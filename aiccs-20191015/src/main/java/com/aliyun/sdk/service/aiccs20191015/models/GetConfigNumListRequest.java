@@ -75,11 +75,11 @@ public class GetConfigNumListRequest extends Request {
             super();
         } 
 
-        private Builder(GetConfigNumListRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.departmentId = response.departmentId;
-            this.instanceId = response.instanceId;
+        private Builder(GetConfigNumListRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.departmentId = request.departmentId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

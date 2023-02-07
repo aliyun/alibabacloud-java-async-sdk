@@ -63,10 +63,10 @@ public class QueryHotlineInQueueRequest extends Request {
             super();
         } 
 
-        private Builder(QueryHotlineInQueueRequest response) {
-            super(response);
-            this.outerGroupId = response.outerGroupId;
-            this.outerGroupType = response.outerGroupType;
+        private Builder(QueryHotlineInQueueRequest request) {
+            super(request);
+            this.outerGroupId = request.outerGroupId;
+            this.outerGroupType = request.outerGroupType;
         } 
 
         /**

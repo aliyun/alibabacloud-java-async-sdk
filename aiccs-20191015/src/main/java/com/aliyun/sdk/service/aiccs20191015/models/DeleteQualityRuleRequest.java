@@ -63,10 +63,10 @@ public class DeleteQualityRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteQualityRuleRequest response) {
-            super(response);
-            this.id = response.id;
-            this.instanceId = response.instanceId;
+        private Builder(DeleteQualityRuleRequest request) {
+            super(request);
+            this.id = request.id;
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class ListHotlineRecordRequest extends Request {
             super();
         } 
 
-        private Builder(ListHotlineRecordRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(ListHotlineRecordRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

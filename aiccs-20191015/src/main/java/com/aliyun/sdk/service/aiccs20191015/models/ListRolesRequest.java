@@ -62,10 +62,10 @@ public class ListRolesRequest extends Request {
             super();
         } 
 
-        private Builder(ListRolesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(ListRolesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

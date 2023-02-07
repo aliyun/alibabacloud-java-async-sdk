@@ -115,14 +115,14 @@ public class UpdateSkillGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSkillGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.displayName = response.displayName;
-            this.instanceId = response.instanceId;
-            this.skillGroupId = response.skillGroupId;
-            this.skillGroupName = response.skillGroupName;
+        private Builder(UpdateSkillGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.displayName = request.displayName;
+            this.instanceId = request.instanceId;
+            this.skillGroupId = request.skillGroupId;
+            this.skillGroupName = request.skillGroupName;
         } 
 
         /**

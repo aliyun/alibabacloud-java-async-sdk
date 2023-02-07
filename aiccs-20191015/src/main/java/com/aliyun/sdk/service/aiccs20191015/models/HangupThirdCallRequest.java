@@ -115,14 +115,14 @@ public class HangupThirdCallRequest extends Request {
             super();
         } 
 
-        private Builder(HangupThirdCallRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.callId = response.callId;
-            this.clientToken = response.clientToken;
-            this.connectionId = response.connectionId;
-            this.instanceId = response.instanceId;
-            this.jobId = response.jobId;
+        private Builder(HangupThirdCallRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.callId = request.callId;
+            this.clientToken = request.clientToken;
+            this.connectionId = request.connectionId;
+            this.instanceId = request.instanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

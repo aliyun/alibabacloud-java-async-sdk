@@ -76,11 +76,11 @@ public class ListAgentBySkillGroupIdRequest extends Request {
             super();
         } 
 
-        private Builder(ListAgentBySkillGroupIdRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.skillGroupId = response.skillGroupId;
+        private Builder(ListAgentBySkillGroupIdRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.skillGroupId = request.skillGroupId;
         } 
 
         /**

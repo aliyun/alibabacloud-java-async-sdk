@@ -214,21 +214,21 @@ public class EditQualityProjectRequest extends Request {
             super();
         } 
 
-        private Builder(EditQualityProjectRequest response) {
-            super(response);
-            this.analysisIds = response.analysisIds;
-            this.channelTouchType = response.channelTouchType;
-            this.checkFreqType = response.checkFreqType;
-            this.depList = response.depList;
-            this.groupList = response.groupList;
-            this.instanceId = response.instanceId;
-            this.projectId = response.projectId;
-            this.projectName = response.projectName;
-            this.projectVersion = response.projectVersion;
-            this.scopeType = response.scopeType;
-            this.servicerList = response.servicerList;
-            this.timeRangeEnd = response.timeRangeEnd;
-            this.timeRangeStart = response.timeRangeStart;
+        private Builder(EditQualityProjectRequest request) {
+            super(request);
+            this.analysisIds = request.analysisIds;
+            this.channelTouchType = request.channelTouchType;
+            this.checkFreqType = request.checkFreqType;
+            this.depList = request.depList;
+            this.groupList = request.groupList;
+            this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
+            this.projectName = request.projectName;
+            this.projectVersion = request.projectVersion;
+            this.scopeType = request.scopeType;
+            this.servicerList = request.servicerList;
+            this.timeRangeEnd = request.timeRangeEnd;
+            this.timeRangeStart = request.timeRangeStart;
         } 
 
         /**

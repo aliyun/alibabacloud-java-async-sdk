@@ -131,15 +131,15 @@ public class GetHotlineAgentDetailReportRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotlineAgentDetailReportRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.depIds = response.depIds;
-            this.endDate = response.endDate;
-            this.groupIds = response.groupIds;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
+        private Builder(GetHotlineAgentDetailReportRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.depIds = request.depIds;
+            this.endDate = request.endDate;
+            this.groupIds = request.groupIds;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DeleteOuterAccountRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteOuterAccountRequest response) {
-            super(response);
-            this.outerAccountId = response.outerAccountId;
-            this.outerAccountType = response.outerAccountType;
+        private Builder(DeleteOuterAccountRequest request) {
+            super(request);
+            this.outerAccountId = request.outerAccountId;
+            this.outerAccountType = request.outerAccountType;
         } 
 
         /**

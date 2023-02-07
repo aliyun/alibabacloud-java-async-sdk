@@ -101,13 +101,13 @@ public class StartTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StartTaskRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startNow = response.startNow;
-            this.taskId = response.taskId;
+        private Builder(StartTaskRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startNow = request.startNow;
+            this.taskId = request.taskId;
         } 
 
         /**

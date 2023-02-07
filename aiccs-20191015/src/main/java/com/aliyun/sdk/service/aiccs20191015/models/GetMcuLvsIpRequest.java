@@ -49,9 +49,9 @@ public class GetMcuLvsIpRequest extends Request {
             super();
         } 
 
-        private Builder(GetMcuLvsIpRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(GetMcuLvsIpRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

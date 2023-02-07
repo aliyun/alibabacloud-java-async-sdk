@@ -187,19 +187,19 @@ public class CreateAiOutboundTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAiOutboundTaskRequest response) {
-            super(response);
-            this.concurrentRate = response.concurrentRate;
-            this.description = response.description;
-            this.executionTime = response.executionTime;
-            this.forecastCallRate = response.forecastCallRate;
-            this.handlerId = response.handlerId;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.numRepeated = response.numRepeated;
-            this.outboundNums = response.outboundNums;
-            this.recallRule = response.recallRule;
-            this.type = response.type;
+        private Builder(CreateAiOutboundTaskRequest request) {
+            super(request);
+            this.concurrentRate = request.concurrentRate;
+            this.description = request.description;
+            this.executionTime = request.executionTime;
+            this.forecastCallRate = request.forecastCallRate;
+            this.handlerId = request.handlerId;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.numRepeated = request.numRepeated;
+            this.outboundNums = request.outboundNums;
+            this.recallRule = request.recallRule;
+            this.type = request.type;
         } 
 
         /**
@@ -278,7 +278,8 @@ public class CreateAiOutboundTaskRequest extends Request {
          * 外呼主叫号码
          */
         public Builder outboundNums(java.util.List < String > outboundNums) {
-            this.putQueryParameter("OutboundNums", outboundNums);
+            String outboundNumsShrink = shrink(outboundNums, "OutboundNums", "json");
+            this.putQueryParameter("OutboundNums", outboundNumsShrink);
             this.outboundNums = outboundNums;
             return this;
         }
@@ -287,7 +288,8 @@ public class CreateAiOutboundTaskRequest extends Request {
          * 失败重呼策略（为空则不重呼）
          */
         public Builder recallRule(RecallRule recallRule) {
-            this.putQueryParameter("RecallRule", recallRule);
+            String recallRuleShrink = shrink(recallRule, "RecallRule", "json");
+            this.putQueryParameter("RecallRule", recallRuleShrink);
             this.recallRule = recallRule;
             return this;
         }

@@ -215,21 +215,21 @@ public class QueryTicketsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTicketsRequest response) {
-            super(response);
-            this.caseId = response.caseId;
-            this.caseStatus = response.caseStatus;
-            this.caseType = response.caseType;
-            this.channelId = response.channelId;
-            this.channelType = response.channelType;
-            this.currentPage = response.currentPage;
-            this.dealId = response.dealId;
-            this.extra = response.extra;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.srType = response.srType;
-            this.taskStatus = response.taskStatus;
-            this.touchId = response.touchId;
+        private Builder(QueryTicketsRequest request) {
+            super(request);
+            this.caseId = request.caseId;
+            this.caseStatus = request.caseStatus;
+            this.caseType = request.caseType;
+            this.channelId = request.channelId;
+            this.channelType = request.channelType;
+            this.currentPage = request.currentPage;
+            this.dealId = request.dealId;
+            this.extra = request.extra;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.srType = request.srType;
+            this.taskStatus = request.taskStatus;
+            this.touchId = request.touchId;
         } 
 
         /**
@@ -299,7 +299,8 @@ public class QueryTicketsRequest extends Request {
          * Extra.
          */
         public Builder extra(java.util.Map < String, ? > extra) {
-            this.putBodyParameter("Extra", extra);
+            String extraShrink = shrink(extra, "Extra", "json");
+            this.putBodyParameter("Extra", extraShrink);
             this.extra = extra;
             return this;
         }

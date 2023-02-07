@@ -63,10 +63,10 @@ public class CreateAiOutboundTaskBatchRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAiOutboundTaskBatchRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.taskId = response.taskId;
+        private Builder(CreateAiOutboundTaskBatchRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.taskId = request.taskId;
         } 
 
         /**

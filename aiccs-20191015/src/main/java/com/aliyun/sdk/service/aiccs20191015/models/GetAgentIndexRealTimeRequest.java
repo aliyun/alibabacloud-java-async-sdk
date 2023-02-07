@@ -103,13 +103,13 @@ public class GetAgentIndexRealTimeRequest extends Request {
             super();
         } 
 
-        private Builder(GetAgentIndexRealTimeRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.depIds = response.depIds;
-            this.groupIds = response.groupIds;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
+        private Builder(GetAgentIndexRealTimeRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.depIds = request.depIds;
+            this.groupIds = request.groupIds;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

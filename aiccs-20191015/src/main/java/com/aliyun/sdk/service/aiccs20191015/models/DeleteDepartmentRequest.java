@@ -63,10 +63,10 @@ public class DeleteDepartmentRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDepartmentRequest response) {
-            super(response);
-            this.departmentId = response.departmentId;
-            this.instanceId = response.instanceId;
+        private Builder(DeleteDepartmentRequest request) {
+            super(request);
+            this.departmentId = request.departmentId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

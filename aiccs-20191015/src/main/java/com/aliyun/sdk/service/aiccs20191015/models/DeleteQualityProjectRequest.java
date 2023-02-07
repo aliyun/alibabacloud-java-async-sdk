@@ -63,10 +63,10 @@ public class DeleteQualityProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteQualityProjectRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.projectId = response.projectId;
+        private Builder(DeleteQualityProjectRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
         } 
 
         /**

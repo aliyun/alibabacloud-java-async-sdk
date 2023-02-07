@@ -63,10 +63,10 @@ public class DeleteHotlineNumberRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteHotlineNumberRequest response) {
-            super(response);
-            this.hotlineNumber = response.hotlineNumber;
-            this.instanceId = response.instanceId;
+        private Builder(DeleteHotlineNumberRequest request) {
+            super(request);
+            this.hotlineNumber = request.hotlineNumber;
+            this.instanceId = request.instanceId;
         } 
 
         /**

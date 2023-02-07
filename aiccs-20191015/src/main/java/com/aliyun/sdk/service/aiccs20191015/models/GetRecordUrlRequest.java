@@ -77,11 +77,11 @@ public class GetRecordUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetRecordUrlRequest response) {
-            super(response);
-            this.acid = response.acid;
-            this.instanceId = response.instanceId;
-            this.recordType = response.recordType;
+        private Builder(GetRecordUrlRequest request) {
+            super(request);
+            this.acid = request.acid;
+            this.instanceId = request.instanceId;
+            this.recordType = request.recordType;
         } 
 
         /**

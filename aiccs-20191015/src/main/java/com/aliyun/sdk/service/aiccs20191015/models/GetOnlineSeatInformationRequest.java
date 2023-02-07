@@ -127,22 +127,23 @@ public class GetOnlineSeatInformationRequest extends Request {
             super();
         } 
 
-        private Builder(GetOnlineSeatInformationRequest response) {
-            super(response);
-            this.agentIds = response.agentIds;
-            this.currentPage = response.currentPage;
-            this.depIds = response.depIds;
-            this.endDate = response.endDate;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
+        private Builder(GetOnlineSeatInformationRequest request) {
+            super(request);
+            this.agentIds = request.agentIds;
+            this.currentPage = request.currentPage;
+            this.depIds = request.depIds;
+            this.endDate = request.endDate;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
         } 
 
         /**
          * 坐席id列表
          */
         public Builder agentIds(java.util.List < Long > agentIds) {
-            this.putQueryParameter("AgentIds", agentIds);
+            String agentIdsShrink = shrink(agentIds, "AgentIds", "simple");
+            this.putQueryParameter("AgentIds", agentIdsShrink);
             this.agentIds = agentIds;
             return this;
         }
@@ -160,7 +161,8 @@ public class GetOnlineSeatInformationRequest extends Request {
          * 部门id列表
          */
         public Builder depIds(java.util.List < Long > depIds) {
-            this.putQueryParameter("DepIds", depIds);
+            String depIdsShrink = shrink(depIds, "DepIds", "simple");
+            this.putQueryParameter("DepIds", depIdsShrink);
             this.depIds = depIds;
             return this;
         }

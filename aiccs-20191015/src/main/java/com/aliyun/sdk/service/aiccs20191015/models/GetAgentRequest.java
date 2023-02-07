@@ -76,11 +76,11 @@ public class GetAgentRequest extends Request {
             super();
         } 
 
-        private Builder(GetAgentRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(GetAgentRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

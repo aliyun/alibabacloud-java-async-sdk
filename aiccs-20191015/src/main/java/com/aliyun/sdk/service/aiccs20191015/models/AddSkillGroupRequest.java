@@ -103,13 +103,13 @@ public class AddSkillGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddSkillGroupRequest response) {
-            super(response);
-            this.outerDepartmentId = response.outerDepartmentId;
-            this.outerDepartmentType = response.outerDepartmentType;
-            this.outerGroupId = response.outerGroupId;
-            this.outerGroupName = response.outerGroupName;
-            this.outerGroupType = response.outerGroupType;
+        private Builder(AddSkillGroupRequest request) {
+            super(request);
+            this.outerDepartmentId = request.outerDepartmentId;
+            this.outerDepartmentType = request.outerDepartmentType;
+            this.outerGroupId = request.outerGroupId;
+            this.outerGroupName = request.outerGroupName;
+            this.outerGroupType = request.outerGroupType;
         } 
 
         /**

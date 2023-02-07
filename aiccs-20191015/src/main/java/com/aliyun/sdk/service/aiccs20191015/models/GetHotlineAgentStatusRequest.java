@@ -63,10 +63,10 @@ public class GetHotlineAgentStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotlineAgentStatusRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.instanceId = response.instanceId;
+        private Builder(GetHotlineAgentStatusRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.instanceId = request.instanceId;
         } 
 
         /**

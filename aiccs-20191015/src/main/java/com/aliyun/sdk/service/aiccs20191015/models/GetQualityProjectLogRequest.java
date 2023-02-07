@@ -62,10 +62,10 @@ public class GetQualityProjectLogRequest extends Request {
             super();
         } 
 
-        private Builder(GetQualityProjectLogRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.projectId = response.projectId;
+        private Builder(GetQualityProjectLogRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
         } 
 
         /**

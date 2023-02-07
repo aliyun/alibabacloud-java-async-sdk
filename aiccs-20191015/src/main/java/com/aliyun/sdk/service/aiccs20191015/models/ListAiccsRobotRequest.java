@@ -87,12 +87,12 @@ public class ListAiccsRobotRequest extends Request {
             super();
         } 
 
-        private Builder(ListAiccsRobotRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.robotName = response.robotName;
+        private Builder(ListAiccsRobotRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.robotName = request.robotName;
         } 
 
         /**

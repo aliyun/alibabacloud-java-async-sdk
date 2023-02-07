@@ -63,10 +63,10 @@ public class GetHotlineMessageLogRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotlineMessageLogRequest response) {
-            super(response);
-            this.acid = response.acid;
-            this.instanceId = response.instanceId;
+        private Builder(GetHotlineMessageLogRequest request) {
+            super(request);
+            this.acid = request.acid;
+            this.instanceId = request.instanceId;
         } 
 
         /**

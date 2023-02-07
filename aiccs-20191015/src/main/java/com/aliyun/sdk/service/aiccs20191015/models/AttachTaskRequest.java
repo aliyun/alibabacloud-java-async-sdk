@@ -101,13 +101,13 @@ public class AttachTaskRequest extends Request {
             super();
         } 
 
-        private Builder(AttachTaskRequest response) {
-            super(response);
-            this.callString = response.callString;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(AttachTaskRequest request) {
+            super(request);
+            this.callString = request.callString;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
         } 
 
         /**

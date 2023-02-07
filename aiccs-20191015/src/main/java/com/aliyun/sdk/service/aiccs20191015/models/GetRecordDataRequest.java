@@ -63,10 +63,10 @@ public class GetRecordDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetRecordDataRequest response) {
-            super(response);
-            this.acid = response.acid;
-            this.instanceId = response.instanceId;
+        private Builder(GetRecordDataRequest request) {
+            super(request);
+            this.acid = request.acid;
+            this.instanceId = request.instanceId;
         } 
 
         /**

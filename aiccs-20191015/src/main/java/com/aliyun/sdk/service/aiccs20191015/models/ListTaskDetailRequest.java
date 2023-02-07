@@ -168,18 +168,18 @@ public class ListTaskDetailRequest extends Request {
             super();
         } 
 
-        private Builder(ListTaskDetailRequest response) {
-            super(response);
-            this.called = response.called;
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.statusCode = response.statusCode;
-            this.taskId = response.taskId;
+        private Builder(ListTaskDetailRequest request) {
+            super(request);
+            this.called = request.called;
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.statusCode = request.statusCode;
+            this.taskId = request.taskId;
         } 
 
         /**

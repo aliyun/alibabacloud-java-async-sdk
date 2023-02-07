@@ -76,11 +76,11 @@ public class DeleteAgentRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAgentRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(DeleteAgentRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

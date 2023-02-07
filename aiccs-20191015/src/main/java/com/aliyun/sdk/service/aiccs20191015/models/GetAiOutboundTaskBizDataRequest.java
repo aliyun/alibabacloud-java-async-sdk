@@ -63,10 +63,10 @@ public class GetAiOutboundTaskBizDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetAiOutboundTaskBizDataRequest response) {
-            super(response);
-            this.channelId = response.channelId;
-            this.instanceId = response.instanceId;
+        private Builder(GetAiOutboundTaskBizDataRequest request) {
+            super(request);
+            this.channelId = request.channelId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class SendHotlineHeartBeatRequest extends Request {
             super();
         } 
 
-        private Builder(SendHotlineHeartBeatRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.token = response.token;
+        private Builder(SendHotlineHeartBeatRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.token = request.token;
         } 
 
         /**

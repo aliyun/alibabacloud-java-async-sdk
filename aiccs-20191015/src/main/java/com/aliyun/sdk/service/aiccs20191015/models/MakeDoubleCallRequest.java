@@ -117,14 +117,14 @@ public class MakeDoubleCallRequest extends Request {
             super();
         } 
 
-        private Builder(MakeDoubleCallRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.bizData = response.bizData;
-            this.instanceId = response.instanceId;
-            this.memberPhone = response.memberPhone;
-            this.outboundCallNumber = response.outboundCallNumber;
-            this.servicerPhone = response.servicerPhone;
+        private Builder(MakeDoubleCallRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.bizData = request.bizData;
+            this.instanceId = request.instanceId;
+            this.memberPhone = request.memberPhone;
+            this.outboundCallNumber = request.outboundCallNumber;
+            this.servicerPhone = request.servicerPhone;
         } 
 
         /**

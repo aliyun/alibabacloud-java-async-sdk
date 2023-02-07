@@ -167,18 +167,18 @@ public class AddOuterAccountRequest extends Request {
             super();
         } 
 
-        private Builder(AddOuterAccountRequest response) {
-            super(response);
-            this.avatar = response.avatar;
-            this.ext = response.ext;
-            this.outerAccountId = response.outerAccountId;
-            this.outerAccountName = response.outerAccountName;
-            this.outerAccountType = response.outerAccountType;
-            this.outerDepartmentId = response.outerDepartmentId;
-            this.outerDepartmentType = response.outerDepartmentType;
-            this.outerGroupIds = response.outerGroupIds;
-            this.outerGroupType = response.outerGroupType;
-            this.realName = response.realName;
+        private Builder(AddOuterAccountRequest request) {
+            super(request);
+            this.avatar = request.avatar;
+            this.ext = request.ext;
+            this.outerAccountId = request.outerAccountId;
+            this.outerAccountName = request.outerAccountName;
+            this.outerAccountType = request.outerAccountType;
+            this.outerDepartmentId = request.outerDepartmentId;
+            this.outerDepartmentType = request.outerDepartmentType;
+            this.outerGroupIds = request.outerGroupIds;
+            this.outerGroupType = request.outerGroupType;
+            this.realName = request.realName;
         } 
 
         /**

@@ -49,9 +49,9 @@ public class GetQualityRuleTagListRequest extends Request {
             super();
         } 
 
-        private Builder(GetQualityRuleTagListRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(GetQualityRuleTagListRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

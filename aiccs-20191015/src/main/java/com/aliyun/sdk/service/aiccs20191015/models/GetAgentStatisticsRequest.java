@@ -166,25 +166,26 @@ public class GetAgentStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetAgentStatisticsRequest response) {
-            super(response);
-            this.agentIds = response.agentIds;
-            this.currentPage = response.currentPage;
-            this.depIds = response.depIds;
-            this.endDate = response.endDate;
-            this.existAgentGrouping = response.existAgentGrouping;
-            this.existDepartmentGrouping = response.existDepartmentGrouping;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
-            this.timeLatitudeType = response.timeLatitudeType;
+        private Builder(GetAgentStatisticsRequest request) {
+            super(request);
+            this.agentIds = request.agentIds;
+            this.currentPage = request.currentPage;
+            this.depIds = request.depIds;
+            this.endDate = request.endDate;
+            this.existAgentGrouping = request.existAgentGrouping;
+            this.existDepartmentGrouping = request.existDepartmentGrouping;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
+            this.timeLatitudeType = request.timeLatitudeType;
         } 
 
         /**
          * 坐席id列表
          */
         public Builder agentIds(java.util.List < Long > agentIds) {
-            this.putQueryParameter("AgentIds", agentIds);
+            String agentIdsShrink = shrink(agentIds, "AgentIds", "simple");
+            this.putQueryParameter("AgentIds", agentIdsShrink);
             this.agentIds = agentIds;
             return this;
         }
@@ -202,7 +203,8 @@ public class GetAgentStatisticsRequest extends Request {
          * 部门id列表
          */
         public Builder depIds(java.util.List < Long > depIds) {
-            this.putQueryParameter("DepIds", depIds);
+            String depIdsShrink = shrink(depIds, "DepIds", "simple");
+            this.putQueryParameter("DepIds", depIdsShrink);
             this.depIds = depIds;
             return this;
         }

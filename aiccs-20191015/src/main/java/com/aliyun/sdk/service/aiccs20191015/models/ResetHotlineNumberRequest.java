@@ -186,19 +186,19 @@ public class ResetHotlineNumberRequest extends Request {
             super();
         } 
 
-        private Builder(ResetHotlineNumberRequest response) {
-            super(response);
-            this.description = response.description;
-            this.enableInbound = response.enableInbound;
-            this.enableInboundEvaluation = response.enableInboundEvaluation;
-            this.enableOutbound = response.enableOutbound;
-            this.enableOutboundEvaluation = response.enableOutboundEvaluation;
-            this.evaluationLevel = response.evaluationLevel;
-            this.hotlineNumber = response.hotlineNumber;
-            this.inboundFlowId = response.inboundFlowId;
-            this.instanceId = response.instanceId;
-            this.outboundAllDepart = response.outboundAllDepart;
-            this.outboundRangeList = response.outboundRangeList;
+        private Builder(ResetHotlineNumberRequest request) {
+            super(request);
+            this.description = request.description;
+            this.enableInbound = request.enableInbound;
+            this.enableInboundEvaluation = request.enableInboundEvaluation;
+            this.enableOutbound = request.enableOutbound;
+            this.enableOutboundEvaluation = request.enableOutboundEvaluation;
+            this.evaluationLevel = request.evaluationLevel;
+            this.hotlineNumber = request.hotlineNumber;
+            this.inboundFlowId = request.inboundFlowId;
+            this.instanceId = request.instanceId;
+            this.outboundAllDepart = request.outboundAllDepart;
+            this.outboundRangeList = request.outboundRangeList;
         } 
 
         /**
@@ -295,7 +295,8 @@ public class ResetHotlineNumberRequest extends Request {
          * 外呼生效范围
          */
         public Builder outboundRangeList(java.util.List < OutboundRangeList> outboundRangeList) {
-            this.putBodyParameter("OutboundRangeList", outboundRangeList);
+            String outboundRangeListShrink = shrink(outboundRangeList, "OutboundRangeList", "json");
+            this.putBodyParameter("OutboundRangeList", outboundRangeListShrink);
             this.outboundRangeList = outboundRangeList;
             return this;
         }

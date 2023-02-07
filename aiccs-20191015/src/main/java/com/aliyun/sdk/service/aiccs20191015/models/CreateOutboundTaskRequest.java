@@ -269,25 +269,25 @@ public class CreateOutboundTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOutboundTaskRequest response) {
-            super(response);
-            this.ani = response.ani;
-            this.callInfos = response.callInfos;
-            this.departmentId = response.departmentId;
-            this.description = response.description;
-            this.endDate = response.endDate;
-            this.endTime = response.endTime;
-            this.extAttrs = response.extAttrs;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.model = response.model;
-            this.retryInterval = response.retryInterval;
-            this.retryTime = response.retryTime;
-            this.skillGroup = response.skillGroup;
-            this.startDate = response.startDate;
-            this.startTime = response.startTime;
-            this.taskName = response.taskName;
-            this.taskType = response.taskType;
+        private Builder(CreateOutboundTaskRequest request) {
+            super(request);
+            this.ani = request.ani;
+            this.callInfos = request.callInfos;
+            this.departmentId = request.departmentId;
+            this.description = request.description;
+            this.endDate = request.endDate;
+            this.endTime = request.endTime;
+            this.extAttrs = request.extAttrs;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.model = request.model;
+            this.retryInterval = request.retryInterval;
+            this.retryTime = request.retryTime;
+            this.skillGroup = request.skillGroup;
+            this.startDate = request.startDate;
+            this.startTime = request.startTime;
+            this.taskName = request.taskName;
+            this.taskType = request.taskType;
         } 
 
         /**

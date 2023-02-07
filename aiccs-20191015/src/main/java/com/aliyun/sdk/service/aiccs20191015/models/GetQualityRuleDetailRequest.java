@@ -63,10 +63,10 @@ public class GetQualityRuleDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetQualityRuleDetailRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.qualityRuleId = response.qualityRuleId;
+        private Builder(GetQualityRuleDetailRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.qualityRuleId = request.qualityRuleId;
         } 
 
         /**

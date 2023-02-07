@@ -76,11 +76,11 @@ public class GetAiOutboundTaskProgressRequest extends Request {
             super();
         } 
 
-        private Builder(GetAiOutboundTaskProgressRequest response) {
-            super(response);
-            this.batchVersion = response.batchVersion;
-            this.instanceId = response.instanceId;
-            this.taskId = response.taskId;
+        private Builder(GetAiOutboundTaskProgressRequest request) {
+            super(request);
+            this.batchVersion = request.batchVersion;
+            this.instanceId = request.instanceId;
+            this.taskId = request.taskId;
         } 
 
         /**

@@ -169,18 +169,18 @@ public class GetAiOutboundTaskExecDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetAiOutboundTaskExecDetailRequest response) {
-            super(response);
-            this.batchVersion = response.batchVersion;
-            this.caseId = response.caseId;
-            this.caseStatus = response.caseStatus;
-            this.createTimeEnd = response.createTimeEnd;
-            this.createTimeStart = response.createTimeStart;
-            this.currentPage = response.currentPage;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.phoneNum = response.phoneNum;
-            this.taskId = response.taskId;
+        private Builder(GetAiOutboundTaskExecDetailRequest request) {
+            super(request);
+            this.batchVersion = request.batchVersion;
+            this.caseId = request.caseId;
+            this.caseStatus = request.caseStatus;
+            this.createTimeEnd = request.createTimeEnd;
+            this.createTimeStart = request.createTimeStart;
+            this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.phoneNum = request.phoneNum;
+            this.taskId = request.taskId;
         } 
 
         /**

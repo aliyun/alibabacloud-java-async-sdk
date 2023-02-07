@@ -143,16 +143,16 @@ public class CreateThirdSsoAgentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateThirdSsoAgentRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.accountName = response.accountName;
-            this.clientId = response.clientId;
-            this.clientToken = response.clientToken;
-            this.displayName = response.displayName;
-            this.instanceId = response.instanceId;
-            this.roleIds = response.roleIds;
-            this.skillGroupIds = response.skillGroupIds;
+        private Builder(CreateThirdSsoAgentRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.accountName = request.accountName;
+            this.clientId = request.clientId;
+            this.clientToken = request.clientToken;
+            this.displayName = request.displayName;
+            this.instanceId = request.instanceId;
+            this.roleIds = request.roleIds;
+            this.skillGroupIds = request.skillGroupIds;
         } 
 
         /**

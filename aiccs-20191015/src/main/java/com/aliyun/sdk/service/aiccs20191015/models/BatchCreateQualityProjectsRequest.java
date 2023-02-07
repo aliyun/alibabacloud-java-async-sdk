@@ -130,15 +130,15 @@ public class BatchCreateQualityProjectsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchCreateQualityProjectsRequest response) {
-            super(response);
-            this.analysisIds = response.analysisIds;
-            this.channelTouchType = response.channelTouchType;
-            this.checkFreqType = response.checkFreqType;
-            this.instanceList = response.instanceList;
-            this.projectName = response.projectName;
-            this.timeRangeEnd = response.timeRangeEnd;
-            this.timeRangeStart = response.timeRangeStart;
+        private Builder(BatchCreateQualityProjectsRequest request) {
+            super(request);
+            this.analysisIds = request.analysisIds;
+            this.channelTouchType = request.channelTouchType;
+            this.checkFreqType = request.checkFreqType;
+            this.instanceList = request.instanceList;
+            this.projectName = request.projectName;
+            this.timeRangeEnd = request.timeRangeEnd;
+            this.timeRangeStart = request.timeRangeStart;
         } 
 
         /**

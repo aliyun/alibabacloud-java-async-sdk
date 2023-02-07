@@ -63,10 +63,10 @@ public class GetAgentByIdRequest extends Request {
             super();
         } 
 
-        private Builder(GetAgentByIdRequest response) {
-            super(response);
-            this.agentId = response.agentId;
-            this.instanceId = response.instanceId;
+        private Builder(GetAgentByIdRequest request) {
+            super(request);
+            this.agentId = request.agentId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

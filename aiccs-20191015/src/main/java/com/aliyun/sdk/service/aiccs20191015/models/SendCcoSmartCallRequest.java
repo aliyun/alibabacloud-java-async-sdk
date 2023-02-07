@@ -455,40 +455,40 @@ public class SendCcoSmartCallRequest extends Request {
             super();
         } 
 
-        private Builder(SendCcoSmartCallRequest response) {
-            super(response);
-            this.actionCodeBreak = response.actionCodeBreak;
-            this.actionCodeTimeBreak = response.actionCodeTimeBreak;
-            this.asrAlsAmId = response.asrAlsAmId;
-            this.asrBaseId = response.asrBaseId;
-            this.asrModelId = response.asrModelId;
-            this.asrVocabularyId = response.asrVocabularyId;
-            this.backgroundFileCode = response.backgroundFileCode;
-            this.backgroundSpeed = response.backgroundSpeed;
-            this.backgroundVolume = response.backgroundVolume;
-            this.calledNumber = response.calledNumber;
-            this.calledShowNumber = response.calledShowNumber;
-            this.dynamicId = response.dynamicId;
-            this.earlyMediaAsr = response.earlyMediaAsr;
-            this.enableITN = response.enableITN;
-            this.muteTime = response.muteTime;
-            this.outId = response.outId;
-            this.ownerId = response.ownerId;
-            this.pauseTime = response.pauseTime;
-            this.playTimes = response.playTimes;
-            this.prodCode = response.prodCode;
-            this.recordFlag = response.recordFlag;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sessionTimeout = response.sessionTimeout;
-            this.speed = response.speed;
-            this.ttsConf = response.ttsConf;
-            this.ttsSpeed = response.ttsSpeed;
-            this.ttsStyle = response.ttsStyle;
-            this.ttsVolume = response.ttsVolume;
-            this.voiceCode = response.voiceCode;
-            this.voiceCodeParam = response.voiceCodeParam;
-            this.volume = response.volume;
+        private Builder(SendCcoSmartCallRequest request) {
+            super(request);
+            this.actionCodeBreak = request.actionCodeBreak;
+            this.actionCodeTimeBreak = request.actionCodeTimeBreak;
+            this.asrAlsAmId = request.asrAlsAmId;
+            this.asrBaseId = request.asrBaseId;
+            this.asrModelId = request.asrModelId;
+            this.asrVocabularyId = request.asrVocabularyId;
+            this.backgroundFileCode = request.backgroundFileCode;
+            this.backgroundSpeed = request.backgroundSpeed;
+            this.backgroundVolume = request.backgroundVolume;
+            this.calledNumber = request.calledNumber;
+            this.calledShowNumber = request.calledShowNumber;
+            this.dynamicId = request.dynamicId;
+            this.earlyMediaAsr = request.earlyMediaAsr;
+            this.enableITN = request.enableITN;
+            this.muteTime = request.muteTime;
+            this.outId = request.outId;
+            this.ownerId = request.ownerId;
+            this.pauseTime = request.pauseTime;
+            this.playTimes = request.playTimes;
+            this.prodCode = request.prodCode;
+            this.recordFlag = request.recordFlag;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sessionTimeout = request.sessionTimeout;
+            this.speed = request.speed;
+            this.ttsConf = request.ttsConf;
+            this.ttsSpeed = request.ttsSpeed;
+            this.ttsStyle = request.ttsStyle;
+            this.ttsVolume = request.ttsVolume;
+            this.voiceCode = request.voiceCode;
+            this.voiceCodeParam = request.voiceCodeParam;
+            this.volume = request.volume;
         } 
 
         /**

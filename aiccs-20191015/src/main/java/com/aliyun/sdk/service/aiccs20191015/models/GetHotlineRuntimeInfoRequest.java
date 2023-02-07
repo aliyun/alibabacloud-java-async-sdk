@@ -63,10 +63,10 @@ public class GetHotlineRuntimeInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotlineRuntimeInfoRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.instanceId = response.instanceId;
+        private Builder(GetHotlineRuntimeInfoRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -389,35 +389,35 @@ public class HotlineSessionQueryRequest extends Request {
             super();
         } 
 
-        private Builder(HotlineSessionQueryRequest response) {
-            super(response);
-            this.acid = response.acid;
-            this.acidList = response.acidList;
-            this.callResult = response.callResult;
-            this.callResultList = response.callResultList;
-            this.callType = response.callType;
-            this.callTypeList = response.callTypeList;
-            this.calledNumber = response.calledNumber;
-            this.calledNumberList = response.calledNumberList;
-            this.callingNumber = response.callingNumber;
-            this.callingNumberList = response.callingNumberList;
-            this.groupId = response.groupId;
-            this.groupIdList = response.groupIdList;
-            this.groupName = response.groupName;
-            this.id = response.id;
-            this.instanceId = response.instanceId;
-            this.memberId = response.memberId;
-            this.memberIdList = response.memberIdList;
-            this.memberName = response.memberName;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.params = response.params;
-            this.queryEndTime = response.queryEndTime;
-            this.queryStartTime = response.queryStartTime;
-            this.requestId = response.requestId;
-            this.servicerId = response.servicerId;
-            this.servicerIdList = response.servicerIdList;
-            this.servicerName = response.servicerName;
+        private Builder(HotlineSessionQueryRequest request) {
+            super(request);
+            this.acid = request.acid;
+            this.acidList = request.acidList;
+            this.callResult = request.callResult;
+            this.callResultList = request.callResultList;
+            this.callType = request.callType;
+            this.callTypeList = request.callTypeList;
+            this.calledNumber = request.calledNumber;
+            this.calledNumberList = request.calledNumberList;
+            this.callingNumber = request.callingNumber;
+            this.callingNumberList = request.callingNumberList;
+            this.groupId = request.groupId;
+            this.groupIdList = request.groupIdList;
+            this.groupName = request.groupName;
+            this.id = request.id;
+            this.instanceId = request.instanceId;
+            this.memberId = request.memberId;
+            this.memberIdList = request.memberIdList;
+            this.memberName = request.memberName;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.params = request.params;
+            this.queryEndTime = request.queryEndTime;
+            this.queryStartTime = request.queryStartTime;
+            this.requestId = request.requestId;
+            this.servicerId = request.servicerId;
+            this.servicerIdList = request.servicerIdList;
+            this.servicerName = request.servicerName;
         } 
 
         /**

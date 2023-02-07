@@ -75,11 +75,11 @@ public class ListOutboundPhoneNumberRequest extends Request {
             super();
         } 
 
-        private Builder(ListOutboundPhoneNumberRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(ListOutboundPhoneNumberRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

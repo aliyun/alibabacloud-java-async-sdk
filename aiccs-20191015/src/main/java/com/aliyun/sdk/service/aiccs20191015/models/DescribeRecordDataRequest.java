@@ -139,16 +139,16 @@ public class DescribeRecordDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecordDataRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.accountType = response.accountType;
-            this.acid = response.acid;
-            this.ownerId = response.ownerId;
-            this.prodCode = response.prodCode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.secLevel = response.secLevel;
+        private Builder(DescribeRecordDataRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.accountType = request.accountType;
+            this.acid = request.acid;
+            this.ownerId = request.ownerId;
+            this.prodCode = request.prodCode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.secLevel = request.secLevel;
         } 
 
         /**

@@ -116,14 +116,14 @@ public class QueryHotlineNumberRequest extends Request {
             super();
         } 
 
-        private Builder(QueryHotlineNumberRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.departmentId = response.departmentId;
-            this.groupIds = response.groupIds;
-            this.hotlineNumber = response.hotlineNumber;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryHotlineNumberRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.departmentId = request.departmentId;
+            this.groupIds = request.groupIds;
+            this.hotlineNumber = request.hotlineNumber;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -148,7 +148,8 @@ public class QueryHotlineNumberRequest extends Request {
          * 技能组列表
          */
         public Builder groupIds(java.util.List < Long > groupIds) {
-            this.putQueryParameter("GroupIds", groupIds);
+            String groupIdsShrink = shrink(groupIds, "GroupIds", "json");
+            this.putQueryParameter("GroupIds", groupIdsShrink);
             this.groupIds = groupIds;
             return this;
         }

@@ -90,12 +90,12 @@ public class SuspendHotlineServiceRequest extends Request {
             super();
         } 
 
-        private Builder(SuspendHotlineServiceRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.type = response.type;
+        private Builder(SuspendHotlineServiceRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.type = request.type;
         } 
 
         /**

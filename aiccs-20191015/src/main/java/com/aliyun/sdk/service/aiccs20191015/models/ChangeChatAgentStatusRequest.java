@@ -90,12 +90,12 @@ public class ChangeChatAgentStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ChangeChatAgentStatusRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.method = response.method;
+        private Builder(ChangeChatAgentStatusRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.method = request.method;
         } 
 
         /**

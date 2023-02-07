@@ -77,11 +77,11 @@ public class UpdateDepartmentRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDepartmentRequest response) {
-            super(response);
-            this.departmentId = response.departmentId;
-            this.departmentName = response.departmentName;
-            this.instanceId = response.instanceId;
+        private Builder(UpdateDepartmentRequest request) {
+            super(request);
+            this.departmentId = request.departmentId;
+            this.departmentName = request.departmentName;
+            this.instanceId = request.instanceId;
         } 
 
         /**

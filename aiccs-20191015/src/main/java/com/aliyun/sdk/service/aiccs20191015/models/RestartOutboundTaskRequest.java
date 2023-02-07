@@ -63,10 +63,10 @@ public class RestartOutboundTaskRequest extends Request {
             super();
         } 
 
-        private Builder(RestartOutboundTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.outboundTaskId = response.outboundTaskId;
+        private Builder(RestartOutboundTaskRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.outboundTaskId = request.outboundTaskId;
         } 
 
         /**

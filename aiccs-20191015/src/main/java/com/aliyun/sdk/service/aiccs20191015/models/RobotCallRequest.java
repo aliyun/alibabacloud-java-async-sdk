@@ -168,18 +168,18 @@ public class RobotCallRequest extends Request {
             super();
         } 
 
-        private Builder(RobotCallRequest response) {
-            super(response);
-            this.calledNumber = response.calledNumber;
-            this.calledShowNumber = response.calledShowNumber;
-            this.earlyMediaAsr = response.earlyMediaAsr;
-            this.outId = response.outId;
-            this.ownerId = response.ownerId;
-            this.params = response.params;
-            this.recordFlag = response.recordFlag;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.robotId = response.robotId;
+        private Builder(RobotCallRequest request) {
+            super(request);
+            this.calledNumber = request.calledNumber;
+            this.calledShowNumber = request.calledShowNumber;
+            this.earlyMediaAsr = request.earlyMediaAsr;
+            this.outId = request.outId;
+            this.ownerId = request.ownerId;
+            this.params = request.params;
+            this.recordFlag = request.recordFlag;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.robotId = request.robotId;
         } 
 
         /**

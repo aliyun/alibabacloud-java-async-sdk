@@ -61,10 +61,10 @@ public class DeleteSkillGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSkillGroupRequest response) {
-            super(response);
-            this.outerGroupId = response.outerGroupId;
-            this.outerGroupType = response.outerGroupType;
+        private Builder(DeleteSkillGroupRequest request) {
+            super(request);
+            this.outerGroupId = request.outerGroupId;
+            this.outerGroupType = request.outerGroupType;
         } 
 
         /**

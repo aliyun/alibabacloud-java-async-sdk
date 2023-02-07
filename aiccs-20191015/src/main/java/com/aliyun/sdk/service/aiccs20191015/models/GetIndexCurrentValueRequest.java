@@ -74,11 +74,11 @@ public class GetIndexCurrentValueRequest extends Request {
             super();
         } 
 
-        private Builder(GetIndexCurrentValueRequest response) {
-            super(response);
-            this.depIds = response.depIds;
-            this.groupIds = response.groupIds;
-            this.instanceId = response.instanceId;
+        private Builder(GetIndexCurrentValueRequest request) {
+            super(request);
+            this.depIds = request.depIds;
+            this.groupIds = request.groupIds;
+            this.instanceId = request.instanceId;
         } 
 
         /**

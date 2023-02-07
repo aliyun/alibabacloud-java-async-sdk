@@ -104,13 +104,13 @@ public class StartCallRequest extends Request {
             super();
         } 
 
-        private Builder(StartCallRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.callee = response.callee;
-            this.caller = response.caller;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(StartCallRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.callee = request.callee;
+            this.caller = request.caller;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

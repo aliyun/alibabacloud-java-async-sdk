@@ -61,10 +61,10 @@ public class HangUpDoubleCallRequest extends Request {
             super();
         } 
 
-        private Builder(HangUpDoubleCallRequest response) {
-            super(response);
-            this.acid = response.acid;
-            this.instanceId = response.instanceId;
+        private Builder(HangUpDoubleCallRequest request) {
+            super(request);
+            this.acid = request.acid;
+            this.instanceId = request.instanceId;
         } 
 
         /**

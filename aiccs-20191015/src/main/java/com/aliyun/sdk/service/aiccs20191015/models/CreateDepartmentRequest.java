@@ -63,10 +63,10 @@ public class CreateDepartmentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDepartmentRequest response) {
-            super(response);
-            this.departmentName = response.departmentName;
-            this.instanceId = response.instanceId;
+        private Builder(CreateDepartmentRequest request) {
+            super(request);
+            this.departmentName = request.departmentName;
+            this.instanceId = request.instanceId;
         } 
 
         /**

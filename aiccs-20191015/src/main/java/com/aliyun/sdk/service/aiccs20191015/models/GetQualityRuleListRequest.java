@@ -77,11 +77,11 @@ public class GetQualityRuleListRequest extends Request {
             super();
         } 
 
-        private Builder(GetQualityRuleListRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(GetQualityRuleListRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**

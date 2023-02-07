@@ -63,10 +63,10 @@ public class DeleteOutboundTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteOutboundTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.outboundTaskId = response.outboundTaskId;
+        private Builder(DeleteOutboundTaskRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.outboundTaskId = request.outboundTaskId;
         } 
 
         /**

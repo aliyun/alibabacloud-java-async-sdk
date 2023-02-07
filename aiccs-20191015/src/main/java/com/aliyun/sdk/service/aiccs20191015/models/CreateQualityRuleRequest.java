@@ -105,13 +105,13 @@ public class CreateQualityRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateQualityRuleRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.keyWords = response.keyWords;
-            this.matchType = response.matchType;
-            this.name = response.name;
-            this.ruleTag = response.ruleTag;
+        private Builder(CreateQualityRuleRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.keyWords = request.keyWords;
+            this.matchType = request.matchType;
+            this.name = request.name;
+            this.ruleTag = request.ruleTag;
         } 
 
         /**

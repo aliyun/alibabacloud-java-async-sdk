@@ -87,12 +87,12 @@ public class ListOuterOrderedNumbersRequest extends Request {
             super();
         } 
 
-        private Builder(ListOuterOrderedNumbersRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.prodCode = response.prodCode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListOuterOrderedNumbersRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.prodCode = request.prodCode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

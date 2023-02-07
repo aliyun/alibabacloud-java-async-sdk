@@ -114,14 +114,14 @@ public class ListChatRecordDetailRequest extends Request {
             super();
         } 
 
-        private Builder(ListChatRecordDetailRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.closeTimeEnd = response.closeTimeEnd;
-            this.closeTimeStart = response.closeTimeStart;
-            this.currentPage = response.currentPage;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
+        private Builder(ListChatRecordDetailRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.closeTimeEnd = request.closeTimeEnd;
+            this.closeTimeStart = request.closeTimeStart;
+            this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

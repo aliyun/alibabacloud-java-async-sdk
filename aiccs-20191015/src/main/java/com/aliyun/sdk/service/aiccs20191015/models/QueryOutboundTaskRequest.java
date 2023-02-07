@@ -236,23 +236,23 @@ public class QueryOutboundTaskRequest extends Request {
             super();
         } 
 
-        private Builder(QueryOutboundTaskRequest response) {
-            super(response);
-            this.ani = response.ani;
-            this.currentPage = response.currentPage;
-            this.departmentId = response.departmentId;
-            this.endDate = response.endDate;
-            this.endTime = response.endTime;
-            this.groupName = response.groupName;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.skillGroup = response.skillGroup;
-            this.startDate = response.startDate;
-            this.startTime = response.startTime;
-            this.status = response.status;
-            this.taskId = response.taskId;
-            this.taskName = response.taskName;
-            this.taskType = response.taskType;
+        private Builder(QueryOutboundTaskRequest request) {
+            super(request);
+            this.ani = request.ani;
+            this.currentPage = request.currentPage;
+            this.departmentId = request.departmentId;
+            this.endDate = request.endDate;
+            this.endTime = request.endTime;
+            this.groupName = request.groupName;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.skillGroup = request.skillGroup;
+            this.startDate = request.startDate;
+            this.startTime = request.startTime;
+            this.status = request.status;
+            this.taskId = request.taskId;
+            this.taskName = request.taskName;
+            this.taskType = request.taskType;
         } 
 
         /**

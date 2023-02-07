@@ -118,14 +118,14 @@ public class StartCallV2Request extends Request {
             super();
         } 
 
-        private Builder(StartCallV2Request response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.callee = response.callee;
-            this.caller = response.caller;
-            this.callerType = response.callerType;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(StartCallV2Request request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.callee = request.callee;
+            this.caller = request.caller;
+            this.callerType = request.callerType;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

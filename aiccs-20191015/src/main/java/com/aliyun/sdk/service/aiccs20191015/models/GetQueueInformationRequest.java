@@ -153,17 +153,17 @@ public class GetQueueInformationRequest extends Request {
             super();
         } 
 
-        private Builder(GetQueueInformationRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.depIds = response.depIds;
-            this.endDate = response.endDate;
-            this.existDepartmentGrouping = response.existDepartmentGrouping;
-            this.existSkillGroupGrouping = response.existSkillGroupGrouping;
-            this.groupIds = response.groupIds;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
+        private Builder(GetQueueInformationRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.depIds = request.depIds;
+            this.endDate = request.endDate;
+            this.existDepartmentGrouping = request.existDepartmentGrouping;
+            this.existSkillGroupGrouping = request.existSkillGroupGrouping;
+            this.groupIds = request.groupIds;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
         } 
 
         /**
@@ -179,7 +179,8 @@ public class GetQueueInformationRequest extends Request {
          * 部门id列表
          */
         public Builder depIds(java.util.List < Long > depIds) {
-            this.putQueryParameter("DepIds", depIds);
+            String depIdsShrink = shrink(depIds, "DepIds", "simple");
+            this.putQueryParameter("DepIds", depIdsShrink);
             this.depIds = depIds;
             return this;
         }
@@ -215,7 +216,8 @@ public class GetQueueInformationRequest extends Request {
          * 技能组id列表
          */
         public Builder groupIds(java.util.List < Long > groupIds) {
-            this.putQueryParameter("GroupIds", groupIds);
+            String groupIdsShrink = shrink(groupIds, "GroupIds", "simple");
+            this.putQueryParameter("GroupIds", groupIdsShrink);
             this.groupIds = groupIds;
             return this;
         }

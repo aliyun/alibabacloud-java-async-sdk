@@ -63,10 +63,10 @@ public class GetCustomerInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetCustomerInfoRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.memberId = response.memberId;
+        private Builder(GetCustomerInfoRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.memberId = request.memberId;
         } 
 
         /**

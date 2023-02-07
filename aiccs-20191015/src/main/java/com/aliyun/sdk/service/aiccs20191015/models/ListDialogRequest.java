@@ -102,13 +102,13 @@ public class ListDialogRequest extends Request {
             super();
         } 
 
-        private Builder(ListDialogRequest response) {
-            super(response);
-            this.called = response.called;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(ListDialogRequest request) {
+            super(request);
+            this.called = request.called;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
         } 
 
         /**

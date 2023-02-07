@@ -119,14 +119,14 @@ public class EditQualityRuleRequest extends Request {
             super();
         } 
 
-        private Builder(EditQualityRuleRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.keyWords = response.keyWords;
-            this.matchType = response.matchType;
-            this.name = response.name;
-            this.qualityRuleId = response.qualityRuleId;
-            this.ruleTag = response.ruleTag;
+        private Builder(EditQualityRuleRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.keyWords = request.keyWords;
+            this.matchType = request.matchType;
+            this.name = request.name;
+            this.qualityRuleId = request.qualityRuleId;
+            this.ruleTag = request.ruleTag;
         } 
 
         /**

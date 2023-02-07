@@ -171,18 +171,18 @@ public class GetQualityResultRequest extends Request {
             super();
         } 
 
-        private Builder(GetQualityResultRequest response) {
-            super(response);
-            this.channelType = response.channelType;
-            this.groupIds = response.groupIds;
-            this.hitStatus = response.hitStatus;
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.projectIds = response.projectIds;
-            this.qualityRuleIds = response.qualityRuleIds;
-            this.touchEndTime = response.touchEndTime;
-            this.touchStartTime = response.touchStartTime;
+        private Builder(GetQualityResultRequest request) {
+            super(request);
+            this.channelType = request.channelType;
+            this.groupIds = request.groupIds;
+            this.hitStatus = request.hitStatus;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.projectIds = request.projectIds;
+            this.qualityRuleIds = request.qualityRuleIds;
+            this.touchEndTime = request.touchEndTime;
+            this.touchStartTime = request.touchStartTime;
         } 
 
         /**

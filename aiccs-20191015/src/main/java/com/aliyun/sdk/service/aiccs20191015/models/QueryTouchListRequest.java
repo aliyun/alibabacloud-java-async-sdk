@@ -284,27 +284,27 @@ public class QueryTouchListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTouchListRequest response) {
-            super(response);
-            this.channelId = response.channelId;
-            this.channelType = response.channelType;
-            this.closeTimeEnd = response.closeTimeEnd;
-            this.closeTimeStart = response.closeTimeStart;
-            this.currentPage = response.currentPage;
-            this.evaluationLevel = response.evaluationLevel;
-            this.evaluationScore = response.evaluationScore;
-            this.evaluationStatus = response.evaluationStatus;
-            this.firstTimeEnd = response.firstTimeEnd;
-            this.firstTimeStart = response.firstTimeStart;
-            this.instanceId = response.instanceId;
-            this.memberId = response.memberId;
-            this.memberName = response.memberName;
-            this.pageSize = response.pageSize;
-            this.queueId = response.queueId;
-            this.servicerId = response.servicerId;
-            this.servicerName = response.servicerName;
-            this.touchId = response.touchId;
-            this.touchType = response.touchType;
+        private Builder(QueryTouchListRequest request) {
+            super(request);
+            this.channelId = request.channelId;
+            this.channelType = request.channelType;
+            this.closeTimeEnd = request.closeTimeEnd;
+            this.closeTimeStart = request.closeTimeStart;
+            this.currentPage = request.currentPage;
+            this.evaluationLevel = request.evaluationLevel;
+            this.evaluationScore = request.evaluationScore;
+            this.evaluationStatus = request.evaluationStatus;
+            this.firstTimeEnd = request.firstTimeEnd;
+            this.firstTimeStart = request.firstTimeStart;
+            this.instanceId = request.instanceId;
+            this.memberId = request.memberId;
+            this.memberName = request.memberName;
+            this.pageSize = request.pageSize;
+            this.queueId = request.queueId;
+            this.servicerId = request.servicerId;
+            this.servicerName = request.servicerName;
+            this.touchId = request.touchId;
+            this.touchType = request.touchType;
         } 
 
         /**

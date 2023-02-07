@@ -76,11 +76,11 @@ public class GetOutbounNumListRequest extends Request {
             super();
         } 
 
-        private Builder(GetOutbounNumListRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(GetOutbounNumListRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class GetInstanceListRequest extends Request {
             super();
         } 
 
-        private Builder(GetInstanceListRequest response) {
-            super(response);
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(GetInstanceListRequest request) {
+            super(request);
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class EncryptPhoneNumRequest extends Request {
             super();
         } 
 
-        private Builder(EncryptPhoneNumRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.phoneNum = response.phoneNum;
+        private Builder(EncryptPhoneNumRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.phoneNum = request.phoneNum;
         } 
 
         /**

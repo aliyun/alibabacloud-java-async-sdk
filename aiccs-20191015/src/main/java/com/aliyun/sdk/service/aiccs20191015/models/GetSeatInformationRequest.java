@@ -127,15 +127,15 @@ public class GetSeatInformationRequest extends Request {
             super();
         } 
 
-        private Builder(GetSeatInformationRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.currentPage = response.currentPage;
-            this.depIds = response.depIds;
-            this.endDate = response.endDate;
-            this.existDepartmentGrouping = response.existDepartmentGrouping;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
+        private Builder(GetSeatInformationRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.currentPage = request.currentPage;
+            this.depIds = request.depIds;
+            this.endDate = request.endDate;
+            this.existDepartmentGrouping = request.existDepartmentGrouping;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
         } 
 
         /**
@@ -160,7 +160,8 @@ public class GetSeatInformationRequest extends Request {
          * 部门id列表
          */
         public Builder depIds(java.util.List < Long > depIds) {
-            this.putQueryParameter("depIds", depIds);
+            String depIdsShrink = shrink(depIds, "depIds", "simple");
+            this.putQueryParameter("depIds", depIdsShrink);
             this.depIds = depIds;
             return this;
         }

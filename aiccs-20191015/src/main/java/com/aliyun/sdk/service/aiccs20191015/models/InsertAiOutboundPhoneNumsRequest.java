@@ -90,12 +90,12 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
             super();
         } 
 
-        private Builder(InsertAiOutboundPhoneNumsRequest response) {
-            super(response);
-            this.batchVersion = response.batchVersion;
-            this.details = response.details;
-            this.instanceId = response.instanceId;
-            this.taskId = response.taskId;
+        private Builder(InsertAiOutboundPhoneNumsRequest request) {
+            super(request);
+            this.batchVersion = request.batchVersion;
+            this.details = request.details;
+            this.instanceId = request.instanceId;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -111,7 +111,8 @@ public class InsertAiOutboundPhoneNumsRequest extends Request {
          * 号码详情(至多30条)
          */
         public Builder details(java.util.List < Details> details) {
-            this.putQueryParameter("Details", details);
+            String detailsShrink = shrink(details, "Details", "json");
+            this.putQueryParameter("Details", detailsShrink);
             this.details = details;
             return this;
         }

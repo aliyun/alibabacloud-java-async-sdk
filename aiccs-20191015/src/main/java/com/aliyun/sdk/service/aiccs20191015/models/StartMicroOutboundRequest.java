@@ -178,19 +178,19 @@ public class StartMicroOutboundRequest extends Request {
             super();
         } 
 
-        private Builder(StartMicroOutboundRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.accountType = response.accountType;
-            this.appName = response.appName;
-            this.calledNumber = response.calledNumber;
-            this.callingNumber = response.callingNumber;
-            this.commandCode = response.commandCode;
-            this.extInfo = response.extInfo;
-            this.ownerId = response.ownerId;
-            this.prodCode = response.prodCode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(StartMicroOutboundRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.accountType = request.accountType;
+            this.appName = request.appName;
+            this.calledNumber = request.calledNumber;
+            this.callingNumber = request.callingNumber;
+            this.commandCode = request.commandCode;
+            this.extInfo = request.extInfo;
+            this.ownerId = request.ownerId;
+            this.prodCode = request.prodCode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

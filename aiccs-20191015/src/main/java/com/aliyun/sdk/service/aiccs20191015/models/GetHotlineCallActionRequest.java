@@ -128,19 +128,19 @@ public class GetHotlineCallActionRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotlineCallActionRequest response) {
-            super(response);
-            this.acc = response.acc;
-            this.accountName = response.accountName;
-            this.act = response.act;
-            this.biz = response.biz;
-            this.clientToken = response.clientToken;
-            this.fromSource = response.fromSource;
-            this.instanceId = response.instanceId;
+        private Builder(GetHotlineCallActionRequest request) {
+            super(request);
+            this.acc = request.acc;
+            this.accountName = request.accountName;
+            this.act = request.act;
+            this.biz = request.biz;
+            this.clientToken = request.clientToken;
+            this.fromSource = request.fromSource;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * Acc.
+         * 热线自定义参数
          */
         public Builder acc(String acc) {
             this.putBodyParameter("Acc", acc);
@@ -167,7 +167,7 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
-         * Biz.
+         * 业务自定义参数
          */
         public Builder biz(String biz) {
             this.putBodyParameter("Biz", biz);

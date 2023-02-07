@@ -153,17 +153,17 @@ public class ListTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ListTaskRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.robotName = response.robotName;
-            this.status = response.status;
-            this.taskId = response.taskId;
-            this.taskName = response.taskName;
+        private Builder(ListTaskRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.robotName = request.robotName;
+            this.status = request.status;
+            this.taskId = request.taskId;
+            this.taskName = request.taskName;
         } 
 
         /**

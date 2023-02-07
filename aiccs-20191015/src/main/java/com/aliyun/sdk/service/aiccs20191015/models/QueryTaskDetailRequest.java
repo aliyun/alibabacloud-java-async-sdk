@@ -234,23 +234,23 @@ public class QueryTaskDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTaskDetailRequest response) {
-            super(response);
-            this.ani = response.ani;
-            this.currentPage = response.currentPage;
-            this.departmentIdList = response.departmentIdList;
-            this.dnis = response.dnis;
-            this.endReasonList = response.endReasonList;
-            this.instanceId = response.instanceId;
-            this.outboundTaskId = response.outboundTaskId;
-            this.pageSize = response.pageSize;
-            this.priorityList = response.priorityList;
-            this.servicerId = response.servicerId;
-            this.servicerName = response.servicerName;
-            this.sid = response.sid;
-            this.skillGroup = response.skillGroup;
-            this.statusList = response.statusList;
-            this.taskId = response.taskId;
+        private Builder(QueryTaskDetailRequest request) {
+            super(request);
+            this.ani = request.ani;
+            this.currentPage = request.currentPage;
+            this.departmentIdList = request.departmentIdList;
+            this.dnis = request.dnis;
+            this.endReasonList = request.endReasonList;
+            this.instanceId = request.instanceId;
+            this.outboundTaskId = request.outboundTaskId;
+            this.pageSize = request.pageSize;
+            this.priorityList = request.priorityList;
+            this.servicerId = request.servicerId;
+            this.servicerName = request.servicerName;
+            this.sid = request.sid;
+            this.skillGroup = request.skillGroup;
+            this.statusList = request.statusList;
+            this.taskId = request.taskId;
         } 
 
         /**

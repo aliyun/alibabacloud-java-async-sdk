@@ -77,11 +77,11 @@ public class InsertTaskDetailRequest extends Request {
             super();
         } 
 
-        private Builder(InsertTaskDetailRequest response) {
-            super(response);
-            this.callInfos = response.callInfos;
-            this.instanceId = response.instanceId;
-            this.outboundTaskId = response.outboundTaskId;
+        private Builder(InsertTaskDetailRequest request) {
+            super(request);
+            this.callInfos = request.callInfos;
+            this.instanceId = request.instanceId;
+            this.outboundTaskId = request.outboundTaskId;
         } 
 
         /**

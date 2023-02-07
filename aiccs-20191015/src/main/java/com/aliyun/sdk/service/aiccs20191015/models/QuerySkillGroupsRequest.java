@@ -116,14 +116,14 @@ public class QuerySkillGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySkillGroupsRequest response) {
-            super(response);
-            this.channelType = response.channelType;
-            this.clientToken = response.clientToken;
-            this.departmentId = response.departmentId;
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(QuerySkillGroupsRequest request) {
+            super(request);
+            this.channelType = request.channelType;
+            this.clientToken = request.clientToken;
+            this.departmentId = request.departmentId;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**

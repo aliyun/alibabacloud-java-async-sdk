@@ -63,10 +63,10 @@ public class EditQualityRuleTagRequest extends Request {
             super();
         } 
 
-        private Builder(EditQualityRuleTagRequest response) {
-            super(response);
-            this.analysisTypes = response.analysisTypes;
-            this.instanceId = response.instanceId;
+        private Builder(EditQualityRuleTagRequest request) {
+            super(request);
+            this.analysisTypes = request.analysisTypes;
+            this.instanceId = request.instanceId;
         } 
 
         /**

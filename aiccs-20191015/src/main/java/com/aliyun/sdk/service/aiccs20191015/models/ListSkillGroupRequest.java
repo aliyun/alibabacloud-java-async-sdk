@@ -76,11 +76,11 @@ public class ListSkillGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ListSkillGroupRequest response) {
-            super(response);
-            this.channelType = response.channelType;
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
+        private Builder(ListSkillGroupRequest request) {
+            super(request);
+            this.channelType = request.channelType;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
         } 
 
         /**

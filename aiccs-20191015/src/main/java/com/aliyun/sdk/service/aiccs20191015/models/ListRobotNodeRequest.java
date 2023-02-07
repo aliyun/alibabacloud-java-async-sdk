@@ -88,12 +88,12 @@ public class ListRobotNodeRequest extends Request {
             super();
         } 
 
-        private Builder(ListRobotNodeRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.robotId = response.robotId;
+        private Builder(ListRobotNodeRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.robotId = request.robotId;
         } 
 
         /**

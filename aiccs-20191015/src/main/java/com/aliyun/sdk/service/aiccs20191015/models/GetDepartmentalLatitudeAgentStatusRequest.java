@@ -127,15 +127,15 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetDepartmentalLatitudeAgentStatusRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.depIds = response.depIds;
-            this.endDate = response.endDate;
-            this.existDepartmentGrouping = response.existDepartmentGrouping;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
+        private Builder(GetDepartmentalLatitudeAgentStatusRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.depIds = request.depIds;
+            this.endDate = request.endDate;
+            this.existDepartmentGrouping = request.existDepartmentGrouping;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
         } 
 
         /**
@@ -151,7 +151,8 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
          * 技能组分组id列表
          */
         public Builder depIds(java.util.List < Long > depIds) {
-            this.putQueryParameter("DepIds", depIds);
+            String depIdsShrink = shrink(depIds, "DepIds", "simple");
+            this.putQueryParameter("DepIds", depIdsShrink);
             this.depIds = depIds;
             return this;
         }

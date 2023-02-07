@@ -118,14 +118,14 @@ public class MakeCallRequest extends Request {
             super();
         } 
 
-        private Builder(MakeCallRequest response) {
-            super(response);
-            this.calledNumber = response.calledNumber;
-            this.callingNumber = response.callingNumber;
-            this.commandCode = response.commandCode;
-            this.extInfo = response.extInfo;
-            this.outerAccountId = response.outerAccountId;
-            this.outerAccountType = response.outerAccountType;
+        private Builder(MakeCallRequest request) {
+            super(request);
+            this.calledNumber = request.calledNumber;
+            this.callingNumber = request.callingNumber;
+            this.commandCode = request.commandCode;
+            this.extInfo = request.extInfo;
+            this.outerAccountId = request.outerAccountId;
+            this.outerAccountType = request.outerAccountType;
         } 
 
         /**

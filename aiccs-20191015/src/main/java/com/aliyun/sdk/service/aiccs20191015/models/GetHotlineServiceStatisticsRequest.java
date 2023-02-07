@@ -192,27 +192,28 @@ public class GetHotlineServiceStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotlineServiceStatisticsRequest response) {
-            super(response);
-            this.agentIds = response.agentIds;
-            this.currentPage = response.currentPage;
-            this.depIds = response.depIds;
-            this.endDate = response.endDate;
-            this.existAgentGrouping = response.existAgentGrouping;
-            this.existDepartmentGrouping = response.existDepartmentGrouping;
-            this.existSkillGroupGrouping = response.existSkillGroupGrouping;
-            this.groupIds = response.groupIds;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.startDate = response.startDate;
-            this.timeLatitudeType = response.timeLatitudeType;
+        private Builder(GetHotlineServiceStatisticsRequest request) {
+            super(request);
+            this.agentIds = request.agentIds;
+            this.currentPage = request.currentPage;
+            this.depIds = request.depIds;
+            this.endDate = request.endDate;
+            this.existAgentGrouping = request.existAgentGrouping;
+            this.existDepartmentGrouping = request.existDepartmentGrouping;
+            this.existSkillGroupGrouping = request.existSkillGroupGrouping;
+            this.groupIds = request.groupIds;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.startDate = request.startDate;
+            this.timeLatitudeType = request.timeLatitudeType;
         } 
 
         /**
          * 坐席id列表
          */
         public Builder agentIds(java.util.List < Long > agentIds) {
-            this.putQueryParameter("AgentIds", agentIds);
+            String agentIdsShrink = shrink(agentIds, "AgentIds", "simple");
+            this.putQueryParameter("AgentIds", agentIdsShrink);
             this.agentIds = agentIds;
             return this;
         }
@@ -230,7 +231,8 @@ public class GetHotlineServiceStatisticsRequest extends Request {
          * 部门id列表
          */
         public Builder depIds(java.util.List < Long > depIds) {
-            this.putQueryParameter("DepIds", depIds);
+            String depIdsShrink = shrink(depIds, "DepIds", "simple");
+            this.putQueryParameter("DepIds", depIdsShrink);
             this.depIds = depIds;
             return this;
         }
@@ -275,7 +277,8 @@ public class GetHotlineServiceStatisticsRequest extends Request {
          * 技能组id列表
          */
         public Builder groupIds(java.util.List < Long > groupIds) {
-            this.putQueryParameter("GroupIds", groupIds);
+            String groupIdsShrink = shrink(groupIds, "GroupIds", "simple");
+            this.putQueryParameter("GroupIds", groupIdsShrink);
             this.groupIds = groupIds;
             return this;
         }

@@ -63,10 +63,10 @@ public class SuspendOutboundTaskRequest extends Request {
             super();
         } 
 
-        private Builder(SuspendOutboundTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.outboundTaskId = response.outboundTaskId;
+        private Builder(SuspendOutboundTaskRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.outboundTaskId = request.outboundTaskId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class GetAiOutboundTaskDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetAiOutboundTaskDetailRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.taskId = response.taskId;
+        private Builder(GetAiOutboundTaskDetailRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.taskId = request.taskId;
         } 
 
         /**

@@ -129,15 +129,15 @@ public class CreateSkillGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSkillGroupRequest response) {
-            super(response);
-            this.channelType = response.channelType;
-            this.clientToken = response.clientToken;
-            this.departmentId = response.departmentId;
-            this.description = response.description;
-            this.displayName = response.displayName;
-            this.instanceId = response.instanceId;
-            this.skillGroupName = response.skillGroupName;
+        private Builder(CreateSkillGroupRequest request) {
+            super(request);
+            this.channelType = request.channelType;
+            this.clientToken = request.clientToken;
+            this.departmentId = request.departmentId;
+            this.description = request.description;
+            this.displayName = request.displayName;
+            this.instanceId = request.instanceId;
+            this.skillGroupName = request.skillGroupName;
         } 
 
         /**

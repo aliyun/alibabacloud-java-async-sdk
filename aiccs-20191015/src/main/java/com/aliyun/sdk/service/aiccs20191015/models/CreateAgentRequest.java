@@ -116,14 +116,14 @@ public class CreateAgentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAgentRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.clientToken = response.clientToken;
-            this.displayName = response.displayName;
-            this.instanceId = response.instanceId;
-            this.skillGroupId = response.skillGroupId;
-            this.skillGroupIdList = response.skillGroupIdList;
+        private Builder(CreateAgentRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.clientToken = request.clientToken;
+            this.displayName = request.displayName;
+            this.instanceId = request.instanceId;
+            this.skillGroupId = request.skillGroupId;
+            this.skillGroupIdList = request.skillGroupIdList;
         } 
 
         /**

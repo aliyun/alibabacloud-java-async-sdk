@@ -77,11 +77,11 @@ public class ChangeQualityProjectStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ChangeQualityProjectStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.projectId = response.projectId;
-            this.status = response.status;
+        private Builder(ChangeQualityProjectStatusRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
+            this.status = request.status;
         } 
 
         /**

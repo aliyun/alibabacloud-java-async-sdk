@@ -63,10 +63,10 @@ public class StartChatWorkRequest extends Request {
             super();
         } 
 
-        private Builder(StartChatWorkRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.instanceId = response.instanceId;
+        private Builder(StartChatWorkRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.instanceId = request.instanceId;
         } 
 
         /**

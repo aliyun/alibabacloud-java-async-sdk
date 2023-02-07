@@ -63,10 +63,10 @@ public class GetDepGroupTreeDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetDepGroupTreeDataRequest response) {
-            super(response);
-            this.agentId = response.agentId;
-            this.instanceId = response.instanceId;
+        private Builder(GetDepGroupTreeDataRequest request) {
+            super(request);
+            this.agentId = request.agentId;
+            this.instanceId = request.instanceId;
         } 
 
         /**

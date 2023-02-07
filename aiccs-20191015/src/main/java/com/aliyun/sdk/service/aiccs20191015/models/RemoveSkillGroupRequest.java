@@ -76,11 +76,11 @@ public class RemoveSkillGroupRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveSkillGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.skillGroupId = response.skillGroupId;
+        private Builder(RemoveSkillGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.skillGroupId = request.skillGroupId;
         } 
 
         /**

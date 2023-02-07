@@ -126,15 +126,15 @@ public class AiccsSmartCallOperateRequest extends Request {
             super();
         } 
 
-        private Builder(AiccsSmartCallOperateRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.command = response.command;
-            this.ownerId = response.ownerId;
-            this.param = response.param;
-            this.prodCode = response.prodCode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AiccsSmartCallOperateRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.command = request.command;
+            this.ownerId = request.ownerId;
+            this.param = request.param;
+            this.prodCode = request.prodCode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

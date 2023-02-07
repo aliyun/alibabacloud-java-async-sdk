@@ -143,16 +143,16 @@ public class GetAiOutboundTaskListRequest extends Request {
             super();
         } 
 
-        private Builder(GetAiOutboundTaskListRequest response) {
-            super(response);
-            this.createTimeEnd = response.createTimeEnd;
-            this.createTimeStart = response.createTimeStart;
-            this.currentPage = response.currentPage;
-            this.instanceId = response.instanceId;
-            this.pageSize = response.pageSize;
-            this.searchKey = response.searchKey;
-            this.status = response.status;
-            this.type = response.type;
+        private Builder(GetAiOutboundTaskListRequest request) {
+            super(request);
+            this.createTimeEnd = request.createTimeEnd;
+            this.createTimeStart = request.createTimeStart;
+            this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
+            this.searchKey = request.searchKey;
+            this.status = request.status;
+            this.type = request.type;
         } 
 
         /**

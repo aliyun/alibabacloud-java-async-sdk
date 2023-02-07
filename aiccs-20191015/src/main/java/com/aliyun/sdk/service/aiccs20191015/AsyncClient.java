@@ -24,8 +24,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddSkillGroupResponse> addSkillGroup(AddSkillGroupRequest request);
 
-    CompletableFuture<AiccsEchoResponse> aiccsEcho(AiccsEchoRequest request);
-
     CompletableFuture<AiccsSmartCallResponse> aiccsSmartCall(AiccsSmartCallRequest request);
 
     CompletableFuture<AiccsSmartCallOperateResponse> aiccsSmartCallOperate(AiccsSmartCallOperateRequest request);
@@ -42,8 +40,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeQualityProjectStatusResponse> changeQualityProjectStatus(ChangeQualityProjectStatusRequest request);
 
-    CompletableFuture<CreateAccountGroupResponse> createAccountGroup(CreateAccountGroupRequest request);
-
     CompletableFuture<CreateAgentResponse> createAgent(CreateAgentRequest request);
 
     CompletableFuture<CreateAiOutboundTaskResponse> createAiOutboundTask(CreateAiOutboundTaskRequest request);
@@ -51,8 +47,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAiOutboundTaskBatchResponse> createAiOutboundTaskBatch(CreateAiOutboundTaskBatchRequest request);
 
     CompletableFuture<CreateDepartmentResponse> createDepartment(CreateDepartmentRequest request);
-
-    CompletableFuture<CreateNameListResponse> createNameList(CreateNameListRequest request);
 
     CompletableFuture<CreateOutboundTaskResponse> createOutboundTask(CreateOutboundTaskRequest request);
 
@@ -65,8 +59,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
     CompletableFuture<CreateThirdSsoAgentResponse> createThirdSsoAgent(CreateThirdSsoAgentRequest request);
-
-    CompletableFuture<DeleteAccountGroupResponse> deleteAccountGroup(DeleteAccountGroupRequest request);
 
     CompletableFuture<DeleteAgentResponse> deleteAgent(DeleteAgentRequest request);
 
@@ -85,8 +77,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteQualityRuleResponse> deleteQualityRule(DeleteQualityRuleRequest request);
 
     CompletableFuture<DeleteSkillGroupResponse> deleteSkillGroup(DeleteSkillGroupRequest request);
-
-    CompletableFuture<DeleteTaskAiOutboundTaskResponse> deleteTaskAiOutboundTask(DeleteTaskAiOutboundTaskRequest request);
 
     CompletableFuture<DescribeRecordDataResponse> describeRecordData(DescribeRecordDataRequest request);
 
@@ -117,8 +107,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAgentServiceStatusResponse> getAgentServiceStatus(GetAgentServiceStatusRequest request);
 
     CompletableFuture<GetAgentStatisticsResponse> getAgentStatistics(GetAgentStatisticsRequest request);
-
-    CompletableFuture<GetAgentStatusResponse> getAgentStatus(GetAgentStatusRequest request);
 
     CompletableFuture<GetAiOutboundTaskBizDataResponse> getAiOutboundTaskBizData(GetAiOutboundTaskBizDataRequest request);
 
@@ -163,8 +151,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIndexCurrentValueResponse> getIndexCurrentValue(GetIndexCurrentValueRequest request);
 
     CompletableFuture<GetInstanceListResponse> getInstanceList(GetInstanceListRequest request);
-
-    CompletableFuture<GetListDepartmentResponse> getListDepartment(GetListDepartmentRequest request);
 
     CompletableFuture<GetMcuLvsIpResponse> getMcuLvsIp(GetMcuLvsIpRequest request);
 
@@ -236,21 +222,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDialogResponse> listDialog(ListDialogRequest request);
 
-    CompletableFuture<ListDialogByCreateTimeResponse> listDialogByCreateTime(ListDialogByCreateTimeRequest request);
-
     CompletableFuture<ListHotlineRecordResponse> listHotlineRecord(ListHotlineRecordRequest request);
 
     CompletableFuture<ListHotlineRecordDetailResponse> listHotlineRecordDetail(ListHotlineRecordDetailRequest request);
 
-    CompletableFuture<ListHotlineRecordsResponse> listHotlineRecords(ListHotlineRecordsRequest request);
-
     CompletableFuture<ListOutboundPhoneNumberResponse> listOutboundPhoneNumber(ListOutboundPhoneNumberRequest request);
 
-    CompletableFuture<ListOutboundStrategiesResponse> listOutboundStrategies(ListOutboundStrategiesRequest request);
-
     CompletableFuture<ListOuterOrderedNumbersResponse> listOuterOrderedNumbers(ListOuterOrderedNumbersRequest request);
-
-    CompletableFuture<ListRobotAllResponse> listRobotAll(ListRobotAllRequest request);
 
     CompletableFuture<ListRobotCallDialogResponse> listRobotCallDialog(ListRobotCallDialogRequest request);
 
@@ -280,8 +258,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryTaskDetailResponse> queryTaskDetail(QueryTaskDetailRequest request);
 
-    CompletableFuture<QueryTaskResultResponse> queryTaskResult(QueryTaskResultRequest request);
-
     CompletableFuture<QueryTicketsResponse> queryTickets(QueryTicketsRequest request);
 
     CompletableFuture<QueryTouchListResponse> queryTouchList(QueryTouchListRequest request);
@@ -302,12 +278,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SendHotlineHeartBeatResponse> sendHotlineHeartBeat(SendHotlineHeartBeatRequest request);
 
-    CompletableFuture<SendMicroCommandResponse> sendMicroCommand(SendMicroCommandRequest request);
-
-    CompletableFuture<SendOutboundCommandResponse> sendOutboundCommand(SendOutboundCommandRequest request);
-
-    CompletableFuture<SmartOutboundResponse> smartOutbound(SmartOutboundRequest request);
-
     CompletableFuture<StartAiOutboundTaskResponse> startAiOutboundTask(StartAiOutboundTaskRequest request);
 
     CompletableFuture<StartCallResponse> startCall(StartCallRequest request);
@@ -320,11 +290,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartMicroOutboundResponse> startMicroOutbound(StartMicroOutboundRequest request);
 
-    CompletableFuture<StartMicroOutboundNewResponse> startMicroOutboundNew(StartMicroOutboundNewRequest request);
-
     CompletableFuture<StartTaskResponse> startTask(StartTaskRequest request);
-
-    CompletableFuture<StartTaskByAppResponse> startTaskByApp(StartTaskByAppRequest request);
 
     CompletableFuture<StopAiOutboundTaskResponse> stopAiOutboundTask(StopAiOutboundTaskRequest request);
 
@@ -335,10 +301,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SuspendOutboundTaskResponse> suspendOutboundTask(SuspendOutboundTaskRequest request);
 
     CompletableFuture<TerminateAiOutboundTaskResponse> terminateAiOutboundTask(TerminateAiOutboundTaskRequest request);
-
-    CompletableFuture<TerminateTaskAiOutboundTaskResponse> terminateTaskAiOutboundTask(TerminateTaskAiOutboundTaskRequest request);
-
-    CompletableFuture<TestApiAResponse> testApiA(TestApiARequest request);
 
     CompletableFuture<TransferCallToSkillGroupResponse> transferCallToSkillGroup(TransferCallToSkillGroupRequest request);
 

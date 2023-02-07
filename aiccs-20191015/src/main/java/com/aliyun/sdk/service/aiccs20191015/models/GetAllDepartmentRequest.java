@@ -49,9 +49,9 @@ public class GetAllDepartmentRequest extends Request {
             super();
         } 
 
-        private Builder(GetAllDepartmentRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(GetAllDepartmentRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**

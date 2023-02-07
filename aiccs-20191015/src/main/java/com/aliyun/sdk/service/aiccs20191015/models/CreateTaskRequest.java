@@ -250,24 +250,24 @@ public class CreateTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTaskRequest response) {
-            super(response);
-            this.callString = response.callString;
-            this.callStringType = response.callStringType;
-            this.caller = response.caller;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.retryCount = response.retryCount;
-            this.retryFlag = response.retryFlag;
-            this.retryInterval = response.retryInterval;
-            this.retryStatusCode = response.retryStatusCode;
-            this.robotId = response.robotId;
-            this.seatCount = response.seatCount;
-            this.startNow = response.startNow;
-            this.taskName = response.taskName;
-            this.workDay = response.workDay;
-            this.workTimeList = response.workTimeList;
+        private Builder(CreateTaskRequest request) {
+            super(request);
+            this.callString = request.callString;
+            this.callStringType = request.callStringType;
+            this.caller = request.caller;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.retryCount = request.retryCount;
+            this.retryFlag = request.retryFlag;
+            this.retryInterval = request.retryInterval;
+            this.retryStatusCode = request.retryStatusCode;
+            this.robotId = request.robotId;
+            this.seatCount = request.seatCount;
+            this.startNow = request.startNow;
+            this.taskName = request.taskName;
+            this.workDay = request.workDay;
+            this.workTimeList = request.workTimeList;
         } 
 
         /**

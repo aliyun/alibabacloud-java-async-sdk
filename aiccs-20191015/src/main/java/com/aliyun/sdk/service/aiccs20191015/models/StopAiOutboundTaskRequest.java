@@ -63,10 +63,10 @@ public class StopAiOutboundTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StopAiOutboundTaskRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.taskId = response.taskId;
+        private Builder(StopAiOutboundTaskRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.taskId = request.taskId;
         } 
 
         /**

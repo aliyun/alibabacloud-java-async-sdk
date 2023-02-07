@@ -77,18 +77,19 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveAgentFromSkillGroupRequest response) {
-            super(response);
-            this.agentIds = response.agentIds;
-            this.instanceId = response.instanceId;
-            this.skillGroupId = response.skillGroupId;
+        private Builder(RemoveAgentFromSkillGroupRequest request) {
+            super(request);
+            this.agentIds = request.agentIds;
+            this.instanceId = request.instanceId;
+            this.skillGroupId = request.skillGroupId;
         } 
 
         /**
          * 坐席列表
          */
         public Builder agentIds(java.util.List < Long > agentIds) {
-            this.putQueryParameter("AgentIds", agentIds);
+            String agentIdsShrink = shrink(agentIds, "AgentIds", "json");
+            this.putQueryParameter("AgentIds", agentIdsShrink);
             this.agentIds = agentIds;
             return this;
         }

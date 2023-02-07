@@ -102,13 +102,13 @@ public class GetCallSoundRecordRequest extends Request {
             super();
         } 
 
-        private Builder(GetCallSoundRecordRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.createTime = response.createTime;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GetCallSoundRecordRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.createTime = request.createTime;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

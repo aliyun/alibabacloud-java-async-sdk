@@ -169,18 +169,18 @@ public class TransferCallToSkillGroupRequest extends Request {
             super();
         } 
 
-        private Builder(TransferCallToSkillGroupRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.callId = response.callId;
-            this.clientToken = response.clientToken;
-            this.connectionId = response.connectionId;
-            this.holdConnectionId = response.holdConnectionId;
-            this.instanceId = response.instanceId;
-            this.isSingleTransfer = response.isSingleTransfer;
-            this.jobId = response.jobId;
-            this.skillGroupId = response.skillGroupId;
-            this.type = response.type;
+        private Builder(TransferCallToSkillGroupRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.callId = request.callId;
+            this.clientToken = request.clientToken;
+            this.connectionId = request.connectionId;
+            this.holdConnectionId = request.holdConnectionId;
+            this.instanceId = request.instanceId;
+            this.isSingleTransfer = request.isSingleTransfer;
+            this.jobId = request.jobId;
+            this.skillGroupId = request.skillGroupId;
+            this.type = request.type;
         } 
 
         /**

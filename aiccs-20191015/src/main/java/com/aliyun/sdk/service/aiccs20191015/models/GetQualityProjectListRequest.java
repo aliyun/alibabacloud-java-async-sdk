@@ -130,15 +130,15 @@ public class GetQualityProjectListRequest extends Request {
             super();
         } 
 
-        private Builder(GetQualityProjectListRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.projectId = response.projectId;
-            this.projectName = response.projectName;
-            this.status = response.status;
-            this.checkFreqType = response.checkFreqType;
+        private Builder(GetQualityProjectListRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
+            this.projectName = request.projectName;
+            this.status = request.status;
+            this.checkFreqType = request.checkFreqType;
         } 
 
         /**
