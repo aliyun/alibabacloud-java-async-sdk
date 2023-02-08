@@ -26,11 +26,16 @@ public class ListInstancesRequest extends Request {
     @Validation(required = true, maximum = 200, minimum = 10)
     private Integer pageSize;
 
+    @Query
+    @NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class ListInstancesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String filter; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class ListInstancesRequest extends Request {
             this.filter = request.filter;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -107,6 +121,15 @@ public class ListInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * 资源组ID
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

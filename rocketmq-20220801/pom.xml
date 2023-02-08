@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-rocketmq20220801</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>alibabacloud-rocketmq20220801</name>
   <description>Alibaba Cloud RocketMQ (20220801) Async SDK for Java

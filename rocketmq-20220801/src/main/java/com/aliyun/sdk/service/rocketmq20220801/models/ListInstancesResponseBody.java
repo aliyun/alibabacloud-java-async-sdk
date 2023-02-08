@@ -222,6 +222,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("remark")
         private String remark;
 
+        @NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("seriesCode")
         private String seriesCode;
 
@@ -257,6 +260,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.releaseTime = builder.releaseTime;
             this.remark = builder.remark;
+            this.resourceGroupId = builder.resourceGroupId;
             this.seriesCode = builder.seriesCode;
             this.serviceCode = builder.serviceCode;
             this.startTime = builder.startTime;
@@ -346,6 +350,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return seriesCode
          */
         public String getSeriesCode() {
@@ -412,6 +423,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String releaseTime; 
             private String remark; 
+            private String resourceGroupId; 
             private String seriesCode; 
             private String serviceCode; 
             private String startTime; 
@@ -498,6 +510,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * 资源组ID
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -51,6 +51,7 @@ com/aliyun/sdk/service/rocketmq20220801/models/DeleteTopicRequest$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetInstanceResponse$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateConsumerGroupRequest.class
 com/aliyun/sdk/service/rocketmq20220801/models/ListInstancesResponseBody$List$Builder.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupResponseBody$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/CreateConsumerGroupResponseBody.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetInstanceResponseBody$InstanceQuotas$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateTopicRequest$Builder.class
@@ -82,6 +83,7 @@ com/aliyun/sdk/service/rocketmq20220801/models/GetConsumerGroupResponseBody$Buil
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateInstanceRequest$NetworkInfo.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateConsumerGroupResponse$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/ListInstancesResponse.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupResponse$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteInstanceRequest$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetInstanceResponseBody$AclInfo.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteConsumerGroupResponse$BuilderImpl.class
@@ -115,6 +117,7 @@ com/aliyun/sdk/service/rocketmq20220801/models/UpdateConsumerGroupRequest$Consum
 com/aliyun/sdk/service/rocketmq20220801/models/ListTopicsResponse$BuilderImpl.class
 com/aliyun/sdk/service/rocketmq20220801/models/CreateInstanceResponseBody$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteTopicResponse$BuilderImpl.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupResponse.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateTopicResponse.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetInstanceResponseBody$Endpoints.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetInstanceResponse.class
@@ -129,9 +132,11 @@ com/aliyun/sdk/service/rocketmq20220801/models/CreateTopicRequest.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateInstanceRequest$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteTopicResponseBody.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteTopicResponseBody$Builder.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupResponse$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/CreateTopicResponse$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteInstanceResponse$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetInstanceResponseBody$ProductInfo$Builder.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupRequest$1.class
 com/aliyun/sdk/service/rocketmq20220801/DefaultAsyncClient.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteInstanceResponseBody$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/ListTopicsRequest$Builder.class
@@ -150,11 +155,15 @@ com/aliyun/sdk/service/rocketmq20220801/models/GetConsumerGroupResponseBody$Data
 com/aliyun/sdk/service/rocketmq20220801/models/CreateConsumerGroupResponseBody$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetInstanceResponseBody$InstanceQuotas.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetTopicResponseBody$Builder.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupRequest.class
 com/aliyun/sdk/service/rocketmq20220801/models/CreateInstanceRequest$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteConsumerGroupResponse.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupResponse$BuilderImpl.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupResponseBody$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/ListConsumerGroupsResponseBody$Data$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateConsumerGroupResponse$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/ListTopicsResponseBody$1.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupResponseBody.class
 com/aliyun/sdk/service/rocketmq20220801/models/GetInstanceResponseBody$NetworkInfo.class
 com/aliyun/sdk/service/rocketmq20220801/models/ListTopicsResponseBody$List$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/DeleteInstanceRequest.class
@@ -203,6 +212,7 @@ com/aliyun/sdk/service/rocketmq20220801/models/ListConsumerGroupsResponse$Builde
 com/aliyun/sdk/service/rocketmq20220801/models/ListInstancesRequest$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateInstanceResponse$1.class
 com/aliyun/sdk/service/rocketmq20220801/models/CreateConsumerGroupRequest$ConsumeRetryPolicy.class
+com/aliyun/sdk/service/rocketmq20220801/models/ChangeResourceGroupRequest$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/CreateInstanceRequest$VpcInfo.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateInstanceRequest$NetworkInfo$Builder.class
 com/aliyun/sdk/service/rocketmq20220801/models/UpdateInstanceRequest$InternetInfo.class
