@@ -89,6 +89,30 @@ public class CreateMeetingTransRequest extends Request {
     @NameInMap("RealtimeResultLevel")
     private Integer realtimeResultLevel;
 
+    @Body
+    @NameInMap("RealtimeResultMeetingInfoEnabled")
+    private Boolean realtimeResultMeetingInfoEnabled;
+
+    @Body
+    @NameInMap("RealtimeResultWordsEnabled")
+    private Boolean realtimeResultWordsEnabled;
+
+    @Body
+    @NameInMap("TranslateActiveResultLevel")
+    private Integer translateActiveResultLevel;
+
+    @Body
+    @NameInMap("TranslateLanguages")
+    private String translateLanguages;
+
+    @Body
+    @NameInMap("TranslateResultEnabled")
+    private Boolean translateResultEnabled;
+
+    @Body
+    @NameInMap("TranslateResultLevel")
+    private Integer translateResultLevel;
+
     private CreateMeetingTransRequest(Builder builder) {
         super(builder);
         this.appKey = builder.appKey;
@@ -109,6 +133,12 @@ public class CreateMeetingTransRequest extends Request {
         this.realtimeActiveResultLevel = builder.realtimeActiveResultLevel;
         this.realtimeResultEnabled = builder.realtimeResultEnabled;
         this.realtimeResultLevel = builder.realtimeResultLevel;
+        this.realtimeResultMeetingInfoEnabled = builder.realtimeResultMeetingInfoEnabled;
+        this.realtimeResultWordsEnabled = builder.realtimeResultWordsEnabled;
+        this.translateActiveResultLevel = builder.translateActiveResultLevel;
+        this.translateLanguages = builder.translateLanguages;
+        this.translateResultEnabled = builder.translateResultEnabled;
+        this.translateResultLevel = builder.translateResultLevel;
     }
 
     public static Builder builder() {
@@ -250,6 +280,48 @@ public class CreateMeetingTransRequest extends Request {
         return this.realtimeResultLevel;
     }
 
+    /**
+     * @return realtimeResultMeetingInfoEnabled
+     */
+    public Boolean getRealtimeResultMeetingInfoEnabled() {
+        return this.realtimeResultMeetingInfoEnabled;
+    }
+
+    /**
+     * @return realtimeResultWordsEnabled
+     */
+    public Boolean getRealtimeResultWordsEnabled() {
+        return this.realtimeResultWordsEnabled;
+    }
+
+    /**
+     * @return translateActiveResultLevel
+     */
+    public Integer getTranslateActiveResultLevel() {
+        return this.translateActiveResultLevel;
+    }
+
+    /**
+     * @return translateLanguages
+     */
+    public String getTranslateLanguages() {
+        return this.translateLanguages;
+    }
+
+    /**
+     * @return translateResultEnabled
+     */
+    public Boolean getTranslateResultEnabled() {
+        return this.translateResultEnabled;
+    }
+
+    /**
+     * @return translateResultLevel
+     */
+    public Integer getTranslateResultLevel() {
+        return this.translateResultLevel;
+    }
+
     public static final class Builder extends Request.Builder<CreateMeetingTransRequest, Builder> {
         private String appKey; 
         private Integer audioBitRate; 
@@ -269,6 +341,12 @@ public class CreateMeetingTransRequest extends Request {
         private Integer realtimeActiveResultLevel; 
         private Boolean realtimeResultEnabled; 
         private Integer realtimeResultLevel; 
+        private Boolean realtimeResultMeetingInfoEnabled; 
+        private Boolean realtimeResultWordsEnabled; 
+        private Integer translateActiveResultLevel; 
+        private String translateLanguages; 
+        private Boolean translateResultEnabled; 
+        private Integer translateResultLevel; 
 
         private Builder() {
             super();
@@ -294,6 +372,12 @@ public class CreateMeetingTransRequest extends Request {
             this.realtimeActiveResultLevel = request.realtimeActiveResultLevel;
             this.realtimeResultEnabled = request.realtimeResultEnabled;
             this.realtimeResultLevel = request.realtimeResultLevel;
+            this.realtimeResultMeetingInfoEnabled = request.realtimeResultMeetingInfoEnabled;
+            this.realtimeResultWordsEnabled = request.realtimeResultWordsEnabled;
+            this.translateActiveResultLevel = request.translateActiveResultLevel;
+            this.translateLanguages = request.translateLanguages;
+            this.translateResultEnabled = request.translateResultEnabled;
+            this.translateResultLevel = request.translateResultLevel;
         } 
 
         /**
@@ -329,6 +413,8 @@ public class CreateMeetingTransRequest extends Request {
          * cn：中文。
          * en：英文。
          * yue：粤语。
+         * fspk：中英文自由说。
+         * multi：动态语言切换。
          */
         public Builder audioLanguage(String audioLanguage) {
             this.putBodyParameter("AudioLanguage", audioLanguage);
@@ -337,7 +423,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 是否开启mp3格式音频同步转码，默认是False。
+         * 是否开启mp3格式音频同步转码，默认是false。
          */
         public Builder audioOutputEnabled(Boolean audioOutputEnabled) {
             this.putBodyParameter("AudioOutputEnabled", audioOutputEnabled);
@@ -346,7 +432,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启音频同步转码时，转码音频写入到的OSS Bucket。
+         * 开启音频同步转码时，转码音频写入到的OSS Bucket，需要与管控台项目配置的OSS Bucket一致。
          */
         public Builder audioOutputOssBucket(String audioOutputOssBucket) {
             this.putBodyParameter("AudioOutputOssBucket", audioOutputOssBucket);
@@ -355,9 +441,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启音频同步转码时，转码音频写入到的OSS文件路径。
-         * <p>
-         * 示例：目录/文件名
+         * 开启音频同步转码时，转码音频写入到的OSS文件路径，需要以"tingwu/"为前缀。
          */
         public Builder audioOutputOssPath(String audioOutputOssPath) {
             this.putBodyParameter("AudioOutputOssPath", audioOutputOssPath);
@@ -384,7 +468,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会后智能提取时，是否开启有效音频片断检测结果写入，默认是False。
+         * 开启会后智能提取时，是否开启有效音频片断检测结果写入，默认是false。
          */
         public Builder audioSegmentsEnabled(Boolean audioSegmentsEnabled) {
             this.putBodyParameter("AudioSegmentsEnabled", audioSegmentsEnabled);
@@ -393,7 +477,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会后智能提取时，是否会中识别结果写入，默认是False。
+         * 开启会后智能提取时，是否会中识别结果写入，默认是false。
          */
         public Builder docResultEnabled(Boolean docResultEnabled) {
             this.putBodyParameter("DocResultEnabled", docResultEnabled);
@@ -411,7 +495,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 是否开启会后智能提取，默认是False。
+         * 是否开启会后智能提取，默认是false。
          */
         public Builder meetingResultEnabled(Boolean meetingResultEnabled) {
             this.putBodyParameter("MeetingResultEnabled", meetingResultEnabled);
@@ -420,7 +504,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会后智能提取时，提取结果写入到的OSS Bucket。
+         * 开启会后智能提取时，提取结果写入到的OSS Bucket，需要与管控台项目配置的OSS Bucket一致。
          */
         public Builder meetingResultOssBucket(String meetingResultOssBucket) {
             this.putBodyParameter("MeetingResultOssBucket", meetingResultOssBucket);
@@ -429,9 +513,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会后智能提取时，提取结果写入到的OSS文件路径。
-         * <p>
-         * 示例：目录/文件名
+         * 开启会后智能提取时，提取结果写入到的OSS文件路径，需要以"tingwu/"为前缀。
          */
         public Builder meetingResultOssPath(String meetingResultOssPath) {
             this.putBodyParameter("MeetingResultOssPath", meetingResultOssPath);
@@ -453,7 +535,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 是否开启会中实时结果返回，默认是True。
+         * 是否开启会中实时结果返回，默认是true。
          */
         public Builder realtimeResultEnabled(Boolean realtimeResultEnabled) {
             this.putBodyParameter("RealtimeResultEnabled", realtimeResultEnabled);
@@ -471,6 +553,60 @@ public class CreateMeetingTransRequest extends Request {
         public Builder realtimeResultLevel(Integer realtimeResultLevel) {
             this.putBodyParameter("RealtimeResultLevel", realtimeResultLevel);
             this.realtimeResultLevel = realtimeResultLevel;
+            return this;
+        }
+
+        /**
+         * 会中识别消息结果header中是否包含MeetingKey、MeetingId，默认是false。
+         */
+        public Builder realtimeResultMeetingInfoEnabled(Boolean realtimeResultMeetingInfoEnabled) {
+            this.putBodyParameter("RealtimeResultMeetingInfoEnabled", realtimeResultMeetingInfoEnabled);
+            this.realtimeResultMeetingInfoEnabled = realtimeResultMeetingInfoEnabled;
+            return this;
+        }
+
+        /**
+         * 会中识别消息是否包含words信息，默认是true。
+         */
+        public Builder realtimeResultWordsEnabled(Boolean realtimeResultWordsEnabled) {
+            this.putBodyParameter("RealtimeResultWordsEnabled", realtimeResultWordsEnabled);
+            this.realtimeResultWordsEnabled = realtimeResultWordsEnabled;
+            return this;
+        }
+
+        /**
+         * 多通道Active流识别结果翻译等级。0：不返回翻译结果。 1：识别出完整句子时返回翻译结果。 2：识别出中间结果及完整句子时返回翻译结果。默认是1。
+         */
+        public Builder translateActiveResultLevel(Integer translateActiveResultLevel) {
+            this.putBodyParameter("TranslateActiveResultLevel", translateActiveResultLevel);
+            this.translateActiveResultLevel = translateActiveResultLevel;
+            return this;
+        }
+
+        /**
+         * 翻译目标语言集合，多个语言间用英文逗号","分隔，当前支持cn、en。
+         */
+        public Builder translateLanguages(String translateLanguages) {
+            this.putBodyParameter("TranslateLanguages", translateLanguages);
+            this.translateLanguages = translateLanguages;
+            return this;
+        }
+
+        /**
+         * 是否开启会中翻译，默认是false。
+         */
+        public Builder translateResultEnabled(Boolean translateResultEnabled) {
+            this.putBodyParameter("TranslateResultEnabled", translateResultEnabled);
+            this.translateResultEnabled = translateResultEnabled;
+            return this;
+        }
+
+        /**
+         * 单通道识别或多通道mix流识别结果翻译等级。0：不返回翻译结果。 1：识别出完整句子时返回翻译结果。 2：识别出中间结果及完整句子时返回翻译结果。默认是1。
+         */
+        public Builder translateResultLevel(Integer translateResultLevel) {
+            this.putBodyParameter("TranslateResultLevel", translateResultLevel);
+            this.translateResultLevel = translateResultLevel;
             return this;
         }
 

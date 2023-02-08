@@ -228,6 +228,7 @@ public class CreateFileTransRequest extends Request {
          * cn：中文。
          * en：英文。
          * yue：粤语。
+         * fspk：中英文自由说。
          */
         public Builder audioLanguage(String audioLanguage) {
             this.putBodyParameter("AudioLanguage", audioLanguage);
@@ -254,7 +255,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 是否开启mp3格式音频转码，默认是False。
+         * 是否开启mp3格式音频转码，默认是false。
          */
         public Builder audioOutputEnabled(Boolean audioOutputEnabled) {
             this.putBodyParameter("AudioOutputEnabled", audioOutputEnabled);
@@ -281,7 +282,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 是否开启说话人角色区分。
+         * 是否开启说话人角色区分。注，只对16K及以上采样率生效
          * <p>
          * 不设置：不使用说话人角色区分。
          * 0：说话人角色区分结果为不定人数。
@@ -294,7 +295,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 是否开启有效音频片断检测结果写入，默认是False。
+         * 是否开启有效音频片断检测结果写入，默认是false。
          */
         public Builder audioSegmentsEnabled(Boolean audioSegmentsEnabled) {
             this.putBodyParameter("AudioSegmentsEnabled", audioSegmentsEnabled);
