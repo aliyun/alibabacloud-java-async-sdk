@@ -119,9 +119,13 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         @NameInMap("ColumnName")
         private String columnName;
 
+        @NameInMap("SecurityLevel")
+        private String securityLevel;
+
         private ColumnMetaList(Builder builder) {
             this.columnComment = builder.columnComment;
             this.columnName = builder.columnName;
+            this.securityLevel = builder.securityLevel;
         }
 
         public static Builder builder() {
@@ -146,9 +150,17 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             return this.columnName;
         }
 
+        /**
+         * @return securityLevel
+         */
+        public String getSecurityLevel() {
+            return this.securityLevel;
+        }
+
         public static final class Builder {
             private String columnComment; 
             private String columnName; 
+            private String securityLevel; 
 
             /**
              * ColumnComment.
@@ -163,6 +175,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
+                return this;
+            }
+
+            /**
+             * SecurityLevel.
+             */
+            public Builder securityLevel(String securityLevel) {
+                this.securityLevel = securityLevel;
                 return this;
             }
 

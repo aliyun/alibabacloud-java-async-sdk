@@ -18,7 +18,7 @@ public class CreateQualityEntityRequest extends Request {
 
     @Body
     @NameInMap("EntityLevel")
-    @Validation(required = true, maximum = 99)
+    @Validation(maximum = 99)
     private Integer entityLevel;
 
     @Body
