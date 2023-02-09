@@ -24,6 +24,9 @@ public class PathConfig extends TeaModel {
     @NameInMap("qualifier")
     private String qualifier;
 
+    @NameInMap("rewriteConfig")
+    private RewriteConfig rewriteConfig;
+
     @NameInMap("serviceName")
     private String serviceName;
 
@@ -32,6 +35,7 @@ public class PathConfig extends TeaModel {
         this.methods = builder.methods;
         this.path = builder.path;
         this.qualifier = builder.qualifier;
+        this.rewriteConfig = builder.rewriteConfig;
         this.serviceName = builder.serviceName;
     }
 
@@ -72,6 +76,13 @@ public class PathConfig extends TeaModel {
     }
 
     /**
+     * @return rewriteConfig
+     */
+    public RewriteConfig getRewriteConfig() {
+        return this.rewriteConfig;
+    }
+
+    /**
      * @return serviceName
      */
     public String getServiceName() {
@@ -83,6 +94,7 @@ public class PathConfig extends TeaModel {
         private java.util.List < String > methods; 
         private String path; 
         private String qualifier; 
+        private RewriteConfig rewriteConfig; 
         private String serviceName; 
 
         /**
@@ -114,6 +126,14 @@ public class PathConfig extends TeaModel {
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
+            return this;
+        }
+
+        /**
+         * URI重写配置
+         */
+        public Builder rewriteConfig(RewriteConfig rewriteConfig) {
+            this.rewriteConfig = rewriteConfig;
             return this;
         }
 

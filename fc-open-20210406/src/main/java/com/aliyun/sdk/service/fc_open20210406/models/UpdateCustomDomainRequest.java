@@ -185,7 +185,7 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the operation is called. The format is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -215,9 +215,9 @@ public class UpdateCustomDomainRequest extends Request {
          * The protocol types supported by the domain name. Valid values:
          * <p>
          * 
-         * - **HTTP**: Only HTTP is supported.
-         * - **HTTPS**: Only HTTPS is supported.
-         * - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+         * *   **HTTP**: Only HTTP is supported.
+         * *   **HTTPS**: Only HTTPS is supported.
+         * *   **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("protocol", protocol);
@@ -235,7 +235,7 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * The configurations of the TLS.
+         * The Transport Layer Security (TLS) configuration.
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.putBodyParameter("tlsConfig", tlsConfig);
@@ -244,7 +244,7 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * wafConfig.
+         * The Web Application Firewall (WAF) configuration.
          */
         public Builder wafConfig(WAFConfig wafConfig) {
             this.putBodyParameter("wafConfig", wafConfig);

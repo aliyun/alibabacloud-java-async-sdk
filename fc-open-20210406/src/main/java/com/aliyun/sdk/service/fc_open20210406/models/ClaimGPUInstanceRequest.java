@@ -375,7 +375,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The range of TCP ports that are open to the security group of the GPU-rendered instance.
+         * The range of TCP ports that are open to the security group of the GPU rendering instance.
          */
         public Builder tcpPortRange(java.util.List < String > tcpPortRange) {
             this.putBodyParameter("tcpPortRange", tcpPortRange);
@@ -393,7 +393,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * The ID of the VPC in which the instance resides.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);

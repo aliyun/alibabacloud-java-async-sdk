@@ -108,6 +108,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("functionName")
         private String functionName;
 
+        @NameInMap("gpuMemorySize")
+        private Integer gpuMemorySize;
+
         @NameInMap("handler")
         private String handler;
 
@@ -157,6 +160,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             this.environmentVariables = builder.environmentVariables;
             this.functionId = builder.functionId;
             this.functionName = builder.functionName;
+            this.gpuMemorySize = builder.gpuMemorySize;
             this.handler = builder.handler;
             this.initializationTimeout = builder.initializationTimeout;
             this.initializer = builder.initializer;
@@ -264,6 +268,13 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return gpuMemorySize
+         */
+        public Integer getGpuMemorySize() {
+            return this.gpuMemorySize;
+        }
+
+        /**
          * @return handler
          */
         public String getHandler() {
@@ -360,6 +371,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private java.util.Map < String, String > environmentVariables; 
             private String functionId; 
             private String functionName; 
+            private Integer gpuMemorySize; 
             private String handler; 
             private Integer initializationTimeout; 
             private String initializer; 
@@ -466,6 +478,14 @@ public class ListFunctionsResponseBody extends TeaModel {
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
+                return this;
+            }
+
+            /**
+             * function的GPU显存规格，单位为MB，为1024MB的倍数
+             */
+            public Builder gpuMemorySize(Integer gpuMemorySize) {
+                this.gpuMemorySize = gpuMemorySize;
                 return this;
             }
 

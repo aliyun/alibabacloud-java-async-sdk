@@ -146,7 +146,7 @@ public class CreateCustomDomainResponseBody extends TeaModel {
         private WAFConfig wafConfig; 
 
         /**
-         * The ID of the account.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -197,9 +197,9 @@ public class CreateCustomDomainResponseBody extends TeaModel {
          * The protocol types supported by the domain name. Valid values:
          * <p>
          * 
-         * - **HTTP**: Only HTTP is supported. 
-         * - **HTTPS**: Only HTTPS is supported. 
-         * - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+         * *   **HTTP**: Only HTTP is supported.
+         * *   **HTTPS**: Only HTTPS is supported.
+         * *   **HTTP,HTTPS**: HTTP and HTTPS are supported.
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -215,7 +215,7 @@ public class CreateCustomDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the TLS.
+         * The Transport Layer Security (TLS) configuration.
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;
@@ -223,7 +223,7 @@ public class CreateCustomDomainResponseBody extends TeaModel {
         }
 
         /**
-         * wafConfig.
+         * The Web Application Firewall (WAF) configuration.
          */
         public Builder wafConfig(WAFConfig wafConfig) {
             this.wafConfig = wafConfig;

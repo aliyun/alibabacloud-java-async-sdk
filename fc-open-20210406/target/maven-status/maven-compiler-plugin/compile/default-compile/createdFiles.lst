@@ -278,6 +278,7 @@ com/aliyun/sdk/service/fc_open20210406/models/ListFunctionsResponse$BuilderImpl.
 com/aliyun/sdk/service/fc_open20210406/models/CreateVpcBindingRequest$1.class
 com/aliyun/sdk/service/fc_open20210406/models/PreFreeze$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListCustomDomainsRequest.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig$WildcardRules.class
 com/aliyun/sdk/service/fc_open20210406/models/ListEventSourcesRequest$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/GetFunctionAsyncInvokeConfigResponseBody.class
 com/aliyun/sdk/service/fc_open20210406/models/ClaimGPUInstanceRequest.class
@@ -319,6 +320,7 @@ com/aliyun/sdk/service/fc_open20210406/models/NASConfig$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/PutFunctionOnDemandConfigResponse.class
 com/aliyun/sdk/service/fc_open20210406/models/SourceConfig$1.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteFunctionResponse$BuilderImpl.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig$RegexRules.class
 com/aliyun/sdk/service/fc_open20210406/models/GetCustomDomainResponse$1.class
 com/aliyun/sdk/service/fc_open20210406/models/ListCustomDomainsResponseBody$CustomDomains$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListProvisionConfigsRequest$Builder.class
@@ -363,6 +365,7 @@ com/aliyun/sdk/service/fc_open20210406/models/GetFunctionResponse$BuilderImpl.cl
 com/aliyun/sdk/service/fc_open20210406/models/ListReservedCapacitiesRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/ListStatefulAsyncInvocationsRequest$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteFunctionRequest$1.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig$EqualRules.class
 com/aliyun/sdk/service/fc_open20210406/models/GetStatefulAsyncInvocationResponse$BuilderImpl.class
 com/aliyun/sdk/service/fc_open20210406/models/ListServiceVersionsResponse.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteAliasResponse$BuilderImpl.class
@@ -453,6 +456,7 @@ com/aliyun/sdk/service/fc_open20210406/models/OSSMountConfig$MountPoints.class
 com/aliyun/sdk/service/fc_open20210406/models/AvailableAZ$1.class
 com/aliyun/sdk/service/fc_open20210406/models/UpdateAliasResponse$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListLayersResponseBody$Builder.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig$WildcardRules$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/CertConfig.class
 com/aliyun/sdk/service/fc_open20210406/models/DeregisterEventSourceResponse.class
 com/aliyun/sdk/service/fc_open20210406/models/ListAliasesResponse.class
@@ -525,6 +529,7 @@ com/aliyun/sdk/service/fc_open20210406/models/UpdateFunctionResponseBody.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteLayerVersionResponse$BuilderImpl.class
 com/aliyun/sdk/service/fc_open20210406/models/ListEventSourcesResponseBody$1.class
 com/aliyun/sdk/service/fc_open20210406/models/RegisterEventSourceRequest$1.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListOnDemandConfigsResponseBody$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListInstancesRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/ListServicesResponse.class
@@ -602,6 +607,7 @@ com/aliyun/sdk/service/fc_open20210406/models/ListFunctionAsyncInvokeConfigsResp
 com/aliyun/sdk/service/fc_open20210406/models/PutLayerACLRequest$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/UpdateAliasRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteServiceRequest$1.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig$EqualRules$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteAliasResponse.class
 com/aliyun/sdk/service/fc_open20210406/models/GetResourceTagsRequest$1.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteTriggerResponse.class
@@ -642,6 +648,7 @@ com/aliyun/sdk/service/fc_open20210406/models/OutputCodeLocation$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/PutFunctionAsyncInvokeConfigRequest$1.class
 com/aliyun/sdk/service/fc_open20210406/models/CreateServiceResponse$BuilderImpl.class
 com/aliyun/sdk/service/fc_open20210406/models/PreStop$Builder.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig$RegexRules$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/GetLayerVersionRequest$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListFunctionsResponse$1.class
 com/aliyun/sdk/service/fc_open20210406/models/GetProvisionConfigResponse$1.class
@@ -707,6 +714,7 @@ com/aliyun/sdk/service/fc_open20210406/models/UpdateFunctionRequest$Builder.clas
 com/aliyun/sdk/service/fc_open20210406/models/VendorConfig$1.class
 com/aliyun/sdk/service/fc_open20210406/models/ListInstancesResponseBody$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ListReservedCapacitiesResponse$1.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig.class
 com/aliyun/sdk/service/fc_open20210406/models/ListStatefulAsyncInvocationFunctionsResponseBody.class
 com/aliyun/sdk/service/fc_open20210406/models/GetResourceTagsResponse$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/GetResourceTagsResponse$BuilderImpl.class
@@ -756,6 +764,7 @@ com/aliyun/sdk/service/fc_open20210406/models/WAFConfig$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/DeleteFunctionResponse.class
 com/aliyun/sdk/service/fc_open20210406/models/StopStatefulAsyncInvocationRequest.class
 com/aliyun/sdk/service/fc_open20210406/models/PutFunctionOnDemandConfigResponse$Builder.class
+com/aliyun/sdk/service/fc_open20210406/models/RewriteConfig$1.class
 com/aliyun/sdk/service/fc_open20210406/models/GetTriggerRequest$1.class
 com/aliyun/sdk/service/fc_open20210406/models/ListServiceVersionsRequest$Builder.class
 com/aliyun/sdk/service/fc_open20210406/models/ReleaseGPUInstanceResponse.class

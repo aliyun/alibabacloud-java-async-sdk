@@ -146,7 +146,7 @@ public class ListReservedCapacitiesRequest extends Request {
         }
 
         /**
-         * The token that is required for pagination.
+         * The token that determines the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

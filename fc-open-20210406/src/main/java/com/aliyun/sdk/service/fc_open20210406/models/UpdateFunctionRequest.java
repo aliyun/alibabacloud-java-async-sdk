@@ -87,6 +87,10 @@ public class UpdateFunctionRequest extends Request {
     private java.util.Map < String, String > environmentVariables;
 
     @Body
+    @NameInMap("gpuMemorySize")
+    private Integer gpuMemorySize;
+
+    @Body
     @NameInMap("handler")
     private String handler;
 
@@ -146,6 +150,7 @@ public class UpdateFunctionRequest extends Request {
         this.description = builder.description;
         this.diskSize = builder.diskSize;
         this.environmentVariables = builder.environmentVariables;
+        this.gpuMemorySize = builder.gpuMemorySize;
         this.handler = builder.handler;
         this.initializationTimeout = builder.initializationTimeout;
         this.initializer = builder.initializer;
@@ -298,6 +303,13 @@ public class UpdateFunctionRequest extends Request {
     }
 
     /**
+     * @return gpuMemorySize
+     */
+    public Integer getGpuMemorySize() {
+        return this.gpuMemorySize;
+    }
+
+    /**
      * @return handler
      */
     public String getHandler() {
@@ -386,6 +398,7 @@ public class UpdateFunctionRequest extends Request {
         private String description; 
         private Integer diskSize; 
         private java.util.Map < String, String > environmentVariables; 
+        private Integer gpuMemorySize; 
         private String handler; 
         private Integer initializationTimeout; 
         private String initializer; 
@@ -421,6 +434,7 @@ public class UpdateFunctionRequest extends Request {
             this.description = request.description;
             this.diskSize = request.diskSize;
             this.environmentVariables = request.environmentVariables;
+            this.gpuMemorySize = request.gpuMemorySize;
             this.handler = request.handler;
             this.initializationTimeout = request.initializationTimeout;
             this.initializer = request.initializer;
@@ -515,11 +529,11 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * **Function code packages** can be provided with the following two methods. You must use only one of the methods in a single request.
+         * **Function code packages** can be provided with the following two methods. You must use only one of the methods in a request.
          * <p>
          * 
-         * *   Specify the names of the **Object Storage Service (OSS) bucket** and **object** where the code package is stored.
-         * *   Set the **zipFile** parameter to the Base64-encoded content of the ZIP file.
+         * *   Specify the name of the **Object Storage Service (OSS) bucket** and **object** where the code package is stored.
+         * *   Specify that the **zipFile** parameter is used as the Base64-encoded content of the ZIP file.
          */
         public Builder code(Code code) {
             this.putBodyParameter("code", code);
@@ -537,7 +551,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The configurations of the custom container runtime. After you configure the custom container, Function Compute can execute functions in a container created from a custom image.
+         * The configuration of the custom container. After you configure the custom container, Function Compute can execute functions in a container created from a custom image.
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
             this.putBodyParameter("customContainerConfig", customContainerConfig);
@@ -546,7 +560,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The custom Domain Name System (DNS) configurations of the function.
+         * The custom DNS configurations of the function.
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.putBodyParameter("customDNS", customDNS);
@@ -555,7 +569,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
+         * The custom health check configurations of the function. This parameter is applicable to only custom runtimes and custom containers.
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.putBodyParameter("customHealthCheckConfig", customHealthCheckConfig);
@@ -591,11 +605,20 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The environment variables that you configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Overview](~~69777~~).
+         * The environment variables that are configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Environment variables](~~69777~~).
          */
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.putBodyParameter("environmentVariables", environmentVariables);
             this.environmentVariables = environmentVariables;
+            return this;
+        }
+
+        /**
+         * function的GPU显存规格，单位为MB，为1024MB的倍数
+         */
+        public Builder gpuMemorySize(Integer gpuMemorySize) {
+            this.putBodyParameter("gpuMemorySize", gpuMemorySize);
+            this.gpuMemorySize = gpuMemorySize;
             return this;
         }
 
@@ -609,7 +632,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the initializer function is terminated.
+         * The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the initializer function is terminated.
          */
         public Builder initializationTimeout(Integer initializationTimeout) {
             this.putBodyParameter("initializationTimeout", initializationTimeout);
@@ -636,10 +659,10 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long term to start, you can specify a suitable soft concurrency to start the instance in advance.
+         * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
          * <p>
          * 
-         * The value must be less than or equal to that of **instanceConcurrency**.
+         * The value must be less than or equal to that of the **instanceConcurrency** parameter.
          */
         public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
             this.putBodyParameter("instanceSoftConcurrency", instanceSoftConcurrency);
@@ -661,10 +684,10 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * An array that consists of the information of layers.
+         * The information about layers.
          * <p>
          * 
-         * >  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript.
+         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name and a larger subscript in the layer.
          */
         public Builder layers(java.util.List < String > layers) {
             this.putBodyParameter("layers", layers);
@@ -682,7 +705,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The runtime environment of the function. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom** and **custom-container**.
+         * The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom** and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
          */
         public Builder runtime(String runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -691,7 +714,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the function is terminated.
+         * The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the function is terminated.
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);

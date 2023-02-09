@@ -58,7 +58,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+         * The pagination token to use to request the next page of results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +206,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             private WAFConfig wafConfig; 
 
             /**
-             * The ID of the account.
+             * The ID of your Alibaba Cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -230,7 +230,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was added.
+             * The time when the custom domain name was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -254,12 +254,12 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol types supported by the domain name. Valid values: 
+             * The protocol type that is supported by the custom domain name.
              * <p>
              * 
-             * - **HTTP**: Only HTTP is supported. 
-             * - **HTTPS**: Only HTTPS is supported. 
-             * - **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+             * *   **HTTP**: Only HTTP is supported.
+             * *   **HTTPS**: Only HTTPS is supported.
+             * *   **HTTP,HTTPS**: HTTP and HTTPS are supported.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -275,7 +275,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the TLS.
+             * The Transport Layer Security (TLS) configuration.
              */
             public Builder tlsConfig(TLSConfig tlsConfig) {
                 this.tlsConfig = tlsConfig;
@@ -283,7 +283,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * wafConfig.
+             * The Web Application Firewall (WAF) configuration.
              */
             public Builder wafConfig(WAFConfig wafConfig) {
                 this.wafConfig = wafConfig;
