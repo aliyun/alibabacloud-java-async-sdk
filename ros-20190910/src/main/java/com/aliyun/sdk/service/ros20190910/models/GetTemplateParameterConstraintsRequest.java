@@ -34,6 +34,10 @@ public class GetTemplateParameterConstraintsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("StackId")
+    private String stackId;
+
+    @Query
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -56,6 +60,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         this.parametersKeyFilter = builder.parametersKeyFilter;
         this.parametersOrder = builder.parametersOrder;
         this.regionId = builder.regionId;
+        this.stackId = builder.stackId;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateURL = builder.templateURL;
@@ -111,6 +116,13 @@ public class GetTemplateParameterConstraintsRequest extends Request {
     }
 
     /**
+     * @return stackId
+     */
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    /**
      * @return templateBody
      */
     public String getTemplateBody() {
@@ -144,6 +156,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         private java.util.List < String > parametersKeyFilter; 
         private java.util.List < String > parametersOrder; 
         private String regionId; 
+        private String stackId; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -160,6 +173,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
             this.parametersKeyFilter = request.parametersKeyFilter;
             this.parametersOrder = request.parametersOrder;
             this.regionId = request.regionId;
+            this.stackId = request.stackId;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateURL = request.templateURL;
@@ -210,6 +224,15 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StackId.
+         */
+        public Builder stackId(String stackId) {
+            this.putQueryParameter("StackId", stackId);
+            this.stackId = stackId;
             return this;
         }
 

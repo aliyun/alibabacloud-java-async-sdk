@@ -267,6 +267,9 @@ public class PreviewStackResponseBody extends TeaModel {
         @NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
+        @NameInMap("PhysicalResourceId")
+        private String physicalResourceId;
+
         @NameInMap("Properties")
         private java.util.Map < String, ? > properties;
 
@@ -287,6 +290,7 @@ public class PreviewStackResponseBody extends TeaModel {
             this.action = builder.action;
             this.description = builder.description;
             this.logicalResourceId = builder.logicalResourceId;
+            this.physicalResourceId = builder.physicalResourceId;
             this.properties = builder.properties;
             this.replacement = builder.replacement;
             this.requiredBy = builder.requiredBy;
@@ -331,6 +335,13 @@ public class PreviewStackResponseBody extends TeaModel {
         }
 
         /**
+         * @return physicalResourceId
+         */
+        public String getPhysicalResourceId() {
+            return this.physicalResourceId;
+        }
+
+        /**
          * @return properties
          */
         public java.util.Map < String, ? > getProperties() {
@@ -370,6 +381,7 @@ public class PreviewStackResponseBody extends TeaModel {
             private String action; 
             private String description; 
             private String logicalResourceId; 
+            private String physicalResourceId; 
             private java.util.Map < String, ? > properties; 
             private String replacement; 
             private java.util.List < String > requiredBy; 
@@ -405,6 +417,14 @@ public class PreviewStackResponseBody extends TeaModel {
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
+                return this;
+            }
+
+            /**
+             * PhysicalResourceId.
+             */
+            public Builder physicalResourceId(String physicalResourceId) {
+                this.physicalResourceId = physicalResourceId;
                 return this;
             }
 
