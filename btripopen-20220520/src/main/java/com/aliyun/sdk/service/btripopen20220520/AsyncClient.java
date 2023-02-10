@@ -30,6 +30,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyApproveResponse> applyApprove(ApplyApproveRequest request);
 
+    CompletableFuture<ApplyInvoiceTaskResponse> applyInvoiceTask(ApplyInvoiceTaskRequest request);
+
     CompletableFuture<ApplyListQueryResponse> applyListQuery(ApplyListQueryRequest request);
 
     CompletableFuture<ApplyModifyResponse> applyModify(ApplyModifyRequest request);
@@ -85,6 +87,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FlightCreateOrderResponse> flightCreateOrder(FlightCreateOrderRequest request);
 
     CompletableFuture<FlightExceedApplyQueryResponse> flightExceedApplyQuery(FlightExceedApplyQueryRequest request);
+
+    CompletableFuture<FlightItineraryScanQueryResponse> flightItineraryScanQuery(FlightItineraryScanQueryRequest request);
 
     CompletableFuture<FlightOrderDetailInfoResponse> flightOrderDetailInfo(FlightOrderDetailInfoRequest request);
 
@@ -154,8 +158,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TrainOrderQueryResponse> trainOrderQuery(TrainOrderQueryRequest request);
 
+    CompletableFuture<TrainOrderQueryV2Response> trainOrderQueryV2(TrainOrderQueryV2Request request);
+
     CompletableFuture<TrainStationSearchResponse> trainStationSearch(TrainStationSearchRequest request);
 
+    CompletableFuture<TrainTicketScanQueryResponse> trainTicketScanQuery(TrainTicketScanQueryRequest request);
+
     CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request);
+
+    CompletableFuture<VatInvoiceScanQueryResponse> vatInvoiceScanQuery(VatInvoiceScanQueryRequest request);
+
+    CompletableFuture<WaitApplyInvoiceTaskDetailQueryResponse> waitApplyInvoiceTaskDetailQuery(WaitApplyInvoiceTaskDetailQueryRequest request);
 
 }
