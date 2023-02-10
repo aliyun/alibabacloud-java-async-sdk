@@ -12,12 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceRequest</p>
  */
 public class CreateServiceRequest extends Request {
+    @Query
+    @NameInMap("Develop")
+    private String develop;
+
+    @Query
+    @NameInMap("Labels")
+    private java.util.Map < String, String > labels;
+
     @Body
     @NameInMap("body")
     private String body;
 
     private CreateServiceRequest(Builder builder) {
         super(builder);
+        this.develop = builder.develop;
+        this.labels = builder.labels;
         this.body = builder.body;
     }
 
@@ -35,6 +45,20 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
+     * @return develop
+     */
+    public String getDevelop() {
+        return this.develop;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.Map < String, String > getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return body
      */
     public String getBody() {
@@ -42,6 +66,8 @@ public class CreateServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateServiceRequest, Builder> {
+        private String develop; 
+        private java.util.Map < String, String > labels; 
         private String body; 
 
         private Builder() {
@@ -50,8 +76,29 @@ public class CreateServiceRequest extends Request {
 
         private Builder(CreateServiceRequest request) {
             super(request);
+            this.develop = request.develop;
+            this.labels = request.labels;
             this.body = request.body;
         } 
+
+        /**
+         * 是否进入开发模式。
+         */
+        public Builder develop(String develop) {
+            this.putQueryParameter("Develop", develop);
+            this.develop = develop;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.Map < String, String > labels) {
+            String labelsShrink = shrink(labels, "Labels", "json");
+            this.putQueryParameter("Labels", labelsShrink);
+            this.labels = labels;
+            return this;
+        }
 
         /**
          * body.

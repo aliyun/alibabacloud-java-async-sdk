@@ -86,7 +86,7 @@ public class ListServicesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * 页码。
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * 每页显示的服务数。
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * 请求ID。
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Services.
+         * 服务列表。
          */
         public Builder services(java.util.List < Service > services) {
             this.services = services;
@@ -118,7 +118,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * 服务总数。
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

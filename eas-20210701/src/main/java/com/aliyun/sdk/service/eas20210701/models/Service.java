@@ -42,6 +42,9 @@ public class Service extends TeaModel {
     @NameInMap("IntranetEndpoint")
     private String intranetEndpoint;
 
+    @NameInMap("Labels")
+    private java.util.List < Labels> labels;
+
     @NameInMap("LatestVersion")
     private Integer latestVersion;
 
@@ -128,6 +131,7 @@ public class Service extends TeaModel {
         this.image = builder.image;
         this.internetEndpoint = builder.internetEndpoint;
         this.intranetEndpoint = builder.intranetEndpoint;
+        this.labels = builder.labels;
         this.latestVersion = builder.latestVersion;
         this.memory = builder.memory;
         this.message = builder.message;
@@ -231,6 +235,13 @@ public class Service extends TeaModel {
      */
     public String getIntranetEndpoint() {
         return this.intranetEndpoint;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.List < Labels> getLabels() {
+        return this.labels;
     }
 
     /**
@@ -419,6 +430,7 @@ public class Service extends TeaModel {
         private String image; 
         private String internetEndpoint; 
         private String intranetEndpoint; 
+        private java.util.List < Labels> labels; 
         private Integer latestVersion; 
         private Integer memory; 
         private String message; 
@@ -522,6 +534,14 @@ public class Service extends TeaModel {
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
+            return this;
+        }
+
+        /**
+         * 服务标签列表
+         */
+        public Builder labels(java.util.List < Labels> labels) {
+            this.labels = labels;
             return this;
         }
 
@@ -731,4 +751,65 @@ public class Service extends TeaModel {
 
     } 
 
+    public static class Labels extends TeaModel {
+        @NameInMap("LabelKey")
+        private String labelKey;
+
+        @NameInMap("LabelValue")
+        private String labelValue;
+
+        private Labels(Builder builder) {
+            this.labelKey = builder.labelKey;
+            this.labelValue = builder.labelValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labelKey
+         */
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        /**
+         * @return labelValue
+         */
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
+        public static final class Builder {
+            private String labelKey; 
+            private String labelValue; 
+
+            /**
+             * 服务标签键
+             */
+            public Builder labelKey(String labelKey) {
+                this.labelKey = labelKey;
+                return this;
+            }
+
+            /**
+             * 服务标签值
+             */
+            public Builder labelValue(String labelValue) {
+                this.labelValue = labelValue;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
 }

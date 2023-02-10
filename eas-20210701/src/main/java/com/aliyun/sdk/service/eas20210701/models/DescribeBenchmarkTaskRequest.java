@@ -70,7 +70,7 @@ public class DescribeBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * 压测任务所在的区域。
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class DescribeBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * 压测任务的名字。
          */
         public Builder taskName(String taskName) {
             this.putPathParameter("TaskName", taskName);

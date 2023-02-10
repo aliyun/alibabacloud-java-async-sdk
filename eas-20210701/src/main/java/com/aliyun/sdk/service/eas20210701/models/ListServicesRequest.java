@@ -21,6 +21,10 @@ public class ListServicesRequest extends Request {
     private String groupName;
 
     @Query
+    @NameInMap("Label")
+    private java.util.Map < String, String > label;
+
+    @Query
     @NameInMap("Order")
     private String order;
 
@@ -33,6 +37,14 @@ public class ListServicesRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("ParentServiceUid")
+    private String parentServiceUid;
+
+    @Query
+    @NameInMap("ServiceType")
+    private String serviceType;
+
+    @Query
     @NameInMap("Sort")
     private String sort;
 
@@ -40,9 +52,12 @@ public class ListServicesRequest extends Request {
         super(builder);
         this.filter = builder.filter;
         this.groupName = builder.groupName;
+        this.label = builder.label;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.parentServiceUid = builder.parentServiceUid;
+        this.serviceType = builder.serviceType;
         this.sort = builder.sort;
     }
 
@@ -74,6 +89,13 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return label
+     */
+    public java.util.Map < String, String > getLabel() {
+        return this.label;
+    }
+
+    /**
      * @return order
      */
     public String getOrder() {
@@ -95,6 +117,20 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return parentServiceUid
+     */
+    public String getParentServiceUid() {
+        return this.parentServiceUid;
+    }
+
+    /**
+     * @return serviceType
+     */
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
+    /**
      * @return sort
      */
     public String getSort() {
@@ -104,9 +140,12 @@ public class ListServicesRequest extends Request {
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
         private String filter; 
         private String groupName; 
+        private java.util.Map < String, String > label; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String parentServiceUid; 
+        private String serviceType; 
         private String sort; 
 
         private Builder() {
@@ -117,14 +156,17 @@ public class ListServicesRequest extends Request {
             super(request);
             this.filter = request.filter;
             this.groupName = request.groupName;
+            this.label = request.label;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.parentServiceUid = request.parentServiceUid;
+            this.serviceType = request.serviceType;
             this.sort = request.sort;
         } 
 
         /**
-         * 模糊匹配字段（只支持按服务名字模糊匹配）
+         * 关键字搜索。
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -133,7 +175,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 服务组名称过滤
+         * 所属的group。
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -142,7 +184,17 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 排序方式（默认降序）
+         * Label.
+         */
+        public Builder label(java.util.Map < String, String > label) {
+            String labelShrink = shrink(label, "Label", "json");
+            this.putQueryParameter("Label", labelShrink);
+            this.label = label;
+            return this;
+        }
+
+        /**
+         * 排序顺序，支持升序或将序。
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -151,7 +203,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 请求的页码（默认为1）
+         * 页号。
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +212,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 每页的大小（默认为100）
+         * 每页大小。
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +221,25 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 排序字段 （时间戳类型默认倒序排序）
+         * Band类型服务主服务的UID
+         */
+        public Builder parentServiceUid(String parentServiceUid) {
+            this.putQueryParameter("ParentServiceUid", parentServiceUid);
+            this.parentServiceUid = parentServiceUid;
+            return this;
+        }
+
+        /**
+         * 服务的类型，例如Async, OfflineTask和Standard等
+         */
+        public Builder serviceType(String serviceType) {
+            this.putQueryParameter("ServiceType", serviceType);
+            this.serviceType = serviceType;
+            return this;
+        }
+
+        /**
+         * 排序字段。
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

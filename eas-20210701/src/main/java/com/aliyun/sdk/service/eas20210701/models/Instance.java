@@ -39,14 +39,26 @@ public class Instance extends TeaModel {
     @NameInMap("Reason")
     private String reason;
 
+    @NameInMap("ResourceType")
+    private String resourceType;
+
     @NameInMap("RestartCount")
     private Integer restartCount;
+
+    @NameInMap("Role")
+    private String role;
 
     @NameInMap("StartAt")
     private String startAt;
 
     @NameInMap("Status")
     private String status;
+
+    @NameInMap("TenantHostIP")
+    private String tenantHostIP;
+
+    @NameInMap("TenantInstanceIP")
+    private String tenantInstanceIP;
 
     @NameInMap("TotalProcesses")
     private Integer totalProcesses;
@@ -61,9 +73,13 @@ public class Instance extends TeaModel {
         this.namespace = builder.namespace;
         this.readyProcesses = builder.readyProcesses;
         this.reason = builder.reason;
+        this.resourceType = builder.resourceType;
         this.restartCount = builder.restartCount;
+        this.role = builder.role;
         this.startAt = builder.startAt;
         this.status = builder.status;
+        this.tenantHostIP = builder.tenantHostIP;
+        this.tenantInstanceIP = builder.tenantInstanceIP;
         this.totalProcesses = builder.totalProcesses;
     }
 
@@ -139,10 +155,24 @@ public class Instance extends TeaModel {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return restartCount
      */
     public Integer getRestartCount() {
         return this.restartCount;
+    }
+
+    /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
     }
 
     /**
@@ -157,6 +187,20 @@ public class Instance extends TeaModel {
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return tenantHostIP
+     */
+    public String getTenantHostIP() {
+        return this.tenantHostIP;
+    }
+
+    /**
+     * @return tenantInstanceIP
+     */
+    public String getTenantInstanceIP() {
+        return this.tenantInstanceIP;
     }
 
     /**
@@ -176,9 +220,13 @@ public class Instance extends TeaModel {
         private String namespace; 
         private Integer readyProcesses; 
         private String reason; 
+        private String resourceType; 
         private Integer restartCount; 
+        private String role; 
         private String startAt; 
         private String status; 
+        private String tenantHostIP; 
+        private String tenantInstanceIP; 
         private Integer totalProcesses; 
 
         /**
@@ -254,10 +302,26 @@ public class Instance extends TeaModel {
         }
 
         /**
+         * 实例所属的资源组类型，包括PublicResource和PrivateResource
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
          * 实例重启次数
          */
         public Builder restartCount(Integer restartCount) {
             this.restartCount = restartCount;
+            return this;
+        }
+
+        /**
+         * 实例所属的服务角色，包括Queue, DataLoader, Standard等角色
+         */
+        public Builder role(String role) {
+            this.role = role;
             return this;
         }
 
@@ -274,6 +338,22 @@ public class Instance extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * 宿主机所在的vpc分配的地址
+         */
+        public Builder tenantHostIP(String tenantHostIP) {
+            this.tenantHostIP = tenantHostIP;
+            return this;
+        }
+
+        /**
+         * 实例所在的VPC分配的IP
+         */
+        public Builder tenantInstanceIP(String tenantInstanceIP) {
+            this.tenantInstanceIP = tenantInstanceIP;
             return this;
         }
 

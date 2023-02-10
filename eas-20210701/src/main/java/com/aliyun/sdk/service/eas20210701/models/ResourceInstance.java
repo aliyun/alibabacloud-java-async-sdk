@@ -51,6 +51,9 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceStatus")
     private String instanceStatus;
 
+    @NameInMap("InstanceTenantIp")
+    private String instanceTenantIp;
+
     @NameInMap("InstanceType")
     private String instanceType;
 
@@ -58,7 +61,10 @@ public class ResourceInstance extends TeaModel {
     private Float instanceUsedCpu;
 
     @NameInMap("InstanceUsedGpu")
-    private Integer instanceUsedGpu;
+    private Float instanceUsedGpu;
+
+    @NameInMap("InstanceUsedGpuMemory")
+    private String instanceUsedGpuMemory;
 
     @NameInMap("InstanceUsedMemory")
     private String instanceUsedMemory;
@@ -83,9 +89,11 @@ public class ResourceInstance extends TeaModel {
         this.instanceMemory = builder.instanceMemory;
         this.instanceName = builder.instanceName;
         this.instanceStatus = builder.instanceStatus;
+        this.instanceTenantIp = builder.instanceTenantIp;
         this.instanceType = builder.instanceType;
         this.instanceUsedCpu = builder.instanceUsedCpu;
         this.instanceUsedGpu = builder.instanceUsedGpu;
+        this.instanceUsedGpuMemory = builder.instanceUsedGpuMemory;
         this.instanceUsedMemory = builder.instanceUsedMemory;
         this.region = builder.region;
         this.zone = builder.zone;
@@ -191,6 +199,13 @@ public class ResourceInstance extends TeaModel {
     }
 
     /**
+     * @return instanceTenantIp
+     */
+    public String getInstanceTenantIp() {
+        return this.instanceTenantIp;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -207,8 +222,15 @@ public class ResourceInstance extends TeaModel {
     /**
      * @return instanceUsedGpu
      */
-    public Integer getInstanceUsedGpu() {
+    public Float getInstanceUsedGpu() {
         return this.instanceUsedGpu;
+    }
+
+    /**
+     * @return instanceUsedGpuMemory
+     */
+    public String getInstanceUsedGpuMemory() {
+        return this.instanceUsedGpuMemory;
     }
 
     /**
@@ -246,9 +268,11 @@ public class ResourceInstance extends TeaModel {
         private String instanceMemory; 
         private String instanceName; 
         private String instanceStatus; 
+        private String instanceTenantIp; 
         private String instanceType; 
         private Float instanceUsedCpu; 
-        private Integer instanceUsedGpu; 
+        private Float instanceUsedGpu; 
+        private String instanceUsedGpuMemory; 
         private String instanceUsedMemory; 
         private String region; 
         private String zone; 
@@ -358,6 +382,14 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
+         * 实例专属网络IP
+         */
+        public Builder instanceTenantIp(String instanceTenantIp) {
+            this.instanceTenantIp = instanceTenantIp;
+            return this;
+        }
+
+        /**
          * 实例的机型
          */
         public Builder instanceType(String instanceType) {
@@ -366,7 +398,7 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例被使用的CPU数量
+         * 实例已使用的CPU数量
          */
         public Builder instanceUsedCpu(Float instanceUsedCpu) {
             this.instanceUsedCpu = instanceUsedCpu;
@@ -374,15 +406,23 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
-         * 实例被使用的GPU数量
+         * 实例已使用的GPU数量
          */
-        public Builder instanceUsedGpu(Integer instanceUsedGpu) {
+        public Builder instanceUsedGpu(Float instanceUsedGpu) {
             this.instanceUsedGpu = instanceUsedGpu;
             return this;
         }
 
         /**
-         * 实例被使用的内存大小
+         * 实例已使用的显存大小
+         */
+        public Builder instanceUsedGpuMemory(String instanceUsedGpuMemory) {
+            this.instanceUsedGpuMemory = instanceUsedGpuMemory;
+            return this;
+        }
+
+        /**
+         * 实例已使用的内存大小
          */
         public Builder instanceUsedMemory(String instanceUsedMemory) {
             this.instanceUsedMemory = instanceUsedMemory;

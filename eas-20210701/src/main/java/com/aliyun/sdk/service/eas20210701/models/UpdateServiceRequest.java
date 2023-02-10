@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateServiceRequest extends Request {
     @Path
     @NameInMap("ClusterId")
+    @Validation(required = true)
     private String clusterId;
 
     @Path
     @NameInMap("ServiceName")
+    @Validation(required = true)
     private String serviceName;
 
     @Body

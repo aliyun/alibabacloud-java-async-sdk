@@ -182,7 +182,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * AvailableAgent.
+         * 实际可用的压测实例个数。
          */
         public Builder availableAgent(Long availableAgent) {
             this.availableAgent = availableAgent;
@@ -190,7 +190,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CallerUid.
+         * 调用者的UID。
          */
         public Builder callerUid(String callerUid) {
             this.callerUid = callerUid;
@@ -198,7 +198,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * DesiredAgent.
+         * 预期的压测实例个数。
          */
         public Builder desiredAgent(Long desiredAgent) {
             this.desiredAgent = desiredAgent;
@@ -206,7 +206,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * 服务对外公开的访问路径。
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -214,7 +214,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * 当前压测任务的运行进度信息。
          */
         public Builder message(String message) {
             this.message = message;
@@ -222,7 +222,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ParentUid.
+         * 资源拥有者的UID。
          */
         public Builder parentUid(String parentUid) {
             this.parentUid = parentUid;
@@ -230,7 +230,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * 当前压测任务状态产生的原因。
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -238,7 +238,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * 请求ID。
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +246,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * 压测的eas服务名。
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -254,7 +254,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * 压测任务的状态。
          */
         public Builder status(String status) {
             this.status = status;
@@ -262,7 +262,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * 压测任务ID。
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -270,7 +270,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * 压测任务名字。
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -278,7 +278,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * 访问eas服务的鉴权token。
          */
         public Builder token(String token) {
             this.token = token;
