@@ -1,3 +1,6 @@
+2023-02-10 Version: 1.0.4
+- Support broadcast for FengTian.
+
 2022-09-16 Version: 1.0.3
 - Iot_20180120 TeaDSL SDK.
 

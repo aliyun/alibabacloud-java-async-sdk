@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PubRequest extends Request {
     @Query
+    @NameInMap("ContentType")
+    private String contentType;
+
+    @Query
     @NameInMap("CorrelationData")
     private String correlationData;
 
@@ -28,6 +32,10 @@ public class PubRequest extends Request {
     @NameInMap("MessageContent")
     @Validation(required = true)
     private String messageContent;
+
+    @Query
+    @NameInMap("PayloadFormatIndicator")
+    private Integer payloadFormatIndicator;
 
     @Query
     @NameInMap("ProductKey")
@@ -53,10 +61,12 @@ public class PubRequest extends Request {
 
     private PubRequest(Builder builder) {
         super(builder);
+        this.contentType = builder.contentType;
         this.correlationData = builder.correlationData;
         this.deviceName = builder.deviceName;
         this.iotInstanceId = builder.iotInstanceId;
         this.messageContent = builder.messageContent;
+        this.payloadFormatIndicator = builder.payloadFormatIndicator;
         this.productKey = builder.productKey;
         this.qos = builder.qos;
         this.responseTopic = builder.responseTopic;
@@ -75,6 +85,13 @@ public class PubRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return contentType
+     */
+    public String getContentType() {
+        return this.contentType;
     }
 
     /**
@@ -103,6 +120,13 @@ public class PubRequest extends Request {
      */
     public String getMessageContent() {
         return this.messageContent;
+    }
+
+    /**
+     * @return payloadFormatIndicator
+     */
+    public Integer getPayloadFormatIndicator() {
+        return this.payloadFormatIndicator;
     }
 
     /**
@@ -141,10 +165,12 @@ public class PubRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PubRequest, Builder> {
+        private String contentType; 
         private String correlationData; 
         private String deviceName; 
         private String iotInstanceId; 
         private String messageContent; 
+        private Integer payloadFormatIndicator; 
         private String productKey; 
         private Integer qos; 
         private String responseTopic; 
@@ -157,16 +183,27 @@ public class PubRequest extends Request {
 
         private Builder(PubRequest request) {
             super(request);
+            this.contentType = request.contentType;
             this.correlationData = request.correlationData;
             this.deviceName = request.deviceName;
             this.iotInstanceId = request.iotInstanceId;
             this.messageContent = request.messageContent;
+            this.payloadFormatIndicator = request.payloadFormatIndicator;
             this.productKey = request.productKey;
             this.qos = request.qos;
             this.responseTopic = request.responseTopic;
             this.topicFullName = request.topicFullName;
             this.userProp = request.userProp;
         } 
+
+        /**
+         * ContentType.
+         */
+        public Builder contentType(String contentType) {
+            this.putQueryParameter("ContentType", contentType);
+            this.contentType = contentType;
+            return this;
+        }
 
         /**
          * CorrelationData.
@@ -201,6 +238,15 @@ public class PubRequest extends Request {
         public Builder messageContent(String messageContent) {
             this.putBodyParameter("MessageContent", messageContent);
             this.messageContent = messageContent;
+            return this;
+        }
+
+        /**
+         * PayloadFormatIndicator.
+         */
+        public Builder payloadFormatIndicator(Integer payloadFormatIndicator) {
+            this.putQueryParameter("PayloadFormatIndicator", payloadFormatIndicator);
+            this.payloadFormatIndicator = payloadFormatIndicator;
             return this;
         }
 

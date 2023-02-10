@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RRpcRequest extends Request {
     @Query
+    @NameInMap("ContentType")
+    private String contentType;
+
+    @Query
     @NameInMap("DeviceName")
     @Validation(required = true)
     private String deviceName;
@@ -42,6 +46,7 @@ public class RRpcRequest extends Request {
 
     private RRpcRequest(Builder builder) {
         super(builder);
+        this.contentType = builder.contentType;
         this.deviceName = builder.deviceName;
         this.iotInstanceId = builder.iotInstanceId;
         this.productKey = builder.productKey;
@@ -61,6 +66,13 @@ public class RRpcRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return contentType
+     */
+    public String getContentType() {
+        return this.contentType;
     }
 
     /**
@@ -106,6 +118,7 @@ public class RRpcRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RRpcRequest, Builder> {
+        private String contentType; 
         private String deviceName; 
         private String iotInstanceId; 
         private String productKey; 
@@ -119,6 +132,7 @@ public class RRpcRequest extends Request {
 
         private Builder(RRpcRequest request) {
             super(request);
+            this.contentType = request.contentType;
             this.deviceName = request.deviceName;
             this.iotInstanceId = request.iotInstanceId;
             this.productKey = request.productKey;
@@ -126,6 +140,15 @@ public class RRpcRequest extends Request {
             this.timeout = request.timeout;
             this.topic = request.topic;
         } 
+
+        /**
+         * ContentType.
+         */
+        public Builder contentType(String contentType) {
+            this.putQueryParameter("ContentType", contentType);
+            this.contentType = contentType;
+            return this;
+        }
 
         /**
          * DeviceName.

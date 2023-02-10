@@ -66,6 +66,10 @@ public class UpdateSubscribeRelationRequest extends Request {
     private String productKey;
 
     @Query
+    @NameInMap("SubscribeFlags")
+    private String subscribeFlags;
+
+    @Query
     @NameInMap("ThingHistoryFlag")
     private Boolean thingHistoryFlag;
 
@@ -89,6 +93,7 @@ public class UpdateSubscribeRelationRequest extends Request {
         this.otaJobFlag = builder.otaJobFlag;
         this.otaVersionFlag = builder.otaVersionFlag;
         this.productKey = builder.productKey;
+        this.subscribeFlags = builder.subscribeFlags;
         this.thingHistoryFlag = builder.thingHistoryFlag;
         this.type = builder.type;
     }
@@ -198,6 +203,13 @@ public class UpdateSubscribeRelationRequest extends Request {
     }
 
     /**
+     * @return subscribeFlags
+     */
+    public String getSubscribeFlags() {
+        return this.subscribeFlags;
+    }
+
+    /**
      * @return thingHistoryFlag
      */
     public Boolean getThingHistoryFlag() {
@@ -225,6 +237,7 @@ public class UpdateSubscribeRelationRequest extends Request {
         private Boolean otaJobFlag; 
         private Boolean otaVersionFlag; 
         private String productKey; 
+        private String subscribeFlags; 
         private Boolean thingHistoryFlag; 
         private String type; 
 
@@ -247,6 +260,7 @@ public class UpdateSubscribeRelationRequest extends Request {
             this.otaJobFlag = request.otaJobFlag;
             this.otaVersionFlag = request.otaVersionFlag;
             this.productKey = request.productKey;
+            this.subscribeFlags = request.subscribeFlags;
             this.thingHistoryFlag = request.thingHistoryFlag;
             this.type = request.type;
         } 
@@ -365,6 +379,15 @@ public class UpdateSubscribeRelationRequest extends Request {
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
             this.productKey = productKey;
+            return this;
+        }
+
+        /**
+         * SubscribeFlags.
+         */
+        public Builder subscribeFlags(String subscribeFlags) {
+            this.putQueryParameter("SubscribeFlags", subscribeFlags);
+            this.subscribeFlags = subscribeFlags;
             return this;
         }
 

@@ -42,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BatchCheckImportDeviceResponse> batchCheckImportDevice(BatchCheckImportDeviceRequest request);
 
+    CompletableFuture<BatchCheckVehicleDeviceResponse> batchCheckVehicleDevice(BatchCheckVehicleDeviceRequest request);
+
     CompletableFuture<BatchClearEdgeInstanceDeviceConfigResponse> batchClearEdgeInstanceDeviceConfig(BatchClearEdgeInstanceDeviceConfigRequest request);
 
     CompletableFuture<BatchCreateSoundCodeLabelResponse> batchCreateSoundCodeLabel(BatchCreateSoundCodeLabelRequest request);
@@ -69,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetEdgeInstanceDriverConfigsResponse> batchGetEdgeInstanceDriverConfigs(BatchGetEdgeInstanceDriverConfigsRequest request);
 
     CompletableFuture<BatchImportDeviceResponse> batchImportDevice(BatchImportDeviceRequest request);
+
+    CompletableFuture<BatchImportVehicleDeviceResponse> batchImportVehicleDevice(BatchImportVehicleDeviceRequest request);
 
     CompletableFuture<BatchPubResponse> batchPub(BatchPubRequest request);
 
@@ -115,6 +119,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelReleaseProductResponse> cancelReleaseProduct(CancelReleaseProductRequest request);
 
     CompletableFuture<CheckBindLicenseDeviceProgressResponse> checkBindLicenseDeviceProgress(CheckBindLicenseDeviceProgressRequest request);
+
+    CompletableFuture<ClearDeviceDesiredPropertyResponse> clearDeviceDesiredProperty(ClearDeviceDesiredPropertyRequest request);
 
     CompletableFuture<ClearEdgeInstanceDriverConfigsResponse> clearEdgeInstanceDriverConfigs(ClearEdgeInstanceDriverConfigsRequest request);
 
@@ -380,6 +386,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GisSearchDeviceTraceResponse> gisSearchDeviceTrace(GisSearchDeviceTraceRequest request);
 
+    CompletableFuture<ImportDTDataResponse> importDTData(ImportDTDataRequest request);
+
     CompletableFuture<ImportDeviceResponse> importDevice(ImportDeviceRequest request);
 
     CompletableFuture<ImportThingModelTslResponse> importThingModelTsl(ImportThingModelTslRequest request);
@@ -540,6 +548,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryDeviceTunnelResponse> queryDeviceTunnel(QueryDeviceTunnelRequest request);
 
+    CompletableFuture<QueryDevicesHotStorageDataResponse> queryDevicesHotStorageData(QueryDevicesHotStorageDataRequest request);
+
+    CompletableFuture<QueryDevicesHotStorageDataStatusResponse> queryDevicesHotStorageDataStatus(QueryDevicesHotStorageDataStatusRequest request);
+
     CompletableFuture<QueryDynamicGroupDevicesResponse> queryDynamicGroupDevices(QueryDynamicGroupDevicesRequest request);
 
     CompletableFuture<QueryEdgeDriverResponse> queryEdgeDriver(QueryEdgeDriverRequest request);
@@ -651,6 +663,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryTopicReverseRouteTableResponse> queryTopicReverseRouteTable(QueryTopicReverseRouteTableRequest request);
 
     CompletableFuture<QueryTopicRouteTableResponse> queryTopicRouteTable(QueryTopicRouteTableRequest request);
+
+    CompletableFuture<QueryVehicleDeviceResponse> queryVehicleDevice(QueryVehicleDeviceRequest request);
 
     CompletableFuture<RRpcResponse> rRpc(RRpcRequest request);
 
@@ -791,5 +805,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateThingModelResponse> updateThingModel(UpdateThingModelRequest request);
 
     CompletableFuture<UpdateThingScriptResponse> updateThingScript(UpdateThingScriptRequest request);
+
+    CompletableFuture<UpdateTopicConfigResponse> updateTopicConfig(UpdateTopicConfigRequest request);
+
+    CompletableFuture<WriteDevicesHotStorageDataResponse> writeDevicesHotStorageData(WriteDevicesHotStorageDataRequest request);
 
 }

@@ -57,6 +57,9 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SubscribeFlags")
+    private String subscribeFlags;
+
     @NameInMap("Success")
     private Boolean success;
 
@@ -82,6 +85,7 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         this.otaVersionFlag = builder.otaVersionFlag;
         this.productKey = builder.productKey;
         this.requestId = builder.requestId;
+        this.subscribeFlags = builder.subscribeFlags;
         this.success = builder.success;
         this.thingHistoryFlag = builder.thingHistoryFlag;
         this.type = builder.type;
@@ -201,6 +205,13 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
     }
 
     /**
+     * @return subscribeFlags
+     */
+    public String getSubscribeFlags() {
+        return this.subscribeFlags;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -237,6 +248,7 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
         private Boolean otaVersionFlag; 
         private String productKey; 
         private String requestId; 
+        private String subscribeFlags; 
         private Boolean success; 
         private Boolean thingHistoryFlag; 
         private String type; 
@@ -358,6 +370,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SubscribeFlags.
+         */
+        public Builder subscribeFlags(String subscribeFlags) {
+            this.subscribeFlags = subscribeFlags;
             return this;
         }
 
