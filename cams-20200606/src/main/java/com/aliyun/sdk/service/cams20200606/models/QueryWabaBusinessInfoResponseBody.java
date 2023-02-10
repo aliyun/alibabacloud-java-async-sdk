@@ -74,7 +74,11 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The business information about the WhatsApp Business account.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +178,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
             private String vertical; 
 
             /**
-             * business平台Id
+             * The ID of the business platform.
              */
             public Builder businessId(String businessId) {
                 this.businessId = businessId;
@@ -182,7 +186,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * business 平台名称
+             * The name of the business platform.
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -190,7 +194,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 校验状态
+             * The verification status.
              */
             public Builder verificationStatus(String verificationStatus) {
                 this.verificationStatus = verificationStatus;
@@ -198,7 +202,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 行业
+             * The industry.
              */
             public Builder vertical(String vertical) {
                 this.vertical = vertical;

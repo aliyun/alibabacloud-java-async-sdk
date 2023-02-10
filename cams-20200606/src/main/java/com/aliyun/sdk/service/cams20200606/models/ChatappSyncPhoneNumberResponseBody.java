@@ -74,7 +74,11 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +94,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * 模板列表
+         * The list of phone numbers.
          */
         public Builder phoneNumbers(java.util.List < PhoneNumbers> phoneNumbers) {
             this.phoneNumbers = phoneNumbers;
@@ -98,7 +102,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -270,7 +274,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             private String verifiedName; 
 
             /**
-             * 校验状态
+             * The verification status.
              */
             public Builder codeVerificationStatus(String codeVerificationStatus) {
                 this.codeVerificationStatus = codeVerificationStatus;
@@ -278,7 +282,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 号码发送量
+             * The quantity of phone numbers to which messages can be sent in a day.
              */
             public Builder messagingLimitTier(String messagingLimitTier) {
                 this.messagingLimitTier = messagingLimitTier;
@@ -286,7 +290,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 名称审核状态
+             * The review status of the business name.
              */
             public Builder nameStatus(String nameStatus) {
                 this.nameStatus = nameStatus;
@@ -294,7 +298,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 新名称审核状态
+             * The review status of the new business name.
              */
             public Builder newNameStatus(String newNameStatus) {
                 this.newNameStatus = newNameStatus;
@@ -302,7 +306,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 模板编码
+             * The phone number.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -310,7 +314,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 号码质量
+             * The quality of the phone number. Valid values: GREEN, YELLOW, and RED.
              */
             public Builder qualityRating(String qualityRating) {
                 this.qualityRating = qualityRating;
@@ -318,7 +322,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 号码状态
+             * The status of the phone number.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -326,7 +330,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 模板分类
+             * The callback URL to which status reports are sent via HTTP callbacks.
              */
             public Builder statusCallbackUrl(String statusCallbackUrl) {
                 this.statusCallbackUrl = statusCallbackUrl;
@@ -334,7 +338,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 审核状态
+             * The status report queue.
              */
             public Builder statusQueue(String statusQueue) {
                 this.statusQueue = statusQueue;
@@ -342,7 +346,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 模板分类
+             * The callback URL to which MO messages are sent via HTTP callbacks.
              */
             public Builder upCallbackUrl(String upCallbackUrl) {
                 this.upCallbackUrl = upCallbackUrl;
@@ -350,7 +354,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 模板名称
+             * The mobile originated (MO) message queue.
              */
             public Builder upQueue(String upQueue) {
                 this.upQueue = upQueue;
@@ -358,7 +362,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 语言
+             * The name of the business to which the phone number belongs.
              */
             public Builder verifiedName(String verifiedName) {
                 this.verifiedName = verifiedName;

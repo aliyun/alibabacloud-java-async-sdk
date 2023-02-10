@@ -77,8 +77,8 @@ public class SendChatappMessageResponseBody extends TeaModel {
          * The HTTP status code returned.
          * <p>
          * 
-         * *   A code of OK indicates that the call is successful.
-         * *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;

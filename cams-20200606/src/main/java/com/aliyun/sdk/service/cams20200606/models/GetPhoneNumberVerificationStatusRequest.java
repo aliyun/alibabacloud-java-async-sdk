@@ -70,7 +70,7 @@ public class GetPhoneNumberVerificationStatusRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -79,7 +79,7 @@ public class GetPhoneNumberVerificationStatusRequest extends Request {
         }
 
         /**
-         * 号码
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

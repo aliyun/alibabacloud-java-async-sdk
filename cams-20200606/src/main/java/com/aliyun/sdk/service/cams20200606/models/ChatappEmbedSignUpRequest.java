@@ -55,7 +55,7 @@ public class ChatappEmbedSignUpRequest extends Request {
         } 
 
         /**
-         * 嵌入式返回的inputToken
+         * The InputToken returned by the embedded signup.
          */
         public Builder inputToken(String inputToken) {
             this.putBodyParameter("InputToken", inputToken);

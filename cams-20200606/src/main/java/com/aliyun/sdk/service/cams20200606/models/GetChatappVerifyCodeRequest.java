@@ -100,7 +100,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -109,7 +109,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
-         * 语言
+         * The language.
          */
         public Builder locale(String locale) {
             this.putBodyParameter("Locale", locale);
@@ -118,7 +118,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
-         * 验证码类型，取值SMS/VOICE
+         * The type of the verification code. Valid values: SMS and VOICE.
          */
         public Builder method(String method) {
             this.putBodyParameter("Method", method);
@@ -127,7 +127,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
-         * 号码
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

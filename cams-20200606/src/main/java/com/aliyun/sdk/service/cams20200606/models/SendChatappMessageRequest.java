@@ -329,8 +329,8 @@ public class SendChatappMessageRequest extends Request {
          * <p>
          * 
          * *   **whatsapp**
-         * *   viber (under development)
-         * *   line (under development)
+         * *   viber, which is under development
+         * *   line, which is under development
          */
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -342,9 +342,16 @@ public class SendChatappMessageRequest extends Request {
          * The content of the message.
          * <p>
          * 
-         * **
-         * 
-         * **Note** The **Content** parameter is required if you set the **Type** parameter to **message**.
+         * *   When you set the **MessageType** parameter to **text**, the **text** parameter is required and the **caption** parameter cannot be specified.
+         * *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
+         * *   When you set the **MessageType** parameter to **video**, the **link** parameter is required.
+         * *   When you set the **MessageType** parameter to **audio**, the **link** parameter is required and **caption** parameter is invalid.
+         * *   When you set the **MessageType** parameter to **document**, the **link** and **fileName** parameters are required and **caption** parameter is invalid.
+         * *   When you set the **MessageType** parameter to **interactive**, the **type** and **action** parameters are required.
+         * *   When you set the **MessageType** parameter to **contacts**, the **name** parameter is required.
+         * *   When you set the **MessageType** parameter to **location**, the **longitude** and **latitude** parameters are required.
+         * *   When you set the **MessageType** parameter to **sticker**, the **link** parameter is required, and the **caption** and **fileName** parameters are invalid.
+         * *   When you set the **MessageType** parameter to **reaction**, the **messageId** and **emoji** parameters are required.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -353,7 +360,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 回复的消息ID
+         * The ID of the reply message.
          */
         public Builder contextMessageId(String contextMessageId) {
             this.putBodyParameter("ContextMessageId", contextMessageId);
@@ -362,7 +369,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -380,7 +387,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * Fallback message content.
+         * The content of the fallback message.
          */
         public Builder fallBackContent(String fallBackContent) {
             this.putBodyParameter("FallBackContent", fallBackContent);
@@ -389,7 +396,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * Fallback strategy id. Fallback Strategy can be created on the ChatApp console.
+         * The ID of the fallback policy. You can create a fallback policy and view information about the policy in the console.
          */
         public Builder fallBackId(String fallBackId) {
             this.putBodyParameter("FallBackId", fallBackId);
@@ -398,10 +405,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The mobile phone number of the message sender.
+         * The phone number of the message sender.
          * <p>
          * 
-         * <notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice>
+         * >  You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -410,7 +417,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * Assigned by ISV for RAM user authentication and authorization.
+         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -419,7 +426,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * Viber消息类型，取值 pormotion/transation
+         * The message type when the ChannelType parameter is set to viber. Valid values: pormotion and transition.
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -428,7 +435,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template.
+         * The language that is used in the message template. This parameter is required only if you set the Type parameter to **template**. For more information about language codes, see [Language codes](~~463420~~).
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -437,14 +444,21 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The type of the message. This parameter is required if you set the Type parameter to **message**. Valid values:
+         * The type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:
          * <p>
          * 
-         * *   **text**: a text message. The **Text** parameter is required if you set the MessageType parameter to text.
-         * *   **image**: an image message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to image.
-         * *   **video**: a video message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to video.
-         * *   **audio**: an audio message. The **Link** parameter is required and the **Caption** parameter is invalid if you set the MessageType parameter to audio.
-         * *   **document**: a document message. The **Link** and **FileName** parameters are required and the **Caption** parameter is invalid if you set the MessageType parameter to document.
+         * *   **text**: the text message.
+         * *   **image**: the image message.
+         * *   **video**: the video message.
+         * *   **audio**: the audio message.
+         * *   **document**: the document message.
+         * *   **interactive**: the interactive message.
+         * *   **contacts**: the contact message.
+         * *   **location**: the location message.
+         * *   **sticker**: the sticker message.
+         * *   **reaction**: the reaction message.
+         * 
+         * >  For more information about parameters of location, contacts, interactive, and media, see [Parameters of a message template](~~454530~~).
          */
         public Builder messageType(String messageType) {
             this.putBodyParameter("MessageType", messageType);
@@ -463,7 +477,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * viber消息发送时tag信息
+         * The tag information when the ChannelType parameter is set to viber.
          */
         public Builder tag(String tag) {
             this.putBodyParameter("Tag", tag);
@@ -472,7 +486,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The code of the message template. This parameter is required if you set the Type parameter to **template**.
+         * The code of the message template. This parameter is required only if you set the Type parameter to **template**.
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -491,7 +505,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The mobile phone number of the message recipient.
+         * The phone number of the message receiver.
          */
         public Builder to(String to) {
             this.putBodyParameter("To", to);
@@ -500,7 +514,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * viber消息跟踪数据值
+         * The tracking data when the ChannelType parameter is set to viber.
          */
         public Builder trackingData(String trackingData) {
             this.putBodyParameter("TrackingData", trackingData);
@@ -509,7 +523,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * Viber消息发送超时时间，单位为秒，取值范围 30 - 1209600
+         * The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600, in seconds.
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("Ttl", ttl);
@@ -521,7 +535,7 @@ public class SendChatappMessageRequest extends Request {
          * The type of the message. Valid values:
          * <p>
          * 
-         * *   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages based on your business requirements.
+         * *   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages at any time based on your business requirements.
          * *   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.
          */
         public Builder type(String type) {

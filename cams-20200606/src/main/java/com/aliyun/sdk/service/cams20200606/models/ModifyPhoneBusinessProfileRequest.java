@@ -154,7 +154,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         } 
 
         /**
-         * 地址
+         * The address.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -163,7 +163,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -172,7 +172,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * 描述
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -181,7 +181,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * 邮箱
+         * The email address.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -190,7 +190,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * 号码
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -199,7 +199,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * 头像url
+         * The URL of the profile picture.
          */
         public Builder profilePictureUrl(String profilePictureUrl) {
             this.putQueryParameter("ProfilePictureUrl", profilePictureUrl);
@@ -208,7 +208,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * 行业
+         * The industry.
          */
         public Builder vertical(String vertical) {
             this.putQueryParameter("Vertical", vertical);
@@ -217,7 +217,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * 网站
+         * The websites.
          */
         public Builder websites(java.util.List < String > websites) {
             String websitesShrink = shrink(websites, "Websites", "json");

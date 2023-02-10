@@ -74,7 +74,11 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         private java.util.List < Wabas> wabas; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +94,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         }
 
         /**
-         * Wabas.
+         * The list of WhatsApp Business accounts.
          */
         public Builder wabas(java.util.List < Wabas> wabas) {
             this.wabas = wabas;
@@ -186,7 +190,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Waba审核状态
+             * The audit status of the WhatsApp Business account.
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;
@@ -194,7 +198,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * 币种
+             * The currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -210,7 +214,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * 消息模板命名空间
+             * The namespace of the message template.
              */
             public Builder messageTemplateNamespace(String messageTemplateNamespace) {
                 this.messageTemplateNamespace = messageTemplateNamespace;

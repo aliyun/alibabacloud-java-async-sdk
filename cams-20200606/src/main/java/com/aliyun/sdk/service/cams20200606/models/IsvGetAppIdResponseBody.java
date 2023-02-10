@@ -74,7 +74,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 消息ID
+         * The message ID.
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -82,7 +82,11 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +94,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

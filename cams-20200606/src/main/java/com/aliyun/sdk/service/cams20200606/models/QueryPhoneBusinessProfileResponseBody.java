@@ -74,7 +74,11 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +202,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             private java.util.List < String > websites; 
 
             /**
-             * 地址
+             * The address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -206,7 +210,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +218,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * The email address.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -222,7 +226,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * 头像
+             * The URL of the profile picture.
              */
             public Builder profilePictureUrl(String profilePictureUrl) {
                 this.profilePictureUrl = profilePictureUrl;
@@ -230,7 +234,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * 行业
+             * The industry.
              */
             public Builder vertical(String vertical) {
                 this.vertical = vertical;
@@ -238,7 +242,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * 网站
+             * The websites.
              */
             public Builder websites(java.util.List < String > websites) {
                 this.websites = websites;
