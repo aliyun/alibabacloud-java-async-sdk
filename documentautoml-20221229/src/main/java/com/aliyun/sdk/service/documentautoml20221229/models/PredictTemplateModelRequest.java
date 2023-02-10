@@ -18,14 +18,14 @@ public class PredictTemplateModelRequest extends Request {
     private String content;
 
     @Query
-    @NameInMap("ProjectId")
+    @NameInMap("TaskId")
     @Validation(required = true)
-    private Long projectId;
+    private Long taskId;
 
     private PredictTemplateModelRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
-        this.projectId = builder.projectId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -49,15 +49,15 @@ public class PredictTemplateModelRequest extends Request {
     }
 
     /**
-     * @return projectId
+     * @return taskId
      */
-    public Long getProjectId() {
-        return this.projectId;
+    public Long getTaskId() {
+        return this.taskId;
     }
 
     public static final class Builder extends Request.Builder<PredictTemplateModelRequest, Builder> {
         private String content; 
-        private Long projectId; 
+        private Long taskId; 
 
         private Builder() {
             super();
@@ -66,7 +66,7 @@ public class PredictTemplateModelRequest extends Request {
         private Builder(PredictTemplateModelRequest request) {
             super(request);
             this.content = request.content;
-            this.projectId = request.projectId;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -79,11 +79,11 @@ public class PredictTemplateModelRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * TaskId.
          */
-        public Builder projectId(Long projectId) {
-            this.putQueryParameter("ProjectId", projectId);
-            this.projectId = projectId;
+        public Builder taskId(Long taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 

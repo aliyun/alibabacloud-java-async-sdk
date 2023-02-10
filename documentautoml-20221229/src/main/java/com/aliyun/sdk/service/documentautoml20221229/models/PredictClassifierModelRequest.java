@@ -18,8 +18,8 @@ public class PredictClassifierModelRequest extends Request {
 
     @Query
     @NameInMap("ClassifierId")
-    @Validation(required = true)
-    private String classifierId;
+    @Validation(maximum = 99999999999999D, minimum = 1)
+    private Long classifierId;
 
     @Query
     @NameInMap("Content")
@@ -56,7 +56,7 @@ public class PredictClassifierModelRequest extends Request {
     /**
      * @return classifierId
      */
-    public String getClassifierId() {
+    public Long getClassifierId() {
         return this.classifierId;
     }
 
@@ -69,7 +69,7 @@ public class PredictClassifierModelRequest extends Request {
 
     public static final class Builder extends Request.Builder<PredictClassifierModelRequest, Builder> {
         private Boolean autoPrediction; 
-        private String classifierId; 
+        private Long classifierId; 
         private String content; 
 
         private Builder() {
@@ -95,7 +95,7 @@ public class PredictClassifierModelRequest extends Request {
         /**
          * ClassifierId.
          */
-        public Builder classifierId(String classifierId) {
+        public Builder classifierId(Long classifierId) {
             this.putQueryParameter("ClassifierId", classifierId);
             this.classifierId = classifierId;
             return this;
