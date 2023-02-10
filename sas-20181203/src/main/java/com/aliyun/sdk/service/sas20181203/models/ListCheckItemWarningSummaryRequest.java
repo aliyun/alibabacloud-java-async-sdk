@@ -194,7 +194,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         } 
 
         /**
-         * 检查项名称模糊匹配
+         * The name of the check item. Fuzzy match is supported.
          */
         public Builder checkItemFuzzy(String checkItemFuzzy) {
             this.putQueryParameter("CheckItemFuzzy", checkItemFuzzy);
@@ -203,7 +203,11 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * 风险等级
+         * The risk level of the check item. Default value: null, which indicates that check items of all risk levels are queried. Valid values:
+         * <p>
+         * *   **high**
+         * *   **medium**
+         * *   **low**
          */
         public Builder checkLevel(String checkLevel) {
             this.putQueryParameter("CheckLevel", checkLevel);
@@ -212,7 +216,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * 检查项分类名称
+         * The type of the check item.
          */
         public Builder checkType(String checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -221,7 +225,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * 风险状态
+         * The status of the check item. Default value: null, which indicates that check items in all states are queried. Valid values:
+         * <p>
+         * *   **1**: failed
+         * *   **3**: passed
          */
         public Builder checkWarningStatus(Integer checkWarningStatus) {
             this.putQueryParameter("CheckWarningStatus", checkWarningStatus);
@@ -230,7 +237,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * 容器安全查询参数名称
+         * The name of the condition that is used to query containers.
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -239,7 +246,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * 容器安全查询值
+         * The value of the condition that is used to query containers.
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -248,7 +255,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -257,7 +264,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the asset group.
+         * <p>
+         * 
+         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -266,7 +276,11 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -275,7 +289,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -284,7 +301,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * 基线分类名称
+         * The baseline type.
          */
         public Builder riskType(String riskType) {
             this.putQueryParameter("RiskType", riskType);

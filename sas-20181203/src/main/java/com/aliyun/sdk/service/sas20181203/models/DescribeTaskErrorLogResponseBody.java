@@ -50,7 +50,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The error logs that are returned.
+         * An array that consists of the error logs.
          */
         public Builder logs(java.util.List < Logs> logs) {
             this.logs = logs;
@@ -58,7 +58,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * The error log.
+             * The text content of the log.
              */
             public Builder text(String text) {
                 this.text = text;

@@ -84,7 +84,7 @@ public class EnableCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * BlockIp.
+         * The IP address that is specified in the policy.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -93,7 +93,11 @@ public class EnableCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * Bound.
+         * The traffic direction that is specified in the policy. Valid values:
+         * <p>
+         * 
+         * *   **in**: inbound
+         * *   **out**: outbound
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);

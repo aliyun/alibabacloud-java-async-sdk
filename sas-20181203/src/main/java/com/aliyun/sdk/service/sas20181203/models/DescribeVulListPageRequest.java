@@ -96,7 +96,7 @@ public class DescribeVulListPageRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +105,7 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * CveId.
+         * The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
          */
         public Builder cveId(String cveId) {
             this.putQueryParameter("CveId", cveId);
@@ -114,7 +114,7 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +123,7 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * VulNameLike.
+         * The name of the vulnerability.
          */
         public Builder vulNameLike(String vulNameLike) {
             this.putQueryParameter("VulNameLike", vulNameLike);

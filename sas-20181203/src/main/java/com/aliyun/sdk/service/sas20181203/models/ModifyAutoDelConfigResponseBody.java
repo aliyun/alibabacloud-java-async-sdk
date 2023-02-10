@@ -38,7 +38,7 @@ public class ModifyAutoDelConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

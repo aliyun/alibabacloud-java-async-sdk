@@ -50,7 +50,7 @@ public class QueryDiscoverDatabaseResponseBody extends TeaModel {
         private Integer taskProgress; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class QueryDiscoverDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * TaskProgress.
+         * The progress of the database scan task in percentage.
          */
         public Builder taskProgress(Integer taskProgress) {
             this.taskProgress = taskProgress;

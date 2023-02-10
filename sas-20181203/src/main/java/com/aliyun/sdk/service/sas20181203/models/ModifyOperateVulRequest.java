@@ -132,7 +132,7 @@ public class ModifyOperateVulRequest extends Request {
          * <p>
          * 
          * *   **vul_fix**: fixes the vulnerability.
-         * *   **vul_verify**: verifies the vulnerability.
+         * *   **vul_verify**: verifies the vulnerability fix.
          * *   **vul_ignore**: ignores the vulnerability.
          * *   **vul\_undo_ignore**: cancels ignoring the vulnerability.
          * *   **vul_delete**: deletes the vulnerability.

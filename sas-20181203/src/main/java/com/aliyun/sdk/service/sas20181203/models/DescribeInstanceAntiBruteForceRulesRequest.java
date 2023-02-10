@@ -146,7 +146,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * An array that consists of the UUIDs of the servers.
+         * The UUIDs of the servers.
          * <p>
          * 
          * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.

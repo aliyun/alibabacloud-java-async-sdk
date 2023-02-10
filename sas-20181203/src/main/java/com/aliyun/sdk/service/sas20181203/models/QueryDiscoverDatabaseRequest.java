@@ -54,7 +54,10 @@ public class QueryDiscoverDatabaseRequest extends Request {
         } 
 
         /**
-         * CreateMark.
+         * The ID of the scan task.
+         * <p>
+         * 
+         * > You can call the [StartDiscoverDatabaseTask](~~StartDiscoverDatabaseTask~~) operation to query the ID of the task.
          */
         public Builder createMark(String createMark) {
             this.putQueryParameter("CreateMark", createMark);

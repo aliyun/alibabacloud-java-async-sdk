@@ -54,12 +54,12 @@ public class ModifyAutoDelConfigRequest extends Request {
         } 
 
         /**
-         * The number of days after which a detected vulnerability is automatically deleted. Valid values:
+         * The number of days after which a detected vulnerability is automatically deleted. Unit: days. Valid values:
          * <p>
          * 
-         * - 7
-         * - 30
-         * - 90
+         * *   7
+         * *   30
+         * *   90
          */
         public Builder days(Integer days) {
             this.putQueryParameter("Days", days);

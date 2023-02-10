@@ -112,7 +112,7 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         } 
 
         /**
-         * BaselineItemKeyList.
+         * The keys of baseline check items.
          */
         public Builder baselineItemKeyList(String baselineItemKeyList) {
             this.putQueryParameter("BaselineItemKeyList", baselineItemKeyList);
@@ -121,7 +121,7 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         }
 
         /**
-         * ImageUuid.
+         * The UUID of the image.
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -130,7 +130,11 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -139,7 +143,11 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         }
 
         /**
-         * Operation.
+         * The operation that you want to perform on the check items. Valid values:
+         * <p>
+         * 
+         * *   **add**: adds the check items to the whitelist
+         * *   **del**: removes the check items from the whitelist
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -148,7 +156,7 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

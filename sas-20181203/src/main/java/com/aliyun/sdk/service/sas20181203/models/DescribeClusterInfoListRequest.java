@@ -84,7 +84,7 @@ public class DescribeClusterInfoListRequest extends Request {
         } 
 
         /**
-         * Target.
+         * The operation value. The value specifies the ID of the cluster.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -93,7 +93,10 @@ public class DescribeClusterInfoListRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The dimension based on which you want to configure the feature. Valid values:
+         * <p>
+         * 
+         * *   **Cluster**: the ID of the cluster
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -102,7 +105,11 @@ public class DescribeClusterInfoListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the feature. Valid values:
+         * <p>
+         * 
+         * *   **containerNetwork**: container network
+         * *   **interceptionSwitch**: cluster microsegmentation
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

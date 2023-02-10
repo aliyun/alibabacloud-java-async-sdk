@@ -97,7 +97,10 @@ public class SaveImageBaselineStrategyRequest extends Request {
         } 
 
         /**
-         * BaselineItemList.
+         * The baseline check items.
+         * <p>
+         * 
+         * > You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query baseline check items.
          */
         public Builder baselineItemList(String baselineItemList) {
             this.putQueryParameter("BaselineItemList", baselineItemList);
@@ -106,7 +109,11 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +122,10 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the baseline check policy.
+         * <p>
+         * 
+         * > You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query the IDs of baseline check policies.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -124,7 +134,7 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * The name of the baseline check policy.
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

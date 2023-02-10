@@ -68,7 +68,7 @@ public class JoinWebLockProcessWhiteListRequest extends Request {
         } 
 
         /**
-         * ProcessPaths.
+         * The paths of the processes.
          */
         public Builder processPaths(java.util.List < String > processPaths) {
             this.putQueryParameter("ProcessPaths", processPaths);
@@ -77,7 +77,7 @@ public class JoinWebLockProcessWhiteListRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of the servers on which the processes run. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -50,7 +50,7 @@ public class DescribeImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The information about the image digest.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeImageResponseBody extends TeaModel {
             private String digest; 
 
             /**
-             * Digest.
+             * The digest value of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;

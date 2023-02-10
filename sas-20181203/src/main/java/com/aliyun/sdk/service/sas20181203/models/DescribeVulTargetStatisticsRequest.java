@@ -54,7 +54,13 @@ public class DescribeVulTargetStatisticsRequest extends Request {
         } 
 
         /**
-         * Type.
+         * The type of the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerabilities
+         * *   **sys**: Windows system vulnerabilities
+         * *   **cms**: Web-CMS vulnerabilities
+         * *   **emg**: urgent vulnerabilities
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

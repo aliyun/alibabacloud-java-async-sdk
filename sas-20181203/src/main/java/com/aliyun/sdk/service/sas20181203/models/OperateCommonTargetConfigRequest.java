@@ -126,7 +126,11 @@ public class OperateCommonTargetConfigRequest extends Request {
         } 
 
         /**
-         * FieldName.
+         * The type of the image. Valid values:
+         * <p>
+         * 
+         * *   **repoName**: the name of the image repository
+         * *   **repoNamespace**: the namespace of the image repository
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("FieldName", fieldName);
@@ -135,7 +139,7 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * FieldValue.
+         * The name of the image repository or the namespace of the image repository.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -144,7 +148,7 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -153,7 +157,12 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * TargetOperations.
+         * The configuration of proactive defense for your server. The value includes the following fields:
+         * <p>
+         * 
+         * *   **targetType**: specifies the dimension from which you manage proactive defense. UUIDs are supported. Set the value to **uuid**.
+         * *   **target**: specifies the UUID of the server for which you want to configure proactive defense.
+         * *   **flag**: specifies whether to enable or disable proactive defense for your server. Valid values are **add** and **del**. The value add indicates that proactive defense will be enabled for your server. The value del indicates that proactive defense will be disabled for your server.
          */
         public Builder targetOperations(String targetOperations) {
             this.putQueryParameter("TargetOperations", targetOperations);
@@ -162,7 +171,12 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The dimension based on which you want to configure the feature. Valid values:
+         * <p>
+         * 
+         * *   **uuid**: the UUID of the server
+         * *   **Cluster**: the ID of the cluster
+         * *   **image_repo**: the name of the image repository
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -171,7 +185,20 @@ public class OperateCommonTargetConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the feature. Valid values:
+         * <p>
+         * 
+         * *   **alidetect-scan-enable**: local file detection
+         * *   **ACTION-TRIAL-PERMISSION**: data delivery of ActionTrail
+         * *   **alidetect**: local file detection engine
+         * *   **container_prevent_escape**: container escape prevention
+         * *   **image_repo**: repository image scan
+         * *   **proc_filter_switch**: log filtering
+         * *   **agentless**: agentless detection
+         * *   **rasp**: application protection
+         * *   **sensitiveFile**: sensitive file detection
+         * *   **aliscriptengine**: in-depth detection engine
+         * *   **containerNetwork**: container network visualization
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

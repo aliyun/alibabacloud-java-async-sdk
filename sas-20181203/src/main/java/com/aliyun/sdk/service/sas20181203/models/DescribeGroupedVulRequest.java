@@ -17,8 +17,16 @@ public class DescribeGroupedVulRequest extends Request {
     private String aliasName;
 
     @Query
+    @NameInMap("AssetType")
+    private String assetType;
+
+    @Query
     @NameInMap("AttachTypes")
     private String attachTypes;
+
+    @Query
+    @NameInMap("ContainerFieldName")
+    private String containerFieldName;
 
     @Query
     @NameInMap("CurrentPage")
@@ -49,6 +57,10 @@ public class DescribeGroupedVulRequest extends Request {
     private String searchTags;
 
     @Query
+    @NameInMap("TargetType")
+    private String targetType;
+
+    @Query
     @NameInMap("Type")
     private String type;
 
@@ -59,7 +71,9 @@ public class DescribeGroupedVulRequest extends Request {
     private DescribeGroupedVulRequest(Builder builder) {
         super(builder);
         this.aliasName = builder.aliasName;
+        this.assetType = builder.assetType;
         this.attachTypes = builder.attachTypes;
+        this.containerFieldName = builder.containerFieldName;
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.groupId = builder.groupId;
@@ -67,6 +81,7 @@ public class DescribeGroupedVulRequest extends Request {
         this.necessity = builder.necessity;
         this.pageSize = builder.pageSize;
         this.searchTags = builder.searchTags;
+        this.targetType = builder.targetType;
         this.type = builder.type;
         this.uuids = builder.uuids;
     }
@@ -92,10 +107,24 @@ public class DescribeGroupedVulRequest extends Request {
     }
 
     /**
+     * @return assetType
+     */
+    public String getAssetType() {
+        return this.assetType;
+    }
+
+    /**
      * @return attachTypes
      */
     public String getAttachTypes() {
         return this.attachTypes;
+    }
+
+    /**
+     * @return containerFieldName
+     */
+    public String getContainerFieldName() {
+        return this.containerFieldName;
     }
 
     /**
@@ -148,6 +177,13 @@ public class DescribeGroupedVulRequest extends Request {
     }
 
     /**
+     * @return targetType
+     */
+    public String getTargetType() {
+        return this.targetType;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -163,7 +199,9 @@ public class DescribeGroupedVulRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeGroupedVulRequest, Builder> {
         private String aliasName; 
+        private String assetType; 
         private String attachTypes; 
+        private String containerFieldName; 
         private Integer currentPage; 
         private String dealed; 
         private String groupId; 
@@ -171,6 +209,7 @@ public class DescribeGroupedVulRequest extends Request {
         private String necessity; 
         private Integer pageSize; 
         private String searchTags; 
+        private String targetType; 
         private String type; 
         private String uuids; 
 
@@ -181,7 +220,9 @@ public class DescribeGroupedVulRequest extends Request {
         private Builder(DescribeGroupedVulRequest request) {
             super(request);
             this.aliasName = request.aliasName;
+            this.assetType = request.assetType;
             this.attachTypes = request.attachTypes;
+            this.containerFieldName = request.containerFieldName;
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.groupId = request.groupId;
@@ -189,6 +230,7 @@ public class DescribeGroupedVulRequest extends Request {
             this.necessity = request.necessity;
             this.pageSize = request.pageSize;
             this.searchTags = request.searchTags;
+            this.targetType = request.targetType;
             this.type = request.type;
             this.uuids = request.uuids;
         } 
@@ -203,6 +245,15 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
+         * AssetType.
+         */
+        public Builder assetType(String assetType) {
+            this.putQueryParameter("AssetType", assetType);
+            this.assetType = assetType;
+            return this;
+        }
+
+        /**
          * The type of the vulnerability.
          * <p>
          * 
@@ -211,6 +262,15 @@ public class DescribeGroupedVulRequest extends Request {
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
             this.attachTypes = attachTypes;
+            return this;
+        }
+
+        /**
+         * ContainerFieldName.
+         */
+        public Builder containerFieldName(String containerFieldName) {
+            this.putQueryParameter("ContainerFieldName", containerFieldName);
+            this.containerFieldName = containerFieldName;
             return this;
         }
 
@@ -294,6 +354,15 @@ public class DescribeGroupedVulRequest extends Request {
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
             this.searchTags = searchTags;
+            return this;
+        }
+
+        /**
+         * TargetType.
+         */
+        public Builder targetType(String targetType) {
+            this.putQueryParameter("TargetType", targetType);
+            this.targetType = targetType;
             return this;
         }
 

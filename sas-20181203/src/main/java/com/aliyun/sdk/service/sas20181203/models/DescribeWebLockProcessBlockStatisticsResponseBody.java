@@ -86,7 +86,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         }
 
         /**
-         * List.
+         * An array consisting of the statistics on processes.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -102,7 +102,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         }
 
         /**
-         * TotalCount.
+         * The total number of processes.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
             private String process; 
 
             /**
-             * Count.
+             * The number of processes on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +178,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
             }
 
             /**
-             * Process.
+             * The process.
              */
             public Builder process(String process) {
                 this.process = process;

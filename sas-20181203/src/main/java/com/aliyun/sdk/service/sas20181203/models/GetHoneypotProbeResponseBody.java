@@ -98,7 +98,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details about the probe.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +206,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private String nodeName; 
 
             /**
-             * 实例id
+             * The ID of the Elastic Compute Service (ECS) instance in the management node.
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -210,7 +214,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 节点id
+             * The ID of the management node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -218,7 +222,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 节点名称
+             * The name of the management node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -307,7 +311,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Id.
+             * The ID of the record generated when the honeypot monitors the ports.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -315,7 +319,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The ports that are monitored.
              */
             public Builder ports(String ports) {
                 this.ports = ports;
@@ -323,7 +327,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * ProbeId.
+             * The ID of the probe.
              */
             public Builder probeId(String probeId) {
                 this.probeId = probeId;
@@ -331,7 +335,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIpList.
+             * An array consisting of the IP addresses of the sever on which the probe is installed.
              */
             public Builder serviceIpList(java.util.List < String > serviceIpList) {
                 this.serviceIpList = serviceIpList;
@@ -339,7 +343,11 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The listening status. Valid values:
+             * <p>
+             * 
+             * *   **1**: abnormal
+             * *   **3**: normal
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -488,7 +496,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private Integer targetPort; 
 
             /**
-             * BindPort.
+             * Indicates whether the port is bound.
              */
             public Builder bindPort(Boolean bindPort) {
                 this.bindPort = bindPort;
@@ -496,7 +504,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针监听结束端口
+             * The end port on which the probe monitors.
              */
             public Builder endPort(Integer endPort) {
                 this.endPort = endPort;
@@ -504,7 +512,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Err.
+             * The error that indicates a binding failure.
              */
             public Builder err(String err) {
                 this.err = err;
@@ -512,7 +520,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Fixed.
+             * Indicates whether the port is a fixed port.
              */
             public Builder fixed(Boolean fixed) {
                 this.fixed = fixed;
@@ -520,7 +528,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the record generated when the port is bound.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -528,7 +536,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * The details about the error.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -536,7 +544,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 协议类型
+             * The type of the protocol.
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -544,7 +552,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针监听起始端口
+             * The start port on which the probe monitors.
              */
             public Builder startPort(Integer startPort) {
                 this.startPort = startPort;
@@ -552,7 +560,11 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The binding status. Valid values:
+             * <p>
+             * 
+             * *   **1**: abnormal
+             * *   **3**: normal
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -560,7 +572,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPort.
+             * The destination port.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -649,7 +661,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * BindId.
+             * The ID of the binding record.
              */
             public Builder bindId(String bindId) {
                 this.bindId = bindId;
@@ -657,7 +669,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * BindPortList.
+             * An array consisting of the ports that are bound.
              */
             public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
                 this.bindPortList = bindPortList;
@@ -665,7 +677,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐Id
+             * The ID of the honeypot.
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -673,7 +685,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 监听 ip 列表
+             * An array consisting of the IP addresses that are monitored.
              */
             public Builder serviceIpList(java.util.List < String > serviceIpList) {
                 this.serviceIpList = serviceIpList;
@@ -681,7 +693,11 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 服务状态
+             * The status of the service. Valid values:
+             * <p>
+             * 
+             * *   **1**: abnormal
+             * *   **3**: normal
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -962,7 +978,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 检查项目 arp
+             * Indicates whether address resolution protocol (ARP) is enabled for the check item.
              */
             public Builder arp(Boolean arp) {
                 this.arp = arp;
@@ -970,7 +986,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * CanListenIpList.
+             * An array consisting of the IP addresses that can be monitored.
              */
             public Builder canListenIpList(java.util.List < String > canListenIpList) {
                 this.canListenIpList = canListenIpList;
@@ -978,7 +994,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * CidrList.
+             * An array consisting of the CIDR blocks that are allowed to access the VPC probe.
              */
             public Builder cidrList(java.util.List < String > cidrList) {
                 this.cidrList = cidrList;
@@ -986,7 +1002,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 管理节点
+             * The information about the management node.
              */
             public Builder controlNode(ControlNode controlNode) {
                 this.controlNode = controlNode;
@@ -994,7 +1010,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * cpu 占用
+             * The CPU utilization.
              */
             public Builder cpuLoad(Double cpuLoad) {
                 this.cpuLoad = cpuLoad;
@@ -1002,7 +1018,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 部署时间
+             * The time when the probe was deployed.
              */
             public Builder deployTime(Long deployTime) {
                 this.deployTime = deployTime;
@@ -1010,7 +1026,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针名称
+             * The name of the probe.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1018,7 +1034,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * HoneyPotProbeScanPort.
+             * The ports that the honeypot monitors.
              */
             public Builder honeyPotProbeScanPort(HoneyPotProbeScanPort honeyPotProbeScanPort) {
                 this.honeyPotProbeScanPort = honeyPotProbeScanPort;
@@ -1026,7 +1042,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 服务列表
+             * The list of honeypots to which the probe forwards traffic.
              */
             public Builder honeypotProbeBindList(java.util.List < HoneypotProbeBindList> honeypotProbeBindList) {
                 this.honeypotProbeBindList = honeypotProbeBindList;
@@ -1034,7 +1050,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针绑定的本地地址
+             * The IP address of the server on which the host probe is installed.
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -1042,7 +1058,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 可监听IP
+             * An array consisting of the IP addresses that can be monitored.
              */
             public Builder listenIpList(java.util.List < String > listenIpList) {
                 this.listenIpList = listenIpList;
@@ -1050,7 +1066,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 内存 占用
+             * The memory usage.
              */
             public Builder memoryLoad(Double memoryLoad) {
                 this.memoryLoad = memoryLoad;
@@ -1058,7 +1074,11 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 操作系统类型
+             * The operating system type of the server on which the probe is installed. Valid values:
+             * <p>
+             * 
+             * *   windows
+             * *   linux
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1066,7 +1086,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 检查项目 ping
+             * Indicates whether ping is enabled for the check item.
              */
             public Builder ping(Boolean ping) {
                 this.ping = ping;
@@ -1074,7 +1094,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针id
+             * The ID of the probe.
              */
             public Builder probeId(String probeId) {
                 this.probeId = probeId;
@@ -1082,7 +1102,11 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针类型
+             * The type of the probe. Valid values:
+             * <p>
+             * 
+             * *   **host_probe**: host probe
+             * *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
              */
             public Builder probeType(String probeType) {
                 this.probeType = probeType;
@@ -1090,7 +1114,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针版本
+             * The version of the probe.
              */
             public Builder probeVersion(String probeVersion) {
                 this.probeVersion = probeVersion;
@@ -1098,7 +1122,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyIp.
+             * The IP address of the proxy server.
              */
             public Builder proxyIp(String proxyIp) {
                 this.proxyIp = proxyIp;
@@ -1106,7 +1130,19 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针状态
+             * The status of the probe. Valid values:
+             * <p>
+             * 
+             * *   **installed**: installed
+             * *   **install_failed**: installation failed
+             * *   **online**: online
+             * *   **offline**: offline
+             * *   **unnormal**: abnormal
+             * *   **unprobe**: unauthorized
+             * *   **uninstalling**: being uninstalled
+             * *   **uninstalled**: uninstalled
+             * *   **uninstall_failed**: uninstallation failed
+             * *   **not_exist**: not installed
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1114,7 +1150,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the asset on which the host probe is installed.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1122,7 +1158,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC in which the VPC probe is installed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

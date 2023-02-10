@@ -140,7 +140,7 @@ public class ListSystemAggregationRulesRequest extends Request {
         } 
 
         /**
-         * AggregationIds.
+         * The IDs of the aggregation types.
          */
         public Builder aggregationIds(java.util.List < Integer > aggregationIds) {
             this.putQueryParameter("AggregationIds", aggregationIds);
@@ -149,7 +149,7 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -158,7 +158,11 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -167,7 +171,7 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +180,7 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -185,7 +189,7 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * RuleTypes.
+         * The types of the rules.
          */
         public Builder ruleTypes(java.util.List < Integer > ruleTypes) {
             this.putQueryParameter("RuleTypes", ruleTypes);
@@ -194,7 +198,12 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * SystemType.
+         * The type of the operating system. Valid values:
+         * <p>
+         * 
+         * *   **2**: Windows
+         * *   **1**: Linux
+         * *   **0**: all
          */
         public Builder systemType(Integer systemType) {
             this.putQueryParameter("SystemType", systemType);

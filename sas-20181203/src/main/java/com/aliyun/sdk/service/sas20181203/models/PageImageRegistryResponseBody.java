@@ -62,7 +62,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List.
+         * An array that consists of image repositories.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -346,7 +346,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * 黑名单
+             * The blacklist.
              */
             public Builder blackList(String blackList) {
                 this.blackList = blackList;
@@ -354,7 +354,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 域名
+             * The domain name of the image repository.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -362,7 +362,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建日期
+             * The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -370,7 +370,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 更改日期
+             * The update time. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -378,7 +378,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 唯一ID
+             * The ID of the image repository.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -386,7 +386,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 包含的镜像数量
+             * The number of images that are stored in the image repository.
              */
             public Builder imageCount(Integer imageCount) {
                 this.imageCount = imageCount;
@@ -394,7 +394,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * JenkinsEnv.
+             * The information about the Jenkins environment.
              */
             public Builder jenkinsEnv(String jenkinsEnv) {
                 this.jenkinsEnv = jenkinsEnv;
@@ -402,7 +402,11 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 网络类型 1：公网 2：vpc
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **1**: Internet
+             * *   **2**: Virtual Private Cloud (VPC)
              */
             public Builder netType(Integer netType) {
                 this.netType = netType;
@@ -410,7 +414,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 密码
+             * The password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -418,7 +422,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 资产保存天数
+             * The number of days during which assets can be retained.
              */
             public Builder persistenceDay(Integer persistenceDay) {
                 this.persistenceDay = persistenceDay;
@@ -426,7 +430,11 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 协议类型 1：http 2:https
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **1**: HTTP
+             * *   **2**: HTTPS
              */
             public Builder protocolType(Integer protocolType) {
                 this.protocolType = protocolType;
@@ -434,7 +442,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像仓库所在的regionId
+             * The region ID of the image repository.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -442,7 +450,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 主机Ip地址
+             * The IP address of the image repository.
              */
             public Builder registryHostIp(String registryHostIp) {
                 this.registryHostIp = registryHostIp;
@@ -450,7 +458,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像仓库别名
+             * The alias of the image repository.
              */
             public Builder registryName(String registryName) {
                 this.registryName = registryName;
@@ -458,7 +466,13 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 容器镜像服务类型 harbor，quory
+             * The type of the image repository. Valid values:
+             * <p>
+             * 
+             * *   **acr**: Container Registry
+             * *   **harbor**: Harbor
+             * *   **quay**: Quay
+             * *   **CI/CD**: Jenkins
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -466,7 +480,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * token 用户的唯一标识
+             * The authentication token of the user.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -474,7 +488,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 每小时扫描任务数
+             * The number of scan tasks that are performed per hour.
              */
             public Builder transPerHour(Integer transPerHour) {
                 this.transPerHour = transPerHour;
@@ -482,7 +496,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -490,7 +504,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -498,7 +512,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 白名单
+             * The whitelist.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -575,7 +589,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -583,7 +597,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -591,7 +605,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -599,7 +613,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

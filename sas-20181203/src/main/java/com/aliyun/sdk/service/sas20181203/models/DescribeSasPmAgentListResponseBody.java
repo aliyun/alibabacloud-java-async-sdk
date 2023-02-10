@@ -50,7 +50,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
         private java.util.List < SasPmAgentList> sasPmAgentList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
         }
 
         /**
-         * SasPmAgentList.
+         * An array that consists of the information about servers.
          */
         public Builder sasPmAgentList(java.util.List < SasPmAgentList> sasPmAgentList) {
             this.sasPmAgentList = sasPmAgentList;
@@ -170,7 +170,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * 云助手全局唯一Id
+             * The ID of Cloud Assistant.
              */
             public Builder aliyunAssistId(String aliyunAssistId) {
                 this.aliyunAssistId = aliyunAssistId;
@@ -178,7 +178,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * 云监控全局唯一Id
+             * The ID of the CloudMonitor agent.
              */
             public Builder aliyunMonitorId(String aliyunMonitorId) {
                 this.aliyunMonitorId = aliyunMonitorId;
@@ -186,7 +186,14 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * AssistInstallResult.
+             * The installation result of Cloud Assistant. Valid values:
+             * <p>
+             * 
+             * *   **0**: SUCCESS
+             * *   **1**: MISSING_PARAM
+             * *   **2**: UNKNOWN_SYSTEM
+             * *   **3**: DOWNLOAD_FAILED
+             * *   **4**: INSTALL_FAILED
              */
             public Builder assistInstallResult(Integer assistInstallResult) {
                 this.assistInstallResult = assistInstallResult;
@@ -194,7 +201,13 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * AssistInstallStatus.
+             * The status of Cloud Assistant. Valid values:
+             * <p>
+             * 
+             * *   **0**: installing
+             * *   **1**: installed
+             * *   **2**: installation failed
+             * *   **3**: installation timed out
              */
             public Builder assistInstallStatus(Integer assistInstallStatus) {
                 this.assistInstallStatus = assistInstallStatus;
@@ -202,7 +215,11 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorInstallResult.
+             * The installation result of the CloudMonitor agent. Valid values:
+             * <p>
+             * 
+             * *   **0**: failed
+             * *   **1**: successful
              */
             public Builder monitorInstallResult(Integer monitorInstallResult) {
                 this.monitorInstallResult = monitorInstallResult;
@@ -210,7 +227,11 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorInstallStatus.
+             * The status of the CloudMonitor agent. Valid values:
+             * <p>
+             * 
+             * *   **0**: installation failed
+             * *   **1**: installed
              */
             public Builder monitorInstallStatus(Integer monitorInstallStatus) {
                 this.monitorInstallStatus = monitorInstallStatus;
@@ -218,7 +239,7 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * 机器uuid
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

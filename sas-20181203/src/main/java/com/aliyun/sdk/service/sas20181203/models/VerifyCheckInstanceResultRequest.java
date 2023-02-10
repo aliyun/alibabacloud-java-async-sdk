@@ -68,7 +68,10 @@ public class VerifyCheckInstanceResultRequest extends Request {
         } 
 
         /**
-         * CheckId.
+         * The ID of the check item.
+         * <p>
+         * 
+         * > You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the ID of the check item.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -77,7 +80,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * An array consisting of instance IDs of assets on which risk items are detected based on the check item.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

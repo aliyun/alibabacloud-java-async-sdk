@@ -62,7 +62,7 @@ public class DescribeRisksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeRisksResponseBody extends TeaModel {
         }
 
         /**
-         * Risks.
+         * An array that consists of the information about the baselines.
          */
         public Builder risks(java.util.List < Risks> risks) {
             this.risks = risks;
@@ -78,7 +78,7 @@ public class DescribeRisksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             private String typeAlias; 
 
             /**
-             * RiskDetail.
+             * The description of the baseline.
              */
             public Builder riskDetail(String riskDetail) {
                 this.riskDetail = riskDetail;
@@ -198,7 +198,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * RiskId.
+             * The ID of the baseline.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -206,7 +206,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * RiskName.
+             * The name of the baseline.
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -214,7 +214,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * RiskType.
+             * The name of the baseline type.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
@@ -222,7 +222,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * SubRiskType.
+             * The name of the baseline sub type.
              */
             public Builder subRiskType(String subRiskType) {
                 this.subRiskType = subRiskType;
@@ -230,7 +230,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * SubTypeAlias.
+             * The display name of the baseline sub type.
              */
             public Builder subTypeAlias(String subTypeAlias) {
                 this.subTypeAlias = subTypeAlias;
@@ -238,7 +238,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * TypeAlias.
+             * The display name of the baseline type.
              */
             public Builder typeAlias(String typeAlias) {
                 this.typeAlias = typeAlias;

@@ -86,7 +86,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * EventLevels.
+         * The statistics of alerts events by risk level.
          */
         public Builder eventLevels(EventLevels eventLevels) {
             this.eventLevels = eventLevels;
@@ -102,7 +102,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
             private Integer suspicious; 
 
             /**
-             * Remind.
+             * The number of alerts whose Emergency level is Reminder.
              */
             public Builder remind(Integer remind) {
                 this.remind = remind;
@@ -190,7 +194,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
             }
 
             /**
-             * Serious.
+             * The number of alerts whose Emergency level is Urgent.
              */
             public Builder serious(Integer serious) {
                 this.serious = serious;
@@ -198,7 +202,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
             }
 
             /**
-             * Suspicious.
+             * The number of alerts whose Emergency level is Suspicious.
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;

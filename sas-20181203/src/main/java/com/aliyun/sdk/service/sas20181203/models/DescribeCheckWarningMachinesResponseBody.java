@@ -62,7 +62,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Count.
+         * The number of the servers.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * Machines.
+         * An array consisting of the servers on which the same risk item is detected.
          */
         public Builder machines(java.util.List < Machines> machines) {
             this.machines = machines;
@@ -78,7 +78,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,11 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Bind.
+             * Indicates whether Security Center is authorized to protect the asset. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -198,7 +202,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -206,7 +210,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -214,7 +218,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -222,7 +226,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -230,7 +234,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -238,7 +242,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

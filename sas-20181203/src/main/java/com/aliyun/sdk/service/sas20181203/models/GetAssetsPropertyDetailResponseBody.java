@@ -62,7 +62,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Propertys.
+         * An array that consists of the details about the asset fingerprints.
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -78,7 +78,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -495,7 +495,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private String webPath; 
 
             /**
-             * 容器名称
+             * The name of the container.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -503,7 +503,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 扫描时间戳
+             * The timestamp of the last fingerprint collection. Unit: milliseconds.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -511,7 +511,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * web站点:域名
+             * The domain name of the website.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -519,7 +522,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 内核模块:路径
+             * The path to the kernel module file.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder filepath(String filepath) {
                 this.filepath = filepath;
@@ -527,7 +533,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像名称
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -535,7 +541,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 机器信息:实例id
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -543,7 +549,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 机器信息:实例名称
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -551,7 +557,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 机器信息:公网ip
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -559,7 +565,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 机器信息:私网ip
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -567,7 +573,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 机器信息:机器ip
+             * The IP address of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -575,7 +581,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 进程监听协议
+             * The listening protocol that the website uses.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder listenProtocol(String listenProtocol) {
                 this.listenProtocol = listenProtocol;
@@ -583,7 +592,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 内核模块:模块名称
+             * The name of the module.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -591,7 +603,11 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 启动项:路径 web站点:安装路径
+             * The path. The value of this parameter varies based on the value of **Biz**.
+             * <p>
+             * 
+             * *   If **Biz** is set to **web_server**, the value of this parameter indicates the path to the website root directory.
+             * *   If **Biz** is set to **autorun**, the value of this parameter indicates the path to the startup item.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -599,7 +615,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * web站点:目录权限
+             * The permissions on the root directory of the website.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder pathMode(String pathMode) {
                 this.pathMode = pathMode;
@@ -607,7 +626,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Pid
+             * The process ID (PID) of the process that runs the website service.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -615,7 +637,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * web站点:监听端口
+             * The port of the website.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -623,7 +648,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 进程启动时间
+             * The timestamp when the process was started. Unit: milliseconds.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder processStarted(Long processStarted) {
                 this.processStarted = processStarted;
@@ -631,7 +659,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 机器信息:地域id
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -639,7 +667,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * web站点:站点类型
+             * The type of the website.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -647,7 +678,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 内核模块:大小
+             * The size of the kernel module.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -655,7 +689,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 内核模块:被依赖数目
+             * The number of times that the kernel module is referenced.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder usedByCount(Integer usedByCount) {
                 this.usedByCount = usedByCount;
@@ -663,7 +700,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * web站点:操作用户
+             * The user who started the process of the website.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -671,7 +711,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 机器信息:uuid
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -679,7 +719,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * web站点:web路径
+             * The path to the root directory of the website.
+             * <p>
+             * 
+             * >  This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder webPath(String webPath) {
                 this.webPath = webPath;

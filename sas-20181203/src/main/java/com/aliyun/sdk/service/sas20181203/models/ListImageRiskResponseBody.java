@@ -62,7 +62,7 @@ public class ListImageRiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageRiskList.
+         * An array that consists of security information about the image.
          */
         public Builder imageRiskList(java.util.List < ImageRiskList> imageRiskList) {
             this.imageRiskList = imageRiskList;
@@ -70,7 +70,7 @@ public class ListImageRiskResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListImageRiskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Domains.
+             * An array that consists the details of the domain name in the endpoint.
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -138,7 +138,11 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the domain name in the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **internet**: Internet
+             * *   **intranet**: internal network
              */
             public Builder type(String type) {
                 this.type = type;
@@ -383,7 +387,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             private String vpcURLs; 
 
             /**
-             * Digest.
+             * The digest value of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -391,7 +395,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * EndPointList.
+             * An array that consists of the details of the endpoint.
              */
             public Builder endPointList(java.util.List < EndPointList> endPointList) {
                 this.endPointList = endPointList;
@@ -399,7 +403,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * The endpoint of Container Registry.
              */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
@@ -407,7 +411,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -415,7 +419,11 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * ImageAccessType.
+             * The registration status of the image repository. Valid values:
+             * <p>
+             * 
+             * *   **IN_SAS**: The image repository is registered with Security Center.
+             * *   **NOT_IN_SAS**: The image repository is not registered with Security Center.
              */
             public Builder imageAccessType(String imageAccessType) {
                 this.imageAccessType = imageAccessType;
@@ -423,7 +431,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -431,7 +439,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * InternetURLs.
+             * The public endpoint of the image repository.
              */
             public Builder internetURLs(String internetURLs) {
                 this.internetURLs = internetURLs;
@@ -439,7 +447,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region of the image repository.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -447,7 +455,13 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * The type of the image repository. Valid values:
+             * <p>
+             * 
+             * *   **acr**
+             * *   **harbor**
+             * *   **quay**
+             * *   **CI/CD**: Jenkins
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -455,7 +469,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the image repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -463,7 +477,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -471,7 +485,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * The name of the namespace to which the repository belongs.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -479,7 +493,11 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoType.
+             * The type of the repository. Valid values:
+             * <p>
+             * 
+             * *   `PUBLIC`
+             * *   `PRIVATE`
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -487,7 +505,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * The statistics on a security event.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -495,7 +513,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag that is added to the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -503,7 +521,11 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * TagImmutable.
+             * Indicates whether the image version is immutable. If the image version is immutable, only the image of the latest version in the image repository can be overwritten. Valid values:
+             * <p>
+             * 
+             * *   **0**: The image version is mutable.
+             * *   **1**: The image version is immutable.
              */
             public Builder tagImmutable(Integer tagImmutable) {
                 this.tagImmutable = tagImmutable;
@@ -511,7 +533,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the image.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -519,7 +541,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * VpcURLs.
+             * The endpoint of the image repository in the VPC.
              */
             public Builder vpcURLs(String vpcURLs) {
                 this.vpcURLs = vpcURLs;
@@ -596,7 +618,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -604,7 +626,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -612,7 +634,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -620,7 +642,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

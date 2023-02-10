@@ -98,7 +98,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the honeypot template.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +206,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             private String ossUrl; 
 
             /**
-             * FileId.
+             * The ID of the uploaded file.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -210,7 +214,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the uploaded file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -218,7 +222,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * OssUrl.
+             * The download URL.
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -355,7 +359,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             private String presetType; 
 
             /**
-             * 蜜罐管理节点名称
+             * The name of the management node to which the honeypot is deployed.
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -363,7 +367,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * 文件参数
+             * An array that consists of the configurations of the uploaded file.
              */
             public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
@@ -371,7 +375,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐镜像展示名称
+             * The display name of the image that is used for the honeypot.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -379,7 +383,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐镜像名称
+             * The name of the image that is used for the honeypot.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -387,7 +391,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐模板唯一ID
+             * The ID of the honeypot template.
              */
             public Builder honeypotPresetId(String honeypotPresetId) {
                 this.honeypotPresetId = honeypotPresetId;
@@ -395,7 +399,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐模板自定义参数
+             * The custom configurations of the honeypot template.
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -403,7 +407,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * 管理节点唯一id
+             * The ID of the management node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -411,7 +415,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * 蜜罐模板自定义名称
+             * The custom name of the honeypot template.
              */
             public Builder presetName(String presetName) {
                 this.presetName = presetName;
@@ -419,7 +423,12 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * 模板类型
+             * The type of the template. Valid values:
+             * <p>
+             * 
+             * *   **TEMP**: automatically generated
+             * *   **CUSTOM**: custom
+             * *   **DEFAULT**: default
              */
             public Builder presetType(String presetType) {
                 this.presetType = presetType;

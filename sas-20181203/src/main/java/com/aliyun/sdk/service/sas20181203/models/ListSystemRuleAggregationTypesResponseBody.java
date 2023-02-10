@@ -50,7 +50,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AggregationTypeList.
+         * An array that consists of the aggregation types.
          */
         public Builder aggregationTypeList(java.util.List < AggregationTypeList> aggregationTypeList) {
             this.aggregationTypeList = aggregationTypeList;
@@ -58,7 +58,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the aggregation type.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -118,7 +118,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the aggregation type.
              */
             public Builder name(String name) {
                 this.name = name;

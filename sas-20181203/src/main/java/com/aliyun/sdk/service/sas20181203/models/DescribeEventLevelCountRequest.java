@@ -124,7 +124,10 @@ public class DescribeEventLevelCountRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -133,7 +136,21 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * ContainerFieldName.
+         * The key of the condition that is used to query alert events on containers. Valid values:
+         * <p>
+         * 
+         * *   **instanceId**: the ID of the asset
+         * *   **appName**: the name of the application
+         * *   **clusterId**: the ID of the cluster
+         * *   **regionId**: the ID of the region
+         * *   **nodeName**: the name of the node
+         * *   **namespace**: the namespace
+         * *   **clusterName**: the name of the cluster
+         * *   **image**: the name of the image
+         * *   **imageRepoName**: the name of the image repository
+         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
+         * *   **imageRepoTag**: the tag that is added to the image
+         * *   **imageDigest**: the digest of the image
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -142,7 +159,7 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * ContainerFieldValue.
+         * The value of the condition that is used to query alert events on containers. If you specify multiple values, separate them with commas (,).
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -151,7 +168,7 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * ContainerIds.
+         * The ID of the container.
          */
         public Builder containerIds(String containerIds) {
             this.putQueryParameter("ContainerIds", containerIds);
@@ -160,7 +177,7 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * From.
+         * The ID of the request source. Set the value to **sas**.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -169,7 +186,11 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the query condition. Valid values:
+         * <p>
+         * 
+         * *   **containerId**: the ID of the container
+         * *   **uuid**: the ID of the asset
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

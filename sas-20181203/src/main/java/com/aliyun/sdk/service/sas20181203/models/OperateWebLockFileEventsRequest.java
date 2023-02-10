@@ -85,7 +85,11 @@ public class OperateWebLockFileEventsRequest extends Request {
         } 
 
         /**
-         * DealAll.
+         * Specifies whether to handle all alert events that are generated for web tamper proofing. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder dealAll(Integer dealAll) {
             this.putQueryParameter("DealAll", dealAll);
@@ -94,7 +98,7 @@ public class OperateWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * EventIds.
+         * The IDs of alert events.
          */
         public Builder eventIds(java.util.List < Long > eventIds) {
             this.putQueryParameter("EventIds", eventIds);
@@ -103,7 +107,14 @@ public class OperateWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * OperationCode.
+         * The operation that you want to perform on the alert events. Valid values:
+         * <p>
+         * 
+         * *   **mark_mis_info**: marks the alert events as false positives
+         * *   **rm_mark_mis_info**: cancels marking the alerts events as false positives
+         * *   **offline_handled**: marks the alert events as handled offline
+         * *   **whitelist**: adds the alert events to the whitelist
+         * *   **rm_whitelist**: cancels adding the alert events to the whitelist
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);

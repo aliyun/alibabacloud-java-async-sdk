@@ -99,7 +99,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * AvailableProbeNum.
+         * The number of available probes.
          */
         public Builder availableProbeNum(Integer availableProbeNum) {
             this.putQueryParameter("AvailableProbeNum", availableProbeNum);
@@ -108,7 +108,10 @@ public class UpdateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * 管理节点id
+         * The ID of the management node.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -117,7 +120,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * 管理节点名称
+         * The name of the management node.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -126,7 +129,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * SecurityGroupProbeIpList.
+         * The CIDR blocks that are allowed to access the management node.
          */
         public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);

@@ -50,7 +50,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned if the call is successful.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,13 +194,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Indicates whether you can create more image scan tasks. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
-             * 
-             * >  By default, a maximum of 10 image scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create an image scan task by calling this operation. You must wait for at least one of the 10 existing image scan tasks to complete before you can create an image scan task.
+             * CanCreate.
              */
             public Builder canCreate(Boolean canCreate) {
                 this.canCreate = canCreate;
@@ -208,7 +202,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the image information was collected. Unit: milliseconds.
+             * CollectTime.
              */
             public Builder collectTime(Long collectTime) {
                 this.collectTime = collectTime;
@@ -216,7 +210,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the image scan task started to run. Unit: milliseconds.
+             * ExecTime.
              */
             public Builder execTime(Long execTime) {
                 this.execTime = execTime;
@@ -224,7 +218,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images that have been scanned.
+             * FinishCount.
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -232,7 +226,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the image scan task.
+             * Progress.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -240,11 +234,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the image scan task. Valid values:
-             * <p>
-             * 
-             * *   **SUCCESS**: The task is successful.
-             * *   **TASK\_NOT\_SUPPORT_REGION**: The image is deployed in a region that is not supported by container image scan.
+             * Result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -252,13 +242,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image scan task. Valid values:
-             * <p>
-             * 
-             * *   **INIT**: The task is being initialized.
-             * *   **PRE_ANALYZER**: The task is being pre-processed.
-             * *   **SUCCESS**: The task is successful.
-             * *   **FAIL**: The task failed.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -266,7 +250,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image scan task.
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -274,7 +258,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of images to scan.
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

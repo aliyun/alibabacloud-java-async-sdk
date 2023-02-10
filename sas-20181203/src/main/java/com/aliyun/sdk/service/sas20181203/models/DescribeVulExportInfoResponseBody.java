@@ -145,9 +145,9 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
          * The status of the export task. Valid values:
          * <p>
          * 
-         * - **init**: The task is being initialized.
-         * - **exporting**: The task is in progress.
-         * - **success**: The task is complete.
+         * *   **init**: The task is being initialized.
+         * *   **exporting**: The task is in progress.
+         * *   **success**: The task is complete.
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -163,7 +163,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vulnerability export task.
+         * The ID of the task.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -179,7 +179,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message that shows the task result. The value is fixed as **success*, which indicates that the export task is completed.
+         * The message that shows the results of the task. The value is fixed as **success**, which indicates that the task is complete.
          */
         public Builder message(String message) {
             this.message = message;
@@ -187,7 +187,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress percentage of the asset export task.
+         * The progress percentage of the task.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -203,7 +203,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries in the Excel file.
+         * The total number of entries in the exported Excel file.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

@@ -114,7 +114,7 @@ public class StartBaselineSecurityCheckRequest extends Request {
          * The IDs of the check items.
          * <p>
          * 
-         * >  To perform a check task on cloud service configurations, you must specify the IDs of the check items. You can call the  [DescribeRiskItemType ](~~DescribeRiskItemType~~)  operation to query the IDs of check items.
+         * > To perform a check task on cloud service configurations, you must specify the ID of the check item. You can call the [DescribeRiskItemType](~~DescribeRiskItemType~~) operation to query the IDs of check items.
          */
         public Builder itemIds(java.util.List < Long > itemIds) {
             this.putQueryParameter("ItemIds", itemIds);
@@ -123,7 +123,7 @@ public class StartBaselineSecurityCheckRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
+         * The language of the content within the request and response. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese

@@ -69,7 +69,10 @@ public class GetHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * 蜜罐模板唯一ID
+         * The ID of the honeypot template.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.
          */
         public Builder honeypotPresetId(String honeypotPresetId) {
             this.putQueryParameter("HoneypotPresetId", honeypotPresetId);
@@ -78,7 +81,11 @@ public class GetHoneypotPresetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

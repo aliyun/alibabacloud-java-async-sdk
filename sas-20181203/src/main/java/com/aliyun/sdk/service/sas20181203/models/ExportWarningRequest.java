@@ -377,7 +377,7 @@ public class ExportWarningRequest extends Request {
          * The subtypes of the baselines based on which baseline checks are performed. Separate multiple subtypes with commas (,).
          * <p>
          * 
-         * >  You must set the value of this parameter to the value of the **TypeName** parameter that is contained in the **SubTypes** parameter. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to obtain the value of the TypeName parameter.
+         * > You must set the value of this parameter to the value of the **TypeName** parameter that is contained in the **SubTypes** parameter. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to obtain the value of the TypeName parameter.
          */
         public Builder subTypeNames(String subTypeNames) {
             this.putQueryParameter("SubTypeNames", subTypeNames);
@@ -389,7 +389,7 @@ public class ExportWarningRequest extends Request {
          * The type of the baseline based on which baseline checks are performed.
          * <p>
          * 
-         * >  You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
+         * > You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -401,7 +401,7 @@ public class ExportWarningRequest extends Request {
          * The types of the baselines based on which baseline checks are performed. Separate multiple types with commas (,).
          * <p>
          * 
-         * >  You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
+         * > You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
          */
         public Builder typeNames(String typeNames) {
             this.putQueryParameter("TypeNames", typeNames);

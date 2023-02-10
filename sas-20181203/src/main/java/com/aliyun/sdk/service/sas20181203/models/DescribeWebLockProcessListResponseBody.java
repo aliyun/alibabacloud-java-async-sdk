@@ -86,7 +86,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * An array that consists of the processes.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -102,7 +102,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of processes.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -250,7 +250,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -258,7 +258,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -266,7 +266,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -274,7 +274,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * The name of the process.
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -282,7 +282,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessPath.
+             * The path to the process.
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -290,7 +290,11 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the process is added to the process whitelist. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -298,7 +302,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

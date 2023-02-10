@@ -74,7 +74,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AegisUuidTargetPluginConfigList.
+         * An array that consists of the information about the plug-ins.
          */
         public Builder aegisUuidTargetPluginConfigList(java.util.List < AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList) {
             this.aegisUuidTargetPluginConfigList = aegisUuidTargetPluginConfigList;
@@ -82,7 +82,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,11 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Config.
+             * Indicates whether the plug-in is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder config(Boolean config) {
                 this.config = config;
@@ -182,7 +186,13 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * The message that indicates whether you are authorized to install the plug-in on your server or whether the plug-in is installed on your server. Valid values:
+             * <p>
+             * 
+             * *   **authorized**: authorized
+             * *   **unauthorized**: unauthorized
+             * *   **unbind**: not installed
+             * *   **nonsupport**: not supported
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -190,7 +200,11 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * OverallConfig.
+             * Indicates whether the plug-in is globally configured. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder overallConfig(Boolean overallConfig) {
                 this.overallConfig = overallConfig;
@@ -198,7 +212,12 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The name of the plug-in. Valid values:
+             * <p>
+             * 
+             * *   **alihips**: trojan-specific prevention
+             * *   **alisecguard**: attack-specific prevention
+             * *   **alinet**: defense against attacks on servers
              */
             public Builder type(String type) {
                 this.type = type;
@@ -299,7 +318,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             private String pluginVersion; 
 
             /**
-             * AegisSuspiciousConfigList.
+             * An array that consists of the configurations of plug-ins.
              */
             public Builder aegisSuspiciousConfigList(java.util.List < AegisSuspiciousConfigList> aegisSuspiciousConfigList) {
                 this.aegisSuspiciousConfigList = aegisSuspiciousConfigList;
@@ -307,7 +326,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * PluginInstallCode.
+             * The installation code of the plug-in.
              */
             public Builder pluginInstallCode(String pluginInstallCode) {
                 this.pluginInstallCode = pluginInstallCode;
@@ -315,7 +334,12 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * The name of the plug-in. Valid values:
+             * <p>
+             * 
+             * *   **alihips**: trojan-specific prevention
+             * *   **alisecguard**: attack-specific prevention
+             * *   **alinet**: defense against attacks on servers
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -323,7 +347,11 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * PluginOnlineInstalled.
+             * Indicates whether the plug-in is installed. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder pluginOnlineInstalled(Boolean pluginOnlineInstalled) {
                 this.pluginOnlineInstalled = pluginOnlineInstalled;
@@ -331,7 +359,11 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * PluginOnlineStatus.
+             * Indicates whether the plug-in is online. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder pluginOnlineStatus(Boolean pluginOnlineStatus) {
                 this.pluginOnlineStatus = pluginOnlineStatus;
@@ -339,7 +371,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             }
 
             /**
-             * PluginVersion.
+             * The version of the plug-in.
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;

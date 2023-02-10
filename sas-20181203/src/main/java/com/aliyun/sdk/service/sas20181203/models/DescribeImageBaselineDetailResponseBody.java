@@ -50,7 +50,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BaselineDetail.
+         * The details about the image baseline.
          */
         public Builder baselineDetail(BaselineDetail baselineDetail) {
             this.baselineDetail = baselineDetail;
@@ -58,7 +58,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             private String resultId; 
 
             /**
-             * Advice.
+             * The suggestion for the management of the risk item.
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -202,7 +202,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineClassAlias.
+             * The alias of the baseline type.
              */
             public Builder baselineClassAlias(String baselineClassAlias) {
                 this.baselineClassAlias = baselineClassAlias;
@@ -210,7 +210,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineItemAlias.
+             * The alias of the baseline check item.
              */
             public Builder baselineItemAlias(String baselineItemAlias) {
                 this.baselineItemAlias = baselineItemAlias;
@@ -218,7 +218,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineItemKey.
+             * The key of the baseline check item.
              */
             public Builder baselineItemKey(String baselineItemKey) {
                 this.baselineItemKey = baselineItemKey;
@@ -226,7 +226,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineNameAlias.
+             * The alias of the baseline.
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -234,7 +234,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the risk item.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,7 +242,12 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The risk level of the baseline check item. Valid values:
+             * <p>
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -250,7 +255,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Prompt.
+             * The issue that is detected by using the baseline.
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -258,7 +263,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResultId.
+             * The ID of the asynchronous request.
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;

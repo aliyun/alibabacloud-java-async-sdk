@@ -84,7 +84,10 @@ public class DescribeBackupMachineStatusRequest extends Request {
         } 
 
         /**
-         * PolicyId.
+         * The ID of the anti-ransomware policy.
+         * <p>
+         * 
+         * >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -93,7 +96,11 @@ public class DescribeBackupMachineStatusRequest extends Request {
         }
 
         /**
-         * PolicyVersion.
+         * The version of the anti-ransomware policy. Valid values:
+         * <p>
+         * 
+         * *   **1.0.0**
+         * *   **2.0.0**
          */
         public Builder policyVersion(String policyVersion) {
             this.putQueryParameter("PolicyVersion", policyVersion);
@@ -102,7 +109,10 @@ public class DescribeBackupMachineStatusRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
+         * <p>
+         * 
+         * >  You can call the [DescribeBackupPolicy](~~DescribeBackupPolicy~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

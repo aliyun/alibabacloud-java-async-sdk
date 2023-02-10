@@ -269,7 +269,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item.
+             * The name of the check item type.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -330,7 +330,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the check items. Valid values of risk levels:
+             * The risk level of the check items. Valid values:
              * <p>
              * 
              * *   **high**
@@ -508,7 +508,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the statistics about each type of check items.
+             * An array that consists of the statistics for each type of check item.
              */
             public Builder groups(java.util.List < Groups> groups) {
                 this.groups = groups;

@@ -50,7 +50,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupMachineStatus.
+         * The backup status of the server.
          */
         public Builder backupMachineStatus(BackupMachineStatus backupMachineStatus) {
             this.backupMachineStatus = backupMachineStatus;
@@ -58,7 +58,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             private String errorStatus; 
 
             /**
-             * ErrorCode.
+             * The error code returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -118,7 +118,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorStatus.
+             * The error message returned.
              */
             public Builder errorStatus(String errorStatus) {
                 this.errorStatus = errorStatus;
@@ -279,7 +279,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * ClientId.
+             * The ID of the anti-ransomware agent.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -287,7 +287,15 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ClientStatus.
+             * The status of the anti-ransomware agent. Valid values:
+             * <p>
+             * 
+             * *   **ONLINE**: normal
+             * *   **CLIENT_CONNECTION_ERROR**: abnormal
+             * *   **UNINSTALLING**: being uninstalled
+             * *   **UNINSTALL_FAILED**: failed to be uninstalled
+             * *   **UPGRADING**: being upgraded
+             * *   **UPGRADE_FAILED**: failed to be upgraded
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -295,7 +303,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ClientVersion.
+             * The version of the anti-ransomware agent.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -303,7 +311,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -311,7 +319,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorList.
+             * An array that consists of the error information reported by the backup server.
              */
             public Builder errorList(java.util.List < ErrorList> errorList) {
                 this.errorList = errorList;
@@ -319,7 +327,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -327,7 +335,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -335,7 +343,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SavedBackupCount.
+             * The number of backup versions.
              */
             public Builder savedBackupCount(Integer savedBackupCount) {
                 this.savedBackupCount = savedBackupCount;
@@ -343,7 +351,12 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the anti-ransomware agent. Valid values:
+             * <p>
+             * 
+             * *   **NOT_INSTALLED**: not installed
+             * *   **CLIENT_CONNECTION_ERROR**: abnormal
+             * *   **ACTIVATED**: normal
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,7 +364,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -359,7 +372,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * VaultId.
+             * The ID of the backup vault in which the backup data is stored.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

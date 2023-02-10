@@ -129,9 +129,7 @@ public class DescribeInstanceStatisticsRequest extends Request {
         }
 
         /**
-         * The UUIDs of the assets to query. Separate multiple UUIDs with commas (,).
-         * <p>
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+         * The UUID of the asset to query. Separate multiple UUIDs with commas (,). You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

@@ -159,7 +159,7 @@ public class CreateRestoreJobRequest extends Request {
         } 
 
         /**
-         * Includes.
+         * The directory in which the files included in the restoration task are located. This parameter is specified when you create the anti-ransomware policy. The value is a directory that requires protection.
          */
         public Builder includes(String includes) {
             this.putQueryParameter("Includes", includes);
@@ -168,7 +168,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * SnapshotHash.
+         * The hash value of the snapshot.
+         * <p>
+         * 
+         * > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
          */
         public Builder snapshotHash(String snapshotHash) {
             this.putQueryParameter("SnapshotHash", snapshotHash);
@@ -177,7 +180,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot that you want to use for restoration.
+         * <p>
+         * 
+         * > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -186,7 +192,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * SnapshotVersion.
+         * The version of the backup data.
+         * <p>
+         * 
+         * > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
          */
         public Builder snapshotVersion(String snapshotVersion) {
             this.putQueryParameter("SnapshotVersion", snapshotVersion);
@@ -195,7 +204,11 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   **ECS_FILE**: backup snapshots for Elastic Compute Service (ECS) files
+         * *   **File**: backup snapshots for on-premises servers
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -204,7 +217,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * Target.
+         * The path to which you want to restore data.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -213,7 +226,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server whose data you want to restore.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -222,7 +235,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault that is used in the restoration task.
+         * <p>
+         * 
+         * > You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

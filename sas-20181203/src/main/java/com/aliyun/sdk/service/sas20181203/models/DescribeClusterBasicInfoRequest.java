@@ -85,7 +85,10 @@ public class DescribeClusterBasicInfoRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to query.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +97,10 @@ public class DescribeClusterBasicInfoRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The dimension from which you want to configure the feature. Valid values:
+         * <p>
+         * 
+         * *   **Cluster**: the ID of the cluster
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -103,7 +109,11 @@ public class DescribeClusterBasicInfoRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the feature. Valid values:
+         * <p>
+         * 
+         * *   **containerNetwork**: container network topology
+         * *   **interceptionSwitch**: cluster microsegmentation
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

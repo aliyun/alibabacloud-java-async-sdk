@@ -440,7 +440,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VPC was created. Unit: milliseconds.
+             * The time at which the VPC was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -525,7 +525,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
              * The region ID of the VPC.
              * <p>
              * 
-             * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+             * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
              */
             public Builder vpcRegionId(String vpcRegionId) {
                 this.vpcRegionId = vpcRegionId;

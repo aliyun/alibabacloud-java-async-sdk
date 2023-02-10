@@ -96,7 +96,7 @@ public class DescribeRestorePlansRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +105,7 @@ public class DescribeRestorePlansRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the server.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -114,7 +114,10 @@ public class DescribeRestorePlansRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +126,15 @@ public class DescribeRestorePlansRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the restoration task. Valid values:
+         * <p>
+         * 
+         * *   **init**: initializing
+         * *   **created**: creating
+         * *   **running**: running
+         * *   **completed**: complete
+         * *   **error**: failed
+         * *   **restoring**: restoring
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -98,7 +98,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the check items.
+         * An array that consists of the details about the check item.
          */
         public Builder checkWarnings(java.util.List < CheckWarnings> checkWarnings) {
             this.checkWarnings = checkWarnings;
@@ -302,7 +302,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecErrorMessage.
+             * The error message in check result.
              */
             public Builder execErrorMessage(String execErrorMessage) {
                 this.execErrorMessage = execErrorMessage;
@@ -343,7 +343,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * The description of the check item.
              */
             public Builder reason(String reason) {
                 this.reason = reason;

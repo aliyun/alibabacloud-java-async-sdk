@@ -50,7 +50,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the risk information about assets.
+         * An array that consists of the risk information about the asset.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -378,7 +378,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CSPM risks detected on the asset.
+             * The number of configuration risks detected on the asset.
              */
             public Builder cspmNum(Integer cspmNum) {
                 this.cspmNum = cspmNum;
@@ -418,7 +418,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts generated on the asset.
+             * The number of alerts generated for the asset.
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;

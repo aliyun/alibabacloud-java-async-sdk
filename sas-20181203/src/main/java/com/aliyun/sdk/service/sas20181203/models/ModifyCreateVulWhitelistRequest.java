@@ -92,19 +92,19 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         }
 
         /**
-         * The applicable scope of the whitelist. The value is a JSON string that contains the following fields:
+         * The applicable scope of the whitelist. The value of this parameter is in the JSON format and contains the following fields:
          * <p>
          * 
          * *   **type**: the type of the applicable scope. Valid values:
          * 
-         *     *   **GroupId**: groups
-         *     *   **Uuid**: hosts
+         *     *   **GroupId**: the ID of a server group
+         *     *   **Uuid**: the UUID of a server
          * 
-         * *   **uuids**: the UUIDs of hosts.
+         * *   **uuids**: the UUIDs of servers
          * 
-         * *   **groupIds**: the IDs of groups.
+         * *   **groupIds**: the IDs of server groups
          * 
-         * >  If you leave this parameter unspecified, the whitelist takes effect on all hosts. If you set **type** to **GroupId**, you must specify the **groupIds** parameter. If you set **type** to **Uuid**, you must specify the **uuids** parameter.
+         * >  If you leave this parameter empty, all servers are added to the whitelist. If you set the **type** field to **GroupId**, you must also specify the **groupIds** field. If you set **type** to **Uuid**, you must specify the **uuids** parameter.
          */
         public Builder targetInfo(String targetInfo) {
             this.putQueryParameter("TargetInfo", targetInfo);
@@ -132,7 +132,7 @@ public class ModifyCreateVulWhitelistRequest extends Request {
          *     *   **sys**: Windows system vulnerability
          *     *   **cms**: Web-CMS vulnerability
          *     *   **app**: application vulnerability
-         *     *   **emg**: urgent vulnerabilities
+         *     *   **emg**: urgent vulnerability
          * 
          * *   **Related**: the Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
          * 

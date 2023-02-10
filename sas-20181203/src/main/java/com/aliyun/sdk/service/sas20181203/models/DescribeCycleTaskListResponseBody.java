@@ -62,7 +62,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CycleScheduleResponseList.
+         * An array that consists of periodic scan tasks.
          */
         public Builder cycleScheduleResponseList(java.util.List < CycleScheduleResponseList> cycleScheduleResponseList) {
             this.cycleScheduleResponseList = cycleScheduleResponseList;
@@ -70,7 +70,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * ConfigId.
+             * The ID of the task configuration.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -258,7 +258,11 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the task is enabled. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -266,7 +270,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * FirstDateStr.
+             * The time when the task first run.
              */
             public Builder firstDateStr(Long firstDateStr) {
                 this.firstDateStr = firstDateStr;
@@ -274,7 +278,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * IntervalPeriod.
+             * The interval of the task.
              */
             public Builder intervalPeriod(Integer intervalPeriod) {
                 this.intervalPeriod = intervalPeriod;
@@ -282,7 +286,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * LastTaskId.
+             * The ID of the task when the task last run.
              */
             public Builder lastTaskId(String lastTaskId) {
                 this.lastTaskId = lastTaskId;
@@ -290,7 +294,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * NextStartTimeStr.
+             * The next time when the task starts. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder nextStartTimeStr(Long nextStartTimeStr) {
                 this.nextStartTimeStr = nextStartTimeStr;
@@ -298,7 +302,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Param.
+             * The additional information.
              */
             public Builder param(String param) {
                 this.param = param;
@@ -306,7 +310,11 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodUnit.
+             * The unit of the scan interval. Valid values:
+             * <p>
+             * 
+             * *   **day**: days
+             * *   **hour**: hours
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -314,7 +322,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetEndTime.
+             * The period of time before the task ends. Unit: hours.
              */
             public Builder targetEndTime(Integer targetEndTime) {
                 this.targetEndTime = targetEndTime;
@@ -322,7 +330,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetStartTime.
+             * The period of time before the next task starts. Unit: hours.
              */
             public Builder targetStartTime(Integer targetStartTime) {
                 this.targetStartTime = targetStartTime;
@@ -330,7 +338,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -338,7 +346,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -415,7 +423,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -423,7 +431,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -431,7 +439,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +447,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

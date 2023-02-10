@@ -133,7 +133,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * The instance ID of the cloud service. Separate multiple IDs with commas (,).
+         * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
          * <p>
          * 
          * >  If you do not specify this parameter, an empty list is returned.

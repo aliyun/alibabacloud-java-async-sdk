@@ -55,7 +55,7 @@ public class DescribeVulExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the vulnerability export task.
+         * The ID of the task.
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

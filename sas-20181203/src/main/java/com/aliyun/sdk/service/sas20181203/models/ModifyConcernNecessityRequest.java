@@ -54,7 +54,12 @@ public class ModifyConcernNecessityRequest extends Request {
         } 
 
         /**
-         * ConcernNecessity.
+         * The priorities to fix the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   asap: high
+         * *   later: medium
+         * *   nntf: low
          */
         public Builder concernNecessity(String concernNecessity) {
             this.putQueryParameter("ConcernNecessity", concernNecessity);

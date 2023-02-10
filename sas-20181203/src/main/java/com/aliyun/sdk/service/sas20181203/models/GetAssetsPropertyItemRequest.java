@@ -140,7 +140,12 @@ public class GetAssetsPropertyItemRequest extends Request {
         } 
 
         /**
-         * Biz.
+         * The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:
+         * <p>
+         * 
+         * *   **lkm**: kernel module
+         * *   **autorun**: startup item
+         * *   **web_server**: website
          */
         public Builder biz(String biz) {
             this.putQueryParameter("Biz", biz);
@@ -149,7 +154,7 @@ public class GetAssetsPropertyItemRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -158,7 +163,11 @@ public class GetAssetsPropertyItemRequest extends Request {
         }
 
         /**
-         * ForceFlush.
+         * Specifies whether to forcefully refresh the data that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -167,7 +176,11 @@ public class GetAssetsPropertyItemRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -176,7 +189,10 @@ public class GetAssetsPropertyItemRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -185,7 +201,14 @@ public class GetAssetsPropertyItemRequest extends Request {
         }
 
         /**
-         * SearchInfo.
+         * The value of the search condition. You must specify this parameter based on the value of the **SearchItem** parameter.
+         * <p>
+         * 
+         * *   If you set **SearchItem** to **domain**, you must enter the domain name.
+         * *   If you set **SearchItem** to **module_name**, you must enter the module name.
+         * *   If you set **SearchItem** to **path**, you must enter the path to the self-starting item.
+         * 
+         * >  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the information about asset fingerprints by asset fingerprint name.
          */
         public Builder searchInfo(String searchInfo) {
             this.putQueryParameter("SearchInfo", searchInfo);
@@ -194,7 +217,22 @@ public class GetAssetsPropertyItemRequest extends Request {
         }
 
         /**
-         * SearchItem.
+         * The type of the search condition. You must specify this parameter based on the value of the **Biz** parameter. Valid values:
+         * <p>
+         * 
+         * *   If you set **Biz** to **web_server**, set **SearchItem** to the following value:
+         * 
+         *     *   **domain**: the domain name
+         * 
+         * *   If you set **Biz** to **lkm**, set **SearchItem** to the following value:
+         * 
+         *     *   **module_name**: the name of the module
+         * 
+         * *   If you set **Biz** to **autorun**, set **SearchItem** to the following value:
+         * 
+         *     *   **path**: the path to the self-starting item
+         * 
+         * >  You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the information about asset fingerprints by asset fingerprint name.
          */
         public Builder searchItem(String searchItem) {
             this.putQueryParameter("SearchItem", searchItem);

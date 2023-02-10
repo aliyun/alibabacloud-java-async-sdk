@@ -110,7 +110,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Count.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -118,7 +118,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -126,7 +126,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * Database.
+         * The name of the database.
          */
         public Builder database(String database) {
             this.database = database;
@@ -134,7 +134,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * RecoverableInfoList.
+         * An array that consists of the backup snapshots.
          */
         public Builder recoverableInfoList(java.util.List < RecoverableInfoList> recoverableInfoList) {
             this.recoverableInfoList = recoverableInfoList;
@@ -150,7 +150,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +246,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             private String restoreInfo; 
 
             /**
-             * FirstTime.
+             * The timestamp of the first backup. Unit: milliseconds.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -254,7 +254,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The timestamp of the last backup. Unit: milliseconds.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -262,7 +262,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             }
 
             /**
-             * ResetScn.
+             * The identifier of the point in time for restoration in the backup version that is used. The database is an Oracle database.
              */
             public Builder resetScn(String resetScn) {
                 this.resetScn = resetScn;
@@ -270,7 +270,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             }
 
             /**
-             * ResetTime.
+             * The point in time for restoration in the backup version that is used. The database is an Oracle database.
              */
             public Builder resetTime(Long resetTime) {
                 this.resetTime = resetTime;
@@ -278,7 +278,11 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreInfo.
+             * The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:
+             * <p>
+             * 
+             * *   **name**: the name of the database
+             * *   **files**: the path to the database files
              */
             public Builder restoreInfo(String restoreInfo) {
                 this.restoreInfo = restoreInfo;

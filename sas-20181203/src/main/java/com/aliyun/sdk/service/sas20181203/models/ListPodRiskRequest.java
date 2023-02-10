@@ -124,7 +124,7 @@ public class ListPodRiskRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -133,7 +133,10 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -142,7 +145,7 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -151,7 +154,7 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace of the Kubernetes cluster.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -160,7 +163,7 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +172,7 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * PodName.
+         * The name of the pod.
          */
         public Builder podName(String podName) {
             this.putQueryParameter("PodName", podName);

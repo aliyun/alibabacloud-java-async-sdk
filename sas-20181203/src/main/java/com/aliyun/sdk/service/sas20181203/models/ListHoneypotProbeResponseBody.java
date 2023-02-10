@@ -110,7 +110,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * An array that consists of the details about the probe.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -134,7 +134,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +226,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private String nodeName; 
 
             /**
-             * 实例id
+             * The ID of the Elastic Compute Service (ECS) instance.
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -230,7 +234,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 节点id
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -238,7 +242,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 节点名称
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -399,7 +403,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 管理节点
+             * The information about the management node.
              */
             public Builder controlNode(ControlNode controlNode) {
                 this.controlNode = controlNode;
@@ -407,7 +411,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 部署时间
+             * The time when the probe was deployed.
              */
             public Builder deployTime(Long deployTime) {
                 this.deployTime = deployTime;
@@ -415,7 +419,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针名称
+             * The name of the probe.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -423,7 +427,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针绑定的本地地址
+             * The IP address of the server on which the probe is installed.
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -431,7 +435,11 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 操作系统类型
+             * The operating system of the server on which the probe is deployed. Valid values:
+             * <p>
+             * 
+             * *   windows
+             * *   linux
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -439,7 +447,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针id
+             * The ID of the probe.
              */
             public Builder probeId(String probeId) {
                 this.probeId = probeId;
@@ -447,7 +455,11 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针类型
+             * The type of the probe. Valid values:
+             * <p>
+             * 
+             * *   **host_probe**: host probe
+             * *   **vpc_black_hole_probe**: VPC probe
              */
             public Builder probeType(String probeType) {
                 this.probeType = probeType;
@@ -455,7 +467,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * 探针版本
+             * The version of the probe.
              */
             public Builder probeVersion(String probeVersion) {
                 this.probeVersion = probeVersion;
@@ -463,7 +475,19 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the probe. Valid values:
+             * <p>
+             * 
+             * *   **installed**: installed
+             * *   **install_failed**: installation failed
+             * *   **online**: online
+             * *   **offline**: offline
+             * *   **unnormal**: abnormal
+             * *   **unprobe**: unauthorized
+             * *   **uninstalling**: being uninstalled
+             * *   **uninstalled**: uninstalled
+             * *   **uninstall_failed**: uninstallation failed
+             * *   **not_exist**: not installed
              */
             public Builder status(String status) {
                 this.status = status;
@@ -471,7 +495,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server to which the host probe is deployed.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -479,7 +503,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC in which the VPC probe is deployed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -556,7 +580,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -564,7 +588,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -572,7 +596,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: **20**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -580,7 +604,7 @@ public class ListHoneypotProbeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

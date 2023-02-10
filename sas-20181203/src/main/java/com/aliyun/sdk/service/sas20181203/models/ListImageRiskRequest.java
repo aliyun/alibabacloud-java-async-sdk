@@ -124,7 +124,7 @@ public class ListImageRiskRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -133,7 +133,10 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the ID of the container cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -142,7 +145,7 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -151,7 +154,7 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the image.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -160,7 +163,7 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace to which the repository belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -169,7 +172,7 @@ public class ListImageRiskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

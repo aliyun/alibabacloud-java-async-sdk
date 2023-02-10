@@ -96,7 +96,11 @@ public class DescribeRisksRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +109,7 @@ public class DescribeRisksRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of entries to return. Default value: 20.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -114,7 +118,10 @@ public class DescribeRisksRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * The ID of the baseline.
+         * <p>
+         * 
+         * >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -123,7 +130,7 @@ public class DescribeRisksRequest extends Request {
         }
 
         /**
-         * RiskName.
+         * The name of the baseline.
          */
         public Builder riskName(String riskName) {
             this.putQueryParameter("RiskName", riskName);

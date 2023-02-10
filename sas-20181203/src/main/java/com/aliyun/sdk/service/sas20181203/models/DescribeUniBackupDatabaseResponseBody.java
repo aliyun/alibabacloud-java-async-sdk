@@ -62,7 +62,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DatabaseList.
+         * An array that consists of the information about the databases.
          */
         public Builder databaseList(java.util.List < DatabaseList> databaseList) {
             this.databaseList = databaseList;
@@ -70,7 +70,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +226,13 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AgentStatus.
+             * The status of the anti-ransomware agent. Valid values:
+             * <p>
+             * 
+             * *   **UNKNOWN**: unknown
+             * *   **INSTALLED**: installed
+             * *   **INSTALL_FAILED**: installation failed
+             * *   **UNINSTALL_FAILED**: uninstallation failed
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -234,7 +240,11 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedByProduct.
+             * The service from which the database is created. Valid values:
+             * <p>
+             * 
+             * *   **HBR**: HBR
+             * *   **AEGIS**: Security Center
              */
             public Builder createdByProduct(String createdByProduct) {
                 this.createdByProduct = createdByProduct;
@@ -242,7 +252,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The name of the database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -250,7 +260,12 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseType.
+             * The type of the database. Valid values:
+             * <p>
+             * 
+             * *   **MYSQL**
+             * *   **MSSQL**
+             * *   **Oracle**
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
@@ -258,7 +273,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseVersion.
+             * The version of the database engine.
              */
             public Builder databaseVersion(String databaseVersion) {
                 this.databaseVersion = databaseVersion;
@@ -266,7 +281,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -274,7 +289,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance to which the database belongs.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -282,7 +297,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceUuid.
+             * The UUID of the Hybrid Backup Recovery (HBR) agent that is used to back up the data of the database.
              */
             public Builder instanceUuid(String instanceUuid) {
                 this.instanceUuid = instanceUuid;
@@ -290,7 +305,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * The ID of the anti-ransomware policy.
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -298,7 +313,11 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   **Stopped**
+             * *   **Running**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -375,7 +394,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -383,7 +402,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -391,7 +410,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -399,7 +418,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

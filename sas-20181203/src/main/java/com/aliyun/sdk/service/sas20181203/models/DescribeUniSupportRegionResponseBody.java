@@ -50,7 +50,7 @@ public class DescribeUniSupportRegionResponseBody extends TeaModel {
         private java.util.List < String > uniSupportRegion; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUniSupportRegionResponseBody extends TeaModel {
         }
 
         /**
-         * UniSupportRegion.
+         * An array consisting of the regions that are supported.
          */
         public Builder uniSupportRegion(java.util.List < String > uniSupportRegion) {
             this.uniSupportRegion = uniSupportRegion;

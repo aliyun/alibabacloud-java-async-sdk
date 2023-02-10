@@ -80,14 +80,14 @@ public class DescribeVulConfigRequest extends Request {
          * The type of configuration. By default, all types of configurations are queried. Valid values:
          * <p>
          * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **app**: application vulnerability that is detected by using web scanner
-         * *   **emg**: urgent vulnerability
-         * *   **scanMode**: displays easily exploitable vulnerability
-         * *   **imageVulClean**: vulnerability retention duration
-         * *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities
+         * *   **cve**: Linux software vulnerability.
+         * *   **sys**: Windows system vulnerability.
+         * *   **cms**: Web-CMS vulnerability.
+         * *   **app**: application vulnerability that is detected by using web scanner.
+         * *   **emg**: urgent vulnerability.
+         * *   **scanMode**: displays easily exploitable vulnerability.
+         * *   **imageVulClean**: vulnerability retention duration.
+         * *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

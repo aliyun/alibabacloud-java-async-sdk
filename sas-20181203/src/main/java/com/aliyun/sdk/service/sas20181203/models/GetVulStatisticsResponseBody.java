@@ -74,7 +74,7 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         private Integer vulNntfSum; 
 
         /**
-         * The ID of the request.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

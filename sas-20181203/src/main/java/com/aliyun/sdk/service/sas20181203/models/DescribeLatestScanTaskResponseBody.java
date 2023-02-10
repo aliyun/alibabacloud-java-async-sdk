@@ -86,7 +86,7 @@ public class DescribeLatestScanTaskResponseBody extends TeaModel {
         private java.util.List < String > uuids; 
 
         /**
-         * LastCheckTime.
+         * The timestamp when the last check was performed. Unit: milliseconds.
          */
         public Builder lastCheckTime(Long lastCheckTime) {
             this.lastCheckTime = lastCheckTime;
@@ -94,7 +94,7 @@ public class DescribeLatestScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class DescribeLatestScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RiskNum.
+         * The number of virus detection risks on the server.
          */
         public Builder riskNum(Integer riskNum) {
             this.riskNum = riskNum;
@@ -110,7 +110,20 @@ public class DescribeLatestScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TargetInfo.
+         * The information about the asset on which the virus scan task runs. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
+         * <p>
+         * 
+         * *   **type**: the type of the asset on which the virus scan task runs. Valid values:
+         * 
+         *     *   **groupId**: server group
+         *     *   **uuid**: server
+         * 
+         * *   **name**: the name of the server group or server
+         * 
+         * *   **target**: the asset on which the virus scan task runs The value of this field varies based on the value of the type field.
+         * 
+         *     *   If the value of **type** is **groupId**, the value of this field is the ID of the server group.
+         *     *   If the value of **type** is **uuid**, the value of this field is the UUID of the server.
          */
         public Builder targetInfo(String targetInfo) {
             this.targetInfo = targetInfo;
@@ -118,7 +131,7 @@ public class DescribeLatestScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Uuids.
+         * The ID of the asset.
          */
         public Builder uuids(java.util.List < String > uuids) {
             this.uuids = uuids;

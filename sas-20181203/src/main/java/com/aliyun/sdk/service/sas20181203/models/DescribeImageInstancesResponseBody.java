@@ -62,7 +62,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageInstanceList.
+         * An array that consists of the information about the image.
          */
         public Builder imageInstanceList(java.util.List < ImageInstanceList> imageInstanceList) {
             this.imageInstanceList = imageInstanceList;
@@ -70,7 +70,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -430,7 +430,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * AlarmCount.
+             * The number of alerts that are generated on the image.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -438,7 +438,11 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmStatus.
+             * Indicates whether alerts are generated for the image. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -446,7 +450,11 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Deployed.
+             * Indicates whether the image was deployed. Valid values:
+             * <p>
+             * 
+             * *   **0**: The image was not deployed.
+             * *   **1**: The image was deployed.
              */
             public Builder deployed(Integer deployed) {
                 this.deployed = deployed;
@@ -454,7 +462,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Digest.
+             * The digest value of the image.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -462,7 +470,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * The address of the image.
              */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
@@ -470,7 +478,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HcCount.
+             * The number of baseline risks.
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
@@ -478,7 +486,11 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HcStatus.
+             * Indicates whether the image baseline risks exist. Valid values:
+             * <p>
+             * 
+             * *   **NO**
+             * *   **YES**
              */
             public Builder hcStatus(String hcStatus) {
                 this.hcStatus = hcStatus;
@@ -486,7 +498,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCreate.
+             * The timestamp when the image was created. Unit: milliseconds.
              */
             public Builder imageCreate(String imageCreate) {
                 this.imageCreate = imageCreate;
@@ -494,7 +506,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -502,7 +514,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image. Unit: MB.
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -510,7 +522,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUpdate.
+             * The timestamp when the image was updated. Unit: milliseconds.
              */
             public Builder imageUpdate(String imageUpdate) {
                 this.imageUpdate = imageUpdate;
@@ -518,7 +530,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the image instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -526,7 +538,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -534,7 +546,13 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * *   **acr**
+             * *   **harbor**
+             * *   **quay**
+             * *   **CI/CD**
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -542,7 +560,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the image repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -550,7 +568,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -558,7 +576,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * The namespace to which the image repository belongs.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -566,7 +584,11 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoType.
+             * The type of the repository. Valid values:
+             * <p>
+             * 
+             * *   **private**
+             * *   **public**
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -574,7 +596,11 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * Indicates whether risks exist. Valid values:
+             * <p>
+             * 
+             * *   **NO**: No risks exist.
+             * *   **YES**: Risks exist.
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -582,7 +608,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaProgress.
+             * The scan progress of the image. Valid values: 0 to 100.
              */
             public Builder scaProgress(Integer scaProgress) {
                 this.scaProgress = scaProgress;
@@ -590,7 +616,12 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaResult.
+             * The error code of the image scan result. Valid values:
+             * <p>
+             * 
+             * *   **TASK_NOT_EXISTS**: The image scan task does not exist.
+             * *   **TASK_NOT_SUPPORT_REGION**: The image scan task cannot be performed in the current region.
+             * *   **forbid_create_repeat_task**: The image scan task already exists.
              */
             public Builder scaResult(String scaResult) {
                 this.scaResult = scaResult;
@@ -598,7 +629,23 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaStatus.
+             * The scan status of the image. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The image scan task is to be started.
+             * *   **START**: The image scan task is started.
+             * *   **MESSAGE_SEND**: The message about the image scan task is sent.
+             * *   **START_RUN**: The image scan task is started.
+             * *   **DOWNLOAD**: The image scan result is downloaded.
+             * *   **PRE_ANALYZER**: The image scan task is being processed.
+             * *   **WEB_SHELL_ANALYZER**: The WebShell analysis is complete.
+             * *   **CVE_ANALYZER**: The CVE analysis is complete.
+             * *   **BIN_ANALYZER**: The binary analysis of the image is complete.
+             * *   **OTHER_ANALYZER**: The extended analysis of the image is complete.
+             * *   **SUCCESS**: The image scan task is complete.
+             * *   **PRE_ANALYZER_SUCCESS**: The image scan task is processed.
+             * *   **FAIL**: The image scan task fails.
+             * *   **TIMEOUT**: The image scan task times out.
              */
             public Builder scaStatus(String scaStatus) {
                 this.scaStatus = scaStatus;
@@ -606,7 +653,10 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: The image is normal.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -614,7 +664,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -622,7 +672,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -630,7 +680,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulCount.
+             * The number of vulnerabilities in the image.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -638,7 +688,11 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulStatus.
+             * Indicates whether vulnerabilities exist in the image. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
@@ -715,7 +769,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of images returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -723,7 +777,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -731,7 +785,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -739,7 +793,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

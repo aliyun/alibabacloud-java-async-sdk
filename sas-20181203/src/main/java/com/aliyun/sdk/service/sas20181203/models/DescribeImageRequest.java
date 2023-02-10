@@ -100,7 +100,10 @@ public class DescribeImageRequest extends Request {
         } 
 
         /**
-         * ImageInstanceId.
+         * The instance ID of the image.
+         * <p>
+         * 
+         * >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of instances.
          */
         public Builder imageInstanceId(String imageInstanceId) {
             this.putQueryParameter("ImageInstanceId", imageInstanceId);
@@ -109,7 +112,10 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * ImageRegionId.
+         * The region ID of the image.
+         * <p>
+         * 
+         * >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of regions.
          */
         public Builder imageRegionId(String imageRegionId) {
             this.putQueryParameter("ImageRegionId", imageRegionId);
@@ -118,7 +124,10 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * ImageRepoId.
+         * The ID of the image repository.
+         * <p>
+         * 
+         * >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of image repositories.
          */
         public Builder imageRepoId(String imageRepoId) {
             this.putQueryParameter("ImageRepoId", imageRepoId);
@@ -127,7 +136,10 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * ImageTag.
+         * The tag that is added to the image.
+         * <p>
+         * 
+         * >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query tags.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);

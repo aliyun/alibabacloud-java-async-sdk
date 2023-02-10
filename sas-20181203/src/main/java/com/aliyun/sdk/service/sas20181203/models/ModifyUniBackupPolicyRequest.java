@@ -167,7 +167,7 @@ public class ModifyUniBackupPolicyRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -176,7 +176,7 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the database account.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -185,7 +185,13 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * FullPlan.
+         * The policy for full backup. The value of this parameter is a JSON string that contains the following fields:
+         * <p>
+         * 
+         * *   **start**: the start time of a backup task
+         * *   **interval**: the interval of backup tasks
+         * *   **type**: the unit of the interval
+         * *   **days**: the days of a week on which a backup task is performed
          */
         public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
             String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
@@ -195,7 +201,13 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * IncPlan.
+         * The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:
+         * <p>
+         * 
+         * *   **start**: the start time of a backup task
+         * *   **interval**: the interval of backup tasks
+         * *   **type**: the unit of the interval
+         * *   **days**: the days of a week on which a backup task is performed
          */
         public Builder incPlan(java.util.Map < String, ? > incPlan) {
             String incPlanShrink = shrink(incPlan, "IncPlan", "json");
@@ -205,7 +217,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * The ID of the anti-ransomware policy.
+         * <p>
+         * 
+         * > You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -214,7 +229,7 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the anti-ransomware policy.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -223,7 +238,11 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * PolicyStatus.
+         * The status of the anti-ransomware policy. Valid values:
+         * <p>
+         * 
+         * *   **enabled**
+         * *   **disabled**
          */
         public Builder policyStatus(String policyStatus) {
             this.putQueryParameter("PolicyStatus", policyStatus);
@@ -232,7 +251,7 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * Retention.
+         * The retention period of the backup snapshot.
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);
@@ -241,7 +260,7 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * SpeedLimiter.
+         * The maximum network bandwidth that is allowed during data backup. Unit: bytes.
          */
         public Builder speedLimiter(Long speedLimiter) {
             this.putQueryParameter("SpeedLimiter", speedLimiter);

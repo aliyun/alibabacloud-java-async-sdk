@@ -112,7 +112,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         } 
 
         /**
-         * Tag.
+         * The key of the tag that is added to the agent configuration policy.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -121,7 +121,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * TagExt.
+         * The extended tag of the agent configuration policy.
          */
         public Builder tagExt(String tagExt) {
             this.putQueryParameter("TagExt", tagExt);
@@ -130,7 +130,12 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * TagValue.
+         * The value of the tag that is added to the agent configuration policy.
+         * <p>
+         * 
+         * *   major
+         * *   advanced
+         * *   basic
          */
         public Builder tagValue(String tagValue) {
             this.putQueryParameter("TagValue", tagValue);
@@ -139,7 +144,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server that you want to query.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -148,7 +153,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUID of the asset. You can specify a maximum of 500 UUIDs at a time.
          */
         public Builder uuids(java.util.List < String > uuids) {
             this.putQueryParameter("Uuids", uuids);

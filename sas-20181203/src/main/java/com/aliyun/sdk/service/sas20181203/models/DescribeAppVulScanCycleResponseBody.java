@@ -50,7 +50,12 @@ public class DescribeAppVulScanCycleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cycle.
+         * The scan cycle for application vulnerabilities.
+         * <p>
+         * 
+         * *   1week
+         * *   2weeks
+         * *   3days
          */
         public Builder cycle(String cycle) {
             this.cycle = cycle;
@@ -58,7 +63,7 @@ public class DescribeAppVulScanCycleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

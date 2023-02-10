@@ -68,7 +68,16 @@ public class ModifyVulConfigRequest extends Request {
         } 
 
         /**
-         * Config.
+         * Enables or disables vulnerability scan. Valid values:
+         * <p>
+         * 
+         * *   **on**: enables vulnerability scan
+         * *   **off**: disables vulnerability scan
+         * 
+         * >  If you set Type to scanMode, Config specifies whether to show only real risk vulnerabilities. Valid values:
+         * 
+         * *   **real**: shows only real risk vulnerabilities
+         * *   **all**: shows all vulnerabilities
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -77,7 +86,16 @@ public class ModifyVulConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerabilities
+         * *   **sys**: Windows system vulnerabilities
+         * *   **cms**: Web-CMS vulnerabilities
+         * *   **emg**: urgent vulnerabilities
+         * *   **app**: application vulnerabilities
+         * *   **yum**: YUM and APT source configuration
+         * *   **scanMode**: real risks
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

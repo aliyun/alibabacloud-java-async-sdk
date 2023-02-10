@@ -62,7 +62,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Targets.
+         * The information about the servers.
          */
         public Builder targets(java.util.List < Targets> targets) {
             this.targets = targets;
@@ -78,7 +78,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class DescribeTargetResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * Flag.
+             * The tag that is added to the server. This parameter can be empty.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -150,7 +150,7 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The UUID of the server or the ID of the server group.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -158,7 +158,11 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The condition by which vulnerability scan is enabled for the server. Valid values:
+             * <p>
+             * 
+             * *   **uuid**: the UUID of the server
+             * *   **groupId**: the ID of the server group
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

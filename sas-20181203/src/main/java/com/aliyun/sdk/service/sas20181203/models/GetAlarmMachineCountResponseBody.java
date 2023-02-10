@@ -50,7 +50,7 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
             private Integer machineCount; 
 
             /**
-             * MachineCount.
+             * The number of servers on which alerts are generated.
              */
             public Builder machineCount(Integer machineCount) {
                 this.machineCount = machineCount;

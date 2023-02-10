@@ -50,7 +50,7 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LogShipperStatus.
+         * The status information.
          */
         public Builder logShipperStatus(LogShipperStatus logShipperStatus) {
             this.logShipperStatus = logShipperStatus;
@@ -58,7 +58,7 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,11 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             private String slsServiceStatus; 
 
             /**
-             * AuthStatus.
+             * Indicates whether Security Center is authorized to access Log Service. Valid values:
+             * <p>
+             * 
+             * *   **yes**
+             * *   **no**
              */
             public Builder authStatus(String authStatus) {
                 this.authStatus = authStatus;
@@ -178,7 +182,11 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * BuyStatus.
+             * Indicates whether the log analysis feature is purchased. Valid values:
+             * <p>
+             * 
+             * *   **yes**
+             * *   **no**
              */
             public Builder buyStatus(String buyStatus) {
                 this.buyStatus = buyStatus;
@@ -186,7 +194,11 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OpenStatus.
+             * The status of the log analysis feature. Valid values:
+             * <p>
+             * 
+             * *   **yes**: enabled
+             * *   **no**: disabled
              */
             public Builder openStatus(String openStatus) {
                 this.openStatus = openStatus;
@@ -194,7 +206,11 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PostPaidOpenStatus.
+             * Indicates whether the pay-as-you-go billing method is used. Valid values:
+             * <p>
+             * 
+             * *   **yes**
+             * *   **no**
              */
             public Builder postPaidOpenStatus(String postPaidOpenStatus) {
                 this.postPaidOpenStatus = postPaidOpenStatus;
@@ -202,7 +218,11 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PostPaidSupportStatus.
+             * Indicates whether the log analysis feature supports the pay-as-you-go billing method. Valid values:
+             * <p>
+             * 
+             * *   **yes**
+             * *   **no**
              */
             public Builder postPaidSupportStatus(String postPaidSupportStatus) {
                 this.postPaidSupportStatus = postPaidSupportStatus;
@@ -210,7 +230,11 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SlsProjectStatus.
+             * The status of the dedicated Log Service project. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: normal
+             * *   **Disable**: disabled
              */
             public Builder slsProjectStatus(String slsProjectStatus) {
                 this.slsProjectStatus = slsProjectStatus;
@@ -218,7 +242,11 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SlsServiceStatus.
+             * Indicates whether Log Service is activated. Valid values:
+             * <p>
+             * 
+             * *   **yes**
+             * *   **no**
              */
             public Builder slsServiceStatus(String slsServiceStatus) {
                 this.slsServiceStatus = slsServiceStatus;

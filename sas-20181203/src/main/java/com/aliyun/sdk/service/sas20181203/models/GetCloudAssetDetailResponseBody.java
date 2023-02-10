@@ -62,7 +62,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Count.
+         * The number of instances in the list of cloud assets returned.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Instances.
+         * An array that consists of the details of the cloud assets.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -78,7 +78,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +274,11 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             private Integer vendor; 
 
             /**
-             * AlarmStatus.
+             * Indicates whether alerts are generated for the current cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -282,7 +286,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetSubType.
+             * The subtype of the cloud asset.
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -290,7 +294,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetSubTypeName.
+             * The subtype name of the cloud asset.
              */
             public Builder assetSubTypeName(String assetSubTypeName) {
                 this.assetSubTypeName = assetSubTypeName;
@@ -298,7 +302,34 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * The type of the cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **0**: ECS
+             * *   **1**: SLB
+             * *   **3**: ApsaraDB RDS
+             * *   **4**: MongoDB
+             * *   **5**: Redis
+             * *   **6**: Container Registry
+             * *   **8**: ACK
+             * *   **9**: VPC
+             * *   **11**: ActionTrail
+             * *   **12**: CDN
+             * *   **13**: Certificate Management Service (formerly SSL Certificates Service)
+             * *   **14**: Apsara Devops
+             * *   **15**: RAM
+             * *   **16**: Anti-DDoS
+             * *   **17**: WAF
+             * *   **18**: OSS
+             * *   **19**: PolarDB
+             * *   **20**: ApsaraDB RDS for PostgreSQL
+             * *   **21**: MSE
+             * *   **22**: NAS
+             * *   **23**: DSC
+             * *   **24**: EIP
+             * *   **25**: IDaaS EIAM
+             * *   **26**: PolarDB-X
+             * *   **27**: Elasticsearch
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -306,7 +337,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetTypeName.
+             * The type name of the cloud asset.
              */
             public Builder assetTypeName(String assetTypeName) {
                 this.assetTypeName = assetTypeName;
@@ -314,7 +345,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the instance was created. The value is a timestamp.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -322,7 +353,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DetailLink.
+             * The detailed address of the cloud asset.
              */
             public Builder detailLink(String detailLink) {
                 this.detailLink = detailLink;
@@ -330,7 +361,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of the cloud asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +369,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name of the cloud asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -346,7 +377,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -354,7 +385,10 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region where the cloud asset resides.
+             * <p>
+             * 
+             * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -362,7 +396,11 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * Indicates whether risks are detected on the current cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -370,7 +408,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityInfo.
+             * The security information about the cloud asset.
              */
             public Builder securityInfo(String securityInfo) {
                 this.securityInfo = securityInfo;
@@ -378,7 +416,14 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The service provider of the cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **0**: The asset is provided by Alibaba Cloud.
+             * *   **1**: The asset is not provided by Alibaba Cloud.
+             * *   **2**: The asset resides in a data center.
+             * *   **3**, **4**, **5**, and **7**: other cloud asset.
+             * *   **8**: The asset is a simple application server.
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

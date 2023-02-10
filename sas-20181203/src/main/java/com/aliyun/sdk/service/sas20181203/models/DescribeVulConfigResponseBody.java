@@ -142,26 +142,22 @@ public class DescribeVulConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The configuartion of vulnerability scan.
+             * The configuration of vulnerability scan.
              * <p>
              * 
-             * > 
-             * 
-             * Valid values of this parameter if **cve**, **sys**, **cms**, **app**, **emg**, or **yum** is returned for the Type parameter:
+             * > Valid values when you set the Type parameter to **cve**, **sys**, **cms**, **app**, **emg**, or **yum**:
              * 
              * *   **on**: enabled
+             * 
              * *   **off**: disabled
              * 
-             * > 
+             * Valid values when you set the Type parameter to **scanMode**:
              * 
-             * Valid values of this parameter if **scanMode** is returned for the Type parameter:
+             * *   **real**: displays easily exploitable vulnerability.
              * 
-             * *   **real**: displays easily exploitable vulnerability
-             * *   **all**: displays all vulnerabilities
+             * *   **all**: displays all vulnerabilities.
              * 
-             * > 
-             * 
-             * If **imageVulClean** is returned for the Type parameter, the value of this parameter indicates the vulnerability retention duration.
+             * When you set the Type parameter to **imageVulClean**, the value of this parameter indicates the vulnerability retention period in days.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -169,7 +165,7 @@ public class DescribeVulConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status of vulnerability management. Valid values:
+             * Indicates whether the vulnerability management feature is enabled for all servers. Valid values:
              * <p>
              * 
              * *   **off**: disabled
@@ -184,14 +180,14 @@ public class DescribeVulConfigResponseBody extends TeaModel {
              * The type of configuration. Valid values:
              * <p>
              * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **app**: application vulnerability that is detected by using web scanner
-             * *   **emg**: urgent vulnerability
-             * *   **scanMode**: displays easily exploitable vulnerability
-             * *   **imageVulClean**: vulnerability retention duration
-             * *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities
+             * *   **cve**: Linux software vulnerability.
+             * *   **sys**: Windows system vulnerability.
+             * *   **cms**: Web-CMS vulnerability.
+             * *   **app**: application vulnerability that is detected by using web scanner.
+             * *   **emg**: urgent vulnerability.
+             * *   **scanMode**: displays easily exploitable vulnerability.
+             * *   **imageVulClean**: vulnerability retention duration.
+             * *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.
              */
             public Builder type(String type) {
                 this.type = type;

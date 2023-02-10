@@ -71,6 +71,9 @@ public class ExportWarningResponseBody extends TeaModel {
 
         /**
          * The ID of the task to export baseline check results.
+         * <p>
+         * 
+         * > You can call use the value of this parameter to call the [DescribeHcExportInfo](~~DescribeHcExportInfo~~) operation to query the export progress.
          */
         public Builder id(Long id) {
             this.id = id;

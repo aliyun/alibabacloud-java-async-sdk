@@ -50,7 +50,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class VerifyCheckResultResponseBody extends TeaModel {
             private String operateCode; 
 
             /**
-             * OperateCode.
+             * The operation code of the cloud service configuration task. Valid values:
+             * <p>
+             * 
+             * *   **Throttling**: frequency limit
+             * *   **ActionTrialUnauthorized**: an error that is related to unauthorized operations
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;

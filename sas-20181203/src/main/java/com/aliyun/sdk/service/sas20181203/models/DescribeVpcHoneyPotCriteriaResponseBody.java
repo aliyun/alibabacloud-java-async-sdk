@@ -50,7 +50,7 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the search conditions that can be used to query honeypots.
+         * An array that consists of the search conditions.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -145,7 +145,7 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
              * The values of the search condition. This parameter is returned only if the value of **Type** is **select**.
              * <p>
              * 
-             * >  If the value of **Type** is **input**, the value of this parameter is an empty string.
+             * > If the value of **Type** is **input**, the value of this parameter is an empty string.
              */
             public Builder values(String values) {
                 this.values = values;

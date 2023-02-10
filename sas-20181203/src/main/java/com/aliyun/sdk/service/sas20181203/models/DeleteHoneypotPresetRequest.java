@@ -55,7 +55,10 @@ public class DeleteHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * 蜜罐模板唯一ID
+         * The ID of the honeypot template.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.
          */
         public Builder honeypotPresetId(String honeypotPresetId) {
             this.putQueryParameter("HoneypotPresetId", honeypotPresetId);

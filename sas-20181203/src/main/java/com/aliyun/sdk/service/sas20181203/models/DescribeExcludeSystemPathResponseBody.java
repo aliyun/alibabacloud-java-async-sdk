@@ -62,7 +62,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExcludePaths.
+         * An array consisting of the directories that are excluded.
          */
         public Builder excludePaths(java.util.List < ExcludePaths> excludePaths) {
             this.excludePaths = excludePaths;
@@ -70,7 +70,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * Os.
+             * The operating system of the server. Valid values:
+             * <p>
+             * 
+             * *   **linux**: Linux
+             * *   **windows**: Windows
              */
             public Builder os(String os) {
                 this.os = os;
@@ -138,7 +142,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The absolute path to the directory.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -215,7 +219,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -223,7 +227,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -231,7 +235,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -239,7 +243,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

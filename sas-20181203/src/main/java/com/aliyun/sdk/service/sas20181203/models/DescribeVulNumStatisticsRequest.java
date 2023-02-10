@@ -54,7 +54,7 @@ public class DescribeVulNumStatisticsRequest extends Request {
         } 
 
         /**
-         * From.
+         * The source of the request. Set the value to sas.
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

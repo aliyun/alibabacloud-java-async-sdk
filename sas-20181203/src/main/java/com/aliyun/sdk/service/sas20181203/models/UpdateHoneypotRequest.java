@@ -83,7 +83,10 @@ public class UpdateHoneypotRequest extends Request {
         } 
 
         /**
-         * 蜜罐唯一ID
+         * The ID of the honeypot.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -92,7 +95,7 @@ public class UpdateHoneypotRequest extends Request {
         }
 
         /**
-         * 蜜罐自定义名称
+         * The custom name of the honeypot.
          */
         public Builder honeypotName(String honeypotName) {
             this.putQueryParameter("HoneypotName", honeypotName);
@@ -101,7 +104,10 @@ public class UpdateHoneypotRequest extends Request {
         }
 
         /**
-         * Meta.
+         * The custom configuration of the honeypot.
+         * <p>
+         * 
+         * >  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the configurations of honeypots from the **Template** response parameter.
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);

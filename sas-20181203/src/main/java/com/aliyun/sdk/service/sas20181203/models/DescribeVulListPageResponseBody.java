@@ -62,7 +62,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 返回参数
+         * An array that consists of the vulnerabilities.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +202,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * cveId
+             * The CVE ID of the vulnerability.
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -210,7 +210,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 安骑士拓展字段
+             * The extended field for Server Guard.
              */
             public Builder extAegis(String extAegis) {
                 this.extAegis = extAegis;
@@ -218,7 +218,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * The primary key ID of the database.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -226,7 +226,11 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 是否安骑士扫描
+             * Indicates whether the vulnerability was detected based on version comparison. Valid values:
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder isAegis(Integer isAegis) {
                 this.isAegis = isAegis;
@@ -234,7 +238,11 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 是否网络扫描
+             * Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder isSas(Integer isSas) {
                 this.isSas = isSas;
@@ -242,7 +250,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 编号
+             * The ID of the vulnerability.
              */
             public Builder otherId(String otherId) {
                 this.otherId = otherId;
@@ -250,7 +258,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 发布时间
+             * The time when the vulnerability was disclosed.
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -258,7 +266,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 漏洞标题
+             * The name of the vulnerability.
              */
             public Builder title(String title) {
                 this.title = title;

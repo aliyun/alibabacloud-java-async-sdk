@@ -50,7 +50,7 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterList.
+         * An array that consists of the information about clusters.
          */
         public Builder clusterList(java.util.List < ClusterList> clusterList) {
             this.clusterList = clusterList;
@@ -58,7 +58,7 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             private Boolean targetResult; 
 
             /**
-             * ClusterId.
+             * The ID of the container cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -166,7 +166,7 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the container cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -174,7 +174,14 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * The type of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **ManagedKubernetes**: managed Kubernetes cluster
+             * *   **NotManagedKubernetes**: non-managed Kubernetes cluster
+             * *   **PrivateKubernetes**: private cluster
+             * *   **kubernetes**: dedicated Kubernetes cluster
+             * *   **ask**: dedicated ASK cluster
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -182,7 +189,7 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region of the container cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -190,7 +197,13 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **unavailable**
+             * *   **Available**
+             * *   **Creating**
+             * *   **CreateFailed**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -198,7 +211,11 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetResult.
+             * Indicates whether the cluster is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder targetResult(Boolean targetResult) {
                 this.targetResult = targetResult;

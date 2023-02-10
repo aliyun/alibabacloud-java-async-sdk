@@ -101,7 +101,7 @@ public class ExportRecordRequest extends Request {
          * *   **imageVulExport**: the list of image system vulnerabilities
          * *   **imageBaseLineExport**: the list of baseline check results for images
          * *   **imageAffectedMaliciousExport**: the list of check results for malicious image samples
-         * *   **baseline**: the list of check results for configuration assessment
+         * *   **baselineCspm**: the list of check results for configuration assessment
          * *   **attack**: the list of alerts for attack analysis
          * *   **accessKey**: the list of alerts that are generated for AccessKey pair leaks
          */

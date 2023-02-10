@@ -62,7 +62,7 @@ public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ExclusiveFileType.
+         * An array that consists of the types of the files that have web tamper proofing disabled.
          */
         public Builder exclusiveFileType(java.util.List < String > exclusiveFileType) {
             this.exclusiveFileType = exclusiveFileType;
@@ -70,7 +70,7 @@ public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of files that have web tamper proofing disabled.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

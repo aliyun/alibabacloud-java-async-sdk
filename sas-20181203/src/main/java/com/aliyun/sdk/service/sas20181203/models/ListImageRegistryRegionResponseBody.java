@@ -50,7 +50,7 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * An array that consists of regions.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
             private String regionName; 
 
             /**
-             * RegionId.
+             * The region ID of the image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -118,7 +118,7 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

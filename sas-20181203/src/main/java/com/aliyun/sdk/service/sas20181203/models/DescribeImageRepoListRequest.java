@@ -168,7 +168,7 @@ public class DescribeImageRepoListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -177,7 +177,13 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * FieldName.
+         * The name of the field that is used for the query. Valid values:
+         * <p>
+         * 
+         * *   **repoName**: the name of the image repository
+         * *   **repoNamespace**: the namespace to which the image repository belongs
+         * 
+         * >  This parameter takes effect only when the **OperateType** parameter is set to **other**.
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("FieldName", fieldName);
@@ -186,7 +192,10 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * FieldValue.
+         * The value of the field that is used for the query.
+         * <p>
+         * 
+         * >  This parameter takes effect only when the **OperateType** parameter is set to **other**.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -195,7 +204,11 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * The type of the operation. Valid values:
+         * <p>
+         * 
+         * *   **count**: counts statistics
+         * *   **other**: others
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -204,7 +217,10 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +229,7 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the image repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -222,7 +238,7 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * RepoNamespace.
+         * The namespace to which the image repository belongs.
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -231,7 +247,10 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The condition by which the feature is applied. Valid values:
+         * <p>
+         * 
+         * *   **image_repo**: the ID of the image repository
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -240,7 +259,10 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the feature. Valid values:
+         * <p>
+         * 
+         * *   **image_repo**: image repository protection
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

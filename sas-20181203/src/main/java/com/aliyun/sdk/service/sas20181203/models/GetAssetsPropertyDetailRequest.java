@@ -153,7 +153,12 @@ public class GetAssetsPropertyDetailRequest extends Request {
         } 
 
         /**
-         * Biz.
+         * The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:
+         * <p>
+         * 
+         * *   **lkm**: kernel module
+         * *   **autorun**: startup item
+         * *   **web_server**: website
          */
         public Builder biz(String biz) {
             this.putQueryParameter("Biz", biz);
@@ -162,7 +167,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -171,7 +176,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * ItemName.
+         * The name of the aggregation item for the asset fingerprint that you want to query.
+         * <p>
+         * 
+         * >  You can call the [GetAssetsPropertyItem](~~GetAssetsPropertyItem~~) operation to query the names of aggregation items.
          */
         public Builder itemName(String itemName) {
             this.putQueryParameter("ItemName", itemName);
@@ -180,7 +188,11 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -189,7 +201,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +213,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The name or IP address of the server.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -207,7 +222,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * SearchCriteriaList.
+         * The conditions that are used to query the details about the asset fingerprint.
          */
         public Builder searchCriteriaList(java.util.List < SearchCriteriaList> searchCriteriaList) {
             this.putQueryParameter("SearchCriteriaList", searchCriteriaList);
@@ -216,7 +231,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -270,7 +288,17 @@ public class GetAssetsPropertyDetailRequest extends Request {
             private String value; 
 
             /**
-             * Name.
+             * The name of the condition. Valid values:
+             * <p>
+             * 
+             * *   **remarkItemName**: the aggregation item of the asset fingerprints. Fuzzy match is supported.
+             * 
+             * > 
+             * 
+             * *   If **Biz** is set to **web_server**, **remarkItemName** specifies a domain name.
+             * 
+             * *   If **Biz** is set to **lkm**, **remarkItemName** specifies a module name.
+             * *   If **Biz** is set to **autorun**, **remarkItemName** specifies the path to a startup item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +306,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the condition.
              */
             public Builder value(String value) {
                 this.value = value;

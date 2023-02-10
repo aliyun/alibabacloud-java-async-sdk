@@ -1038,7 +1038,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              * *   **baselineHigh**: the number of high-risk baseline risks
              * *   **baselineLow**: the number of low-risk baseline risks
              * *   **baselineMedium**: the number of medium-risk baseline risks
-             * *   **baselineNum**: the total number of baseline risks
+             * *   **baselineNum**: the total number of configuration  risks
              * *   **cmsNum**: the number of Web-CMS vulnerabilities
              * *   **containerAsap**: the number of high-risk vulnerabilities that are detected on containers
              * *   **containerLater**: the number of medium-risk vulnerabilities that are detected on containers

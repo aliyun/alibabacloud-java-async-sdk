@@ -50,7 +50,7 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
         private java.util.List < String > ruleTypes; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RuleTypes.
+         * An array that consists of the rule types.
          */
         public Builder ruleTypes(java.util.List < String > ruleTypes) {
             this.ruleTypes = ruleTypes;

@@ -474,7 +474,10 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeAvailable.
+             * Whether the node is upgradable. Valid values:
+             * <p>
+             * *   **false**: non-default type
+             * *   **true**: default type
              */
             public Builder upgradeAvailable(Boolean upgradeAvailable) {
                 this.upgradeAvailable = upgradeAvailable;

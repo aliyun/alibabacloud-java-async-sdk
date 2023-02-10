@@ -84,7 +84,7 @@ public class GetLastOnceTaskInfoRequest extends Request {
         } 
 
         /**
-         * Source.
+         * The source of the task.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -93,7 +93,12 @@ public class GetLastOnceTaskInfoRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task. Valid values:
+         * <p>
+         * 
+         * *   **CLIENT\_PROBLEM_CHECK**: client diagnosis task
+         * *   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant
+         * *   **ASSETS_COLLECTION**: asset collection task
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -102,7 +107,12 @@ public class GetLastOnceTaskInfoRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **CLIENT\_PROBLEM_CHECK**: client diagnosis task
+         * *   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant
+         * *   **ASSETS\_COLLECTION**: asset collection task
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

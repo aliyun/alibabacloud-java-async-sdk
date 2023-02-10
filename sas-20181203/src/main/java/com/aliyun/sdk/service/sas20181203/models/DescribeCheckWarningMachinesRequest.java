@@ -96,7 +96,10 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         } 
 
         /**
-         * CheckId.
+         * The ID of the check item.
+         * <p>
+         * 
+         * > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -105,7 +108,11 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +121,10 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * The ID of the baseline.
+         * <p>
+         * 
+         * > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -123,7 +133,14 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the check item.
+         * <p>
+         * 
+         * > This parameter indicates the status of the check item. Valid values:
+         * 
+         * *   1: failed
+         * 
+         * *   3: passed
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

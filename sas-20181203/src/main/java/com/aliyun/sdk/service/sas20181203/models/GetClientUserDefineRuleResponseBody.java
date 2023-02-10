@@ -50,7 +50,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         private UserDefineRuleDetail userDefineRuleDetail; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         }
 
         /**
-         * UserDefineRuleDetail.
+         * The information about the custom defense rule.
          */
         public Builder userDefineRuleDetail(UserDefineRuleDetail userDefineRuleDetail) {
             this.userDefineRuleDetail = userDefineRuleDetail;
@@ -314,7 +314,11 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * ActionType.
+             * The action of the custom defense rule. Valid values:
+             * <p>
+             * 
+             * *   **0**: allow
+             * *   **1**: block
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -322,7 +326,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Cmdline.
+             * The command line.
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -330,7 +334,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * The file path.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -338,7 +342,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the custom defense rule was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -346,7 +350,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the custom defense rule was last modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -354,7 +358,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -362,7 +366,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the custom defense rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -370,7 +374,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Md5List.
+             * The hash values of processes.
              */
             public Builder md5List(String md5List) {
                 this.md5List = md5List;
@@ -378,7 +382,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the custom defense rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -386,7 +390,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NewFilePath.
+             * The new file path after the file is renamed.
              */
             public Builder newFilePath(String newFilePath) {
                 this.newFilePath = newFilePath;
@@ -394,7 +398,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCmdline.
+             * The parent command line.
              */
             public Builder parentCmdline(String parentCmdline) {
                 this.parentCmdline = parentCmdline;
@@ -402,7 +406,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ParentProcPath.
+             * The path to the parent process.
              */
             public Builder parentProcPath(String parentProcPath) {
                 this.parentProcPath = parentProcPath;
@@ -410,7 +414,12 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The type of the operating system. Valid values:
+             * <p>
+             * 
+             * *   **linux**
+             * *   **windows**
+             * *   **all**
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -418,7 +427,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -426,7 +435,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PortStr.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder portStr(String portStr) {
                 this.portStr = portStr;
@@ -434,7 +443,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ProcPath.
+             * The path to the process.
              */
             public Builder procPath(String procPath) {
                 this.procPath = procPath;
@@ -442,7 +451,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryContent.
+             * The registry value.
              */
             public Builder registryContent(String registryContent) {
                 this.registryContent = registryContent;
@@ -450,7 +459,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryKey.
+             * The registry key.
              */
             public Builder registryKey(String registryKey) {
                 this.registryKey = registryKey;
@@ -458,7 +467,16 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the custom defense rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: Process hash
+             * *   **2**: Command line
+             * *   **3**: Process Network
+             * *   **4**: File Read and Write
+             * *   **5**: Operation on Registry
+             * *   **6**: Dynamic-link Library Loading
+             * *   **7**: File Renaming
              */
             public Builder type(Integer type) {
                 this.type = type;

@@ -50,7 +50,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         private java.util.List < Task> task; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * An array that consists of the information about the task.
          */
         public Builder task(java.util.List < Task> task) {
             this.task = task;
@@ -242,7 +242,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * Create.
+             * The time when the task was created. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder create(String create) {
                 this.create = create;
@@ -250,7 +250,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Finish.
+             * The number of images that are scanned.
              */
             public Builder finish(Integer finish) {
                 this.finish = finish;
@@ -258,7 +258,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The end time of the task. The value of this parameter is returned only if Status is SUCCESS. Otherwise, this parameter is returned empty.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -266,7 +266,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The primary key ID of the database.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -274,7 +274,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Modified.
+             * The time when the task was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder modified(String modified) {
                 this.modified = modified;
@@ -282,7 +282,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -290,7 +290,11 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The creation method. A task can be created in the Security Center console or by calling an operation. Valid values:
+             * <p>
+             * 
+             * *   **console_batch**: The task was created in the Security Center console.
+             * *   **openapi**: The task was created by calling an operation.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -298,7 +302,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the task.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -306,7 +310,16 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **PROCESSING**: running
+             * *   **START**: starting
+             * *   **MESSAGE_SEND**: delivering
+             * *   **PRE_ANALYZER**: image prechecking
+             * *   **SUCCESS**: successful
+             * *   **FAIL**: failed
+             * *   **TIMOUT**: timed out
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,7 +327,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The digest value of the image.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -322,7 +335,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the scanned asset. Valid values:
+             * <p>
+             * 
+             * *   **IMAGE**: image
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -330,7 +346,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -338,7 +354,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **IMAGE_SCAN**: image scan task
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

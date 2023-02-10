@@ -13,12 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChangeCheckConfigRequest extends Request {
     @Query
-    @NameInMap("CycleDays")
-    private java.util.List < Integer > cycleDays;
-
-    @Query
     @NameInMap("EndTime")
     private Integer endTime;
+
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Query
     @NameInMap("StandardIds")
@@ -30,8 +30,8 @@ public class ChangeCheckConfigRequest extends Request {
 
     private ChangeCheckConfigRequest(Builder builder) {
         super(builder);
-        this.cycleDays = builder.cycleDays;
         this.endTime = builder.endTime;
+        this.regionId = builder.regionId;
         this.standardIds = builder.standardIds;
         this.startTime = builder.startTime;
     }
@@ -50,17 +50,17 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
-     * @return cycleDays
-     */
-    public java.util.List < Integer > getCycleDays() {
-        return this.cycleDays;
-    }
-
-    /**
      * @return endTime
      */
     public Integer getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -78,8 +78,8 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
-        private java.util.List < Integer > cycleDays; 
         private Integer endTime; 
+        private String regionId; 
         private java.util.List < Long > standardIds; 
         private Integer startTime; 
 
@@ -89,20 +89,11 @@ public class ChangeCheckConfigRequest extends Request {
 
         private Builder(ChangeCheckConfigRequest request) {
             super(request);
-            this.cycleDays = request.cycleDays;
             this.endTime = request.endTime;
+            this.regionId = request.regionId;
             this.standardIds = request.standardIds;
             this.startTime = request.startTime;
         } 
-
-        /**
-         * CycleDays.
-         */
-        public Builder cycleDays(java.util.List < Integer > cycleDays) {
-            this.putQueryParameter("CycleDays", cycleDays);
-            this.cycleDays = cycleDays;
-            return this;
-        }
 
         /**
          * EndTime.
@@ -110,6 +101,15 @@ public class ChangeCheckConfigRequest extends Request {
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

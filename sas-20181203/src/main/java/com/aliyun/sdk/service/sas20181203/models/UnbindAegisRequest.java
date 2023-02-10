@@ -55,9 +55,10 @@ public class UnbindAegisRequest extends Request {
         } 
 
         /**
-         * The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,). 
+         * The UUID of the server that you want to unbind. If you specify more than one UUID, separate the UUIDs with commas (,).
          * <p>
-         * You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * 
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

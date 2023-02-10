@@ -110,7 +110,7 @@ public class DescribeBruteForceRecordsRequest extends Request {
         } 
 
         /**
-         * BlockIp.
+         * The IP address that is blocked by the defense rule.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -119,7 +119,7 @@ public class DescribeBruteForceRecordsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -128,7 +128,7 @@ public class DescribeBruteForceRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +146,12 @@ public class DescribeBruteForceRecordsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the defense rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: invalid
+         * *   **1**: enabled
+         * *   **2**: failed
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

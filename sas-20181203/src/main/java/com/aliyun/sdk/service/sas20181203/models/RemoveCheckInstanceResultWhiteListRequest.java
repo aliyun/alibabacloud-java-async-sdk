@@ -68,7 +68,7 @@ public class RemoveCheckInstanceResultWhiteListRequest extends Request {
         } 
 
         /**
-         * CheckId.
+         * The ID of the check item.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -77,7 +77,7 @@ public class RemoveCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances. Separate multiple IDs with commas (,).
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

@@ -97,7 +97,7 @@ public class UpdateHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * 蜜罐镜像名称
+         * The name of the honeypot image.
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -106,7 +106,10 @@ public class UpdateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * 蜜罐模板唯一ID
+         * The ID of the honeypot template.
+         * <p>
+         * 
+         * > You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the ID of the honeypot template.
          */
         public Builder honeypotPresetId(String honeypotPresetId) {
             this.putQueryParameter("HoneypotPresetId", honeypotPresetId);
@@ -115,7 +118,12 @@ public class UpdateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * 蜜罐模板自定义参数
+         * The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:
+         * <p>
+         * 
+         * *   **portrait_option**: Social Source Tracing
+         * *   **burp**: Burp-specific Defense
+         * *   **trojan_git**: Git-specific Defense
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);
@@ -124,7 +132,7 @@ public class UpdateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * 蜜罐模板自定义名称
+         * The custom name of the honeypot template.
          */
         public Builder presetName(String presetName) {
             this.putQueryParameter("PresetName", presetName);

@@ -78,7 +78,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the defense rules returned.
+         * An array that consists of the defense rules.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -377,7 +377,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.
+             * The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP addresses of attackers cannot be used to log on to the server within the specified period of time.
              */
             public Builder span(Integer span) {
                 this.span = span;

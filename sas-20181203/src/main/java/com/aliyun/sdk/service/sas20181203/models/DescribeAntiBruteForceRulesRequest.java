@@ -13,8 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAntiBruteForceRulesRequest extends Request {
     @Query
+    @NameInMap("CurrentPage")
+    private Integer currentPage;
+
+    @Query
     @NameInMap("Id")
     private Long id;
+
+    @Query
+    @NameInMap("PageSize")
+    private String pageSize;
 
     @Query
     @NameInMap("ResourceOwnerId")
@@ -26,7 +34,9 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
 
     private DescribeAntiBruteForceRulesRequest(Builder builder) {
         super(builder);
+        this.currentPage = builder.currentPage;
         this.id = builder.id;
+        this.pageSize = builder.pageSize;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceIp = builder.sourceIp;
     }
@@ -45,10 +55,24 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
      * @return id
      */
     public Long getId() {
         return this.id;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -66,7 +90,9 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAntiBruteForceRulesRequest, Builder> {
+        private Integer currentPage; 
         private Long id; 
+        private String pageSize; 
         private Long resourceOwnerId; 
         private String sourceIp; 
 
@@ -76,19 +102,40 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
 
         private Builder(DescribeAntiBruteForceRulesRequest request) {
             super(request);
+            this.currentPage = request.currentPage;
             this.id = request.id;
+            this.pageSize = request.pageSize;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceIp = request.sourceIp;
         } 
 
         /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
          * The ID of the defense rule.
          * <p>
-         * >  You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to obtain the ID of the defense rule against brute-force attacks.
+         * 
+         * >  You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to query the IDs of defense rules.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

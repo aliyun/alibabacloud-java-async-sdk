@@ -55,7 +55,10 @@ public class CancelOnceTaskRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * The ID of the task.
+         * <p>
+         * 
+         * >  You can call the [GenerateOnceTask](~~GenerateOnceTask~~) operation to query the IDs of tasks.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

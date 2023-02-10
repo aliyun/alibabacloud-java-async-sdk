@@ -78,7 +78,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the servers to which the defense rule is applied.
+         * An array consisting of the servers to which a defense rule is applied.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -154,7 +154,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of servers to which the defense rule is applied on the current page.
+             * The number of servers returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +178,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers to which the defense rule is applied.
+             * The total number of servers returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -84,7 +84,7 @@ public class ValidateHcWarningsRequest extends Request {
         } 
 
         /**
-         * The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).
+         * RiskIds.
          */
         public Builder riskIds(String riskIds) {
             this.putQueryParameter("RiskIds", riskIds);
@@ -93,7 +93,7 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -102,7 +102,7 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers on which you want to verify risk items.
+         * Uuids.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

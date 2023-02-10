@@ -112,7 +112,7 @@ public class IgnoreCheckItemsRequest extends Request {
         } 
 
         /**
-         * 检查项
+         * The risk items.
          */
         public Builder checkAndRiskTypeList(java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList) {
             this.putQueryParameter("CheckAndRiskTypeList", checkAndRiskTypeList);
@@ -121,7 +121,11 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -130,7 +134,7 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * 加白理由
+         * The reason why you add the risk item to the whitelist.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -139,7 +143,11 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * 操作类型
+         * The operation that you want to perform on the risk item. Valid values:
+         * <p>
+         * 
+         * *   **1**: ignores a risk item
+         * *   **2**: cancels ignoring a risk item
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);
@@ -148,7 +156,10 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * 指定机器
+         * The UUIDs of the servers.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);
@@ -202,7 +213,7 @@ public class IgnoreCheckItemsRequest extends Request {
             private String riskType; 
 
             /**
-             * CheckId.
+             * The IDs of the check items.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -210,7 +221,7 @@ public class IgnoreCheckItemsRequest extends Request {
             }
 
             /**
-             * RiskType.
+             * The baseline type of the risk item.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;

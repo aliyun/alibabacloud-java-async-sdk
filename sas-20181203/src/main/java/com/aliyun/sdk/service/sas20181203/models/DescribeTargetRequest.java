@@ -68,7 +68,13 @@ public class DescribeTargetRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The type of the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   **cms**: Web-CMS vulnerabilities
+         * *   **sys**: Windows system vulnerabilities
+         * *   **cve**: Linux software vulnerabilities
+         * *   **emg**: urgent vulnerabilities
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -77,7 +83,7 @@ public class DescribeTargetRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the query. Set the value to vul.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
