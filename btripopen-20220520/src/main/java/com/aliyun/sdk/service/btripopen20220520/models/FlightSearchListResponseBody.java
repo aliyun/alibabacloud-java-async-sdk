@@ -2880,6 +2880,9 @@ public class FlightSearchListResponseBody extends TeaModel {
         @NameInMap("agent_id")
         private Long agentId;
 
+        @NameInMap("basic_cabin_price")
+        private Integer basicCabinPrice;
+
         @NameInMap("build_price")
         private Integer buildPrice;
 
@@ -2951,6 +2954,7 @@ public class FlightSearchListResponseBody extends TeaModel {
 
         private CabinInfoList(Builder builder) {
             this.agentId = builder.agentId;
+            this.basicCabinPrice = builder.basicCabinPrice;
             this.buildPrice = builder.buildPrice;
             this.cabin = builder.cabin;
             this.cabinClass = builder.cabinClass;
@@ -2989,6 +2993,13 @@ public class FlightSearchListResponseBody extends TeaModel {
          */
         public Long getAgentId() {
             return this.agentId;
+        }
+
+        /**
+         * @return basicCabinPrice
+         */
+        public Integer getBasicCabinPrice() {
+            return this.basicCabinPrice;
         }
 
         /**
@@ -3154,6 +3165,7 @@ public class FlightSearchListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long agentId; 
+            private Integer basicCabinPrice; 
             private Integer buildPrice; 
             private String cabin; 
             private String cabinClass; 
@@ -3183,6 +3195,14 @@ public class FlightSearchListResponseBody extends TeaModel {
              */
             public Builder agentId(Long agentId) {
                 this.agentId = agentId;
+                return this;
+            }
+
+            /**
+             * 舱位基准价
+             */
+            public Builder basicCabinPrice(Integer basicCabinPrice) {
+                this.basicCabinPrice = basicCabinPrice;
                 return this;
             }
 
@@ -9623,7 +9643,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             }
 
             /**
-             * basic_cabin_price.
+             * 舱位基准价
              */
             public Builder basicCabinPrice(Integer basicCabinPrice) {
                 this.basicCabinPrice = basicCabinPrice;
