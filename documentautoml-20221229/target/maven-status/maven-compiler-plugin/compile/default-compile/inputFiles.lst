@@ -1,0 +1,12 @@
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictModelResponse.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/DefaultAsyncClientBuilder.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictClassifierModelRequest.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/DefaultAsyncClient.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/AsyncClient.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictModelRequest.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictClassifierModelResponse.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictTemplateModelResponseBody.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictModelResponseBody.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictTemplateModelRequest.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictClassifierModelResponseBody.java
+/root/output/62ecb33a-d67a-4c7b-8eb0-a7d146538b24/tea-java-async/documentautoml-20221229/src/main/java/com/aliyun/sdk/service/documentautoml20221229/models/PredictTemplateModelResponse.java
