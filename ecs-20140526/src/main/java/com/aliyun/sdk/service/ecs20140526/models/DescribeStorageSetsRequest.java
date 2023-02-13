@@ -197,7 +197,7 @@ public class DescribeStorageSetsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,7 +224,10 @@ public class DescribeStorageSetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -233,7 +236,10 @@ public class DescribeStorageSetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,7 +248,7 @@ public class DescribeStorageSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the storage set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -269,7 +275,7 @@ public class DescribeStorageSetsRequest extends Request {
         }
 
         /**
-         * StorageSetIds.
+         * The IDs of storage sets. The value is a JSON array that consists of up to 100 storage set IDs. Separate the IDs with commas (,).
          */
         public Builder storageSetIds(String storageSetIds) {
             this.putQueryParameter("StorageSetIds", storageSetIds);
@@ -278,7 +284,7 @@ public class DescribeStorageSetsRequest extends Request {
         }
 
         /**
-         * StorageSetName.
+         * The name of the storage set.
          */
         public Builder storageSetName(String storageSetName) {
             this.putQueryParameter("StorageSetName", storageSetName);
@@ -287,7 +293,7 @@ public class DescribeStorageSetsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the storage set. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

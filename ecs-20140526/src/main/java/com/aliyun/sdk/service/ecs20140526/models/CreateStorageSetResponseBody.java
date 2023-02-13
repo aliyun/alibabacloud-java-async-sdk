@@ -50,7 +50,7 @@ public class CreateStorageSetResponseBody extends TeaModel {
         private String storageSetId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateStorageSetResponseBody extends TeaModel {
         }
 
         /**
-         * StorageSetId.
+         * The ID of the storage set.
          */
         public Builder storageSetId(String storageSetId) {
             this.storageSetId = storageSetId;

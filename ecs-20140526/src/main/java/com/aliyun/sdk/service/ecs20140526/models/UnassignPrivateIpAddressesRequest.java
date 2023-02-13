@@ -17,6 +17,10 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     private String sourceRegionId;
 
     @Query
+    @NameInMap("Ipv4Prefix")
+    private java.util.List < String > ipv4Prefix;
+
+    @Query
     @NameInMap("NetworkInterfaceId")
     @Validation(required = true)
     private String networkInterfaceId;
@@ -31,7 +35,6 @@ public class UnassignPrivateIpAddressesRequest extends Request {
 
     @Query
     @NameInMap("PrivateIpAddress")
-    @Validation(required = true)
     private java.util.List < String > privateIpAddress;
 
     @Query
@@ -50,6 +53,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     private UnassignPrivateIpAddressesRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.ipv4Prefix = builder.ipv4Prefix;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -77,6 +81,13 @@ public class UnassignPrivateIpAddressesRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return ipv4Prefix
+     */
+    public java.util.List < String > getIpv4Prefix() {
+        return this.ipv4Prefix;
     }
 
     /**
@@ -130,6 +141,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UnassignPrivateIpAddressesRequest, Builder> {
         private String sourceRegionId; 
+        private java.util.List < String > ipv4Prefix; 
         private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -145,6 +157,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         private Builder(UnassignPrivateIpAddressesRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.ipv4Prefix = request.ipv4Prefix;
             this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -160,6 +173,15 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Ipv4Prefix.
+         */
+        public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
+            this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
+            this.ipv4Prefix = ipv4Prefix;
             return this;
         }
 

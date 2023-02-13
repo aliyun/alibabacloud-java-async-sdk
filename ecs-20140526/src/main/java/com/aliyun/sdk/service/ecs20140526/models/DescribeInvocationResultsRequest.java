@@ -62,6 +62,10 @@ public class DescribeInvocationResultsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -87,6 +91,7 @@ public class DescribeInvocationResultsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
@@ -190,6 +195,13 @@ public class DescribeInvocationResultsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -223,6 +235,7 @@ public class DescribeInvocationResultsRequest extends Request {
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < Tag> tag; 
@@ -245,6 +258,7 @@ public class DescribeInvocationResultsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
@@ -260,7 +274,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * CommandId.
+         * The ID of the command.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -269,7 +283,13 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * ContentEncoding.
+         * The encoding method of the `Output` response parameter. Valid values:
+         * <p>
+         * 
+         * *   PlainText: returns the original command content and command output.
+         * *   Base64: returns the Base64-encoded command content and command output.
+         * 
+         * Default value: Base64.
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -278,7 +298,13 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * IncludeHistory.
+         * Specifies whether to return the results of historical scheduled executions. Valid values:
+         * <p>
+         * 
+         * *   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled task.
+         * *   false: does not return the results of historical scheduled executions.
+         * 
+         * Default value: false.
          */
         public Builder includeHistory(Boolean includeHistory) {
             this.putQueryParameter("IncludeHistory", includeHistory);
@@ -287,7 +313,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -296,7 +322,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * InvokeId.
+         * The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the command task IDs.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -305,7 +331,15 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * InvokeRecordStatus.
+         * The state of the execution. Valid values:
+         * <p>
+         * 
+         * *   Running
+         * *   Finished
+         * *   Failed
+         * *   Stopped
+         * 
+         * >  To improve compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
@@ -332,7 +366,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -341,7 +380,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -350,11 +394,23 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -377,7 +433,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -431,7 +487,12 @@ public class DescribeInvocationResultsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -439,7 +500,10 @@ public class DescribeInvocationResultsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -62,7 +62,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NextToken.
+         * The query token returned in this call. If the return value is empty, no more data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * PrefixLists.
+         * Details about the prefix lists.
          */
         public Builder prefixLists(PrefixLists prefixLists) {
             this.prefixLists = prefixLists;
@@ -78,7 +78,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,11 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             private String prefixListName; 
 
             /**
-             * AddressFamily.
+             * The IP address family of the prefix list. Valid values:
+             * <p>
+             * 
+             * *   IPv4
+             * *   IPv6
              */
             public Builder addressFamily(String addressFamily) {
                 this.addressFamily = addressFamily;
@@ -198,7 +202,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * AssociationCount.
+             * The number of associated resources.
              */
             public Builder associationCount(Integer associationCount) {
                 this.associationCount = associationCount;
@@ -206,7 +210,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the prefix list was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -214,7 +218,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the prefix list.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +226,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxEntries.
+             * The maximum number of entries that the prefix list can contain.
              */
             public Builder maxEntries(Integer maxEntries) {
                 this.maxEntries = maxEntries;
@@ -230,7 +234,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixListId.
+             * The ID of the prefix list.
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -238,7 +242,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixListName.
+             * The name of the prefix list.
              */
             public Builder prefixListName(String prefixListName) {
                 this.prefixListName = prefixListName;

@@ -50,7 +50,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DedicatedHostIdSets.
+         * The IDs of the dedicated hosts.
          */
         public Builder dedicatedHostIdSets(DedicatedHostIdSets dedicatedHostIdSets) {
             this.dedicatedHostIdSets = dedicatedHostIdSets;
@@ -58,7 +58,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

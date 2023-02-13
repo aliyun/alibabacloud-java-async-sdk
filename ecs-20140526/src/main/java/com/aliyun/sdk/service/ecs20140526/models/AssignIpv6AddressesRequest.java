@@ -25,6 +25,15 @@ public class AssignIpv6AddressesRequest extends Request {
     private Integer ipv6AddressCount;
 
     @Query
+    @NameInMap("Ipv6Prefix")
+    private java.util.List < String > ipv6Prefix;
+
+    @Query
+    @NameInMap("Ipv6PrefixCount")
+    @Validation(maximum = 10, minimum = 1)
+    private Integer ipv6PrefixCount;
+
+    @Query
     @NameInMap("NetworkInterfaceId")
     @Validation(required = true)
     private String networkInterfaceId;
@@ -55,6 +64,8 @@ public class AssignIpv6AddressesRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.ipv6Address = builder.ipv6Address;
         this.ipv6AddressCount = builder.ipv6AddressCount;
+        this.ipv6Prefix = builder.ipv6Prefix;
+        this.ipv6PrefixCount = builder.ipv6PrefixCount;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -95,6 +106,20 @@ public class AssignIpv6AddressesRequest extends Request {
      */
     public Integer getIpv6AddressCount() {
         return this.ipv6AddressCount;
+    }
+
+    /**
+     * @return ipv6Prefix
+     */
+    public java.util.List < String > getIpv6Prefix() {
+        return this.ipv6Prefix;
+    }
+
+    /**
+     * @return ipv6PrefixCount
+     */
+    public Integer getIpv6PrefixCount() {
+        return this.ipv6PrefixCount;
     }
 
     /**
@@ -143,6 +168,8 @@ public class AssignIpv6AddressesRequest extends Request {
         private String sourceRegionId; 
         private java.util.List < String > ipv6Address; 
         private Integer ipv6AddressCount; 
+        private java.util.List < String > ipv6Prefix; 
+        private Integer ipv6PrefixCount; 
         private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -159,6 +186,8 @@ public class AssignIpv6AddressesRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.ipv6Address = request.ipv6Address;
             this.ipv6AddressCount = request.ipv6AddressCount;
+            this.ipv6Prefix = request.ipv6Prefix;
+            this.ipv6PrefixCount = request.ipv6PrefixCount;
             this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -177,7 +206,12 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Ipv6Address.
+         * IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.
+         * <p>
+         * 
+         * Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
+         * 
+         * > You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -186,7 +220,10 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Ipv6AddressCount.
+         * The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
+         * <p>
+         * 
+         * >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -195,7 +232,25 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * > 该参数正在邀测中，暂未开放使用。
+         */
+        public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
+            this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
+            this.ipv6Prefix = ipv6Prefix;
+            return this;
+        }
+
+        /**
+         * > 该参数正在邀测中，暂未开放使用。
+         */
+        public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
+            this.putQueryParameter("Ipv6PrefixCount", ipv6PrefixCount);
+            this.ipv6PrefixCount = ipv6PrefixCount;
+            return this;
+        }
+
+        /**
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -222,7 +277,7 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

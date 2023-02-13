@@ -86,7 +86,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * KeyPairs.
+         * Details about the key pairs.
          */
         public Builder keyPairs(KeyPairs keyPairs) {
             this.keyPairs = keyPairs;
@@ -94,7 +94,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of key pairs.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the key pair.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the key pair.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -308,7 +308,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * CreationTime.
+             * The time when the key pair was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -316,7 +316,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairFingerPrint.
+             * The fingerprint of the key pair.
              */
             public Builder keyPairFingerPrint(String keyPairFingerPrint) {
                 this.keyPairFingerPrint = keyPairFingerPrint;
@@ -324,7 +324,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * The name of the key pair.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -332,7 +332,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -340,7 +340,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the key pair.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

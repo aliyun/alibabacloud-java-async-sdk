@@ -62,7 +62,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         private SnapshotGroups snapshotGroups; 
 
         /**
-         * NextToken.
+         * The token used to start the next query.
+         * <p>
+         * 
+         * >  If this parameter is empty, no more data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotGroups.
+         * Details of the snapshot-consistent groups.
          */
         public Builder snapshotGroups(SnapshotGroups snapshotGroups) {
             this.snapshotGroups = snapshotGroups;
@@ -130,7 +133,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -138,7 +141,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -292,7 +295,11 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * InstantAccess.
+             * Indicates whether the instant access feature is enabled. Valid values:
+             * <p>
+             * 
+             * - true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+             * - false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -300,7 +307,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstantAccessRetentionDays.
+             * The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -308,7 +315,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the snapshot creation task. Unit: percent (%).
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -316,7 +323,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the snapshot.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -324,7 +331,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskId.
+             * The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -332,7 +339,11 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskType.
+             * The type of the source disk. Valid values:
+             * <p>
+             * 
+             * - system: system disk
+             * - data: data disk
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -340,7 +351,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot-consistent group belongs.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -434,7 +445,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the snapshot-consistent group.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -442,7 +453,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value of the snapshot-consistent group.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -632,7 +643,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private SnapshotGroupTags tags; 
 
             /**
-             * CreationTime.
+             * The time when the snapshot-consistent group was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -640,7 +651,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the snapshot-consistent group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -648,7 +659,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can use parameters starting with `Snapshots.Snapshot.Tags.` in the response to view the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -656,7 +667,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the snapshot-consistent group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -664,7 +675,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProgressStatus.
+             * >  This parameter is unavailable.
              */
             public Builder progressStatus(String progressStatus) {
                 this.progressStatus = progressStatus;
@@ -672,7 +683,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the snapshot-consistent group belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -680,7 +691,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotGroupId.
+             * The ID of the snapshot-consistent group.
              */
             public Builder snapshotGroupId(String snapshotGroupId) {
                 this.snapshotGroupId = snapshotGroupId;
@@ -688,7 +699,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * Details of the snapshots in the snapshot-consistent group.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -696,7 +707,12 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the snapshot-consistent group. Valid values:
+             * <p>
+             * 
+             * *   progressing: The snapshot-consistent group is being created.
+             * *   accomplished: The snapshot-consistent group is created.
+             * *   failed: The snapshot-consistent group fails to be created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -704,7 +720,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the snapshot-consistent group.
              */
             public Builder tags(SnapshotGroupTags tags) {
                 this.tags = tags;

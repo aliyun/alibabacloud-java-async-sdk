@@ -218,7 +218,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * LaunchTemplateId.
+         * The IDs of one or more launch templates. You can specify up to 100 launch template IDs.
          */
         public Builder launchTemplateId(java.util.List < String > launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -227,7 +227,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * LaunchTemplateName.
+         * The names of one or more launch templates. You can specify up to 100 launch template names.
          */
         public Builder launchTemplateName(java.util.List < String > launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -254,7 +254,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -263,7 +266,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,7 +278,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +305,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateResourceGroupId.
+         * The ID of the resource group to which the launch template belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder templateResourceGroupId(String templateResourceGroupId) {
             this.putQueryParameter("TemplateResourceGroupId", templateResourceGroupId);
@@ -308,7 +317,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateTag.
+         * The tags.
          */
         public Builder templateTag(java.util.List < TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
@@ -362,7 +371,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the launch template. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +382,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the launch template. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -284,7 +284,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the instances to be created by using the elasticity assurance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.  
+         * <p>
+         * 
+         * Default value: PostPaid.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -293,7 +296,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type to which the elasticity assurance applies.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -302,7 +305,12 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -311,7 +319,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -338,7 +346,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * Platform.
+         * >  This parameter is deprecated.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -347,7 +355,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -356,7 +364,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the elasticity assurance belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -383,7 +394,16 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the elasticity assurance. Valid values:
+         * <p>
+         * 
+         * - All: All states.
+         * - Preparing: The elasticity assurance is being prepared.
+         * - Prepared: The elasticity assurance is to take effect.
+         * - Active: The elasticity assurance is in effect.
+         * - Released: The elasticity assurance is released.
+         * 
+         * Default value: Active.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -392,7 +412,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that you want to query resources. You can specify a maximum of 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -401,7 +421,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the elasticity assurance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -443,7 +463,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             private String ids; 
 
             /**
-             * Ids.
+             * The IDs of elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).
              */
             public Builder ids(String ids) {
                 this.ids = ids;
@@ -496,7 +516,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag of the elasticity assurance. You can specify multiple tag keys to query.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -504,7 +527,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag of the elasticity assurance.
              */
             public Builder value(String value) {
                 this.value = value;

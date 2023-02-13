@@ -221,7 +221,11 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * AddressFamily.
+         * The IP address family. Valid values:
+         * <p>
+         * 
+         * *   IPv4
+         * *   IPv6
          */
         public Builder addressFamily(String addressFamily) {
             this.putQueryParameter("AddressFamily", addressFamily);
@@ -230,7 +234,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -239,7 +243,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -248,7 +252,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * Entry.
+         * 前缀列表条目信息。
          */
         public Builder entry(java.util.List < Entry> entry) {
             this.putQueryParameter("Entry", entry);
@@ -257,7 +261,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * MaxEntries.
+         * The maximum number of entries that the prefix list can contain. Valid values: 1 to 200.
          */
         public Builder maxEntries(Integer maxEntries) {
             this.putQueryParameter("MaxEntries", maxEntries);
@@ -284,7 +288,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * PrefixListName.
+         * The name of the prefix list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -293,7 +297,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to create the prefix list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -366,7 +370,18 @@ public class CreatePrefixListRequest extends Request {
             private String description; 
 
             /**
-             * Cidr.
+             * The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:
+             * <p>
+             * 
+             * *   The total number of entries must not exceed the `MaxEntries` value.
+             * *   CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.
+             * *   CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.
+             * *   IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.
+             * *   If an IPv6 CIDR block is used, the system converts it to the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.
+             * 
+             * For more information about CIDR blocks, see the "What is CIDR block?" section of the [Network FAQ](https://www.alibabacloud.com/help/doc-detail/40637.htm#title-gu4-uzk-12r) topic.
+             * 
+             * This parameter is empty by default.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -374,7 +389,7 @@ public class CreatePrefixListRequest extends Request {
             }
 
             /**
-             * Description.
+             * The description in entry N. The description must be 2 to 32 characters in length and cannot start with `http://` or `https://`. Valid values of N: 0 to 200.
              */
             public Builder description(String description) {
                 this.description = description;

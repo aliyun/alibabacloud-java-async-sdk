@@ -219,7 +219,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * ExecutionId.
+         * The ID of the image build task.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -228,7 +228,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * ImagePipelineId.
+         * The ID of the image template.
          */
         public Builder imagePipelineId(String imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -237,7 +237,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. Valid values: 1 to 500.
+         * <p>
+         * 
+         * Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -246,7 +249,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the `NextToken` value that was returned when you last called the DescribeImagePipelineExecutions operation. Leave this parameter empty when you call this operation for the first time.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -273,7 +276,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -300,7 +303,18 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the image build task. You can specify multiple values at the same time. Separate the values with commas (,). Example format: `BUILDING,DISTRIBUTING`. Valid values: 
+         * <p>
+         * 
+         * - BUILDING: The image is being built.
+         * - DISTRIBUTING: The image is being distributed.
+         * - RELEASING: The image is being recycled.
+         * - SUCCESS: The image is built.
+         * - FAILED: The image fails to be built.
+         * - CANCELLING: The image build task is being canceled.
+         * - CANCELLED: The image build task is canceled.
+         * 
+         * >  You cannot query the image build tasks in all status by leaving this parameter empty.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -309,7 +323,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * > This parameter is deprecated.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -363,7 +377,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * > This parameter is deprecated.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -371,7 +385,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             }
 
             /**
-             * Value.
+             * > This parameter is deprecated.
              */
             public Builder value(String value) {
                 this.value = value;

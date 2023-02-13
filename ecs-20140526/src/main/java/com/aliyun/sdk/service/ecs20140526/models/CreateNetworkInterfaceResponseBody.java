@@ -15,6 +15,12 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("Ipv4PrefixSets")
+    private Ipv4PrefixSets ipv4PrefixSets;
+
+    @NameInMap("Ipv6PrefixSets")
+    private Ipv6PrefixSets ipv6PrefixSets;
+
     @NameInMap("Ipv6Sets")
     private Ipv6Sets ipv6Sets;
 
@@ -71,6 +77,8 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     private CreateNetworkInterfaceResponseBody(Builder builder) {
         this.description = builder.description;
+        this.ipv4PrefixSets = builder.ipv4PrefixSets;
+        this.ipv6PrefixSets = builder.ipv6PrefixSets;
         this.ipv6Sets = builder.ipv6Sets;
         this.macAddress = builder.macAddress;
         this.networkInterfaceId = builder.networkInterfaceId;
@@ -104,6 +112,20 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return ipv4PrefixSets
+     */
+    public Ipv4PrefixSets getIpv4PrefixSets() {
+        return this.ipv4PrefixSets;
+    }
+
+    /**
+     * @return ipv6PrefixSets
+     */
+    public Ipv6PrefixSets getIpv6PrefixSets() {
+        return this.ipv6PrefixSets;
     }
 
     /**
@@ -234,6 +256,8 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String description; 
+        private Ipv4PrefixSets ipv4PrefixSets; 
+        private Ipv6PrefixSets ipv6PrefixSets; 
         private Ipv6Sets ipv6Sets; 
         private String macAddress; 
         private String networkInterfaceId; 
@@ -254,7 +278,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * Description.
+         * The description of the ENI.
          */
         public Builder description(String description) {
             this.description = description;
@@ -262,7 +286,23 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv6Sets.
+         * > This parameter is in invitational preview and is unavailable for general users.
+         */
+        public Builder ipv4PrefixSets(Ipv4PrefixSets ipv4PrefixSets) {
+            this.ipv4PrefixSets = ipv4PrefixSets;
+            return this;
+        }
+
+        /**
+         * > This parameter is in invitational preview and is unavailable for general users.
+         */
+        public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
+            this.ipv6PrefixSets = ipv6PrefixSets;
+            return this;
+        }
+
+        /**
+         * The IPv6 addresses of the ENI.
          */
         public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
             this.ipv6Sets = ipv6Sets;
@@ -270,7 +310,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * MacAddress.
+         * The media access control (MAC) address of the ENI.
          */
         public Builder macAddress(String macAddress) {
             this.macAddress = macAddress;
@@ -278,7 +318,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkInterfaceId.
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
@@ -286,7 +326,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkInterfaceName.
+         * The name of the ENI.
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
@@ -294,7 +334,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * The ID of the account to which the ENI belongs.
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -302,7 +342,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateIpAddress.
+         * The private IP address of the ENI.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
@@ -310,7 +350,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateIpSets.
+         * Details about the private IP addresses of the ENI.
          */
         public Builder privateIpSets(PrivateIpSets privateIpSets) {
             this.privateIpSets = privateIpSets;
@@ -318,7 +358,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -326,7 +366,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the ENI belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -334,7 +374,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupIds.
+         * The IDs of the security groups to which the ENI belongs.
          */
         public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
@@ -342,7 +382,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceID.
+         * The ID of the distributor to which the ENI belongs.
          */
         public Builder serviceID(Long serviceID) {
             this.serviceID = serviceID;
@@ -350,7 +390,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceManaged.
+         * Indicates whether the user of the ENI is an Alibaba Cloud service or a distributor.
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -358,7 +398,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the ENI.
          */
         public Builder status(String status) {
             this.status = status;
@@ -366,7 +406,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tags of the ENI.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -374,7 +414,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the ENI.
          */
         public Builder type(String type) {
             this.type = type;
@@ -382,7 +422,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch with which the ENI is associated.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -390,7 +430,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the ENI belongs.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -398,7 +438,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the ENI.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -411,6 +451,170 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     } 
 
+    public static class Ipv4PrefixSet extends TeaModel {
+        @NameInMap("Ipv4Prefix")
+        private String ipv4Prefix;
+
+        private Ipv4PrefixSet(Builder builder) {
+            this.ipv4Prefix = builder.ipv4Prefix;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv4PrefixSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv4Prefix
+         */
+        public String getIpv4Prefix() {
+            return this.ipv4Prefix;
+        }
+
+        public static final class Builder {
+            private String ipv4Prefix; 
+
+            /**
+             * > This parameter is in invitational preview and is unavailable for general users.
+             */
+            public Builder ipv4Prefix(String ipv4Prefix) {
+                this.ipv4Prefix = ipv4Prefix;
+                return this;
+            }
+
+            public Ipv4PrefixSet build() {
+                return new Ipv4PrefixSet(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv4PrefixSets extends TeaModel {
+        @NameInMap("Ipv4PrefixSet")
+        private java.util.List < Ipv4PrefixSet> ipv4PrefixSet;
+
+        private Ipv4PrefixSets(Builder builder) {
+            this.ipv4PrefixSet = builder.ipv4PrefixSet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv4PrefixSets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv4PrefixSet
+         */
+        public java.util.List < Ipv4PrefixSet> getIpv4PrefixSet() {
+            return this.ipv4PrefixSet;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ipv4PrefixSet> ipv4PrefixSet; 
+
+            /**
+             * Ipv4PrefixSet.
+             */
+            public Builder ipv4PrefixSet(java.util.List < Ipv4PrefixSet> ipv4PrefixSet) {
+                this.ipv4PrefixSet = ipv4PrefixSet;
+                return this;
+            }
+
+            public Ipv4PrefixSets build() {
+                return new Ipv4PrefixSets(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv6PrefixSet extends TeaModel {
+        @NameInMap("Ipv6Prefix")
+        private String ipv6Prefix;
+
+        private Ipv6PrefixSet(Builder builder) {
+            this.ipv6Prefix = builder.ipv6Prefix;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6PrefixSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Prefix
+         */
+        public String getIpv6Prefix() {
+            return this.ipv6Prefix;
+        }
+
+        public static final class Builder {
+            private String ipv6Prefix; 
+
+            /**
+             * > This parameter is in invitational preview and is unavailable for general users.
+             */
+            public Builder ipv6Prefix(String ipv6Prefix) {
+                this.ipv6Prefix = ipv6Prefix;
+                return this;
+            }
+
+            public Ipv6PrefixSet build() {
+                return new Ipv6PrefixSet(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv6PrefixSets extends TeaModel {
+        @NameInMap("Ipv6PrefixSet")
+        private java.util.List < Ipv6PrefixSet> ipv6PrefixSet;
+
+        private Ipv6PrefixSets(Builder builder) {
+            this.ipv6PrefixSet = builder.ipv6PrefixSet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6PrefixSets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6PrefixSet
+         */
+        public java.util.List < Ipv6PrefixSet> getIpv6PrefixSet() {
+            return this.ipv6PrefixSet;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ipv6PrefixSet> ipv6PrefixSet; 
+
+            /**
+             * Ipv6PrefixSet.
+             */
+            public Builder ipv6PrefixSet(java.util.List < Ipv6PrefixSet> ipv6PrefixSet) {
+                this.ipv6PrefixSet = ipv6PrefixSet;
+                return this;
+            }
+
+            public Ipv6PrefixSets build() {
+                return new Ipv6PrefixSets(this);
+            } 
+
+        } 
+
+    }
     public static class Ipv6Set extends TeaModel {
         @NameInMap("Ipv6Address")
         private String ipv6Address;
@@ -438,7 +642,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String ipv6Address; 
 
             /**
-             * Ipv6Address.
+             * The IPv6 address.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -532,7 +736,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String privateIpAddress; 
 
             /**
-             * Primary.
+             * Indicates whether the private IP address is the primary private IP address.
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -540,7 +744,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * The private IP address of the ENI.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -675,7 +879,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the ENI.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -683,7 +887,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the ENI.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

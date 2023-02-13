@@ -205,7 +205,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -214,7 +214,11 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true: perform a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DRYRUN.SUCCESS error code is returned.
+         * *   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -223,7 +227,11 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcefully release the instance that is in the **Running** (`Running`) state. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true: forcefully releases the instance that is in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be recovered.
+         * *   false: normally releases the instance. This value is valid only for instances that are in the **Stopped** (`Stopped`) state.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -232,7 +240,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of instances. You can specify up to 100 instance IDs in a single request.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -259,7 +267,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -286,7 +294,10 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * TerminateSubscription.
+         * Specifies whether to release an expired subscription instance.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder terminateSubscription(Boolean terminateSubscription) {
             this.putQueryParameter("TerminateSubscription", terminateSubscription);

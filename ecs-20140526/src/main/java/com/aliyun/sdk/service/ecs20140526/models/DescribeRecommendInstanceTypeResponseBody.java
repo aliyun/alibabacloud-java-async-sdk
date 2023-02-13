@@ -50,7 +50,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Details of recommended instance types.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private String supportIoOptimized; 
 
             /**
-             * Cores.
+             * The number of vCPUs of the instance type.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -166,7 +166,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Generation.
+             * The generation of the instance family.
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -174,7 +174,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The name of the instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -182,7 +182,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * The instance family.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -190,7 +190,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the instance type. Unit: MB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -198,7 +198,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * SupportIoOptimized.
+             * Indicates whether the instance type supports I/O optimization.
              */
             public Builder supportIoOptimized(String supportIoOptimized) {
                 this.supportIoOptimized = supportIoOptimized;
@@ -292,7 +292,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private String zoneNo; 
 
             /**
-             * NetworkTypes.
+             * Details of network types of the alternative instance types.
              */
             public Builder networkTypes(NetworkTypes networkTypes) {
                 this.networkTypes = networkTypes;
@@ -300,7 +300,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneNo.
+             * The zone ID of the specified instance type.
              */
             public Builder zoneNo(String zoneNo) {
                 this.zoneNo = zoneNo;
@@ -490,7 +490,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private Zones zones; 
 
             /**
-             * CommodityCode.
+             * The commodity code of the instance type.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -498,7 +498,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * The billing method of the instances of the instance type.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -506,7 +506,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The name of the instance type.
              */
             public Builder instanceType(InstanceType instanceType) {
                 this.instanceType = instanceType;
@@ -514,7 +514,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type of the ECS instance.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -522,7 +522,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The sorting priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -530,7 +530,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance type.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -538,7 +538,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * Indicates the scenario in which the instance type was recommended.
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -546,7 +546,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The preemption policy for the preemptible instance.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -554,7 +554,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance type.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -562,7 +562,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * Details of the zones where the alternative instance types are available.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

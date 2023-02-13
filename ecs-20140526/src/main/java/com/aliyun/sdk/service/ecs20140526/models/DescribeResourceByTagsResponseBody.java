@@ -86,7 +86,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * An array consisting of Resource data.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -118,7 +118,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of resources returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -190,7 +190,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -198,7 +198,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

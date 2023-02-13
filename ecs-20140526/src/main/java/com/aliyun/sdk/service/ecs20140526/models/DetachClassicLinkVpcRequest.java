@@ -150,7 +150,7 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the classic network-type instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,7 +168,7 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the classic network-type instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +195,7 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC to which the instance is linked.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

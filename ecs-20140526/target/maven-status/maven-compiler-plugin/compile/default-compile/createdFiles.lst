@@ -57,7 +57,9 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportsResponse$Buil
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSupportInstanceTypesRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagePipelinesResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteSnapshotGroupRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv6PrefixSets.class
 com/aliyun/sdk/service/ecs20140526/models/EipFillProductRequest$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypesResponseBody$NetworkCards.class
 com/aliyun/sdk/service/ecs20140526/models/AuthorizeSecurityGroupEgressRequest$Permissions$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySecurityGroupPolicyResponse.class
 com/aliyun/sdk/service/ecs20140526/models/AssociateEipAddressResponse$BuilderImpl.class
@@ -119,6 +121,7 @@ com/aliyun/sdk/service/ecs20140526/models/CancelTaskResponse.class
 com/aliyun/sdk/service/ecs20140526/models/UntagResourcesRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostsChargeTypeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DetachNetworkInterfaceRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Ipv4PrefixSets.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceHistoryEventsResponseBody$InactiveDisks$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody$PayAsYouGoOptions$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/UnassociateEipAddressResponse$1.class
@@ -264,6 +267,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Hibernat
 com/aliyun/sdk/service/ecs20140526/models/JoinSecurityGroupResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeResourceByTagsResponse.class
 com/aliyun/sdk/service/ecs20140526/models/EipNotifyPaidResponse$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportsResponseBody$Issue.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNewProjectEipMonitorDataRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceMaintenanceAttributesResponseBody$MaintenanceAttribute.class
 com/aliyun/sdk/service/ecs20140526/models/AssociateHaVipResponse$Builder.class
@@ -288,6 +292,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeImageFromFamilyResponseBody$Di
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupInstancesResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSupportInstanceTypesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/CopyImageRequest$Tag$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Ipv6PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeZonesResponseBody$Zone.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstancesResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeletePrefixListResponse.class
@@ -299,7 +304,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeDisksResponseBody$MountInstanc
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceHistoryEventsRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRenewalPriceResponseBody$Price.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyUserBusinessBehaviorResponse$BuilderImpl.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeStorageCapacityUnitsResponseBody$Tags.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRenewalPriceResponseBody$Price$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyAutoProvisioningGroupResponse$1.class
@@ -310,23 +314,29 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeImagesRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyBandwidthPackageSpecResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyStorageCapacityUnitAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateCapacityReservationRequest$PrivatePoolOptions$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeActivationsResponseBody$Tags.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotLinksResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeManagedInstancesResponseBody$Tags$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RevokeSecurityGroupRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceMonitorDataResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$NetworkInterface$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$PrivateIpSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteForwardEntryResponse$1.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationsResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/InvokeCommandResponseBody$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$MetricResult.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAutoRenewAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RemoveBandwidthPackageIpsResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeResourceByTagsRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$MemberNetworkInterfaceIds.class
 com/aliyun/sdk/service/ecs20140526/models/ImportImageRequest$DiskDeviceMapping$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAttributeRequest.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSharePermissionRequest.class
 com/aliyun/sdk/service/ecs20140526/models/CopySnapshotResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CancelCopyImageResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Ipv6PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePhysicalConnectionsRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotsResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyForwardEntryRequest.class
@@ -341,6 +351,7 @@ com/aliyun/sdk/service/ecs20140526/models/CreateStorageSetRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody$LaunchTemplateConfigs$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ResetDisksResponseBody$OperationProgressSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyForwardEntryRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponseBody$ReservedInstanceRenewAttribute.class
 com/aliyun/sdk/service/ecs20140526/models/AssignPrivateIpAddressesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateSecurityGroupRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$OperationLocks.class
@@ -356,13 +367,13 @@ com/aliyun/sdk/service/ecs20140526/models/ReInitDiskResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupInstancesResponseBody$Instances.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteImagePipelineRequest.class
 com/aliyun/sdk/service/ecs20140526/models/AttachInstanceRamRoleRequest$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypesResponseBody$NetworkCards$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$PrivateIpSets.class
 com/aliyun/sdk/service/ecs20140526/models/ListPluginStatusResponseBody$PluginStatus$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteNetworkInterfacePermissionResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/CreateElasticityAssuranceRequest$PrivatePoolOptions.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$BondInterfaceSpecification$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyManagedInstanceResponseBody$Instance.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterResponse.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyHaVipAttributeRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySecurityGroupRuleResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$NetworkInterfaces.class
@@ -373,6 +384,7 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteNetworkInterfaceResponseBody.cla
 com/aliyun/sdk/service/ecs20140526/models/AllocatePublicIpAddressResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceHistoryEventsResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/EnablePhysicalConnectionRequest$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypesResponseBody$NetworkCardInfo.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeTasksResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDiagnosticMetricSetsRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotGroupsResponseBody$SnapshotGroup.class
@@ -437,6 +449,7 @@ com/aliyun/sdk/service/ecs20140526/models/ReActivateInstancesRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstancesResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteVpcResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/AcceptInquiredSystemEventResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponseBody$ReservedInstanceRenewAttribute$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDemandResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCloudAssistantStatusRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAutoRenewAttributeResponseBody$InstanceRenewAttribute.class
@@ -462,13 +475,13 @@ com/aliyun/sdk/service/ecs20140526/models/CreateImagePipelineRequest$Tag$Builder
 com/aliyun/sdk/service/ecs20140526/models/PurchaseReservedInstancesOfferingResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSpotAdviceResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeEniMonitorDataResponse$1.class
+com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv6PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/CreateDiagnosticMetricSetResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$PrivateIpSet.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAttachmentAttributesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeClustersRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteVSwitchResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePriceResponseBody$ResourcePriceModel$Builder.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ReInitDiskResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteHpcClusterResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyImageShareGroupPermissionResponseBody.class
@@ -531,6 +544,7 @@ com/aliyun/sdk/service/ecs20140526/models/StartElasticityAssuranceResponse$1.cla
 com/aliyun/sdk/service/ecs20140526/models/JoinSecurityGroupResponse.class
 com/aliyun/sdk/service/ecs20140526/models/PurchaseReservedInstancesOfferingResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupsResponseBody$Tags.class
+com/aliyun/sdk/service/ecs20140526/models/CopySnapshotRequest$Arn$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DisableActivationResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/UnassignPrivateIpAddressesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ResetDisksResponse$Builder.class
@@ -784,6 +798,7 @@ com/aliyun/sdk/service/ecs20140526/models/CreateRouteEntryResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInvocationsRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiagnosticMetricSetResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeBandwidthPackagesResponse.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyVRouterAttributeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotsUsageResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagePipelineExecutionsResponse.class
@@ -830,11 +845,13 @@ com/aliyun/sdk/service/ecs20140526/models/CreateHaVipResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDeploymentSetsResponseBody$DeploymentSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateSnapshotRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDiagnosticReportsResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv6PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$LockReason$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyElasticityAssuranceRequest$PrivatePoolOptions.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVRoutersResponseBody$VRouter$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AllocateDedicatedHostsResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/CreateActivationRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeActivationsResponseBody$Tags$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/StartInstancesResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotPackageResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksResponseBody$1.class
@@ -847,6 +864,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeZonesResponseBody$Builder.clas
 com/aliyun/sdk/service/ecs20140526/models/CopyImageRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyCapacityReservationResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponse.class
 com/aliyun/sdk/service/ecs20140526/models/PurchaseReservedInstancesOfferingRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiskChargeTypeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateAutoProvisioningGroupRequest$LaunchTemplateConfig.class
@@ -905,6 +923,7 @@ com/aliyun/sdk/service/ecs20140526/models/AllocatePublicIpAddressResponseBody$1.
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagesRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$SupportedInstanceTypesList.class
 com/aliyun/sdk/service/ecs20140526/models/StopInstancesRequest$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$MetricResult$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceHistoryEventsResponseBody$InstanceSystemEventSet.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyRouterInterfaceAttributeResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAutoRenewAttributeResponseBody.class
@@ -941,6 +960,7 @@ com/aliyun/sdk/service/ecs20140526/models/PurchaseStorageCapacityUnitRequest$1.c
 com/aliyun/sdk/service/ecs20140526/models/CreateRouterInterfaceResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateHpcClusterResponse.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Ipv6PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyElasticityAssuranceResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceMaintenanceAttributesResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceVncPasswdResponse$BuilderImpl.class
@@ -960,6 +980,7 @@ com/aliyun/sdk/service/ecs20140526/models/CreateAutoSnapshotPolicyResponse$Build
 com/aliyun/sdk/service/ecs20140526/models/ReleaseEipAddressResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotsResponseBody$Tags$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAutoReleaseTimeResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiskAttributeRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AttachKeyPairResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyElasticityAssuranceResponse$Builder.class
@@ -1048,9 +1069,12 @@ com/aliyun/sdk/service/ecs20140526/models/RunCommandResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/CreateImagePipelineResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceDeploymentRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ResetDisksResponseBody$1.class
+com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv4PrefixSets.class
+com/aliyun/sdk/service/ecs20140526/models/AssignIpv6AddressesResponseBody$Ipv6PrefixSets.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySecurityGroupPolicyResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ReleaseDedicatedHostResponse.class
 com/aliyun/sdk/service/ecs20140526/models/RunInstancesResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Ipv6PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceMonitorDataRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeResourcesModificationResponseBody$SupportedResource.class
 com/aliyun/sdk/service/ecs20140526/models/AcceptInquiredSystemEventRequest$1.class
@@ -1073,6 +1097,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceModificationPriceRespo
 com/aliyun/sdk/service/ecs20140526/models/DescribeRecommendInstanceTypeResponse.class
 com/aliyun/sdk/service/ecs20140526/models/StartInstanceRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePhysicalConnectionsResponseBody$PhysicalConnectionType$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ReplaceSystemDiskResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/JoinResourceGroupResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ActivateRouterInterfaceResponse$1.class
@@ -1105,11 +1130,14 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyDiskSpecRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateLaunchTemplateVersionRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/StartElasticityAssuranceResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyImageSharePermissionResponseBody$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AttachNetworkInterfaceResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiskChargeTypeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeKeyPairsResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSupportInstanceTypesResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupInstancesResponse.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeSendFileResultsResponseBody$Tags.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateSnapshotGroupResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAttachmentAttributesResponseBody$Instance.class
 com/aliyun/sdk/service/ecs20140526/models/CreateImagePipelineResponse$Builder.class
@@ -1121,6 +1149,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeDemandsResponseBody$Demands.cl
 com/aliyun/sdk/service/ecs20140526/models/DeleteAutoProvisioningGroupResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAvailableResourceRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacePermissionsRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Ipv4PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/GetInstanceScreenshotRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AuthorizeSecurityGroupRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateImagePipelineRequest$1.class
@@ -1200,6 +1229,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribePriceResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostClustersResponseBody$DedicatedHostCluster.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSpotAdviceResponse.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyPhysicalConnectionAttributeResponseBody$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribePriceRequest$SchedulerOptions$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeResourceByTagsRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDiskMonitorDataRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ConnectRouterInterfaceRequest$Builder.class
@@ -1220,6 +1250,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$EipAddre
 com/aliyun/sdk/service/ecs20140526/models/ModifySecurityGroupPolicyRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDeploymentSetSupportedInstanceTypeFamilyResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePrefixListAttributesResponseBody$Entries$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv6Sets.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAccountAttributesResponseBody$AttributeValues$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody$AutoProvisioningGroups.class
@@ -1310,8 +1341,10 @@ com/aliyun/sdk/service/ecs20140526/models/CopyImageResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/ListPluginStatusRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ResetDisksRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AddTagsRequest.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponseBody$ReservedInstanceRenewAttributes.class
 com/aliyun/sdk/service/ecs20140526/models/AttachClassicLinkVpcResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagesResponseBody$Tags.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Ipv4PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AssignIpv6AddressesResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateRouterInterfaceResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateSimulatedSystemEventsRequest$1.class
@@ -1408,6 +1441,7 @@ com/aliyun/sdk/service/ecs20140526/models/AcceptInquiredSystemEventRequest$Build
 com/aliyun/sdk/service/ecs20140526/models/DescribeEipAddressesResponseBody$EipAddress.class
 com/aliyun/sdk/service/ecs20140526/models/StopInvocationResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePriceResponseBody$Rules$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/AssignPrivateIpAddressesResponseBody$Ipv4PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/ApplyAutoSnapshotPolicyResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceStatusResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RedeployDedicatedHostResponse$BuilderImpl.class
@@ -1431,6 +1465,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeImagePipelineExecutionsRespons
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageComponentsRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSpotPriceHistoryResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeLaunchTemplatesResponseBody$LaunchTemplateSets$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportsResponseBody$Report.class
 com/aliyun/sdk/service/ecs20140526/models/CopySnapshotResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteKeyPairsResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageComponentsResponseBody$Tag$Builder.class
@@ -1452,6 +1487,7 @@ com/aliyun/sdk/service/ecs20140526/models/CreateAutoProvisioningGroupRequest$Dat
 com/aliyun/sdk/service/ecs20140526/models/DescribeManagedInstancesResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceVncPasswdRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DetachDiskResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeHaVipsResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateVSwitchResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationInstancesResponse$Builder.class
@@ -1462,9 +1498,11 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyDiskAttributeResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$Instance.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePriceResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateInstanceResponse$1.class
+com/aliyun/sdk/service/ecs20140526/models/CreateActivationRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostTypesRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyAutoProvisioningGroupResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteInstanceResponseBody$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/RevokeSecurityGroupResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ImportImageRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeEipAddressesResponseBody$Builder.class
@@ -1488,13 +1526,13 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody$LaunchTemplateConfigs.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$NetworkInterfaces$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeEipAddressesResponseBody$1.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DeregisterManagedInstanceResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteImageResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteInstanceResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeStorageSetDetailsResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSharePermissionRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeActivationsRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv4PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/StartInstanceRequest.class
 com/aliyun/sdk/service/ecs20140526/models/CreateStorageSetRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$BondInterfaceSpecificationSlaveInterfaceSpecification.class
@@ -1525,6 +1563,7 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyImageAttributeResponseBody$1.cla
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostAutoRenewResponse.class
 com/aliyun/sdk/service/ecs20140526/models/AttachDiskRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstancesRequest$Configuration$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Ipv4PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotsRequest$Filter.class
 com/aliyun/sdk/service/ecs20140526/models/CreateCommandResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeTaskAttributeResponseBody$Builder.class
@@ -1547,6 +1586,7 @@ com/aliyun/sdk/service/ecs20140526/models/RebootInstancesResponseBody$Builder.cl
 com/aliyun/sdk/service/ecs20140526/models/DescribePhysicalConnectionsResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody$AutoProvisioningGroup.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyElasticityAssuranceResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Ipv4PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteActivationResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateDiagnosticReportRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVpcsResponse.class
@@ -1587,8 +1627,10 @@ com/aliyun/sdk/service/ecs20140526/models/AssignPrivateIpAddressesRequest$Builde
 com/aliyun/sdk/service/ecs20140526/models/CreateRouterInterfaceRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAutoRenewAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DetachDiskResponse.class
+com/aliyun/sdk/service/ecs20140526/models/ReplaceSystemDiskRequest$Arn$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteCommandResponse.class
 com/aliyun/sdk/service/ecs20140526/models/LeaveSecurityGroupResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$RdmaIpAddress$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/UnassignPrivateIpAddressesResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RebootInstanceResponseBody.class
@@ -1668,15 +1710,16 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInvocationsRequest$Builder.cla
 com/aliyun/sdk/service/ecs20140526/models/ConvertNatPublicIpToEipResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySnapshotGroupResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteKeyPairsRequest$1.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiskChargeTypeRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRenewalPriceResponseBody$ResourcePriceModel.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeClassicLinkInstancesResponseBody$Link$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAutoReleaseTimeResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostClusterAttributeRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRegionsResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportsResponseBody$Issue$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AcceptInquiredSystemEventResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RunInstancesRequest$HibernationOptions$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/CopySnapshotResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSendFileResultsResponseBody$InvokeInstance.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePhysicalConnectionsResponseBody.class
@@ -1684,6 +1727,7 @@ com/aliyun/sdk/service/ecs20140526/models/StopInvocationResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/RedeployDedicatedHostResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateCapacityReservationResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/CreateImageComponentRequest.class
+com/aliyun/sdk/service/ecs20140526/models/ReplaceSystemDiskRequest$Arn.class
 com/aliyun/sdk/service/ecs20140526/models/AssignPrivateIpAddressesResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAccessPointsResponseBody$AccessPointType$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypesResponse.class
@@ -1708,6 +1752,7 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAutoRenewAttributeR
 com/aliyun/sdk/service/ecs20140526/models/DescribeVSwitchesResponse.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiskAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/UnassociateEipAddressResponse$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Ipv6PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCloudAssistantStatusResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyHpcClusterAttributeResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSpotAdviceResponseBody$1.class
@@ -1729,6 +1774,7 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyAutoProvisioningGroupRequest$Lau
 com/aliyun/sdk/service/ecs20140526/models/ExportSnapshotResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateKeyPairRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/UnassociateHaVipResponse$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeManagedInstancesRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/AllocateEipAddressResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateRouterInterfaceResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeHaVipsResponse$1.class
@@ -1843,7 +1889,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeImageSharePermissionResponse$B
 com/aliyun/sdk/service/ecs20140526/models/TagResourcesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/TerminatePhysicalConnectionResponse.class
 com/aliyun/sdk/service/ecs20140526/models/AddBandwidthPackageIpsRequest$Builder.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeTaskAttributeResponseBody$RelatedItemSet.class
 com/aliyun/sdk/service/ecs20140526/models/SendFileRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/RemoveBandwidthPackageIpsResponseBody.class
@@ -1940,7 +1985,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeVRoutersResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AttachKeyPairResponse.class
 com/aliyun/sdk/service/ecs20140526/models/AttachNetworkInterfaceResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$OperationLocks$Builder.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ImportKeyPairResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeElasticityAssurancesResponseBody$AllocatedResource.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksResponseBody$MountInstance$Builder.class
@@ -1953,6 +1997,7 @@ com/aliyun/sdk/service/ecs20140526/models/AssociateEipAddressRequest.class
 com/aliyun/sdk/service/ecs20140526/models/TerminateVirtualBorderRouterRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/RebootInstancesResponseBody$InstanceResponse.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AllocateDedicatedHostsResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateDeploymentSetResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteInstanceResponse$Builder.class
@@ -2006,6 +2051,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeRouteTablesResponseBody$NextHo
 com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfacePermissionResponse.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAutoRenewAttributeRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/EnablePhysicalConnectionResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Ipv6PrefixSets.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeLaunchTemplateVersionsResponseBody$LaunchTemplateDataSecurityGroupIds$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyEipAddressAttributeRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAccountAttributesResponseBody$AccountAttributeItem.class
@@ -2052,6 +2098,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeStorageSetDetailsResponseBody$
 com/aliyun/sdk/service/ecs20140526/models/ModifyVirtualBorderRouterAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstancesResponseBody$OperationLocks$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageFromFamilyRequest.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/RemoveBandwidthPackageIpsResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagesResponseBody$Image$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyVpcAttributeResponseBody$Builder.class
@@ -2131,7 +2178,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponse
 com/aliyun/sdk/service/ecs20140526/models/AttachNetworkInterfaceResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceModificationPriceResponseBody$Price$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVirtualBorderRoutersForPhysicalConnectionResponse$1.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody$DedicatedBlockStorageCluster$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySecurityGroupPolicyResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAttributeResponseBody$PublicIpAddress.class
 com/aliyun/sdk/service/ecs20140526/models/AddBandwidthPackageIpsResponse$Builder.class
@@ -2151,6 +2197,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupsResponseBody$Sec
 com/aliyun/sdk/service/ecs20140526/models/DescribeElasticityAssurancesRequest$PrivatePoolOptions$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ListPluginStatusResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVirtualBorderRoutersRequest.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$Issue$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyManagedInstanceResponse.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySnapshotAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/PurchaseStorageCapacityUnitResponse$1.class
@@ -2206,7 +2253,6 @@ com/aliyun/sdk/service/ecs20140526/models/AttachDiskResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DetachNetworkInterfaceResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAttachmentAttributesResponseBody$Instances.class
 com/aliyun/sdk/service/ecs20140526/models/DetachInstanceRamRoleResponseBody$DetachInstanceRamRoleResults.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteVpcRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksFullStatusResponseBody$EventType.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiagnosticMetricSetRequest.class
@@ -2268,7 +2314,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeAvailableResourceResponse.clas
 com/aliyun/sdk/service/ecs20140526/models/GetInstanceConsoleOutputResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateRouteEntryResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVpcsRequest$Builder.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/RenewDedicatedHostsRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeUserBusinessBehaviorResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyAutoSnapshotPolicyResponse$BuilderImpl.class
@@ -2307,6 +2352,7 @@ com/aliyun/sdk/service/ecs20140526/models/StartInstancesResponseBody$InstanceRes
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacePermissionsResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotGroupsRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyCapacityReservationRequest$PrivatePoolOptions$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/CreateActivationRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupReferencesRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/RebootInstancesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/CreateInstanceRequest$PrivatePoolOptions$Builder.class
@@ -2401,7 +2447,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribePrefixListAssociationsResponse
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/LeaveSecurityGroupResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceStatusResponseBody.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateHpcClusterResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCommandsResponseBody$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/CreateVirtualBorderRouterRequest$1.class
@@ -2503,7 +2548,6 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceMetadataOptionsResponse$
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceVncPasswdResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCommandsResponseBody$ParameterNames.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotGroupsResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeEipMonitorDataResponseBody$EipMonitorData$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypeFamiliesRequest$1.class
@@ -2548,8 +2592,10 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteImagePipelineResponseBody$Builde
 com/aliyun/sdk/service/ecs20140526/models/RunCommandRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/PurchaseStorageCapacityUnitResponseBody$StorageCapacityUnitIds.class
 com/aliyun/sdk/service/ecs20140526/models/RevokeSecurityGroupResponse$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponseBody$ReservedInstanceRenewAttributes$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateCapacityReservationRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeTagsResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribePriceRequest$SchedulerOptions.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceNetworkSpecResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RenewReservedInstancesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSharePermissionResponseBody$Accounts.class
@@ -2568,7 +2614,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeDemandsResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationInstancesResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInvocationResultsResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteCommandResponse$BuilderImpl.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationInstancesResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeStorageSetDetailsRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostClustersResponseBody$AvailableInstanceType.class
@@ -2638,6 +2683,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupReferencesRespons
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagePipelinesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDemandResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDiagnosticMetricSetsRequest$1.class
+com/aliyun/sdk/service/ecs20140526/models/SendFileRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteLaunchTemplateResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeElasticityAssurancesResponse.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyAutoProvisioningGroupRequest.class
@@ -2787,6 +2833,7 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteRouteEntryRequest$NextHopList.cl
 com/aliyun/sdk/service/ecs20140526/models/DescribeLaunchTemplateVersionsResponseBody$DataDisks$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateAutoSnapshotPolicyResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$NetworkInterfaceSet$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeSendFileResultsResponseBody$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RebootInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAttributeResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesRequest$Filter.class
@@ -2808,6 +2855,7 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyDeploymentSetAttributeResponse$B
 com/aliyun/sdk/service/ecs20140526/models/AddTagsResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeBandwidthPackagesResponseBody$PublicIpAddresse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAttributeResponse$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/CreateCommandRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInvocationsResponseBody$Invocation.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyAutoSnapshotPolicyExResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAttachmentAttributesRequest$1.class
@@ -2822,8 +2870,8 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteVirtualBorderRouterRequest$1.cla
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceRamRoleResponseBody$InstanceRamRoleSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticMetricSetsRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRecommendInstanceTypeResponseBody$Zone.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$SocketCapacity.class
 com/aliyun/sdk/service/ecs20140526/models/StartInstanceResponse$Builder.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody$DedicatedBlockStorageClusterCapacity$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeLimitationResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/AllocateDedicatedHostsRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ListTagResourcesResponseBody.class
@@ -2887,6 +2935,7 @@ com/aliyun/sdk/service/ecs20140526/models/ModifySnapshotGroupResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Tags.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteVpcResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyRouterInterfaceSpecResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySnapshotGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/CreateForwardEntryRequest.class
 com/aliyun/sdk/service/ecs20140526/models/RunInstancesRequest$NetworkInterface.class
@@ -2914,6 +2963,7 @@ com/aliyun/sdk/service/ecs20140526/models/ReleaseCapacityReservationResponse.cla
 com/aliyun/sdk/service/ecs20140526/models/ModifyPrefixListResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSpotPriceHistoryResponse.class
 com/aliyun/sdk/service/ecs20140526/models/StartImagePipelineExecutionResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksFullStatusRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/RedeployDedicatedHostResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteAutoProvisioningGroupResponse$1.class
@@ -2954,8 +3004,10 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyManagedInstanceResponseBody$Buil
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagesResponseBody$Images.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyVSwitchAttributeRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateInstanceRequest$Tag$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeActivationsRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostClusterAttributeResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagesRequest$Tag$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Ipv4PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstancesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteStorageSetResponse.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyVSwitchAttributeRequest$1.class
@@ -3037,12 +3089,14 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeImageFromFamilyResponse.class
 com/aliyun/sdk/service/ecs20140526/models/TerminatePhysicalConnectionResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/EipFillProductRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAutoReleaseTimeRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv4PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteVSwitchResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyHpcClusterAttributeRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypesRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyPrefixListResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyHaVipAttributeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceMetadataOptionsRequest.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Ipv6PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateCapacityReservationResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeletePhysicalConnectionResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RevokeSecurityGroupEgressResponse$BuilderImpl.class
@@ -3092,6 +3146,7 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyImageAttributeRequest$Features.c
 com/aliyun/sdk/service/ecs20140526/models/DeleteVirtualBorderRouterResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteSecurityGroupRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyCapacityReservationResponse$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCommandsResponseBody$ParameterDefinition$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCloudAssistantStatusResponseBody$InstanceCloudAssistantStatus.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePrefixListAttributesResponseBody$Entries.class
@@ -3160,7 +3215,6 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyDiskSpecResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeTagsResponseBody$ResourceTypeCount$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeResourceByTagsRequest.class
 com/aliyun/sdk/service/ecs20140526/models/RenewInstanceRequest$1.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateImageResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceSpecRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RemoveBandwidthPackageIpsResponse.class
@@ -3235,7 +3289,6 @@ com/aliyun/sdk/service/ecs20140526/models/CreateForwardEntryResponse.class
 com/aliyun/sdk/service/ecs20140526/models/AllocateDedicatedHostsResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksFullStatusRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVRoutersRequest$Builder.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportsResponseBody$Reports$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/StopInstanceResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$1.class
@@ -3253,7 +3306,6 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyPhysicalConnectionAttributeRespo
 com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstancesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DetachClassicLinkVpcResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/AuthorizeSecurityGroupEgressResponse$BuilderImpl.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody$DedicatedBlockStorageClusterCapacity.class
 com/aliyun/sdk/service/ecs20140526/models/AllocatePublicIpAddressResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotsResponseBody$Tags.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteVSwitchResponse$BuilderImpl.class
@@ -3295,6 +3347,7 @@ com/aliyun/sdk/service/ecs20140526/models/ResetDisksResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceMonitorDataResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/AddTagsResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePhysicalConnectionsResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$Issue.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeUserDataResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRecommendInstanceTypeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesFullStatusResponseBody$ScheduledSystemEventType$Builder.class
@@ -3320,6 +3373,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceRamRoleResponse$1.clas
 com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstancesRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RunInstancesRequest$DataDisk.class
 com/aliyun/sdk/service/ecs20140526/models/CreateVSwitchResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeResponse.class
 com/aliyun/sdk/service/ecs20140526/models/AttachInstanceRamRoleResponseBody$AttachInstanceRamRoleResult.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVpcsResponseBody$Vpcs$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeHpcClustersResponseBody$HpcCluster.class
@@ -3351,6 +3405,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationsResponseBo
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostClustersResponseBody$AvailableInstanceTypes.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody$TargetCapacitySpecification$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/EipNotifyPaidResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/AssignIpv6AddressesResponseBody$Ipv6PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyHpcClusterAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAttributeResponseBody$Builder.class
@@ -3416,7 +3471,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribePriceResponseBody$RulesRule.cl
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotGroupsResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/EnablePhysicalConnectionResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteRouteEntryResponse$1.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody$DedicatedBlockStorageCluster.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceMaintenanceAttributesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAutoReleaseTimeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyCommandResponse$Builder.class
@@ -3460,6 +3514,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeUserDataResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupAttributeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$SecurityGroupIds.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVirtualBorderRoutersRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$MetricResults$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Tags$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAttachmentAttributesResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageComponentsRequest$1.class
@@ -3484,6 +3539,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeBandwidthLimitationRequest$Bui
 com/aliyun/sdk/service/ecs20140526/models/ModifyCommandResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSupportInstanceTypesResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostClustersResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeSendFileResultsRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRenewalPriceResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyEipAddressAttributeRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateKeyPairRequest$Tag$Builder.class
@@ -3492,7 +3548,6 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyImageAttributeResponse$Builder.c
 com/aliyun/sdk/service/ecs20140526/models/DescribeLaunchTemplateVersionsResponseBody$SecurityGroupIds.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupReferencesResponseBody$SecurityGroupReference.class
 com/aliyun/sdk/service/ecs20140526/models/CreateInstanceRequest$Tag.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/ConvertNatPublicIpToEipResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeElasticityAssurancesRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteSecurityGroupResponseBody.class
@@ -3500,7 +3555,6 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyStorageSetAttributeRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotMonitorDataRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNatGatewaysResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/AuthorizeSecurityGroupEgressResponse$1.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyAutoSnapshotPolicyExResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateVirtualBorderRouterResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostClustersResponseBody$DedicatedHostClusterCapacity.class
@@ -3608,6 +3662,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$EcsCapac
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDiagnosticMetricSetsResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/AllocateDedicatedHostsRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypesResponseBody$NetworkCardInfo$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RenewReservedInstancesResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypeFamiliesResponseBody$InstanceTypeFamily$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CancelAutoSnapshotPolicyResponseBody$1.class
@@ -3640,7 +3695,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeHaVipsResponseBody$HaVip.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySecurityGroupAttributeRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeletePrefixListResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/AttachNetworkInterfaceRequest.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody$DedicatedBlockStorageClusters.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Ipv4PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationInstancesResponseBody$InstanceIdSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyVSwitchAttributeResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNatGatewaysRequest$1.class
@@ -3652,6 +3707,7 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteInstancesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeactivateRouterInterfaceResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSpotAdviceResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePrefixListsResponseBody$PrefixLists$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$SocketCapacities$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeLaunchTemplateVersionsResponseBody$LaunchTemplateVersionSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteNatGatewayRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/PurchaseStorageCapacityUnitRequest$Tag.class
@@ -3730,8 +3786,8 @@ com/aliyun/sdk/service/ecs20140526/models/CreateInstanceResponse.class
 com/aliyun/sdk/service/ecs20140526/models/AuthorizeSecurityGroupResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAttributeRequest$NetworkAttributes$Builder.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody$DedicatedBlockStorageClusters$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotGroupsRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/AssignPrivateIpAddressesResponseBody$Ipv4PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeStorageSetDetailsResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/CreateSimulatedSystemEventsResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyImageShareGroupPermissionResponse$1.class
@@ -3776,7 +3832,6 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAutoRenewAttributeRequ
 com/aliyun/sdk/service/ecs20140526/models/DeleteImageComponentResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAutoReleaseTimeResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceRamRoleResponse$BuilderImpl.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAttributeRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupReferencesRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstancesResponseBody$Tags.class
@@ -3784,7 +3839,9 @@ com/aliyun/sdk/service/ecs20140526/models/CreateCapacityReservationResponse$1.cl
 com/aliyun/sdk/service/ecs20140526/models/CreateDemandResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RebootInstanceRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyAutoProvisioningGroupResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Ipv4PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePhysicalConnectionsRequest.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeActivationsRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteImageComponentResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/ExportImageResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponse$1.class
@@ -3822,6 +3879,7 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteSnapshotGroupResponseBody$Builde
 com/aliyun/sdk/service/ecs20140526/models/AttachInstanceRamRoleResponseBody$AttachInstanceRamRoleResults.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyStorageSetAttributeResponse.class
 com/aliyun/sdk/service/ecs20140526/models/TagResourcesResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecs20140526/models/SendFileRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDeploymentSetResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/RecoverVirtualBorderRouterResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/ConnectRouterInterfaceResponse.class
@@ -3894,7 +3952,6 @@ com/aliyun/sdk/service/ecs20140526/models/ModifySecurityGroupPolicyResponse$Buil
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostAttributeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeZonesResponseBody$NetworkTypes.class
 com/aliyun/sdk/service/ecs20140526/models/CreateLaunchTemplateVersionRequest.class
-com/aliyun/sdk/service/ecs20140526/models/CreateDedicatedBlockStorageClusterResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotPackageResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksFullStatusResponseBody$EventType$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeStorageSetDetailsResponseBody.class
@@ -3923,6 +3980,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeActivationsResponseBody$Activa
 com/aliyun/sdk/service/ecs20140526/models/DescribeSendFileResultsResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/CreateAutoProvisioningGroupResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Attachment$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyElasticityAssuranceResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRenewalPriceRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypesResponseBody$InstanceType$Builder.class
@@ -3931,6 +3989,7 @@ com/aliyun/sdk/service/ecs20140526/models/ResetDiskResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInvocationsResponseBody$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AllocatePublicIpAddressRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySecurityGroupEgressRuleResponse$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$MetricResults.class
 com/aliyun/sdk/service/ecs20140526/models/CancelImagePipelineExecutionResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ReplaceSystemDiskResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/CreateLaunchTemplateRequest$Tag.class
@@ -3939,6 +3998,7 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteSecurityGroupResponseBody$1.clas
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAutoRenewAttributeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticMetricSetsResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostsChargeTypeResponse$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeResponseBody$Ipv6PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAvailableResourceResponseBody$AvailableResource.class
 com/aliyun/sdk/service/ecs20140526/models/DeactivateRouterInterfaceResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAvailableResourceResponseBody$SupportedResources$Builder.class
@@ -3983,6 +4043,7 @@ com/aliyun/sdk/service/ecs20140526/models/CreateRouteEntryResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSpotPriceHistoryResponseBody$SpotPriceType.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteVpcResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Instances$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/InvokeCommandRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AttachKeyPairRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyNetworkInterfaceAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteVSwitchResponse$1.class
@@ -4081,6 +4142,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeDeploymentSetsRequest$Builder.
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAutoRenewAttributeResponseBody$InstanceRenewAttributes$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody$VirtualBorderRouterForPhysicalConnectionType.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDeploymentSetResponse$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$Capacity.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticMetricSetsResponseBody$MetricSets.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeElasticityAssurancesResponse$BuilderImpl.class
@@ -4097,6 +4159,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeRouteTablesResponse$Builder.cl
 com/aliyun/sdk/service/ecs20140526/models/DescribePrefixListsResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/ListTagResourcesResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/RenewReservedInstancesResponse$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Ipv6PrefixSets.class
 com/aliyun/sdk/service/ecs20140526/models/CreateNatGatewayResponseBody$BandwidthPackageIds$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AllocateDedicatedHostsRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDeploymentSetsRequest$1.class
@@ -4125,6 +4188,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsRequest$Builder.
 com/aliyun/sdk/service/ecs20140526/models/ResetDisksResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationsResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Ipv4PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeZonesResponseBody$ResourcesInfo$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeTaskAttributeResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteForwardEntryResponse.class
@@ -4145,9 +4209,12 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeDemandsResponse$BuilderImpl.cl
 com/aliyun/sdk/service/ecs20140526/models/JoinSecurityGroupResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeHpcClustersResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePriceRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyRouterInterfaceSpecResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateDiagnosticReportResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeStorageCapacityUnitsResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$SocketCapacities.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSharePermissionResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotMonitorDataResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$AssociatedPublicIp$Builder.class
@@ -4193,6 +4260,8 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotsRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImageSharePermissionResponseBody$ShareGroups.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotGroupsResponseBody$Snapshots.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$DedicatedHost.class
+com/aliyun/sdk/service/ecs20140526/models/CopySnapshotRequest$Arn.class
+com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv4PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDeploymentSetSupportedInstanceTypeFamilyRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateAutoProvisioningGroupResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateAutoProvisioningGroupRequest$Builder.class
@@ -4208,6 +4277,7 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteImageComponentRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyVirtualBorderRouterAttributeResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeKeyPairsRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationInstancesResponseBody$InstanceIdSet.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ConnectRouterInterfaceRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationInstancesResponseBody$CapacityReservationItem.class
 com/aliyun/sdk/service/ecs20140526/models/CreateAutoSnapshotPolicyResponse$1.class
@@ -4217,6 +4287,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeRespo
 com/aliyun/sdk/service/ecs20140526/models/ExportImageResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/EnablePhysicalConnectionResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticMetricsResponseBody$1.class
+com/aliyun/sdk/service/ecs20140526/models/CreateCommandRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeHaVipsResponseBody$AssociatedInstances.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostTypesResponseBody$DedicatedHostTypes.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceVncUrlResponse$Builder.class
@@ -4229,6 +4300,7 @@ com/aliyun/sdk/service/ecs20140526/models/CreateRouterInterfaceResponse$Builder.
 com/aliyun/sdk/service/ecs20140526/models/RedeployInstanceResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CopyImageRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody$VirtualBorderRouterForPhysicalConnectionSet$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/StartTerminalSessionRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeBandwidthPackagesResponseBody$BandwidthPackage.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePrefixListAttributesResponse$Builder.class
@@ -4263,6 +4335,7 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyAutoSnapshotPolicyExResponseBody
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$SupportedInstanceTypeFamilies.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDemandRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesFullStatusResponseBody$EventCycleStatus$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDeploymentSetResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteImagePipelineRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/RenewInstanceResponse.class
@@ -4334,6 +4407,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceHistoryEventsResponse$
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateDiagnosticMetricSetRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ListTagResourcesResponseBody$TagResources$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$Issues.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeLaunchTemplateVersionsResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSpotAdviceResponseBody$AvailableSpotResource.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteKeyPairsRequest.class
@@ -4359,6 +4433,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeAccessPointsResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteHaVipRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDemandsResponseBody$Demands$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeClassicLinkInstancesResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Ipv4PrefixSets.class
 com/aliyun/sdk/service/ecs20140526/models/InvokeCommandResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/CreateRouterInterfaceRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDeploymentSetAttributeRequest.class
@@ -4367,6 +4442,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypeFamiliesResponseBo
 com/aliyun/sdk/service/ecs20140526/models/ModifyVirtualBorderRouterAttributeResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeUserBusinessBehaviorResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateInstanceRequest$HibernationOptions$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Ipv4PrefixSets.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceMaintenanceAttributesResponseBody$ActionOnMaintenance.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotsUsageResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/CreateVirtualBorderRouterResponseBody$Builder.class
@@ -4389,6 +4465,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeVirtualBorderRoutersResponseBo
 com/aliyun/sdk/service/ecs20140526/models/CreateVpcRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeManagedInstancesResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyManagedInstanceResponseBody$Instance$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Ipv6PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/LeaveSecurityGroupRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeBandwidthPackagesResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePrefixListsRequest.class
@@ -4411,9 +4488,10 @@ com/aliyun/sdk/service/ecs20140526/models/CreateDiskResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupsResponseBody$SpotOptions$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceAttributeResponseBody$VpcAttributes.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRenewalPriceResponseBody$SubRules.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody$Ipv6PrefixSets$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/JoinResourceGroupRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyPhysicalConnectionAttributeResponseBody$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostClustersResponseBody$LocalStorageCapacity.class
 com/aliyun/sdk/service/ecs20140526/models/EipFillProductResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeTaskAttributeResponseBody$OperationProgress.class
@@ -4429,6 +4507,7 @@ com/aliyun/sdk/service/ecs20140526/models/TerminatePhysicalConnectionRequest$Bui
 com/aliyun/sdk/service/ecs20140526/models/DeleteAutoSnapshotPolicyResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceHistoryEventsRequest.class
 com/aliyun/sdk/service/ecs20140526/models/CancelSimulatedSystemEventsResponseBody$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$Ipv4PrefixSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateImagePipelineResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInvocationsResponseBody$Tags.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRouterInterfacesRequest$Filter$Builder.class
@@ -4473,6 +4552,7 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteLaunchTemplateResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteAutoProvisioningGroupResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteAutoSnapshotPolicyResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/ResetDisksRequest$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeSendFileResultsResponseBody$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/EipNotifyPaidResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDedicatedHostsChargeTypeResponseBody$FeeOfInstances.class
 com/aliyun/sdk/service/ecs20140526/models/ResetDiskRequest$1.class
@@ -4508,6 +4588,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeCapacityReservationsRequest$Bu
 com/aliyun/sdk/service/ecs20140526/models/DescribeManagedInstancesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/EipFillParamsResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeElasticityAssurancesResponseBody$AllocatedResources$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponseBody$Issues$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotLinksResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotGroupsResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteBandwidthPackageRequest.class
@@ -4540,8 +4621,10 @@ com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAutoRenewAttributeRespon
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiagnosticMetricSetResponse.class
 com/aliyun/sdk/service/ecs20140526/models/CreateVirtualBorderRouterResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyElasticityAssuranceRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeSendFileResultsResponseBody$Tags$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/StopInstancesRequest$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Ipv6PrefixSets.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$OperationLocks.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceMonitorDataResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyNetworkInterfaceAttributeResponse$Builder.class
@@ -4553,6 +4636,7 @@ com/aliyun/sdk/service/ecs20140526/models/RunCommandRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDiskMonitorDataResponseBody$MonitorData.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeResourceByTagsResponseBody$Resource$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyPhysicalConnectionAttributeResponse$Builder.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeSendFileResultsRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/UnassociateEipAddressRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateLaunchTemplateResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeClustersResponseBody.class
@@ -4569,6 +4653,7 @@ com/aliyun/sdk/service/ecs20140526/models/DeleteBandwidthPackageResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/CreateImageResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribePriceResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/AttachNetworkInterfaceResponseBody$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfacesResponseBody$Ipv6PrefixSet.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagePipelineExecutionsResponseBody$Tags.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceNetworkSpecResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteNetworkInterfacePermissionResponse.class
@@ -4611,12 +4696,12 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$InnerIpA
 com/aliyun/sdk/service/ecs20140526/models/DeleteNetworkInterfaceResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeElasticityAssurancesResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/PurchaseReservedInstancesOfferingResponse.class
-com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedBlockStorageClustersRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteNatGatewayResponse.class
 com/aliyun/sdk/service/ecs20140526/models/RecoverVirtualBorderRouterResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupHistoryResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyCapacityReservationResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyDiskSpecResponse$1.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeManagedInstancesResponseBody$Tags.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDeploymentSetResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeCommandsResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupAttributeRequest.class
@@ -4653,6 +4738,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeCommandsResponseBody$Commands.
 com/aliyun/sdk/service/ecs20140526/models/DescribeZonesResponseBody$AvailableResourceCreation.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotMonitorDataRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyInstanceAutoReleaseTimeResponseBody.class
+com/aliyun/sdk/service/ecs20140526/models/InvokeCommandRequest$Tag.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeImagesResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeBandwidthPackagesResponseBody$PublicIpAddresses.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsRequest$Tag.class
@@ -4699,6 +4785,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeRegionsResponseBody$Regions$Bu
 com/aliyun/sdk/service/ecs20140526/models/DescribeSecurityGroupReferencesResponseBody$SecurityGroupReferences$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNatGatewaysResponseBody$NatGateways$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/UntagResourcesRequest.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportAttributesResponse.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyUserBusinessBehaviorResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeDisksFullStatusResponseBody$DiskFullStatusSet$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupInstancesRequest.class
@@ -4707,14 +4794,17 @@ com/aliyun/sdk/service/ecs20140526/models/ListTagResourcesRequest.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteSecurityGroupResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/AllocateDedicatedHostsResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/CreateSimulatedSystemEventsResponse$BuilderImpl.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDiagnosticReportsResponseBody$Report$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInvocationResultsRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/TerminatePhysicalConnectionResponse$BuilderImpl.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteStorageSetResponseBody$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$MetadataOptions.class
 com/aliyun/sdk/service/ecs20140526/models/ImportKeyPairResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAvailableResourceResponseBody$AvailableZones.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeDedicatedHostsResponseBody$SocketCapacity$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeAutoProvisioningGroupInstancesResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeRouteTablesResponseBody$NextHops.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeManagedInstancesRequest$Tag$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotGroupsRequest$1.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteHpcClusterRequest.class
 com/aliyun/sdk/service/ecs20140526/models/CreateNetworkInterfaceResponseBody.class
@@ -4753,6 +4843,7 @@ com/aliyun/sdk/service/ecs20140526/models/DescribeSnapshotsResponseBody$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstancesResponseBody$LockReason.class
 com/aliyun/sdk/service/ecs20140526/models/RedeployDedicatedHostRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeLaunchTemplatesResponseBody$LaunchTemplateSet.class
+com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstanceAutoRenewAttributeResponse$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteDeploymentSetResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeVRoutersRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyReservedInstancesResponseBody$ReservedInstanceIdSets.class
@@ -4768,6 +4859,7 @@ com/aliyun/sdk/service/ecs20140526/models/RedeployInstanceRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeNetworkInterfaceAttributeRequest.class
 com/aliyun/sdk/service/ecs20140526/models/ModifySnapshotGroupResponseBody.class
 com/aliyun/sdk/service/ecs20140526/models/DeleteSecurityGroupRequest.class
+com/aliyun/sdk/service/ecs20140526/models/DescribeReservedInstanceAutoRenewAttributeResponse$1.class
 com/aliyun/sdk/service/ecs20140526/models/ModifyHpcClusterAttributeResponse.class
 com/aliyun/sdk/service/ecs20140526/models/DescribeInstanceTypeFamiliesRequest$Builder.class
 com/aliyun/sdk/service/ecs20140526/models/StartImagePipelineExecutionRequest$TemplateTag$Builder.class

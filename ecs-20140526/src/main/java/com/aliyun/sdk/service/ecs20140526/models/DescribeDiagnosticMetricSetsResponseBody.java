@@ -70,7 +70,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Description.
+             * The description of the diagnostic metric set.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +186,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricIds.
+             * The IDs of the diagnostic metrics.
              */
             public Builder metricIds(java.util.List < String > metricIds) {
                 this.metricIds = metricIds;
@@ -194,7 +194,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricSetId.
+             * The ID of the diagnostic metric set.
              */
             public Builder metricSetId(String metricSetId) {
                 this.metricSetId = metricSetId;
@@ -202,7 +202,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricSetName.
+             * The name of the diagnostic metric set.
              */
             public Builder metricSetName(String metricSetName) {
                 this.metricSetName = metricSetName;
@@ -210,7 +210,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type supported by the diagnostic metric set.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -218,7 +218,11 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the diagnostic metric set. Valid values:
+             * <p>
+             * 
+             * *   User: user-defined diagnostic metric set
+             * *   Common: common diagnostic metric set
              */
             public Builder type(String type) {
                 this.type = type;

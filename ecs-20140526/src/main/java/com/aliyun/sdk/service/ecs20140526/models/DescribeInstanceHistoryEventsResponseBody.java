@@ -86,7 +86,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceSystemEventSet.
+         * Details about the instance system events.
          */
         public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
             this.instanceSystemEventSet = instanceSystemEventSet;
@@ -94,7 +94,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of instances that were queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The state code of the system event.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -178,7 +178,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The state name of the system event.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +231,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the system event type.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -239,7 +239,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the system event type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -328,7 +328,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String releaseTime; 
 
             /**
-             * CreationTime.
+             * The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -336,7 +336,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceCategory.
+             * The category of the cloud disk or local disk. Valid values:
+             * <p>
+             * 
+             * *   cloud: basic disk.
+             * *   cloud_efficiency: ultra disk.
+             * *   cloud_ssd: standard SSD.
+             * *   cloud_essd: enhanced SSD (ESSD).
+             * *   local_ssd_pro: I/O-intensive local disk.
+             * *   local_hdd_pro: throughput-intensive local disk.
+             * *   ephemeral: retired local disk.
+             * *   ephemeral_ssd: retired local SSD.
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -344,7 +354,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceSize.
+             * The size of the disk. Unit: GiB.
              */
             public Builder deviceSize(String deviceSize) {
                 this.deviceSize = deviceSize;
@@ -352,7 +362,11 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * The type of the disk. Valid values:
+             * <p>
+             * 
+             * *   system: system disk.
+             * *   data: data disk.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -360,7 +374,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -567,7 +581,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String rack; 
 
             /**
-             * Device.
+             * The device name of the local disk.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -575,7 +589,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the local disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -583,7 +597,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -591,7 +605,11 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HostType.
+             * The type of the host. Valid values:
+             * <p>
+             * 
+             * *   ddh: dedicated host.
+             * *   managehost: physical machine in a smart hosting pool.
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -599,7 +617,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InactiveDisks.
+             * Details about the inactive cloud disks or local disks that have been released and must be removed.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -607,7 +625,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationOptions.
+             * The migration solution of the instance. Valid value: MigrationOptions. Instances can be migrated only by using migration plans.
              */
             public Builder migrationOptions(MigrationOptions migrationOptions) {
                 this.migrationOptions = migrationOptions;
@@ -615,7 +633,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineRepairPolicy.
+             * The online repair policy of the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.
              */
             public Builder onlineRepairPolicy(String onlineRepairPolicy) {
                 this.onlineRepairPolicy = onlineRepairPolicy;
@@ -623,7 +641,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Rack.
+             * The rack number of the cloud box.
              */
             public Builder rack(String rack) {
                 this.rack = rack;
@@ -784,7 +802,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * EventCycleStatus.
+             * The lifecycle state of the system event.
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -792,7 +810,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventFinishTime.
+             * The time when the system event ended. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder eventFinishTime(String eventFinishTime) {
                 this.eventFinishTime = eventFinishTime;
@@ -800,7 +818,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The ID of the system event.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -808,7 +826,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventPublishTime.
+             * The time when the system event was published. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder eventPublishTime(String eventPublishTime) {
                 this.eventPublishTime = eventPublishTime;
@@ -816,7 +834,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the system event.
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -824,7 +842,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedAttribute.
+             * The extended attribute of the system event.
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
@@ -832,7 +850,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ImpactLevel.
+             * The impact level of the system event.
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -840,7 +858,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance that you query.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -848,7 +866,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -856,7 +874,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the system event was scheduled.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -864,7 +882,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of a resource. Valid values:
+             * <p>
+             * 
+             * *   instance: ECS instance.
+             * *   ddh: dedicated host.
+             * *   managehost: physical machine in a smart hosting pool.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

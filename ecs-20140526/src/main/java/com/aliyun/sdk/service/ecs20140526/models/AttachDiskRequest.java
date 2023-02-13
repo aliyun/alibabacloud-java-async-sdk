@@ -219,7 +219,12 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * Bootable.
+         * Specifies whether to attach the disk as a system disk.
+         * <p>
+         * 
+         * Default value: false.
+         * 
+         * > If the `Bootable` parameter is set to true, the instance must be in the No System Disk state.
          */
         public Builder bootable(Boolean bootable) {
             this.putQueryParameter("Bootable", bootable);
@@ -228,7 +233,18 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * DeleteWithInstance.
+         * Specifies whether to release the disk when the instance is released. Valid values:
+         * <p>
+         * 
+         * *   true: releases the disk when the instance is released.
+         * *   false: does not release the data disk when the instance is released. The disk is retained as a pay-as-you-go data disk.
+         * 
+         * Default value: false.
+         * 
+         * When you specify this parameter, take note of the following items:
+         * 
+         * *   If `OperationLocks` in the DescribeInstances response contains `"LockReason" : "security"` for the instance to which the disk is attached, the instance is locked for security reasons. Even if `DeleteWithInstance` is set to `false`, the DeleteWithInstance parameter is ignored, and the disk is released when the instance is released.
+         * *   This parameter cannot be specified for disks for which the multi-attach feature is enabled.
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -237,7 +253,10 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * Device.
+         * The device name of the disk.
+         * <p>
+         * 
+         * > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
          */
         public Builder device(String device) {
             this.putQueryParameter("Device", device);
@@ -246,7 +265,10 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk. The disk specified by the `DiskId` parameter and the instance specified by the `InstanceId` parameter must reside in the same zone.
+         * <p>
+         * 
+         * > For more information about the limits on attaching a data disk and system disk, see the "Description" section of this topic.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -255,7 +277,7 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to which to attach the disk.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -264,7 +286,11 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the SSH key pair that you bind to the Linux instance when you attach the system disk.
+         * <p>
+         * 
+         * *   Windows instances do not support logons based on SSH key pairs. The `Password` parameter takes effect even if the KeyPairName parameter is specified.
+         * *   For Linux instances, the username and password-based logon method is disabled by default.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -291,7 +317,14 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password set when you attach the system disk. The password is applicable only to the administrator and root users. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
+         * <p>
+         * 
+         *     ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /
+         * 
+         * The password of a Windows instance cannot start with a forward slash (/).
+         * 
+         * > If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

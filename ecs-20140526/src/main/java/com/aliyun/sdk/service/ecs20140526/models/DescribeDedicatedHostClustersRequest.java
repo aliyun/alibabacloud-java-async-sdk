@@ -261,7 +261,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * DedicatedHostClusterIds.
+         * The IDs of dedicated host clusters. The value can be a JSON array that consists of up to 100 dedicated host cluster IDs in the format of `["dc-xxxxxxxxx", "dc-yyyyyyyyy", ... "dc-zzzzzzzzz"]`. Separate the IDs with commas (,).
          */
         public Builder dedicatedHostClusterIds(String dedicatedHostClusterIds) {
             this.putQueryParameter("DedicatedHostClusterIds", dedicatedHostClusterIds);
@@ -270,7 +270,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * DedicatedHostClusterName.
+         * The name of the dedicated host cluster.
          */
         public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
             this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
@@ -279,7 +279,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * LockReason.
+         * >  This parameter is unavailable for use.
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -306,7 +306,12 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -315,7 +320,12 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -324,7 +334,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -333,7 +343,10 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the dedicated host cluster belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -360,7 +373,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * Status.
+         * >  This parameter is unavailable for use.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -369,7 +382,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of the tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -378,7 +391,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the dedicated host cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -432,7 +445,10 @@ public class DescribeDedicatedHostClustersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -440,7 +456,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

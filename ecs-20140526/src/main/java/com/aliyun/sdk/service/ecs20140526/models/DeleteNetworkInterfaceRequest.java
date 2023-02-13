@@ -149,7 +149,7 @@ public class DeleteNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -176,7 +176,7 @@ public class DeleteNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

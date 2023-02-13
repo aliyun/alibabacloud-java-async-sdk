@@ -346,7 +346,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * Cores.
+         * The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
+         * <p>
+         * 
+         * The Cores parameter takes effect only when the DestinationResource parameter is set to InstanceType.
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -355,7 +358,14 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * DataDiskCategory.
+         * The type of the data disk. Valid values:
+         * <p>
+         * 
+         * *   cloud: basic disk.
+         * *   cloud_efficiency: ultra disk.
+         * *   cloud_ssd: standard SSD.
+         * *   ephemeral_ssd: local SSD.
+         * *   cloud_essd: ESSD.
          */
         public Builder dataDiskCategory(String dataDiskCategory) {
             this.putQueryParameter("DataDiskCategory", dataDiskCategory);
@@ -364,7 +374,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The ID of the dedicated host.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -373,7 +383,18 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * DestinationResource.
+         * The resource type to query. Valid values:
+         * <p>
+         * 
+         * *   Zone: zone.
+         * *   IoOptimized: I/O optimized resource.
+         * *   InstanceType: instance type.
+         * *   SystemDisk: system disk.
+         * *   DataDisk: data disk.
+         * *   Network: network type.
+         * *   ddh: dedicated host.
+         * 
+         * For more information about how to configure the DestinationResource parameter, see the **Description** section of this topic.
          */
         public Builder destinationResource(String destinationResource) {
             this.putQueryParameter("DestinationResource", destinationResource);
@@ -382,7 +403,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the resource. For more information, see [Billing overview](~~25398~~). Valid values:
+         * <p>
+         * 
+         * *   PrePaid: subscription.
+         * *   PostPaid: pay-as-you-go.
+         * 
+         * Default value: PostPaid.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -391,7 +418,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance types. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
+         * <p>
+         * 
+         * For more information about how to configure the InstanceType parameter, see the **Description** section of this topic.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -400,7 +430,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * IoOptimized.
+         * Specifies whether the instance is an I/O optimized instance. Valid values:
+         * <p>
+         * 
+         * *   none: The instance is a non-I/O optimized instance.
+         * *   optimized: The instance is an I/O optimized instance.
+         * 
+         * Default value: optimized.
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -409,7 +445,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * Memory.
+         * The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).
+         * <p>
+         * 
+         * The Memory parameter takes effect only when the DestinationResource parameter is set to InstanceType.
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -418,7 +457,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * NetworkCategory.
+         * The network type of the cluster. Valid values:
+         * <p>
+         * 
+         * *   vpc
+         * *   classic
          */
         public Builder networkCategory(String networkCategory) {
             this.putQueryParameter("NetworkCategory", networkCategory);
@@ -445,7 +488,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region for which to query resources. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -472,7 +515,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance: ECS instance.
+         * *   disk: cloud disk.
+         * *   reservedinstance: reserved instance.
+         * *   ddh: dedicated host.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -481,7 +530,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The scope of the reserved instance. Valid values:
+         * <p>
+         * 
+         * *   Region: regional.
+         * *   Zone: zonal.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -490,7 +543,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * SpotDuration.
+         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+         * <p>
+         * 
+         * *   The following protection periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
+         * *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
+         * 
+         * Default value: 1.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -499,7 +558,16 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * SpotStrategy.
+         * The bidding policy for pay-as-you-go instances. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The instance is a pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
+         * 
+         * Default value: NoSpot.
+         * 
+         * The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -508,7 +576,18 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * SystemDiskCategory.
+         * The category of the system disk. Valid values:
+         * <p>
+         * 
+         * *   cloud: basic disk.
+         * *   cloud_efficiency: ultra disk.
+         * *   cloud_ssd: standard SSD.
+         * *   ephemeral_ssd: local SSD.
+         * *   cloud_essd: enhanced SSD (ESSD).
+         * 
+         * Default value: cloud_efficiency.
+         * 
+         * > When the ResourceType parameter is set to instance and the DestinationResource parameter is set to DataDisk, you must set the SystemDiskCategory parameter. If you do not set this parameter, the default value takes effect.
          */
         public Builder systemDiskCategory(String systemDiskCategory) {
             this.putQueryParameter("SystemDiskCategory", systemDiskCategory);
@@ -517,7 +596,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone where the instance resides.
+         * <p>
+         * 
+         * This parameter is empty by default. When this parameter is empty, the system returns resources that match the other criteria in all zones within the region specified by `RegionId`.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

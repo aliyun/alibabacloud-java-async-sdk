@@ -16,7 +16,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     private String nextToken;
 
     @NameInMap("Reports")
-    private java.util.List < Reports> reports;
+    private Reports reports;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -45,7 +45,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     /**
      * @return reports
      */
-    public java.util.List < Reports> getReports() {
+    public Reports getReports() {
         return this.reports;
     }
 
@@ -58,11 +58,11 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Reports> reports; 
+        private Reports reports; 
         private String requestId; 
 
         /**
-         * NextToken.
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,15 +70,15 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Reports.
+         * The list of reports.
          */
-        public Builder reports(java.util.List < Reports> reports) {
+        public Builder reports(Reports reports) {
             this.reports = reports;
             return this;
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,7 +91,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
     } 
 
-    public static class Issues extends TeaModel {
+    public static class Issue extends TeaModel {
         @NameInMap("IssueId")
         private String issueId;
 
@@ -104,7 +104,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         @NameInMap("Severity")
         private String severity;
 
-        private Issues(Builder builder) {
+        private Issue(Builder builder) {
             this.issueId = builder.issueId;
             this.metricCategory = builder.metricCategory;
             this.metricId = builder.metricId;
@@ -115,7 +115,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Issues create() {
+        public static Issue create() {
             return builder().build();
         }
 
@@ -154,7 +154,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             private String severity; 
 
             /**
-             * IssueId.
+             * The unique ID of the diagnosed issue.
              */
             public Builder issueId(String issueId) {
                 this.issueId = issueId;
@@ -162,7 +162,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricCategory.
+             * The category of the diagnostic metric.
              */
             public Builder metricCategory(String metricCategory) {
                 this.metricCategory = metricCategory;
@@ -170,7 +170,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricId.
+             * The ID of the diagnostic metric.
              */
             public Builder metricId(String metricId) {
                 this.metricId = metricId;
@@ -178,10 +178,56 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The severity level of the diagnostic metric. Valid values:
+             * <p>
+             * 
+             * *   Info: Diagnostic information was recorded and may be related to exceptions.
+             * *   Warn: Diagnostic information was recorded and may indicate exceptions.
+             * *   Critical: Critical exceptions were detected.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
+                return this;
+            }
+
+            public Issue build() {
+                return new Issue(this);
+            } 
+
+        } 
+
+    }
+    public static class Issues extends TeaModel {
+        @NameInMap("Issue")
+        private java.util.List < Issue> issue;
+
+        private Issues(Builder builder) {
+            this.issue = builder.issue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Issues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return issue
+         */
+        public java.util.List < Issue> getIssue() {
+            return this.issue;
+        }
+
+        public static final class Builder {
+            private java.util.List < Issue> issue; 
+
+            /**
+             * Issue.
+             */
+            public Builder issue(java.util.List < Issue> issue) {
+                this.issue = issue;
                 return this;
             }
 
@@ -192,7 +238,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         } 
 
     }
-    public static class Reports extends TeaModel {
+    public static class Report extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
@@ -203,7 +249,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         private String finishedTime;
 
         @NameInMap("Issues")
-        private java.util.List < Issues> issues;
+        private Issues issues;
 
         @NameInMap("MetricSetId")
         private String metricSetId;
@@ -226,7 +272,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
-        private Reports(Builder builder) {
+        private Report(Builder builder) {
             this.creationTime = builder.creationTime;
             this.endTime = builder.endTime;
             this.finishedTime = builder.finishedTime;
@@ -244,7 +290,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Reports create() {
+        public static Report create() {
             return builder().build();
         }
 
@@ -272,7 +318,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         /**
          * @return issues
          */
-        public java.util.List < Issues> getIssues() {
+        public Issues getIssues() {
             return this.issues;
         }
 
@@ -329,7 +375,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             private String creationTime; 
             private String endTime; 
             private String finishedTime; 
-            private java.util.List < Issues> issues; 
+            private Issues issues; 
             private String metricSetId; 
             private String reportId; 
             private String resourceId; 
@@ -339,7 +385,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreationTime.
+             * The time when the diagnostic report was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -347,7 +393,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -355,7 +401,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * The time when the diagnostic was complete.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -363,15 +409,15 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Issues.
+             * The list of issues.
              */
-            public Builder issues(java.util.List < Issues> issues) {
+            public Builder issues(Issues issues) {
                 this.issues = issues;
                 return this;
             }
 
             /**
-             * MetricSetId.
+             * The ID of the diagnostic metric set.
              */
             public Builder metricSetId(String metricSetId) {
                 this.metricSetId = metricSetId;
@@ -379,7 +425,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * The ID of the diagnostic report.
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -387,7 +433,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -395,7 +441,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -403,7 +449,14 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The severity level of the diagnostic report. Valid values:
+             * <p>
+             * 
+             * *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
+             * *   Normal: No exceptions were detected.
+             * *   Info: Diagnostic information was recorded and may be related to exceptions.
+             * *   Warn: Diagnostic information was recorded and may indicate exceptions.
+             * *   Critical: Critical exceptions were detected.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -411,7 +464,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -419,10 +472,51 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the diagnostic report.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            public Report build() {
+                return new Report(this);
+            } 
+
+        } 
+
+    }
+    public static class Reports extends TeaModel {
+        @NameInMap("Report")
+        private java.util.List < Report> report;
+
+        private Reports(Builder builder) {
+            this.report = builder.report;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Reports create() {
+            return builder().build();
+        }
+
+        /**
+         * @return report
+         */
+        public java.util.List < Report> getReport() {
+            return this.report;
+        }
+
+        public static final class Builder {
+            private java.util.List < Report> report; 
+
+            /**
+             * Report.
+             */
+            public Builder report(java.util.List < Report> report) {
+                this.report = report;
                 return this;
             }
 

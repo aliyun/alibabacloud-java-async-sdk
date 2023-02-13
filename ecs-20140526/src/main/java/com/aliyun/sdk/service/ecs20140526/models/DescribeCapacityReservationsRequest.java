@@ -284,7 +284,13 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of instances to be created by using the capacity reservation. Valid values:
+         * <p>
+         * 
+         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription
+         * 
+         * Default value: PostPaid.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -293,7 +299,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -302,7 +308,12 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -311,7 +322,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -338,7 +349,14 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The operating system type of instances to be created by using the capacity reservation. Valid values:
+         * <p>
+         * 
+         * *   windows: Windows operating systems
+         * *   linux: Linux operating systems
+         * *   all: all operating system types
+         * 
+         * Default value: all.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -347,7 +365,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -356,7 +374,10 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the capacity reservation belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -383,7 +404,17 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the capacity reservation. Valid values:
+         * <p>
+         * 
+         * *   All: All states.
+         * *   Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.
+         * *   Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.
+         * *   Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.
+         * *   Active: The capacity reservation is in effect.
+         * *   Released: The capacity reservation has been released manually or automatically when it expired.
+         * 
+         * Default value: Active.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -392,7 +423,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -401,7 +432,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the capacity reservation.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -443,7 +474,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             private String ids; 
 
             /**
-             * Ids.
+             * The IDs of capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs. Separate the IDs with commas (,).
              */
             public Builder ids(String ids) {
                 this.ids = ids;
@@ -496,7 +527,10 @@ public class DescribeCapacityReservationsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the capacity reservation. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -504,7 +538,7 @@ public class DescribeCapacityReservationsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the capacity reservation. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

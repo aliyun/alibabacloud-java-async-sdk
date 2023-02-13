@@ -21,6 +21,15 @@ public class AssignPrivateIpAddressesRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("Ipv4Prefix")
+    private java.util.List < String > ipv4Prefix;
+
+    @Query
+    @NameInMap("Ipv4PrefixCount")
+    @Validation(maximum = 10, minimum = 1)
+    private Integer ipv4PrefixCount;
+
+    @Query
     @NameInMap("NetworkInterfaceId")
     @Validation(required = true)
     private String networkInterfaceId;
@@ -58,6 +67,8 @@ public class AssignPrivateIpAddressesRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
+        this.ipv4Prefix = builder.ipv4Prefix;
+        this.ipv4PrefixCount = builder.ipv4PrefixCount;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -93,6 +104,20 @@ public class AssignPrivateIpAddressesRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return ipv4Prefix
+     */
+    public java.util.List < String > getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    /**
+     * @return ipv4PrefixCount
+     */
+    public Integer getIpv4PrefixCount() {
+        return this.ipv4PrefixCount;
     }
 
     /**
@@ -154,6 +179,8 @@ public class AssignPrivateIpAddressesRequest extends Request {
     public static final class Builder extends Request.Builder<AssignPrivateIpAddressesRequest, Builder> {
         private String sourceRegionId; 
         private String clientToken; 
+        private java.util.List < String > ipv4Prefix; 
+        private Integer ipv4PrefixCount; 
         private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -171,6 +198,8 @@ public class AssignPrivateIpAddressesRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
+            this.ipv4Prefix = request.ipv4Prefix;
+            this.ipv4PrefixCount = request.ipv4PrefixCount;
             this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -191,7 +220,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +229,25 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * > This parameter is in invitational preview and is unavailable to general users.
+         */
+        public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
+            this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+
+        /**
+         * > This parameter is in invitational preview and is unavailable to general users.
+         */
+        public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
+            this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
+            this.ipv4PrefixCount = ipv4PrefixCount;
+            return this;
+        }
+
+        /**
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -227,7 +274,13 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * Secondary private IP address N, which is selected from within the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:
+         * <p>
+         * 
+         * *   When the ENI is in the Available (`Available`) state, the valid values of N are 1 to 32.
+         * *   When the ENI is in the InUse (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Instance families](~~25378~~).
+         * 
+         * To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -236,7 +289,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +316,10 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * SecondaryPrivateIpAddressCount.
+         * The number of private IP addresses to be automatically assigned from within the CIDR block of the vSwitch that is connected to the ENI.
+         * <p>
+         * 
+         * To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.
          */
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             this.putQueryParameter("SecondaryPrivateIpAddressCount", secondaryPrivateIpAddressCount);

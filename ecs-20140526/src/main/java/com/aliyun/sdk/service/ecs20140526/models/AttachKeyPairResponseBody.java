@@ -86,7 +86,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * FailCount.
+         * The number of instances to which the key pair fails to be attached.
          */
         public Builder failCount(String failCount) {
             this.failCount = failCount;
@@ -94,7 +94,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -102,7 +102,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * An array that contains the results of the operation.
          */
         public Builder results(Results results) {
             this.results = results;
@@ -118,7 +118,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of instances to which the SSH key pair is attached.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * Code.
+             * The operation status code returned. 200 indicates that the operation was successful.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -202,7 +202,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +210,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The operation information returned. When the value of Code is 200, the value of Message is successful.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -218,7 +218,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the operation was successful.
              */
             public Builder success(String success) {
                 this.success = success;

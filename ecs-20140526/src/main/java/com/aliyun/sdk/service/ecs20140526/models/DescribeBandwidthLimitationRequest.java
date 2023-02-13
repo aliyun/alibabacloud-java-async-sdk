@@ -204,7 +204,13 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
+         * <p>
+         * 
+         * *   PrePaid: subscription
+         * *   PostPaid: pay-as-you-go
+         * 
+         * Default value: PostPaid.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -213,7 +219,10 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type. For more information about the values, see [Instance families](~~25378~~).
+         * <p>
+         * 
+         * >  This parameter is required.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -222,7 +231,14 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * Specifies the operation for which to query the maximum public bandwidth. Valid values:
+         * <p>
+         * 
+         * *   Upgrade: upgrades the public bandwidth.
+         * *   Downgrade: downgrades the public bandwidth.
+         * *   Create: creates an ECS instance.
+         * 
+         * Default value: Create.
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -249,7 +265,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -258,7 +274,10 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource.
+         * <p>
+         * 
+         * >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -285,7 +304,16 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * SpotStrategy.
+         * The preemption policy for the preemptible or pay-as-you-go instance. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The instance is a regular pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.
+         * *   SpotAsPriceGo: The system automatically offers a bid, which is not higher than the pay-as-you-go price for the same instance type.
+         * 
+         * Default value: NoSpot.
+         * 
+         * >  This parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);

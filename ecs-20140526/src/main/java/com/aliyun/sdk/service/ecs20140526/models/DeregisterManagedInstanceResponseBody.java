@@ -50,7 +50,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Instance.
+         * Details of the managed instance.
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -58,7 +58,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +242,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             private String registrationTime; 
 
             /**
-             * ActivationId.
+             * The ID of the activation code.
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -250,7 +250,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AgentVersion.
+             * The version number of the Cloud Assistant client.
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -258,7 +258,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * The hostname of the managed instance.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -266,7 +266,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the managed instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -274,7 +274,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the managed instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -282,7 +282,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the managed instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -290,7 +290,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The internal IP address of the managed instance.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -298,7 +298,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationCount.
+             * The number of times that Cloud Assistant tasks were executed on the managed instance.
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -306,7 +306,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LastInvokedTime.
+             * The last Cloud Assistant task execution time.
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;
@@ -314,7 +314,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MachineId.
+             * The machine code of the managed instance.
              */
             public Builder machineId(String machineId) {
                 this.machineId = machineId;
@@ -322,7 +322,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * The operating system type of the managed instance.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -330,7 +330,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OsVersion.
+             * The version information of the operating system.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -338,7 +338,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RegistrationTime.
+             * The time when the managed instance was registered.
              */
             public Builder registrationTime(String registrationTime) {
                 this.registrationTime = registrationTime;

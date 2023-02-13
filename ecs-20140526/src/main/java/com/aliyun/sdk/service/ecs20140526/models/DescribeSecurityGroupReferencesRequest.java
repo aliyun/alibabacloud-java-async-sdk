@@ -167,7 +167,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the security group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +194,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of security group N. Valid values of N: 1 to 10.
          */
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

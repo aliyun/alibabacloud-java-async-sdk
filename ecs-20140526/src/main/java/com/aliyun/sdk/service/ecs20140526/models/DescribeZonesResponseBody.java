@@ -50,7 +50,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * Details of the zones and their supported resources.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -580,7 +580,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private SystemDiskCategories systemDiskCategories; 
 
             /**
-             * DataDiskCategories.
+             * The categories of data disks that can be created.
              */
             public Builder dataDiskCategories(DataDiskCategories dataDiskCategories) {
                 this.dataDiskCategories = dataDiskCategories;
@@ -588,7 +588,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceGenerations.
+             * The supported generations of instance families.
              */
             public Builder instanceGenerations(InstanceGenerations instanceGenerations) {
                 this.instanceGenerations = instanceGenerations;
@@ -596,7 +596,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamilies.
+             * The supported instance families.
              */
             public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
                 this.instanceTypeFamilies = instanceTypeFamilies;
@@ -604,7 +604,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypes.
+             * The supported instance types.
              */
             public Builder instanceTypes(InstanceTypes instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -612,7 +612,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * IoOptimized.
+             * Indicates whether the instance is I/O optimized.
              */
             public Builder ioOptimized(Boolean ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -620,7 +620,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkTypes.
+             * The supported network types
              */
             public Builder networkTypes(NetworkTypes networkTypes) {
                 this.networkTypes = networkTypes;
@@ -628,7 +628,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskCategories.
+             * The supported categories of system disks that can be created.
              */
             public Builder systemDiskCategories(SystemDiskCategories systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
@@ -900,7 +900,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * AvailableDedicatedHostTypes.
+             * The supported dedicated host types.
              */
             public Builder availableDedicatedHostTypes(AvailableDedicatedHostTypes availableDedicatedHostTypes) {
                 this.availableDedicatedHostTypes = availableDedicatedHostTypes;
@@ -908,7 +908,13 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableDiskCategories.
+             * The supported disk categories. Valid values:
+             * <p>
+             * 
+             * *   cloud: basic disk
+             * *   cloud_ssd: standard SSD
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_essd: ESSD
              */
             public Builder availableDiskCategories(AvailableDiskCategories availableDiskCategories) {
                 this.availableDiskCategories = availableDiskCategories;
@@ -916,7 +922,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableInstanceTypes.
+             * The supported instance types.
              */
             public Builder availableInstanceTypes(AvailableInstanceTypes availableInstanceTypes) {
                 this.availableInstanceTypes = availableInstanceTypes;
@@ -924,7 +930,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableResourceCreation.
+             * The types of resources that can be created. Valid values:
+             * <p>
+             * 
+             * *   VSwitch: vSwitch
+             * *   IoOptimized: I/O optimized instance
+             * *   Instance: instance
+             * *   DedicatedHost: dedicated host
+             * *   disk: disk
              */
             public Builder availableResourceCreation(AvailableResourceCreation availableResourceCreation) {
                 this.availableResourceCreation = availableResourceCreation;
@@ -932,7 +945,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableResources.
+             * Details about the resources that can be created in the zone.
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -940,7 +953,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableVolumeCategories.
+             * The supported Shared Block Storage device categories.
              */
             public Builder availableVolumeCategories(AvailableVolumeCategories availableVolumeCategories) {
                 this.availableVolumeCategories = availableVolumeCategories;
@@ -948,7 +961,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostGenerations.
+             * The supported generations of dedicated hosts.
              */
             public Builder dedicatedHostGenerations(DedicatedHostGenerations dedicatedHostGenerations) {
                 this.dedicatedHostGenerations = dedicatedHostGenerations;
@@ -956,7 +969,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * The name of the zone in the local language.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -964,7 +977,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -972,7 +985,11 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneType.
+             * The type of the zone. Valid values:
+             * <p>
+             * 
+             * *   AvailabilityZone: zone for the Alibaba Cloud public cloud
+             * *   CloudBoxZone: zone for CloudBox
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;

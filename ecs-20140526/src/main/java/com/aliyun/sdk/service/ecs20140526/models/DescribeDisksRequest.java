@@ -551,7 +551,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * AdditionalAttributes.
+         * The values of attributes.
          */
         public Builder additionalAttributes(java.util.List < String > additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
@@ -560,7 +560,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * AutoSnapshotPolicyId.
+         * The ID of the automatic snapshot policy that is applied to the cloud disk.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -569,7 +569,20 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Category.
+         * The category of the disk. Valid values:
+         * <p>
+         * 
+         * * all: all disk categories
+         * * cloud: basic disk
+         * * cloud_efficiency: ultra disk
+         * * cloud_ssd: standard SSD
+         * * cloud_essd: enhanced SSD (ESSD)
+         * * local\_ssd_pro: I/O-intensive local disk
+         * * local\_hdd_pro: throughput-intensive local disk
+         * * ephemeral: retired local disk
+         * * ephemeral_ssd: retired local SSD
+         * 
+         * Default value: all.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -578,7 +591,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DeleteAutoSnapshot.
+         * Specifies whether to delete the automatic snapshots of the cloud disk when the disk is released.
+         * <p>
+         * 
+         * *   true: The automatic snapshots of the cloud disk are deleted when the disk is released.
+         * *   false: The automatic snapshots of the cloud disk are not deleted when the disk is released.
+         * 
+         * Default value: false.
          */
         public Builder deleteAutoSnapshot(Boolean deleteAutoSnapshot) {
             this.putQueryParameter("DeleteAutoSnapshot", deleteAutoSnapshot);
@@ -587,7 +606,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DeleteWithInstance.
+         * Specifies whether to release the cloud disk when its associated instance is released. Valid values:
+         * <p>
+         * 
+         * *   true: The cloud disk is released when its associated instance is released.
+         * *   false: The cloud disk is not released but is retained as a pay-as-you-go data disk when its associated instance is released.
+         * 
+         * Default value: false.
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -596,7 +621,11 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskChargeType.
+         * The billing method of the disk. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: subscription
+         * *   PostPaid: pay-as-you-go
          */
         public Builder diskChargeType(String diskChargeType) {
             this.putQueryParameter("DiskChargeType", diskChargeType);
@@ -605,7 +634,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskIds.
+         * The IDs of disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -614,7 +643,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskName.
+         * The name of the disk.
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -623,7 +652,14 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * The type of the disk. Valid values:
+         * <p>
+         * 
+         * *   all: system disk and data disk
+         * *   system: system disk
+         * *   data: data disk
+         * 
+         * Default value: all.
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -632,7 +668,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the validity of the request without actually making the request. Valid values:
+         * <p>
+         * 
+         * *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the `DryRunOperation` error code is returned.
+         * *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -641,7 +683,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * EnableAutoSnapshot.
+         * Specifies whether the automatic snapshot policy feature is enabled for the cloud disk.
+         * <p>
+         * 
+         * *   true: The automatic snapshot policy feature is enabled for the cloud disk.
+         * *   false: The automatic snapshot policy feature is not enabled for the cloud disk.
+         * 
+         * >  By default, the automatic snapshot policy feature is enabled for created cloud disks. You only need to apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.
          */
         public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
             this.putQueryParameter("EnableAutoSnapshot", enableAutoSnapshot);
@@ -650,7 +698,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * EnableAutomatedSnapshotPolicy.
+         * Specifies whether an automatic snapshot policy is applied to the cloud disk.
+         * <p>
+         * 
+         * *   true: An automatic snapshot policy is applied to the cloud disk.
+         * *   false: No automatic snapshot policy is applied to the cloud disk.
+         * 
+         * Default value: false.
          */
         public Builder enableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
             this.putQueryParameter("EnableAutomatedSnapshotPolicy", enableAutomatedSnapshotPolicy);
@@ -659,7 +713,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * EnableShared.
+         * Specifies whether the disk is a Shared Block Storage device.
          */
         public Builder enableShared(Boolean enableShared) {
             this.putQueryParameter("EnableShared", enableShared);
@@ -668,7 +722,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Encrypted.
+         * Specifies whether to query only encrypted cloud disks.
+         * <p>
+         * 
+         * *   true: queries only encrypted cloud disks.
+         * *   false: does not query encrypted cloud disks.
+         * 
+         * Default value: false.
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -677,7 +737,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to which the disk is attached.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -686,7 +746,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * KMSKeyId.
+         * The ID of the Key Management Service (KMS) key used by the cloud disk.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -695,7 +755,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * LockReason.
+         * The reason why the disk is locked. Valid values:
+         * <p>
+         * 
+         * *   financial: The disk is locked due to overdue payments.
+         * *   security: The disk is locked due to security reasons.
+         * *   recycling: The preemptible instance is locked and pending release.
+         * *   dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -704,7 +770,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. Valid values: 1 to 500.
+         * <p>
+         * 
+         * Default value:
+         * 
+         * *   If this parameter is not specified or is set to a value smaller than 10, the default value is 10.
+         * *   If this parameter is set to a value greater than 500, the default value is 500.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -713,7 +785,14 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * MultiAttach.
+         * Specifies whether the multi-attach feature is enabled for the disk. Valid values:
+         * <p>
+         * 
+         * *   Disabled: The multi-attach feature is not enabled for the disk.
+         * *   Enabled: The multi-attach feature is enabled for the disk.
+         * *   LegacyShared: Shared Block Storage devices are queried.
+         * 
+         * The multi-attach feature is in invitational preview. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/list).
          */
         public Builder multiAttach(String multiAttach) {
             this.putQueryParameter("MultiAttach", multiAttach);
@@ -722,7 +801,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the `NextToken` value returned in the last call to the Describedisks operation.
+         * <p>
+         * 
+         * For more information about how to check the responses returned by this operation, see the preceding "Description" section.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -749,7 +831,12 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Page start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -758,7 +845,12 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -767,7 +859,17 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Portable.
+         * Specifies whether the disk is removable. Valid values:
+         * <p>
+         * 
+         * *   true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.
+         * *   false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.
+         * 
+         * The `Portable` attribute of the following disks is `false`, and these disks share the same lifecycle with their associated instances:
+         * 
+         * *   Local disks
+         * *   Local SSDs
+         * *   Subscription data disks
          */
         public Builder portable(Boolean portable) {
             this.putQueryParameter("Portable", portable);
@@ -776,7 +878,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -785,7 +887,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the disk belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -812,7 +917,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot that was used to create the cloud disk.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -821,7 +926,18 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the cloud disk. For more information, see [Disk states](~~25689~~). Valid values:
+         * <p>
+         * 
+         * * In_use
+         * * Available
+         * * Attaching
+         * * Detaching
+         * * Creating
+         * * ReIniting
+         * * All
+         * 
+         * Default value: All.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -830,7 +946,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -839,7 +955,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the disk.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -893,7 +1009,7 @@ public class DescribeDisksRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -901,7 +1017,7 @@ public class DescribeDisksRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -954,7 +1070,10 @@ public class DescribeDisksRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the disk. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -962,7 +1081,7 @@ public class DescribeDisksRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the disk. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

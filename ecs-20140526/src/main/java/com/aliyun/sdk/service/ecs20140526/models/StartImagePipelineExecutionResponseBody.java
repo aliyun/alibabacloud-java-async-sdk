@@ -50,7 +50,7 @@ public class StartImagePipelineExecutionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExecutionId.
+         * The ID of the image creation task.
          */
         public Builder executionId(String executionId) {
             this.executionId = executionId;
@@ -58,7 +58,7 @@ public class StartImagePipelineExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

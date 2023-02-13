@@ -34,6 +34,10 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("InstanceMetadataTags")
+    private String instanceMetadataTags;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -57,6 +61,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
         this.httpTokens = builder.httpTokens;
         this.instanceId = builder.instanceId;
+        this.instanceMetadataTags = builder.instanceMetadataTags;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -112,6 +117,13 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
     }
 
     /**
+     * @return instanceMetadataTags
+     */
+    public String getInstanceMetadataTags() {
+        return this.instanceMetadataTags;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -145,6 +157,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         private Integer httpPutResponseHopLimit; 
         private String httpTokens; 
         private String instanceId; 
+        private String instanceMetadataTags; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -161,6 +174,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
             this.httpPutResponseHopLimit = request.httpPutResponseHopLimit;
             this.httpTokens = request.httpTokens;
             this.instanceId = request.instanceId;
+            this.instanceMetadataTags = request.instanceMetadataTags;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -209,6 +223,15 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceMetadataTags.
+         */
+        public Builder instanceMetadataTags(String instanceMetadataTags) {
+            this.putQueryParameter("InstanceMetadataTags", instanceMetadataTags);
+            this.instanceMetadataTags = instanceMetadataTags;
             return this;
         }
 

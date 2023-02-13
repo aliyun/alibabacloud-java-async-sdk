@@ -163,7 +163,13 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcibly delete the custom image. Valid values:
+         * <p>
+         * 
+         * *   true: forcibly deletes the custom image, regardless of whether the image is being used by other instances.
+         * *   false: verifies that the image is not being used by other instances and then deletes the image.
+         * 
+         * Default value: false.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -172,7 +178,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image. If the specified custom image does not exist, the request is ignored.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -199,7 +205,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

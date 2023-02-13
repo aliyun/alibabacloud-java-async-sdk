@@ -163,7 +163,7 @@ public class CreateKeyPairRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -181,7 +181,7 @@ public class CreateKeyPairRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to create the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -190,7 +190,7 @@ public class CreateKeyPairRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the enterprise resource group to which the SSH key pair belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -217,7 +217,7 @@ public class CreateKeyPairRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -271,7 +271,7 @@ public class CreateKeyPairRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to be bound to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +279,7 @@ public class CreateKeyPairRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs:.
              */
             public Builder value(String value) {
                 this.value = value;

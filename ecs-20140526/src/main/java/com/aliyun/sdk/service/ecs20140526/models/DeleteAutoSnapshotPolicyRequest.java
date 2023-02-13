@@ -162,7 +162,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * autoSnapshotPolicyId.
+         * The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](~~25530~~) operation to query the available automatic snapshot policies.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("autoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -171,7 +171,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID of the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

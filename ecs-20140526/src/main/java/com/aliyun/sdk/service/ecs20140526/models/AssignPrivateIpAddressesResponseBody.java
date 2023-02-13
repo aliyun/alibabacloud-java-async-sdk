@@ -50,7 +50,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssignedPrivateIpAddressesSet.
+         * Details about the ENI.
          */
         public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
             this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
@@ -58,7 +58,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,6 +71,47 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     } 
 
+    public static class Ipv4PrefixSet extends TeaModel {
+        @NameInMap("Ipv4Prefixes")
+        private java.util.List < String > ipv4Prefixes;
+
+        private Ipv4PrefixSet(Builder builder) {
+            this.ipv4Prefixes = builder.ipv4Prefixes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv4PrefixSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv4Prefixes
+         */
+        public java.util.List < String > getIpv4Prefixes() {
+            return this.ipv4Prefixes;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > ipv4Prefixes; 
+
+            /**
+             * Ipv4Prefixes.
+             */
+            public Builder ipv4Prefixes(java.util.List < String > ipv4Prefixes) {
+                this.ipv4Prefixes = ipv4Prefixes;
+                return this;
+            }
+
+            public Ipv4PrefixSet build() {
+                return new Ipv4PrefixSet(this);
+            } 
+
+        } 
+
+    }
     public static class PrivateIpSet extends TeaModel {
         @NameInMap("PrivateIpAddress")
         private java.util.List < String > privateIpAddress;
@@ -113,6 +154,9 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     }
     public static class AssignedPrivateIpAddressesSet extends TeaModel {
+        @NameInMap("Ipv4PrefixSet")
+        private Ipv4PrefixSet ipv4PrefixSet;
+
         @NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
@@ -120,6 +164,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private PrivateIpSet privateIpSet;
 
         private AssignedPrivateIpAddressesSet(Builder builder) {
+            this.ipv4PrefixSet = builder.ipv4PrefixSet;
             this.networkInterfaceId = builder.networkInterfaceId;
             this.privateIpSet = builder.privateIpSet;
         }
@@ -130,6 +175,13 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
         public static AssignedPrivateIpAddressesSet create() {
             return builder().build();
+        }
+
+        /**
+         * @return ipv4PrefixSet
+         */
+        public Ipv4PrefixSet getIpv4PrefixSet() {
+            return this.ipv4PrefixSet;
         }
 
         /**
@@ -147,11 +199,20 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Ipv4PrefixSet ipv4PrefixSet; 
             private String networkInterfaceId; 
             private PrivateIpSet privateIpSet; 
 
             /**
-             * NetworkInterfaceId.
+             * > This parameter is in invitational preview and is unavailable to general users.
+             */
+            public Builder ipv4PrefixSet(Ipv4PrefixSet ipv4PrefixSet) {
+                this.ipv4PrefixSet = ipv4PrefixSet;
+                return this;
+            }
+
+            /**
+             * The ID of the ENI.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -159,7 +220,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpSet.
+             * The private IP addresses assigned to the ENI.
              */
             public Builder privateIpSet(PrivateIpSet privateIpSet) {
                 this.privateIpSet = privateIpSet;

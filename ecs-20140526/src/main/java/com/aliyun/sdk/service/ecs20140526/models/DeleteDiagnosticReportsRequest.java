@@ -93,7 +93,7 @@ public class DeleteDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class DeleteDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * ReportIds.
+         * The IDs of diagnostic reports. You can specify up to 100 report IDs.
          */
         public Builder reportIds(java.util.List < String > reportIds) {
             this.putQueryParameter("ReportIds", reportIds);

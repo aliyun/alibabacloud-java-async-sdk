@@ -86,7 +86,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DedicatedHosts.
+         * Details about the dedicated hosts.
          */
         public Builder dedicatedHosts(DedicatedHosts dedicatedHosts) {
             this.dedicatedHosts = dedicatedHosts;
@@ -94,7 +94,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of dedicated hosts.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +131,168 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     } 
 
+    public static class SocketCapacity extends TeaModel {
+        @NameInMap("AvailableMemory")
+        private Float availableMemory;
+
+        @NameInMap("AvailableVcpu")
+        private Integer availableVcpu;
+
+        @NameInMap("SocketId")
+        private Integer socketId;
+
+        @NameInMap("TotalMemory")
+        private Float totalMemory;
+
+        @NameInMap("TotalVcpu")
+        private Integer totalVcpu;
+
+        private SocketCapacity(Builder builder) {
+            this.availableMemory = builder.availableMemory;
+            this.availableVcpu = builder.availableVcpu;
+            this.socketId = builder.socketId;
+            this.totalMemory = builder.totalMemory;
+            this.totalVcpu = builder.totalVcpu;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SocketCapacity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return availableMemory
+         */
+        public Float getAvailableMemory() {
+            return this.availableMemory;
+        }
+
+        /**
+         * @return availableVcpu
+         */
+        public Integer getAvailableVcpu() {
+            return this.availableVcpu;
+        }
+
+        /**
+         * @return socketId
+         */
+        public Integer getSocketId() {
+            return this.socketId;
+        }
+
+        /**
+         * @return totalMemory
+         */
+        public Float getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        /**
+         * @return totalVcpu
+         */
+        public Integer getTotalVcpu() {
+            return this.totalVcpu;
+        }
+
+        public static final class Builder {
+            private Float availableMemory; 
+            private Integer availableVcpu; 
+            private Integer socketId; 
+            private Float totalMemory; 
+            private Integer totalVcpu; 
+
+            /**
+             * AvailableMemory.
+             */
+            public Builder availableMemory(Float availableMemory) {
+                this.availableMemory = availableMemory;
+                return this;
+            }
+
+            /**
+             * AvailableVcpu.
+             */
+            public Builder availableVcpu(Integer availableVcpu) {
+                this.availableVcpu = availableVcpu;
+                return this;
+            }
+
+            /**
+             * SocketId.
+             */
+            public Builder socketId(Integer socketId) {
+                this.socketId = socketId;
+                return this;
+            }
+
+            /**
+             * TotalMemory.
+             */
+            public Builder totalMemory(Float totalMemory) {
+                this.totalMemory = totalMemory;
+                return this;
+            }
+
+            /**
+             * TotalVcpu.
+             */
+            public Builder totalVcpu(Integer totalVcpu) {
+                this.totalVcpu = totalVcpu;
+                return this;
+            }
+
+            public SocketCapacity build() {
+                return new SocketCapacity(this);
+            } 
+
+        } 
+
+    }
+    public static class SocketCapacities extends TeaModel {
+        @NameInMap("SocketCapacity")
+        private java.util.List < SocketCapacity> socketCapacity;
+
+        private SocketCapacities(Builder builder) {
+            this.socketCapacity = builder.socketCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SocketCapacities create() {
+            return builder().build();
+        }
+
+        /**
+         * @return socketCapacity
+         */
+        public java.util.List < SocketCapacity> getSocketCapacity() {
+            return this.socketCapacity;
+        }
+
+        public static final class Builder {
+            private java.util.List < SocketCapacity> socketCapacity; 
+
+            /**
+             * SocketCapacity.
+             */
+            public Builder socketCapacity(java.util.List < SocketCapacity> socketCapacity) {
+                this.socketCapacity = socketCapacity;
+                return this;
+            }
+
+            public SocketCapacities build() {
+                return new SocketCapacities(this);
+            } 
+
+        } 
+
+    }
     public static class Capacity extends TeaModel {
         @NameInMap("AvailableLocalStorage")
         private Integer availableLocalStorage;
@@ -146,6 +308,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         @NameInMap("LocalStorageCategory")
         private String localStorageCategory;
+
+        @NameInMap("SocketCapacities")
+        private SocketCapacities socketCapacities;
 
         @NameInMap("TotalLocalStorage")
         private Integer totalLocalStorage;
@@ -165,6 +330,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             this.availableVcpus = builder.availableVcpus;
             this.availableVgpus = builder.availableVgpus;
             this.localStorageCategory = builder.localStorageCategory;
+            this.socketCapacities = builder.socketCapacities;
             this.totalLocalStorage = builder.totalLocalStorage;
             this.totalMemory = builder.totalMemory;
             this.totalVcpus = builder.totalVcpus;
@@ -215,6 +381,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
+         * @return socketCapacities
+         */
+        public SocketCapacities getSocketCapacities() {
+            return this.socketCapacities;
+        }
+
+        /**
          * @return totalLocalStorage
          */
         public Integer getTotalLocalStorage() {
@@ -248,13 +421,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer availableVcpus; 
             private Integer availableVgpus; 
             private String localStorageCategory; 
+            private SocketCapacities socketCapacities; 
             private Integer totalLocalStorage; 
             private Float totalMemory; 
             private Integer totalVcpus; 
             private Integer totalVgpus; 
 
             /**
-             * AvailableLocalStorage.
+             * The amount of available space on the local disks. Unit: GiB.
              */
             public Builder availableLocalStorage(Integer availableLocalStorage) {
                 this.availableLocalStorage = availableLocalStorage;
@@ -262,7 +436,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableMemory.
+             * The amount of available memory space. Unit: GiB.
              */
             public Builder availableMemory(Float availableMemory) {
                 this.availableMemory = availableMemory;
@@ -270,7 +444,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableVcpus.
+             * The number of available vCPUs.
              */
             public Builder availableVcpus(Integer availableVcpus) {
                 this.availableVcpus = availableVcpus;
@@ -278,7 +452,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableVgpus.
+             * The number of available vGPUs.
              */
             public Builder availableVgpus(Integer availableVgpus) {
                 this.availableVgpus = availableVgpus;
@@ -286,7 +460,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorageCategory.
+             * The category of the local disks.
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -294,7 +468,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLocalStorage.
+             * SocketCapacities.
+             */
+            public Builder socketCapacities(SocketCapacities socketCapacities) {
+                this.socketCapacities = socketCapacities;
+                return this;
+            }
+
+            /**
+             * The total capacity of the local disks. Unit: GiB.
              */
             public Builder totalLocalStorage(Integer totalLocalStorage) {
                 this.totalLocalStorage = totalLocalStorage;
@@ -302,7 +484,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMemory.
+             * The total capacity of the memory. Unit: GiB.
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -310,7 +492,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVcpus.
+             * The total number of vCPUs.
              */
             public Builder totalVcpus(Integer totalVcpus) {
                 this.totalVcpus = totalVcpus;
@@ -318,7 +500,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVgpus.
+             * The total number of vGPUs.
              */
             public Builder totalVgpus(Integer totalVgpus) {
                 this.totalVgpus = totalVgpus;
@@ -359,7 +541,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * SerialNumber.
+             * This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -380,9 +562,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         private String instanceType;
 
+        @NameInMap("SocketId")
+        private String socketId;
+
         private Instance(Builder builder) {
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
+            this.socketId = builder.socketId;
         }
 
         public static Builder builder() {
@@ -407,12 +593,20 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        /**
+         * @return socketId
+         */
+        public String getSocketId() {
+            return this.socketId;
+        }
+
         public static final class Builder {
             private String instanceId; 
             private String instanceType; 
+            private String socketId; 
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance created on the dedicated host.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -420,10 +614,18 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the ECS instance created on the dedicated host.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * SocketId.
+             */
+            public Builder socketId(String socketId) {
+                this.socketId = socketId;
                 return this;
             }
 
@@ -514,7 +716,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer udpTimeout; 
 
             /**
-             * SlbUdpTimeout.
+             * The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.
              */
             public Builder slbUdpTimeout(Integer slbUdpTimeout) {
                 this.slbUdpTimeout = slbUdpTimeout;
@@ -522,7 +724,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * UdpTimeout.
+             * The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -563,7 +765,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the dedicated host was locked. Valid values:
+             * <p>
+             * 
+             * - financial: The dedicated host was locked due to overdue payments.
+             * - security: The dedicated host was locked due to security reasons.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -780,7 +986,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the dedicated host.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -788,7 +994,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the dedicated host.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1242,7 +1448,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * ActionOnMaintenance.
+             * The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:
+             * <p>
+             * 
+             * *   Migrate: The instances are migrated to another physical server. Instances that are not in the Stopped state when the dedicated host fails are restarted after migration.
+             * *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.
+             * 
+             * If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.
              */
             public Builder actionOnMaintenance(String actionOnMaintenance) {
                 this.actionOnMaintenance = actionOnMaintenance;
@@ -1250,7 +1462,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoPlacement.
+             * Indicates whether the dedicated host was added to the resource pool for automatic deployment. Valid values:
+             * <p>
+             * 
+             * *   on: The dedicated host was added to the resource pool for automatic deployment.
+             * *   off: The dedicated host was not added to the resource pool for automatic deployment.
+             * 
+             * For more information about automatic deployment, see the "[Automatic deployment](~~118938~~)" section in the Functions and features topic.
              */
             public Builder autoPlacement(String autoPlacement) {
                 this.autoPlacement = autoPlacement;
@@ -1258,7 +1476,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoReleaseTime.
+             * The automatic release time of the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1266,7 +1484,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * The performance specifications of the dedicated host.
              */
             public Builder capacity(Capacity capacity) {
                 this.capacity = capacity;
@@ -1274,7 +1492,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the dedicated host.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1282,7 +1500,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Cores.
+             * The number of cores in a single CPU.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -1290,7 +1508,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * CpuOverCommitRatio.
+             * The CPU overcommit ratio.
              */
             public Builder cpuOverCommitRatio(Float cpuOverCommitRatio) {
                 this.cpuOverCommitRatio = cpuOverCommitRatio;
@@ -1298,7 +1516,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the dedicated host was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1306,7 +1524,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostClusterId.
+             * The ID of the dedicated host cluster to which the dedicated host belongs.
              */
             public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
                 this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -1314,7 +1532,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostId.
+             * The ID of the dedicated host.
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -1322,7 +1540,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostName.
+             * The name of the dedicated host.
              */
             public Builder dedicatedHostName(String dedicatedHostName) {
                 this.dedicatedHostName = dedicatedHostName;
@@ -1330,7 +1548,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostType.
+             * The type of the dedicated host.
              */
             public Builder dedicatedHostType(String dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;
@@ -1338,7 +1556,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the dedicated host.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1346,7 +1564,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The expiration time of the subscription dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1354,7 +1572,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * GPUSpec.
+             * The GPU model.
              */
             public Builder GPUSpec(String GPUSpec) {
                 this.GPUSpec = GPUSpec;
@@ -1362,7 +1580,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostDetailInfo.
+             * This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder hostDetailInfo(HostDetailInfo hostDetailInfo) {
                 this.hostDetailInfo = hostDetailInfo;
@@ -1370,7 +1588,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * Details about the ECS instances that were created on the dedicated host.
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -1378,7 +1596,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * MachineId.
+             * The machine code of the dedicated host.
              */
             public Builder machineId(String machineId) {
                 this.machineId = machineId;
@@ -1386,7 +1604,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAttributes.
+             * The network attributes of the dedicated host.
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -1394,7 +1612,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationLocks.
+             * The reasons why the resources of the dedicated host were locked.
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -1402,7 +1620,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalGpus.
+             * The number of physical GPUs.
              */
             public Builder physicalGpus(Integer physicalGpus) {
                 this.physicalGpus = physicalGpus;
@@ -1410,7 +1628,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the dedicated host.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1418,7 +1636,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the dedicated host belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1426,7 +1644,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * SaleCycle.
+             * The unit of the subscription period. Valid values:
+             * <p>
+             * 
+             * *   Month
+             * *   Year
              */
             public Builder saleCycle(String saleCycle) {
                 this.saleCycle = saleCycle;
@@ -1442,7 +1664,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Sockets.
+             * The number of physical CPUs.
              */
             public Builder sockets(Integer sockets) {
                 this.sockets = sockets;
@@ -1450,7 +1672,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The service state of the dedicated host. Valid values:
+             * <p>
+             * 
+             * *   Available: The dedicated host is running normally.
+             * *   UnderAssessment: The dedicated host is at risk, which may cause issues to ECS instances on the dedicated host.
+             * *   PermanentFailure: The dedicated host has permanent failures and is unusable.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1458,7 +1685,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedCustomInstanceTypeFamilies.
+             * The custom ECS instance families supported by the dedicated host.
              */
             public Builder supportedCustomInstanceTypeFamilies(SupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies) {
                 this.supportedCustomInstanceTypeFamilies = supportedCustomInstanceTypeFamilies;
@@ -1466,7 +1693,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedInstanceTypeFamilies.
+             * The ECS instance families supported by the dedicated host.
              */
             public Builder supportedInstanceTypeFamilies(SupportedInstanceTypeFamilies supportedInstanceTypeFamilies) {
                 this.supportedInstanceTypeFamilies = supportedInstanceTypeFamilies;
@@ -1474,7 +1701,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedInstanceTypesList.
+             * The ECS instance types supported by the dedicated host.
              */
             public Builder supportedInstanceTypesList(SupportedInstanceTypesList supportedInstanceTypesList) {
                 this.supportedInstanceTypesList = supportedInstanceTypesList;
@@ -1482,7 +1709,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the dedicated host.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1490,7 +1717,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the dedicated host.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

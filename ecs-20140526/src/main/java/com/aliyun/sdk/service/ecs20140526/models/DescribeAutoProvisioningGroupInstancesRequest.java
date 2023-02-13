@@ -155,7 +155,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         } 
 
         /**
-         * AutoProvisioningGroupId.
+         * The ID of the auto provisioning group.
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -182,7 +182,12 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -191,7 +196,12 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,7 +210,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

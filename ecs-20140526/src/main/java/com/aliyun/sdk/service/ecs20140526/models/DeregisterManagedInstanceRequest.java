@@ -149,7 +149,7 @@ public class DeregisterManagedInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the managed instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,7 +176,10 @@ public class DeregisterManagedInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the secondary ENI. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

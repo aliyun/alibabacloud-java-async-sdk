@@ -186,7 +186,12 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -195,7 +200,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -222,7 +227,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -283,7 +288,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the elasticity assurance.
              */
             public Builder id(String id) {
                 this.id = id;

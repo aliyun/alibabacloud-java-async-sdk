@@ -177,7 +177,7 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * DeleteVersion.
+         * The version numbers of instance launch templates that to be deleted. You can specify at most 29 version numbers.
          */
         public Builder deleteVersion(java.util.List < Long > deleteVersion) {
             this.putQueryParameter("DeleteVersion", deleteVersion);
@@ -186,7 +186,7 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * LaunchTemplateId.
+         * The ID of the instance launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -195,7 +195,7 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * LaunchTemplateName.
+         * The name of the instance launch template.
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -222,7 +222,7 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the instance lauch template belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

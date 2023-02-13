@@ -86,7 +86,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Links.
+         * The details about the ClassicLink connections between the instances located in the classic network and the VPCs.
          */
         public Builder links(Links links) {
             this.links = links;
@@ -94,7 +94,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of ClassicLink connections.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -178,7 +178,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -247,7 +247,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -256,7 +256,12 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -265,7 +270,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the snapshot-consistent group.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -274,7 +279,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the NextToken value that is returned in the last call to the DescribeSnapshotGroups operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -301,7 +306,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +315,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the snapshot-consistent group belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -409,7 +414,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -417,7 +422,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

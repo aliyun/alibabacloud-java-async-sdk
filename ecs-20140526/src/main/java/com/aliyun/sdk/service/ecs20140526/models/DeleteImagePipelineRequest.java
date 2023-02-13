@@ -149,7 +149,7 @@ public class DeleteImagePipelineRequest extends Request {
         }
 
         /**
-         * ImagePipelineId.
+         * The ID of the image template.
          */
         public Builder imagePipelineId(String imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -176,7 +176,7 @@ public class DeleteImagePipelineRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

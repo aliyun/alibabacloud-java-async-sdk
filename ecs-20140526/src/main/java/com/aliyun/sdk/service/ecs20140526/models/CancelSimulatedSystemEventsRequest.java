@@ -149,7 +149,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * EventId.
+         * The IDs of system events. You can specify up to 100 system event IDs.
          */
         public Builder eventId(java.util.List < String > eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -176,7 +176,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the system event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

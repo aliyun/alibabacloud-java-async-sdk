@@ -33,6 +33,10 @@ public class CreateImageRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("DetectionStrategy")
+    private String detectionStrategy;
+
+    @Query
     @NameInMap("DiskDeviceMapping")
     private java.util.List < DiskDeviceMapping> diskDeviceMapping;
 
@@ -96,6 +100,7 @@ public class CreateImageRequest extends Request {
         this.bootMode = builder.bootMode;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.detectionStrategy = builder.detectionStrategy;
         this.diskDeviceMapping = builder.diskDeviceMapping;
         this.imageFamily = builder.imageFamily;
         this.imageName = builder.imageName;
@@ -158,6 +163,13 @@ public class CreateImageRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return detectionStrategy
+     */
+    public String getDetectionStrategy() {
+        return this.detectionStrategy;
     }
 
     /**
@@ -264,6 +276,7 @@ public class CreateImageRequest extends Request {
         private String bootMode; 
         private String clientToken; 
         private String description; 
+        private String detectionStrategy; 
         private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
         private String imageFamily; 
         private String imageName; 
@@ -290,6 +303,7 @@ public class CreateImageRequest extends Request {
             this.bootMode = request.bootMode;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.detectionStrategy = request.detectionStrategy;
             this.diskDeviceMapping = request.diskDeviceMapping;
             this.imageFamily = request.imageFamily;
             this.imageName = request.imageName;
@@ -316,7 +330,14 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * Architecture.
+         * The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, you must use the Architecture parameter to specify the system architecture of the system disk. Valid values:
+         * <p>
+         * 
+         * *   i386
+         * *   x86\_64
+         * *   arm64
+         * 
+         * Default value: x86\_64.
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -325,7 +346,13 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * BootMode.
+         * The boot mode of the custom image. Valid values:
+         * <p>
+         * 
+         * *   BIOS
+         * *   UEFI
+         * 
+         * > You must be aware of the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can start as expected.
          */
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);
@@ -334,7 +361,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -352,7 +379,37 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * DiskDeviceMapping.
+         * The mode in which to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.
+         * <p>
+         * 
+         * The following items are checked in standard check mode:
+         * 
+         * *   Virtio: whether the virtio driver is installed.
+         * *   Fstab: whether mounting configurations in the fstab file are correct.
+         * *   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.
+         * *   SystemImage: whether the image is valid. Do not import images that are in the ISO format or empty.
+         * *   CloudInit: whether cloud-init is installed.
+         * *   NVMe: whether the NVMe driver is installed.
+         * *   Selinux: whether SElinux is enabled.
+         * *   OnlineResizeFS: whether the root partition can be automatically resized.
+         * *   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).
+         * *   RtcTimeMode: the RTC time mode.
+         * *   Platform: the platform. Example: Linux or Windows.
+         * *   OSVersion: the operating system version. Example: Centos 7.9.
+         * *   Architecture: the architecture. Example: ARM or x86\_64.
+         * *   BootMode: the boot mode. Example: UEFI or Legacy.
+         * *   KernelVersion: the kernel version.
+         * *   CloudAssistant: whether the Cloud Assistant client is installed.
+         * *   SecurityCenterAgent: whether the Security Center agent is installed.
+         */
+        public Builder detectionStrategy(String detectionStrategy) {
+            this.putQueryParameter("DetectionStrategy", detectionStrategy);
+            this.detectionStrategy = detectionStrategy;
+            return this;
+        }
+
+        /**
+         * Details about the custom images.
          */
         public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
@@ -379,7 +436,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * ImageVersion.
+         * The version of the custom image.
+         * <p>
+         * 
+         * > If you specify an instance by setting `InstanceId` and the instance uses an Alibaba Cloud Marketplace image or a custom image derived from an Alibaba Cloud Marketplace image, this parameter must be left empty or set to the value of the ImageVersion parameter of the instance.
          */
         public Builder imageVersion(String imageVersion) {
             this.putQueryParameter("ImageVersion", imageVersion);
@@ -388,7 +448,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -415,7 +475,23 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, you must use the Platform parameter to specify the distribution of the operating system for the system disk. Valid values:
+         * <p>
+         * 
+         * *   CentOS
+         * *   Ubuntu
+         * *   SUSE
+         * *   OpenSUSE
+         * *   RedHat
+         * *   Debian
+         * *   CoreOS
+         * *   Aliyun
+         * *   Windows Server 2012
+         * *   Windows 7
+         * *   Customized Linux
+         * *   Others Linux
+         * 
+         * Default value: Others Linux.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -424,7 +500,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to create the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -433,7 +509,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.
+         * <p>
+         * 
+         * > If you call the CopyImage operation as a Resource Access Management (RAM) user who is not authorized to manage the default resource group and do not specify the `ResourceGroupId` parameter, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -460,7 +539,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot that is used to create the custom image.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -469,7 +548,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the custom image.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -547,7 +626,11 @@ public class CreateImageRequest extends Request {
             private String snapshotId; 
 
             /**
-             * Device.
+             * The device name of disk N in the custom image. Valid values:
+             * <p>
+             * 
+             * *   For disk categories other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values are in alphabetical order from /dev/vda to /dev/vdz.
+             * *   For basic disks, the valid values are in alphabetical order from /dev/xvda to /dev/xvdz.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -555,7 +638,11 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * DiskType.
+             * The type of disk N in the custom image. You can set this parameter to create the system disk of the custom image from a data disk snapshot. If you do not set this parameter, the disk type is determined by the corresponding snapshot. Valid values:
+             * <p>
+             * 
+             * *   system: system disk
+             * *   data: data disk
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -563,7 +650,15 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * Size.
+             * The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on DiskDeviceMapping.N.SnapshotId.
+             * <p>
+             * 
+             * *   If no corresponding snapshot IDs are specified in the DiskDeviceMapping.N.SnapshotId value, the following valid values and default values are available for DiskDeviceMapping.N.Size:
+             * 
+             *     *   For basic disks, the valid values are 5 to 2000, and the default value is 5.
+             *     *   For other disk categories, the valid values are 20 to 32768, and the default value is 20.
+             * 
+             * *   If a corresponding snapshot ID is specified in the DiskDeviceMapping.N.SnapshotId value, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -571,7 +666,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the snapshot that is used to create the custom image.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -624,7 +719,7 @@ public class CreateImageRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -632,7 +727,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

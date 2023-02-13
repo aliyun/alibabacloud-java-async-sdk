@@ -33,12 +33,30 @@ public class CreateNetworkInterfaceRequest extends Request {
     private String instanceType;
 
     @Query
+    @NameInMap("Ipv4Prefix")
+    private java.util.List < String > ipv4Prefix;
+
+    @Query
+    @NameInMap("Ipv4PrefixCount")
+    @Validation(maximum = 10, minimum = 1)
+    private Integer ipv4PrefixCount;
+
+    @Query
     @NameInMap("Ipv6Address")
     private java.util.List < String > ipv6Address;
 
     @Query
     @NameInMap("Ipv6AddressCount")
     private Integer ipv6AddressCount;
+
+    @Query
+    @NameInMap("Ipv6Prefix")
+    private java.util.List < String > ipv6Prefix;
+
+    @Query
+    @NameInMap("Ipv6PrefixCount")
+    @Validation(maximum = 10, minimum = 1)
+    private Integer ipv6PrefixCount;
 
     @Query
     @NameInMap("NetworkInterfaceName")
@@ -121,8 +139,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.instanceType = builder.instanceType;
+        this.ipv4Prefix = builder.ipv4Prefix;
+        this.ipv4PrefixCount = builder.ipv4PrefixCount;
         this.ipv6Address = builder.ipv6Address;
         this.ipv6AddressCount = builder.ipv6AddressCount;
+        this.ipv6Prefix = builder.ipv6Prefix;
+        this.ipv6PrefixCount = builder.ipv6PrefixCount;
         this.networkInterfaceName = builder.networkInterfaceName;
         this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
         this.ownerAccount = builder.ownerAccount;
@@ -192,6 +214,20 @@ public class CreateNetworkInterfaceRequest extends Request {
     }
 
     /**
+     * @return ipv4Prefix
+     */
+    public java.util.List < String > getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    /**
+     * @return ipv4PrefixCount
+     */
+    public Integer getIpv4PrefixCount() {
+        return this.ipv4PrefixCount;
+    }
+
+    /**
      * @return ipv6Address
      */
     public java.util.List < String > getIpv6Address() {
@@ -203,6 +239,20 @@ public class CreateNetworkInterfaceRequest extends Request {
      */
     public Integer getIpv6AddressCount() {
         return this.ipv6AddressCount;
+    }
+
+    /**
+     * @return ipv6Prefix
+     */
+    public java.util.List < String > getIpv6Prefix() {
+        return this.ipv6Prefix;
+    }
+
+    /**
+     * @return ipv6PrefixCount
+     */
+    public Integer getIpv6PrefixCount() {
+        return this.ipv6PrefixCount;
     }
 
     /**
@@ -337,8 +387,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         private String clientToken; 
         private String description; 
         private String instanceType; 
+        private java.util.List < String > ipv4Prefix; 
+        private Integer ipv4PrefixCount; 
         private java.util.List < String > ipv6Address; 
         private Integer ipv6AddressCount; 
+        private java.util.List < String > ipv6Prefix; 
+        private Integer ipv6PrefixCount; 
         private String networkInterfaceName; 
         private String networkInterfaceTrafficMode; 
         private String ownerAccount; 
@@ -369,8 +423,12 @@ public class CreateNetworkInterfaceRequest extends Request {
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.instanceType = request.instanceType;
+            this.ipv4Prefix = request.ipv4Prefix;
+            this.ipv4PrefixCount = request.ipv4PrefixCount;
             this.ipv6Address = request.ipv6Address;
             this.ipv6AddressCount = request.ipv6AddressCount;
+            this.ipv6Prefix = request.ipv6Prefix;
+            this.ipv6PrefixCount = request.ipv6PrefixCount;
             this.networkInterfaceName = request.networkInterfaceName;
             this.networkInterfaceTrafficMode = request.networkInterfaceTrafficMode;
             this.ownerAccount = request.ownerAccount;
@@ -401,7 +459,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * BusinessType.
+         * > This parameter is no longer used.
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -410,7 +468,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -419,7 +477,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -428,7 +489,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * > This parameter is no longer used.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -437,7 +498,30 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Ipv6Address.
+         * > This parameter is in invitational preview and is unavailable for general users.
+         */
+        public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
+            this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+
+        /**
+         * > This parameter is in invitational preview and is unavailable for general users.
+         */
+        public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
+            this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
+            this.ipv4PrefixCount = ipv4PrefixCount;
+            return this;
+        }
+
+        /**
+         * IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.
+         * <p>
+         * 
+         * Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
+         * 
+         * > To assign IPv6 addresses to the ENI, you must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but not both.
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -446,7 +530,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Ipv6AddressCount.
+         * The number of IPv6 addresses to generate at random for the ENI. Valid values: 1 to 10.
+         * <p>
+         * 
+         * > To assign IPv6 addresses to the ENI, you must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but not both.
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -455,7 +542,28 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceName.
+         * > This parameter is in invitational preview and is unavailable for general users.
+         */
+        public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
+            this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
+            this.ipv6Prefix = ipv6Prefix;
+            return this;
+        }
+
+        /**
+         * > This parameter is in invitational preview and is unavailable for general users.
+         */
+        public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
+            this.putQueryParameter("Ipv6PrefixCount", ipv6PrefixCount);
+            this.ipv6PrefixCount = ipv6PrefixCount;
+            return this;
+        }
+
+        /**
+         * The name of the ENI. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
@@ -464,7 +572,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceTrafficMode.
+         * The communication model of the ENI. Valid values:
+         * <p>
+         * 
+         * *   Standard: uses the TCP communication mode.
+         * *   HighPerformance: enables Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
+         * 
+         * > HighPerformance supports only the c7re RDMA-enhanced instance family. The maximum number of ENIs in RDMA mode that can be attached to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Instance families](~~25378~~).
+         * 
+         * Default value: Standard.
          */
         public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
             this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);
@@ -491,7 +607,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * PrimaryIpAddress.
+         * The primary private IP address to assign to the ENI.
+         * <p>
+         * 
+         * The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is randomly assigned from within the CIDR block of the vSwitch.
          */
         public Builder primaryIpAddress(String primaryIpAddress) {
             this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
@@ -500,7 +619,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * Secondary private IP address N to assign to the ENI. The IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.
+         * <p>
+         * 
+         * > To assign secondary private IP addresses to the ENI, you cannot specify both the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -509,7 +631,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * QueueNumber.
+         * The number of queues supported by the ENI. Valid values: 1 to 2048.
+         * <p>
+         * 
+         * When you attach the ENI to an instance, make sure that the value of this parameter is smaller than the maximum number of queues per ENI allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the `MaximumQueueNumberPerEni` response parameter.
+         * 
+         * This parameter is empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the `SecondaryEniQueueNumber` response parameter.
          */
         public Builder queueNumber(Integer queueNumber) {
             this.putQueryParameter("QueueNumber", queueNumber);
@@ -518,7 +645,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * QueuePairNumber.
+         * > This parameter is in invitational preview and is unavailable for general users.
          */
         public Builder queuePairNumber(Integer queuePairNumber) {
             this.putQueryParameter("QueuePairNumber", queuePairNumber);
@@ -527,7 +654,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to create the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -536,7 +663,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which to assign the ENI. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -563,7 +690,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * SecondaryPrivateIpAddressCount.
+         * The number of private IP addresses to be automatically created by ECS.
          */
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             this.putQueryParameter("SecondaryPrivateIpAddressCount", secondaryPrivateIpAddressCount);
@@ -572,7 +699,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.
+         * <p>
+         * 
+         * > You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -581,7 +711,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * SecurityGroupIds.
+         * The ID of security group N to which to assign the ENI. The security group and the ENI must belong to the same VPC. The valid values of N are determined based on the maximum number of security groups to which an ENI can be assigned. For more information, see [Limits](~~25412~~).
+         * <p>
+         * 
+         * > You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -590,7 +723,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the ENI.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -599,7 +732,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -608,7 +741,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Visible.
+         * > This parameter is no longer used.
          */
         public Builder visible(Boolean visible) {
             this.putQueryParameter("Visible", visible);
@@ -662,7 +795,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -670,7 +803,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -134,7 +134,7 @@ public class DeleteDiskRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk to be released.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -152,7 +152,7 @@ public class DeleteDiskRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * RAM 用户的虚拟账号ID。
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -161,7 +161,7 @@ public class DeleteDiskRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * 资源主账号的账号名称。
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -170,7 +170,7 @@ public class DeleteDiskRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * 资源主账号的ID，亦即UID。
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

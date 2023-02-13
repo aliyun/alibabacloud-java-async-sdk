@@ -265,7 +265,19 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * AllowMigrateAcrossZone.
+         * Specifies whether to support cross-cluster instance type upgrades.
+         * <p>
+         * 
+         * Default value: false.
+         * 
+         * When `AllowMigrateAcrossZone` is set to true and you upgrade the instance configurations based on the returned information, take note of the following items:
+         * 
+         * Instances of the classic network type:
+         * 
+         * *   For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software license codes of the instance are changed. For more information, see [Retired instance types](~~55263~~). For Linux instances, basic disks (`cloud`) are identified by the prefix **xvd** such as **xvda and xvdb**. Ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified by the prefix **vd** such as **vda and vdb**.
+         * *   For instance families that are available for purchase, when the instance type of an instance is changed, the private IP address of the instance is also changed. For more information, see [Instance families](~~25378~~).
+         * 
+         * Instances of the Virtual Private Cloud (VPC) type: For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software license codes of the instance are changed. For Linux instances, basic disks (`cloud`) are identified by the prefix **xvd** such as **xvda and xvdb**. Ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified by the prefix **vd** such as **vda and vdb**.
          */
         public Builder allowMigrateAcrossZone(Boolean allowMigrateAcrossZone) {
             this.putQueryParameter("AllowMigrateAcrossZone", allowMigrateAcrossZone);
@@ -274,7 +286,10 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Async.
+         * Specifies whether to submit an asynchronous request.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -283,7 +298,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -292,7 +307,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -301,7 +316,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The new instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -310,7 +325,13 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthIn.
+         * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
+         * <p>
+         * 
+         * *   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.
+         * *   When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.
+         * 
+         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
@@ -319,7 +340,10 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthOut.
+         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
+         * <p>
+         * 
+         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -397,7 +421,11 @@ public class ModifyInstanceSpecRequest extends Request {
             private String category; 
 
             /**
-             * Category.
+             * The new category of the system disk. This parameter is valid only when you upgrade an instance from a retired instance type to an available instance type or when you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Instance families](~~25378~~). Valid values:
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
              */
             public Builder category(String category) {
                 this.category = category;
@@ -463,7 +491,7 @@ public class ModifyInstanceSpecRequest extends Request {
             private String startTime; 
 
             /**
-             * EndTime.
+             * > This parameter is in invitational preview and is unavailable to general users.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -471,7 +499,7 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * InternetMaxBandwidthOut.
+             * > This parameter is in invitational preview and is unavailable to general users.
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -479,7 +507,7 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * > This parameter is in invitational preview and is unavailable to general users.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

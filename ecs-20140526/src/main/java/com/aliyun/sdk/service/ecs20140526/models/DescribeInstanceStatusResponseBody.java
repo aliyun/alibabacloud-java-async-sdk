@@ -86,7 +86,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceStatuses.
+         * The status information of the instances.
          */
         public Builder instanceStatuses(InstanceStatuses instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
@@ -94,7 +94,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * InstanceId.
+             * The ID of instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -178,7 +178,14 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the instance. Valid values:
+             * <p>
+             * 
+             * * Pending: The instance is being created.
+             * * Running: The instance is running.
+             * * Starting: The instance is being started.
+             * * Stopping: The instance is being stopped.
+             * * Stopped: The instance is stopped.
              */
             public Builder status(String status) {
                 this.status = status;

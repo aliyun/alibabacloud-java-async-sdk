@@ -74,7 +74,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -82,7 +82,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceTypes.
+         * Details about the instance types that are supported by the image.
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -90,7 +90,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -98,7 +98,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             private Float memorySize; 
 
             /**
-             * CpuCoreCount.
+             * The number of vCPUs of the instance type.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -182,7 +182,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * The instance family.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -190,7 +190,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeId.
+             * The ID of the instance type.
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -198,7 +198,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * The memory size of the instance type. Unit: GiB.
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;

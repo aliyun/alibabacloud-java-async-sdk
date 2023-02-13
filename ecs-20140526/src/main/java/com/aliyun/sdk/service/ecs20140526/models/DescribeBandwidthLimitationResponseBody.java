@@ -50,7 +50,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Bandwidths.
+         * Details about the maximum public bandwidth.
          */
         public Builder bandwidths(Bandwidths bandwidths) {
             this.bandwidths = bandwidths;
@@ -58,7 +58,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * InternetChargeType.
+             * The billing method for network usage. Valid values:
+             * <p>
+             * 
+             * *   PayByBandwidth
+             * *   PayByTraffic
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -142,7 +146,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * Max.
+             * The maximum public bandwidth.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -150,7 +154,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * The minimum public bandwidth.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -158,7 +162,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the public bandwidth.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

@@ -183,7 +183,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         } 
 
         /**
-         * AutoProvisioningGroupId.
+         * The ID of the auto provisioning group.
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -192,7 +192,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range of the queried data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -219,7 +219,10 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -228,7 +231,10 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Maximum value: 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -237,7 +243,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the auto provisioning group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +270,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range of the queried data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

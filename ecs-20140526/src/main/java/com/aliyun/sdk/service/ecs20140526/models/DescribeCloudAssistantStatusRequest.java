@@ -190,7 +190,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of instances. You can specify up to 100 instance IDs in each request.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +199,11 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * OSType.
+         * The operating system type of the instance. Valid values:
+         * <p>
+         * 
+         * *   Windows
+         * *   Linux
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -226,7 +230,12 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,7 +244,12 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +258,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

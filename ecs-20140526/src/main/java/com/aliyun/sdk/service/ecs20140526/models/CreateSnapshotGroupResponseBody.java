@@ -50,7 +50,7 @@ public class CreateSnapshotGroupResponseBody extends TeaModel {
         private String snapshotGroupId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateSnapshotGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotGroupId.
+         * The ID of the snapshot-consistent group.
          */
         public Builder snapshotGroupId(String snapshotGroupId) {
             this.snapshotGroupId = snapshotGroupId;

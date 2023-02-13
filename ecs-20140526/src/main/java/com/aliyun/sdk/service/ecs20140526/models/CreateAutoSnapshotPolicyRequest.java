@@ -41,6 +41,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("StorageLocationArn")
+    private String storageLocationArn;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -81,6 +85,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.storageLocationArn = builder.storageLocationArn;
         this.tag = builder.tag;
         this.targetCopyRegions = builder.targetCopyRegions;
         this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
@@ -153,6 +158,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
+     * @return storageLocationArn
+     */
+    public String getStorageLocationArn() {
+        return this.storageLocationArn;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -209,6 +221,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String storageLocationArn; 
         private java.util.List < Tag> tag; 
         private String targetCopyRegions; 
         private String autoSnapshotPolicyName; 
@@ -230,6 +243,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.storageLocationArn = request.storageLocationArn;
             this.tag = request.tag;
             this.targetCopyRegions = request.targetCopyRegions;
             this.autoSnapshotPolicyName = request.autoSnapshotPolicyName;
@@ -249,7 +263,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * CopiedSnapshotsRetentionDays.
+         * The retention period of the snapshot copy in the destination region. Unit: days. Valid values:
+         * <p>
+         * 
+         * *   \-1: The snapshot is permanently retained.
+         * *   1 to 65535: The automatic snapshot is retained for the specified number of days.
+         * 
+         * Default value: -1.
          */
         public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
             this.putQueryParameter("CopiedSnapshotsRetentionDays", copiedSnapshotsRetentionDays);
@@ -258,7 +278,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * EnableCrossRegionCopy.
+         * Specifies whether to enable cross-region replication for the automatic snapshot.
+         * <p>
+         * 
+         * *   true: enables cross-region replication for snapshots.
+         * *   false: disables cross-region replication for snapshots.
          */
         public Builder enableCrossRegionCopy(Boolean enableCrossRegionCopy) {
             this.putQueryParameter("EnableCrossRegionCopy", enableCrossRegionCopy);
@@ -276,7 +300,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -303,7 +327,16 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * Tag.
+         * > This parameter is unavailable.
+         */
+        public Builder storageLocationArn(String storageLocationArn) {
+            this.putQueryParameter("StorageLocationArn", storageLocationArn);
+            this.storageLocationArn = storageLocationArn;
+            return this;
+        }
+
+        /**
+         * The tags to add to the automatic snapshot policy.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -312,7 +345,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * TargetCopyRegions.
+         * The destination region to which to copy the snapshot. You can specify only a single destination region.
          */
         public Builder targetCopyRegions(String targetCopyRegions) {
             this.putQueryParameter("TargetCopyRegions", targetCopyRegions);
@@ -321,7 +354,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * autoSnapshotPolicyName.
+         * The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
             this.putQueryParameter("autoSnapshotPolicyName", autoSnapshotPolicyName);
@@ -330,7 +366,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The ID of the region in which to create the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -339,7 +375,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * repeatWeekdays.
+         * The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to Monday to Sunday. 1 indicates Monday.
+         * <p>
+         * 
+         * *   Set this parameter to a JSON-formatted array. For example, a value of \["1"] specifies automatic snapshots to be created every Monday.
+         * *   To schedule multiple automatic snapshots to be created in a week, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of seven days. For example, a value of \["1","3","5"] specifies automatic snapshots to be created every Monday, Wednesday, and Friday.
          */
         public Builder repeatWeekdays(String repeatWeekdays) {
             this.putQueryParameter("repeatWeekdays", repeatWeekdays);
@@ -348,7 +388,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * retentionDays.
+         * The retention period of the automatic snapshot. Unit: days. Valid values:
+         * <p>
+         * 
+         * *   \-1: The snapshot is permanently retained.
+         * *   1 to 65535: The automatic snapshot is retained for the specified number of days.
+         * 
+         * Default value: -1.
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("retentionDays", retentionDays);
@@ -357,7 +403,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * timePoints.
+         * The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Format description:
+         * <p>
+         * 
+         * *   You must set this parameter to a JSON-formatted array. For example, a value of \["1"] specifies automatic snapshots to be created at 01:00:00.
+         * *   To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of 24 points in time. For example, a value of \["1","3","5"] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.
          */
         public Builder timePoints(String timePoints) {
             this.putQueryParameter("timePoints", timePoints);
@@ -411,7 +461,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder key(String key) {
                 this.key = key;
@@ -419,7 +469,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder value(String value) {
                 this.value = value;

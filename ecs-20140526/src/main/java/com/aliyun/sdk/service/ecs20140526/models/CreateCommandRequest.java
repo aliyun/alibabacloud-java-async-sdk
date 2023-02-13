@@ -60,6 +60,10 @@ public class CreateCommandRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("Timeout")
     private Long timeout;
 
@@ -85,6 +89,7 @@ public class CreateCommandRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.timeout = builder.timeout;
         this.type = builder.type;
         this.workingDir = builder.workingDir;
@@ -181,6 +186,13 @@ public class CreateCommandRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return timeout
      */
     public Long getTimeout() {
@@ -213,6 +225,7 @@ public class CreateCommandRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private Long timeout; 
         private String type; 
         private String workingDir; 
@@ -234,6 +247,7 @@ public class CreateCommandRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
             this.timeout = request.timeout;
             this.type = request.type;
             this.workingDir = request.workingDir;
@@ -249,7 +263,43 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * CommandContent.
+         * The Base64-encoded content of the command.
+         * <p>
+         * 
+         * *   The parameter value must be Base64-encoded and cannot exceed 18 KB in size.
+         * 
+         * *   Custom parameters can be added to the command. To enable the custom parameter feature, you must set `EnableParameter` to true.
+         * 
+         *     *   Custom parameters are defined in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.
+         *     *   The number of custom parameters cannot exceed 20.
+         *     *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive.
+         *     *   Each custom parameter name cannot exceed 64 bytes in length.
+         * 
+         * *   You can specify built-in environment parameters as custom parameters. Then, when you run the command, these parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:
+         * 
+         *     *   `{{ACS::RegionId}}`: the ID of the region.
+         * 
+         *     *   `{{ACS::AccountId}}`: the UID of the Alibaba Cloud account.
+         * 
+         *     *   `{{ACS::InstanceId}}`: the ID of the instance. When the command is run on multiple instances, if you want to specify `{{ACS::InstanceId}}` as a built-in environment variable, make sure that the version of the Cloud Assistant client is not earlier than the following ones:
+         * 
+         *         *   Linux: 2.2.3.309
+         *         *   Windows: 2.1.3.309
+         * 
+         *     *   `{{ACS::InstanceName}}`: the name of the instance. If you want to run the command on multiple instances and specify `{{ACS::InstanceName}}` as a built-in environment parameter, make sure that the version of the Cloud Assistant client is not earlier than the following ones:
+         * 
+         *         *   Linux: 2.2.3.344
+         *         *   Windows: 2.1.3.344
+         * 
+         *     *   `{{ACS::InvokeId}}`: the ID of the command task. If you want to specify `{{ACS::InvokeId}}` as a built-in environment variable, make sure that the version of the Cloud Assistant client is not earlier than the following one:
+         * 
+         *         *   Linux: 2.2.3.309
+         *         *   Windows: 2.1.3.309
+         * 
+         *     *   `{{ACS::CommandId}}`: the ID of the command. When you call the [RunCommand](~~141751~~) operation, if you want to specify `{{ACS::CommandId}}` as a built-in environment parameter, make sure that the version of the Cloud Assistant client is not earlier than the following ones:
+         * 
+         *         *   Linux: 2.2.3.309
+         *         *   Windows: 2.1.3.309
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -258,7 +308,15 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * ContentEncoding.
+         * The encoding mode of the command content (CommandContent). Valid values:
+         * <p>
+         * 
+         * *   PlainText: The command content is not encoded.
+         * *   Base64: The command content is Base64-encoded.
+         * 
+         * Default value: Base64.
+         * 
+         * > If the specified value of this parameter is invalid, Base64 is used by default.
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -267,7 +325,7 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the command. The description supports all character sets and can be up to 512 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -276,7 +334,10 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * EnableParameter.
+         * Specifies whether to use custom parameters in the command.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder enableParameter(Boolean enableParameter) {
             this.putQueryParameter("EnableParameter", enableParameter);
@@ -285,7 +346,7 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the command. The name supports all character sets and can be up to 128 characters in length.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -312,7 +373,7 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to create the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -339,7 +400,19 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The tags to add to the command.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The maximum timeout period for the command execution on the instance. Unit: seconds. When a command cannot be run, a timeout error occurs. After that, the command process is forcefully terminated by canceling the PID of the command.
+         * <p>
+         * 
+         * Default value: 60.
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -348,7 +421,12 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * Type.
+         * The command type. Valid values:
+         * <p>
+         * 
+         * *   RunBatScript: batch commands. These commands are applicable to Windows instances.
+         * *   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.
+         * *   RunShellScript: shell commands. These commands are applicable to Linux instances.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -357,7 +435,13 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * WorkingDir.
+         * The working directory of the command on the instance.
+         * <p>
+         * 
+         * Default value:
+         * 
+         * *   For Linux instances, the default value is the home directory of the root user, which is the `/root` directory.
+         * *   For Windows instances, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32\`.
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);
@@ -372,4 +456,73 @@ public class CreateCommandRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

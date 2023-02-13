@@ -110,7 +110,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NextToken.
+         * The query token returned in this call. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no more results are to be returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -118,7 +118,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
+         * <p>
+         * 
+         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -126,7 +129,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
+         * <p>
+         * 
+         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -134,7 +140,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the security group.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -142,7 +148,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +156,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroups.
+         * Details about the security groups.
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -158,7 +164,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of security groups. If the `MaxResults` and `NextToken` parameters are specified in the request, the value of this parameter is not returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -210,7 +216,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the security group.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -218,7 +224,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the security group.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -432,7 +438,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AvailableInstanceAmount.
+             * > This parameter is in invitational preview and unavailable for general users.
              */
             public Builder availableInstanceAmount(Integer availableInstanceAmount) {
                 this.availableInstanceAmount = availableInstanceAmount;
@@ -440,7 +446,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the security group was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -448,7 +454,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the security group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -456,7 +462,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsCount.
+             * > This parameter is in invitational preview and unavailable for general users.
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -464,7 +470,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the security group belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -472,7 +478,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -480,7 +486,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupName.
+             * The name of the security group.
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -488,7 +494,11 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupType.
+             * The type of the security group. Valid values:
+             * <p>
+             * 
+             * *   normal: basic security group
+             * *   enterprise: advanced security group
              */
             public Builder securityGroupType(String securityGroupType) {
                 this.securityGroupType = securityGroupType;
@@ -496,7 +506,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceID.
+             * The ID of the distributor to which the security group belongs.
              */
             public Builder serviceID(Long serviceID) {
                 this.serviceID = serviceID;
@@ -504,7 +514,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceManaged.
+             * Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -512,7 +522,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the security groups.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -520,7 +530,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC to which the security group belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

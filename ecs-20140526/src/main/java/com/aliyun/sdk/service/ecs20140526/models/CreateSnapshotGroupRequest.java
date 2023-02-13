@@ -66,6 +66,10 @@ public class CreateSnapshotGroupRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("StorageLocationArn")
+    private String storageLocationArn;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -84,6 +88,7 @@ public class CreateSnapshotGroupRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.storageLocationArn = builder.storageLocationArn;
         this.tag = builder.tag;
     }
 
@@ -192,6 +197,13 @@ public class CreateSnapshotGroupRequest extends Request {
     }
 
     /**
+     * @return storageLocationArn
+     */
+    public String getStorageLocationArn() {
+        return this.storageLocationArn;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -212,6 +224,7 @@ public class CreateSnapshotGroupRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String storageLocationArn; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -233,11 +246,12 @@ public class CreateSnapshotGroupRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.storageLocationArn = request.storageLocationArn;
             this.tag = request.tag;
         } 
 
         /**
-         * Description.
+         * The description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -246,7 +260,13 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of disk N for which you want to create snapshots. You can specify multiple disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 disks and cannot exceed 32 TiB in size.
+         * <p>
+         * 
+         * Take note of the following items:
+         * 
+         * *   You cannot specify both DiskId.N and `ExcludeDiskId.N`.
+         * *   If `InstanceId` is set, you can use DiskId.N to specify only disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify disks attached to multiple instances.
          */
         public Builder diskId(java.util.List < String > diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -255,7 +275,12 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * ExcludeDiskId.
+         * The ID of disk N for which you do not need to create snapshots. After this parameter is specified, the created snapshot-consistent group does not contain snapshots of the disk. Valid values of N: 1 to 16.
+         * <p>
+         * 
+         * This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.
+         * 
+         * > You cannot specify ExcludeDiskId.N and `DiskId.N`.
          */
         public Builder excludeDiskId(java.util.List < String > excludeDiskId) {
             this.putQueryParameter("ExcludeDiskId", excludeDiskId);
@@ -264,7 +289,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -273,7 +298,13 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * InstantAccess.
+         * Specify whether to enable the instant access feature. Valid values:
+         * <p>
+         * 
+         * *   true: enables the instant access feature.
+         * *   false: disables the instant access feature.
+         * 
+         * Default value: false.
          */
         public Builder instantAccess(Boolean instantAccess) {
             this.putQueryParameter("InstantAccess", instantAccess);
@@ -282,7 +313,12 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * InstantAccessRetentionDays.
+         * Specify the number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.
+         * <p>
+         * 
+         * This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration of the instant access feature expires.
+         * 
+         * This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when snapshots are released.
          */
         public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
             this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
@@ -291,7 +327,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -318,7 +354,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -327,7 +363,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the snapshot-consistent group belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -354,7 +390,16 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * > This parameter is unavailable.
+         */
+        public Builder storageLocationArn(String storageLocationArn) {
+            this.putQueryParameter("StorageLocationArn", storageLocationArn);
+            this.storageLocationArn = storageLocationArn;
+            return this;
+        }
+
+        /**
+         * The list of tags that are associated with the instances.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -408,7 +453,7 @@ public class CreateSnapshotGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -416,7 +461,7 @@ public class CreateSnapshotGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

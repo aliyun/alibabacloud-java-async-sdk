@@ -233,7 +233,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * ImageComponentId.
+         * The IDs of the image components. You can specify up to 20 image components.
          */
         public Builder imageComponentId(java.util.List < String > imageComponentId) {
             this.putQueryParameter("ImageComponentId", imageComponentId);
@@ -242,7 +242,10 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. Valid values: 1 to 500.
+         * <p>
+         * 
+         * Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -251,7 +254,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the image component. You must specify an exact name to search for the image component.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -260,7 +263,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImageComponents operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -269,7 +272,11 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The type of the image component. Valid values:
+         * <p>
+         * 
+         * *   SELF: the custom component that you created.
+         * *   ALIYUN: the system component provided by Alibaba Cloud.
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -296,7 +303,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -305,7 +312,10 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -332,7 +342,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -386,7 +396,7 @@ public class DescribeImageComponentsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the image component. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +404,7 @@ public class DescribeImageComponentsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the image component. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

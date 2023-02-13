@@ -144,7 +144,7 @@ public class DeleteSnapshotGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +171,7 @@ public class DeleteSnapshotGroupRequest extends Request {
         }
 
         /**
-         * SnapshotGroupId.
+         * The ID of the snapshot-consistent group. You can call the [DescribeSnapshotGroups](~~210940~~) operation to query the IDs of one or more snapshot-consistent groups.
          */
         public Builder snapshotGroupId(String snapshotGroupId) {
             this.putQueryParameter("SnapshotGroupId", snapshotGroupId);

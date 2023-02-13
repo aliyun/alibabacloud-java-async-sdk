@@ -292,7 +292,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * EventId.
+         * The IDs of the event. You can specify up to 100 event IDs in a single request.
          */
         public Builder eventId(java.util.List < String > eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -301,7 +301,16 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The type of the system event. This parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values:
+         * <p>
+         * 
+         * *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+         * *   SystemFailure.Reboot: The instance is restarted due to a system failure.
+         * *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+         * *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
+         * *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
+         * *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
+         * *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -310,7 +319,17 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * HealthStatus.
+         * The health state of the instance. Valid values:
+         * <p>
+         * 
+         * *   Impaired: The instance is impaired.
+         * *   Warning: The performance of the instance is degraded.
+         * *   Maintaining: The instance is being maintained.
+         * *   Initializing: The instance is being initialized.
+         * *   InsufficientData: The state cannot be determined due to insufficient data.
+         * *   NotApplicable: The state is not applicable.
+         * 
+         * All these values are case-sensitive.
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -319,7 +338,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * InstanceEventType.
+         * The types of system events. You can specify up to 30 event types in a single request.
          */
         public Builder instanceEventType(java.util.List < String > instanceEventType) {
             this.putQueryParameter("InstanceEventType", instanceEventType);
@@ -328,7 +347,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of the instances. You can specify up to 100 instance IDs in a single request.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -355,7 +374,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be a positive integer.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -364,7 +386,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -373,7 +398,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -400,7 +425,12 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The lifecycle state of the instance. Valid values:
+         * <p>
+         * 
+         * *   Starting: The instance is being started.
+         * *   Running: The instance is running.
+         * *   Stopped: The instance is stopped.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -454,7 +484,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
             private String start; 
 
             /**
-             * End.
+             * The end of the period during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
              */
             public Builder end(String end) {
                 this.end = end;
@@ -462,7 +492,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
             }
 
             /**
-             * Start.
+             * The beginning of the period during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -515,7 +545,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
             private String start; 
 
             /**
-             * End.
+             * The end of the period during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
              */
             public Builder end(String end) {
                 this.end = end;
@@ -523,7 +553,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
             }
 
             /**
-             * Start.
+             * The beginning of the period during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
              */
             public Builder start(String start) {
                 this.start = start;

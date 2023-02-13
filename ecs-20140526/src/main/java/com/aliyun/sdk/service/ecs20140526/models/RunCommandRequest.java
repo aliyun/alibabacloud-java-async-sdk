@@ -80,6 +80,10 @@ public class RunCommandRequest extends Request {
     private String repeatMode;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -134,6 +138,7 @@ public class RunCommandRequest extends Request {
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
         this.repeatMode = builder.repeatMode;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
@@ -271,6 +276,13 @@ public class RunCommandRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -350,6 +362,7 @@ public class RunCommandRequest extends Request {
         private java.util.Map < String, ? > parameters; 
         private String regionId; 
         private String repeatMode; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < Tag> tag; 
@@ -382,6 +395,7 @@ public class RunCommandRequest extends Request {
             this.parameters = request.parameters;
             this.regionId = request.regionId;
             this.repeatMode = request.repeatMode;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
@@ -535,6 +549,15 @@ public class RunCommandRequest extends Request {
         public Builder repeatMode(String repeatMode) {
             this.putQueryParameter("RepeatMode", repeatMode);
             this.repeatMode = repeatMode;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -206,7 +206,11 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   true: Automatic payment is enabled. Make sure that you have sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.
+         * *   false: An order is generated but no payment is made. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -215,7 +219,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,7 +228,11 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * DiskChargeType.
+         * The new billing method of the disk. Default value: PrePaid. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: changes the billing method from pay-as-you-go to subscription.
+         * *   PostPaid: changes the billing method from subscription to pay-as-you-go.
          */
         public Builder diskChargeType(String diskChargeType) {
             this.putQueryParameter("DiskChargeType", diskChargeType);
@@ -233,7 +241,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * DiskIds.
+         * The list of disk IDs. The value is a JSON array that consists of up to 16 disk IDs. Separate multiple disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -242,7 +250,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to which the disk is attached.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -260,7 +268,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * 资源主账号的ID，亦即UID。
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -269,7 +277,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,7 +286,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * 资源主账号的账号名称。
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -287,7 +295,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * RAM用户的虚拟账号ID。
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

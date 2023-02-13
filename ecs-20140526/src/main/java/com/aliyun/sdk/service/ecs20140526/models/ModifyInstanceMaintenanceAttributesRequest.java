@@ -190,7 +190,12 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * ActionOnMaintenance.
+         * The maintenance action. Valid values:
+         * <p>
+         * 
+         * *   Stop: stops the instance.
+         * *   AutoRecover: automatically recovers the instance.
+         * *   AutoRedeploy: redeploys the instance, which may damage the data of the local disks (if any).
          */
         public Builder actionOnMaintenance(String actionOnMaintenance) {
             this.putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
@@ -199,7 +204,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of instance N. Valid values of N: 1 to 100.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -208,7 +213,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * MaintenanceWindow.
+         * The maintenance windows.
          */
         public Builder maintenanceWindow(java.util.List < MaintenanceWindow> maintenanceWindow) {
             this.putQueryParameter("MaintenanceWindow", maintenanceWindow);
@@ -217,7 +222,13 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * NotifyOnMaintenance.
+         * Specifies whether to send an event notification before maintenance. Valid values:
+         * <p>
+         * 
+         * *   True: sends an event notification.
+         * *   False: does not send an event notification.
+         * 
+         * Default value: false.
          */
         public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
             this.putQueryParameter("NotifyOnMaintenance", notifyOnMaintenance);
@@ -244,7 +255,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -316,7 +327,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             private String startTime; 
 
             /**
-             * EndTime.
+             * The end time of the maintenance window. The time must be on the hour at exactly 0 minute and 0 second. The StartTime and EndTime parameters must be specified at the same time. The EndTime value must be 1 to 23 hours later than the StartTime value. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -324,7 +335,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The start time of the maintenance window. The time must be on the hour at exactly 0 minute and 0 second. The StartTime and EndTime parameters must be specified at the same time. The EndTime value must be 1 to 23 hours later than the StartTime value. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

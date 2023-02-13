@@ -251,7 +251,7 @@ public class DescribeSpotAdviceRequest extends Request {
         } 
 
         /**
-         * Cores.
+         * The number of vCPUs of the instance type. For information about the valid values, see [Instance families](~~25378~~).
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -260,7 +260,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * GpuAmount.
+         * The number of GPUs per GPU-accelerated instance. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).
          */
         public Builder gpuAmount(Integer gpuAmount) {
             this.putQueryParameter("GpuAmount", gpuAmount);
@@ -269,7 +269,16 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * GpuSpec.
+         * The GPU type. Valid values:
+         * <p>
+         * 
+         * *   NVIDIA P4
+         * *   NVIDIA T4
+         * *   NVIDIA P100
+         * *   NVIDIA V100
+         * *   NVIDIA A100
+         * 
+         * This parameter is empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](~~108496~~).
          */
         public Builder gpuSpec(String gpuSpec) {
             this.putQueryParameter("GpuSpec", gpuSpec);
@@ -278,7 +287,14 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * InstanceFamilyLevel.
+         * The level of the instance family. Valid values:
+         * <p>
+         * 
+         * *   EntryLevel
+         * *   EnterpriseLevel
+         * *   CreditEntryLevel. For more information, see [Burstable instance overview](~~59977~~).
+         * 
+         * This parameter is empty by default, which indicates that instance families of all levels are queried.
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -287,7 +303,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * InstanceTypeFamily.
+         * The instance family. For information about the valid values, see [Instance families](~~25378~~).
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -296,7 +312,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * InstanceTypes.
+         * The list of instance types. You can enter up to 10 instance types.
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -305,7 +321,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * Memory.
+         * The memory size of the instance type. Unit: GiB. For information about the valid values, see [Instance families](~~25378~~).
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -314,7 +330,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * MinCores.
+         * The minimum number of vCPUs of the instance type. For information about the valid values, see [Instance families](~~25378~~).
          */
         public Builder minCores(Integer minCores) {
             this.putQueryParameter("MinCores", minCores);
@@ -323,7 +339,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * MinMemory.
+         * The minimum memory size of the instance type. For information about the valid values, see [Instance families](~~25378~~).
          */
         public Builder minMemory(Float minMemory) {
             this.putQueryParameter("MinMemory", minMemory);
@@ -350,7 +366,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -377,7 +393,10 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
+         * <p>
+         * 
+         * This parameter is empty by default, which indicates that all zones in the specified region are queried.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

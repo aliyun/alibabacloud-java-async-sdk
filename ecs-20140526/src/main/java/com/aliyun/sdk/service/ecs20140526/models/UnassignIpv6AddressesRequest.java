@@ -18,8 +18,11 @@ public class UnassignIpv6AddressesRequest extends Request {
 
     @Query
     @NameInMap("Ipv6Address")
-    @Validation(required = true)
     private java.util.List < String > ipv6Address;
+
+    @Query
+    @NameInMap("Ipv6Prefix")
+    private java.util.List < String > ipv6Prefix;
 
     @Query
     @NameInMap("NetworkInterfaceId")
@@ -51,6 +54,7 @@ public class UnassignIpv6AddressesRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.ipv6Address = builder.ipv6Address;
+        this.ipv6Prefix = builder.ipv6Prefix;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -84,6 +88,13 @@ public class UnassignIpv6AddressesRequest extends Request {
      */
     public java.util.List < String > getIpv6Address() {
         return this.ipv6Address;
+    }
+
+    /**
+     * @return ipv6Prefix
+     */
+    public java.util.List < String > getIpv6Prefix() {
+        return this.ipv6Prefix;
     }
 
     /**
@@ -131,6 +142,7 @@ public class UnassignIpv6AddressesRequest extends Request {
     public static final class Builder extends Request.Builder<UnassignIpv6AddressesRequest, Builder> {
         private String sourceRegionId; 
         private java.util.List < String > ipv6Address; 
+        private java.util.List < String > ipv6Prefix; 
         private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -146,6 +158,7 @@ public class UnassignIpv6AddressesRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.ipv6Address = request.ipv6Address;
+            this.ipv6Prefix = request.ipv6Prefix;
             this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -169,6 +182,15 @@ public class UnassignIpv6AddressesRequest extends Request {
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
             this.ipv6Address = ipv6Address;
+            return this;
+        }
+
+        /**
+         * Ipv6Prefix.
+         */
+        public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
+            this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
+            this.ipv6Prefix = ipv6Prefix;
             return this;
         }
 

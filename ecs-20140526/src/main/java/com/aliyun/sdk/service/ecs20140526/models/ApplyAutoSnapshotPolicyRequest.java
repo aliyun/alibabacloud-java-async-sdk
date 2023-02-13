@@ -177,7 +177,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * autoSnapshotPolicyId.
+         * The ID of the automatic snapshot policy.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("autoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -186,7 +186,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * diskIds.
+         * The IDs of disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("diskIds", diskIds);
@@ -195,7 +195,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID of the automatic snapshot policy and the disks. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

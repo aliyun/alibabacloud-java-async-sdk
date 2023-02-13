@@ -149,7 +149,7 @@ public class DeleteImageComponentRequest extends Request {
         }
 
         /**
-         * ImageComponentId.
+         * The ID of the image component.
          */
         public Builder imageComponentId(String imageComponentId) {
             this.putQueryParameter("ImageComponentId", imageComponentId);
@@ -176,7 +176,7 @@ public class DeleteImageComponentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

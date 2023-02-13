@@ -163,7 +163,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
-         * Choice.
+         * > This parameter is in invitational preview and is unavailable.
          */
         public Builder choice(String choice) {
             this.putQueryParameter("Choice", choice);
@@ -172,7 +172,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
-         * EventId.
+         * The ID of the system event.
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -199,7 +199,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the system event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

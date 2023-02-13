@@ -62,7 +62,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Metrics.
+         * The list of diagnostic metrics.
          */
         public Builder metrics(java.util.List < Metrics> metrics) {
             this.metrics = metrics;
@@ -70,7 +70,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             private String supportedOperatingSystem; 
 
             /**
-             * Description.
+             * The description of the diagnostic metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -198,7 +198,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * GuestMetric.
+             * Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.
              */
             public Builder guestMetric(Boolean guestMetric) {
                 this.guestMetric = guestMetric;
@@ -206,7 +206,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricCategory.
+             * The category of the diagnostic metric.
              */
             public Builder metricCategory(String metricCategory) {
                 this.metricCategory = metricCategory;
@@ -214,7 +214,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricId.
+             * The ID of the diagnostic metric.
              */
             public Builder metricId(String metricId) {
                 this.metricId = metricId;
@@ -222,7 +222,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * The name of the diagnostic metric.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -230,7 +230,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type supported by the diagnostic metric.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -238,7 +238,12 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedOperatingSystem.
+             * The operating system type supported by the diagnostic metric. Valid values:
+             * <p>
+             * 
+             * *   Windows
+             * *   Linux
+             * *   All: both Windows and Linux
              */
             public Builder supportedOperatingSystem(String supportedOperatingSystem) {
                 this.supportedOperatingSystem = supportedOperatingSystem;

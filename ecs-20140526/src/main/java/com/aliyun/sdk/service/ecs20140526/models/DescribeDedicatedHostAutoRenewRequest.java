@@ -149,7 +149,7 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
         }
 
         /**
-         * DedicatedHostIds.
+         * The IDs of the dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).
          */
         public Builder dedicatedHostIds(String dedicatedHostIds) {
             this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
@@ -176,7 +176,7 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -205,7 +205,12 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * ExpectedRenewDay.
+         * The synchronized expiration date. If you set this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.
+         * <p>
+         * 
+         * For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of instances](~~108486~~).
+         * 
+         * > The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.
          */
         public Builder expectedRenewDay(Integer expectedRenewDay) {
             this.putQueryParameter("ExpectedRenewDay", expectedRenewDay);
@@ -232,7 +237,15 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal period. Valid values:
+         * <p>
+         * 
+         * *   Valid values when `PriceUnit` is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+         * *   Valid values when `PriceUnit` is set to `Year`: 1, 2, 3.
+         * 
+         * Default value: 1.
+         * 
+         * > The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -241,7 +254,13 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * PriceUnit.
+         * The unit of the renewal period. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
+         * 
+         * Default value: Month.
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -250,7 +269,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +278,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource. When the `ResourceType` parameter is set to`  instance `, `ResourceId` is interpreted as `InstanceId`.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -286,7 +305,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to instance.
+         * <p>
+         * 
+         * Default value: instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

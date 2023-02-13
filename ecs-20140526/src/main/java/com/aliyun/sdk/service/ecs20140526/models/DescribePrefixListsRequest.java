@@ -205,7 +205,13 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * AddressFamily.
+         * The IP address family of the prefix list. Valid values:
+         * <p>
+         * 
+         * *   IPv4
+         * *   IPv6
+         * 
+         * This parameter is empty by default, which indicates that all prefix lists are queried.
          */
         public Builder addressFamily(String addressFamily) {
             this.putQueryParameter("AddressFamily", addressFamily);
@@ -214,7 +220,12 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -223,7 +234,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -250,7 +261,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * PrefixListId.
+         * The IDs of prefix list.
          */
         public Builder prefixListId(java.util.List < String > prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -259,7 +270,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * PrefixListName.
+         * The name of the prefix list.
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -268,7 +279,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

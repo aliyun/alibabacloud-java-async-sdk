@@ -162,7 +162,10 @@ public class DeleteLaunchTemplateRequest extends Request {
         }
 
         /**
-         * LaunchTemplateId.
+         * The ID of the instance launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.
+         * <p>
+         * 
+         * You must specify the `LaunchTemplateId` parameter or the `LaunchTemplateName` parameter to determine an instance launch template.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -171,7 +174,10 @@ public class DeleteLaunchTemplateRequest extends Request {
         }
 
         /**
-         * LaunchTemplateName.
+         * The name of the instance launch template.
+         * <p>
+         * 
+         * You must specify the `LaunchTemplateId` parameter or the `LaunchTemplateName` parameter to determine an instance launch template.
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -198,7 +204,7 @@ public class DeleteLaunchTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

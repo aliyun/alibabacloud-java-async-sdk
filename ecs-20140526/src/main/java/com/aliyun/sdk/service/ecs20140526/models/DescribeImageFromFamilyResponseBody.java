@@ -50,7 +50,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Image.
+         * The image information.
          */
         public Builder image(Image image) {
             this.image = image;
@@ -58,7 +58,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Device.
+             * The device name of the disk. Example: /dev/xvdb.
+             * <p>
+             * 
+             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -178,7 +181,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * The format of the image.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -186,7 +189,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * ImportOSSBucket.
+             * The OSS bucket that contains the imported image file.
              */
             public Builder importOSSBucket(String importOSSBucket) {
                 this.importOSSBucket = importOSSBucket;
@@ -194,7 +197,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * ImportOSSObject.
+             * The OSS object corresponding to the imported image file.
              */
             public Builder importOSSObject(String importOSSObject) {
                 this.importOSSObject = importOSSObject;
@@ -202,7 +205,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the disk. Unit: GiB.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -210,7 +213,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the snapshot.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -218,7 +221,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the image.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -312,7 +315,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the image.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -320,7 +323,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the image.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -666,7 +669,11 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * Architecture.
+             * The image architecture. Valid values:
+             * <p>
+             * 
+             * *   i386
+             * *   x86\_64
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -674,7 +681,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the image was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -682,7 +689,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the image.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -690,7 +697,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * DiskDeviceMappings.
+             * The mappings between the disks and snapshots under the image.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -698,7 +705,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * ImageFamily.
+             * The name of the image family.
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -706,7 +713,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -714,7 +721,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -722,7 +729,13 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * The alias of the image owner. Valid values:
+             * <p>
+             * 
+             * - system: public images provided by Alibaba Cloud
+             * - self: your custom images
+             * - others: shared images from other Alibaba Cloud accounts
+             * - marketplace: Alibaba Cloud Marketplace images
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -730,7 +743,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * The version of the image.
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -738,7 +751,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * IsCopied.
+             * Indicates whether the image is a copy of another image.
              */
             public Builder isCopied(Boolean isCopied) {
                 this.isCopied = isCopied;
@@ -746,7 +759,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * IsSelfShared.
+             * Indicates whether the image has been shared to other Alibaba Cloud accounts.
              */
             public Builder isSelfShared(String isSelfShared) {
                 this.isSelfShared = isSelfShared;
@@ -754,7 +767,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * IsSubscribed.
+             * Indicates whether you have subscribed to the image corresponding to the specified product code.
              */
             public Builder isSubscribed(Boolean isSubscribed) {
                 this.isSubscribed = isSubscribed;
@@ -762,7 +775,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * IsSupportCloudinit.
+             * Indicates whether the image supports cloud-init.
              */
             public Builder isSupportCloudinit(Boolean isSupportCloudinit) {
                 this.isSupportCloudinit = isSupportCloudinit;
@@ -770,7 +783,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * IsSupportIoOptimized.
+             * Indicates whether the image can be used on I/O optimized instances.
              */
             public Builder isSupportIoOptimized(Boolean isSupportIoOptimized) {
                 this.isSupportIoOptimized = isSupportIoOptimized;
@@ -778,7 +791,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * The name of the operating system.
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -786,7 +799,11 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * The type of the operating system. Valid values:
+             * <p>
+             * 
+             * - windows
+             * - linux
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -794,7 +811,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The platform of the operating system.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -802,7 +819,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The product code of the Alibaba Cloud Marketplace image.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -810,7 +827,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The image creation progress. Unit: percent (%).
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -818,7 +835,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the image. Unit: GiB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -826,7 +843,13 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image. Valid values:
+             * <p>
+             * 
+             * - UnAvailable: The image is unavailable.
+             * - Available: The image is available.
+             * - Creating: The image is being created.
+             * - CreateFailed: The image failed to be created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -834,7 +857,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * An array that consists of Tag data.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -842,7 +865,11 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * Indicates whether the image has been used to create ECS instances. Valid values:
+             * <p>
+             * 
+             * - instance: The image has been used to create one or more ECS instances.
+             * - none: The image has not been used to create ECS instances.
              */
             public Builder usage(String usage) {
                 this.usage = usage;

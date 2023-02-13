@@ -167,7 +167,7 @@ public class DescribePrefixListAttributesRequest extends Request {
         }
 
         /**
-         * PrefixListId.
+         * The ID of the prefix list.
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -176,7 +176,7 @@ public class DescribePrefixListAttributesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

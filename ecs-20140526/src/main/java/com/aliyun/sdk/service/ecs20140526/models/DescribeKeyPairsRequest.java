@@ -205,7 +205,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * KeyPairFingerPrint.
+         * The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see [RFC 4716](https://tools.ietf.org/html/rfc4716).
          */
         public Builder keyPairFingerPrint(String keyPairFingerPrint) {
             this.putQueryParameter("KeyPairFingerPrint", keyPairFingerPrint);
@@ -214,7 +214,13 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair. You can use the asterisk (\*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:
+         * <p>
+         * 
+         * *   `*SshKey`: queries key pairs whose names end with SshKey, including the key pair named SshKey.
+         * *   `SshKey*`: queries key pairs whose names start with SshKey, including the key pair named SshKey.
+         * *   `*SshKey*`: queries key pairs whose names include SshKey, including the key pair named SshKey.
+         * *   `SshKey`: queries the key pair named SshKey.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -232,7 +238,10 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -241,7 +250,10 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 50.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -250,7 +262,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +271,10 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -286,7 +301,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -340,7 +355,10 @@ public class DescribeKeyPairsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the key pair. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -348,7 +366,7 @@ public class DescribeKeyPairsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the key pair. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

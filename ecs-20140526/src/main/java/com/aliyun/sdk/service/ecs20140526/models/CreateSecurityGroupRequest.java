@@ -246,7 +246,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -255,7 +255,10 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the security group. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -282,7 +285,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,7 +294,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the security group belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -318,7 +321,10 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * SecurityGroupName.
+         * The name of the security group.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`. This parameter is empty by default.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -327,7 +333,11 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * SecurityGroupType.
+         * The type of the security group. Valid values:
+         * <p>
+         * 
+         * *   normal: basic security group
+         * *   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).
          */
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);
@@ -336,7 +346,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * ServiceManaged.
+         * This parameter is unavailable.
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
@@ -345,7 +355,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that are bound to the security group.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -354,7 +364,10 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC in which to create the security group.
+         * <p>
+         * 
+         * > The VpcId parameter is required only when you want to create security groups of the VPC type. In regions that support the classic network, you can create security groups of the classic network type without specifying the VpcId parameter.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -408,7 +421,10 @@ public class CreateSecurityGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -416,7 +432,10 @@ public class CreateSecurityGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

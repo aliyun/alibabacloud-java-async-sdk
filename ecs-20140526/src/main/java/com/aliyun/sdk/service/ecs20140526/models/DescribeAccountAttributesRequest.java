@@ -148,7 +148,7 @@ public class DescribeAccountAttributesRequest extends Request {
         }
 
         /**
-         * AttributeName.
+         * The list of attribute names.
          */
         public Builder attributeName(java.util.List < String > attributeName) {
             this.putQueryParameter("AttributeName", attributeName);
@@ -166,7 +166,7 @@ public class DescribeAccountAttributesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +193,7 @@ public class DescribeAccountAttributesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

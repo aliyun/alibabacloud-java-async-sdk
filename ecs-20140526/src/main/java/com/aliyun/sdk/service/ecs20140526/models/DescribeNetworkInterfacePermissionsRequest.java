@@ -190,7 +190,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the ENIs to query.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -199,7 +199,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * NetworkInterfacePermissionId.
+         * The IDs of permissions on the ENI. You can specify up to 100 ENI permission IDs.
          */
         public Builder networkInterfacePermissionId(java.util.List < String > networkInterfacePermissionId) {
             this.putQueryParameter("NetworkInterfacePermissionId", networkInterfacePermissionId);
@@ -226,7 +226,12 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,7 +240,12 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +254,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

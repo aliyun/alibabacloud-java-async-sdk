@@ -182,7 +182,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CreationTime.
+         * The time when the task was created.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -190,7 +190,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * FailedCount.
+         * The number of failed tasks.
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -198,7 +198,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * FinishedTime.
+         * The time when the task was complete.
          */
         public Builder finishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
@@ -206,7 +206,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * OperationProgressSet.
+         * An array consisting of OperationProgress data of each subtask.
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -214,7 +214,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the task.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -222,7 +222,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * The number of completed tasks.
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -238,7 +238,11 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SupportCancel.
+         * Indicates whether the task can be canceled ([CancelTask](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask)). Valid values: 
+         * <p>
+         * 
+         * - true: The task can be canceled.
+         * - false: The task cannot be canceled.
          */
         public Builder supportCancel(String supportCancel) {
             this.supportCancel = supportCancel;
@@ -246,7 +250,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskAction.
+         * The operation name of the task.
          */
         public Builder taskAction(String taskAction) {
             this.taskAction = taskAction;
@@ -254,7 +258,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -262,7 +266,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskProcess.
+         * The progress of the task.
          */
         public Builder taskProcess(String taskProcess) {
             this.taskProcess = taskProcess;
@@ -270,7 +274,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * The status of the task.
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -278,7 +282,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tasks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -330,7 +334,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the related item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +342,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the related item.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -456,7 +460,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -464,7 +468,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The error message.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -472,7 +476,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * OperationStatus.
+             * The status of the operation.
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -480,7 +484,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedItemSet.
+             * An array consisting of RelatedItem data.
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;

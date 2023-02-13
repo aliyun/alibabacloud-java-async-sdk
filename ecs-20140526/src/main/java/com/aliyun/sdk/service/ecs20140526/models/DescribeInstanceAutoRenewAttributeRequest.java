@@ -190,7 +190,10 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of instances. You can specify a maximum of 100 subscription instance IDs in a single requets. Separate the instance IDs with commas (,).
+         * <p>
+         * 
+         * > The `InstanceId` and `RenewalStatus` parameters cannot be empty at the same time.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +220,12 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +234,12 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +248,7 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,7 +257,12 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * The auto-renewal state of the instance. Valid values:
+         * <p>
+         * 
+         * *   AutoRenewal: Auto-renewal is enabled for the instance.
+         * *   Normal: Auto-renewal is disabled for the instance.
+         * *   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal state to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

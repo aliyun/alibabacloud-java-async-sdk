@@ -148,7 +148,13 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to force delete the snapshot that has been used to create disks. Valid values:
+         * <p>
+         * 
+         * *   true: force deletes the snapshot. After the snapshot is force deleted, the disks created from this snapshot cannot be re-initialized.
+         * *   false: does not force delete the snapshot.
+         * 
+         * Default value: false
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -193,7 +199,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

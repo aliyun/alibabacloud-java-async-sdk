@@ -178,7 +178,12 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -187,7 +192,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -214,7 +219,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * PrefixListId.
+         * The ID of the prefix list.
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -223,7 +228,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

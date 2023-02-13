@@ -27,7 +27,7 @@ public class ResizeDiskRequest extends Request {
 
     @Query
     @NameInMap("NewSize")
-    @Validation(required = true, maximum = 32768, minimum = 5)
+    @Validation(required = true, maximum = 65536, minimum = 5)
     private Integer newSize;
 
     @Query

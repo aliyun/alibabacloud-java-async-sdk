@@ -247,7 +247,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * DeploymentSetIds.
+         * The IDs of deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs in the format of `["ds-xxxxxxxxx", "ds-yyyyyyyyy", … "ds-zzzzzzzzz"]`. Separate multiple deployment set IDs with commas (,).
          */
         public Builder deploymentSetIds(String deploymentSetIds) {
             this.putQueryParameter("DeploymentSetIds", deploymentSetIds);
@@ -256,7 +256,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * DeploymentSetName.
+         * The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
@@ -265,7 +265,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * Domain.
+         * > The parameter is deprecated.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -274,7 +274,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * > The parameter is deprecated.
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -283,7 +283,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * > The parameter is deprecated.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -310,7 +310,12 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -319,7 +324,12 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -328,7 +338,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -355,7 +365,11 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * Strategy.
+         * The deployment strategy. Valid values:
+         * <p>
+         * 
+         * *   Availability: high availability strategy.
+         * *   AvailabilityGroup: high availability group strategy.
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

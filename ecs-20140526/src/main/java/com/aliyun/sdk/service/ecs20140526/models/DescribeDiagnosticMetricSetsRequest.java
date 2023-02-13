@@ -126,7 +126,13 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. Maximum value: 100.
+         * <p>
+         * 
+         * Default value:
+         * 
+         * *   If this parameter is left empty, the default value is 10.
+         * *   If this parameter is set to a value greater than 100, the default value is 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -144,7 +150,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetricSets operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -153,7 +159,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the diagnostic metric set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +168,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type supported by the diagnostic metric set.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -171,7 +177,13 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the diagnostic metric set. Valid values:
+         * <p>
+         * 
+         * *   User: user-defined diagnostic metric set
+         * *   Common: common diagnostic metric set
+         * 
+         * Default value: user.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -174,7 +174,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource on which you want to add or overwrite tags. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +183,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource. When ResourceType is set to instance, this parameter can be interpreted as InstanceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -210,7 +210,23 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance: ECS instance
+         * *   disk: disk
+         * *   snapshot: snapshot
+         * *   image: image
+         * *   securitygroup: security group
+         * *   volume: storage volume
+         * *   eni: elastic network interface (ENI)
+         * *   ddh: dedicated host
+         * *   keypair: SSH key pair
+         * *   launchtemplate: launch template
+         * *   reservedinstance: reserved instance
+         * *   snapshotpolicy: automatic snapshot policy
+         * 
+         * All these values are lowercase.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -219,7 +235,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -273,7 +289,7 @@ public class AddTagsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://](http://https://).
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +297,7 @@ public class AddTagsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://](http://https://).
              */
             public Builder value(String value) {
                 this.value = value;

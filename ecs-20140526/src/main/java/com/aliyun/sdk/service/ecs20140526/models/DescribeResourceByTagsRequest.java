@@ -186,7 +186,10 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -195,7 +198,10 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 100.
+         * <p>
+         * 
+         * Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -204,7 +210,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +237,21 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance: ECS instance
+         * *   disk: disk
+         * *   snapshot: snapshot
+         * *   image: image
+         * *   securitygroup: security group
+         * *   volume: storage volume
+         * *   eni: elastic network interface (ENI)
+         * *   ddh: dedicated host
+         * *   keypair: SSH key pair
+         * *   launchtemplate: launch template
+         * 
+         * All the preceding values must be lowercase.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -240,7 +260,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -294,7 +314,7 @@ public class DescribeResourceByTagsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the resource. Valid values of N: 1 to 20 The tag key cannot be an empty string. It can be up to 128 characters in length.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +322,7 @@ public class DescribeResourceByTagsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the resource. Valid values of N: 1 to 20 The tag value can be an empty string. It can be up to 128 characters in length.
              */
             public Builder value(String value) {
                 this.value = value;

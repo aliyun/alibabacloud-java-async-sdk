@@ -103,6 +103,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
     private String securityGroupId;
 
     @Query
+    @NameInMap("SecurityGroupRuleId")
+    private java.util.List < String > securityGroupRuleId;
+
+    @Query
     @NameInMap("SourceCidrIp")
     private String sourceCidrIp;
 
@@ -134,6 +138,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
+        this.securityGroupRuleId = builder.securityGroupRuleId;
         this.sourceCidrIp = builder.sourceCidrIp;
         this.sourcePortRange = builder.sourcePortRange;
     }
@@ -306,6 +311,13 @@ public class RevokeSecurityGroupEgressRequest extends Request {
     }
 
     /**
+     * @return securityGroupRuleId
+     */
+    public java.util.List < String > getSecurityGroupRuleId() {
+        return this.securityGroupRuleId;
+    }
+
+    /**
      * @return sourceCidrIp
      */
     public String getSourceCidrIp() {
@@ -342,6 +354,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
+        private java.util.List < String > securityGroupRuleId; 
         private String sourceCidrIp; 
         private String sourcePortRange; 
 
@@ -373,6 +386,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
+            this.securityGroupRuleId = request.securityGroupRuleId;
             this.sourceCidrIp = request.sourceCidrIp;
             this.sourcePortRange = request.sourcePortRange;
         } 
@@ -572,6 +586,15 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupRuleId.
+         */
+        public Builder securityGroupRuleId(java.util.List < String > securityGroupRuleId) {
+            this.putQueryParameter("SecurityGroupRuleId", securityGroupRuleId);
+            this.securityGroupRuleId = securityGroupRuleId;
             return this;
         }
 

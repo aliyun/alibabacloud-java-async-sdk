@@ -74,7 +74,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         private Float tradePrice; 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -82,7 +82,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order. This parameter is returned only when `InstanceChargeType` is set to PrePaid.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -90,7 +90,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TradePrice.
+         * The transaction price.
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;

@@ -50,7 +50,7 @@ public class CopySnapshotResponseBody extends TeaModel {
         private String snapshotId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CopySnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the new snapshot.
          */
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = snapshotId;

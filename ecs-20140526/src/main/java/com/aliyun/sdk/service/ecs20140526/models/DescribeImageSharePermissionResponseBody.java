@@ -122,7 +122,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Accounts.
+         * The Alibaba Cloud accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -130,7 +130,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ImageId.
+         * The ID of the custom image.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -138,7 +138,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +146,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +154,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -162,7 +162,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ShareGroups.
+         * The shared groups.
          */
         public Builder shareGroups(ShareGroups shareGroups) {
             this.shareGroups = shareGroups;
@@ -178,7 +178,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             private String aliyunId; 
 
             /**
-             * AliyunId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder aliyunId(String aliyunId) {
                 this.aliyunId = aliyunId;
@@ -300,7 +300,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             private String group; 
 
             /**
-             * Group.
+             * The shared group.
              */
             public Builder group(String group) {
                 this.group = group;

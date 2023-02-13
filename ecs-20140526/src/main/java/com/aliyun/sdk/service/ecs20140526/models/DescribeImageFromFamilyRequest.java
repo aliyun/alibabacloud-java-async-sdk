@@ -149,7 +149,7 @@ public class DescribeImageFromFamilyRequest extends Request {
         }
 
         /**
-         * ImageFamily.
+         * The name of the image family. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http://, https://, acs:, or aliyun.
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -176,7 +176,7 @@ public class DescribeImageFromFamilyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

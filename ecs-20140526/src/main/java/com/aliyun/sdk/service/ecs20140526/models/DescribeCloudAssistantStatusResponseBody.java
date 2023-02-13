@@ -86,7 +86,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * InstanceCloudAssistantStatusSet.
+         * Details about the installation status of the Cloud Assistant client.
          */
         public Builder instanceCloudAssistantStatusSet(InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet) {
             this.instanceCloudAssistantStatusSet = instanceCloudAssistantStatusSet;
@@ -94,7 +94,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of instances.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             private Boolean supportSessionManager; 
 
             /**
-             * ActiveTaskCount.
+             * The number of commands that are being run.
              */
             public Builder activeTaskCount(Long activeTaskCount) {
                 this.activeTaskCount = activeTaskCount;
@@ -262,7 +262,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAssistantStatus.
+             * Indicates whether the Cloud Assistant client is installed on the instance.
              */
             public Builder cloudAssistantStatus(String cloudAssistantStatus) {
                 this.cloudAssistantStatus = cloudAssistantStatus;
@@ -270,7 +270,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAssistantVersion.
+             * The version number of the Cloud Assistant client.
              */
             public Builder cloudAssistantVersion(String cloudAssistantVersion) {
                 this.cloudAssistantVersion = cloudAssistantVersion;
@@ -278,7 +278,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -286,7 +286,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationCount.
+             * The total number of commands that have been run.
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -294,7 +294,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastHeartbeatTime.
+             * The last heartbeat time of Cloud Assistant.
              */
             public Builder lastHeartbeatTime(String lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -302,7 +302,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastInvokedTime.
+             * The time when commands were last run.
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;
@@ -310,7 +310,11 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * The operating system type of the instance. Valid values:
+             * <p>
+             * 
+             * *   Windows
+             * *   Linux
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -318,7 +322,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SupportSessionManager.
+             * Indicates whether the version of the Cloud Assistant client supports the session management feature.
              */
             public Builder supportSessionManager(Boolean supportSessionManager) {
                 this.supportSessionManager = supportSessionManager;

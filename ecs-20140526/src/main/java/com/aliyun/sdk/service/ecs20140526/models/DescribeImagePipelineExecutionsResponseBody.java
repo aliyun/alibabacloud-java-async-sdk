@@ -86,7 +86,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ImagePipelineExecution.
+         * Details of the image build task.
          */
         public Builder imagePipelineExecution(ImagePipelineExecution imagePipelineExecution) {
             this.imagePipelineExecution = imagePipelineExecution;
@@ -94,7 +94,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The query token returned in this call. For information about how to use this return value, see the Description section in this topic.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned image components.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -356,7 +356,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * CreationTime.
+             * The time when the image build task was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -364,7 +364,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionId.
+             * The ID of the image build task.
              */
             public Builder executionId(String executionId) {
                 this.executionId = executionId;
@@ -372,7 +372,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image to be created by using the image build task.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -380,7 +380,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ImagePipelineId.
+             * The ID of the image template.
              */
             public Builder imagePipelineId(String imagePipelineId) {
                 this.imagePipelineId = imagePipelineId;
@@ -388,7 +388,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The execution result of the image build task.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -396,7 +396,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The last time when the image build task was updated.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -404,7 +404,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -412,7 +412,16 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image build task. Valid values:
+             * <p>
+             * 
+             * *   BUILDING: The image was being built.
+             * *   DISTRIBUTING: The image was being distributed.
+             * *   RELEASING: The image was being recycled.
+             * *   SUCCESS: The image was built.
+             * *   FAILED: The image failed to be built.
+             * *   CANCELLING: The image build task was being canceled.
+             * *   CANCELLED: The image build task was cancelled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -420,7 +429,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The list of tag key-value pairs.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

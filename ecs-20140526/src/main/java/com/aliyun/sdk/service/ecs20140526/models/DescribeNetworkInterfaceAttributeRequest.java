@@ -177,7 +177,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * Attribute.
+         * The attribute of the ENI.
          */
         public Builder attribute(String attribute) {
             this.putQueryParameter("Attribute", attribute);
@@ -186,7 +186,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -213,7 +213,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +240,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * Tag.
+         * > This parameter is unavailable.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -294,7 +294,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * > This parameter is unavailable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +302,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * Value.
+             * > This parameter is unavailable.
              */
             public Builder value(String value) {
                 this.value = value;

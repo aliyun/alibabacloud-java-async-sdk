@@ -43,6 +43,10 @@ public class DescribeTasksRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceIds")
+    private java.util.List < String > resourceIds;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -75,6 +79,7 @@ public class DescribeTasksRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceIds = builder.resourceIds;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
@@ -146,6 +151,13 @@ public class DescribeTasksRequest extends Request {
     }
 
     /**
+     * @return resourceIds
+     */
+    public java.util.List < String > getResourceIds() {
+        return this.resourceIds;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -195,6 +207,7 @@ public class DescribeTasksRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private java.util.List < String > resourceIds; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startTime; 
@@ -215,6 +228,7 @@ public class DescribeTasksRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceIds = request.resourceIds;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
@@ -283,6 +297,15 @@ public class DescribeTasksRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceIds.
+         */
+        public Builder resourceIds(java.util.List < String > resourceIds) {
+            this.putQueryParameter("ResourceIds", resourceIds);
+            this.resourceIds = resourceIds;
             return this;
         }
 

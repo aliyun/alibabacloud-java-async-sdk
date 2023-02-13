@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PurchaseReservedInstancesOfferingRequest extends Request {
     @Query
+    @NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @Query
+    @NameInMap("AutoRenewPeriod")
+    private Integer autoRenewPeriod;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -89,6 +97,8 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
 
     private PurchaseReservedInstancesOfferingRequest(Builder builder) {
         super(builder);
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.instanceAmount = builder.instanceAmount;
@@ -120,6 +130,20 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     /**
@@ -249,6 +273,8 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PurchaseReservedInstancesOfferingRequest, Builder> {
+        private Boolean autoRenew; 
+        private Integer autoRenewPeriod; 
         private String clientToken; 
         private String description; 
         private Integer instanceAmount; 
@@ -274,6 +300,8 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
 
         private Builder(PurchaseReservedInstancesOfferingRequest request) {
             super(request);
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.instanceAmount = request.instanceAmount;
@@ -293,6 +321,24 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoRenewPeriod.
+         */
+        public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+            this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
 
         /**
          * ClientToken.

@@ -50,7 +50,7 @@ public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AutoSnapshotPolicyId.
+         * The ID of the automatic snapshot policy.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -58,7 +58,7 @@ public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

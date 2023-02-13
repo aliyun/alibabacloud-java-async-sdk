@@ -135,7 +135,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * 开始时间，只对不需要在GuestOS内执行云助手指令的诊断指标生效
+         * The end of the reporting period. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,7 +144,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * 诊断指标集合ID，如果为空，会使用EcsInstance的默认诊断指标集合。
+         * The ID of the diagnostic metric set. If this parameter is left empty, the dms-instancedefault set is used, which is the default diagnostic metric set provided for Elastic Compute Service (ECS) instances.
          */
         public Builder metricSetId(String metricSetId) {
             this.putQueryParameter("MetricSetId", metricSetId);
@@ -153,7 +153,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * 地域
+         * The ID of the region in which to create a diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +162,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * 资源ID，如i-bp1io7xxxutup5l2y4vt
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -171,7 +171,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * 开始时间，只对不需要在GuestOS内执行云助手指令的诊断指标生效
+         * The beginning of the reporting period. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

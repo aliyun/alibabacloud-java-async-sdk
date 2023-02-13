@@ -86,7 +86,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ActivationList.
+         * Details of the activation codes and their usage information.
          */
         public Builder activationList(java.util.List < ActivationList> activationList) {
             this.activationList = activationList;
@@ -94,7 +94,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +131,67 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ActivationList extends TeaModel {
         @NameInMap("ActivationId")
         private String activationId;
@@ -159,6 +220,9 @@ public class DescribeActivationsResponseBody extends TeaModel {
         @NameInMap("RegisteredCount")
         private Integer registeredCount;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("TimeToLiveInHours")
         private Long timeToLiveInHours;
 
@@ -172,6 +236,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.ipAddressRange = builder.ipAddressRange;
             this.registeredCount = builder.registeredCount;
+            this.tags = builder.tags;
             this.timeToLiveInHours = builder.timeToLiveInHours;
         }
 
@@ -247,6 +312,13 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return timeToLiveInHours
          */
         public Long getTimeToLiveInHours() {
@@ -263,10 +335,11 @@ public class DescribeActivationsResponseBody extends TeaModel {
             private String instanceName; 
             private String ipAddressRange; 
             private Integer registeredCount; 
+            private java.util.List < Tags> tags; 
             private Long timeToLiveInHours; 
 
             /**
-             * ActivationId.
+             * The ID of the activation code.
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -274,7 +347,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the activation code was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -282,7 +355,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * DeregisteredCount.
+             * The number of instances that were deregistered.
              */
             public Builder deregisteredCount(Integer deregisteredCount) {
                 this.deregisteredCount = deregisteredCount;
@@ -290,7 +363,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the activation code.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +371,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * Disabled.
+             * Indicates whether the activation code is disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -306,7 +379,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The maximum number of times that the activation code can be used to register managed instances.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -314,7 +387,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The default instance name prefix.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -322,7 +395,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddressRange.
+             * The IP addresses of hosts that are allowed to use the activation code.
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -330,7 +403,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * RegisteredCount.
+             * The number of instances that were registered.
              */
             public Builder registeredCount(Integer registeredCount) {
                 this.registeredCount = registeredCount;
@@ -338,7 +411,15 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeToLiveInHours.
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The validity period of the activation code. Unit: hours.
              */
             public Builder timeToLiveInHours(Long timeToLiveInHours) {
                 this.timeToLiveInHours = timeToLiveInHours;

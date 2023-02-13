@@ -22,6 +22,10 @@ public class AttachNetworkInterfaceRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("NetworkCardIndex")
+    private Integer networkCardIndex;
+
+    @Query
     @NameInMap("NetworkInterfaceId")
     @Validation(required = true)
     private String networkInterfaceId;
@@ -59,6 +63,7 @@ public class AttachNetworkInterfaceRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
+        this.networkCardIndex = builder.networkCardIndex;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -94,6 +99,13 @@ public class AttachNetworkInterfaceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return networkCardIndex
+     */
+    public Integer getNetworkCardIndex() {
+        return this.networkCardIndex;
     }
 
     /**
@@ -155,6 +167,7 @@ public class AttachNetworkInterfaceRequest extends Request {
     public static final class Builder extends Request.Builder<AttachNetworkInterfaceRequest, Builder> {
         private String sourceRegionId; 
         private String instanceId; 
+        private Integer networkCardIndex; 
         private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -172,6 +185,7 @@ public class AttachNetworkInterfaceRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
+            this.networkCardIndex = request.networkCardIndex;
             this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -192,7 +206,7 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -201,7 +215,19 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * 网卡指定的物理网卡索引。
+         * <p>
+         * 
+         * >NetworkCardIndex 取值与实例规格族有关。如果实例规格不支持NetworkCard则不能指定；如果支持，取值请参见[实例规格族](~~25378~~)。
+         */
+        public Builder networkCardIndex(Integer networkCardIndex) {
+            this.putQueryParameter("NetworkCardIndex", networkCardIndex);
+            this.networkCardIndex = networkCardIndex;
+            return this;
+        }
+
+        /**
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -228,7 +254,7 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -255,7 +281,10 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * TrunkNetworkInstanceId.
+         * The ID of the trunk ENI.
+         * <p>
+         * 
+         * > This parameter is unavailable for use.
          */
         public Builder trunkNetworkInstanceId(String trunkNetworkInstanceId) {
             this.putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);
@@ -264,7 +293,7 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * WaitForNetworkConfigurationReady.
+         * > This parameter is no longer used.
          */
         public Builder waitForNetworkConfigurationReady(Boolean waitForNetworkConfigurationReady) {
             this.putQueryParameter("WaitForNetworkConfigurationReady", waitForNetworkConfigurationReady);

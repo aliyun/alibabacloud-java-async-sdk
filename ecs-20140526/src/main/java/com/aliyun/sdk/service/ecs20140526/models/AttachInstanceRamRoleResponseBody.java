@@ -86,7 +86,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AttachInstanceRamRoleResults.
+         * Details about the results of attaching the instance RAM role.
          */
         public Builder attachInstanceRamRoleResults(AttachInstanceRamRoleResults attachInstanceRamRoleResults) {
             this.attachInstanceRamRoleResults = attachInstanceRamRoleResults;
@@ -94,7 +94,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * FailCount.
+         * The number of the instances to which the instance RAM role failed to be attached.
          */
         public Builder failCount(Integer failCount) {
             this.failCount = failCount;
@@ -102,7 +102,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RamRoleName.
+         * The name of the instance RAM role.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.ramRoleName = ramRoleName;
@@ -110,7 +110,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of instances to which you attempted to attach the instance RAM role.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Code.
+             * Indicates whether the instance RAM role was attached. If the instance RAM role was attached, 200 is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the "Error codes" section.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -202,7 +202,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +210,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * Indicates whether the instance RAM role was attached. If the instance RAM role was attached, success is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the "Error codes" section.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -218,7 +218,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the instance RAM role was attached.
              */
             public Builder success(Boolean success) {
                 this.success = success;

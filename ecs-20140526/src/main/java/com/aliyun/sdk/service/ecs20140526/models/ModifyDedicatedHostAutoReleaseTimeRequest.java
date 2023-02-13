@@ -163,7 +163,13 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * AutoReleaseTime.
+         * The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+         * <p>
+         * 
+         * *   The automatic release time must be at least 30 minutes from the current time.
+         * *   The automatic release time must be at most three years from the current time.
+         * *   If the value of seconds (ss) is not 00, it is automatically set to 00.
+         * *   If you do not specify the `AutoReleaseTime` parameter, the automatic release time is canceled the dedicated host is automatically released.
          */
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
@@ -172,7 +178,7 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The ID of the dedicated host.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -199,7 +205,7 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

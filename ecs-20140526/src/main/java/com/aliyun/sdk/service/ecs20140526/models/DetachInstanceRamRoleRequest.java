@@ -149,7 +149,7 @@ public class DetachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances from which you want to detach an instance RAM role. It can be a JSON array that consists of up to 100 instance IDs. Separate multiple instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -167,7 +167,7 @@ public class DetachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * RamRoleName.
+         * The name of the instance RAM role to be detached. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you have created.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -176,7 +176,7 @@ public class DetachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -161,7 +161,14 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * The natural language that is used to filter responses. For more information, visit [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Chinese
+         * *   en-US: English
+         * *   ja: Japanese
+         * 
+         * Default value: zh-CN.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -170,7 +177,13 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
+         * <p>
+         * 
+         * *   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
+         * *   PostPaid: pay-as-you-go.
+         * 
+         * Default value: PostPaid.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -215,7 +228,15 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance: Elastic Compute Service (ECS) instance
+         * *   disk: disk
+         * *   reservedinstance: reserved instance
+         * *   scu: storage capacity unit (SCU)
+         * 
+         * Default value: instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

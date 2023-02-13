@@ -193,7 +193,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,7 +202,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which to add the resource.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +211,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource. This parameter depends on the ResourceType value. For example, when ResourceType is set to instance, ResourceId can be interpreted as InstanceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -238,7 +238,21 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the ECS resource. Valid values:
+         * <p>
+         * 
+         * *   instance: instance
+         * *   disk: Elastic Block Storage device
+         * *   snapshot: snapshot
+         * *   image: image
+         * *   securitygroup: security group
+         * *   ddh: dedicated host
+         * *   ddhcluster: dedicated host cluster
+         * *   eni: ENI
+         * *   keypair: SSH key pair
+         * *   launchtemplate: launch template
+         * 
+         * These values are case-sensitive.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

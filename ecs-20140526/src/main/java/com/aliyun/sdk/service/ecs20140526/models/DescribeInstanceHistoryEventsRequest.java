@@ -362,7 +362,16 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * EventCycleStatus.
+         * The lifecycle state of the system event. This parameter is valid only when the InstanceEventCycleStatus.N parameter is not specified. Valid values:
+         * <p>
+         * 
+         * *   Scheduled
+         * *   Avoided
+         * *   Executing
+         * *   Executed
+         * *   Canceled
+         * *   Failed
+         * *   Inquiring
          */
         public Builder eventCycleStatus(String eventCycleStatus) {
             this.putQueryParameter("EventCycleStatus", eventCycleStatus);
@@ -371,7 +380,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * EventId.
+         * The ID of system event N. Valid values of N: 1 to 100. You can specify multiple event IDs by repeatedly listing this parameter.
          */
         public Builder eventId(java.util.List < String > eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -380,7 +389,21 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The type of the system event. This parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values:
+         * <p>
+         * 
+         * *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+         * *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
+         * *   SystemFailure.Reboot: The instance is restarted due to a system failure.
+         * *   SystemFailure.Redeploy: The instance is redeployed due to a system failure.
+         * *   SystemFailure.Delete: The instance is released due to an instance creation failure.
+         * *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+         * *   InstanceExpiration.Stop: The instance is stopped due to subscription expiration.
+         * *   InstanceExpiration.Delete: The instance is released due to subscription expiration.
+         * *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
+         * *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
+         * 
+         * > For more information, see [Overview](~~66574~~). The values of this parameter are applicable to only instance system events, but not to disk system events.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -389,7 +412,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * ImpactLevel.
+         * > This parameter is unavailable.
          */
         public Builder impactLevel(String impactLevel) {
             this.putQueryParameter("ImpactLevel", impactLevel);
@@ -398,7 +421,16 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * InstanceEventCycleStatus.
+         * The lifecycle state of system event N. Valid values of N: 1 to 7. You can specify multiple states by repeatedly listing this parameter. Valid values:
+         * <p>
+         * 
+         * *   Scheduled
+         * *   Avoided
+         * *   Executing
+         * *   Executed
+         * *   Canceled
+         * *   Failed
+         * *   Inquiring
          */
         public Builder instanceEventCycleStatus(java.util.List < String > instanceEventCycleStatus) {
             this.putQueryParameter("InstanceEventCycleStatus", instanceEventCycleStatus);
@@ -407,7 +439,21 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * InstanceEventType.
+         * The type of system event N. Valid values of N: 1 to 30. You can specify multiple types by repeatedly listing this parameter. Valid values:
+         * <p>
+         * 
+         * *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+         * *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
+         * *   SystemFailure.Reboot: The instance is restarted due to a system failure.
+         * *   SystemFailure.Redeploy: The instance is redeployed due to a system failure.
+         * *   SystemFailure.Delete: The instance is released due to an instance creation failure.
+         * *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
+         * *   InstanceExpiration.Stop: The instance is stopped due to subscription expiration.
+         * *   InstanceExpiration.Delete: The instance is released due to subscription expiration.
+         * *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
+         * *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
+         * 
+         * > For more information, see [Overview](~~66574~~). The values of this parameter are applicable to only instance system events, but not to disk system events.
          */
         public Builder instanceEventType(java.util.List < String > instanceEventType) {
             this.putQueryParameter("InstanceEventType", instanceEventType);
@@ -416,7 +462,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. If this parameter is not specified, the system events of all instances within the specified region are queried.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -443,7 +489,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be a positive integer.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -452,7 +501,10 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -461,7 +513,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -470,7 +522,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the resource belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -479,7 +531,16 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of resource N. Valid values of N: 1 to 100. You can specify multiple resource IDs by repeatedly listing this parameter. Valid values:
+         * <p>
+         * 
+         * *   When the `ResourceType` parameter is set to instance, the ResourceId.N parameter specifies the ID of instance N.
+         * *   When the `ResourceType` parameter is set to ddh, the ResourceId.N parameter specifies the ID of dedicated host N.
+         * *   When the `ResourceType` parameter is set to managedhost, the ResourceId.N parameter specifies the ID of physical machine N in a smart hosting pool.
+         * 
+         * If this parameter is not specified, the system events of all resources of the resource type specified by `ResourceType` within the region specified by `RegionId` are queried.
+         * 
+         * > We recommend that you use the `ResourceId.N` parameter to specify one or more resource IDs. If you specify both the ` ResourceId.N  `and `InstanceId` parameters, the `ResourceId.N` parameter takes precedence by default.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -506,7 +567,14 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance: ECS instance.
+         * *   ddh: dedicated host.
+         * *   managehost: physical machine in a smart hosting pool.
+         * 
+         * Default value: instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -515,7 +583,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that are supported by system events.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -569,7 +637,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             private String start; 
 
             /**
-             * End.
+             * The end of the time range in which to query published system events. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder end(String end) {
                 this.end = end;
@@ -577,7 +645,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             }
 
             /**
-             * Start.
+             * The beginning of the time range in which to query published system events. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -630,7 +698,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             private String start; 
 
             /**
-             * End.
+             * The end time of the scheduled execution period for the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder end(String end) {
                 this.end = end;
@@ -638,7 +706,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             }
 
             /**
-             * Start.
+             * The start time of the scheduled execution period for the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -691,7 +759,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of a tag that you want to attach to the specified resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -699,7 +767,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag that you want to attach to the specified resource.
              */
             public Builder value(String value) {
                 this.value = value;

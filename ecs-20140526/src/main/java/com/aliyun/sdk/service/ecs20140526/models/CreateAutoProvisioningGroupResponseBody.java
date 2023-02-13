@@ -62,7 +62,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AutoProvisioningGroupId.
+         * The ID of the auto provisioning group.
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.autoProvisioningGroupId = autoProvisioningGroupId;
@@ -70,7 +70,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * LaunchResults.
+         * Details about the instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.
          */
         public Builder launchResults(LaunchResults launchResults) {
             this.launchResults = launchResults;
@@ -78,7 +78,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +219,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * ErrorCode.
+             * The error code returned when the instance cannot be created.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -227,7 +227,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The error message returned when the instance cannot be created.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -235,7 +235,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIds.
+             * The IDs of created instances.
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -243,7 +243,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -251,7 +251,12 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The bidding policy for the pay-as-you-go instance. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -259,7 +264,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

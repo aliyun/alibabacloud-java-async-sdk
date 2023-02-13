@@ -62,7 +62,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NextToken.
+         * The query token returned in this call. If the return value is empty, no more data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * PrefixListAssociations.
+         * Details about the resources that are associated with the prefix list.
          */
         public Builder prefixListAssociations(PrefixListAssociations prefixListAssociations) {
             this.prefixListAssociations = prefixListAssociations;
@@ -78,7 +78,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -138,7 +138,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

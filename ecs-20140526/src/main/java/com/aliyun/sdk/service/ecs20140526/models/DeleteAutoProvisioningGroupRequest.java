@@ -141,7 +141,7 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
         } 
 
         /**
-         * AutoProvisioningGroupId.
+         * The ID of the auto provisioning group to be deleted.
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -168,7 +168,7 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the auto provisioning group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +195,11 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * TerminateInstances.
+         * Specifies whether to release instances in the auto provisioning group. Valid values:
+         * <p>
+         * 
+         * *   true: releases instances in the auto provisioning group.
+         * *   false: retains instances in the auto provisioning group.
          */
         public Builder terminateInstances(Boolean terminateInstances) {
             this.putQueryParameter("TerminateInstances", terminateInstances);

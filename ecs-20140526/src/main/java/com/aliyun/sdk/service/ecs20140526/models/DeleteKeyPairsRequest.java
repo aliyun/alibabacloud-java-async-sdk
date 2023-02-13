@@ -135,7 +135,7 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * KeyPairNames.
+         * The names of SSH key pairs. The value can be a JSON array that consists of up to 100 key pair names. Separate multiple key pair names with commas (,).
          */
         public Builder keyPairNames(String keyPairNames) {
             this.putQueryParameter("KeyPairNames", keyPairNames);
@@ -153,7 +153,7 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

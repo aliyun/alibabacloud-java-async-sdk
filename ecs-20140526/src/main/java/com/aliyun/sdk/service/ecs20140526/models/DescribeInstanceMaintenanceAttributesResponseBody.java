@@ -86,7 +86,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * MaintenanceAttributes.
+         * Details about the maintenance attributes.
          */
         public Builder maintenanceAttributes(MaintenanceAttributes maintenanceAttributes) {
             this.maintenanceAttributes = maintenanceAttributes;
@@ -94,7 +94,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * TotalCount.
+         * The total number of queried maintenance attributes.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -223,7 +223,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * DefaultValue.
+             * The default maintenance action.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -231,7 +231,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * SupportedValues.
+             * The list of the supported maintenance actions.
              */
             public Builder supportedValues(SupportedValues supportedValues) {
                 this.supportedValues = supportedValues;
@@ -239,7 +239,12 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * The current maintenance action. Valid values:
+             * <p>
+             * 
+             * *   Stop: The instance goes down.
+             * *   AutoRecover: The instance is automatically recovered.
+             * *   AutoRedeploy: Failover is performed on the instance, which may damage the data disks.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -292,7 +297,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private String startTime; 
 
             /**
-             * EndTime.
+             * The end time of the maintenance window.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -300,7 +305,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * StartTime.
+             * The start time of the maintenance window.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -418,7 +423,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private Boolean notifyOnMaintenance; 
 
             /**
-             * ActionOnMaintenance.
+             * The attributes of the maintenance action of the instance.
              */
             public Builder actionOnMaintenance(ActionOnMaintenance actionOnMaintenance) {
                 this.actionOnMaintenance = actionOnMaintenance;
@@ -426,7 +431,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -434,7 +439,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * MaintenanceWindows.
+             * Details about the maintenance window.
              */
             public Builder maintenanceWindows(MaintenanceWindows maintenanceWindows) {
                 this.maintenanceWindows = maintenanceWindows;
@@ -442,7 +447,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * NotifyOnMaintenance.
+             * Indicates whether an event notification was sent before instance shutdown.
              */
             public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
                 this.notifyOnMaintenance = notifyOnMaintenance;

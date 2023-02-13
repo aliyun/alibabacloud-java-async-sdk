@@ -25,12 +25,24 @@ public class ReplaceSystemDiskRequest extends Request {
     private String architecture;
 
     @Query
+    @NameInMap("Arn")
+    private java.util.List < Arn> arn;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
     @NameInMap("DiskId")
     private String diskId;
+
+    @Query
+    @NameInMap("EncryptAlgorithm")
+    private String encryptAlgorithm;
+
+    @Query
+    @NameInMap("Encrypted")
+    private Boolean encrypted;
 
     @Query
     @NameInMap("ImageId")
@@ -40,6 +52,10 @@ public class ReplaceSystemDiskRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("KMSKeyId")
+    private String KMSKeyId;
 
     @Query
     @NameInMap("KeyPairName")
@@ -86,10 +102,14 @@ public class ReplaceSystemDiskRequest extends Request {
         this.systemDisk = builder.systemDisk;
         this.sourceRegionId = builder.sourceRegionId;
         this.architecture = builder.architecture;
+        this.arn = builder.arn;
         this.clientToken = builder.clientToken;
         this.diskId = builder.diskId;
+        this.encryptAlgorithm = builder.encryptAlgorithm;
+        this.encrypted = builder.encrypted;
         this.imageId = builder.imageId;
         this.instanceId = builder.instanceId;
+        this.KMSKeyId = builder.KMSKeyId;
         this.keyPairName = builder.keyPairName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -137,6 +157,13 @@ public class ReplaceSystemDiskRequest extends Request {
     }
 
     /**
+     * @return arn
+     */
+    public java.util.List < Arn> getArn() {
+        return this.arn;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -151,6 +178,20 @@ public class ReplaceSystemDiskRequest extends Request {
     }
 
     /**
+     * @return encryptAlgorithm
+     */
+    public String getEncryptAlgorithm() {
+        return this.encryptAlgorithm;
+    }
+
+    /**
+     * @return encrypted
+     */
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    /**
      * @return imageId
      */
     public String getImageId() {
@@ -162,6 +203,13 @@ public class ReplaceSystemDiskRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return KMSKeyId
+     */
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
     }
 
     /**
@@ -238,10 +286,14 @@ public class ReplaceSystemDiskRequest extends Request {
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
         private String architecture; 
+        private java.util.List < Arn> arn; 
         private String clientToken; 
         private String diskId; 
+        private String encryptAlgorithm; 
+        private Boolean encrypted; 
         private String imageId; 
         private String instanceId; 
+        private String KMSKeyId; 
         private String keyPairName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -262,10 +314,14 @@ public class ReplaceSystemDiskRequest extends Request {
             this.systemDisk = request.systemDisk;
             this.sourceRegionId = request.sourceRegionId;
             this.architecture = request.architecture;
+            this.arn = request.arn;
             this.clientToken = request.clientToken;
             this.diskId = request.diskId;
+            this.encryptAlgorithm = request.encryptAlgorithm;
+            this.encrypted = request.encrypted;
             this.imageId = request.imageId;
             this.instanceId = request.instanceId;
+            this.KMSKeyId = request.KMSKeyId;
             this.keyPairName = request.keyPairName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -306,6 +362,15 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
+         * Arn.
+         */
+        public Builder arn(java.util.List < Arn> arn) {
+            this.putQueryParameter("Arn", arn);
+            this.arn = arn;
+            return this;
+        }
+
+        /**
          * ClientToken.
          */
         public Builder clientToken(String clientToken) {
@@ -324,6 +389,24 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
+         * EncryptAlgorithm.
+         */
+        public Builder encryptAlgorithm(String encryptAlgorithm) {
+            this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
+            this.encryptAlgorithm = encryptAlgorithm;
+            return this;
+        }
+
+        /**
+         * Encrypted.
+         */
+        public Builder encrypted(Boolean encrypted) {
+            this.putQueryParameter("Encrypted", encrypted);
+            this.encrypted = encrypted;
+            return this;
+        }
+
+        /**
          * ImageId.
          */
         public Builder imageId(String imageId) {
@@ -338,6 +421,15 @@ public class ReplaceSystemDiskRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * KMSKeyId.
+         */
+        public Builder KMSKeyId(String KMSKeyId) {
+            this.putQueryParameter("KMSKeyId", KMSKeyId);
+            this.KMSKeyId = KMSKeyId;
             return this;
         }
 
@@ -474,6 +566,87 @@ public class ReplaceSystemDiskRequest extends Request {
 
             public SystemDisk build() {
                 return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    public static class Arn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        private Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        private String roleType;
+
+        @NameInMap("Rolearn")
+        private String rolearn;
+
+        private Arn(Builder builder) {
+            this.assumeRoleFor = builder.assumeRoleFor;
+            this.roleType = builder.roleType;
+            this.rolearn = builder.rolearn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Arn create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assumeRoleFor
+         */
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        /**
+         * @return roleType
+         */
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        /**
+         * @return rolearn
+         */
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
+        public static final class Builder {
+            private Long assumeRoleFor; 
+            private String roleType; 
+            private String rolearn; 
+
+            /**
+             * AssumeRoleFor.
+             */
+            public Builder assumeRoleFor(Long assumeRoleFor) {
+                this.assumeRoleFor = assumeRoleFor;
+                return this;
+            }
+
+            /**
+             * RoleType.
+             */
+            public Builder roleType(String roleType) {
+                this.roleType = roleType;
+                return this;
+            }
+
+            /**
+             * Rolearn.
+             */
+            public Builder rolearn(String rolearn) {
+                this.rolearn = rolearn;
+                return this;
+            }
+
+            public Arn build() {
+                return new Arn(this);
             } 
 
         } 

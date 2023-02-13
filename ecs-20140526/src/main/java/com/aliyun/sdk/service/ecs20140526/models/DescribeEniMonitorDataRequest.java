@@ -207,7 +207,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -216,7 +216,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * EniId.
+         * The ID of the secondary ENI. By default, all secondary ENIs that are bound to the specified instance are queried.
          */
         public Builder eniId(String eniId) {
             this.putQueryParameter("EniId", eniId);
@@ -225,7 +225,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to which the secondary ENI is bound.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -252,7 +252,14 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * The interval at which to retrieve monitored data. Unit: seconds. Valid values:
+         * <p>
+         * 
+         * *   60
+         * *   600
+         * *   3600
+         * 
+         * Default value: 60.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -261,7 +268,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the secondary ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -288,7 +295,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

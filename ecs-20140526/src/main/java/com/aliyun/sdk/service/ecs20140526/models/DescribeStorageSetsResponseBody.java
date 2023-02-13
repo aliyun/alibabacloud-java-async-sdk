@@ -86,7 +86,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * StorageSets.
+         * Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.
          */
         public Builder storageSets(StorageSets storageSets) {
             this.storageSets = storageSets;
@@ -118,7 +118,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of storage sets.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CreationTime.
+             * The time when the storage set was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +238,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the storage set.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +246,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region to which the storage set belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,7 +254,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSetId.
+             * The ID of the storage set.
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -262,7 +262,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSetName.
+             * The name of the storage set.
              */
             public Builder storageSetName(String storageSetName) {
                 this.storageSetName = storageSetName;
@@ -270,7 +270,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSetPartitionNumber.
+             * The maximum number of partitions supported by the storage set.
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -278,7 +278,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone to which the storage set belongs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

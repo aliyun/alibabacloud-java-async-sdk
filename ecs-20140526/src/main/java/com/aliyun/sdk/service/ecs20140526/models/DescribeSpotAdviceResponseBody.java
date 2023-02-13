@@ -62,7 +62,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableSpotZones.
+         * Details about preemptible instances in the zones of the specified region.
+         * <p>
+         * 
+         * >  The return values are sorted based on the historical percentages of average preemptible instance prices relative to pay-as-you-go instance prices for instance types.
          */
         public Builder availableSpotZones(AvailableSpotZones availableSpotZones) {
             this.availableSpotZones = availableSpotZones;
@@ -70,7 +73,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +81,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             private Float interruptionRate; 
 
             /**
-             * AverageSpotDiscount.
+             * The percentage of the average preemptible instance relative to the pay-as-you-go instance price in the last 30 days. Unit: percent (%). Valid values: 1 to 100.
+             * <p>
+             * 
+             * You can calculate the average preemptible instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average preemptible instance price in the last 30 days is 0.2.
              */
             public Builder averageSpotDiscount(Integer averageSpotDiscount) {
                 this.averageSpotDiscount = averageSpotDiscount;
@@ -162,7 +168,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -170,7 +176,13 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * InterruptRateDesc.
+             * The release rate range of preemptible instances in the last 30 days, which corresponds to the `InterruptionRate` value. Valid values:
+             * <p>
+             * 
+             * *   0-3%
+             * *   3-5%
+             * *   5-10%
+             * *   10-100%
              */
             public Builder interruptRateDesc(String interruptRateDesc) {
                 this.interruptRateDesc = interruptRateDesc;
@@ -178,7 +190,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * InterruptionRate.
+             * The average release rate of preemptible instances in the last 30 days. Unit: percent (%).
              */
             public Builder interruptionRate(Float interruptionRate) {
                 this.interruptionRate = interruptionRate;
@@ -272,7 +284,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AvailableSpotResources.
+             * Details about preemptible instances in the last 30 days, including release rates and percentages of average preemptible instance prices relative to pay-as-you-go instance prices.
              */
             public Builder availableSpotResources(AvailableSpotResources availableSpotResources) {
                 this.availableSpotResources = availableSpotResources;
@@ -280,7 +292,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -346,7 +346,13 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the validity of the request without actually making the request. Valid values:
+         * <p>
+         * 
+         * *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
+         * *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -355,7 +361,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * FuzzyQuery.
+         * > This parameter is deprecated.
          */
         public Builder fuzzyQuery(Boolean fuzzyQuery) {
             this.putQueryParameter("FuzzyQuery", fuzzyQuery);
@@ -364,7 +370,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * IsQueryEcsCount.
+         * > This parameter is deprecated.
          */
         public Builder isQueryEcsCount(Boolean isQueryEcsCount) {
             this.putQueryParameter("IsQueryEcsCount", isQueryEcsCount);
@@ -373,7 +379,12 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. If you specify the MaxResults parameter, both the `MaxResults` and `NextToken` parameters are used for a paged query.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -382,7 +393,11 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the security group. Valid values:
+         * <p>
+         * 
+         * *   vpc
+         * *   classic
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -391,7 +406,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeSecurityGroups operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -418,7 +433,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
+         * 
+         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -427,7 +449,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
+         * 
+         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -436,7 +465,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -445,7 +474,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
+         * <p>
+         * 
+         * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -472,7 +504,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -481,7 +513,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupIds.
+         * The IDs of security groups. The value is a JSON array that consists of up to 100 security group IDs. Separate the security group IDs with commas (,).
          */
         public Builder securityGroupIds(String securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -490,7 +522,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupName.
+         * The name of the security group.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -499,7 +531,13 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupType.
+         * The type of the security group. Valid values:
+         * <p>
+         * 
+         * *   normal: basic security group
+         * *   enterprise: advanced security group
+         * 
+         * > If you do not specify this parameter, both basic and advanced security groups are queried.
          */
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);
@@ -508,7 +546,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the security group.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -517,7 +555,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the security group belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -571,7 +609,10 @@ public class DescribeSecurityGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the security group. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -579,7 +620,7 @@ public class DescribeSecurityGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the security group. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

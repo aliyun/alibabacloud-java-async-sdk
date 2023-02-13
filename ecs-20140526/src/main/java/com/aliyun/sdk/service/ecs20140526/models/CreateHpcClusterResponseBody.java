@@ -50,7 +50,7 @@ public class CreateHpcClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HpcClusterId.
+         * The ID of the HPC cluster.
          */
         public Builder hpcClusterId(String hpcClusterId) {
             this.hpcClusterId = hpcClusterId;
@@ -58,7 +58,7 @@ public class CreateHpcClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

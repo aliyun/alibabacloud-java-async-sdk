@@ -152,7 +152,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         }
 
         /**
-         * RegionId.
+         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

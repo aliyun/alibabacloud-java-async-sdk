@@ -178,7 +178,7 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair. The name must be unique. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -196,7 +196,7 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
-         * PublicKeyBody.
+         * The public key of the key pair.
          */
         public Builder publicKeyBody(String publicKeyBody) {
             this.putQueryParameter("PublicKeyBody", publicKeyBody);
@@ -205,7 +205,7 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -214,7 +214,7 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the key pair belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -241,7 +241,7 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the key pair.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -295,7 +295,7 @@ public class ImportKeyPairRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. The tag key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -303,7 +303,7 @@ public class ImportKeyPairRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

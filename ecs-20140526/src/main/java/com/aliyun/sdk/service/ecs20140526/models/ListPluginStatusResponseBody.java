@@ -86,7 +86,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * InstancePluginStatusSet.
+         * The states of the Cloud Assistant plug-ins on the ECS instances.
          */
         public Builder instancePluginStatusSet(InstancePluginStatusSet instancePluginStatusSet) {
             this.instancePluginStatusSet = instancePluginStatusSet;
@@ -94,7 +94,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             private String pluginVersion; 
 
             /**
-             * FirstHeartbeatTime.
+             * The first time when Cloud Assistant reported the state of the plug-in.
              */
             public Builder firstHeartbeatTime(String firstHeartbeatTime) {
                 this.firstHeartbeatTime = firstHeartbeatTime;
@@ -214,7 +214,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastHeartbeatTime.
+             * The last time when Cloud Assistant reported the state of the plug-in.
              */
             public Builder lastHeartbeatTime(String lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -222,7 +222,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * The name of the plug-in.
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -230,7 +230,16 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PluginStatus.
+             * The state of the Cloud Assistant plug-in. Valid values:
+             * <p>
+             * 
+             * * NotInstalled: The plug-in is not installed.
+             * * Installed: The one-time plug-in is installed.
+             * * Running: The long-running plug-in is running.
+             * * Stopped: The long-running plug-in is not running.
+             * * Crashed: The plug-in is abnormal.
+             * * Removed: The plug-in is uninstalled.
+             * * Unknown: The state of the plug-in is unknown.
              */
             public Builder pluginStatus(String pluginStatus) {
                 this.pluginStatus = pluginStatus;
@@ -238,7 +247,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PluginVersion.
+             * The version of the plug-in
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -279,7 +288,16 @@ public class ListPluginStatusResponseBody extends TeaModel {
             private java.util.List < PluginStatus> pluginStatus; 
 
             /**
-             * PluginStatus.
+             * The state of the Cloud Assistant plug-in. Valid values:
+             * <p>
+             * 
+             * * NotInstalled: The plug-in is not installed.
+             * * Installed: The one-time plug-in is installed.
+             * * Running: The long-running plug-in is running.
+             * * Stopped: The long-running plug-in is not running.
+             * * Crashed: The plug-in is abnormal.
+             * * Removed: The plug-in is uninstalled.
+             * * Unknown: The state of the plug-in is unknown.
              */
             public Builder pluginStatus(java.util.List < PluginStatus> pluginStatus) {
                 this.pluginStatus = pluginStatus;
@@ -332,7 +350,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             private PluginStatusSet pluginStatusSet; 
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -340,7 +358,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PluginStatusSet.
+             * Details about the Cloud Assistant plug-in.
              */
             public Builder pluginStatusSet(PluginStatusSet pluginStatusSet) {
                 this.pluginStatusSet = pluginStatusSet;

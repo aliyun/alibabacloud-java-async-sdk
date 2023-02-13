@@ -50,7 +50,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OperationProgressSet.
+         * Details about the delete operation.
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -58,7 +58,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the resource.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +118,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The ID of the resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -236,7 +236,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * ErrorCode.
+             * The error code. This parameter is empty when the operation was successful.
+             * <p>
+             * 
+             * For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -244,7 +247,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The error message. This parameter is empty when the operation was successful.
+             * <p>
+             * 
+             * For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -252,7 +258,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OperationStatus.
+             * Indicates whether the operation was successful. If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -260,7 +266,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedItemSet.
+             * Details about the resources.
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;

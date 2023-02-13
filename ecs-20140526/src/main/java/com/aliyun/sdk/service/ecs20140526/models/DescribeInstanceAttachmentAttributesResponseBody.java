@@ -86,7 +86,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * Details about the private pools that the instances match.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +94,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             private String privatePoolOptionsMatchCriteria; 
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -190,7 +190,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivatePoolOptionsId.
+             * The ID of the private pool. When the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the value of PrivatePoolOptionsId is the ID of a private pool that is automatically matched to the instance.
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -198,7 +198,12 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivatePoolOptionsMatchCriteria.
+             * The match mode of the private pool. Valid values:
+             * <p>
+             * 
+             * *   Open: open private pool. Instances automatically match an open private pool.
+             * *   Target: specified private pool. Instances match a specified private pool.
+             * *   None: no private pool. Instances do not use private pools.
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;

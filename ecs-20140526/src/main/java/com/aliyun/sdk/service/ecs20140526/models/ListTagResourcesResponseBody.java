@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * NextToken.
+         * The token used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,26 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource. Valid values:
+             * <p>
+             * 
+             * *   instance: ECS instance
+             * *   disk: disk
+             * *   snapshot: snapshot
+             * *   image: image
+             * *   securitygroup: security group
+             * *   volume: storage volume
+             * *   eni: ENI
+             * *   ddh: dedicated host
+             * *   ddhcluster: dedicated host cluster
+             * *   keypair: SSH key pair
+             * *   launchtemplate: launch template
+             * *   reservedinstance: reserved instance
+             * *   snapshotpolicy: automatic snapshot policy
+             * *   elasticityassurance: elasticity assurance
+             * *   capacityreservation: capacity reservation
+             * *   command: Cloud Assistant command.
+             * *   invocation: Cloud Assistant command execution result
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +189,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +197,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

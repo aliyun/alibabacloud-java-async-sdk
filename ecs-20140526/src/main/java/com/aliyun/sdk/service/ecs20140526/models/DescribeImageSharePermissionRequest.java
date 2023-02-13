@@ -178,7 +178,7 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the custom image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -205,7 +205,10 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -214,7 +217,10 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 100.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,7 +229,7 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

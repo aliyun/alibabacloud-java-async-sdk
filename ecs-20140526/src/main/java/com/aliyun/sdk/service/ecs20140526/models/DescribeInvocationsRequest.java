@@ -74,6 +74,10 @@ public class DescribeInvocationsRequest extends Request {
     private String repeatMode;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -106,6 +110,7 @@ public class DescribeInvocationsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.repeatMode = builder.repeatMode;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
@@ -231,6 +236,13 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -274,6 +286,7 @@ public class DescribeInvocationsRequest extends Request {
         private Long pageSize; 
         private String regionId; 
         private String repeatMode; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < Tag> tag; 
@@ -300,6 +313,7 @@ public class DescribeInvocationsRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.repeatMode = request.repeatMode;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
@@ -316,7 +330,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * CommandId.
+         * The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -325,7 +339,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * CommandName.
+         * The name of the command.
          */
         public Builder commandName(String commandName) {
             this.putQueryParameter("CommandName", commandName);
@@ -334,7 +348,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * CommandType.
+         * The type of the command. If this parameter and `InstanceId` are both specified, this parameter does not take effect.
          */
         public Builder commandType(String commandType) {
             this.putQueryParameter("CommandType", commandType);
@@ -343,7 +357,13 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * ContentEncoding.
+         * The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:
+         * <p>
+         * 
+         * *   PlainText: returns the original command content and command outputs.
+         * *   Base64: returns the Base64-encoded command content and command outputs.
+         * 
+         * Default value: Base64.
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -352,7 +372,13 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * IncludeOutput.
+         * Specifies whether to return the command outputs in the response.
+         * <p>
+         * 
+         * *   true: The command outputs are returned. When this parameter is set to true, you must specify `InvokeId`, `InstanceId`, or both.
+         * *   false: The command outputs are not returned.
+         * 
+         * Default value: false.
          */
         public Builder includeOutput(Boolean includeOutput) {
             this.putQueryParameter("IncludeOutput", includeOutput);
@@ -361,7 +387,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. When you specify this parameter, the system queries all the execution records of all the commands that run on the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -370,7 +396,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * InvokeId.
+         * The ID of the command task.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -379,7 +405,30 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * InvokeStatus.
+         * The overall execution state of the command. The value of this parameter depends on the execution states on all involved instances. Valid values:
+         * <p>
+         * 
+         * *   Running:
+         * 
+         *     *   Scheduled execution: Before you manually stop the execution of the command, the overall execution state is always Running.
+         *     *   One-time execution: If the execution is in progress on one or more instances, the overall execution state is Running.
+         * 
+         * *   Finished:
+         * 
+         *     *   Scheduled execution: The overall execution state can never be Finished.
+         *     *   One-time execution: The execution is complete on all instances, or the execution is manually stopped on some instances and is complete on other instances.
+         * 
+         * *   Failed:
+         * 
+         *     *   Scheduled execution: The overall execution state can never be Failed.
+         *     *   One-time execution: The execution fails on all instances.
+         * 
+         * *   PartialFailed:
+         * 
+         *     *   Scheduled execution: The overall execution state can never be PartialFailed.
+         *     *   One-time execution: The execution fails on some instances.
+         * 
+         * *   Stopped: The execution is stopped.
          */
         public Builder invokeStatus(String invokeStatus) {
             this.putQueryParameter("InvokeStatus", invokeStatus);
@@ -406,7 +455,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Page start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -415,7 +469,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -424,7 +483,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -433,11 +492,28 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * RepeatMode.
+         * The execution mode of the command. Valid values:
+         * <p>
+         * 
+         * *   Once: The command is immediately run.
+         * *   Period: The command is run on a schedule.
+         * *   NextRebootOnly: The command is automatically run the next time the instance starts.
+         * *   EveryReboot: The command is automatically run every time the instance starts.
+         * 
+         * This parameter is empty by default, which indicates that commands run in all modes are queried.
          */
         public Builder repeatMode(String repeatMode) {
             this.putQueryParameter("RepeatMode", repeatMode);
             this.repeatMode = repeatMode;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -460,7 +536,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the command.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -469,7 +545,17 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * Timed.
+         * Specifies whether to query the commands that are to be automatically run. Valid values:
+         * <p>
+         * 
+         * *   true: queries the commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.
+         * 
+         * *   false: queries commands that meet the following requirements:
+         * 
+         *     *   The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Once`.
+         *     *   The executions of the commands are canceled, stopped, or complete.
+         * 
+         * Default value: false.
          */
         public Builder timed(Boolean timed) {
             this.putQueryParameter("Timed", timed);
@@ -523,7 +609,12 @@ public class DescribeInvocationsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -531,7 +622,7 @@ public class DescribeInvocationsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

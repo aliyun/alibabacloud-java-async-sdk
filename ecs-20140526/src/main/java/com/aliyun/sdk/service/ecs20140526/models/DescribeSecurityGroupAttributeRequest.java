@@ -177,7 +177,14 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The direction in which the security group rule is applied. Valid values:
+         * <p>
+         * 
+         * *   egress: outbound
+         * *   ingress: inbound
+         * *   all: outbound and inbound
+         * 
+         * Default value: all.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -186,7 +193,20 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * NicType.
+         * The network interface controller (NIC) type of the security group rule.
+         * <p>
+         * 
+         * *   Default value for rules of security groups in the classic network: internet. Valid values for rules of security groups in the classic network:
+         * 
+         *     *   internet
+         * 
+         *     *   intranet
+         * 
+         *         > You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.
+         * 
+         * *   When the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.
+         * 
+         *     > If you set this parameter to internet or leave this parameter empty, the intranet value is automatically used.
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -213,7 +233,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +260,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

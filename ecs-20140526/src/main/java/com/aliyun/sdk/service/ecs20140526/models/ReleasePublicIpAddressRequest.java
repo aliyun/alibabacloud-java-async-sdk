@@ -17,16 +17,12 @@ public class ReleasePublicIpAddressRequest extends Request {
     private String sourceRegionId;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
-
-    @Query
-    @NameInMap("OwnerAccount")
-    private String ownerAccount;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
 
     @Query
     @NameInMap("PublicIpAddress")
@@ -34,22 +30,16 @@ public class ReleasePublicIpAddressRequest extends Request {
     private String publicIpAddress;
 
     @Query
-    @NameInMap("ResourceOwnerAccount")
-    private String resourceOwnerAccount;
-
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("RegionId")
+    private String regionId;
 
     private ReleasePublicIpAddressRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
-        this.ownerAccount = builder.ownerAccount;
-        this.ownerId = builder.ownerId;
         this.publicIpAddress = builder.publicIpAddress;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -73,24 +63,17 @@ public class ReleasePublicIpAddressRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return ownerAccount
-     */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -101,27 +84,18 @@ public class ReleasePublicIpAddressRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerAccount
+     * @return regionId
      */
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static final class Builder extends Request.Builder<ReleasePublicIpAddressRequest, Builder> {
         private String sourceRegionId; 
+        private Boolean dryRun; 
         private String instanceId; 
-        private String ownerAccount; 
-        private Long ownerId; 
         private String publicIpAddress; 
-        private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -130,12 +104,10 @@ public class ReleasePublicIpAddressRequest extends Request {
         private Builder(ReleasePublicIpAddressRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
-            this.ownerAccount = request.ownerAccount;
-            this.ownerId = request.ownerId;
             this.publicIpAddress = request.publicIpAddress;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -148,7 +120,16 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * > This parameter is unavailable.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -157,25 +138,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PublicIpAddress.
+         * The public IP address of the instance.
          */
         public Builder publicIpAddress(String publicIpAddress) {
             this.putQueryParameter("PublicIpAddress", publicIpAddress);
@@ -184,20 +147,11 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * The region ID of the instance.
          */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

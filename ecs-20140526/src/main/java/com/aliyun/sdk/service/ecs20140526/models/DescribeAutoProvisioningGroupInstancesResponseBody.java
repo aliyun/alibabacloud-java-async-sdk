@@ -86,7 +86,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * An array consisting of Instance data.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +94,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * TotalCount.
+         * The number of queried instances in the auto provisioning group.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +290,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             private String zoneId; 
 
             /**
-             * CPU.
+             * The number of vCPUs.
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -298,7 +298,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * CreationTime.
+             * The time when the instance was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -306,7 +306,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -314,7 +314,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * InstanceType.
+             * The instance type of the ECS instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -322,7 +322,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * IoOptimized.
+             * Indicates whether the instance is I/O optimized.
              */
             public Builder ioOptimized(Boolean ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -330,7 +330,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * IsSpot.
+             * Indicates whether the instance is a preemptible instance.
              */
             public Builder isSpot(Boolean isSpot) {
                 this.isSpot = isSpot;
@@ -338,7 +338,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * Memory.
+             * The memory size of the instance. Unit: MiB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -346,7 +346,11 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * NetworkType.
+             * The network type of the instance. Valid values:
+             * <p>
+             * 
+             * *   vpc
+             * *   classic
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -354,7 +358,11 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * OsType.
+             * The operating system type of the instance. Valid values:
+             * <p>
+             * 
+             * *   windows
+             * *   linux
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -362,7 +370,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -370,7 +378,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * Status.
+             * The status of the instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -378,7 +386,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

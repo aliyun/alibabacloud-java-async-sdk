@@ -86,7 +86,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Commands.
+         * Details about the commands.
          */
         public Builder commands(Commands commands) {
             this.commands = commands;
@@ -94,7 +94,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of the commands.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -247,7 +247,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private Boolean required; 
 
             /**
-             * DefaultValue.
+             * The default value of the custom parameter.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -255,7 +255,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the custom parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -263,7 +263,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the custom parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -271,7 +271,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * PossibleValues.
+             * The valid values of the custom enumeration parameter.
              */
             public Builder possibleValues(PossibleValues possibleValues) {
                 this.possibleValues = possibleValues;
@@ -279,7 +279,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * Indicates whether the custom parameter is required. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false.
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -361,7 +367,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private java.util.List < String > parameterName; 
 
             /**
-             * ParameterName.
+             * The name of the custom parameter.
              */
             public Builder parameterName(java.util.List < String > parameterName) {
                 this.parameterName = parameterName;
@@ -414,7 +420,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the command.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -422,7 +428,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the command.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -696,7 +702,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * Category.
+             * The category of the common command.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -704,7 +710,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * CommandContent.
+             * The Base64-encoded command content.
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -712,7 +718,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * CommandId.
+             * The ID of the command.
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -720,7 +726,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the command was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -728,7 +734,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the command.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -736,7 +742,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableParameter.
+             * Indicates whether the custom parameter feature was enabled for the command.
              */
             public Builder enableParameter(Boolean enableParameter) {
                 this.enableParameter = enableParameter;
@@ -744,7 +750,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeTimes.
+             * The number of tasks created by using the command.
              */
             public Builder invokeTimes(Integer invokeTimes) {
                 this.invokeTimes = invokeTimes;
@@ -752,7 +758,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Latest.
+             * Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are of different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
              */
             public Builder latest(Boolean latest) {
                 this.latest = latest;
@@ -760,7 +766,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the command.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -768,7 +774,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDefinitions.
+             * Details about the custom parameters.
              */
             public Builder parameterDefinitions(ParameterDefinitions parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
@@ -776,7 +782,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterNames.
+             * The custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is not enabled, an empty list is returned.
              */
             public Builder parameterNames(ParameterNames parameterNames) {
                 this.parameterNames = parameterNames;
@@ -784,7 +790,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Provider.
+             * The provider of the common command.
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -792,7 +798,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags added to the command.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -800,7 +806,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * The timeout period.
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -808,7 +814,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the command.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -816,7 +822,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are of different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -824,7 +830,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingDir.
+             * The working directory of the command on the Elastic Compute Service (ECS) instance.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;

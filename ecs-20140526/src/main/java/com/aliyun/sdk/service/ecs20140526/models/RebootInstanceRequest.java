@@ -162,7 +162,13 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   true: performs a dry run. The system checks the required parameters, the request format, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -171,7 +177,11 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * ForceStop.
+         * Specifies whether to forcibly stop the instance to restart it. Valid values:
+         * <p>
+         * 
+         * *   true: stops the instance in a forceful manner. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage in the instance will be lost.
+         * *   false: normally stops the instance. This is the default value.
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -180,7 +190,7 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

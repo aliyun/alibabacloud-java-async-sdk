@@ -149,7 +149,7 @@ public class DeleteDeploymentSetRequest extends Request {
         }
 
         /**
-         * DeploymentSetId.
+         * The ID of the deployment set. You cannot delete a deployment set that contains instances.
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -176,7 +176,7 @@ public class DeleteDeploymentSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

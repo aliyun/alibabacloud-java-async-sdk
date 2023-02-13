@@ -162,7 +162,13 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * ActionType.
+         * The scenario in which the instance type is used. Default value: CreateEcs. Valid values:
+         * <p>
+         * 
+         * *   CreateEcs: instance creation
+         * *   Upgrade: instance type upgrade
+         * *   Downgrade: instance type downgrade
+         * *   RenewDowngrade: renewal and configuration downgrade
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -171,7 +177,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The list of filters to querying resources.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -180,7 +186,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -198,7 +204,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +276,11 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of filter. Only the image ID can be used to filter instance types. Valid values:
+             * <p>
+             * 
+             * * imagId: image ID
+             * * filter: image ID
              */
             public Builder key(String key) {
                 this.key = key;
@@ -278,7 +288,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of filter.
              */
             public Builder value(String value) {
                 this.value = value;

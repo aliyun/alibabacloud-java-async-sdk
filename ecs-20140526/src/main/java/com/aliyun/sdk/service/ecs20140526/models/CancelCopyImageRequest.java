@@ -149,7 +149,7 @@ public class CancelCopyImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image that is being copied.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -176,7 +176,7 @@ public class CancelCopyImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image copy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

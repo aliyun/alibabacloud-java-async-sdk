@@ -86,7 +86,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyPairFingerPrint.
+         * The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see [RFC 4716](https://tools.ietf.org/html/rfc4716).
          */
         public Builder keyPairFingerPrint(String keyPairFingerPrint) {
             this.keyPairFingerPrint = keyPairFingerPrint;
@@ -94,7 +94,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairId.
+         * The ID of the SSH key pair.
          */
         public Builder keyPairId(String keyPairId) {
             this.keyPairId = keyPairId;
@@ -102,7 +102,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairName.
+         * The name of the SSH key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -110,7 +110,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateKeyBody.
+         * The private key of the key pair. The private key is encoded with PEM in the PKCS#8 format.
          */
         public Builder privateKeyBody(String privateKeyBody) {
             this.privateKeyBody = privateKeyBody;
@@ -118,7 +118,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

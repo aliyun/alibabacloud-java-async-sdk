@@ -86,7 +86,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceFullStatusSet.
+         * Details about the full status information of instances.
          */
         public Builder instanceFullStatusSet(InstanceFullStatusSet instanceFullStatusSet) {
             this.instanceFullStatusSet = instanceFullStatusSet;
@@ -94,7 +94,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the health state.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -178,7 +178,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the health state.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +231,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the event state.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -239,7 +239,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the event state.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +292,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the event type.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -300,7 +300,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the event type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -389,7 +389,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String releaseTime; 
 
             /**
-             * CreationTime.
+             * The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -397,7 +397,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceCategory.
+             * The category of the disk. Valid values:
+             * <p>
+             * 
+             * *   cloud: basic disk
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             * *   cloud_essd: enhanced SSD (ESSD)
+             * *   local_ssd_pro: I/O-intensive local disk
+             * *   local_hdd_pro: throughput-intensive local disk
+             * *   ephemeral: retired local disk
+             * *   ephemeral_ssd: retired local SSD
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -405,7 +415,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceSize.
+             * The size of the disk. Unit: GiB.
              */
             public Builder deviceSize(String deviceSize) {
                 this.deviceSize = deviceSize;
@@ -413,7 +423,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * The type of the disk. Valid values:
+             * <p>
+             * 
+             * *   system: system disk
+             * *   data: data disk
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -421,7 +435,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -527,7 +541,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private InactiveDisks inactiveDisks; 
 
             /**
-             * Device.
+             * The device name of the local disk.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -535,7 +549,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the local disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -543,7 +557,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InactiveDisks.
+             * Details about the inactive cloud disks or local disks that have been released and must be cleared.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -668,7 +682,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * EventCycleStatus.
+             * The state of the event. Valid values:
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -676,7 +690,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The ID of the event.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -684,7 +698,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EventPublishTime.
+             * The time when the event was published. The time is displayed in UTC.
              */
             public Builder eventPublishTime(String eventPublishTime) {
                 this.eventPublishTime = eventPublishTime;
@@ -692,7 +706,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the event.
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -700,7 +714,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedAttribute.
+             * The extended attributes of system events generated for instances that have local disks attached.
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
@@ -708,7 +722,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ImpactLevel.
+             * The impact level of the event.
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -716,7 +730,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * The scheduled time when to execute the O\&M task related to the event. The time is displayed in UTC.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -724,7 +738,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the event was scheduled.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -818,7 +832,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the instance lifecycle state.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -826,7 +840,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the instance lifecycle state.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -903,7 +917,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private Status status; 
 
             /**
-             * HealthStatus.
+             * The health state of the instance.
              */
             public Builder healthStatus(HealthStatus healthStatus) {
                 this.healthStatus = healthStatus;
@@ -911,7 +925,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -919,7 +933,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledSystemEventSet.
+             * Details about the scheduled system events.
              */
             public Builder scheduledSystemEventSet(ScheduledSystemEventSet scheduledSystemEventSet) {
                 this.scheduledSystemEventSet = scheduledSystemEventSet;
@@ -927,7 +941,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The lifecycle state of the instance.
              */
             public Builder status(Status status) {
                 this.status = status;

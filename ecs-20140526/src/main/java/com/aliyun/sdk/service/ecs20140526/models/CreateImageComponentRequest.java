@@ -246,7 +246,7 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -255,7 +255,10 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * ComponentType.
+         * The type of the image component. Only image building components are supported. Set the value to Build.
+         * <p>
+         * 
+         * Default value: Build.
          */
         public Builder componentType(String componentType) {
             this.putQueryParameter("ComponentType", componentType);
@@ -264,7 +267,7 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the image component. The content can consist of up to 127 commands.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -273,7 +276,7 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the image component. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -282,7 +285,10 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the image component. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <p>
+         * 
+         * >  If you do not specify the `Name` parameter, the return value of `ImageComponentId` is used by default.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -309,7 +315,7 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to create the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -318,7 +324,7 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which to assign the image component.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -345,7 +351,10 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * SystemType.
+         * The operating system type supported by the image component. Only Linux is supported. Set the value to Linux.
+         * <p>
+         * 
+         * Default value: Linux.
          */
         public Builder systemType(String systemType) {
             this.putQueryParameter("SystemType", systemType);
@@ -354,7 +363,7 @@ public class CreateImageComponentRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -408,7 +417,7 @@ public class CreateImageComponentRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -416,7 +425,7 @@ public class CreateImageComponentRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

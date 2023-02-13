@@ -182,7 +182,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         } 
 
         /**
-         * AutoProvisioningGroupId.
+         * The IDs of auto provisioning groups. You can specify up to 20 auto provisioning group IDs.
          */
         public Builder autoProvisioningGroupId(java.util.List < String > autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -191,7 +191,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * AutoProvisioningGroupName.
+         * The name of the auto provisioning group.
          */
         public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
             this.putQueryParameter("AutoProvisioningGroupName", autoProvisioningGroupName);
@@ -200,7 +200,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * AutoProvisioningGroupStatus.
+         * The statuses of auto provisioning groups.
          */
         public Builder autoProvisioningGroupStatus(java.util.List < String > autoProvisioningGroupStatus) {
             this.putQueryParameter("AutoProvisioningGroupStatus", autoProvisioningGroupStatus);
@@ -227,7 +227,12 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -236,7 +241,12 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -245,7 +255,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the auto provisioning group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -177,7 +177,7 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value of the **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -186,7 +186,7 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * ImagePipelineId.
+         * The ID of the image template.
          */
         public Builder imagePipelineId(String imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -213,7 +213,7 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image creation task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +240,7 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * TemplateTag.
+         * > This parameter is deprecated.
          */
         public Builder templateTag(java.util.List < TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
@@ -294,7 +294,7 @@ public class StartImagePipelineExecutionRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * >  This parameter is deprecated.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +302,7 @@ public class StartImagePipelineExecutionRequest extends Request {
             }
 
             /**
-             * Value.
+             * >  This parameter is deprecated.
              */
             public Builder value(String value) {
                 this.value = value;

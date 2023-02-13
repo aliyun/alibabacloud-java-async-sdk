@@ -65,6 +65,10 @@ public class DescribeManagedInstancesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private DescribeManagedInstancesRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
@@ -80,6 +84,7 @@ public class DescribeManagedInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -186,6 +191,13 @@ public class DescribeManagedInstancesRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeManagedInstancesRequest, Builder> {
         private String sourceRegionId; 
         private String activationId; 
@@ -200,6 +212,7 @@ public class DescribeManagedInstancesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -220,6 +233,7 @@ public class DescribeManagedInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -232,7 +246,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * ActivationId.
+         * The ID of the activation code.
          */
         public Builder activationId(String activationId) {
             this.putQueryParameter("ActivationId", activationId);
@@ -241,7 +255,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of managed instance N. Valid values of N: 1 to 50.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -250,7 +264,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIp.
+         * The internal or public IP address of the managed instance.
          */
         public Builder instanceIp(String instanceIp) {
             this.putQueryParameter("InstanceIp", instanceIp);
@@ -259,7 +273,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the managed instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -268,7 +282,11 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * OsType.
+         * The operating system type of the managed instance. Valid values:
+         * <p>
+         * 
+         * *   windows
+         * *   linux
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -295,7 +313,12 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -304,7 +327,12 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -313,7 +341,10 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the managed instance. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -339,6 +370,15 @@ public class DescribeManagedInstancesRequest extends Request {
             return this;
         }
 
+        /**
+         * The tags of the managed instance.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public DescribeManagedInstancesRequest build() {
             return new DescribeManagedInstancesRequest(this);
@@ -346,4 +386,73 @@ public class DescribeManagedInstancesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

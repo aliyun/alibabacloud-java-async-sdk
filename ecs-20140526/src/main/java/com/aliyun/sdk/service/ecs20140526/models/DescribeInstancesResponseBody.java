@@ -98,7 +98,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * Details about the instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -106,7 +106,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of instances returned.
+         * <p>
+         * 
+         * >  If you specify the `MaxResults` and `NextToken` parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +205,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer threadsPerCore; 
 
             /**
-             * CoreCount.
+             * The number of physical CPU cores.
              */
             public Builder coreCount(Integer coreCount) {
                 this.coreCount = coreCount;
@@ -210,7 +213,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Numa.
+             * The number of threads allocated. Valid value: 2.
              */
             public Builder numa(String numa) {
                 this.numa = numa;
@@ -218,7 +221,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadsPerCore.
+             * The number of threads per CPU core.
              */
             public Builder threadsPerCore(Integer threadsPerCore) {
                 this.threadsPerCore = threadsPerCore;
@@ -283,7 +286,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String dedicatedHostName; 
 
             /**
-             * DedicatedHostClusterId.
+             * The ID of the dedicated host cluster.
              */
             public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
                 this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -291,7 +294,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostId.
+             * The ID of the dedicated host.
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -299,7 +302,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostName.
+             * The name of the dedicated host.
              */
             public Builder dedicatedHostName(String dedicatedHostName) {
                 this.dedicatedHostName = dedicatedHostName;
@@ -352,7 +355,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String tenancy; 
 
             /**
-             * Affinity.
+             * Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values: 
+             * <p>
+             * 
+             * - default: The instance is not associated with the dedicated host. When the instance is started from economical mode, the instance may be automatically deployed on another dedicated host in the automatic deployment resource pool.
+             * - host: The instance is associated with the dedicated host. When the instance is started from economical mode, the instance is still deployed on the original dedicated host.
              */
             public Builder affinity(String affinity) {
                 this.affinity = affinity;
@@ -360,7 +367,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tenancy.
+             * Indicates whether the instance is hosted on a dedicated host. Valid values:
+             * <p>
+             * 
+             * - default: The instance is not hosted on a dedicated host.
+             * - host: The instance is hosted on a dedicated host.
              */
             public Builder tenancy(String tenancy) {
                 this.tenancy = tenancy;
@@ -413,7 +424,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String capacityReservationPreference; 
 
             /**
-             * CapacityReservationId.
+             * The ID of the capacity reservation.
              */
             public Builder capacityReservationId(String capacityReservationId) {
                 this.capacityReservationId = capacityReservationId;
@@ -421,7 +432,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CapacityReservationPreference.
+             * The preference of the capacity reservation.
              */
             public Builder capacityReservationPreference(String capacityReservationPreference) {
                 this.capacityReservationPreference = capacityReservationPreference;
@@ -510,7 +521,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean isSupportUnassociate; 
 
             /**
-             * AllocationId.
+             * The ID of the EIP.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -518,7 +529,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The maximum public bandwidth of the EIP. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -526,7 +537,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * The billing method of the EIP. Valid values: 
+             * <p>
+             * 
+             * - PayByBandwidth
+             * - PayByTraffic
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -534,7 +549,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * The EIP.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -542,7 +557,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSupportUnassociate.
+             * Indicates whether the EIP can be disassociated.
              */
             public Builder isSupportUnassociate(Boolean isSupportUnassociate) {
                 this.isSupportUnassociate = isSupportUnassociate;
@@ -583,7 +598,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean configured; 
 
             /**
-             * Configured.
+             * >  This parameter is in invitational preview and is unavailable for general users.
              */
             public Builder configured(Boolean configured) {
                 this.configured = configured;
@@ -624,7 +639,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean loginAsNonRoot; 
 
             /**
-             * LoginAsNonRoot.
+             * Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values: 
+             * <p>
+             * 
+             * - true: The instance that uses the image supports logons of the ecs-user user.
+             * - false: The instance that uses the image does not support logons of the ecs-user user.
              */
             public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
                 this.loginAsNonRoot = loginAsNonRoot;
@@ -665,7 +684,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * IpAddress.
+             * The EIP.
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -730,7 +749,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String httpTokens; 
 
             /**
-             * HttpEndpoint.
+             * Indicates whether the access channel is enabled for instance metadata. Valid values:
+             * <p>
+             * 
+             * - enabled
+             * - disabled
              */
             public Builder httpEndpoint(String httpEndpoint) {
                 this.httpEndpoint = httpEndpoint;
@@ -738,7 +761,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPutResponseHopLimit.
+             * >  This parameter is unavailable.
              */
             public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
                 this.httpPutResponseHopLimit = httpPutResponseHopLimit;
@@ -746,7 +769,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HttpTokens.
+             * Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values: 
+             * <p>
+             * 
+             * - optional: The security hardening mode (IMDSv2) is not forcefully used.
+             * - required: The security hardening mode (IMDSv2) is forcefully used.
              */
             public Builder httpTokens(String httpTokens) {
                 this.httpTokens = httpTokens;
@@ -755,6 +782,170 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             public MetadataOptions build() {
                 return new MetadataOptions(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv4PrefixSet extends TeaModel {
+        @NameInMap("Ipv4Prefix")
+        private String ipv4Prefix;
+
+        private Ipv4PrefixSet(Builder builder) {
+            this.ipv4Prefix = builder.ipv4Prefix;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv4PrefixSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv4Prefix
+         */
+        public String getIpv4Prefix() {
+            return this.ipv4Prefix;
+        }
+
+        public static final class Builder {
+            private String ipv4Prefix; 
+
+            /**
+             * The IPv4 prefix.
+             */
+            public Builder ipv4Prefix(String ipv4Prefix) {
+                this.ipv4Prefix = ipv4Prefix;
+                return this;
+            }
+
+            public Ipv4PrefixSet build() {
+                return new Ipv4PrefixSet(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv4PrefixSets extends TeaModel {
+        @NameInMap("Ipv4PrefixSet")
+        private java.util.List < Ipv4PrefixSet> ipv4PrefixSet;
+
+        private Ipv4PrefixSets(Builder builder) {
+            this.ipv4PrefixSet = builder.ipv4PrefixSet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv4PrefixSets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv4PrefixSet
+         */
+        public java.util.List < Ipv4PrefixSet> getIpv4PrefixSet() {
+            return this.ipv4PrefixSet;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ipv4PrefixSet> ipv4PrefixSet; 
+
+            /**
+             * Ipv4PrefixSet.
+             */
+            public Builder ipv4PrefixSet(java.util.List < Ipv4PrefixSet> ipv4PrefixSet) {
+                this.ipv4PrefixSet = ipv4PrefixSet;
+                return this;
+            }
+
+            public Ipv4PrefixSets build() {
+                return new Ipv4PrefixSets(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv6PrefixSet extends TeaModel {
+        @NameInMap("Ipv6Prefix")
+        private String ipv6Prefix;
+
+        private Ipv6PrefixSet(Builder builder) {
+            this.ipv6Prefix = builder.ipv6Prefix;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6PrefixSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Prefix
+         */
+        public String getIpv6Prefix() {
+            return this.ipv6Prefix;
+        }
+
+        public static final class Builder {
+            private String ipv6Prefix; 
+
+            /**
+             * The IPv6 prefix.
+             */
+            public Builder ipv6Prefix(String ipv6Prefix) {
+                this.ipv6Prefix = ipv6Prefix;
+                return this;
+            }
+
+            public Ipv6PrefixSet build() {
+                return new Ipv6PrefixSet(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv6PrefixSets extends TeaModel {
+        @NameInMap("Ipv6PrefixSet")
+        private java.util.List < Ipv6PrefixSet> ipv6PrefixSet;
+
+        private Ipv6PrefixSets(Builder builder) {
+            this.ipv6PrefixSet = builder.ipv6PrefixSet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6PrefixSets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6PrefixSet
+         */
+        public java.util.List < Ipv6PrefixSet> getIpv6PrefixSet() {
+            return this.ipv6PrefixSet;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ipv6PrefixSet> ipv6PrefixSet; 
+
+            /**
+             * Ipv6PrefixSet.
+             */
+            public Builder ipv6PrefixSet(java.util.List < Ipv6PrefixSet> ipv6PrefixSet) {
+                this.ipv6PrefixSet = ipv6PrefixSet;
+                return this;
+            }
+
+            public Ipv6PrefixSets build() {
+                return new Ipv6PrefixSets(this);
             } 
 
         } 
@@ -787,7 +978,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String ipv6Address; 
 
             /**
-             * Ipv6Address.
+             * The IPv6 address assigned to the ENI.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -881,7 +1072,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String privateIpAddress; 
 
             /**
-             * Primary.
+             * Indicates whether the IP address is the primary private IP address.
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -889,7 +1080,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * The private IP address of the instance to which the ENI is bound.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -945,6 +1136,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class NetworkInterface extends TeaModel {
+        @NameInMap("Ipv4PrefixSets")
+        private Ipv4PrefixSets ipv4PrefixSets;
+
+        @NameInMap("Ipv6PrefixSets")
+        private Ipv6PrefixSets ipv6PrefixSets;
+
         @NameInMap("Ipv6Sets")
         private Ipv6Sets ipv6Sets;
 
@@ -964,6 +1161,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private String type;
 
         private NetworkInterface(Builder builder) {
+            this.ipv4PrefixSets = builder.ipv4PrefixSets;
+            this.ipv6PrefixSets = builder.ipv6PrefixSets;
             this.ipv6Sets = builder.ipv6Sets;
             this.macAddress = builder.macAddress;
             this.networkInterfaceId = builder.networkInterfaceId;
@@ -978,6 +1177,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static NetworkInterface create() {
             return builder().build();
+        }
+
+        /**
+         * @return ipv4PrefixSets
+         */
+        public Ipv4PrefixSets getIpv4PrefixSets() {
+            return this.ipv4PrefixSets;
+        }
+
+        /**
+         * @return ipv6PrefixSets
+         */
+        public Ipv6PrefixSets getIpv6PrefixSets() {
+            return this.ipv6PrefixSets;
         }
 
         /**
@@ -1023,6 +1236,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Ipv4PrefixSets ipv4PrefixSets; 
+            private Ipv6PrefixSets ipv6PrefixSets; 
             private Ipv6Sets ipv6Sets; 
             private String macAddress; 
             private String networkInterfaceId; 
@@ -1031,7 +1246,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Ipv6Sets.
+             * The sets of IPv4 prefix.
+             */
+            public Builder ipv4PrefixSets(Ipv4PrefixSets ipv4PrefixSets) {
+                this.ipv4PrefixSets = ipv4PrefixSets;
+                return this;
+            }
+
+            /**
+             * The sets of IPv6 prefix.
+             */
+            public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
+                this.ipv6PrefixSets = ipv6PrefixSets;
+                return this;
+            }
+
+            /**
+             * The IPv6 addresses assigned to the ENI. This parameter has a value only when the `AdditionalAttributes.N` request parameter is set to `NETWORK_PRIMARY_ENI_IP`.
              */
             public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
                 this.ipv6Sets = ipv6Sets;
@@ -1039,7 +1270,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MacAddress.
+             * The media access control (MAC) address of the ENI.
              */
             public Builder macAddress(String macAddress) {
                 this.macAddress = macAddress;
@@ -1047,7 +1278,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * The ID of the ENI.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -1055,7 +1286,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryIpAddress.
+             * The primary private IP address of the ENI.
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -1063,7 +1294,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpSets.
+             * Details about the private IP address.
              */
             public Builder privateIpSets(PrivateIpSets privateIpSets) {
                 this.privateIpSets = privateIpSets;
@@ -1071,7 +1302,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the ENI. Valid values:
+             * <p>
+             * 
+             * *   Primary
+             * *   Secondary
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1165,7 +1400,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * LockMsg.
+             * The message returned when the instance was locked.
              */
             public Builder lockMsg(String lockMsg) {
                 this.lockMsg = lockMsg;
@@ -1173,7 +1408,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LockReason.
+             * The reason why the instance was locked. Valid values:
+             * <p>
+             * 
+             * - financial: The instance was locked due to overdue payments.
+             * - security: The instance was locked due to security reasons.
+             * - recycling: The preemptible instance was locked and pending release.
+             * - dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
+             * - refunded: The instance was locked because a refund was made for the instance.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1214,7 +1456,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the instance was locked. Valid values:
+             * <p>
+             * 
+             * - financial: The instance was locked due to overdue payments.
+             * - security: The instance was locked due to security reasons.
+             * - recycling: The preemptible instance was locked and pending release.
+             * - dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
+             * - refunded: The instance was locked because a refund was made for the instance.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;
@@ -1255,7 +1504,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * IpAddress.
+             * The EIP.
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1296,7 +1545,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * IpAddress.
+             * The EIP.
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1390,7 +1639,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the instance.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1398,7 +1647,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the instance.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1480,7 +1729,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < String > ipAddress; 
 
             /**
-             * IpAddress.
+             * The EIP.
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1557,7 +1806,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * NatIpAddress.
+             * The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.
              */
             public Builder natIpAddress(String natIpAddress) {
                 this.natIpAddress = natIpAddress;
@@ -1565,7 +1814,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * The private IP addresses of the instance.
              */
             public Builder privateIpAddress(PrivateIpAddress privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -1573,7 +1822,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1581,7 +1830,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2366,7 +2615,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AutoReleaseTime.
+             * The time when to automatically release the pay-as-you-go instance.
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -2374,7 +2623,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster to which the instance belongs.
+             * <p>
+             * 
+             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -2382,7 +2634,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -2390,7 +2642,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuOptions.
+             * Details about the CPU options.
              */
             public Builder cpuOptions(CpuOptions cpuOptions) {
                 this.cpuOptions = cpuOptions;
@@ -2398,7 +2650,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -2406,7 +2658,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreditSpecification.
+             * The performance mode of the burstable instance. Valid values:
+             * <p>
+             * 
+             * *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977~~).
+             * *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977~~).
              */
             public Builder creditSpecification(String creditSpecification) {
                 this.creditSpecification = creditSpecification;
@@ -2414,7 +2670,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostAttribute.
+             * Details about the dedicated host. It is an array that consists of the DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName parameters.
              */
             public Builder dedicatedHostAttribute(DedicatedHostAttribute dedicatedHostAttribute) {
                 this.dedicatedHostAttribute = dedicatedHostAttribute;
@@ -2422,7 +2678,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedInstanceAttribute.
+             * The attributes of the instance on the dedicated host.
              */
             public Builder dedicatedInstanceAttribute(DedicatedInstanceAttribute dedicatedInstanceAttribute) {
                 this.dedicatedInstanceAttribute = dedicatedInstanceAttribute;
@@ -2430,7 +2686,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * The release protection attribute of the instance. This parameter indicates whether you can use the ECS console or call the DeleteInstance operation to release the instance.
+             * <p>
+             * 
+             * *   true: Release protection is enabled for the instance.
+             * *   false: Release protection is disabled for the instance.
+             * 
+             * >  This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -2438,7 +2700,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentSetGroupNo.
+             * The number of the deployment set group to which the instance belongs in a deployment set.
              */
             public Builder deploymentSetGroupNo(Integer deploymentSetGroupNo) {
                 this.deploymentSetGroupNo = deploymentSetGroupNo;
@@ -2446,7 +2708,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentSetId.
+             * The ID of the deployment set in which the instance is deployed.
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -2454,7 +2716,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2462,7 +2724,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceAvailable.
+             * Indicates whether data disks can be attached to the instance.
              */
             public Builder deviceAvailable(Boolean deviceAvailable) {
                 this.deviceAvailable = deviceAvailable;
@@ -2470,7 +2732,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EcsCapacityReservationAttr.
+             * Details about the capacity reservation related to the instance.
              */
             public Builder ecsCapacityReservationAttr(EcsCapacityReservationAttr ecsCapacityReservationAttr) {
                 this.ecsCapacityReservationAttr = ecsCapacityReservationAttr;
@@ -2478,7 +2740,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EipAddress.
+             * Details about the EIP associated with the instance.
              */
             public Builder eipAddress(EipAddress eipAddress) {
                 this.eipAddress = eipAddress;
@@ -2486,7 +2748,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -2494,7 +2756,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GPUAmount.
+             * The number of GPUs for the instance type.
              */
             public Builder GPUAmount(Integer GPUAmount) {
                 this.GPUAmount = GPUAmount;
@@ -2502,7 +2764,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GPUSpec.
+             * The category of GPUs for the instance type.
              */
             public Builder GPUSpec(String GPUSpec) {
                 this.GPUSpec = GPUSpec;
@@ -2510,7 +2772,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HibernationOptions.
+             * >  This parameter is in invitational preview and is unavailable for general users.
              */
             public Builder hibernationOptions(HibernationOptions hibernationOptions) {
                 this.hibernationOptions = hibernationOptions;
@@ -2518,7 +2780,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The hostname of the instance.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -2526,7 +2788,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HpcClusterId.
+             * The ID of the HPC cluster to which the instance belongs.
              */
             public Builder hpcClusterId(String hpcClusterId) {
                 this.hpcClusterId = hpcClusterId;
@@ -2534,7 +2796,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ISP.
+             * >  This parameter is in invitational preview and is unavailable for general users.
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -2542,7 +2804,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image that the instance is running.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -2550,7 +2812,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOptions.
+             * Details about the image options.
              */
             public Builder imageOptions(ImageOptions imageOptions) {
                 this.imageOptions = imageOptions;
@@ -2558,7 +2820,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InnerIpAddress.
+             * The internal IP addresses of the instance located in the classic network.
              */
             public Builder innerIpAddress(InnerIpAddress innerIpAddress) {
                 this.innerIpAddress = innerIpAddress;
@@ -2566,7 +2828,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   PrePaid: subscription
+             * *   PostPaid: pay-as-you-go
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -2574,7 +2840,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2582,7 +2848,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -2590,7 +2856,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNetworkType.
+             * The network type of the instance. Valid values:
+             * <p>
+             * 
+             * *   classic
+             * *   vpc
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -2598,7 +2868,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2606,7 +2876,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * The instance family of the instance.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -2614,7 +2884,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * The billing method for network usage. Valid values:
+             * <p>
+             * 
+             * *   PayByBandwidth: pay-by-bandwidth
+             * *   PayByTraffic: pay-by-traffic
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -2622,7 +2896,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxBandwidthIn.
+             * The maximum inbound public bandwidth. Unit: Mbit/s.
              */
             public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
                 this.internetMaxBandwidthIn = internetMaxBandwidthIn;
@@ -2630,7 +2904,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxBandwidthOut.
+             * The maximum outbound public bandwidth. Unit: Mbit/s.
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -2638,7 +2912,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IoOptimized.
+             * Indicates whether the instance is I/O optimized.
              */
             public Builder ioOptimized(Boolean ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -2646,7 +2920,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * The name of the key pair bound to the instance.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -2654,7 +2928,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorageAmount.
+             * The number of local disks attached to the instance.
              */
             public Builder localStorageAmount(Integer localStorageAmount) {
                 this.localStorageAmount = localStorageAmount;
@@ -2662,7 +2936,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorageCapacity.
+             * The capacity of local disks attached to the instance.
              */
             public Builder localStorageCapacity(Long localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
@@ -2670,7 +2944,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the instance. Unit: MiB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -2678,7 +2952,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MetadataOptions.
+             * Details about the metadata options.
              */
             public Builder metadataOptions(MetadataOptions metadataOptions) {
                 this.metadataOptions = metadataOptions;
@@ -2686,7 +2960,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaces.
+             * Details about the ENIs bound to the instance.
              */
             public Builder networkInterfaces(NetworkInterfaces networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
@@ -2694,7 +2968,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * The name of the operating system of the instance.
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -2702,7 +2976,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OSNameEn.
+             * The English name of the operating system of the instance.
              */
             public Builder OSNameEn(String OSNameEn) {
                 this.OSNameEn = OSNameEn;
@@ -2710,7 +2984,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * The type of the operating system of the instance. Valid values:
+             * <p>
+             * 
+             * *   windows
+             * *   linux
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -2718,7 +2996,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OperationLocks.
+             * The reasons why the instance was locked.
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -2726,7 +3004,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddress.
+             * The public IP addresses of the instance.
              */
             public Builder publicIpAddress(PublicIpAddress publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -2734,7 +3012,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RdmaIpAddress.
+             * The RDMA IP addresses of the HPC instance.
              */
             public Builder rdmaIpAddress(RdmaIpAddress rdmaIpAddress) {
                 this.rdmaIpAddress = rdmaIpAddress;
@@ -2742,7 +3020,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Recyclable.
+             * Indicates whether the instance can be recycled.
              */
             public Builder recyclable(Boolean recyclable) {
                 this.recyclable = recyclable;
@@ -2750,7 +3028,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2758,7 +3036,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2766,7 +3044,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SaleCycle.
+             * >  The parameter is discontinued.
              */
             public Builder saleCycle(String saleCycle) {
                 this.saleCycle = saleCycle;
@@ -2774,7 +3052,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * The IDs of the security groups to which the instance belongs.
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -2782,7 +3060,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * The serial number of the instance.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -2790,7 +3068,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotDuration.
+             * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+             * <p>
+             * 
+             * *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
+             * *   A value of 0 indicates that the preemptible instance has no protection period.
+             * 
+             * >  This parameter is returned when the SpotStrategy parameter is set to SpotWithPriceLimit or SpotAsPriceGo.
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
@@ -2798,7 +3082,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPriceLimit.
+             * The maximum hourly price of the instance. It can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -2806,7 +3090,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The bidding policy for the pay-as-you-go instance. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The instance is a regular pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -2814,7 +3103,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2822,7 +3111,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2830,7 +3119,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StoppedMode.
+             * Indicates whether the instance continues to be billed after it is stopped. Valid values:
+             * <p>
+             * 
+             * *   KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.
+             * *   StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.
+             * *   Not-applicable: The instance does not support economical mode.
              */
             public Builder stoppedMode(String stoppedMode) {
                 this.stoppedMode = stoppedMode;
@@ -2838,7 +3132,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -2846,7 +3140,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VlanId.
+             * The virtual LAN (VLAN) ID of the instance.
+             * <p>
+             * 
+             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder vlanId(String vlanId) {
                 this.vlanId = vlanId;
@@ -2854,7 +3151,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcAttributes.
+             * The VPC attributes of the instance.
              */
             public Builder vpcAttributes(VpcAttributes vpcAttributes) {
                 this.vpcAttributes = vpcAttributes;
@@ -2862,7 +3159,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -50,7 +50,7 @@ public class CreateDedicatedHostClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DedicatedHostClusterId.
+         * The ID of the dedicated host cluster.
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -58,7 +58,7 @@ public class CreateDedicatedHostClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

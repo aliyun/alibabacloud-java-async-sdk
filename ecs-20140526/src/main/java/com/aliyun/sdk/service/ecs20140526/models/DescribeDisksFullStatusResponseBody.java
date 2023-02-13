@@ -86,7 +86,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DiskFullStatusSet.
+         * The collection of full status information of the EBS devices.
          */
         public Builder diskFullStatusSet(DiskFullStatusSet diskFullStatusSet) {
             this.diskFullStatusSet = diskFullStatusSet;
@@ -94,7 +94,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of EBS devices for which full status information is returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the event type.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -178,7 +178,13 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the event type. Valid values:
+             * <p>
+             * 
+             * *   Degraded: The performance of the EBS device was degraded.
+             * *   SeverelyDegraded: The performance of the EBS device was severely degraded.
+             * *   Stalled: The performance of the EBS device was severely affected.
+             * *   ErrorDetected: The local disk was damaged.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -267,7 +273,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String impactLevel; 
 
             /**
-             * EventEndTime.
+             * The time when the event ended.
              */
             public Builder eventEndTime(String eventEndTime) {
                 this.eventEndTime = eventEndTime;
@@ -275,7 +281,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The ID of the event.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -283,7 +289,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * The time when the event occurred.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -291,7 +297,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the event.
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -299,7 +305,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ImpactLevel.
+             * The impact level of the event.
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -393,7 +399,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the health status of the EBS device.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -401,7 +407,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the health status of the EBS device.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,7 +460,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the lifecycle status of the EBS device.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -462,7 +468,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the lifecycle status of the EBS device.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -563,7 +569,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private Status status; 
 
             /**
-             * Device.
+             * The name of the EBS device that is attached to an instance. Example: /dev/xvdb.
+             * <p>
+             * 
+             * This parameter has a value only when the value of `Status` is `In_use`.
+             * 
+             * > This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -571,7 +582,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DiskEventSet.
+             * The events about the EBS device.
              */
             public Builder diskEventSet(DiskEventSet diskEventSet) {
                 this.diskEventSet = diskEventSet;
@@ -579,7 +590,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of EBS device N.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -587,7 +598,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * The health status of the EBS device.
              */
             public Builder healthStatus(HealthStatus healthStatus) {
                 this.healthStatus = healthStatus;
@@ -595,7 +606,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance that you query.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -603,7 +614,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The lifecycle status of the EBS device.
              */
             public Builder status(Status status) {
                 this.status = status;

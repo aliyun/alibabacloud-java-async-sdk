@@ -163,7 +163,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * ExecutionId.
+         * The ID of the image build task.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -190,7 +190,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +217,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * TemplateTag.
+         * > This parameter is deprecated.
          */
         public Builder templateTag(java.util.List < TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
@@ -271,7 +271,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * >  This parameter is deprecated.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +279,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
             }
 
             /**
-             * Value.
+             * >  This parameter is deprecated.
              */
             public Builder value(String value) {
                 this.value = value;

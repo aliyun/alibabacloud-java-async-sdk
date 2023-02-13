@@ -274,7 +274,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * CommandId.
+         * The ID of the command.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -283,7 +283,13 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * ContentEncoding.
+         * The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:
+         * <p>
+         * 
+         * *   PlainText: returns the original command content and command output.
+         * *   Base64: returns the Base64-encoded command content and command output
+         * 
+         * Default value: Base64.
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -292,7 +298,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Description.
+         * > This parameter is deprecated and does not take effect.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -301,7 +307,13 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Latest.
+         * Specifies whether to query only the latest version of common commands if common commands are queried. This parameter does not affect the query for private commands. Valid values:
+         * <p>
+         * 
+         * *   true: queries only the latest version of common commands.
+         * *   false: queries all versions of common commands.
+         * 
+         * Default value: false.
          */
         public Builder latest(Boolean latest) {
             this.putQueryParameter("Latest", latest);
@@ -310,7 +322,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the command. Partial command names are not supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -337,7 +349,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -346,7 +363,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -355,7 +377,17 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Provider.
+         * The provider of the common command. Take note of the following items:
+         * <p>
+         * 
+         * *   If you do not specify this parameter, all the commands that you created are queried.
+         * 
+         * *   If you set this parameter to `AlibabaCloud`, all the common commands provided by Alibaba Cloud are queried.
+         * 
+         * *   If you set this parameter to a specific provider, all the common commands provided by the provider are queried, such as the following ones:
+         * 
+         *     *   If you set `Provider` to AlibabaCloud.ECS.GuestOS, all the common commands provided by `AlibabaCloud.ECS.GuestOS` are queried.
+         *     *   If you set `Provider` to AlibabaCloud.ECS.GuestOSDiagnose, all the common commands provided by `AlibabaCloud.ECS.GuestOSDiagnose` are queried.
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -364,7 +396,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -391,7 +423,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the command.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -400,7 +432,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The command type. Valid values:
+         * <p>
+         * 
+         * *   RunBatScript: batch command, applicable to Windows instances
+         * *   RunPowerShellScript: PowerShell command, applicable to Windows instances
+         * *   RunShellScript: shell command, applicable to Linux instances
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -454,7 +491,12 @@ public class DescribeCommandsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * he key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -462,7 +504,10 @@ public class DescribeCommandsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

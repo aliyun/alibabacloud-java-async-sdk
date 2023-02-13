@@ -50,7 +50,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PriceInfo.
+         * Details about the prices and discount rules.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -58,7 +58,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * The description of the pricing rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the pricing rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -248,7 +248,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * DiscountPrice.
+             * The discount.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -256,7 +256,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -264,7 +264,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The name of the resource that corresponds to the price.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -272,7 +272,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * SubRules.
+             * Details about the pricing rules.
              */
             public Builder subRules(SubRules subRules) {
                 this.subRules = subRules;
@@ -280,7 +280,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The transaction price.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -410,7 +410,12 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * Currency.
+             * The currency unit.
+             * <p>
+             * 
+             * Alibaba Cloud China site (aliyun.com): CNY.
+             * 
+             * Alibaba Cloud International site (alibabacloud.com): USD.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -418,7 +423,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DetailInfos.
+             * Details about the resource prices.
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;
@@ -426,7 +431,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * The discount.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -434,7 +439,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -442,7 +447,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The transaction price, which is equal to the original price minus the discount.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -495,7 +500,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * The description of the promotion rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -503,7 +508,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the promotion rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -597,7 +602,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Rules rules; 
 
             /**
-             * Price.
+             * The price.
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -605,7 +610,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * Details about the promotion rules.
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;

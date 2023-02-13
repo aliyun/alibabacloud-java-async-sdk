@@ -50,7 +50,7 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LaunchTemplateVersionNumber.
+         * The version number of the launch template.
          */
         public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
             this.launchTemplateVersionNumber = launchTemplateVersionNumber;
@@ -58,7 +58,7 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

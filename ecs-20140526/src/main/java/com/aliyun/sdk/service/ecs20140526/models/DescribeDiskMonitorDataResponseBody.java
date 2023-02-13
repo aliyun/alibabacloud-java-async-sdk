@@ -62,7 +62,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MonitorData.
+         * Details about the monitoring data of the disk.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -70,7 +70,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned monitoring data entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -226,7 +226,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * BPSRead.
+             * The read bandwidth of the system disk. Unit: byte/s.
              */
             public Builder BPSRead(Integer BPSRead) {
                 this.BPSRead = BPSRead;
@@ -234,7 +234,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * BPSTotal.
+             * The total read and write bandwidth of the system disk. Unit: byte/s.
              */
             public Builder BPSTotal(Integer BPSTotal) {
                 this.BPSTotal = BPSTotal;
@@ -242,7 +242,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * BPSWrite.
+             * The write bandwidth of the system disk. Unit: byte/s.
              */
             public Builder BPSWrite(Integer BPSWrite) {
                 this.BPSWrite = BPSWrite;
@@ -250,7 +250,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -258,7 +258,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * IOPSRead.
+             * The number of read I/O operations per second on the system disk.
              */
             public Builder IOPSRead(Integer IOPSRead) {
                 this.IOPSRead = IOPSRead;
@@ -266,7 +266,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * IOPSTotal.
+             * The total number of read and write I/O operations per second on the system disk.
              */
             public Builder IOPSTotal(Integer IOPSTotal) {
                 this.IOPSTotal = IOPSTotal;
@@ -274,7 +274,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * IOPSWrite.
+             * The number of write I/O operations per second on the system disk.
              */
             public Builder IOPSWrite(Integer IOPSWrite) {
                 this.IOPSWrite = IOPSWrite;
@@ -282,7 +282,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * LatencyRead.
+             * The read latency of the disk. Unit: microseconds.
              */
             public Builder latencyRead(Integer latencyRead) {
                 this.latencyRead = latencyRead;
@@ -290,7 +290,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * LatencyWrite.
+             * The write latency of the disk. Unit: microseconds.
              */
             public Builder latencyWrite(Integer latencyWrite) {
                 this.latencyWrite = latencyWrite;
@@ -298,7 +298,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -50,7 +50,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableZones.
+         * Details about the available zones.
          */
         public Builder availableZones(AvailableZones availableZones) {
             this.availableZones = availableZones;
@@ -58,7 +58,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Max.
+             * The maximum resource specification value. This parameter is not returned if it has no value.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -166,7 +166,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * The minimum resource specification value. This parameter is not returned if it has no value.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -174,7 +174,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the resource. Valid values:
+             * <p>
+             * 
+             * *   Available
+             * *   SoldOut
              */
             public Builder status(String status) {
                 this.status = status;
@@ -182,7 +186,12 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCategory.
+             * The category of resource based on stock status. Valid values:
+             * <p>
+             * 
+             * *   WithStock: resources that are in sufficient stock
+             * *   ClosedWithStock: resources that are ininsufficient stock
+             * *   WithoutStock: resources that are out of stock
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -190,7 +199,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The resource specification unit. This parameter is not returned if it has no value.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -198,7 +207,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The resource value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -292,7 +301,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * SupportedResources.
+             * Details about the resources.
              */
             public Builder supportedResources(SupportedResources supportedResources) {
                 this.supportedResources = supportedResources;
@@ -300,7 +309,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of resource. Valid values:
+             * <p>
+             * 
+             * *   Zone
+             * *   IoOptimized
+             * *   InstanceType
+             * *   SystemDisk
+             * *   DataDisk
+             * *   Network
              */
             public Builder type(String type) {
                 this.type = type;
@@ -430,7 +447,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AvailableResources.
+             * Details about the resources available in the zone.
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -438,7 +455,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the zone.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -446,7 +463,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the resource. Valid values:
+             * <p>
+             * 
+             * *   Available
+             * *   SoldOut
              */
             public Builder status(String status) {
                 this.status = status;
@@ -454,7 +475,12 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCategory.
+             * The category of resource based on stock status. Valid values:
+             * <p>
+             * 
+             * *   WithStock: resources that are in sufficient stock
+             * *   ClosedWithStock: resources that are in insufficient stock
+             * *   WithoutStock: resources that are out of stock
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -462,7 +488,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -167,7 +167,7 @@ public class DeleteSecurityGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +194,7 @@ public class DeleteSecurityGroupRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) to query the security group ID.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

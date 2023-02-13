@@ -50,7 +50,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DedicatedHostTypes.
+         * The information about the dedicated host type.
          */
         public Builder dedicatedHostTypes(DedicatedHostTypes dedicatedHostTypes) {
             this.dedicatedHostTypes = dedicatedHostTypes;
@@ -58,7 +58,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -348,7 +348,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             private Integer totalVgpus; 
 
             /**
-             * Cores.
+             * The number of cores in a single physical CPU.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -356,7 +356,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuOverCommitRatioRange.
+             * The supported CPU overcommit ratio range.
              */
             public Builder cpuOverCommitRatioRange(String cpuOverCommitRatioRange) {
                 this.cpuOverCommitRatioRange = cpuOverCommitRatioRange;
@@ -364,7 +364,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DedicatedHostType.
+             * The type of the dedicated host. You can submit a ticket to request more dedicated host types.
              */
             public Builder dedicatedHostType(String dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;
@@ -372,7 +372,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GPUSpec.
+             * The GPU model.
              */
             public Builder GPUSpec(String GPUSpec) {
                 this.GPUSpec = GPUSpec;
@@ -380,7 +380,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorageAmount.
+             * The number of local disks on a dedicated host.
              */
             public Builder localStorageAmount(Integer localStorageAmount) {
                 this.localStorageAmount = localStorageAmount;
@@ -388,7 +388,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorageCapacity.
+             * The capacity of a local disk. Unit: GiB.
              */
             public Builder localStorageCapacity(Long localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
@@ -396,7 +396,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorageCategory.
+             * The category of the local disks.
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -404,7 +404,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * The size of the memory. Unit: GiB.
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;
@@ -412,7 +412,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalGpus.
+             * The number of physical GPUs.
              */
             public Builder physicalGpus(Integer physicalGpus) {
                 this.physicalGpus = physicalGpus;
@@ -420,7 +420,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Sockets.
+             * The number of physical CPUs.
              */
             public Builder sockets(Integer sockets) {
                 this.sockets = sockets;
@@ -428,7 +428,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportCpuOverCommitRatio.
+             * Indicates whether the CPU overcommit ratio setting is supported.
              */
             public Builder supportCpuOverCommitRatio(Boolean supportCpuOverCommitRatio) {
                 this.supportCpuOverCommitRatio = supportCpuOverCommitRatio;
@@ -436,7 +436,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedInstanceTypeFamilies.
+             * The ECS instance families supported by the dedicated host.
              */
             public Builder supportedInstanceTypeFamilies(SupportedInstanceTypeFamilies supportedInstanceTypeFamilies) {
                 this.supportedInstanceTypeFamilies = supportedInstanceTypeFamilies;
@@ -444,7 +444,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedInstanceTypesList.
+             * The ECS instance types supported by the dedicated host.
              */
             public Builder supportedInstanceTypesList(SupportedInstanceTypesList supportedInstanceTypesList) {
                 this.supportedInstanceTypesList = supportedInstanceTypesList;
@@ -452,7 +452,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVcpus.
+             * The total number of vCPUs.
              */
             public Builder totalVcpus(Integer totalVcpus) {
                 this.totalVcpus = totalVcpus;
@@ -460,7 +460,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalVgpus.
+             * The total number of vGPUs.
              */
             public Builder totalVgpus(Integer totalVgpus) {
                 this.totalVgpus = totalVgpus;
@@ -501,7 +501,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             private java.util.List < DedicatedHostType> dedicatedHostType; 
 
             /**
-             * DedicatedHostType.
+             * The type of the dedicated host. You can submit a ticket to request more dedicated host types.
              */
             public Builder dedicatedHostType(java.util.List < DedicatedHostType> dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;

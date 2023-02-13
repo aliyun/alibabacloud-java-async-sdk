@@ -71,6 +71,10 @@ public class DescribeDedicatedHostsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SocketDetails")
+    private String socketDetails;
+
+    @Query
     @NameInMap("Status")
     private String status;
 
@@ -98,6 +102,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.socketDetails = builder.socketDetails;
         this.status = builder.status;
         this.tag = builder.tag;
         this.zoneId = builder.zoneId;
@@ -215,6 +220,13 @@ public class DescribeDedicatedHostsRequest extends Request {
     }
 
     /**
+     * @return socketDetails
+     */
+    public String getSocketDetails() {
+        return this.socketDetails;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -250,6 +262,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String socketDetails; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String zoneId; 
@@ -274,6 +287,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.socketDetails = request.socketDetails;
             this.status = request.status;
             this.tag = request.tag;
             this.zoneId = request.zoneId;
@@ -289,7 +303,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * DedicatedHostClusterId.
+         * The ID of the dedicated host cluster.
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -298,7 +312,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * DedicatedHostIds.
+         * The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).
          */
         public Builder dedicatedHostIds(String dedicatedHostIds) {
             this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
@@ -307,7 +321,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * DedicatedHostName.
+         * The name of the dedicated host.
          */
         public Builder dedicatedHostName(String dedicatedHostName) {
             this.putQueryParameter("DedicatedHostName", dedicatedHostName);
@@ -316,7 +330,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * DedicatedHostType.
+         * The type of the dedicated host. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to obtain the most recent list of dedicated host types.
          */
         public Builder dedicatedHostType(String dedicatedHostType) {
             this.putQueryParameter("DedicatedHostType", dedicatedHostType);
@@ -325,7 +339,11 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * LockReason.
+         * The reason why the dedicated host is locked. Valid values:
+         * <p>
+         * 
+         * *   financial: The dedicated host is locked due to overdue payments.
+         * *   security: The dedicated host is locked due to security reasons.
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -352,7 +370,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -361,7 +382,12 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -370,7 +396,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -379,7 +405,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -406,7 +435,25 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * Status.
+         * SocketDetails.
+         */
+        public Builder socketDetails(String socketDetails) {
+            this.putQueryParameter("SocketDetails", socketDetails);
+            this.socketDetails = socketDetails;
+            return this;
+        }
+
+        /**
+         * The service state of the dedicated host. Valid values:
+         * <p>
+         * 
+         * *   Available: The dedicated host is running normally.
+         * *   UnderAssessment: The dedicated host is at risk, which may cause issues to ECS instances on the dedicated host.
+         * *   PermanentFailure: The dedicated host has permanent failures and is unusable.
+         * *   TempUnavailable: The dedicated host is temporarily unusable.
+         * *   Redeploying: The dedicated host is being restored.
+         * 
+         * Default value: Available.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -415,7 +462,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * 标签列表。
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -424,7 +471,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the dedicated host. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -478,7 +525,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -486,7 +533,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

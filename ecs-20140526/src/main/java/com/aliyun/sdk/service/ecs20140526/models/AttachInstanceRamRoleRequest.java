@@ -164,7 +164,7 @@ public class AttachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The ID of the instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -182,7 +182,7 @@ public class AttachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * Policy.
+         * The policy. The policy must be 1 to 1,024 characters in length. When you attach an instance RAM role to one or more instances, you can specify an additional policy to further restrict the permissions of the role. For more information, see [Policy overview](~~93732~~).
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -191,7 +191,7 @@ public class AttachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * RamRoleName.
+         * The name of the instance RAM role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -200,7 +200,7 @@ public class AttachInstanceRamRoleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

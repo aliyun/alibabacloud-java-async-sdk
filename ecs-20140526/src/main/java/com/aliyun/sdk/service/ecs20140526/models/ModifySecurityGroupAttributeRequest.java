@@ -177,7 +177,10 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the security group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -204,7 +207,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +234,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -240,7 +243,10 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * SecurityGroupName.
+         * The new name of the security group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

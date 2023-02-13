@@ -86,7 +86,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ImageComponent.
+         * Details about the image components.
          */
         public Builder imageComponent(ImageComponent imageComponent) {
             this.imageComponent = imageComponent;
@@ -94,7 +94,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of image components returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the image component.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the image component.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -368,7 +368,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * ComponentType.
+             * The type of the image component.
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -376,7 +376,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The content of the image component.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -384,7 +384,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the image component was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -392,7 +392,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the image component.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -400,7 +400,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageComponentId.
+             * The ID of the image component.
              */
             public Builder imageComponentId(String imageComponentId) {
                 this.imageComponentId = imageComponentId;
@@ -408,7 +408,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the image component.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -416,7 +416,11 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The type of the image component. Valid values:
+             * <p>
+             * 
+             * *   SELF: the custom component that you created.
+             * *   ALIYUN: the system component provided by Alibaba Cloud.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -424,7 +428,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -432,7 +436,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemType.
+             * The operating system type supported by the image component.
              */
             public Builder systemType(String systemType) {
                 this.systemType = systemType;
@@ -440,7 +444,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the image component.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

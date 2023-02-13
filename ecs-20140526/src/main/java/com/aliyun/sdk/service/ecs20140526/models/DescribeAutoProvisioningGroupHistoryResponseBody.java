@@ -86,7 +86,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AutoProvisioningGroupHistories.
+         * An array consisting of AutoProvisioningGroupHistory data.
          */
         public Builder autoProvisioningGroupHistories(AutoProvisioningGroupHistories autoProvisioningGroupHistories) {
             this.autoProvisioningGroupHistories = autoProvisioningGroupHistories;
@@ -94,7 +94,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of queried scheduling tasks in the auto provisioning group.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Detail.
+             * The execution details of instance creation performed by the single scheduling task.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -178,7 +178,13 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The execution status of instance creation performed by the single scheduling task. Valid values:
+             * <p>
+             * 
+             * *   Successful: Instances are created.
+             * *   Failed: Instances failed to be created.
+             * *   InProgress: Instances are being created.
+             * *   Warning: Some instances are created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -308,7 +314,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * ActivityDetails.
+             * An array consisting of ActivityDetail data.
              */
             public Builder activityDetails(ActivityDetails activityDetails) {
                 this.activityDetails = activityDetails;
@@ -316,7 +322,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * LastEventTime.
+             * The execution time of the last instance creation performed by the single scheduling task.
              */
             public Builder lastEventTime(String lastEventTime) {
                 this.lastEventTime = lastEventTime;
@@ -324,7 +330,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of executing the single scheduling task.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -332,7 +338,12 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The execution status of the single scheduling task. Valid values:
+             * <p>
+             * 
+             * *   prepare: The scheduling task is being executed.
+             * *   success: The scheduling task is executed.
+             * *   failed: The scheduling task failed to be executed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -340,7 +351,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the scheduling task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -158,6 +158,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("FinishedTime")
         private String finishedTime;
 
+        @NameInMap("ResourceId")
+        private String resourceId;
+
         @NameInMap("SupportCancel")
         private String supportCancel;
 
@@ -173,6 +176,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Task(Builder builder) {
             this.creationTime = builder.creationTime;
             this.finishedTime = builder.finishedTime;
+            this.resourceId = builder.resourceId;
             this.supportCancel = builder.supportCancel;
             this.taskAction = builder.taskAction;
             this.taskId = builder.taskId;
@@ -199,6 +203,13 @@ public class DescribeTasksResponseBody extends TeaModel {
          */
         public String getFinishedTime() {
             return this.finishedTime;
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
         }
 
         /**
@@ -232,6 +243,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String creationTime; 
             private String finishedTime; 
+            private String resourceId; 
             private String supportCancel; 
             private String taskAction; 
             private String taskId; 
@@ -250,6 +262,14 @@ public class DescribeTasksResponseBody extends TeaModel {
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
+                return this;
+            }
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
                 return this;
             }
 

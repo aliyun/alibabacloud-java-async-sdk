@@ -163,7 +163,13 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. Maximum value: 100.
+         * <p>
+         * 
+         * Default value:
+         * 
+         * *   If this parameter is left empty, the default value is 10.
+         * *   If this parameter is set to a value greater than 100, the default value is 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -172,7 +178,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。
+         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticReports operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -181,7 +187,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * 地域
+         * The region ID of the diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -190,7 +196,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * ReportIds.
+         * The IDs of diagnostic reports. You can specify up to 100 report IDs.
          */
         public Builder reportIds(java.util.List < String > reportIds) {
             this.putQueryParameter("ReportIds", reportIds);
@@ -199,7 +205,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * The IDs of resources. You can specify up to 100 resource IDs.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -208,11 +214,14 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * 严重等级
+         * The severity level of the diagnostic report. Valid values:
          * <p>
-         * - Info
-         * - Warn
-         * - Critical
+         * 
+         * * Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
+         * * Normal: No exceptions are detected.
+         * * Info: Diagnostic information is recorded and may be related to exceptions.
+         * * Warn: Diagnostic information is recorded and may indicate exceptions.
+         * * Critical: Critical exceptions are detected.
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -221,7 +230,12 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * 报告状态
+         * The state of the diagnostic report. Valid values:
+         * <p>
+         * 
+         * *   InProgress: The diagnostic is in progress.
+         * *   Failed: The diagnostic failed.
+         * *   Finished: The diagnostic is complete.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

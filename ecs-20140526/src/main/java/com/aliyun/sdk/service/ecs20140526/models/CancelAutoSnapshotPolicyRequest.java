@@ -162,7 +162,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * diskIds.
+         * The IDs of the disks for which you want to disable the automatic snapshot policy. To disable the automatic snapshot policy for multiple disks, you can set this parameter to a JSON array that consists of multiple disk IDs, such as \["dxxxxxxxxx", "dyyyyyyyyy", … "dzzzzzzzzz"]. Separate the disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("diskIds", diskIds);
@@ -171,7 +171,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID of the automatic snapshot policy and the disks. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

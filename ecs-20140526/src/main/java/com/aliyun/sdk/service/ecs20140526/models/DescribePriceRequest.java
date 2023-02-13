@@ -17,6 +17,10 @@ public class DescribePriceRequest extends Request {
     private java.util.List < DataDisk> dataDisk;
 
     @Query
+    @NameInMap("SchedulerOptions")
+    private SchedulerOptions schedulerOptions;
+
+    @Query
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
@@ -140,6 +144,7 @@ public class DescribePriceRequest extends Request {
     private DescribePriceRequest(Builder builder) {
         super(builder);
         this.dataDisk = builder.dataDisk;
+        this.schedulerOptions = builder.schedulerOptions;
         this.systemDisk = builder.systemDisk;
         this.sourceRegionId = builder.sourceRegionId;
         this.amount = builder.amount;
@@ -190,6 +195,13 @@ public class DescribePriceRequest extends Request {
      */
     public java.util.List < DataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    /**
+     * @return schedulerOptions
+     */
+    public SchedulerOptions getSchedulerOptions() {
+        return this.schedulerOptions;
     }
 
     /**
@@ -404,6 +416,7 @@ public class DescribePriceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
         private java.util.List < DataDisk> dataDisk; 
+        private SchedulerOptions schedulerOptions; 
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
         private Integer amount; 
@@ -442,6 +455,7 @@ public class DescribePriceRequest extends Request {
         private Builder(DescribePriceRequest request) {
             super(request);
             this.dataDisk = request.dataDisk;
+            this.schedulerOptions = request.schedulerOptions;
             this.systemDisk = request.systemDisk;
             this.sourceRegionId = request.sourceRegionId;
             this.amount = request.amount;
@@ -484,6 +498,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
+         * SchedulerOptions.
+         */
+        public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+            this.putQueryParameter("SchedulerOptions", schedulerOptions);
+            this.schedulerOptions = schedulerOptions;
+            return this;
+        }
+
+        /**
          * SystemDisk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
@@ -502,7 +525,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Amount.
+         * The number of ECS instances. You can specify this parameter when you want to query the prices of multiple instances that have specific specifications. Valid values: 1 to 1000.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -511,7 +537,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * AssuranceTimes.
+         * The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective duration.
+         * <p>
+         * 
+         * Default value: Unlimited.
          */
         public Builder assuranceTimes(String assuranceTimes) {
             this.putQueryParameter("AssuranceTimes", assuranceTimes);
@@ -529,7 +558,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * DedicatedHostType.
+         * The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to obtain the most recent list of dedicated host types.
          */
         public Builder dedicatedHostType(String dedicatedHostType) {
             this.putQueryParameter("DedicatedHostType", dedicatedHostType);
@@ -538,7 +567,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image. Images contain the runtime environment to load when instances start. You can call the [DescribeImages](~~25534~~) operation to query the available images. If you do not specify this parameter, the system queries the prices of Linux images.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -565,7 +594,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   classic: classic network
+         * *   vpc: Virtual Private Cloud (VPC)
+         * 
+         * Default value: vpc.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -574,7 +609,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type. When the `ResourceType` parameter is set to `instance`, you must specify the InstanceType parameter. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -592,7 +627,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The billing method for network usage. Valid values:
+         * <p>
+         * 
+         * *   PayByBandwidth: pay-by-bandwidth
+         * *   PayByTraffic: pay-by-traffic
+         * 
+         * Default value: PayByTraffic.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -601,7 +642,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthOut.
+         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
+         * <p>
+         * 
+         * Default value: 0.
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -610,7 +654,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * IoOptimized.
+         * Specifies whether the instance is I/O optimized. Valid values:
+         * <p>
+         * 
+         * *   none: The instance is not I/O optimized.
+         * *   optimized: The instance is I/O optimized.
+         * 
+         * If the instance type specified by the InstanceType parameter belongs to [Generation I instance families](~~55263~~), the default value is none.
+         * 
+         * If the instance type specified by the InstanceType parameter does not belong to [Generation I instance families](~~55263~~), the default value is optimized.
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -655,7 +707,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The billing cycle of the ECS instance. Valid values:
+         * <p>
+         * 
+         * *   Valid values when PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+         * *   Valid values when PriceUnit is set to Year: 1, 2, 3, 4, and 5.
+         * *   Set the value to 1 when PriceUnit is set to Hour.
+         * 
+         * Default value: 1
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -673,7 +732,12 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * PriceUnit.
+         * The pricing unit of the ECS resource. Default value: Hour. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
+         * *   Hour
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -682,7 +746,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ECS resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -709,7 +773,17 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance: queries the most recent prices of ECS instances. When this parameter is set to `instance`, you must specify the `InstanceType` parameter.
+         * *   disk: queries the most recent prices of disks. When this parameter is set to `disk`, you must specify both the `DataDisk.1.Category` and `DataDisk.1.Size` parameters.
+         * *   bandwidth: queries the most recent prices for network usage.
+         * *   ddh: queries the most recent prices of dedicated hosts.
+         * *   ElasticityAssurance: queries the most recent prices of elasticity assurances. When this parameter is set to `ElasticityAssurance`, you must specify the `InstanceType` parameter.
+         * *   ElasticityAssurance: queries the most recent prices of capacity reservations. When this parameter is set to `CapacityReservation`, you must specify the `InstanceType` parameter.
+         * 
+         * Default value: instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -727,7 +801,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * SpotDuration.
+         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+         * <p>
+         * 
+         * *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
+         * *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
+         * 
+         * Default value: 1.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -736,7 +816,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * SpotStrategy.
+         * The preemption policy for the pay-as-you-go instance. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The instance is a regular pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
+         * 
+         * Default value: NoSpot.
+         * 
+         * >  This parameter is valid only when the `PriceUnit` parameter is set to Hour and the `Period` parameter is set to 1. The default value of the `PriceUnit` parameter is `Hour` and the default value of the `Period` parameter is `1`. Therefore, you do not need to set the `PriceUnit` and `Period` parameters when you set the SpotStrategy parameter.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -745,7 +834,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the ECS resource.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -841,6 +930,47 @@ public class DescribePriceRequest extends Request {
         } 
 
     }
+    public static class SchedulerOptions extends TeaModel {
+        @NameInMap("DedicatedHostId")
+        private String dedicatedHostId;
+
+        private SchedulerOptions(Builder builder) {
+            this.dedicatedHostId = builder.dedicatedHostId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchedulerOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dedicatedHostId
+         */
+        public String getDedicatedHostId() {
+            return this.dedicatedHostId;
+        }
+
+        public static final class Builder {
+            private String dedicatedHostId; 
+
+            /**
+             * DedicatedHostId.
+             */
+            public Builder dedicatedHostId(String dedicatedHostId) {
+                this.dedicatedHostId = dedicatedHostId;
+                return this;
+            }
+
+            public SchedulerOptions build() {
+                return new SchedulerOptions(this);
+            } 
+
+        } 
+
+    }
     public static class SystemDisk extends TeaModel {
         @NameInMap("Category")
         private String category;
@@ -892,7 +1022,19 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * Category.
+             * The category of the system disk. Valid values:
+             * <p>
+             * 
+             * *   cloud: basic disk
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             * *   ephemeral_ssd: local SSD
+             * *   cloud_essd: enhanced SSD (ESSD)
+             * 
+             * Description of the default values:
+             * 
+             * *   When the InstanceType parameter is set to a retired instance type and the `IoOptimized` parameter is set to `none`, the default value of this parameter is `cloud`.
+             * *   In other cases, the default value of this parameter is `cloud_efficiency`.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -900,7 +1042,13 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * The performance level of the system disk when it is an ESSD. This parameter is valid only when the `SystemDiskCategory` parameter is set to cloud_essd. Default value: PL1. Valid values:
+             * <p>
+             * 
+             * *   PL0
+             * *   PL1
+             * *   PL2
+             * *   PL3
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -908,7 +1056,12 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * Size.
+             * The size of the system disk. Unit: GiB. Valid values: 20 to 500.
+             * <p>
+             * 
+             * Default value: 40 or the image size, whichever is greater.
+             * 
+             * >  The value of this parameter must be at least 20 and greater than or equal to the image size.
              */
             public Builder size(Integer size) {
                 this.size = size;

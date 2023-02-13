@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReleasePublicIpAddressResponseBody</p>
  */
 public class ReleasePublicIpAddressResponseBody extends TeaModel {
+    @NameInMap("RemainTimes")
+    private String remainTimes;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private ReleasePublicIpAddressResponseBody(Builder builder) {
+        this.remainTimes = builder.remainTimes;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class ReleasePublicIpAddressResponseBody extends TeaModel {
     }
 
     /**
+     * @return remainTimes
+     */
+    public String getRemainTimes() {
+        return this.remainTimes;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,10 +46,19 @@ public class ReleasePublicIpAddressResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String remainTimes; 
         private String requestId; 
 
         /**
-         * RequestId.
+         * > This parameter is unavailable.
+         */
+        public Builder remainTimes(String remainTimes) {
+            this.remainTimes = remainTimes;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

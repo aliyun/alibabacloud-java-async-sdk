@@ -247,7 +247,15 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   true: enables automatic payment. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.
+         * *   false: An order is generated but no payment is made.
+         * 
+         * Default value: true.
+         * 
+         * >  If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can pay for the order.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -256,7 +264,7 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -265,7 +273,13 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * DedicatedHostChargeType.
+         * The new billing method for the dedicated host. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: changes the billing method from pay-as-you-go to subscription.
+         * *   PostPaid: changes the billing method from subscription to pay-as-you-go.
+         * 
+         * Default value: PrePaid.
          */
         public Builder dedicatedHostChargeType(String dedicatedHostChargeType) {
             this.putQueryParameter("DedicatedHostChargeType", dedicatedHostChargeType);
@@ -274,7 +288,7 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * DedicatedHostIds.
+         * The IDs of dedicated hosts. The value can be a JSON array that consists of up to 20 dedicated host IDs. Separate the dedicated host IDs with commas (,).
          */
         public Builder dedicatedHostIds(String dedicatedHostIds) {
             this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
@@ -283,7 +297,10 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * DetailFee.
+         * Specifies whether to return the billing details of the order when the billing method is changed from subscription to pay-as-you-go.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder detailFee(Boolean detailFee) {
             this.putQueryParameter("DetailFee", detailFee);
@@ -292,7 +309,13 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the validity of the request without actually making the request. Valid values:
+         * <p>
+         * 
+         * *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the `DryRunOperation` error code is returned.
+         * *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -319,7 +342,11 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal duration of the subscription dedicated host. Valid values:
+         * <p>
+         * 
+         * *   When `PeriodUnit` is set to Week, valid values of `Period` are 1, 2, 3, and 4.
+         * *   When `PeriodUnit` is set to Month, valid values of `Period` are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -328,7 +355,13 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the renewal duration (`Period`). Valid values:
+         * <p>
+         * 
+         * *   Week
+         * *   Month
+         * 
+         * Default value: Month.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -337,7 +370,7 @@ public class ModifyDedicatedHostsChargeTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

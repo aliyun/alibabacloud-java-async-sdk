@@ -17,6 +17,14 @@ public class RenewReservedInstancesRequest extends Request {
     private String sourceRegionId;
 
     @Query
+    @NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @Query
+    @NameInMap("AutoRenewPeriod")
+    private Integer autoRenewPeriod;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -55,6 +63,8 @@ public class RenewReservedInstancesRequest extends Request {
     private RenewReservedInstancesRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.clientToken = builder.clientToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -84,6 +94,20 @@ public class RenewReservedInstancesRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     /**
@@ -151,6 +175,8 @@ public class RenewReservedInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<RenewReservedInstancesRequest, Builder> {
         private String sourceRegionId; 
+        private Boolean autoRenew; 
+        private Integer autoRenewPeriod; 
         private String clientToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -168,6 +194,8 @@ public class RenewReservedInstancesRequest extends Request {
         private Builder(RenewReservedInstancesRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
             this.clientToken = request.clientToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -185,6 +213,24 @@ public class RenewReservedInstancesRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoRenewPeriod.
+         */
+        public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+            this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
             return this;
         }
 

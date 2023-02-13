@@ -272,7 +272,7 @@ public class CreateDemandRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * The number of instances. Valid values: 1 to 100000.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -281,7 +281,7 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -290,7 +290,7 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * DemandDescription.
+         * The description of the demand. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
          */
         public Builder demandDescription(String demandDescription) {
             this.putQueryParameter("DemandDescription", demandDescription);
@@ -299,7 +299,10 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * DemandName.
+         * The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <p>
+         * 
+         * The default value is the instance type name.
          */
         public Builder demandName(String demandName) {
             this.putQueryParameter("DemandName", demandName);
@@ -308,7 +311,10 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+         * <p>
+         * 
+         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. Typically, the interval between the two times cannot be more than 10 days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -317,7 +323,11 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the instance. Default value: PostPaid. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: subscription
+         * *   PostPaid: pay-as-you-go
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -326,7 +336,7 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Select instance types](~~58291~~) to learn about how to select instance types.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -353,7 +363,12 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription period of the resource. Valid values:
+         * <p>
+         * 
+         * *   When the value of PeriodUnit is Day, the valid values of Period are 1, 2, 3, 4, 5, and 6.
+         * *   When the value of PeriodUnit is Week, the valid values of Period are 1, 2, 3, and 4.
+         * *   When the value of PeriodUnit is Month, the valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -362,7 +377,12 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the subscription period of the resource. Default value: Month. Valid values:
+         * <p>
+         * 
+         * *   Day
+         * *   Week
+         * *   Month
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -371,7 +391,7 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -398,7 +418,10 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+         * <p>
+         * 
+         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. Typically, the interval between the two times cannot be more than 10 days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -407,7 +430,10 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>
+         * 
+         * This parameter is empty by default. If you do not specify a zone, the system randomly selects one.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

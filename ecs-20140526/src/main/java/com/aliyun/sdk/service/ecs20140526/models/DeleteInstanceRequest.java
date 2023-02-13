@@ -162,7 +162,13 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:
+         * <p>
+         * 
+         * *   true: forcefully releases the instance in the **Running** (`Running`) state. When the Force parameter is set to true, this operation is equivalent to the power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.
+         * *   false: normally releases the instance. This value is valid only for instances in the **Stopped** (`Stopped`) state.
+         * 
+         * Default value: false.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -171,7 +177,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance that you want to release.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -216,7 +222,10 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * TerminateSubscription.
+         * Specifies whether to release the expired subscription instance.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder terminateSubscription(Boolean terminateSubscription) {
             this.putQueryParameter("TerminateSubscription", terminateSubscription);

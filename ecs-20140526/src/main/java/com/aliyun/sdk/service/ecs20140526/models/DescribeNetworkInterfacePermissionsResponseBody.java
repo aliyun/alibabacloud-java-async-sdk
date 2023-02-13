@@ -86,7 +86,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NetworkInterfacePermissions.
+         * Details about the permissions on ENIs.
          */
         public Builder networkInterfacePermissions(NetworkInterfacePermissions networkInterfacePermissions) {
             this.networkInterfacePermissions = networkInterfacePermissions;
@@ -94,7 +94,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -226,7 +226,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * The ID of the ENI.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -234,7 +234,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfacePermissionId.
+             * The ID of the permission on the ENI.
              */
             public Builder networkInterfacePermissionId(String networkInterfacePermissionId) {
                 this.networkInterfacePermissionId = networkInterfacePermissionId;
@@ -242,7 +242,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Permission.
+             * The permission on the ENI.
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -250,7 +250,13 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionState.
+             * The status of the permission on the ENI. Valid values:
+             * <p>
+             * 
+             * *   Pending: The permission is being granted.
+             * *   Granted: The permission has been granted.
+             * *   Revoking: The permission is being revoked.
+             * *   Revoked: The permission has been revoked.
              */
             public Builder permissionState(String permissionState) {
                 this.permissionState = permissionState;
@@ -258,7 +264,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the Alibaba Cloud service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

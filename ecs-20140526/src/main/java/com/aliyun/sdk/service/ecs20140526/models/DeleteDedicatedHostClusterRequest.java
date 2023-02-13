@@ -149,7 +149,7 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * DedicatedHostClusterId.
+         * The ID of the dedicated host cluster.
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -176,7 +176,7 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

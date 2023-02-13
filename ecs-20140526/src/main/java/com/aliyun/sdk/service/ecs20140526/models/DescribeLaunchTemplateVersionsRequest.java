@@ -260,7 +260,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * DefaultVersion.
+         * Specifies whether to query the default version.
          */
         public Builder defaultVersion(Boolean defaultVersion) {
             this.putQueryParameter("DefaultVersion", defaultVersion);
@@ -269,7 +269,13 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * DetailFlag.
+         * Specifies whether to query the configurations of the launch template. Valid values:
+         * <p>
+         * 
+         * *   true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.
+         * *   false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.
+         * 
+         * Default value: true.
          */
         public Builder detailFlag(Boolean detailFlag) {
             this.putQueryParameter("DetailFlag", detailFlag);
@@ -278,7 +284,10 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * LaunchTemplateId.
+         * The ID of the launch template.
+         * <p>
+         * 
+         * You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -287,7 +296,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * LaunchTemplateName.
+         * The name of the launch template.
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -305,7 +314,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * MaxVersion.
+         * The maximum version number in the version range to query.
          */
         public Builder maxVersion(Long maxVersion) {
             this.putQueryParameter("MaxVersion", maxVersion);
@@ -314,7 +323,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * MinVersion.
+         * The minimum version number in the version range to query.
          */
         public Builder minVersion(Long minVersion) {
             this.putQueryParameter("MinVersion", minVersion);
@@ -341,7 +350,12 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -350,7 +364,10 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -359,7 +376,10 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the launch template.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
