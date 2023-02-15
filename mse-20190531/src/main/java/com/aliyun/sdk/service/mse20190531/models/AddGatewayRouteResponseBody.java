@@ -18,6 +18,9 @@ public class AddGatewayRouteResponseBody extends TeaModel {
     @NameInMap("Data")
     private Long data;
 
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
@@ -33,6 +36,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
     private AddGatewayRouteResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -59,6 +63,13 @@ public class AddGatewayRouteResponseBody extends TeaModel {
      */
     public Long getData() {
         return this.data;
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     /**
@@ -92,6 +103,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private Long data; 
+        private String errorCode; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -106,10 +118,18 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The response data.
          */
         public Builder data(Long data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
             return this;
         }
 

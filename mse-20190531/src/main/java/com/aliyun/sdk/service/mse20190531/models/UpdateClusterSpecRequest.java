@@ -165,7 +165,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +174,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * MseVersion.
+         * The MSE version.
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);

@@ -7,26 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryInstancesInfoRequest} extends {@link RequestModel}
+ * {@link ExportZookeeperDataRequest} extends {@link RequestModel}
  *
- * <p>QueryInstancesInfoRequest</p>
+ * <p>ExportZookeeperDataRequest</p>
  */
-public class QueryInstancesInfoRequest extends Request {
+public class ExportZookeeperDataRequest extends Request {
     @Query
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
     @Query
-    @NameInMap("ClusterId")
-    private String clusterId;
+    @NameInMap("ExportType")
+    private String exportType;
 
     @Query
     @NameInMap("InstanceId")
     private String instanceId;
-
-    @Query
-    @NameInMap("OrderId")
-    private String orderId;
 
     @Query
     @NameInMap("RegionId")
@@ -36,12 +32,11 @@ public class QueryInstancesInfoRequest extends Request {
     @NameInMap("RequestPars")
     private String requestPars;
 
-    private QueryInstancesInfoRequest(Builder builder) {
+    private ExportZookeeperDataRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
-        this.clusterId = builder.clusterId;
+        this.exportType = builder.exportType;
         this.instanceId = builder.instanceId;
-        this.orderId = builder.orderId;
         this.regionId = builder.regionId;
         this.requestPars = builder.requestPars;
     }
@@ -50,7 +45,7 @@ public class QueryInstancesInfoRequest extends Request {
         return new Builder();
     }
 
-    public static QueryInstancesInfoRequest create() {
+    public static ExportZookeeperDataRequest create() {
         return builder().build();
     }
 
@@ -67,10 +62,10 @@ public class QueryInstancesInfoRequest extends Request {
     }
 
     /**
-     * @return clusterId
+     * @return exportType
      */
-    public String getClusterId() {
-        return this.clusterId;
+    public String getExportType() {
+        return this.exportType;
     }
 
     /**
@@ -78,13 +73,6 @@ public class QueryInstancesInfoRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
     }
 
     /**
@@ -101,11 +89,10 @@ public class QueryInstancesInfoRequest extends Request {
         return this.requestPars;
     }
 
-    public static final class Builder extends Request.Builder<QueryInstancesInfoRequest, Builder> {
+    public static final class Builder extends Request.Builder<ExportZookeeperDataRequest, Builder> {
         private String acceptLanguage; 
-        private String clusterId; 
+        private String exportType; 
         private String instanceId; 
-        private String orderId; 
         private String regionId; 
         private String requestPars; 
 
@@ -113,22 +100,17 @@ public class QueryInstancesInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryInstancesInfoRequest request) {
+        private Builder(ExportZookeeperDataRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
-            this.clusterId = request.clusterId;
+            this.exportType = request.exportType;
             this.instanceId = request.instanceId;
-            this.orderId = request.orderId;
             this.regionId = request.regionId;
             this.requestPars = request.requestPars;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,16 +119,16 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * ExportType.
          */
-        public Builder clusterId(String clusterId) {
-            this.putQueryParameter("ClusterId", clusterId);
-            this.clusterId = clusterId;
+        public Builder exportType(String exportType) {
+            this.putQueryParameter("ExportType", exportType);
+            this.exportType = exportType;
             return this;
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,16 +137,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * The ID of the order.
-         */
-        public Builder orderId(String orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
-            return this;
-        }
-
-        /**
-         * The ID of the region where the instance is deployed.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +146,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * RequestPars.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -182,8 +155,8 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         @Override
-        public QueryInstancesInfoRequest build() {
-            return new QueryInstancesInfoRequest(this);
+        public ExportZookeeperDataRequest build() {
+            return new ExportZookeeperDataRequest(this);
         } 
 
     } 

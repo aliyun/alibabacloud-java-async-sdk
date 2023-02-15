@@ -150,7 +150,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -374,7 +374,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The source from which the namespace was created.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

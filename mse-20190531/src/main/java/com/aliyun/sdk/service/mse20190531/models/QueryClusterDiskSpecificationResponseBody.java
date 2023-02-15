@@ -141,7 +141,7 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
          * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
          * <p>
          * 
-         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -249,7 +249,7 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
             private Integer step; 
 
             /**
-             * The maximum capacity of the disk.
+             * The maximum disk capacity. Unit: GB.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -257,7 +257,7 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum capacity of the disk.
+             * The minimum disk capacity. Unit: GB.
              */
             public Builder min(Integer min) {
                 this.min = min;

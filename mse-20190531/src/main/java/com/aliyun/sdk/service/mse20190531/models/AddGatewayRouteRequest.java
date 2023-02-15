@@ -300,7 +300,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether to activate Web Application Firewall (WAF).
+         * Specifies whether to enable Web Application Firewall (WAF).
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.putQueryParameter("EnableWaf", enableWaf);
@@ -600,7 +600,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The name of the application.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -640,7 +640,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -815,7 +815,7 @@ public class AddGatewayRouteRequest extends Request {
              * 
              * *   PRE: prefix matching
              * *   EQUAL: exact matching
-             * *   ERGULAR: regular expression matching
+             * *   REGULAR: regular expression matching
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1645,7 +1645,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

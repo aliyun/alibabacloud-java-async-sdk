@@ -292,7 +292,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The group.
+         * The name of the group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);

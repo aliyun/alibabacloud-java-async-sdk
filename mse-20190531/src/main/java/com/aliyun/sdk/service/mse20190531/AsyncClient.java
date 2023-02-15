@@ -152,6 +152,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ExportNacosConfigResponse> exportNacosConfig(ExportNacosConfigRequest request);
 
+    CompletableFuture<ExportZookeeperDataResponse> exportZookeeperData(ExportZookeeperDataRequest request);
+
+    CompletableFuture<FetchLosslessRuleListResponse> fetchLosslessRuleList(FetchLosslessRuleListRequest request);
+
     CompletableFuture<GetAppMessageQueueRouteResponse> getAppMessageQueueRoute(GetAppMessageQueueRouteRequest request);
 
     CompletableFuture<GetApplicationListResponse> getApplicationList(GetApplicationListRequest request);
@@ -263,6 +267,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEurekaInstancesResponse> listEurekaInstances(ListEurekaInstancesRequest request);
 
     CompletableFuture<ListEurekaServicesResponse> listEurekaServices(ListEurekaServicesRequest request);
+
+    CompletableFuture<ListExportZookeeperDataResponse> listExportZookeeperData(ListExportZookeeperDataRequest request);
 
     CompletableFuture<ListGatewayResponse> listGateway(ListGatewayRequest request);
 

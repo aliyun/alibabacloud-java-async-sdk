@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListEngineNamespacesRequest} extends {@link RequestModel}
+ * {@link ListExportZookeeperDataRequest} extends {@link RequestModel}
  *
- * <p>ListEngineNamespacesRequest</p>
+ * <p>ListExportZookeeperDataRequest</p>
  */
-public class ListEngineNamespacesRequest extends Request {
+public class ListExportZookeeperDataRequest extends Request {
     @Query
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
@@ -20,17 +20,27 @@ public class ListEngineNamespacesRequest extends Request {
     @NameInMap("InstanceId")
     private String instanceId;
 
-    private ListEngineNamespacesRequest(Builder builder) {
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    private ListExportZookeeperDataRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.instanceId = builder.instanceId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListEngineNamespacesRequest create() {
+    public static ListExportZookeeperDataRequest create() {
         return builder().build();
     }
 
@@ -53,26 +63,40 @@ public class ListEngineNamespacesRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<ListEngineNamespacesRequest, Builder> {
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public static final class Builder extends Request.Builder<ListExportZookeeperDataRequest, Builder> {
         private String acceptLanguage; 
         private String instanceId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListEngineNamespacesRequest request) {
+        private Builder(ListExportZookeeperDataRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -81,7 +105,7 @@ public class ListEngineNamespacesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -89,9 +113,27 @@ public class ListEngineNamespacesRequest extends Request {
             return this;
         }
 
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
         @Override
-        public ListEngineNamespacesRequest build() {
-            return new ListEngineNamespacesRequest(this);
+        public ListExportZookeeperDataRequest build() {
+            return new ListExportZookeeperDataRequest(this);
         } 
 
     } 
