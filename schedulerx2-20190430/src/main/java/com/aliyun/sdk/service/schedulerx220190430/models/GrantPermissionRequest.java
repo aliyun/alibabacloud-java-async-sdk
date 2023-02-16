@@ -130,19 +130,19 @@ public class GrantPermissionRequest extends Request {
             super();
         } 
 
-        private Builder(GrantPermissionRequest response) {
-            super(response);
-            this.grantOption = response.grantOption;
-            this.groupId = response.groupId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
-            this.userName = response.userName;
+        private Builder(GrantPermissionRequest request) {
+            super(request);
+            this.grantOption = request.grantOption;
+            this.groupId = request.groupId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
+            this.userName = request.userName;
         } 
 
         /**
-         * GrantOption.
+         * Specifies whether to grant the permissions with the GRANT option. Valid values: -**true**: grants the permissions with the GRANT option. -**false**: does not grant the permissions with the GRANT option.
          */
         public Builder grantOption(Boolean grantOption) {
             this.putQueryParameter("GrantOption", grantOption);
@@ -151,7 +151,7 @@ public class GrantPermissionRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -160,7 +160,7 @@ public class GrantPermissionRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -169,7 +169,7 @@ public class GrantPermissionRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -178,7 +178,7 @@ public class GrantPermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -187,7 +187,7 @@ public class GrantPermissionRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The user ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -196,7 +196,7 @@ public class GrantPermissionRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

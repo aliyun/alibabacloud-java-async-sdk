@@ -86,7 +86,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The list of namespaces.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional information that is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call is successful.
+         * *   **false**: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -139,12 +143,12 @@ public class ListNamespacesResponseBody extends TeaModel {
         private String name;
 
         @NameInMap("UId")
-        private String UId;
+        private String uId;
 
         private Namespaces(Builder builder) {
             this.description = builder.description;
             this.name = builder.name;
-            this.UId = builder.UId;
+            this.uId = builder.uId;
         }
 
         public static Builder builder() {
@@ -170,19 +174,19 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * @return UId
+         * @return uId
          */
         public String getUId() {
-            return this.UId;
+            return this.uId;
         }
 
         public static final class Builder {
             private String description; 
             private String name; 
-            private String UId; 
+            private String uId; 
 
             /**
-             * Description.
+             * The description of the namespace.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -190,7 +194,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the namespace.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,10 +202,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * UId.
+             * The ID of the namespace.
              */
-            public Builder UId(String UId) {
-                this.UId = UId;
+            public Builder uId(String uId) {
+                this.uId = uId;
                 return this;
             }
 
@@ -239,7 +243,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             private java.util.List < Namespaces> namespaces; 
 
             /**
-             * Namespaces.
+             * The list and details of the namespaces.
              */
             public Builder namespaces(java.util.List < Namespaces> namespaces) {
                 this.namespaces = namespaces;

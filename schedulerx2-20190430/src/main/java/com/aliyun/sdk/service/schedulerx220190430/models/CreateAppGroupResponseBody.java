@@ -86,7 +86,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the job group.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message that is returned only if an error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class CreateAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the application is created. Valid values:
+         * <p>
+         * 
+         * *   **true**: The application is created.
+         * *   **false**: Failed to create the application.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,8 +139,12 @@ public class CreateAppGroupResponseBody extends TeaModel {
         @NameInMap("AppGroupId")
         private Long appGroupId;
 
+        @NameInMap("AppKey")
+        private String appKey;
+
         private Data(Builder builder) {
             this.appGroupId = builder.appGroupId;
+            this.appKey = builder.appKey;
         }
 
         public static Builder builder() {
@@ -154,14 +162,30 @@ public class CreateAppGroupResponseBody extends TeaModel {
             return this.appGroupId;
         }
 
+        /**
+         * @return appKey
+         */
+        public String getAppKey() {
+            return this.appKey;
+        }
+
         public static final class Builder {
             private Long appGroupId; 
+            private String appKey; 
 
             /**
-             * AppGroupId.
+             * The ID of the job group.
              */
             public Builder appGroupId(Long appGroupId) {
                 this.appGroupId = appGroupId;
+                return this;
+            }
+
+            /**
+             * The AppKey for the application.
+             */
+            public Builder appKey(String appKey) {
+                this.appKey = appKey;
                 return this;
             }
 

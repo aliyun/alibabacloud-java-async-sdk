@@ -18,21 +18,52 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<BatchDeleteJobResponse> batchDeleteJob(BatchDeleteJobRequest request);
-
+    /**
+      * Before you call this operation, you must add the following dependency to the pom.xml file:
+      * ```xml
+      * <dependency>
+      *     <groupId>com.aliyun</groupId>
+      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+      *     <version>1.0.4</version>
+      * </dependency>
+      * ```
+      *
+     */
     CompletableFuture<BatchDeleteJobsResponse> batchDeleteJobs(BatchDeleteJobsRequest request);
 
-    CompletableFuture<BatchDisableJobResponse> batchDisableJob(BatchDisableJobRequest request);
-
+    /**
+      * Before you call this operation, you must add the following dependency to the pom.xml file:
+      * ```xml
+      * <dependency>
+      *     <groupId>com.aliyun</groupId>
+      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+      *     <version>1.0.4</version>
+      * </dependency>
+      * ```
+      *
+     */
     CompletableFuture<BatchDisableJobsResponse> batchDisableJobs(BatchDisableJobsRequest request);
 
-    CompletableFuture<BatchEnableJobResponse> batchEnableJob(BatchEnableJobRequest request);
-
+    /**
+      * Before you call this operation, you must add the following dependency to the pom.xml file:
+      * ```xml
+      * <dependency>
+      *     <groupId>com.aliyun</groupId>
+      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+      *     <version>1.0.4</version>
+      * </dependency>
+      * ```
+      *
+     */
     CompletableFuture<BatchEnableJobsResponse> batchEnableJobs(BatchEnableJobsRequest request);
 
     CompletableFuture<CreateAppGroupResponse> createAppGroup(CreateAppGroupRequest request);
 
     CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
+
+    CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
+
+    CompletableFuture<CreateWorkflowResponse> createWorkflow(CreateWorkflowRequest request);
 
     CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
 
@@ -50,6 +81,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableWorkflowResponse> enableWorkflow(EnableWorkflowRequest request);
 
+    /**
+      * > : The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+      *
+     */
     CompletableFuture<ExecuteJobResponse> executeJob(ExecuteJobRequest request);
 
     CompletableFuture<ExecuteWorkflowResponse> executeWorkflow(ExecuteWorkflowRequest request);
@@ -60,22 +95,65 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetJobInstanceListResponse> getJobInstanceList(GetJobInstanceListRequest request);
 
+    CompletableFuture<GetLogResponse> getLog(GetLogRequest request);
+
     CompletableFuture<GetWorkFlowResponse> getWorkFlow(GetWorkFlowRequest request);
 
     CompletableFuture<GetWorkerListResponse> getWorkerList(GetWorkerListRequest request);
 
+    CompletableFuture<GetWorkflowInstanceResponse> getWorkflowInstance(GetWorkflowInstanceRequest request);
+
     CompletableFuture<GrantPermissionResponse> grantPermission(GrantPermissionRequest request);
 
+    /**
+      * >  Before you call this operation, you must add the following dependency to the pom.xml file:
+      *       <groupId>com.aliyun</groupId>
+      *       <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+      *       <version>1.0.5</version>
+      *
+     */
     CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);
 
+    /**
+      * Before you call this operation, you must add the following dependency to the pom.xml file:
+      *     <dependency>
+      *           <groupId>com.aliyun</groupId>
+      *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+      *           <version>1.0.5</version>
+      *     </dependency>
+      *
+     */
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
+    /**
+      * Before you call this operation, you must add the following dependency to the pom.xml file:
+      *     <dependency>
+      *         <groupId>com.aliyun</groupId>
+      *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+      *         <version>1.0.5</version>
+      *     </dependency>
+      *
+     */
     CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request);
 
+    CompletableFuture<ListWorkflowInstanceResponse> listWorkflowInstance(ListWorkflowInstanceRequest request);
+
+    CompletableFuture<RerunJobResponse> rerunJob(RerunJobRequest request);
+
+    CompletableFuture<RetryJobInstanceResponse> retryJobInstance(RetryJobInstanceRequest request);
+
     CompletableFuture<RevokePermissionResponse> revokePermission(RevokePermissionRequest request);
+
+    CompletableFuture<SetJobInstanceSuccessResponse> setJobInstanceSuccess(SetJobInstanceSuccessRequest request);
+
+    CompletableFuture<SetWfInstanceSuccessResponse> setWfInstanceSuccess(SetWfInstanceSuccessRequest request);
 
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
     CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request);
+
+    CompletableFuture<UpdateWorkflowResponse> updateWorkflow(UpdateWorkflowRequest request);
+
+    CompletableFuture<UpdateWorkflowDagResponse> updateWorkflowDag(UpdateWorkflowDagRequest request);
 
 }

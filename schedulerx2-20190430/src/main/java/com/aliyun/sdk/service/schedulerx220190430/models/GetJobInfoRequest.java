@@ -23,6 +23,10 @@ public class GetJobInfoRequest extends Request {
     private Long jobId;
 
     @Query
+    @NameInMap("JobName")
+    private String jobName;
+
+    @Query
     @NameInMap("Namespace")
     @Validation(required = true)
     private String namespace;
@@ -33,12 +37,14 @@ public class GetJobInfoRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private GetJobInfoRequest(Builder builder) {
         super(builder);
         this.groupId = builder.groupId;
         this.jobId = builder.jobId;
+        this.jobName = builder.jobName;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
         this.regionId = builder.regionId;
@@ -72,6 +78,13 @@ public class GetJobInfoRequest extends Request {
     }
 
     /**
+     * @return jobName
+     */
+    public String getJobName() {
+        return this.jobName;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -95,6 +108,7 @@ public class GetJobInfoRequest extends Request {
     public static final class Builder extends Request.Builder<GetJobInfoRequest, Builder> {
         private String groupId; 
         private Long jobId; 
+        private String jobName; 
         private String namespace; 
         private String namespaceSource; 
         private String regionId; 
@@ -103,17 +117,18 @@ public class GetJobInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetJobInfoRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobId = response.jobId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(GetJobInfoRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.jobId = request.jobId;
+            this.jobName = request.jobName;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the ID of the application on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +137,7 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -131,7 +146,16 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the job.
+         */
+        public Builder jobName(String jobName) {
+            this.putQueryParameter("JobName", jobName);
+            this.jobName = jobName;
+            return this;
+        }
+
+        /**
+         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,7 +164,7 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -149,7 +173,7 @@ public class GetJobInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the job resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

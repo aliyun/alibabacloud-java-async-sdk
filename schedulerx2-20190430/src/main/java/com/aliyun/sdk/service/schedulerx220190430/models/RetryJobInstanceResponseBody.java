@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchEnableJobResponseBody} extends {@link TeaModel}
+ * {@link RetryJobInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>BatchEnableJobResponseBody</p>
+ * <p>RetryJobInstanceResponseBody</p>
  */
-public class BatchEnableJobResponseBody extends TeaModel {
+public class RetryJobInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
@@ -24,7 +24,7 @@ public class BatchEnableJobResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private BatchEnableJobResponseBody(Builder builder) {
+    private RetryJobInstanceResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -35,7 +35,7 @@ public class BatchEnableJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static BatchEnableJobResponseBody create() {
+    public static RetryJobInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -90,7 +90,7 @@ public class BatchEnableJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,8 +105,8 @@ public class BatchEnableJobResponseBody extends TeaModel {
             return this;
         }
 
-        public BatchEnableJobResponseBody build() {
-            return new BatchEnableJobResponseBody(this);
+        public RetryJobInstanceResponseBody build() {
+            return new RetryJobInstanceResponseBody(this);
         } 
 
     } 

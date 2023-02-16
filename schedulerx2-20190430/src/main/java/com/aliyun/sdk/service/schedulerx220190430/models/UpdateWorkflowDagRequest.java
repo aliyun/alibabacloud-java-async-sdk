@@ -7,48 +7,55 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchDeleteJobRequest} extends {@link RequestModel}
+ * {@link UpdateWorkflowDagRequest} extends {@link RequestModel}
  *
- * <p>BatchDeleteJobRequest</p>
+ * <p>UpdateWorkflowDagRequest</p>
  */
-public class BatchDeleteJobRequest extends Request {
-    @Query
+public class UpdateWorkflowDagRequest extends Request {
+    @Body
+    @NameInMap("DagJson")
+    @Validation(required = true)
+    private String dagJson;
+
+    @Body
     @NameInMap("GroupId")
     @Validation(required = true)
     private String groupId;
 
     @Body
-    @NameInMap("JobIdList")
-    @Validation(required = true)
-    private java.util.List < Integer > jobIdList;
-
-    @Query
     @NameInMap("Namespace")
     @Validation(required = true)
     private String namespace;
 
-    @Query
+    @Body
     @NameInMap("NamespaceSource")
     private String namespaceSource;
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
-    private BatchDeleteJobRequest(Builder builder) {
+    @Body
+    @NameInMap("WorkflowId")
+    @Validation(required = true)
+    private String workflowId;
+
+    private UpdateWorkflowDagRequest(Builder builder) {
         super(builder);
+        this.dagJson = builder.dagJson;
         this.groupId = builder.groupId;
-        this.jobIdList = builder.jobIdList;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
         this.regionId = builder.regionId;
+        this.workflowId = builder.workflowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static BatchDeleteJobRequest create() {
+    public static UpdateWorkflowDagRequest create() {
         return builder().build();
     }
 
@@ -58,17 +65,17 @@ public class BatchDeleteJobRequest extends Request {
     }
 
     /**
+     * @return dagJson
+     */
+    public String getDagJson() {
+        return this.dagJson;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
         return this.groupId;
-    }
-
-    /**
-     * @return jobIdList
-     */
-    public java.util.List < Integer > getJobIdList() {
-        return this.jobIdList;
     }
 
     /**
@@ -92,41 +99,50 @@ public class BatchDeleteJobRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<BatchDeleteJobRequest, Builder> {
+    /**
+     * @return workflowId
+     */
+    public String getWorkflowId() {
+        return this.workflowId;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateWorkflowDagRequest, Builder> {
+        private String dagJson; 
         private String groupId; 
-        private java.util.List < Integer > jobIdList; 
         private String namespace; 
         private String namespaceSource; 
         private String regionId; 
+        private String workflowId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchDeleteJobRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobIdList = response.jobIdList;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(UpdateWorkflowDagRequest request) {
+            super(request);
+            this.dagJson = request.dagJson;
+            this.groupId = request.groupId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.workflowId = request.workflowId;
         } 
+
+        /**
+         * DagJson.
+         */
+        public Builder dagJson(String dagJson) {
+            this.putBodyParameter("DagJson", dagJson);
+            this.dagJson = dagJson;
+            return this;
+        }
 
         /**
          * GroupId.
          */
         public Builder groupId(String groupId) {
-            this.putQueryParameter("GroupId", groupId);
+            this.putBodyParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * JobIdList.
-         */
-        public Builder jobIdList(java.util.List < Integer > jobIdList) {
-            this.putBodyParameter("JobIdList", jobIdList);
-            this.jobIdList = jobIdList;
             return this;
         }
 
@@ -134,7 +150,7 @@ public class BatchDeleteJobRequest extends Request {
          * Namespace.
          */
         public Builder namespace(String namespace) {
-            this.putQueryParameter("Namespace", namespace);
+            this.putBodyParameter("Namespace", namespace);
             this.namespace = namespace;
             return this;
         }
@@ -143,7 +159,7 @@ public class BatchDeleteJobRequest extends Request {
          * NamespaceSource.
          */
         public Builder namespaceSource(String namespaceSource) {
-            this.putQueryParameter("NamespaceSource", namespaceSource);
+            this.putBodyParameter("NamespaceSource", namespaceSource);
             this.namespaceSource = namespaceSource;
             return this;
         }
@@ -157,9 +173,18 @@ public class BatchDeleteJobRequest extends Request {
             return this;
         }
 
+        /**
+         * WorkflowId.
+         */
+        public Builder workflowId(String workflowId) {
+            this.putBodyParameter("WorkflowId", workflowId);
+            this.workflowId = workflowId;
+            return this;
+        }
+
         @Override
-        public BatchDeleteJobRequest build() {
-            return new BatchDeleteJobRequest(this);
+        public UpdateWorkflowDagRequest build() {
+            return new UpdateWorkflowDagRequest(this);
         } 
 
     } 

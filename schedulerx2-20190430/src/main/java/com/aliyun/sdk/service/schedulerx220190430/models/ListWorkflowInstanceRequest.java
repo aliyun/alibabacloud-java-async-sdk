@@ -7,19 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchEnableJobRequest} extends {@link RequestModel}
+ * {@link ListWorkflowInstanceRequest} extends {@link RequestModel}
  *
- * <p>BatchEnableJobRequest</p>
+ * <p>ListWorkflowInstanceRequest</p>
  */
-public class BatchEnableJobRequest extends Request {
+public class ListWorkflowInstanceRequest extends Request {
     @Query
     @NameInMap("GroupId")
-    private String groupId;
-
-    @Body
-    @NameInMap("JobIdList")
     @Validation(required = true)
-    private java.util.List < Integer > jobIdList;
+    private String groupId;
 
     @Query
     @NameInMap("Namespace")
@@ -32,22 +28,28 @@ public class BatchEnableJobRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
-    private BatchEnableJobRequest(Builder builder) {
+    @Query
+    @NameInMap("WorkflowId")
+    @Validation(required = true)
+    private String workflowId;
+
+    private ListWorkflowInstanceRequest(Builder builder) {
         super(builder);
         this.groupId = builder.groupId;
-        this.jobIdList = builder.jobIdList;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
         this.regionId = builder.regionId;
+        this.workflowId = builder.workflowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static BatchEnableJobRequest create() {
+    public static ListWorkflowInstanceRequest create() {
         return builder().build();
     }
 
@@ -61,13 +63,6 @@ public class BatchEnableJobRequest extends Request {
      */
     public String getGroupId() {
         return this.groupId;
-    }
-
-    /**
-     * @return jobIdList
-     */
-    public java.util.List < Integer > getJobIdList() {
-        return this.jobIdList;
     }
 
     /**
@@ -91,24 +86,31 @@ public class BatchEnableJobRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<BatchEnableJobRequest, Builder> {
+    /**
+     * @return workflowId
+     */
+    public String getWorkflowId() {
+        return this.workflowId;
+    }
+
+    public static final class Builder extends Request.Builder<ListWorkflowInstanceRequest, Builder> {
         private String groupId; 
-        private java.util.List < Integer > jobIdList; 
         private String namespace; 
         private String namespaceSource; 
         private String regionId; 
+        private String workflowId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchEnableJobRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobIdList = response.jobIdList;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(ListWorkflowInstanceRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.workflowId = request.workflowId;
         } 
 
         /**
@@ -117,15 +119,6 @@ public class BatchEnableJobRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * JobIdList.
-         */
-        public Builder jobIdList(java.util.List < Integer > jobIdList) {
-            this.putBodyParameter("JobIdList", jobIdList);
-            this.jobIdList = jobIdList;
             return this;
         }
 
@@ -156,9 +149,18 @@ public class BatchEnableJobRequest extends Request {
             return this;
         }
 
+        /**
+         * WorkflowId.
+         */
+        public Builder workflowId(String workflowId) {
+            this.putQueryParameter("WorkflowId", workflowId);
+            this.workflowId = workflowId;
+            return this;
+        }
+
         @Override
-        public BatchEnableJobRequest build() {
-            return new BatchEnableJobRequest(this);
+        public ListWorkflowInstanceRequest build() {
+            return new ListWorkflowInstanceRequest(this);
         } 
 
     } 

@@ -32,6 +32,7 @@ public class ListJobsRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -115,18 +116,18 @@ public class ListJobsRequest extends Request {
             super();
         } 
 
-        private Builder(ListJobsRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobName = response.jobName;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(ListJobsRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.jobName = request.jobName;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -135,7 +136,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * JobName.
+         * The name of the job.
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -144,7 +145,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -153,7 +154,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -162,7 +163,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the job resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +172,11 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether to enable the job. Valid values:
+         * <p>
+         * 
+         * *   **0**: disables the job.
+         * *   **1**: enables the job.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

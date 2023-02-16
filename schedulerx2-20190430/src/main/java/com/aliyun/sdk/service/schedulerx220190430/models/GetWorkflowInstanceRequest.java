@@ -7,19 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchDisableJobRequest} extends {@link RequestModel}
+ * {@link GetWorkflowInstanceRequest} extends {@link RequestModel}
  *
- * <p>BatchDisableJobRequest</p>
+ * <p>GetWorkflowInstanceRequest</p>
  */
-public class BatchDisableJobRequest extends Request {
+public class GetWorkflowInstanceRequest extends Request {
     @Query
     @NameInMap("GroupId")
-    private String groupId;
-
-    @Body
-    @NameInMap("JobIdList")
     @Validation(required = true)
-    private java.util.List < Integer > jobIdList;
+    private String groupId;
 
     @Query
     @NameInMap("Namespace")
@@ -32,22 +28,34 @@ public class BatchDisableJobRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
-    private BatchDisableJobRequest(Builder builder) {
+    @Query
+    @NameInMap("WfInstanceId")
+    @Validation(required = true)
+    private Long wfInstanceId;
+
+    @Query
+    @NameInMap("WorkflowId")
+    @Validation(required = true)
+    private Long workflowId;
+
+    private GetWorkflowInstanceRequest(Builder builder) {
         super(builder);
         this.groupId = builder.groupId;
-        this.jobIdList = builder.jobIdList;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
         this.regionId = builder.regionId;
+        this.wfInstanceId = builder.wfInstanceId;
+        this.workflowId = builder.workflowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static BatchDisableJobRequest create() {
+    public static GetWorkflowInstanceRequest create() {
         return builder().build();
     }
 
@@ -61,13 +69,6 @@ public class BatchDisableJobRequest extends Request {
      */
     public String getGroupId() {
         return this.groupId;
-    }
-
-    /**
-     * @return jobIdList
-     */
-    public java.util.List < Integer > getJobIdList() {
-        return this.jobIdList;
     }
 
     /**
@@ -91,24 +92,40 @@ public class BatchDisableJobRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<BatchDisableJobRequest, Builder> {
+    /**
+     * @return wfInstanceId
+     */
+    public Long getWfInstanceId() {
+        return this.wfInstanceId;
+    }
+
+    /**
+     * @return workflowId
+     */
+    public Long getWorkflowId() {
+        return this.workflowId;
+    }
+
+    public static final class Builder extends Request.Builder<GetWorkflowInstanceRequest, Builder> {
         private String groupId; 
-        private java.util.List < Integer > jobIdList; 
         private String namespace; 
         private String namespaceSource; 
         private String regionId; 
+        private Long wfInstanceId; 
+        private Long workflowId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchDisableJobRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobIdList = response.jobIdList;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(GetWorkflowInstanceRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.wfInstanceId = request.wfInstanceId;
+            this.workflowId = request.workflowId;
         } 
 
         /**
@@ -117,15 +134,6 @@ public class BatchDisableJobRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
-            return this;
-        }
-
-        /**
-         * JobIdList.
-         */
-        public Builder jobIdList(java.util.List < Integer > jobIdList) {
-            this.putBodyParameter("JobIdList", jobIdList);
-            this.jobIdList = jobIdList;
             return this;
         }
 
@@ -156,9 +164,27 @@ public class BatchDisableJobRequest extends Request {
             return this;
         }
 
+        /**
+         * WfInstanceId.
+         */
+        public Builder wfInstanceId(Long wfInstanceId) {
+            this.putQueryParameter("WfInstanceId", wfInstanceId);
+            this.wfInstanceId = wfInstanceId;
+            return this;
+        }
+
+        /**
+         * WorkflowId.
+         */
+        public Builder workflowId(Long workflowId) {
+            this.putQueryParameter("WorkflowId", workflowId);
+            this.workflowId = workflowId;
+            return this;
+        }
+
         @Override
-        public BatchDisableJobRequest build() {
-            return new BatchDisableJobRequest(this);
+        public GetWorkflowInstanceRequest build() {
+            return new GetWorkflowInstanceRequest(this);
         } 
 
     } 

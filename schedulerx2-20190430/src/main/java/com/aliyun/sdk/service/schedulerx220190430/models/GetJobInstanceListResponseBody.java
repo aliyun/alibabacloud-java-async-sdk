@@ -86,7 +86,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the job instances.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message that is returned if an error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call is successful.
+         * *   **false**: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -302,7 +306,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             private String workAddr; 
 
             /**
-             * DataTime.
+             * The data time.
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -310,7 +314,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the job execution.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -318,7 +322,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Executor.
+             * The user who executes the job.
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -326,7 +330,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the job instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -334,7 +338,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the job.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -342,7 +346,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the job instance.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -350,7 +354,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The execution results of the job instance.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -358,7 +362,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * The scheduled time of the job.
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -366,7 +370,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the job execution.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -374,7 +378,16 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the job instance. Valid values:
+             * <p>
+             * 
+             * *   **1**: The job instance is waiting for execution.
+             * *   **3**: The job instance is running.
+             * *   **4**: The job instance is successful.
+             * *   **5**: The job instance fails.
+             * *   **9**: The job instance is rejected.
+             * 
+             * Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -382,7 +395,15 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * TimeType.
+             * The method that is used to specify the time when to schedule the job instance. Valid values:
+             * <p>
+             * 
+             * *   **1**: cron
+             * *   **3**: fix_rate
+             * *   **4**: second_delay
+             * *   **100**: api
+             * 
+             * Enumeration class: com.alibaba.schedulerx.common.domain.TimeType
              */
             public Builder timeType(Integer timeType) {
                 this.timeType = timeType;
@@ -390,7 +411,16 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * The trigger type of the job instance. Valid values:
+             * <p>
+             * 
+             * *   **1**: The job instance is triggered at the scheduled time.
+             * *   **2**: The job instance is triggered due to data update.
+             * *   **3**: The job instance is triggered by an API call.
+             * *   **4**: The job instance is triggered because it is manually rerun.
+             * *   **5**: The job instance is triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.
+             * 
+             * Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType
              */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;
@@ -398,7 +428,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * WorkAddr.
+             * The endpoint of the triggered client. The value is in the IP address:Port number format.
              */
             public Builder workAddr(String workAddr) {
                 this.workAddr = workAddr;
@@ -439,7 +469,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             private java.util.List < JobInstanceDetails> jobInstanceDetails; 
 
             /**
-             * JobInstanceDetails.
+             * The details of the job instance.
              */
             public Builder jobInstanceDetails(java.util.List < JobInstanceDetails> jobInstanceDetails) {
                 this.jobInstanceDetails = jobInstanceDetails;

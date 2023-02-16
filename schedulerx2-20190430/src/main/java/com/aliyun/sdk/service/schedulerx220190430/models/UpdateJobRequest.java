@@ -50,7 +50,6 @@ public class UpdateJobRequest extends Request {
 
     @Body
     @NameInMap("ExecuteMode")
-    @Validation(required = true)
     private String executeMode;
 
     @Body
@@ -58,13 +57,13 @@ public class UpdateJobRequest extends Request {
     private Boolean failEnable;
 
     @Body
+    @NameInMap("FailTimes")
+    private Integer failTimes;
+
+    @Body
     @NameInMap("GroupId")
     @Validation(required = true)
     private String groupId;
-
-    @Body
-    @NameInMap("JarUrl")
-    private String jarUrl;
 
     @Body
     @NameInMap("JobId")
@@ -86,7 +85,6 @@ public class UpdateJobRequest extends Request {
 
     @Body
     @NameInMap("Name")
-    @Validation(required = true)
     private String name;
 
     @Body
@@ -112,11 +110,16 @@ public class UpdateJobRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Body
     @NameInMap("SendChannel")
     private String sendChannel;
+
+    @Body
+    @NameInMap("SuccessNoticeEnable")
+    private Boolean successNoticeEnable;
 
     @Body
     @NameInMap("TaskAttemptInterval")
@@ -133,7 +136,6 @@ public class UpdateJobRequest extends Request {
 
     @Body
     @NameInMap("TimeType")
-    @Validation(required = true)
     private Integer timeType;
 
     @Body
@@ -161,8 +163,8 @@ public class UpdateJobRequest extends Request {
         this.dispatcherSize = builder.dispatcherSize;
         this.executeMode = builder.executeMode;
         this.failEnable = builder.failEnable;
+        this.failTimes = builder.failTimes;
         this.groupId = builder.groupId;
-        this.jarUrl = builder.jarUrl;
         this.jobId = builder.jobId;
         this.maxAttempt = builder.maxAttempt;
         this.maxConcurrency = builder.maxConcurrency;
@@ -175,6 +177,7 @@ public class UpdateJobRequest extends Request {
         this.queueSize = builder.queueSize;
         this.regionId = builder.regionId;
         this.sendChannel = builder.sendChannel;
+        this.successNoticeEnable = builder.successNoticeEnable;
         this.taskAttemptInterval = builder.taskAttemptInterval;
         this.taskMaxAttempt = builder.taskMaxAttempt;
         this.timeExpression = builder.timeExpression;
@@ -275,17 +278,17 @@ public class UpdateJobRequest extends Request {
     }
 
     /**
+     * @return failTimes
+     */
+    public Integer getFailTimes() {
+        return this.failTimes;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
         return this.groupId;
-    }
-
-    /**
-     * @return jarUrl
-     */
-    public String getJarUrl() {
-        return this.jarUrl;
     }
 
     /**
@@ -373,6 +376,13 @@ public class UpdateJobRequest extends Request {
     }
 
     /**
+     * @return successNoticeEnable
+     */
+    public Boolean getSuccessNoticeEnable() {
+        return this.successNoticeEnable;
+    }
+
+    /**
      * @return taskAttemptInterval
      */
     public Integer getTaskAttemptInterval() {
@@ -433,8 +443,8 @@ public class UpdateJobRequest extends Request {
         private Integer dispatcherSize; 
         private String executeMode; 
         private Boolean failEnable; 
+        private Integer failTimes; 
         private String groupId; 
-        private String jarUrl; 
         private Long jobId; 
         private Integer maxAttempt; 
         private Integer maxConcurrency; 
@@ -447,6 +457,7 @@ public class UpdateJobRequest extends Request {
         private Integer queueSize; 
         private String regionId; 
         private String sendChannel; 
+        private Boolean successNoticeEnable; 
         private Integer taskAttemptInterval; 
         private Integer taskMaxAttempt; 
         private String timeExpression; 
@@ -459,44 +470,45 @@ public class UpdateJobRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateJobRequest response) {
-            super(response);
-            this.attemptInterval = response.attemptInterval;
-            this.calendar = response.calendar;
-            this.className = response.className;
-            this.consumerSize = response.consumerSize;
-            this.contactInfo = response.contactInfo;
-            this.content = response.content;
-            this.dataOffset = response.dataOffset;
-            this.description = response.description;
-            this.dispatcherSize = response.dispatcherSize;
-            this.executeMode = response.executeMode;
-            this.failEnable = response.failEnable;
-            this.groupId = response.groupId;
-            this.jarUrl = response.jarUrl;
-            this.jobId = response.jobId;
-            this.maxAttempt = response.maxAttempt;
-            this.maxConcurrency = response.maxConcurrency;
-            this.missWorkerEnable = response.missWorkerEnable;
-            this.name = response.name;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.pageSize = response.pageSize;
-            this.parameters = response.parameters;
-            this.queueSize = response.queueSize;
-            this.regionId = response.regionId;
-            this.sendChannel = response.sendChannel;
-            this.taskAttemptInterval = response.taskAttemptInterval;
-            this.taskMaxAttempt = response.taskMaxAttempt;
-            this.timeExpression = response.timeExpression;
-            this.timeType = response.timeType;
-            this.timeout = response.timeout;
-            this.timeoutEnable = response.timeoutEnable;
-            this.timeoutKillEnable = response.timeoutKillEnable;
+        private Builder(UpdateJobRequest request) {
+            super(request);
+            this.attemptInterval = request.attemptInterval;
+            this.calendar = request.calendar;
+            this.className = request.className;
+            this.consumerSize = request.consumerSize;
+            this.contactInfo = request.contactInfo;
+            this.content = request.content;
+            this.dataOffset = request.dataOffset;
+            this.description = request.description;
+            this.dispatcherSize = request.dispatcherSize;
+            this.executeMode = request.executeMode;
+            this.failEnable = request.failEnable;
+            this.failTimes = request.failTimes;
+            this.groupId = request.groupId;
+            this.jobId = request.jobId;
+            this.maxAttempt = request.maxAttempt;
+            this.maxConcurrency = request.maxConcurrency;
+            this.missWorkerEnable = request.missWorkerEnable;
+            this.name = request.name;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.pageSize = request.pageSize;
+            this.parameters = request.parameters;
+            this.queueSize = request.queueSize;
+            this.regionId = request.regionId;
+            this.sendChannel = request.sendChannel;
+            this.successNoticeEnable = request.successNoticeEnable;
+            this.taskAttemptInterval = request.taskAttemptInterval;
+            this.taskMaxAttempt = request.taskMaxAttempt;
+            this.timeExpression = request.timeExpression;
+            this.timeType = request.timeType;
+            this.timeout = request.timeout;
+            this.timeoutEnable = request.timeoutEnable;
+            this.timeoutKillEnable = request.timeoutKillEnable;
         } 
 
         /**
-         * AttemptInterval.
+         * The interval at which the system attempts to rerun a job. Default value: 30. Unit: seconds.
          */
         public Builder attemptInterval(Integer attemptInterval) {
             this.putBodyParameter("AttemptInterval", attemptInterval);
@@ -505,7 +517,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Calendar.
+         * When the Time type parameter is set to cron, you can specify a custom calendar.
          */
         public Builder calendar(String calendar) {
             this.putBodyParameter("Calendar", calendar);
@@ -514,7 +526,10 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * ClassName.
+         * The full path of the job interface class.
+         * <p>
+         * 
+         * This field is available only when you select a java job. In this case, you must enter a full path.
          */
         public Builder className(String className) {
             this.putBodyParameter("ClassName", className);
@@ -523,7 +538,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * ConsumerSize.
+         * The number of threads that are triggered by a single worker at a time. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.
          */
         public Builder consumerSize(Integer consumerSize) {
             this.putBodyParameter("ConsumerSize", consumerSize);
@@ -532,7 +547,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * ContactInfo.
+         * The information of the job contact.
          */
         public Builder contactInfo(java.util.List < ContactInfo> contactInfo) {
             this.putBodyParameter("ContactInfo", contactInfo);
@@ -541,7 +556,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Content.
+         * The script code content that is required when you set the job type to **python**, **shell**, or **go**.
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -550,7 +565,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * DataOffset.
+         * When the Time type parameter is set to cron, you can specify a time offset. Unit: seconds.
          */
         public Builder dataOffset(Integer dataOffset) {
             this.putBodyParameter("DataOffset", dataOffset);
@@ -559,7 +574,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the job.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -568,7 +583,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * DispatcherSize.
+         * Default value: 5. This parameter is an advanced configuration item of the MapReduce job.
          */
         public Builder dispatcherSize(Integer dispatcherSize) {
             this.putBodyParameter("DispatcherSize", dispatcherSize);
@@ -577,7 +592,15 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * ExecuteMode.
+         * The execution mode of the job. The following execution modes are supported:
+         * <p>
+         * 
+         * *   **standalone**: The job runs in standalone mode.
+         * *   **broadcast**: The job runs in broadcast mode.
+         * *   **parallel**: The job runs in parallel computing mode.
+         * *   **grid**: The job runs in memory grid mode.
+         * *   **batch**: The job runs in grid computing mode.
+         * *   **sharding**: The job runs in sharding mode.
          */
         public Builder executeMode(String executeMode) {
             this.putBodyParameter("ExecuteMode", executeMode);
@@ -586,7 +609,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * FailEnable.
+         * Specifies whether to turn on Failure alarm. Valid values:
+         * <p>
+         * 
+         * *   **true**: Turn on Failure alarm.
+         * *   **false**: Turn off Failure alarm.
          */
         public Builder failEnable(Boolean failEnable) {
             this.putBodyParameter("FailEnable", failEnable);
@@ -595,7 +622,16 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * FailTimes.
+         */
+        public Builder failTimes(Integer failTimes) {
+            this.putBodyParameter("FailTimes", failTimes);
+            this.failTimes = failTimes;
+            return this;
+        }
+
+        /**
+         * The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -604,16 +640,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * JarUrl.
-         */
-        public Builder jarUrl(String jarUrl) {
-            this.putBodyParameter("JarUrl", jarUrl);
-            this.jarUrl = jarUrl;
-            return this;
-        }
-
-        /**
-         * JobId.
+         * The ID of the job. You can obtain the job ID on the Task Management page in Distributed Task Scheduling Platform.
          */
         public Builder jobId(Long jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -622,7 +649,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * MaxAttempt.
+         * The maximum number of attempts that the system can make when an error occurs on a job. You can specify this parameter based on your business requirements.
          */
         public Builder maxAttempt(Integer maxAttempt) {
             this.putBodyParameter("MaxAttempt", maxAttempt);
@@ -631,7 +658,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * The maximum number of instances that the system can run at the same time. Default value: 1. When you set this parameter to 1, if the current job does not end, the system will not run the next job even if the runtime is reached.
          */
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.putBodyParameter("MaxConcurrency", maxConcurrency);
@@ -640,7 +667,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * MissWorkerEnable.
+         * Specifies whether to turn on No machine alarm available when no worker is available.
+         * <p>
+         * 
+         * *   **true**: Turn on No machine alarm available when no worker is available.
+         * *   **false**: Turn off No machine alarm available when no worker is available.
          */
         public Builder missWorkerEnable(Boolean missWorkerEnable) {
             this.putBodyParameter("MissWorkerEnable", missWorkerEnable);
@@ -649,7 +680,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the job.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -658,7 +689,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -667,7 +698,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -676,7 +707,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of subtasks that can be pulled at a time. Default value: 100. This parameter is an advanced configuration item of the MapReduce job.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -685,7 +716,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The user-defined parameters that you can obtain when you run the job.
          */
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);
@@ -694,7 +725,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * QueueSize.
+         * The maximum number of subtask queues that you can cache. Default value: 10000. This parameter is an advanced configuration item of the MapReduce job.
          */
         public Builder queueSize(Integer queueSize) {
             this.putBodyParameter("QueueSize", queueSize);
@@ -703,7 +734,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -712,7 +743,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * SendChannel.
+         * The channel for sending alerts. Only SMS messages are supported.
          */
         public Builder sendChannel(String sendChannel) {
             this.putBodyParameter("SendChannel", sendChannel);
@@ -721,7 +752,16 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * TaskAttemptInterval.
+         * SuccessNoticeEnable.
+         */
+        public Builder successNoticeEnable(Boolean successNoticeEnable) {
+            this.putBodyParameter("SuccessNoticeEnable", successNoticeEnable);
+            this.successNoticeEnable = successNoticeEnable;
+            return this;
+        }
+
+        /**
+         * The interval at which the system can rerun the subtask when the subtask fails. This parameter is an advanced configuration item of the MapReduce job.
          */
         public Builder taskAttemptInterval(Integer taskAttemptInterval) {
             this.putBodyParameter("TaskAttemptInterval", taskAttemptInterval);
@@ -730,7 +770,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * TaskMaxAttempt.
+         * The number of retries that the system can perform when the subtask fails. This parameter is an advanced configuration item of the MapReduce job.
          */
         public Builder taskMaxAttempt(Integer taskMaxAttempt) {
             this.putBodyParameter("TaskMaxAttempt", taskMaxAttempt);
@@ -739,7 +779,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * TimeExpression.
+         * The time expression. You can set the time expression according to the selected time type.
+         * <p>
+         * 
+         * *   **cron**: Specify a standard Cron expression. You can verify the expression online after you specify the expression.
+         * *   **api**: No time expression is available.
+         * *   **fixed_rate**: Specify a fixed frequency value. Unit: seconds. For example, if you set this parameter to 30, the system triggers a job every 30 seconds.
+         * *   **second_delay**: Specify a delay after which you can run a job. You can specify a value from 1 to 60. Unit: seconds.
          */
         public Builder timeExpression(String timeExpression) {
             this.putBodyParameter("TimeExpression", timeExpression);
@@ -748,7 +794,13 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * TimeType.
+         * The type of time. The following time types are supported:
+         * <p>
+         * 
+         * *   **cron**: 1
+         * *   **fix_rate**: 3
+         * *   **second_delay**: 4
+         * *   **api**: 100
          */
         public Builder timeType(Integer timeType) {
             this.putBodyParameter("TimeType", timeType);
@@ -757,7 +809,7 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout threshold. Default value: 7200. Unit: seconds.
          */
         public Builder timeout(Long timeout) {
             this.putBodyParameter("Timeout", timeout);
@@ -766,7 +818,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * TimeoutEnable.
+         * Specifies whether to turn on Timeout alarm. Valid values:
+         * <p>
+         * 
+         * *   **true**: Turn on Timeout alarm.
+         * *   **false**: Turn off Timeout alarm.
          */
         public Builder timeoutEnable(Boolean timeoutEnable) {
             this.putBodyParameter("TimeoutEnable", timeoutEnable);
@@ -775,7 +831,11 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
-         * TimeoutKillEnable.
+         * Specifies whether to turn on Timeout termination. Valid values:
+         * <p>
+         * 
+         * *   **true**: Turn on Timeout termination.
+         * *   **false**: Turn off Timeout termination.
          */
         public Builder timeoutKillEnable(Boolean timeoutKillEnable) {
             this.putBodyParameter("TimeoutKillEnable", timeoutKillEnable);
@@ -853,7 +913,7 @@ public class UpdateJobRequest extends Request {
             private String userPhone; 
 
             /**
-             * Ding.
+             * The webhook URL of the DingTalk chatbot. For more information, see [DingTalk development documentation](https://open.dingtalk.com/document/org/application-types).
              */
             public Builder ding(String ding) {
                 this.ding = ding;
@@ -861,7 +921,7 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * UserMail.
+             * The email address of the contact.
              */
             public Builder userMail(String userMail) {
                 this.userMail = userMail;
@@ -869,7 +929,7 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * UserName.
+             * The name of the contact.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -877,7 +937,7 @@ public class UpdateJobRequest extends Request {
             }
 
             /**
-             * UserPhone.
+             * The mobile phone number of the contact.
              */
             public Builder userPhone(String userPhone) {
                 this.userPhone = userPhone;

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchDisableJobResponseBody} extends {@link TeaModel}
+ * {@link UpdateWorkflowResponseBody} extends {@link TeaModel}
  *
- * <p>BatchDisableJobResponseBody</p>
+ * <p>UpdateWorkflowResponseBody</p>
  */
-public class BatchDisableJobResponseBody extends TeaModel {
+public class UpdateWorkflowResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
@@ -24,7 +24,7 @@ public class BatchDisableJobResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private BatchDisableJobResponseBody(Builder builder) {
+    private UpdateWorkflowResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -35,7 +35,7 @@ public class BatchDisableJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static BatchDisableJobResponseBody create() {
+    public static UpdateWorkflowResponseBody create() {
         return builder().build();
     }
 
@@ -90,7 +90,7 @@ public class BatchDisableJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,8 +105,8 @@ public class BatchDisableJobResponseBody extends TeaModel {
             return this;
         }
 
-        public BatchDisableJobResponseBody build() {
-            return new BatchDisableJobResponseBody(this);
+        public UpdateWorkflowResponseBody build() {
+            return new UpdateWorkflowResponseBody(this);
         } 
 
     } 

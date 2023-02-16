@@ -28,6 +28,7 @@ public class RevokePermissionRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -103,17 +104,17 @@ public class RevokePermissionRequest extends Request {
             super();
         } 
 
-        private Builder(RevokePermissionRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
-            this.userId = response.userId;
+        private Builder(RevokePermissionRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.userId = request.userId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +123,7 @@ public class RevokePermissionRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -131,7 +132,7 @@ public class RevokePermissionRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -140,7 +141,7 @@ public class RevokePermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +150,7 @@ public class RevokePermissionRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The unique ID (UID) of the RAM user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -38,6 +38,7 @@ public class StopInstanceRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private StopInstanceRequest(Builder builder) {
@@ -117,18 +118,18 @@ public class StopInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(StopInstanceRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.instanceId = response.instanceId;
-            this.jobId = response.jobId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(StopInstanceRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.instanceId = request.instanceId;
+            this.jobId = request.jobId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -137,7 +138,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the job instance in the running state.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,7 +147,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -155,7 +156,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -164,7 +165,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -173,7 +174,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the application resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

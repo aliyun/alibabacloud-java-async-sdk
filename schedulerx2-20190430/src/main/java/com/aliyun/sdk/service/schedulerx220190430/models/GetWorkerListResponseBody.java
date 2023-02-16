@@ -86,7 +86,7 @@ public class GetWorkerListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetWorkerListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The job information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetWorkerListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional information that is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +118,11 @@ public class GetWorkerListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call is successful.
+         * *   **false**: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +222,7 @@ public class GetWorkerListResponseBody extends TeaModel {
             private String workerAddress; 
 
             /**
-             * Ip.
+             * The IP address of the worker.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -226,7 +230,7 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The label of the worker.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -234,7 +238,7 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the worker.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -242,7 +246,7 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * Starter.
+             * The startup method of the worker.
              */
             public Builder starter(String starter) {
                 this.starter = starter;
@@ -250,7 +254,7 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the worker.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -258,7 +262,7 @@ public class GetWorkerListResponseBody extends TeaModel {
             }
 
             /**
-             * WorkerAddress.
+             * The address of the worker. The address is in the format of ${worker_id}@${worker_ip}:${worker_port}.
              */
             public Builder workerAddress(String workerAddress) {
                 this.workerAddress = workerAddress;
@@ -299,7 +303,7 @@ public class GetWorkerListResponseBody extends TeaModel {
             private java.util.List < WorkerInfos> workerInfos; 
 
             /**
-             * WorkerInfos.
+             * The worker information.
              */
             public Builder workerInfos(java.util.List < WorkerInfos> workerInfos) {
                 this.workerInfos = workerInfos;

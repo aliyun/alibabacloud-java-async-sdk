@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListNamespacesRequest extends Request {
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private ListNamespacesRequest(Builder builder) {
@@ -48,13 +49,13 @@ public class ListNamespacesRequest extends Request {
             super();
         } 
 
-        private Builder(ListNamespacesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListNamespacesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

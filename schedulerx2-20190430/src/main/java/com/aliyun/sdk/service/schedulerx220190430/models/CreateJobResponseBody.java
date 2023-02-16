@@ -86,7 +86,7 @@ public class CreateJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the job.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional information that is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class CreateJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the job is created. Valid values:
+         * <p>
+         * 
+         * *   **true**: The job is created.
+         * *   **false**: Failed to create the job.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +162,7 @@ public class CreateJobResponseBody extends TeaModel {
             private Long jobId; 
 
             /**
-             * JobId.
+             * The ID of the job.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;

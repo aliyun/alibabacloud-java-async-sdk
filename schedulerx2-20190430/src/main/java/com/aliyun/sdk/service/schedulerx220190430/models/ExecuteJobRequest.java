@@ -49,6 +49,7 @@ public class ExecuteJobRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -168,22 +169,22 @@ public class ExecuteJobRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteJobRequest response) {
-            super(response);
-            this.checkJobStatus = response.checkJobStatus;
-            this.designateType = response.designateType;
-            this.groupId = response.groupId;
-            this.instanceParameters = response.instanceParameters;
-            this.jobId = response.jobId;
-            this.label = response.label;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
-            this.worker = response.worker;
+        private Builder(ExecuteJobRequest request) {
+            super(request);
+            this.checkJobStatus = request.checkJobStatus;
+            this.designateType = request.designateType;
+            this.groupId = request.groupId;
+            this.instanceParameters = request.instanceParameters;
+            this.jobId = request.jobId;
+            this.label = request.label;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.worker = request.worker;
         } 
 
         /**
-         * CheckJobStatus.
+         * Specifies whether to check the job status. Valid values: -**true**: The job can be run only if the job is enabled. -**false**: The job can be run even if the job is disabled.
          */
         public Builder checkJobStatus(Boolean checkJobStatus) {
             this.putQueryParameter("CheckJobStatus", checkJobStatus);
@@ -192,7 +193,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * 指定机器类型：1.workerAddr; 2. label
+         * The type of the designated machine. Valid values: -**1**: worker. -**2**: label.
          */
         public Builder designateType(Integer designateType) {
             this.putQueryParameter("DesignateType", designateType);
@@ -201,7 +202,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -210,7 +211,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * InstanceParameters.
+         * The parameters that are passed to trigger the job to run. The input value can be any string. The parameters that are passed are obtained by calling the `context.getInstanceParameters()` class in the `processor` code. The parameters are different from custom parameters for creating jobs.
          */
         public Builder instanceParameters(String instanceParameters) {
             this.putQueryParameter("InstanceParameters", instanceParameters);
@@ -219,7 +220,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -228,7 +229,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * 指定机器的标签
+         * The label of the worker.
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -237,7 +238,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -246,7 +247,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -255,7 +256,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +265,7 @@ public class ExecuteJobRequest extends Request {
         }
 
         /**
-         * 指定机器的workerAddr
+         * The worker address of the application. To query the worker address, call the GetWokerList operation.
          */
         public Builder worker(String worker) {
             this.putQueryParameter("Worker", worker);

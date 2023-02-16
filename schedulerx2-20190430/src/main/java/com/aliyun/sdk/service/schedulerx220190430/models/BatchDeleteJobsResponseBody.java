@@ -74,7 +74,7 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional information that is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether jobs are deleted in batches. Valid values:
+         * <p>
+         * 
+         * *   **true**: Jobs are deleted in batches.
+         * *   **false**: Failed to delete jobs in batches.
          */
         public Builder success(Boolean success) {
             this.success = success;

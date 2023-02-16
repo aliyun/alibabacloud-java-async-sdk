@@ -32,6 +32,7 @@ public class BatchEnableJobsRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private BatchEnableJobsRequest(Builder builder) {
@@ -102,17 +103,17 @@ public class BatchEnableJobsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchEnableJobsRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobIdList = response.jobIdList;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(BatchEnableJobsRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.jobIdList = request.jobIdList;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the ID of the application on the **Application Management** page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -121,7 +122,7 @@ public class BatchEnableJobsRequest extends Request {
         }
 
         /**
-         * JobIdList.
+         * The job IDs. Separate multiple job IDs with commas (,).
          */
         public Builder jobIdList(java.util.List < Long > jobIdList) {
             this.putBodyParameter("JobIdList", jobIdList);
@@ -130,7 +131,7 @@ public class BatchEnableJobsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -139,7 +140,7 @@ public class BatchEnableJobsRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * Required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -148,7 +149,7 @@ public class BatchEnableJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the job resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchDeleteJobResponse} extends {@link TeaModel}
+ * {@link RetryJobInstanceResponse} extends {@link TeaModel}
  *
- * <p>BatchDeleteJobResponse</p>
+ * <p>RetryJobInstanceResponse</p>
  */
-public class BatchDeleteJobResponse extends Response {
+public class RetryJobInstanceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private BatchDeleteJobResponseBody body;
+    private RetryJobInstanceResponseBody body;
 
-    private BatchDeleteJobResponse(BuilderImpl builder) {
+    private RetryJobInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static BatchDeleteJobResponse create() {
+    public static RetryJobInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class BatchDeleteJobResponse extends Response {
     /**
      * @return body
      */
-    public BatchDeleteJobResponseBody getBody() {
+    public RetryJobInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<BatchDeleteJobResponse, Builder> {
+    public interface Builder extends Response.Builder<RetryJobInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(BatchDeleteJobResponseBody body);
+        Builder body(RetryJobInstanceResponseBody body);
 
         @Override
-        BatchDeleteJobResponse build();
+        RetryJobInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<BatchDeleteJobResponse, Builder>
+            extends Response.BuilderImpl<RetryJobInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private BatchDeleteJobResponseBody body; 
+        private RetryJobInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(BatchDeleteJobResponse response) {
+        private BuilderImpl(RetryJobInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class BatchDeleteJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(BatchDeleteJobResponseBody body) {
+        public Builder body(RetryJobInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public BatchDeleteJobResponse build() {
-            return new BatchDeleteJobResponse(this);
+        public RetryJobInstanceResponse build() {
+            return new RetryJobInstanceResponse(this);
         } 
 
     } 

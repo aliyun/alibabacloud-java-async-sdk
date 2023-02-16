@@ -86,7 +86,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * The error code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * 工作流的数据
+         * The data of the workflow.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message that is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         }
 
         /**
-         * 会否成功
+         * The result of the API call.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * 工作流描述
+             * The description of the workflow.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +226,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流名称
+             * The name of the workflow.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +234,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流状态
+             * The status of the workflow.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -242,7 +242,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流时间表达式
+             * The time expression of the workflow.
              */
             public Builder timeExpression(String timeExpression) {
                 this.timeExpression = timeExpression;
@@ -250,7 +250,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流时间类型
+             * The time type of the workflow.
              */
             public Builder timeType(String timeType) {
                 this.timeType = timeType;
@@ -258,7 +258,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流ID
+             * The ID of the workflow.
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -311,7 +311,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private Long target; 
 
             /**
-             * 起始任务ID
+             * The ID of the source job.
              */
             public Builder source(Long source) {
                 this.source = source;
@@ -319,7 +319,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 目的任务ID
+             * The ID of the target job.
              */
             public Builder target(Long target) {
                 this.target = target;
@@ -384,7 +384,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * 任务ID
+             * The ID of the job.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -392,7 +392,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 任务名称
+             * The name of the job.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -400,7 +400,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态
+             * The status of the job.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -453,7 +453,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * 工作流边列表
+             * The workflow edges.
              */
             public Builder edges(java.util.List < Edges> edges) {
                 this.edges = edges;
@@ -461,7 +461,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流节点列表
+             * The list of workflow nodes.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -514,7 +514,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             private WorkFlowNodeInfo workFlowNodeInfo; 
 
             /**
-             * 工作流基本信息
+             * The basic information of the workflow.
              */
             public Builder workFlowInfo(WorkFlowInfo workFlowInfo) {
                 this.workFlowInfo = workFlowInfo;
@@ -522,7 +522,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流节点信息
+             * The node information of the workflow.
              */
             public Builder workFlowNodeInfo(WorkFlowNodeInfo workFlowNodeInfo) {
                 this.workFlowNodeInfo = workFlowNodeInfo;

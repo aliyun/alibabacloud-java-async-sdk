@@ -27,6 +27,7 @@ public class EnableWorkflowRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -102,17 +103,17 @@ public class EnableWorkflowRequest extends Request {
             super();
         } 
 
-        private Builder(EnableWorkflowRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
-            this.workflowId = response.workflowId;
+        private Builder(EnableWorkflowRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.workflowId = request.workflowId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -121,7 +122,7 @@ public class EnableWorkflowRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -130,7 +131,7 @@ public class EnableWorkflowRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -139,7 +140,7 @@ public class EnableWorkflowRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +149,7 @@ public class EnableWorkflowRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * The ID of the workflow.
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

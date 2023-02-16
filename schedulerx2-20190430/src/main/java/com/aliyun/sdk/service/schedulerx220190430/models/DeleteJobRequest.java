@@ -33,6 +33,7 @@ public class DeleteJobRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private DeleteJobRequest(Builder builder) {
@@ -103,17 +104,17 @@ public class DeleteJobRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteJobRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobId = response.jobId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(DeleteJobRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.jobId = request.jobId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the **Application Management** page in Distributed Task Scheduling Platform.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +123,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the job. You can obtain the ID on the **Task Management** page in Distributed Task Scheduling Platform.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -131,7 +132,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the ID of the namespace on the **Namespace** page in Distributed Task Scheduling Platform.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,7 +141,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -149,7 +150,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

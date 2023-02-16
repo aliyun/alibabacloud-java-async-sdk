@@ -86,7 +86,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * If the call is successful, the ID of the workflow instance is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message that is returned only if the error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the API call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
             private Long wfInstanceId; 
 
             /**
-             * WfInstanceId.
+             * The ID of the workflow instance.
              */
             public Builder wfInstanceId(Long wfInstanceId) {
                 this.wfInstanceId = wfInstanceId;

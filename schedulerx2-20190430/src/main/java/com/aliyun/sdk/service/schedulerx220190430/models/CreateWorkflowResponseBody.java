@@ -7,13 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchDeleteJobResponseBody} extends {@link TeaModel}
+ * {@link CreateWorkflowResponseBody} extends {@link TeaModel}
  *
- * <p>BatchDeleteJobResponseBody</p>
+ * <p>CreateWorkflowResponseBody</p>
  */
-public class BatchDeleteJobResponseBody extends TeaModel {
+public class CreateWorkflowResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Integer code;
+    private String code;
+
+    @NameInMap("Data")
+    private Data data;
 
     @NameInMap("Message")
     private String message;
@@ -24,8 +27,9 @@ public class BatchDeleteJobResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private BatchDeleteJobResponseBody(Builder builder) {
+    private CreateWorkflowResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -35,15 +39,22 @@ public class BatchDeleteJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static BatchDeleteJobResponseBody create() {
+    public static CreateWorkflowResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
     }
 
     /**
@@ -68,7 +79,8 @@ public class BatchDeleteJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
+        private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,8 +88,16 @@ public class BatchDeleteJobResponseBody extends TeaModel {
         /**
          * Code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -90,7 +110,7 @@ public class BatchDeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,10 +125,51 @@ public class BatchDeleteJobResponseBody extends TeaModel {
             return this;
         }
 
-        public BatchDeleteJobResponseBody build() {
-            return new BatchDeleteJobResponseBody(this);
+        public CreateWorkflowResponseBody build() {
+            return new CreateWorkflowResponseBody(this);
         } 
 
     } 
 
+    public static class Data extends TeaModel {
+        @NameInMap("WorkflowId")
+        private Long workflowId;
+
+        private Data(Builder builder) {
+            this.workflowId = builder.workflowId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return workflowId
+         */
+        public Long getWorkflowId() {
+            return this.workflowId;
+        }
+
+        public static final class Builder {
+            private Long workflowId; 
+
+            /**
+             * WorkflowId.
+             */
+            public Builder workflowId(Long workflowId) {
+                this.workflowId = workflowId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

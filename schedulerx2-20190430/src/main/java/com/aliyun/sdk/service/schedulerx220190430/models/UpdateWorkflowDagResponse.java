@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchEnableJobResponse} extends {@link TeaModel}
+ * {@link UpdateWorkflowDagResponse} extends {@link TeaModel}
  *
- * <p>BatchEnableJobResponse</p>
+ * <p>UpdateWorkflowDagResponse</p>
  */
-public class BatchEnableJobResponse extends Response {
+public class UpdateWorkflowDagResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private BatchEnableJobResponseBody body;
+    private UpdateWorkflowDagResponseBody body;
 
-    private BatchEnableJobResponse(BuilderImpl builder) {
+    private UpdateWorkflowDagResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static BatchEnableJobResponse create() {
+    public static UpdateWorkflowDagResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class BatchEnableJobResponse extends Response {
     /**
      * @return body
      */
-    public BatchEnableJobResponseBody getBody() {
+    public UpdateWorkflowDagResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<BatchEnableJobResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateWorkflowDagResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(BatchEnableJobResponseBody body);
+        Builder body(UpdateWorkflowDagResponseBody body);
 
         @Override
-        BatchEnableJobResponse build();
+        UpdateWorkflowDagResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<BatchEnableJobResponse, Builder>
+            extends Response.BuilderImpl<UpdateWorkflowDagResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private BatchEnableJobResponseBody body; 
+        private UpdateWorkflowDagResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(BatchEnableJobResponse response) {
+        private BuilderImpl(UpdateWorkflowDagResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class BatchEnableJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(BatchEnableJobResponseBody body) {
+        public Builder body(UpdateWorkflowDagResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public BatchEnableJobResponse build() {
-            return new BatchEnableJobResponse(this);
+        public UpdateWorkflowDagResponse build() {
+            return new UpdateWorkflowDagResponse(this);
         } 
 
     } 

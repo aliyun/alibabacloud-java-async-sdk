@@ -42,6 +42,7 @@ public class DesignateWorkersRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -157,21 +158,21 @@ public class DesignateWorkersRequest extends Request {
             super();
         } 
 
-        private Builder(DesignateWorkersRequest response) {
-            super(response);
-            this.designateType = response.designateType;
-            this.groupId = response.groupId;
-            this.jobId = response.jobId;
-            this.labels = response.labels;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
-            this.transferable = response.transferable;
-            this.workers = response.workers;
+        private Builder(DesignateWorkersRequest request) {
+            super(request);
+            this.designateType = request.designateType;
+            this.groupId = request.groupId;
+            this.jobId = request.jobId;
+            this.labels = request.labels;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.transferable = request.transferable;
+            this.workers = request.workers;
         } 
 
         /**
-         * 指定机器的类型
+         * The type of the designated machines. Valid values: 1: worker. 2: label.
          */
         public Builder designateType(Integer designateType) {
             this.putQueryParameter("DesignateType", designateType);
@@ -180,7 +181,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * 应用分组ID
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -189,7 +190,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * 任务ID
+         * The ID of the job.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -198,7 +199,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * 指定label列表json格式
+         * The designated `labels`. The value is a `JSON` string.
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -207,7 +208,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * 命名空间UID
+         * The ID of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -216,7 +217,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * 命名空间来源
+         * The source of the namespace.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -225,7 +226,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +235,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * 是否故障转移
+         * Specifies whether to allow a failover.
          */
         public Builder transferable(Boolean transferable) {
             this.putQueryParameter("Transferable", transferable);
@@ -243,7 +244,7 @@ public class DesignateWorkersRequest extends Request {
         }
 
         /**
-         * 指定机器列表json格式
+         * The designated workers. The value is a JSON string.
          */
         public Builder workers(String workers) {
             this.putQueryParameter("Workers", workers);

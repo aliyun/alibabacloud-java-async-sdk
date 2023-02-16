@@ -75,15 +75,15 @@ public class ListGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListGroupsRequest response) {
-            super(response);
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(ListGroupsRequest request) {
+            super(request);
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * Namespace.
+         * The namespace. You can obtain the namespace on the **Namespace** page in Distributed Task Scheduling Platform.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -92,7 +92,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * Required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -101,7 +101,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the application is located.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link BatchDisableJobResponse} extends {@link TeaModel}
+ * {@link SetJobInstanceSuccessResponse} extends {@link TeaModel}
  *
- * <p>BatchDisableJobResponse</p>
+ * <p>SetJobInstanceSuccessResponse</p>
  */
-public class BatchDisableJobResponse extends Response {
+public class SetJobInstanceSuccessResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private BatchDisableJobResponseBody body;
+    private SetJobInstanceSuccessResponseBody body;
 
-    private BatchDisableJobResponse(BuilderImpl builder) {
+    private SetJobInstanceSuccessResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static BatchDisableJobResponse create() {
+    public static SetJobInstanceSuccessResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class BatchDisableJobResponse extends Response {
     /**
      * @return body
      */
-    public BatchDisableJobResponseBody getBody() {
+    public SetJobInstanceSuccessResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<BatchDisableJobResponse, Builder> {
+    public interface Builder extends Response.Builder<SetJobInstanceSuccessResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(BatchDisableJobResponseBody body);
+        Builder body(SetJobInstanceSuccessResponseBody body);
 
         @Override
-        BatchDisableJobResponse build();
+        SetJobInstanceSuccessResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<BatchDisableJobResponse, Builder>
+            extends Response.BuilderImpl<SetJobInstanceSuccessResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private BatchDisableJobResponseBody body; 
+        private SetJobInstanceSuccessResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(BatchDisableJobResponse response) {
+        private BuilderImpl(SetJobInstanceSuccessResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class BatchDisableJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(BatchDisableJobResponseBody body) {
+        public Builder body(SetJobInstanceSuccessResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public BatchDisableJobResponse build() {
-            return new BatchDisableJobResponse(this);
+        public SetJobInstanceSuccessResponse build() {
+            return new SetJobInstanceSuccessResponse(this);
         } 
 
     } 

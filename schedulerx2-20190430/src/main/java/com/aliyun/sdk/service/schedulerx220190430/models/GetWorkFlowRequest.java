@@ -28,6 +28,7 @@ public class GetWorkFlowRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -103,17 +104,17 @@ public class GetWorkFlowRequest extends Request {
             super();
         } 
 
-        private Builder(GetWorkFlowRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
-            this.workflowId = response.workflowId;
+        private Builder(GetWorkFlowRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.workflowId = request.workflowId;
         } 
 
         /**
-         * 应用分组ID
+         * The ID of the application group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +123,7 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * 命名空间uid
+         * The ID of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -131,7 +132,7 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * 命名空间来源
+         * The source of the namespcae.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -140,7 +141,7 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region information.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +150,7 @@ public class GetWorkFlowRequest extends Request {
         }
 
         /**
-         * 工作流ID
+         * The ID of the workflow.
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

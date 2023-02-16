@@ -74,7 +74,7 @@ public class DesignateWorkersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DesignateWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message that is returned if an error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DesignateWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DesignateWorkersResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

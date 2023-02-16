@@ -33,6 +33,7 @@ public class BatchDeleteJobsRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private BatchDeleteJobsRequest(Builder builder) {
@@ -103,17 +104,17 @@ public class BatchDeleteJobsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchDeleteJobsRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobIdList = response.jobIdList;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(BatchDeleteJobsRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.jobIdList = request.jobIdList;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the **Application Management** page in Distributed Task Scheduling Platform.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -122,7 +123,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * JobIdList.
+         * The job IDs. Multiple job IDs are separated by commas (,).
          */
         public Builder jobIdList(java.util.List < Long > jobIdList) {
             this.putBodyParameter("JobIdList", jobIdList);
@@ -131,7 +132,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the **Namespace** page in Distributed Task Scheduling Platform.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,7 +141,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -149,7 +150,7 @@ public class BatchDeleteJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the job belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

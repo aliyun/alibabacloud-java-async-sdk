@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobInstanceRequest</p>
  */
 public class GetJobInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("GroupId")
     @Validation(required = true)
@@ -36,18 +41,14 @@ public class GetJobInstanceRequest extends Request {
     @NameInMap("NamespaceSource")
     private String namespaceSource;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetJobInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.groupId = builder.groupId;
         this.jobId = builder.jobId;
         this.jobInstanceId = builder.jobInstanceId;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -61,6 +62,13 @@ public class GetJobInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -98,37 +106,39 @@ public class GetJobInstanceRequest extends Request {
         return this.namespaceSource;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetJobInstanceRequest, Builder> {
+        private String regionId; 
         private String groupId; 
         private Long jobId; 
         private Long jobInstanceId; 
         private String namespace; 
         private String namespaceSource; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetJobInstanceRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobId = response.jobId;
-            this.jobInstanceId = response.jobInstanceId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(GetJobInstanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.groupId = request.groupId;
+            this.jobId = request.jobId;
+            this.jobInstanceId = request.jobInstanceId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
         } 
 
         /**
-         * GroupId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -137,7 +147,7 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the job.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -146,7 +156,7 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * JobInstanceId.
+         * The ID of the job instance.
          */
         public Builder jobInstanceId(Long jobInstanceId) {
             this.putQueryParameter("JobInstanceId", jobInstanceId);
@@ -155,7 +165,7 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -164,20 +174,11 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * The source of the namespace. This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
             this.namespaceSource = namespaceSource;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

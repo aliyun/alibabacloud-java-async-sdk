@@ -32,6 +32,7 @@ public class EnableJobRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private EnableJobRequest(Builder builder) {
@@ -102,17 +103,17 @@ public class EnableJobRequest extends Request {
             super();
         } 
 
-        private Builder(EnableJobRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.jobId = response.jobId;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(EnableJobRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.jobId = request.jobId;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the ID of the application on the Application Management page in the SchedulerX console.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -121,7 +122,7 @@ public class EnableJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -130,7 +131,7 @@ public class EnableJobRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -139,7 +140,7 @@ public class EnableJobRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * Required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -148,7 +149,7 @@ public class EnableJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

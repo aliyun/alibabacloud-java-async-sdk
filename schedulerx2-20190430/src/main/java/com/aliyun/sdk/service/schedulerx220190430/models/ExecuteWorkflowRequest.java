@@ -30,8 +30,9 @@ public class ExecuteWorkflowRequest extends Request {
     @NameInMap("NamespaceSource")
     private String namespaceSource;
 
-    @Host
+    @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -116,18 +117,18 @@ public class ExecuteWorkflowRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteWorkflowRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.instanceParameters = response.instanceParameters;
-            this.namespace = response.namespace;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
-            this.workflowId = response.workflowId;
+        private Builder(ExecuteWorkflowRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.instanceParameters = request.instanceParameters;
+            this.namespace = request.namespace;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.workflowId = request.workflowId;
         } 
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -136,7 +137,7 @@ public class ExecuteWorkflowRequest extends Request {
         }
 
         /**
-         * InstanceParameters.
+         * The dynamic parameter of the workflow instance. The parameter must be 1 to 1,000 bytes in length.
          */
         public Builder instanceParameters(String instanceParameters) {
             this.putQueryParameter("InstanceParameters", instanceParameters);
@@ -145,7 +146,7 @@ public class ExecuteWorkflowRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -154,7 +155,7 @@ public class ExecuteWorkflowRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * This parameter is required only for a special third party.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -166,13 +167,13 @@ public class ExecuteWorkflowRequest extends Request {
          * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
+            this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
 
         /**
-         * WorkflowId.
+         * The ID of the workflow.
          */
         public Builder workflowId(Long workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

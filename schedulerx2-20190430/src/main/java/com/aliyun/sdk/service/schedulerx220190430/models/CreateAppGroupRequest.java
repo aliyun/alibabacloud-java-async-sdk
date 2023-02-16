@@ -13,8 +13,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAppGroupRequest extends Request {
     @Query
-    @NameInMap("AlarmJson")
-    private String alarmJson;
+    @NameInMap("AppKey")
+    private String appKey;
 
     @Query
     @NameInMap("AppName")
@@ -35,13 +35,20 @@ public class CreateAppGroupRequest extends Request {
     private Integer maxJobs;
 
     @Query
+    @NameInMap("MonitorConfigJson")
+    private String monitorConfigJson;
+
+    @Query
+    @NameInMap("MonitorContactsJson")
+    private String monitorContactsJson;
+
+    @Query
     @NameInMap("Namespace")
     @Validation(required = true)
     private String namespace;
 
     @Query
     @NameInMap("NamespaceName")
-    @Validation(required = true)
     private String namespaceName;
 
     @Query
@@ -52,17 +59,24 @@ public class CreateAppGroupRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ScheduleBusyWorkers")
+    private Boolean scheduleBusyWorkers;
+
     private CreateAppGroupRequest(Builder builder) {
         super(builder);
-        this.alarmJson = builder.alarmJson;
+        this.appKey = builder.appKey;
         this.appName = builder.appName;
         this.description = builder.description;
         this.groupId = builder.groupId;
         this.maxJobs = builder.maxJobs;
+        this.monitorConfigJson = builder.monitorConfigJson;
+        this.monitorContactsJson = builder.monitorContactsJson;
         this.namespace = builder.namespace;
         this.namespaceName = builder.namespaceName;
         this.namespaceSource = builder.namespaceSource;
         this.regionId = builder.regionId;
+        this.scheduleBusyWorkers = builder.scheduleBusyWorkers;
     }
 
     public static Builder builder() {
@@ -79,10 +93,10 @@ public class CreateAppGroupRequest extends Request {
     }
 
     /**
-     * @return alarmJson
+     * @return appKey
      */
-    public String getAlarmJson() {
-        return this.alarmJson;
+    public String getAppKey() {
+        return this.appKey;
     }
 
     /**
@@ -114,6 +128,20 @@ public class CreateAppGroupRequest extends Request {
     }
 
     /**
+     * @return monitorConfigJson
+     */
+    public String getMonitorConfigJson() {
+        return this.monitorConfigJson;
+    }
+
+    /**
+     * @return monitorContactsJson
+     */
+    public String getMonitorContactsJson() {
+        return this.monitorContactsJson;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -141,45 +169,58 @@ public class CreateAppGroupRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return scheduleBusyWorkers
+     */
+    public Boolean getScheduleBusyWorkers() {
+        return this.scheduleBusyWorkers;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppGroupRequest, Builder> {
-        private String alarmJson; 
+        private String appKey; 
         private String appName; 
         private String description; 
         private String groupId; 
         private Integer maxJobs; 
+        private String monitorConfigJson; 
+        private String monitorContactsJson; 
         private String namespace; 
         private String namespaceName; 
         private String namespaceSource; 
         private String regionId; 
+        private Boolean scheduleBusyWorkers; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateAppGroupRequest response) {
-            super(response);
-            this.alarmJson = response.alarmJson;
-            this.appName = response.appName;
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.maxJobs = response.maxJobs;
-            this.namespace = response.namespace;
-            this.namespaceName = response.namespaceName;
-            this.namespaceSource = response.namespaceSource;
-            this.regionId = response.regionId;
+        private Builder(CreateAppGroupRequest request) {
+            super(request);
+            this.appKey = request.appKey;
+            this.appName = request.appName;
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.maxJobs = request.maxJobs;
+            this.monitorConfigJson = request.monitorConfigJson;
+            this.monitorContactsJson = request.monitorContactsJson;
+            this.namespace = request.namespace;
+            this.namespaceName = request.namespaceName;
+            this.namespaceSource = request.namespaceSource;
+            this.regionId = request.regionId;
+            this.scheduleBusyWorkers = request.scheduleBusyWorkers;
         } 
 
         /**
-         * AlarmJson.
+         * The AppKey for the application.
          */
-        public Builder alarmJson(String alarmJson) {
-            this.putQueryParameter("AlarmJson", alarmJson);
-            this.alarmJson = alarmJson;
+        public Builder appKey(String appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
             return this;
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -188,7 +229,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the application.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -197,7 +238,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -206,7 +247,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * MaxJobs.
+         * The maximum number of jobs.
          */
         public Builder maxJobs(Integer maxJobs) {
             this.putQueryParameter("MaxJobs", maxJobs);
@@ -215,7 +256,25 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The configuration of the alert. The value is a JSON string. For more information about this parameter, see **Additional information about request parameters**.
+         */
+        public Builder monitorConfigJson(String monitorConfigJson) {
+            this.putQueryParameter("MonitorConfigJson", monitorConfigJson);
+            this.monitorConfigJson = monitorConfigJson;
+            return this;
+        }
+
+        /**
+         * The configuration of alert contacts. The value is a JSON string.
+         */
+        public Builder monitorContactsJson(String monitorContactsJson) {
+            this.putQueryParameter("MonitorContactsJson", monitorContactsJson);
+            this.monitorContactsJson = monitorContactsJson;
+            return this;
+        }
+
+        /**
+         * The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -224,7 +283,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * The name of the namespace.
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
@@ -233,7 +292,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * This parameter is not supported. You do not need to specify this parameter.
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -242,11 +301,20 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to schedule a busy worker.
+         */
+        public Builder scheduleBusyWorkers(Boolean scheduleBusyWorkers) {
+            this.putQueryParameter("ScheduleBusyWorkers", scheduleBusyWorkers);
+            this.scheduleBusyWorkers = scheduleBusyWorkers;
             return this;
         }
 
