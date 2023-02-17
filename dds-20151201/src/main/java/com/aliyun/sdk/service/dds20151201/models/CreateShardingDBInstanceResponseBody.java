@@ -62,7 +62,7 @@ public class CreateShardingDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Instance IDs.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;

@@ -26,6 +26,10 @@ public class DescribeDBInstanceAttributeRequest extends Request {
     private String engine;
 
     @Query
+    @NameInMap("IsDelete")
+    private Boolean isDelete;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -54,6 +58,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.engine = builder.engine;
+        this.isDelete = builder.isDelete;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -94,6 +99,13 @@ public class DescribeDBInstanceAttributeRequest extends Request {
      */
     public String getEngine() {
         return this.engine;
+    }
+
+    /**
+     * @return isDelete
+     */
+    public Boolean getIsDelete() {
+        return this.isDelete;
     }
 
     /**
@@ -142,6 +154,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         private String regionId; 
         private String DBInstanceId; 
         private String engine; 
+        private Boolean isDelete; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -158,6 +171,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.DBInstanceId = request.DBInstanceId;
             this.engine = request.engine;
+            this.isDelete = request.isDelete;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
@@ -185,11 +199,20 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. The value is set to **MongoDB**.
+         * The engine of the instance. The value is set to **MongoDB**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
             this.engine = engine;
+            return this;
+        }
+
+        /**
+         * IsDelete.
+         */
+        public Builder isDelete(Boolean isDelete) {
+            this.putQueryParameter("IsDelete", isDelete);
+            this.isDelete = isDelete;
             return this;
         }
 
@@ -215,7 +238,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
          * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
          * <p>
          * 
-         * >  This parameter is available only if you use the China site (aliyun.com).
+         * > This parameter is available only if you use the China site (aliyun.com).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

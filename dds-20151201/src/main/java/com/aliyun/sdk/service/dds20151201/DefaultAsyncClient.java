@@ -130,7 +130,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
       * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
       * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
       *
@@ -188,7 +188,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
       * *   For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
       * *   To create standalone and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
       *
@@ -917,7 +917,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading an instance, or upgrading a single node of a sharded cluster instance.
-      * >  You can call this operation a maximum of 200 times per minute.
+      * > You can call this operation a maximum of 200 times per minute.
       *
      */
     @Override

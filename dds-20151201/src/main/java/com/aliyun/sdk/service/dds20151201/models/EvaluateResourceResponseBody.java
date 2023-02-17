@@ -94,7 +94,7 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine version of the instance.
+         * The major engine version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
