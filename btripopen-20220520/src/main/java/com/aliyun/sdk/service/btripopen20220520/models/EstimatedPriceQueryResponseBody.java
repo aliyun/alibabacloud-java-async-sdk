@@ -234,7 +234,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 差旅标准，单位为分
+             * 差旅标准，单位为元
              */
             public Builder criterion(Long criterion) {
                 this.criterion = criterion;
@@ -250,7 +250,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 预估总价, 单位为分
+             * 预估总价, 单位为元
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -840,11 +840,15 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("hotel_fee_detail")
         private java.util.List < HotelFeeDetail> hotelFeeDetail;
 
+        @NameInMap("total_hotel_fee")
+        private Long totalHotelFee;
+
         @NameInMap("traffic_fee")
         private TrafficFee trafficFee;
 
         private Module(Builder builder) {
             this.hotelFeeDetail = builder.hotelFeeDetail;
+            this.totalHotelFee = builder.totalHotelFee;
             this.trafficFee = builder.trafficFee;
         }
 
@@ -864,6 +868,13 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalHotelFee
+         */
+        public Long getTotalHotelFee() {
+            return this.totalHotelFee;
+        }
+
+        /**
          * @return trafficFee
          */
         public TrafficFee getTrafficFee() {
@@ -872,6 +883,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < HotelFeeDetail> hotelFeeDetail; 
+            private Long totalHotelFee; 
             private TrafficFee trafficFee; 
 
             /**
@@ -879,6 +891,14 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
              */
             public Builder hotelFeeDetail(java.util.List < HotelFeeDetail> hotelFeeDetail) {
                 this.hotelFeeDetail = hotelFeeDetail;
+                return this;
+            }
+
+            /**
+             * 酒店费用总额，单位为元
+             */
+            public Builder totalHotelFee(Long totalHotelFee) {
+                this.totalHotelFee = totalHotelFee;
                 return this;
             }
 
