@@ -151,9 +151,213 @@ public class MonthBillGetResponseBody extends TeaModel {
 
     } 
 
+    public static class MonthAccountBillDetail extends TeaModel {
+        @NameInMap("carAmount")
+        private Double carAmount;
+
+        @NameInMap("damageAmount")
+        private Double damageAmount;
+
+        @NameInMap("flightAmount")
+        private Double flightAmount;
+
+        @NameInMap("fuPoint")
+        private Double fuPoint;
+
+        @NameInMap("hotelAmount")
+        private Double hotelAmount;
+
+        @NameInMap("ieFlightAmount")
+        private Double ieFlightAmount;
+
+        @NameInMap("mailBillDate")
+        private Long mailBillDate;
+
+        @NameInMap("serviceAmount")
+        private Double serviceAmount;
+
+        @NameInMap("trainAmount")
+        private Double trainAmount;
+
+        private MonthAccountBillDetail(Builder builder) {
+            this.carAmount = builder.carAmount;
+            this.damageAmount = builder.damageAmount;
+            this.flightAmount = builder.flightAmount;
+            this.fuPoint = builder.fuPoint;
+            this.hotelAmount = builder.hotelAmount;
+            this.ieFlightAmount = builder.ieFlightAmount;
+            this.mailBillDate = builder.mailBillDate;
+            this.serviceAmount = builder.serviceAmount;
+            this.trainAmount = builder.trainAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MonthAccountBillDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return carAmount
+         */
+        public Double getCarAmount() {
+            return this.carAmount;
+        }
+
+        /**
+         * @return damageAmount
+         */
+        public Double getDamageAmount() {
+            return this.damageAmount;
+        }
+
+        /**
+         * @return flightAmount
+         */
+        public Double getFlightAmount() {
+            return this.flightAmount;
+        }
+
+        /**
+         * @return fuPoint
+         */
+        public Double getFuPoint() {
+            return this.fuPoint;
+        }
+
+        /**
+         * @return hotelAmount
+         */
+        public Double getHotelAmount() {
+            return this.hotelAmount;
+        }
+
+        /**
+         * @return ieFlightAmount
+         */
+        public Double getIeFlightAmount() {
+            return this.ieFlightAmount;
+        }
+
+        /**
+         * @return mailBillDate
+         */
+        public Long getMailBillDate() {
+            return this.mailBillDate;
+        }
+
+        /**
+         * @return serviceAmount
+         */
+        public Double getServiceAmount() {
+            return this.serviceAmount;
+        }
+
+        /**
+         * @return trainAmount
+         */
+        public Double getTrainAmount() {
+            return this.trainAmount;
+        }
+
+        public static final class Builder {
+            private Double carAmount; 
+            private Double damageAmount; 
+            private Double flightAmount; 
+            private Double fuPoint; 
+            private Double hotelAmount; 
+            private Double ieFlightAmount; 
+            private Long mailBillDate; 
+            private Double serviceAmount; 
+            private Double trainAmount; 
+
+            /**
+             * 用车金额（单位：元）
+             */
+            public Builder carAmount(Double carAmount) {
+                this.carAmount = carAmount;
+                return this;
+            }
+
+            /**
+             * 违约金金额（单位：元）
+             */
+            public Builder damageAmount(Double damageAmount) {
+                this.damageAmount = damageAmount;
+                return this;
+            }
+
+            /**
+             * 机票金额（单位：元）
+             */
+            public Builder flightAmount(Double flightAmount) {
+                this.flightAmount = flightAmount;
+                return this;
+            }
+
+            /**
+             * 福豆金额（单位：元）
+             */
+            public Builder fuPoint(Double fuPoint) {
+                this.fuPoint = fuPoint;
+                return this;
+            }
+
+            /**
+             * 酒店金额（单位：元）
+             */
+            public Builder hotelAmount(Double hotelAmount) {
+                this.hotelAmount = hotelAmount;
+                return this;
+            }
+
+            /**
+             * 国际机票金额（单位：元）
+             */
+            public Builder ieFlightAmount(Double ieFlightAmount) {
+                this.ieFlightAmount = ieFlightAmount;
+                return this;
+            }
+
+            /**
+             * 账期日：YYYYMMDD
+             */
+            public Builder mailBillDate(Long mailBillDate) {
+                this.mailBillDate = mailBillDate;
+                return this;
+            }
+
+            /**
+             * 服务费金额（单位：元）
+             */
+            public Builder serviceAmount(Double serviceAmount) {
+                this.serviceAmount = serviceAmount;
+                return this;
+            }
+
+            /**
+             * 火车票金额（单位：元）
+             */
+            public Builder trainAmount(Double trainAmount) {
+                this.trainAmount = trainAmount;
+                return this;
+            }
+
+            public MonthAccountBillDetail build() {
+                return new MonthAccountBillDetail(this);
+            } 
+
+        } 
+
+    }
     public static class Module extends TeaModel {
         @NameInMap("end_date")
         private String endDate;
+
+        @NameInMap("monthAccountBillDetail")
+        private MonthAccountBillDetail monthAccountBillDetail;
 
         @NameInMap("start_date")
         private String startDate;
@@ -163,6 +367,7 @@ public class MonthBillGetResponseBody extends TeaModel {
 
         private Module(Builder builder) {
             this.endDate = builder.endDate;
+            this.monthAccountBillDetail = builder.monthAccountBillDetail;
             this.startDate = builder.startDate;
             this.url = builder.url;
         }
@@ -183,6 +388,13 @@ public class MonthBillGetResponseBody extends TeaModel {
         }
 
         /**
+         * @return monthAccountBillDetail
+         */
+        public MonthAccountBillDetail getMonthAccountBillDetail() {
+            return this.monthAccountBillDetail;
+        }
+
+        /**
          * @return startDate
          */
         public String getStartDate() {
@@ -198,6 +410,7 @@ public class MonthBillGetResponseBody extends TeaModel {
 
         public static final class Builder {
             private String endDate; 
+            private MonthAccountBillDetail monthAccountBillDetail; 
             private String startDate; 
             private String url; 
 
@@ -206,6 +419,14 @@ public class MonthBillGetResponseBody extends TeaModel {
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
+                return this;
+            }
+
+            /**
+             * CorpMonthAccountBillFeeDetail
+             */
+            public Builder monthAccountBillDetail(MonthAccountBillDetail monthAccountBillDetail) {
+                this.monthAccountBillDetail = monthAccountBillDetail;
                 return this;
             }
 
