@@ -75,8 +75,12 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         @NameInMap("LastUsedDate")
         private String lastUsedDate;
 
+        @NameInMap("ServiceName")
+        private String serviceName;
+
         private AccessKeyLastUsed(Builder builder) {
             this.lastUsedDate = builder.lastUsedDate;
+            this.serviceName = builder.serviceName;
         }
 
         public static Builder builder() {
@@ -94,14 +98,30 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
             return this.lastUsedDate;
         }
 
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
         public static final class Builder {
             private String lastUsedDate; 
+            private String serviceName; 
 
             /**
              * LastUsedDate.
              */
             public Builder lastUsedDate(String lastUsedDate) {
                 this.lastUsedDate = lastUsedDate;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
                 return this;
             }
 
