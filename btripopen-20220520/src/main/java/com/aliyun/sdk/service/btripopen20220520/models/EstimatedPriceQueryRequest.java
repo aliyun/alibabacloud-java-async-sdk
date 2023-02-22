@@ -42,6 +42,10 @@ public class EstimatedPriceQueryRequest extends Request {
     private Long startTime;
 
     @Query
+    @NameInMap("sub_corp_id")
+    private String subCorpId;
+
+    @Query
     @NameInMap("user_id")
     @Validation(required = true)
     private String userId;
@@ -59,6 +63,7 @@ public class EstimatedPriceQueryRequest extends Request {
         this.endTime = builder.endTime;
         this.itineraryId = builder.itineraryId;
         this.startTime = builder.startTime;
+        this.subCorpId = builder.subCorpId;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
@@ -119,6 +124,13 @@ public class EstimatedPriceQueryRequest extends Request {
     }
 
     /**
+     * @return subCorpId
+     */
+    public String getSubCorpId() {
+        return this.subCorpId;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -139,6 +151,7 @@ public class EstimatedPriceQueryRequest extends Request {
         private Long endTime; 
         private String itineraryId; 
         private Long startTime; 
+        private String subCorpId; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -154,6 +167,7 @@ public class EstimatedPriceQueryRequest extends Request {
             this.endTime = request.endTime;
             this.itineraryId = request.itineraryId;
             this.startTime = request.startTime;
+            this.subCorpId = request.subCorpId;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
@@ -216,6 +230,15 @@ public class EstimatedPriceQueryRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("start_time", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * 子企业corpId
+         */
+        public Builder subCorpId(String subCorpId) {
+            this.putQueryParameter("sub_corp_id", subCorpId);
+            this.subCorpId = subCorpId;
             return this;
         }
 
