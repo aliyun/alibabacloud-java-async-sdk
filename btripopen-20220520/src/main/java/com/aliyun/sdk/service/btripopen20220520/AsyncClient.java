@@ -38,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyQueryResponse> applyQuery(ApplyQueryRequest request);
 
+    CompletableFuture<BtripBillInfoAdjustResponse> btripBillInfoAdjust(BtripBillInfoAdjustRequest request);
+
     CompletableFuture<CarApplyAddResponse> carApplyAdd(CarApplyAddRequest request);
 
     CompletableFuture<CarApplyModifyResponse> carApplyModify(CarApplyModifyRequest request);
@@ -127,6 +129,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InvoiceSearchResponse> invoiceSearch(InvoiceSearchRequest request);
 
     CompletableFuture<IsvUserSaveResponse> isvUserSave(IsvUserSaveRequest request);
+
+    CompletableFuture<MonthBillConfirmResponse> monthBillConfirm(MonthBillConfirmRequest request);
 
     CompletableFuture<MonthBillGetResponse> monthBillGet(MonthBillGetRequest request);
 
