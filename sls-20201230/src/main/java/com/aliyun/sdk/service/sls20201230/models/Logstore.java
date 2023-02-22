@@ -43,6 +43,9 @@ public class Logstore extends TeaModel {
     @NameInMap("mode")
     private String mode;
 
+    @NameInMap("productType")
+    private String productType;
+
     @NameInMap("shardCount")
     @Validation(required = true)
     private Integer shardCount;
@@ -65,6 +68,7 @@ public class Logstore extends TeaModel {
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
         this.mode = builder.mode;
+        this.productType = builder.productType;
         this.shardCount = builder.shardCount;
         this.telemetryType = builder.telemetryType;
         this.ttl = builder.ttl;
@@ -149,6 +153,13 @@ public class Logstore extends TeaModel {
     }
 
     /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
+    }
+
+    /**
      * @return shardCount
      */
     public Integer getShardCount() {
@@ -180,6 +191,7 @@ public class Logstore extends TeaModel {
         private String logstoreName; 
         private Integer maxSplitShard; 
         private String mode; 
+        private String productType; 
         private Integer shardCount; 
         private String telemetryType; 
         private Integer ttl; 
@@ -217,7 +229,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * Encrypt configuration
+         * 加密配置
          */
         public Builder encryptConf(EncryptConf encryptConf) {
             this.encryptConf = encryptConf;
@@ -261,6 +273,14 @@ public class Logstore extends TeaModel {
          */
         public Builder mode(String mode) {
             this.mode = mode;
+            return this;
+        }
+
+        /**
+         * 日志所属产品类型
+         */
+        public Builder productType(String productType) {
+            this.productType = productType;
             return this;
         }
 

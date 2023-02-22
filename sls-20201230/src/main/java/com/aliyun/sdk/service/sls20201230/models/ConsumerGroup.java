@@ -78,7 +78,7 @@ public class ConsumerGroup extends TeaModel {
         }
 
         /**
-         * 消费超时时长，单位为妙
+         * 消费超时时长，单位为秒
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

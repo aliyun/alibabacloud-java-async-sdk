@@ -118,7 +118,7 @@ public class GetCursorRequest extends Request {
         }
 
         /**
-         * shard id。
+         * Shard ID。
          */
         public Builder shardId(Integer shardId) {
             this.putPathParameter("shardId", shardId);

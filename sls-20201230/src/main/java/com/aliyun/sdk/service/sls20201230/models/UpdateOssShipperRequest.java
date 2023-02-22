@@ -225,7 +225,7 @@ public class UpdateOssShipperRequest extends Request {
              * "escape": "",
              * "nullIdentifier": "",
              * "header": false,
-             * "lineFeed": "n"
+             * "lineFeed": "\n"
              *  }
              * 
              * json 格式

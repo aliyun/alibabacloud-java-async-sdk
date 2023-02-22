@@ -164,7 +164,7 @@ public class GetCheckPointResponse extends Response {
             private String consumer; 
 
             /**
-             * shard id。
+             * Shard ID。
              */
             public Builder shard(Integer shard) {
                 this.shard = shard;

@@ -14,22 +14,27 @@ import com.aliyun.sdk.gateway.sls.models.*;
 public class PullDataRequest extends Request {
     @Host
     @NameInMap("project")
+    @Validation(required = true)
     private String project;
 
     @Path
     @NameInMap("logstore")
+    @Validation(required = true)
     private String logstore;
 
     @Path
     @NameInMap("shard")
+    @Validation(required = true)
     private String shard;
 
     @Query
     @NameInMap("count")
+    @Validation(required = true)
     private String count;
 
     @Query
     @NameInMap("cursor")
+    @Validation(required = true)
     private String cursor;
 
     @Query
@@ -142,7 +147,7 @@ public class PullDataRequest extends Request {
         }
 
         /**
-         * shard.
+         * Shard ID。
          */
         public Builder shard(String shard) {
             this.putPathParameter("shard", shard);

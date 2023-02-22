@@ -15,34 +15,34 @@ public class Project extends TeaModel {
     @NameInMap("createTime")
     private String createTime;
 
-    @NameInMap("description")
-    @Validation(required = true)
-    private String description;
-
     @NameInMap("lastModifyTime")
     private String lastModifyTime;
 
-    @NameInMap("owner")
-    private String owner;
+    @NameInMap("projectDesc")
+    @Validation(required = true)
+    private String projectDesc;
 
     @NameInMap("projectName")
     @Validation(required = true)
     private String projectName;
 
+    @NameInMap("projectOwner")
+    private String projectOwner;
+
+    @NameInMap("projectStatus")
+    private String projectStatus;
+
     @NameInMap("region")
     private String region;
 
-    @NameInMap("status")
-    private String status;
-
     private Project(Builder builder) {
         this.createTime = builder.createTime;
-        this.description = builder.description;
         this.lastModifyTime = builder.lastModifyTime;
-        this.owner = builder.owner;
+        this.projectDesc = builder.projectDesc;
         this.projectName = builder.projectName;
+        this.projectOwner = builder.projectOwner;
+        this.projectStatus = builder.projectStatus;
         this.region = builder.region;
-        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -61,13 +61,6 @@ public class Project extends TeaModel {
     }
 
     /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
      * @return lastModifyTime
      */
     public String getLastModifyTime() {
@@ -75,10 +68,10 @@ public class Project extends TeaModel {
     }
 
     /**
-     * @return owner
+     * @return projectDesc
      */
-    public String getOwner() {
-        return this.owner;
+    public String getProjectDesc() {
+        return this.projectDesc;
     }
 
     /**
@@ -89,41 +82,40 @@ public class Project extends TeaModel {
     }
 
     /**
+     * @return projectOwner
+     */
+    public String getProjectOwner() {
+        return this.projectOwner;
+    }
+
+    /**
+     * @return projectStatus
+     */
+    public String getProjectStatus() {
+        return this.projectStatus;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
         return this.region;
     }
 
-    /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
     public static final class Builder {
         private String createTime; 
-        private String description; 
         private String lastModifyTime; 
-        private String owner; 
+        private String projectDesc; 
         private String projectName; 
+        private String projectOwner; 
+        private String projectStatus; 
         private String region; 
-        private String status; 
 
         /**
          * 创建时间
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
-            return this;
-        }
-
-        /**
-         * 描述
-         */
-        public Builder description(String description) {
-            this.description = description;
             return this;
         }
 
@@ -136,10 +128,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * owner
+         * 描述
          */
-        public Builder owner(String owner) {
-            this.owner = owner;
+        public Builder projectDesc(String projectDesc) {
+            this.projectDesc = projectDesc;
             return this;
         }
 
@@ -152,18 +144,26 @@ public class Project extends TeaModel {
         }
 
         /**
-         * 所在区域
+         * owner
          */
-        public Builder region(String region) {
-            this.region = region;
+        public Builder projectOwner(String projectOwner) {
+            this.projectOwner = projectOwner;
             return this;
         }
 
         /**
          * 状态
          */
-        public Builder status(String status) {
-            this.status = status;
+        public Builder projectStatus(String projectStatus) {
+            this.projectStatus = projectStatus;
+            return this;
+        }
+
+        /**
+         * 所在区域
+         */
+        public Builder region(String region) {
+            this.region = region;
             return this;
         }
 

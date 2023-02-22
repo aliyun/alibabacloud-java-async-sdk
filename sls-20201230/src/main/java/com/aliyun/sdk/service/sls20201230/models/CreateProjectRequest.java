@@ -22,10 +22,15 @@ public class CreateProjectRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
+    @Body
+    @NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     private CreateProjectRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.projectName = builder.projectName;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class CreateProjectRequest extends Request {
         return this.projectName;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<CreateProjectRequest, Builder> {
         private String description; 
         private String projectName; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -67,6 +80,7 @@ public class CreateProjectRequest extends Request {
             super(request);
             this.description = request.description;
             this.projectName = request.projectName;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class CreateProjectRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("projectName", projectName);
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
