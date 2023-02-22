@@ -35,8 +35,8 @@ public class EnableControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(EnableControlPolicyRequest response) {
-            super(response);
+        private Builder(EnableControlPolicyRequest request) {
+            super(request);
         } 
 
         @Override

@@ -90,12 +90,12 @@ public class CreateControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateControlPolicyRequest response) {
-            super(response);
-            this.description = response.description;
-            this.effectScope = response.effectScope;
-            this.policyDocument = response.policyDocument;
-            this.policyName = response.policyName;
+        private Builder(CreateControlPolicyRequest request) {
+            super(request);
+            this.description = request.description;
+            this.effectScope = request.effectScope;
+            this.policyDocument = request.policyDocument;
+            this.policyName = request.policyName;
         } 
 
         /**

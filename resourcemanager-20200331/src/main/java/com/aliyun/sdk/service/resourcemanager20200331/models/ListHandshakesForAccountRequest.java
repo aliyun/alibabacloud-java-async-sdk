@@ -61,10 +61,10 @@ public class ListHandshakesForAccountRequest extends Request {
             super();
         } 
 
-        private Builder(ListHandshakesForAccountRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListHandshakesForAccountRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

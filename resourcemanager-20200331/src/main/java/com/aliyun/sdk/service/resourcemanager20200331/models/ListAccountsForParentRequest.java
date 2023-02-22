@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAccountsForParentRequest extends Request {
     @Query
+    @NameInMap("IncludeTags")
+    private Boolean includeTags;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -28,12 +32,18 @@ public class ListAccountsForParentRequest extends Request {
     @NameInMap("QueryKeyword")
     private String queryKeyword;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private ListAccountsForParentRequest(Builder builder) {
         super(builder);
+        this.includeTags = builder.includeTags;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.parentFolderId = builder.parentFolderId;
         this.queryKeyword = builder.queryKeyword;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -47,6 +57,13 @@ public class ListAccountsForParentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return includeTags
+     */
+    public Boolean getIncludeTags() {
+        return this.includeTags;
     }
 
     /**
@@ -77,23 +94,43 @@ public class ListAccountsForParentRequest extends Request {
         return this.queryKeyword;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListAccountsForParentRequest, Builder> {
+        private Boolean includeTags; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String parentFolderId; 
         private String queryKeyword; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListAccountsForParentRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.parentFolderId = response.parentFolderId;
-            this.queryKeyword = response.queryKeyword;
+        private Builder(ListAccountsForParentRequest request) {
+            super(request);
+            this.includeTags = request.includeTags;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.parentFolderId = request.parentFolderId;
+            this.queryKeyword = request.queryKeyword;
+            this.tag = request.tag;
         } 
+
+        /**
+         * IncludeTags.
+         */
+        public Builder includeTags(Boolean includeTags) {
+            this.putQueryParameter("IncludeTags", includeTags);
+            this.includeTags = includeTags;
+            return this;
+        }
 
         /**
          * PageNumber.
@@ -131,6 +168,15 @@ public class ListAccountsForParentRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public ListAccountsForParentRequest build() {
             return new ListAccountsForParentRequest(this);
@@ -138,4 +184,65 @@ public class ListAccountsForParentRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

@@ -88,12 +88,12 @@ public class UpdateControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateControlPolicyRequest response) {
-            super(response);
-            this.newDescription = response.newDescription;
-            this.newPolicyDocument = response.newPolicyDocument;
-            this.newPolicyName = response.newPolicyName;
-            this.policyId = response.policyId;
+        private Builder(UpdateControlPolicyRequest request) {
+            super(request);
+            this.newDescription = request.newDescription;
+            this.newPolicyDocument = request.newPolicyDocument;
+            this.newPolicyName = request.newPolicyName;
+            this.policyId = request.policyId;
         } 
 
         /**

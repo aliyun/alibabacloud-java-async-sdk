@@ -49,9 +49,9 @@ public class ResendCreateCloudAccountEmailRequest extends Request {
             super();
         } 
 
-        private Builder(ResendCreateCloudAccountEmailRequest response) {
-            super(response);
-            this.recordId = response.recordId;
+        private Builder(ResendCreateCloudAccountEmailRequest request) {
+            super(request);
+            this.recordId = request.recordId;
         } 
 
         /**

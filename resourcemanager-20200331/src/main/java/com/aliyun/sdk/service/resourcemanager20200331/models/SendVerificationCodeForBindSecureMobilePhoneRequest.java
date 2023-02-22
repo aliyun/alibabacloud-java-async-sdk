@@ -63,10 +63,10 @@ public class SendVerificationCodeForBindSecureMobilePhoneRequest extends Request
             super();
         } 
 
-        private Builder(SendVerificationCodeForBindSecureMobilePhoneRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.secureMobilePhone = response.secureMobilePhone;
+        private Builder(SendVerificationCodeForBindSecureMobilePhoneRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.secureMobilePhone = request.secureMobilePhone;
         } 
 
         /**

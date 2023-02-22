@@ -76,11 +76,11 @@ public class CreatePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePolicyRequest response) {
-            super(response);
-            this.description = response.description;
-            this.policyDocument = response.policyDocument;
-            this.policyName = response.policyName;
+        private Builder(CreatePolicyRequest request) {
+            super(request);
+            this.description = request.description;
+            this.policyDocument = request.policyDocument;
+            this.policyName = request.policyName;
         } 
 
         /**

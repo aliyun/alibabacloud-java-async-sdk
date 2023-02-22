@@ -63,10 +63,10 @@ public class DeletePolicyVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePolicyVersionRequest response) {
-            super(response);
-            this.policyName = response.policyName;
-            this.versionId = response.versionId;
+        private Builder(DeletePolicyVersionRequest request) {
+            super(request);
+            this.policyName = request.policyName;
+            this.versionId = request.versionId;
         } 
 
         /**

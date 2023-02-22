@@ -49,9 +49,9 @@ public class ListAncestorsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAncestorsRequest response) {
-            super(response);
-            this.childId = response.childId;
+        private Builder(ListAncestorsRequest request) {
+            super(request);
+            this.childId = request.childId;
         } 
 
         /**

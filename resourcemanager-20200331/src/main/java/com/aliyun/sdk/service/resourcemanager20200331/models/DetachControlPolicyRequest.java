@@ -63,10 +63,10 @@ public class DetachControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DetachControlPolicyRequest response) {
-            super(response);
-            this.policyId = response.policyId;
-            this.targetId = response.targetId;
+        private Builder(DetachControlPolicyRequest request) {
+            super(request);
+            this.policyId = request.policyId;
+            this.targetId = request.targetId;
         } 
 
         /**

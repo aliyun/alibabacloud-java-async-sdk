@@ -87,12 +87,12 @@ public class ListFoldersForParentRequest extends Request {
             super();
         } 
 
-        private Builder(ListFoldersForParentRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.parentFolderId = response.parentFolderId;
-            this.queryKeyword = response.queryKeyword;
+        private Builder(ListFoldersForParentRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.parentFolderId = request.parentFolderId;
+            this.queryKeyword = request.queryKeyword;
         } 
 
         /**

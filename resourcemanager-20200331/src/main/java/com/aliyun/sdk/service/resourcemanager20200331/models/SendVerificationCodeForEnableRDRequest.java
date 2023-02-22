@@ -48,9 +48,9 @@ public class SendVerificationCodeForEnableRDRequest extends Request {
             super();
         } 
 
-        private Builder(SendVerificationCodeForEnableRDRequest response) {
-            super(response);
-            this.secureMobilePhone = response.secureMobilePhone;
+        private Builder(SendVerificationCodeForEnableRDRequest request) {
+            super(request);
+            this.secureMobilePhone = request.secureMobilePhone;
         } 
 
         /**

@@ -35,8 +35,8 @@ public class DisableControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DisableControlPolicyRequest response) {
-            super(response);
+        private Builder(DisableControlPolicyRequest request) {
+            super(request);
         } 
 
         @Override

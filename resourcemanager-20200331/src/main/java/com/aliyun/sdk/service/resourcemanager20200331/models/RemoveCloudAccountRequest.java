@@ -49,9 +49,9 @@ public class RemoveCloudAccountRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveCloudAccountRequest response) {
-            super(response);
-            this.accountId = response.accountId;
+        private Builder(RemoveCloudAccountRequest request) {
+            super(request);
+            this.accountId = request.accountId;
         } 
 
         /**

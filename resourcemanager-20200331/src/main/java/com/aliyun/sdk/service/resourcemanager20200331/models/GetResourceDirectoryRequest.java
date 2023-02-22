@@ -35,8 +35,8 @@ public class GetResourceDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(GetResourceDirectoryRequest response) {
-            super(response);
+        private Builder(GetResourceDirectoryRequest request) {
+            super(request);
         } 
 
         @Override

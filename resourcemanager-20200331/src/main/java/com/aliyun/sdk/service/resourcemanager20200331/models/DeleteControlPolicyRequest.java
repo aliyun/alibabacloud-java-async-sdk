@@ -49,9 +49,9 @@ public class DeleteControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteControlPolicyRequest response) {
-            super(response);
-            this.policyId = response.policyId;
+        private Builder(DeleteControlPolicyRequest request) {
+            super(request);
+            this.policyId = request.policyId;
         } 
 
         /**

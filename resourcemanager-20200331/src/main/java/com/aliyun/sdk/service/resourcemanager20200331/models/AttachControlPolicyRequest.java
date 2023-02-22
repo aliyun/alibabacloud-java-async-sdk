@@ -63,10 +63,10 @@ public class AttachControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(AttachControlPolicyRequest response) {
-            super(response);
-            this.policyId = response.policyId;
-            this.targetId = response.targetId;
+        private Builder(AttachControlPolicyRequest request) {
+            super(request);
+            this.policyId = request.policyId;
+            this.targetId = request.targetId;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class GetRoleRequest extends Request {
             super();
         } 
 
-        private Builder(GetRoleRequest response) {
-            super(response);
-            this.language = response.language;
-            this.roleName = response.roleName;
+        private Builder(GetRoleRequest request) {
+            super(request);
+            this.language = request.language;
+            this.roleName = request.roleName;
         } 
 
         /**

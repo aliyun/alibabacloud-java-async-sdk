@@ -49,9 +49,9 @@ public class DeleteServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServiceLinkedRoleRequest response) {
-            super(response);
-            this.roleName = response.roleName;
+        private Builder(DeleteServiceLinkedRoleRequest request) {
+            super(request);
+            this.roleName = request.roleName;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class CreateFolderRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFolderRequest response) {
-            super(response);
-            this.folderName = response.folderName;
-            this.parentFolderId = response.parentFolderId;
+        private Builder(CreateFolderRequest request) {
+            super(request);
+            this.folderName = request.folderName;
+            this.parentFolderId = request.parentFolderId;
         } 
 
         /**

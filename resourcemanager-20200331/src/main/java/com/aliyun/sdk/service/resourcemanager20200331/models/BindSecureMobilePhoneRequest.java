@@ -19,12 +19,10 @@ public class BindSecureMobilePhoneRequest extends Request {
 
     @Query
     @NameInMap("SecureMobilePhone")
-    @Validation(required = true)
     private String secureMobilePhone;
 
     @Query
     @NameInMap("VerificationCode")
-    @Validation(required = true)
     private String verificationCode;
 
     private BindSecureMobilePhoneRequest(Builder builder) {
@@ -77,11 +75,11 @@ public class BindSecureMobilePhoneRequest extends Request {
             super();
         } 
 
-        private Builder(BindSecureMobilePhoneRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.secureMobilePhone = response.secureMobilePhone;
-            this.verificationCode = response.verificationCode;
+        private Builder(BindSecureMobilePhoneRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.secureMobilePhone = request.secureMobilePhone;
+            this.verificationCode = request.verificationCode;
         } 
 
         /**

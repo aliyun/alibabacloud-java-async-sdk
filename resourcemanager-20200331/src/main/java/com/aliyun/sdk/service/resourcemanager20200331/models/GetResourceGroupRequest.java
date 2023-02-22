@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetResourceGroupRequest extends Request {
     @Query
+    @NameInMap("IncludeTags")
+    private Boolean includeTags;
+
+    @Query
     @NameInMap("ResourceGroupId")
     @Validation(required = true)
     private String resourceGroupId;
 
     private GetResourceGroupRequest(Builder builder) {
         super(builder);
+        this.includeTags = builder.includeTags;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -36,6 +41,13 @@ public class GetResourceGroupRequest extends Request {
     }
 
     /**
+     * @return includeTags
+     */
+    public Boolean getIncludeTags() {
+        return this.includeTags;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -43,16 +55,27 @@ public class GetResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetResourceGroupRequest, Builder> {
+        private Boolean includeTags; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetResourceGroupRequest response) {
-            super(response);
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(GetResourceGroupRequest request) {
+            super(request);
+            this.includeTags = request.includeTags;
+            this.resourceGroupId = request.resourceGroupId;
         } 
+
+        /**
+         * IncludeTags.
+         */
+        public Builder includeTags(Boolean includeTags) {
+            this.putQueryParameter("IncludeTags", includeTags);
+            this.includeTags = includeTags;
+            return this;
+        }
 
         /**
          * ResourceGroupId.

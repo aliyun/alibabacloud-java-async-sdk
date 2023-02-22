@@ -49,9 +49,9 @@ public class DeclineHandshakeRequest extends Request {
             super();
         } 
 
-        private Builder(DeclineHandshakeRequest response) {
-            super(response);
-            this.handshakeId = response.handshakeId;
+        private Builder(DeclineHandshakeRequest request) {
+            super(request);
+            this.handshakeId = request.handshakeId;
         } 
 
         /**

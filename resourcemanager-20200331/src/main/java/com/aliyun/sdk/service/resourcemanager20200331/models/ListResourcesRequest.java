@@ -127,15 +127,15 @@ public class ListResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListResourcesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.region = response.region;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.service = response.service;
+        private Builder(ListResourcesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.region = request.region;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.service = request.service;
         } 
 
         /**

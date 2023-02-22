@@ -62,10 +62,10 @@ public class GetControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GetControlPolicyRequest response) {
-            super(response);
-            this.language = response.language;
-            this.policyId = response.policyId;
+        private Builder(GetControlPolicyRequest request) {
+            super(request);
+            this.language = request.language;
+            this.policyId = request.policyId;
         } 
 
         /**

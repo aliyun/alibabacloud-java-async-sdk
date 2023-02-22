@@ -63,10 +63,10 @@ public class MoveResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(MoveResourcesRequest response) {
-            super(response);
-            this.resourceGroupId = response.resourceGroupId;
-            this.resources = response.resources;
+        private Builder(MoveResourcesRequest request) {
+            super(request);
+            this.resourceGroupId = request.resourceGroupId;
+            this.resources = request.resources;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class GetPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(GetPolicyRequest response) {
-            super(response);
-            this.language = response.language;
-            this.policyName = response.policyName;
-            this.policyType = response.policyType;
+        private Builder(GetPolicyRequest request) {
+            super(request);
+            this.language = request.language;
+            this.policyName = request.policyName;
+            this.policyType = request.policyType;
         } 
 
         /**

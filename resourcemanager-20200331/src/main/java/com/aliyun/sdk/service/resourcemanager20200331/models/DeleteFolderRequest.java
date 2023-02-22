@@ -49,9 +49,9 @@ public class DeleteFolderRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFolderRequest response) {
-            super(response);
-            this.folderId = response.folderId;
+        private Builder(DeleteFolderRequest request) {
+            super(request);
+            this.folderId = request.folderId;
         } 
 
         /**

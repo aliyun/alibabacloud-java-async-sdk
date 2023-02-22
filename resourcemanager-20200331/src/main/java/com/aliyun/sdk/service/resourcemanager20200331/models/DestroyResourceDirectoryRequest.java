@@ -35,8 +35,8 @@ public class DestroyResourceDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(DestroyResourceDirectoryRequest response) {
-            super(response);
+        private Builder(DestroyResourceDirectoryRequest request) {
+            super(request);
         } 
 
         @Override

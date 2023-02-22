@@ -49,9 +49,9 @@ public class DeletePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePolicyRequest response) {
-            super(response);
-            this.policyName = response.policyName;
+        private Builder(DeletePolicyRequest request) {
+            super(request);
+            this.policyName = request.policyName;
         } 
 
         /**

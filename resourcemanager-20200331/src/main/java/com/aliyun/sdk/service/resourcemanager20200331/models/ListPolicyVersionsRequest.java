@@ -63,10 +63,10 @@ public class ListPolicyVersionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListPolicyVersionsRequest response) {
-            super(response);
-            this.policyName = response.policyName;
-            this.policyType = response.policyType;
+        private Builder(ListPolicyVersionsRequest request) {
+            super(request);
+            this.policyName = request.policyName;
+            this.policyType = request.policyType;
         } 
 
         /**

@@ -75,11 +75,11 @@ public class CreateServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServiceLinkedRoleRequest response) {
-            super(response);
-            this.customSuffix = response.customSuffix;
-            this.description = response.description;
-            this.serviceName = response.serviceName;
+        private Builder(CreateServiceLinkedRoleRequest request) {
+            super(request);
+            this.customSuffix = request.customSuffix;
+            this.description = request.description;
+            this.serviceName = request.serviceName;
         } 
 
         /**

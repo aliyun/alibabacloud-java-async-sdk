@@ -49,9 +49,9 @@ public class CancelPromoteResourceAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CancelPromoteResourceAccountRequest response) {
-            super(response);
-            this.recordId = response.recordId;
+        private Builder(CancelPromoteResourceAccountRequest request) {
+            super(request);
+            this.recordId = request.recordId;
         } 
 
         /**

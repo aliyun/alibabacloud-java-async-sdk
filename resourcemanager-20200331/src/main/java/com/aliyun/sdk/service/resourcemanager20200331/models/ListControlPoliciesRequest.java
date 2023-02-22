@@ -89,12 +89,12 @@ public class ListControlPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(ListControlPoliciesRequest response) {
-            super(response);
-            this.language = response.language;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.policyType = response.policyType;
+        private Builder(ListControlPoliciesRequest request) {
+            super(request);
+            this.language = request.language;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.policyType = request.policyType;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class MoveAccountRequest extends Request {
             super();
         } 
 
-        private Builder(MoveAccountRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.destinationFolderId = response.destinationFolderId;
+        private Builder(MoveAccountRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.destinationFolderId = request.destinationFolderId;
         } 
 
         /**

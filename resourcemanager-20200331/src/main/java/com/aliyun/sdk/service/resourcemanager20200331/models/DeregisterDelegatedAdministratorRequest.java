@@ -63,10 +63,10 @@ public class DeregisterDelegatedAdministratorRequest extends Request {
             super();
         } 
 
-        private Builder(DeregisterDelegatedAdministratorRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.servicePrincipal = response.servicePrincipal;
+        private Builder(DeregisterDelegatedAdministratorRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.servicePrincipal = request.servicePrincipal;
         } 
 
         /**

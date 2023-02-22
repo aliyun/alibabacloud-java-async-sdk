@@ -75,11 +75,11 @@ public class UpdateAccountRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAccountRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.newAccountType = response.newAccountType;
-            this.newDisplayName = response.newDisplayName;
+        private Builder(UpdateAccountRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.newAccountType = request.newAccountType;
+            this.newDisplayName = request.newDisplayName;
         } 
 
         /**

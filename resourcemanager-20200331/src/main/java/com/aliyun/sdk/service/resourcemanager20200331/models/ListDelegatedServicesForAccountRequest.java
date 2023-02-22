@@ -49,9 +49,9 @@ public class ListDelegatedServicesForAccountRequest extends Request {
             super();
         } 
 
-        private Builder(ListDelegatedServicesForAccountRequest response) {
-            super(response);
-            this.accountId = response.accountId;
+        private Builder(ListDelegatedServicesForAccountRequest request) {
+            super(request);
+            this.accountId = request.accountId;
         } 
 
         /**

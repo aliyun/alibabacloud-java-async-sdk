@@ -89,12 +89,12 @@ public class CreateRoleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRoleRequest response) {
-            super(response);
-            this.assumeRolePolicyDocument = response.assumeRolePolicyDocument;
-            this.description = response.description;
-            this.maxSessionDuration = response.maxSessionDuration;
-            this.roleName = response.roleName;
+        private Builder(CreateRoleRequest request) {
+            super(request);
+            this.assumeRolePolicyDocument = request.assumeRolePolicyDocument;
+            this.description = request.description;
+            this.maxSessionDuration = request.maxSessionDuration;
+            this.roleName = request.roleName;
         } 
 
         /**

@@ -131,6 +131,108 @@ public class ListAccountsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Account extends TeaModel {
         @NameInMap("AccountId")
         private String accountId;
@@ -159,6 +261,9 @@ public class ListAccountsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         @NameInMap("Type")
         private String type;
 
@@ -172,6 +277,7 @@ public class ListAccountsResponseBody extends TeaModel {
             this.resourceDirectoryId = builder.resourceDirectoryId;
             this.resourceDirectoryPath = builder.resourceDirectoryPath;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.type = builder.type;
         }
 
@@ -247,6 +353,13 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -263,6 +376,7 @@ public class ListAccountsResponseBody extends TeaModel {
             private String resourceDirectoryId; 
             private String resourceDirectoryPath; 
             private String status; 
+            private Tags tags; 
             private String type; 
 
             /**
@@ -334,6 +448,14 @@ public class ListAccountsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

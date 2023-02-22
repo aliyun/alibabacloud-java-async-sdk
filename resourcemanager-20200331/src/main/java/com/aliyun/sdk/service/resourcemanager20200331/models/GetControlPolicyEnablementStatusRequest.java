@@ -35,8 +35,8 @@ public class GetControlPolicyEnablementStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetControlPolicyEnablementStatusRequest response) {
-            super(response);
+        private Builder(GetControlPolicyEnablementStatusRequest request) {
+            super(request);
         } 
 
         @Override

@@ -139,16 +139,16 @@ public class ListPolicyAttachmentsRequest extends Request {
             super();
         } 
 
-        private Builder(ListPolicyAttachmentsRequest response) {
-            super(response);
-            this.language = response.language;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.policyName = response.policyName;
-            this.policyType = response.policyType;
-            this.principalName = response.principalName;
-            this.principalType = response.principalType;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(ListPolicyAttachmentsRequest request) {
+            super(request);
+            this.language = request.language;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.policyName = request.policyName;
+            this.policyType = request.policyType;
+            this.principalName = request.principalName;
+            this.principalType = request.principalType;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

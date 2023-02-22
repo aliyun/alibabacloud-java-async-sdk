@@ -87,12 +87,12 @@ public class ListPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPoliciesRequest response) {
-            super(response);
-            this.language = response.language;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.policyType = response.policyType;
+        private Builder(ListPoliciesRequest request) {
+            super(request);
+            this.language = request.language;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.policyType = request.policyType;
         } 
 
         /**

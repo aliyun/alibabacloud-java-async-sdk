@@ -77,11 +77,11 @@ public class GetPolicyVersionRequest extends Request {
             super();
         } 
 
-        private Builder(GetPolicyVersionRequest response) {
-            super(response);
-            this.policyName = response.policyName;
-            this.policyType = response.policyType;
-            this.versionId = response.versionId;
+        private Builder(GetPolicyVersionRequest request) {
+            super(request);
+            this.policyName = request.policyName;
+            this.policyType = request.policyType;
+            this.versionId = request.versionId;
         } 
 
         /**

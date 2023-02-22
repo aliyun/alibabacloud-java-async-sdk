@@ -77,11 +77,11 @@ public class ListTargetAttachmentsForControlPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ListTargetAttachmentsForControlPolicyRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.policyId = response.policyId;
+        private Builder(ListTargetAttachmentsForControlPolicyRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.policyId = request.policyId;
         } 
 
         /**

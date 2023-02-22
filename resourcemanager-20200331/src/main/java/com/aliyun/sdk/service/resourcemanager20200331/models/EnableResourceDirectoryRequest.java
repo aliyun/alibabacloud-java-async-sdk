@@ -88,12 +88,12 @@ public class EnableResourceDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(EnableResourceDirectoryRequest response) {
-            super(response);
-            this.enableMode = response.enableMode;
-            this.MAName = response.MAName;
-            this.MASecureMobilePhone = response.MASecureMobilePhone;
-            this.verificationCode = response.verificationCode;
+        private Builder(EnableResourceDirectoryRequest request) {
+            super(request);
+            this.enableMode = request.enableMode;
+            this.MAName = request.MAName;
+            this.MASecureMobilePhone = request.MASecureMobilePhone;
+            this.verificationCode = request.verificationCode;
         } 
 
         /**

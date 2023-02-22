@@ -88,12 +88,12 @@ public class UpdateRoleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRoleRequest response) {
-            super(response);
-            this.newAssumeRolePolicyDocument = response.newAssumeRolePolicyDocument;
-            this.newDescription = response.newDescription;
-            this.newMaxSessionDuration = response.newMaxSessionDuration;
-            this.roleName = response.roleName;
+        private Builder(UpdateRoleRequest request) {
+            super(request);
+            this.newAssumeRolePolicyDocument = request.newAssumeRolePolicyDocument;
+            this.newDescription = request.newDescription;
+            this.newMaxSessionDuration = request.newMaxSessionDuration;
+            this.roleName = request.roleName;
         } 
 
         /**

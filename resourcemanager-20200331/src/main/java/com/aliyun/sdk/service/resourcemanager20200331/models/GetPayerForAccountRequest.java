@@ -49,9 +49,9 @@ public class GetPayerForAccountRequest extends Request {
             super();
         } 
 
-        private Builder(GetPayerForAccountRequest response) {
-            super(response);
-            this.accountId = response.accountId;
+        private Builder(GetPayerForAccountRequest request) {
+            super(request);
+            this.accountId = request.accountId;
         } 
 
         /**

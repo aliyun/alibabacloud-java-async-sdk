@@ -63,10 +63,10 @@ public class PromoteResourceAccountRequest extends Request {
             super();
         } 
 
-        private Builder(PromoteResourceAccountRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.email = response.email;
+        private Builder(PromoteResourceAccountRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.email = request.email;
         } 
 
         /**

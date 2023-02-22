@@ -49,9 +49,9 @@ public class GetFolderRequest extends Request {
             super();
         } 
 
-        private Builder(GetFolderRequest response) {
-            super(response);
-            this.folderId = response.folderId;
+        private Builder(GetFolderRequest request) {
+            super(request);
+            this.folderId = request.folderId;
         } 
 
         /**

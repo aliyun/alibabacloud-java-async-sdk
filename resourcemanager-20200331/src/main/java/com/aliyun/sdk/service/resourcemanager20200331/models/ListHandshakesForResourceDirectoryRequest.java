@@ -61,10 +61,10 @@ public class ListHandshakesForResourceDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(ListHandshakesForResourceDirectoryRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListHandshakesForResourceDirectoryRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

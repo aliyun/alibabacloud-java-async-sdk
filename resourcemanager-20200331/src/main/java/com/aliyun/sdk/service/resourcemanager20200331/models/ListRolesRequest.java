@@ -74,11 +74,11 @@ public class ListRolesRequest extends Request {
             super();
         } 
 
-        private Builder(ListRolesRequest response) {
-            super(response);
-            this.language = response.language;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListRolesRequest request) {
+            super(request);
+            this.language = request.language;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

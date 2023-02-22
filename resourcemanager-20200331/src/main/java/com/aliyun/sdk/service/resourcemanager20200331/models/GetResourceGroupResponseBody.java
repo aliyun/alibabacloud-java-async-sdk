@@ -173,6 +173,108 @@ public class GetResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ResourceGroup extends TeaModel {
         @NameInMap("AccountId")
         private String accountId;
@@ -195,6 +297,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         private ResourceGroup(Builder builder) {
             this.accountId = builder.accountId;
             this.createDate = builder.createDate;
@@ -203,6 +308,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             this.name = builder.name;
             this.regionStatuses = builder.regionStatuses;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -262,6 +368,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String accountId; 
             private String createDate; 
@@ -270,6 +383,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             private String name; 
             private RegionStatuses regionStatuses; 
             private String status; 
+            private Tags tags; 
 
             /**
              * AccountId.
@@ -324,6 +438,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

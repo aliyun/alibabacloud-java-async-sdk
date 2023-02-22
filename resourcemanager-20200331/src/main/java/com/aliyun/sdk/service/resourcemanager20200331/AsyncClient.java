@@ -26,11 +26,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindSecureMobilePhoneResponse> bindSecureMobilePhone(BindSecureMobilePhoneRequest request);
 
+    CompletableFuture<CancelChangeAccountEmailResponse> cancelChangeAccountEmail(CancelChangeAccountEmailRequest request);
+
     CompletableFuture<CancelCreateCloudAccountResponse> cancelCreateCloudAccount(CancelCreateCloudAccountRequest request);
 
     CompletableFuture<CancelHandshakeResponse> cancelHandshake(CancelHandshakeRequest request);
 
     CompletableFuture<CancelPromoteResourceAccountResponse> cancelPromoteResourceAccount(CancelPromoteResourceAccountRequest request);
+
+    CompletableFuture<ChangeAccountEmailResponse> changeAccountEmail(ChangeAccountEmailRequest request);
+
+    CompletableFuture<CheckAccountDeleteResponse> checkAccountDelete(CheckAccountDeleteRequest request);
 
     CompletableFuture<CreateCloudAccountResponse> createCloudAccount(CreateCloudAccountRequest request);
 
@@ -51,6 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     CompletableFuture<DeclineHandshakeResponse> declineHandshake(DeclineHandshakeRequest request);
+
+    CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     CompletableFuture<DeleteControlPolicyResponse> deleteControlPolicy(DeleteControlPolicyRequest request);
 
@@ -82,6 +90,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAccountResponse> getAccount(GetAccountRequest request);
 
+    CompletableFuture<GetAccountDeletionCheckResultResponse> getAccountDeletionCheckResult(GetAccountDeletionCheckResultRequest request);
+
+    CompletableFuture<GetAccountDeletionStatusResponse> getAccountDeletionStatus(GetAccountDeletionStatusRequest request);
+
     CompletableFuture<GetControlPolicyResponse> getControlPolicy(GetControlPolicyRequest request);
 
     CompletableFuture<GetControlPolicyEnablementStatusResponse> getControlPolicyEnablementStatus(GetControlPolicyEnablementStatusRequest request);
@@ -99,6 +111,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceDirectoryResponse> getResourceDirectory(GetResourceDirectoryRequest request);
 
     CompletableFuture<GetResourceGroupResponse> getResourceGroup(GetResourceGroupRequest request);
+
+    CompletableFuture<GetResourceGroupListAclModeResponse> getResourceGroupListAclMode(GetResourceGroupListAclModeRequest request);
 
     CompletableFuture<GetRoleResponse> getRole(GetRoleRequest request);
 
@@ -140,6 +154,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
 
+    CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
+
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
+
     CompletableFuture<ListTargetAttachmentsForControlPolicyResponse> listTargetAttachmentsForControlPolicy(ListTargetAttachmentsForControlPolicyRequest request);
 
     CompletableFuture<ListTrustedServiceStatusResponse> listTrustedServiceStatus(ListTrustedServiceStatusRequest request);
@@ -158,11 +178,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResendPromoteResourceAccountEmailResponse> resendPromoteResourceAccountEmail(ResendPromoteResourceAccountEmailRequest request);
 
+    CompletableFuture<RetryChangeAccountEmailResponse> retryChangeAccountEmail(RetryChangeAccountEmailRequest request);
+
     CompletableFuture<SendVerificationCodeForBindSecureMobilePhoneResponse> sendVerificationCodeForBindSecureMobilePhone(SendVerificationCodeForBindSecureMobilePhoneRequest request);
 
     CompletableFuture<SendVerificationCodeForEnableRDResponse> sendVerificationCodeForEnableRD(SendVerificationCodeForEnableRDRequest request);
 
     CompletableFuture<SetDefaultPolicyVersionResponse> setDefaultPolicyVersion(SetDefaultPolicyVersionRequest request);
+
+    CompletableFuture<SetMemberDeletionPermissionResponse> setMemberDeletionPermission(SetMemberDeletionPermissionRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateAccountResponse> updateAccount(UpdateAccountRequest request);
 

@@ -62,10 +62,10 @@ public class ListControlPolicyAttachmentsForTargetRequest extends Request {
             super();
         } 
 
-        private Builder(ListControlPolicyAttachmentsForTargetRequest response) {
-            super(response);
-            this.language = response.language;
-            this.targetId = response.targetId;
+        private Builder(ListControlPolicyAttachmentsForTargetRequest request) {
+            super(request);
+            this.language = request.language;
+            this.targetId = request.targetId;
         } 
 
         /**

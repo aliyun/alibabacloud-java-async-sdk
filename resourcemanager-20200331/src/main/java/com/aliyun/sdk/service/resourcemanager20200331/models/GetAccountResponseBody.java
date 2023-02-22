@@ -71,6 +71,67 @@ public class GetAccountResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Account extends TeaModel {
         @NameInMap("AccountId")
         private String accountId;
@@ -80,6 +141,9 @@ public class GetAccountResponseBody extends TeaModel {
 
         @NameInMap("DisplayName")
         private String displayName;
+
+        @NameInMap("EmailStatus")
+        private String emailStatus;
 
         @NameInMap("FolderId")
         private String folderId;
@@ -93,6 +157,9 @@ public class GetAccountResponseBody extends TeaModel {
         @NameInMap("JoinTime")
         private String joinTime;
 
+        @NameInMap("Location")
+        private String location;
+
         @NameInMap("ModifyTime")
         private String modifyTime;
 
@@ -105,6 +172,9 @@ public class GetAccountResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("Type")
         private String type;
 
@@ -112,14 +182,17 @@ public class GetAccountResponseBody extends TeaModel {
             this.accountId = builder.accountId;
             this.accountName = builder.accountName;
             this.displayName = builder.displayName;
+            this.emailStatus = builder.emailStatus;
             this.folderId = builder.folderId;
             this.identityInformation = builder.identityInformation;
             this.joinMethod = builder.joinMethod;
             this.joinTime = builder.joinTime;
+            this.location = builder.location;
             this.modifyTime = builder.modifyTime;
             this.resourceDirectoryId = builder.resourceDirectoryId;
             this.resourceDirectoryPath = builder.resourceDirectoryPath;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.type = builder.type;
         }
 
@@ -153,6 +226,13 @@ public class GetAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return emailStatus
+         */
+        public String getEmailStatus() {
+            return this.emailStatus;
+        }
+
+        /**
          * @return folderId
          */
         public String getFolderId() {
@@ -178,6 +258,13 @@ public class GetAccountResponseBody extends TeaModel {
          */
         public String getJoinTime() {
             return this.joinTime;
+        }
+
+        /**
+         * @return location
+         */
+        public String getLocation() {
+            return this.location;
         }
 
         /**
@@ -209,6 +296,13 @@ public class GetAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -219,14 +313,17 @@ public class GetAccountResponseBody extends TeaModel {
             private String accountId; 
             private String accountName; 
             private String displayName; 
+            private String emailStatus; 
             private String folderId; 
             private String identityInformation; 
             private String joinMethod; 
             private String joinTime; 
+            private String location; 
             private String modifyTime; 
             private String resourceDirectoryId; 
             private String resourceDirectoryPath; 
             private String status; 
+            private java.util.List < Tags> tags; 
             private String type; 
 
             /**
@@ -250,6 +347,14 @@ public class GetAccountResponseBody extends TeaModel {
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * EmailStatus.
+             */
+            public Builder emailStatus(String emailStatus) {
+                this.emailStatus = emailStatus;
                 return this;
             }
 
@@ -286,6 +391,14 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
+             * Location.
+             */
+            public Builder location(String location) {
+                this.location = location;
+                return this;
+            }
+
+            /**
              * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
@@ -314,6 +427,14 @@ public class GetAccountResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

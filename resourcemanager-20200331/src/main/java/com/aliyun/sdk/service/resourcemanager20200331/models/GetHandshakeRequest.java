@@ -49,9 +49,9 @@ public class GetHandshakeRequest extends Request {
             super();
         } 
 
-        private Builder(GetHandshakeRequest response) {
-            super(response);
-            this.handshakeId = response.handshakeId;
+        private Builder(GetHandshakeRequest request) {
+            super(request);
+            this.handshakeId = request.handshakeId;
         } 
 
         /**

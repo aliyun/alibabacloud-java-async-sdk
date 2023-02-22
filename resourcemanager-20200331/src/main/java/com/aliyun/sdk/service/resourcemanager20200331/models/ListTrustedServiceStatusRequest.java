@@ -74,11 +74,11 @@ public class ListTrustedServiceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ListTrustedServiceStatusRequest response) {
-            super(response);
-            this.adminAccountId = response.adminAccountId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListTrustedServiceStatusRequest request) {
+            super(request);
+            this.adminAccountId = request.adminAccountId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**

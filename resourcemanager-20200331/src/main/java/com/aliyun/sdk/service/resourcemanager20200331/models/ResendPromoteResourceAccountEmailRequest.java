@@ -49,9 +49,9 @@ public class ResendPromoteResourceAccountEmailRequest extends Request {
             super();
         } 
 
-        private Builder(ResendPromoteResourceAccountEmailRequest response) {
-            super(response);
-            this.recordId = response.recordId;
+        private Builder(ResendPromoteResourceAccountEmailRequest request) {
+            super(request);
+            this.recordId = request.recordId;
         } 
 
         /**

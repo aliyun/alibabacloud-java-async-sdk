@@ -17,9 +17,14 @@ public class GetAccountRequest extends Request {
     @Validation(required = true)
     private String accountId;
 
+    @Query
+    @NameInMap("IncludeTags")
+    private Boolean includeTags;
+
     private GetAccountRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.includeTags = builder.includeTags;
     }
 
     public static Builder builder() {
@@ -42,16 +47,25 @@ public class GetAccountRequest extends Request {
         return this.accountId;
     }
 
+    /**
+     * @return includeTags
+     */
+    public Boolean getIncludeTags() {
+        return this.includeTags;
+    }
+
     public static final class Builder extends Request.Builder<GetAccountRequest, Builder> {
         private String accountId; 
+        private Boolean includeTags; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetAccountRequest response) {
-            super(response);
-            this.accountId = response.accountId;
+        private Builder(GetAccountRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.includeTags = request.includeTags;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class GetAccountRequest extends Request {
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * IncludeTags.
+         */
+        public Builder includeTags(Boolean includeTags) {
+            this.putQueryParameter("IncludeTags", includeTags);
+            this.includeTags = includeTags;
             return this;
         }
 

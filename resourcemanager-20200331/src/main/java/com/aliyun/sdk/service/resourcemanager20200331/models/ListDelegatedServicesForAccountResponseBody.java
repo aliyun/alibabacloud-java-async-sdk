@@ -78,9 +78,13 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         @NameInMap("ServicePrincipal")
         private String servicePrincipal;
 
+        @NameInMap("Status")
+        private String status;
+
         private DelegatedService(Builder builder) {
             this.delegationEnabledTime = builder.delegationEnabledTime;
             this.servicePrincipal = builder.servicePrincipal;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -105,9 +109,17 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             return this.servicePrincipal;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private String delegationEnabledTime; 
             private String servicePrincipal; 
+            private String status; 
 
             /**
              * DelegationEnabledTime.
@@ -122,6 +134,14 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

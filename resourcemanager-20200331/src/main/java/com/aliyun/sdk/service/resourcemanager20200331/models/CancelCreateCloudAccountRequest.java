@@ -49,9 +49,9 @@ public class CancelCreateCloudAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CancelCreateCloudAccountRequest response) {
-            super(response);
-            this.recordId = response.recordId;
+        private Builder(CancelCreateCloudAccountRequest request) {
+            super(request);
+            this.recordId = request.recordId;
         } 
 
         /**

@@ -78,6 +78,9 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("IdentityInformation")
+        private String identityInformation;
+
         @NameInMap("MasterAccountId")
         private String masterAccountId;
 
@@ -96,6 +99,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         private ResourceDirectory(Builder builder) {
             this.controlPolicyStatus = builder.controlPolicyStatus;
             this.createTime = builder.createTime;
+            this.identityInformation = builder.identityInformation;
             this.masterAccountId = builder.masterAccountId;
             this.masterAccountName = builder.masterAccountName;
             this.memberDeletionStatus = builder.memberDeletionStatus;
@@ -123,6 +127,13 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return identityInformation
+         */
+        public String getIdentityInformation() {
+            return this.identityInformation;
         }
 
         /**
@@ -163,6 +174,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         public static final class Builder {
             private String controlPolicyStatus; 
             private String createTime; 
+            private String identityInformation; 
             private String masterAccountId; 
             private String masterAccountName; 
             private String memberDeletionStatus; 
@@ -182,6 +194,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * IdentityInformation.
+             */
+            public Builder identityInformation(String identityInformation) {
+                this.identityInformation = identityInformation;
                 return this;
             }
 

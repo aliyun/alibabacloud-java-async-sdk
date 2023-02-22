@@ -105,13 +105,13 @@ public class AttachPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(AttachPolicyRequest response) {
-            super(response);
-            this.policyName = response.policyName;
-            this.policyType = response.policyType;
-            this.principalName = response.principalName;
-            this.principalType = response.principalType;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(AttachPolicyRequest request) {
+            super(request);
+            this.policyName = request.policyName;
+            this.policyType = request.policyType;
+            this.principalName = request.principalName;
+            this.principalType = request.principalType;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

@@ -89,12 +89,12 @@ public class CreateCloudAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCloudAccountRequest response) {
-            super(response);
-            this.displayName = response.displayName;
-            this.email = response.email;
-            this.parentFolderId = response.parentFolderId;
-            this.payerAccountId = response.payerAccountId;
+        private Builder(CreateCloudAccountRequest request) {
+            super(request);
+            this.displayName = request.displayName;
+            this.email = request.email;
+            this.parentFolderId = request.parentFolderId;
+            this.payerAccountId = request.payerAccountId;
         } 
 
         /**

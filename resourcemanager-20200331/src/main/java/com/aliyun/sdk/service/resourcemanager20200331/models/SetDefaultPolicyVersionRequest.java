@@ -63,10 +63,10 @@ public class SetDefaultPolicyVersionRequest extends Request {
             super();
         } 
 
-        private Builder(SetDefaultPolicyVersionRequest response) {
-            super(response);
-            this.policyName = response.policyName;
-            this.versionId = response.versionId;
+        private Builder(SetDefaultPolicyVersionRequest request) {
+            super(request);
+            this.policyName = request.policyName;
+            this.versionId = request.versionId;
         } 
 
         /**

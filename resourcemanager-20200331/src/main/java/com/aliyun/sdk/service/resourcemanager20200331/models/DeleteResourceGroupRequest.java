@@ -49,9 +49,9 @@ public class DeleteResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteResourceGroupRequest response) {
-            super(response);
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DeleteResourceGroupRequest request) {
+            super(request);
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

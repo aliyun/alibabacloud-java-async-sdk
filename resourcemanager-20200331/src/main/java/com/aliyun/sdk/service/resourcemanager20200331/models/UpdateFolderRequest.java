@@ -63,10 +63,10 @@ public class UpdateFolderRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFolderRequest response) {
-            super(response);
-            this.folderId = response.folderId;
-            this.newFolderName = response.newFolderName;
+        private Builder(UpdateFolderRequest request) {
+            super(request);
+            this.folderId = request.folderId;
+            this.newFolderName = request.newFolderName;
         } 
 
         /**

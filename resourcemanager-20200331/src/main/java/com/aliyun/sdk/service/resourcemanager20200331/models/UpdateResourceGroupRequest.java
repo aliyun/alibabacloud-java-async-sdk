@@ -63,10 +63,10 @@ public class UpdateResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateResourceGroupRequest response) {
-            super(response);
-            this.newDisplayName = response.newDisplayName;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(UpdateResourceGroupRequest request) {
+            super(request);
+            this.newDisplayName = request.newDisplayName;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

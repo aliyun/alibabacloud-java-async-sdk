@@ -63,10 +63,10 @@ public class CreateResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateResourceGroupRequest response) {
-            super(response);
-            this.displayName = response.displayName;
-            this.name = response.name;
+        private Builder(CreateResourceGroupRequest request) {
+            super(request);
+            this.displayName = request.displayName;
+            this.name = request.name;
         } 
 
         /**

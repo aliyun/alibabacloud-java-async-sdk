@@ -48,9 +48,9 @@ public class GetServiceLinkedRoleDeletionStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceLinkedRoleDeletionStatusRequest response) {
-            super(response);
-            this.deletionTaskId = response.deletionTaskId;
+        private Builder(GetServiceLinkedRoleDeletionStatusRequest request) {
+            super(request);
+            this.deletionTaskId = request.deletionTaskId;
         } 
 
         /**
