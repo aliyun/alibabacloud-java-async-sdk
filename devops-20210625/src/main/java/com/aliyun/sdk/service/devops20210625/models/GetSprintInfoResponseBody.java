@@ -156,6 +156,9 @@ public class GetSprintInfoResponseBody extends TeaModel {
         @NameInMap("name")
         private String name;
 
+        @NameInMap("owners")
+        private java.util.List < String > owners;
+
         @NameInMap("scope")
         private String scope;
 
@@ -177,6 +180,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             this.identifier = builder.identifier;
             this.modifier = builder.modifier;
             this.name = builder.name;
+            this.owners = builder.owners;
             this.scope = builder.scope;
             this.spaceIdentifier = builder.spaceIdentifier;
             this.startDate = builder.startDate;
@@ -248,6 +252,13 @@ public class GetSprintInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return owners
+         */
+        public java.util.List < String > getOwners() {
+            return this.owners;
+        }
+
+        /**
          * @return scope
          */
         public String getScope() {
@@ -284,6 +295,7 @@ public class GetSprintInfoResponseBody extends TeaModel {
             private String identifier; 
             private String modifier; 
             private String name; 
+            private java.util.List < String > owners; 
             private String scope; 
             private String spaceIdentifier; 
             private Long startDate; 
@@ -350,6 +362,14 @@ public class GetSprintInfoResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * owners.
+             */
+            public Builder owners(java.util.List < String > owners) {
+                this.owners = owners;
                 return this;
             }
 

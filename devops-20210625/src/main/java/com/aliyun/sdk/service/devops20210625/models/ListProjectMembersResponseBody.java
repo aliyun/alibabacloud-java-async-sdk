@@ -265,6 +265,9 @@ public class ListProjectMembersResponseBody extends TeaModel {
         @NameInMap("realNamePinyin")
         private String realNamePinyin;
 
+        @NameInMap("roleName")
+        private String roleName;
+
         @NameInMap("stamp")
         private String stamp;
 
@@ -289,6 +292,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             this.organizationUserInfo = builder.organizationUserInfo;
             this.realName = builder.realName;
             this.realNamePinyin = builder.realNamePinyin;
+            this.roleName = builder.roleName;
             this.stamp = builder.stamp;
             this.tbRoleId = builder.tbRoleId;
         }
@@ -421,6 +425,13 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        /**
          * @return stamp
          */
         public String getStamp() {
@@ -452,6 +463,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private OrganizationUserInfo organizationUserInfo; 
             private String realName; 
             private String realNamePinyin; 
+            private String roleName; 
             private String stamp; 
             private String tbRoleId; 
 
@@ -588,6 +600,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
              */
             public Builder realNamePinyin(String realNamePinyin) {
                 this.realNamePinyin = realNamePinyin;
+                return this;
+            }
+
+            /**
+             * 角色名称
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
                 return this;
             }
 

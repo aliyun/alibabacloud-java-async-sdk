@@ -132,10 +132,10 @@ public class GetFileLastCommitResponseBody extends TeaModel {
     } 
 
     public static class Signature extends TeaModel {
-        @NameInMap("GpgKeyId")
+        @NameInMap("gpgKeyId")
         private String gpgKeyId;
 
-        @NameInMap("VerificationStatus")
+        @NameInMap("verificationStatus")
         private String verificationStatus;
 
         private Signature(Builder builder) {

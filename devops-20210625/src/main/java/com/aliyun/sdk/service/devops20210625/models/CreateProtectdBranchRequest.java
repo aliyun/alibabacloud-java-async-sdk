@@ -28,7 +28,6 @@ public class CreateProtectdBranchRequest extends Request {
 
     @Body
     @NameInMap("allowMergeUserIds")
-    @Validation(required = true)
     private java.util.List < String > allowMergeUserIds;
 
     @Body
@@ -38,7 +37,6 @@ public class CreateProtectdBranchRequest extends Request {
 
     @Body
     @NameInMap("allowPushUserIds")
-    @Validation(required = true)
     private java.util.List < String > allowPushUserIds;
 
     @Body
