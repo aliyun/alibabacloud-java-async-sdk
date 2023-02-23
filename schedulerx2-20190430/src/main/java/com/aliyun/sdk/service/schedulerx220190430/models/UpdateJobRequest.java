@@ -126,6 +126,10 @@ public class UpdateJobRequest extends Request {
     private Integer taskAttemptInterval;
 
     @Body
+    @NameInMap("TaskDispatchMode")
+    private String taskDispatchMode;
+
+    @Body
     @NameInMap("TaskMaxAttempt")
     @Validation(maximum = 10)
     private Integer taskMaxAttempt;
@@ -179,6 +183,7 @@ public class UpdateJobRequest extends Request {
         this.sendChannel = builder.sendChannel;
         this.successNoticeEnable = builder.successNoticeEnable;
         this.taskAttemptInterval = builder.taskAttemptInterval;
+        this.taskDispatchMode = builder.taskDispatchMode;
         this.taskMaxAttempt = builder.taskMaxAttempt;
         this.timeExpression = builder.timeExpression;
         this.timeType = builder.timeType;
@@ -390,6 +395,13 @@ public class UpdateJobRequest extends Request {
     }
 
     /**
+     * @return taskDispatchMode
+     */
+    public String getTaskDispatchMode() {
+        return this.taskDispatchMode;
+    }
+
+    /**
      * @return taskMaxAttempt
      */
     public Integer getTaskMaxAttempt() {
@@ -459,6 +471,7 @@ public class UpdateJobRequest extends Request {
         private String sendChannel; 
         private Boolean successNoticeEnable; 
         private Integer taskAttemptInterval; 
+        private String taskDispatchMode; 
         private Integer taskMaxAttempt; 
         private String timeExpression; 
         private Integer timeType; 
@@ -499,6 +512,7 @@ public class UpdateJobRequest extends Request {
             this.sendChannel = request.sendChannel;
             this.successNoticeEnable = request.successNoticeEnable;
             this.taskAttemptInterval = request.taskAttemptInterval;
+            this.taskDispatchMode = request.taskDispatchMode;
             this.taskMaxAttempt = request.taskMaxAttempt;
             this.timeExpression = request.timeExpression;
             this.timeType = request.timeType;
@@ -766,6 +780,15 @@ public class UpdateJobRequest extends Request {
         public Builder taskAttemptInterval(Integer taskAttemptInterval) {
             this.putBodyParameter("TaskAttemptInterval", taskAttemptInterval);
             this.taskAttemptInterval = taskAttemptInterval;
+            return this;
+        }
+
+        /**
+         * TaskDispatchMode.
+         */
+        public Builder taskDispatchMode(String taskDispatchMode) {
+            this.putBodyParameter("TaskDispatchMode", taskDispatchMode);
+            this.taskDispatchMode = taskDispatchMode;
             return this;
         }
 

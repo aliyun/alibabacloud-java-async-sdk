@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetJobInstanceRequest} extends {@link RequestModel}
+ * {@link DeleteRouteStrategyRequest} extends {@link RequestModel}
  *
- * <p>GetJobInstanceRequest</p>
+ * <p>DeleteRouteStrategyRequest</p>
  */
-public class GetJobInstanceRequest extends Request {
+public class DeleteRouteStrategyRequest extends Request {
     @Query
     @NameInMap("GroupId")
     @Validation(required = true)
@@ -19,13 +19,7 @@ public class GetJobInstanceRequest extends Request {
 
     @Query
     @NameInMap("JobId")
-    @Validation(required = true)
     private Long jobId;
-
-    @Query
-    @NameInMap("JobInstanceId")
-    @Validation(required = true)
-    private Long jobInstanceId;
 
     @Query
     @NameInMap("Namespace")
@@ -33,21 +27,15 @@ public class GetJobInstanceRequest extends Request {
     private String namespace;
 
     @Query
-    @NameInMap("NamespaceSource")
-    private String namespaceSource;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    private GetJobInstanceRequest(Builder builder) {
+    private DeleteRouteStrategyRequest(Builder builder) {
         super(builder);
         this.groupId = builder.groupId;
         this.jobId = builder.jobId;
-        this.jobInstanceId = builder.jobInstanceId;
         this.namespace = builder.namespace;
-        this.namespaceSource = builder.namespaceSource;
         this.regionId = builder.regionId;
     }
 
@@ -55,7 +43,7 @@ public class GetJobInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static GetJobInstanceRequest create() {
+    public static DeleteRouteStrategyRequest create() {
         return builder().build();
     }
 
@@ -79,24 +67,10 @@ public class GetJobInstanceRequest extends Request {
     }
 
     /**
-     * @return jobInstanceId
-     */
-    public Long getJobInstanceId() {
-        return this.jobInstanceId;
-    }
-
-    /**
      * @return namespace
      */
     public String getNamespace() {
         return this.namespace;
-    }
-
-    /**
-     * @return namespaceSource
-     */
-    public String getNamespaceSource() {
-        return this.namespaceSource;
     }
 
     /**
@@ -106,30 +80,26 @@ public class GetJobInstanceRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetJobInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteRouteStrategyRequest, Builder> {
         private String groupId; 
         private Long jobId; 
-        private Long jobInstanceId; 
         private String namespace; 
-        private String namespaceSource; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetJobInstanceRequest request) {
+        private Builder(DeleteRouteStrategyRequest request) {
             super(request);
             this.groupId = request.groupId;
             this.jobId = request.jobId;
-            this.jobInstanceId = request.jobInstanceId;
             this.namespace = request.namespace;
-            this.namespaceSource = request.namespaceSource;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -138,7 +108,7 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * JobId.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -147,29 +117,11 @@ public class GetJobInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the job instance.
-         */
-        public Builder jobInstanceId(Long jobInstanceId) {
-            this.putQueryParameter("JobInstanceId", jobInstanceId);
-            this.jobInstanceId = jobInstanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
-            return this;
-        }
-
-        /**
-         * The source of the namespace. This parameter is required only for a special third party.
-         */
-        public Builder namespaceSource(String namespaceSource) {
-            this.putQueryParameter("NamespaceSource", namespaceSource);
-            this.namespaceSource = namespaceSource;
             return this;
         }
 
@@ -183,8 +135,8 @@ public class GetJobInstanceRequest extends Request {
         }
 
         @Override
-        public GetJobInstanceRequest build() {
-            return new GetJobInstanceRequest(this);
+        public DeleteRouteStrategyRequest build() {
+            return new DeleteRouteStrategyRequest(this);
         } 
 
     } 

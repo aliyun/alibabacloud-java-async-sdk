@@ -22,8 +22,16 @@ public class CreateAppGroupRequest extends Request {
     private String appName;
 
     @Query
+    @NameInMap("AppType")
+    private Integer appType;
+
+    @Query
     @NameInMap("Description")
     private String description;
+
+    @Query
+    @NameInMap("EnableLog")
+    private Boolean enableLog;
 
     @Query
     @NameInMap("GroupId")
@@ -67,7 +75,9 @@ public class CreateAppGroupRequest extends Request {
         super(builder);
         this.appKey = builder.appKey;
         this.appName = builder.appName;
+        this.appType = builder.appType;
         this.description = builder.description;
+        this.enableLog = builder.enableLog;
         this.groupId = builder.groupId;
         this.maxJobs = builder.maxJobs;
         this.monitorConfigJson = builder.monitorConfigJson;
@@ -107,10 +117,24 @@ public class CreateAppGroupRequest extends Request {
     }
 
     /**
+     * @return appType
+     */
+    public Integer getAppType() {
+        return this.appType;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableLog
+     */
+    public Boolean getEnableLog() {
+        return this.enableLog;
     }
 
     /**
@@ -179,7 +203,9 @@ public class CreateAppGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAppGroupRequest, Builder> {
         private String appKey; 
         private String appName; 
+        private Integer appType; 
         private String description; 
+        private Boolean enableLog; 
         private String groupId; 
         private Integer maxJobs; 
         private String monitorConfigJson; 
@@ -198,7 +224,9 @@ public class CreateAppGroupRequest extends Request {
             super(request);
             this.appKey = request.appKey;
             this.appName = request.appName;
+            this.appType = request.appType;
             this.description = request.description;
+            this.enableLog = request.enableLog;
             this.groupId = request.groupId;
             this.maxJobs = request.maxJobs;
             this.monitorConfigJson = request.monitorConfigJson;
@@ -229,11 +257,29 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
+         * AppType.
+         */
+        public Builder appType(Integer appType) {
+            this.putQueryParameter("AppType", appType);
+            this.appType = appType;
+            return this;
+        }
+
+        /**
          * The description of the application.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableLog.
+         */
+        public Builder enableLog(Boolean enableLog) {
+            this.putQueryParameter("EnableLog", enableLog);
+            this.enableLog = enableLog;
             return this;
         }
 

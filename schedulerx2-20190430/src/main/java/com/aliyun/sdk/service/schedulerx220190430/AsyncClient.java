@@ -31,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<BatchDeleteJobsResponse> batchDeleteJobs(BatchDeleteJobsRequest request);
 
+    CompletableFuture<BatchDeleteRouteStrategyResponse> batchDeleteRouteStrategy(BatchDeleteRouteStrategyRequest request);
+
     /**
       * Before you call this operation, you must add the following dependency to the pom.xml file:
       * ```xml
@@ -63,9 +65,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
 
+    CompletableFuture<CreateRouteStrategyResponse> createRouteStrategy(CreateRouteStrategyRequest request);
+
     CompletableFuture<CreateWorkflowResponse> createWorkflow(CreateWorkflowRequest request);
 
+    CompletableFuture<DeleteAppGroupResponse> deleteAppGroup(DeleteAppGroupRequest request);
+
     CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
+
+    CompletableFuture<DeleteRouteStrategyResponse> deleteRouteStrategy(DeleteRouteStrategyRequest request);
 
     CompletableFuture<DeleteWorkflowResponse> deleteWorkflow(DeleteWorkflowRequest request);
 
@@ -88,6 +96,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteJobResponse> executeJob(ExecuteJobRequest request);
 
     CompletableFuture<ExecuteWorkflowResponse> executeWorkflow(ExecuteWorkflowRequest request);
+
+    CompletableFuture<GetAppGroupResponse> getAppGroup(GetAppGroupRequest request);
 
     CompletableFuture<GetJobInfoResponse> getJobInfo(GetJobInfoRequest request);
 
@@ -149,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetWfInstanceSuccessResponse> setWfInstanceSuccess(SetWfInstanceSuccessRequest request);
 
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
+
+    CompletableFuture<UpdateAppGroupResponse> updateAppGroup(UpdateAppGroupRequest request);
 
     CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request);
 
