@@ -114,14 +114,14 @@ public class QueryPhoneNoAByTrackNoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPhoneNoAByTrackNoRequest response) {
-            super(response);
-            this.cabinetNo = response.cabinetNo;
-            this.ownerId = response.ownerId;
-            this.phoneNoX = response.phoneNoX;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trackNo = response.trackNo;
+        private Builder(QueryPhoneNoAByTrackNoRequest request) {
+            super(request);
+            this.cabinetNo = request.cabinetNo;
+            this.ownerId = request.ownerId;
+            this.phoneNoX = request.phoneNoX;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trackNo = request.trackNo;
         } 
 
         /**

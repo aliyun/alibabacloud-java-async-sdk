@@ -102,13 +102,13 @@ public class QuerySecretNoDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySecretNoDetailRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.poolKey = response.poolKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.secretNo = response.secretNo;
+        private Builder(QuerySecretNoDetailRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.secretNo = request.secretNo;
         } 
 
         /**

@@ -130,15 +130,15 @@ public class AddAxnTrackNoRequest extends Request {
             super();
         } 
 
-        private Builder(AddAxnTrackNoRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.phoneNoX = response.phoneNoX;
-            this.poolKey = response.poolKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.subsId = response.subsId;
-            this.trackNo = response.trackNo;
+        private Builder(AddAxnTrackNoRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.phoneNoX = request.phoneNoX;
+            this.poolKey = request.poolKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.subsId = request.subsId;
+            this.trackNo = request.trackNo;
         } 
 
         /**

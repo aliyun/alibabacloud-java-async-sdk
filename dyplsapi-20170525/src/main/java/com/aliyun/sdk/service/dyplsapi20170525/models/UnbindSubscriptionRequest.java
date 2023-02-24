@@ -128,15 +128,15 @@ public class UnbindSubscriptionRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindSubscriptionRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.poolKey = response.poolKey;
-            this.productType = response.productType;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.secretNo = response.secretNo;
-            this.subsId = response.subsId;
+        private Builder(UnbindSubscriptionRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
+            this.productType = request.productType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.secretNo = request.secretNo;
+            this.subsId = request.subsId;
         } 
 
         /**

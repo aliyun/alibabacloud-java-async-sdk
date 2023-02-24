@@ -115,14 +115,14 @@ public class QuerySecretNoRemainRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySecretNoRemainRequest response) {
-            super(response);
-            this.city = response.city;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.secretNo = response.secretNo;
-            this.specId = response.specId;
+        private Builder(QuerySecretNoRemainRequest request) {
+            super(request);
+            this.city = request.city;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.secretNo = request.secretNo;
+            this.specId = request.specId;
         } 
 
         /**

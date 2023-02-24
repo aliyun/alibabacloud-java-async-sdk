@@ -142,16 +142,16 @@ public class BuySecretNoRequest extends Request {
             super();
         } 
 
-        private Builder(BuySecretNoRequest response) {
-            super(response);
-            this.city = response.city;
-            this.displayPool = response.displayPool;
-            this.ownerId = response.ownerId;
-            this.poolKey = response.poolKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.secretNo = response.secretNo;
-            this.specId = response.specId;
+        private Builder(BuySecretNoRequest request) {
+            super(request);
+            this.city = request.city;
+            this.displayPool = request.displayPool;
+            this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.secretNo = request.secretNo;
+            this.specId = request.specId;
         } 
 
         /**

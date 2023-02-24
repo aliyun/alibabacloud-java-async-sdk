@@ -101,13 +101,13 @@ public class QuerySubsIdRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySubsIdRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.phoneNoX = response.phoneNoX;
-            this.poolKey = response.poolKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QuerySubsIdRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.phoneNoX = request.phoneNoX;
+            this.poolKey = request.poolKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

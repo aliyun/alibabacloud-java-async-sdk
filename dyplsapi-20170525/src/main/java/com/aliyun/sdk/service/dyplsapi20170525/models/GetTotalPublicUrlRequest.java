@@ -130,15 +130,15 @@ public class GetTotalPublicUrlRequest extends Request {
             super();
         } 
 
-        private Builder(GetTotalPublicUrlRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.callTime = response.callTime;
-            this.checkSubs = response.checkSubs;
-            this.ownerId = response.ownerId;
-            this.partnerKey = response.partnerKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GetTotalPublicUrlRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.callTime = request.callTime;
+            this.checkSubs = request.checkSubs;
+            this.ownerId = request.ownerId;
+            this.partnerKey = request.partnerKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

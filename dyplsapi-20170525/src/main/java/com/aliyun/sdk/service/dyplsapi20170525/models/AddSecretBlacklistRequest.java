@@ -103,13 +103,13 @@ public class AddSecretBlacklistRequest extends Request {
             super();
         } 
 
-        private Builder(AddSecretBlacklistRequest response) {
-            super(response);
-            this.blackNo = response.blackNo;
-            this.blackType = response.blackType;
-            this.poolKey = response.poolKey;
-            this.remark = response.remark;
-            this.wayControl = response.wayControl;
+        private Builder(AddSecretBlacklistRequest request) {
+            super(request);
+            this.blackNo = request.blackNo;
+            this.blackType = request.blackType;
+            this.poolKey = request.poolKey;
+            this.remark = request.remark;
+            this.wayControl = request.wayControl;
         } 
 
         /**

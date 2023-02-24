@@ -285,27 +285,27 @@ public class UpdateSubscriptionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSubscriptionRequest response) {
-            super(response);
-            this.ASRModelId = response.ASRModelId;
-            this.ASRStatus = response.ASRStatus;
-            this.callDisplayType = response.callDisplayType;
-            this.callRestrict = response.callRestrict;
-            this.expiration = response.expiration;
-            this.groupId = response.groupId;
-            this.isRecordingEnabled = response.isRecordingEnabled;
-            this.operateType = response.operateType;
-            this.outId = response.outId;
-            this.ownerId = response.ownerId;
-            this.phoneNoA = response.phoneNoA;
-            this.phoneNoB = response.phoneNoB;
-            this.phoneNoX = response.phoneNoX;
-            this.poolKey = response.poolKey;
-            this.productType = response.productType;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ringConfig = response.ringConfig;
-            this.subsId = response.subsId;
+        private Builder(UpdateSubscriptionRequest request) {
+            super(request);
+            this.ASRModelId = request.ASRModelId;
+            this.ASRStatus = request.ASRStatus;
+            this.callDisplayType = request.callDisplayType;
+            this.callRestrict = request.callRestrict;
+            this.expiration = request.expiration;
+            this.groupId = request.groupId;
+            this.isRecordingEnabled = request.isRecordingEnabled;
+            this.operateType = request.operateType;
+            this.outId = request.outId;
+            this.ownerId = request.ownerId;
+            this.phoneNoA = request.phoneNoA;
+            this.phoneNoB = request.phoneNoB;
+            this.phoneNoX = request.phoneNoX;
+            this.poolKey = request.poolKey;
+            this.productType = request.productType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ringConfig = request.ringConfig;
+            this.subsId = request.subsId;
         } 
 
         /**

@@ -127,15 +127,15 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRecordFileDownloadUrlRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.callTime = response.callTime;
-            this.ownerId = response.ownerId;
-            this.poolKey = response.poolKey;
-            this.productType = response.productType;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryRecordFileDownloadUrlRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.callTime = request.callTime;
+            this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
+            this.productType = request.productType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

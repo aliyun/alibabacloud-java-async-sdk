@@ -127,15 +127,15 @@ public class CreateAxgGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAxgGroupRequest response) {
-            super(response);
-            this.name = response.name;
-            this.numbers = response.numbers;
-            this.ownerId = response.ownerId;
-            this.poolKey = response.poolKey;
-            this.remark = response.remark;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateAxgGroupRequest request) {
+            super(request);
+            this.name = request.name;
+            this.numbers = request.numbers;
+            this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
+            this.remark = request.remark;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

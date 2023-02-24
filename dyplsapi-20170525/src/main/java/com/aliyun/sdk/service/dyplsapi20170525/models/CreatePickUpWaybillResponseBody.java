@@ -121,6 +121,9 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         @NameInMap("ErrorMsg")
         private String errorMsg;
 
+        @NameInMap("GotCode")
+        private String gotCode;
+
         @NameInMap("MailNo")
         private String mailNo;
 
@@ -131,6 +134,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             this.cpCode = builder.cpCode;
             this.errorCode = builder.errorCode;
             this.errorMsg = builder.errorMsg;
+            this.gotCode = builder.gotCode;
             this.mailNo = builder.mailNo;
             this.success = builder.success;
         }
@@ -165,6 +169,13 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
+         * @return gotCode
+         */
+        public String getGotCode() {
+            return this.gotCode;
+        }
+
+        /**
          * @return mailNo
          */
         public String getMailNo() {
@@ -182,6 +193,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             private String cpCode; 
             private String errorCode; 
             private String errorMsg; 
+            private String gotCode; 
             private String mailNo; 
             private String success; 
 
@@ -206,6 +218,14 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
+                return this;
+            }
+
+            /**
+             * GotCode.
+             */
+            public Builder gotCode(String gotCode) {
+                this.gotCode = gotCode;
                 return this;
             }
 

@@ -77,11 +77,11 @@ public class GetSecretAsrDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetSecretAsrDetailRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.callTime = response.callTime;
-            this.poolKey = response.poolKey;
+        private Builder(GetSecretAsrDetailRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.callTime = request.callTime;
+            this.poolKey = request.poolKey;
         } 
 
         /**

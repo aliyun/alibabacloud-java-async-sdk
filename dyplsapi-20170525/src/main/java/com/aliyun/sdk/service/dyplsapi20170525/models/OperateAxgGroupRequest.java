@@ -130,15 +130,15 @@ public class OperateAxgGroupRequest extends Request {
             super();
         } 
 
-        private Builder(OperateAxgGroupRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.numbers = response.numbers;
-            this.operateType = response.operateType;
-            this.ownerId = response.ownerId;
-            this.poolKey = response.poolKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(OperateAxgGroupRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.numbers = request.numbers;
+            this.operateType = request.operateType;
+            this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -128,15 +128,15 @@ public class QuerySubscriptionDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QuerySubscriptionDetailRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.phoneNoX = response.phoneNoX;
-            this.poolKey = response.poolKey;
-            this.productType = response.productType;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.subsId = response.subsId;
+        private Builder(QuerySubscriptionDetailRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.phoneNoX = request.phoneNoX;
+            this.poolKey = request.poolKey;
+            this.productType = request.productType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.subsId = request.subsId;
         } 
 
         /**

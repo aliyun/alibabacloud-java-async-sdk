@@ -129,15 +129,15 @@ public class OperateBlackNoRequest extends Request {
             super();
         } 
 
-        private Builder(OperateBlackNoRequest response) {
-            super(response);
-            this.blackNo = response.blackNo;
-            this.operateType = response.operateType;
-            this.ownerId = response.ownerId;
-            this.poolKey = response.poolKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tips = response.tips;
+        private Builder(OperateBlackNoRequest request) {
+            super(request);
+            this.blackNo = request.blackNo;
+            this.operateType = request.operateType;
+            this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tips = request.tips;
         } 
 
         /**

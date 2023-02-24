@@ -34,17 +34,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelPickUpWaybillResponse> cancelPickUpWaybill(CancelPickUpWaybillRequest request);
 
-    CompletableFuture<ConfirmSendSmsResponse> confirmSendSms(ConfirmSendSmsRequest request);
-
     CompletableFuture<CreateAxgGroupResponse> createAxgGroup(CreateAxgGroupRequest request);
 
     CompletableFuture<CreatePickUpWaybillResponse> createPickUpWaybill(CreatePickUpWaybillRequest request);
 
+    CompletableFuture<CreatePickUpWaybillPreQueryResponse> createPickUpWaybillPreQuery(CreatePickUpWaybillPreQueryRequest request);
+
     CompletableFuture<DeleteSecretBlacklistResponse> deleteSecretBlacklist(DeleteSecretBlacklistRequest request);
 
     CompletableFuture<GetSecretAsrDetailResponse> getSecretAsrDetail(GetSecretAsrDetailRequest request);
-
-    CompletableFuture<GetSubscriptionDetailResponse> getSubscriptionDetail(GetSubscriptionDetailRequest request);
 
     CompletableFuture<GetTotalPublicUrlResponse> getTotalPublicUrl(GetTotalPublicUrlRequest request);
 
@@ -53,8 +51,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateAxgGroupResponse> operateAxgGroup(OperateAxgGroupRequest request);
 
     CompletableFuture<OperateBlackNoResponse> operateBlackNo(OperateBlackNoRequest request);
-
-    CompletableFuture<QueryCallStatusResponse> queryCallStatus(QueryCallStatusRequest request);
 
     CompletableFuture<QueryPhoneNoAByTrackNoResponse> queryPhoneNoAByTrackNo(QueryPhoneNoAByTrackNoRequest request);
 

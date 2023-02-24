@@ -285,27 +285,27 @@ public class BindAxnRequest extends Request {
             super();
         } 
 
-        private Builder(BindAxnRequest response) {
-            super(response);
-            this.ASRModelId = response.ASRModelId;
-            this.ASRStatus = response.ASRStatus;
-            this.callDisplayType = response.callDisplayType;
-            this.callRestrict = response.callRestrict;
-            this.callTimeout = response.callTimeout;
-            this.expectCity = response.expectCity;
-            this.expiration = response.expiration;
-            this.isRecordingEnabled = response.isRecordingEnabled;
-            this.noType = response.noType;
-            this.outId = response.outId;
-            this.outOrderId = response.outOrderId;
-            this.ownerId = response.ownerId;
-            this.phoneNoA = response.phoneNoA;
-            this.phoneNoB = response.phoneNoB;
-            this.phoneNoX = response.phoneNoX;
-            this.poolKey = response.poolKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ringConfig = response.ringConfig;
+        private Builder(BindAxnRequest request) {
+            super(request);
+            this.ASRModelId = request.ASRModelId;
+            this.ASRStatus = request.ASRStatus;
+            this.callDisplayType = request.callDisplayType;
+            this.callRestrict = request.callRestrict;
+            this.callTimeout = request.callTimeout;
+            this.expectCity = request.expectCity;
+            this.expiration = request.expiration;
+            this.isRecordingEnabled = request.isRecordingEnabled;
+            this.noType = request.noType;
+            this.outId = request.outId;
+            this.outOrderId = request.outOrderId;
+            this.ownerId = request.ownerId;
+            this.phoneNoA = request.phoneNoA;
+            this.phoneNoB = request.phoneNoB;
+            this.phoneNoX = request.phoneNoX;
+            this.poolKey = request.poolKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ringConfig = request.ringConfig;
         } 
 
         /**

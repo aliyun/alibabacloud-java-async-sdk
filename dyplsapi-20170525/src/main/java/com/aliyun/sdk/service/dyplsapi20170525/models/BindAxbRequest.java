@@ -34,6 +34,10 @@ public class BindAxbRequest extends Request {
     private Integer callTimeout;
 
     @Query
+    @NameInMap("DtmfConfig")
+    private String dtmfConfig;
+
+    @Query
     @NameInMap("ExpectCity")
     private String expectCity;
 
@@ -94,6 +98,7 @@ public class BindAxbRequest extends Request {
         this.callDisplayType = builder.callDisplayType;
         this.callRestrict = builder.callRestrict;
         this.callTimeout = builder.callTimeout;
+        this.dtmfConfig = builder.dtmfConfig;
         this.expectCity = builder.expectCity;
         this.expiration = builder.expiration;
         this.isRecordingEnabled = builder.isRecordingEnabled;
@@ -155,6 +160,13 @@ public class BindAxbRequest extends Request {
      */
     public Integer getCallTimeout() {
         return this.callTimeout;
+    }
+
+    /**
+     * @return dtmfConfig
+     */
+    public String getDtmfConfig() {
+        return this.dtmfConfig;
     }
 
     /**
@@ -254,6 +266,7 @@ public class BindAxbRequest extends Request {
         private Integer callDisplayType; 
         private String callRestrict; 
         private Integer callTimeout; 
+        private String dtmfConfig; 
         private String expectCity; 
         private String expiration; 
         private Boolean isRecordingEnabled; 
@@ -272,26 +285,27 @@ public class BindAxbRequest extends Request {
             super();
         } 
 
-        private Builder(BindAxbRequest response) {
-            super(response);
-            this.ASRModelId = response.ASRModelId;
-            this.ASRStatus = response.ASRStatus;
-            this.callDisplayType = response.callDisplayType;
-            this.callRestrict = response.callRestrict;
-            this.callTimeout = response.callTimeout;
-            this.expectCity = response.expectCity;
-            this.expiration = response.expiration;
-            this.isRecordingEnabled = response.isRecordingEnabled;
-            this.outId = response.outId;
-            this.outOrderId = response.outOrderId;
-            this.ownerId = response.ownerId;
-            this.phoneNoA = response.phoneNoA;
-            this.phoneNoB = response.phoneNoB;
-            this.phoneNoX = response.phoneNoX;
-            this.poolKey = response.poolKey;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ringConfig = response.ringConfig;
+        private Builder(BindAxbRequest request) {
+            super(request);
+            this.ASRModelId = request.ASRModelId;
+            this.ASRStatus = request.ASRStatus;
+            this.callDisplayType = request.callDisplayType;
+            this.callRestrict = request.callRestrict;
+            this.callTimeout = request.callTimeout;
+            this.dtmfConfig = request.dtmfConfig;
+            this.expectCity = request.expectCity;
+            this.expiration = request.expiration;
+            this.isRecordingEnabled = request.isRecordingEnabled;
+            this.outId = request.outId;
+            this.outOrderId = request.outOrderId;
+            this.ownerId = request.ownerId;
+            this.phoneNoA = request.phoneNoA;
+            this.phoneNoB = request.phoneNoB;
+            this.phoneNoX = request.phoneNoX;
+            this.poolKey = request.poolKey;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ringConfig = request.ringConfig;
         } 
 
         /**
@@ -336,6 +350,15 @@ public class BindAxbRequest extends Request {
         public Builder callTimeout(Integer callTimeout) {
             this.putQueryParameter("CallTimeout", callTimeout);
             this.callTimeout = callTimeout;
+            return this;
+        }
+
+        /**
+         * DtmfConfig.
+         */
+        public Builder dtmfConfig(String dtmfConfig) {
+            this.putQueryParameter("DtmfConfig", dtmfConfig);
+            this.dtmfConfig = dtmfConfig;
             return this;
         }
 

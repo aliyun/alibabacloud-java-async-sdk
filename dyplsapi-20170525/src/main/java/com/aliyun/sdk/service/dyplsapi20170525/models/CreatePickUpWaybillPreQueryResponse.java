@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetSubscriptionDetailResponse} extends {@link TeaModel}
+ * {@link CreatePickUpWaybillPreQueryResponse} extends {@link TeaModel}
  *
- * <p>GetSubscriptionDetailResponse</p>
+ * <p>CreatePickUpWaybillPreQueryResponse</p>
  */
-public class GetSubscriptionDetailResponse extends Response {
+public class CreatePickUpWaybillPreQueryResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetSubscriptionDetailResponseBody body;
+    private CreatePickUpWaybillPreQueryResponseBody body;
 
-    private GetSubscriptionDetailResponse(BuilderImpl builder) {
+    private CreatePickUpWaybillPreQueryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetSubscriptionDetailResponse create() {
+    public static CreatePickUpWaybillPreQueryResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetSubscriptionDetailResponse extends Response {
     /**
      * @return body
      */
-    public GetSubscriptionDetailResponseBody getBody() {
+    public CreatePickUpWaybillPreQueryResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetSubscriptionDetailResponse, Builder> {
+    public interface Builder extends Response.Builder<CreatePickUpWaybillPreQueryResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetSubscriptionDetailResponseBody body);
+        Builder body(CreatePickUpWaybillPreQueryResponseBody body);
 
         @Override
-        GetSubscriptionDetailResponse build();
+        CreatePickUpWaybillPreQueryResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetSubscriptionDetailResponse, Builder>
+            extends Response.BuilderImpl<CreatePickUpWaybillPreQueryResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetSubscriptionDetailResponseBody body; 
+        private CreatePickUpWaybillPreQueryResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetSubscriptionDetailResponse response) {
+        private BuilderImpl(CreatePickUpWaybillPreQueryResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetSubscriptionDetailResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetSubscriptionDetailResponseBody body) {
+        public Builder body(CreatePickUpWaybillPreQueryResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetSubscriptionDetailResponse build() {
-            return new GetSubscriptionDetailResponse(this);
+        public CreatePickUpWaybillPreQueryResponse build() {
+            return new CreatePickUpWaybillPreQueryResponse(this);
         } 
 
     } 

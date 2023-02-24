@@ -115,14 +115,14 @@ public class CancelPickUpWaybillRequest extends Request {
             super();
         } 
 
-        private Builder(CancelPickUpWaybillRequest response) {
-            super(response);
-            this.cancelDesc = response.cancelDesc;
-            this.contentType = response.contentType;
-            this.outerOrderCode = response.outerOrderCode;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CancelPickUpWaybillRequest request) {
+            super(request);
+            this.cancelDesc = request.cancelDesc;
+            this.contentType = request.contentType;
+            this.outerOrderCode = request.outerOrderCode;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -135,7 +135,7 @@ public class CancelPickUpWaybillRequest extends Request {
         }
 
         /**
-         * Content-Type.
+         * 1
          */
         public Builder contentType(String contentType) {
             this.putHeaderParameter("Content-Type", contentType);

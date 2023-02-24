@@ -13,6 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePickUpWaybillRequest extends Request {
     @Query
+    @NameInMap("AppointGotEndTime")
+    private String appointGotEndTime;
+
+    @Query
+    @NameInMap("AppointGotStartTime")
+    private String appointGotStartTime;
+
+    @Query
+    @NameInMap("BizType")
+    private Integer bizType;
+
+    @Query
     @NameInMap("ConsigneeAddress")
     @Validation(required = true)
     private ConsigneeAddress consigneeAddress;
@@ -76,6 +88,9 @@ public class CreatePickUpWaybillRequest extends Request {
 
     private CreatePickUpWaybillRequest(Builder builder) {
         super(builder);
+        this.appointGotEndTime = builder.appointGotEndTime;
+        this.appointGotStartTime = builder.appointGotStartTime;
+        this.bizType = builder.bizType;
         this.consigneeAddress = builder.consigneeAddress;
         this.consigneeMobile = builder.consigneeMobile;
         this.consigneeName = builder.consigneeName;
@@ -103,6 +118,27 @@ public class CreatePickUpWaybillRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appointGotEndTime
+     */
+    public String getAppointGotEndTime() {
+        return this.appointGotEndTime;
+    }
+
+    /**
+     * @return appointGotStartTime
+     */
+    public String getAppointGotStartTime() {
+        return this.appointGotStartTime;
+    }
+
+    /**
+     * @return bizType
+     */
+    public Integer getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -204,6 +240,9 @@ public class CreatePickUpWaybillRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePickUpWaybillRequest, Builder> {
+        private String appointGotEndTime; 
+        private String appointGotStartTime; 
+        private Integer bizType; 
         private ConsigneeAddress consigneeAddress; 
         private String consigneeMobile; 
         private String consigneeName; 
@@ -223,29 +262,60 @@ public class CreatePickUpWaybillRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePickUpWaybillRequest response) {
-            super(response);
-            this.consigneeAddress = response.consigneeAddress;
-            this.consigneeMobile = response.consigneeMobile;
-            this.consigneeName = response.consigneeName;
-            this.consigneePhone = response.consigneePhone;
-            this.contentType = response.contentType;
-            this.cpCode = response.cpCode;
-            this.goodsInfos = response.goodsInfos;
-            this.orderChannels = response.orderChannels;
-            this.outerOrderCode = response.outerOrderCode;
-            this.remark = response.remark;
-            this.sendAddress = response.sendAddress;
-            this.sendMobile = response.sendMobile;
-            this.sendName = response.sendName;
-            this.sendPhone = response.sendPhone;
+        private Builder(CreatePickUpWaybillRequest request) {
+            super(request);
+            this.appointGotEndTime = request.appointGotEndTime;
+            this.appointGotStartTime = request.appointGotStartTime;
+            this.bizType = request.bizType;
+            this.consigneeAddress = request.consigneeAddress;
+            this.consigneeMobile = request.consigneeMobile;
+            this.consigneeName = request.consigneeName;
+            this.consigneePhone = request.consigneePhone;
+            this.contentType = request.contentType;
+            this.cpCode = request.cpCode;
+            this.goodsInfos = request.goodsInfos;
+            this.orderChannels = request.orderChannels;
+            this.outerOrderCode = request.outerOrderCode;
+            this.remark = request.remark;
+            this.sendAddress = request.sendAddress;
+            this.sendMobile = request.sendMobile;
+            this.sendName = request.sendName;
+            this.sendPhone = request.sendPhone;
         } 
+
+        /**
+         * AppointGotEndTime.
+         */
+        public Builder appointGotEndTime(String appointGotEndTime) {
+            this.putQueryParameter("AppointGotEndTime", appointGotEndTime);
+            this.appointGotEndTime = appointGotEndTime;
+            return this;
+        }
+
+        /**
+         * AppointGotStartTime.
+         */
+        public Builder appointGotStartTime(String appointGotStartTime) {
+            this.putQueryParameter("AppointGotStartTime", appointGotStartTime);
+            this.appointGotStartTime = appointGotStartTime;
+            return this;
+        }
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(Integer bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * ConsigneeAddress.
          */
         public Builder consigneeAddress(ConsigneeAddress consigneeAddress) {
-            this.putQueryParameter("ConsigneeAddress", consigneeAddress);
+            String consigneeAddressShrink = shrink(consigneeAddress, "ConsigneeAddress", "json");
+            this.putQueryParameter("ConsigneeAddress", consigneeAddressShrink);
             this.consigneeAddress = consigneeAddress;
             return this;
         }
@@ -299,7 +369,8 @@ public class CreatePickUpWaybillRequest extends Request {
          * GoodsInfos.
          */
         public Builder goodsInfos(java.util.List < GoodsInfos> goodsInfos) {
-            this.putQueryParameter("GoodsInfos", goodsInfos);
+            String goodsInfosShrink = shrink(goodsInfos, "GoodsInfos", "json");
+            this.putQueryParameter("GoodsInfos", goodsInfosShrink);
             this.goodsInfos = goodsInfos;
             return this;
         }
@@ -335,7 +406,8 @@ public class CreatePickUpWaybillRequest extends Request {
          * SendAddress.
          */
         public Builder sendAddress(SendAddress sendAddress) {
-            this.putQueryParameter("SendAddress", sendAddress);
+            String sendAddressShrink = shrink(sendAddress, "SendAddress", "json");
+            this.putQueryParameter("SendAddress", sendAddressShrink);
             this.sendAddress = sendAddress;
             return this;
         }
