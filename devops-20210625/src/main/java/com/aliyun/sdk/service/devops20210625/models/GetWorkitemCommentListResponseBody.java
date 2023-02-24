@@ -131,6 +131,127 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
 
     } 
 
+    public static class User extends TeaModel {
+        @NameInMap("account")
+        private String account;
+
+        @NameInMap("avatar")
+        private String avatar;
+
+        @NameInMap("identifier")
+        private String identifier;
+
+        @NameInMap("nickName")
+        private String nickName;
+
+        @NameInMap("realName")
+        private String realName;
+
+        private User(Builder builder) {
+            this.account = builder.account;
+            this.avatar = builder.avatar;
+            this.identifier = builder.identifier;
+            this.nickName = builder.nickName;
+            this.realName = builder.realName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static User create() {
+            return builder().build();
+        }
+
+        /**
+         * @return account
+         */
+        public String getAccount() {
+            return this.account;
+        }
+
+        /**
+         * @return avatar
+         */
+        public String getAvatar() {
+            return this.avatar;
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        /**
+         * @return nickName
+         */
+        public String getNickName() {
+            return this.nickName;
+        }
+
+        /**
+         * @return realName
+         */
+        public String getRealName() {
+            return this.realName;
+        }
+
+        public static final class Builder {
+            private String account; 
+            private String avatar; 
+            private String identifier; 
+            private String nickName; 
+            private String realName; 
+
+            /**
+             * account.
+             */
+            public Builder account(String account) {
+                this.account = account;
+                return this;
+            }
+
+            /**
+             * avatar.
+             */
+            public Builder avatar(String avatar) {
+                this.avatar = avatar;
+                return this;
+            }
+
+            /**
+             * identifier.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * nickName.
+             */
+            public Builder nickName(String nickName) {
+                this.nickName = nickName;
+                return this;
+            }
+
+            /**
+             * realName.
+             */
+            public Builder realName(String realName) {
+                this.realName = realName;
+                return this;
+            }
+
+            public User build() {
+                return new User(this);
+            } 
+
+        } 
+
+    }
     public static class CommentList extends TeaModel {
         @NameInMap("content")
         private String content;
@@ -162,6 +283,9 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         @NameInMap("topTime")
         private Long topTime;
 
+        @NameInMap("user")
+        private User user;
+
         private CommentList(Builder builder) {
             this.content = builder.content;
             this.createTime = builder.createTime;
@@ -173,6 +297,7 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
             this.targetIdentifier = builder.targetIdentifier;
             this.targetType = builder.targetType;
             this.topTime = builder.topTime;
+            this.user = builder.user;
         }
 
         public static Builder builder() {
@@ -253,6 +378,13 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
             return this.topTime;
         }
 
+        /**
+         * @return user
+         */
+        public User getUser() {
+            return this.user;
+        }
+
         public static final class Builder {
             private String content; 
             private Long createTime; 
@@ -264,6 +396,7 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
             private String targetIdentifier; 
             private String targetType; 
             private Long topTime; 
+            private User user; 
 
             /**
              * content.
@@ -342,6 +475,14 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
              */
             public Builder topTime(Long topTime) {
                 this.topTime = topTime;
+                return this;
+            }
+
+            /**
+             * user.
+             */
+            public Builder user(User user) {
+                this.user = user;
                 return this;
             }
 

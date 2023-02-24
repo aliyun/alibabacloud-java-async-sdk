@@ -106,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteVariableGroupResponse> deleteVariableGroup(DeleteVariableGroupRequest request);
 
+    CompletableFuture<DeleteWorkitemResponse> deleteWorkitem(DeleteWorkitemRequest request);
+
     CompletableFuture<DeleteWorkitemAllCommentResponse> deleteWorkitemAllComment(DeleteWorkitemAllCommentRequest request);
 
     CompletableFuture<DeleteWorkitemCommentResponse> deleteWorkitemComment(DeleteWorkitemCommentRequest request);
@@ -323,5 +325,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateWorkItemResponse> updateWorkItem(UpdateWorkItemRequest request);
 
     CompletableFuture<UpdateWorkitemCommentResponse> updateWorkitemComment(UpdateWorkitemCommentRequest request);
+
+    CompletableFuture<UpdateWorkitemFieldResponse> updateWorkitemField(UpdateWorkitemFieldRequest request);
 
 }
