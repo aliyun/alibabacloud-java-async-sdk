@@ -50,7 +50,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
         private Tags tags; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tags of the CMK.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -122,7 +122,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * KeyId.
+             * The globally unique ID of the CMK.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -130,7 +130,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -138,7 +138,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

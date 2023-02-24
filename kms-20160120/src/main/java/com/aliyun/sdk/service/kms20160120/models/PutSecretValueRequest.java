@@ -113,7 +113,7 @@ public class PutSecretValueRequest extends Request {
         } 
 
         /**
-         * SecretData.
+         * The secret value. The value is encrypted and then stored in the new version.
          */
         public Builder secretData(String secretData) {
             this.putQueryParameter("SecretData", secretData);
@@ -122,7 +122,11 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * SecretDataType.
+         * The type of the secret value. Valid values:
+         * <p>
+         * 
+         * *   text: This is the default value.
+         * *   binary
          */
         public Builder secretDataType(String secretDataType) {
             this.putQueryParameter("SecretDataType", secretDataType);
@@ -131,7 +135,7 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -140,7 +144,7 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The new version of the secret value. Version numbers must be unique in each secret.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
@@ -149,7 +153,7 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * VersionStages.
+         * The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.
          */
         public Builder versionStages(String versionStages) {
             this.putQueryParameter("VersionStages", versionStages);

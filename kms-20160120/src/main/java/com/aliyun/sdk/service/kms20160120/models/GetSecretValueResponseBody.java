@@ -182,7 +182,14 @@ public class GetSecretValueResponseBody extends TeaModel {
         private VersionStages versionStages; 
 
         /**
-         * AutomaticRotation.
+         * Indicates whether automatic rotation is enabled. Valid values:
+         * <p>
+         * 
+         * *   Enabled: indicates that automatic rotation is enabled.
+         * *   Disabled: indicates that automatic rotation is disabled.
+         * *   Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.
+         * 
+         * >  This parameter is returned only for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.
          */
         public Builder automaticRotation(String automaticRotation) {
             this.automaticRotation = automaticRotation;
@@ -190,7 +197,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the secret was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -198,7 +205,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * ExtendedConfig.
+         * The extended configuration of the secret.
+         * <p>
+         * 
+         * >  This parameter is returned if you set the FetchExtendedConfig parameter to true. This parameter is returned only for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.
          */
         public Builder extendedConfig(String extendedConfig) {
             this.extendedConfig = extendedConfig;
@@ -206,7 +216,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * LastRotationDate.
+         * The time when the last rotation was performed.
+         * <p>
+         * 
+         * >  This parameter is returned if the secret was rotated.
          */
         public Builder lastRotationDate(String lastRotationDate) {
             this.lastRotationDate = lastRotationDate;
@@ -214,7 +227,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * NextRotationDate.
+         * The time when the next rotation will be performed.
+         * <p>
+         * 
+         * >  This parameter is returned if automatic rotation is enabled.
          */
         public Builder nextRotationDate(String nextRotationDate) {
             this.nextRotationDate = nextRotationDate;
@@ -222,7 +238,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +246,12 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * RotationInterval.
+         * The interval for automatic rotation.
+         * <p>
+         * 
+         * The value is in the `integer[unit]` format. The `unit` field has a fixed value of s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.
+         * 
+         * >  This parameter is returned if automatic rotation is enabled.
          */
         public Builder rotationInterval(String rotationInterval) {
             this.rotationInterval = rotationInterval;
@@ -238,7 +259,19 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * SecretData.
+         * The secret value. Secrets Manager decrypts the ciphertext of the secret value and returns the plaintext of the secret value in this parameter.
+         * <p>
+         * 
+         * *   For a generic secret, the secret value of the specified version is returned.
+         * 
+         * *   For a managed ApsaraDB RDS secret, the value is returned in the following format:`{"AccountName":"","AccountPassword":""}` .
+         * 
+         * *   For a managed RAM secret, the secret value is returned in the following format: `{"AccessKeyId":"Adfdsfd","AccessKeySecret":"fdsfdsf","GenerateTimestamp": "2016-03-25T10:42:40Z"}`.
+         * 
+         * *   For a managed ECS secret, the secret value is returned in one of the following formats:
+         * 
+         *     *   `{"UserName":"root","Password":"H5asdasdsads****"}`: The secret value is returned in this format if the ECS secret is a password.
+         *     *   `{"UserName":"root","PublicKey":"ssh-rsa ****mKwnVix9YTFY9Rs= imported-openssh-key","PrivateKey": "d6bee1cb-2e14-4277-ba6b-73786b21****"}`: The secret value is returned in this format is the ECS secret is a pair of SSH keys. The private key is in the Privacy Enhanced Mail (PEM) format.
          */
         public Builder secretData(String secretData) {
             this.secretData = secretData;
@@ -246,7 +279,11 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * SecretDataType.
+         * The type of the secret value. Valid values:
+         * <p>
+         * 
+         * *   text
+         * *   binary
          */
         public Builder secretDataType(String secretDataType) {
             this.secretDataType = secretDataType;
@@ -254,7 +291,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -262,7 +299,13 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * SecretType.
+         * The type of the secret. Valid values:
+         * <p>
+         * 
+         * *   Generic: indicates a generic secret.
+         * *   Rds: indicates a managed ApsaraDB RDS secret.
+         * *   RAMCredentials: indicates a managed RAM secret.
+         * *   ECS: indicates a managed ECS secret.
          */
         public Builder secretType(String secretType) {
             this.secretType = secretType;
@@ -270,7 +313,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * VersionId.
+         * The version number of the secret value.
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;
@@ -278,7 +321,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * VersionStages.
+         * The stage labels that mark the secret versions.
          */
         public Builder versionStages(VersionStages versionStages) {
             this.versionStages = versionStages;

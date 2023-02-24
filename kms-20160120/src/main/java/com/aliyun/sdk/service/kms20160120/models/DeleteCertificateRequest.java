@@ -55,7 +55,7 @@ public class DeleteCertificateRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Alibaba Cloud Certificate Manager.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);

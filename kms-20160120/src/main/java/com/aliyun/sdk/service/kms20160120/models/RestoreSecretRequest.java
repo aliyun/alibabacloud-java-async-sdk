@@ -55,7 +55,7 @@ public class RestoreSecretRequest extends Request {
         } 
 
         /**
-         * SecretName.
+         * The name of the secret you want to restore.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

@@ -50,7 +50,7 @@ public class RestoreSecretResponseBody extends TeaModel {
         private String secretName; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RestoreSecretResponseBody extends TeaModel {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;

@@ -74,7 +74,7 @@ public class RotateSecretResponseBody extends TeaModel {
         private String versionId; 
 
         /**
-         * Arn.
+         * The Alibaba Cloud Resource Name (ARN) of the secret.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -82,7 +82,7 @@ public class RotateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class RotateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -98,7 +98,7 @@ public class RotateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * VersionId.
+         * The version number of the secret after the secret is rotated.
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

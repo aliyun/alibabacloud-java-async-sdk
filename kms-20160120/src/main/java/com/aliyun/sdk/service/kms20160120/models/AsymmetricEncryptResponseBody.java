@@ -74,7 +74,7 @@ public class AsymmetricEncryptResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CiphertextBlob.
+         * The Base64-encoded ciphertext that was generated after encryption.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
@@ -82,7 +82,10 @@ public class AsymmetricEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
+         * <p>
+         * 
+         * >  If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -90,7 +93,7 @@ public class AsymmetricEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * KeyVersionId.
+         * The version ID of the CMK that is used to encrypt the plaintext.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -98,7 +101,7 @@ public class AsymmetricEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

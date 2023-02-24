@@ -97,7 +97,13 @@ public class GetSecretValueRequest extends Request {
         } 
 
         /**
-         * FetchExtendedConfig.
+         * Specifies whether to obtain the extended configuration of the secret. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false: This is the default value.
+         * 
+         * >  This parameter is ignored for a generic secret.
          */
         public Builder fetchExtendedConfig(Boolean fetchExtendedConfig) {
             this.putQueryParameter("FetchExtendedConfig", fetchExtendedConfig);
@@ -106,7 +112,7 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -115,7 +121,10 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.
+         * <p>
+         * 
+         * >  This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
@@ -124,7 +133,12 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * VersionStage.
+         * The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.
+         * <p>
+         * 
+         * Default value: ACSCurrent.
+         * 
+         * >  For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.
          */
         public Builder versionStage(String versionStage) {
             this.putQueryParameter("VersionStage", versionStage);

@@ -74,7 +74,10 @@ public class AsymmetricVerifyResponseBody extends TeaModel {
         private Boolean value; 
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
+         * <p>
+         * 
+         * >  If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -82,7 +85,7 @@ public class AsymmetricVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyVersionId.
+         * The version ID of the CMK that is used to encrypt the plaintext.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -90,7 +93,7 @@ public class AsymmetricVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class AsymmetricVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * Indicates whether the signature passed the verification.
          */
         public Builder value(Boolean value) {
             this.value = value;

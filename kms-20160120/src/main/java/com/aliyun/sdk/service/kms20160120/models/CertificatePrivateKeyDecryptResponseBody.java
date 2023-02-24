@@ -62,7 +62,7 @@ public class CertificatePrivateKeyDecryptResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertificateId.
+         * The ID of the certificate.
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -70,7 +70,10 @@ public class CertificatePrivateKeyDecryptResponseBody extends TeaModel {
         }
 
         /**
-         * Plaintext.
+         * The plaintext after data is decrypted.
+         * <p>
+         * 
+         * The value is encoded in Base64.
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -78,7 +81,7 @@ public class CertificatePrivateKeyDecryptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

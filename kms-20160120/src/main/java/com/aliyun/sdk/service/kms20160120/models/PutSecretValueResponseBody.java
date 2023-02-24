@@ -74,7 +74,7 @@ public class PutSecretValueResponseBody extends TeaModel {
         private VersionStages versionStages; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class PutSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -90,7 +90,7 @@ public class PutSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * VersionId.
+         * The new version of the secret value.
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;
@@ -98,7 +98,7 @@ public class PutSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * VersionStages.
+         * The stage labels that are used to mark the new version.
          */
         public Builder versionStages(VersionStages versionStages) {
             this.versionStages = versionStages;

@@ -70,7 +70,10 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias of the CMK.
+         * <p>
+         * 
+         * The alias must be 1 to 255 characters in length and must contain the prefix `alias/`. The alias cannot be prefixed with the reserved word `alias/acs`.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -79,7 +82,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);

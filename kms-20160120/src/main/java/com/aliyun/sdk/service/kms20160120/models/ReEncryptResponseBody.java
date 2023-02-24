@@ -74,7 +74,7 @@ public class ReEncryptResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CiphertextBlob.
+         * The ciphertext re-encrypted.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
@@ -82,7 +82,10 @@ public class ReEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK that is used to decrypt the original ciphertext.
+         * <p>
+         * 
+         * This parameter is the globally unique ID of the CMK.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -90,7 +93,7 @@ public class ReEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * KeyVersionId.
+         * The ID of the CMK version that is used to decrypt the original ciphertext.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -98,7 +101,7 @@ public class ReEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

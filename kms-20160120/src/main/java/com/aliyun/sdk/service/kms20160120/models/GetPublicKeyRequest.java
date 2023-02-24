@@ -70,7 +70,7 @@ public class GetPublicKeyRequest extends Request {
         } 
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see [Use aliases](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -79,7 +79,7 @@ public class GetPublicKeyRequest extends Request {
         }
 
         /**
-         * KeyVersionId.
+         * The globally unique ID of the CMK version.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);

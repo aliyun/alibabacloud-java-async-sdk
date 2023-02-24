@@ -86,7 +86,7 @@ public class ListSecretsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * SecretList.
+         * The list of secrets.
          */
         public Builder secretList(SecretList secretList) {
             this.secretList = secretList;
@@ -118,7 +118,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of returned secrets.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListSecretsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -320,7 +320,7 @@ public class ListSecretsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the secret was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -328,7 +328,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * PlannedDeleteTime.
+             * The time when the secret is scheduled to be deleted.
              */
             public Builder plannedDeleteTime(String plannedDeleteTime) {
                 this.plannedDeleteTime = plannedDeleteTime;
@@ -336,7 +336,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * SecretName.
+             * The secret name.
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -344,7 +344,11 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * SecretType.
+             * The type of the secret. Valid values:
+             * <p>
+             * 
+             * *   Generic: indicates a generic secret.
+             * *   Rds: indicates a managed ApsaraDB RDS secret.
              */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;
@@ -352,7 +356,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The resource tags of the secret.
+             * <p>
+             * 
+             * This parameter is not returned if you set the FetchTags parameter to false or do not specify the FetchTags parameter.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -360,7 +367,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the secret was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -98,7 +98,7 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
         } 
 
         /**
-         * EncryptionContext.
+         * A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](~~42975~~).
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
@@ -108,7 +108,7 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see Use aliases.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -117,7 +117,13 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
         }
 
         /**
-         * KeySpec.
+         * The length of the data key that you want to generate. Valid values:
+         * <p>
+         * 
+         * *   AES\_256: 256-bit symmetric key
+         * *   AES\_128: 128-bit symmetric key
+         * 
+         * >  We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If both of them are not specified, KMS generates a 256-bit data key. If both of them are specified, KMS ignores the KeySpec parameter.
          */
         public Builder keySpec(String keySpec) {
             this.putQueryParameter("KeySpec", keySpec);
@@ -126,7 +132,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
         }
 
         /**
-         * NumberOfBytes.
+         * The length of the data key that you want to generate.
+         * <p>
+         * 
+         * Valid values: 1 to 1024.
+         * 
+         * Unit: bytes.
          */
         public Builder numberOfBytes(Integer numberOfBytes) {
             this.putQueryParameter("NumberOfBytes", numberOfBytes);

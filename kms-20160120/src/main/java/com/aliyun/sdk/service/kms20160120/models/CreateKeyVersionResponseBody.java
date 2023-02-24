@@ -50,7 +50,7 @@ public class CreateKeyVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyVersion.
+         * The metadata of the version.
          */
         public Builder keyVersion(KeyVersion keyVersion) {
             this.keyVersion = keyVersion;
@@ -58,7 +58,7 @@ public class CreateKeyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class CreateKeyVersionResponseBody extends TeaModel {
             private String keyVersionId; 
 
             /**
-             * CreationDate.
+             * The date and time when the version was created. The time is displayed in UTC.
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -130,7 +130,7 @@ public class CreateKeyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The ID of the CMK. The ID must be globally unique.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -138,7 +138,7 @@ public class CreateKeyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * KeyVersionId.
+             * The ID of the version.
              */
             public Builder keyVersionId(String keyVersionId) {
                 this.keyVersionId = keyVersionId;

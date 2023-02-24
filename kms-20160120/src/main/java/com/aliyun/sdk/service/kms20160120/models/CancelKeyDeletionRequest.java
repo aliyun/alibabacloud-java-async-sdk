@@ -55,7 +55,7 @@ public class CancelKeyDeletionRequest extends Request {
         } 
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);

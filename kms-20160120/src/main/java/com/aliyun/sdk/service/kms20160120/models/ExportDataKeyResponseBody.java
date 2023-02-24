@@ -74,7 +74,7 @@ public class ExportDataKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExportedDataKey.
+         * The data key encrypted by using the public key and then exported.
          */
         public Builder exportedDataKey(String exportedDataKey) {
             this.exportedDataKey = exportedDataKey;
@@ -82,7 +82,10 @@ public class ExportDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK that is used to decrypt the specified ciphertext of the data key.
+         * <p>
+         * 
+         * This parameter is the globally unique ID of the CMK.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -90,7 +93,7 @@ public class ExportDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyVersionId.
+         * The ID of the CMK version that is used to decrypt the specified ciphertext of the data key.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -98,7 +101,7 @@ public class ExportDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

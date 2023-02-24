@@ -86,7 +86,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * KeyVersions.
+         * An array that consists of key versions.
          */
         public Builder keyVersions(KeyVersions keyVersions) {
             this.keyVersions = keyVersions;
@@ -94,7 +94,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned key versions.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             private String keyVersionId; 
 
             /**
-             * CreationDate.
+             * The date and time when the CMK version was created. The time is displayed in UTC.
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -190,7 +190,10 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The globally unique ID of the CMK.
+             * <p>
+             * 
+             * >  If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -198,7 +201,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyVersionId.
+             * The globally unique ID of the CMK version.
              */
             public Builder keyVersionId(String keyVersionId) {
                 this.keyVersionId = keyVersionId;

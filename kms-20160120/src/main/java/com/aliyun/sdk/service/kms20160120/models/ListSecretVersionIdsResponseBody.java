@@ -98,7 +98,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         private VersionIds versionIds; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -130,7 +130,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned on the current page.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +138,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * VersionIds.
+         * The list of secret versions.
          */
         public Builder versionIds(VersionIds versionIds) {
             this.versionIds = versionIds;
@@ -243,7 +243,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             private VersionStages versionStages; 
 
             /**
-             * CreateTime.
+             * The time when the secret version was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -251,7 +251,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * The version number.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -259,7 +259,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionStages.
+             * The stage labels that mark the secret version.
              */
             public Builder versionStages(VersionStages versionStages) {
                 this.versionStages = versionStages;
@@ -300,7 +300,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             private java.util.List < VersionId> versionId; 
 
             /**
-             * VersionId.
+             * The version number.
              */
             public Builder versionId(java.util.List < VersionId> versionId) {
                 this.versionId = versionId;

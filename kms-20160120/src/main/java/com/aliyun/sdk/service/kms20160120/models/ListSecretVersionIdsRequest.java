@@ -97,7 +97,15 @@ public class ListSecretVersionIdsRequest extends Request {
         } 
 
         /**
-         * IncludeDeprecated.
+         * Specifies whether to return deprecated secret versions.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   false: no
+         * *   true: yes
+         * 
+         * Default value: false.
          */
         public Builder includeDeprecated(String includeDeprecated) {
             this.putQueryParameter("IncludeDeprecated", includeDeprecated);
@@ -106,7 +114,7 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +123,7 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +132,7 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

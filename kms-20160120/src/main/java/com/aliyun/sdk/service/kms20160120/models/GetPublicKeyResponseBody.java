@@ -74,7 +74,10 @@ public class GetPublicKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK.
+         * <p>
+         * 
+         * >  If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -82,7 +85,7 @@ public class GetPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyVersionId.
+         * The version of the CMK that is used to encrypt the plaintext.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -90,7 +93,7 @@ public class GetPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * PublicKey.
+         * The public key returned in the PEM format.
          */
         public Builder publicKey(String publicKey) {
             this.publicKey = publicKey;
@@ -98,7 +101,7 @@ public class GetPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

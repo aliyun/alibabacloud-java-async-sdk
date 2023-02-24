@@ -85,7 +85,16 @@ public class CertificatePrivateKeyDecryptRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The encryption algorithm. Valid values:
+         * <p>
+         * 
+         * *   RSAES_OAEP_SHA\_1
+         * 
+         * *   RSAES_OAEP_SHA\_256
+         * 
+         * *   SM2PKE
+         * 
+         * > The SM2PKE encryption algorithm is supported only in regions in mainland China. In these regions, managed hardware security modules (HSMs) are used. For more information, see [Managed HSM overview](~~125803~~).
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -94,7 +103,7 @@ public class CertificatePrivateKeyDecryptRequest extends Request {
         }
 
         /**
-         * CertificateId.
+         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -103,7 +112,10 @@ public class CertificatePrivateKeyDecryptRequest extends Request {
         }
 
         /**
-         * CiphertextBlob.
+         * The data that you want to decrypt.
+         * <p>
+         * 
+         * The value is encoded in Base64.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);

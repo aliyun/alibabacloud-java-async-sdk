@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateKeyRequest extends Request {
     @Query
+    @NameInMap("DKMSInstanceId")
+    private String DKMSInstanceId;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -42,6 +46,7 @@ public class CreateKeyRequest extends Request {
 
     private CreateKeyRequest(Builder builder) {
         super(builder);
+        this.DKMSInstanceId = builder.DKMSInstanceId;
         this.description = builder.description;
         this.enableAutomaticRotation = builder.enableAutomaticRotation;
         this.keySpec = builder.keySpec;
@@ -62,6 +67,13 @@ public class CreateKeyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return DKMSInstanceId
+     */
+    public String getDKMSInstanceId() {
+        return this.DKMSInstanceId;
     }
 
     /**
@@ -114,6 +126,7 @@ public class CreateKeyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateKeyRequest, Builder> {
+        private String DKMSInstanceId; 
         private String description; 
         private Boolean enableAutomaticRotation; 
         private String keySpec; 
@@ -128,6 +141,7 @@ public class CreateKeyRequest extends Request {
 
         private Builder(CreateKeyRequest request) {
             super(request);
+            this.DKMSInstanceId = request.DKMSInstanceId;
             this.description = request.description;
             this.enableAutomaticRotation = request.enableAutomaticRotation;
             this.keySpec = request.keySpec;
@@ -138,7 +152,19 @@ public class CreateKeyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The ID of the dedicated KMS instance.
+         */
+        public Builder DKMSInstanceId(String DKMSInstanceId) {
+            this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);
+            this.DKMSInstanceId = DKMSInstanceId;
+            return this;
+        }
+
+        /**
+         * The description of the CMK.
+         * <p>
+         * 
+         * The description can be 0 to 8,192 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -147,7 +173,15 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * EnableAutomaticRotation.
+         * Specifies whether to enable automatic key rotation. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
+         * 
+         * >  If the Origin parameter is set to EXTERNAL or the KeySpec parameter is set to an asymmetric CMK type, automatic key rotation is not supported.
          */
         public Builder enableAutomaticRotation(Boolean enableAutomaticRotation) {
             this.putQueryParameter("EnableAutomaticRotation", enableAutomaticRotation);
@@ -156,7 +190,22 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * KeySpec.
+         * The type of the CMK. Valid values:
+         * <p>
+         * 
+         * *   Aliyun_AES\_256
+         * *   Aliyun_AES\_128
+         * *   Aliyun_AES\_192
+         * *   Aliyun_SM4
+         * *   RSA\_2048
+         * *   RSA\_3072
+         * *   EC_P256
+         * *   EC_P256K
+         * *   EC_SM2
+         * 
+         * > 
+         * *   The default type of the CMK is Aliyun_AES\_256.
+         * *   Only Dedicated KMS supports Aliyun_AES\_128 and Aliyun_AES\_192.
          */
         public Builder keySpec(String keySpec) {
             this.putQueryParameter("KeySpec", keySpec);
@@ -165,7 +214,13 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * KeyUsage.
+         * The usage of the CMK. Valid values:
+         * <p>
+         * 
+         * *   ENCRYPT/DECRYPT: encrypts or decrypts data.
+         * *   SIGN/VERIFY: generates or verifies a digital signature.
+         * 
+         * If the CMK supports signature verification, the default value is SIGN/VERIFY. If the CMK does not support signature verification, the default value is ENCRYPT/DECRYPT.
          */
         public Builder keyUsage(String keyUsage) {
             this.putQueryParameter("KeyUsage", keyUsage);
@@ -174,7 +229,16 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * Origin.
+         * The source of key material. Valid values:
+         * <p>
+         * 
+         * *   Aliyun_KMS (default value)
+         * *   EXTERNAL
+         * 
+         * > 
+         * *   The value of this parameter is case-sensitive.
+         * *   If you set the KeySpec parameter to an asymmetric CMK type, you are not allowed to set the Origin parameter to EXTERNAL.
+         * *   If you set the Origin parameter to EXTERNAL, you must import key material. For more information, see [Import key material](~~68523~~).
          */
         public Builder origin(String origin) {
             this.putQueryParameter("Origin", origin);
@@ -183,7 +247,17 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * ProtectionLevel.
+         * The protection level of the CMK. Valid values:
+         * <p>
+         * 
+         * *   SOFTWARE
+         * *   HSM
+         * 
+         * Default value: SOFTWARE.
+         * 
+         * > 
+         * *   The value of this parameter is case-sensitive.
+         * *   Assume that you set this parameter to HSM. If you set the Origin parameter to Aliyun_KMS, the CMK is created in a managed HSM. If you set the Origin parameter to EXTERNAL, you can import an external key into the managed HSM.
          */
         public Builder protectionLevel(String protectionLevel) {
             this.putQueryParameter("ProtectionLevel", protectionLevel);
@@ -192,7 +266,10 @@ public class CreateKeyRequest extends Request {
         }
 
         /**
-         * RotationInterval.
+         * The period of automatic key rotation. Specify the value in the integer\[unit] format. Unit: d (day), h (hour), m (minute), or s (second). For example, you can use either 7d or 604800s to specify a seven-day period. The period can range from 7 days to 730 days.
+         * <p>
+         * 
+         * >  If you set the EnableAutomaticRotation parameter to true, you must also specify this parameter. If you set the EnableAutomaticRotation parameter to false, you can leave this parameter unspecified.
          */
         public Builder rotationInterval(String rotationInterval) {
             this.putQueryParameter("RotationInterval", rotationInterval);

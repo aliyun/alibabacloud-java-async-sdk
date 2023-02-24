@@ -62,7 +62,7 @@ public class CertificatePrivateKeySignResponseBody extends TeaModel {
         private String signatureValue; 
 
         /**
-         * CertificateId.
+         * The ID of the certificate.
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -70,7 +70,7 @@ public class CertificatePrivateKeySignResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,10 @@ public class CertificatePrivateKeySignResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureValue.
+         * The signature value.
+         * <p>
+         * 
+         * The value is encoded in Base64.
          */
         public Builder signatureValue(String signatureValue) {
             this.signatureValue = signatureValue;

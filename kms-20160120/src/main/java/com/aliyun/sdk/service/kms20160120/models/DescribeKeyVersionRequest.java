@@ -70,7 +70,10 @@ public class DescribeKeyVersionRequest extends Request {
         } 
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK.
+         * <p>
+         * 
+         * You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -79,7 +82,10 @@ public class DescribeKeyVersionRequest extends Request {
         }
 
         /**
-         * KeyVersionId.
+         * The globally unique ID of the CMK version.
+         * <p>
+         * 
+         * You can call the [ListKeyVersions](~~133966~~) operation to query the versions of the CMK.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);

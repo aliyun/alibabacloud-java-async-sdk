@@ -55,7 +55,7 @@ public class ListResourceTagsRequest extends Request {
         } 
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);

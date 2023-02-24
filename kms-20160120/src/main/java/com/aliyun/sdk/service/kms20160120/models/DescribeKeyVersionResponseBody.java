@@ -50,7 +50,7 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyVersion.
+         * The metadata of the CMK version.
          */
         public Builder keyVersion(KeyVersion keyVersion) {
             this.keyVersion = keyVersion;
@@ -58,7 +58,7 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
             private String keyVersionId; 
 
             /**
-             * CreationDate.
+             * The date and time when the CMK version was created. The time is displayed in UTC.
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -130,7 +130,10 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The globally unique ID of the CMK.
+             * <p>
+             * 
+             * >  If you set the KeyId parameter in the request to an alias of the CMK, the ID of the CMK to which the alias is bound is returned.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -138,7 +141,7 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * KeyVersionId.
+             * The globally unique ID of the CMK version.
              */
             public Builder keyVersionId(String keyVersionId) {
                 this.keyVersionId = keyVersionId;

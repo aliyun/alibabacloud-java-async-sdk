@@ -98,7 +98,10 @@ public class GenerateDataKeyRequest extends Request {
         } 
 
         /**
-         * EncryptionContext.
+         * The JSON string that consists of key-value pairs.
+         * <p>
+         * 
+         * If you specify this parameter, an equivalent value is required when you call the [Decrypt](~~28950~~) operation. For more information, see [EncryptionContext](~~42975~~).
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
@@ -108,7 +111,10 @@ public class GenerateDataKeyRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
+         * <p>
+         * 
+         * You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -117,7 +123,13 @@ public class GenerateDataKeyRequest extends Request {
         }
 
         /**
-         * KeySpec.
+         * The type of the data key that you want to generate. Valid values:
+         * <p>
+         * 
+         * *   AES\_256: a 256-bit symmetric key
+         * *   AES\_128: a 128-bit symmetric key
+         * 
+         * >  We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If none of the parameters are specified, KMS generates a 256-bit data key. If both parameters are specified, KMS ignores the KeySpec parameter.
          */
         public Builder keySpec(String keySpec) {
             this.putQueryParameter("KeySpec", keySpec);
@@ -126,7 +138,15 @@ public class GenerateDataKeyRequest extends Request {
         }
 
         /**
-         * NumberOfBytes.
+         * The length of the data key that you want to generate. Unit: bytes.
+         * <p>
+         * 
+         * Valid values: 1 to 1024.
+         * 
+         * Default value:
+         * 
+         * *   If the KeySpec parameter is set to AES\_256, set the value of the NumberOfBytes parameter to 32.
+         * *   If the KeySpec parameter is set to AES\_128, set the value of the NumberOfBytes parameter to 16.
          */
         public Builder numberOfBytes(Integer numberOfBytes) {
             this.putQueryParameter("NumberOfBytes", numberOfBytes);

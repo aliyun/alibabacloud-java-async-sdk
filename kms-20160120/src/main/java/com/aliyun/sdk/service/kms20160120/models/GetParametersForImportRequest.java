@@ -85,7 +85,10 @@ public class GetParametersForImportRequest extends Request {
         } 
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK.
+         * <p>
+         * 
+         * >  You can import key material only for CMKs whose Origin parameter is set to EXTERNAL.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -94,7 +97,7 @@ public class GetParametersForImportRequest extends Request {
         }
 
         /**
-         * WrappingAlgorithm.
+         * The algorithm that is used to encrypt key material.
          */
         public Builder wrappingAlgorithm(String wrappingAlgorithm) {
             this.putQueryParameter("WrappingAlgorithm", wrappingAlgorithm);
@@ -103,7 +106,7 @@ public class GetParametersForImportRequest extends Request {
         }
 
         /**
-         * WrappingKeySpec.
+         * The type of the public key that is used to encrypt key material.
          */
         public Builder wrappingKeySpec(String wrappingKeySpec) {
             this.putQueryParameter("WrappingKeySpec", wrappingKeySpec);

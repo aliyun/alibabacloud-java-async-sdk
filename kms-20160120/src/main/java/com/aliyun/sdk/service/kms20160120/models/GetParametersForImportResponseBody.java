@@ -86,7 +86,10 @@ public class GetParametersForImportResponseBody extends TeaModel {
         private String tokenExpireTime; 
 
         /**
-         * ImportToken.
+         * The token that is used to import key material.
+         * <p>
+         * 
+         * The token is valid for 24 hours. The value of this parameter is required when you call the [ImportKeyMaterial](~~68622~~) operation.
          */
         public Builder importToken(String importToken) {
             this.importToken = importToken;
@@ -94,7 +97,10 @@ public class GetParametersForImportResponseBody extends TeaModel {
         }
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK.
+         * <p>
+         * 
+         * The value of this parameter is required when you call the [ImportKeyMaterial](~~68622~~) operation.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -102,7 +108,10 @@ public class GetParametersForImportResponseBody extends TeaModel {
         }
 
         /**
-         * PublicKey.
+         * The public key that is used to encrypt key material.
+         * <p>
+         * 
+         * The public key is Base64-encoded.
          */
         public Builder publicKey(String publicKey) {
             this.publicKey = publicKey;
@@ -110,7 +119,7 @@ public class GetParametersForImportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,7 @@ public class GetParametersForImportResponseBody extends TeaModel {
         }
 
         /**
-         * TokenExpireTime.
+         * The time when the token expires.
          */
         public Builder tokenExpireTime(String tokenExpireTime) {
             this.tokenExpireTime = tokenExpireTime;

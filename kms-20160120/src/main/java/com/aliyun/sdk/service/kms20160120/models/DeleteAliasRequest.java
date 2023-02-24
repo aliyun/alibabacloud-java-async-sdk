@@ -55,7 +55,10 @@ public class DeleteAliasRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias that you want to delete.
+         * <p>
+         * 
+         * The value must be 1 to 255 characters in length and must include the alias/ prefix.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);

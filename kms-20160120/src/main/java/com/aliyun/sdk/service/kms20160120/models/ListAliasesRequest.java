@@ -68,7 +68,12 @@ public class ListAliasesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -77,7 +82,12 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 0 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -85,7 +85,16 @@ public class CertificatePublicKeyEncryptRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The encryption algorithm. Valid values:
+         * <p>
+         * 
+         * *   RSAES_OAEP_SHA\_1
+         * 
+         * *   RSAES_OAEP_SHA\_256
+         * 
+         * *   SM2PKE
+         * 
+         * >The SM2PKE encryption algorithm is supported only in regions in mainland China. In these regions, managed hardware security modules (HSMs) are used. For more information, see [Managed HSM overview](~~125803~~).
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -94,7 +103,7 @@ public class CertificatePublicKeyEncryptRequest extends Request {
         }
 
         /**
-         * CertificateId.
+         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -103,7 +112,18 @@ public class CertificatePublicKeyEncryptRequest extends Request {
         }
 
         /**
-         * Plaintext.
+         * The data that you want to encrypt.
+         * <p>
+         * 
+         * The value is encoded in Base64. For example, if the hexadecimal data that you want to encrypt is `[0x31, 0x32, 0x33, 0x34]`, the Base64-encoded data is `MTIzNA==`.
+         * 
+         * The size of data that can be encrypted varies based on the encryption algorithm that you use:
+         * 
+         * *   RSAES_OAEP_SHA\_1: 214 bytes
+         * *   RSAES_OAEP_SHA\_256: 190 bytes
+         * *   SM2PKE: 6,047 bytes
+         * 
+         * If the size of data that you want to encrypt exceeds the preceding limits, you can call the [GenerateDataKey](~~28948~~) operation to generate a data key to encrypt the data. Then, call the CertificatePublicKeyEncrypt operation to encrypt the data key.
          */
         public Builder plaintext(String plaintext) {
             this.putQueryParameter("Plaintext", plaintext);

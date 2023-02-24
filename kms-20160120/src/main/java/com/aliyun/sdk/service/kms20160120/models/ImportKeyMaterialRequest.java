@@ -100,7 +100,7 @@ public class ImportKeyMaterialRequest extends Request {
         } 
 
         /**
-         * EncryptedKeyMaterial.
+         * Use** GetParametersForImport** the Returned public key and the base64-encoded key material.
          */
         public Builder encryptedKeyMaterial(String encryptedKeyMaterial) {
             this.putQueryParameter("EncryptedKeyMaterial", encryptedKeyMaterial);
@@ -109,7 +109,7 @@ public class ImportKeyMaterialRequest extends Request {
         }
 
         /**
-         * ImportToken.
+         * By calling** GetParametersForImport** the import token.
          */
         public Builder importToken(String importToken) {
             this.putQueryParameter("ImportToken", importToken);
@@ -118,7 +118,7 @@ public class ImportKeyMaterialRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK to be imported.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -127,7 +127,12 @@ public class ImportKeyMaterialRequest extends Request {
         }
 
         /**
-         * KeyMaterialExpireUnix.
+         * The time when the key material expires.
+         * <p>
+         * 
+         * If this parameter is not specified or set this parameter to 0, the key material does not expire.
+         * 
+         * >  The value cannot be earlier than the time when the API is called (based on the server time).
          */
         public Builder keyMaterialExpireUnix(Long keyMaterialExpireUnix) {
             this.putQueryParameter("KeyMaterialExpireUnix", keyMaterialExpireUnix);

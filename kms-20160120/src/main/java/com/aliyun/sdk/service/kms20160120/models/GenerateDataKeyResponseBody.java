@@ -86,7 +86,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CiphertextBlob.
+         * The ciphertext of the data key that is encrypted by using the primary version of the specified CMK.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
@@ -94,7 +94,10 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
+         * <p>
+         * 
+         * >  If you set the KeyId parameter in the request to an alias of the CMK, the ID of the CMK to which the alias is bound is returned.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -102,7 +105,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyVersionId.
+         * The ID of the CMK version. The ID must be globally unique.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -110,7 +113,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Plaintext.
+         * The Base64 encoded plaintext of the data key.
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -118,7 +121,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

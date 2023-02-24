@@ -138,7 +138,14 @@ public class GetRandomPasswordRequest extends Request {
         } 
 
         /**
-         * ExcludeCharacters.
+         * The characters that are not included in the password to be generated.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * ` Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \"#$%&\"()*+,-. /:;<=>? @[\] your_project_id} ~  `.
+         * 
+         * This parameter is empty by default.
          */
         public Builder excludeCharacters(String excludeCharacters) {
             this.putQueryParameter("ExcludeCharacters", excludeCharacters);
@@ -147,7 +154,13 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * ExcludeLowercase.
+         * Specifies whether to exclude lowercase letters.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder excludeLowercase(String excludeLowercase) {
             this.putQueryParameter("ExcludeLowercase", excludeLowercase);
@@ -156,7 +169,13 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * ExcludeNumbers.
+         * Specifies whether to exclude digits.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder excludeNumbers(String excludeNumbers) {
             this.putQueryParameter("ExcludeNumbers", excludeNumbers);
@@ -165,7 +184,13 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * ExcludePunctuation.
+         * Specifies whether to exclude special characters.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder excludePunctuation(String excludePunctuation) {
             this.putQueryParameter("ExcludePunctuation", excludePunctuation);
@@ -174,7 +199,13 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * ExcludeUppercase.
+         * Specifies whether to exclude uppercase letters.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder excludeUppercase(String excludeUppercase) {
             this.putQueryParameter("ExcludeUppercase", excludeUppercase);
@@ -183,7 +214,12 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * PasswordLength.
+         * The number of bytes that the password to be generated contains.
+         * <p>
+         * 
+         * Valid values: 8 to 128.
+         * 
+         * Default value: 32
          */
         public Builder passwordLength(String passwordLength) {
             this.putQueryParameter("PasswordLength", passwordLength);
@@ -192,7 +228,13 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * RequireEachIncludedType.
+         * Specifies whether to include all the preceding character types.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder requireEachIncludedType(String requireEachIncludedType) {
             this.putQueryParameter("RequireEachIncludedType", requireEachIncludedType);

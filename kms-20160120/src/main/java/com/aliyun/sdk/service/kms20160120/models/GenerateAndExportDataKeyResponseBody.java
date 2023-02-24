@@ -86,7 +86,7 @@ public class GenerateAndExportDataKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CiphertextBlob.
+         * The ciphertext of the data key encrypted by using the primary CMK version.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
@@ -94,7 +94,7 @@ public class GenerateAndExportDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ExportedDataKey.
+         * The data key encrypted by using the public key and then exported.
          */
         public Builder exportedDataKey(String exportedDataKey) {
             this.exportedDataKey = exportedDataKey;
@@ -102,7 +102,10 @@ public class GenerateAndExportDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK.
+         * <p>
+         * 
+         * >  If you set the KeyId parameter to an alias, the ID of the CMK to which the alias is bound is returned.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -110,7 +113,7 @@ public class GenerateAndExportDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyVersionId.
+         * The ID of the CMK version that is used to encrypt the plaintext. It is the primary version of the CMK.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -118,7 +121,7 @@ public class GenerateAndExportDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

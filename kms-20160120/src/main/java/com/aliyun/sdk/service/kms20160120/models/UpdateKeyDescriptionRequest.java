@@ -70,7 +70,7 @@ public class UpdateKeyDescriptionRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the CMK. This description includes the purpose of the CMK, such as the types of data that you want to protect and applications that can use the CMK.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -79,7 +79,7 @@ public class UpdateKeyDescriptionRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);

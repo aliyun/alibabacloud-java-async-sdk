@@ -92,7 +92,7 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the secret.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -101,7 +101,7 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -143,7 +143,12 @@ public class UpdateSecretRequest extends Request {
             private java.util.Map < String, ? > customData; 
 
             /**
-             * CustomData.
+             * The custom data in the extended configuration of the secret.
+             * <p>
+             * 
+             * > 
+             * *   If this parameter is specified, the existing extended configuration of the secret is updated.
+             * *   This parameter is unavailable for generic secrets.
              */
             public Builder customData(java.util.Map < String, ? > customData) {
                 this.customData = customData;

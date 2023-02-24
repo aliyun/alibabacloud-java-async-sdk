@@ -84,7 +84,7 @@ public class EncryptRequest extends Request {
         } 
 
         /**
-         * EncryptionContext.
+         * A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](~~42975~~).
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
@@ -94,7 +94,7 @@ public class EncryptRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see [Use aliases](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -103,7 +103,7 @@ public class EncryptRequest extends Request {
         }
 
         /**
-         * Plaintext.
+         * The plaintext to be encrypted. The plaintext must be Base64 encoded.
          */
         public Builder plaintext(String plaintext) {
             this.putQueryParameter("Plaintext", plaintext);

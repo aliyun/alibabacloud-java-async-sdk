@@ -100,7 +100,7 @@ public class AsymmetricDecryptRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The decryption algorithm.
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -109,7 +109,12 @@ public class AsymmetricDecryptRequest extends Request {
         }
 
         /**
-         * CiphertextBlob.
+         * The ciphertext that you want to decrypt.
+         * <p>
+         * 
+         * > 
+         * *   The value is encoded in Base64.
+         * *   You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
@@ -118,7 +123,10 @@ public class AsymmetricDecryptRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the customer master key (CMK). The ID must be globally unique.
+         * <p>
+         * 
+         * >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -127,7 +135,7 @@ public class AsymmetricDecryptRequest extends Request {
         }
 
         /**
-         * KeyVersionId.
+         * The version ID of the CMK. The ID must be globally unique.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);

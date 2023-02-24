@@ -86,7 +86,7 @@ public class GetCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Certificate.
+         * The certificate in the Privacy Enhanced Mail (PEM) format.
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -94,7 +94,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateChain.
+         * The certificate chain in the PEM format.
          */
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = certificateChain;
@@ -102,7 +102,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateId.
+         * The ID of the certificate.
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -110,7 +110,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Csr.
+         * The CSR in the PEM format.
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -118,7 +118,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

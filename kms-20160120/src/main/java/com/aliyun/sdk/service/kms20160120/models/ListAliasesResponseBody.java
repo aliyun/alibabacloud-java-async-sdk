@@ -86,7 +86,7 @@ public class ListAliasesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Aliases.
+         * The alias of the user.
          */
         public Builder aliases(Aliases aliases) {
             this.aliases = aliases;
@@ -94,7 +94,7 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned aliases.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class ListAliasesResponseBody extends TeaModel {
             private String keyId; 
 
             /**
-             * AliasArn.
+             * The Alibaba Cloud Resource Name (ARN) of the alias.
              */
             public Builder aliasArn(String aliasArn) {
                 this.aliasArn = aliasArn;
@@ -190,7 +190,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * AliasName.
+             * The ID of the alias.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -198,7 +198,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The CMK to which the alias belongs.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;

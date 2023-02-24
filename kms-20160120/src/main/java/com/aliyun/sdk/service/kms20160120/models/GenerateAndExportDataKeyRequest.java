@@ -143,7 +143,7 @@ public class GenerateAndExportDataKeyRequest extends Request {
         } 
 
         /**
-         * EncryptionContext.
+         * A JSON string of key-value pairs. If you specify this parameter here, an equivalent value is required when you decrypt or re-encrypt the data key. For more information, see [EncryptionContext](~~42975~~).
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
@@ -153,7 +153,7 @@ public class GenerateAndExportDataKeyRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see [Use aliases](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -162,7 +162,13 @@ public class GenerateAndExportDataKeyRequest extends Request {
         }
 
         /**
-         * KeySpec.
+         * The length of the data key that you want to generate. Valid values:
+         * <p>
+         * 
+         * *   AES\_256: a 256-bit symmetric key
+         * *   AES\_128: a 128-bit symmetric key
+         * 
+         * >  We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If both parameters are not specified, KMS generates a 256-bit data key. If both parameters are specified, KMS ignores the KeySpec parameter.
          */
         public Builder keySpec(String keySpec) {
             this.putQueryParameter("KeySpec", keySpec);
@@ -171,7 +177,12 @@ public class GenerateAndExportDataKeyRequest extends Request {
         }
 
         /**
-         * NumberOfBytes.
+         * The length of the data key that you want to generate.
+         * <p>
+         * 
+         * Valid values: 1 to 1024.
+         * 
+         * Unit: bytes.
          */
         public Builder numberOfBytes(Integer numberOfBytes) {
             this.putQueryParameter("NumberOfBytes", numberOfBytes);
@@ -180,7 +191,7 @@ public class GenerateAndExportDataKeyRequest extends Request {
         }
 
         /**
-         * PublicKeyBlob.
+         * A Base64-encoded public key.
          */
         public Builder publicKeyBlob(String publicKeyBlob) {
             this.putQueryParameter("PublicKeyBlob", publicKeyBlob);
@@ -189,7 +200,14 @@ public class GenerateAndExportDataKeyRequest extends Request {
         }
 
         /**
-         * WrappingAlgorithm.
+         * The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see [AsymmetricDecrypt](~~148130~~).
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   RSAES_OAEP_SHA\_256
+         * *   RSAES_OAEP_SHA\_1
+         * *   SM2PKE
          */
         public Builder wrappingAlgorithm(String wrappingAlgorithm) {
             this.putQueryParameter("WrappingAlgorithm", wrappingAlgorithm);
@@ -198,7 +216,13 @@ public class GenerateAndExportDataKeyRequest extends Request {
         }
 
         /**
-         * WrappingKeySpec.
+         * The key type of the public key specified by PublicKeyBlob. For more information about key types, see [Introduction to asymmetric keys](~~148147~~).
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   RSA\_2048
+         * *   EC_SM2
          */
         public Builder wrappingKeySpec(String wrappingKeySpec) {
             this.putQueryParameter("WrappingKeySpec", wrappingKeySpec);

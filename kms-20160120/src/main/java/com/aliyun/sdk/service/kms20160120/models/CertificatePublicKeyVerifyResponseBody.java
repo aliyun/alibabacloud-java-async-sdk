@@ -62,7 +62,7 @@ public class CertificatePublicKeyVerifyResponseBody extends TeaModel {
         private Boolean signatureValid; 
 
         /**
-         * CertificateId.
+         * The ID of the certificate.
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -70,7 +70,7 @@ public class CertificatePublicKeyVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class CertificatePublicKeyVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureValid.
+         * The verification result. Valid values:
+         * <p>
+         * 
+         * *   true: The signature is valid.
+         * *   false: The signature is invalid.
          */
         public Builder signatureValid(Boolean signatureValid) {
             this.signatureValid = signatureValid;

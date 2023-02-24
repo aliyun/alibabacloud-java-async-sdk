@@ -83,7 +83,7 @@ public class ListAliasesByKeyIdRequest extends Request {
         } 
 
         /**
-         * KeyId.
+         * The globally unique ID of the CMK.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -92,7 +92,12 @@ public class ListAliasesByKeyIdRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Valid values: an integer that is greater than 0.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -101,7 +106,12 @@ public class ListAliasesByKeyIdRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 0 to 101.
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

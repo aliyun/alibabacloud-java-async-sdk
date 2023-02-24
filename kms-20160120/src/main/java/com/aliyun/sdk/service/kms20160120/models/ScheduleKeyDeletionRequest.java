@@ -19,6 +19,7 @@ public class ScheduleKeyDeletionRequest extends Request {
 
     @Query
     @NameInMap("PendingWindowInDays")
+    @Validation(required = true, maximum = 366, minimum = 7)
     private Integer pendingWindowInDays;
 
     private ScheduleKeyDeletionRequest(Builder builder) {
@@ -69,7 +70,7 @@ public class ScheduleKeyDeletionRequest extends Request {
         } 
 
         /**
-         * KeyId.
+         * The ID of the customer master key (CMK). The ID must be globally unique.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -78,7 +79,12 @@ public class ScheduleKeyDeletionRequest extends Request {
         }
 
         /**
-         * PendingWindowInDays.
+         * The scheduled period after which the CMK is deleted. During this period, the CMK is in the PendingDeletion state. After this period ends, you cannot cancel the key deletion task.
+         * <p>
+         * 
+         * Valid values: 7 to 366.
+         * 
+         * Unit: days.
          */
         public Builder pendingWindowInDays(Integer pendingWindowInDays) {
             this.putQueryParameter("PendingWindowInDays", pendingWindowInDays);

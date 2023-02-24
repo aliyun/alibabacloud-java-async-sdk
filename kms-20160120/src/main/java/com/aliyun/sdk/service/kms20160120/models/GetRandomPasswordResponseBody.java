@@ -50,7 +50,7 @@ public class GetRandomPasswordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RandomPassword.
+         * The generated random password.
          */
         public Builder randomPassword(String randomPassword) {
             this.randomPassword = randomPassword;
@@ -58,7 +58,7 @@ public class GetRandomPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

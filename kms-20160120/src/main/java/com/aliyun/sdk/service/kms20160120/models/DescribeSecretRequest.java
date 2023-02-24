@@ -69,7 +69,11 @@ public class DescribeSecretRequest extends Request {
         } 
 
         /**
-         * FetchTags.
+         * Specifies whether to return the resource tags of the secret. Valid values:
+         * <p>
+         * 
+         * *   true: The resource tags are returned.
+         * *   false: The resource tags are not returned. This is the default value.
          */
         public Builder fetchTags(String fetchTags) {
             this.putQueryParameter("FetchTags", fetchTags);
@@ -78,7 +82,7 @@ public class DescribeSecretRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

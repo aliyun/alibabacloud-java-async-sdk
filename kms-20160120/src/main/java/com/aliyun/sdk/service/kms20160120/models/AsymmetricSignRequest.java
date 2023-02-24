@@ -100,7 +100,7 @@ public class AsymmetricSignRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The signature algorithm.
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -109,7 +109,12 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * Digest.
+         * The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the Algorithm parameter.
+         * <p>
+         * 
+         * > 
+         * *   The value is encoded in Base64.
+         * *   For more information about how to calculate message digests, see the **Preprocess signature: compute a message digest** section of the [Generate and verify a signature by using an asymmetric CMK](~~148146~~) topic.
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -118,7 +123,10 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the customer master key (CMK). The ID must be globally unique.
+         * <p>
+         * 
+         * >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -127,7 +135,7 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * KeyVersionId.
+         * The version ID of the CMK. The ID must be globally unique.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);

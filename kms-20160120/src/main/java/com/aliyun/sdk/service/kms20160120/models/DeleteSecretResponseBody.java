@@ -62,7 +62,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         private String secretName; 
 
         /**
-         * PlannedDeleteTime.
+         * The time when the secret is scheduled to be deleted.
          */
         public Builder plannedDeleteTime(String plannedDeleteTime) {
             this.plannedDeleteTime = plannedDeleteTime;
@@ -70,7 +70,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;

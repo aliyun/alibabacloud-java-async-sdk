@@ -50,7 +50,18 @@ public class DescribeAccountKmsStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountStatus.
+         * The status of KMS within your Alibaba cloud account. Valid values:
+         * <p>
+         * 
+         * *   Enabled: KMS is enabled.
+         * 
+         * *   NotEnabled: KMS is disabled.
+         * 
+         * *   InDebt: Your account is overdue, and KMS stops providing services.
+         * 
+         * > If your Alibaba Cloud account is overdue, top up your account at the earliest opportunity to avoid impacts on your services.
+         * 
+         * *   Suspended: KMS is suspended.
          */
         public Builder accountStatus(String accountStatus) {
             this.accountStatus = accountStatus;
@@ -58,7 +69,7 @@ public class DescribeAccountKmsStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

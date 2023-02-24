@@ -242,7 +242,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         private String updatedAt; 
 
         /**
-         * Arn.
+         * The Alibaba Cloud Resource Name (ARN) of the certificate.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -250,7 +250,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateId.
+         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -258,7 +258,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * The time when the certificate was created.
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -266,7 +266,11 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ExportablePrivateKey.
+         * Indicates whether the private key of the certificate can be exported for use. Valid values:
+         * <p>
+         * 
+         * *   true: The private key of the certificate can be exported for use. This is the default value.
+         * *   false: The private key of the certificate cannot be exported for use.
          */
         public Builder exportablePrivateKey(Boolean exportablePrivateKey) {
             this.exportablePrivateKey = exportablePrivateKey;
@@ -274,7 +278,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Issuer.
+         * The certificate issuer in the distinguished name (DN) format.
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -282,7 +286,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * KeySpec.
+         * The type of the key.
          */
         public Builder keySpec(String keySpec) {
             this.keySpec = keySpec;
@@ -290,7 +294,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * NotAfter.
+         * The end of the validity period of the certificate.
          */
         public Builder notAfter(String notAfter) {
             this.notAfter = notAfter;
@@ -298,7 +302,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * NotBefore.
+         * The beginning of the validity period of the certificate.
          */
         public Builder notBefore(String notBefore) {
             this.notBefore = notBefore;
@@ -306,7 +310,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -314,7 +318,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Serial.
+         * The serial number of the certificate.
          */
         public Builder serial(String serial) {
             this.serial = serial;
@@ -322,7 +326,12 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureAlgorithm.
+         * The signature algorithm of the certificate. Valid values:
+         * <p>
+         * 
+         * *   RSA2048-SHA256
+         * *   ECDSA-SHA256
+         * *   SM2-SM3
          */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
@@ -330,7 +339,13 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the certificate. Valid values:
+         * <p>
+         * 
+         * *   PENDING: The certificate is to be imported.
+         * *   ACTIVE: The certificate is enabled.
+         * *   INACTIVE: The certificate is disabled.
+         * *   REVOKED: The certificate is revoked.
          */
         public Builder status(String status) {
             this.status = status;
@@ -338,7 +353,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Subject.
+         * The subject of the certificate, which is in the DN format.
          */
         public Builder subject(String subject) {
             this.subject = subject;
@@ -346,7 +361,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SubjectAlternativeNames.
+         * The alias of the certificate subject.
+         * <p>
+         * 
+         * A domain name list is supported. A maximum of 10 domain names are supported.
          */
         public Builder subjectAlternativeNames(java.util.List < String > subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
@@ -354,7 +372,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SubjectKeyIdentifier.
+         * The public key identifier of the certificate subject.
          */
         public Builder subjectKeyIdentifier(String subjectKeyIdentifier) {
             this.subjectKeyIdentifier = subjectKeyIdentifier;
@@ -362,7 +380,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SubjectPublicKey.
+         * The public key of the certificate.
          */
         public Builder subjectPublicKey(String subjectPublicKey) {
             this.subjectPublicKey = subjectPublicKey;
@@ -370,7 +388,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tag of the certificate.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             this.tags = tags;
@@ -378,7 +396,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatedAt.
+         * The time when the certificate was updated.
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;

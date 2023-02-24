@@ -70,7 +70,7 @@ public class UpdateCertificateStatusRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -79,7 +79,16 @@ public class UpdateCertificateStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the certificate. Valid values:
+         * <p>
+         * 
+         * *   INACTIVE: The certificate is disabled.
+         * 
+         * *   ACTIVE: The certificate is enabled.
+         * 
+         * *   REVOKED: The certificate is revoked.
+         * 
+         * > If the certificate is in the REVOKED state, you can use the certificate only to verify a signature, but not to generate a signature.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

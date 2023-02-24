@@ -115,7 +115,7 @@ public class AsymmetricVerifyRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The signature algorithm.
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -124,7 +124,10 @@ public class AsymmetricVerifyRequest extends Request {
         }
 
         /**
-         * Digest.
+         * The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the **Algorithm** parameter.
+         * <p>
+         * 
+         * >  The value is encoded in Base64.
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -133,7 +136,10 @@ public class AsymmetricVerifyRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
+         * <p>
+         * 
+         * >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -142,7 +148,7 @@ public class AsymmetricVerifyRequest extends Request {
         }
 
         /**
-         * KeyVersionId.
+         * The version ID of the CMK. The ID must be globally unique.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);
@@ -151,7 +157,10 @@ public class AsymmetricVerifyRequest extends Request {
         }
 
         /**
-         * Value.
+         * The signature value to be verified.
+         * <p>
+         * 
+         * >  The value is encoded in Base64.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

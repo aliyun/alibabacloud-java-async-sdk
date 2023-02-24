@@ -74,7 +74,10 @@ public class DecryptResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyId.
+         * The ID of the customer master key (CMK) that is used to decrypt the ciphertext.
+         * <p>
+         * 
+         * It is the GUID of the CMK.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -82,7 +85,7 @@ public class DecryptResponseBody extends TeaModel {
         }
 
         /**
-         * KeyVersionId.
+         * The ID of the CMK version that is used to decrypt the ciphertext.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -90,7 +93,7 @@ public class DecryptResponseBody extends TeaModel {
         }
 
         /**
-         * Plaintext.
+         * The plaintext that is generated after decryption.
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -98,7 +101,7 @@ public class DecryptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

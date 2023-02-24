@@ -70,7 +70,10 @@ public class UpdateAliasRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias that you want to bind.
+         * <p>
+         * 
+         * The value must be 1 to 255 characters in length and must include the alias/ prefix.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -79,7 +82,7 @@ public class UpdateAliasRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);

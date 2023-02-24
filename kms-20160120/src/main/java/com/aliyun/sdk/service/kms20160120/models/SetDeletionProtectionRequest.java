@@ -84,7 +84,10 @@ public class SetDeletionProtectionRequest extends Request {
         } 
 
         /**
-         * DeletionProtectionDescription.
+         * The description of deletion protection.
+         * <p>
+         * 
+         * >  This parameter takes effect only when you set the EnableDeletionProtection parameter to true.
          */
         public Builder deletionProtectionDescription(String deletionProtectionDescription) {
             this.putQueryParameter("DeletionProtectionDescription", deletionProtectionDescription);
@@ -93,7 +96,11 @@ public class SetDeletionProtectionRequest extends Request {
         }
 
         /**
-         * EnableDeletionProtection.
+         * Specifies whether to enable deletion protection. Valid values:
+         * <p>
+         * 
+         * *   true: enables deletion protection.
+         * *   false: disables deletion protection.
          */
         public Builder enableDeletionProtection(Boolean enableDeletionProtection) {
             this.putQueryParameter("EnableDeletionProtection", enableDeletionProtection);
@@ -102,7 +109,10 @@ public class SetDeletionProtectionRequest extends Request {
         }
 
         /**
-         * ProtectedResourceArn.
+         * The ARN of the CMK for which you want to set deletion protection.
+         * <p>
+         * 
+         * You can call the [DescribeKey](~~28952~~) operation to query the CMK ARN.
          */
         public Builder protectedResourceArn(String protectedResourceArn) {
             this.putQueryParameter("ProtectedResourceArn", protectedResourceArn);

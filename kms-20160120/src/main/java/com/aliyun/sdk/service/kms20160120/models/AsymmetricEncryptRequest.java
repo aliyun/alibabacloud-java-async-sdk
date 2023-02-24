@@ -100,7 +100,7 @@ public class AsymmetricEncryptRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The encryption algorithm.
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -109,7 +109,10 @@ public class AsymmetricEncryptRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the CMK. The ID must be globally unique.
+         * <p>
+         * 
+         * >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](~~68522~~).
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -118,7 +121,10 @@ public class AsymmetricEncryptRequest extends Request {
         }
 
         /**
-         * KeyVersionId.
+         * The version ID of the CMK. The ID must be globally unique.
+         * <p>
+         * 
+         * >  You can call the [ListKeyVersions](~~133966~~) operation to query the versions of a CMK. The ID of a version is specified by the KeyVersionId parameter.
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);
@@ -127,7 +133,7 @@ public class AsymmetricEncryptRequest extends Request {
         }
 
         /**
-         * Plaintext.
+         * The plaintext that you want to encrypt. The plaintext must be Base64-encoded.
          */
         public Builder plaintext(String plaintext) {
             this.putQueryParameter("Plaintext", plaintext);

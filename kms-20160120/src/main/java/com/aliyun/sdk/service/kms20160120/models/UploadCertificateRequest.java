@@ -84,7 +84,7 @@ public class UploadCertificateRequest extends Request {
         } 
 
         /**
-         * Certificate.
+         * The certificate issued by the CA, which is in the Privacy Enhanced Mail (PEM) format.
          */
         public Builder certificate(String certificate) {
             this.putQueryParameter("Certificate", certificate);
@@ -93,7 +93,7 @@ public class UploadCertificateRequest extends Request {
         }
 
         /**
-         * CertificateChain.
+         * The certificate chain issued by the CA, which is in the PEM format.
          */
         public Builder certificateChain(String certificateChain) {
             this.putQueryParameter("CertificateChain", certificateChain);
@@ -102,7 +102,7 @@ public class UploadCertificateRequest extends Request {
         }
 
         /**
-         * CertificateId.
+         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);

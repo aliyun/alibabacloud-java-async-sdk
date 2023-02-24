@@ -97,7 +97,10 @@ public class TagResourceRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * The ID of the certificate.
+         * <p>
+         * 
+         * >  You can configure only one of the KeyId, SecretName, and CertificateId parameters.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -106,7 +109,10 @@ public class TagResourceRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The ID of the customer master key (CMK). The ID must be globally unique.
+         * <p>
+         * 
+         * >  You can configure only one of the KeyId, SecretName, and CertificateId parameters.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -115,7 +121,10 @@ public class TagResourceRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
+         * <p>
+         * 
+         * >  You can configure only one of the KeyId, SecretName, and CertificateId parameters.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -124,7 +133,13 @@ public class TagResourceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * One or more tags that you want to add. The value is in the array format.
+         * <p>
+         * 
+         * Tag attributes:
+         * 
+         * *   TagKey: the tag key.
+         * *   TagValue: the tag value.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

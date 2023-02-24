@@ -98,7 +98,12 @@ public class UpdateSecretVersionStageRequest extends Request {
         } 
 
         /**
-         * MoveToVersion.
+         * The version to which you want to apply the specified stage label.
+         * <p>
+         * 
+         * > 
+         * *   You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.
+         * *   If the VersionStage parameter is set to ACSCurrent or ACSPrevious, this parameter is required.
          */
         public Builder moveToVersion(String moveToVersion) {
             this.putQueryParameter("MoveToVersion", moveToVersion);
@@ -107,7 +112,10 @@ public class UpdateSecretVersionStageRequest extends Request {
         }
 
         /**
-         * RemoveFromVersion.
+         * The version from which you want to remove the specified stage label.
+         * <p>
+         * 
+         * >  You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.
          */
         public Builder removeFromVersion(String removeFromVersion) {
             this.putQueryParameter("RemoveFromVersion", removeFromVersion);
@@ -116,7 +124,7 @@ public class UpdateSecretVersionStageRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -125,7 +133,12 @@ public class UpdateSecretVersionStageRequest extends Request {
         }
 
         /**
-         * VersionStage.
+         * The specified stage label. Valid values:
+         * <p>
+         * 
+         * *   ACSCurrent
+         * *   ACSPrevious
+         * *   Custom stage label
          */
         public Builder versionStage(String versionStage) {
             this.putQueryParameter("VersionStage", versionStage);

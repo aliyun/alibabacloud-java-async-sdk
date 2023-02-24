@@ -114,7 +114,7 @@ public class ExportDataKeyRequest extends Request {
         } 
 
         /**
-         * CiphertextBlob.
+         * The ciphertext of the data key encrypted by using a CMK.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
@@ -123,7 +123,7 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * EncryptionContext.
+         * A JSON string that consists of key-value pairs. If you specify this parameter when you use a CMK to encrypt the data key, an equivalent value is required here. For more information, see [EncryptionContext](~~42975~~).
          */
         public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
@@ -133,7 +133,7 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * PublicKeyBlob.
+         * A Base64-encoded public key.
          */
         public Builder publicKeyBlob(String publicKeyBlob) {
             this.putQueryParameter("PublicKeyBlob", publicKeyBlob);
@@ -142,7 +142,14 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * WrappingAlgorithm.
+         * The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see [AsymmetricDecrypt](~~148130~~).
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   RSAES_OAEP_SHA\_256
+         * *   RSAES_OAEP_SHA\_1
+         * *   SM2PKE
          */
         public Builder wrappingAlgorithm(String wrappingAlgorithm) {
             this.putQueryParameter("WrappingAlgorithm", wrappingAlgorithm);
@@ -151,7 +158,13 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * WrappingKeySpec.
+         * The key type of the public key specified by PublicKeyBlob. For more information about key types, see [Introduction to asymmetric keys](~~148147~~).
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   RSA\_2048
+         * *   EC_SM2
          */
         public Builder wrappingKeySpec(String wrappingKeySpec) {
             this.putQueryParameter("WrappingKeySpec", wrappingKeySpec);

@@ -83,7 +83,13 @@ public class DeleteSecretRequest extends Request {
         } 
 
         /**
-         * ForceDeleteWithoutRecovery.
+         * Specifies whether to forcibly delete the secret. If this parameter is set to true, the secret cannot be recovered.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **true**
+         * *   **false** (default value)
          */
         public Builder forceDeleteWithoutRecovery(String forceDeleteWithoutRecovery) {
             this.putQueryParameter("ForceDeleteWithoutRecovery", forceDeleteWithoutRecovery);
@@ -92,7 +98,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * RecoveryWindowInDays.
+         * Specifies the recovery period of the secret if you do not forcibly delete it. Default value: 30. Unit: Days.
          */
         public Builder recoveryWindowInDays(String recoveryWindowInDays) {
             this.putQueryParameter("RecoveryWindowInDays", recoveryWindowInDays);
@@ -101,7 +107,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

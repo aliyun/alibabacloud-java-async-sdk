@@ -74,7 +74,7 @@ public class CreateCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Arn.
+         * The Alibaba Cloud Resource Name (ARN) of the certificate.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -82,7 +82,7 @@ public class CreateCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CertificateId.
+         * The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Certificates Manager.
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -90,7 +90,7 @@ public class CreateCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Csr.
+         * The CSR in the PEM format.
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -98,7 +98,7 @@ public class CreateCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

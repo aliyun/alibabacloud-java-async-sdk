@@ -84,7 +84,11 @@ public class UpdateSecretRotationPolicyRequest extends Request {
         } 
 
         /**
-         * EnableAutomaticRotation.
+         * Specifies whether to enable automatic rotation. Valid values:
+         * <p>
+         * 
+         * *   true: enables automatic rotation.
+         * *   false: does not enable automatic rotation. This is the default value.
          */
         public Builder enableAutomaticRotation(Boolean enableAutomaticRotation) {
             this.putQueryParameter("EnableAutomaticRotation", enableAutomaticRotation);
@@ -93,7 +97,14 @@ public class UpdateSecretRotationPolicyRequest extends Request {
         }
 
         /**
-         * RotationInterval.
+         * The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).
+         * <p>
+         * 
+         * The value is in the `integer[unit]` format.````
+         * 
+         * The unit can be d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s indicate a seven-day interval.
+         * 
+         * >  This parameter is required if you set the EnableAutomaticRotation parameter to true. This parameter is ignored if you set the EnableAutomaticRotation parameter to false or does not specify the EnableAutomaticRotation parameter.
          */
         public Builder rotationInterval(String rotationInterval) {
             this.putQueryParameter("RotationInterval", rotationInterval);
@@ -102,7 +113,7 @@ public class UpdateSecretRotationPolicyRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

@@ -50,7 +50,7 @@ public class DescribeKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyMetadata.
+         * The metadata of the CMK.
          */
         public Builder keyMetadata(KeyMetadata keyMetadata) {
             this.keyMetadata = keyMetadata;
@@ -58,7 +58,7 @@ public class DescribeKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,6 +83,9 @@ public class DescribeKeyResponseBody extends TeaModel {
 
         @NameInMap("Creator")
         private String creator;
+
+        @NameInMap("DKMSInstanceId")
+        private String DKMSInstanceId;
 
         @NameInMap("DeleteDate")
         private String deleteDate;
@@ -134,6 +137,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             this.automaticRotation = builder.automaticRotation;
             this.creationDate = builder.creationDate;
             this.creator = builder.creator;
+            this.DKMSInstanceId = builder.DKMSInstanceId;
             this.deleteDate = builder.deleteDate;
             this.deletionProtection = builder.deletionProtection;
             this.deletionProtectionDescription = builder.deletionProtectionDescription;
@@ -185,6 +189,13 @@ public class DescribeKeyResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return DKMSInstanceId
+         */
+        public String getDKMSInstanceId() {
+            return this.DKMSInstanceId;
         }
 
         /**
@@ -297,6 +308,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             private String automaticRotation; 
             private String creationDate; 
             private String creator; 
+            private String DKMSInstanceId; 
             private String deleteDate; 
             private String deletionProtection; 
             private String deletionProtectionDescription; 
@@ -314,7 +326,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             private String rotationInterval; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the CMK.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -322,7 +334,16 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * AutomaticRotation.
+             * Indicates whether automatic key rotation is enabled. Valid values:
+             * <p>
+             * 
+             * *   Enabled
+             * *   Disabled
+             * *   Suspended
+             * 
+             * For more information, see [Automatic key rotation](~~134270~~).
+             * 
+             * >  Only symmetric CMKs support automatic key rotation.
              */
             public Builder automaticRotation(String automaticRotation) {
                 this.automaticRotation = automaticRotation;
@@ -330,7 +351,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * CreationDate.
+             * The time when the CMK was created. The time is displayed in UTC.
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -338,7 +359,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * The Alibaba Cloud account that is used to create the CMK.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -346,7 +367,20 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteDate.
+             * The ID of the dedicated KMS instance.
+             */
+            public Builder DKMSInstanceId(String DKMSInstanceId) {
+                this.DKMSInstanceId = DKMSInstanceId;
+                return this;
+            }
+
+            /**
+             * The time at which the CMK is scheduled for deletion. The time is displayed in UTC.
+             * <p>
+             * 
+             * For more information, see [ScheduleKeyDeletion](~~44196~~).
+             * 
+             * >  This parameter is returned only when the value of the KeyState parameter is PendingDeletion.
              */
             public Builder deleteDate(String deleteDate) {
                 this.deleteDate = deleteDate;
@@ -354,7 +388,11 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * Indicates whether deletion protection is enabled. Valid values:
+             * <p>
+             * 
+             * *   Enabled
+             * *   Disabled
              */
             public Builder deletionProtection(String deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -362,7 +400,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtectionDescription.
+             * The description of deletion protection.
              */
             public Builder deletionProtectionDescription(String deletionProtectionDescription) {
                 this.deletionProtectionDescription = deletionProtectionDescription;
@@ -370,7 +408,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the CMK.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -378,7 +416,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The ID of the CMK. The ID must be globally unique.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -386,7 +424,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * KeySpec.
+             * The type of the CMK.
              */
             public Builder keySpec(String keySpec) {
                 this.keySpec = keySpec;
@@ -394,7 +432,10 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * KeyState.
+             * The status of the CMK.
+             * <p>
+             * 
+             * For more information, see [Impact of CMK status on API operations](~~44211~~).
              */
             public Builder keyState(String keyState) {
                 this.keyState = keyState;
@@ -402,7 +443,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * KeyUsage.
+             * The usage of the CMK.
              */
             public Builder keyUsage(String keyUsage) {
                 this.keyUsage = keyUsage;
@@ -410,7 +451,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LastRotationDate.
+             * The time when the last rotation was performed. The time is displayed in UTC. For a new CMK, the value of this parameter is the time when the initial version of the CMK was generated.
              */
             public Builder lastRotationDate(String lastRotationDate) {
                 this.lastRotationDate = lastRotationDate;
@@ -418,7 +459,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialExpireTime.
+             * The time when the key material expires. The time is displayed in UTC. If this parameter value is empty, the key material does not expire.
              */
             public Builder materialExpireTime(String materialExpireTime) {
                 this.materialExpireTime = materialExpireTime;
@@ -426,7 +467,10 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * NextRotationDate.
+             * The time when the next rotation will be performed.
+             * <p>
+             * 
+             * >  This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.
              */
             public Builder nextRotationDate(String nextRotationDate) {
                 this.nextRotationDate = nextRotationDate;
@@ -434,7 +478,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * The source of the key material for the CMK.
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -442,7 +486,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKeyVersion.
+             * The ID of the current primary key version for the symmetric CMK.
              */
             public Builder primaryKeyVersion(String primaryKeyVersion) {
                 this.primaryKeyVersion = primaryKeyVersion;
@@ -450,7 +494,7 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectionLevel.
+             * The protection level of the CMK.
              */
             public Builder protectionLevel(String protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -458,7 +502,14 @@ public class DescribeKeyResponseBody extends TeaModel {
             }
 
             /**
-             * RotationInterval.
+             * The interval for automatic key rotation.
+             * <p>
+             * 
+             * Unit: seconds.
+             * 
+             * For example, if the value is 604800s, automatic key rotation is performed at a 7-day interval.
+             * 
+             * >  This parameter is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.
              */
             public Builder rotationInterval(String rotationInterval) {
                 this.rotationInterval = rotationInterval;

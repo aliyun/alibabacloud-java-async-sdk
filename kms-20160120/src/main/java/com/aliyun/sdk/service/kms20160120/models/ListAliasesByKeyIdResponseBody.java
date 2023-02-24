@@ -86,7 +86,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Aliases.
+         * An array that consists of aliases.
          */
         public Builder aliases(Aliases aliases) {
             this.aliases = aliases;
@@ -94,7 +94,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned CMKs.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
             private String keyId; 
 
             /**
-             * AliasArn.
+             * The Alibaba Cloud Resource Name (ARN) of the alias.
              */
             public Builder aliasArn(String aliasArn) {
                 this.aliasArn = aliasArn;
@@ -190,7 +190,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
             }
 
             /**
-             * AliasName.
+             * The ID of the alias.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -198,7 +198,7 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The CMK to which an alias is bound.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
