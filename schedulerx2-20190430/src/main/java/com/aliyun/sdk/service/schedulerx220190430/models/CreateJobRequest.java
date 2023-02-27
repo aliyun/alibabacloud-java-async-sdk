@@ -158,6 +158,10 @@ public class CreateJobRequest extends Request {
     private Boolean timeoutKillEnable;
 
     @Body
+    @NameInMap("Timezone")
+    private String timezone;
+
+    @Body
     @NameInMap("XAttrs")
     private String xAttrs;
 
@@ -197,6 +201,7 @@ public class CreateJobRequest extends Request {
         this.timeout = builder.timeout;
         this.timeoutEnable = builder.timeoutEnable;
         this.timeoutKillEnable = builder.timeoutKillEnable;
+        this.timezone = builder.timezone;
         this.xAttrs = builder.xAttrs;
     }
 
@@ -452,6 +457,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return timezone
+     */
+    public String getTimezone() {
+        return this.timezone;
+    }
+
+    /**
      * @return xAttrs
      */
     public String getXAttrs() {
@@ -493,6 +505,7 @@ public class CreateJobRequest extends Request {
         private Long timeout; 
         private Boolean timeoutEnable; 
         private Boolean timeoutKillEnable; 
+        private String timezone; 
         private String xAttrs; 
 
         private Builder() {
@@ -535,6 +548,7 @@ public class CreateJobRequest extends Request {
             this.timeout = request.timeout;
             this.timeoutEnable = request.timeoutEnable;
             this.timeoutKillEnable = request.timeoutKillEnable;
+            this.timezone = request.timezone;
             this.xAttrs = request.xAttrs;
         } 
 
@@ -893,6 +907,15 @@ public class CreateJobRequest extends Request {
         public Builder timeoutKillEnable(Boolean timeoutKillEnable) {
             this.putBodyParameter("TimeoutKillEnable", timeoutKillEnable);
             this.timeoutKillEnable = timeoutKillEnable;
+            return this;
+        }
+
+        /**
+         * Timezone.
+         */
+        public Builder timezone(String timezone) {
+            this.putBodyParameter("Timezone", timezone);
+            this.timezone = timezone;
             return this;
         }
 

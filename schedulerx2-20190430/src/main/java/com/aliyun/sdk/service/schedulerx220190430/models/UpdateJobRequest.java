@@ -154,6 +154,10 @@ public class UpdateJobRequest extends Request {
     @NameInMap("TimeoutKillEnable")
     private Boolean timeoutKillEnable;
 
+    @Body
+    @NameInMap("Timezone")
+    private String timezone;
+
     private UpdateJobRequest(Builder builder) {
         super(builder);
         this.attemptInterval = builder.attemptInterval;
@@ -190,6 +194,7 @@ public class UpdateJobRequest extends Request {
         this.timeout = builder.timeout;
         this.timeoutEnable = builder.timeoutEnable;
         this.timeoutKillEnable = builder.timeoutKillEnable;
+        this.timezone = builder.timezone;
     }
 
     public static Builder builder() {
@@ -443,6 +448,13 @@ public class UpdateJobRequest extends Request {
         return this.timeoutKillEnable;
     }
 
+    /**
+     * @return timezone
+     */
+    public String getTimezone() {
+        return this.timezone;
+    }
+
     public static final class Builder extends Request.Builder<UpdateJobRequest, Builder> {
         private Integer attemptInterval; 
         private String calendar; 
@@ -478,6 +490,7 @@ public class UpdateJobRequest extends Request {
         private Long timeout; 
         private Boolean timeoutEnable; 
         private Boolean timeoutKillEnable; 
+        private String timezone; 
 
         private Builder() {
             super();
@@ -519,6 +532,7 @@ public class UpdateJobRequest extends Request {
             this.timeout = request.timeout;
             this.timeoutEnable = request.timeoutEnable;
             this.timeoutKillEnable = request.timeoutKillEnable;
+            this.timezone = request.timezone;
         } 
 
         /**
@@ -863,6 +877,15 @@ public class UpdateJobRequest extends Request {
         public Builder timeoutKillEnable(Boolean timeoutKillEnable) {
             this.putBodyParameter("TimeoutKillEnable", timeoutKillEnable);
             this.timeoutKillEnable = timeoutKillEnable;
+            return this;
+        }
+
+        /**
+         * Timezone.
+         */
+        public Builder timezone(String timezone) {
+            this.putBodyParameter("Timezone", timezone);
+            this.timezone = timezone;
             return this;
         }
 
