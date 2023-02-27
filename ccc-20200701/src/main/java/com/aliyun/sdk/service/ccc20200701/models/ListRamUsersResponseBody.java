@@ -1,0 +1,396 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ccc20200701.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListRamUsersResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListRamUsersResponseBody</p>
+ */
+public class ListRamUsersResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("Data")
+    private Data data;
+
+    @NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private ListRamUsersResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.data = builder.data;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListRamUsersResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private Data data; 
+        private Integer httpStatusCode; 
+        private String message; 
+        private String requestId; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public ListRamUsersResponseBody build() {
+            return new ListRamUsersResponseBody(this);
+        } 
+
+    } 
+
+    public static class List extends TeaModel {
+        @NameInMap("AliyunUid")
+        private Long aliyunUid;
+
+        @NameInMap("DisplayName")
+        private String displayName;
+
+        @NameInMap("Email")
+        private String email;
+
+        @NameInMap("LoginName")
+        private String loginName;
+
+        @NameInMap("Mobile")
+        private String mobile;
+
+        @NameInMap("Primary")
+        private Boolean primary;
+
+        @NameInMap("RamId")
+        private String ramId;
+
+        private List(Builder builder) {
+            this.aliyunUid = builder.aliyunUid;
+            this.displayName = builder.displayName;
+            this.email = builder.email;
+            this.loginName = builder.loginName;
+            this.mobile = builder.mobile;
+            this.primary = builder.primary;
+            this.ramId = builder.ramId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static List create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aliyunUid
+         */
+        public Long getAliyunUid() {
+            return this.aliyunUid;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
+        }
+
+        /**
+         * @return loginName
+         */
+        public String getLoginName() {
+            return this.loginName;
+        }
+
+        /**
+         * @return mobile
+         */
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        /**
+         * @return primary
+         */
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        /**
+         * @return ramId
+         */
+        public String getRamId() {
+            return this.ramId;
+        }
+
+        public static final class Builder {
+            private Long aliyunUid; 
+            private String displayName; 
+            private String email; 
+            private String loginName; 
+            private String mobile; 
+            private Boolean primary; 
+            private String ramId; 
+
+            /**
+             * AliyunUid.
+             */
+            public Builder aliyunUid(Long aliyunUid) {
+                this.aliyunUid = aliyunUid;
+                return this;
+            }
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * Email.
+             */
+            public Builder email(String email) {
+                this.email = email;
+                return this;
+            }
+
+            /**
+             * LoginName.
+             */
+            public Builder loginName(String loginName) {
+                this.loginName = loginName;
+                return this;
+            }
+
+            /**
+             * Mobile.
+             */
+            public Builder mobile(String mobile) {
+                this.mobile = mobile;
+                return this;
+            }
+
+            /**
+             * Primary.
+             */
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
+                return this;
+            }
+
+            /**
+             * RamId.
+             */
+            public Builder ramId(String ramId) {
+                this.ramId = ramId;
+                return this;
+            }
+
+            public List build() {
+                return new List(this);
+            } 
+
+        } 
+
+    }
+    public static class Data extends TeaModel {
+        @NameInMap("List")
+        private java.util.List < List> list;
+
+        @NameInMap("PageNumber")
+        private Integer pageNumber;
+
+        @NameInMap("PageSize")
+        private Integer pageSize;
+
+        @NameInMap("TotalCount")
+        private Integer totalCount;
+
+        private Data(Builder builder) {
+            this.list = builder.list;
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return list
+         */
+        public java.util.List < List> getList() {
+            return this.list;
+        }
+
+        /**
+         * @return pageNumber
+         */
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private java.util.List < List> list; 
+            private Integer pageNumber; 
+            private Integer pageSize; 
+            private Integer totalCount; 
+
+            /**
+             * List.
+             */
+            public Builder list(java.util.List < List> list) {
+                this.list = list;
+                return this;
+            }
+
+            /**
+             * PageNumber.
+             */
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+}

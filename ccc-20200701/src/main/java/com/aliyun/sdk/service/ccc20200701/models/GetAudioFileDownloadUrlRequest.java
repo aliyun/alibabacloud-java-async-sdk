@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ccc20200701.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetAudioFileDownloadUrlRequest} extends {@link RequestModel}
+ *
+ * <p>GetAudioFileDownloadUrlRequest</p>
+ */
+public class GetAudioFileDownloadUrlRequest extends Request {
+    @Query
+    @NameInMap("AudioResourceId")
+    @Validation(required = true)
+    private String audioResourceId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    private GetAudioFileDownloadUrlRequest(Builder builder) {
+        super(builder);
+        this.audioResourceId = builder.audioResourceId;
+        this.instanceId = builder.instanceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetAudioFileDownloadUrlRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return audioResourceId
+     */
+    public String getAudioResourceId() {
+        return this.audioResourceId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public static final class Builder extends Request.Builder<GetAudioFileDownloadUrlRequest, Builder> {
+        private String audioResourceId; 
+        private String instanceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetAudioFileDownloadUrlRequest request) {
+            super(request);
+            this.audioResourceId = request.audioResourceId;
+            this.instanceId = request.instanceId;
+        } 
+
+        /**
+         * AudioResourceId.
+         */
+        public Builder audioResourceId(String audioResourceId) {
+            this.putQueryParameter("AudioResourceId", audioResourceId);
+            this.audioResourceId = audioResourceId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        @Override
+        public GetAudioFileDownloadUrlRequest build() {
+            return new GetAudioFileDownloadUrlRequest(this);
+        } 
+
+    } 
+
+}
