@@ -22,6 +22,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ADMMUResponse> aDMMU(ADMMURequest request);
 
+    CompletableFuture<ADMiniCogResponse> aDMiniCog(ADMiniCogRequest request);
+
+    CompletableFuture<ADMiniCogResultResponse> aDMiniCogResult(ADMiniCogResultRequest request);
+
     CompletableFuture<GetBrandChEcomResponse> getBrandChEcom(GetBrandChEcomRequest request);
 
     CompletableFuture<GetCateChEcomResponse> getCateChEcom(GetCateChEcomRequest request);
@@ -72,6 +76,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSummaryChEcomResponse> getSummaryChEcom(GetSummaryChEcomRequest request);
 
+    CompletableFuture<GetTableQAServiceInfoByIdResponse> getTableQAServiceInfoById(GetTableQAServiceInfoByIdRequest request);
+
     CompletableFuture<GetTcChEcomResponse> getTcChEcom(GetTcChEcomRequest request);
 
     CompletableFuture<GetTcChGeneralResponse> getTcChGeneral(GetTcChGeneralRequest request);
@@ -106,10 +112,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetWsCustomizedSeaGeneralResponse> getWsCustomizedSeaGeneral(GetWsCustomizedSeaGeneralRequest request);
 
-    CompletableFuture<InsertCustomResponse> insertCustom(InsertCustomRequest request);
-
     CompletableFuture<OpenAlinlpServiceResponse> openAlinlpService(OpenAlinlpServiceRequest request);
 
-    CompletableFuture<UpdateCustomResponse> updateCustom(UpdateCustomRequest request);
+    CompletableFuture<RequestTableQAResponse> requestTableQA(RequestTableQARequest request);
+
+    CompletableFuture<RequestTableQAOnlineResponse> requestTableQAOnline(RequestTableQAOnlineRequest request);
 
 }
