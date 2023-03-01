@@ -462,7 +462,7 @@ public class CreateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的GPU显存规格，单位为MB，为1024MB的倍数
+         * GPU instance memory specifications of the function. Unit: MB. The value is a multiple of 1024.
          */
         public Builder gpuMemorySize(Integer gpuMemorySize) {
             this.gpuMemorySize = gpuMemorySize;

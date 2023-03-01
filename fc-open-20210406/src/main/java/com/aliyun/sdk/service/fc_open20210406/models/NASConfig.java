@@ -92,6 +92,9 @@ public class NASConfig extends TeaModel {
     } 
 
     public static class MountPoints extends TeaModel {
+        @NameInMap("enableTLS")
+        private Boolean enableTLS;
+
         @NameInMap("mountDir")
         private String mountDir;
 
@@ -99,6 +102,7 @@ public class NASConfig extends TeaModel {
         private String serverAddr;
 
         private MountPoints(Builder builder) {
+            this.enableTLS = builder.enableTLS;
             this.mountDir = builder.mountDir;
             this.serverAddr = builder.serverAddr;
         }
@@ -109,6 +113,13 @@ public class NASConfig extends TeaModel {
 
         public static MountPoints create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableTLS
+         */
+        public Boolean getEnableTLS() {
+            return this.enableTLS;
         }
 
         /**
@@ -126,8 +137,17 @@ public class NASConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enableTLS; 
             private String mountDir; 
             private String serverAddr; 
+
+            /**
+             * 使用传输加密方式挂载
+             */
+            public Builder enableTLS(Boolean enableTLS) {
+                this.enableTLS = enableTLS;
+                return this;
+            }
 
             /**
              * 本地挂载目录

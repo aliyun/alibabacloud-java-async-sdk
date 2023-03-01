@@ -217,7 +217,7 @@ public class UpdateCustomDomainRequest extends Request {
          * 
          * *   **HTTP**: Only HTTP is supported.
          * *   **HTTPS**: Only HTTPS is supported.
-         * *   **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
+         * *   **HTTP,HTTPS**: HTTP and HTTPS are supported.
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("protocol", protocol);
