@@ -731,6 +731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to query the rules for graceful start and shutdown.
+      *
+     */
     @Override
     public CompletableFuture<FetchLosslessRuleListResponse> fetchLosslessRuleList(FetchLosslessRuleListRequest request) {
         try {
@@ -1009,6 +1013,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call the GetOverview operation to query overview information about service governance.
+      *
+     */
     @Override
     public CompletableFuture<GetOverviewResponse> getOverview(GetOverviewRequest request) {
         try {

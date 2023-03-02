@@ -95,7 +95,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. Unit: months. Valid values: 1, 2, 3, 6, and 12.
+         * The time range for the query. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -104,7 +104,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

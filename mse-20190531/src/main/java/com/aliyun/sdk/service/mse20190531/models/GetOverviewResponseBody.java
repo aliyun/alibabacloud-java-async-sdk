@@ -98,7 +98,7 @@ public class GetOverviewResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The status code returned.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;

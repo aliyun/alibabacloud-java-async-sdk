@@ -57,6 +57,10 @@ public class AddGatewayRouteRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("Policies")
+    private String policies;
+
+    @Query
     @NameInMap("Predicates")
     private Predicates predicates;
 
@@ -67,6 +71,10 @@ public class AddGatewayRouteRequest extends Request {
     @Query
     @NameInMap("RouteOrder")
     private Integer routeOrder;
+
+    @Query
+    @NameInMap("RouteType")
+    private String routeType;
 
     @Query
     @NameInMap("Services")
@@ -85,9 +93,11 @@ public class AddGatewayRouteRequest extends Request {
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.name = builder.name;
+        this.policies = builder.policies;
         this.predicates = builder.predicates;
         this.redirectJSON = builder.redirectJSON;
         this.routeOrder = builder.routeOrder;
+        this.routeType = builder.routeType;
         this.services = builder.services;
     }
 
@@ -182,6 +192,13 @@ public class AddGatewayRouteRequest extends Request {
     }
 
     /**
+     * @return policies
+     */
+    public String getPolicies() {
+        return this.policies;
+    }
+
+    /**
      * @return predicates
      */
     public Predicates getPredicates() {
@@ -203,6 +220,13 @@ public class AddGatewayRouteRequest extends Request {
     }
 
     /**
+     * @return routeType
+     */
+    public String getRouteType() {
+        return this.routeType;
+    }
+
+    /**
      * @return services
      */
     public java.util.List < Services> getServices() {
@@ -221,9 +245,11 @@ public class AddGatewayRouteRequest extends Request {
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private String name; 
+        private String policies; 
         private Predicates predicates; 
         private RedirectJSON redirectJSON; 
         private Integer routeOrder; 
+        private String routeType; 
         private java.util.List < Services> services; 
 
         private Builder() {
@@ -243,9 +269,11 @@ public class AddGatewayRouteRequest extends Request {
             this.gatewayId = request.gatewayId;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.name = request.name;
+            this.policies = request.policies;
             this.predicates = request.predicates;
             this.redirectJSON = request.redirectJSON;
             this.routeOrder = request.routeOrder;
+            this.routeType = request.routeType;
             this.services = request.services;
         } 
 
@@ -291,7 +319,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The list of domain names.
+         * The IDs of domains.
          */
         public Builder domainIdListJSON(String domainIdListJSON) {
             this.putQueryParameter("DomainIdListJSON", domainIdListJSON);
@@ -300,7 +328,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Web Application Firewall (WAF).
+         * Specifies whether to activate Web Application Firewall (WAF).
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.putQueryParameter("EnableWaf", enableWaf);
@@ -355,6 +383,15 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
+         * Policies.
+         */
+        public Builder policies(String policies) {
+            this.putQueryParameter("Policies", policies);
+            this.policies = policies;
+            return this;
+        }
+
+        /**
          * The matching rule.
          */
         public Builder predicates(Predicates predicates) {
@@ -380,6 +417,15 @@ public class AddGatewayRouteRequest extends Request {
         public Builder routeOrder(Integer routeOrder) {
             this.putQueryParameter("RouteOrder", routeOrder);
             this.routeOrder = routeOrder;
+            return this;
+        }
+
+        /**
+         * RouteType.
+         */
+        public Builder routeType(String routeType) {
+            this.putQueryParameter("RouteType", routeType);
+            this.routeType = routeType;
             return this;
         }
 
@@ -584,7 +630,7 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * The type of the protocol. Valid values:
+             * The type of the protocol.
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -794,7 +840,7 @@ public class AddGatewayRouteRequest extends Request {
             private String type; 
 
             /**
-             * Specifies whether to perform case-insensitive matching.
+             * Specifies whether to ignore case sensitivity.
              */
             public Builder ignoreCase(Boolean ignoreCase) {
                 this.ignoreCase = ignoreCase;
@@ -1062,7 +1108,7 @@ public class AddGatewayRouteRequest extends Request {
             private String path; 
 
             /**
-             * The HTTP status code.
+             * The status code returned.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1408,7 +1454,7 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List < MothedMapList> mothedMapList; 
 
             /**
-             * The service group.
+             * The name of the service group.
              */
             public Builder dubboServiceGroup(String dubboServiceGroup) {
                 this.dubboServiceGroup = dubboServiceGroup;
@@ -1581,7 +1627,7 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * The type of the protocol. Valid values:
+             * The type of the protocol.
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;

@@ -114,7 +114,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -238,7 +238,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
              * <p>
              * 
              * *   normal: basic security group
-             * *   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).
+             * *   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).
              */
             public Builder securityGroupType(String securityGroupType) {
                 this.securityGroupType = securityGroupType;

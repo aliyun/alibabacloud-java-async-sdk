@@ -1813,6 +1813,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Policies")
+        private String policies;
+
         @NameInMap("Predicates")
         private String predicates;
 
@@ -1862,6 +1865,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             this.headerOp = builder.headerOp;
             this.id = builder.id;
             this.name = builder.name;
+            this.policies = builder.policies;
             this.predicates = builder.predicates;
             this.redirect = builder.redirect;
             this.retry = builder.retry;
@@ -2029,6 +2033,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return policies
+         */
+        public String getPolicies() {
+            return this.policies;
+        }
+
+        /**
          * @return predicates
          */
         public String getPredicates() {
@@ -2113,6 +2124,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private HeaderOp headerOp; 
             private Long id; 
             private String name; 
+            private String policies; 
             private String predicates; 
             private Redirect redirect; 
             private Retry retry; 
@@ -2288,6 +2300,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Policies.
+             */
+            public Builder policies(String policies) {
+                this.policies = policies;
                 return this;
             }
 

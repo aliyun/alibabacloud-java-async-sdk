@@ -158,6 +158,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ExportZookeeperDataResponse> exportZookeeperData(ExportZookeeperDataRequest request);
 
+    /**
+      * You can call this operation to query the rules for graceful start and shutdown.
+      *
+     */
     CompletableFuture<FetchLosslessRuleListResponse> fetchLosslessRuleList(FetchLosslessRuleListRequest request);
 
     CompletableFuture<GetAppMessageQueueRouteResponse> getAppMessageQueueRoute(GetAppMessageQueueRouteRequest request);
@@ -208,6 +212,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetNacosHistoryConfigResponse> getNacosHistoryConfig(GetNacosHistoryConfigRequest request);
 
+    /**
+      * You can call the GetOverview operation to query overview information about service governance.
+      *
+     */
     CompletableFuture<GetOverviewResponse> getOverview(GetOverviewRequest request);
 
     CompletableFuture<GetPluginConfigResponse> getPluginConfig(GetPluginConfigRequest request);

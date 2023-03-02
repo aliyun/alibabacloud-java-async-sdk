@@ -221,6 +221,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigSecretSupported")
         private Boolean configSecretSupported;
 
+        @NameInMap("EurekaSupported")
+        private Boolean eurekaSupported;
+
         @NameInMap("ExtendedTypesEnable")
         private Boolean extendedTypesEnable;
 
@@ -290,6 +293,7 @@ public class QueryConfigResponseBody extends TeaModel {
             this.configContentLimit = builder.configContentLimit;
             this.configSecretEnabled = builder.configSecretEnabled;
             this.configSecretSupported = builder.configSecretSupported;
+            this.eurekaSupported = builder.eurekaSupported;
             this.extendedTypesEnable = builder.extendedTypesEnable;
             this.initLimit = builder.initLimit;
             this.juteMaxbuffer = builder.juteMaxbuffer;
@@ -374,6 +378,13 @@ public class QueryConfigResponseBody extends TeaModel {
          */
         public Boolean getConfigSecretSupported() {
             return this.configSecretSupported;
+        }
+
+        /**
+         * @return eurekaSupported
+         */
+        public Boolean getEurekaSupported() {
+            return this.eurekaSupported;
         }
 
         /**
@@ -525,6 +536,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private Long configContentLimit; 
             private Boolean configSecretEnabled; 
             private Boolean configSecretSupported; 
+            private Boolean eurekaSupported; 
             private Boolean extendedTypesEnable; 
             private String initLimit; 
             private String juteMaxbuffer; 
@@ -623,6 +635,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder configSecretSupported(Boolean configSecretSupported) {
                 this.configSecretSupported = configSecretSupported;
+                return this;
+            }
+
+            /**
+             * EurekaSupported.
+             */
+            public Builder eurekaSupported(Boolean eurekaSupported) {
+                this.eurekaSupported = eurekaSupported;
                 return this;
             }
 
