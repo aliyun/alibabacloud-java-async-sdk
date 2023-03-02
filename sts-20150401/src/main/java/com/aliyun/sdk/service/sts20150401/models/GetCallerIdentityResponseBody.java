@@ -110,7 +110,7 @@ public class GetCallerIdentityResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account to which the current requester belongs.
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -118,7 +118,7 @@ public class GetCallerIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * Arn.
+         * The Alibaba Cloud Resource Name (ARN) of the current requester.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -126,7 +126,12 @@ public class GetCallerIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * IdentityType.
+         * The type of the identity. Valid values:
+         * <p>
+         * 
+         * - Account: an Alibaba Cloud account
+         * - RamUser: a RAM user
+         * - AssumedRoleUser: a RAM role
          */
         public Builder identityType(String identityType) {
             this.identityType = identityType;
@@ -134,7 +139,7 @@ public class GetCallerIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * PrincipalId.
+         * The ID of the principal.
          */
         public Builder principalId(String principalId) {
             this.principalId = principalId;
@@ -142,7 +147,7 @@ public class GetCallerIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +155,10 @@ public class GetCallerIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * RoleId.
+         * The ID of the RAM role.
+         * <p>
+         * 
+         * > This parameter is returned only when the current requester uses a RAM role.
          */
         public Builder roleId(String roleId) {
             this.roleId = roleId;
@@ -158,7 +166,13 @@ public class GetCallerIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * The ID of the current requester.
+         * <p>
+         * 
+         * - If the requester uses an Alibaba Cloud account to call the operation, the ID of the Alibaba Cloud account is returned.
+         * - If the requester uses a RAM user to call the operation, the ID of the RAM user is returned.
+         * 
+         * > This parameter is returned only when the current requester uses an Alibaba Cloud account or a RAM user.
          */
         public Builder userId(String userId) {
             this.userId = userId;

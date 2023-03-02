@@ -62,7 +62,7 @@ public class AssumeRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssumedRoleUser.
+         * The temporary identity that you use to assume the RAM role.
          */
         public Builder assumedRoleUser(AssumedRoleUser assumedRoleUser) {
             this.assumedRoleUser = assumedRoleUser;
@@ -70,7 +70,7 @@ public class AssumeRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Credentials.
+         * The STS credentials.
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -78,7 +78,7 @@ public class AssumeRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class AssumeRoleResponseBody extends TeaModel {
             private String assumedRoleId; 
 
             /**
-             * Arn.
+             * The ARN of the temporary identity that you use to assume the RAM role.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -138,7 +138,7 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * AssumedRoleId.
+             * The ID of the temporary identity that you use to assume the RAM role.
              */
             public Builder assumedRoleId(String assumedRoleId) {
                 this.assumedRoleId = assumedRoleId;
@@ -215,7 +215,7 @@ public class AssumeRoleResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -223,7 +223,7 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * The AccessKey secret.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -231,7 +231,7 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration.
+             * The time when the STS token expires. The time is displayed in UTC.
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -239,7 +239,7 @@ public class AssumeRoleResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * The STS token.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

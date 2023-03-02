@@ -74,7 +74,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssumedRoleUser.
+         * The temporary identity that you use to assume the RAM role.
          */
         public Builder assumedRoleUser(AssumedRoleUser assumedRoleUser) {
             this.assumedRoleUser = assumedRoleUser;
@@ -82,7 +82,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
 
         /**
-         * Credentials.
+         * The access credentials.
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -90,7 +90,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
 
         /**
-         * OIDCTokenInfo.
+         * The information about the OIDC token.
          */
         public Builder OIDCTokenInfo(OIDCTokenInfo OIDCTokenInfo) {
             this.OIDCTokenInfo = OIDCTokenInfo;
@@ -98,7 +98,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             private String assumedRoleId; 
 
             /**
-             * Arn.
+             * The ARN of the temporary identity that you use to assume the RAM role.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -158,7 +158,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * AssumedRoleId.
+             * The ID of the temporary identity that you use to assume the RAM role.
              */
             public Builder assumedRoleId(String assumedRoleId) {
                 this.assumedRoleId = assumedRoleId;
@@ -235,7 +235,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -243,7 +243,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * The AccessKey secret.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -251,7 +251,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration.
+             * The time when the STS token expires. The time is displayed in UTC.
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -259,7 +259,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * The STS token.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -324,7 +324,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             private String subject; 
 
             /**
-             * ClientIds.
+             * The audience. If multiple audiences are returned, the audiences are separated by commas (,).
+             * <p>
+             * 
+             * The audience is represented by the `aud` field in the OIDC Token.
              */
             public Builder clientIds(String clientIds) {
                 this.clientIds = clientIds;
@@ -332,7 +335,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The URL of the issuer,
+             * <p>
+             * 
+             * which is represented by the `iss` field in the OIDC Token.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -340,7 +346,10 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             }
 
             /**
-             * Subject.
+             * The subject,
+             * <p>
+             * 
+             * which is represented by the `sub` field in the OIDC Token.
              */
             public Builder subject(String subject) {
                 this.subject = subject;

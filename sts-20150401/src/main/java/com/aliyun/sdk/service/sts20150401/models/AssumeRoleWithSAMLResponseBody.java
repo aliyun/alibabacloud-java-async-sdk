@@ -74,7 +74,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         private SAMLAssertionInfo SAMLAssertionInfo; 
 
         /**
-         * AssumedRoleUser.
+         * The temporary identity that you use to assume the RAM role.
          */
         public Builder assumedRoleUser(AssumedRoleUser assumedRoleUser) {
             this.assumedRoleUser = assumedRoleUser;
@@ -82,7 +82,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         }
 
         /**
-         * Credentials.
+         * The access credentials.
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -90,7 +90,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         }
 
         /**
-         * SAMLAssertionInfo.
+         * The information in the SAML assertion.
          */
         public Builder SAMLAssertionInfo(SAMLAssertionInfo SAMLAssertionInfo) {
             this.SAMLAssertionInfo = SAMLAssertionInfo;
@@ -150,7 +150,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             private String assumedRoleId; 
 
             /**
-             * Arn.
+             * The ARN of the temporary identity that you use to assume the RAM role.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -158,7 +158,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * AssumedRoleId.
+             * The ID of the temporary identity that you use to assume the RAM role.
              */
             public Builder assumedRoleId(String assumedRoleId) {
                 this.assumedRoleId = assumedRoleId;
@@ -235,7 +235,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -243,7 +243,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * The AccessKey secret.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -251,7 +251,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration.
+             * The time when the STS token expires. The time is displayed in UTC.
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -259,7 +259,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * The STS token.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -336,7 +336,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             private String subjectType; 
 
             /**
-             * Issuer.
+             * The value in the `Issuer` element in the SAML assertion.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -344,7 +344,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * Recipient.
+             * The `Recipient` attribute of the SubjectConfirmationData sub-element. SubjectConfirmationData is a sub-element of the `Subject` element in the SAML assertion.
              */
             public Builder recipient(String recipient) {
                 this.recipient = recipient;
@@ -352,7 +352,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * Subject.
+             * The value in the NameID sub-element of the `Subject` element in the SAML assertion.
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -360,7 +360,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             }
 
             /**
-             * SubjectType.
+             * The Format attribute of the `NameID` element in the SAML assertion. If the Format attribute is prefixed with `urn:oasis:names:tc:SAML:2.0:nameid-format:`, the prefix is not included in the value of this parameter. For example, if the value of the Format attribute is urn:oasis:names:tc:SAML:2.0:nameid-format:persistent/transient, the value of this parameter is `persistent/transient`.
              */
             public Builder subjectType(String subjectType) {
                 this.subjectType = subjectType;
