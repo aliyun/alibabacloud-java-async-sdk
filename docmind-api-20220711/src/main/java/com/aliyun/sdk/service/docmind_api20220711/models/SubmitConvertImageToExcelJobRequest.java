@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitConvertImageToExcelJobRequest extends Request {
     @Query
+    @NameInMap("ForceMergeExcel")
+    private Boolean forceMergeExcel;
+
+    @Query
     @NameInMap("ImageNameExtension")
     private String imageNameExtension;
 
@@ -26,6 +30,7 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
 
     private SubmitConvertImageToExcelJobRequest(Builder builder) {
         super(builder);
+        this.forceMergeExcel = builder.forceMergeExcel;
         this.imageNameExtension = builder.imageNameExtension;
         this.imageNames = builder.imageNames;
         this.imageUrls = builder.imageUrls;
@@ -42,6 +47,13 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return forceMergeExcel
+     */
+    public Boolean getForceMergeExcel() {
+        return this.forceMergeExcel;
     }
 
     /**
@@ -66,6 +78,7 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitConvertImageToExcelJobRequest, Builder> {
+        private Boolean forceMergeExcel; 
         private String imageNameExtension; 
         private java.util.List < String > imageNames; 
         private java.util.List < String > imageUrls; 
@@ -76,10 +89,20 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
 
         private Builder(SubmitConvertImageToExcelJobRequest request) {
             super(request);
+            this.forceMergeExcel = request.forceMergeExcel;
             this.imageNameExtension = request.imageNameExtension;
             this.imageNames = request.imageNames;
             this.imageUrls = request.imageUrls;
         } 
+
+        /**
+         * ForceMergeExcel.
+         */
+        public Builder forceMergeExcel(Boolean forceMergeExcel) {
+            this.putQueryParameter("ForceMergeExcel", forceMergeExcel);
+            this.forceMergeExcel = forceMergeExcel;
+            return this;
+        }
 
         /**
          * 图片扩展名。与imageName二选一
