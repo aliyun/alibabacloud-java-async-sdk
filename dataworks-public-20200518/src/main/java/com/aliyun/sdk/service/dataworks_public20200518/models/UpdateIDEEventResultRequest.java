@@ -119,12 +119,7 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * The check status of the extension point event. Valid values:
-         * <p>
-         * 
-         * *   OK: The event passes the check.
-         * *   FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.
-         * *   WARN: The event passes the check, but an alert is reported.
+         * CheckResult.
          */
         public Builder checkResult(String checkResult) {
             this.putBodyParameter("CheckResult", checkResult);
@@ -133,7 +128,7 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * The summary information of the check result. The information is displayed in DataStudio. If an alert is reported or the event fails the check, you can troubleshoot errors based on the information.
+         * CheckResultTip.
          */
         public Builder checkResultTip(String checkResultTip) {
             this.putBodyParameter("CheckResultTip", checkResultTip);
@@ -142,7 +137,7 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * The ID of the extension. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Extensions tab of the Open Platform page to view the ID.
+         * ExtensionCode.
          */
         public Builder extensionCode(String extensionCode) {
             this.putBodyParameter("ExtensionCode", extensionCode);
@@ -151,7 +146,7 @@ public class UpdateIDEEventResultRequest extends Request {
         }
 
         /**
-         * The ID of the message. You can obtain the ID from the received message when the extension point event is triggered.
+         * 扩展点消息UUID
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);

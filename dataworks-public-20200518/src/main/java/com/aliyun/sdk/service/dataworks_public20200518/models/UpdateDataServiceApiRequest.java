@@ -52,6 +52,10 @@ public class UpdateDataServiceApiRequest extends Request {
     private Integer requestMethod;
 
     @Body
+    @NameInMap("ResourceGroupId")
+    private Long resourceGroupId;
+
+    @Body
     @NameInMap("ResponseContentType")
     @Validation(required = true)
     private Integer responseContentType;
@@ -89,6 +93,7 @@ public class UpdateDataServiceApiRequest extends Request {
         this.protocols = builder.protocols;
         this.registrationDetails = builder.registrationDetails;
         this.requestMethod = builder.requestMethod;
+        this.resourceGroupId = builder.resourceGroupId;
         this.responseContentType = builder.responseContentType;
         this.scriptDetails = builder.scriptDetails;
         this.tenantId = builder.tenantId;
@@ -167,6 +172,13 @@ public class UpdateDataServiceApiRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public Long getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return responseContentType
      */
     public Integer getResponseContentType() {
@@ -217,6 +229,7 @@ public class UpdateDataServiceApiRequest extends Request {
         private String protocols; 
         private String registrationDetails; 
         private Integer requestMethod; 
+        private Long resourceGroupId; 
         private Integer responseContentType; 
         private String scriptDetails; 
         private Long tenantId; 
@@ -238,6 +251,7 @@ public class UpdateDataServiceApiRequest extends Request {
             this.protocols = request.protocols;
             this.registrationDetails = request.registrationDetails;
             this.requestMethod = request.requestMethod;
+            this.resourceGroupId = request.resourceGroupId;
             this.responseContentType = request.responseContentType;
             this.scriptDetails = request.scriptDetails;
             this.tenantId = request.tenantId;
@@ -315,6 +329,15 @@ public class UpdateDataServiceApiRequest extends Request {
         public Builder requestMethod(Integer requestMethod) {
             this.putBodyParameter("RequestMethod", requestMethod);
             this.requestMethod = requestMethod;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(Long resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

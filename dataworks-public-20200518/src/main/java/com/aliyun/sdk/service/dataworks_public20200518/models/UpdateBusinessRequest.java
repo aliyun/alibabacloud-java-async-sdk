@@ -149,7 +149,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * BusinessId.
+         * The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow ID.
          */
         public Builder businessId(Long businessId) {
             this.putBodyParameter("BusinessId", businessId);
@@ -158,7 +158,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * BusinessName.
+         * The name of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow name.
          */
         public Builder businessName(String businessName) {
             this.putBodyParameter("BusinessName", businessName);
@@ -167,7 +167,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the workflow.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -176,7 +176,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The owner of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -185,7 +185,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -194,7 +194,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
