@@ -182,6 +182,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("Size")
         private Integer size;
 
+        @NameInMap("SnapshotId")
+        private String snapshotId;
+
         @NameInMap("Status")
         private String status;
 
@@ -199,6 +202,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.portable = builder.portable;
             this.size = builder.size;
+            this.snapshotId = builder.snapshotId;
             this.status = builder.status;
             this.type = builder.type;
         }
@@ -282,6 +286,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -306,6 +317,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String instanceName; 
             private Boolean portable; 
             private Integer size; 
+            private String snapshotId; 
             private String status; 
             private String type; 
 
@@ -386,6 +398,14 @@ public class DescribeDisksResponseBody extends TeaModel {
              */
             public Builder size(Integer size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 

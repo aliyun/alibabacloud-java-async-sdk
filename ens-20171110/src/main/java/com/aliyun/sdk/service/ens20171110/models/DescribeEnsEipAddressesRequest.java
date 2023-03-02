@@ -29,6 +29,10 @@ public class DescribeEnsEipAddressesRequest extends Request {
     private String eipAddress;
 
     @Query
+    @NameInMap("EipName")
+    private String eipName;
+
+    @Query
     @NameInMap("EnsRegionId")
     private String ensRegionId;
 
@@ -47,6 +51,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         this.associatedInstanceId = builder.associatedInstanceId;
         this.associatedInstanceType = builder.associatedInstanceType;
         this.eipAddress = builder.eipAddress;
+        this.eipName = builder.eipName;
         this.ensRegionId = builder.ensRegionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -94,6 +99,13 @@ public class DescribeEnsEipAddressesRequest extends Request {
     }
 
     /**
+     * @return eipName
+     */
+    public String getEipName() {
+        return this.eipName;
+    }
+
+    /**
      * @return ensRegionId
      */
     public String getEnsRegionId() {
@@ -119,6 +131,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         private String associatedInstanceId; 
         private String associatedInstanceType; 
         private String eipAddress; 
+        private String eipName; 
         private String ensRegionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -133,6 +146,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
             this.associatedInstanceId = request.associatedInstanceId;
             this.associatedInstanceType = request.associatedInstanceType;
             this.eipAddress = request.eipAddress;
+            this.eipName = request.eipName;
             this.ensRegionId = request.ensRegionId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -171,6 +185,15 @@ public class DescribeEnsEipAddressesRequest extends Request {
         public Builder eipAddress(String eipAddress) {
             this.putQueryParameter("EipAddress", eipAddress);
             this.eipAddress = eipAddress;
+            return this;
+        }
+
+        /**
+         * EipName.
+         */
+        public Builder eipName(String eipName) {
+            this.putQueryParameter("EipName", eipName);
+            this.eipName = eipName;
             return this;
         }
 

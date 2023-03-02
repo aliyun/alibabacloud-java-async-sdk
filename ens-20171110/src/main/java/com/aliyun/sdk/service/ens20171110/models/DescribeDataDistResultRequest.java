@@ -26,6 +26,10 @@ public class DescribeDataDistResultRequest extends Request {
     private String dataVersions;
 
     @Query
+    @NameInMap("EnsRegionIds")
+    private java.util.List < String > ensRegionIds;
+
+    @Query
     @NameInMap("InstanceIds")
     private String instanceIds;
 
@@ -50,6 +54,7 @@ public class DescribeDataDistResultRequest extends Request {
         this.appId = builder.appId;
         this.dataNames = builder.dataNames;
         this.dataVersions = builder.dataVersions;
+        this.ensRegionIds = builder.ensRegionIds;
         this.instanceIds = builder.instanceIds;
         this.maxDate = builder.maxDate;
         this.minDate = builder.minDate;
@@ -92,6 +97,13 @@ public class DescribeDataDistResultRequest extends Request {
     }
 
     /**
+     * @return ensRegionIds
+     */
+    public java.util.List < String > getEnsRegionIds() {
+        return this.ensRegionIds;
+    }
+
+    /**
      * @return instanceIds
      */
     public String getInstanceIds() {
@@ -130,6 +142,7 @@ public class DescribeDataDistResultRequest extends Request {
         private String appId; 
         private String dataNames; 
         private String dataVersions; 
+        private java.util.List < String > ensRegionIds; 
         private String instanceIds; 
         private String maxDate; 
         private String minDate; 
@@ -145,6 +158,7 @@ public class DescribeDataDistResultRequest extends Request {
             this.appId = request.appId;
             this.dataNames = request.dataNames;
             this.dataVersions = request.dataVersions;
+            this.ensRegionIds = request.ensRegionIds;
             this.instanceIds = request.instanceIds;
             this.maxDate = request.maxDate;
             this.minDate = request.minDate;
@@ -176,6 +190,16 @@ public class DescribeDataDistResultRequest extends Request {
         public Builder dataVersions(String dataVersions) {
             this.putQueryParameter("DataVersions", dataVersions);
             this.dataVersions = dataVersions;
+            return this;
+        }
+
+        /**
+         * EnsRegionIds.
+         */
+        public Builder ensRegionIds(java.util.List < String > ensRegionIds) {
+            String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");
+            this.putQueryParameter("EnsRegionIds", ensRegionIdsShrink);
+            this.ensRegionIds = ensRegionIds;
             return this;
         }
 

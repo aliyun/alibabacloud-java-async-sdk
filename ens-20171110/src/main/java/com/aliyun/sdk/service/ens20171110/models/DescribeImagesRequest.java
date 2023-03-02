@@ -33,17 +33,12 @@ public class DescribeImagesRequest extends Request {
     private String pageSize;
 
     @Query
+    @NameInMap("SnapshotId")
+    private String snapshotId;
+
+    @Query
     @NameInMap("Status")
     private String status;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
-    @Query
-    @NameInMap("product")
-    private String product;
 
     private DescribeImagesRequest(Builder builder) {
         super(builder);
@@ -52,9 +47,8 @@ public class DescribeImagesRequest extends Request {
         this.imageName = builder.imageName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.snapshotId = builder.snapshotId;
         this.status = builder.status;
-        this.version = builder.version;
-        this.product = builder.product;
     }
 
     public static Builder builder() {
@@ -106,24 +100,17 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
         return this.status;
-    }
-
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
-    /**
-     * @return product
-     */
-    public String getProduct() {
-        return this.product;
     }
 
     public static final class Builder extends Request.Builder<DescribeImagesRequest, Builder> {
@@ -132,9 +119,8 @@ public class DescribeImagesRequest extends Request {
         private String imageName; 
         private String pageNumber; 
         private String pageSize; 
+        private String snapshotId; 
         private String status; 
-        private String version; 
-        private String product; 
 
         private Builder() {
             super();
@@ -147,9 +133,8 @@ public class DescribeImagesRequest extends Request {
             this.imageName = request.imageName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.snapshotId = request.snapshotId;
             this.status = request.status;
-            this.version = request.version;
-            this.product = request.product;
         } 
 
         /**
@@ -198,29 +183,20 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
+         * SnapshotId.
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
+            return this;
+        }
+
+        /**
          * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
-            return this;
-        }
-
-        /**
-         * product.
-         */
-        public Builder product(String product) {
-            this.putQueryParameter("product", product);
-            this.product = product;
             return this;
         }
 

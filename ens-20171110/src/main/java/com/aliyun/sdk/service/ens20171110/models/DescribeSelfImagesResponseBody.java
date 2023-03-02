@@ -95,6 +95,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         @NameInMap("Architecture")
         private String architecture;
 
+        @NameInMap("ComputeType")
+        private String computeType;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
@@ -119,11 +122,15 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         @NameInMap("Platform")
         private String platform;
 
+        @NameInMap("SnapshotId")
+        private String snapshotId;
+
         @NameInMap("Status")
         private String status;
 
         private Image(Builder builder) {
             this.architecture = builder.architecture;
+            this.computeType = builder.computeType;
             this.creationTime = builder.creationTime;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
@@ -132,6 +139,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.osVersion = builder.osVersion;
             this.platform = builder.platform;
+            this.snapshotId = builder.snapshotId;
             this.status = builder.status;
         }
 
@@ -148,6 +156,13 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
          */
         public String getArchitecture() {
             return this.architecture;
+        }
+
+        /**
+         * @return computeType
+         */
+        public String getComputeType() {
+            return this.computeType;
         }
 
         /**
@@ -207,6 +222,13 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -215,6 +237,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String architecture; 
+            private String computeType; 
             private String creationTime; 
             private String imageId; 
             private String imageName; 
@@ -223,6 +246,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             private String instanceId; 
             private String osVersion; 
             private String platform; 
+            private String snapshotId; 
             private String status; 
 
             /**
@@ -230,6 +254,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
+                return this;
+            }
+
+            /**
+             * ComputeType.
+             */
+            public Builder computeType(String computeType) {
+                this.computeType = computeType;
                 return this;
             }
 
@@ -294,6 +326,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
              */
             public Builder platform(String platform) {
                 this.platform = platform;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 

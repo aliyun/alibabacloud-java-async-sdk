@@ -45,6 +45,10 @@ public class DescribeDisksRequest extends Request {
     private String ensRegionIds;
 
     @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
     @NameInMap("OrderByParams")
     private String orderByParams;
 
@@ -55,6 +59,10 @@ public class DescribeDisksRequest extends Request {
     @Query
     @NameInMap("PageSize")
     private String pageSize;
+
+    @Query
+    @NameInMap("SnapshotId")
+    private String snapshotId;
 
     @Query
     @NameInMap("Status")
@@ -74,9 +82,11 @@ public class DescribeDisksRequest extends Request {
         this.diskType = builder.diskType;
         this.ensRegionId = builder.ensRegionId;
         this.ensRegionIds = builder.ensRegionIds;
+        this.instanceId = builder.instanceId;
         this.orderByParams = builder.orderByParams;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.snapshotId = builder.snapshotId;
         this.status = builder.status;
         this.type = builder.type;
     }
@@ -151,6 +161,13 @@ public class DescribeDisksRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return orderByParams
      */
     public String getOrderByParams() {
@@ -169,6 +186,13 @@ public class DescribeDisksRequest extends Request {
      */
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
     /**
@@ -194,9 +218,11 @@ public class DescribeDisksRequest extends Request {
         private String diskType; 
         private String ensRegionId; 
         private String ensRegionIds; 
+        private String instanceId; 
         private String orderByParams; 
         private String pageNumber; 
         private String pageSize; 
+        private String snapshotId; 
         private String status; 
         private String type; 
 
@@ -214,9 +240,11 @@ public class DescribeDisksRequest extends Request {
             this.diskType = request.diskType;
             this.ensRegionId = request.ensRegionId;
             this.ensRegionIds = request.ensRegionIds;
+            this.instanceId = request.instanceId;
             this.orderByParams = request.orderByParams;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.snapshotId = request.snapshotId;
             this.status = request.status;
             this.type = request.type;
         } 
@@ -294,6 +322,15 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
+         * 云盘所挂载的实列。
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
          * OrderByParams.
          */
         public Builder orderByParams(String orderByParams) {
@@ -317,6 +354,15 @@ public class DescribeDisksRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SnapshotId.
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
             return this;
         }
 

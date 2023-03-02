@@ -173,6 +173,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("Platform")
         private String platform;
 
+        @NameInMap("SnapshotId")
+        private String snapshotId;
+
         private Image(Builder builder) {
             this.architecture = builder.architecture;
             this.creationTime = builder.creationTime;
@@ -181,6 +184,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             this.imageOwnerAlias = builder.imageOwnerAlias;
             this.imageSize = builder.imageSize;
             this.platform = builder.platform;
+            this.snapshotId = builder.snapshotId;
         }
 
         public static Builder builder() {
@@ -240,6 +244,13 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.platform;
         }
 
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
         public static final class Builder {
             private String architecture; 
             private String creationTime; 
@@ -248,6 +259,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String imageOwnerAlias; 
             private String imageSize; 
             private String platform; 
+            private String snapshotId; 
 
             /**
              * Architecture.
@@ -302,6 +314,14 @@ public class DescribeImagesResponseBody extends TeaModel {
              */
             public Builder platform(String platform) {
                 this.platform = platform;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 

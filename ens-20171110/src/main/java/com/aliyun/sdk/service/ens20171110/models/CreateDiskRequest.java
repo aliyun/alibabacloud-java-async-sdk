@@ -29,8 +29,11 @@ public class CreateDiskRequest extends Request {
 
     @Query
     @NameInMap("Size")
-    @Validation(required = true)
     private String size;
+
+    @Query
+    @NameInMap("SnapshotId")
+    private String snapshotId;
 
     private CreateDiskRequest(Builder builder) {
         super(builder);
@@ -38,6 +41,7 @@ public class CreateDiskRequest extends Request {
         this.ensRegionId = builder.ensRegionId;
         this.instanceChargeType = builder.instanceChargeType;
         this.size = builder.size;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
@@ -81,11 +85,19 @@ public class CreateDiskRequest extends Request {
         return this.size;
     }
 
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
     public static final class Builder extends Request.Builder<CreateDiskRequest, Builder> {
         private String category; 
         private String ensRegionId; 
         private String instanceChargeType; 
         private String size; 
+        private String snapshotId; 
 
         private Builder() {
             super();
@@ -97,6 +109,7 @@ public class CreateDiskRequest extends Request {
             this.ensRegionId = request.ensRegionId;
             this.instanceChargeType = request.instanceChargeType;
             this.size = request.size;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
@@ -132,6 +145,15 @@ public class CreateDiskRequest extends Request {
         public Builder size(String size) {
             this.putQueryParameter("Size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * SnapshotId.
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
             return this;
         }
 

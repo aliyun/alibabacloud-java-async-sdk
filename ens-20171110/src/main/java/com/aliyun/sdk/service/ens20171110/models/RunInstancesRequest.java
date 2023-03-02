@@ -81,6 +81,10 @@ public class RunInstancesRequest extends Request {
     private String password;
 
     @Query
+    @NameInMap("PasswordInherit")
+    private Boolean passwordInherit;
+
+    @Query
     @NameInMap("Period")
     private Long period;
 
@@ -147,6 +151,7 @@ public class RunInstancesRequest extends Request {
         this.netDistrictCode = builder.netDistrictCode;
         this.netWorkId = builder.netWorkId;
         this.password = builder.password;
+        this.passwordInherit = builder.passwordInherit;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.privateIpAddress = builder.privateIpAddress;
@@ -287,6 +292,13 @@ public class RunInstancesRequest extends Request {
     }
 
     /**
+     * @return passwordInherit
+     */
+    public Boolean getPasswordInherit() {
+        return this.passwordInherit;
+    }
+
+    /**
      * @return period
      */
     public Long getPeriod() {
@@ -387,6 +399,7 @@ public class RunInstancesRequest extends Request {
         private String netDistrictCode; 
         private String netWorkId; 
         private String password; 
+        private Boolean passwordInherit; 
         private Long period; 
         private String periodUnit; 
         private String privateIpAddress; 
@@ -422,6 +435,7 @@ public class RunInstancesRequest extends Request {
             this.netDistrictCode = request.netDistrictCode;
             this.netWorkId = request.netWorkId;
             this.password = request.password;
+            this.passwordInherit = request.passwordInherit;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.privateIpAddress = request.privateIpAddress;
@@ -578,6 +592,15 @@ public class RunInstancesRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * PasswordInherit.
+         */
+        public Builder passwordInherit(Boolean passwordInherit) {
+            this.putQueryParameter("PasswordInherit", passwordInherit);
+            this.passwordInherit = passwordInherit;
             return this;
         }
 

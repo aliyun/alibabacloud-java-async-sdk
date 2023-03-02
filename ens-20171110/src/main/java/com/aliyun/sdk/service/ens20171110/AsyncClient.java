@@ -38,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AuthorizeSecurityGroupEgressResponse> authorizeSecurityGroupEgress(AuthorizeSecurityGroupEgressRequest request);
 
+    CompletableFuture<CleanDistDataResponse> cleanDistData(CleanDistDataRequest request);
+
     CompletableFuture<CreateARMServerInstancesResponse> createARMServerInstances(CreateARMServerInstancesRequest request);
 
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
@@ -330,8 +332,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyVSwitchAttributeResponse> modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request);
 
-    CompletableFuture<PreCreateEnsServiceResponse> preCreateEnsService(PreCreateEnsServiceRequest request);
-
     CompletableFuture<PushApplicationDataResponse> pushApplicationData(PushApplicationDataRequest request);
 
     CompletableFuture<ReInitDiskResponse> reInitDisk(ReInitDiskRequest request);
@@ -344,9 +344,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RebootInstancesResponse> rebootInstances(RebootInstancesRequest request);
 
+    CompletableFuture<RecoverAICInstanceResponse> recoverAICInstance(RecoverAICInstanceRequest request);
+
     CompletableFuture<ReinitInstanceResponse> reinitInstance(ReinitInstanceRequest request);
 
     CompletableFuture<ReinitInstancesResponse> reinitInstances(ReinitInstancesRequest request);
+
+    CompletableFuture<ReleaseAICInstanceResponse> releaseAICInstance(ReleaseAICInstanceRequest request);
 
     CompletableFuture<ReleaseARMServerInstanceResponse> releaseARMServerInstance(ReleaseARMServerInstanceRequest request);
 
@@ -373,6 +377,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAICInstanceResponse> resetAICInstance(ResetAICInstanceRequest request);
 
     CompletableFuture<ResetDeviceInstanceResponse> resetDeviceInstance(ResetDeviceInstanceRequest request);
+
+    CompletableFuture<ResetDiskResponse> resetDisk(ResetDiskRequest request);
 
     CompletableFuture<ResizeDiskResponse> resizeDisk(ResizeDiskRequest request);
 

@@ -28,12 +28,17 @@ public class DescribeSelfImagesRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @Query
+    @NameInMap("SnapshotId")
+    private String snapshotId;
+
     private DescribeSelfImagesRequest(Builder builder) {
         super(builder);
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class DescribeSelfImagesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSelfImagesRequest, Builder> {
         private String imageId; 
         private String imageName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String snapshotId; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class DescribeSelfImagesRequest extends Request {
             this.imageName = request.imageName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class DescribeSelfImagesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SnapshotId.
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
             return this;
         }
 

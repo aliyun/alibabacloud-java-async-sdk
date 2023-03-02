@@ -92,6 +92,9 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     } 
 
     public static class Image extends TeaModel {
+        @NameInMap("ComputeType")
+        private String computeType;
+
         @NameInMap("Description")
         private String description;
 
@@ -111,6 +114,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         private String OSType;
 
         private Image(Builder builder) {
+            this.computeType = builder.computeType;
             this.description = builder.description;
             this.imageId = builder.imageId;
             this.imageSize = builder.imageSize;
@@ -125,6 +129,13 @@ public class DescribeImageInfosResponseBody extends TeaModel {
 
         public static Image create() {
             return builder().build();
+        }
+
+        /**
+         * @return computeType
+         */
+        public String getComputeType() {
+            return this.computeType;
         }
 
         /**
@@ -170,12 +181,21 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String computeType; 
             private String description; 
             private String imageId; 
             private String imageSize; 
             private String imageVersion; 
             private String OSName; 
             private String OSType; 
+
+            /**
+             * ComputeType.
+             */
+            public Builder computeType(String computeType) {
+                this.computeType = computeType;
+                return this;
+            }
 
             /**
              * Description.

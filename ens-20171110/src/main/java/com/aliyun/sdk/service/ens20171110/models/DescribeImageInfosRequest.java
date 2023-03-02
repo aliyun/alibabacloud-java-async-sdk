@@ -16,15 +16,9 @@ public class DescribeImageInfosRequest extends Request {
     @NameInMap("OsType")
     private String osType;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeImageInfosRequest(Builder builder) {
         super(builder);
         this.osType = builder.osType;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -47,16 +41,8 @@ public class DescribeImageInfosRequest extends Request {
         return this.osType;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeImageInfosRequest, Builder> {
         private String osType; 
-        private String version; 
 
         private Builder() {
             super();
@@ -65,7 +51,6 @@ public class DescribeImageInfosRequest extends Request {
         private Builder(DescribeImageInfosRequest request) {
             super(request);
             this.osType = request.osType;
-            this.version = request.version;
         } 
 
         /**
@@ -74,15 +59,6 @@ public class DescribeImageInfosRequest extends Request {
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
             this.osType = osType;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 
