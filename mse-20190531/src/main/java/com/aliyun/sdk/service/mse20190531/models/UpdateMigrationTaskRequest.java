@@ -207,7 +207,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The type of the instance.
+         * The type of the instance. Valid values:
          * <p>
          * 
          * *   Nacos-Ans
@@ -230,7 +230,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The source instance node address.
+         * The address of the source instance node.
          */
         public Builder originInstanceAddress(String originInstanceAddress) {
             this.putQueryParameter("OriginInstanceAddress", originInstanceAddress);
@@ -248,7 +248,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * The list of namespaces. This parameter is optional if the source instance is a Nacos instance.
+         * The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.
          */
         public Builder originInstanceNamespace(String originInstanceNamespace) {
             this.putQueryParameter("OriginInstanceNamespace", originInstanceNamespace);

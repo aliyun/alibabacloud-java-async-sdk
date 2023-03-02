@@ -164,7 +164,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The names of the applications.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -191,7 +191,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

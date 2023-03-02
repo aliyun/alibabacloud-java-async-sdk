@@ -152,6 +152,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ExportNacosConfigResponse> exportNacosConfig(ExportNacosConfigRequest request);
 
+    /**
+      * Only one task can run at a time.
+      *
+     */
     CompletableFuture<ExportZookeeperDataResponse> exportZookeeperData(ExportZookeeperDataRequest request);
 
     CompletableFuture<FetchLosslessRuleListResponse> fetchLosslessRuleList(FetchLosslessRuleListRequest request);
@@ -226,6 +230,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ImportServicesResponse> importServices(ImportServicesRequest request);
 
+    /**
+      * **
+      * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
+      *
+     */
     CompletableFuture<ImportZookeeperDataResponse> importZookeeperData(ImportZookeeperDataRequest request);
 
     /**

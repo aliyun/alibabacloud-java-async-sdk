@@ -41,6 +41,10 @@ public class UpdateConfigRequest extends Request {
     private String configType;
 
     @Query
+    @NameInMap("EurekaSupported")
+    private Boolean eurekaSupported;
+
+    @Query
     @NameInMap("ExtendedTypesEnable")
     private String extendedTypesEnable;
 
@@ -113,6 +117,7 @@ public class UpdateConfigRequest extends Request {
         this.configAuthEnabled = builder.configAuthEnabled;
         this.configSecretEnabled = builder.configSecretEnabled;
         this.configType = builder.configType;
+        this.eurekaSupported = builder.eurekaSupported;
         this.extendedTypesEnable = builder.extendedTypesEnable;
         this.initLimit = builder.initLimit;
         this.instanceId = builder.instanceId;
@@ -191,6 +196,13 @@ public class UpdateConfigRequest extends Request {
      */
     public String getConfigType() {
         return this.configType;
+    }
+
+    /**
+     * @return eurekaSupported
+     */
+    public Boolean getEurekaSupported() {
+        return this.eurekaSupported;
     }
 
     /**
@@ -313,6 +325,7 @@ public class UpdateConfigRequest extends Request {
         private Boolean configAuthEnabled; 
         private Boolean configSecretEnabled; 
         private String configType; 
+        private Boolean eurekaSupported; 
         private String extendedTypesEnable; 
         private String initLimit; 
         private String instanceId; 
@@ -343,6 +356,7 @@ public class UpdateConfigRequest extends Request {
             this.configAuthEnabled = request.configAuthEnabled;
             this.configSecretEnabled = request.configSecretEnabled;
             this.configType = request.configType;
+            this.eurekaSupported = request.eurekaSupported;
             this.extendedTypesEnable = request.extendedTypesEnable;
             this.initLimit = request.initLimit;
             this.instanceId = request.instanceId;
@@ -437,6 +451,15 @@ public class UpdateConfigRequest extends Request {
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
             this.configType = configType;
+            return this;
+        }
+
+        /**
+         * EurekaSupported.
+         */
+        public Builder eurekaSupported(Boolean eurekaSupported) {
+            this.putQueryParameter("EurekaSupported", eurekaSupported);
+            this.eurekaSupported = eurekaSupported;
             return this;
         }
 

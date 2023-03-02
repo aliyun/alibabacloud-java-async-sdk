@@ -201,7 +201,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * Indicates whether the call was successful. Valid values:
          * <p>
          * 
          * *   `true`: The request was successful.

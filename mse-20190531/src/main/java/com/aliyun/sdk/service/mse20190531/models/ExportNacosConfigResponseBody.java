@@ -138,7 +138,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.
          * <p>
          * 
          * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
@@ -225,7 +225,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The URL used to download the exported configurations.
+             * The URL that is used to download the exported configurations.
              */
             public Builder url(String url) {
                 this.url = url;

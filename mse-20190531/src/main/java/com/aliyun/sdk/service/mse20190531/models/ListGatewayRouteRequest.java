@@ -137,7 +137,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable sorting.
+         * Specifies whether to enable sorting. This parameter is taken offline and is unavailable.
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);

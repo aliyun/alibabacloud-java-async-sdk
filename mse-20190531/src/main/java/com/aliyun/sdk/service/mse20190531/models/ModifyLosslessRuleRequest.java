@@ -338,7 +338,7 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The microservice namespace to which the rule applies.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

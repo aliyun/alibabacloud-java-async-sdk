@@ -114,7 +114,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -230,7 +230,7 @@ public class PullServicesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The group.
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -339,7 +339,7 @@ public class PullServicesResponseBody extends TeaModel {
             private java.util.List < Services> services; 
 
             /**
-             * The group.
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

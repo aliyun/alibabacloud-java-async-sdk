@@ -122,7 +122,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -138,7 +138,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.
          * <p>
          * 
          * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
@@ -383,7 +383,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             private Integer succCount; 
 
             /**
-             * The information about configurations failed to be imported.
+             * The information about configurations that are failed to be imported.
              */
             public Builder failData(java.util.List < FailData> failData) {
                 this.failData = failData;

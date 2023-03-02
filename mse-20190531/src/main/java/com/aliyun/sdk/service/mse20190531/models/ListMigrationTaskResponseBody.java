@@ -166,7 +166,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -411,7 +411,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The source instance node address.
+             * The address of the source instance node.
              */
             public Builder originInstanceAddress(String originInstanceAddress) {
                 this.originInstanceAddress = originInstanceAddress;
@@ -427,7 +427,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The list of namespaces. This parameter is optional if the source instance is a Nacos instance.
+             * The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.
              */
             public Builder originInstanceNamespace(String originInstanceNamespace) {
                 this.originInstanceNamespace = originInstanceNamespace;

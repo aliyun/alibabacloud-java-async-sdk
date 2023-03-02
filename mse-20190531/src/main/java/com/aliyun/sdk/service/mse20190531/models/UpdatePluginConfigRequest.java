@@ -207,8 +207,8 @@ public class UpdatePluginConfigRequest extends Request {
          * <p>
          * 
          * *   0: global
-         * *   1: domain names
-         * *   2: routes
+         * *   1: route
+         * *   2: domain name
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);

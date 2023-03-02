@@ -106,7 +106,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the created service version.
+         * The ID of the gateway service.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

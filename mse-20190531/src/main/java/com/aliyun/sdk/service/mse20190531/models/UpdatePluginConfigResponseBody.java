@@ -122,7 +122,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -178,7 +178,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

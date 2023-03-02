@@ -135,7 +135,7 @@ public class ListClusterTypesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. The region is supported by MSE.
+         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

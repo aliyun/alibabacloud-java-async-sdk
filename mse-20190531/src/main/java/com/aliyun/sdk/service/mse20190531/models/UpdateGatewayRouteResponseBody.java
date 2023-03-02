@@ -110,7 +110,7 @@ public class UpdateGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -126,7 +126,7 @@ public class UpdateGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

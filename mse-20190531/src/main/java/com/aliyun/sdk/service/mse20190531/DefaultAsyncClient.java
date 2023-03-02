@@ -713,6 +713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only one task can run at a time.
+      *
+     */
     @Override
     public CompletableFuture<ExportZookeeperDataResponse> exportZookeeperData(ExportZookeeperDataRequest request) {
         try {
@@ -1135,6 +1139,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **
+      * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
+      *
+     */
     @Override
     public CompletableFuture<ImportZookeeperDataResponse> importZookeeperData(ImportZookeeperDataRequest request) {
         try {

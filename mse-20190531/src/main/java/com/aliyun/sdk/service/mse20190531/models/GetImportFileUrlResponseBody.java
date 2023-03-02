@@ -141,7 +141,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
          * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
          * <p>
          * 
-         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -165,7 +165,7 @@ public class GetImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;

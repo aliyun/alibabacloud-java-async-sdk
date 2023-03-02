@@ -127,7 +127,7 @@ public class UpdateGatewayRouteWafStatusRequest extends Request {
         }
 
         /**
-         * The ID of the route entry.
+         * The ID of the route.
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);

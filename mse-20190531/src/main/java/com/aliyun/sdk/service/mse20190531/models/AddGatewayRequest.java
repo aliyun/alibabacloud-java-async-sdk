@@ -358,7 +358,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -444,7 +444,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * The ID of the virtual private cloud (VPC) in which the instances reside.
          */
         public Builder vpc(String vpc) {
             this.putQueryParameter("Vpc", vpc);

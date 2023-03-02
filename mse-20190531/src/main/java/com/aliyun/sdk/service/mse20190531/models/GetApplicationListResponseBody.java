@@ -358,7 +358,7 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -98,7 +98,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +122,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          * <p>
          * 
          * *   If the request is successful, a success message is returned.
@@ -142,7 +142,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: -\[unk]true\[unk]: The request is successful. -\[unk]false\[unk]: The request fails.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -310,11 +314,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert rule is enabled. Valid values:
+             * Indicates whether the alert rule is enabled. Valid value:
              * <p>
              * 
-             * *   `true`: enabled
-             * *   `false`: disabled
+             * *   `true`: enabled.
+             * *   `false`: disabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -463,7 +467,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Long routeStatus; 
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -479,7 +483,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the rules.
+             * The information about the rules.
              */
             public Builder routeRules(java.util.List < RouteRules> routeRules) {
                 this.routeRules = routeRules;

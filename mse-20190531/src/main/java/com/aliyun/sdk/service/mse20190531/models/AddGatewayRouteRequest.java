@@ -584,7 +584,7 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * The type of the protocol. Valid values:
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -1062,7 +1062,7 @@ public class AddGatewayRouteRequest extends Request {
             private String path; 
 
             /**
-             * The status code returned.
+             * The HTTP status code.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1581,7 +1581,7 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * The type of the protocol. Valid values:
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;

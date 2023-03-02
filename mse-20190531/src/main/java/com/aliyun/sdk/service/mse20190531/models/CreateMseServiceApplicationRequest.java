@@ -221,7 +221,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Microservices Engine (MSE) instance resides. Examples:
+         * The ID of the region where the instance resides. Examples:
          * <p>
          * 
          * *   cn-hangzhou: China (Hangzhou)
@@ -246,7 +246,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * The service source.
+         * The source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

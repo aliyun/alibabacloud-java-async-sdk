@@ -98,7 +98,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The code returned.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +122,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -392,7 +392,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * The protocol.
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -440,7 +440,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * The name of a service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -456,7 +456,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * The type of the service source.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -464,7 +464,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * The version of a service.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1406,7 +1406,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * The protocol.
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -1891,7 +1891,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The list of domain names.
+             * The names of domains.
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
@@ -1899,7 +1899,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to activate Web Application Firewall (WAF).
+             * Indicates whether Web Application Firewall (WAF) is activated.
              */
             public Builder enableWaf(String enableWaf) {
                 this.enableWaf = enableWaf;
@@ -1907,7 +1907,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the Fallback service.
+             * Indicates whether the Fallback service is enabled.
              */
             public Builder fallback(Boolean fallback) {
                 this.fallback = fallback;
@@ -1915,7 +1915,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Fallback service.
+             * The information of the Fallback service.
              */
             public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
                 this.fallbackServices = fallbackServices;
@@ -2003,7 +2003,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The information about services.
+             * The services.
              */
             public Builder routeServices(java.util.List < RouteServices> routeServices) {
                 this.routeServices = routeServices;

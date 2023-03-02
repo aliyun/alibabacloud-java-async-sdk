@@ -110,7 +110,7 @@ public class GetImportFileUrlRequest extends Request {
         }
 
         /**
-         * The type of the file.
+         * The file type.
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);

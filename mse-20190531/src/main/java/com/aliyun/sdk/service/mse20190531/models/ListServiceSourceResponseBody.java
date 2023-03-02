@@ -122,7 +122,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -218,7 +218,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String watchNamespace; 
 
             /**
-             * Indicates whether Ingresses are enabled.
+             * Indicates whether Ingress is enabled.
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -226,7 +226,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Ingress gateway status is updated.
+             * Indicates whether the Ingress status is updated.
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -242,7 +242,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace whose resources you want to monitor.
+             * The namespace that you want to monitor.
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;
@@ -503,7 +503,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Support for Ingresses of applications.
+             * Indicates whether Ingress is supported for applications.
              */
             public Builder ingressOptions(IngressOptions ingressOptions) {
                 this.ingressOptions = ingressOptions;

@@ -242,7 +242,7 @@ public class GetMseSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The ID of cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

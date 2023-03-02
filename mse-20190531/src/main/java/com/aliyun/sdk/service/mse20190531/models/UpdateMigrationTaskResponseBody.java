@@ -327,7 +327,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the migration task was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -335,7 +335,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * The time when the migration task was updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -351,7 +351,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The source instance node address.
+             * The address of the source instance node.
              */
             public Builder originInstanceAddress(String originInstanceAddress) {
                 this.originInstanceAddress = originInstanceAddress;
@@ -367,7 +367,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The list of namespaces. This parameter is optional if the source instance is a Nacos instance.
+             * The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.
              */
             public Builder originInstanceNamespace(String originInstanceNamespace) {
                 this.originInstanceNamespace = originInstanceNamespace;

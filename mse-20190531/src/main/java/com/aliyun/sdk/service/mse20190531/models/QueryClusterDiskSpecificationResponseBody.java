@@ -122,7 +122,7 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;

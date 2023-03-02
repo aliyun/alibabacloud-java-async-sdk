@@ -211,7 +211,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * The ID of an application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -220,7 +220,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * The name of an application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -238,7 +238,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The microservice namespace to which the application belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -265,7 +265,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

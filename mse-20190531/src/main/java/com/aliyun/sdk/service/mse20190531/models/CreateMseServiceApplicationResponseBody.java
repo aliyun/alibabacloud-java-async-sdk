@@ -98,7 +98,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The status code returned.
+         * The return value.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -314,7 +314,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -362,7 +362,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -378,7 +378,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The status. Valid values: 1: available; 2: deleted
              */
             public Builder status(Integer status) {
                 this.status = status;

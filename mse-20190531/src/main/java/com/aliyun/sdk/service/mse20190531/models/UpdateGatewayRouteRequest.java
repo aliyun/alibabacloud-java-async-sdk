@@ -640,7 +640,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1057,7 +1057,7 @@ public class UpdateGatewayRouteRequest extends Request {
             private String path; 
 
             /**
-             * The status code.
+             * The status code returned.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1642,7 +1642,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

@@ -262,7 +262,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * The version of the instance.
              */
             public Builder showName(String showName) {
                 this.showName = showName;

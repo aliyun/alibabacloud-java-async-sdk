@@ -125,7 +125,7 @@ public class ImportNacosConfigRequest extends Request {
         }
 
         /**
-         * The download URL of the configuration file.
+         * The URL that is used to download the configuration file.
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);

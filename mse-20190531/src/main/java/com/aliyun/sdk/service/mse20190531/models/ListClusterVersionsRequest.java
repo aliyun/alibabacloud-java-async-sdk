@@ -107,7 +107,7 @@ public class ListClusterVersionsRequest extends Request {
          * Valid values:
          * <p>
          * 
-         * *   `mse_dev`: Developer Edition
+         * *   `mse_dev`: Developer Edition.
          * *   `mse_pro`: Professional Edition. This is the default value.
          */
         public Builder mseVersion(String mseVersion) {
