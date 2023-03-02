@@ -55,7 +55,7 @@ public class GetDefaultAITemplateRequest extends Request {
         } 
 
         /**
-         * The type of the AI template. Set the value to **AIMediaAudit**, which specifies intelligent review.
+         * The type of the AI template. Set the value to **AIMediaAudit**, which specifies the automated review.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

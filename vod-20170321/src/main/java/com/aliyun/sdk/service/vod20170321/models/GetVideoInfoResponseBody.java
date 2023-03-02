@@ -58,7 +58,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the video.
+         * The information about the media file.
          */
         public Builder video(Video video) {
             this.video = video;
@@ -375,7 +375,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The category ID of the video.
+             * The category ID of the media file.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -383,7 +383,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the video.
+             * The name of the category.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -391,7 +391,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The thumbnail URL of the video.
+             * The thumbnail URL of the media file.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -399,7 +399,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the video was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the media file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -407,9 +407,10 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the custom media asset.
+             * The custom information about the media file.
              * <p>
-             * > This parameter has been deprecated. This parameter is no longer returned when you call the API.
+             * 
+             * > This parameter has been deprecated. This parameter is no longer returned after you call the operation.
              */
             public Builder customMediaInfo(String customMediaInfo) {
                 this.customMediaInfo = customMediaInfo;
@@ -417,7 +418,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the video.
+             * The description of the media file.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -425,7 +426,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video. Unit: seconds.
+             * The duration of the media file. Unit: seconds.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -433,7 +434,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the media file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -441,7 +442,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Object Storage Service (OSS) bucket.
+             * The region where the media file is stored.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -449,7 +450,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the source video file. Unit: byte.
+             * The size of the source file. Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -457,7 +458,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The URL array of video snapshots.
+             * The video snapshot URLs.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -465,15 +466,16 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The video status. Valid values:
+             * The status of the video. For information about the operations that can be performed on videos in different statuses and limits, see the Status: the status of a video section of the [Basic data types](~~52839~~) topic. Valid values:
              * <p>
+             * 
              * *   **Uploading**: The video is being uploaded.
              * *   **UploadFail**: The video failed to be uploaded.
              * *   **UploadSucc**: The video has been uploaded.
              * *   **Transcoding**: The video is being transcoded.
              * *   **TranscodeFail**: The video failed to be transcoded.
-             * *   **Blocked**: The video failed the review.
-             * *   **Normal**: The video passed the review.
+             * *   **Blocked**: The video is blocked.
+             * *   **Normal**: The video is normal.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -481,7 +483,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS bucket where the video is stored.
+             * The storage address of the media file.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -489,7 +491,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the video. Separate multiple tags with commas (,).
+             * The tags of the media file. Multiple tags are separated by commas (,).
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -497,7 +499,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template group.
+             * The ID of the transcoding template group.
              */
             public Builder templateGroupId(String templateGroupId) {
                 this.templateGroupId = templateGroupId;
@@ -505,7 +507,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the video.
+             * The title of the media file.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -513,7 +515,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * The ID of the media file.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

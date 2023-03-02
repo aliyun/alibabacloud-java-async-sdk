@@ -98,7 +98,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * SrcBpsDataPerInterval.
+         * Details about the origin bandwidth data returned at each time interval. Unit: bit/s.
          */
         public Builder srcBpsDataPerInterval(SrcBpsDataPerInterval srcBpsDataPerInterval) {
             this.srcBpsDataPerInterval = srcBpsDataPerInterval;
@@ -138,7 +138,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -202,7 +202,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * HttpsValue.
+             * The bandwidth values of origin HTTPS requests.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -210,7 +210,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -218,7 +218,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The bandwidth value at each time interval.
              */
             public Builder value(String value) {
                 this.value = value;

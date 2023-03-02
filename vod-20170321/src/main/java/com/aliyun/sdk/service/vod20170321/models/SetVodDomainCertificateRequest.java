@@ -149,7 +149,7 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * The domain name that is secured by the certificate. The domain name uses HTTPS acceleration.
+         * The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -179,8 +179,8 @@ public class SetVodDomainCertificateRequest extends Request {
          * Specifies whether to enable the SSL certificate. Valid values:
          * <p>
          * 
-         * *   **on**: enables the SSL certificate.
-         * *   **off**: disables the SSL certificate. Default value: off.
+         * *   **on**
+         * *   **off**
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);

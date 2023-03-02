@@ -31,6 +31,10 @@ public class DescribeVodDomainUsageDataRequest extends Request {
     private String field;
 
     @Query
+    @NameInMap("Interval")
+    private String interval;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -49,6 +53,7 @@ public class DescribeVodDomainUsageDataRequest extends Request {
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.field = builder.field;
+        this.interval = builder.interval;
         this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
         this.type = builder.type;
@@ -96,6 +101,13 @@ public class DescribeVodDomainUsageDataRequest extends Request {
     }
 
     /**
+     * @return interval
+     */
+    public String getInterval() {
+        return this.interval;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -121,6 +133,7 @@ public class DescribeVodDomainUsageDataRequest extends Request {
         private String domainName; 
         private String endTime; 
         private String field; 
+        private String interval; 
         private Long ownerId; 
         private String startTime; 
         private String type; 
@@ -135,6 +148,7 @@ public class DescribeVodDomainUsageDataRequest extends Request {
             this.domainName = request.domainName;
             this.endTime = request.endTime;
             this.field = request.field;
+            this.interval = request.interval;
             this.ownerId = request.ownerId;
             this.startTime = request.startTime;
             this.type = request.type;
@@ -181,6 +195,15 @@ public class DescribeVodDomainUsageDataRequest extends Request {
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
             this.field = field;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(String interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
             return this;
         }
 

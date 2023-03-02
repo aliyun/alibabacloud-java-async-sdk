@@ -58,7 +58,7 @@ public class ListWatermarkResponseBody extends TeaModel {
         }
 
         /**
-         * The watermarks.
+         * Details about the watermarks.
          */
         public Builder watermarkInfos(java.util.List < WatermarkInfos> watermarkInfos) {
             this.watermarkInfos = watermarkInfos;
@@ -190,7 +190,7 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the watermark was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,7 +198,7 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.
+             * The Object Storage Service (OSS) URL or CDN URL of the watermark file. A text watermark does not have a file URL.
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -206,10 +206,11 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the watermark is the default one. Valid values:
+             * Indicates whether the default watermark was used. Valid values:
              * <p>
-             * *   **Default**: The watermark is the default one.
-             * *   **NotDefault**: The watermark is not the default one.
+             * 
+             * *   **Default**
+             * *   **NotDefault**
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -227,6 +228,7 @@ public class ListWatermarkResponseBody extends TeaModel {
             /**
              * The type of the watermark. Valid values:
              * <p>
+             * 
              * *   **Image**
              * *   **Text**
              */
@@ -236,7 +238,7 @@ public class ListWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+             * The configuration information such as the position and effect about the text watermark or image watermark. The value is a JSON string. For more information about the data structure, see the "WatermarkConfig: specifies the watermark configurations" section of the [Parameters for media processing](~~98618~~) topic.
              */
             public Builder watermarkConfig(String watermarkConfig) {
                 this.watermarkConfig = watermarkConfig;

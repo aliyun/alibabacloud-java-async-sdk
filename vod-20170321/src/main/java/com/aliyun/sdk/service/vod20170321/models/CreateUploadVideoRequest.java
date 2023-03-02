@@ -219,12 +219,12 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The category ID of the audio or video file. You can use one of the following methods to obtain the category ID:
+         * The category ID of the media file. You can use one of the following methods to obtain the category ID:
          * <p>
          * 
-         * * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories**. On the Categories page, you can view the category ID.
-         * * View the value of the CateId parameter returned by the [AddCategory](~~56401~~) operation that you called to create a category.
-         * * View the value of the CateId parameter returned by the [GetCategories](~~56406~~) operation that you called to query a category.
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID of the media file.
+         * *   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.
+         * *   Obtain the value of CateId from the response to the [GetCategories](~~56406~~) operation.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -245,8 +245,8 @@ public class CreateUploadVideoRequest extends Request {
          * The description of the audio or video file.
          * <p>
          * 
-         * * The description can be up to 1,024 characters in length.
-         * * The value must be encoded in UTF-8.
+         * *   The value can be up to 1,024 characters in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -258,8 +258,8 @@ public class CreateUploadVideoRequest extends Request {
          * The name of the audio or video file.
          * <p>
          * 
-         * * The name must contain a file name extension, which is not case-sensitive.
-         * * For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](~~55396~~).
+         * *   The name must contain a file name extension, which is not case-sensitive.
+         * *   For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](~~55396~~).
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -268,7 +268,7 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The size of the audio or video file. Unit: byte.
+         * The size of the audio or video file. Unit: bytes.
          */
         public Builder fileSize(Long fileSize) {
             this.putQueryParameter("FileSize", fileSize);
@@ -277,12 +277,10 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The storage location. You can use one of the following methods to obtain the storage location:
+         * The storage address. To obtain the storage address, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**.
          * <p>
          * 
-         * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the storage location.
-         * 
-         * > If this parameter is set to a specific value, the audio or video file is uploaded to the specified storage location.
+         * > If you specify a storage address, media files are uploaded to the specified address.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -291,13 +289,13 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The one or more tags of the audio or video file.
+         * The tags of the audio or video file.
          * <p>
          * 
-         * * You can specify a maximum of 16 tags.
-         * * If you need to specify multiple tags, separate the tags with commas (,).
-         * * Each tag can be up to 32 characters in length.
-         * * The value must be encoded in UTF-8.
+         * *   You can specify a maximum of 16 tags.
+         * *   If you want to specify multiple tags, separate the tags with commas (,).
+         * *   Each tag can be up to 32 characters in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -309,11 +307,11 @@ public class CreateUploadVideoRequest extends Request {
          * The ID of the transcoding template group. You can use one of the following methods to obtain the ID of the transcoding template group:
          * <p>
          * 
-         * * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Transcoding Template Groups**. On the Transcoding Template Groups page, you can view the ID of the transcoding template group.
-         * * View the value of the TranscodeTemplateGroupId parameter returned by the [AddTranscodeTemplateGroup](~~102665~~) operation that you called to create a transcoding template group.
-         * * View the value of the TranscodeTemplateGroupId parameter returned by the [ListTranscodeTemplateGroup](~~102669~~) operation that you called to query a transcoding template group.
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Transcoding Template Groups** to view the ID of the transcoding template group.
+         * *   Obtain the value of TranscodeTemplateGroupId in the response to the [AddTranscodeTemplateGroup](~~102665~~) operation.
+         * *   Obtain the value of TranscodeTemplateGroupId in the response to the [ListTranscodeTemplateGroup](~~102669~~) operation.
          * 
-         * > If you leave this parameter empty, the default transcoding template group is used for transcoding. If you set this parameter to the ID of a specific transcoding template group, the specified transcoding template group is used for transcoding.
+         * > If you leave this parameter empty, the default transcoding template group is used. If you specify this parameter, the specified transcoding template group is used for transcoding.
          */
         public Builder templateGroupId(String templateGroupId) {
             this.putQueryParameter("TemplateGroupId", templateGroupId);
@@ -325,8 +323,8 @@ public class CreateUploadVideoRequest extends Request {
          * The title of the audio or video file.
          * <p>
          * 
-         * * The title can be up to 128 characters in length.
-         * * The value must be encoded in UTF-8.
+         * *   The title can be up to 128 characters in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -335,11 +333,14 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+         * The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see [Request parameters](~~86952~~).
          * <p>
          * 
-         * > * The callback configurations take effect only after you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. For more information about how to configure an HTTP callback in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
-         * > * To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
+         * > 
+         * 
+         * *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+         * 
+         * *   If you want to enable the upload acceleration feature, [submit a request on Yida](https://yida.alibaba-inc.com/o/ticketapply). For more information, see [Overview](~~55396~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -351,7 +352,7 @@ public class CreateUploadVideoRequest extends Request {
          * The ID of the workflow. To view the ID of the workflow, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Workflows**.
          * <p>
          * 
-         * > If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes effect. For more information, see [Workflows](~~115347~~).
+         * > If you specify the WorkflowId and TemplateGroupId parameters, the value of the WorkflowId parameter takes effect. For more information, see [Workflows](~~115347~~).
          */
         public Builder workflowId(String workflowId) {
             this.putQueryParameter("WorkflowId", workflowId);

@@ -124,11 +124,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUploadImageResponse> createUploadImage(CreateUploadImageRequest request);
 
     /**
-      * * You can call this operation to obtain upload URLs and credentials for both video and audio files. For more information, see [Upload URLs and credentials](~~55397~~).
-      * * The process of obtaining upload URLs and credentials is a core process in ApsaraVideo VOD and is required for each upload operation. ApsaraVideo VOD provides multiple upload methods. You can upload media files by using SDKs for upload from servers, SDKs for upload from clients, file URLs, Object Storage Service (OSS) API, or OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-      * * If the upload credential expires, you can call the [RefreshUploadVideo](~~55408~~) operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.
-      * * You can configure a callback to receive an [event notification](~~55396~~) when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the [GetMezzanineInfo](~~59624~~) operation to determine whether the upload is successful based on the value of the Status response parameter.
-      * * The value of the VideoId parameter that is returned after you call this operation can be used for media processing or the lifecycle management of media assets.
+      * *   You can call this operation to obtain upload URLs and credentials for video and audio files. For more information, see [Upload URLs and credentials](~~55397~~).
+      * *   You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see [Upload media files by calling API operations](~~476208~~).
+      * *   If the upload credential expires, call the [RefreshUploadVideo](~~55408~~) operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.
+      * *   You can configure a callback to receive an [event notification](~~55396~~) when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the [GetMezzanineInfo](~~59624~~) operation to determine whether the upload is successful based on the file status in the response.
+      * *   The VideoId parameter that is returned after you call this operation can be used for media processing or lifecycle management of media assets.
+      * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see [Upload URLs and credentials](~~55397~~).
+      * > If you have more questions about the ApsaraVideo VOD API, join the DingTalk group 2720012141 for consultation.
       *
      */
     CompletableFuture<CreateUploadVideoResponse> createUploadVideo(CreateUploadVideoRequest request);
@@ -331,8 +333,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodDomainLogResponse> describeVodDomainLog(DescribeVodDomainLogRequest request);
 
+    /**
+      * * This operation is available only in the **China (Shanghai)** region.
+      * * ApsaraVideo VOD stores the origin bandwidth data for 90 days before the data is deleted.
+      * * If you do not set the `StartTime` or `EndTime` parameter, the request returns the data collected in the last 24 hours. If you set both the `StartTime` and `EndTime` parameters, the request returns the data collected within the specified time range.
+      * * You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
+      * ### Time granularity
+      * The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Time range per query (days)|Historical data available (days)|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|(0, 3\\]|93|15 minutes|
+      * |1 hour|(3, 31\\]|186|4 hours|
+      * |1 day|(31, 366\\]|366|04:00 on the next day|
+      *
+     */
     CompletableFuture<DescribeVodDomainSrcBpsDataResponse> describeVodDomainSrcBpsData(DescribeVodDomainSrcBpsDataRequest request);
 
+    /**
+      * * This operation is available only in the **China (Shanghai)** region.
+      * * ApsaraVideo VOD stores the origin traffic data for 90 days before the data is deleted.
+      * * If you do not set the `StartTime` or `EndTime` parameter, the request returns the data collected in the last 24 hours. If you set both the `StartTime` and `EndTime` parameters, the request returns the data collected within the specified time range.
+      * * You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
+      * ### Time granularity
+      * The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Time range per query (days)|Historical data available (days)|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|(0, 3\\]|93|15 minutes|
+      * |1 hour|(3, 31\\]|186|4 hours|
+      * |1 day|(31, 366\\]|366|04:00 on the next day|
+      *
+     */
     CompletableFuture<DescribeVodDomainSrcTrafficDataResponse> describeVodDomainSrcTrafficData(DescribeVodDomainSrcTrafficDataRequest request);
 
     /**
@@ -407,6 +437,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * Before you call this operation to query the details of an AI template, you must obtain the ID of the AI template.
+      * ### QPS limit
+      * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
       *
      */
     CompletableFuture<GetAITemplateResponse> getAITemplate(GetAITemplateRequest request);
@@ -433,7 +465,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCategoriesResponse> getCategories(GetCategoriesRequest request);
 
     /**
-      * You can query only the default AI template for intelligent review.
+      * You can query information only about the default AI template for automated review.
+      * ### QPS limit
+      * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
       *
      */
     CompletableFuture<GetDefaultAITemplateResponse> getDefaultAITemplate(GetDefaultAITemplateRequest request);
@@ -553,6 +587,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetUploadDetailsResponse> getUploadDetails(GetUploadDetailsRequest request);
 
+    /**
+      * *   You can call this operation to obtain the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags of a media file based on the file ID.
+      * *   After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive the **VideoAnalysisComplete** callback. For more information, see [Overview](~~55627~~).
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+      *
+     */
     CompletableFuture<GetVideoInfoResponse> getVideoInfo(GetVideoInfoRequest request);
 
     /**
@@ -595,8 +636,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAIJobResponse> listAIJob(ListAIJobRequest request);
 
     /**
-      * ## Description
       * You can call this operation to query AI templates of a specified type.
+      * ### QPS limit
+      * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
       *
      */
     CompletableFuture<ListAITemplateResponse> listAITemplate(ListAITemplateRequest request);
@@ -815,12 +857,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * You can call this operation to initiate a VOD workflow to process media files. For more information, see [Workflows](~~115347~~).
+      * ### QPS limits
+      * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
       *
      */
     CompletableFuture<SubmitWorkflowJobResponse> submitWorkflowJob(SubmitWorkflowJobRequest request);
 
     /**
-      * After you call the [AddAITemplate](~~102930~~) to add an AI template, you can call the UpdateAITemplate operation to modify the AI template.
+      * After you call the [AddAITemplate](~~102930~~) to add an AI template, you can call this operation to modify the AI template.
+      * ### QPS limit
+      * You can call this operation up to five times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
       *
      */
     CompletableFuture<UpdateAITemplateResponse> updateAITemplate(UpdateAITemplateRequest request);

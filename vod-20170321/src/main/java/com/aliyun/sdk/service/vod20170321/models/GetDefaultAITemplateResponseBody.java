@@ -190,7 +190,7 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template is the default template. Valid values:
+             * Indicates whether the template is the default AI template. Valid values:
              * <p>
              * 
              * *   **Default**
@@ -246,7 +246,7 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the AI template. The value is **AIMediaAudit**, which indicates intelligent review.
+             * The type of the AI template. The value is **AIMediaAudit**, which indicates automated review.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

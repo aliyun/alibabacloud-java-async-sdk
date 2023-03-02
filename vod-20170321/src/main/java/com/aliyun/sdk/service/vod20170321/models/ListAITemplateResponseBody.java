@@ -222,7 +222,9 @@ public class ListAITemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed configurations of the AI template. The value is a JSON string.
+             * The detailed configurations of the AI template. The value is a JSON string. 
+             * <p>
+             * <props="china">For more information, see [AITemplateConfig](~~89863~~#title-vd3-499-o36).</props>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
