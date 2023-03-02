@@ -109,7 +109,11 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * IoType.
+         * The type of node that you want to query. Valid values:
+         * <p>
+         * 
+         * *   input: ancestor nodes
+         * *   output: descendant nodes
          */
         public Builder ioType(String ioType) {
             this.putBodyParameter("IoType", ioType);
@@ -118,7 +122,7 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -127,7 +131,7 @@ public class ListNodeInputOrOutputRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: DEV and PROD. A value of DEV indicates the development environment. A value of PROD indicates the production environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

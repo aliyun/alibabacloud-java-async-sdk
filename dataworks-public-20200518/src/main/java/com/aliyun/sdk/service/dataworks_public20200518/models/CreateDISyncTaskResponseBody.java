@@ -62,7 +62,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information that indicates whether the synchronization node was created.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can query logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +142,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * FileId.
+             * The ID of the created synchronization node.
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -150,7 +150,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The reason why the synchronization node failed to be created.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -158,7 +158,11 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the synchronization node was created. Valid values:
+             * <p>
+             * 
+             * *   success: The synchronization node was created.
+             * *   fail: The synchronization node failed to be created.
              */
             public Builder status(String status) {
                 this.status = status;

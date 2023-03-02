@@ -165,7 +165,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * ApiNameKeyword.
+         * The ID of the tenant.
          */
         public Builder apiNameKeyword(String apiNameKeyword) {
             this.putBodyParameter("ApiNameKeyword", apiNameKeyword);
@@ -174,7 +174,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * ApiPathKeyword.
+         * The keyword in the name of the API. The keyword can be used to search for the API whose name contains the keyword.
          */
         public Builder apiPathKeyword(String apiPathKeyword) {
             this.putBodyParameter("ApiPathKeyword", apiPathKeyword);
@@ -183,7 +183,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * CreatorId.
+         * The keyword in the path of the API. The keyword can be used to search for the API whose path contains the keyword.
          */
         public Builder creatorId(String creatorId) {
             this.putBodyParameter("CreatorId", creatorId);
@@ -192,7 +192,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The operation that you want to perform. Set the value to **ListDataServiceApis**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -201,7 +201,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -210,7 +210,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The number of entries to return on each page. Default value: 10. A maximum of 100 entries can be returned on each page.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -219,7 +219,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the workspace.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

@@ -85,7 +85,7 @@ public class GetFileTypeStatisticRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class GetFileTypeStatisticRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -103,7 +103,7 @@ public class GetFileTypeStatisticRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

@@ -50,7 +50,7 @@ public class UpdateWorkbenchEventResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateWorkbenchEventResultResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标识
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

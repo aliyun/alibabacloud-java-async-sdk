@@ -123,7 +123,7 @@ public class ListDataServiceApplicationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -132,7 +132,7 @@ public class ListDataServiceApplicationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -141,7 +141,7 @@ public class ListDataServiceApplicationsRequest extends Request {
         }
 
         /**
-         * ProjectIdList.
+         * The ID of the workspace based on which you want to query the basic information of applications. You can specify multiple IDs. Separate them with commas (,). You must specify at least one workspace ID. You can specify a maximum of 50 workspace IDs.
          */
         public Builder projectIdList(String projectIdList) {
             this.putBodyParameter("ProjectIdList", projectIdList);
@@ -150,7 +150,7 @@ public class ListDataServiceApplicationsRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

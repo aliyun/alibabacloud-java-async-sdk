@@ -128,7 +128,7 @@ public class ListFoldersRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -137,7 +137,7 @@ public class ListFoldersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -146,7 +146,7 @@ public class ListFoldersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -155,7 +155,7 @@ public class ListFoldersRequest extends Request {
         }
 
         /**
-         * ParentFolderPath.
+         * The path of the parent folder.
          */
         public Builder parentFolderPath(String parentFolderPath) {
             this.putBodyParameter("ParentFolderPath", parentFolderPath);
@@ -164,7 +164,7 @@ public class ListFoldersRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID. You must specify either this parameter or ProjectIdentifier to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -173,7 +173,7 @@ public class ListFoldersRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Settings panel to obtain the name. You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

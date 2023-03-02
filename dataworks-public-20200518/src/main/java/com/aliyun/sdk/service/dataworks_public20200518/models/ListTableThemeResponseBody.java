@@ -98,7 +98,7 @@ public class ListTableThemeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The returned data about the level of the table folder.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +250,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             private Long themeId; 
 
             /**
-             * CreateTimeStamp.
+             * The time when the level was created.
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -258,7 +258,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * The creator of the level.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -266,7 +266,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a table folder of level 1. A value of 2 indicates a table folder of level 2.
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -274,7 +274,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the level of the table folder.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +282,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the parent node.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -290,7 +290,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the DataWorks workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -298,7 +298,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeId.
+             * The ID of the table folder.
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -351,7 +351,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * ThemeList.
+             * The list of levels of the table folders.
              */
             public Builder themeList(java.util.List < ThemeList> themeList) {
                 this.themeList = themeList;
@@ -359,7 +359,7 @@ public class ListTableThemeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of table folders.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

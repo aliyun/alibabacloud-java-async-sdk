@@ -228,7 +228,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * Creator.
+         * The ID of the Alibaba Cloud account used by the user who created the deployment tasks.
          */
         public Builder creator(String creator) {
             this.putBodyParameter("Creator", creator);
@@ -237,7 +237,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * EndCreateTime.
+         * The time when the deployment tasks to be queried were created. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endCreateTime(Long endCreateTime) {
             this.putBodyParameter("EndCreateTime", endCreateTime);
@@ -246,7 +246,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * EndExecuteTime.
+         * The time when the deployment tasks were run. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endExecuteTime(Long endExecuteTime) {
             this.putBodyParameter("EndExecuteTime", endExecuteTime);
@@ -255,7 +255,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * Executor.
+         * The ID of the Alibaba Cloud account used by the user who runs the deployment tasks.
          */
         public Builder executor(String executor) {
             this.putBodyParameter("Executor", executor);
@@ -264,7 +264,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword that is contained in the names of the deployment tasks. The keyword is used to search for deployment tasks in fuzzy mode.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -273,7 +273,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -282,7 +282,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -291,7 +291,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * <p>
+         * 
+         * You must configure this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -300,7 +303,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace name.
+         * <p>
+         * 
+         * You must configure this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -309,7 +315,13 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the deployment tasks. Valid values:
+         * <p>
+         * 
+         * *   0: The deployment tasks are ready.
+         * *   1: The deployment tasks are successful.
+         * *   2: The deployment tasks fail.
+         * *   6: The deployment tasks are rejected.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

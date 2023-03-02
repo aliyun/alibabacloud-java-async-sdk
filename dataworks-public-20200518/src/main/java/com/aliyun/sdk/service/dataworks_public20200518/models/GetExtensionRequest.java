@@ -78,7 +78,7 @@ public class GetExtensionRequest extends Request {
         }
 
         /**
-         * ExtensionCode.
+         * The unique code of the extension.
          */
         public Builder extensionCode(String extensionCode) {
             this.putQueryParameter("ExtensionCode", extensionCode);

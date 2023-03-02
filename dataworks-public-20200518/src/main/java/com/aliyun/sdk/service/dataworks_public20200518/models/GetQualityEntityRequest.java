@@ -123,7 +123,7 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The type of the compute engine instance or data source.
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -132,7 +132,7 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * MatchExpression.
+         * The partition filter expression.
          */
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
@@ -141,7 +141,7 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the compute engine instance or data source. You can obtain the name from data source configurations.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -150,7 +150,7 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the partitioned table. You can call the [GetMetaTablePartition](~~173923~~) operation to obtain the name.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

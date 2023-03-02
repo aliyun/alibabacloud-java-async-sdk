@@ -109,7 +109,7 @@ public class ListManualDagInstancesRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the directed acyclic graph (DAG) for the manually triggered workflow. You can call the [RunManualDagNodes](~~212830~~) operation to obtain the ID.
          */
         public Builder dagId(String dagId) {
             this.putBodyParameter("DagId", dagId);
@@ -118,7 +118,7 @@ public class ListManualDagInstancesRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV. A value of PROD indicates the production environment. A value of DEV indicates the development environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -127,7 +127,7 @@ public class ListManualDagInstancesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the workspace to which the manually triggered workflow belongs. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to view the name.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

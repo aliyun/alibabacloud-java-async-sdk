@@ -98,7 +98,11 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates whether the subscriber was successfully deleted. Valid values:
+         * <p>
+         * 
+         * *   true: The subscriber was successfully deleted.
+         * *   false: The subscriber failed to be deleted. You can troubleshoot errors based on the error message returned.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -106,7 +110,7 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +118,7 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned when the subscriber failed to be deleted.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +126,7 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +134,7 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot errors.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,11 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

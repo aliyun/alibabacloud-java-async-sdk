@@ -98,7 +98,11 @@ public class UmountDirectoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The number of directories that are removed. Valid values:
+         * <p>
+         * 
+         * *   0: No directories are removed. The left-side navigation pane may not contain the specified directory.
+         * *   1: One directory is removed.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -106,7 +110,7 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned. The value 200 indicates that the remove task is successful.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +118,7 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +126,7 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned. The value 200 indicates that the request was successful.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +134,7 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,11 @@ public class UmountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

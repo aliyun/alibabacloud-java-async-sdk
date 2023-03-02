@@ -100,7 +100,7 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the DataWorks workspace resides.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -118,7 +118,20 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         }
 
         /**
-         * RoleCode.
+         * The role in the DataWorks workspace. You can call the ListProjectRoles operation to query codes of the roles in the workspace.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   role_project_owner: workspace owner
+         * *   role_project_admin: workspace administrator
+         * *   role_project_dev: developer
+         * *   role_project_pe: O\&M engineer
+         * *   role_project_deploy: deployment expert
+         * *   role_project_guest: visitor
+         * *   role_project_security: security administrator
+         * *   role_project_tester: experiencer
+         * *   role_project_erd: model designer
          */
         public Builder roleCode(String roleCode) {
             this.putQueryParameter("RoleCode", roleCode);
@@ -127,7 +140,7 @@ public class RemoveProjectMemberFromRoleRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

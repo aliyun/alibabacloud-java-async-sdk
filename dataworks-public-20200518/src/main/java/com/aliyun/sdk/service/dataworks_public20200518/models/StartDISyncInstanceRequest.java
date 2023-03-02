@@ -123,7 +123,9 @@ public class StartDISyncInstanceRequest extends Request {
         }
 
         /**
-         * FileId.
+         * *   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to start.
+         * <p>
+         * *   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to start.
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -132,7 +134,10 @@ public class StartDISyncInstanceRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * <p>
+         * 
+         * You must set this parameter to specify the DataWorks workspace in which the real-time synchronization node or the data synchronization solution resides.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -141,7 +146,9 @@ public class StartDISyncInstanceRequest extends Request {
         }
 
         /**
-         * StartParam.
+         * *   If you set the TaskType parameter to DI_REALTIME, the StartParam parameter specifies the startup parameters for the real-time synchronization node. The startup parameters include failover-related parameters, the parameter that specifies the number of dirty data records allowed, and the parameters in the data definition language (DDL) statements.
+         * <p>
+         * *   If you set the TaskType parameter to DI_SOLUTION, the StartParam parameter does not take effect.
          */
         public Builder startParam(String startParam) {
             this.putQueryParameter("StartParam", startParam);
@@ -150,7 +157,11 @@ public class StartDISyncInstanceRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the Data Integration object that you want to start. Valid values:
+         * <p>
+         * 
+         * *   DI_REALTIME: real-time synchronization node
+         * *   DI_SOLUTION: data synchronization solution
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

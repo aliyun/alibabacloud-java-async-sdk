@@ -100,7 +100,7 @@ public class UpdateNodeOwnerRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class UpdateNodeOwnerRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -118,7 +118,7 @@ public class UpdateNodeOwnerRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment where the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment. The value PROD indicates the production environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -127,7 +127,7 @@ public class UpdateNodeOwnerRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The Alibaba Cloud account ID of the node owner. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);

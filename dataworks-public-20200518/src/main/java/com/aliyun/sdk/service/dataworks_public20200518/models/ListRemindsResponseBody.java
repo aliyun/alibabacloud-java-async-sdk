@@ -98,7 +98,7 @@ public class ListRemindsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information about custom alert rules returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -346,7 +346,7 @@ public class ListRemindsResponseBody extends TeaModel {
             private Boolean useflag; 
 
             /**
-             * AlertMethods.
+             * The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. The value SMS indicates that the notification is sent by text message. The value PHONE indicates that the notification is sent by call, which is supported only by DataWorks Professional Edition and more advanced editions.
              */
             public Builder alertMethods(java.util.List < String > alertMethods) {
                 this.alertMethods = alertMethods;
@@ -354,7 +354,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTargets.
+             * The IDs of the Alibaba Cloud accounts that are used to receive alert notifications.
              */
             public Builder alertTargets(java.util.List < String > alertTargets) {
                 this.alertTargets = alertTargets;
@@ -362,7 +362,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertUnit.
+             * The alert recipient. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.
              */
             public Builder alertUnit(String alertUnit) {
                 this.alertUnit = alertUnit;
@@ -370,7 +370,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineIds.
+             * The IDs of the baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.
              */
             public Builder baselineIds(java.util.List < Long > baselineIds) {
                 this.baselineIds = baselineIds;
@@ -378,7 +378,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * BizProcessIds.
+             * The IDs of the workflows to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BIZPROCESS.
              */
             public Builder bizProcessIds(java.util.List < Long > bizProcessIds) {
                 this.bizProcessIds = bizProcessIds;
@@ -386,7 +386,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * DndEnd.
+             * The end time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.
              */
             public Builder dndEnd(String dndEnd) {
                 this.dndEnd = dndEnd;
@@ -394,7 +394,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * DndStart.
+             * The start time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.
              */
             public Builder dndStart(String dndStart) {
                 this.dndStart = dndStart;
@@ -402,7 +402,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * Founder.
+             * The ID of the Alibaba Cloud account that is used to create the custom alert rule.
              */
             public Builder founder(String founder) {
                 this.founder = founder;
@@ -410,7 +410,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIds.
+             * The IDs of the nodes to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is NODE.
              */
             public Builder nodeIds(java.util.List < Long > nodeIds) {
                 this.nodeIds = nodeIds;
@@ -418,7 +418,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectIds.
+             * The IDs of the workspaces to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is PROJECT.
              */
             public Builder projectIds(java.util.List < Long > projectIds) {
                 this.projectIds = projectIds;
@@ -426,7 +426,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * RemindId.
+             * The ID of the custom alert rule.
              */
             public Builder remindId(Long remindId) {
                 this.remindId = remindId;
@@ -434,7 +434,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * RemindName.
+             * The name of the custom alert rule.
              */
             public Builder remindName(String remindName) {
                 this.remindName = remindName;
@@ -442,7 +442,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * RemindType.
+             * The conditions that trigger an alert for the node. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT. The value FINISHED indicates that the node finishes running. The value UNFINISHED indicates that the node is still running at the specified point in time. The value ERROR indicates that an error occurs when the node is running. The value CYCLE_UNFINISHED indicates that the node does not finish running in the specified scheduling cycle. The value TIMEOUT indicates that the node times out.
              */
             public Builder remindType(String remindType) {
                 this.remindType = remindType;
@@ -450,7 +450,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * RemindUnit.
+             * The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates that the monitored object is a node. The value BASELINE indicates that the monitored object is a baseline. The value PROJECT indicates that the monitored object is a workspace. The value BIZPROCESS indicates that the monitored object is a workflow.
              */
             public Builder remindUnit(String remindUnit) {
                 this.remindUnit = remindUnit;
@@ -458,7 +458,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * Useflag.
+             * Indicates whether the custom alert rule is enabled. Valid values: true and false.
              */
             public Builder useflag(Boolean useflag) {
                 this.useflag = useflag;
@@ -535,7 +535,7 @@ public class ListRemindsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -543,7 +543,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -551,7 +551,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * Reminds.
+             * The custom alert rules returned.
              */
             public Builder reminds(java.util.List < Reminds> reminds) {
                 this.reminds = reminds;
@@ -559,7 +559,7 @@ public class ListRemindsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of custom alert rules returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

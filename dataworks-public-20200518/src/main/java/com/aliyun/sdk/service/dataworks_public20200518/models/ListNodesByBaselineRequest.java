@@ -79,7 +79,7 @@ public class ListNodesByBaselineRequest extends Request {
         }
 
         /**
-         * BaselineId.
+         * The ID of the baseline. You can call the [ListBaselineConfigs](~~173964~~) operation to query the ID.
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);

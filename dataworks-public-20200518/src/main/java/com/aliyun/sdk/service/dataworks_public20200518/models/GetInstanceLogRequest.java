@@ -108,7 +108,7 @@ public class GetInstanceLogRequest extends Request {
         }
 
         /**
-         * InstanceHistoryId.
+         * The historical record number of the instance. You can call the ListInstanceHistory operation to query the ID.
          */
         public Builder instanceHistoryId(Long instanceHistoryId) {
             this.putBodyParameter("InstanceHistoryId", instanceHistoryId);
@@ -117,7 +117,7 @@ public class GetInstanceLogRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class GetInstanceLogRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

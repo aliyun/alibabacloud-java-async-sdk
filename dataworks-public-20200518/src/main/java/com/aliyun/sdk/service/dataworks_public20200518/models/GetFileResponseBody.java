@@ -98,7 +98,7 @@ public class GetFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the file.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -430,7 +434,12 @@ public class GetFileResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * AdvancedSettings.
+             * The advanced configurations of the node.
+             * <p>
+             * 
+             * This parameter is valid only for an EMR Spark Streaming node or an EMR Streaming SQL node. This parameter corresponds to the Advanced Settings tab of the node in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * 
+             * This parameter is configured in the JSON format.
              */
             public Builder advancedSettings(String advancedSettings) {
                 this.advancedSettings = advancedSettings;
@@ -438,7 +447,13 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * AutoParsing.
+             * Indicates whether the automatic parsing feature is enabled for the file. Valid values:
+             * <p>
+             * 
+             * *   true: The automatic parsing feature is enabled for the file.
+             * *   false: The automatic parsing feature is not enabled for the file.
+             * 
+             * This parameter corresponds to the Analyze Code parameter that is displayed after Same Cycle is selected in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder autoParsing(Boolean autoParsing) {
                 this.autoParsing = autoParsing;
@@ -446,7 +461,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * BizId.
+             * The ID of the workflow to which the file belongs. This parameter is deprecated and replaced by the BusinessId parameter.
              */
             public Builder bizId(Long bizId) {
                 this.bizId = bizId;
@@ -454,7 +469,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessId.
+             * The ID of the workflow to which the file belongs.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -462,7 +477,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * CommitStatus.
+             * Indicates whether the latest code in the file is committed. Valid values: 0 and 1. The value 0 indicates that the latest code in the file is not committed. The value 1 indicates that the latest code in the file is committed.
              */
             public Builder commitStatus(Integer commitStatus) {
                 this.commitStatus = commitStatus;
@@ -470,7 +485,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionName.
+             * The ID of the compute engine instance that is used to run the node that corresponds to the file.
              */
             public Builder connectionName(String connectionName) {
                 this.connectionName = connectionName;
@@ -478,7 +493,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The code in the file.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -486,7 +501,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the file was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -494,7 +509,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * The ID of the Alibaba Cloud account used to create the file.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -502,7 +517,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentVersion.
+             * The latest version number of the file.
              */
             public Builder currentVersion(Integer currentVersion) {
                 this.currentVersion = currentVersion;
@@ -510,7 +525,12 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedStatus.
+             * The status of the file. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The file is not deleted.
+             * *   RECYCLE_BIN: The file is stored in the recycle bin.
+             * *   DELETED: The file is deleted.
              */
             public Builder deletedStatus(String deletedStatus) {
                 this.deletedStatus = deletedStatus;
@@ -518,7 +538,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileDescription.
+             * The description of the file.
              */
             public Builder fileDescription(String fileDescription) {
                 this.fileDescription = fileDescription;
@@ -526,7 +546,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileFolderId.
+             * The ID of the folder to which the file belongs.
              */
             public Builder fileFolderId(String fileFolderId) {
                 this.fileFolderId = fileFolderId;
@@ -534,7 +554,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -542,7 +562,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * The type of the code for the file. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
              */
             public Builder fileType(Integer fileType) {
                 this.fileType = fileType;
@@ -550,7 +570,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * IsMaxCompute.
+             * Indicates whether the file needs to be uploaded to MaxCompute.
+             * <p>
+             * 
+             * This parameter is returned only if the file is a MaxCompute resource file.
              */
             public Builder isMaxCompute(Boolean isMaxCompute) {
                 this.isMaxCompute = isMaxCompute;
@@ -558,7 +581,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * LastEditTime.
+             * The time when the file was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder lastEditTime(Long lastEditTime) {
                 this.lastEditTime = lastEditTime;
@@ -566,7 +589,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * LastEditUser.
+             * The ID of the Alibaba Cloud account used to last modify the file.
              */
             public Builder lastEditUser(String lastEditUser) {
                 this.lastEditUser = lastEditUser;
@@ -574,7 +597,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the auto triggered node that is generated in the scheduling system after the file is committed.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -582,7 +605,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Alibaba Cloud account used by the file owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -590,7 +613,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the node group file to which the current file belongs. This parameter is returned only if the current file is an inner file of the node group file.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -598,7 +621,15 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * The module to which the file belongs. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The file is used for DataStudio.
+             * *   MANUAL: The file is used for a manually triggered node.
+             * *   MANUAL_BIZ: The file is used for a manually triggered workflow.
+             * *   SKIP: The file is used for a dry-run DataStudio node.
+             * *   ADHOCQUERY: The file is used for an ad hoc query.
+             * *   COMPONENT: The file is used for a snippet.
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -651,7 +682,10 @@ public class GetFileResponseBody extends TeaModel {
             private String parseType; 
 
             /**
-             * Input.
+             * The output name of the parent file on which the current file depends.
+             * <p>
+             * 
+             * This parameter corresponds to the Output Name parameter under Parent Nodes after Same Cycle is selected in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder input(String input) {
                 this.input = input;
@@ -659,7 +693,11 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ParseType.
+             * The mode of the configuration file dependency. Valid values:
+             * <p>
+             * 
+             * *   MANUAL: Scheduling dependencies are manually configured.
+             * *   AUTO: Scheduling dependencies are automatically parsed.
              */
             public Builder parseType(String parseType) {
                 this.parseType = parseType;
@@ -712,7 +750,10 @@ public class GetFileResponseBody extends TeaModel {
             private String valueSource; 
 
             /**
-             * ParameterName.
+             * The name of the input parameter of the node. In the code, you can use the ${...} method to reference the input parameter of the node.
+             * <p>
+             * 
+             * This parameter corresponds to the Parameter Name parameter in the Input Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -720,7 +761,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ValueSource.
+             * The value source of the input parameter of the node.
+             * <p>
+             * 
+             * This parameter corresponds to the Value Source parameter in the Input Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder valueSource(String valueSource) {
                 this.valueSource = valueSource;
@@ -773,7 +817,10 @@ public class GetFileResponseBody extends TeaModel {
             private String refTableName; 
 
             /**
-             * Output.
+             * The output name of the current file.
+             * <p>
+             * 
+             * This parameter corresponds to the Output Name parameter under Output after Same Cycle is selected in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder output(String output) {
                 this.output = output;
@@ -781,7 +828,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * RefTableName.
+             * The output table name of the current file.
+             * <p>
+             * 
+             * This parameter corresponds to the Output Table Name parameter under Output after Same Cycle is selected in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder refTableName(String refTableName) {
                 this.refTableName = refTableName;
@@ -858,7 +908,7 @@ public class GetFileResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Description.
+             * The description of the output parameter of the node.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -866,7 +916,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the output parameter of the node.
+             * <p>
+             * 
+             * This parameter corresponds to the Parameter Name parameter in the Output Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -874,7 +927,14 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the output parameter of the node. Valid values:
+             * <p>
+             * 
+             * *   1: indicates a constant.
+             * *   2: indicates a variable.
+             * *   3: indicates a pass-through variable.
+             * 
+             * This parameter corresponds to the Type parameter in the Output Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -882,7 +942,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the output parameter of the node.
+             * <p>
+             * 
+             * This parameter corresponds to the Value parameter in the Output Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1127,7 +1190,12 @@ public class GetFileResponseBody extends TeaModel {
             private Boolean stop; 
 
             /**
-             * AutoRerunIntervalMillis.
+             * The interval between automatic reruns after an error occurs. Unit: milliseconds.
+             * <p>
+             * 
+             * This parameter corresponds to the Rerun Interval parameter that is displayed after the Auto Rerun upon Error check box is selected in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * 
+             * The interval that you specify in the DataWorks console is measured in minutes. Pay attention to the conversion between the units of time when you call the operation.
              */
             public Builder autoRerunIntervalMillis(Integer autoRerunIntervalMillis) {
                 this.autoRerunIntervalMillis = autoRerunIntervalMillis;
@@ -1135,7 +1203,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRerunTimes.
+             * The number of automatic reruns that are allowed after an error occurs.
              */
             public Builder autoRerunTimes(Integer autoRerunTimes) {
                 this.autoRerunTimes = autoRerunTimes;
@@ -1143,7 +1211,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpress.
+             * The CRON expression that represents the periodic scheduling policy of the node.
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -1151,7 +1219,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * CycleType.
+             * The type of the scheduling cycle. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.
+             * <p>
+             * 
+             * This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder cycleType(String cycleType) {
                 this.cycleType = cycleType;
@@ -1159,7 +1230,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * DependentNodeIdList.
+             * The ID of the node on which the node corresponding to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).
+             * <p>
+             * 
+             * The value of this parameter is equivalent to the ID of the node that you specified after you select Previous Cycle and set Depend On to Other Nodes in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder dependentNodeIdList(String dependentNodeIdList) {
                 this.dependentNodeIdList = dependentNodeIdList;
@@ -1167,7 +1241,13 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * DependentType.
+             * The type of the cross-cycle scheduling dependency of the node. Valid values:
+             * <p>
+             * 
+             * *   SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.
+             * *   CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.
+             * *   USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.
+             * *   NONE: No cross-cycle scheduling dependency type is selected for the node.
              */
             public Builder dependentType(String dependentType) {
                 this.dependentType = dependentType;
@@ -1175,7 +1255,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * EndEffectDate.
+             * The end time of automatic scheduling. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>
+             * 
+             * This parameter corresponds to the Validity Period parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder endEffectDate(Long endEffectDate) {
                 this.endEffectDate = endEffectDate;
@@ -1183,7 +1266,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * InputList.
+             * The output names of the parent files on which the current file depends.
              */
             public Builder inputList(java.util.List < InputList> inputList) {
                 this.inputList = inputList;
@@ -1191,7 +1274,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * InputParameters.
+             * Input parameters of the node.
+             * <p>
+             * 
+             * This parameter corresponds to the Input Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder inputParameters(java.util.List < InputParameters> inputParameters) {
                 this.inputParameters = inputParameters;
@@ -1199,7 +1285,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * OutputList.
+             * The output names of the current file.
+             * <p>
+             * 
+             * This parameter corresponds to the Output Name parameter under Output after Same Cycle is selected in the Dependencies section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder outputList(java.util.List < OutputList> outputList) {
                 this.outputList = outputList;
@@ -1207,7 +1296,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * OutputParameters.
+             * Output parameters of the node.
+             * <p>
+             * 
+             * This parameter corresponds to the Output Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder outputParameters(java.util.List < OutputParameters> outputParameters) {
                 this.outputParameters = outputParameters;
@@ -1215,7 +1307,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ParaValue.
+             * The scheduling parameters of the node.
+             * <p>
+             * 
+             * This parameter corresponds to the Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information about the configurations of the scheduling parameters, see [Configure scheduling parameters](~~137548~~).
              */
             public Builder paraValue(String paraValue) {
                 this.paraValue = paraValue;
@@ -1223,7 +1318,14 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * RerunMode.
+             * Indicates whether the node that corresponds to the file can be rerun. Valid values:
+             * <p>
+             * 
+             * *   ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.
+             * *   FAILURE_ALLOWED: The node can be rerun only after it fails to run.
+             * *   ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.
+             * 
+             * This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -1231,7 +1333,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group that is used to run the node. You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace.
              */
             public Builder resourceGroupId(Long resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1239,7 +1341,13 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerType.
+             * The scheduling type of the node. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The node is an auto triggered node.
+             * *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.
+             * *   PAUSE: The node is a paused node.
+             * *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -1247,7 +1355,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * StartEffectDate.
+             * The start time of automatic scheduling. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>
+             * 
+             * This parameter corresponds to the Validity Period parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder startEffectDate(Long startEffectDate) {
                 this.startEffectDate = startEffectDate;
@@ -1255,7 +1366,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * StartImmediately.
+             * Indicates whether a node is immediately run after the node is deployed to the production environment.
+             * <p>
+             * 
+             * This parameter is valid only for an EMR Spark Streaming node or an EMR Streaming SQL node. This parameter corresponds to the Start Method parameter in the Schedule section of the Configure tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder startImmediately(Boolean startImmediately) {
                 this.startImmediately = startImmediately;
@@ -1263,7 +1377,13 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * Stop.
+             * Indicates whether the scheduling for the node is suspended Valid values:
+             * <p>
+             * 
+             * *   true: The scheduling for the node is suspended.
+             * *   false: The scheduling for the node is not suspended.
+             * 
+             * This parameter corresponds to the Recurrence parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder stop(Boolean stop) {
                 this.stop = stop;
@@ -1316,7 +1436,7 @@ public class GetFileResponseBody extends TeaModel {
             private NodeConfiguration nodeConfiguration; 
 
             /**
-             * File.
+             * The basic information about the file.
              */
             public Builder file(File file) {
                 this.file = file;
@@ -1324,7 +1444,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * NodeConfiguration.
+             * The scheduling configurations of the file.
              */
             public Builder nodeConfiguration(NodeConfiguration nodeConfiguration) {
                 this.nodeConfiguration = nodeConfiguration;

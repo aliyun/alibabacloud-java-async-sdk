@@ -94,7 +94,7 @@ public class GetDagRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the DAG. You can set this parameter to the value of the DagId parameter returned by the CreateDagComplement, CreateTest, or CreateManualDag operation.
          */
         public Builder dagId(Long dagId) {
             this.putBodyParameter("DagId", dagId);
@@ -103,7 +103,7 @@ public class GetDagRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment type. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

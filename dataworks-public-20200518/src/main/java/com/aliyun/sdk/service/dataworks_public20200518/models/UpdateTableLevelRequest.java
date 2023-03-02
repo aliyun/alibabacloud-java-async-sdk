@@ -128,7 +128,7 @@ public class UpdateTableLevelRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the service is activated.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -137,7 +137,7 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the table level.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -146,7 +146,7 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * LevelId.
+         * The ID of the table level to be updated. You can call the ListTableLevel operation to obtain the ID.
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -155,7 +155,7 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * LevelType.
+         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -164,7 +164,7 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the table level.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -173,7 +173,7 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

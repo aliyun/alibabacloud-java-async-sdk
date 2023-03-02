@@ -94,7 +94,7 @@ public class GetIDEEventDetailRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * The ID of the message. You can obtain the ID from the received message when the extension point event is triggered.
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);
@@ -103,7 +103,7 @@ public class GetIDEEventDetailRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace. You can obtain the ID from the message.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

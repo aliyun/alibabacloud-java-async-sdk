@@ -138,7 +138,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * DatasourceName.
+         * The name of the data source.
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
@@ -147,7 +147,11 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The environment to which the data source belongs. Valid values:
+         * <p>
+         * 
+         * *   0: development environment
+         * *   1: production environment
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -156,7 +160,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,7 +169,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +178,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

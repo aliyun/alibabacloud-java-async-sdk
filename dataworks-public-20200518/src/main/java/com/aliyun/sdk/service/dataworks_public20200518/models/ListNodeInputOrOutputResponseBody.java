@@ -98,7 +98,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The ancestor or descendant nodes.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request fails.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +202,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Data.
+             * The name of the ancestor or descendant node.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -210,7 +210,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -218,7 +218,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the associated table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

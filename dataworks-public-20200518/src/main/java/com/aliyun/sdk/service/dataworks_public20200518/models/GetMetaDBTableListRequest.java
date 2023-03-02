@@ -148,7 +148,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * AppGuid.
+         * The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the `odps.{projectName}` format. This parameter must be configured if you set the DataSourceType parameter to odps.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -157,7 +157,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the E-MapReduce (EMR) cluster. This parameter must be configured if you set the DataSourceType parameter to emr.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -166,7 +166,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -175,7 +175,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * The name of the metadatabase.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -184,7 +184,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +193,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -50,7 +50,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Paging.
+         * The pagination data.
          */
         public Builder paging(Paging paging) {
             this.paging = paging;
@@ -58,7 +58,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             private String shiftScheduleName; 
 
             /**
-             * ShiftScheduleIdentifier.
+             * The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.
              */
             public Builder shiftScheduleIdentifier(String shiftScheduleIdentifier) {
                 this.shiftScheduleIdentifier = shiftScheduleIdentifier;
@@ -118,7 +118,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * ShiftScheduleName.
+             * The name of the shift schedule.
              */
             public Builder shiftScheduleName(String shiftScheduleName) {
                 this.shiftScheduleName = shiftScheduleName;
@@ -195,7 +195,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page. Minimum value:1. Maximum value: 100.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -203,7 +203,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -211,7 +211,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * ShiftSchedules.
+             * The shift schedules.
              */
             public Builder shiftSchedules(java.util.List < ShiftSchedules> shiftSchedules) {
                 this.shiftSchedules = shiftSchedules;
@@ -219,7 +219,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -74,7 +74,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The query result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +90,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -342,7 +342,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * BindingCalcEngineId.
+             * The ID of the compute engine instance with which the data source is associated.
              */
             public Builder bindingCalcEngineId(Integer bindingCalcEngineId) {
                 this.bindingCalcEngineId = bindingCalcEngineId;
@@ -350,7 +350,11 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectStatus.
+             * The status of the data source. Valid values:
+             * <p>
+             * 
+             * *   1: The data source is accessible.
+             * *   2: The data source is inaccessible.
              */
             public Builder connectStatus(Integer connectStatus) {
                 this.connectStatus = connectStatus;
@@ -358,7 +362,97 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The data connection string. The value of this parameter is in the JSON format. Sample connection strings of common data sources:
+             * <p>
+             * 
+             * *   MaxCompute
+             * 
+             * <!---->
+             * 
+             *     json
+             *     {
+             *       "pubEndpoint": "http://service.cn.maxcompute.aliyun.com/api",
+             *       "accessId": "xxxxxxx",
+             *       "securityToken": null,
+             *       "endpoint": "http://service.cn.maxcompute.aliyun-inc.com/api",
+             *       "accessKey": "***",
+             *       "name": "PRE_PROJECT_A_engine",
+             *       "project": "PRE_PROJECT_A",
+             *       "vpcEndpoint": "http://service.cn.maxcompute.aliyun-inc.com/api",
+             *       "region": "cn-shanghai",
+             *       "authType": "2"
+             *     }
+             * 
+             * *   mysql
+             * 
+             * <!---->
+             * 
+             *     json
+             *     {
+             *       "configType": "1",
+             *       "database": "mysql_d111b",
+             *       "instanceName": "rm-xxxxxx",
+             *       "password": "***",
+             *       "rdsOwnerId": "12133xxxxxx",
+             *       "tag": "rds",
+             *       "username": "mysql_db111"
+             *     }
+             * 
+             * *   sqlserver
+             * 
+             * <!---->
+             * 
+             *     json
+             *     {
+             *       "configType": "1",
+             *       "jdbcUrl": "jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1",
+             *       "password": "***",
+             *       "tag": "public",
+             *       "username": "sqlserver_db111"
+             *     }
+             * 
+             * *   oss
+             * 
+             * <!---->
+             * 
+             *     json
+             *     {
+             *       "accessId": "LTAINbR9Uxxxx",
+             *       "accessKey": "***",
+             *       "bucket": "bigxxx1223",
+             *       "configType": "1",
+             *       "endpoint": "http://oss-cn-hangzhou.aliyuncs.com",
+             *       "tag": "public"
+             *     }
+             * 
+             * *   postgresql
+             * 
+             * <!---->
+             * 
+             *     json
+             *     {
+             *       "configType": "1",
+             *       "database": "cdp_xxx",
+             *       "instanceName": "rm-xxxx",
+             *       "password": "***",
+             *       "rdsOwnerId": "121xxxxx",
+             *       "tag": "rds",
+             *       "username": "cdp_xxx"
+             *     }
+             * 
+             * *   ads
+             * 
+             * <!---->
+             * 
+             *     json
+             *     {
+             *       "configType": "1",
+             *       "password": "***",
+             *       "schema": "ads_demo",
+             *       "tag": "public",
+             *       "url": "ads-xxx-xxxx.cn-hangzhou-1.ads.aliyuncs.com:3029",
+             *       "username": "lslslsls"
+             *     }
              */
             public Builder content(String content) {
                 this.content = content;
@@ -366,7 +460,22 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   odps
+             * *   mysql
+             * *   rds
+             * *   oss
+             * *   sqlserver
+             * *   polardb
+             * *   oracle
+             * *   mongodb
+             * *   emr
+             * *   postgresql
+             * *   analyticdb_for_mysql
+             * *   hybriddb_for_postgresql
+             * *   holo
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -374,7 +483,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultEngine.
+             * Indicates whether the compute engine instance that is associated with the data source is the default compute engine instance used by data sources of the same type.
              */
             public Builder defaultEngine(Boolean defaultEngine) {
                 this.defaultEngine = defaultEngine;
@@ -382,7 +491,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the data source.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -390,7 +499,11 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The environment in which the data source is used. Valid values:
+             * <p>
+             * 
+             * *   0: development environment
+             * *   1: production environment
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -398,7 +511,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -406,7 +519,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -414,7 +527,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data source.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -422,7 +535,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -430,7 +543,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The ID of the Alibaba Cloud account that is used to last modify the data source.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -438,7 +551,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the data source belongs.
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -446,7 +559,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -454,7 +567,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Shared.
+             * Indicates whether the data source is a shared data source.
              */
             public Builder shared(Boolean shared) {
                 this.shared = shared;
@@ -462,7 +575,11 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the data source. Valid values:
+             * <p>
+             * 
+             * *   1: The data source is accessible.
+             * *   2: The data source is inaccessible.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -470,7 +587,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.
+             * <p>
+             * 
+             * If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -478,7 +598,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -555,7 +675,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DataSources.
+             * The data sources.
              */
             public Builder dataSources(java.util.List < DataSources> dataSources) {
                 this.dataSources = dataSources;
@@ -563,7 +683,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -571,7 +691,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -579,7 +699,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of data sources.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

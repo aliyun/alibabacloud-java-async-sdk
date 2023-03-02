@@ -50,7 +50,7 @@ public class GetSensitiveDataResponseBody extends TeaModel {
         private java.util.Map < String, ? > sensitiveData; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,14 @@ public class GetSensitiveDataResponseBody extends TeaModel {
         }
 
         /**
-         * SensitiveData.
+         * The information of the sensitive data returned. The information includes totalCount and sensDatas.
+         * <p>
+         * 
+         * sensDatas includes the following parameters:
+         * 
+         * *   guid: the ID of the metadata of the tenant. For example, the ID of the metadata in the MaxCompute compute engine is in the Project name.Table name.Column name format.
+         * *   sensType: the type of the sensitive data.
+         * *   sensLevel: the sensitivity level of the sensitive data.
          */
         public Builder sensitiveData(java.util.Map < String, ? > sensitiveData) {
             this.sensitiveData = sensitiveData;

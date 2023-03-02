@@ -123,7 +123,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * The ID of the partition filter expression. You can call the [GetQualityEntity](~~174003~~) operation to query the ID of the partition filter expression.
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -132,7 +132,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -141,7 +141,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -150,7 +150,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the compute engine instance or data source. You can obtain the name from data source configurations.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

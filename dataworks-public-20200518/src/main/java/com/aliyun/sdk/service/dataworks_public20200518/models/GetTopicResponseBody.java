@@ -98,7 +98,7 @@ public class GetTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the event.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -442,7 +442,7 @@ public class GetTopicResponseBody extends TeaModel {
             private String topicType; 
 
             /**
-             * AddTime.
+             * The timestamp when the event was found.
              */
             public Builder addTime(Long addTime) {
                 this.addTime = addTime;
@@ -450,7 +450,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTime.
+             * The timestamp when the first alert was reported.
              */
             public Builder alertTime(Long alertTime) {
                 this.alertTime = alertTime;
@@ -458,7 +458,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Assigner.
+             * The ID of the Apsara Stack tenant account used by the alert recipient.
              */
             public Builder assigner(String assigner) {
                 this.assigner = assigner;
@@ -466,7 +466,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineBuffer.
+             * The margin of the worst baseline instance. Unit: seconds.
              */
             public Builder baselineBuffer(Long baselineBuffer) {
                 this.baselineBuffer = baselineBuffer;
@@ -474,7 +474,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineId.
+             * The ID of the baseline to which the worst baseline instance belongs.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -482,7 +482,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineInGroupId.
+             * The ID of the cycle of the worst baseline instance.
              */
             public Builder baselineInGroupId(Integer baselineInGroupId) {
                 this.baselineInGroupId = baselineInGroupId;
@@ -490,7 +490,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineName.
+             * The name of the baseline to which the worst baseline instance belongs.
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -498,7 +498,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineStatus.
+             * The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. A value of ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. A value of SAFE indicates that nodes are run before the alert duration begins. A value of DANGROUS indicates that nodes are still running after the alert duration ends but the committed time does not arrive. A value of OVER indicates that nodes are still running after the committed time.
              */
             public Builder baselineStatus(String baselineStatus) {
                 this.baselineStatus = baselineStatus;
@@ -506,7 +506,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Buffer.
+             * The margin of the event. Unit: seconds.
              */
             public Builder buffer(Long buffer) {
                 this.buffer = buffer;
@@ -514,7 +514,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * DealTime.
+             * The timestamp when the event was last processed.
              */
             public Builder dealTime(Long dealTime) {
                 this.dealTime = dealTime;
@@ -522,7 +522,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * DealUser.
+             * The ID of the Apsara Stack tenant account used by the user who last processed the event.
              */
             public Builder dealUser(String dealUser) {
                 this.dealUser = dealUser;
@@ -530,7 +530,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * FixTime.
+             * The timestamp when the event was processed.
              */
             public Builder fixTime(Long fixTime) {
                 this.fixTime = fixTime;
@@ -538,7 +538,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * HappenTime.
+             * The timestamp when the system event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.
              */
             public Builder happenTime(Long happenTime) {
                 this.happenTime = happenTime;
@@ -546,7 +546,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance that triggered the event.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -554,7 +554,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * NextAlertTime.
+             * The timestamp when the system reports the next alert.
              */
             public Builder nextAlertTime(Long nextAlertTime) {
                 this.nextAlertTime = nextAlertTime;
@@ -562,7 +562,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node that triggered the event.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -570,7 +570,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node that triggered the event.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -578,7 +578,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Apsara Stack tenant account used by the event owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -586,7 +586,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node that triggered the event belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -594,7 +594,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicId.
+             * The ID of the event.
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -602,7 +602,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * The name of the event.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -610,7 +610,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicStatus.
+             * The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. A value of IGNORE indicates that the event is ignored. A value of NEW indicates that the event is a new event. A value of FIXING indicates that the event is being processed. A value of RECOVER indicates that the event is processed.
              */
             public Builder topicStatus(String topicStatus) {
                 this.topicStatus = topicStatus;
@@ -618,7 +618,7 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicType.
+             * The type of the event. Valid values: SLOW and ERROR. A value of SLOW indicates that the duration of the task is significantly longer than the average duration of the task in previous cycles. A value of ERROR indicates that the task fails to run.
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;

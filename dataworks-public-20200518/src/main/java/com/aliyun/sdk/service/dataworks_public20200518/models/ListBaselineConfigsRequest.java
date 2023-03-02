@@ -179,7 +179,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * BaselineTypes.
+         * The type of the baseline. Valid values: DAILY and HOURLY. A value of DAILY indicates that the baseline is a day-level baseline. A value of HOURLY indicates that the baseline is an hour-level baseline. Separate multiple baseline types with commas (,).
          */
         public Builder baselineTypes(String baselineTypes) {
             this.putBodyParameter("BaselineTypes", baselineTypes);
@@ -188,7 +188,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The ID of the Alibaba Cloud account used by the baseline owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -197,7 +197,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -206,7 +206,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -215,7 +215,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Separate multiple priorities with commas (,).
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -224,7 +224,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace. You can call the ListProjects operation to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -233,7 +233,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * SearchText.
+         * The keyword in the baseline name used to search for the baseline.
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
@@ -242,7 +242,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * Useflag.
+         * Specifies whether to enable the baseline. Valid values: true and false.
          */
         public Builder useflag(Boolean useflag) {
             this.putBodyParameter("Useflag", useflag);

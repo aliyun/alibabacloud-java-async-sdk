@@ -124,7 +124,7 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The ID of the DataWorks workspace to which the manually triggered node belongs. You can call the [ListProjects](~~178393~~) operation to query the ID.
          */
         public Builder appId(Long appId) {
             this.putBodyParameter("AppId", appId);
@@ -133,7 +133,7 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * BizDate.
+         * The data timestamp of the manually triggered node instance.
          */
         public Builder bizDate(Long bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -142,7 +142,7 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * CycleTime.
+         * The scheduled time to run the manually triggered node. Set the value to a 13-digit timestamp in milliseconds.
          */
         public Builder cycleTime(Long cycleTime) {
             this.putBodyParameter("CycleTime", cycleTime);
@@ -151,7 +151,7 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the manually triggered node. You can call the [ListNodes](~~173979~~) operation to query the ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);

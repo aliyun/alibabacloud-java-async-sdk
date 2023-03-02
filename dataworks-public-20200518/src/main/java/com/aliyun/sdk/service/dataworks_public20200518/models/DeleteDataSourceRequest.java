@@ -70,7 +70,7 @@ public class DeleteDataSourceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the data source. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class DeleteDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * The ID of the data source. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.
          */
         public Builder dataSourceId(Long dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

@@ -107,7 +107,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * FolderPath.
+         * The path of the folder.
          */
         public Builder folderPath(String folderPath) {
             this.putBodyParameter("FolderPath", folderPath);
@@ -116,7 +116,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -125,7 +125,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

@@ -98,7 +98,7 @@ public class GetBusinessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the workflow.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class GetBusinessResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * BusinessId.
+             * The ID of the workflow.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -246,7 +246,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessName.
+             * The name of the workflow.
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -254,7 +254,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the workflow.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +262,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The Alibaba Cloud account ID of the workflow owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -270,7 +270,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the workflow belongs.
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -278,7 +278,7 @@ public class GetBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ.
              */
             public Builder useType(String useType) {
                 this.useType = useType;

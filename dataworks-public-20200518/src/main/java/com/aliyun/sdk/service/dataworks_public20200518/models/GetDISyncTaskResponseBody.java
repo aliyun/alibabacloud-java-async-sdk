@@ -62,7 +62,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the real-time synchronization node or data synchronization solution.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can query logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +242,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CreatorName.
+             * The creator of the data synchronization solution.
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -246,7 +250,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data synchronization solution.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -254,7 +258,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the data synchronization solution.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -262,7 +266,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessContent.
+             * The configuration details of the data synchronization solution.
              */
             public Builder processContent(String processContent) {
                 this.processContent = processContent;
@@ -270,7 +274,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessExtra.
+             * The additional parameters of the data synchronization solution.
              */
             public Builder processExtra(String processExtra) {
                 this.processExtra = processExtra;
@@ -278,7 +282,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the project to which the data synchronization solution belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -286,7 +290,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The type of the source of the data synchronization solution.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -294,7 +298,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the data synchronization solution.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -302,7 +306,19 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the data synchronization solution. Valid values:
+             * <p>
+             * 
+             * *   0: successful
+             * *   1: not running
+             * *   2: running
+             * *   3: failed
+             * *   4: committed
+             * *   5: pending manual confirmation
+             * *   6: manually confirmed
+             * *   7: others
+             * *   8: waiting
+             * *   9: deleted
              */
             public Builder status(String status) {
                 this.status = status;
@@ -310,7 +326,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * The time when the data synchronization solution was committed.
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -318,7 +334,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the data synchronization solution.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -395,7 +411,9 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Code.
+             * *   If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization node are returned.
+             * <p>
+             * *   If the TaskType parameter is set to DI_SOLUTION, the value null is returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -403,7 +421,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The cause of the failure to obtain the details of the real-time synchronization node or data synchronization solution.
+             * <p>
+             * 
+             * If the details of the real-time synchronization node or data synchronization solution are obtained, the value null is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -411,7 +432,9 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SolutionDetail.
+             * *   If the TaskType parameter is set to DI_REALTIME, the value null is returned.
+             * <p>
+             * *   If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution task are returned.
              */
             public Builder solutionDetail(SolutionDetail solutionDetail) {
                 this.solutionDetail = solutionDetail;
@@ -419,7 +442,12 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the details of the real-time synchronization node or data synchronization solution are obtained. Valid values:
+             * <p>
+             * 
+             * success: The details are obtained.
+             * 
+             * fail: The details fail to be obtained.
              */
             public Builder status(String status) {
                 this.status = status;

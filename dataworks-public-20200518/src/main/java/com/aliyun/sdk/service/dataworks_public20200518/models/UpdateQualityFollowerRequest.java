@@ -124,7 +124,7 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * AlarmMode.
+         * The notification method. Valid values: 1, 2, 4, and 5. 1 indicates that the notification is sent by email. 2 indicates that the notification is sent by email and text message. 4 indicates that the notification is sent by a DingTalk chatbot. 5 indicates that the notification is sent by a DingTalk chatbot to all members in a DingTalk group.
          */
         public Builder alarmMode(Integer alarmMode) {
             this.putBodyParameter("AlarmMode", alarmMode);
@@ -133,7 +133,7 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * Follower.
+         * The name of the subscriber.
          */
         public Builder follower(String follower) {
             this.putBodyParameter("Follower", follower);
@@ -142,7 +142,7 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * FollowerId.
+         * The ID of the subscription relationship.
          */
         public Builder followerId(Long followerId) {
             this.putBodyParameter("FollowerId", followerId);
@@ -151,7 +151,7 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the computing engine instance or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

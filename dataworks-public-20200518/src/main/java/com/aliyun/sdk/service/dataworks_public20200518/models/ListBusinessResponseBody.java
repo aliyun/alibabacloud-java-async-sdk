@@ -98,7 +98,7 @@ public class ListBusinessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information about the workflows returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class ListBusinessResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * BusinessId.
+             * The ID of the workflow.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -246,7 +246,7 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessName.
+             * The name of the workflow.
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -254,7 +254,7 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the workflow.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +262,7 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The owner of the workflow.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -270,7 +270,7 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the workflow belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -278,7 +278,7 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ. The value NORMAL indicates that the workflow belongs to auto triggered workflows. The value MANUAL_BIZ indicates that the workflow belongs to manually triggered workflows.
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -355,7 +355,7 @@ public class ListBusinessResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Business.
+             * The details of the workflow.
              */
             public Builder business(java.util.List < Business> business) {
                 this.business = business;
@@ -363,7 +363,7 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -371,7 +371,7 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -379,7 +379,7 @@ public class ListBusinessResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

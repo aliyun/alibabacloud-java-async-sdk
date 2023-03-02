@@ -124,7 +124,7 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -133,7 +133,7 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * AuthorizedProjectId.
+         * The ID of the workspace from which you want to revoke the access permissions on the API.
          */
         public Builder authorizedProjectId(Long authorizedProjectId) {
             this.putBodyParameter("AuthorizedProjectId", authorizedProjectId);
@@ -142,7 +142,7 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -151,7 +151,7 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

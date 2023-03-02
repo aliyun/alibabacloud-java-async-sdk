@@ -50,7 +50,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The return results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * CreateTime.
+             * The time when the deployment task was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -190,7 +190,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * The ID of the Alibaba Cloud account used by the user who created the deployment tasks.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -198,7 +198,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned when the deployment task failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -206,7 +206,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -214,7 +214,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * Executor.
+             * The ID of the Alibaba Cloud account used by the user who ran the deployment tasks.
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -222,7 +222,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the deployment task. You can call the [GetDeployment](~~173950~~) operation to query the details of the deployment task based on the ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -230,7 +230,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the deployment task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,7 +238,13 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the deployment tasks. Valid values:
+             * <p>
+             * 
+             * *   0: The deployment tasks are ready.
+             * *   1: The deployment tasks are successful.
+             * *   2: The deployment tasks fail.
+             * *   6: The deployment tasks are rejected.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -315,7 +321,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * Deployments.
+             * The information about the deployment tasks.
              */
             public Builder deployments(java.util.List < Deployments> deployments) {
                 this.deployments = deployments;
@@ -323,7 +329,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -331,7 +337,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -339,7 +345,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

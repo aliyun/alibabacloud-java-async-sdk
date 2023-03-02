@@ -130,7 +130,7 @@ public class UpdateTableModelInfoRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the service is activated.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -139,7 +139,7 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * FirstLevelThemeId.
+         * The ID of the first-level table folder.
          */
         public Builder firstLevelThemeId(Long firstLevelThemeId) {
             this.putQueryParameter("FirstLevelThemeId", firstLevelThemeId);
@@ -148,7 +148,7 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * LevelId.
+         * The ID of the table level.
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -157,7 +157,7 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * LevelType.
+         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -166,7 +166,7 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * SecondLevelThemeId.
+         * The ID of the second-level table folder.
          */
         public Builder secondLevelThemeId(Long secondLevelThemeId) {
             this.putQueryParameter("SecondLevelThemeId", secondLevelThemeId);
@@ -175,7 +175,7 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

@@ -138,7 +138,7 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * Bizdate.
+         * The data timestamp.
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -147,7 +147,7 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the workflow.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -156,7 +156,7 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -165,7 +165,7 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * NodeParams.
+         * The parameters related to the node. Set this parameter to a JSON string. A key in the string indicates a parameter, and a value in the string indicates the value of the related parameter.
          */
         public Builder nodeParams(String nodeParams) {
             this.putBodyParameter("NodeParams", nodeParams);
@@ -174,7 +174,10 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
+         * <p>
+         * 
+         * A workspace in basic mode does not have a development environment. For more information, see [Basic mode and standard mode](~~85772~~).
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

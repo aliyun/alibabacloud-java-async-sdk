@@ -62,7 +62,7 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         private TaskList taskList; 
 
         /**
-         * RequestId.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +82,7 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * TaskList.
+         * The information about the connectivity test.
          */
         public Builder taskList(TaskList taskList) {
             this.taskList = taskList;
@@ -130,7 +134,7 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
             private Boolean connectStatus; 
 
             /**
-             * ConnectMessage.
+             * The reason why the data source and resource group failed the connectivity test. If data source and the resource group passed the connectivity test, this parameter is left empty.
              */
             public Builder connectMessage(String connectMessage) {
                 this.connectMessage = connectMessage;
@@ -138,7 +142,11 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectStatus.
+             * The result of the connectivity test. Valid values:
+             * <p>
+             * 
+             * *   true: The data source and the resource group passed the connectivity test.
+             * *   false: The data source and the resource group failed the connectivity test. You can troubleshoot issues based on the ConnectMessage parameter.
              */
             public Builder connectStatus(Boolean connectStatus) {
                 this.connectStatus = connectStatus;

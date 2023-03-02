@@ -153,7 +153,10 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * <p>
+         * 
+         * This parameter is used together with the StartDate parameter. The interval between the time specified by this parameter and the time specified by the StartDate parameter cannot exceed 7 days.
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -162,7 +165,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -171,7 +174,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -180,7 +183,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the compute engine instance or data source for which data quality is monitored.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -189,7 +192,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the monitoring rule. You can use the ID and information such as a partition filter expression to perform a joint query.
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);
@@ -198,7 +201,10 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * <p>
+         * 
+         * This parameter is used together with the EndDate parameter. The interval between the time specified by this parameter and the time specified by the EndDate parameter cannot exceed 7 days.
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

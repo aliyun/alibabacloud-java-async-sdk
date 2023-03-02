@@ -151,7 +151,7 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. This parameter can be left empty.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -160,7 +160,7 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -169,7 +169,10 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskContent.
+         * The configuration of the synchronization node to be created. This operation is equivalent to node creation by using the code editor in the DataWorks console. For more information, see [Create a synchronization node by using the code editor](~~137717~~).
+         * <p>
+         * 
+         * You can call the CreateDISyncTask operation to create only batch synchronization nodes.
          */
         public Builder taskContent(String taskContent) {
             this.putQueryParameter("TaskContent", taskContent);
@@ -178,7 +181,7 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the synchronization node.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -187,7 +190,11 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskParam.
+         * The settings that specify the storage path of the synchronization node and the resource group used by the node. The following fields are supported:
+         * <p>
+         * 
+         * *   FileFolderPath: the storage path of the node.
+         * *   ResourceGroup: the identifier of the resource group for Data Integration that is used by the node. To query the identifier of the resource group, call the [ListResourceGroup](~~173913~~) operation.
          */
         public Builder taskParam(String taskParam) {
             this.putQueryParameter("TaskParam", taskParam);
@@ -196,7 +203,10 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the synchronization node.
+         * <p>
+         * 
+         * You can call the CreateDISyncTask operation to create only batch synchronization nodes. Set the value to DI_OFFLINE.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -98,7 +98,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details about the instance.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned because the instance fails to be scheduled.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -490,7 +490,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * BaselineId.
+             * The ID of the baseline.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -498,7 +498,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BeginRunningTime.
+             * The time when the instance started to run.
              */
             public Builder beginRunningTime(Long beginRunningTime) {
                 this.beginRunningTime = beginRunningTime;
@@ -506,7 +506,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BeginWaitResTime.
+             * The time when the instance started to wait for resources.
              */
             public Builder beginWaitResTime(Long beginWaitResTime) {
                 this.beginWaitResTime = beginWaitResTime;
@@ -514,7 +514,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BeginWaitTimeTime.
+             * The time when the instance started to wait to be run.
              */
             public Builder beginWaitTimeTime(Long beginWaitTimeTime) {
                 this.beginWaitTimeTime = beginWaitTimeTime;
@@ -522,7 +522,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Bizdate.
+             * The data timestamp. In most cases, the value is one day before the date when the instance is run.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -530,7 +530,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessId.
+             * The ID of the workflow.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -538,7 +538,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Connection.
+             * The connection string.
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -546,7 +546,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was generated.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -554,7 +554,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * The owner of the instance.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -562,7 +562,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CycTime.
+             * The scheduled time of the instance.
              */
             public Builder cycTime(Long cycTime) {
                 this.cycTime = cycTime;
@@ -570,7 +570,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DagId.
+             * The ID of the workflow.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -578,7 +578,13 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DagType.
+             * The type of the workflow. Valid values:
+             * <p>
+             * 
+             * *   DAILY: The workflow is used to run auto triggered nodes.
+             * *   MANUAL: The workflow is used to run manually triggered nodes.
+             * *   SMOKE_TEST: The workflow is used to perform smoke testing.
+             * *   SUPPLY_DATA: The workflow is used to backfill data.
              */
             public Builder dagType(String dagType) {
                 this.dagType = dagType;
@@ -586,7 +592,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DqcDescription.
+             * The table and partition filter expression in Data Quality that are associated with the instance.
              */
             public Builder dqcDescription(String dqcDescription) {
                 this.dqcDescription = dqcDescription;
@@ -594,7 +600,11 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DqcType.
+             * Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:
+             * <p>
+             * 
+             * *   0: The instance is associated with a monitoring rule in Data Quality.
+             * *   1: The instance is not associated with a monitoring rule in Data Quality.
              */
             public Builder dqcType(Integer dqcType) {
                 this.dqcType = dqcType;
@@ -602,7 +612,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the running of the instance was complete.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -610,7 +620,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -618,7 +628,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the instance was last modified.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -626,7 +636,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node that generates the instance.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -634,7 +644,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node that generates the instance.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -642,7 +652,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValues.
+             * The values of the parameters related to the node.
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
@@ -650,7 +660,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the instance. Valid values: 1, 3, 5, 7, and 8. A great value indicates a high priority. Default value: 1.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -658,7 +668,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedFlowId.
+             * The ID of the workflow to which the node that generates the instance belongs.
              */
             public Builder relatedFlowId(Long relatedFlowId) {
                 this.relatedFlowId = relatedFlowId;
@@ -666,7 +676,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatInterval.
+             * The interval at which the node that generates the instance is rerun after the node fails to run. Unit: milliseconds.
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -674,7 +684,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Repeatability.
+             * Indicates whether the node that generates the instance can be rerun.
              */
             public Builder repeatability(Boolean repeatability) {
                 this.repeatability = repeatability;
@@ -682,7 +692,17 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the node that generates the instance. Valid values:
+             * <p>
+             * 
+             * *   NOT_RUN: The node is not run.
+             * *   WAIT_TIME: The node is waiting for its scheduled time to arrive.
+             * *   WAIT_RESOURCE: The node is waiting for resources.
+             * *   RUNNING: The node is running.
+             * *   CHECKING: Data quality is being checked for the node.
+             * *   CHECKING_CONDITION: Branch conditions are being checked for the node.
+             * *   FAILURE: The node fails to run.
+             * *   SUCCESS: The node is successfully run.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -690,7 +710,12 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskRerunTime.
+             * The number of times the node that generates the instance can be rerun. This parameter can be left empty, or the value of this parameter can be an integer that is greater than or equal to 0.
+             * <p>
+             * 
+             * *   If this parameter is left empty, the number of rerun times is not specified for the node.
+             * *   If the value of this parameter is 0, the node cannot be rerun.
+             * *   If the value of this parameter is n (an integer that is greater than 0), the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun two times, and so on.
              */
             public Builder taskRerunTime(Integer taskRerunTime) {
                 this.taskRerunTime = taskRerunTime;
@@ -698,7 +723,17 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The scheduling type of the node that generates the instance. Valid values:
+             * <p>
+             * 
+             * *   NORMAL(0): The node is an auto triggered node. It is run on a regular basis.
+             * *   MANUAL(1): The node is a manually triggered node. It is not run on a regular basis.
+             * *   PAUSE(2): The node is a frozen node. The scheduling system still runs the node on a regular basis but sets it to FAILURE when the scheduling system starts to run the node.
+             * *   SKIP(3): The node is a dry-run node. The scheduling system still runs the node on a regular basis but sets it to SUCCESS when the scheduling system starts to run the node.
+             * *   SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the node to SUCCESS when the scheduling system starts to run the node.
+             * *   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for its scheduled time. The scheduling system still runs the node on a regular basis but sets it to SUCCESS when the scheduling system starts to run the node.
+             * *   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.
+             * *   REALTIME_DEPRECATED(7): The node has instances generated in real time but deprecated. The scheduling system directly sets the node to SUCCESS.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

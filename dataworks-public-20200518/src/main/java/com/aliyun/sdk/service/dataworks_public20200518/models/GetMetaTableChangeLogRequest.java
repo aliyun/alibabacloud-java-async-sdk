@@ -163,7 +163,7 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * ChangeType.
+         * The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.
          */
         public Builder changeType(String changeType) {
             this.putBodyParameter("ChangeType", changeType);
@@ -172,7 +172,11 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * <p>
+         * 
+         * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
+         * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -181,7 +185,7 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * The entity on which the change is made. Valid values: TABLE and PARTITION.
          */
         public Builder objectType(String objectType) {
             this.putBodyParameter("ObjectType", objectType);
@@ -190,7 +194,7 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -199,7 +203,7 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -208,7 +212,11 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * <p>
+         * 
+         * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
+         * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -217,7 +225,10 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.projectName.tableName. You can call the [GetMetaDBTableList](~~173916~~) operation to query the GUID of the table.
+         * <p>
+         * 
+         * >  To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](~~173925~~) operation.
          */
         public Builder tableGuid(String tableGuid) {
             this.putBodyParameter("TableGuid", tableGuid);

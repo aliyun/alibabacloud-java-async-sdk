@@ -98,7 +98,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data about the deployment task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can troubleshoot errors based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -367,7 +367,11 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Integer toEnvironment; 
 
             /**
-             * CheckingStatus.
+             * The check status of one or more files in the deployment task. If the value of the ToEnvironment parameter is 1, the files can be deployed to the production environment only when the value of the Status parameter is 1 and the CheckingStatus parameter is empty. Valid values:
+             * <p>
+             * 
+             * *   7: The file failed the check.
+             * *   8: The file is being checked.
              */
             public Builder checkingStatus(Integer checkingStatus) {
                 this.checkingStatus = checkingStatus;
@@ -375,7 +379,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the deployment task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -383,7 +387,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * The ID of the Alibaba Cloud account used by the user who created the deployment task.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -391,7 +395,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -399,7 +403,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -407,7 +411,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * FromEnvironment.
+             * The environment in which the deployment task was run. Valid values: 0 and 1. A value of 0 indicates the on-premises environment. A value of 1 indicates the development environment.
              */
             public Builder fromEnvironment(Integer fromEnvironment) {
                 this.fromEnvironment = fromEnvironment;
@@ -415,7 +419,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerId.
+             * The ID of the Alibaba Cloud account used by the user who ran the deployment task.
              */
             public Builder handlerId(String handlerId) {
                 this.handlerId = handlerId;
@@ -423,7 +427,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the deployment task. The value is the same as the name of the specific deployment task that is displayed on the Release Package page in the Deploy module.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -431,7 +435,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the deployment task. Valid values: 0, 1, and 2. A value of 0 indicates that the task is ready. A value of 1 indicates that the task was successful. A value of 2 indicates that the task failed.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -439,7 +443,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * ToEnvironment.
+             * The environment to which the file was deployed. Valid values: 1 and 2. A value of 1 indicates the development environment. A value of 2 indicates the production environment.
              */
             public Builder toEnvironment(Integer toEnvironment) {
                 this.toEnvironment = toEnvironment;
@@ -500,7 +504,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * Deployment.
+             * The details of the deployment task.
              */
             public Builder deployment(Deployment deployment) {
                 this.deployment = deployment;

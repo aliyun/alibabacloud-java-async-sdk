@@ -50,7 +50,7 @@ public class GetOptionValueForProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OptionValue.
+         * The option settings. In the example, cuNumber is a custom key.
          */
         public Builder optionValue(String optionValue) {
             this.optionValue = optionValue;

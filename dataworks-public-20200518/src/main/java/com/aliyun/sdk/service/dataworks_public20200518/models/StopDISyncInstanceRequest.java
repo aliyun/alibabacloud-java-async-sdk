@@ -109,7 +109,7 @@ public class StopDISyncInstanceRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The ID of the synchronization node. You can call the [ListFiles](~~173942~~) operation to obtain the ID.
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -118,7 +118,10 @@ public class StopDISyncInstanceRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * <p>
+         * 
+         * This parameter specifies the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -127,7 +130,10 @@ public class StopDISyncInstanceRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the synchronization node that you want to stop. Set the value to DI_REALTIME.
+         * <p>
+         * 
+         * DI_REALTIME indicates a real-time synchronization node.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

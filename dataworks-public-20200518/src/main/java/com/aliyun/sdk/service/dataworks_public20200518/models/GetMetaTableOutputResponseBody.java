@@ -98,7 +98,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The output node and instance.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +250,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             private String waitTime; 
 
             /**
-             * EndTime.
+             * The end time of the node.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -258,7 +258,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -266,7 +266,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the node.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -274,7 +274,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The GUID of the MaxCompute metatable.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -282,7 +282,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the node.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -290,7 +290,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * TaskInstanceId.
+             * The ID of the instance.
              */
             public Builder taskInstanceId(Long taskInstanceId) {
                 this.taskInstanceId = taskInstanceId;
@@ -298,7 +298,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * WaitTime.
+             * The duration during which the node waits to start.
              */
             public Builder waitTime(String waitTime) {
                 this.waitTime = waitTime;
@@ -375,7 +375,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DataEntityList.
+             * The information of the node and instance.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -383,7 +383,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -391,7 +391,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -399,7 +399,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

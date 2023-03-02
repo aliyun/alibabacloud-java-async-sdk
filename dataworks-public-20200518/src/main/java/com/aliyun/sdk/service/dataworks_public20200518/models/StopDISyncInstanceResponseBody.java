@@ -62,7 +62,7 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information returned for the synchronization node.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,10 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * The reason why the synchronization node fails to be stopped.
+             * <p>
+             * 
+             * If the synchronization node is stopped, the value null is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -138,7 +145,11 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the synchronization node is stopped. Valid values:
+             * <p>
+             * 
+             * *   success: The synchronization node is stopped.
+             * *   fail: The synchronization node fails to be stopped.
              */
             public Builder status(String status) {
                 this.status = status;

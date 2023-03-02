@@ -94,7 +94,7 @@ public class StartMigrationRequest extends Request {
         }
 
         /**
-         * MigrationId.
+         * The ID of the migration package. You can call the [CreateImportMigration](~~206094~~) operation to obtain the ID of the import package and call the [CreateExportMigration](~~349325~~) operation to obtain the ID of the export package.
          */
         public Builder migrationId(Long migrationId) {
             this.putBodyParameter("MigrationId", migrationId);
@@ -103,7 +103,7 @@ public class StartMigrationRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace. You can go to the Workspace Management page of the DataWorks console to view the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

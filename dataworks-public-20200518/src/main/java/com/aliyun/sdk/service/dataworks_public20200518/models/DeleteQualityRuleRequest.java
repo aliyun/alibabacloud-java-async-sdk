@@ -85,7 +85,7 @@ public class DeleteQualityRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where your project resides.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the database engine or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -103,7 +103,7 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

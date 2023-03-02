@@ -79,7 +79,7 @@ public class GetPermissionApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * FlowId.
+         * The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

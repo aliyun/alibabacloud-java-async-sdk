@@ -62,7 +62,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the migration task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails. You can locate the error based on the request ID.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +218,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateUser.
+             * The ID of the user who creates the migration task.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -222,7 +226,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * The URL that is used to download the package of the export task.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -230,7 +234,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the migration task was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -238,7 +242,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the migration task was modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -246,7 +250,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationId.
+             * The ID of the migration task.
              */
             public Builder migrationId(Long migrationId) {
                 this.migrationId = migrationId;
@@ -254,7 +258,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the migration task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -262,7 +266,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OpUser.
+             * The ID of the user who manages the migration task.
              */
             public Builder opUser(String opUser) {
                 this.opUser = opUser;
@@ -270,7 +274,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the DataWorks workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -278,7 +282,19 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the migration task. Valid values:
+             * <p>
+             * 
+             * *   INIT: The migration task is initiating.
+             * *   EDITING: The migration task is being edited.
+             * *   IMPORTING: The migration task is importing data objects.
+             * *   IMPORT_ERROR: The migration task fails to import data objects.
+             * *   IMPORT_SUCCESS: Data objects are imported.
+             * *   EXPORTING: The migration task is exporting data objects.
+             * *   EXPORT_ERROR: The migration task fails to export data objects.
+             * *   EXPORT_SUCCESS: The migration task successfully exports data objects.
+             * *   REVOKED: The migration task is canceled.
+             * *   PARTIAL_SUCCESS: The migration task successfully imports or exports only some data objects.
              */
             public Builder status(String status) {
                 this.status = status;

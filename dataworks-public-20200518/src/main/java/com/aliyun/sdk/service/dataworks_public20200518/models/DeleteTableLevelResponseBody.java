@@ -50,7 +50,7 @@ public class DeleteTableLevelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeleteResult.
+         * Indicates whether the table level is deleted.
          */
         public Builder deleteResult(Boolean deleteResult) {
             this.deleteResult = deleteResult;
@@ -58,7 +58,7 @@ public class DeleteTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

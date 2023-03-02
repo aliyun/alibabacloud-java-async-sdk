@@ -164,7 +164,7 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * AlertTarget.
+         * The ID of the Alibaba Cloud account that is used to receive alert notifications.
          */
         public Builder alertTarget(String alertTarget) {
             this.putBodyParameter("AlertTarget", alertTarget);
@@ -173,7 +173,7 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * Founder.
+         * The ID of the Alibaba Cloud account that is used to create the custom alert rules.
          */
         public Builder founder(String founder) {
             this.putBodyParameter("Founder", founder);
@@ -182,7 +182,7 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node to which the custom alert rules are applied. You can use the ID to search for the custom alert rules that are applied to the node.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -191,7 +191,7 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -200,7 +200,7 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -209,7 +209,7 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * RemindTypes.
+         * The conditions that trigger an alert for the node. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT. The value FINISHED indicates that the node finishes running. The value UNFINISHED indicates that the node is still running at the specified point in time. The value ERROR indicates that an error occurs when the node is running. The value CYCLE_UNFINISHED indicates that the node does not finish running in the specified scheduling cycle. The value TIMEOUT indicates that the node times out. You can specify multiple conditions for a custom alert rule. If you specify multiple condition, separate them with commas (,).
          */
         public Builder remindTypes(String remindTypes) {
             this.putBodyParameter("RemindTypes", remindTypes);
@@ -218,7 +218,7 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * SearchText.
+         * The keyword in a rule name that is used to search for the rule. Fuzzy search is supported.
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);

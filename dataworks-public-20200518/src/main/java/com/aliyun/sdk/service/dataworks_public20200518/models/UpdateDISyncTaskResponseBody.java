@@ -62,7 +62,7 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information that indicates whether the sync node was updated.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * The reason why the sync node failed to be updated. If the sync node was updated, this parameter is left empty.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -138,7 +142,11 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the sync node was updated. Valid values:
+             * <p>
+             * 
+             * *   success: The sync node was updated.
+             * *   fail: The sync node failed to be updated.
              */
             public Builder status(String status) {
                 this.status = status;

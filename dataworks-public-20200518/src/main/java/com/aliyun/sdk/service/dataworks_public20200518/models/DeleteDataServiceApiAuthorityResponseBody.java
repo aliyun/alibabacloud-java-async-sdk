@@ -50,7 +50,7 @@ public class DeleteDataServiceApiAuthorityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteDataServiceApiAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the access permissions are revoked.
          */
         public Builder success(Boolean success) {
             this.success = success;

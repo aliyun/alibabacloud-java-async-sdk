@@ -50,7 +50,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * The extensions returned on pages.
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -110,7 +110,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             private String eventName; 
 
             /**
-             * EventCode.
+             * The code of the event.
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -118,7 +118,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the event.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -219,7 +219,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * BindEventList.
+             * The extension point events.
              */
             public Builder bindEventList(java.util.List < BindEventList> bindEventList) {
                 this.bindEventList = bindEventList;
@@ -227,7 +227,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionCode.
+             * The unique code of the extension.
              */
             public Builder extensionCode(String extensionCode) {
                 this.extensionCode = extensionCode;
@@ -235,7 +235,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionDesc.
+             * The description of the extension.
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -243,7 +243,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionName.
+             * The name of the extension.
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
@@ -251,7 +251,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the RAM user.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -259,7 +259,20 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the extension. Valid values:
+             * <p>
+             * 
+             * 0: Testing
+             * 
+             * 1: Publishing
+             * 
+             * 3: Disabled
+             * 
+             * 4: Processing
+             * 
+             * 5: Approved
+             * 
+             * 6: Approve Failed
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -336,7 +349,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Extensions.
+             * The extensions.
              */
             public Builder extensions(java.util.List < Extensions> extensions) {
                 this.extensions = extensions;
@@ -344,7 +357,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -352,7 +365,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -360,7 +373,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

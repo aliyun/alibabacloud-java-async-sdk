@@ -50,7 +50,7 @@ public class DesensitizeDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DesensitizeData.
+         * The data returned after masking.
          */
         public Builder desensitizeData(String desensitizeData) {
             this.desensitizeData = desensitizeData;
@@ -58,7 +58,7 @@ public class DesensitizeDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

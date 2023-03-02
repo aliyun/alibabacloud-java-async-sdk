@@ -109,7 +109,11 @@ public class DeployDISyncTaskRequest extends Request {
         }
 
         /**
-         * FileId.
+         * *   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to deploy.
+         * <p>
+         * *   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to deploy.
+         * 
+         * You can call the [ListFiles](~~173942~~) operation to query the ID of the real-time synchronization node or data synchronization solution.
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -118,7 +122,10 @@ public class DeployDISyncTaskRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to query the workspace ID.
+         * <p>
+         * 
+         * This parameter specifies the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -127,7 +134,11 @@ public class DeployDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the object that you want to deploy. Valid values:
+         * <p>
+         * 
+         * *   DI_REALTIME: real-time synchronization node
+         * *   DI_SOLUTION: data synchronization solution
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

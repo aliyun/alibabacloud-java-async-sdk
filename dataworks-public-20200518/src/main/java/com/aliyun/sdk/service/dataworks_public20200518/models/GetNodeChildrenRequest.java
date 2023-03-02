@@ -85,7 +85,7 @@ public class GetNodeChildrenRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class GetNodeChildrenRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node. You can go to the Operation Center page in the DataWorks console to view the ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -103,7 +103,7 @@ public class GetNodeChildrenRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

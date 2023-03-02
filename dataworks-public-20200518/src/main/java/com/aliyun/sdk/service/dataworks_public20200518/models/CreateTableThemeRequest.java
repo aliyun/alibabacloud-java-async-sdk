@@ -115,7 +115,7 @@ public class CreateTableThemeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the service is activated.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * Level.
+         * The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a first-level table folder. A value of 2 indicates a second-level table folder.
          */
         public Builder level(Integer level) {
             this.putQueryParameter("Level", level);
@@ -133,7 +133,7 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the table folder.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -142,7 +142,7 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * The ID of the level of the parent table folder.
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -151,7 +151,7 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -98,7 +98,7 @@ public class ListDagsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of DAGs.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +322,7 @@ public class ListDagsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bizdate.
+             * The data timestamp.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -330,7 +330,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time at which the DAG was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -338,7 +338,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * The user who created the DAG.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -346,7 +346,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * DagId。
+             * The ID of the DAG.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -354,7 +354,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time at which the DAG finished running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -362,7 +362,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * Gmtdate。
+             * The time at which the DAG was scheduled to run.
              */
             public Builder gmtdate(Long gmtdate) {
                 this.gmtdate = gmtdate;
@@ -370,7 +370,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time at which the DAG was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -378,7 +378,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the DAG.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -386,7 +386,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * OpSeq.
+             * The sequence number of the operation.
              */
             public Builder opSeq(Long opSeq) {
                 this.opSeq = opSeq;
@@ -394,7 +394,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -402,7 +402,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time at which the DAG started to run.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -410,7 +410,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -418,7 +418,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -459,7 +459,7 @@ public class ListDagsResponseBody extends TeaModel {
             private java.util.List < Dags> dags; 
 
             /**
-             * Dags.
+             * The entities returned.
              */
             public Builder dags(java.util.List < Dags> dags) {
                 this.dags = dags;

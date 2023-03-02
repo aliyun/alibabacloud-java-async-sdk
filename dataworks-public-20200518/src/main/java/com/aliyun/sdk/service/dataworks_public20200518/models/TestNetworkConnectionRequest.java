@@ -115,7 +115,7 @@ public class TestNetworkConnectionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region in which the data source resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class TestNetworkConnectionRequest extends Request {
         }
 
         /**
-         * DatasourceName.
+         * The name of the data source.
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
@@ -133,7 +133,11 @@ public class TestNetworkConnectionRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The environment to which the data source belongs. Valid values:
+         * <p>
+         * 
+         * *   0: development environment
+         * *   1: production environment
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -142,7 +146,7 @@ public class TestNetworkConnectionRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -151,7 +155,7 @@ public class TestNetworkConnectionRequest extends Request {
         }
 
         /**
-         * ResourceGroup.
+         * The identifier of the resource group. You can call the [ListResourceGroups](~~173913~~) operation to query the identifier of the resource group.
          */
         public Builder resourceGroup(String resourceGroup) {
             this.putQueryParameter("ResourceGroup", resourceGroup);

@@ -85,7 +85,7 @@ public class GetMetaTableThemeLevelRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region in which DataWorks is activated. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint that is used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class GetMetaTableThemeLevelRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * The type of the data source. Set the value to odps.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -103,7 +103,7 @@ public class GetMetaTableThemeLevelRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.${projectName}.${tableName}.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

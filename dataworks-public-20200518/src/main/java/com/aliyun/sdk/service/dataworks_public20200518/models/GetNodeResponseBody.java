@@ -98,7 +98,7 @@ public class GetNodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the node.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -173,6 +173,9 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("DqcType")
         private Integer dqcType;
 
+        @NameInMap("FileType")
+        private Integer fileType;
+
         @NameInMap("NodeId")
         private Long nodeId;
 
@@ -203,6 +206,9 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("Repeatability")
         private String repeatability;
 
+        @NameInMap("ResGroupIdentifier")
+        private String resGroupIdentifier;
+
         @NameInMap("ResGroupName")
         private String resGroupName;
 
@@ -217,6 +223,7 @@ public class GetNodeResponseBody extends TeaModel {
             this.description = builder.description;
             this.dqcDescription = builder.dqcDescription;
             this.dqcType = builder.dqcType;
+            this.fileType = builder.fileType;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
             this.ownerId = builder.ownerId;
@@ -227,6 +234,7 @@ public class GetNodeResponseBody extends TeaModel {
             this.relatedFlowId = builder.relatedFlowId;
             this.repeatInterval = builder.repeatInterval;
             this.repeatability = builder.repeatability;
+            this.resGroupIdentifier = builder.resGroupIdentifier;
             this.resGroupName = builder.resGroupName;
             this.schedulerType = builder.schedulerType;
         }
@@ -286,6 +294,13 @@ public class GetNodeResponseBody extends TeaModel {
          */
         public Integer getDqcType() {
             return this.dqcType;
+        }
+
+        /**
+         * @return fileType
+         */
+        public Integer getFileType() {
+            return this.fileType;
         }
 
         /**
@@ -359,6 +374,13 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
+         * @return resGroupIdentifier
+         */
+        public String getResGroupIdentifier() {
+            return this.resGroupIdentifier;
+        }
+
+        /**
          * @return resGroupName
          */
         public String getResGroupName() {
@@ -380,6 +402,7 @@ public class GetNodeResponseBody extends TeaModel {
             private String description; 
             private String dqcDescription; 
             private Integer dqcType; 
+            private Integer fileType; 
             private Long nodeId; 
             private String nodeName; 
             private String ownerId; 
@@ -390,11 +413,12 @@ public class GetNodeResponseBody extends TeaModel {
             private Long relatedFlowId; 
             private Long repeatInterval; 
             private String repeatability; 
+            private String resGroupIdentifier; 
             private String resGroupName; 
             private String schedulerType; 
 
             /**
-             * BaselineId.
+             * The ID of the baseline.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -402,7 +426,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessId.
+             * The ID of the workflow.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -410,7 +434,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Connection.
+             * The connection string.
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -418,7 +442,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpress.
+             * The CRON expression returned.
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -426,7 +450,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the node.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -434,7 +458,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * DqcDescription.
+             * The table and partition filter expression in Data Quality that are associated with the node.
              */
             public Builder dqcDescription(String dqcDescription) {
                 this.dqcDescription = dqcDescription;
@@ -442,7 +466,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * DqcType.
+             * Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.
              */
             public Builder dqcType(Integer dqcType) {
                 this.dqcType = dqcType;
@@ -450,7 +474,15 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * FileType.
+             */
+            public Builder fileType(Integer fileType) {
+                this.fileType = fileType;
+                return this;
+            }
+
+            /**
+             * The ID of the node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -458,7 +490,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -466,7 +498,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The ID of the owner of the node.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -474,7 +506,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValues.
+             * Other parameters.
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
@@ -482,7 +514,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the node. Valid values: 1, 3, 5, 7, and 8.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -490,7 +522,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ProgramType.
+             * The type of the node.
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -498,7 +530,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -506,7 +538,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedFlowId.
+             * The ID of the workflow to which the node belongs.
              */
             public Builder relatedFlowId(Long relatedFlowId) {
                 this.relatedFlowId = relatedFlowId;
@@ -514,7 +546,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatInterval.
+             * The interval at which the node is rerun after the node fails to run.
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -522,7 +554,7 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Repeatability.
+             * Indicates whether the node can be rerun.
              */
             public Builder repeatability(String repeatability) {
                 this.repeatability = repeatability;
@@ -530,7 +562,15 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ResGroupName.
+             * ResGroupIdentifier.
+             */
+            public Builder resGroupIdentifier(String resGroupIdentifier) {
+                this.resGroupIdentifier = resGroupIdentifier;
+                return this;
+            }
+
+            /**
+             * The name of the resource group.
              */
             public Builder resGroupName(String resGroupName) {
                 this.resGroupName = resGroupName;
@@ -538,7 +578,13 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerType.
+             * The scheduling type of the node. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The node is an auto triggered node.
+             * *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.
+             * *   PAUSE: The node is a paused node.
+             * *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;

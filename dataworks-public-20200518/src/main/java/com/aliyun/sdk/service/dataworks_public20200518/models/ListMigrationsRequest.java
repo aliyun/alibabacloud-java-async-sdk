@@ -138,7 +138,7 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * Migration operation type, IMPORT/EXPORT
+         * The type of the migration task. Valid values: IMPORT and EXPORT.
          */
         public Builder migrationType(String migrationType) {
             this.putBodyParameter("MigrationType", migrationType);
@@ -147,7 +147,7 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The ID of the owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -156,7 +156,7 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -165,7 +165,7 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -174,7 +174,7 @@ public class ListMigrationsRequest extends Request {
         }
 
         /**
-         * Workspace Id
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

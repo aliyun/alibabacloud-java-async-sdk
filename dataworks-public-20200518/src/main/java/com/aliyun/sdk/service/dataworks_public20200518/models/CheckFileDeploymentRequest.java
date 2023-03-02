@@ -99,7 +99,7 @@ public class CheckFileDeploymentRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where DataWorks is activated. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -108,7 +108,7 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * CheckDetailUrl.
+         * This parameter is deprecated.
          */
         public Builder checkDetailUrl(String checkDetailUrl) {
             this.putBodyParameter("CheckDetailUrl", checkDetailUrl);
@@ -117,7 +117,7 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * CheckerInstanceId.
+         * The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.
          */
         public Builder checkerInstanceId(String checkerInstanceId) {
             this.putBodyParameter("CheckerInstanceId", checkerInstanceId);
@@ -126,7 +126,12 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * Status.
+         * The check status of the file that you want to deploy. Valid values:
+         * <p>
+         * 
+         * *   OK: The file passes the check.
+         * *   WARN: The file passes the check, but an alert is reported.
+         * *   FAIL: The file fails the check.
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

@@ -62,7 +62,7 @@ public class ListMigrationsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +302,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             private String updateUserName; 
 
             /**
-             * CreateTime.
+             * The time when the migration task was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -306,7 +310,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * The ID of the user who created the migration task.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -314,7 +318,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * The name of the user who created the migration task.
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -322,7 +326,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the export task.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +334,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -338,7 +342,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the primary key.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -346,7 +350,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -354,7 +358,11 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationType.
+             * The type of the migration task.
+             * <p>
+             * 
+             * *   IMPORT
+             * *   EXPORT
              */
             public Builder migrationType(String migrationType) {
                 this.migrationType = migrationType;
@@ -362,7 +370,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the migration task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -370,7 +378,15 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * The type of the import or export package. Valid values:
+             * <p>
+             * 
+             * *   DWMA (standard format)
+             * *   DATAWORKS_MODEL (standard format)
+             * *   DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)
+             * *   DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)
+             * 
+             * The DWMA and DATAWORKS_MODEL types are interchangeable.
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -378,7 +394,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the DataWorks workspace to which the task belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -386,7 +402,14 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the migration task. Valid values:
+             * <p>
+             * 
+             * *   INIT: The migration task is in the initial state.
+             * *   EDITING: The migration task is being edited.
+             * *   RUNNING: The migration task is running.
+             * *   FAILURE: The migration task fails to run.
+             * *   SUCCESS: The migration task is successfully run.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -394,7 +417,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -402,7 +425,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the migration task was last updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -410,7 +433,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateUser.
+             * The ID of the user who last updated the migration task.
              */
             public Builder updateUser(String updateUser) {
                 this.updateUser = updateUser;
@@ -418,7 +441,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateUserName.
+             * The name of the user who last updated the migration task.
              */
             public Builder updateUserName(String updateUserName) {
                 this.updateUserName = updateUserName;
@@ -495,7 +518,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Migrations.
+             * The list of migration tasks.
              */
             public Builder migrations(java.util.List < Migrations> migrations) {
                 this.migrations = migrations;
@@ -503,7 +526,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -511,7 +534,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 50.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -519,7 +542,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

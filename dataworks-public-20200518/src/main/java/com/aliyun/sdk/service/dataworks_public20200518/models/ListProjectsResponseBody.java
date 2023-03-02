@@ -50,7 +50,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageResult.
+         * The results that are returned.
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -58,7 +58,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -303,7 +303,12 @@ public class ListProjectsResponseBody extends TeaModel {
             private Boolean useProxyOdpsAccount; 
 
             /**
-             * DisableDevelopment.
+             * Indicates whether the Development role is disabled. Valid values:
+             * <p>
+             * 
+             * *   false: enabled
+             * *   true: disabled
+             * *   Default value: false
              */
             public Builder disableDevelopment(Boolean disableDevelopment) {
                 this.disableDevelopment = disableDevelopment;
@@ -311,7 +316,11 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the workspace is a default workspace. Valid values:
+             * <p>
+             * 
+             * *   1: The workspace is a default workspace.
+             * *   0: The workspace is not a default workspace.
              */
             public Builder isDefault(Integer isDefault) {
                 this.isDefault = isDefault;
@@ -319,7 +328,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectDescription.
+             * The description of the workspace.
              */
             public Builder projectDescription(String projectDescription) {
                 this.projectDescription = projectDescription;
@@ -327,7 +336,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -335,7 +344,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectIdentifier.
+             * The identifier of the workspace.
              */
             public Builder projectIdentifier(String projectIdentifier) {
                 this.projectIdentifier = projectIdentifier;
@@ -343,7 +352,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * The name of the workspace.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -351,7 +360,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectOwnerBaseId.
+             * The ID of the user used by the workspace owner.
              */
             public Builder projectOwnerBaseId(String projectOwnerBaseId) {
                 this.projectOwnerBaseId = projectOwnerBaseId;
@@ -359,7 +368,19 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectStatus.
+             * The status of the workspace. Valid values:
+             * <p>
+             * 
+             * *   0: AVAILABLE, which indicates that the workspace is running as expected.
+             * *   1: DELETED, which indicates that the workspace is deleted.
+             * *   2: INITIALIZING, which indicates that the workspace is being initialized.
+             * *   3: INIT_FAILED, which indicates that the workspace fails to be initialized.
+             * *   4: FORBIDDEN, which indicates that the workspace is manually disabled.
+             * *   5: DELETING, which indicates that the workspace is being deleted.
+             * *   6: DEL_FAILED, which indicates that the workspace fails to be deleted.
+             * *   7: FROZEN, which indicates that the workspace is frozen due to overdue payments.
+             * *   8: UPDATING, which indicates that the workspace is being updated. After you associate a compute engine with the workspace, the system initializes compute engine and updates the workspace.
+             * *   9: UPDATE_FAILED, which indicates that the workspace fails to be updated.
              */
             public Builder projectStatus(Integer projectStatus) {
                 this.projectStatus = projectStatus;
@@ -367,7 +388,19 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectStatusCode.
+             * The status code of the workspace. Valid values:
+             * <p>
+             * 
+             * *   AVAILABLE: 0, which indicates that the workspace is running as expected.
+             * *   DELETED: 1, which indicates that the workspace is deleted.
+             * *   INITIALIZING: 2, which indicates that the workspace is being initialized.
+             * *   INIT_FAILED: 3, which indicates that the workspace fails to be initialized.
+             * *   FORBIDDEN: 4, which indicates that the workspace is manually disabled.
+             * *   DELETING: 5, which indicates that the workspace is being deleted.
+             * *   DEL_FAILED: 6, which indicates that the workspace fails to be deleted.
+             * *   FROZEN: 7, which indicates that the workspace is frozen due to overdue payments.
+             * *   UPDATING: 8, which indicates that the workspace is being updated. After you associate a compute engine with the workspace, the system initializes compute engine and updates the workspace.
+             * *   UPDATE_FAILED: 9, which indicates that the workspace fails to be updated.
              */
             public Builder projectStatusCode(String projectStatusCode) {
                 this.projectStatusCode = projectStatusCode;
@@ -375,7 +408,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceManagerResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -383,7 +416,11 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * TablePrivacyMode.
+             * Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:
+             * <p>
+             * 
+             * *   0: invisible
+             * *   1: visible
              */
             public Builder tablePrivacyMode(Integer tablePrivacyMode) {
                 this.tablePrivacyMode = tablePrivacyMode;
@@ -391,7 +428,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -399,7 +436,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * UseProxyOdpsAccount.
+             * Indicates whether a proxy account is used to access the MaxCompute compute engine associated with the workspace.
              */
             public Builder useProxyOdpsAccount(Boolean useProxyOdpsAccount) {
                 this.useProxyOdpsAccount = useProxyOdpsAccount;
@@ -476,7 +513,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -484,7 +521,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -492,7 +529,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectList.
+             * The DataWorks workspaces returned.
              */
             public Builder projectList(java.util.List < ProjectList> projectList) {
                 this.projectList = projectList;
@@ -500,7 +537,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

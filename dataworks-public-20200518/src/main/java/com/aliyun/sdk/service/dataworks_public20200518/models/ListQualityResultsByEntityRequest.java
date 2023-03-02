@@ -153,7 +153,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -162,7 +162,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * The ID of the partition filter expression. You can call the [GetQualityEntity](~~174003~~) operation to query the ID of the partition filter expression.
          */
         public Builder entityId(Integer entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -171,7 +171,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -180,7 +180,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -189,7 +189,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the compute engine instance or data source. You can obtain the name from data source configurations.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -198,7 +198,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

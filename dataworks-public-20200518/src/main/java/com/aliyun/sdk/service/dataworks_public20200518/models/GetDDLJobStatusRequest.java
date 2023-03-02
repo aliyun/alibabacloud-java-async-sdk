@@ -79,7 +79,7 @@ public class GetDDLJobStatusRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the DDL task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

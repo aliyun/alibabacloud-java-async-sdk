@@ -98,7 +98,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Entity.
+         * The returned data.
          */
         public Builder entity(Entity entity) {
             this.entity = entity;
@@ -106,7 +106,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can troubleshoot errors based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +214,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * Description.
+             * The description of the table level.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +222,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * LevelId.
+             * The ID of the table level.
              */
             public Builder levelId(Long levelId) {
                 this.levelId = levelId;
@@ -230,7 +230,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the table level.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,7 +238,11 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the table level. Valid values:
+             * <p>
+             * 
+             * *   1: indicates the logical level.
+             * *   2: indicates the physical level.
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -315,7 +319,11 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private Long themeId; 
 
             /**
-             * Level.
+             * The level of the table folder. Valid values:
+             * <p>
+             * 
+             * *   1: indicates a table folder of level 1.
+             * *   2: indicates a table folder of level 2.
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -323,7 +331,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the table folder.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -331,7 +339,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the parent table folder.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -339,7 +347,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeId.
+             * The ID of the table folder.
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -392,7 +400,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             private java.util.List < Theme> theme; 
 
             /**
-             * Level.
+             * The information about the table level.
              */
             public Builder level(java.util.List < Level> level) {
                 this.level = level;
@@ -400,7 +408,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Theme.
+             * The information about the table folder.
              */
             public Builder theme(java.util.List < Theme> theme) {
                 this.theme = theme;

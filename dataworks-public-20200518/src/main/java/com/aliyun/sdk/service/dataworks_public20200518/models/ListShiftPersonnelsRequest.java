@@ -136,7 +136,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.
          */
         public Builder beginTime(Long beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -145,7 +145,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -154,7 +154,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * ShiftPersonUID.
+         * The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.
          */
         public Builder shiftPersonUID(String shiftPersonUID) {
             this.putBodyParameter("ShiftPersonUID", shiftPersonUID);
@@ -163,7 +163,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * ShiftScheduleIdentifier.
+         * The unique identifier of the shift schedule.
          */
         public Builder shiftScheduleIdentifier(String shiftScheduleIdentifier) {
             this.putBodyParameter("ShiftScheduleIdentifier", shiftScheduleIdentifier);
@@ -172,7 +172,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * UserType.
+         * The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

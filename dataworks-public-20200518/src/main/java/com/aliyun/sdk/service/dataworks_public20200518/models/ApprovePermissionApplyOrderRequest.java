@@ -100,7 +100,7 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint that is used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -109,7 +109,11 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * ApproveAction.
+         * The approval action. Valid values:
+         * <p>
+         * 
+         * *   1: Approve the permission request order.
+         * *   2: Reject the permission request order.
          */
         public Builder approveAction(Integer approveAction) {
             this.putQueryParameter("ApproveAction", approveAction);
@@ -118,7 +122,7 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * ApproveComment.
+         * The comment on the approval.
          */
         public Builder approveComment(String approveComment) {
             this.putQueryParameter("ApproveComment", approveComment);
@@ -127,7 +131,7 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * FlowId.
+         * The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

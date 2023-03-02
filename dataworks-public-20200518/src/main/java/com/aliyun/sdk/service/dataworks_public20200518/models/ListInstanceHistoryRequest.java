@@ -93,7 +93,7 @@ public class ListInstanceHistoryRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of the instances. You can call the ListInstances operation to query the instance IDs.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class ListInstanceHistoryRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD (production environment) and DEV (development environment).By default, data of instances in the production environment is queried.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

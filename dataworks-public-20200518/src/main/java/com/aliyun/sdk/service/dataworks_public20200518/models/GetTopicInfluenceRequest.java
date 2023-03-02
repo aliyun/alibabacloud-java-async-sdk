@@ -79,7 +79,7 @@ public class GetTopicInfluenceRequest extends Request {
         }
 
         /**
-         * TopicId.
+         * The ID of the event.
          */
         public Builder topicId(Long topicId) {
             this.putBodyParameter("TopicId", topicId);

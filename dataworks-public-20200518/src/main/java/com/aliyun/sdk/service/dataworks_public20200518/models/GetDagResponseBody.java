@@ -98,7 +98,7 @@ public class GetDagResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the DAG.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +130,7 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetDagResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +322,7 @@ public class GetDagResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bizdate.
+             * The data timestamp.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -330,7 +330,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time at which the DAG was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -338,7 +338,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * The user who created the DAG.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -346,7 +346,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * DagId。
+             * The ID of the DAG.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -354,7 +354,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time at which the DAG finished running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -362,7 +362,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * Gmtdate。
+             * The time at which the DAG was scheduled to run.
              */
             public Builder gmtdate(Long gmtdate) {
                 this.gmtdate = gmtdate;
@@ -370,7 +370,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time at which the DAG was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -378,7 +378,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the DAG.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -386,7 +386,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * OpSeq.
+             * The sequence number of the operation.
              */
             public Builder opSeq(Long opSeq) {
                 this.opSeq = opSeq;
@@ -394,7 +394,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -402,7 +402,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time at which the DAG started to run.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -410,7 +410,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -418,7 +418,7 @@ public class GetDagResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG.
              */
             public Builder type(String type) {
                 this.type = type;

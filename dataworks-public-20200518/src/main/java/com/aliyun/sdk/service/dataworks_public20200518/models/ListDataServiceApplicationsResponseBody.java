@@ -98,7 +98,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +202,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * ApplicationId.
+             * The ID of the application.
              */
             public Builder applicationId(Long applicationId) {
                 this.applicationId = applicationId;
@@ -210,7 +210,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationName.
+             * The name of the application.
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -218,7 +218,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -295,7 +295,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Applications.
+             * The basic information of the applications.
              */
             public Builder applications(java.util.List < Applications> applications) {
                 this.applications = applications;
@@ -303,7 +303,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -311,7 +311,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -319,7 +319,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

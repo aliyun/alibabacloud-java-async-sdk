@@ -134,7 +134,12 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * BizExtKey.
+         * The category of the resource groups. Valid values:
+         * <p>
+         * 
+         * *   default: shared resource group
+         * *   single: exclusive resource group
+         * *   Default value: default
          */
         public Builder bizExtKey(String bizExtKey) {
             this.putQueryParameter("BizExtKey", bizExtKey);
@@ -143,7 +148,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword that is used for fuzzy queries by resource group name and identifier.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -152,7 +157,19 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupType.
+         * The type of the resource groups that you want to query. Valid values:
+         * <p>
+         * 
+         * *   0: DataWorks
+         * *   1: scheduling
+         * *   2: MaxCompute
+         * *   3: Machine Learning Platform for AI (PAI)
+         * *   4: Data Integration
+         * *   7: exclusive resource group for scheduling (An ID is generated for the purchased resource when you purchase an exclusive resource group for scheduling.)
+         * *   9: DataService Studio
+         * *   Default value: 1
+         * 
+         * If the value indicates a compute engine, the resource groups to query are the ones that were created when you purchased the compute engine.
          */
         public Builder resourceGroupType(Integer resourceGroupType) {
             this.putQueryParameter("ResourceGroupType", resourceGroupType);
@@ -161,7 +178,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -170,7 +187,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -225,7 +242,7 @@ public class ListResourceGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +250,7 @@ public class ListResourceGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

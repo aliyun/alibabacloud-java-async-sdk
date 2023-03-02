@@ -99,7 +99,7 @@ public class ListDIProjectConfigRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region in which the sync solution resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -108,7 +108,10 @@ public class ListDIProjectConfigRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * The type of the destination data source of the sync solution. This parameter cannot be left empty.
+         * <p>
+         * 
+         * Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb. You can call the ListDIProjectConfig operation to query the supported types of destination data sources.
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -117,7 +120,7 @@ public class ListDIProjectConfigRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -126,7 +129,12 @@ public class ListDIProjectConfigRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the source data source of the sync solution.
+         * <p>
+         * 
+         * Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql. You can call the ListDIProjectConfig operation to query the supported types of source data sources.
+         * 
+         * If you do not set this parameter, DataWorks applies the default global configuration to all the source data sources of the preceding types.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

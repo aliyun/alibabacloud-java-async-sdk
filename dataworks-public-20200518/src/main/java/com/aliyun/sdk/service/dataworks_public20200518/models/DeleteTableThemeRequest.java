@@ -85,7 +85,7 @@ public class DeleteTableThemeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the service is activated.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class DeleteTableThemeRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -103,7 +103,7 @@ public class DeleteTableThemeRequest extends Request {
         }
 
         /**
-         * ThemeId.
+         * The ID of the table folder.
          */
         public Builder themeId(Long themeId) {
             this.putQueryParameter("ThemeId", themeId);

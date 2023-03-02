@@ -137,7 +137,7 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * AppGuid.
+         * The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -146,7 +146,7 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -155,7 +155,7 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -164,7 +164,7 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * Schema.
+         * The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -173,7 +173,7 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the MaxCompute table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

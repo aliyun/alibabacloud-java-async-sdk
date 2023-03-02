@@ -98,7 +98,7 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,11 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateResult.
+         * Indicates whether the update result is returned. Valid values:
+         * <p>
+         * 
+         * *   true: The update result is returned.
+         * *   false: The update result is not returned.
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

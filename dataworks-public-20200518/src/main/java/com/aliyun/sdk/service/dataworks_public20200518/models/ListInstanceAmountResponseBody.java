@@ -50,7 +50,7 @@ public class ListInstanceAmountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceCounts.
+         * The trend of the number of auto triggered node instances within the specified period of time.
          */
         public Builder instanceCounts(java.util.List < InstanceCounts> instanceCounts) {
             this.instanceCounts = instanceCounts;
@@ -58,7 +58,7 @@ public class ListInstanceAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListInstanceAmountResponseBody extends TeaModel {
             private Long date; 
 
             /**
-             * Count.
+             * The number of auto triggered node instances.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class ListInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.
              */
             public Builder date(Long date) {
                 this.date = date;

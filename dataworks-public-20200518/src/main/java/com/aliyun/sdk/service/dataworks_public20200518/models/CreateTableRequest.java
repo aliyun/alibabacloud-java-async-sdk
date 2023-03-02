@@ -350,7 +350,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * AppGuid.
+         * The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -359,7 +359,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * The ID of the associated category. You can call the [GetMetaCategory](~~173932~~) operation to query the ID of the category that can be associated.
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -368,7 +368,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * A reserved parameter.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -386,7 +386,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The comment.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -395,7 +395,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * The endpoint of MaxCompute.
          */
         public Builder endpoint(String endpoint) {
             this.putBodyParameter("Endpoint", endpoint);
@@ -404,7 +404,11 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The environment of the DataWorks workspace. Valid values:
+         * <p>
+         * 
+         * *   0: development environment
+         * *   1: production environment
          */
         public Builder envType(Integer envType) {
             this.putBodyParameter("EnvType", envType);
@@ -413,7 +417,13 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * ExternalTableType.
+         * The storage type of the external table. Valid values:
+         * <p>
+         * 
+         * *   0: Object Storage Service (OSS)
+         * *   1: Tablestore
+         * *   2: Volume
+         * *   3: MySQL
          */
         public Builder externalTableType(String externalTableType) {
             this.putQueryParameter("ExternalTableType", externalTableType);
@@ -422,7 +432,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * HasPart.
+         * Specifies whether the MaxCompute table is a partitioned table. Valid values: 1 and 0. The value 1 indicates that the MaxCompute table is a partitioned table. The value 0 indicates that the MaxCompute table is not a partitioned table. This parameter is deprecated. Do not use this parameter.
+         * <p>
+         * 
+         * The Column.N.isPartitionCol parameter is used to specify whether the MaxCompute table is a partitioned table. If the Column.N.isPartitionCol parameter is set to true, the MaxCompute table is a partitioned table.
          */
         public Builder hasPart(Integer hasPart) {
             this.putQueryParameter("HasPart", hasPart);
@@ -431,7 +444,11 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * IsView.
+         * Specifies whether to create a view or table.
+         * <p>
+         * 
+         * *   0: Create a table.
+         * *   1: Create a view.
          */
         public Builder isView(Integer isView) {
             this.putQueryParameter("IsView", isView);
@@ -440,7 +457,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * LifeCycle.
+         * The lifecycle of the table. Unit: days. By default, this parameter is left empty, which indicates that the table is permanently stored.
          */
         public Builder lifeCycle(Integer lifeCycle) {
             this.putQueryParameter("LifeCycle", lifeCycle);
@@ -449,7 +466,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Location.
+         * The storage location of the external table.
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);
@@ -458,7 +475,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * LogicalLevelId.
+         * The ID of the logical level.
          */
         public Builder logicalLevelId(Long logicalLevelId) {
             this.putQueryParameter("LogicalLevelId", logicalLevelId);
@@ -476,7 +493,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * PhysicsLevelId.
+         * The ID of the physical level.
          */
         public Builder physicsLevelId(Long physicsLevelId) {
             this.putQueryParameter("PhysicsLevelId", physicsLevelId);
@@ -485,7 +502,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -494,7 +511,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Schema.
+         * The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -503,7 +520,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -521,7 +538,12 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * Specifies whether the table or workspace is visible:
+         * <p>
+         * 
+         * *   0: Both the table and workspace are not visible.
+         * *   1: The table and workspace are visible.
+         * *   2: Only the workspace is visible.
          */
         public Builder visibility(Integer visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -637,7 +659,10 @@ public class CreateTableRequest extends Request {
             private Integer seqNumber; 
 
             /**
-             * ColumnName.
+             * The name of the field.
+             * <p>
+             * 
+             * You can call the CreateTable operation to configure a maximum of 1,000 fields.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -645,7 +670,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * ColumnNameCn.
+             * The display name of the field.
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -653,7 +678,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * ColumnType.
+             * The data type of the field.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -661,7 +686,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * Comment.
+             * The comment of the field.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -669,7 +694,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * IsPartitionCol.
+             * Specifies whether the current field is a partition field.
              */
             public Builder isPartitionCol(Boolean isPartitionCol) {
                 this.isPartitionCol = isPartitionCol;
@@ -677,7 +702,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * Length.
+             * The length of the field. For more information, see [MaxCompute V2.0 data type edition](~~159541#concept-2454988~~).
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -685,7 +710,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * SeqNumber.
+             * The sequence number of the field. You can use this parameter to specify how fields are sorted in a table. By default, fields are sorted in the order in which requests are created.
+             * <p>
+             * 
+             * If the field is a partition field, this parameter is not supported.
              */
             public Builder seqNumber(Integer seqNumber) {
                 this.seqNumber = seqNumber;
@@ -739,7 +767,7 @@ public class CreateTableRequest extends Request {
             private Integer themeLevel; 
 
             /**
-             * ThemeId.
+             * The ID of the topic.
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -747,7 +775,7 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * ThemeLevel.
+             * The level that corresponds to the topic ID.
              */
             public Builder themeLevel(Integer themeLevel) {
                 this.themeLevel = themeLevel;

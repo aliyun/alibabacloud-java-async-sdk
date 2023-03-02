@@ -50,7 +50,17 @@ public class GetOpSensitiveDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OpSensitiveData.
+         * The information of the access records returned for the sensitive data. The information includes totalCount and opRiskDatas.
+         * <p>
+         * 
+         * opRiskDatas includes the following parameters:
+         * 
+         * *   sensType: indicates the type of the sensitive data.
+         * *   sensLevel: indicates the sensitivity level of the sensitive data. A larger value of sensLevel indicates a higher sensitivity level.
+         * *   opType: indicates the type of the operation.
+         * *   sql: indicates the SQL statement that is executed.
+         * *   opAccount: indicates the account that is used to perform the operation.
+         * *   opTime: indicates the time when the operation was performed.
          */
         public Builder opSensitiveData(String opSensitiveData) {
             this.opSensitiveData = opSensitiveData;
@@ -58,7 +68,7 @@ public class GetOpSensitiveDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

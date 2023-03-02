@@ -62,7 +62,7 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The result returned for the start.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request succeeded.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,10 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * The reason why the real-time synchronization node or the data synchronization solution fails to be started.
+             * <p>
+             * 
+             * If the real-time synchronization node or the data synchronization solution is started, the value null is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -138,7 +145,11 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the real-time synchronization node or the data synchronization solution is started. Valid values:
+             * <p>
+             * 
+             * *   success: The real-time synchronization node or the data synchronization solution is started.
+             * *   fail: The real-time synchronization node or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.
              */
             public Builder status(String status) {
                 this.status = status;

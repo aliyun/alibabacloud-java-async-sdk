@@ -109,7 +109,7 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the business process.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -118,7 +118,7 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -127,7 +127,7 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

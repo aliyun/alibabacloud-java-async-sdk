@@ -74,7 +74,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The ID of the data source.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +90,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

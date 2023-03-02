@@ -94,7 +94,7 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the compute engine instance or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -103,7 +103,7 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the monitoring rule. You can call the [ListQualityRules](~~173995~~) operation to query the ID.
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

@@ -221,7 +221,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * AddedLabels.
+         * The names of the labels that you want to add. Separate the labels with commas (,).
          */
         public Builder addedLabels(String addedLabels) {
             this.putBodyParameter("AddedLabels", addedLabels);
@@ -230,7 +230,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * Caption.
+         * The display name of the table.
          */
         public Builder caption(String caption) {
             this.putQueryParameter("Caption", caption);
@@ -239,7 +239,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * The ID of the category that you want to associate.
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -248,7 +248,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -257,7 +257,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * NewOwnerId.
+         * The ID of the new owner. If this parameter is not specified, the owner ID is not updated.
          */
         public Builder newOwnerId(String newOwnerId) {
             this.putQueryParameter("NewOwnerId", newOwnerId);
@@ -266,7 +266,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -275,7 +275,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * RemovedLabels.
+         * The names of labels that you want to delete. Separate the labels with commas (,).
          */
         public Builder removedLabels(String removedLabels) {
             this.putBodyParameter("RemovedLabels", removedLabels);
@@ -284,7 +284,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * Schema.
+         * The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -293,7 +293,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -302,7 +302,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -311,7 +311,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.
          */
         public Builder visibility(Integer visibility) {
             this.putQueryParameter("Visibility", visibility);

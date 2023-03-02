@@ -115,7 +115,7 @@ public class ListTableThemeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the service is activated.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -133,7 +133,7 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value:10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -142,7 +142,7 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * The ID of the parent table folder.
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -151,7 +151,7 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

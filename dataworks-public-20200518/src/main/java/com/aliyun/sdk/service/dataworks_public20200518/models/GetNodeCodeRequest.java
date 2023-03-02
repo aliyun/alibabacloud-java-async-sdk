@@ -94,7 +94,7 @@ public class GetNodeCodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -103,7 +103,7 @@ public class GetNodeCodeRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

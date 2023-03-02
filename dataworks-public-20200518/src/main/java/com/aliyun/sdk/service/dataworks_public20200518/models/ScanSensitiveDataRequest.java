@@ -79,7 +79,7 @@ public class ScanSensitiveDataRequest extends Request {
         }
 
         /**
-         * Data.
+         * The data that you want to check.
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);

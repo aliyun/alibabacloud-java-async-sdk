@@ -50,7 +50,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Folder.
+         * The details of the folder.
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -58,7 +58,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * CreatedTime.
+             * The time when the folder was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -190,7 +190,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(Long folderId) {
                 this.folderId = folderId;
@@ -198,7 +198,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * FolderName.
+             * The name of the folder.
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -206,7 +206,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the business process to which the folder belongs.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -214,7 +214,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the folder was last modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -222,7 +222,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the parent folder. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -230,7 +230,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -238,7 +238,7 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

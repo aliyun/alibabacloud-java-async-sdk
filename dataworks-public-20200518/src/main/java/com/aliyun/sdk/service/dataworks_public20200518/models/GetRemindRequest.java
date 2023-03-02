@@ -79,7 +79,7 @@ public class GetRemindRequest extends Request {
         }
 
         /**
-         * RemindId.
+         * The ID of the custom alert rule.
          */
         public Builder remindId(Long remindId) {
             this.putBodyParameter("RemindId", remindId);

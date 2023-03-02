@@ -98,7 +98,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information of the descendant nodes.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,7 +286,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             private String schedulerType; 
 
             /**
-             * BaselineId.
+             * The ID of the baseline.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -294,7 +294,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpress.
+             * The cron expression. Cron expressions are used to run auto triggered nodes.
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -302,7 +302,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -310,7 +310,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -318,7 +318,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -326,7 +326,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the node. Valid values: 1 to 8. A large value indicates a high priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -334,7 +334,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * ProgramType.
+             * The type of the node.
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -342,7 +342,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -350,7 +350,11 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * Repeatability.
+             * Indicates whether the node can be rerun if the node fails to run. Valid values:
+             * <p>
+             * 
+             * *   true: indicates that the node can be rerun.
+             * *   false: indicates that the node cannot be rerun.
              */
             public Builder repeatability(Boolean repeatability) {
                 this.repeatability = repeatability;
@@ -358,7 +362,13 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerType.
+             * The scheduling type of the node. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: indicates that the node is an auto triggered node.
+             * *   MANUAL: indicates that node is a manually triggered node.
+             * *   PAUSE: indicates that the node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.
+             * *   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -399,7 +409,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * Nodes.
+             * The descendant nodes returned.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;

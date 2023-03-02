@@ -126,7 +126,7 @@ public class UpdateConnectionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where your project resides.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -135,7 +135,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * ConnectionId.
+         * The ID of the data source.
          */
         public Builder connectionId(Long connectionId) {
             this.putQueryParameter("ConnectionId", connectionId);
@@ -144,7 +144,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * Content.
+         * Details of the data source.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -153,7 +153,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * Description.
+         * Describes the data source.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -162,7 +162,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * Environment of the data source.
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -171,7 +171,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the data source.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

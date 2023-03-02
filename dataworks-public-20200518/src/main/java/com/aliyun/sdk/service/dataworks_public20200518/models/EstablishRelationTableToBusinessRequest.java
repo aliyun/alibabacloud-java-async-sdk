@@ -127,7 +127,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +136,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * BusinessId.
+         * The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the ID.
          */
         public Builder businessId(String businessId) {
             this.putBodyParameter("BusinessId", businessId);
@@ -145,7 +145,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * FolderId.
+         * The ID of the folder. You can call the [GetFolder](~~173952~~) or [ListFolders](~~173955~~) operation to query the ID.
          */
         public Builder folderId(String folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -154,7 +154,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -163,7 +163,10 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.
+         * <p>
+         * 
+         * You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -172,7 +175,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The universally unique identifier (UUID) of the table. You can call the [SearchMetaTables](~~173919~~) operation to query the UUID.
          */
         public Builder tableGuid(String tableGuid) {
             this.putBodyParameter("TableGuid", tableGuid);

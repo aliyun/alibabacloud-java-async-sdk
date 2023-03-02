@@ -98,7 +98,7 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,12 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The result of the operation. Valid values:
+         * <p>
+         * 
+         * true: succeeded
+         * 
+         * false: failed
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -138,7 +143,12 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * true: The request was successful.
+         * 
+         * false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

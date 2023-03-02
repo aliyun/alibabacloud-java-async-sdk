@@ -50,7 +50,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details of the task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * Content.
+             * The content of the task.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -142,7 +142,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NextTaskId.
+             * The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.
              */
             public Builder nextTaskId(String nextTaskId) {
                 this.nextTaskId = nextTaskId;
@@ -150,7 +150,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task
              */
             public Builder status(String status) {
                 this.status = status;
@@ -158,7 +158,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

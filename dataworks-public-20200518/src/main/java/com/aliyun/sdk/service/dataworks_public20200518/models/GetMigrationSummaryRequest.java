@@ -94,7 +94,10 @@ public class GetMigrationSummaryRequest extends Request {
         }
 
         /**
-         * MigrationId.
+         * The ID of the migration task.
+         * <p>
+         * 
+         * You can call the [CreateImportMigration](~~2809123~~) operation to obtain the ID of the import task and call the [CreateExportMigration](~~3241603~~) operation to obtain the ID of the export task.
          */
         public Builder migrationId(Long migrationId) {
             this.putBodyParameter("MigrationId", migrationId);
@@ -103,7 +106,7 @@ public class GetMigrationSummaryRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

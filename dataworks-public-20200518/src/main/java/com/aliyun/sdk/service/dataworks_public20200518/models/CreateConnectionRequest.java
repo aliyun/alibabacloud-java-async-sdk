@@ -158,7 +158,7 @@ public class CreateConnectionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where your project resides.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -167,7 +167,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * ConnectionType.
+         * The type of the connection string.
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
@@ -176,7 +176,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * Content.
+         * Details of the data source.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -185,7 +185,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the connection string.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -194,7 +194,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * Environment of the data source.
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -203,7 +203,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the data source.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -212,7 +212,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace to be associated with the data source.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -221,7 +221,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * SubType.
+         * The sub-type of a connection string.
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

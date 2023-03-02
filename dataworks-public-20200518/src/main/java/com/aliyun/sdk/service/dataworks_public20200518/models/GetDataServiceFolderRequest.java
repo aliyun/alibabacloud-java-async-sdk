@@ -109,7 +109,7 @@ public class GetDataServiceFolderRequest extends Request {
         }
 
         /**
-         * FolderId.
+         * The ID of the folder.
          */
         public Builder folderId(Long folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -118,7 +118,7 @@ public class GetDataServiceFolderRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -127,7 +127,7 @@ public class GetDataServiceFolderRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

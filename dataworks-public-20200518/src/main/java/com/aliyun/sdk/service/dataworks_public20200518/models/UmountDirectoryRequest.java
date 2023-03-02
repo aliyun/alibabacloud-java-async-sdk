@@ -24,11 +24,16 @@ public class UmountDirectoryRequest extends Request {
     @NameInMap("TargetType")
     private String targetType;
 
+    @Body
+    @NameInMap("TargetUserId")
+    private String targetUserId;
+
     private UmountDirectoryRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.targetId = builder.targetId;
         this.targetType = builder.targetType;
+        this.targetUserId = builder.targetUserId;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class UmountDirectoryRequest extends Request {
         return this.targetType;
     }
 
+    /**
+     * @return targetUserId
+     */
+    public String getTargetUserId() {
+        return this.targetUserId;
+    }
+
     public static final class Builder extends Request.Builder<UmountDirectoryRequest, Builder> {
         private String regionId; 
         private String targetId; 
         private String targetType; 
+        private String targetUserId; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class UmountDirectoryRequest extends Request {
             this.regionId = request.regionId;
             this.targetId = request.targetId;
             this.targetType = request.targetType;
+            this.targetUserId = request.targetUserId;
         } 
 
         /**
@@ -91,7 +105,10 @@ public class UmountDirectoryRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the directory that you want to remove from the left-side navigation pane of DataAnalysis. This parameter is used together with the TargetType parameter.
+         * <p>
+         * 
+         * For example, if you set the TargetType parameter to META_ALBUM, you must set the TargetId parameter to the ID of the related data album. You can call the [ListMetaCollections](~~469938~~) operation to obtain the ID of the data album. The ID is indicated by the QualifiedName parameter.
          */
         public Builder targetId(String targetId) {
             this.putBodyParameter("TargetId", targetId);
@@ -100,11 +117,20 @@ public class UmountDirectoryRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the directory that you want to remove from the left-side navigation pane of DataAnalysis. Example: META_ALBUM, which indicates the data album.
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("TargetType", targetType);
             this.targetType = targetType;
+            return this;
+        }
+
+        /**
+         * TargetUserId.
+         */
+        public Builder targetUserId(String targetUserId) {
+            this.putBodyParameter("TargetUserId", targetUserId);
+            this.targetUserId = targetUserId;
             return this;
         }
 

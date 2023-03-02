@@ -227,7 +227,7 @@ public class UpdateUdfFileRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -236,7 +236,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ClassName.
+         * The name of the class in which the function is defined. This parameter corresponds to the Class Name parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
          */
         public Builder className(String className) {
             this.putBodyParameter("ClassName", className);
@@ -245,7 +245,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * CmdDescription.
+         * The syntax used for calling the function. This parameter corresponds to the Expression Syntax parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
          */
         public Builder cmdDescription(String cmdDescription) {
             this.putBodyParameter("CmdDescription", cmdDescription);
@@ -254,7 +254,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * Example.
+         * The example for calling the function. This parameter corresponds to the Example parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
          */
         public Builder example(String example) {
             this.putBodyParameter("Example", example);
@@ -263,7 +263,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * FileFolderPath.
+         * The path of the folder in which the function file is stored.
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
@@ -272,7 +272,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The ID of the file.
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -281,7 +281,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * FunctionType.
+         * The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
          */
         public Builder functionType(String functionType) {
             this.putBodyParameter("FunctionType", functionType);
@@ -290,7 +290,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ParameterDescription.
+         * The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
          */
         public Builder parameterDescription(String parameterDescription) {
             this.putBodyParameter("ParameterDescription", parameterDescription);
@@ -299,7 +299,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -308,7 +308,10 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.
+         * <p>
+         * 
+         * You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -317,7 +320,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The names of the resources that are referenced by the function. This parameter corresponds to the Resources parameter in the Register Function section of the configuration tab of the function in the DataWorks console. Separate multiple resource names with commas (,).
          */
         public Builder resources(String resources) {
             this.putBodyParameter("Resources", resources);
@@ -326,7 +329,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * ReturnValue.
+         * The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
          */
         public Builder returnValue(String returnValue) {
             this.putBodyParameter("ReturnValue", returnValue);
@@ -335,7 +338,7 @@ public class UpdateUdfFileRequest extends Request {
         }
 
         /**
-         * UdfDescription.
+         * The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
          */
         public Builder udfDescription(String udfDescription) {
             this.putBodyParameter("UdfDescription", udfDescription);

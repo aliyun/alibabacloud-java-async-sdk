@@ -194,7 +194,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder beginTime(String beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -203,7 +203,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -212,7 +212,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the node instance that triggers the events. You can configure either this parameter or the NodeId parameter.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -221,7 +221,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node that triggers the events. You can configure either this parameter or the InstanceId parameter.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -230,7 +230,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The ID of the Alibaba Cloud account used by the owner of the events.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -239,7 +239,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -248,7 +248,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -257,7 +257,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * TopicStatuses.
+         * The status of the events. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the events are ignored. The value NEW indicates that the events are new events. The value FIXING indicates that the events are being processed. The value RECOVER indicates that the events are processed. You can specify multiple states. Separate them with commas (,).
          */
         public Builder topicStatuses(String topicStatuses) {
             this.putBodyParameter("TopicStatuses", topicStatuses);
@@ -266,7 +266,7 @@ public class ListTopicsRequest extends Request {
         }
 
         /**
-         * TopicTypes.
+         * The types of the events. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run. You can specify multiple types. Separate them with commas (,).
          */
         public Builder topicTypes(String topicTypes) {
             this.putBodyParameter("TopicTypes", topicTypes);

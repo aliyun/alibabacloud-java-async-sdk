@@ -98,7 +98,7 @@ public class ListFoldersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The folders returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +190,7 @@ public class ListFoldersResponseBody extends TeaModel {
             private String folderPath; 
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -198,7 +198,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * FolderPath.
+             * The path of the folder.
              */
             public Builder folderPath(String folderPath) {
                 this.folderPath = folderPath;
@@ -275,7 +275,7 @@ public class ListFoldersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Folders.
+             * The details of the folder.
              */
             public Builder folders(java.util.List < Folders> folders) {
                 this.folders = folders;
@@ -283,7 +283,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -291,7 +291,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries on the returned page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -299,7 +299,7 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -62,7 +62,7 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The result of the operation.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can query logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * The reason why the real-time synchronization node fails to be terminated. If the real-time synchronization node is terminated, this parameter is left empty.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -138,7 +142,11 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the real-time synchronization node is terminated. Valid values:
+             * <p>
+             * 
+             * *   success
+             * *   fail
              */
             public Builder status(String status) {
                 this.status = status;

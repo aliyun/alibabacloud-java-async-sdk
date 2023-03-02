@@ -120,7 +120,7 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The ID of the file. You can call the [ListFiles](~~173942~~) operation to obtain the ID.
          */
         public Builder fileId(Long fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -129,7 +129,7 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node that is scheduled. You can call the [ListFiles](~~173942~~) operation to obtain the node ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -138,7 +138,10 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * <p>
+         * 
+         * You must configure this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -147,7 +150,10 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace name.
+         * <p>
+         * 
+         * You must configure this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

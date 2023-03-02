@@ -50,7 +50,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EventDetail.
+         * The data snapshot that is generated when the extension point event is triggered.
+         * <p>
+         * 
+         * The fields contained in data snapshots vary based on the types of the triggered extension point events. For more information, see the description of the fields.
          */
         public Builder eventDetail(EventDetail eventDetail) {
             this.eventDetail = eventDetail;
@@ -58,7 +61,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request. You can troubleshoot errors based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +161,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Long parentFileId; 
 
             /**
-             * BusinessId.
+             * The ID of the workflow to which the file belongs.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -166,7 +169,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentVersion.
+             * The latest version number of the file.
              */
             public Builder currentVersion(Long currentVersion) {
                 this.currentVersion = currentVersion;
@@ -174,7 +177,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * The name of the compute engine instance with which the file is associated.
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -182,7 +185,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder to which the file belongs. You can call the [GetFolder](~~173952~~) operation to query the details of the file based on the folder ID.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -190,7 +193,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The owner of the file.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -198,7 +201,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ParentFileId.
+             * The ID of the do-while node or for-each node that corresponds to the file.
              */
             public Builder parentFileId(Long parentFileId) {
                 this.parentFileId = parentFileId;
@@ -251,7 +254,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String parseType; 
 
             /**
-             * Input.
+             * The output names of the parent files on which the current file depends.
+             * <p>
+             * 
+             * This parameter is equivalent to the Output Name parameter under Parent Nodes in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder input(String input) {
                 this.input = input;
@@ -259,7 +265,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ParseType.
+             * The mode of the configuration file dependency. Valid values:
+             * <p>
+             * 
+             * *   MANUAL: The scheduling dependencies are manually configured.
+             * *   AUTO: The scheduling dependencies are automatically parsed.
              */
             public Builder parseType(String parseType) {
                 this.parseType = parseType;
@@ -312,7 +322,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String refTableName; 
 
             /**
-             * Output.
+             * The output name of the current file.
+             * <p>
+             * 
+             * This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder output(String output) {
                 this.output = output;
@@ -320,7 +333,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RefTableName.
+             * The output table name of the current file.
+             * <p>
+             * 
+             * This parameter is equivalent to the Output Table Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder refTableName(String refTableName) {
                 this.refTableName = refTableName;
@@ -493,7 +509,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String schedulerType; 
 
             /**
-             * AutoRerunIntervalMillis.
+             * The interval at which the node corresponding to the file is rerun. Unit: milliseconds.
              */
             public Builder autoRerunIntervalMillis(Long autoRerunIntervalMillis) {
                 this.autoRerunIntervalMillis = autoRerunIntervalMillis;
@@ -501,7 +517,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRerunTimes.
+             * The number of times that the node corresponding to the file can be rerun.
              */
             public Builder autoRerunTimes(Long autoRerunTimes) {
                 this.autoRerunTimes = autoRerunTimes;
@@ -509,7 +525,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpress.
+             * The CRON expression that is used to schedule the node corresponding to the file.
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -517,7 +533,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CycleType.
+             * The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. A value of NOT_DAY indicates that the node is scheduled to run by minute or hour. A value of DAY indicates that the node is scheduled to run by day, week, or month.
+             * <p>
+             * 
+             * This parameter is equivalent to the Scheduling Cycle parameter in the Schedule section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder cycleType(String cycleType) {
                 this.cycleType = cycleType;
@@ -525,7 +544,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DependentNodeIdList.
+             * The IDs of the nodes on which the node corresponding to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).
+             * <p>
+             * 
+             * This parameter is equivalent to the field that appears after Previous Cycle is selected and the Depend On parameter is set to Other Nodes in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder dependentNodeIdList(String dependentNodeIdList) {
                 this.dependentNodeIdList = dependentNodeIdList;
@@ -533,7 +555,13 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DependentType.
+             * The type of the cross-cycle scheduling dependency of the node that corresponds to the file. Valid values:
+             * <p>
+             * 
+             * *   SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.
+             * *   CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.
+             * *   USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.
+             * *   NONE: No cross-cycle scheduling dependency type is selected for the node.
              */
             public Builder dependentType(String dependentType) {
                 this.dependentType = dependentType;
@@ -541,7 +569,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InputList.
+             * The output names of the parent files on which the current file depends.
              */
             public Builder inputList(java.util.List < InputList> inputList) {
                 this.inputList = inputList;
@@ -549,7 +577,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutputList.
+             * The output names of the current file.
+             * <p>
+             * 
+             * This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder outputList(java.util.List < OutputList> outputList) {
                 this.outputList = outputList;
@@ -557,7 +588,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ParaValue.
+             * The scheduling parameters.
+             * <p>
+             * 
+             * This parameter is equivalent to the configuration of the scheduling parameters in the Parameters section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information, see [Configure scheduling parameters](~~137548~~).
              */
             public Builder paraValue(String paraValue) {
                 this.paraValue = paraValue;
@@ -565,7 +599,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RerunMode.
+             * Indicates whether the node can be rerun. Valid values:
+             * <p>
+             * 
+             * *   ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.
+             * *   FAILURE_ALLOWED: The node can be rerun only after it fails to run.
+             * *   ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.
+             * 
+             * This parameter is equivalent to the Rerun parameter in the Schedule section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -573,7 +614,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group that is used to run the node that corresponds to the file. You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace.
              */
             public Builder resourceGroupId(Long resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -581,7 +622,13 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerType.
+             * The scheduling type of the node. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The node is an auto triggered node.
+             * *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.
+             * *   PAUSE: The node is a paused node.
+             * *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -742,7 +789,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * ChangeType.
+             * The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -750,7 +797,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The description of the file version.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -758,7 +805,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Committor.
+             * The ID of the Alibaba Cloud account that is used to create the file of the current version.
              */
             public Builder committor(String committor) {
                 this.committor = committor;
@@ -766,7 +813,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The code in the file of the current version.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -774,7 +821,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The ID of the file.
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -782,7 +829,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -790,7 +837,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FilePropertyContent.
+             * The details of the file.
              */
             public Builder filePropertyContent(FilePropertyContent filePropertyContent) {
                 this.filePropertyContent = filePropertyContent;
@@ -798,7 +845,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
              */
             public Builder fileType(Long fileType) {
                 this.fileType = fileType;
@@ -806,7 +853,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NodeConfiguration.
+             * The scheduling properties of the node that corresponds to the file.
              */
             public Builder nodeConfiguration(NodeConfiguration nodeConfiguration) {
                 this.nodeConfiguration = nodeConfiguration;
@@ -814,7 +861,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node that is scheduled.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -822,7 +869,15 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * The module to which the file belongs. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The file is used for DataStudio.
+             * *   MANUAL: The file is used for a manually triggered node.
+             * *   MANUAL_BIZ: The file is used for a manually triggered workflow.
+             * *   SKIP: The file is used for a dry-run DataStudio node.
+             * *   ADHOCQUERY: The file is used for an ad hoc query.
+             * *   COMPONENT: The file is used for a snippet.
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -995,7 +1050,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * BusinessId.
+             * The ID of the workflow to which the file belongs.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -1003,7 +1058,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The code in the file of the current version.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1011,7 +1066,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentVersion.
+             * The latest version number of the file.
              */
             public Builder currentVersion(Long currentVersion) {
                 this.currentVersion = currentVersion;
@@ -1019,7 +1074,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * The name of the compute engine instance with which the file is associated.
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1027,7 +1082,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The ID of the file.
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -1035,7 +1090,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1043,7 +1098,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
              */
             public Builder fileType(Long fileType) {
                 this.fileType = fileType;
@@ -1051,7 +1106,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder to which the file belongs. You can call the [GetFolder](~~173952~~) operation to query the details of the file based on the folder ID.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -1059,7 +1114,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node that is scheduled.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -1067,7 +1122,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The owner of the file.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1075,7 +1130,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ParentFileId.
+             * The ID of the do-while node or for-each node that corresponds to the file.
              */
             public Builder parentFileId(Long parentFileId) {
                 this.parentFileId = parentFileId;
@@ -1083,7 +1138,15 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * The module to which the file belongs. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The file is used for DataStudio.
+             * *   MANUAL: The file is used for a manually triggered node.
+             * *   MANUAL_BIZ: The file is used for a manually triggered workflow.
+             * *   SKIP: The file is used for a dry-run DataStudio node.
+             * *   ADHOCQUERY: The file is used for an ad hoc query.
+             * *   COMPONENT: The file is used for a snippet.
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -1160,7 +1223,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Long fileType; 
 
             /**
-             * Content.
+             * The code in the file of the current version.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1168,7 +1231,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * The name of the compute engine instance with which the file is associated.
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1176,7 +1239,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The ID of the file.
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -1184,7 +1247,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
              */
             public Builder fileType(Long fileType) {
                 this.fileType = fileType;
@@ -1261,7 +1324,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Boolean isPartitionColumn; 
 
             /**
-             * ColumnName.
+             * The name of the column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -1269,7 +1332,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * The data type of the column.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -1277,7 +1340,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The remarks of the column.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1285,7 +1348,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsPartitionColumn.
+             * Indicates whether the column is a partition key column. Valid values:
+             * <p>
+             * 
+             * - true: The column is a partition key column.
+             * - false: The column is not a partition key column.
              */
             public Builder isPartitionColumn(Boolean isPartitionColumn) {
                 this.isPartitionColumn = isPartitionColumn;
@@ -1398,7 +1465,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Columns.
+             * The columns in the table.
              */
             public Builder columns(java.util.List < Columns> columns) {
                 this.columns = columns;
@@ -1406,7 +1473,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The description of the table.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1414,7 +1481,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * The name of the compute engine instance to which the table belongs.
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1422,7 +1489,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * The environment in which the table is used. Valid values:
+             * <p>
+             * 
+             * - DEV: development environment
+             * - PROD: production environment
              */
             public Builder env(String env) {
                 this.env = env;
@@ -1430,7 +1501,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LifeCycle.
+             * The lifecycle of the table. Unit: days.
              */
             public Builder lifeCycle(Long lifeCycle) {
                 this.lifeCycle = lifeCycle;
@@ -1438,7 +1509,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The path of the table.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1446,7 +1517,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1523,7 +1594,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private TableModel tableModel; 
 
             /**
-             * CommittedFile.
+             * The data snapshot when the file is committed and deployed.
+             * <p>
+             * 
+             * The value of this parameter is not empty only when the message type is IDE_FILE_SUBMIT_BEFORE or IDE_FILE_DEPLOY_BEFORE.
              */
             public Builder committedFile(CommittedFile committedFile) {
                 this.committedFile = committedFile;
@@ -1531,7 +1605,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedFile.
+             * The data snapshot when the file is deleted. The value of this parameter is not empty only when the message type is IDE_FILE_DELETE_BEFORE.
              */
             public Builder deletedFile(DeletedFile deletedFile) {
                 this.deletedFile = deletedFile;
@@ -1539,7 +1613,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FileExecutionCommand.
+             * The data snapshot when the code in the file is run. The value of this parameter is not empty only when the message type is IDE_FILE_EXECUTE_BEFORE.
              */
             public Builder fileExecutionCommand(FileExecutionCommand fileExecutionCommand) {
                 this.fileExecutionCommand = fileExecutionCommand;
@@ -1547,7 +1621,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableModel.
+             * The data snapshot when the table is committed and deployed. The value of this parameter is not empty only when the message type is IDE_TABLE_SUBMIT_BEFORE or IDE_TABLE_DEPLOY_BEFORE.
              */
             public Builder tableModel(TableModel tableModel) {
                 this.tableModel = tableModel;

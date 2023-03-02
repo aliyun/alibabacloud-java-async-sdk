@@ -109,7 +109,7 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * The ID of the partition filter expression.
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -118,7 +118,7 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The type of the compute engine instance or data source. Valid values: EMR, Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka and DataHub.
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -127,7 +127,7 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the compute engine instance or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

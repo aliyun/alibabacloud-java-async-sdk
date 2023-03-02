@@ -98,7 +98,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -274,7 +274,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             private Long parentCategoryId; 
 
             /**
-             * CategoryId.
+             * The ID of the category.
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -282,7 +282,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The remarks of the category.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -290,7 +290,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the category was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -298,7 +298,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Depth.
+             * The number of category levels.
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -306,7 +306,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * LastOperatorId.
+             * The ID of the user that performed the last operation.
              */
             public Builder lastOperatorId(String lastOperatorId) {
                 this.lastOperatorId = lastOperatorId;
@@ -314,7 +314,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the category was last modified.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -322,7 +322,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the category.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +330,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The ID of the category owner.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -338,7 +338,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCategoryId.
+             * The ID of the parent category.
              */
             public Builder parentCategoryId(Long parentCategoryId) {
                 this.parentCategoryId = parentCategoryId;
@@ -415,7 +415,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DataEntityList.
+             * The information about the category tree.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -423,7 +423,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -431,7 +431,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +439,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of categories.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

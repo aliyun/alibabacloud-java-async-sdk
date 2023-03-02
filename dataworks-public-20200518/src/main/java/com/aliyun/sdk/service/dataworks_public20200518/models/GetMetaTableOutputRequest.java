@@ -151,7 +151,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * The end date of the time range to query. The end date must be within the previous 30 days.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -160,7 +160,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be a positive integer.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +169,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. The value must be a positive integer. We recommend that you do not set this parameter to a value greater than 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,7 +178,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The start date of the time range to query. The start date must be within the previous 30 days.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -187,7 +187,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The Globally Unique Identifier (GUID) of the MaxCompute metatable.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -196,7 +196,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the node.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

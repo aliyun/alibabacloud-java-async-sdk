@@ -70,7 +70,7 @@ public class ListProjectRolesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * Dataworks ID of the region where the workspace is located.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * Dataworks ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

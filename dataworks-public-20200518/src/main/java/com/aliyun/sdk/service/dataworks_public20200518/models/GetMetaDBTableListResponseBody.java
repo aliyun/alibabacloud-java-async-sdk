@@ -50,7 +50,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The business data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DatabaseName.
+             * The name of the metadatabase.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -130,7 +130,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The GUID of the metatable.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -138,7 +138,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the metatable.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -215,7 +215,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -223,7 +223,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -231,7 +231,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TableEntityList.
+             * The list of metatables in the compute engine instance.
              */
             public Builder tableEntityList(java.util.List < TableEntityList> tableEntityList) {
                 this.tableEntityList = tableEntityList;
@@ -239,7 +239,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of compute engine instances.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

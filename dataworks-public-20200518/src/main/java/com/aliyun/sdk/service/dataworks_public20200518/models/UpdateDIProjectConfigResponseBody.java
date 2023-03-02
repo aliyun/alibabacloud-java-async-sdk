@@ -62,7 +62,7 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information about the modification.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,11 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Status.
+             * Indicates whether the default global configuration of synchronization solutions was modified. Valid values:
+             * <p>
+             * 
+             * *   success: The default global configuration of synchronization solutions was modified.
+             * *   fail: The default global configuration of synchronization solutions failed to be modified.
              */
             public Builder status(String status) {
                 this.status = status;

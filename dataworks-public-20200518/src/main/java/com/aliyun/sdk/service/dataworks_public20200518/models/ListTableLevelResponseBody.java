@@ -98,7 +98,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         private TableLevelInfo tableLevelInfo; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * TableLevelInfo.
+         * The information about the table levels.
          */
         public Builder tableLevelInfo(TableLevelInfo tableLevelInfo) {
             this.tableLevelInfo = tableLevelInfo;
@@ -226,7 +226,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * Description.
+             * The description of the table level.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +234,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * LevelId.
+             * The ID of the table level.
              */
             public Builder levelId(Long levelId) {
                 this.levelId = levelId;
@@ -242,7 +242,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * LevelType.
+             * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
              */
             public Builder levelType(Integer levelType) {
                 this.levelType = levelType;
@@ -250,7 +250,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the table level.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +258,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the DataWorks workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -311,7 +311,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * LevelList.
+             * The list of table levels.
              */
             public Builder levelList(java.util.List < LevelList> levelList) {
                 this.levelList = levelList;
@@ -319,7 +319,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of table levels returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

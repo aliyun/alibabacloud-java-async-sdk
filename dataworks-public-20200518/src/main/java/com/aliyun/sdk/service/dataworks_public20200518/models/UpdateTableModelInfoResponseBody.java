@@ -50,7 +50,7 @@ public class UpdateTableModelInfoResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateTableModelInfoResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateResult.
+         * Indicates whether the request is successful.
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

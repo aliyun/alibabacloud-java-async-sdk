@@ -50,7 +50,7 @@ public class DeleteTableResponseBody extends TeaModel {
         private TaskInfo taskInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteTableResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInfo.
+         * The information about the task that is used to delete the table.
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -134,7 +134,7 @@ public class DeleteTableResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * Content.
+             * The content of the task.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -142,7 +142,7 @@ public class DeleteTableResponseBody extends TeaModel {
             }
 
             /**
-             * NextTaskId.
+             * The ID of the task that is running.
              */
             public Builder nextTaskId(String nextTaskId) {
                 this.nextTaskId = nextTaskId;
@@ -150,7 +150,7 @@ public class DeleteTableResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task that is complete.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -158,7 +158,7 @@ public class DeleteTableResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task that is complete.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

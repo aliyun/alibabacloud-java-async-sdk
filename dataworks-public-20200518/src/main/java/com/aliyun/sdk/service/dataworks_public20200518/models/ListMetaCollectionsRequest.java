@@ -190,7 +190,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * Administrator.
+         * The ID of the collection administrator.
          */
         public Builder administrator(String administrator) {
             this.putQueryParameter("Administrator", administrator);
@@ -199,7 +199,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * CollectionType.
+         * ALBUM: data album
+         * <p>
+         * 
+         * ALBUM_CATEGORY: category in a data album
          */
         public Builder collectionType(String collectionType) {
             this.putQueryParameter("CollectionType", collectionType);
@@ -208,7 +211,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * Creator.
+         * The ID of the collection creator.
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -217,7 +220,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * Follower.
+         * The ID of the collection follower.
          */
         public Builder follower(String follower) {
             this.putQueryParameter("Follower", follower);
@@ -226,7 +229,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -235,7 +238,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The paging information. This parameter specifies the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -244,7 +247,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The name of the sorting field.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -253,7 +256,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,7 +265,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * ParentQualifiedName.
+         * The unique identifier of the parent collection.
          */
         public Builder parentQualifiedName(String parentQualifiedName) {
             this.putQueryParameter("ParentQualifiedName", parentQualifiedName);

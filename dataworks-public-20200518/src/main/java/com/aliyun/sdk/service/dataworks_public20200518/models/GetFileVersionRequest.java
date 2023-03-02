@@ -112,7 +112,7 @@ public class GetFileVersionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +121,7 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.
          */
         public Builder fileId(Long fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -130,7 +130,7 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * FileVersion.
+         * The file version whose details you want to query.
          */
         public Builder fileVersion(Integer fileVersion) {
             this.putBodyParameter("FileVersion", fileVersion);
@@ -139,7 +139,7 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -148,7 +148,10 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.
+         * <p>
+         * 
+         * You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

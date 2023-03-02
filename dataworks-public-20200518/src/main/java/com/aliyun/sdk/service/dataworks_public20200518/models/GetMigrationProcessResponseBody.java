@@ -98,7 +98,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The progress information of the migration task, including the names of all steps in and status of the migration task.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +190,7 @@ public class GetMigrationProcessResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * TaskName.
+             * The name of the step in the migration task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -198,7 +198,13 @@ public class GetMigrationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The running status of the step in the migration task. Valid values:
+             * <p>
+             * 
+             * *   INT
+             * *   RUNNING
+             * *   FAILURE
+             * *   SUCCESS
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

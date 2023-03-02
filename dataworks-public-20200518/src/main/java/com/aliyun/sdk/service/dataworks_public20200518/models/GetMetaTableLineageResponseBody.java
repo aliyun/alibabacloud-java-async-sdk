@@ -98,7 +98,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The business data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,6 +155,9 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
+        @NameInMap("DatabaseName")
+        private String databaseName;
+
         @NameInMap("TableGuid")
         private String tableGuid;
 
@@ -163,6 +166,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
 
         private DataEntityList(Builder builder) {
             this.createTimestamp = builder.createTimestamp;
+            this.databaseName = builder.databaseName;
             this.tableGuid = builder.tableGuid;
             this.tableName = builder.tableName;
         }
@@ -183,6 +187,13 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
+         * @return databaseName
+         */
+        public String getDatabaseName() {
+            return this.databaseName;
+        }
+
+        /**
          * @return tableGuid
          */
         public String getTableGuid() {
@@ -198,11 +209,12 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTimestamp; 
+            private String databaseName; 
             private String tableGuid; 
             private String tableName; 
 
             /**
-             * CreateTimestamp.
+             * The time when the metatable was created.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -210,7 +222,15 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * DatabaseName.
+             */
+            public Builder databaseName(String databaseName) {
+                this.databaseName = databaseName;
+                return this;
+            }
+
+            /**
+             * The GUID of the metatable.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -218,7 +238,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the metatable.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -283,7 +303,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             private String nextPrimaryKey; 
 
             /**
-             * DataEntityList.
+             * The information about the metatable.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -291,7 +311,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * HasNext.
+             * Indicates whether the next page has more query results.
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -299,7 +319,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * NextPrimaryKey.
+             * The paging information.
              */
             public Builder nextPrimaryKey(String nextPrimaryKey) {
                 this.nextPrimaryKey = nextPrimaryKey;

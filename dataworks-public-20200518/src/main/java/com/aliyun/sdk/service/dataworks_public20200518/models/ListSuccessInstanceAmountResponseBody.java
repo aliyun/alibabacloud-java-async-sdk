@@ -50,7 +50,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceStatusTrend.
+         * Indicates the trend of the number of auto triggered node instances that are successfully run every hour on the hour of the current day.
          */
         public Builder instanceStatusTrend(InstanceStatusTrend instanceStatusTrend) {
             this.instanceStatusTrend = instanceStatusTrend;
@@ -58,7 +58,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * The number of instances that are successfully run.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -171,7 +171,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * The number of instances that are successfully run.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -179,7 +179,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -232,7 +232,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * The number of instances that are successfully run.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -240,7 +240,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -305,7 +305,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             private java.util.List < YesterdayTrend> yesterdayTrend; 
 
             /**
-             * AvgTrend.
+             * The average trend.
              */
             public Builder avgTrend(java.util.List < AvgTrend> avgTrend) {
                 this.avgTrend = avgTrend;
@@ -313,7 +313,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * TodayTrend.
+             * The trend of the number of auto triggered node instances that are successfully run on the current day.
              */
             public Builder todayTrend(java.util.List < TodayTrend> todayTrend) {
                 this.todayTrend = todayTrend;
@@ -321,7 +321,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * YesterdayTrend.
+             * The trend of the number of auto triggered node instances that are successfully run one day earlier than the current day.
              */
             public Builder yesterdayTrend(java.util.List < YesterdayTrend> yesterdayTrend) {
                 this.yesterdayTrend = yesterdayTrend;

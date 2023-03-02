@@ -50,7 +50,7 @@ public class GetExtensionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Extension.
+         * The details of the extension.
          */
         public Builder extension(Extension extension) {
             this.extension = extension;
@@ -58,7 +58,7 @@ public class GetExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetExtensionResponseBody extends TeaModel {
             private String eventName; 
 
             /**
-             * EventCode.
+             * The code of the extension point event.
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -118,7 +118,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the extension point event.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -171,7 +171,7 @@ public class GetExtensionResponseBody extends TeaModel {
             private String categoryName; 
 
             /**
-             * CategoryCode.
+             * The code of the event type.
              */
             public Builder categoryCode(String categoryCode) {
                 this.categoryCode = categoryCode;
@@ -179,7 +179,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * The name of the event type.
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -340,7 +340,7 @@ public class GetExtensionResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * BindEventList.
+             * The extension point events.
              */
             public Builder bindEventList(java.util.List < BindEventList> bindEventList) {
                 this.bindEventList = bindEventList;
@@ -348,7 +348,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * DetailUrl.
+             * The URL of the help document about the extension. You can visit the URL for the details of the extension.
              */
             public Builder detailUrl(String detailUrl) {
                 this.detailUrl = detailUrl;
@@ -356,7 +356,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * EventCategoryList.
+             * The types of the events.
              */
             public Builder eventCategoryList(java.util.List < EventCategoryList> eventCategoryList) {
                 this.eventCategoryList = eventCategoryList;
@@ -364,7 +364,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionCode.
+             * The unique code of the extension.
              */
             public Builder extensionCode(String extensionCode) {
                 this.extensionCode = extensionCode;
@@ -372,7 +372,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionDesc.
+             * The description of the extension.
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -380,7 +380,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionName.
+             * The name of the extension.
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
@@ -388,7 +388,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * HelpDocUrl.
+             * The URL of the help document about the extension.
              */
             public Builder helpDocUrl(String helpDocUrl) {
                 this.helpDocUrl = helpDocUrl;
@@ -396,7 +396,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * OptionSetting.
+             * The option settings of the extension.
              */
             public Builder optionSetting(String optionSetting) {
                 this.optionSetting = optionSetting;
@@ -404,7 +404,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterSetting.
+             * The parameter settings of the extension. For more information, visit https://www.alibabacloud.com/help/en/dataworks/latest/set-extension-parameters.
              */
             public Builder parameterSetting(String parameterSetting) {
                 this.parameterSetting = parameterSetting;
@@ -412,7 +412,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectTesting.
+             * The workspace for testing. If the extension is in the testing state, the extension can be used only in the workspace for testing.
              */
             public Builder projectTesting(Long projectTesting) {
                 this.projectTesting = projectTesting;
@@ -420,7 +420,7 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the extension. 0: testing. 1: publishing. 3: disabled. 4: approving. 5: approved. 6: approval failed.
              */
             public Builder status(Integer status) {
                 this.status = status;

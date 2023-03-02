@@ -22,6 +22,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddMetaCollectionEntityResponse> addMetaCollectionEntity(AddMetaCollectionEntityRequest request);
 
+    /**
+      * For more information about how to add your Alibaba Cloud account or a RAM user as a member of a DataWorks workspace, see [Add a member to a DataWorks workspace](~~136941~~).
+      *
+     */
     CompletableFuture<AddProjectMemberToRoleResponse> addProjectMemberToRole(AddProjectMemberToRoleRequest request);
 
     CompletableFuture<AddToMetaCategoryResponse> addToMetaCategory(AddToMetaCategoryRequest request);
@@ -46,6 +50,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateConnectionResponse> createConnection(CreateConnectionRequest request);
 
+    /**
+      * DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+      *
+     */
     CompletableFuture<CreateDISyncTaskResponse> createDISyncTask(CreateDISyncTaskRequest request);
 
     /**
@@ -84,6 +92,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateMetaCategoryResponse> createMetaCategory(CreateMetaCategoryRequest request);
 
+    /**
+      * Collections are classified into various types. The names of collections of the same type must be different.
+      *
+     */
     CompletableFuture<CreateMetaCollectionResponse> createMetaCollection(CreateMetaCollectionRequest request);
 
     CompletableFuture<CreatePermissionApplyOrderResponse> createPermissionApplyOrder(CreatePermissionApplyOrderRequest request);
@@ -142,6 +154,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteQualityEntityResponse> deleteQualityEntity(DeleteQualityEntityRequest request);
 
+    /**
+      * In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transformation, load (ETL). Thereby, Data Quality automatically blocks the nodes that involve dirty data to stop dirty data from spreading downstream. This prevents nodes from producing unexpected dirty data that affects normal use and business decisions. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule described by the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors in a timely manner. For more information, see [Configure monitoring rules for MaxCompute](~~73690~~).
+      *
+     */
     CompletableFuture<DeleteQualityFollowerResponse> deleteQualityFollower(DeleteQualityFollowerRequest request);
 
     CompletableFuture<DeleteQualityRelativeNodeResponse> deleteQualityRelativeNode(DeleteQualityRelativeNodeRequest request);
@@ -166,8 +182,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExportDataSourcesResponse> exportDataSources(ExportDataSourcesRequest request);
 
+    /**
+      * DataWorks allows you to use only the [CreateDISyncTask](~~278725~~) operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the [CreateDISyncTask](~~278725~~) operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+      * DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+     */
     CompletableFuture<GenerateDISyncTaskConfigForCreatingResponse> generateDISyncTaskConfigForCreating(GenerateDISyncTaskConfigForCreatingRequest request);
 
+    /**
+      * DataWorks allows you to use only the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization node in Data Integration. To update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization node or a synchronization solution in Data Integration. DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+     */
     CompletableFuture<GenerateDISyncTaskConfigForUpdatingResponse> generateDISyncTaskConfigForUpdating(GenerateDISyncTaskConfigForUpdatingRequest request);
 
     CompletableFuture<GetBaselineResponse> getBaseline(GetBaselineRequest request);
@@ -186,6 +211,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDISyncTaskResponse> getDISyncTask(GetDISyncTaskRequest request);
 
+    /**
+      * Supported DAG types:
+      * *   MANUAL: the DAG for a manually triggered workflow.
+      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
+      * *   SUPPLY_DATA: the DAG for a data backfill instance.
+      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
+      * Supported DAG states:
+      * *   CREATED: The DAG is created.
+      * *   RUNNING: The DAG is running.
+      * *   FAILURE: The DAG fails to run.
+      * *   SUCCESS: The DAG successfully runs.
+      *
+     */
     CompletableFuture<GetDagResponse> getDag(GetDagRequest request);
 
     CompletableFuture<GetDataServiceApiResponse> getDataServiceApi(GetDataServiceApiRequest request);
@@ -236,6 +274,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetInstanceErrorRankResponse> getInstanceErrorRank(GetInstanceErrorRankRequest request);
 
+    /**
+      * You may not obtain the instance logs that were generated more than seven days ago.
+      *
+     */
     CompletableFuture<GetInstanceLogResponse> getInstanceLog(GetInstanceLogRequest request);
 
     /**
@@ -258,6 +300,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMetaColumnLineageResponse> getMetaColumnLineage(GetMetaColumnLineageRequest request);
 
+    /**
+      * You can call this operation to query only the basic metadata information about a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+     */
     CompletableFuture<GetMetaDBInfoResponse> getMetaDBInfo(GetMetaDBInfoRequest request);
 
     CompletableFuture<GetMetaDBTableListResponse> getMetaDBTableList(GetMetaDBTableListRequest request);
@@ -282,6 +328,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMetaTableOutputResponse> getMetaTableOutput(GetMetaTableOutputRequest request);
 
+    /**
+      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+     */
     CompletableFuture<GetMetaTablePartitionResponse> getMetaTablePartition(GetMetaTablePartitionRequest request);
 
     CompletableFuture<GetMetaTableProducingTasksResponse> getMetaTableProducingTasks(GetMetaTableProducingTasksRequest request);
@@ -352,6 +402,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTopicInfluenceResponse> getTopicInfluence(GetTopicInfluenceRequest request);
 
+    /**
+      * You can import self-managed data sources or data sources that are exported from other Dataworks workspaces to a specified DataWorks workspace.
+      * *   To import a self-managed data source to DataWorks, the data source type must be supported by DataWorks. For more information about the types of data sources supported by DataWorks, see [Supported data stores](~~181656~~).
+      * *   For more information about how to export data sources from DataWorks workspaces to on-premises devices, see [ExportDataSources](~~279570~~).
+      *
+     */
     CompletableFuture<ImportDataSourcesResponse> importDataSources(ImportDataSourcesRequest request);
 
     CompletableFuture<ListAlertMessagesResponse> listAlertMessages(ListAlertMessagesRequest request);
@@ -372,8 +428,25 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
 
+    /**
+      * DataWorks allows you to set the default global configuration for only the processing rules of DDL messages in sync solutions. After you configure the **processing rules of DDL messages** in sync solutions, the configuration is set as the default global configuration and applies to all real-time sync nodes. You can also modify the **processing rules of DDL messages** based on your business requirements. For more information, see [Sync solutions](~~199008~~).
+      *
+     */
     CompletableFuture<ListDIProjectConfigResponse> listDIProjectConfig(ListDIProjectConfigRequest request);
 
+    /**
+      * Supported DAG types:
+      * *   MANUAL: the DAG for a manually triggered workflow.
+      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
+      * *   SUPPLY_DATA: the DAG for a data backfill instance.
+      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
+      * Supported DAG states:
+      * *   CREATED: The DAG is created.
+      * *   RUNNING: The DAG is running.
+      * *   FAILURE: The DAG fails to run.
+      * *   SUCCESS: The DAG successfully runs.
+      *
+     */
     CompletableFuture<ListDagsResponse> listDags(ListDagsRequest request);
 
     CompletableFuture<ListDataServiceApiAuthoritiesResponse> listDataServiceApiAuthorities(ListDataServiceApiAuthoritiesRequest request);
@@ -420,6 +493,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListMetaCollectionEntitiesResponse> listMetaCollectionEntities(ListMetaCollectionEntitiesRequest request);
 
+    /**
+      * The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+      *
+     */
     CompletableFuture<ListMetaCollectionsResponse> listMetaCollections(ListMetaCollectionsRequest request);
 
     CompletableFuture<ListMetaDBResponse> listMetaDB(ListMetaDBRequest request);
@@ -448,6 +525,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListProgramTypeCountResponse> listProgramTypeCount(ListProgramTypeCountRequest request);
 
+    /**
+      * For example, an Alibaba Cloud account can assume the developer, O&M engineer, or workspace administrator role in a workspace. For more information, see [Manage members and roles](~~136941~~).
+      *
+     */
     CompletableFuture<ListProjectIdsResponse> listProjectIds(ListProjectIdsRequest request);
 
     CompletableFuture<ListProjectMembersResponse> listProjectMembers(ListProjectMembersRequest request);
@@ -490,8 +571,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PublishDataServiceApiResponse> publishDataServiceApi(PublishDataServiceApiRequest request);
 
+    /**
+      * DataWorks allows you to call only the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a batch synchronization node in Data Integration. To create or update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForCreating or GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization node or a synchronization solution.
+      * DataWorks allows you to create or update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+     */
     CompletableFuture<QueryDISyncTaskConfigProcessResultResponse> queryDISyncTaskConfigProcessResult(QueryDISyncTaskConfigProcessResultRequest request);
 
+    /**
+      * *   You must use FML statements to query information about the data modeling engine when you call this operation.
+      * *   The information about the data modeling engine can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement.
+      *     The num LIMIT num statement specifies the offset when the information about the data modeling engine is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.
+      * *   A maximum of 1,000 entries can be returned each time you call the operation.
+      *
+     */
     CompletableFuture<QueryPublicModelEngineResponse> queryPublicModelEngine(QueryPublicModelEngineRequest request);
 
     CompletableFuture<RemoveProjectMemberFromRoleResponse> removeProjectMemberFromRole(RemoveProjectMemberFromRoleRequest request);
@@ -504,6 +597,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RevokeTablePermissionResponse> revokeTablePermission(RevokeTablePermissionRequest request);
 
+    /**
+      * For more information about data backfill, see [Backfill data](~~137937~~).
+      *
+     */
     CompletableFuture<RunCycleDagNodesResponse> runCycleDagNodes(RunCycleDagNodesRequest request);
 
     CompletableFuture<RunManualDagNodesResponse> runManualDagNodes(RunManualDagNodesRequest request);
@@ -514,6 +611,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ScanSensitiveDataResponse> scanSensitiveData(ScanSensitiveDataRequest request);
 
+    /**
+      * You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+     */
     CompletableFuture<SearchMetaTablesResponse> searchMetaTables(SearchMetaTablesRequest request);
 
     /**
@@ -564,6 +665,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateConnectionResponse> updateConnection(UpdateConnectionRequest request);
 
+    /**
+      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+      *
+     */
     CompletableFuture<UpdateDIProjectConfigResponse> updateDIProjectConfig(UpdateDIProjectConfigRequest request);
 
     CompletableFuture<UpdateDISyncTaskResponse> updateDISyncTask(UpdateDISyncTaskRequest request);
@@ -572,6 +677,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
 
+    /**
+      * When you debug or call this operation, you must specify new values for the specified parameters to ensure that the values are different from the original configurations of the file. For example, if the original value of a parameter is A, you must change the value of this parameter to B before you commit the node. If you set the parameter to A, an exception that indicates invalid data occurs.
+      *
+     */
     CompletableFuture<UpdateFileResponse> updateFile(UpdateFileRequest request);
 
     CompletableFuture<UpdateFolderResponse> updateFolder(UpdateFolderRequest request);
@@ -580,6 +689,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateMetaCategoryResponse> updateMetaCategory(UpdateMetaCategoryRequest request);
 
+    /**
+      * Only the name and comment of a collection can be updated.
+      *
+     */
     CompletableFuture<UpdateMetaCollectionResponse> updateMetaCollection(UpdateMetaCollectionRequest request);
 
     CompletableFuture<UpdateMetaTableResponse> updateMetaTable(UpdateMetaTableRequest request);

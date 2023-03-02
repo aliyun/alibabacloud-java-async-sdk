@@ -205,7 +205,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * FileFolderPath.
+         * The path of the files.
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
@@ -214,7 +214,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * FileTypes.
+         * The types of the code in the files.
+         * <p>
+         * 
+         * Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (node group), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI inner node), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), 1106 (for-each), and 1221 (PyODPS 3).
          */
         public Builder fileTypes(String fileTypes) {
             this.putBodyParameter("FileTypes", fileTypes);
@@ -223,7 +226,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword in the file names. The keyword is used to perform a fuzzy match. You can specify a keyword to query all files whose names contain the keyword.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -232,7 +235,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node that is scheduled. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -241,7 +244,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The owner of the files.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -250,7 +253,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -259,7 +262,7 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -268,7 +271,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * <p>
+         * 
+         * You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -277,7 +283,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace name.
+         * <p>
+         * 
+         * You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -286,7 +295,15 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * UseType.
+         * The module to which the files belong. Valid values:
+         * <p>
+         * 
+         * *   NORMAL: The files are used for DataStudio.
+         * *   MANUAL: The files are used for manually triggered nodes.
+         * *   MANUAL_BIZ: The files are used for manually triggered workflows.
+         * *   SKIP: The files are used for dry-run nodes in DataStudio.
+         * *   ADHOCQUERY: The files are used for ad hoc queries.
+         * *   COMPONENT: The files are used for snippets.
          */
         public Builder useType(String useType) {
             this.putBodyParameter("UseType", useType);

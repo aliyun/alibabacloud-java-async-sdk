@@ -123,7 +123,7 @@ public class UpdateWorkbenchEventResultRequest extends Request {
         }
 
         /**
-         * CheckResult.
+         * The check status of the extension point event. Valid values: OK and Fail. A value of OK indicates that the event passes the check. A value of FAIL indicates that the event fails to pass the check.
          */
         public Builder checkResult(String checkResult) {
             this.putQueryParameter("CheckResult", checkResult);
@@ -132,7 +132,7 @@ public class UpdateWorkbenchEventResultRequest extends Request {
         }
 
         /**
-         * CheckResultTip.
+         * The cause of the check failure.
          */
         public Builder checkResultTip(String checkResultTip) {
             this.putQueryParameter("CheckResultTip", checkResultTip);
@@ -141,7 +141,7 @@ public class UpdateWorkbenchEventResultRequest extends Request {
         }
 
         /**
-         * ExtensionCode.
+         * The code of the extension.
          */
         public Builder extensionCode(String extensionCode) {
             this.putQueryParameter("ExtensionCode", extensionCode);
@@ -150,7 +150,7 @@ public class UpdateWorkbenchEventResultRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * The ID of the message received when the related extension point event is triggered after you enable message subscription by using the OpenEvent module.
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);

@@ -149,7 +149,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the E-MapReduce (EMR) cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -158,7 +158,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -167,7 +167,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * The name of the database.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -176,7 +176,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * Partition.
+         * The name of the partition.
          */
         public Builder partition(String partition) {
             this.putQueryParameter("Partition", partition);
@@ -185,7 +185,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The GUID of the table.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -194,7 +194,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

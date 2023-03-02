@@ -103,7 +103,7 @@ public class UpdateTableAddColumnRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -183,7 +183,7 @@ public class UpdateTableAddColumnRequest extends Request {
             private String comment; 
 
             /**
-             * ColumnName.
+             * The name of the field.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -191,7 +191,7 @@ public class UpdateTableAddColumnRequest extends Request {
             }
 
             /**
-             * ColumnNameCn.
+             * The display name of the field.
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -199,7 +199,7 @@ public class UpdateTableAddColumnRequest extends Request {
             }
 
             /**
-             * ColumnType.
+             * The type of the field. For more information, see MaxCompute field types.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -207,7 +207,7 @@ public class UpdateTableAddColumnRequest extends Request {
             }
 
             /**
-             * Comment.
+             * The comment of the field.
              */
             public Builder comment(String comment) {
                 this.comment = comment;

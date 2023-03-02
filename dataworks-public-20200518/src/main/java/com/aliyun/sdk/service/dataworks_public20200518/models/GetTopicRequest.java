@@ -79,7 +79,7 @@ public class GetTopicRequest extends Request {
         }
 
         /**
-         * TopicId.
+         * The ID of the event. You can call the [listTopics](~~173973~~) operation to query the event ID.
          */
         public Builder topicId(Long topicId) {
             this.putBodyParameter("TopicId", topicId);

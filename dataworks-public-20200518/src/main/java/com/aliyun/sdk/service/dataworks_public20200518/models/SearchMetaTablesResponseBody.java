@@ -98,7 +98,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The business data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +298,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * ClusterId.
+             * The ID of the EMR cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -306,7 +306,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The name of the metadatabase.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -314,7 +314,11 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The type of the metatable. Valid values:
+             * <p>
+             * 
+             * *   0: table
+             * *   1: view
              */
             public Builder entityType(Integer entityType) {
                 this.entityType = entityType;
@@ -322,7 +326,11 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment. Valid values:
+             * <p>
+             * 
+             * *   1: production environment
+             * *   0: development environment
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -330,7 +338,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The ID of the Alibaba Cloud account used by the workspace owner.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -338,7 +346,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -346,7 +354,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * The name of the workspace.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -354,7 +362,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * The schema information of the table. This parameter is returned only if you enable the table schema in MaxCompute.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -362,7 +370,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The GUID of the metatable.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -370,7 +378,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the metatable.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -378,7 +386,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -455,7 +463,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DataEntityList.
+             * The list of metatables.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -463,7 +471,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -471,7 +479,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +487,7 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of metatables.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

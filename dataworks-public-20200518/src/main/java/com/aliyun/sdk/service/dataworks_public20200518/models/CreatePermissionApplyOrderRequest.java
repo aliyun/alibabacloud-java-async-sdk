@@ -190,7 +190,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * ApplyReason.
+         * The reason for your request. The administrator determines whether to approve the request based on the reason.
          */
         public Builder applyReason(String applyReason) {
             this.putQueryParameter("ApplyReason", applyReason);
@@ -199,7 +199,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * ApplyUserIds.
+         * The ID of the Alibaba Cloud account for which you want to request permissions. If you want to request permissions for multiple Alibaba Cloud accounts, separate the IDs of the accounts with commas (,).
          */
         public Builder applyUserIds(String applyUserIds) {
             this.putQueryParameter("ApplyUserIds", applyUserIds);
@@ -208,7 +208,14 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * Deadline.
+         * The expiration time of the permissions that you request. This value is a UNIX timestamp. If you do not specify a value for this parameter, January 1, 2065 is used as the expiration time.
+         * <p>
+         * 
+         * If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions.
+         * 
+         * You can go to the Workspace Management page of the DataWorks console, click MaxCompute Management in the left-side navigation pane, and then check whether column-level access control is enabled.
+         * 
+         * You can go to your DataWorks workspace, view the security level of the fields in DataMap, and then view the security level of the Alibaba Cloud account on the User Management page.
          */
         public Builder deadline(Long deadline) {
             this.putQueryParameter("Deadline", deadline);
@@ -217,7 +224,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * The type of the compute engine instance in which you want to request permissions on the fields of a table. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in MaxCompute compute engine instances.
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -226,7 +233,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * MaxComputeProjectName.
+         * The name of the MaxCompute project in which you request permissions on the fields of a table.
          */
         public Builder maxComputeProjectName(String maxComputeProjectName) {
             this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
@@ -235,7 +242,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.
          */
         public Builder orderType(Integer orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -244,7 +251,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the Workspace Management page in the DataWorks console to view the workspace ID.
          */
         public Builder workspaceId(Integer workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -287,7 +294,10 @@ public class CreatePermissionApplyOrderRequest extends Request {
             private String name; 
 
             /**
-             * Name.
+             * The name of the field on which you want to request permissions. If you want to request permissions on an entire table, enter the names of all fields in the table.
+             * <p>
+             * 
+             * You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -355,7 +365,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
             private String name; 
 
             /**
-             * Actions.
+             * The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.
              */
             public Builder actions(String actions) {
                 this.actions = actions;
@@ -371,7 +381,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.
              */
             public Builder name(String name) {
                 this.name = name;

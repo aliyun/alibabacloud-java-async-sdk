@@ -194,7 +194,16 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * AlertMethods.
+         * The notification method. Valid values:
+         * <p>
+         * 
+         * *   MAIL: email
+         * 
+         * *   SMS: text message
+         * 
+         *     Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.
+         * 
+         * You can specify multiple notification methods. Separate them with commas (,).
          */
         public Builder alertMethods(String alertMethods) {
             this.putBodyParameter("AlertMethods", alertMethods);
@@ -203,7 +212,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * AlertRuleTypes.
+         * The type of the alert rule. Valid values: GLOBAL, USER_DEFINE, and OTHER. The value GLOBAL indicates that the alert rule is a global alert rule. The value USER_DEFINE indicates that the alert rule is customized by a user. The value OTHER indicates that the alert rule is a rule of another type. You can specify multiple types. Separate them with commas (,).
          */
         public Builder alertRuleTypes(String alertRuleTypes) {
             this.putBodyParameter("AlertRuleTypes", alertRuleTypes);
@@ -212,7 +221,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * AlertUser.
+         * The ID of the Alibaba Cloud account used by the alert recipient.
          */
         public Builder alertUser(String alertUser) {
             this.putBodyParameter("AlertUser", alertUser);
@@ -221,7 +230,10 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * 基线ID，当 alertRuleTypes 包含 GLOBAL 时生效，与 RemindId 互斥
+         * The ID of the baseline. This parameter takes effect if the AlertRuleTypes parameter is set to GLOBAL.
+         * <p>
+         * 
+         * You can configure either this parameter or RemindId.
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -230,7 +242,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder beginTime(String beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -239,7 +251,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -248,7 +260,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -257,7 +269,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -266,7 +278,10 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * RemindId.
+         * The ID of the custom alert rule. This parameter takes effect if the AlertRuleTypes parameter is set to USER_DEFINE.
+         * <p>
+         * 
+         * You can configure either this parameter or BaselineId.
          */
         public Builder remindId(Long remindId) {
             this.putBodyParameter("RemindId", remindId);

@@ -109,7 +109,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * ApiId.
+         * The ID of the API. You can call the [ListDataServiceApis](~~174009~~) operation to obtain the ID.
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -118,7 +118,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -127,7 +127,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

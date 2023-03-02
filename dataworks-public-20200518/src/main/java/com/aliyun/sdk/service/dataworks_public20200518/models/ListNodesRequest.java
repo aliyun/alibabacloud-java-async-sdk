@@ -179,7 +179,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * BizName.
+         * The name of the workflow.
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -188,7 +188,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * NodeName.
+         * The name of the node.
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -197,7 +197,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The ID of the owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -206,7 +206,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Minimum value: 1. Maximum value: 100.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -215,7 +215,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -224,7 +224,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ProgramType.
+         * The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.
          */
         public Builder programType(String programType) {
             this.putBodyParameter("ProgramType", programType);
@@ -233,7 +233,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -242,7 +242,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

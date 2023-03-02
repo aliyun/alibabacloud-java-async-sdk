@@ -156,7 +156,7 @@ public class ExportDataSourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region in which the data sources reside. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -165,7 +165,22 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * The data source type. Valid values:
+         * <p>
+         * 
+         * *   odps
+         * *   mysql
+         * *   rds
+         * *   oss
+         * *   sqlserver
+         * *   polardb
+         * *   oracle
+         * *   mongodb
+         * *   emr
+         * *   postgresql
+         * *   analyticdb_for_mysql
+         * *   hybriddb_for_postgresql
+         * *   holo
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -174,7 +189,11 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The environment to which the data sources belong. Valid values:
+         * <p>
+         * 
+         * *   0: development environment
+         * *   1: production environment
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -183,7 +202,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The keyword contained in the names of the data sources to be exported.
+         * <p>
+         * 
+         * You can specify only one keyword. For example, if you set this parameter to test, all the data sources whose names contain test in the specified workspace are exported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -192,7 +214,7 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value of this parameter must be a positive integer greater than or equal to 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -201,7 +223,7 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -210,7 +232,7 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -219,7 +241,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * SubType.
+         * The data source subtype. This parameter takes effect only if the DataSourceType parameter is set to rds.
+         * <p>
+         * 
+         * If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

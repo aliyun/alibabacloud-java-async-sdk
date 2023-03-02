@@ -239,7 +239,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * BizBeginTime.
+         * The time when the node started to run. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.
          */
         public Builder bizBeginTime(String bizBeginTime) {
             this.putBodyParameter("BizBeginTime", bizBeginTime);
@@ -248,7 +248,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * BizEndTime.
+         * The time when the node stopped running. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.
          */
         public Builder bizEndTime(String bizEndTime) {
             this.putBodyParameter("BizEndTime", bizEndTime);
@@ -257,7 +257,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * EndBizDate.
+         * The data timestamp at which data is no longer backfilled. Specify the value in the yyyy-MM-dd 00:00:00 format.
          */
         public Builder endBizDate(String endBizDate) {
             this.putBodyParameter("EndBizDate", endBizDate);
@@ -266,7 +266,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * ExcludeNodeIds.
+         * The IDs of the nodes for which no data needs to be backfilled. The system generates dry-run instances for all these nodes. After these dry-run instances are scheduled, the statuses of these instances are directly set to successful, but the script is not run.
          */
         public Builder excludeNodeIds(String excludeNodeIds) {
             this.putBodyParameter("ExcludeNodeIds", excludeNodeIds);
@@ -275,7 +275,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * IncludeNodeIds.
+         * The ID of the node for which you want to backfill data. If you want to backfill data for multiple nodes, separate the IDs of the nodes with commas (,). You can call the [ListNodes](~~173979~~) operation to query the ID.
          */
         public Builder includeNodeIds(String includeNodeIds) {
             this.putBodyParameter("IncludeNodeIds", includeNodeIds);
@@ -284,7 +284,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the workflow.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -293,7 +293,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * NodeParams.
+         * The parameters that need to be configured for the node. Set this parameter to a JSON string. The key indicates the ID of the node, and the value indicates the actual values of the parameters.
          */
         public Builder nodeParams(String nodeParams) {
             this.putBodyParameter("NodeParams", nodeParams);
@@ -302,7 +302,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * Parallelism.
+         * Specifies whether data can be backfilled for multiple nodes at the same time.
          */
         public Builder parallelism(Boolean parallelism) {
             this.putBodyParameter("Parallelism", parallelism);
@@ -311,7 +311,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -320,7 +320,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * RootNodeId.
+         * The ID of the node for which data is first backfilled. You can call the [ListNodes](~~173979~~) operation to query the ID.
          */
         public Builder rootNodeId(Long rootNodeId) {
             this.putBodyParameter("RootNodeId", rootNodeId);
@@ -329,7 +329,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * StartBizDate.
+         * The data timestamp at which data starts to be backfilled. Specify the value in the yyyy-MM-dd 00:00:00 format.
          */
         public Builder startBizDate(String startBizDate) {
             this.putBodyParameter("StartBizDate", startBizDate);
@@ -338,7 +338,7 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
-         * StartFutureInstanceImmediately.
+         * Specifies whether to immediately run an instance that is scheduled to run in the future. If you set this parameter to true, the instance that is scheduled to run in the future is run immediately. Otherwise, the instance is run as scheduled.
          */
         public Builder startFutureInstanceImmediately(Boolean startFutureInstanceImmediately) {
             this.putBodyParameter("StartFutureInstanceImmediately", startFutureInstanceImmediately);

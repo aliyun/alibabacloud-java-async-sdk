@@ -85,7 +85,7 @@ public class DesensitizeDataRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class DesensitizeDataRequest extends Request {
         }
 
         /**
-         * Data.
+         * The data that you want to mask.
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -103,7 +103,7 @@ public class DesensitizeDataRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * The code of the data masking scene. You can view the code on the Data Masking page in Data Security Guard of the DataWorks console.
          */
         public Builder sceneCode(String sceneCode) {
             this.putBodyParameter("SceneCode", sceneCode);

@@ -74,7 +74,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information about the export operation.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,11 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned. Valid values:
+         * <p>
+         * 
+         * *   200: The request was successful.
+         * *   Other values: The request failed. You can troubleshoot issues based on the HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +94,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,11 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -342,7 +350,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * BindingCalcEngineId.
+             * The ID of the compute engine to which the data source is bound.
              */
             public Builder bindingCalcEngineId(Integer bindingCalcEngineId) {
                 this.bindingCalcEngineId = bindingCalcEngineId;
@@ -350,7 +358,11 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectStatus.
+             * Indicates whether the data source is connected to an exclusive resource group. Valid values:
+             * <p>
+             * 
+             * *   1: The data source is connected to at least one exclusive resource group.
+             * *   0: The data source is not connected to any exclusive resource group.
              */
             public Builder connectStatus(Integer connectStatus) {
                 this.connectStatus = connectStatus;
@@ -358,7 +370,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The configuration of the data source.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -366,7 +378,22 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   odps
+             * *   mysql
+             * *   rds
+             * *   oss
+             * *   sqlserver
+             * *   polardb
+             * *   oracle
+             * *   mongodb
+             * *   emr
+             * *   postgresql
+             * *   analyticdb_for_mysql
+             * *   hybriddb_for_postgresql
+             * *   holo
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -374,7 +401,11 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultEngine.
+             * Indicates whether the compute engine to which the data source is bound is the default compute engine. Valid values:
+             * <p>
+             * 
+             * *   true: The compute engine is the default compute engine.
+             * *   false: The compute engine is not the default compute engine.
              */
             public Builder defaultEngine(Boolean defaultEngine) {
                 this.defaultEngine = defaultEngine;
@@ -382,7 +413,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the data source.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -390,7 +421,11 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The environment to which the data source belongs. Valid values:
+             * <p>
+             * 
+             * *   0: development environment
+             * *   1: production environment
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -398,7 +433,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -406,7 +441,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -414,7 +449,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data source.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -422,7 +457,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -430,7 +465,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The ID of the user who exported the data source.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -438,7 +473,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the DataWorks workspace to which the data source belongs.
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -446,7 +481,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * The sequence number of the data source.
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -454,7 +489,11 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Shared.
+             * Indicates whether the data source can be shared. Valid values:
+             * <p>
+             * 
+             * *   true: The data source can be shared.
+             * *   false: The data source cannot be shared.
              */
             public Builder shared(Boolean shared) {
                 this.shared = shared;
@@ -462,7 +501,11 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the data source is available. Valid values:
+             * <p>
+             * 
+             * *   1: The data source is available.
+             * *   0: The data source is unavailable.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -470,7 +513,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * The subtype of the data source. This parameter is returned only if the value of the DataSourceType parameter is rds.
+             * <p>
+             * 
+             * If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -478,7 +524,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the Alibaba Cloud account to which the data source belongs.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -555,7 +601,10 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DataSources.
+             * The details of the exported data sources.
+             * <p>
+             * 
+             * The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.
              */
             public Builder dataSources(java.util.List < DataSources> dataSources) {
                 this.dataSources = dataSources;
@@ -563,7 +612,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page. The value of this parameter is a positive integer greater than or equal to 1.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -571,7 +620,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -579,7 +628,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

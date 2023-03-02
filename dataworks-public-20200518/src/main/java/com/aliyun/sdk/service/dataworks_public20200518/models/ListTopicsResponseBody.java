@@ -98,7 +98,7 @@ public class ListTopicsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information about the events returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -310,7 +310,7 @@ public class ListTopicsResponseBody extends TeaModel {
             private String topicType; 
 
             /**
-             * AddTime.
+             * The timestamp when the event was found.
              */
             public Builder addTime(Long addTime) {
                 this.addTime = addTime;
@@ -318,7 +318,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * FixTime.
+             * The timestamp when the event was processed.
              */
             public Builder fixTime(Long fixTime) {
                 this.fixTime = fixTime;
@@ -326,7 +326,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * HappenTime.
+             * The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.
              */
             public Builder happenTime(Long happenTime) {
                 this.happenTime = happenTime;
@@ -334,7 +334,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the node instance that triggers the event.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +342,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node that triggers the event.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -350,7 +350,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -358,7 +358,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeOwner.
+             * The ID of the Alibaba Cloud account that is used by the node owner.
              */
             public Builder nodeOwner(String nodeOwner) {
                 this.nodeOwner = nodeOwner;
@@ -366,7 +366,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -374,7 +374,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TopicId.
+             * The ID of the event.
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -382,7 +382,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * The name of the event.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -390,7 +390,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TopicStatus.
+             * The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being processed. The value RECOVER indicates that the event is processed.
              */
             public Builder topicStatus(String topicStatus) {
                 this.topicStatus = topicStatus;
@@ -398,7 +398,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TopicType.
+             * The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run.
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -475,7 +475,7 @@ public class ListTopicsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -483,7 +483,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -491,7 +491,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * Topics.
+             * The events returned.
              */
             public Builder topics(java.util.List < Topics> topics) {
                 this.topics = topics;
@@ -499,7 +499,7 @@ public class ListTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of the events returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

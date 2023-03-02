@@ -138,7 +138,7 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * Date.
+         * The date on which access records were generated. Specify the value in the yyyyMMdd format.
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
@@ -147,7 +147,20 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * Name.
+         * The parameters that you can specify to query the access records. Valid values:
+         * <p>
+         * 
+         * *   dbType: the data type
+         * *   instanceName: the name of the instance
+         * *   databaseName: the name of the database
+         * *   projectName: the name of the workspace
+         * *   clusterName: the name of the cluster
+         * 
+         * The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the ABC Hologres instance:
+         * 
+         * {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"}
+         * 
+         * You must specify the parameters based on the compute engine that you use in your business.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -156,7 +169,11 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * OpType.
+         * The operation that is performed on the data. Valid values:
+         * <p>
+         * 
+         * *   SQL_SELECT: indicates that the data is accessed. For example, the SELECT statement is executed to query the data.
+         * *   TUNNEL_DOWNLOAD: indicates that the data is downloaded. For example, a Tunnel command is run to download the data.
          */
         public Builder opType(String opType) {
             this.putQueryParameter("OpType", opType);
@@ -165,7 +182,7 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The number of the page to return. Minimum value:1. Maximum value: 1000.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -174,7 +191,7 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Minimum value: 1. Maximum value: 1000.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

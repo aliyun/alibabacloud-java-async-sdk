@@ -138,7 +138,7 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * EntityLevel.
+         * Valid values: 0 (corrected when SQl is completed) and 1 (corrected when task is completed).
          */
         public Builder entityLevel(Integer entityLevel) {
             this.putBodyParameter("EntityLevel", entityLevel);
@@ -147,7 +147,7 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The engine or data source type.
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -156,7 +156,7 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * MatchExpression.
+         * The partition expression.
          */
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
@@ -165,7 +165,7 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the maxcompute project or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -174,7 +174,7 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

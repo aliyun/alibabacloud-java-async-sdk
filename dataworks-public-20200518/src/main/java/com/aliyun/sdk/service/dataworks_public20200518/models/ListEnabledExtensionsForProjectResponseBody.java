@@ -50,7 +50,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Extensions.
+         * The details of the extension.
          */
         public Builder extensions(java.util.List < Extensions> extensions) {
             this.extensions = extensions;
@@ -58,7 +58,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * CreateUser.
+             * The creator of the extension.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -214,7 +214,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionCode.
+             * The unique code of the extension.
              */
             public Builder extensionCode(String extensionCode) {
                 this.extensionCode = extensionCode;
@@ -222,7 +222,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionDesc.
+             * The description of the extension.
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -230,7 +230,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionName.
+             * The name of the extension.
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
@@ -238,7 +238,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the extension was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -246,7 +246,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The timestamp when extension was modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -254,7 +254,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * The modifier of the extension.
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -262,7 +262,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The owner ID.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -270,7 +270,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterSetting.
+             * The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).
              */
             public Builder parameterSetting(String parameterSetting) {
                 this.parameterSetting = parameterSetting;
@@ -278,7 +278,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

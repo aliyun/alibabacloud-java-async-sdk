@@ -137,7 +137,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * BizDate.
+         * The date on which the numbers of instances in different states are obtained. Specify the date in the yyyy-MM-dd format.
          */
         public Builder bizDate(String bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -146,7 +146,13 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * DagType.
+         * The type of the directed acyclic graph (DAG). Valid values:
+         * <p>
+         * 
+         * *   MANUAL: DAG for a manually triggered workflow
+         * *   SMOKE_TEST: DAG for a smoke testing workflow
+         * *   SUPPLY_DATA: DAG for a data backfill instance
+         * *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
          */
         public Builder dagType(String dagType) {
             this.putBodyParameter("DagType", dagType);
@@ -155,7 +161,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -164,7 +170,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -173,7 +179,13 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * SchedulerType.
+         * The scheduling type of the node. Valid values:
+         * <p>
+         * 
+         * *   NORMAL: auto triggered node
+         * *   MANUAL: manually triggered node
+         * *   PAUSE: paused node
+         * *   SKIP: dry-run node
          */
         public Builder schedulerType(String schedulerType) {
             this.putBodyParameter("SchedulerType", schedulerType);
