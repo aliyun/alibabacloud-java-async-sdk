@@ -26,6 +26,10 @@ public class AddressGetRequest extends Request {
     private String phone;
 
     @Query
+    @NameInMap("sub_corp_id")
+    private String subCorpId;
+
+    @Query
     @NameInMap("type")
     private Integer type;
 
@@ -44,6 +48,7 @@ public class AddressGetRequest extends Request {
         this.actionType = builder.actionType;
         this.itineraryId = builder.itineraryId;
         this.phone = builder.phone;
+        this.subCorpId = builder.subCorpId;
         this.type = builder.type;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
@@ -84,6 +89,13 @@ public class AddressGetRequest extends Request {
     }
 
     /**
+     * @return subCorpId
+     */
+    public String getSubCorpId() {
+        return this.subCorpId;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -108,6 +120,7 @@ public class AddressGetRequest extends Request {
         private Integer actionType; 
         private String itineraryId; 
         private String phone; 
+        private String subCorpId; 
         private Integer type; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
@@ -121,6 +134,7 @@ public class AddressGetRequest extends Request {
             this.actionType = request.actionType;
             this.itineraryId = request.itineraryId;
             this.phone = request.phone;
+            this.subCorpId = request.subCorpId;
             this.type = request.type;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
@@ -150,6 +164,15 @@ public class AddressGetRequest extends Request {
         public Builder phone(String phone) {
             this.putQueryParameter("phone", phone);
             this.phone = phone;
+            return this;
+        }
+
+        /**
+         * sub_corp_id.
+         */
+        public Builder subCorpId(String subCorpId) {
+            this.putQueryParameter("sub_corp_id", subCorpId);
+            this.subCorpId = subCorpId;
             return this;
         }
 
