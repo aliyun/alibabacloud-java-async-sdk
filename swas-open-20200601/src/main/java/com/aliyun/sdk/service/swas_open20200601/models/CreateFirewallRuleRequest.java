@@ -117,14 +117,14 @@ public class CreateFirewallRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFirewallRuleRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.port = response.port;
-            this.regionId = response.regionId;
-            this.remark = response.remark;
-            this.ruleProtocol = response.ruleProtocol;
+        private Builder(CreateFirewallRuleRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.port = request.port;
+            this.regionId = request.regionId;
+            this.remark = request.remark;
+            this.ruleProtocol = request.ruleProtocol;
         } 
 
         /**

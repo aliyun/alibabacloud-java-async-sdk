@@ -103,13 +103,13 @@ public class ListDisksRequest extends Request {
             super();
         } 
 
-        private Builder(ListDisksRequest response) {
-            super(response);
-            this.diskIds = response.diskIds;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListDisksRequest request) {
+            super(request);
+            this.diskIds = request.diskIds;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**

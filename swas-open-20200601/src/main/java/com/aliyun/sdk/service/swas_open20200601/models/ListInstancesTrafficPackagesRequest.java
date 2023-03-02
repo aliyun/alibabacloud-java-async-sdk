@@ -63,10 +63,10 @@ public class ListInstancesTrafficPackagesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstancesTrafficPackagesRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.regionId = response.regionId;
+        private Builder(ListInstancesTrafficPackagesRequest request) {
+            super(request);
+            this.instanceIds = request.instanceIds;
+            this.regionId = request.regionId;
         } 
 
         /**

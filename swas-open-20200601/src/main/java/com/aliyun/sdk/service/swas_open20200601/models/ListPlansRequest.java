@@ -49,9 +49,9 @@ public class ListPlansRequest extends Request {
             super();
         } 
 
-        private Builder(ListPlansRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(ListPlansRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

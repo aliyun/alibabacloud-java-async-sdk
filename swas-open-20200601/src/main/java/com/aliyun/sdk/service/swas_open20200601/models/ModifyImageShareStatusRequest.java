@@ -90,12 +90,12 @@ public class ModifyImageShareStatusRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyImageShareStatusRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.imageId = response.imageId;
-            this.operation = response.operation;
-            this.regionId = response.regionId;
+        private Builder(ModifyImageShareStatusRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.imageId = request.imageId;
+            this.operation = request.operation;
+            this.regionId = request.regionId;
         } 
 
         /**

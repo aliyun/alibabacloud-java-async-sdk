@@ -116,14 +116,14 @@ public class ListInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstancesRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.instanceIds = response.instanceIds;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.publicIpAddresses = response.publicIpAddresses;
-            this.regionId = response.regionId;
+        private Builder(ListInstancesRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.instanceIds = request.instanceIds;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.publicIpAddresses = request.publicIpAddresses;
+            this.regionId = request.regionId;
         } 
 
         /**

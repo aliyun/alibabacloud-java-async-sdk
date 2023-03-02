@@ -75,11 +75,11 @@ public class ListImagesRequest extends Request {
             super();
         } 
 
-        private Builder(ListImagesRequest response) {
-            super(response);
-            this.imageIds = response.imageIds;
-            this.imageType = response.imageType;
-            this.regionId = response.regionId;
+        private Builder(ListImagesRequest request) {
+            super(request);
+            this.imageIds = request.imageIds;
+            this.imageType = request.imageType;
+            this.regionId = request.regionId;
         } 
 
         /**

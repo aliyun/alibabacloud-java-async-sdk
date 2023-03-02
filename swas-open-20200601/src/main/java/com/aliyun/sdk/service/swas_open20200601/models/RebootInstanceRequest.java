@@ -76,11 +76,11 @@ public class RebootInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RebootInstanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(RebootInstanceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

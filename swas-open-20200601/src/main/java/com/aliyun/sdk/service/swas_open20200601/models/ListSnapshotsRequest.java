@@ -116,14 +116,14 @@ public class ListSnapshotsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSnapshotsRequest response) {
-            super(response);
-            this.diskId = response.diskId;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.snapshotIds = response.snapshotIds;
+        private Builder(ListSnapshotsRequest request) {
+            super(request);
+            this.diskId = request.diskId;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.snapshotIds = request.snapshotIds;
         } 
 
         /**

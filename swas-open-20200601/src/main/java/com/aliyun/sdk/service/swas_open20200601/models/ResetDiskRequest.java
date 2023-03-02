@@ -90,12 +90,12 @@ public class ResetDiskRequest extends Request {
             super();
         } 
 
-        private Builder(ResetDiskRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.diskId = response.diskId;
-            this.regionId = response.regionId;
-            this.snapshotId = response.snapshotId;
+        private Builder(ResetDiskRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.diskId = request.diskId;
+            this.regionId = request.regionId;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**

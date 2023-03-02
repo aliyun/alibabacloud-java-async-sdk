@@ -76,11 +76,11 @@ public class DeleteSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSnapshotRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.snapshotId = response.snapshotId;
+        private Builder(DeleteSnapshotRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**

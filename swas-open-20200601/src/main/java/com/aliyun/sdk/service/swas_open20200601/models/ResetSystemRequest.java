@@ -89,12 +89,12 @@ public class ResetSystemRequest extends Request {
             super();
         } 
 
-        private Builder(ResetSystemRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.imageId = response.imageId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(ResetSystemRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.imageId = request.imageId;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

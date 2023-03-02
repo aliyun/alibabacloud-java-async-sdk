@@ -90,12 +90,12 @@ public class RenewInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RenewInstanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.period = response.period;
-            this.regionId = response.regionId;
+        private Builder(RenewInstanceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.period = request.period;
+            this.regionId = request.regionId;
         } 
 
         /**

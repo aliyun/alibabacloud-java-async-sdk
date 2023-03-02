@@ -91,12 +91,12 @@ public class ListFirewallRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ListFirewallRulesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(ListFirewallRulesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class DeleteCustomImageRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCustomImageRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.imageId = response.imageId;
-            this.regionId = response.regionId;
+        private Builder(DeleteCustomImageRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.imageId = request.imageId;
+            this.regionId = request.regionId;
         } 
 
         /**

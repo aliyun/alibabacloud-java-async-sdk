@@ -130,15 +130,15 @@ public class CreateCustomImageRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCustomImageRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dataSnapshotId = response.dataSnapshotId;
-            this.description = response.description;
-            this.imageName = response.imageName;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.systemSnapshotId = response.systemSnapshotId;
+        private Builder(CreateCustomImageRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dataSnapshotId = request.dataSnapshotId;
+            this.description = request.description;
+            this.imageName = request.imageName;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.systemSnapshotId = request.systemSnapshotId;
         } 
 
         /**

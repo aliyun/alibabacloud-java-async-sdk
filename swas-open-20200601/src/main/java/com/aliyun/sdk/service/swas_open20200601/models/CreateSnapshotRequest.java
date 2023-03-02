@@ -90,12 +90,12 @@ public class CreateSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSnapshotRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.diskId = response.diskId;
-            this.regionId = response.regionId;
-            this.snapshotName = response.snapshotName;
+        private Builder(CreateSnapshotRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.diskId = request.diskId;
+            this.regionId = request.regionId;
+            this.snapshotName = request.snapshotName;
         } 
 
         /**

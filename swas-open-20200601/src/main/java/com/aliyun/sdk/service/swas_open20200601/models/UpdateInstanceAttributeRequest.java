@@ -102,13 +102,13 @@ public class UpdateInstanceAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateInstanceAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.password = response.password;
-            this.regionId = response.regionId;
+        private Builder(UpdateInstanceAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.password = request.password;
+            this.regionId = request.regionId;
         } 
 
         /**

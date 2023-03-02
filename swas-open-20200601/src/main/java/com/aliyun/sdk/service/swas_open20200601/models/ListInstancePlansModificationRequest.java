@@ -63,10 +63,10 @@ public class ListInstancePlansModificationRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstancePlansModificationRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(ListInstancePlansModificationRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

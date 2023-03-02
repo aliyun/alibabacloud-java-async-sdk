@@ -172,18 +172,18 @@ public class CreateInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstancesRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewPeriod = response.autoRenewPeriod;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.dataDiskSize = response.dataDiskSize;
-            this.imageId = response.imageId;
-            this.period = response.period;
-            this.planId = response.planId;
-            this.regionId = response.regionId;
+        private Builder(CreateInstancesRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.dataDiskSize = request.dataDiskSize;
+            this.imageId = request.imageId;
+            this.period = request.period;
+            this.planId = request.planId;
+            this.regionId = request.regionId;
         } 
 
         /**
