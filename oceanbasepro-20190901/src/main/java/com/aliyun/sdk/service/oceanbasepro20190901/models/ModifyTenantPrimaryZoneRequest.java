@@ -173,7 +173,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * 主内网地址可用区
+         * The availability zone where the primary node is located.
          */
         public Builder masterIntranetAddressZone(String masterIntranetAddressZone) {
             this.putBodyParameter("MasterIntranetAddressZone", masterIntranetAddressZone);
@@ -202,7 +202,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * 主可用区模式
+         * The deployment type of the primary zone.
          */
         public Builder primaryZoneDeployType(String primaryZoneDeployType) {
             this.putBodyParameter("PrimaryZoneDeployType", primaryZoneDeployType);

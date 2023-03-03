@@ -254,7 +254,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 地址类型
+             * The type of the address.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -264,9 +264,9 @@ public class DescribeTenantResponseBody extends TeaModel {
             /**
              * The service mode of the connection address. Valid values:  
              * <p>
-             * ReadWrite: provides strong-consistency read and write services.   
-             * ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
-             * Clog: provides transaction log services.
+             * - ReadWrite: provides strong-consistency read and write services.   
+             * - ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
+             * - Clog: provides transaction log services.
              */
             public Builder connectionRole(String connectionRole) {
                 this.connectionRole = connectionRole;
@@ -292,7 +292,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             /**
              * The status of the Internet address for accessing the tenant. Valid values:   
              * <p>
-             * Closed: The address is disabled.   
+             * - CLOSED: The address is disabled.   
              * - ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   
              * - PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   
              * - ONLINE: The address is in service.
@@ -353,7 +353,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启事务拆分
+             * Indicates whether to enable transaction splitting.
              */
             public Builder transactionSplit(Boolean transactionSplit) {
                 this.transactionSplit = transactionSplit;
@@ -1095,7 +1095,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 可用区
+             * The list of zones.
              */
             public Builder availableZones(java.util.List < String > availableZones) {
                 this.availableZones = availableZones;
@@ -1103,7 +1103,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 字符集
+             * The character set.
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -1111,10 +1111,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The enabling status of the Clog service.  
+             * The enabling status of the clog service.  
              * <p>
-             * CLOSED: The Clog service is disabled.   
-             * - ONLINE: The Clog service is running.
+             * - CLOSED: The clog service is disabled.  
+             * - ONLINE: The clog service is running.
              */
             public Builder clogServiceStatus(String clogServiceStatus) {
                 this.clogServiceStatus = clogServiceStatus;
@@ -1122,7 +1122,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 字符序
+             * The collation.
              */
             public Builder collation(String collation) {
                 this.collation = collation;
@@ -1172,7 +1172,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 磁盘类型
+             * The type of the disk.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1180,7 +1180,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Clog service is available. To enable the Clog service, submit a ticket.
+             * Indicates whether the clog service is available. To enable the clog service, submit a ticket.
              */
             public Builder enableClogService(Boolean enableClogService) {
                 this.enableClogService = enableClogService;
@@ -1196,7 +1196,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 是否允许开启读写分离地址
+             * Indicates whether to enable read/write splitting endpoint.
              */
             public Builder enableReadWriteSplit(Boolean enableReadWriteSplit) {
                 this.enableReadWriteSplit = enableReadWriteSplit;
@@ -1204,7 +1204,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 实例类型
+             * The type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1212,7 +1212,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户主地址可用区
+             * The zone where the primary node is located.
              */
             public Builder masterIntranetAddressZone(String masterIntranetAddressZone) {
                 this.masterIntranetAddressZone = masterIntranetAddressZone;
@@ -1220,7 +1220,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 付费类型
+             * The type of the payment.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1236,7 +1236,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 租户主可用区部署模式
+             * The deployment type of the primary zone.
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
@@ -1244,7 +1244,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 实例系列
+             * The series of the instance.
              */
             public Builder series(String series) {
                 this.series = series;
@@ -1270,7 +1270,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The connection access information of the tenant.
+             * The connection information of the tenant.
              */
             public Builder tenantConnections(java.util.List < TenantConnections> tenantConnections) {
                 this.tenantConnections = tenantConnections;
@@ -1288,9 +1288,9 @@ public class DescribeTenantResponseBody extends TeaModel {
             /**
              * The tenant mode.   
              * <p>
-             * Valid values: 
-             * Oracle   
-             * MySQL
+             * Valid values:
+             * - Oracle   
+             * - MySQL
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;

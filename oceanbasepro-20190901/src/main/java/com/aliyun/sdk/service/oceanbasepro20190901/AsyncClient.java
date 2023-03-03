@@ -70,6 +70,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceCreatableZoneResponse> describeInstanceCreatableZone(DescribeInstanceCreatableZoneRequest request);
 
+    CompletableFuture<DescribeInstanceSecurityConfigsResponse> describeInstanceSecurityConfigs(DescribeInstanceSecurityConfigsRequest request);
+
     CompletableFuture<DescribeInstanceTagsResponse> describeInstanceTags(DescribeInstanceTagsRequest request);
 
     CompletableFuture<DescribeInstanceTenantModesResponse> describeInstanceTenantModes(DescribeInstanceTenantModesRequest request);
@@ -107,6 +109,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTenantResponse> describeTenant(DescribeTenantRequest request);
 
     CompletableFuture<DescribeTenantMetricsResponse> describeTenantMetrics(DescribeTenantMetricsRequest request);
+
+    CompletableFuture<DescribeTenantSecurityConfigsResponse> describeTenantSecurityConfigs(DescribeTenantSecurityConfigsRequest request);
 
     CompletableFuture<DescribeTenantTagsResponse> describeTenantTags(DescribeTenantTagsRequest request);
 

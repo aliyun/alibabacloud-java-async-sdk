@@ -521,7 +521,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < TenantZones> tenantZones; 
 
             /**
-             * The primary zone deployment mode.
+             * The deployment type of the primary zone.
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;

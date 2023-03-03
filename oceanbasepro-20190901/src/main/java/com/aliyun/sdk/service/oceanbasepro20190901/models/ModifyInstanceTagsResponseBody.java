@@ -50,7 +50,7 @@ public class ModifyInstanceTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 打标情况
+         * The update status of the tags.
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +58,7 @@ public class ModifyInstanceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

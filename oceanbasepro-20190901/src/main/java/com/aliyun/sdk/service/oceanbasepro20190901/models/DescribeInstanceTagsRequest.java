@@ -92,7 +92,7 @@ public class DescribeInstanceTagsRequest extends Request {
         }
 
         /**
-         * 集群id列表
+         * The list of cluster IDs.
          */
         public Builder instanceIds(String instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);
@@ -101,7 +101,7 @@ public class DescribeInstanceTagsRequest extends Request {
         }
 
         /**
-         * 标签值
+         * The tags.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);

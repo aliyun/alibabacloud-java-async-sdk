@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyInstanceTagsRequest} extends {@link RequestModel}
+ * {@link DescribeTenantSecurityConfigsRequest} extends {@link RequestModel}
  *
- * <p>ModifyInstanceTagsRequest</p>
+ * <p>DescribeTenantSecurityConfigsRequest</p>
  */
-public class ModifyInstanceTagsRequest extends Request {
+public class DescribeTenantSecurityConfigsRequest extends Request {
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
@@ -23,22 +23,21 @@ public class ModifyInstanceTagsRequest extends Request {
     private String instanceId;
 
     @Body
-    @NameInMap("Tags")
-    @Validation(required = true)
-    private String tags;
+    @NameInMap("TenantId")
+    private String tenantId;
 
-    private ModifyInstanceTagsRequest(Builder builder) {
+    private DescribeTenantSecurityConfigsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
-        this.tags = builder.tags;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyInstanceTagsRequest create() {
+    public static DescribeTenantSecurityConfigsRequest create() {
         return builder().build();
     }
 
@@ -62,26 +61,26 @@ public class ModifyInstanceTagsRequest extends Request {
     }
 
     /**
-     * @return tags
+     * @return tenantId
      */
-    public String getTags() {
-        return this.tags;
+    public String getTenantId() {
+        return this.tenantId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyInstanceTagsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeTenantSecurityConfigsRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private String tags; 
+        private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyInstanceTagsRequest request) {
+        private Builder(DescribeTenantSecurityConfigsRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
-            this.tags = request.tags;
+            this.tenantId = request.tenantId;
         } 
 
         /**
@@ -94,7 +93,7 @@ public class ModifyInstanceTagsRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * Oceanbase集群ID
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,17 +102,17 @@ public class ModifyInstanceTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * 租户Id
          */
-        public Builder tags(String tags) {
-            this.putBodyParameter("Tags", tags);
-            this.tags = tags;
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
         @Override
-        public ModifyInstanceTagsRequest build() {
-            return new ModifyInstanceTagsRequest(this);
+        public DescribeTenantSecurityConfigsRequest build() {
+            return new DescribeTenantSecurityConfigsRequest(this);
         } 
 
     } 

@@ -914,7 +914,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;

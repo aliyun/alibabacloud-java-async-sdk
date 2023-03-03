@@ -45,6 +45,7 @@ public class CreateInstanceRequest extends Request {
 
     @Body
     @NameInMap("InstanceName")
+    @Validation(maxLength = 20)
     private String instanceName;
 
     @Body

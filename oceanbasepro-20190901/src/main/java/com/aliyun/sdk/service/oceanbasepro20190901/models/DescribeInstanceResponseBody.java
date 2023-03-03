@@ -596,6 +596,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         private String instanceName;
 
+        @NameInMap("InstanceRole")
+        private String instanceRole;
+
         @NameInMap("IsLatestObVersion")
         private Boolean isLatestObVersion;
 
@@ -604,6 +607,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("MaintainTime")
         private String maintainTime;
+
+        @NameInMap("NodeNum")
+        private String nodeNum;
 
         @NameInMap("ObRpmVersion")
         private String obRpmVersion;
@@ -623,6 +629,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("Version")
         private String version;
 
+        @NameInMap("Zones")
+        private java.util.List < String > zones;
+
         private Instance(Builder builder) {
             this.autoRenewal = builder.autoRenewal;
             this.autoUpgradeObVersion = builder.autoUpgradeObVersion;
@@ -637,15 +646,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.instanceClass = builder.instanceClass;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
+            this.instanceRole = builder.instanceRole;
             this.isLatestObVersion = builder.isLatestObVersion;
             this.isTrustEcs = builder.isTrustEcs;
             this.maintainTime = builder.maintainTime;
+            this.nodeNum = builder.nodeNum;
             this.obRpmVersion = builder.obRpmVersion;
             this.payType = builder.payType;
             this.resource = builder.resource;
             this.series = builder.series;
             this.status = builder.status;
             this.version = builder.version;
+            this.zones = builder.zones;
         }
 
         public static Builder builder() {
@@ -748,6 +760,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceRole
+         */
+        public String getInstanceRole() {
+            return this.instanceRole;
+        }
+
+        /**
          * @return isLatestObVersion
          */
         public Boolean getIsLatestObVersion() {
@@ -766,6 +785,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public String getMaintainTime() {
             return this.maintainTime;
+        }
+
+        /**
+         * @return nodeNum
+         */
+        public String getNodeNum() {
+            return this.nodeNum;
         }
 
         /**
@@ -810,6 +836,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return zones
+         */
+        public java.util.List < String > getZones() {
+            return this.zones;
+        }
+
         public static final class Builder {
             private Boolean autoRenewal; 
             private Boolean autoUpgradeObVersion; 
@@ -824,15 +857,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String instanceClass; 
             private String instanceId; 
             private String instanceName; 
+            private String instanceRole; 
             private Boolean isLatestObVersion; 
             private Boolean isTrustEcs; 
             private String maintainTime; 
+            private String nodeNum; 
             private String obRpmVersion; 
             private String payType; 
             private Resource resource; 
             private String series; 
             private String status; 
             private String version; 
+            private java.util.List < String > zones; 
 
             /**
              * Indicates whether automatic renewal is enabled. 
@@ -960,6 +996,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * 实例角色
+             */
+            public Builder instanceRole(String instanceRole) {
+                this.instanceRole = instanceRole;
+                return this;
+            }
+
+            /**
              * Indicates whether the OBServer version is the latest.
              */
             public Builder isLatestObVersion(Boolean isLatestObVersion) {
@@ -980,6 +1024,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
+                return this;
+            }
+
+            /**
+             * NodeNum.
+             */
+            public Builder nodeNum(String nodeNum) {
+                this.nodeNum = nodeNum;
                 return this;
             }
 
@@ -1050,6 +1102,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * Zones.
+             */
+            public Builder zones(java.util.List < String > zones) {
+                this.zones = zones;
                 return this;
             }
 
