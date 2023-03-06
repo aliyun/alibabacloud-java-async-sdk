@@ -92,6 +92,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteChatappTemplateResponse> deleteChatappTemplate(DeleteChatappTemplateRequest request);
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+     */
+    CompletableFuture<GetChatappTemplateDetailResponse> getChatappTemplateDetail(GetChatappTemplateDetailRequest request);
+
     CompletableFuture<GetChatappUploadAuthorizationResponse> getChatappUploadAuthorization(GetChatappUploadAuthorizationRequest request);
 
     /**
@@ -117,6 +124,13 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<IsvGetAppIdResponse> isvGetAppId(IsvGetAppIdRequest request);
+
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+     */
+    CompletableFuture<ListChatappTemplateResponse> listChatappTemplate(ListChatappTemplateRequest request);
 
     /**
       * ### QPS limit
