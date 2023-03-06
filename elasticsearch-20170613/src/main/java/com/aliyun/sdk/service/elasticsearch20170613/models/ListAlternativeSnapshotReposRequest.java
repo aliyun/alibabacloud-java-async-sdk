@@ -69,7 +69,7 @@ public class ListAlternativeSnapshotReposRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class ListAlternativeSnapshotReposRequest extends Request {
         }
 
         /**
-         * alreadySetItems.
+         * Indicates whether to return the OSS reference repository added. The return value. Valid values: true and false.
          */
         public Builder alreadySetItems(Boolean alreadySetItems) {
             this.putQueryParameter("alreadySetItems", alreadySetItems);

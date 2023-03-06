@@ -50,7 +50,7 @@ public class GetTransferableNodesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTransferableNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class GetTransferableNodesResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * host.
+             * The IP address of the node.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -118,7 +118,7 @@ public class GetTransferableNodesResponseBody extends TeaModel {
             }
 
             /**
-             * port.
+             * The access port of the node.
              */
             public Builder port(Integer port) {
                 this.port = port;

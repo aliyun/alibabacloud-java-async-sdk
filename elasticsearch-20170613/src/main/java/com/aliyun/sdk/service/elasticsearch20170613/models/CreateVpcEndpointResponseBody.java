@@ -50,7 +50,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result details.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             private String serviceId; 
 
             /**
-             * endpointDomain.
+             * The endpoint domain name, which is used to configure the connection.
              */
             public Builder endpointDomain(String endpointDomain) {
                 this.endpointDomain = endpointDomain;
@@ -142,7 +142,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * endpointId.
+             * The ID of the endpoint on the service VPC side.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -150,7 +150,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * endpointName.
+             * The name of the service VPC-side endpoint.
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -158,7 +158,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * The ID of the user endpoint service associated with the endpoint.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;

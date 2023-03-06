@@ -50,7 +50,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Return results:
+         * <p>
+         * 
+         * *   true: renewal successfully
+         * *   false: renewal failed
          */
         public Builder result(Boolean result) {
             this.result = result;

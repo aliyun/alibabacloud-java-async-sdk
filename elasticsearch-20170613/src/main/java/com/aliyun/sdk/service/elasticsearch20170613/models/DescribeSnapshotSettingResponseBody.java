@@ -50,7 +50,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
             private String quartzRegex; 
 
             /**
-             * Enable.
+             * Whether to enable automatic backup.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -118,7 +118,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
             }
 
             /**
-             * QuartzRegex.
+             * Automatic backup time configuration, using Quartz Cron expression.
              */
             public Builder quartzRegex(String quartzRegex) {
                 this.quartzRegex = quartzRegex;

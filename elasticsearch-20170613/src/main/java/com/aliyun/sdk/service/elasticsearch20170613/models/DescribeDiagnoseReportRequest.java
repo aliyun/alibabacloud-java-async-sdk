@@ -84,7 +84,7 @@ public class DescribeDiagnoseReportRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-mp91kzb8m0009****
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -93,7 +93,7 @@ public class DescribeDiagnoseReportRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * scheduled__2020-09-15T00:40:00
          */
         public Builder reportId(String reportId) {
             this.putPathParameter("ReportId", reportId);
@@ -102,7 +102,7 @@ public class DescribeDiagnoseReportRequest extends Request {
         }
 
         /**
-         * lang.
+         * en
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);

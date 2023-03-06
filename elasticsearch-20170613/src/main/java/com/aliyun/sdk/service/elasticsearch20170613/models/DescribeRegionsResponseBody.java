@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The list of returned database shards.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * consoleEndpoint.
+             * The endpoint of the region that is exposed in the console.
              */
             public Builder consoleEndpoint(String consoleEndpoint) {
                 this.consoleEndpoint = consoleEndpoint;
@@ -154,7 +154,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * localName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -162,7 +162,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionEndpoint.
+             * The endpoint of the region.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -170,7 +170,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -178,7 +178,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The available status of the region.
              */
             public Builder status(String status) {
                 this.status = status;

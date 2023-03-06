@@ -17,6 +17,10 @@ public class CreateInstanceRequest extends Request {
     private ClientNodeConfiguration clientNodeConfiguration;
 
     @Body
+    @NameInMap("description")
+    private String description;
+
+    @Body
     @NameInMap("elasticDataNodeConfiguration")
     private ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
@@ -65,6 +69,10 @@ public class CreateInstanceRequest extends Request {
     private String paymentType;
 
     @Body
+    @NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @Body
     @NameInMap("warmNodeConfiguration")
     private WarmNodeConfiguration warmNodeConfiguration;
 
@@ -79,6 +87,7 @@ public class CreateInstanceRequest extends Request {
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.clientNodeConfiguration = builder.clientNodeConfiguration;
+        this.description = builder.description;
         this.elasticDataNodeConfiguration = builder.elasticDataNodeConfiguration;
         this.esAdminPassword = builder.esAdminPassword;
         this.esVersion = builder.esVersion;
@@ -90,6 +99,7 @@ public class CreateInstanceRequest extends Request {
         this.nodeSpec = builder.nodeSpec;
         this.paymentInfo = builder.paymentInfo;
         this.paymentType = builder.paymentType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.warmNodeConfiguration = builder.warmNodeConfiguration;
         this.zoneCount = builder.zoneCount;
         this.clientToken = builder.clientToken;
@@ -113,6 +123,13 @@ public class CreateInstanceRequest extends Request {
      */
     public ClientNodeConfiguration getClientNodeConfiguration() {
         return this.clientNodeConfiguration;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -193,6 +210,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return warmNodeConfiguration
      */
     public WarmNodeConfiguration getWarmNodeConfiguration() {
@@ -215,6 +239,7 @@ public class CreateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private ClientNodeConfiguration clientNodeConfiguration; 
+        private String description; 
         private ElasticDataNodeConfiguration elasticDataNodeConfiguration; 
         private String esAdminPassword; 
         private String esVersion; 
@@ -226,6 +251,7 @@ public class CreateInstanceRequest extends Request {
         private NodeSpec nodeSpec; 
         private PaymentInfo paymentInfo; 
         private String paymentType; 
+        private String resourceGroupId; 
         private WarmNodeConfiguration warmNodeConfiguration; 
         private Integer zoneCount; 
         private String clientToken; 
@@ -237,6 +263,7 @@ public class CreateInstanceRequest extends Request {
         private Builder(CreateInstanceRequest request) {
             super(request);
             this.clientNodeConfiguration = request.clientNodeConfiguration;
+            this.description = request.description;
             this.elasticDataNodeConfiguration = request.elasticDataNodeConfiguration;
             this.esAdminPassword = request.esAdminPassword;
             this.esVersion = request.esVersion;
@@ -248,6 +275,7 @@ public class CreateInstanceRequest extends Request {
             this.nodeSpec = request.nodeSpec;
             this.paymentInfo = request.paymentInfo;
             this.paymentType = request.paymentType;
+            this.resourceGroupId = request.resourceGroupId;
             this.warmNodeConfiguration = request.warmNodeConfiguration;
             this.zoneCount = request.zoneCount;
             this.clientToken = request.clientToken;
@@ -259,6 +287,15 @@ public class CreateInstanceRequest extends Request {
         public Builder clientNodeConfiguration(ClientNodeConfiguration clientNodeConfiguration) {
             this.putBodyParameter("clientNodeConfiguration", clientNodeConfiguration);
             this.clientNodeConfiguration = clientNodeConfiguration;
+            return this;
+        }
+
+        /**
+         * 实例名称。
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
             return this;
         }
 
@@ -362,6 +399,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * 资源组id。
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * warmNodeConfiguration.
          */
         public Builder warmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {
@@ -380,7 +426,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

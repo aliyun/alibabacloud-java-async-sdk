@@ -50,7 +50,7 @@ public class ListAllNodeResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAllNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -194,7 +194,10 @@ public class ListAllNodeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * cpuPercent.
+             * The CPU utilization.
+             * <p>
+             * 
+             * >  If the **extended** request parameter is set to **true** and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.
              */
             public Builder cpuPercent(String cpuPercent) {
                 this.cpuPercent = cpuPercent;
@@ -202,7 +205,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * diskUsedPercent.
+             * The disk usage.
              */
             public Builder diskUsedPercent(String diskUsedPercent) {
                 this.diskUsedPercent = diskUsedPercent;
@@ -210,7 +213,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * health.
+             * The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -218,7 +221,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * heapPercent.
+             * The Java Virtual Machine (JVM) heap memory usage of the node.
              */
             public Builder heapPercent(String heapPercent) {
                 this.heapPercent = heapPercent;
@@ -226,7 +229,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * host.
+             * The IP address of the node.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -234,7 +237,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * loadOneM.
+             * The 1-minute load of the node.
              */
             public Builder loadOneM(String loadOneM) {
                 this.loadOneM = loadOneM;
@@ -242,7 +245,14 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * nodeType.
+             * The type of the nodes. Valid values:
+             * <p>
+             * 
+             * *   MASTER: dedicated master node
+             * *   WORKER: hot node
+             * *   WORKER_WARM: warm node
+             * *   COORDINATING: client node
+             * *   KIBANA: Kibana node
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -250,7 +260,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * port.
+             * The port that is used to connect to the node.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -258,7 +268,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * The zone ID of the node.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

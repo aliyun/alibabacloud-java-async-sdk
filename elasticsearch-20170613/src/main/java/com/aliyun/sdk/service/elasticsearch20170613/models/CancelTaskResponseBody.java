@@ -50,7 +50,7 @@ public class CancelTaskResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class CancelTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Return results:
+         * <p>
+         * 
+         * *   true: the task was cancelled successfully
+         * *   false: the task was cancelled successfully failed
          */
         public Builder result(Boolean result) {
             this.result = result;

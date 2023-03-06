@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceResponseBody</p>
  */
 public class UpdateInstanceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("Message")
+    private String message;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +25,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     private Result result;
 
     private UpdateInstanceResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.result = builder.result;
     }
@@ -29,6 +37,20 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static UpdateInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,11 +68,29 @@ public class UpdateInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
+        private String message; 
         private String requestId; 
         private Result result; 
 
         /**
-         * RequestId.
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +98,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the request.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -134,7 +174,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -142,7 +182,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The size of the node storage space.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -150,7 +190,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. This parameter can be ignored.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -158,7 +198,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The node specifications.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -235,7 +275,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -243,7 +283,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The storage space of the node. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -251,7 +291,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -259,7 +299,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The node specifications.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -324,7 +364,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * disk.
+             * The storage space of the node. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -332,7 +372,11 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. Valid values:
+             * <p>
+             * 
+             * *   cloud_ssd: standard SSD
+             * *   cloud_efficiency: ultra disk
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -340,7 +384,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The node specifications.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -501,7 +545,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * createdAt.
+             * The time when the instance was created.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -509,7 +553,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The name of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -517,7 +561,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * domain.
+             * The private domain name of the instance.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -525,7 +569,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * esVersion.
+             * The edition of the dedicated KMS instance.
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -533,7 +577,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -541,7 +585,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaConfiguration.
+             * The configuration of Kibana nodes.
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -549,7 +593,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * masterConfiguration.
+             * The configuration of dedicated master nodes.
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -557,7 +601,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeAmount.
+             * The number of data nodes.
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -565,7 +609,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeSpec.
+             * The configuration of data nodes.
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -573,7 +617,11 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   prepaid: subscription
+             * *   postpaid: pay-as-you-go
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -581,7 +629,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The state of the instance. Valid values:
+             * <p>
+             * 
+             * *   active: normal
+             * *   activating: taking effect
+             * *   inactive: frozen
+             * *   invalid: invalid
              */
             public Builder status(String status) {
                 this.status = status;

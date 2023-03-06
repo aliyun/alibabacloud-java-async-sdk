@@ -114,7 +114,7 @@ public class TriggerNetworkRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * es-cn-n6w1o1x0w001c\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -150,7 +150,7 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 407d02b74c49beb5bfdac7ec8bde2488
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

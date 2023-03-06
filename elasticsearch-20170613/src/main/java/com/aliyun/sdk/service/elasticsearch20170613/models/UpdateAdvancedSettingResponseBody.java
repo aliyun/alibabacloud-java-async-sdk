@@ -50,7 +50,7 @@ public class UpdateAdvancedSettingResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class UpdateAdvancedSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Return results:
+         * <p>
+         * 
+         * *   true: garbage collector configuration changed successfully
+         * *   false: garbage collector configuration changed successfully failed
          */
         public Builder result(Boolean result) {
             this.result = result;

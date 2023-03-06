@@ -69,7 +69,7 @@ public class AddSnapshotRepoRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance for which you want to access OSS repositories across clusters.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

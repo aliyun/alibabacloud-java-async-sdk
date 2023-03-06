@@ -83,7 +83,7 @@ public class CreateDataTasksRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-n6w1o1x0w001c\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class CreateDataTasksRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

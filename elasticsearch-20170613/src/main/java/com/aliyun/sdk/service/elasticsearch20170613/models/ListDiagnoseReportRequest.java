@@ -157,7 +157,7 @@ public class ListDiagnoseReportRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-n6w1qu7ei000p\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -166,7 +166,7 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * detail.
+         * true
          */
         public Builder detail(Boolean detail) {
             this.putQueryParameter("detail", detail);
@@ -175,7 +175,7 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * endTime.
+         * 1595174399999
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -184,7 +184,7 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * lang.
+         * spanish
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);
@@ -193,7 +193,7 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * page.
+         * 1
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -202,7 +202,7 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * size.
+         * 20
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -211,7 +211,7 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * startTime.
+         * 1594569600000
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -220,7 +220,7 @@ public class ListDiagnoseReportRequest extends Request {
         }
 
         /**
-         * trigger.
+         * SYSTEM
          */
         public Builder trigger(String trigger) {
             this.putQueryParameter("trigger", trigger);

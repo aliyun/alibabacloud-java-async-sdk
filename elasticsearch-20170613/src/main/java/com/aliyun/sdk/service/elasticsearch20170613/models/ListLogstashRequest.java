@@ -138,7 +138,7 @@ public class ListLogstashRequest extends Request {
         } 
 
         /**
-         * description.
+         * ls-cn-abc
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -147,7 +147,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * ls-cn-n6w1o5jq\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -156,7 +156,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * page.
+         * 1
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -165,7 +165,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * rg-acfm2h5vbzd\*\*\*\*
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -174,7 +174,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * size.
+         * 10
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -183,7 +183,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * tags.
+         * \[{"tagKey":"key1","tagValue":"value1"}]
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);
@@ -192,7 +192,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * version.
+         * 5.5.3\_with_X-Pack
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

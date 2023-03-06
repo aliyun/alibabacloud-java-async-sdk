@@ -50,7 +50,7 @@ public class TransferNodeResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class TransferNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Output:
+         * <p>
+         * 
+         * *   true: The task is successfully executed.
+         * *   false: The task failed to be executed.
          */
         public Builder result(Boolean result) {
             this.result = result;

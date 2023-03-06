@@ -74,7 +74,7 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * Code.
+         * The error code. Only displayed if an exception is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message. Only displayed if an exception is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Return results:
+         * <p>
+         * 
+         * *   true: interrupted change successfully
+         * *   false: interrupted change failed
          */
         public Builder result(Boolean result) {
             this.result = result;

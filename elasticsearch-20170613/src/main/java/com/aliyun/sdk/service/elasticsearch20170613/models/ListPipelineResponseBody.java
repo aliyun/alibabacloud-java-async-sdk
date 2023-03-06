@@ -62,7 +62,7 @@ public class ListPipelineResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Headers.
+         * The header of the response.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The response.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class ListPipelineResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * X-Total-Count.
+             * The total number of returned entries.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -195,7 +195,7 @@ public class ListPipelineResponseBody extends TeaModel {
             private String pipelineStatus; 
 
             /**
-             * gmtCreatedTime.
+             * The time when the pipeline was created.
              */
             public Builder gmtCreatedTime(String gmtCreatedTime) {
                 this.gmtCreatedTime = gmtCreatedTime;
@@ -203,7 +203,7 @@ public class ListPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * gmtUpdateTime.
+             * The time when the pipeline was updated.
              */
             public Builder gmtUpdateTime(String gmtUpdateTime) {
                 this.gmtUpdateTime = gmtUpdateTime;
@@ -211,7 +211,7 @@ public class ListPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineId.
+             * The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -219,7 +219,12 @@ public class ListPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineStatus.
+             * The status of the pipeline. Supported:
+             * <p>
+             * 
+             * *   NOT_DEPLOYED: The node is not deployed.
+             * *   RUNNING
+             * *   DELETED: Deleted. The console does not display this status.
              */
             public Builder pipelineStatus(String pipelineStatus) {
                 this.pipelineStatus = pipelineStatus;

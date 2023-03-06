@@ -98,7 +98,7 @@ public class TransferNodeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-nif1q9o8r0008\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -116,7 +116,7 @@ public class TransferNodeRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -125,7 +125,7 @@ public class TransferNodeRequest extends Request {
         }
 
         /**
-         * nodeType.
+         * WORKER
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);

@@ -69,7 +69,7 @@ public class DescribeDiagnosisSettingsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of an instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeDiagnosisSettingsRequest extends Request {
         }
 
         /**
-         * lang.
+         * The language of the returned result. Default value: en.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);

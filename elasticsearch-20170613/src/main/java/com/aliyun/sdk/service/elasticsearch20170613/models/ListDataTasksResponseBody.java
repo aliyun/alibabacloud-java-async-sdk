@@ -50,7 +50,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -170,7 +170,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             private String vpcInstancePort; 
 
             /**
-             * dataSourceType.
+             * The type of the target cluster. Default value: elasticsearch.
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -178,7 +178,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * The public network access address of the target cluster.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -186,7 +186,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * The target index.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -194,7 +194,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the destination index.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -202,7 +202,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The ID of the VPC to which the cluster belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -210,7 +210,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstanceId.
+             * The instance ID or Server Load Balancer (SLB) ID of the current cluster.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -218,7 +218,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstancePort.
+             * The access port number of the cluster.
              */
             public Builder vpcInstancePort(String vpcInstancePort) {
                 this.vpcInstancePort = vpcInstancePort;
@@ -319,7 +319,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * dataSourceType.
+             * The type of the source cluster. Default value: elasticsearch.
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -327,7 +327,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * The index whose data you want to migrate.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -335,7 +335,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * mapping.
+             * The Mapping configuration of the cluster.
              */
             public Builder mapping(String mapping) {
                 this.mapping = mapping;
@@ -343,7 +343,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * routing.
+             * The routing field to index the table. It is set to the primary key by default.
              */
             public Builder routing(String routing) {
                 this.routing = routing;
@@ -351,7 +351,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * settings.
+             * The Settings of the cluster.
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -359,7 +359,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the destination index.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -448,7 +448,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * createTime.
+             * The time when the site monitoring task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -456,7 +456,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * sinkCluster.
+             * The information of the target cluster.
              */
             public Builder sinkCluster(SinkCluster sinkCluster) {
                 this.sinkCluster = sinkCluster;
@@ -464,7 +464,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * sourceCluster.
+             * The information about the source cluster.
              */
             public Builder sourceCluster(SourceCluster sourceCluster) {
                 this.sourceCluster = sourceCluster;
@@ -472,7 +472,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,7 +480,7 @@ public class ListDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

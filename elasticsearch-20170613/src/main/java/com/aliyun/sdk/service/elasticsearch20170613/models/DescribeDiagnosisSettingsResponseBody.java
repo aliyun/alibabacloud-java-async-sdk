@@ -50,7 +50,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * scene.
+             * Scenarios of intelligent maintenance.
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -118,7 +118,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * The timestamp of the last update for Intelligent Maintenance scenarios.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

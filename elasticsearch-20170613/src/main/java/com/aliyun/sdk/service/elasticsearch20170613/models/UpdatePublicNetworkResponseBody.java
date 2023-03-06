@@ -50,7 +50,7 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -98,7 +98,7 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
             private Boolean enablePublic; 
 
             /**
-             * enablePublic.
+             * The status of the public network access switch.
              */
             public Builder enablePublic(Boolean enablePublic) {
                 this.enablePublic = enablePublic;

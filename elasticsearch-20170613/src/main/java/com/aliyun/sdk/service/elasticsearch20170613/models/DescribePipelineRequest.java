@@ -70,7 +70,7 @@ public class DescribePipelineRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * ls-cn-oew1qbgl\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class DescribePipelineRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * pipeline_test
          */
         public Builder pipelineId(String pipelineId) {
             this.putPathParameter("PipelineId", pipelineId);

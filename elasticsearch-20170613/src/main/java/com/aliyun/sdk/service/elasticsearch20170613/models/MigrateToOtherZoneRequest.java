@@ -84,7 +84,7 @@ public class MigrateToOtherZoneRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Verify whether the zone node can be migrated. true indicates that the data is only verified and the migration task is not executed. false indicates that the migration task is executed after the verification is successful.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

@@ -50,7 +50,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Detailed information about the instance.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * tagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -171,7 +171,11 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * status.
+             * The status of the zone. Valid values:
+             * <p>
+             * 
+             * *   ISOLATION: offline
+             * *   NORMAL
              */
             public Builder status(String status) {
                 this.status = status;
@@ -179,7 +183,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * The zone ID of the new instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -244,7 +248,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * host.
+             * The IP address of the node.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -252,7 +256,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * port.
+             * The port number.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -260,7 +264,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * The ID of the zone where the node resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -337,7 +341,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * type.
+             * The network type of the instance. Valid values: Currently, only Virtual Private Cloud (VPC) are supported.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -345,7 +349,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -353,7 +357,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * vsArea.
+             * The zone where the cluster resides.
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -361,7 +365,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * The ID of the vSwitch to which the instance is connected.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -438,7 +442,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * disk.
+             * The disk size of the node.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -446,7 +450,11 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * diskEncryption.
+             * Whether to use disk encryption:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -454,7 +462,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The disk type of the node.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -462,7 +470,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The specifications of the node.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -695,7 +703,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * ExtendConfigs.
+             * The configuration of cluster extension parameters.
              */
             public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -703,7 +711,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -711,7 +719,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags added to the ALB instance.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -719,7 +727,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneInfos.
+             * The information about the zones.
              */
             public Builder zoneInfos(java.util.List < ZoneInfos> zoneInfos) {
                 this.zoneInfos = zoneInfos;
@@ -727,7 +735,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * The configurations of the instance.
              */
             public Builder config(java.util.Map < String, ? > config) {
                 this.config = config;
@@ -735,7 +743,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * The time when the instance was created.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -743,7 +751,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The name of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -751,7 +759,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * endpointList.
+             * The access information of the node.
              */
             public Builder endpointList(java.util.List < EndpointList> endpointList) {
                 this.endpointList = endpointList;
@@ -759,7 +767,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -767,7 +775,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfig.
+             * The network configurations.
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -775,7 +783,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * nodeAmount.
+             * The number of data nodes.
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -783,7 +791,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * nodeSpec.
+             * The configuration information of the node.
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -791,7 +799,11 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   prepaid: subscription
+             * *   postpaid: pay-as-you-go
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -799,7 +811,13 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The state of the instance. Four states are supported:
+             * <p>
+             * 
+             * *   Normal: active
+             * *   Active: activating
+             * *   Freeze: inactive
+             * *   Invalid: invalid
              */
             public Builder status(String status) {
                 this.status = status;
@@ -807,7 +825,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * The time when the instance was last updated.
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -815,7 +833,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The edition of the dedicated KMS instance.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -823,7 +841,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstanceId.
+             * The ID of the virtual private cloud (VPC) to which the elastic container instances belong.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

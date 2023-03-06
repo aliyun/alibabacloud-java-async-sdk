@@ -50,7 +50,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the request.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -218,7 +218,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             private String vpcInstancePort; 
 
             /**
-             * dataSourceType.
+             * The type of the target cluster.
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -226,7 +226,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * The name of the target index.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -234,7 +234,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * mapping.
+             * Mapping configuration.
              */
             public Builder mapping(String mapping) {
                 this.mapping = mapping;
@@ -242,7 +242,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * password.
+             * The access password of the target cluster.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -250,7 +250,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * routing.
+             * The routing field. The primary key field is used by default.
              */
             public Builder routing(String routing) {
                 this.routing = routing;
@@ -258,7 +258,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * settings.
+             * The settings configuration.
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -266,7 +266,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the target index.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -274,7 +274,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * username.
+             * The username of the destination cluster.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -282,7 +282,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The ID of the Virtual Private Cloud to which the cluster belongs. If the cluster access address is a public domain name, you can not specify the private endpoint.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -290,7 +290,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstanceId.
+             * The instance ID of the cluster under the Virtual Private Cloud, or the ID of the SLB instance.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -298,7 +298,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstancePort.
+             * The access port number of the cluster.
              */
             public Builder vpcInstancePort(String vpcInstancePort) {
                 this.vpcInstancePort = vpcInstancePort;
@@ -435,7 +435,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             private Integer vpcInstancePort; 
 
             /**
-             * dataSourceType.
+             * The type of the source cluster. Default value: Elasticsearch.
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -443,7 +443,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * The public domain name of the cluster.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -451,7 +451,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * Specifies the indexes to be migrated.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -459,7 +459,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * password.
+             * The access password of the source cluster.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -467,7 +467,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the specified index.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -475,7 +475,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * username.
+             * The username of the source cluster.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -483,7 +483,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The ID of the Virtual Private Cloud where the source cluster resides. If the cluster access address is a public domain name, you can not specify the private endpoint.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -491,7 +491,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstanceId.
+             * The instance ID of the cluster under the Virtual Private Cloud, or the ID of the SLB instance.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -499,7 +499,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstancePort.
+             * The access port number of the source cluster.
              */
             public Builder vpcInstancePort(Integer vpcInstancePort) {
                 this.vpcInstancePort = vpcInstancePort;
@@ -552,7 +552,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             private SourceCluster sourceCluster; 
 
             /**
-             * sinkCluster.
+             * The information about the target cluster.
              */
             public Builder sinkCluster(SinkCluster sinkCluster) {
                 this.sinkCluster = sinkCluster;
@@ -560,7 +560,7 @@ public class CreateDataTasksResponseBody extends TeaModel {
             }
 
             /**
-             * sourceCluster.
+             * The information about the source cluster.
              */
             public Builder sourceCluster(SourceCluster sourceCluster) {
                 this.sourceCluster = sourceCluster;

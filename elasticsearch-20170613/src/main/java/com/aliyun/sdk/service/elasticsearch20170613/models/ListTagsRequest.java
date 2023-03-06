@@ -69,7 +69,7 @@ public class ListTagsRequest extends Request {
         } 
 
         /**
-         * pageSize.
+         * 20
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -78,7 +78,7 @@ public class ListTagsRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * INSTANCE
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

@@ -55,7 +55,7 @@ public class ListConnectedClustersRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the current instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

@@ -85,7 +85,7 @@ public class GetTransferableNodesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -94,7 +94,7 @@ public class GetTransferableNodesRequest extends Request {
         }
 
         /**
-         * count.
+         * The number of nodes to be migrated.
          */
         public Builder count(Integer count) {
             this.putQueryParameter("count", count);
@@ -103,7 +103,7 @@ public class GetTransferableNodesRequest extends Request {
         }
 
         /**
-         * nodeType.
+         * The type of nodes.**WORKER**represents a hot node,**WORKER_WARM** represents a warm node.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);

@@ -50,7 +50,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned results.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * description.
+             * The description of the plug-in.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +154,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the plug-in.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +162,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * The source of the plug-in.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -170,7 +170,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * specificationUrl.
+             * The address of the documentation for the plug-in.
              */
             public Builder specificationUrl(String specificationUrl) {
                 this.specificationUrl = specificationUrl;
@@ -178,7 +178,16 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The status of the plug-in. Valid values:
+             * <p>
+             * 
+             * *   INSTALLED: Installed
+             * *   UNINSTALLED: Not installed
+             * *   INSTALLING: The instance is being installed.
+             * *   UNINSTALLING: The instance is being uninstalled.
+             * *   UPGRADING: The backup gateway is being upgraded.
+             * *   FAILED: Installation failed
+             * *   UNKNOWN: The cluster is lost and cannot be created.
              */
             public Builder state(String state) {
                 this.state = state;

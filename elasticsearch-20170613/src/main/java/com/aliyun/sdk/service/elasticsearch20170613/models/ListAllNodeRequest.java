@@ -69,7 +69,7 @@ public class ListAllNodeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-tl32cpgwa002l\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class ListAllNodeRequest extends Request {
         }
 
         /**
-         * extended.
+         * false
          */
         public Builder extended(Boolean extended) {
             this.putQueryParameter("extended", extended);

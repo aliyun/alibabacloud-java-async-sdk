@@ -1550,6 +1550,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("ikHotDicts")
         private java.util.List < IkHotDicts> ikHotDicts;
 
+        @NameInMap("instanceCategory")
+        private String instanceCategory;
+
         @NameInMap("instanceId")
         private String instanceId;
 
@@ -1662,6 +1665,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.haveClientNode = builder.haveClientNode;
             this.haveKibana = builder.haveKibana;
             this.ikHotDicts = builder.ikHotDicts;
+            this.instanceCategory = builder.instanceCategory;
             this.instanceId = builder.instanceId;
             this.isNewDeployment = builder.isNewDeployment;
             this.kibanaConfiguration = builder.kibanaConfiguration;
@@ -1847,6 +1851,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public java.util.List < IkHotDicts> getIkHotDicts() {
             return this.ikHotDicts;
+        }
+
+        /**
+         * @return instanceCategory
+         */
+        public String getInstanceCategory() {
+            return this.instanceCategory;
         }
 
         /**
@@ -2081,6 +2092,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean haveClientNode; 
             private Boolean haveKibana; 
             private java.util.List < IkHotDicts> ikHotDicts; 
+            private String instanceCategory; 
             private String instanceId; 
             private Boolean isNewDeployment; 
             private KibanaConfiguration kibanaConfiguration; 
@@ -2277,6 +2289,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder ikHotDicts(java.util.List < IkHotDicts> ikHotDicts) {
                 this.ikHotDicts = ikHotDicts;
+                return this;
+            }
+
+            /**
+             * 版本类型。
+             */
+            public Builder instanceCategory(String instanceCategory) {
+                this.instanceCategory = instanceCategory;
                 return this;
             }
 

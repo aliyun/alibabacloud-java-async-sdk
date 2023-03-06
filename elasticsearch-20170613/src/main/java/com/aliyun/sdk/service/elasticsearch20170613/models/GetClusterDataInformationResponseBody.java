@@ -50,7 +50,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             private java.util.List < String > typeName; 
 
             /**
-             * fields.
+             * The fields in the Mapping for the index.
              */
             public Builder fields(java.util.List < String > fields) {
                 this.fields = fields;
@@ -154,7 +154,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * indices.
+             * The index list of the cluster.
              */
             public Builder indices(java.util.List < String > indices) {
                 this.indices = indices;
@@ -162,7 +162,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * mapping.
+             * The Mapping configuration of the cluster.
              */
             public Builder mapping(String mapping) {
                 this.mapping = mapping;
@@ -170,7 +170,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * settings.
+             * The Settings of the cluster.
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -178,7 +178,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * typeName.
+             * Specifies the type of the index.
              */
             public Builder typeName(java.util.List < String > typeName) {
                 this.typeName = typeName;
@@ -231,7 +231,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             private MetaInfo metaInfo; 
 
             /**
-             * connectable.
+             * Whether it is connectable.
              */
             public Builder connectable(Boolean connectable) {
                 this.connectable = connectable;
@@ -239,7 +239,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * metaInfo.
+             * The metadata of the cluster.
              */
             public Builder metaInfo(MetaInfo metaInfo) {
                 this.metaInfo = metaInfo;

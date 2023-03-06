@@ -50,7 +50,7 @@ public class UpdateAdminPasswordResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class UpdateAdminPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the password was updated. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder result(Boolean result) {
             this.result = result;

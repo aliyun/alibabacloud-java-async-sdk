@@ -62,7 +62,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Headers.
+         * The header of the response.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The details of the index list.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -154,7 +154,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             private Long xOSSStorageSize; 
 
             /**
-             * X-Managed-Count.
+             * The total number of indexes in Cloud Hosting.
              */
             public Builder xManagedCount(Integer xManagedCount) {
                 this.xManagedCount = xManagedCount;
@@ -162,7 +162,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * X-Managed-StorageSize.
+             * The total size of the index in Cloud Hosting. Unit: bytes.
              */
             public Builder xManagedStorageSize(Long xManagedStorageSize) {
                 this.xManagedStorageSize = xManagedStorageSize;
@@ -170,7 +170,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * X-OSS-Count.
+             * The total number of indexes in the OpenStore cold phase.
              */
             public Builder xOSSCount(Integer xOSSCount) {
                 this.xOSSCount = xOSSCount;
@@ -178,7 +178,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * X-OSS-StorageSize.
+             * The total size of the OpenStore cold stage index for this instance. Unit: bytes.
              */
             public Builder xOSSStorageSize(Long xOSSStorageSize) {
                 this.xOSSStorageSize = xOSSStorageSize;
@@ -303,7 +303,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * createTime.
+             * The time when the index list was queried.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -311,7 +311,12 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * health.
+             * The running status of the index. The following three statuses are supported:
+             * <p>
+             * 
+             * *   green: healthy.
+             * *   yellow: alerts.
+             * *   red: an exception.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -319,7 +324,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * ilmExplain.
+             * The full lifecycle status of the current index.
              */
             public Builder ilmExplain(String ilmExplain) {
                 this.ilmExplain = ilmExplain;
@@ -327,7 +332,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * isManaged.
+             * This parameter is deprecated.
              */
             public Builder isManaged(String isManaged) {
                 this.isManaged = isManaged;
@@ -335,7 +340,12 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * managedStatus.
+             * The managed status of the index. The following three statuses are supported:
+             * <p>
+             * 
+             * *   following: Hosting.
+             * *   closing: The instance is being unhosted.
+             * *   closed: unmanaged.
              */
             public Builder managedStatus(String managedStatus) {
                 this.managedStatus = managedStatus;
@@ -343,7 +353,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the Elasticsearch index.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -351,7 +361,15 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * phase.
+             * The current storage lifecycle. Value meaning:
+             * <p>
+             * 
+             * *   warm: warm.
+             * *   cold: the cold phase.
+             * *   hot: hot phase.
+             * *   delete: deletes a stage.
+             * 
+             * >  If this parameter is empty, the current index is not managed by the lifecycle.
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -359,7 +377,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * The total storage space occupied by the current index. Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;

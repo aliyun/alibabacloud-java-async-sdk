@@ -50,7 +50,7 @@ public class UpdateKibanaSettingsResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class UpdateKibanaSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Return results:
+         * <p>
+         * 
+         * *   true: The Kibana language modified successfully
+         * *   false: The Kibana language modified failed
          */
         public Builder result(Boolean result) {
             this.result = result;

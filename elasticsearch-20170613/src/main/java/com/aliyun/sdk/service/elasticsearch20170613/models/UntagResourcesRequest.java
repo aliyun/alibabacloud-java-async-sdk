@@ -110,7 +110,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to delete all parts. Default value: **false** . This parameter is valid only when **TagKeys** is not specified.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -119,7 +119,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * The resource list that you want to delete.
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -128,7 +128,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Fixed to **INSTANCE** .
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -137,7 +137,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKeys.
+         * The list of tags that you want to delete. The list can contain up to 20 subitems.
          */
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

@@ -84,7 +84,7 @@ public class ValidateTransferableNodesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-nif1q9o8r0008\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class ValidateTransferableNodesRequest extends Request {
         }
 
         /**
-         * nodeType.
+         * WORKER
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);

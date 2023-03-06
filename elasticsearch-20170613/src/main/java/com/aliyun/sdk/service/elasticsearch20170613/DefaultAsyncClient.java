@@ -221,6 +221,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, note that:
+      * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
+      * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
+      *
+     */
     @Override
     public CompletableFuture<CreateDataTasksResponse> createDataTasks(CreateDataTasksRequest request) {
         try {
@@ -263,6 +269,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call the API operation, note that:
+      * *   Before you call this operation, make sure that you have fully understood the payment method and price of Logstash.
+      * *   Before you create an instance, you must complete real-name verification.
+      *
+     */
     @Override
     public CompletableFuture<CreateLogstashResponse> createLogstash(CreateLogstashRequest request) {
         try {
@@ -305,6 +317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about this API operation, see [Configure a private connection to an instance](~~279559~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateVpcEndpointResponse> createVpcEndpoint(CreateVpcEndpointRequest request) {
         try {
@@ -459,6 +475,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call an interface, note the following:
+      * After an instance is released, the physical resources used by the instance are recycled. All related data is lost and cannot be recovered. The Cloud disks attached to the instance nodes are also released. The corresponding snapshots are deleted.
+      *
+     */
     @Override
     public CompletableFuture<DeleteLogstashResponse> deleteLogstash(DeleteLogstashRequest request) {
         try {
@@ -515,6 +536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  Before installing the collector on the ACK cluster, you can call this interface to view the installation status of the Elasticsearch Operator on the target cluster.
+      *
+     */
     @Override
     public CompletableFuture<DescribeAckOperatorResponse> describeAckOperator(DescribeAckOperatorRequest request) {
         try {
@@ -641,6 +666,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The instance health condition supports the following three states:
+      * *   GREEN: The distribution of primary and secondary shards is normal.
+      * *   YELLOW: The primary shard is normally allocated, but the replica is not normally allocated.
+      * *   RED: The primary shard is not normally allocated.
+      *
+     */
     @Override
     public CompletableFuture<DescribeElasticsearchHealthResponse> describeElasticsearchHealth(DescribeElasticsearchHealthRequest request) {
         try {
@@ -977,6 +1009,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  When using a collector to collect logs from different data sources or performing elastic cluster scaling tasks (for the China site), you must first grant permissions to create service linked roles.
+      *
+     */
     @Override
     public CompletableFuture<InitializeOperationRoleResponse> initializeOperationRole(InitializeOperationRoleRequest request) {
         try {
@@ -991,6 +1027,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  Before installing the collector on the ACK cluster, you need to call this interface and install the Elasticsearch Operator. on the target cluster.
+      *
+     */
     @Override
     public CompletableFuture<InstallAckOperatorResponse> installAckOperator(InstallAckOperatorRequest request) {
         try {
@@ -1328,6 +1368,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ListDiagnosisItemsResponse> listDiagnosisItems(ListDiagnosisItemsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDiagnosisItems").setMethod(HttpMethod.GET).setPathRegex("/openapi/diagnosis/items").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDiagnosisItemsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDiagnosisItemsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ListDictInformationResponse> listDictInformation(ListDictInformationRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1355,6 +1409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **Important** To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see [Collect ECS service logs](~~146446~~).
+      *
+     */
     @Override
     public CompletableFuture<ListEcsInstancesResponse> listEcsInstances(ListEcsInstancesRequest request) {
         try {
@@ -1537,6 +1595,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  Pipeline management is divided into configuration file management and Kibana pipeline management. Kibana pipeline management is not open in some regional consoles.
+      *
+     */
     @Override
     public CompletableFuture<ListPipelineIdsResponse> listPipelineIds(ListPipelineIdsRequest request) {
         try {
@@ -1579,6 +1641,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  Shard recovery is the process of synchronizing from primary to secondary shards. After the restoration is complete, the secondary parts are available for searching.
+      *
+     */
     @Override
     public CompletableFuture<ListShardRecoveriesResponse> listShardRecoveries(ListShardRecoveriesRequest request) {
         try {
@@ -1649,6 +1715,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:
+      * *   The error message returned because the current account is in a zone that has sufficient resources.
+      *     After migrating nodes with current specifications to another zone, you need to manually [upgrade cluster](~~96650~~) because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.
+      * *   The cluster is in the healthy state.
+      *     Can be passed`  GET _cat/health?v  `command to view the health status of the cluster.
+      *
+     */
     @Override
     public CompletableFuture<MigrateToOtherZoneResponse> migrateToOtherZone(MigrateToOtherZoneRequest request) {
         try {
@@ -1691,6 +1765,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, note that:
+      * *   Before maintenance is performed, the system sends SMS messages and emails to the contacts listed in your Alibaba Cloud account.
+      * *   On the day of instance maintenance, to ensure the stability of the entire maintenance process, the instance enters the Active state before it can be maintenance window. In this case, you can still access the cluster and perform query operations such as performance monitoring. However, you cannot perform modification operations such as restart and configuration upgrades for the cluster.
+      * *   The instance connection may be disconnected within the available maintenance window. Make sure that the application has a reconnection mechanism.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceMaintainTimeResponse> modifyInstanceMaintainTime(ModifyInstanceMaintainTimeRequest request) {
         try {
@@ -1747,6 +1828,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  To ensure data security, we recommend that you enable HTTPS.
+      *
+     */
     @Override
     public CompletableFuture<OpenHttpsResponse> openHttps(OpenHttpsRequest request) {
         try {
@@ -1859,6 +1944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.
+      *
+     */
     @Override
     public CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request) {
         try {
@@ -1943,6 +2032,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * Before you remove data nodes, you must migrate the data stored on them to other nodes.
+      *
+     */
     @Override
     public CompletableFuture<ShrinkNodeResponse> shrinkNode(ShrinkNodeRequest request) {
         try {
@@ -2111,6 +2205,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   You can only delete user tags.
+      * > User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.
+      * *   If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.
+      *
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -2125,6 +2226,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * If the instance is in the Activating, Invalid, or Inactive state, the information cannot be updated.
+      *
+     */
     @Override
     public CompletableFuture<UpdateAdminPasswordResponse> updateAdminPassword(UpdateAdminPasswordRequest request) {
         try {
@@ -2153,6 +2259,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Note the following when calling this interface:
+      * *   Alibaba Cloud Elasticsearch V5.0 clusters do not support the analysis-aliws plug-in.
+      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
+      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      *
+     */
     @Override
     public CompletableFuture<UpdateAliwsDictResponse> updateAliwsDict(UpdateAliwsDictRequest request) {
         try {
@@ -2269,6 +2382,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When calling this interface, note:
+      * *   If the dictionary file comes from OSS, make sure that the OSS storage space is publicly readable.
+      * *   If the uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this interface is called.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDictResponse> updateDict(UpdateDictRequest request) {
         try {
@@ -2311,6 +2430,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Note the following when calling this interface:
+      * Currently, this operation only allows you to delete Logstash extension files that have been uploaded in the console. If you want to add or modify an identifier, perform the operations in the console.
+      *
+     */
     @Override
     public CompletableFuture<UpdateExtendfilesResponse> updateExtendfiles(UpdateExtendfilesRequest request) {
         try {
@@ -2325,6 +2449,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Note the following when calling this interface:
+      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
+      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      *
+     */
     @Override
     public CompletableFuture<UpdateHotIkDictsResponse> updateHotIkDicts(UpdateHotIkDictsRequest request) {
         try {
@@ -2367,6 +2497,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   If the instance is in the Activating, Invalid, or Inactive state, you cannot change the configurations.
+      * *   If the indexes of your cluster do not have replica shards, the load of the cluster is excessively high, and large amounts of data are written to or queried in your cluster, access to the cluster may time out during a cluster configuration upgrade or downgrade. We recommend that you configure an access retry mechanism for your client before you upgrade the configuration of your cluster. This reduces the impact on your business.
+      * *   You can change the configurations of only one type of node at a time (data node, dedicated master node, cold data node, coordinator node, Kibana node, and elastic node).
+      * *   Due to the health and stability of your cluster, Alibaba Cloud Elasticsearch does not support the purchase of 1-core 2 GB instances, 2-core 2 GB instances for dedicated master nodes, and 7.4 instances since May 2021. If you have confirmed that the purchased specifications are no longer available for sale, you must perform the following operations:
+      *     *   For the 1-core 2 GB and 2-core 2 GB specifications, we recommend that you upgrade to the stable sales specifications that are available on the buy page in advance. For more information about the sales specifications available on the buy page, see [Purchase page parameters](~~163243~~).
+      *     *   If your cluster is of V7.4, purchase a V7.10 cluster and migrate data from the original cluster to the V7.10 cluster.
+      * For more information, see [Upgrade a cluster](~~96650~~) and [Downgrade a cluster](~~198887~~).
+      *
+     */
     @Override
     public CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request) {
         try {
@@ -2395,6 +2536,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.
+      *
+     */
     @Override
     public CompletableFuture<UpdateInstanceSettingsResponse> updateInstanceSettings(UpdateInstanceSettingsRequest request) {
         try {
@@ -2423,6 +2569,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Before you call this operation, make sure that the instance is not in the activating, invalid, or inactive state.
+      * *   You can update the whitelist in two ways: IP address whitelist list and IP address whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters, as follows:
+      *     *   IP address whitelist list: kibanaIPWhitelist
+      *     *   IP address whitelist groups: modifyMode and whiteIpGroup
+      * *   Public network access whitelists do not support configuring private IP addresses. Private network access whitelists do not support configuring public IP addresses.
+      *
+     */
     @Override
     public CompletableFuture<UpdateKibanaWhiteIpsResponse> updateKibanaWhiteIps(UpdateKibanaWhiteIpsRequest request) {
         try {
@@ -2437,6 +2591,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * If the instance is in the Activating, Invalid, or Inactive state, you cannot modify the instance information.
+      *
+     */
     @Override
     public CompletableFuture<UpdateLogstashResponse> updateLogstash(UpdateLogstashRequest request) {
         try {
@@ -2465,6 +2624,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * The instance name cannot be modified when the instance is in the activating, invalid, or inactive state.
+      *
+     */
     @Override
     public CompletableFuture<UpdateLogstashDescriptionResponse> updateLogstashDescription(UpdateLogstashDescriptionRequest request) {
         try {
@@ -2479,6 +2643,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.
+      *
+     */
     @Override
     public CompletableFuture<UpdateLogstashSettingsResponse> updateLogstashSettings(UpdateLogstashSettingsRequest request) {
         try {
@@ -2493,6 +2662,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  Pipeline management methods include configuration file management and Kibana pipeline management. Currently, Kibana pipeline management is no longer supported in the console. You can only use this feature through APIs.
+      *
+     */
     @Override
     public CompletableFuture<UpdatePipelineManagementConfigResponse> updatePipelineManagementConfig(UpdatePipelineManagementConfigRequest request) {
         try {
@@ -2521,6 +2694,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If the instance is in the Active (activating), Invalid (invalid), or Inactive (inactive) state, you cannot update the VPC whitelist of the instance.
+      * *   You can update the whitelist in two ways: IP address whitelist list and IP address whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters, as follows:
+      *     *   IP address whitelist list: privateNetworkIpWhiteList
+      *     *   IP address whitelist groups: modifyMode and whiteIpGroup
+      * *   Public network access whitelists do not support configuring private IP addresses. Private network access whitelists do not support configuring public IP addresses.
+      *
+     */
     @Override
     public CompletableFuture<UpdatePrivateNetworkWhiteIpsResponse> updatePrivateNetworkWhiteIps(UpdatePrivateNetworkWhiteIpsRequest request) {
         try {
@@ -2535,6 +2716,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.
+      *
+     */
     @Override
     public CompletableFuture<UpdatePublicNetworkResponse> updatePublicNetwork(UpdatePublicNetworkRequest request) {
         try {
@@ -2549,6 +2735,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If the instance is in the Activating, Invalid, or Inactive state, the public endpoint whitelist of the instance cannot be updated.
+      * *   You can update the whitelist in two ways: IP address whitelist list and IP address whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters, as follows:
+      *     *   IP address whitelist list: publicIpWhitelist
+      *     *   IP address whitelist groups: modifyMode and whiteIpGroup
+      * *   Public network access whitelists do not support configuring private IP addresses. Private network access whitelists do not support configuring public IP addresses.
+      *
+     */
     @Override
     public CompletableFuture<UpdatePublicWhiteIpsResponse> updatePublicWhiteIps(UpdatePublicWhiteIpsRequest request) {
         try {
@@ -2591,6 +2785,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Note the following when calling this interface:
+      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
+      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      *
+     */
     @Override
     public CompletableFuture<UpdateSynonymsDictsResponse> updateSynonymsDicts(UpdateSynonymsDictsRequest request) {
         try {
@@ -2619,6 +2819,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If the instance is in the Activating, Invalid, or Inactive state, the information cannot be updated.
+      * *   You can update the whitelist in two ways: IP address whitelist list and IP address whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters, as follows:
+      *     *   IP address whitelist: esIPWhitelist
+      *     *   IP address whitelist groups: modifyMode and whiteIpGroup
+      * *   Public network access whitelists do not support configuring private IP addresses. Private network access whitelists do not support configuring public IP addresses.
+      *
+     */
     @Override
     public CompletableFuture<UpdateWhiteIpsResponse> updateWhiteIps(UpdateWhiteIpsRequest request) {
         try {
@@ -2661,6 +2869,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  To monitor X-Pack for Logstash, you must configure Elasticsearch instance. After the configuration, you can monitor the Logstash instance in Kibana of the corresponding Elasticsearch instance.
+      *
+     */
     @Override
     public CompletableFuture<ValidateConnectionResponse> validateConnection(ValidateConnectionRequest request) {
         try {
@@ -2689,6 +2901,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  Before you use the collector tool to collect logs from different data sources, you must be authorized to create service linked roles. You can call this operation to verify that it has been created.
+      *
+     */
     @Override
     public CompletableFuture<ValidateSlrPermissionResponse> validateSlrPermission(ValidateSlrPermissionRequest request) {
         try {
@@ -2717,11 +2933,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call the API operation, note that:
+      * *   Make sure that you have read and understand the billing and pricing standards of Alibaba Cloud Elasticsearch.
+      *     For more information, see [Alibaba Cloud Elasticsearch pricing](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.7.657d2cbeRoSPCd#/elasticsearch/detail).
+      * *   Before you create an instance, you must complete real-name verification.
+      *     .
+      * *   You do not need to specify a zone when you create an instance. By default, the instance is in the same zone as the selected VPC.
+      *
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("createInstance").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("createInstance").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInstanceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

@@ -141,7 +141,7 @@ public class ListLogstashLogRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * ls-cn-v0h1kzca\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -150,7 +150,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * beginTime.
+         * 1531910852074
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("beginTime", beginTime);
@@ -159,7 +159,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * endTime.
+         * 1531910852074
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -168,7 +168,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * page.
+         * 1
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -177,7 +177,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * query.
+         * host:10.7.xx.xx AND level:info AND content:opening
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -186,7 +186,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * size.
+         * 20
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -195,7 +195,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * type.
+         * LOGSTASH_INSTANCE_LOG
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

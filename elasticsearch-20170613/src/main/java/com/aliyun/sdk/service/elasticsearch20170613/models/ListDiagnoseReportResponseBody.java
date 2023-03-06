@@ -62,7 +62,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Headers.
+         * The header of the response.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned results.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * X-Total-Count.
+             * The total number of entries returned.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -207,7 +207,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * desc.
+             * The description of the diagnostic item.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -215,7 +215,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The full name of the diagnostic item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +223,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * The diagnosis.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -231,7 +231,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * suggest.
+             * The suggestion for the diagnosis.
              */
             public Builder suggest(String suggest) {
                 this.suggest = suggest;
@@ -239,7 +239,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the diagnostic result. Valid values:
+             * <p>
+             * 
+             * *   TEXT: text description
+             * *   CONSOLE_API: console-triggered
+             * *   ES_API: API triggered
              */
             public Builder type(String type) {
                 this.type = type;
@@ -304,7 +309,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String item; 
 
             /**
-             * detail.
+             * The details of the diagnostic item.
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -312,7 +317,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * health.
+             * The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -320,7 +325,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * item.
+             * The name of the item.
              */
             public Builder item(String item) {
                 this.item = item;
@@ -433,7 +438,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String trigger; 
 
             /**
-             * createTime.
+             * The timestamp when the report was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -441,7 +446,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * diagnoseItems.
+             * Reports the list of diagnostic item information.
              */
             public Builder diagnoseItems(java.util.List < DiagnoseItems> diagnoseItems) {
                 this.diagnoseItems = diagnoseItems;
@@ -449,7 +454,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * health.
+             * The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -457,7 +462,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the instance for diagnosis.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -465,7 +470,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * reportId.
+             * The ID of the report.
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -473,7 +478,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -481,7 +486,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * trigger.
+             * The trigger mode of health diagnostics. Valid values:
+             * <p>
+             * 
+             * *   SYSTEM: The system is automatically triggered.
+             * *   INNER: internal trigger
+             * *   USER: manually triggered by the user
              */
             public Builder trigger(String trigger) {
                 this.trigger = trigger;

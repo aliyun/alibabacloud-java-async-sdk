@@ -111,7 +111,7 @@ public class ListPluginsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-nif1q9o8r0008\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +120,7 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * name.
+         * analysis-ik
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -129,7 +129,7 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * page.
+         * 1
          */
         public Builder page(String page) {
             this.putQueryParameter("page", page);
@@ -138,7 +138,7 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * size.
+         * 10
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -147,7 +147,7 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * source.
+         * SYSTEM
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);

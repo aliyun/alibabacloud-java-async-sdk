@@ -111,7 +111,7 @@ public class CreateVpcEndpointRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-2r429tctl000d\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +120,7 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,7 +147,7 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * false
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

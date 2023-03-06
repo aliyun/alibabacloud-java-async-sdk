@@ -50,7 +50,7 @@ public class RestartInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RestartInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * fileSize.
+             * The size of the Dictionary File. Unit: bytes.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -142,7 +142,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the dictionary file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -150,7 +150,12 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * The source type. Valid values:
+             * <p>
+             * 
+             * *   OSS: OSS open storage (need to ensure that OSS storage space is public readable.)
+             * *   ORIGIN: Open source Elasticsearch
+             * *   UPLOAD: Uploaded files
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -158,7 +163,13 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the dictionary. Valid values:
+             * <p>
+             * 
+             * *   STOP: The STOP word.
+             * *   MAIN: MAIN Dictionary
+             * *   SYNONYMS: SYNONYMS
+             * *   ALI_WS: an Alibaba Dictionary.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -235,7 +246,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of performance metrics.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -243,7 +254,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -251,7 +262,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -259,7 +270,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The specification of data nodes.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -336,7 +347,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes in the cluster.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -344,7 +355,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -352,7 +363,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. This tool only supports cloud_ssd (cloud SSD) disks.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -360,7 +371,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The node specifications of the cluster.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -437,7 +448,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * type.
+             * The network type. Only Virtual Private Cloud (VPC) is supported.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -445,7 +456,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -453,7 +464,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vsArea.
+             * The zone where the instance is deployed.
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -461,7 +472,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * The ID of the vSwitch associated with the specified VPC.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -526,7 +537,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * disk.
+             * The storage space size per data node. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -534,7 +545,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. Valid values: cloud_ssd and cloud_efficiency.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -542,7 +553,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The specification of data nodes.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -619,7 +630,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * fileSize.
+             * The size of the Dictionary File. Unit: bytes.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -627,7 +638,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the dictionary file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -635,7 +646,12 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * The source type. Valid values:
+             * <p>
+             * 
+             * *   OSS:OSS open storage (the OSS storage space must be publicly readable.)
+             * *   ORIGIN: open-source Elasticsearch
+             * *   UPLOAD
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -643,7 +659,13 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the dictionary. Valid values:
+             * <p>
+             * 
+             * *   STOP: The STOP word.
+             * *   MAIN: MAIN Dictionary
+             * *   SYNONYMS: SYNONYMS
+             * *   ALI_WS: an Alibaba Dictionary.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -900,7 +922,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             private String updatedAt; 
 
             /**
-             * createdAt.
+             * The time when the instance was created.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -908,7 +930,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The name of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -916,7 +938,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * dictList.
+             * The configuration of the IK dictionaries.
              */
             public Builder dictList(java.util.List < DictList> dictList) {
                 this.dictList = dictList;
@@ -924,7 +946,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * domain.
+             * The intranet access address of the instance.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -932,7 +954,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * esVersion.
+             * The version of the instance.
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -940,7 +962,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -948,7 +970,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaConfiguration.
+             * The configuration of Kibana nodes.
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -956,7 +978,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaDomain.
+             * The public network access address of Kibana.
              */
             public Builder kibanaDomain(String kibanaDomain) {
                 this.kibanaDomain = kibanaDomain;
@@ -964,7 +986,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaPort.
+             * The public port of the Kibana network.
              */
             public Builder kibanaPort(Integer kibanaPort) {
                 this.kibanaPort = kibanaPort;
@@ -972,7 +994,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * masterConfiguration.
+             * The configuration of dedicated master nodes.
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -980,7 +1002,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfig.
+             * The network configuration.
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -988,7 +1010,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeAmount.
+             * The number of data nodes.
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -996,7 +1018,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeSpec.
+             * The configuration of data nodes.
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1004,7 +1026,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * The billing method of the created ECS instance.
+             * <p>
+             * 
+             * Valid values: prepaid and postpaid.
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -1012,7 +1037,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * publicDomain.
+             * The public network access address.
              */
             public Builder publicDomain(String publicDomain) {
                 this.publicDomain = publicDomain;
@@ -1020,7 +1045,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * publicPort.
+             * The public network port.
              */
             public Builder publicPort(Integer publicPort) {
                 this.publicPort = publicPort;
@@ -1028,7 +1053,10 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The state of the cluster.
+             * <p>
+             * 
+             * Supported: active (normal), activating (initializing), inactive (blocked), and invalid (expired).
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1036,7 +1064,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * synonymsDicts.
+             * The configuration of the synonym dictionaries.
              */
             public Builder synonymsDicts(java.util.List < SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;
@@ -1044,7 +1072,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * The time when the instance was last updated.
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

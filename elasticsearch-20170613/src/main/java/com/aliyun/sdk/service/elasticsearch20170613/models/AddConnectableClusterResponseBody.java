@@ -50,7 +50,7 @@ public class AddConnectableClusterResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class AddConnectableClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The following information is returned:
+         * <p>
+         * 
+         * *   true: The configuration is successful.
+         * *   false: The configuration failed.
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -7,18 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListTagsResponseBody} extends {@link TeaModel}
+ * {@link ListDiagnosisItemsResponseBody} extends {@link TeaModel}
  *
- * <p>ListTagsResponseBody</p>
+ * <p>ListDiagnosisItemsResponseBody</p>
  */
-public class ListTagsResponseBody extends TeaModel {
+public class ListDiagnosisItemsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Result")
     private java.util.List < Result> result;
 
-    private ListTagsResponseBody(Builder builder) {
+    private ListDiagnosisItemsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.result = builder.result;
     }
@@ -27,7 +27,7 @@ public class ListTagsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListTagsResponseBody create() {
+    public static ListDiagnosisItemsResponseBody create() {
         return builder().build();
     }
 
@@ -50,7 +50,7 @@ public class ListTagsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,29 +58,33 @@ public class ListTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * Result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
             return this;
         }
 
-        public ListTagsResponseBody build() {
-            return new ListTagsResponseBody(this);
+        public ListDiagnosisItemsResponseBody build() {
+            return new ListDiagnosisItemsResponseBody(this);
         } 
 
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("TagKey")
-        private String tagKey;
+        @NameInMap("description")
+        private String description;
 
-        @NameInMap("TagValue")
-        private String tagValue;
+        @NameInMap("key")
+        private String key;
+
+        @NameInMap("name")
+        private String name;
 
         private Result(Builder builder) {
-            this.tagKey = builder.tagKey;
-            this.tagValue = builder.tagValue;
+            this.description = builder.description;
+            this.key = builder.key;
+            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -92,36 +96,52 @@ public class ListTagsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagKey
+         * @return description
          */
-        public String getTagKey() {
-            return this.tagKey;
+        public String getDescription() {
+            return this.description;
         }
 
         /**
-         * @return tagValue
+         * @return key
          */
-        public String getTagValue() {
-            return this.tagValue;
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
         }
 
         public static final class Builder {
-            private String tagKey; 
-            private String tagValue; 
+            private String description; 
+            private String key; 
+            private String name; 
 
             /**
-             * The key of the tag.
+             * 诊断项说明
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
             /**
-             * The tag value of the ENI.
+             * 诊断项标识。
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 诊断项名称
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 

@@ -50,7 +50,7 @@ public class RestartLogstashResponseBody extends TeaModel {
         private Logstash result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RestartLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The details of the current instance.
          */
         public Builder result(Logstash result) {
             this.result = result;

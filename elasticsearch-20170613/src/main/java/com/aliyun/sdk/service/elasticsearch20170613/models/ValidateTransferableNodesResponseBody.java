@@ -50,7 +50,7 @@ public class ValidateTransferableNodesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ValidateTransferableNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Returned results:
+         * <p>
+         * 
+         * *   true: can be migrated
+         * *   false: cannot be migrated.
          */
         public Builder result(Boolean result) {
             this.result = result;

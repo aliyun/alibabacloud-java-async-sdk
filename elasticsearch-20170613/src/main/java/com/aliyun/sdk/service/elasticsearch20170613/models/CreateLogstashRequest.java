@@ -40,6 +40,10 @@ public class CreateLogstashRequest extends Request {
     private String paymentType;
 
     @Body
+    @NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @Body
     @NameInMap("version")
     @Validation(required = true)
     private String version;
@@ -56,6 +60,7 @@ public class CreateLogstashRequest extends Request {
         this.nodeSpec = builder.nodeSpec;
         this.paymentInfo = builder.paymentInfo;
         this.paymentType = builder.paymentType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.version = builder.version;
         this.clientToken = builder.clientToken;
     }
@@ -116,6 +121,13 @@ public class CreateLogstashRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return version
      */
     public String getVersion() {
@@ -136,6 +148,7 @@ public class CreateLogstashRequest extends Request {
         private NodeSpec nodeSpec; 
         private PaymentInfo paymentInfo; 
         private String paymentType; 
+        private String resourceGroupId; 
         private String version; 
         private String clientToken; 
 
@@ -151,12 +164,13 @@ public class CreateLogstashRequest extends Request {
             this.nodeSpec = request.nodeSpec;
             this.paymentInfo = request.paymentInfo;
             this.paymentType = request.paymentType;
+            this.resourceGroupId = request.resourceGroupId;
             this.version = request.version;
             this.clientToken = request.clientToken;
         } 
 
         /**
-         * description.
+         * Logstash实例别名。
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -210,6 +224,15 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
+         * Logstash实例所属资源组。
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * version.
          */
         public Builder version(String version) {
@@ -219,7 +242,7 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

@@ -50,7 +50,7 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * instanceId.
+             * Reference instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -142,7 +142,7 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * repoPath.
+             * The address of the repository.
              */
             public Builder repoPath(String repoPath) {
                 this.repoPath = repoPath;
@@ -150,7 +150,7 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * snapWarehouse.
+             * Reference warehouse name.
              */
             public Builder snapWarehouse(String snapWarehouse) {
                 this.snapWarehouse = snapWarehouse;
@@ -158,7 +158,7 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * Reference warehouse status. available indicates that it is valid. unavailable indicates that it is invalid.
              */
             public Builder status(String status) {
                 this.status = status;

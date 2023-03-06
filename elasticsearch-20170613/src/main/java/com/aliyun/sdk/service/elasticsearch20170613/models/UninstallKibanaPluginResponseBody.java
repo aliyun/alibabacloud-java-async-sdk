@@ -50,7 +50,7 @@ public class UninstallKibanaPluginResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UninstallKibanaPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result shows a list of uninstalled plug-ins.
          */
         public Builder result(java.util.List < String > result) {
             this.result = result;

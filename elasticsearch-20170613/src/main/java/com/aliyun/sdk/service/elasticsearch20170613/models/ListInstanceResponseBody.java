@@ -62,7 +62,7 @@ public class ListInstanceResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Headers.
+         * The header of the response.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned data.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * X-Total-Count.
+             * The number of entries returned per page.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -195,7 +195,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -203,7 +203,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -211,7 +211,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. Only ultra disks (cloud_efficiency) are supported.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -219,7 +219,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -308,7 +308,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -316,7 +316,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -324,7 +324,11 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskEncryption.
+             * Specifies whether to enable disk encryption for the node. Valid values:
+             * <p>
+             * 
+             * *   true: enables instant image cache.
+             * *   false: disables reuse of image cache layers.
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -332,7 +336,12 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. Valid values:
+             * <p>
+             * 
+             * *   cloud_ssd: SSD.
+             * *   cloud_essd: ESSD.
+             * *   cloud_efficiency: ultra disk
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -340,7 +349,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -417,7 +426,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -425,7 +434,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -433,7 +442,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -441,7 +450,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -518,7 +527,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -526,7 +535,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -534,7 +543,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -542,7 +551,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -551,6 +560,87 @@ public class ListInstanceResponseBody extends TeaModel {
 
             public MasterConfiguration build() {
                 return new MasterConfiguration(this);
+            } 
+
+        } 
+
+    }
+    public static class WhiteIpGroupList extends TeaModel {
+        @NameInMap("groupName")
+        private String groupName;
+
+        @NameInMap("ips")
+        private java.util.List < String > ips;
+
+        @NameInMap("whiteIpType")
+        private String whiteIpType;
+
+        private WhiteIpGroupList(Builder builder) {
+            this.groupName = builder.groupName;
+            this.ips = builder.ips;
+            this.whiteIpType = builder.whiteIpType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WhiteIpGroupList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return ips
+         */
+        public java.util.List < String > getIps() {
+            return this.ips;
+        }
+
+        /**
+         * @return whiteIpType
+         */
+        public String getWhiteIpType() {
+            return this.whiteIpType;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private java.util.List < String > ips; 
+            private String whiteIpType; 
+
+            /**
+             * 分组名。
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * 网络白名单列表。
+             */
+            public Builder ips(java.util.List < String > ips) {
+                this.ips = ips;
+                return this;
+            }
+
+            /**
+             * 网络类型。PRIVATE_ES，ES私网。PUBLIC_KIBANA。Kibana公网。PUBLIC_ES，ES公网。PRIVATE_KIBANA，Kibana私网。
+             */
+            public Builder whiteIpType(String whiteIpType) {
+                this.whiteIpType = whiteIpType;
+                return this;
+            }
+
+            public WhiteIpGroupList build() {
+                return new WhiteIpGroupList(this);
             } 
 
         } 
@@ -569,11 +659,15 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("vswitchId")
         private String vswitchId;
 
+        @NameInMap("whiteIpGroupList")
+        private java.util.List < WhiteIpGroupList> whiteIpGroupList;
+
         private NetworkConfig(Builder builder) {
             this.type = builder.type;
             this.vpcId = builder.vpcId;
             this.vsArea = builder.vsArea;
             this.vswitchId = builder.vswitchId;
+            this.whiteIpGroupList = builder.whiteIpGroupList;
         }
 
         public static Builder builder() {
@@ -612,14 +706,22 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.vswitchId;
         }
 
+        /**
+         * @return whiteIpGroupList
+         */
+        public java.util.List < WhiteIpGroupList> getWhiteIpGroupList() {
+            return this.whiteIpGroupList;
+        }
+
         public static final class Builder {
             private String type; 
             private String vpcId; 
             private String vsArea; 
             private String vswitchId; 
+            private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
 
             /**
-             * type.
+             * The network type. Only Virtual Private Cloud (VPC) is supported.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -627,7 +729,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The VPC ID of the cluster.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -635,7 +737,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vsArea.
+             * The zone where the cluster resides.
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -643,10 +745,18 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * The vSwitch ID of the cluster.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * 集群公私网网络白名单分组设置。
+             */
+            public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
+                this.whiteIpGroupList = whiteIpGroupList;
                 return this;
             }
 
@@ -732,7 +842,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * disk.
+             * The storage space of the node. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -740,7 +850,11 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskEncryption.
+             * Specifies whether to use disk encryption. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -748,7 +862,11 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type of the node. Valid values:
+             * <p>
+             * 
+             * *   cloud_ssd: standard SSD
+             * *   cloud_efficiency: ultra disk
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -756,7 +874,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * performanceLevel.
+             * The performance level of the ESSD. This parameter is required when the diskType parameter is set to cloud_essd. Valid values: PL1, PL2, and PL3.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -764,7 +882,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -817,7 +935,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * tagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -825,7 +943,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -873,6 +991,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("kibanaConfiguration")
         private KibanaConfiguration kibanaConfiguration;
 
+        @NameInMap("kibanaIPWhitelist")
+        private java.util.List < String > kibanaIPWhitelist;
+
+        @NameInMap("kibanaPrivateIPWhitelist")
+        private java.util.List < String > kibanaPrivateIPWhitelist;
+
         @NameInMap("masterConfiguration")
         private MasterConfiguration masterConfiguration;
 
@@ -890,6 +1014,12 @@ public class ListInstanceResponseBody extends TeaModel {
 
         @NameInMap("postpaidServiceStatus")
         private String postpaidServiceStatus;
+
+        @NameInMap("privateNetworkIpWhiteList")
+        private java.util.List < String > privateNetworkIpWhiteList;
+
+        @NameInMap("publicIpWhitelist")
+        private java.util.List < String > publicIpWhitelist;
 
         @NameInMap("resourceGroupId")
         private String resourceGroupId;
@@ -921,12 +1051,16 @@ public class ListInstanceResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.isNewDeployment = builder.isNewDeployment;
             this.kibanaConfiguration = builder.kibanaConfiguration;
+            this.kibanaIPWhitelist = builder.kibanaIPWhitelist;
+            this.kibanaPrivateIPWhitelist = builder.kibanaPrivateIPWhitelist;
             this.masterConfiguration = builder.masterConfiguration;
             this.networkConfig = builder.networkConfig;
             this.nodeAmount = builder.nodeAmount;
             this.nodeSpec = builder.nodeSpec;
             this.paymentType = builder.paymentType;
             this.postpaidServiceStatus = builder.postpaidServiceStatus;
+            this.privateNetworkIpWhiteList = builder.privateNetworkIpWhiteList;
+            this.publicIpWhitelist = builder.publicIpWhitelist;
             this.resourceGroupId = builder.resourceGroupId;
             this.serviceVpc = builder.serviceVpc;
             this.status = builder.status;
@@ -1021,6 +1155,20 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return kibanaIPWhitelist
+         */
+        public java.util.List < String > getKibanaIPWhitelist() {
+            return this.kibanaIPWhitelist;
+        }
+
+        /**
+         * @return kibanaPrivateIPWhitelist
+         */
+        public java.util.List < String > getKibanaPrivateIPWhitelist() {
+            return this.kibanaPrivateIPWhitelist;
+        }
+
+        /**
          * @return masterConfiguration
          */
         public MasterConfiguration getMasterConfiguration() {
@@ -1060,6 +1208,20 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         public String getPostpaidServiceStatus() {
             return this.postpaidServiceStatus;
+        }
+
+        /**
+         * @return privateNetworkIpWhiteList
+         */
+        public java.util.List < String > getPrivateNetworkIpWhiteList() {
+            return this.privateNetworkIpWhiteList;
+        }
+
+        /**
+         * @return publicIpWhitelist
+         */
+        public java.util.List < String > getPublicIpWhitelist() {
+            return this.publicIpWhitelist;
         }
 
         /**
@@ -1116,12 +1278,16 @@ public class ListInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private String isNewDeployment; 
             private KibanaConfiguration kibanaConfiguration; 
+            private java.util.List < String > kibanaIPWhitelist; 
+            private java.util.List < String > kibanaPrivateIPWhitelist; 
             private MasterConfiguration masterConfiguration; 
             private NetworkConfig networkConfig; 
             private Integer nodeAmount; 
             private NodeSpec nodeSpec; 
             private String paymentType; 
             private String postpaidServiceStatus; 
+            private java.util.List < String > privateNetworkIpWhiteList; 
+            private java.util.List < String > publicIpWhitelist; 
             private String resourceGroupId; 
             private Boolean serviceVpc; 
             private String status; 
@@ -1130,7 +1296,11 @@ public class ListInstanceResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * advancedDedicateMaster.
+             * Specifies whether to include dedicated master nodes. Valid values:
+             * <p>
+             * 
+             * *   true: The files contain data that is dumped to the IA storage medium.
+             * *   false: The files do not contain data that is dumped to the IA storage medium.
              */
             public Builder advancedDedicateMaster(Boolean advancedDedicateMaster) {
                 this.advancedDedicateMaster = advancedDedicateMaster;
@@ -1138,7 +1308,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * clientNodeConfiguration.
+             * Coordination node configuration.
              */
             public Builder clientNodeConfiguration(ClientNodeConfiguration clientNodeConfiguration) {
                 this.clientNodeConfiguration = clientNodeConfiguration;
@@ -1146,7 +1316,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * The time when the node is created.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -1154,7 +1324,11 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * dedicateMaster.
+             * Specifies whether to include dedicated master nodes (obsolete). Valid values:
+             * <p>
+             * 
+             * *   true: The files contain data that is dumped to the IA storage medium.
+             * *   false: The files do not contain data that is dumped to the IA storage medium.
              */
             public Builder dedicateMaster(Boolean dedicateMaster) {
                 this.dedicateMaster = dedicateMaster;
@@ -1162,7 +1336,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The name of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1170,7 +1344,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * elasticDataNodeConfiguration.
+             * The configurations of elastic data nodes.
              */
             public Builder elasticDataNodeConfiguration(ElasticDataNodeConfiguration elasticDataNodeConfiguration) {
                 this.elasticDataNodeConfiguration = elasticDataNodeConfiguration;
@@ -1178,7 +1352,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * esVersion.
+             * The edition of the dedicated KMS instance.
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -1186,7 +1360,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * extendConfigs.
+             * The configuration of cluster extension parameters.
              */
             public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -1194,7 +1368,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1202,7 +1376,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * isNewDeployment.
+             * Specifies whether to deploy the new architecture.
              */
             public Builder isNewDeployment(String isNewDeployment) {
                 this.isNewDeployment = isNewDeployment;
@@ -1210,7 +1384,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaConfiguration.
+             * The configuration of Kibana nodes.
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -1218,7 +1392,23 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * masterConfiguration.
+             * 集群Kibana节点公网访问白名单。
+             */
+            public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
+                this.kibanaIPWhitelist = kibanaIPWhitelist;
+                return this;
+            }
+
+            /**
+             * 集群Kibana节点私网访问白名单。
+             */
+            public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
+                this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
+                return this;
+            }
+
+            /**
+             * The configuration of dedicated master nodes.
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -1226,7 +1416,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfig.
+             * The network configurations.
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -1234,7 +1424,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeAmount.
+             * The number of data nodes.
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -1242,7 +1432,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeSpec.
+             * The configuration of data nodes.
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1250,7 +1440,11 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **prepaid**: subscription
+             * *   **postpaid**: pay-as-you-go
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -1258,7 +1452,12 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * postpaidServiceStatus.
+             * The status of the pay-as-you-go service that is overlaid on a subscription instance. Valid values:
+             * <p>
+             * 
+             * *   **active**: normal
+             * *   **closed**: Close
+             * *   **indebt**: Overdue payments are frozen
              */
             public Builder postpaidServiceStatus(String postpaidServiceStatus) {
                 this.postpaidServiceStatus = postpaidServiceStatus;
@@ -1266,7 +1465,23 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * Elasticsearch集群私网访问白名单。
+             */
+            public Builder privateNetworkIpWhiteList(java.util.List < String > privateNetworkIpWhiteList) {
+                this.privateNetworkIpWhiteList = privateNetworkIpWhiteList;
+                return this;
+            }
+
+            /**
+             * Elasticsearch集群公网访问白名单。
+             */
+            public Builder publicIpWhitelist(java.util.List < String > publicIpWhitelist) {
+                this.publicIpWhitelist = publicIpWhitelist;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1274,7 +1489,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * serviceVpc.
+             * Indicates whether it is a service VPC.
              */
             public Builder serviceVpc(Boolean serviceVpc) {
                 this.serviceVpc = serviceVpc;
@@ -1282,7 +1497,13 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   active: normal
+             * *   activating: taking effect
+             * *   inactive: frozen
+             * *   invalid: invalid
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1290,7 +1511,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * The tags of the instance. Each tag is a key-value pair.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1298,7 +1519,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * The time when the instance was last updated.
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -1306,7 +1527,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstanceId.
+             * The VPC ID of the cluster.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

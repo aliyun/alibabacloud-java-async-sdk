@@ -245,7 +245,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

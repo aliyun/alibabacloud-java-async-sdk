@@ -55,7 +55,7 @@ public class GetOpenStoreUsageRequest extends Request {
         } 
 
         /**
-         * 实例id
+         * es-cn-zvp2cqw1f0020\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

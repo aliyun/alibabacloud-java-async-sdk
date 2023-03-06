@@ -97,7 +97,7 @@ public class UpdatePrivateNetworkWhiteIpsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * >  In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -115,7 +115,7 @@ public class UpdatePrivateNetworkWhiteIpsRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * es-cn-tl329rbpc0001\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -124,7 +124,7 @@ public class UpdatePrivateNetworkWhiteIpsRequest extends Request {
         }
 
         /**
-         * modifyMode.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("modifyMode", modifyMode);

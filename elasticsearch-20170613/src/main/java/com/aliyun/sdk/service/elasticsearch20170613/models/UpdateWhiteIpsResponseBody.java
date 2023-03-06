@@ -50,7 +50,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The results that are returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -122,7 +122,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             private String whiteIpType; 
 
             /**
-             * groupName.
+             * The group name of the whitelist group. The default group is included by default.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -130,7 +130,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * ips.
+             * The list of IP addresses in the whitelist group.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -138,7 +138,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * whiteIpType.
+             * The type of the whitelist. This parameter is set to PRIVATE_ES.
              */
             public Builder whiteIpType(String whiteIpType) {
                 this.whiteIpType = whiteIpType;
@@ -179,7 +179,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
 
             /**
-             * whiteIpGroupList.
+             * The list of whitelists.
              */
             public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
@@ -232,7 +232,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             private NetworkConfig networkConfig; 
 
             /**
-             * esIPWhitelist.
+             * The updated whitelist list.
              */
             public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
                 this.esIPWhitelist = esIPWhitelist;
@@ -240,7 +240,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfig.
+             * The network configurations.
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;

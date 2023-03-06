@@ -113,7 +113,7 @@ public class ListLogstashPluginsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * ls-cn-oew1qbgl\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -122,7 +122,7 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * name.
+         * logstash-filter-clone
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -131,7 +131,7 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * page.
+         * 10
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -140,7 +140,7 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * size.
+         * 3
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -149,7 +149,7 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * source.
+         * USER
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);

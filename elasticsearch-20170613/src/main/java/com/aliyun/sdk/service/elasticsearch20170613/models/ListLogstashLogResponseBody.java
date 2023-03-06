@@ -50,7 +50,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned data.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * content.
+             * The details of the log.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -154,7 +154,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * host.
+             * The IP address of the node that generates the log.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -162,7 +162,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +170,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).
              */
             public Builder level(String level) {
                 this.level = level;
@@ -178,7 +178,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * The timestamp of log generation. Unit: ms.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

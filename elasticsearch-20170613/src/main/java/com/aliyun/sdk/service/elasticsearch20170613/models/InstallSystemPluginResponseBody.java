@@ -50,7 +50,7 @@ public class InstallSystemPluginResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class InstallSystemPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The list of plug-ins to be installed.
          */
         public Builder result(java.util.List < String > result) {
             this.result = result;

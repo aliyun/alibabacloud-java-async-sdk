@@ -84,7 +84,7 @@ public class UpdateAdminPasswordRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-nif1q9o8r0008\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class UpdateAdminPasswordRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

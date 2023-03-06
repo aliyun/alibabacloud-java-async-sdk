@@ -18,8 +18,8 @@ public class UpdateLogstashDescriptionRequest extends Request {
     private String instanceId;
 
     @Body
-    @NameInMap("body")
-    private String body;
+    @NameInMap("description")
+    private String description;
 
     @Query
     @NameInMap("clientToken")
@@ -28,7 +28,7 @@ public class UpdateLogstashDescriptionRequest extends Request {
     private UpdateLogstashDescriptionRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
+        this.description = builder.description;
         this.clientToken = builder.clientToken;
     }
 
@@ -53,10 +53,10 @@ public class UpdateLogstashDescriptionRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return description
      */
-    public String getBody() {
-        return this.body;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -68,7 +68,7 @@ public class UpdateLogstashDescriptionRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateLogstashDescriptionRequest, Builder> {
         private String instanceId; 
-        private String body; 
+        private String description; 
         private String clientToken; 
 
         private Builder() {
@@ -78,7 +78,7 @@ public class UpdateLogstashDescriptionRequest extends Request {
         private Builder(UpdateLogstashDescriptionRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
+            this.description = request.description;
             this.clientToken = request.clientToken;
         } 
 
@@ -92,11 +92,11 @@ public class UpdateLogstashDescriptionRequest extends Request {
         }
 
         /**
-         * body.
+         * description.
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
             return this;
         }
 

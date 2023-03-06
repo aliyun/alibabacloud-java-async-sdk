@@ -50,7 +50,7 @@ public class CreateCollectorResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -98,7 +98,7 @@ public class CreateCollectorResponseBody extends TeaModel {
             private String resId; 
 
             /**
-             * resId.
+             * The ID of the created crawer.
              */
             public Builder resId(String resId) {
                 this.resId = resId;

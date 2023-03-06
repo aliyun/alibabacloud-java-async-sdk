@@ -50,7 +50,7 @@ public class ShrinkNodeResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the region.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ShrinkNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Command output:
+         * <p>
+         * 
+         * *   true: The scale-in is successful.
+         * *   false: The scale-in failed.
          */
         public Builder result(Boolean result) {
             this.result = result;

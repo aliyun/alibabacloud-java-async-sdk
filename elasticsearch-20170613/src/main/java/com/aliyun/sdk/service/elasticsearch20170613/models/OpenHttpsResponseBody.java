@@ -50,7 +50,7 @@ public class OpenHttpsResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class OpenHttpsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Return results:
+         * <p>
+         * 
+         * *   true: open the HTTPS protocol successfully
+         * *   false: open the HTTPS protocol failed
          */
         public Builder result(Boolean result) {
             this.result = result;

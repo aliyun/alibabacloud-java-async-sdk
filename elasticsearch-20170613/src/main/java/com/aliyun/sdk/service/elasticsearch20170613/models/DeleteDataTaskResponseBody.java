@@ -50,7 +50,7 @@ public class DeleteDataTaskResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteDataTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned results.
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -127,7 +127,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * 1d2db86sca4384811e0b5e8707e\*\*\*\*\*\*
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -136,7 +136,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Page.
+         * 1
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -145,7 +145,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * \["es-cn-aaa","es-cn-bbb"]
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -154,7 +154,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * INSTANCE
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -163,7 +163,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Size.
+         * 10
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -172,7 +172,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * \[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

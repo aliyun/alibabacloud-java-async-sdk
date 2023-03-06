@@ -139,7 +139,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * ls-cn-oew1qbgl\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -193,7 +193,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

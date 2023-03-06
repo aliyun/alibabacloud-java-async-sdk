@@ -126,7 +126,7 @@ public class ListEcsInstancesRequest extends Request {
         } 
 
         /**
-         * ecsInstanceIds.
+         * \["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]
          */
         public Builder ecsInstanceIds(String ecsInstanceIds) {
             this.putQueryParameter("ecsInstanceIds", ecsInstanceIds);
@@ -135,7 +135,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * ecsInstanceName.
+         * test
          */
         public Builder ecsInstanceName(String ecsInstanceName) {
             this.putQueryParameter("ecsInstanceName", ecsInstanceName);
@@ -144,7 +144,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * page.
+         * 1
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -153,7 +153,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * size.
+         * 10
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -162,7 +162,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * tags.
+         * \[{ "tagKey":"a","tagValue":"b"}]
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);
@@ -171,7 +171,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * vpc-bp16k1dvzxtmagcva\*\*\*\*
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);

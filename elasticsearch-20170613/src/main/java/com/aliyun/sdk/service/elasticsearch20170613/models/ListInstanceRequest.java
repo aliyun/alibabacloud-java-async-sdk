@@ -194,7 +194,7 @@ public class ListInstanceRequest extends Request {
         } 
 
         /**
-         * description.
+         * aliyunes_test1
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -203,7 +203,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * esVersion.
+         * 6.7\_with_X-Pack
          */
         public Builder esVersion(String esVersion) {
             this.putQueryParameter("esVersion", esVersion);
@@ -212,7 +212,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * instanceCategory.
+         * advanced
          */
         public Builder instanceCategory(String instanceCategory) {
             this.putQueryParameter("instanceCategory", instanceCategory);
@@ -221,7 +221,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * es-cn-v641a0ta3000g\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -230,7 +230,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * page.
+         * 1
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -239,7 +239,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * paymentType.
+         * postpaid
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("paymentType", paymentType);
@@ -248,7 +248,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * rg-aekzvowej3i\*\*\*\*
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -257,7 +257,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * size.
+         * 10
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -266,7 +266,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * tags.
+         * \[{"tagKey":"key1","tagValue":"value1"}]
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);
@@ -275,7 +275,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * vpc-bp16k1dvzxtmagcva\*\*\*\*
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);
@@ -284,7 +284,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * zoneId.
+         * cn-hangzhou-i
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("zoneId", zoneId);

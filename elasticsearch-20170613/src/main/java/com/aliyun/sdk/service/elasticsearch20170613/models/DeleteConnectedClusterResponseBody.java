@@ -50,7 +50,7 @@ public class DeleteConnectedClusterResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DeleteConnectedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Return results:
+         * <p>
+         * 
+         * *   true: remove the interworking instance successfully
+         * *   false: remove the interworking instance failed
          */
         public Builder result(Boolean result) {
             this.result = result;

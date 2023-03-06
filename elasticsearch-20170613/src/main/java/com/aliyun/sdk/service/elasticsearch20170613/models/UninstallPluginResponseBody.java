@@ -50,7 +50,7 @@ public class UninstallPluginResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UninstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The list of plug-ins to be unloaded. If the unloading fails, an exception is returned.
          */
         public Builder result(java.util.List < String > result) {
             this.result = result;

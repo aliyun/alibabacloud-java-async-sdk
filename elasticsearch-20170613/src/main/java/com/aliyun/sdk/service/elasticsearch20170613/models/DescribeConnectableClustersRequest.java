@@ -69,7 +69,7 @@ public class DescribeConnectableClustersRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-n6w1o1x0w001c\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeConnectableClustersRequest extends Request {
         }
 
         /**
-         * alreadySetItems.
+         * true
          */
         public Builder alreadySetItems(Boolean alreadySetItems) {
             this.putQueryParameter("alreadySetItems", alreadySetItems);

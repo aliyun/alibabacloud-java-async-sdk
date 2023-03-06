@@ -55,7 +55,7 @@ public class DescribeLogstashRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * ls-cn-s9dsk3k4k\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

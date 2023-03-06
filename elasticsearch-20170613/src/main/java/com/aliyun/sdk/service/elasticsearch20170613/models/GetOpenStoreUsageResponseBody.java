@@ -50,7 +50,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The current request result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
             private Long lastDayUsage; 
 
             /**
-             * 当前使用量
+             * The current OpenStore storage capacity (estimated value based on actual indexes). Unit: Byte.
              */
             public Builder currentUsage(Long currentUsage) {
                 this.currentUsage = currentUsage;
@@ -118,7 +118,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
             }
 
             /**
-             * 昨日使用容量
+             * The storage capacity of OpenStore yesterday. Unit: bytes.
              */
             public Builder lastDayUsage(Long lastDayUsage) {
                 this.lastDayUsage = lastDayUsage;

@@ -55,7 +55,7 @@ public class DescribeKibanaSettingsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-n6w1o1x0w001c\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

@@ -50,7 +50,7 @@ public class TriggerNetworkResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class TriggerNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Result
+         * <p>
+         * 
+         * *   true: The operation is successful.
+         * *   false: The operation failed.
          */
         public Builder result(Boolean result) {
             this.result = result;

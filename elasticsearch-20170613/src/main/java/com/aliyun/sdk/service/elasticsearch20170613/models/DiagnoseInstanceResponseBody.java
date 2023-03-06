@@ -50,7 +50,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned data.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * createTime.
+             * The timestamp when the diagnostic report was generated.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -142,7 +142,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the diagnostic instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -150,7 +150,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * reportId.
+             * The ID of the report.
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -158,7 +158,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.
              */
             public Builder state(String state) {
                 this.state = state;

@@ -111,7 +111,7 @@ public class UpdateWhiteIpsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-npk2154oi000b\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -138,7 +138,7 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -147,7 +147,7 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * modifyMode.
+         * Cover
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("modifyMode", modifyMode);

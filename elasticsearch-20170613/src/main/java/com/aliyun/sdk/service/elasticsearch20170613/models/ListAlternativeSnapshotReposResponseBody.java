@@ -50,7 +50,7 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return results.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
             private String repoPath; 
 
             /**
-             * instanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -118,7 +118,7 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
             }
 
             /**
-             * repoPath.
+             * The address of the repository.
              */
             public Builder repoPath(String repoPath) {
                 this.repoPath = repoPath;

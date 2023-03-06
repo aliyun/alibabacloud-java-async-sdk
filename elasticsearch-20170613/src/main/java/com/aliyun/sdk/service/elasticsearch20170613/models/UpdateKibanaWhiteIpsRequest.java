@@ -111,7 +111,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-tl329rbpc0001\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -138,7 +138,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -147,7 +147,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * 修改方式，覆盖/新增/删除，针对设置分组时使用。不设置分组，默认覆盖default分组值
+         * Cover
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("modifyMode", modifyMode);

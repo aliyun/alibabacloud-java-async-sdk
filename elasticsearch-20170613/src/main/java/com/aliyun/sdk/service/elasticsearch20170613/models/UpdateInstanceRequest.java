@@ -209,7 +209,7 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * es-cn-n6w1ptcb30009\*\*\*\*
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -290,7 +290,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -308,7 +308,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * orderActionType.
+         * upgrade
          */
         public Builder orderActionType(String orderActionType) {
             this.putQueryParameter("orderActionType", orderActionType);

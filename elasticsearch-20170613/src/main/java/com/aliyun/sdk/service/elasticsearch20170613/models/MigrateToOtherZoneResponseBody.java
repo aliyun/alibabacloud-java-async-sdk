@@ -50,7 +50,7 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Return results:
+         * <p>
+         * 
+         * *   true: migration succeeded
+         * *   false: The migration fails
          */
         public Builder result(Boolean result) {
             this.result = result;

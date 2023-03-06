@@ -99,7 +99,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -108,7 +108,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * count.
+         * The number of nodes that you want to remove.
          */
         public Builder count(Integer count) {
             this.putQueryParameter("count", count);
@@ -117,7 +117,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * ignoreStatus.
+         * Specifies whether to ignore the instance status. Default value: false.
          */
         public Builder ignoreStatus(Boolean ignoreStatus) {
             this.putQueryParameter("ignoreStatus", ignoreStatus);
@@ -126,7 +126,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * nodeType.
+         * The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);

@@ -50,7 +50,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The information about the returned pipeline. For more information, see [logstash.yml](https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html).
          */
         public Builder result(Result result) {
             this.result = result;
@@ -230,7 +230,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             private Integer workers; 
 
             /**
-             * batchDelay.
+             * Pipeline batch delay. Unit: milliseconds.
              */
             public Builder batchDelay(Integer batchDelay) {
                 this.batchDelay = batchDelay;
@@ -238,7 +238,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * batchSize.
+             * The size of the pipeline batch.
              */
             public Builder batchSize(Integer batchSize) {
                 this.batchSize = batchSize;
@@ -246,7 +246,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * The specific configuration of the pipeline.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -254,7 +254,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The description of the pipeline.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +262,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreatedTime.
+             * The time when the pipeline was created.
              */
             public Builder gmtCreatedTime(String gmtCreatedTime) {
                 this.gmtCreatedTime = gmtCreatedTime;
@@ -270,7 +270,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * gmtUpdateTime.
+             * The time when the pipeline was updated.
              */
             public Builder gmtUpdateTime(String gmtUpdateTime) {
                 this.gmtUpdateTime = gmtUpdateTime;
@@ -278,7 +278,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineId.
+             * The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -286,7 +286,12 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineStatus.
+             * The state of the MPS queue. Valid values:
+             * <p>
+             * 
+             * *   NOT_DEPLOYED: The node is not deployed.
+             * *   RUNNING
+             * *   DELETED: Deleted. The console does not display this status.
              */
             public Builder pipelineStatus(String pipelineStatus) {
                 this.pipelineStatus = pipelineStatus;
@@ -294,7 +299,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * queueCheckPointWrites.
+             * Number of queue checkpoint writes.
              */
             public Builder queueCheckPointWrites(Integer queueCheckPointWrites) {
                 this.queueCheckPointWrites = queueCheckPointWrites;
@@ -302,7 +307,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * queueMaxBytes.
+             * The total capacity of the queue in bytes. Unit: MB.
              */
             public Builder queueMaxBytes(Integer queueMaxBytes) {
                 this.queueMaxBytes = queueMaxBytes;
@@ -310,7 +315,11 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * queueType.
+             * The type of the queue. Valid values:
+             * <p>
+             * 
+             * *   MEMORY: a traditional memory-based queue.
+             * *   PERSISTED: disk-based ACKed queue (persistent queue).
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -318,7 +327,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * workers.
+             * The number of pipeline workers.
              */
             public Builder workers(Integer workers) {
                 this.workers = workers;
