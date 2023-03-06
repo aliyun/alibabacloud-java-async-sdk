@@ -127,19 +127,24 @@ public class DeleteTransitRouterRouteTableRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTransitRouterRouteTableRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterRouteTableId = response.transitRouterRouteTableId;
+        private Builder(DeleteTransitRouterRouteTableRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterRouteTableId = request.transitRouterRouteTableId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -148,7 +153,11 @@ public class DeleteTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the custom route table is deleted.
+         * *   **true**: performs a dry run. The system checks whether the required parameters are set, and whether the request syntax is valid. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -193,7 +202,7 @@ public class DeleteTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableId.
+         * The ID of the custom route table.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

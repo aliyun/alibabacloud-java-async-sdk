@@ -194,24 +194,29 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTrafficMarkingPolicyRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.markingDscp = response.markingDscp;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.priority = response.priority;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trafficMarkingPolicyDescription = response.trafficMarkingPolicyDescription;
-            this.trafficMarkingPolicyName = response.trafficMarkingPolicyName;
-            this.trafficMatchRules = response.trafficMatchRules;
-            this.transitRouterId = response.transitRouterId;
+        private Builder(CreateTrafficMarkingPolicyRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.markingDscp = request.markingDscp;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.priority = request.priority;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficMarkingPolicyDescription = request.trafficMarkingPolicyDescription;
+            this.trafficMarkingPolicyName = request.trafficMarkingPolicyName;
+            this.trafficMatchRules = request.trafficMatchRules;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -220,7 +225,11 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -229,7 +238,10 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * MarkingDscp.
+         * The differentiated services code point (DSCP) value to be added to packets that match the traffic classification rule. Valid values: **0** to **63**.
+         * <p>
+         * 
+         * The DSCP value of each traffic marking policy on a transit router must be unique.
          */
         public Builder markingDscp(Integer markingDscp) {
             this.putQueryParameter("MarkingDscp", markingDscp);
@@ -256,7 +268,10 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority value of the traffic marking policy. Valid values: **1** to **100**.
+         * <p>
+         * 
+         * The priority value of each traffic marking policy on a transit router must be unique. A smaller value specifies a higher priority.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -283,7 +298,10 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * TrafficMarkingPolicyDescription.
+         * The description of the traffic marking policy.
+         * <p>
+         * 
+         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
          */
         public Builder trafficMarkingPolicyDescription(String trafficMarkingPolicyDescription) {
             this.putQueryParameter("TrafficMarkingPolicyDescription", trafficMarkingPolicyDescription);
@@ -292,7 +310,10 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * TrafficMarkingPolicyName.
+         * The name of the traffic marking policy.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder trafficMarkingPolicyName(String trafficMarkingPolicyName) {
             this.putQueryParameter("TrafficMarkingPolicyName", trafficMarkingPolicyName);
@@ -301,7 +322,12 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * TrafficMatchRules.
+         * The traffic classification rules in the traffic marking policy.
+         * <p>
+         * 
+         * Packets that match the traffic classification rules are assigned the DSCP value of the traffic marking policy.
+         * 
+         * You can specify at most 50 traffic classification rules.
          */
         public Builder trafficMatchRules(java.util.List < TrafficMatchRules> trafficMatchRules) {
             this.putQueryParameter("TrafficMatchRules", trafficMatchRules);
@@ -310,7 +336,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -436,7 +462,12 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             private String trafficMatchRuleName; 
 
             /**
-             * DstCidr.
+             * The destination CIDR block that is used to match packets.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets whose destination IP addresses fall within the specified destination CIDR block. If you do not set this parameter, packets with all destination IP addresses are matched.
+             * 
+             * You can create up to 50 traffic classification rules in each call. You can specify a destination CIDR block for each traffic classification rule.
              */
             public Builder dstCidr(String dstCidr) {
                 this.dstCidr = dstCidr;
@@ -444,7 +475,18 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * DstPortRange.
+             * The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets are considered a match regardless of the DSCP value.
+             * 
+             * You can specify at most two ports. Take note of the following rules:
+             * 
+             * *   If you enter only one port number such as 1, the system matches the packets whose destination port is port 1.
+             * *   If you enter two port numbers such as 1 and 200, the system matches the packets whose destination ports fall between 1 and 200.
+             * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets with all destination ports are matched.
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a destination port range for each traffic classification rule.
              */
             public Builder dstPortRange(java.util.List < Integer > dstPortRange) {
                 this.dstPortRange = dstPortRange;
@@ -452,7 +494,14 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * MatchDscp.
+             * The DSCP value that is used to match packets. Valid values: **0** to **63**.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets that contain the specified DSCP value. If you do not set this parameter, packets are considered a match regardless of the DSCP value.
+             * 
+             * >  The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.
+             * 
+             * You can create up to 50 traffic classification rules in each call. You can specify a DSCP value for each traffic classification rule.
              */
             public Builder matchDscp(Integer matchDscp) {
                 this.matchDscp = matchDscp;
@@ -460,7 +509,12 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol that is used to match packets.
+             * <p>
+             * 
+             * Valid values: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [Cloud Enterprise Network (CEN) console](https://cen.console.aliyun.com/cen/list).
+             * 
+             * You can create up to 50 traffic classification rules in each call. You can specify a protocol for each traffic classification rule.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -468,7 +522,12 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * SrcCidr.
+             * The source CIDR block that is used to match packets.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets whose source IP addresses fall within the specified source CIDR block. If you do not set this parameter, packets with all source IP addresses are matched.
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a source CIDR block for each traffic classification rule.
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;
@@ -476,7 +535,18 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * SrcPortRange.
+             * The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets are considered a match regardless of the source port.
+             * 
+             * You can specify at most two ports. Take note of the following rules:
+             * 
+             * *   If you enter only one port number such as 1, the system matches the packets whose source port is 1.
+             * *   If you enter two port numbers such as 1 and 200, the system matches the packets whose source ports fall between 1 and 200.
+             * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets with all source ports are matched.
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a source port range for each traffic classification rule.
              */
             public Builder srcPortRange(java.util.List < Integer > srcPortRange) {
                 this.srcPortRange = srcPortRange;
@@ -484,7 +554,12 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * TrafficMatchRuleDescription.
+             * The description of the traffic classification rule.
+             * <p>
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a description for each traffic classification rule.
+             * 
+             * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
              */
             public Builder trafficMatchRuleDescription(String trafficMatchRuleDescription) {
                 this.trafficMatchRuleDescription = trafficMatchRuleDescription;
@@ -492,7 +567,12 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
             }
 
             /**
-             * TrafficMatchRuleName.
+             * The name of the traffic classification rule.
+             * <p>
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a name for each traffic classification rule.
+             * 
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
              */
             public Builder trafficMatchRuleName(String trafficMatchRuleName) {
                 this.trafficMatchRuleName = trafficMatchRuleName;

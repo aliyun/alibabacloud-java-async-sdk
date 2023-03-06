@@ -178,23 +178,28 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTransitRouterRouteEntryRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterRouteEntryDestinationCidrBlock = response.transitRouterRouteEntryDestinationCidrBlock;
-            this.transitRouterRouteEntryId = response.transitRouterRouteEntryId;
-            this.transitRouterRouteEntryNextHopId = response.transitRouterRouteEntryNextHopId;
-            this.transitRouterRouteEntryNextHopType = response.transitRouterRouteEntryNextHopType;
-            this.transitRouterRouteTableId = response.transitRouterRouteTableId;
+        private Builder(DeleteTransitRouterRouteEntryRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterRouteEntryDestinationCidrBlock = request.transitRouterRouteEntryDestinationCidrBlock;
+            this.transitRouterRouteEntryId = request.transitRouterRouteEntryId;
+            this.transitRouterRouteEntryNextHopId = request.transitRouterRouteEntryNextHopId;
+            this.transitRouterRouteEntryNextHopType = request.transitRouterRouteEntryNextHopType;
+            this.transitRouterRouteTableId = request.transitRouterRouteTableId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,7 +208,11 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): sends the request. If the request passes the precheck, the route is deleted.
+         * *   **true**: sends a precheck request. The route is not deleted after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -248,7 +257,7 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteEntryDestinationCidrBlock.
+         * The destination CIDR block.
          */
         public Builder transitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
             this.putQueryParameter("TransitRouterRouteEntryDestinationCidrBlock", transitRouterRouteEntryDestinationCidrBlock);
@@ -257,7 +266,7 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteEntryId.
+         * The ID of the route entry.
          */
         public Builder transitRouterRouteEntryId(String transitRouterRouteEntryId) {
             this.putQueryParameter("TransitRouterRouteEntryId", transitRouterRouteEntryId);
@@ -266,7 +275,7 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteEntryNextHopId.
+         * The ID of the network instance connection that you want to specify as the next hop.
          */
         public Builder transitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopId", transitRouterRouteEntryNextHopId);
@@ -275,7 +284,11 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteEntryNextHopType.
+         * The type of the next hop. Valid values:
+         * <p>
+         * 
+         * *   **BlackHole**: a blackhole route. You do not need to specify a next hop.
+         * *   **Attachment**: a network instance connection. You must specify a network instance connection as the next hop.
          */
         public Builder transitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopType", transitRouterRouteEntryNextHopType);
@@ -284,7 +297,7 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableId.
+         * The ID of the route table of the Enterprise Edition transit router.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

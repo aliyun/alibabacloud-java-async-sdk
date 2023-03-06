@@ -142,20 +142,20 @@ public class DeactiveFlowLogRequest extends Request {
             super();
         } 
 
-        private Builder(DeactiveFlowLogRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.clientToken = response.clientToken;
-            this.flowLogId = response.flowLogId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeactiveFlowLogRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.clientToken = request.clientToken;
+            this.flowLogId = request.flowLogId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -164,7 +164,12 @@ public class DeactiveFlowLogRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -173,7 +178,7 @@ public class DeactiveFlowLogRequest extends Request {
         }
 
         /**
-         * FlowLogId.
+         * The ID of the flow log.
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -200,7 +205,10 @@ public class DeactiveFlowLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the flow log is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -86,7 +86,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         private java.util.List < TransitRouterRouteTables> transitRouterRouteTables; 
 
         /**
-         * MaxResults.
+         * The number of entries returned on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** was not returned, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +122,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterRouteTables.
+         * A list of route tables.
          */
         public Builder transitRouterRouteTables(java.util.List < TransitRouterRouteTables> transitRouterRouteTables) {
             this.transitRouterRouteTables = transitRouterRouteTables;
@@ -131,9 +135,124 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
     } 
 
+    public static class RouteTableOptions extends TeaModel {
+        @NameInMap("MultiRegionECMP")
+        private String multiRegionECMP;
+
+        private RouteTableOptions(Builder builder) {
+            this.multiRegionECMP = builder.multiRegionECMP;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteTableOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return multiRegionECMP
+         */
+        public String getMultiRegionECMP() {
+            return this.multiRegionECMP;
+        }
+
+        public static final class Builder {
+            private String multiRegionECMP; 
+
+            /**
+             * Indicates whether ECMP routing is enabled. Valid values:
+             * <p>
+             * 
+             * *   **disable**: disabled If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit route with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * *   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             */
+            public Builder multiRegionECMP(String multiRegionECMP) {
+                this.multiRegionECMP = multiRegionECMP;
+                return this;
+            }
+
+            public RouteTableOptions build() {
+                return new RouteTableOptions(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class TransitRouterRouteTables extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("RouteTableOptions")
+        private RouteTableOptions routeTableOptions;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("TransitRouterRouteTableDescription")
         private String transitRouterRouteTableDescription;
@@ -152,6 +271,9 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
         private TransitRouterRouteTables(Builder builder) {
             this.createTime = builder.createTime;
+            this.regionId = builder.regionId;
+            this.routeTableOptions = builder.routeTableOptions;
+            this.tags = builder.tags;
             this.transitRouterRouteTableDescription = builder.transitRouterRouteTableDescription;
             this.transitRouterRouteTableId = builder.transitRouterRouteTableId;
             this.transitRouterRouteTableName = builder.transitRouterRouteTableName;
@@ -172,6 +294,27 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return routeTableOptions
+         */
+        public RouteTableOptions getRouteTableOptions() {
+            return this.routeTableOptions;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -211,6 +354,9 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String regionId; 
+            private RouteTableOptions routeTableOptions; 
+            private java.util.List < Tags> tags; 
             private String transitRouterRouteTableDescription; 
             private String transitRouterRouteTableId; 
             private String transitRouterRouteTableName; 
@@ -218,7 +364,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             private String transitRouterRouteTableType; 
 
             /**
-             * CreateTime.
+             * The time when the route table was created.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +375,31 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteTableDescription.
+             * The ID of the region where the Enterprise Edition transit router is deployed.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The features of the route table.
+             */
+            public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
+                this.routeTableOptions = routeTableOptions;
+                return this;
+            }
+
+            /**
+             * The tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The description of the route table.
              */
             public Builder transitRouterRouteTableDescription(String transitRouterRouteTableDescription) {
                 this.transitRouterRouteTableDescription = transitRouterRouteTableDescription;
@@ -234,7 +407,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteTableId.
+             * The ID of the route table.
              */
             public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
                 this.transitRouterRouteTableId = transitRouterRouteTableId;
@@ -242,7 +415,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteTableName.
+             * The name of the route table.
              */
             public Builder transitRouterRouteTableName(String transitRouterRouteTableName) {
                 this.transitRouterRouteTableName = transitRouterRouteTableName;
@@ -250,7 +423,12 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteTableStatus.
+             * The status of the route table. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: being created
+             * *   **Deleting**: being deleted
+             * *   **Active**: available
              */
             public Builder transitRouterRouteTableStatus(String transitRouterRouteTableStatus) {
                 this.transitRouterRouteTableStatus = transitRouterRouteTableStatus;
@@ -258,7 +436,11 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteTableType.
+             * The type of the route table. Valid value:
+             * <p>
+             * 
+             * *   **Custom**: a custom route table
+             * *   **System**: the default system route table
              */
             public Builder transitRouterRouteTableType(String transitRouterRouteTableType) {
                 this.transitRouterRouteTableType = transitRouterRouteTableType;

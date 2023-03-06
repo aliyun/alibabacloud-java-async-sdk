@@ -46,6 +46,10 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
@@ -63,6 +67,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
         this.transitRouterId = builder.transitRouterId;
     }
@@ -137,6 +142,13 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return transitRouterAttachmentId
      */
     public String getTransitRouterAttachmentId() {
@@ -159,6 +171,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String transitRouterAttachmentId; 
         private String transitRouterId; 
 
@@ -166,22 +179,23 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTransitRouterPeerAttachmentsRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterId = response.transitRouterId;
+        private Builder(ListTransitRouterPeerAttachmentsRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -190,7 +204,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return per page. The default value is **20**. The maximum value is **100**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -199,7 +213,11 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no next query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -226,7 +244,10 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Enterprise Edition transit router is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +274,16 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the cross-region connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -262,7 +292,7 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the Enterprise Edition transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -277,4 +307,75 @@ public class ListTransitRouterPeerAttachmentsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag keys of the resources. 
+             * <p>
+             * 
+             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+             * 
+             * You can specify at most 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag values of the resources. 
+             * <p>
+             * 
+             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+             * 
+             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

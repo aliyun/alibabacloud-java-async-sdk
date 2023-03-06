@@ -79,6 +79,10 @@ public class CreateCenBandwidthPackageRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CreateCenBandwidthPackageRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
@@ -97,6 +101,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         this.pricingCycle = builder.pricingCycle;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -224,6 +229,13 @@ public class CreateCenBandwidthPackageRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateCenBandwidthPackageRequest, Builder> {
         private Boolean autoPay; 
         private Boolean autoRenew; 
@@ -241,33 +253,41 @@ public class CreateCenBandwidthPackageRequest extends Request {
         private String pricingCycle; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateCenBandwidthPackageRequest response) {
-            super(response);
-            this.autoPay = response.autoPay;
-            this.autoRenew = response.autoRenew;
-            this.autoRenewDuration = response.autoRenewDuration;
-            this.bandwidth = response.bandwidth;
-            this.bandwidthPackageChargeType = response.bandwidthPackageChargeType;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.geographicRegionAId = response.geographicRegionAId;
-            this.geographicRegionBId = response.geographicRegionBId;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.period = response.period;
-            this.pricingCycle = response.pricingCycle;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateCenBandwidthPackageRequest request) {
+            super(request);
+            this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewDuration = request.autoRenewDuration;
+            this.bandwidth = request.bandwidth;
+            this.bandwidthPackageChargeType = request.bandwidthPackageChargeType;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.geographicRegionAId = request.geographicRegionAId;
+            this.geographicRegionBId = request.geographicRegionBId;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.period = request.period;
+            this.pricingCycle = request.pricingCycle;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically complete the payment of the bandwidth plan. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
+         * 
+         * If you set the parameter to false, go to Billing Management to complete the payment after you call this operation. The instance is created only after you complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -294,7 +314,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: **2** to **10000**.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -303,7 +323,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * BandwidthPackageChargeType.
+         * The billing method of the bandwidth plan. Valid value: **PREPAY**, which indicates that the billing method is pay-as-you-go.
          */
         public Builder bandwidthPackageChargeType(String bandwidthPackageChargeType) {
             this.putQueryParameter("BandwidthPackageChargeType", bandwidthPackageChargeType);
@@ -312,7 +332,10 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate a token, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -321,7 +344,7 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the bandwidth plan.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -330,7 +353,14 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * GeographicRegionAId.
+         * The area where the network instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **China**: Chinese mainland
+         * *   **North-America**: North America
+         * *   **Asia-Pacific**: Asia Pacific
+         * *   **Europe**: Europe
+         * *   **Australia**: Australia
          */
         public Builder geographicRegionAId(String geographicRegionAId) {
             this.putQueryParameter("GeographicRegionAId", geographicRegionAId);
@@ -339,7 +369,14 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * GeographicRegionBId.
+         * The area where the other network instance is deployed. Valid values: Valid values:
+         * <p>
+         * 
+         * *   **China**: Chinese mainland
+         * *   **North-America**: North America
+         * *   **Asia-Pacific**: Asia Pacific
+         * *   **Europe**: Europe
+         * *   **Australia**: Australia
          */
         public Builder geographicRegionBId(String geographicRegionBId) {
             this.putQueryParameter("GeographicRegionBId", geographicRegionBId);
@@ -348,7 +385,10 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the bandwidth plan.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -375,7 +415,13 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration of the bandwidth plan. Default value: 1.
+         * <p>
+         * 
+         * *   If **PricingCycle** is set to **Month**, set **Period** to a value from **1** to **3** or **6**.
+         * *   If **PricingCycle** is set to **Year**, set **Period** to a value from **1** to **3**.
+         * 
+         * >  This parameter is required when **BandwidthPackageChargeType** is set to **PREPAY**.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -384,7 +430,11 @@ public class CreateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The billing cycle of the bandwidth plan. Valid values:
+         * <p>
+         * 
+         * *   **Month** (default): billed on a monthly basis.
+         * *   **Year**: billed on an annual basis.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -410,6 +460,15 @@ public class CreateCenBandwidthPackageRequest extends Request {
             return this;
         }
 
+        /**
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public CreateCenBandwidthPackageRequest build() {
             return new CreateCenBandwidthPackageRequest(this);
@@ -417,4 +476,75 @@ public class CreateCenBandwidthPackageRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag keys of the resources.
+             * <p>
+             * 
+             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag values of the resources.
+             * <p>
+             * 
+             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

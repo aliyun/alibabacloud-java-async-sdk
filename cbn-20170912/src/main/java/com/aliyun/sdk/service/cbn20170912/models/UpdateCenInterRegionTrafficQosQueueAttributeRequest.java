@@ -179,23 +179,26 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
             super();
         } 
 
-        private Builder(UpdateCenInterRegionTrafficQosQueueAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.dscps = response.dscps;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.qosQueueDescription = response.qosQueueDescription;
-            this.qosQueueId = response.qosQueueId;
-            this.qosQueueName = response.qosQueueName;
-            this.remainBandwidthPercent = response.remainBandwidthPercent;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UpdateCenInterRegionTrafficQosQueueAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.dscps = request.dscps;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.qosQueueDescription = request.qosQueueDescription;
+            this.qosQueueId = request.qosQueueId;
+            this.qosQueueName = request.qosQueueName;
+            this.remainBandwidthPercent = request.remainBandwidthPercent;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,7 +207,11 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request but does not modify the queue. The system checks whether the required parameters are set, whether the formats of the values are valid, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): checks the request. If the request passes the check, the queue is modified.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -213,7 +220,10 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * Dscps.
+         * The differentiated services code point (DSCP) value of the packets to be matched by the queue. Valid values: **0** to **63**.
+         * <p>
+         * 
+         * You can enter up to 20 DSCP values at a time.
          */
         public Builder dscps(java.util.List < Integer > dscps) {
             this.putQueryParameter("Dscps", dscps);
@@ -240,7 +250,10 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * QosQueueDescription.
+         * The new description of the queue.
+         * <p>
+         * 
+         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
          */
         public Builder qosQueueDescription(String qosQueueDescription) {
             this.putQueryParameter("QosQueueDescription", qosQueueDescription);
@@ -249,7 +262,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * QosQueueId.
+         * The ID of the queue.
          */
         public Builder qosQueueId(String qosQueueId) {
             this.putQueryParameter("QosQueueId", qosQueueId);
@@ -258,7 +271,10 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * QosQueueName.
+         * The new name of the queue.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder qosQueueName(String qosQueueName) {
             this.putQueryParameter("QosQueueName", qosQueueName);
@@ -267,7 +283,10 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * RemainBandwidthPercent.
+         * The percentage of the inter-region bandwidth that can be used by the queue.
+         * <p>
+         * 
+         * Enter a number. You do not need to enter a percent sign (%).
          */
         public Builder remainBandwidthPercent(String remainBandwidthPercent) {
             this.putQueryParameter("RemainBandwidthPercent", remainBandwidthPercent);

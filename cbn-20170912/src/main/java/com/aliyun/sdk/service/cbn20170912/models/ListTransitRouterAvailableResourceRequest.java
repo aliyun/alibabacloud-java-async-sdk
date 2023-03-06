@@ -32,6 +32,10 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("SupportMulticast")
+    private Boolean supportMulticast;
+
     private ListTransitRouterAvailableResourceRequest(Builder builder) {
         super(builder);
         this.ownerAccount = builder.ownerAccount;
@@ -39,6 +43,7 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.supportMulticast = builder.supportMulticast;
     }
 
     public static Builder builder() {
@@ -89,24 +94,33 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return supportMulticast
+     */
+    public Boolean getSupportMulticast() {
+        return this.supportMulticast;
+    }
+
     public static final class Builder extends Request.Builder<ListTransitRouterAvailableResourceRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean supportMulticast; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTransitRouterAvailableResourceRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListTransitRouterAvailableResourceRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.supportMulticast = request.supportMulticast;
         } 
 
         /**
@@ -128,7 +142,10 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Enterprise Edition transit router is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,6 +168,22 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to query only the zones in which the multicast feature is supported. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * 
+         *     After you call **ListTransitRouterAvailableResource**, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.
+         * 
+         * *   **false** (default): no
+         */
+        public Builder supportMulticast(Boolean supportMulticast) {
+            this.putQueryParameter("SupportMulticast", supportMulticast);
+            this.supportMulticast = supportMulticast;
             return this;
         }
 

@@ -21,6 +21,10 @@ public class DeleteTransitRouterVpcAttachmentRequest extends Request {
     private Boolean dryRun;
 
     @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -45,6 +49,7 @@ public class DeleteTransitRouterVpcAttachmentRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.force = builder.force;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -77,6 +82,13 @@ public class DeleteTransitRouterVpcAttachmentRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -117,6 +129,7 @@ public class DeleteTransitRouterVpcAttachmentRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteTransitRouterVpcAttachmentRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private Boolean force; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -127,19 +140,25 @@ public class DeleteTransitRouterVpcAttachmentRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTransitRouterVpcAttachmentRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
+        private Builder(DeleteTransitRouterVpcAttachmentRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.force = request.force;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -148,11 +167,28 @@ public class DeleteTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): sends the request. After the request passes the precheck, the VPC connection is deleted.
+         * *   **true**: sends a precheck request but does not delete the VPC connection. If you use this value, the system checks the required parameters and the request syntax. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Specifies whether to forcefully delete the VPC connection. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): checks resources such as associated forwarding correlations and route learning policies that are related to the VPC connection before it is deleted. If such a resource exists, the VPC connection is not deleted and an error message is returned.
+         * *   **true**: deletes the VPC connection and all resources that are related to the VPC connection.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 
@@ -193,7 +229,7 @@ public class DeleteTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the VPC connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);

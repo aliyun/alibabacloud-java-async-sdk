@@ -129,19 +129,22 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
             super();
         } 
 
-        private Builder(TempUpgradeCenBandwidthPackageSpecRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.cenBandwidthPackageId = response.cenBandwidthPackageId;
-            this.endTime = response.endTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(TempUpgradeCenBandwidthPackageSpecRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.cenBandwidthPackageId = request.cenBandwidthPackageId;
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth value to which you want to upgrade the bandwidth plan. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **2** to **10000**.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -150,7 +153,7 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * CenBandwidthPackageId.
+         * The ID of the bandwidth plan.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -159,7 +162,10 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the temporary upgrade ends.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);

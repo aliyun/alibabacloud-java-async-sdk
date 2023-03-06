@@ -50,7 +50,7 @@ public class CreateTransitRouterResponseBody extends TeaModel {
         private String transitRouterId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateTransitRouterResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the Enterprise Edition transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.transitRouterId = transitRouterId;

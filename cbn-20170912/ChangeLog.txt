@@ -1,3 +1,61 @@
+2023-03-06 Version: 1.0.2
+- Update to latest.
+- New API CreateTransitRouteTableAggregation.
+- New API DeleteTransitRouteTableAggregation.
+- New API DescribeTransitRouteTableAggregation.
+- New API DescribeTransitRouteTableAggregationDetail.
+- New API RefreshTransitRouteTableAggregation.
+- Update API CreateTransitRouterRouteTable support parameter RouteTableOptions.
+- Update API UpdateTransitRouterRouteTable support parameter RouteTableOptions.
+- Update API ListTransitRouterRouteTables support parameter RouteTableOptions and response RegionId, RouteTableOptions.
+- Update API UpdateTrafficMarkingPolicyAttribute support parameter AddTrafficMatchRules and DeleteTrafficMatchRules.
+- Update API ListTransitRouters support parameter Status, Type, TransitRouterName and FeatureFilter.
+- Update API DescribeFlowlogs support response TransitRouterAttachmentId and Interval.
+- Update API ListTransitRouterVpcAttachments support parameter OrderType, Status and response OrderType.
+- Update API ListTransitRouterRouteTableAssociations support parameter TransitRouterAttachmentResourceId, TransitRouterAttachmentResourceType and Status.
+- Update API ListTransitRouterRouteTablePropagations support parameter TransitRouterAttachmentResourceId, TransitRouterAttachmentResourceType and Status.
+- Add ListCenChildInstanceRouteEntriesToAttachment support query VPC instance route to Vpc Attachment.
+- Add ListTransitRouterAttachmentPropagations support query TransitRouter Propagations by Attachment Id.
+- Update API ListCenInterRegionTrafficQosPolicies support response TransitRouterId and TransitRouterAttachmentId.
+- Update API ListTrafficMarkingPolicies support response TransitRouterId.
+- Update API DescribeFlowlogs support parameter TransitRouterAttachmentId.
+- Update API ListTransitRouterVpcAttachments support parameter VpcId.
+- Update API DeleteTransitRouterConnectAttachment support parameter Force.
+- Update API DeleteTransitRouterVpcAttachment support parameter Force.
+- Update API DeleteTransitRouterVpnAttachment support parameter Force.
+- Update API DeleteTransitRouterVbrAttachment support parameter Force.
+- Add CreateTransitRouterCidr support create TR Cidr.
+- Add ModifyTransitRouterCidr support modify TR Cidr.
+- Add DeleteTransitRouterCidr support delete TR Cidr.
+- Add ListTransitRouterCidr support list TR Cidr.
+- Add ListTransitRouterCidrAllocation support list TR Cidr allocation.
+- Update CreateTransitRouter support TR Cidr list.
+- Update ListTransitRouters support Cidr list.
+- Update ListTransitRouterVpnAttachments response support ChargeType.
+- CreateFlowlog add parameter tag.
+- DescribeFlowlogs add parameter tag and add response tags.
+- CreateTransitRouterRouteTable add parameter tag.
+- ListTransitRouterRouteTables add parameter tag and add response tags.
+- CreateTransitRouter add parameter tag.
+- ListTransitRouters add parameter tag and add response tags.
+- Update CreateCenBandwidthPackage offline parameter ServiceType.
+- Update ModifyCenBandwidthPackageSpec offline parameter ServiceType.
+- Update DescribeCenBandwidthPackages offline parameter ServiceType.
+- Update ListTransitRouterPrefixListAssociation support NextHop and NextHopType filter.
+- Update ListTransitRouterPrefixListAssociation support TransitRouterRouteTableId filter.
+- Update ListTrafficMarkingPolicies no TrafficMatchRules field in response if no TrafficMarkingPolicyId in request.
+- Update ListCenInterRegionTrafficQosPolicies no TrafficQosQueues field in response if no TrafficQosPolicyId in request.
+- Add new API DescribeGrantRulesToResource.
+- Update DescribeGrantRulesToCen support MaxResult and nextToken.
+- Update ListTransitRouterPrefixlistAssociation return TransitRouterId and TransitRouterTableId.
+- Update param NextHopType visibility for DeleteTransitRouterPrefixListAssociation.
+- Add AvailableZones for ListTransitRouterAvailableResource.
+- Support Multicast.
+- RouteMap Support sub-table.
+- Modify the input parameter Action of CreateCen to be required.
+- Support DeleteTransitRouter API.
+- Support Darabonba API.
+
 2022-02-21 Version: 1.0.1
 - Generated java-async 2017-09-12 for Cbn.
 

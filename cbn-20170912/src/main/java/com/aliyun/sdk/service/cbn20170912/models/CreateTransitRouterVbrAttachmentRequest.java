@@ -49,6 +49,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TransitRouterAttachmentDescription")
     private String transitRouterAttachmentDescription;
 
@@ -80,6 +84,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.transitRouterAttachmentDescription = builder.transitRouterAttachmentDescription;
         this.transitRouterAttachmentName = builder.transitRouterAttachmentName;
         this.transitRouterId = builder.transitRouterId;
@@ -164,6 +169,13 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return transitRouterAttachmentDescription
      */
     public String getTransitRouterAttachmentDescription() {
@@ -208,6 +220,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentName; 
         private String transitRouterId; 
@@ -218,26 +231,31 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTransitRouterVbrAttachmentRequest response) {
-            super(response);
-            this.autoPublishRouteEnabled = response.autoPublishRouteEnabled;
-            this.cenId = response.cenId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentDescription = response.transitRouterAttachmentDescription;
-            this.transitRouterAttachmentName = response.transitRouterAttachmentName;
-            this.transitRouterId = response.transitRouterId;
-            this.vbrId = response.vbrId;
-            this.vbrOwnerId = response.vbrOwnerId;
+        private Builder(CreateTransitRouterVbrAttachmentRequest request) {
+            super(request);
+            this.autoPublishRouteEnabled = request.autoPublishRouteEnabled;
+            this.cenId = request.cenId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
+            this.transitRouterAttachmentName = request.transitRouterAttachmentName;
+            this.transitRouterId = request.transitRouterId;
+            this.vbrId = request.vbrId;
+            this.vbrOwnerId = request.vbrOwnerId;
         } 
 
         /**
-         * AutoPublishRouteEnabled.
+         * Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no
+         * *   **true**: yes
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -246,7 +264,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -255,7 +273,12 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -264,7 +287,11 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): performs a dry run and sends the request.
+         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -291,7 +318,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VBR is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -318,7 +348,22 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentDescription.
+         * The information about the tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The description of the VBR connection.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -327,7 +372,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentName.
+         * The name of the VBR connection.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -336,7 +384,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the Enterprise Edition transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -345,7 +393,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * VbrId.
+         * The ID of the VBR.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);
@@ -354,7 +402,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * VbrOwnerId.
+         * The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.
+         * <p>
+         * 
+         * > If you want to connect to a network instance that belongs to a different account, this parameter is required.
          */
         public Builder vbrOwnerId(Long vbrOwnerId) {
             this.putQueryParameter("VbrOwnerId", vbrOwnerId);
@@ -369,4 +420,75 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

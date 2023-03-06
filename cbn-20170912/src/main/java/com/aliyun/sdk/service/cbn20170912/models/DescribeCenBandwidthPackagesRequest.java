@@ -152,21 +152,21 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCenBandwidthPackagesRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.includeReservationData = response.includeReservationData;
-            this.isOrKey = response.isOrKey;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeCenBandwidthPackagesRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.includeReservationData = request.includeReservationData;
+            this.isOrKey = request.isOrKey;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * Filter.
+         * The filter conditions.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -175,7 +175,11 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * IncludeReservationData.
+         * Specifies whether to include renewal data. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -184,7 +188,11 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * IsOrKey.
+         * The logical operator between the filter conditions. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.
+         * *   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.
          */
         public Builder isOrKey(Boolean isOrKey) {
             this.putQueryParameter("IsOrKey", isOrKey);
@@ -211,7 +219,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +228,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -292,7 +300,23 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The filter condition.
+             * <p>
+             * 
+             * You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:
+             * 
+             * *   **CenId**: CEN instance ID
+             * 
+             * *   **Status**: bandwidth plan status. Valid values:
+             * 
+             *     *   **Idle**: not associated with a CEN instance.
+             *     *   **InUse**: associated with a CEN instance.
+             * 
+             * *   **CenBandwidthPackageId**: bandwidth plan ID
+             * 
+             * *   **Name**: bandwidth plan name
+             * 
+             *     You can specify one or more filter conditions. The maximum value of **N** is **5**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -300,7 +324,7 @@ public class DescribeCenBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The values of condition.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

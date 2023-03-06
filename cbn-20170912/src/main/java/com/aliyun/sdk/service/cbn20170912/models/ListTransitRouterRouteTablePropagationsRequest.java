@@ -37,8 +37,20 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
     @NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
+
+    @Query
+    @NameInMap("TransitRouterAttachmentResourceId")
+    private String transitRouterAttachmentResourceId;
+
+    @Query
+    @NameInMap("TransitRouterAttachmentResourceType")
+    private String transitRouterAttachmentResourceType;
 
     @Query
     @NameInMap("TransitRouterRouteTableId")
@@ -53,7 +65,10 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.status = builder.status;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
+        this.transitRouterAttachmentResourceId = builder.transitRouterAttachmentResourceId;
+        this.transitRouterAttachmentResourceType = builder.transitRouterAttachmentResourceType;
         this.transitRouterRouteTableId = builder.transitRouterRouteTableId;
     }
 
@@ -113,10 +128,31 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return transitRouterAttachmentId
      */
     public String getTransitRouterAttachmentId() {
         return this.transitRouterAttachmentId;
+    }
+
+    /**
+     * @return transitRouterAttachmentResourceId
+     */
+    public String getTransitRouterAttachmentResourceId() {
+        return this.transitRouterAttachmentResourceId;
+    }
+
+    /**
+     * @return transitRouterAttachmentResourceType
+     */
+    public String getTransitRouterAttachmentResourceType() {
+        return this.transitRouterAttachmentResourceType;
     }
 
     /**
@@ -133,27 +169,33 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String status; 
         private String transitRouterAttachmentId; 
+        private String transitRouterAttachmentResourceId; 
+        private String transitRouterAttachmentResourceType; 
         private String transitRouterRouteTableId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTransitRouterRouteTablePropagationsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterRouteTableId = response.transitRouterRouteTableId;
+        private Builder(ListTransitRouterRouteTablePropagationsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterAttachmentResourceId = request.transitRouterAttachmentResourceId;
+            this.transitRouterAttachmentResourceType = request.transitRouterAttachmentResourceType;
+            this.transitRouterRouteTableId = request.transitRouterRouteTableId;
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Default value: **50**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -162,7 +204,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -207,7 +249,16 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * The ID of the network instance connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -216,7 +267,25 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableId.
+         * TransitRouterAttachmentResourceId.
+         */
+        public Builder transitRouterAttachmentResourceId(String transitRouterAttachmentResourceId) {
+            this.putQueryParameter("TransitRouterAttachmentResourceId", transitRouterAttachmentResourceId);
+            this.transitRouterAttachmentResourceId = transitRouterAttachmentResourceId;
+            return this;
+        }
+
+        /**
+         * TransitRouterAttachmentResourceType.
+         */
+        public Builder transitRouterAttachmentResourceType(String transitRouterAttachmentResourceType) {
+            this.putQueryParameter("TransitRouterAttachmentResourceType", transitRouterAttachmentResourceType);
+            this.transitRouterAttachmentResourceType = transitRouterAttachmentResourceType;
+            return this;
+        }
+
+        /**
+         * The ID of the route table of the Enterprise Edition transit router.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

@@ -143,20 +143,25 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
             super();
         } 
 
-        private Builder(RoutePrivateZoneInCenToVpcRequest response) {
-            super(response);
-            this.accessRegionId = response.accessRegionId;
-            this.cenId = response.cenId;
-            this.hostRegionId = response.hostRegionId;
-            this.hostVpcId = response.hostVpcId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RoutePrivateZoneInCenToVpcRequest request) {
+            super(request);
+            this.accessRegionId = request.accessRegionId;
+            this.cenId = request.cenId;
+            this.hostRegionId = request.hostRegionId;
+            this.hostVpcId = request.hostVpcId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AccessRegionId.
+         * The ID of the region where PrivateZone is accessed.
+         * <p>
+         * 
+         * This region refers to the region in which PrivateZone is accessed by clients.
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -165,7 +170,7 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -174,7 +179,7 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * HostRegionId.
+         * The ID of the region where PrivateZone is deployed.
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);
@@ -183,7 +188,7 @@ public class RoutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * HostVpcId.
+         * The ID of the VPC that is associated with PrivateZone.
          */
         public Builder hostVpcId(String hostVpcId) {
             this.putQueryParameter("HostVpcId", hostVpcId);

@@ -140,20 +140,25 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
             super();
         } 
 
-        private Builder(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trafficMarkRuleIds = response.trafficMarkRuleIds;
-            this.trafficMarkingPolicyId = response.trafficMarkingPolicyId;
+        private Builder(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficMarkRuleIds = request.trafficMarkRuleIds;
+            this.trafficMarkingPolicyId = request.trafficMarkingPolicyId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. 
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.  
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +167,11 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         }
 
         /**
-         * DryRun.
+         * Specifies whether only to precheck the request. Valid values:
+         * <p>
+         * 
+         * - **true**: prechecks the request but does not delete the traffic classification rules. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * - **false** (default): sends the request and deletes the specified traffic classification rules after the request passes the precheck.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -207,7 +216,12 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         }
 
         /**
-         * TrafficMarkRuleIds.
+         * The IDs of the traffic classification rules.
+         * <p>
+         * 
+         * You can specify at most 20 traffic classification rules.
+         * 
+         * You can call the ListTrafficMarkingPolicies operation to query the IDs of traffic classification rules in a specified traffic marking policy.
          */
         public Builder trafficMarkRuleIds(java.util.List < String > trafficMarkRuleIds) {
             this.putQueryParameter("TrafficMarkRuleIds", trafficMarkRuleIds);
@@ -216,7 +230,7 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         }
 
         /**
-         * TrafficMarkingPolicyId.
+         * The ID of the traffic marking policy.
          */
         public Builder trafficMarkingPolicyId(String trafficMarkingPolicyId) {
             this.putQueryParameter("TrafficMarkingPolicyId", trafficMarkingPolicyId);

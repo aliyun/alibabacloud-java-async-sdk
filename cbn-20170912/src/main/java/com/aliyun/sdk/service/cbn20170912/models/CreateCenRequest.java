@@ -44,6 +44,10 @@ public class CreateCenRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CreateCenRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -54,6 +58,7 @@ public class CreateCenRequest extends Request {
         this.protectionLevel = builder.protectionLevel;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -125,6 +130,13 @@ public class CreateCenRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateCenRequest, Builder> {
         private String clientToken; 
         private String description; 
@@ -134,25 +146,32 @@ public class CreateCenRequest extends Request {
         private String protectionLevel; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateCenRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.protectionLevel = response.protectionLevel;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateCenRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.protectionLevel = request.protectionLevel;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -161,7 +180,10 @@ public class CreateCenRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the CEN instance.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -170,7 +192,10 @@ public class CreateCenRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the CEN instance.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -197,7 +222,10 @@ public class CreateCenRequest extends Request {
         }
 
         /**
-         * ProtectionLevel.
+         * The level of CIDR block overlapping.
+         * <p>
+         * 
+         * Set the value to **REDUCED** (default). This value specifies that CIDR blocks can overlap but cannot be the same.
          */
         public Builder protectionLevel(String protectionLevel) {
             this.putQueryParameter("ProtectionLevel", protectionLevel);
@@ -223,6 +251,15 @@ public class CreateCenRequest extends Request {
             return this;
         }
 
+        /**
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public CreateCenRequest build() {
             return new CreateCenRequest(this);
@@ -230,4 +267,75 @@ public class CreateCenRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag keys of the resources.
+             * <p>
+             * 
+             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag values of the resources.
+             * <p>
+             * 
+             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterAvailableResourceResponseBody</p>
  */
 public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
+    @NameInMap("AvailableZones")
+    private java.util.List < String > availableZones;
+
     @NameInMap("MasterZones")
     private java.util.List < String > masterZones;
 
@@ -22,6 +25,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     private java.util.List < String > slaveZones;
 
     private ListTransitRouterAvailableResourceResponseBody(Builder builder) {
+        this.availableZones = builder.availableZones;
         this.masterZones = builder.masterZones;
         this.requestId = builder.requestId;
         this.slaveZones = builder.slaveZones;
@@ -33,6 +37,13 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
 
     public static ListTransitRouterAvailableResourceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return availableZones
+     */
+    public java.util.List < String > getAvailableZones() {
+        return this.availableZones;
     }
 
     /**
@@ -57,12 +68,21 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < String > availableZones; 
         private java.util.List < String > masterZones; 
         private String requestId; 
         private java.util.List < String > slaveZones; 
 
         /**
-         * MasterZones.
+         * A list of zones.
+         */
+        public Builder availableZones(java.util.List < String > availableZones) {
+            this.availableZones = availableZones;
+            return this;
+        }
+
+        /**
+         * A list of primary zones.
          */
         public Builder masterZones(java.util.List < String > masterZones) {
             this.masterZones = masterZones;
@@ -70,7 +90,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +98,10 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * SlaveZones.
+         * A list of zone IDs.
+         * <p>
+         * 
+         * You can call [DescribeZones](~~36064~~) to query zones by ID.
          */
         public Builder slaveZones(java.util.List < String > slaveZones) {
             this.slaveZones = slaveZones;

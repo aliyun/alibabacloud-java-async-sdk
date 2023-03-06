@@ -86,7 +86,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         private java.util.List < TransitRouterPropagations> transitRouterPropagations; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * TransitRouterPropagations.
+         * A list of route learning correlations.
          */
         public Builder transitRouterPropagations(java.util.List < TransitRouterPropagations> transitRouterPropagations) {
             this.transitRouterPropagations = transitRouterPropagations;
@@ -206,7 +206,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             private String transitRouterRouteTableId; 
 
             /**
-             * ResourceId.
+             * The ID of the next hop.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -214,7 +214,13 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * ResourceType.
+             * The type of next hop. Valid values:
+             * <p>
+             * 
+             * *   **VPC**: virtual private cloud (VPC)
+             * *   **CCN**: Cloud Connect Network (CCN) instance
+             * *   **VBR**: virtual border router (VBR)
+             * *   **TR**: transit router
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -222,7 +228,13 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * Status.
+             * The status of the route learning correlation. Valid values:
+             * <p>
+             * 
+             * *   **Enabling**: enabling
+             * *   **Disabling**: disabling
+             * *   **Active**: available
+             * *   **Deleted**: deleted
              */
             public Builder status(String status) {
                 this.status = status;
@@ -230,7 +242,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * TransitRouterAttachmentId.
+             * The ID of the network instance connection.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -238,7 +250,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * TransitRouterRouteTableId.
+             * The ID of the route table of the Enterprise Edition transit router.
              */
             public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
                 this.transitRouterRouteTableId = transitRouterRouteTableId;

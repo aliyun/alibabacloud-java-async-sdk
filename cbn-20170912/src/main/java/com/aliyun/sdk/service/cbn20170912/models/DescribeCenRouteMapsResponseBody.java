@@ -86,7 +86,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * RouteMaps.
+         * The information about the routing policy.
          */
         public Builder routeMaps(RouteMaps routeMaps) {
             this.routeMaps = routeMaps;
@@ -118,7 +118,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -704,6 +704,9 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         @NameInMap("MapResult")
         private String mapResult;
 
+        @NameInMap("MatchAddressType")
+        private String matchAddressType;
+
         @NameInMap("MatchAsns")
         private MatchAsns matchAsns;
 
@@ -749,6 +752,9 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("TransitRouterRouteTableId")
+        private String transitRouterRouteTableId;
+
         @NameInMap("TransmitDirection")
         private String transmitDirection;
 
@@ -766,6 +772,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             this.destinationInstanceIdsReverseMatch = builder.destinationInstanceIdsReverseMatch;
             this.destinationRouteTableIds = builder.destinationRouteTableIds;
             this.mapResult = builder.mapResult;
+            this.matchAddressType = builder.matchAddressType;
             this.matchAsns = builder.matchAsns;
             this.matchCommunitySet = builder.matchCommunitySet;
             this.nextPriority = builder.nextPriority;
@@ -781,6 +788,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             this.sourceRegionIds = builder.sourceRegionIds;
             this.sourceRouteTableIds = builder.sourceRouteTableIds;
             this.status = builder.status;
+            this.transitRouterRouteTableId = builder.transitRouterRouteTableId;
             this.transmitDirection = builder.transmitDirection;
         }
 
@@ -881,6 +889,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
          */
         public String getMapResult() {
             return this.mapResult;
+        }
+
+        /**
+         * @return matchAddressType
+         */
+        public String getMatchAddressType() {
+            return this.matchAddressType;
         }
 
         /**
@@ -989,6 +1004,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
+         * @return transitRouterRouteTableId
+         */
+        public String getTransitRouterRouteTableId() {
+            return this.transitRouterRouteTableId;
+        }
+
+        /**
          * @return transmitDirection
          */
         public String getTransmitDirection() {
@@ -1009,6 +1031,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             private Boolean destinationInstanceIdsReverseMatch; 
             private DestinationRouteTableIds destinationRouteTableIds; 
             private String mapResult; 
+            private String matchAddressType; 
             private MatchAsns matchAsns; 
             private MatchCommunitySet matchCommunitySet; 
             private Integer nextPriority; 
@@ -1024,10 +1047,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             private SourceRegionIds sourceRegionIds; 
             private SourceRouteTableIds sourceRouteTableIds; 
             private String status; 
+            private String transitRouterRouteTableId; 
             private String transmitDirection; 
 
             /**
-             * AsPathMatchMode.
+             * The match method that is used to match routes based on the AS path.
+             * <p>
+             * 
+             * *   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.
+             * *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as the AS path specified in the match condition.
              */
             public Builder asPathMatchMode(String asPathMatchMode) {
                 this.asPathMatchMode = asPathMatchMode;
@@ -1035,7 +1063,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -1043,7 +1071,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * CenRegionId.
+             * The ID of the region where the routing policy is applied.
              */
             public Builder cenRegionId(String cenRegionId) {
                 this.cenRegionId = cenRegionId;
@@ -1051,7 +1079,16 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * CidrMatchMode.
+             * The match method that is used to match routes based on the prefix. Valid values:
+             * <p>
+             * 
+             * *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
+             * 
+             *     For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.
+             * 
+             * *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
+             * 
+             *     For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
              */
             public Builder cidrMatchMode(String cidrMatchMode) {
                 this.cidrMatchMode = cidrMatchMode;
@@ -1059,7 +1096,11 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * CommunityMatchMode.
+             * The match method that is used to match routes based on the community.
+             * <p>
+             * 
+             * *   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.
+             * *   **Complete**: exact match. A route is a match only if the community of the route is the same as the community specified in the match condition.
              */
             public Builder communityMatchMode(String communityMatchMode) {
                 this.communityMatchMode = communityMatchMode;
@@ -1067,7 +1108,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * CommunityOperateMode.
+             * The action that is performed on the community of the route.
+             * <p>
+             * 
+             * *   **Additive**: adds the community to the route.
+             * *   **Replace**: replaces the original community of the route.
+             * 
+             * This parameter indicates the action to be performed when a route meets the match condition.
              */
             public Builder communityOperateMode(String communityOperateMode) {
                 this.communityOperateMode = communityOperateMode;
@@ -1075,7 +1122,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the routing policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1083,7 +1130,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationChildInstanceTypes.
+             * The types of destination network instance to which the routes belong.
+             * <p>
+             * 
+             * *   **VPC**: VPC
+             * *   **VBR**: VBR
+             * *   **CCN**: CCN instance
+             * *   **VPN**: IPsec-VPN connection
+             * 
+             * >  The destination network instance types are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
              */
             public Builder destinationChildInstanceTypes(DestinationChildInstanceTypes destinationChildInstanceTypes) {
                 this.destinationChildInstanceTypes = destinationChildInstanceTypes;
@@ -1091,7 +1146,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationCidrBlocks.
+             * The prefixes of the routes.
              */
             public Builder destinationCidrBlocks(DestinationCidrBlocks destinationCidrBlocks) {
                 this.destinationCidrBlocks = destinationCidrBlocks;
@@ -1099,7 +1154,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationInstanceIds.
+             * The IDs of the destination network instances to which the routes belong.
+             * <p>
+             * 
+             * >  The destination network instance IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
              */
             public Builder destinationInstanceIds(DestinationInstanceIds destinationInstanceIds) {
                 this.destinationInstanceIds = destinationInstanceIds;
@@ -1107,7 +1165,11 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationInstanceIdsReverseMatch.
+             * Indicates whether the destination network instance IDs are excluded.
+             * <p>
+             * 
+             * *   **false** (default): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
+             * *   **true**: A route is a match if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
              */
             public Builder destinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
                 this.destinationInstanceIdsReverseMatch = destinationInstanceIdsReverseMatch;
@@ -1115,7 +1177,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationRouteTableIds.
+             * The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.
+             * <p>
+             * 
+             * >  The destination route table IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to route tables in the current region.
              */
             public Builder destinationRouteTableIds(DestinationRouteTableIds destinationRouteTableIds) {
                 this.destinationRouteTableIds = destinationRouteTableIds;
@@ -1123,7 +1188,11 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * MapResult.
+             * The action performed on a route that meets the match conditions.
+             * <p>
+             * 
+             * *   **Permit**: the route is permitted.
+             * *   **Deny**: the route is denied.
              */
             public Builder mapResult(String mapResult) {
                 this.mapResult = mapResult;
@@ -1131,7 +1200,20 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchAsns.
+             * The type of IP address to be matched against the match condition. Valid values:
+             * <p>
+             * 
+             * *   **IPv4**: IPv4 addresses
+             * *   **IPv6**: IPv6 addresses
+             * *   If no value is returned, both IPv4 and IPv6 addresses are matched against the match condition.
+             */
+            public Builder matchAddressType(String matchAddressType) {
+                this.matchAddressType = matchAddressType;
+                return this;
+            }
+
+            /**
+             * The AS paths based on which the routes are compared.
              */
             public Builder matchAsns(MatchAsns matchAsns) {
                 this.matchAsns = matchAsns;
@@ -1139,7 +1221,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchCommunitySet.
+             * The community set based on which the routes are compared.
              */
             public Builder matchCommunitySet(MatchCommunitySet matchCommunitySet) {
                 this.matchCommunitySet = matchCommunitySet;
@@ -1147,7 +1229,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * NextPriority.
+             * The priority of the routing policy that you want to associate with the current one.
              */
             public Builder nextPriority(Integer nextPriority) {
                 this.nextPriority = nextPriority;
@@ -1155,7 +1237,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateCommunitySet.
+             * The community set on which actions are performed.
              */
             public Builder operateCommunitySet(OperateCommunitySet operateCommunitySet) {
                 this.operateCommunitySet = operateCommunitySet;
@@ -1163,7 +1245,12 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * Preference.
+             * The new priority of the route.
+             * <p>
+             * 
+             * A smaller value indicates a higher priority.
+             * 
+             * This parameter indicates the action to be performed when a route meets the match condition.
              */
             public Builder preference(Integer preference) {
                 this.preference = preference;
@@ -1171,7 +1258,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * PrependAsPath.
+             * The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.
+             * <p>
+             * 
+             * This parameter indicates the action to be performed when a route meets the match condition.
              */
             public Builder prependAsPath(PrependAsPath prependAsPath) {
                 this.prependAsPath = prependAsPath;
@@ -1179,7 +1269,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the routing policy. A smaller value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1187,7 +1277,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * RouteMapId.
+             * The ID of the routing policy.
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -1195,7 +1285,12 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTypes.
+             * The types of routes that is compared. Valid values:
+             * <p>
+             * 
+             * *   **System**: system routes that are automatically generated by the system.
+             * *   **Custom**: custom routes that are manually added.
+             * *   **BGP**: routes that are advertised over Border Gateway Protocol (BGP).
              */
             public Builder routeTypes(RouteTypes routeTypes) {
                 this.routeTypes = routeTypes;
@@ -1203,7 +1298,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceChildInstanceTypes.
+             * The types of source network instance to which the routes belong.
+             * <p>
+             * 
+             * *   **VPC**: virtual private cloud (VPC)
+             * *   **VBR**: virtual border router (VBR)
+             * *   **CCN**: Cloud Connect Network (CCN) instance
+             * *   **VPN**: IPsec-VPN connection
              */
             public Builder sourceChildInstanceTypes(SourceChildInstanceTypes sourceChildInstanceTypes) {
                 this.sourceChildInstanceTypes = sourceChildInstanceTypes;
@@ -1211,7 +1312,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceIds.
+             * The IDs of the source network instances to which the routes belong.
              */
             public Builder sourceInstanceIds(SourceInstanceIds sourceInstanceIds) {
                 this.sourceInstanceIds = sourceInstanceIds;
@@ -1219,7 +1320,11 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceIdsReverseMatch.
+             * Indicates whether the source network instance IDs are excluded.
+             * <p>
+             * 
+             * *   **false** (default): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
+             * *   **true**: A route is match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
              */
             public Builder sourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
                 this.sourceInstanceIdsReverseMatch = sourceInstanceIdsReverseMatch;
@@ -1227,7 +1332,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRegionIds.
+             * The IDs of the source regions to which the routes belong.
              */
             public Builder sourceRegionIds(SourceRegionIds sourceRegionIds) {
                 this.sourceRegionIds = sourceRegionIds;
@@ -1235,7 +1340,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRouteTableIds.
+             * The IDs of the source route tables to which the routes belong.
              */
             public Builder sourceRouteTableIds(SourceRouteTableIds sourceRouteTableIds) {
                 this.sourceRouteTableIds = sourceRouteTableIds;
@@ -1243,7 +1348,12 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the routing policy. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The routing policy is being created.
+             * *   **Active**: The routing policy is available.
+             * *   **Deleting**: The routing policy is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1251,7 +1361,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * TransmitDirection.
+             * The route table ID of the transit router with which the routing policy is associated.
+             */
+            public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
+                this.transitRouterRouteTableId = transitRouterRouteTableId;
+                return this;
+            }
+
+            /**
+             * The direction in which the routing policy is applied.
              */
             public Builder transmitDirection(String transmitDirection) {
                 this.transmitDirection = transmitDirection;

@@ -50,7 +50,7 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * A list of regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * LocalName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,7 +118,7 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

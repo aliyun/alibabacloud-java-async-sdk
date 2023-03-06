@@ -14,8 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListTransitRoutersRequest extends Request {
     @Query
     @NameInMap("CenId")
-    @Validation(required = true)
     private String cenId;
+
+    @Query
+    @NameInMap("FeatureFilter")
+    private java.util.List < FeatureFilter> featureFilter;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -46,12 +49,29 @@ public class ListTransitRoutersRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TransitRouterId")
     private String transitRouterId;
+
+    @Query
+    @NameInMap("TransitRouterName")
+    private String transitRouterName;
+
+    @Query
+    @NameInMap("Type")
+    private String type;
 
     private ListTransitRoutersRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
+        this.featureFilter = builder.featureFilter;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -59,7 +79,11 @@ public class ListTransitRoutersRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.status = builder.status;
+        this.tag = builder.tag;
         this.transitRouterId = builder.transitRouterId;
+        this.transitRouterName = builder.transitRouterName;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -80,6 +104,13 @@ public class ListTransitRoutersRequest extends Request {
      */
     public String getCenId() {
         return this.cenId;
+    }
+
+    /**
+     * @return featureFilter
+     */
+    public java.util.List < FeatureFilter> getFeatureFilter() {
+        return this.featureFilter;
     }
 
     /**
@@ -132,14 +163,43 @@ public class ListTransitRoutersRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return transitRouterId
      */
     public String getTransitRouterId() {
         return this.transitRouterId;
     }
 
+    /**
+     * @return transitRouterName
+     */
+    public String getTransitRouterName() {
+        return this.transitRouterName;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<ListTransitRoutersRequest, Builder> {
         private String cenId; 
+        private java.util.List < FeatureFilter> featureFilter; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -147,31 +207,49 @@ public class ListTransitRoutersRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String status; 
+        private java.util.List < Tag> tag; 
         private String transitRouterId; 
+        private String transitRouterName; 
+        private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTransitRoutersRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterId = response.transitRouterId;
+        private Builder(ListTransitRoutersRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.featureFilter = request.featureFilter;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.transitRouterId = request.transitRouterId;
+            this.transitRouterName = request.transitRouterName;
+            this.type = request.type;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
             this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * The field that is used to enable or disable a feature of the transit router.
+         */
+        public Builder featureFilter(java.util.List < FeatureFilter> featureFilter) {
+            this.putQueryParameter("FeatureFilter", featureFilter);
+            this.featureFilter = featureFilter;
             return this;
         }
 
@@ -194,7 +272,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -203,7 +281,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +290,10 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the transit router is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,11 +320,64 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The status of the transit router. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: The transit router is being created.
+         * *   **Active**: The transit router is available.
+         * *   **Modifying**: The transit router is being modified
+         * *   **Deleting**: The transit router is being deleted.
+         * *   **Upgrading**: The transit router is being upgraded.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * The information about the tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
             this.transitRouterId = transitRouterId;
+            return this;
+        }
+
+        /**
+         * The name of the Enterprise Edition transit router.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         */
+        public Builder transitRouterName(String transitRouterName) {
+            this.putQueryParameter("TransitRouterName", transitRouterName);
+            this.transitRouterName = transitRouterName;
+            return this;
+        }
+
+        /**
+         * The edition of the transit router. Valid values:
+         * <p>
+         * 
+         * *   **Enterprise**: Enhance Edition
+         * *   **Basic**: Basic Edition
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
@@ -254,4 +388,143 @@ public class ListTransitRoutersRequest extends Request {
 
     } 
 
+    public static class FeatureFilter extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private java.util.List < String > value;
+
+        private FeatureFilter(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FeatureFilter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public java.util.List < String > getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private java.util.List < String > value; 
+
+            /**
+             * The value of the field that is used to enable or disable a feature of the transit router. Supported fields:
+             * <p>
+             * 
+             * *   **Multicast**: the multicast feature.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The fields that are used to enable or disable the features of the transit router. The **Multicast** field supports only one value. Valid values:
+             * <p>
+             * 
+             * *   **Enabled**: enables multicast.
+             * *   **Disabled**: disables multicast.
+             */
+            public Builder value(java.util.List < String > value) {
+                this.value = value;
+                return this;
+            }
+
+            public FeatureFilter build() {
+                return new FeatureFilter(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

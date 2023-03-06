@@ -170,22 +170,22 @@ public class GrantInstanceToTransitRouterRequest extends Request {
             super();
         } 
 
-        private Builder(GrantInstanceToTransitRouterRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenOwnerId = response.cenOwnerId;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.orderType = response.orderType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GrantInstanceToTransitRouterRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenOwnerId = request.cenOwnerId;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.orderType = request.orderType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -194,7 +194,7 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * CenOwnerId.
+         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -203,7 +203,7 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the network instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +212,12 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * *   **ExpressConnect**: VBR
+         * *   **VPN**: IPsec-VPN connection
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -221,7 +226,11 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The entity that pays the fees of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
+         * *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -248,7 +257,10 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

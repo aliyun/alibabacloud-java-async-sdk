@@ -50,7 +50,7 @@ public class CreateTransitRouterVbrAttachmentResponseBody extends TeaModel {
         private String transitRouterAttachmentId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateTransitRouterVbrAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the VBR connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.transitRouterAttachmentId = transitRouterAttachmentId;

@@ -156,21 +156,24 @@ public class DeleteRouteServiceInCenRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRouteServiceInCenRequest response) {
-            super(response);
-            this.accessRegionId = response.accessRegionId;
-            this.cenId = response.cenId;
-            this.host = response.host;
-            this.hostRegionId = response.hostRegionId;
-            this.hostVpcId = response.hostVpcId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteRouteServiceInCenRequest request) {
+            super(request);
+            this.accessRegionId = request.accessRegionId;
+            this.cenId = request.cenId;
+            this.host = request.host;
+            this.hostRegionId = request.hostRegionId;
+            this.hostVpcId = request.hostVpcId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AccessRegionId.
+         * The ID of the region in which the network instance of the cloud service that you want to access is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -179,7 +182,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -188,7 +191,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * Host.
+         * The IP addresses or CIDR blocks of the cloud service.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -197,7 +200,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * HostRegionId.
+         * The ID of the region in which the cloud service is deployed.
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);
@@ -206,7 +209,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * HostVpcId.
+         * The ID of the virtual private cloud (VPC) that is associated with the cloud service.
          */
         public Builder hostVpcId(String hostVpcId) {
             this.putQueryParameter("HostVpcId", hostVpcId);

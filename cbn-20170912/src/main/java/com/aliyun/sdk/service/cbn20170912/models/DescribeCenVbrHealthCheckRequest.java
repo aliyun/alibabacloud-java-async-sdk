@@ -166,22 +166,22 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCenVbrHealthCheckRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vbrInstanceId = response.vbrInstanceId;
-            this.vbrInstanceOwnerId = response.vbrInstanceOwnerId;
-            this.vbrInstanceRegionId = response.vbrInstanceRegionId;
+        private Builder(DescribeCenVbrHealthCheckRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vbrInstanceId = request.vbrInstanceId;
+            this.vbrInstanceOwnerId = request.vbrInstanceOwnerId;
+            this.vbrInstanceRegionId = request.vbrInstanceRegionId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -208,7 +208,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +217,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +244,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * VbrInstanceId.
+         * The ID of the VBR.
          */
         public Builder vbrInstanceId(String vbrInstanceId) {
             this.putQueryParameter("VbrInstanceId", vbrInstanceId);
@@ -253,7 +253,10 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * VbrInstanceOwnerId.
+         * The ID of the Alibaba Cloud account that owns the VBR.
+         * <p>
+         * 
+         * >  The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
          */
         public Builder vbrInstanceOwnerId(Long vbrInstanceOwnerId) {
             this.putQueryParameter("VbrInstanceOwnerId", vbrInstanceOwnerId);
@@ -262,7 +265,10 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * VbrInstanceRegionId.
+         * The ID of the region where the VBR is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
             this.putQueryParameter("VbrInstanceRegionId", vbrInstanceRegionId);

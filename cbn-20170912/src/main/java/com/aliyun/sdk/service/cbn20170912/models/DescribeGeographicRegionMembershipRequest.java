@@ -127,19 +127,26 @@ public class DescribeGeographicRegionMembershipRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeGeographicRegionMembershipRequest response) {
-            super(response);
-            this.geographicRegionId = response.geographicRegionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeGeographicRegionMembershipRequest request) {
+            super(request);
+            this.geographicRegionId = request.geographicRegionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * GeographicRegionId.
+         * The ID of the area that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **china**: the Chinese mainland
+         * *   **asia-pacific**: Asia Pacific
+         * *   **europe**: Europe
+         * *   **australia**: Australia
+         * *   **north-america**: North America
          */
         public Builder geographicRegionId(String geographicRegionId) {
             this.putQueryParameter("GeographicRegionId", geographicRegionId);
@@ -166,7 +173,7 @@ public class DescribeGeographicRegionMembershipRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +182,7 @@ public class DescribeGeographicRegionMembershipRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

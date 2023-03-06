@@ -100,13 +100,13 @@ public class DescribeChildInstanceRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeChildInstanceRegionsRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.productType = response.productType;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeChildInstanceRegionsRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.productType = request.productType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -128,7 +128,12 @@ public class DescribeChildInstanceRegionsRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VBR**: virtual border router (VBR)
+         * *   **CCN**: Cloud Connect Network (CCN) instance
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

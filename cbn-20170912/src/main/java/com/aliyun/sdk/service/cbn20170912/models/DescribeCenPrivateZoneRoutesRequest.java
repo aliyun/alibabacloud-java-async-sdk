@@ -127,19 +127,22 @@ public class DescribeCenPrivateZoneRoutesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCenPrivateZoneRoutesRequest response) {
-            super(response);
-            this.accessRegionId = response.accessRegionId;
-            this.cenId = response.cenId;
-            this.hostRegionId = response.hostRegionId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeCenPrivateZoneRoutesRequest request) {
+            super(request);
+            this.accessRegionId = request.accessRegionId;
+            this.cenId = request.cenId;
+            this.hostRegionId = request.hostRegionId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AccessRegionId.
+         * The ID of the region where PrivateZone is accessed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -148,7 +151,7 @@ public class DescribeCenPrivateZoneRoutesRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -157,7 +160,7 @@ public class DescribeCenPrivateZoneRoutesRequest extends Request {
         }
 
         /**
-         * HostRegionId.
+         * The ID of the region where PrivateZone is deployed.
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);
@@ -166,7 +169,7 @@ public class DescribeCenPrivateZoneRoutesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +178,7 @@ public class DescribeCenPrivateZoneRoutesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

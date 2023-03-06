@@ -86,7 +86,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         private java.util.List < TransitRouterAssociations> transitRouterAssociations; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** was not returned, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +122,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         }
 
         /**
-         * TransitRouterAssociations.
+         * A list of associated forwarding correlations.
          */
         public Builder transitRouterAssociations(java.util.List < TransitRouterAssociations> transitRouterAssociations) {
             this.transitRouterAssociations = transitRouterAssociations;
@@ -206,7 +210,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             private String transitRouterRouteTableId; 
 
             /**
-             * ResourceId.
+             * The ID of the next hop.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -214,7 +218,13 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * ResourceType.
+             * The type of next hop. Valid values:
+             * <p>
+             * 
+             * *   **VPC**: VPC
+             * *   **VBR**: VBR
+             * *   **TR**: transit router
+             * *   **VPN** :VPN attachment
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -222,7 +232,13 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * Status.
+             * The status of the associated forwarding correlation. Valid values:
+             * <p>
+             * 
+             * *   **Active**: The associated forwarding correlation is available.
+             * *   **Associating**: The associated forwarding correlation is being created.
+             * *   **Dissociating**: The associated forwarding correlation is being deleted.
+             * *   **Deleted**: The associated forwarding correlation is deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -230,7 +246,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * TransitRouterAttachmentId.
+             * The ID of the network instance connection.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -238,7 +254,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
             }
 
             /**
-             * TransitRouterRouteTableId.
+             * The ID of the route table of the Enterprise Edition transit router.
              */
             public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
                 this.transitRouterRouteTableId = transitRouterRouteTableId;

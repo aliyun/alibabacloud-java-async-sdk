@@ -157,21 +157,21 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
             super();
         } 
 
-        private Builder(RevokeInstanceFromTransitRouterRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenOwnerId = response.cenOwnerId;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RevokeInstanceFromTransitRouterRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenOwnerId = request.cenOwnerId;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -180,7 +180,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * CenOwnerId.
+         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -189,7 +189,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the network instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -198,7 +198,12 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * *   **ExpressConnect**: VBR
+         * *   **VPN**: IPsec-VPN connection
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -225,7 +230,10 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

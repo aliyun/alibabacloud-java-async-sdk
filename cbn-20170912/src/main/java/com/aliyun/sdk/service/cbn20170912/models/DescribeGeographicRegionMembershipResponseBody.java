@@ -86,7 +86,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * RegionIds.
+         * The list of regions.
          */
         public Builder regionIds(RegionIds regionIds) {
             this.regionIds = regionIds;
@@ -110,7 +110,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +158,10 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * RegionId.
+             * The ID of the region.
+             * <p>
+             * 
+             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -199,7 +202,10 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
             private java.util.List < RegionId> regionId; 
 
             /**
-             * RegionId.
+             * The ID of the region.
+             * <p>
+             * 
+             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
              */
             public Builder regionId(java.util.List < RegionId> regionId) {
                 this.regionId = regionId;

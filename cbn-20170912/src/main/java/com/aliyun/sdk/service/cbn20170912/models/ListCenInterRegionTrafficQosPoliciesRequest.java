@@ -54,7 +54,6 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
 
     @Query
     @NameInMap("TransitRouterId")
-    @Validation(required = true)
     private String transitRouterId;
 
     private ListCenInterRegionTrafficQosPoliciesRequest(Builder builder) {
@@ -179,23 +178,23 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(ListCenInterRegionTrafficQosPoliciesRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trafficQosPolicyDescription = response.trafficQosPolicyDescription;
-            this.trafficQosPolicyId = response.trafficQosPolicyId;
-            this.trafficQosPolicyName = response.trafficQosPolicyName;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterId = response.transitRouterId;
+        private Builder(ListCenInterRegionTrafficQosPoliciesRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficQosPolicyDescription = request.trafficQosPolicyDescription;
+            this.trafficQosPolicyId = request.trafficQosPolicyId;
+            this.trafficQosPolicyName = request.trafficQosPolicyName;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -204,7 +203,11 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -249,7 +252,10 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * TrafficQosPolicyDescription.
+         * The description of the QoS policy.
+         * <p>
+         * 
+         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
          */
         public Builder trafficQosPolicyDescription(String trafficQosPolicyDescription) {
             this.putQueryParameter("TrafficQosPolicyDescription", trafficQosPolicyDescription);
@@ -258,7 +264,7 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * TrafficQosPolicyId.
+         * The ID of the QoS policy.
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);
@@ -267,7 +273,10 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * TrafficQosPolicyName.
+         * The name of the QoS policy.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder trafficQosPolicyName(String trafficQosPolicyName) {
             this.putQueryParameter("TrafficQosPolicyName", trafficQosPolicyName);
@@ -276,7 +285,7 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the inter-region connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -285,7 +294,7 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

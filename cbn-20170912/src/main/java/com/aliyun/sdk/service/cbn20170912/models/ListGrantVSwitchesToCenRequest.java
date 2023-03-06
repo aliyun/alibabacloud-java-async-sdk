@@ -170,22 +170,22 @@ public class ListGrantVSwitchesToCenRequest extends Request {
             super();
         } 
 
-        private Builder(ListGrantVSwitchesToCenRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(ListGrantVSwitchesToCenRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -212,7 +212,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +221,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +230,10 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the VPC is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -257,7 +260,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -266,7 +269,13 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone where the instance resides.
+         * <p>
+         * 
+         * *   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.
+         * *   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.
+         * 
+         * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -155,21 +155,21 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
             super();
         } 
 
-        private Builder(DescribeCenGeographicSpanRemainingBandwidthRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.geographicRegionAId = response.geographicRegionAId;
-            this.geographicRegionBId = response.geographicRegionBId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeCenGeographicSpanRemainingBandwidthRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.geographicRegionAId = request.geographicRegionAId;
+            this.geographicRegionBId = request.geographicRegionBId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is associated.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -178,7 +178,14 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * GeographicRegionAId.
+         * The ID of one of the areas connected by the bandwidth plan. Valid values:
+         * <p>
+         * 
+         * *   **China**: Chinese mainland
+         * *   **North-America**: North America
+         * *   **Asia-Pacific**: Asia Pacific
+         * *   **Europe**: Europe
+         * *   **Australia**: Australia
          */
         public Builder geographicRegionAId(String geographicRegionAId) {
             this.putQueryParameter("GeographicRegionAId", geographicRegionAId);
@@ -187,7 +194,14 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * GeographicRegionBId.
+         * The ID of the other area connected by the bandwidth plan. Valid values:
+         * <p>
+         * 
+         * *   **China**: Chinese mainland
+         * *   **North-America**: North America
+         * *   **Asia-Pacific**: Asia Pacific
+         * *   **Europe**: Europe
+         * *   **Australia**: Australia
          */
         public Builder geographicRegionBId(String geographicRegionBId) {
             this.putQueryParameter("GeographicRegionBId", geographicRegionBId);
@@ -214,7 +228,7 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -223,7 +237,7 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends Request 
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

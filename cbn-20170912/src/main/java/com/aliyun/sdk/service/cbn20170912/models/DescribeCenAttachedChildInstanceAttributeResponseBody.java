@@ -134,7 +134,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         private String status; 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -142,7 +142,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceAttachTime.
+         * The time when the network instance was attached to the CEN instance.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
          */
         public Builder childInstanceAttachTime(String childInstanceAttachTime) {
             this.childInstanceAttachTime = childInstanceAttachTime;
@@ -150,7 +153,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.childInstanceId = childInstanceId;
@@ -158,7 +161,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceName.
+         * The name of the network instance.
          */
         public Builder childInstanceName(String childInstanceName) {
             this.childInstanceName = childInstanceName;
@@ -166,7 +169,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceOwnerId.
+         * The ID of the Alibaba Cloud account to which the network instance belongs.
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.childInstanceOwnerId = childInstanceOwnerId;
@@ -174,7 +177,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The region ID of the network instance.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.childInstanceRegionId = childInstanceRegionId;
@@ -182,7 +185,12 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * *   **VBR**: VBR
+         * *   **CCN**: CCN instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.childInstanceType = childInstanceType;
@@ -190,7 +198,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +206,12 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Status.
+         * Indicates whether the network instance is attached to the CEN instance.
+         * <p>
+         * 
+         * *   **Attaching**: The network instance is being attached to the CEN instance.
+         * *   **Attached**: The network instance is attached to the CEN instance.
+         * *   **Detaching**: The network instance is being detached from the CEN instance.
          */
         public Builder status(String status) {
             this.status = status;

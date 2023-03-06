@@ -37,12 +37,23 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
     @NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
     @Query
+    @NameInMap("TransitRouterAttachmentResourceId")
+    private String transitRouterAttachmentResourceId;
+
+    @Query
+    @NameInMap("TransitRouterAttachmentResourceType")
+    private String transitRouterAttachmentResourceType;
+
+    @Query
     @NameInMap("TransitRouterRouteTableId")
-    @Validation(required = true)
     private String transitRouterRouteTableId;
 
     private ListTransitRouterRouteTableAssociationsRequest(Builder builder) {
@@ -53,7 +64,10 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.status = builder.status;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
+        this.transitRouterAttachmentResourceId = builder.transitRouterAttachmentResourceId;
+        this.transitRouterAttachmentResourceType = builder.transitRouterAttachmentResourceType;
         this.transitRouterRouteTableId = builder.transitRouterRouteTableId;
     }
 
@@ -113,10 +127,31 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return transitRouterAttachmentId
      */
     public String getTransitRouterAttachmentId() {
         return this.transitRouterAttachmentId;
+    }
+
+    /**
+     * @return transitRouterAttachmentResourceId
+     */
+    public String getTransitRouterAttachmentResourceId() {
+        return this.transitRouterAttachmentResourceId;
+    }
+
+    /**
+     * @return transitRouterAttachmentResourceType
+     */
+    public String getTransitRouterAttachmentResourceType() {
+        return this.transitRouterAttachmentResourceType;
     }
 
     /**
@@ -133,27 +168,33 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String status; 
         private String transitRouterAttachmentId; 
+        private String transitRouterAttachmentResourceId; 
+        private String transitRouterAttachmentResourceType; 
         private String transitRouterRouteTableId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTransitRouterRouteTableAssociationsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterRouteTableId = response.transitRouterRouteTableId;
+        private Builder(ListTransitRouterRouteTableAssociationsRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterAttachmentResourceId = request.transitRouterAttachmentResourceId;
+            this.transitRouterAttachmentResourceType = request.transitRouterAttachmentResourceType;
+            this.transitRouterRouteTableId = request.transitRouterRouteTableId;
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Default value: **50**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -162,7 +203,11 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -207,7 +252,21 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The status of the associated forwarding correlation. Valid values:
+         * <p>
+         * 
+         * *   **Active**: The associated forwarding correlation is available.
+         * *   **Associating**: The associated forwarding correlation is being created.
+         * *   **Dissociating**: The associated forwarding correlation is being deleted.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * The ID of the network instance connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -216,7 +275,31 @@ public class ListTransitRouterRouteTableAssociationsRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableId.
+         * The ID of the next hop.
+         */
+        public Builder transitRouterAttachmentResourceId(String transitRouterAttachmentResourceId) {
+            this.putQueryParameter("TransitRouterAttachmentResourceId", transitRouterAttachmentResourceId);
+            this.transitRouterAttachmentResourceId = transitRouterAttachmentResourceId;
+            return this;
+        }
+
+        /**
+         * The type of next hop. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VBR**: virtual border router (VBR)
+         * *   **TR**: transit router
+         * *   **VPN**: VPN attachment
+         */
+        public Builder transitRouterAttachmentResourceType(String transitRouterAttachmentResourceType) {
+            this.putQueryParameter("TransitRouterAttachmentResourceType", transitRouterAttachmentResourceType);
+            this.transitRouterAttachmentResourceType = transitRouterAttachmentResourceType;
+            return this;
+        }
+
+        /**
+         * The ID of the route table of the Enterprise Edition transit router.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

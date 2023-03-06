@@ -167,22 +167,27 @@ public class UpdateTransitRouterRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTransitRouterRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterDescription = response.transitRouterDescription;
-            this.transitRouterId = response.transitRouterId;
-            this.transitRouterName = response.transitRouterName;
+        private Builder(UpdateTransitRouterRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterDescription = request.transitRouterDescription;
+            this.transitRouterId = request.transitRouterId;
+            this.transitRouterName = request.transitRouterName;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +196,11 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:
+         * <p>
+         * 
+         * *   **false**: sends the request. If the request passes the precheck, the information of the transit router is modified.
+         * *   **true**: sends a request for precheck only. The information of the transit router is not modified after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -218,7 +227,10 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the transit router is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -245,7 +257,10 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * TransitRouterDescription.
+         * The description of the transit router.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterDescription(String transitRouterDescription) {
             this.putQueryParameter("TransitRouterDescription", transitRouterDescription);
@@ -254,7 +269,7 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -263,7 +278,10 @@ public class UpdateTransitRouterRequest extends Request {
         }
 
         /**
-         * TransitRouterName.
+         * The name of the transit router.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterName(String transitRouterName) {
             this.putQueryParameter("TransitRouterName", transitRouterName);

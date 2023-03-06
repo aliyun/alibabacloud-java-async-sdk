@@ -30,6 +30,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PrefixListId")
+    private String prefixListId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -38,7 +42,12 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("RouteFilter")
+    private java.util.List < RouteFilter> routeFilter;
+
+    @Query
     @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
+    @Deprecated
     private String transitRouterRouteEntryDestinationCidrBlock;
 
     @Query
@@ -50,8 +59,36 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
     private java.util.List < String > transitRouterRouteEntryNames;
 
     @Query
+    @NameInMap("TransitRouterRouteEntryNextHopId")
+    private String transitRouterRouteEntryNextHopId;
+
+    @Query
+    @NameInMap("TransitRouterRouteEntryNextHopResourceId")
+    private String transitRouterRouteEntryNextHopResourceId;
+
+    @Query
+    @NameInMap("TransitRouterRouteEntryNextHopResourceType")
+    private String transitRouterRouteEntryNextHopResourceType;
+
+    @Query
+    @NameInMap("TransitRouterRouteEntryNextHopType")
+    private String transitRouterRouteEntryNextHopType;
+
+    @Query
+    @NameInMap("TransitRouterRouteEntryOriginResourceId")
+    private String transitRouterRouteEntryOriginResourceId;
+
+    @Query
+    @NameInMap("TransitRouterRouteEntryOriginResourceType")
+    private String transitRouterRouteEntryOriginResourceType;
+
+    @Query
     @NameInMap("TransitRouterRouteEntryStatus")
     private String transitRouterRouteEntryStatus;
+
+    @Query
+    @NameInMap("TransitRouterRouteEntryType")
+    private String transitRouterRouteEntryType;
 
     @Query
     @NameInMap("TransitRouterRouteTableId")
@@ -64,12 +101,21 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.prefixListId = builder.prefixListId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.routeFilter = builder.routeFilter;
         this.transitRouterRouteEntryDestinationCidrBlock = builder.transitRouterRouteEntryDestinationCidrBlock;
         this.transitRouterRouteEntryIds = builder.transitRouterRouteEntryIds;
         this.transitRouterRouteEntryNames = builder.transitRouterRouteEntryNames;
+        this.transitRouterRouteEntryNextHopId = builder.transitRouterRouteEntryNextHopId;
+        this.transitRouterRouteEntryNextHopResourceId = builder.transitRouterRouteEntryNextHopResourceId;
+        this.transitRouterRouteEntryNextHopResourceType = builder.transitRouterRouteEntryNextHopResourceType;
+        this.transitRouterRouteEntryNextHopType = builder.transitRouterRouteEntryNextHopType;
+        this.transitRouterRouteEntryOriginResourceId = builder.transitRouterRouteEntryOriginResourceId;
+        this.transitRouterRouteEntryOriginResourceType = builder.transitRouterRouteEntryOriginResourceType;
         this.transitRouterRouteEntryStatus = builder.transitRouterRouteEntryStatus;
+        this.transitRouterRouteEntryType = builder.transitRouterRouteEntryType;
         this.transitRouterRouteTableId = builder.transitRouterRouteTableId;
     }
 
@@ -115,6 +161,13 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
     }
 
     /**
+     * @return prefixListId
+     */
+    public String getPrefixListId() {
+        return this.prefixListId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -126,6 +179,13 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return routeFilter
+     */
+    public java.util.List < RouteFilter> getRouteFilter() {
+        return this.routeFilter;
     }
 
     /**
@@ -150,10 +210,59 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
     }
 
     /**
+     * @return transitRouterRouteEntryNextHopId
+     */
+    public String getTransitRouterRouteEntryNextHopId() {
+        return this.transitRouterRouteEntryNextHopId;
+    }
+
+    /**
+     * @return transitRouterRouteEntryNextHopResourceId
+     */
+    public String getTransitRouterRouteEntryNextHopResourceId() {
+        return this.transitRouterRouteEntryNextHopResourceId;
+    }
+
+    /**
+     * @return transitRouterRouteEntryNextHopResourceType
+     */
+    public String getTransitRouterRouteEntryNextHopResourceType() {
+        return this.transitRouterRouteEntryNextHopResourceType;
+    }
+
+    /**
+     * @return transitRouterRouteEntryNextHopType
+     */
+    public String getTransitRouterRouteEntryNextHopType() {
+        return this.transitRouterRouteEntryNextHopType;
+    }
+
+    /**
+     * @return transitRouterRouteEntryOriginResourceId
+     */
+    public String getTransitRouterRouteEntryOriginResourceId() {
+        return this.transitRouterRouteEntryOriginResourceId;
+    }
+
+    /**
+     * @return transitRouterRouteEntryOriginResourceType
+     */
+    public String getTransitRouterRouteEntryOriginResourceType() {
+        return this.transitRouterRouteEntryOriginResourceType;
+    }
+
+    /**
      * @return transitRouterRouteEntryStatus
      */
     public String getTransitRouterRouteEntryStatus() {
         return this.transitRouterRouteEntryStatus;
+    }
+
+    /**
+     * @return transitRouterRouteEntryType
+     */
+    public String getTransitRouterRouteEntryType() {
+        return this.transitRouterRouteEntryType;
     }
 
     /**
@@ -168,35 +277,53 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String prefixListId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < RouteFilter> routeFilter; 
         private String transitRouterRouteEntryDestinationCidrBlock; 
         private java.util.List < String > transitRouterRouteEntryIds; 
         private java.util.List < String > transitRouterRouteEntryNames; 
+        private String transitRouterRouteEntryNextHopId; 
+        private String transitRouterRouteEntryNextHopResourceId; 
+        private String transitRouterRouteEntryNextHopResourceType; 
+        private String transitRouterRouteEntryNextHopType; 
+        private String transitRouterRouteEntryOriginResourceId; 
+        private String transitRouterRouteEntryOriginResourceType; 
         private String transitRouterRouteEntryStatus; 
+        private String transitRouterRouteEntryType; 
         private String transitRouterRouteTableId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTransitRouterRouteEntriesRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterRouteEntryDestinationCidrBlock = response.transitRouterRouteEntryDestinationCidrBlock;
-            this.transitRouterRouteEntryIds = response.transitRouterRouteEntryIds;
-            this.transitRouterRouteEntryNames = response.transitRouterRouteEntryNames;
-            this.transitRouterRouteEntryStatus = response.transitRouterRouteEntryStatus;
-            this.transitRouterRouteTableId = response.transitRouterRouteTableId;
+        private Builder(ListTransitRouterRouteEntriesRequest request) {
+            super(request);
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.prefixListId = request.prefixListId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeFilter = request.routeFilter;
+            this.transitRouterRouteEntryDestinationCidrBlock = request.transitRouterRouteEntryDestinationCidrBlock;
+            this.transitRouterRouteEntryIds = request.transitRouterRouteEntryIds;
+            this.transitRouterRouteEntryNames = request.transitRouterRouteEntryNames;
+            this.transitRouterRouteEntryNextHopId = request.transitRouterRouteEntryNextHopId;
+            this.transitRouterRouteEntryNextHopResourceId = request.transitRouterRouteEntryNextHopResourceId;
+            this.transitRouterRouteEntryNextHopResourceType = request.transitRouterRouteEntryNextHopResourceType;
+            this.transitRouterRouteEntryNextHopType = request.transitRouterRouteEntryNextHopType;
+            this.transitRouterRouteEntryOriginResourceId = request.transitRouterRouteEntryOriginResourceId;
+            this.transitRouterRouteEntryOriginResourceType = request.transitRouterRouteEntryOriginResourceType;
+            this.transitRouterRouteEntryStatus = request.transitRouterRouteEntryStatus;
+            this.transitRouterRouteEntryType = request.transitRouterRouteEntryType;
+            this.transitRouterRouteTableId = request.transitRouterRouteTableId;
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -205,7 +332,11 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * - If this is your first query or no subsequent query is to be sent, ignore this parameter.
+         * - If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -232,6 +363,15 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
+         * PrefixListId.
+         */
+        public Builder prefixListId(String prefixListId) {
+            this.putQueryParameter("PrefixListId", prefixListId);
+            this.prefixListId = prefixListId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -250,7 +390,16 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteEntryDestinationCidrBlock.
+         * RouteFilter.
+         */
+        public Builder routeFilter(java.util.List < RouteFilter> routeFilter) {
+            this.putQueryParameter("RouteFilter", routeFilter);
+            this.routeFilter = routeFilter;
+            return this;
+        }
+
+        /**
+         * The destination CIDR block of the route.
          */
         public Builder transitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
             this.putQueryParameter("TransitRouterRouteEntryDestinationCidrBlock", transitRouterRouteEntryDestinationCidrBlock);
@@ -259,7 +408,12 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteEntryIds.
+         * The IDs of the route entries.
+         * <p>
+         * 
+         * You can query at most 20 route entries in each call.
+         * 
+         * >  You can call this operation to query only static routes.
          */
         public Builder transitRouterRouteEntryIds(java.util.List < String > transitRouterRouteEntryIds) {
             this.putQueryParameter("TransitRouterRouteEntryIds", transitRouterRouteEntryIds);
@@ -268,7 +422,14 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteEntryNames.
+         * The names of the routes.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: `, . ; / @ \_ -`. You can also leave the name empty.
+         * 
+         * You can query multiple route entries in each call. Maximum value of **N**: **20**.
+         * 
+         * >  You can call this operation to query only static routes.
          */
         public Builder transitRouterRouteEntryNames(java.util.List < String > transitRouterRouteEntryNames) {
             this.putQueryParameter("TransitRouterRouteEntryNames", transitRouterRouteEntryNames);
@@ -277,7 +438,66 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteEntryStatus.
+         * TransitRouterRouteEntryNextHopId.
+         */
+        public Builder transitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
+            this.putQueryParameter("TransitRouterRouteEntryNextHopId", transitRouterRouteEntryNextHopId);
+            this.transitRouterRouteEntryNextHopId = transitRouterRouteEntryNextHopId;
+            return this;
+        }
+
+        /**
+         * TransitRouterRouteEntryNextHopResourceId.
+         */
+        public Builder transitRouterRouteEntryNextHopResourceId(String transitRouterRouteEntryNextHopResourceId) {
+            this.putQueryParameter("TransitRouterRouteEntryNextHopResourceId", transitRouterRouteEntryNextHopResourceId);
+            this.transitRouterRouteEntryNextHopResourceId = transitRouterRouteEntryNextHopResourceId;
+            return this;
+        }
+
+        /**
+         * TransitRouterRouteEntryNextHopResourceType.
+         */
+        public Builder transitRouterRouteEntryNextHopResourceType(String transitRouterRouteEntryNextHopResourceType) {
+            this.putQueryParameter("TransitRouterRouteEntryNextHopResourceType", transitRouterRouteEntryNextHopResourceType);
+            this.transitRouterRouteEntryNextHopResourceType = transitRouterRouteEntryNextHopResourceType;
+            return this;
+        }
+
+        /**
+         * TransitRouterRouteEntryNextHopType.
+         */
+        public Builder transitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
+            this.putQueryParameter("TransitRouterRouteEntryNextHopType", transitRouterRouteEntryNextHopType);
+            this.transitRouterRouteEntryNextHopType = transitRouterRouteEntryNextHopType;
+            return this;
+        }
+
+        /**
+         * TransitRouterRouteEntryOriginResourceId.
+         */
+        public Builder transitRouterRouteEntryOriginResourceId(String transitRouterRouteEntryOriginResourceId) {
+            this.putQueryParameter("TransitRouterRouteEntryOriginResourceId", transitRouterRouteEntryOriginResourceId);
+            this.transitRouterRouteEntryOriginResourceId = transitRouterRouteEntryOriginResourceId;
+            return this;
+        }
+
+        /**
+         * TransitRouterRouteEntryOriginResourceType.
+         */
+        public Builder transitRouterRouteEntryOriginResourceType(String transitRouterRouteEntryOriginResourceType) {
+            this.putQueryParameter("TransitRouterRouteEntryOriginResourceType", transitRouterRouteEntryOriginResourceType);
+            this.transitRouterRouteEntryOriginResourceType = transitRouterRouteEntryOriginResourceType;
+            return this;
+        }
+
+        /**
+         * The status of the route. Valid values: Valid values:
+         * <p>
+         * 
+         * - **Creating**: The route is being created.
+         * - **Active**: The rule is available.
+         * - **Deleting**: The rule is being deleted.
          */
         public Builder transitRouterRouteEntryStatus(String transitRouterRouteEntryStatus) {
             this.putQueryParameter("TransitRouterRouteEntryStatus", transitRouterRouteEntryStatus);
@@ -286,7 +506,16 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableId.
+         * TransitRouterRouteEntryType.
+         */
+        public Builder transitRouterRouteEntryType(String transitRouterRouteEntryType) {
+            this.putQueryParameter("TransitRouterRouteEntryType", transitRouterRouteEntryType);
+            this.transitRouterRouteEntryType = transitRouterRouteEntryType;
+            return this;
+        }
+
+        /**
+         * The ID of the route table of the Enterprise Edition transit router.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
@@ -301,4 +530,65 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
 
     } 
 
+    public static class RouteFilter extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private java.util.List < String > value;
+
+        private RouteFilter(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteFilter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public java.util.List < String > getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private java.util.List < String > value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(java.util.List < String > value) {
+                this.value = value;
+                return this;
+            }
+
+            public RouteFilter build() {
+                return new RouteFilter(this);
+            } 
+
+        } 
+
+    }
 }

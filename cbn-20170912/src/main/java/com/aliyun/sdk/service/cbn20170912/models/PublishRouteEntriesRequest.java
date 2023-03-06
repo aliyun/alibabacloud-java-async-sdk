@@ -145,20 +145,20 @@ public class PublishRouteEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(PublishRouteEntriesRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.childInstanceId = response.childInstanceId;
-            this.childInstanceRegionId = response.childInstanceRegionId;
-            this.childInstanceRouteTableId = response.childInstanceRouteTableId;
-            this.childInstanceType = response.childInstanceType;
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(PublishRouteEntriesRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.childInstanceId = request.childInstanceId;
+            this.childInstanceRegionId = request.childInstanceRegionId;
+            this.childInstanceRouteTableId = request.childInstanceRouteTableId;
+            this.childInstanceType = request.childInstanceType;
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -167,7 +167,7 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -176,7 +176,10 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -185,7 +188,7 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRouteTableId.
+         * The ID of the route table configured on the network instance.
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -194,7 +197,11 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * *   **VBR**: VBR
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -203,7 +210,7 @@ public class PublishRouteEntriesRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * The destination CIDR block of the route that you want to advertise.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);

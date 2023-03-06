@@ -37,6 +37,10 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("RouteTableOptions")
+    private RouteTableOptions routeTableOptions;
+
+    @Query
     @NameInMap("TransitRouterRouteTableDescription")
     private String transitRouterRouteTableDescription;
 
@@ -57,6 +61,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.routeTableOptions = builder.routeTableOptions;
         this.transitRouterRouteTableDescription = builder.transitRouterRouteTableDescription;
         this.transitRouterRouteTableId = builder.transitRouterRouteTableId;
         this.transitRouterRouteTableName = builder.transitRouterRouteTableName;
@@ -118,6 +123,13 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
     }
 
     /**
+     * @return routeTableOptions
+     */
+    public RouteTableOptions getRouteTableOptions() {
+        return this.routeTableOptions;
+    }
+
+    /**
      * @return transitRouterRouteTableDescription
      */
     public String getTransitRouterRouteTableDescription() {
@@ -145,6 +157,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private RouteTableOptions routeTableOptions; 
         private String transitRouterRouteTableDescription; 
         private String transitRouterRouteTableId; 
         private String transitRouterRouteTableName; 
@@ -153,21 +166,27 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTransitRouterRouteTableRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterRouteTableDescription = response.transitRouterRouteTableDescription;
-            this.transitRouterRouteTableId = response.transitRouterRouteTableId;
-            this.transitRouterRouteTableName = response.transitRouterRouteTableName;
+        private Builder(UpdateTransitRouterRouteTableRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableOptions = request.routeTableOptions;
+            this.transitRouterRouteTableDescription = request.transitRouterRouteTableDescription;
+            this.transitRouterRouteTableId = request.transitRouterRouteTableId;
+            this.transitRouterRouteTableName = request.transitRouterRouteTableName;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +195,11 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Default values:
+         * <p>
+         * 
+         * *   **false** (default): performs a dry run and sends the request.
+         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -221,7 +244,19 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableDescription.
+         * RouteTableOptions.
+         */
+        public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
+            this.putQueryParameter("RouteTableOptions", routeTableOptions);
+            this.routeTableOptions = routeTableOptions;
+            return this;
+        }
+
+        /**
+         * The description of the route table.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
          */
         public Builder transitRouterRouteTableDescription(String transitRouterRouteTableDescription) {
             this.putQueryParameter("TransitRouterRouteTableDescription", transitRouterRouteTableDescription);
@@ -230,7 +265,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableId.
+         * The ID of the route table of the Enterprise Edition transit router.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
@@ -239,7 +274,10 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableName.
+         * The name of the route table.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.
          */
         public Builder transitRouterRouteTableName(String transitRouterRouteTableName) {
             this.putQueryParameter("TransitRouterRouteTableName", transitRouterRouteTableName);
@@ -254,4 +292,45 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
 
     } 
 
+    public static class RouteTableOptions extends TeaModel {
+        @NameInMap("MultiRegionECMP")
+        private String multiRegionECMP;
+
+        private RouteTableOptions(Builder builder) {
+            this.multiRegionECMP = builder.multiRegionECMP;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteTableOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return multiRegionECMP
+         */
+        public String getMultiRegionECMP() {
+            return this.multiRegionECMP;
+        }
+
+        public static final class Builder {
+            private String multiRegionECMP; 
+
+            /**
+             * MultiRegionECMP.
+             */
+            public Builder multiRegionECMP(String multiRegionECMP) {
+                this.multiRegionECMP = multiRegionECMP;
+                return this;
+            }
+
+            public RouteTableOptions build() {
+                return new RouteTableOptions(this);
+            } 
+
+        } 
+
+    }
 }

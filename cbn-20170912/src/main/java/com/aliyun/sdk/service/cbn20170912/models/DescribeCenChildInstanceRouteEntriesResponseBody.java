@@ -86,7 +86,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CenRouteEntries.
+         * The array of routes.
          */
         public Builder cenRouteEntries(CenRouteEntries cenRouteEntries) {
             this.cenRouteEntries = cenRouteEntries;
@@ -94,7 +94,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -211,7 +211,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             private String routeMapId; 
 
             /**
-             * RegionId.
+             * The ID of the region where the route map is applied.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -219,7 +219,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteMapId.
+             * The ID of the route map.
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -390,7 +390,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the conflicting route.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -398,7 +398,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the peer network instance on which conflicting routes are found.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -406,7 +406,12 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the peer network instance on which conflicting routes are found. 
+             * <p>
+             * 
+             * - **VPC**
+             * - **VBR**
+             * - **CCN**
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -414,7 +419,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the peer network instance on which conflicting routes are found is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -422,7 +427,11 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The cause of the route error. Valid values: 
+             * <p>
+             * 
+             * - **conflict**: Two routes have the same destination CIDR block.
+             * - **overflow**: The number of routes in the route table configured on another network instance reached the upper limit.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -648,7 +657,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AsPaths.
+             * The AS paths of the routes.
              */
             public Builder asPaths(AsPaths asPaths) {
                 this.asPaths = asPaths;
@@ -656,7 +665,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * CenRouteMapRecords.
+             * The route maps that the routes match.
              */
             public Builder cenRouteMapRecords(CenRouteMapRecords cenRouteMapRecords) {
                 this.cenRouteMapRecords = cenRouteMapRecords;
@@ -664,7 +673,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Communities.
+             * The community attributes of the routes.
              */
             public Builder communities(Communities communities) {
                 this.communities = communities;
@@ -672,7 +681,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Conflicts.
+             * The array of conflicting routes.
              */
             public Builder conflicts(Conflicts conflicts) {
                 this.conflicts = conflicts;
@@ -680,7 +689,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the route.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -688,7 +697,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHopInstanceId.
+             * The ID of the instance specified as the next hop in the route.
              */
             public Builder nextHopInstanceId(String nextHopInstanceId) {
                 this.nextHopInstanceId = nextHopInstanceId;
@@ -696,7 +705,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHopRegionId.
+             * The ID of the region where the instance specified as the next hop in the route belongs.
              */
             public Builder nextHopRegionId(String nextHopRegionId) {
                 this.nextHopRegionId = nextHopRegionId;
@@ -704,7 +713,30 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHopType.
+             * The type of the instance specified as the next hop in the route. 
+             * <p>
+             * 
+             * - **Instance**: ECS instance
+             * - **HaVip**: HAVIP
+             * - **RouterInterface**: router interface
+             * - **NetworkInterface**: ENI
+             * - **VpnGateway**: VPN gateway
+             * - **IPv6Gateway**: IPv6 gateway
+             * - **NatGateway**: NAT gateway
+             * - **Attachment**: network instance connection
+             * - **service**: cloud service
+             * - **VBR**: virtual border router
+             * - **CCN**: CCN instance
+             * - **VPC**: virtual private cloud
+             * - **local**: system route. No next hop is specified.
+             * - **TR**: transit router
+             * - **BlackHole**: blackhole route. No next hop is specified.
+             * - **EcRouterInterface**: router interface for Express Connect
+             * - **HealthCheck**: health check
+             * - **AS**: access gateway for CCN
+             * - **classic**: classic network-type instance
+             * - **GatewayEndpoint**: gateway endpoint
+             * - **CPE**: data center connected by VBRs
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -712,7 +744,11 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * OperationalMode.
+             * Indicates whether the route is allowed to be advertised to or withdrawn from the CEN instance. Valid values:  
+             * <p>
+             * 
+             * - **true**: The route is allowed to be advertised to or withdrawn from the CEN instance.
+             * - **false**: The route is not allowed to be advertised to or withdrawn from the CEN instance.
              */
             public Builder operationalMode(Boolean operationalMode) {
                 this.operationalMode = operationalMode;
@@ -720,7 +756,11 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * Indicates whether the route is advertised to the CEN instance. Valid values: 
+             * <p>
+             * 
+             * - **Published**: The route is advertised to the CEN instance.
+             * - **NonPublished**: The route is not advertised to the CEN instance.
              */
             public Builder publishStatus(String publishStatus) {
                 this.publishStatus = publishStatus;
@@ -728,7 +768,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableId.
+             * The ID of the route table.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -736,7 +776,13 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the route. Valid values: 
+             * <p>
+             * 
+             * - **Active**: The route is active.
+             * - **Candidate**: The route is a standby route.
+             * - **Rejected**: The route is rejected.
+             * - **Prohibited**: The route is prohibited.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -744,7 +790,12 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the route. Valid values: 
+             * <p>
+             * 
+             * - **CEN**: route that is advertised through CEN
+             * - **System**: system route
+             * - **Custom**: custom route
              */
             public Builder type(String type) {
                 this.type = type;

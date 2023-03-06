@@ -21,6 +21,10 @@ public class TagResourcesRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private java.util.List < String > resourceId;
@@ -47,6 +51,7 @@ public class TagResourcesRequest extends Request {
         super(builder);
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -79,6 +84,13 @@ public class TagResourcesRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -119,6 +131,7 @@ public class TagResourcesRequest extends Request {
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -129,15 +142,16 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
@@ -159,7 +173,16 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The IDs of the resources. You can enter most at 20 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -186,7 +209,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **cen**, which specifies a CEN instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -195,7 +218,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags that you want to associate with the resources.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -249,7 +272,12 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * You can enter multiple tag keys. Valid values of **N**: **1** to **20**.
+             * 
+             * The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -257,7 +285,12 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * Each tag key corresponds to a tag value. Valid values of **N**: **1** to **20**.
+             * 
+             * The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

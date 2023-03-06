@@ -86,7 +86,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * GeographicSpanModels.
+         * A list of areas.
          */
         public Builder geographicSpanModels(GeographicSpanModels geographicSpanModels) {
             this.geographicSpanModels = geographicSpanModels;
@@ -94,7 +94,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             private String oppositeGeoRegionId; 
 
             /**
-             * GeographicSpanId.
+             * The ID of the pair of connected areas.
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -190,7 +190,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             }
 
             /**
-             * LocalGeoRegionId.
+             * The ID of the local area.
              */
             public Builder localGeoRegionId(String localGeoRegionId) {
                 this.localGeoRegionId = localGeoRegionId;
@@ -198,7 +198,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             }
 
             /**
-             * OppositeGeoRegionId.
+             * The ID of the peer area.
              */
             public Builder oppositeGeoRegionId(String oppositeGeoRegionId) {
                 this.oppositeGeoRegionId = oppositeGeoRegionId;

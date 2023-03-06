@@ -86,7 +86,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         private java.util.List < TransitRouters> transitRouters; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouters.
+         * A list of transit routers.
          */
         public Builder transitRouters(java.util.List < TransitRouters> transitRouters) {
             this.transitRouters = transitRouters;
@@ -131,6 +131,197 @@ public class ListTransitRoutersResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    public static class TransitRouterCidrList extends TeaModel {
+        @NameInMap("Cidr")
+        private String cidr;
+
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("PublishCidrRoute")
+        private Boolean publishCidrRoute;
+
+        @NameInMap("TransitRouterCidrId")
+        private String transitRouterCidrId;
+
+        private TransitRouterCidrList(Builder builder) {
+            this.cidr = builder.cidr;
+            this.description = builder.description;
+            this.name = builder.name;
+            this.publishCidrRoute = builder.publishCidrRoute;
+            this.transitRouterCidrId = builder.transitRouterCidrId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TransitRouterCidrList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cidr
+         */
+        public String getCidr() {
+            return this.cidr;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return publishCidrRoute
+         */
+        public Boolean getPublishCidrRoute() {
+            return this.publishCidrRoute;
+        }
+
+        /**
+         * @return transitRouterCidrId
+         */
+        public String getTransitRouterCidrId() {
+            return this.transitRouterCidrId;
+        }
+
+        public static final class Builder {
+            private String cidr; 
+            private String description; 
+            private String name; 
+            private Boolean publishCidrRoute; 
+            private String transitRouterCidrId; 
+
+            /**
+             * The CIDR block of the transit router.
+             */
+            public Builder cidr(String cidr) {
+                this.cidr = cidr;
+                return this;
+            }
+
+            /**
+             * The description of the CIDR block.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The name of the CIDR block.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * 
+             *         A value of **true** indicates that after you create a private VPN connection and create a route learning correlation for the private VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning correlation with the private VPN connection:
+             *           A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. 
+             *           The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. 
+             * 
+             * *   **false**: no
+             */
+            public Builder publishCidrRoute(Boolean publishCidrRoute) {
+                this.publishCidrRoute = publishCidrRoute;
+                return this;
+            }
+
+            /**
+             * The ID of the CIDR block.
+             */
+            public Builder transitRouterCidrId(String transitRouterCidrId) {
+                this.transitRouterCidrId = transitRouterCidrId;
+                return this;
+            }
+
+            public TransitRouterCidrList build() {
+                return new TransitRouterCidrList(this);
+            } 
+
+        } 
+
+    }
     public static class TransitRouters extends TeaModel {
         @NameInMap("AliUid")
         private Long aliUid;
@@ -146,6 +337,15 @@ public class ListTransitRoutersResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("SupportMulticast")
+        private Boolean supportMulticast;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        @NameInMap("TransitRouterCidrList")
+        private java.util.List < TransitRouterCidrList> transitRouterCidrList;
 
         @NameInMap("TransitRouterDescription")
         private String transitRouterDescription;
@@ -165,6 +365,9 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.supportMulticast = builder.supportMulticast;
+            this.tags = builder.tags;
+            this.transitRouterCidrList = builder.transitRouterCidrList;
             this.transitRouterDescription = builder.transitRouterDescription;
             this.transitRouterId = builder.transitRouterId;
             this.transitRouterName = builder.transitRouterName;
@@ -215,6 +418,27 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportMulticast
+         */
+        public Boolean getSupportMulticast() {
+            return this.supportMulticast;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return transitRouterCidrList
+         */
+        public java.util.List < TransitRouterCidrList> getTransitRouterCidrList() {
+            return this.transitRouterCidrList;
+        }
+
+        /**
          * @return transitRouterDescription
          */
         public String getTransitRouterDescription() {
@@ -248,13 +472,16 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             private String creationTime; 
             private String regionId; 
             private String status; 
+            private Boolean supportMulticast; 
+            private java.util.List < Tags> tags; 
+            private java.util.List < TransitRouterCidrList> transitRouterCidrList; 
             private String transitRouterDescription; 
             private String transitRouterId; 
             private String transitRouterName; 
             private String type; 
 
             /**
-             * AliUid.
+             * The ID of the Alibaba Cloud account to which the CEN instance belongs.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -262,7 +489,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -270,7 +497,10 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the transit router was created.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -278,7 +508,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the transit router is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -286,7 +516,14 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the transit router. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The transit router is being created.
+             * *   **Active**: The transit router is available.
+             * *   **Modifying**: The transit router is being modified
+             * *   **Deleting**: The transit router is being deleted.
+             * *   **Upgrading**: The transit router is being upgraded.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -294,7 +531,35 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterDescription.
+             * Indicates whether multicast is enabled for the transit router. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
+             */
+            public Builder supportMulticast(Boolean supportMulticast) {
+                this.supportMulticast = supportMulticast;
+                return this;
+            }
+
+            /**
+             * A list of tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The CIDR blocks of the transit router.
+             */
+            public Builder transitRouterCidrList(java.util.List < TransitRouterCidrList> transitRouterCidrList) {
+                this.transitRouterCidrList = transitRouterCidrList;
+                return this;
+            }
+
+            /**
+             * The description of the transit router.
              */
             public Builder transitRouterDescription(String transitRouterDescription) {
                 this.transitRouterDescription = transitRouterDescription;
@@ -302,7 +567,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterId.
+             * The ID of the transit router.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -310,7 +575,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterName.
+             * The name of the transit router.
              */
             public Builder transitRouterName(String transitRouterName) {
                 this.transitRouterName = transitRouterName;
@@ -318,7 +583,11 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The edition of the transit router. Valid values:
+             * <p>
+             * 
+             * *   **Enterprise**: Enhance Edition
+             * *   **Basic**: Basic Edition
              */
             public Builder type(String type) {
                 this.type = type;

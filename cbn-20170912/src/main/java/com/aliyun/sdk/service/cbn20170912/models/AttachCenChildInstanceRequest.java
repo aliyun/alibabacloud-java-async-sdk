@@ -156,21 +156,21 @@ public class AttachCenChildInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(AttachCenChildInstanceRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.childInstanceId = response.childInstanceId;
-            this.childInstanceOwnerId = response.childInstanceOwnerId;
-            this.childInstanceRegionId = response.childInstanceRegionId;
-            this.childInstanceType = response.childInstanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AttachCenChildInstanceRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.childInstanceId = request.childInstanceId;
+            this.childInstanceOwnerId = request.childInstanceOwnerId;
+            this.childInstanceRegionId = request.childInstanceRegionId;
+            this.childInstanceType = request.childInstanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -179,7 +179,7 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance that you want to attach to the CEN instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -188,7 +188,10 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * ChildInstanceOwnerId.
+         * The ID of the Alibaba Cloud account to which the network instance belongs.
+         * <p>
+         * 
+         * >  This parameter is required if you want to attach a network instance that belongs to another Alibaba Cloud account.
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.putQueryParameter("ChildInstanceOwnerId", childInstanceOwnerId);
@@ -197,7 +200,10 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The region ID of the network instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -206,7 +212,12 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * *   **VBR**: VBR
+         * *   **CCN**: CCN instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);

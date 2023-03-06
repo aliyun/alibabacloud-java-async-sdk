@@ -169,22 +169,22 @@ public class DetachCenChildInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DetachCenChildInstanceRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenOwnerId = response.cenOwnerId;
-            this.childInstanceId = response.childInstanceId;
-            this.childInstanceOwnerId = response.childInstanceOwnerId;
-            this.childInstanceRegionId = response.childInstanceRegionId;
-            this.childInstanceType = response.childInstanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DetachCenChildInstanceRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenOwnerId = request.cenOwnerId;
+            this.childInstanceId = request.childInstanceId;
+            this.childInstanceOwnerId = request.childInstanceOwnerId;
+            this.childInstanceRegionId = request.childInstanceRegionId;
+            this.childInstanceType = request.childInstanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -193,7 +193,7 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * CenOwnerId.
+         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -202,7 +202,7 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance that you want to detach from the CEN instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -211,7 +211,7 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * ChildInstanceOwnerId.
+         * The ID of the Alibaba Cloud account to which the network instance belongs.
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.putQueryParameter("ChildInstanceOwnerId", childInstanceOwnerId);
@@ -220,7 +220,10 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -229,7 +232,12 @@ public class DetachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VBR**: virtual border router (VBR)
+         * *   **CCN**: Cloud Connect Network (CCN) instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);

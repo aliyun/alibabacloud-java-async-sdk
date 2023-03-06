@@ -184,23 +184,23 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCenChildInstanceRouteEntryToCenRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.childInstanceAliUid = response.childInstanceAliUid;
-            this.childInstanceId = response.childInstanceId;
-            this.childInstanceRegionId = response.childInstanceRegionId;
-            this.childInstanceType = response.childInstanceType;
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeTableId = response.routeTableId;
+        private Builder(CreateCenChildInstanceRouteEntryToCenRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.childInstanceAliUid = request.childInstanceAliUid;
+            this.childInstanceId = request.childInstanceId;
+            this.childInstanceRegionId = request.childInstanceRegionId;
+            this.childInstanceType = request.childInstanceType;
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableId = request.routeTableId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -209,7 +209,10 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * ChildInstanceAliUid.
+         * The ID of the Alibaba Cloud account to which the network instance belongs.
+         * <p>
+         * 
+         * > If the network instance belongs to another Alibaba Cloud account, this parameter is required.
          */
         public Builder childInstanceAliUid(Long childInstanceAliUid) {
             this.putQueryParameter("ChildInstanceAliUid", childInstanceAliUid);
@@ -218,7 +221,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -227,7 +230,10 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -236,7 +242,11 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: a virtual private cloud (VPC)
+         * *   **VBR**: a virtual border router (VBR)
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -245,7 +255,10 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * The destination CIDR block of the route.
+         * <p>
+         * 
+         * Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -290,7 +303,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table configured on the network instance.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

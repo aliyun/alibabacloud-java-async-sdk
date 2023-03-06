@@ -206,25 +206,29 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTransitRouterPeerAttachmentAttributeRequest response) {
-            super(response);
-            this.autoPublishRouteEnabled = response.autoPublishRouteEnabled;
-            this.bandwidth = response.bandwidth;
-            this.bandwidthType = response.bandwidthType;
-            this.cenBandwidthPackageId = response.cenBandwidthPackageId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentDescription = response.transitRouterAttachmentDescription;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterAttachmentName = response.transitRouterAttachmentName;
+        private Builder(UpdateTransitRouterPeerAttachmentAttributeRequest request) {
+            super(request);
+            this.autoPublishRouteEnabled = request.autoPublishRouteEnabled;
+            this.bandwidth = request.bandwidth;
+            this.bandwidthType = request.bandwidthType;
+            this.cenBandwidthPackageId = request.cenBandwidthPackageId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterAttachmentName = request.transitRouterAttachmentName;
         } 
 
         /**
-         * AutoPublishRouteEnabled.
+         * Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no.
+         * *   **true**: yes.
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -233,7 +237,11 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+         * <p>
+         * 
+         * *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
+         * *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -242,7 +250,12 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * BandwidthType.
+         * The bandwidth allocation method. Valid values:
+         * <p>
+         * 
+         * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+         * 
+         * **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -251,7 +264,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * CenBandwidthPackageId.
+         * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
+         * <p>
+         * 
+         * >  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -260,7 +276,12 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -269,7 +290,11 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): checks the request. If the request passes the check, the inter-region connection is modified.
+         * *   **true**: prechecks the request but does not perform the operation. The cross-region connection is not modified after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -314,7 +339,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentDescription.
+         * The new description of the cross-region connection.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -323,7 +351,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the inter-region connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -332,7 +360,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentName.
+         * The new name of the inter-region connection.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

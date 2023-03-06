@@ -50,7 +50,7 @@ public class DescribeCenGeographicSpanRemainingBandwidthResponseBody extends Tea
         private String requestId; 
 
         /**
-         * RemainingBandwidth.
+         * The remaining bandwidth of the bandwidth plan. Unit: Mbit/s.
          */
         public Builder remainingBandwidth(Long remainingBandwidth) {
             this.remainingBandwidth = remainingBandwidth;
@@ -58,7 +58,7 @@ public class DescribeCenGeographicSpanRemainingBandwidthResponseBody extends Tea
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

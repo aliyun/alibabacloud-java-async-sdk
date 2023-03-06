@@ -86,7 +86,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * RouteServiceEntries.
+         * The information about the cloud services.
          */
         public Builder routeServiceEntries(RouteServiceEntries routeServiceEntries) {
             this.routeServiceEntries = routeServiceEntries;
@@ -118,7 +118,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -283,7 +283,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccessRegionId.
+             * The ID of the region where the cloud service is accessed.
              */
             public Builder accessRegionId(String accessRegionId) {
                 this.accessRegionId = accessRegionId;
@@ -291,7 +291,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -299,7 +299,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * Cidrs.
+             * The service addresses of the cloud service.
              */
             public Builder cidrs(Cidrs cidrs) {
                 this.cidrs = cidrs;
@@ -307,7 +307,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the cloud service.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -315,7 +315,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The service address of the cloud service.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -323,7 +323,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * HostRegionId.
+             * The ID of the region where the cloud service is deployed.
              */
             public Builder hostRegionId(String hostRegionId) {
                 this.hostRegionId = hostRegionId;
@@ -331,7 +331,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * HostVpcId.
+             * The ID of the VPC that is associated with the cloud service.
              */
             public Builder hostVpcId(String hostVpcId) {
                 this.hostVpcId = hostVpcId;
@@ -339,7 +339,12 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the cloud service. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The cloud service is being created.
+             * *   **Active**: The cloud service is available.
+             * *   **Deleting**: The cloud service is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;

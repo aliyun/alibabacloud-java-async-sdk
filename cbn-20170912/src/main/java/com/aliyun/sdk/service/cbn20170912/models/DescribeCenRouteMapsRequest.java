@@ -50,6 +50,10 @@ public class DescribeCenRouteMapsRequest extends Request {
     private String routeMapId;
 
     @Query
+    @NameInMap("TransitRouterRouteTableId")
+    private String transitRouterRouteTableId;
+
+    @Query
     @NameInMap("TransmitDirection")
     private String transmitDirection;
 
@@ -64,6 +68,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.routeMapId = builder.routeMapId;
+        this.transitRouterRouteTableId = builder.transitRouterRouteTableId;
         this.transmitDirection = builder.transmitDirection;
     }
 
@@ -144,6 +149,13 @@ public class DescribeCenRouteMapsRequest extends Request {
     }
 
     /**
+     * @return transitRouterRouteTableId
+     */
+    public String getTransitRouterRouteTableId() {
+        return this.transitRouterRouteTableId;
+    }
+
+    /**
      * @return transmitDirection
      */
     public String getTransmitDirection() {
@@ -160,28 +172,30 @@ public class DescribeCenRouteMapsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String routeMapId; 
+        private String transitRouterRouteTableId; 
         private String transmitDirection; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCenRouteMapsRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenRegionId = response.cenRegionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeMapId = response.routeMapId;
-            this.transmitDirection = response.transmitDirection;
+        private Builder(DescribeCenRouteMapsRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenRegionId = request.cenRegionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeMapId = request.routeMapId;
+            this.transitRouterRouteTableId = request.transitRouterRouteTableId;
+            this.transmitDirection = request.transmitDirection;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -190,7 +204,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * CenRegionId.
+         * The ID of the region where the routing policy is applied.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -217,7 +234,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +243,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +270,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * RouteMapId.
+         * The ID of the routing policy.
          */
         public Builder routeMapId(String routeMapId) {
             this.putQueryParameter("RouteMapId", routeMapId);
@@ -262,7 +279,25 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * TransmitDirection.
+         * The route table ID of the transit router with which the routing policy is associated.
+         */
+        public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
+            this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
+            this.transitRouterRouteTableId = transitRouterRouteTableId;
+            return this;
+        }
+
+        /**
+         * The direction in which the routing policy is applied. Valid values:
+         * <p>
+         * 
+         * *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
+         * 
+         *     For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
+         * 
+         * *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
+         * 
+         *     For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.
          */
         public Builder transmitDirection(String transmitDirection) {
             this.putQueryParameter("TransmitDirection", transmitDirection);

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
     @Query
+    @NameInMap("AutoPublishRouteEnabled")
+    private Boolean autoPublishRouteEnabled;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -51,6 +55,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
 
     private UpdateTransitRouterVbrAttachmentAttributeRequest(Builder builder) {
         super(builder);
+        this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
@@ -73,6 +78,13 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPublishRouteEnabled
+     */
+    public Boolean getAutoPublishRouteEnabled() {
+        return this.autoPublishRouteEnabled;
     }
 
     /**
@@ -139,6 +151,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTransitRouterVbrAttachmentAttributeRequest, Builder> {
+        private Boolean autoPublishRouteEnabled; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ownerAccount; 
@@ -153,21 +166,40 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTransitRouterVbrAttachmentAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentDescription = response.transitRouterAttachmentDescription;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterAttachmentName = response.transitRouterAttachmentName;
+        private Builder(UpdateTransitRouterVbrAttachmentAttributeRequest request) {
+            super(request);
+            this.autoPublishRouteEnabled = request.autoPublishRouteEnabled;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterAttachmentName = request.transitRouterAttachmentName;
         } 
 
         /**
-         * ClientToken.
+         * Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
+         */
+        public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+            this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
+            this.autoPublishRouteEnabled = autoPublishRouteEnabled;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +208,11 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): sends a request. If the request passes the precheck, the name and description of the VBR connection are modified.
+         * *   **true**: sends a request for precheck only. The name and description of the VBR connection are not modified after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -221,7 +257,10 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentDescription.
+         * The new description of the VBR connection.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -230,7 +269,7 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the VBR connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -239,7 +278,10 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentName.
+         * The new name of the VBR connection.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

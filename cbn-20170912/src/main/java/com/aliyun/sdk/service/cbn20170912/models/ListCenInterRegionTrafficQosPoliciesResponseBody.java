@@ -86,7 +86,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         private java.util.List < TrafficQosPolicies> trafficQosPolicies; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
+         * <p>
+         * 
+         * *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +122,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficQosPolicies.
+         * A list of QoS policies.
          */
         public Builder trafficQosPolicies(java.util.List < TrafficQosPolicies> trafficQosPolicies) {
             this.trafficQosPolicies = trafficQosPolicies;
@@ -206,7 +210,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             private Integer remainBandwidthPercent; 
 
             /**
-             * Dscps.
+             * The differentiated services code point (DSCP) value used to match packets in the queue.
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -214,7 +218,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * QosQueueDescription.
+             * The description of the queue.
              */
             public Builder qosQueueDescription(String qosQueueDescription) {
                 this.qosQueueDescription = qosQueueDescription;
@@ -222,7 +226,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * QosQueueId.
+             * The ID of the queue.
              */
             public Builder qosQueueId(String qosQueueId) {
                 this.qosQueueId = qosQueueId;
@@ -230,7 +234,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * QosQueueName.
+             * The name of the queue.
              */
             public Builder qosQueueName(String qosQueueName) {
                 this.qosQueueName = qosQueueName;
@@ -238,7 +242,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * RemainBandwidthPercent.
+             * The percentage of the inter-region bandwidth that can be used by the queue.
              */
             public Builder remainBandwidthPercent(Integer remainBandwidthPercent) {
                 this.remainBandwidthPercent = remainBandwidthPercent;
@@ -268,12 +272,20 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         @NameInMap("TrafficQosQueues")
         private java.util.List < TrafficQosQueues> trafficQosQueues;
 
+        @NameInMap("TransitRouterAttachmentId")
+        private String transitRouterAttachmentId;
+
+        @NameInMap("TransitRouterId")
+        private String transitRouterId;
+
         private TrafficQosPolicies(Builder builder) {
             this.trafficQosPolicyDescription = builder.trafficQosPolicyDescription;
             this.trafficQosPolicyId = builder.trafficQosPolicyId;
             this.trafficQosPolicyName = builder.trafficQosPolicyName;
             this.trafficQosPolicyStatus = builder.trafficQosPolicyStatus;
             this.trafficQosQueues = builder.trafficQosQueues;
+            this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
+            this.transitRouterId = builder.transitRouterId;
         }
 
         public static Builder builder() {
@@ -319,15 +331,31 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             return this.trafficQosQueues;
         }
 
+        /**
+         * @return transitRouterAttachmentId
+         */
+        public String getTransitRouterAttachmentId() {
+            return this.transitRouterAttachmentId;
+        }
+
+        /**
+         * @return transitRouterId
+         */
+        public String getTransitRouterId() {
+            return this.transitRouterId;
+        }
+
         public static final class Builder {
             private String trafficQosPolicyDescription; 
             private String trafficQosPolicyId; 
             private String trafficQosPolicyName; 
             private String trafficQosPolicyStatus; 
             private java.util.List < TrafficQosQueues> trafficQosQueues; 
+            private String transitRouterAttachmentId; 
+            private String transitRouterId; 
 
             /**
-             * TrafficQosPolicyDescription.
+             * The description of the QoS policy.
              */
             public Builder trafficQosPolicyDescription(String trafficQosPolicyDescription) {
                 this.trafficQosPolicyDescription = trafficQosPolicyDescription;
@@ -335,7 +363,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficQosPolicyId.
+             * The ID of the QoS policy.
              */
             public Builder trafficQosPolicyId(String trafficQosPolicyId) {
                 this.trafficQosPolicyId = trafficQosPolicyId;
@@ -343,7 +371,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficQosPolicyName.
+             * The name of the QoS policy.
              */
             public Builder trafficQosPolicyName(String trafficQosPolicyName) {
                 this.trafficQosPolicyName = trafficQosPolicyName;
@@ -351,7 +379,14 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficQosPolicyStatus.
+             * The status of the QoS policy. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: The QoS policy is being created.
+             * *   **Active**: The QoS policy is available.
+             * *   **Modifying**: The QoS policy is being modified
+             * *   **Deleting**: The QoS policy is being deleted.
+             * *   **Deleted**: The QoS policy is deleted.
              */
             public Builder trafficQosPolicyStatus(String trafficQosPolicyStatus) {
                 this.trafficQosPolicyStatus = trafficQosPolicyStatus;
@@ -359,10 +394,26 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficQosQueues.
+             * A list of queues.
              */
             public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
                 this.trafficQosQueues = trafficQosQueues;
+                return this;
+            }
+
+            /**
+             * The ID of the network instance connection.
+             */
+            public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
+                this.transitRouterAttachmentId = transitRouterAttachmentId;
+                return this;
+            }
+
+            /**
+             * The ID of the transit router.
+             */
+            public Builder transitRouterId(String transitRouterId) {
+                this.transitRouterId = transitRouterId;
                 return this;
             }
 

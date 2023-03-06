@@ -62,7 +62,7 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CenBandwidthPackageId.
+         * The ID of the bandwidth plan.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.cenBandwidthPackageId = cenBandwidthPackageId;
@@ -70,7 +70,7 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * CenBandwidthPackageOrderId.
+         * The ID of the order for the bandwidth plan.
          */
         public Builder cenBandwidthPackageOrderId(String cenBandwidthPackageOrderId) {
             this.cenBandwidthPackageOrderId = cenBandwidthPackageOrderId;
@@ -78,7 +78,7 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

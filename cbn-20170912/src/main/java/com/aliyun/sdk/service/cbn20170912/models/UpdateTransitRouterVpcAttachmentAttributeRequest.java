@@ -153,21 +153,26 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTransitRouterVpcAttachmentAttributeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentDescription = response.transitRouterAttachmentDescription;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterAttachmentName = response.transitRouterAttachmentName;
+        private Builder(UpdateTransitRouterVpcAttachmentAttributeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterAttachmentName = request.transitRouterAttachmentName;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +181,11 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): sends a request. If the request passes the precheck, the name and description of the VPC connection are modified.
+         * *   **true**: sends a request for precheck only. The name and description of the VPC connection are not modified after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -221,7 +230,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentDescription.
+         * The description of the VPC connection.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -230,7 +242,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the VPC connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -239,7 +251,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentName.
+         * The name of the VPC connection.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

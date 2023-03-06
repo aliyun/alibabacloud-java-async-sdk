@@ -29,6 +29,10 @@ public class ListTagResourcesRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceId")
     private java.util.List < String > resourceId;
 
@@ -55,6 +59,7 @@ public class ListTagResourcesRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -104,6 +109,13 @@ public class ListTagResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceId
      */
     public java.util.List < String > getResourceId() {
@@ -143,6 +155,7 @@ public class ListTagResourcesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageSize; 
+        private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -153,21 +166,26 @@ public class ListTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagResourcesRequest response) {
-            super(response);
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageSize = response.pageSize;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(ListTagResourcesRequest request) {
+            super(request);
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * NextToken.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query or no next query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -194,7 +212,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,7 +221,19 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The IDs of the CEN instances.
+         * <p>
+         * 
+         * You can specify at most 20 IDs in each call.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -230,7 +260,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **cen**, which specifies CEN instances.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -239,7 +269,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -293,7 +326,12 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -301,7 +339,12 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag values.
              */
             public Builder value(String value) {
                 this.value = value;

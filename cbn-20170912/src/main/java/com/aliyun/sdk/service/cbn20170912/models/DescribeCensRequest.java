@@ -139,20 +139,20 @@ public class DescribeCensRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCensRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
+        private Builder(DescribeCensRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
 
         /**
-         * Filter.
+         * The list of the filter conditions.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -179,7 +179,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +188,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +215,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -269,7 +269,15 @@ public class DescribeCensRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The filter condition. Valid values:
+             * <p>
+             * 
+             * *   **CenId**: the ID of a CEN instance.
+             * *   **Name**: the name of a CEN instance.
+             * 
+             * By default, the logical operator among filter conditions is **AND**. Information about a CEN instance is returned only if the CEN instance matches all filter conditions.
+             * 
+             * You can specify at most five filter conditions in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -277,7 +285,7 @@ public class DescribeCensRequest extends Request {
             }
 
             /**
-             * Value.
+             * The values of the filter condition.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -330,7 +338,12 @@ public class DescribeCensRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag keys of the resources.
+             * <p>
+             * 
+             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -338,7 +351,12 @@ public class DescribeCensRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag values of the resources.
+             * <p>
+             * 
+             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

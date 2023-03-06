@@ -50,7 +50,7 @@ public class CreateTrafficMarkingPolicyResponseBody extends TeaModel {
         private String trafficMarkingPolicyId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateTrafficMarkingPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficMarkingPolicyId.
+         * The ID of the traffic marking policy.
          */
         public Builder trafficMarkingPolicyId(String trafficMarkingPolicyId) {
             this.trafficMarkingPolicyId = trafficMarkingPolicyId;

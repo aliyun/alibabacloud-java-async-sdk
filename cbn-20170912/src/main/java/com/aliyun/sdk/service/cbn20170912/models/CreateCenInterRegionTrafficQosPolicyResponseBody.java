@@ -50,7 +50,7 @@ public class CreateCenInterRegionTrafficQosPolicyResponseBody extends TeaModel {
         private String trafficQosPolicyId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateCenInterRegionTrafficQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficQosPolicyId.
+         * The ID of the QoS policy.
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.trafficQosPolicyId = trafficQosPolicyId;

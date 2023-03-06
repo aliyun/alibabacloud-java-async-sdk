@@ -24,8 +24,11 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
 
     @Query
     @NameInMap("ChildInstanceRegionId")
-    @Validation(required = true)
     private String childInstanceRegionId;
+
+    @Query
+    @NameInMap("ChildInstanceRouteTableId")
+    private String childInstanceRouteTableId;
 
     @Query
     @NameInMap("ChildInstanceType")
@@ -65,6 +68,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         this.cenId = builder.cenId;
         this.childInstanceId = builder.childInstanceId;
         this.childInstanceRegionId = builder.childInstanceRegionId;
+        this.childInstanceRouteTableId = builder.childInstanceRouteTableId;
         this.childInstanceType = builder.childInstanceType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -107,6 +111,13 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
      */
     public String getChildInstanceRegionId() {
         return this.childInstanceRegionId;
+    }
+
+    /**
+     * @return childInstanceRouteTableId
+     */
+    public String getChildInstanceRouteTableId() {
+        return this.childInstanceRouteTableId;
     }
 
     /**
@@ -169,6 +180,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         private String cenId; 
         private String childInstanceId; 
         private String childInstanceRegionId; 
+        private String childInstanceRouteTableId; 
         private String childInstanceType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -182,23 +194,24 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCenChildInstanceRouteEntriesRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.childInstanceId = response.childInstanceId;
-            this.childInstanceRegionId = response.childInstanceRegionId;
-            this.childInstanceType = response.childInstanceType;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
+        private Builder(DescribeCenChildInstanceRouteEntriesRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.childInstanceId = request.childInstanceId;
+            this.childInstanceRegionId = request.childInstanceRegionId;
+            this.childInstanceRouteTableId = request.childInstanceRouteTableId;
+            this.childInstanceType = request.childInstanceType;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -207,7 +220,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -216,7 +229,10 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -225,7 +241,21 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * ChildInstanceRouteTableId.
+         */
+        public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
+            this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
+            this.childInstanceRouteTableId = childInstanceRouteTableId;
+            return this;
+        }
+
+        /**
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **VBR**
+         * *   **CCN**
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -252,7 +282,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -261,7 +291,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -288,7 +318,14 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the routes that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **Active**: active routes
+         * *   **Candidate**: standby routes
+         * *   **Rejected**: rejected routes
+         * *   **Prohibited**: prohibited routes
+         * *   **All** (default value): all routes
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

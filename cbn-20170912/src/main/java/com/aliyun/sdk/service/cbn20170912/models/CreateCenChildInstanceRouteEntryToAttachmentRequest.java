@@ -169,22 +169,22 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
             super();
         } 
 
-        private Builder(CreateCenChildInstanceRouteEntryToAttachmentRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.clientToken = response.clientToken;
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeTableId = response.routeTableId;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
+        private Builder(CreateCenChildInstanceRouteEntryToAttachmentRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.clientToken = request.clientToken;
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeTableId = request.routeTableId;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -193,7 +193,12 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -202,7 +207,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * DestinationCidrBlock.
+         * The destination CIDR block of the route.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -211,7 +216,13 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
+         * <p>
+         * 
+         * *   **false**: performs a precheck. The route is added to the network instance after the request passes the precheck. This is the default value.
+         * *   **true**: performs a precheck. The route is not added to the network instance. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * 
+         * >  This parameter is not in use.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -256,7 +267,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table configured on the network instance.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -265,7 +276,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the network instance connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);

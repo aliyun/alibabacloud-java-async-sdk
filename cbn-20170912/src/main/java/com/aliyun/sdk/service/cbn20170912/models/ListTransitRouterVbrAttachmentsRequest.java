@@ -45,6 +45,10 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
@@ -62,6 +66,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
         this.transitRouterId = builder.transitRouterId;
     }
@@ -136,6 +141,13 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return transitRouterAttachmentId
      */
     public String getTransitRouterAttachmentId() {
@@ -158,6 +170,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String transitRouterAttachmentId; 
         private String transitRouterId; 
 
@@ -165,22 +178,23 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
             super();
         } 
 
-        private Builder(ListTransitRouterVbrAttachmentsRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterId = response.transitRouterId;
+        private Builder(ListTransitRouterVbrAttachmentsRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -189,7 +203,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -198,7 +212,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -225,7 +239,10 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Enterprise Edition transit router.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,7 +269,19 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The information about the tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the VBR connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -261,7 +290,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the Enterprise Edition transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -276,4 +305,75 @@ public class ListTransitRouterVbrAttachmentsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

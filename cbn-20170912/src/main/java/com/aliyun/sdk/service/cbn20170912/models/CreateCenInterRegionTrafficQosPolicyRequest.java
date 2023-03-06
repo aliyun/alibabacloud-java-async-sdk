@@ -180,23 +180,26 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCenInterRegionTrafficQosPolicyRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.trafficQosPolicyDescription = response.trafficQosPolicyDescription;
-            this.trafficQosPolicyName = response.trafficQosPolicyName;
-            this.trafficQosQueues = response.trafficQosQueues;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterId = response.transitRouterId;
+        private Builder(CreateCenInterRegionTrafficQosPolicyRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficQosPolicyDescription = request.trafficQosPolicyDescription;
+            this.trafficQosPolicyName = request.trafficQosPolicyName;
+            this.trafficQosQueues = request.trafficQosQueues;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -205,7 +208,11 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether only to precheck the API request. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -250,7 +257,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * TrafficQosPolicyDescription.
+         * The description of the QoS policy.
+         * <p>
+         * 
+         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
          */
         public Builder trafficQosPolicyDescription(String trafficQosPolicyDescription) {
             this.putQueryParameter("TrafficQosPolicyDescription", trafficQosPolicyDescription);
@@ -259,7 +269,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * TrafficQosPolicyName.
+         * The name of the QoS policy.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder trafficQosPolicyName(String trafficQosPolicyName) {
             this.putQueryParameter("TrafficQosPolicyName", trafficQosPolicyName);
@@ -268,7 +281,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * TrafficQosQueues.
+         * A list of QoS queues.
+         * <p>
+         * 
+         * Each QoS policy supports up to three queues.
          */
         public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
             this.putQueryParameter("TrafficQosQueues", trafficQosQueues);
@@ -277,7 +293,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the inter-region connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -286,7 +302,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -364,7 +380,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             private String remainBandwidthPercent; 
 
             /**
-             * Dscps.
+             * The differentiated services code point (DSCP) value that matches the current queue.
+             * <p>
+             * 
+             * Each QoS policy supports up to three queues. You can specify at most 60 DSCP values for each queue. Separate DSCP values with commas (,).
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -372,7 +391,12 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * QosQueueDescription.
+             * The description of the current queue.
+             * <p>
+             * 
+             * Each QoS policy supports up to three queues. You can add a description to each queue.
+             * 
+             * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
              */
             public Builder qosQueueDescription(String qosQueueDescription) {
                 this.qosQueueDescription = qosQueueDescription;
@@ -380,7 +404,12 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * QosQueueName.
+             * The name of the current queue.
+             * <p>
+             * 
+             * Each QoS policy supports up to three queues. You can specify a name for each queue.
+             * 
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
              */
             public Builder qosQueueName(String qosQueueName) {
                 this.qosQueueName = qosQueueName;
@@ -388,7 +417,14 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * RemainBandwidthPercent.
+             * The percentage of bandwidth resources that can be allocated to the current queue.
+             * <p>
+             * 
+             * Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.
+             * 
+             * If you enter **1**, it indicates that the current queue can consume at most 1% of the bandwidth resources.
+             * 
+             * >  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.
              */
             public Builder remainBandwidthPercent(String remainBandwidthPercent) {
                 this.remainBandwidthPercent = remainBandwidthPercent;

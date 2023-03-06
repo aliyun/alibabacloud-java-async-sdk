@@ -86,7 +86,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * RouteConflicts.
+         * The array of conflicting routes.
          */
         public Builder routeConflicts(RouteConflicts routeConflicts) {
             this.routeConflicts = routeConflicts;
@@ -118,7 +118,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the conflicting route.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -214,7 +214,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the peer network instance on which conflicting routes are found.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -222,7 +222,12 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the peer network instance on which conflicting routes are found.
+             * <p>
+             * 
+             * *   **VPC**
+             * *   **VBR**
+             * *   **CCN**
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -230,7 +235,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the peer network instance on which conflicting routes are found is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -238,7 +243,11 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The cause of the route error. Valid values:
+             * <p>
+             * 
+             * *   **conflict**: Routes have the same destination CIDR block.
+             * *   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.
              */
             public Builder status(String status) {
                 this.status = status;

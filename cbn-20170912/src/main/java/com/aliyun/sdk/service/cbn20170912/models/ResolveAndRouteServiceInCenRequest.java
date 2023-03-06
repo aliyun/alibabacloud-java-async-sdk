@@ -183,23 +183,26 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
             super();
         } 
 
-        private Builder(ResolveAndRouteServiceInCenRequest response) {
-            super(response);
-            this.accessRegionIds = response.accessRegionIds;
-            this.cenId = response.cenId;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.host = response.host;
-            this.hostRegionId = response.hostRegionId;
-            this.hostVpcId = response.hostVpcId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ResolveAndRouteServiceInCenRequest request) {
+            super(request);
+            this.accessRegionIds = request.accessRegionIds;
+            this.cenId = request.cenId;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.host = request.host;
+            this.hostRegionId = request.hostRegionId;
+            this.hostVpcId = request.hostVpcId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AccessRegionIds.
+         * The ID of the region in which the cloud service that you want to access is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder accessRegionIds(java.util.List < String > accessRegionIds) {
             this.putQueryParameter("AccessRegionIds", accessRegionIds);
@@ -208,7 +211,7 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -217,7 +220,12 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -226,7 +234,10 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the cloud service.
+         * <p>
+         * 
+         * The description can be empty or 2 to 256 characters in length. It must start with a letter, and can contain digits, hyphens (-), periods (.), and underscores (\_). It cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -235,7 +246,10 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * Host.
+         * The IP addresses or CIDR blocks of the cloud service.
+         * <p>
+         * 
+         * > In most cases, multiple IP addresses or CIDR blocks are assigned to a cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -244,7 +258,7 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * HostRegionId.
+         * The ID of the region in which the cloud service is deployed.
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);
@@ -253,7 +267,7 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * HostVpcId.
+         * The ID of the VPC that is associated with the cloud service.
          */
         public Builder hostVpcId(String hostVpcId) {
             this.putQueryParameter("HostVpcId", hostVpcId);

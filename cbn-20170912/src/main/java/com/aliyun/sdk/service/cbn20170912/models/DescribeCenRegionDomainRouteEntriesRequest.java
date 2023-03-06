@@ -154,21 +154,21 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCenRegionDomainRouteEntriesRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenRegionId = response.cenRegionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
+        private Builder(DescribeCenRegionDomainRouteEntriesRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenRegionId = request.cenRegionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -177,7 +177,10 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * CenRegionId.
+         * The ID of the region that you want to query.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -204,7 +207,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -213,7 +216,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +243,14 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the routes that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **Active** (default value): active routes
+         * *   **Candidate**: standby routes
+         * *   **Rejected**: rejected routes
+         * *   **Prohibited**: prohibited routes
+         * *   **All**: all routes
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

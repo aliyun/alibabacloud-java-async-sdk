@@ -126,19 +126,22 @@ public class DescribeCenGeographicSpansRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCenGeographicSpansRequest response) {
-            super(response);
-            this.geographicSpanId = response.geographicSpanId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeCenGeographicSpansRequest request) {
+            super(request);
+            this.geographicSpanId = request.geographicSpanId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * GeographicSpanId.
+         * The ID of the areas that are connected by the CEN instance.
+         * <p>
+         * 
+         * > If you do not set this parameter, the system queries the information about all areas supported by CEN.
          */
         public Builder geographicSpanId(String geographicSpanId) {
             this.putQueryParameter("GeographicSpanId", geographicSpanId);
@@ -165,7 +168,7 @@ public class DescribeCenGeographicSpansRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +177,7 @@ public class DescribeCenGeographicSpansRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

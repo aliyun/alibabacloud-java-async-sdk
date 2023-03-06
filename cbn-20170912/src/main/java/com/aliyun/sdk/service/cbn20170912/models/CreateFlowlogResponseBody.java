@@ -62,7 +62,7 @@ public class CreateFlowlogResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * FlowLogId.
+         * The ID of the flow log.
          */
         public Builder flowLogId(String flowLogId) {
             this.flowLogId = flowLogId;
@@ -70,7 +70,7 @@ public class CreateFlowlogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class CreateFlowlogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(String success) {
             this.success = success;

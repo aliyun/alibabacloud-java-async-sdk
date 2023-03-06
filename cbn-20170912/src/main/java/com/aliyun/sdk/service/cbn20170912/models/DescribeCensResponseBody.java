@@ -86,7 +86,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Cens.
+         * The information about the CEN instance.
          */
         public Builder cens(Cens cens) {
             this.cens = cens;
@@ -94,7 +94,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -211,7 +211,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,7 +219,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -287,11 +287,17 @@ public class DescribeCensResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("Ipv6Level")
+        private String ipv6Level;
+
         @NameInMap("Name")
         private String name;
 
         @NameInMap("ProtectionLevel")
         private String protectionLevel;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("Status")
         private String status;
@@ -304,8 +310,10 @@ public class DescribeCensResponseBody extends TeaModel {
             this.cenId = builder.cenId;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
+            this.ipv6Level = builder.ipv6Level;
             this.name = builder.name;
             this.protectionLevel = builder.protectionLevel;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.tags = builder.tags;
         }
@@ -347,6 +355,13 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipv6Level
+         */
+        public String getIpv6Level() {
+            return this.ipv6Level;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -358,6 +373,13 @@ public class DescribeCensResponseBody extends TeaModel {
          */
         public String getProtectionLevel() {
             return this.protectionLevel;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -379,13 +401,15 @@ public class DescribeCensResponseBody extends TeaModel {
             private String cenId; 
             private String creationTime; 
             private String description; 
+            private String ipv6Level; 
             private String name; 
             private String protectionLevel; 
+            private String resourceGroupId; 
             private String status; 
             private Tags tags; 
 
             /**
-             * CenBandwidthPackageIds.
+             * The IDs of the bandwidth plans that are associated with the CEN instance.
              */
             public Builder cenBandwidthPackageIds(CenBandwidthPackageIds cenBandwidthPackageIds) {
                 this.cenBandwidthPackageIds = cenBandwidthPackageIds;
@@ -393,7 +417,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -401,7 +425,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the CEN instance was created.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -409,7 +436,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the CEN instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -417,7 +444,19 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * Indicates whether IPv6 is enabled for the CEN instance.
+             * <p>
+             * 
+             * *   **ENABLE**: enabled
+             * *   **DISABLED**: disabled
+             */
+            public Builder ipv6Level(String ipv6Level) {
+                this.ipv6Level = ipv6Level;
+                return this;
+            }
+
+            /**
+             * The name of the CEN instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -425,7 +464,10 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectionLevel.
+             * The level of CIDR block overlapping.
+             * <p>
+             * 
+             * **REDUCED**: Overlapped CIDR blocks are allowed. This value specifies that CIDR blocks can overlap but CIDR blocks cannot be duplicates.
              */
             public Builder protectionLevel(String protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -433,7 +475,20 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The ID of the resource group to which the CEN instance belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The status of the CEN instance.
+             * <p>
+             * 
+             * *   **Creating**: The CEN instance is being created.
+             * *   **Active**: The CEN instance is running.
+             * *   **Deleting**: The instance is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -441,7 +496,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The IDs of the tags that are added to the CEN instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

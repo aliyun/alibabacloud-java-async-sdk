@@ -129,19 +129,19 @@ public class DeleteCenRouteMapRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCenRouteMapRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.cenRegionId = response.cenRegionId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeMapId = response.routeMapId;
+        private Builder(DeleteCenRouteMapRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.cenRegionId = request.cenRegionId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeMapId = request.routeMapId;
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -150,7 +150,10 @@ public class DeleteCenRouteMapRequest extends Request {
         }
 
         /**
-         * CenRegionId.
+         * The ID of the region in which the routing policy is applied.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -195,7 +198,7 @@ public class DeleteCenRouteMapRequest extends Request {
         }
 
         /**
-         * RouteMapId.
+         * The ID of the routing policy.
          */
         public Builder routeMapId(String routeMapId) {
             this.putQueryParameter("RouteMapId", routeMapId);

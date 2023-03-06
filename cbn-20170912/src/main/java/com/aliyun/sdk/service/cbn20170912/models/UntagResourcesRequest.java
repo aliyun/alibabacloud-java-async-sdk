@@ -25,6 +25,10 @@ public class UntagResourcesRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private java.util.List < String > resourceId;
@@ -51,6 +55,7 @@ public class UntagResourcesRequest extends Request {
         this.all = builder.all;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -93,6 +98,13 @@ public class UntagResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceId
      */
     public java.util.List < String > getResourceId() {
@@ -131,6 +143,7 @@ public class UntagResourcesRequest extends Request {
         private Boolean all; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -141,20 +154,27 @@ public class UntagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceId = response.resourceId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.tagKey = response.tagKey;
+        private Builder(UntagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
+         * 
+         * > This parameter is valid only when the **TagKey.N** parameter is empty.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -181,7 +201,19 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the region where the resource is deployed.
+         * <p>
+         * 
+         * You can ignore this parameter if ResourceType is set to Cen or BandwidthPackage.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource. Valid values of **N**: **1** to **50**.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -208,7 +240,28 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Valid value:
+         * <p>
+         * 
+         * **Cen**: Cloud Enterprise Network (CEN) instance
+         * 
+         * **BandwidthPackage**: bandwidth plan
+         * 
+         * **TransitRouter**: transit router
+         * 
+         * **TransitRouterVpcAttachment**: virtual private cloud (VPC) connection
+         * 
+         * **TransitRouterVbrAttachment**: virtual border router (VBR) connection
+         * 
+         * **TransitRouterPeerAttachment**: inter-region connection
+         * 
+         * **TransitRouterVpnAttachment**: VPN connection
+         * 
+         * **TransitRouterRouteTable**: route table
+         * 
+         * **Flowlog**: flow log
+         * 
+         * **TransitRouterMulticastDomain**: multicast domain
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -217,7 +270,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag key.
+         * <p>
+         * 
+         * The tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+         * 
+         * If multiple tag keys are specified, the logical relation among these tag keys is **AND**. Valid values of **N**: **1** to **20**.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

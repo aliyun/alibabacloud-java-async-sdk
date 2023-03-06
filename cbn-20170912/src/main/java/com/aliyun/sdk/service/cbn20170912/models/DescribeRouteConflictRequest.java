@@ -182,23 +182,23 @@ public class DescribeRouteConflictRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRouteConflictRequest response) {
-            super(response);
-            this.childInstanceId = response.childInstanceId;
-            this.childInstanceRegionId = response.childInstanceRegionId;
-            this.childInstanceRouteTableId = response.childInstanceRouteTableId;
-            this.childInstanceType = response.childInstanceType;
-            this.destinationCidrBlock = response.destinationCidrBlock;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeRouteConflictRequest request) {
+            super(request);
+            this.childInstanceId = request.childInstanceId;
+            this.childInstanceRegionId = request.childInstanceRegionId;
+            this.childInstanceRouteTableId = request.childInstanceRouteTableId;
+            this.childInstanceType = request.childInstanceType;
+            this.destinationCidrBlock = request.destinationCidrBlock;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ChildInstanceId.
+         * The ID of the network instance that you want to query.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -207,7 +207,10 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -216,7 +219,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * ChildInstanceRouteTableId.
+         * The ID of the route table that is configured on the network instance.
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -225,7 +228,12 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **VBR**
+         * *   **CCN**
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -234,7 +242,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * The destination CIDR block of the conflicting route.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -261,7 +269,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -270,7 +278,7 @@ public class DescribeRouteConflictRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -86,7 +86,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         private java.util.List < TransitRouterRouteEntries> transitRouterRouteEntries; 
 
         /**
-         * MaxResults.
+         * The number of entries returned on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +122,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterRouteEntries.
+         * A list of routes.
          */
         public Builder transitRouterRouteEntries(java.util.List < TransitRouterRouteEntries> transitRouterRouteEntries) {
             this.transitRouterRouteEntries = transitRouterRouteEntries;
@@ -135,6 +139,15 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("OperationalMode")
+        private Boolean operationalMode;
+
+        @NameInMap("PrefixListId")
+        private String prefixListId;
+
+        @NameInMap("Tag")
+        private String tag;
+
         @NameInMap("TransitRouterRouteEntryDescription")
         private String transitRouterRouteEntryDescription;
 
@@ -150,8 +163,20 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         @NameInMap("TransitRouterRouteEntryNextHopId")
         private String transitRouterRouteEntryNextHopId;
 
+        @NameInMap("TransitRouterRouteEntryNextHopResourceId")
+        private String transitRouterRouteEntryNextHopResourceId;
+
+        @NameInMap("TransitRouterRouteEntryNextHopResourceType")
+        private String transitRouterRouteEntryNextHopResourceType;
+
         @NameInMap("TransitRouterRouteEntryNextHopType")
         private String transitRouterRouteEntryNextHopType;
+
+        @NameInMap("TransitRouterRouteEntryOriginResourceId")
+        private String transitRouterRouteEntryOriginResourceId;
+
+        @NameInMap("TransitRouterRouteEntryOriginResourceType")
+        private String transitRouterRouteEntryOriginResourceType;
 
         @NameInMap("TransitRouterRouteEntryStatus")
         private String transitRouterRouteEntryStatus;
@@ -161,12 +186,19 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
 
         private TransitRouterRouteEntries(Builder builder) {
             this.createTime = builder.createTime;
+            this.operationalMode = builder.operationalMode;
+            this.prefixListId = builder.prefixListId;
+            this.tag = builder.tag;
             this.transitRouterRouteEntryDescription = builder.transitRouterRouteEntryDescription;
             this.transitRouterRouteEntryDestinationCidrBlock = builder.transitRouterRouteEntryDestinationCidrBlock;
             this.transitRouterRouteEntryId = builder.transitRouterRouteEntryId;
             this.transitRouterRouteEntryName = builder.transitRouterRouteEntryName;
             this.transitRouterRouteEntryNextHopId = builder.transitRouterRouteEntryNextHopId;
+            this.transitRouterRouteEntryNextHopResourceId = builder.transitRouterRouteEntryNextHopResourceId;
+            this.transitRouterRouteEntryNextHopResourceType = builder.transitRouterRouteEntryNextHopResourceType;
             this.transitRouterRouteEntryNextHopType = builder.transitRouterRouteEntryNextHopType;
+            this.transitRouterRouteEntryOriginResourceId = builder.transitRouterRouteEntryOriginResourceId;
+            this.transitRouterRouteEntryOriginResourceType = builder.transitRouterRouteEntryOriginResourceType;
             this.transitRouterRouteEntryStatus = builder.transitRouterRouteEntryStatus;
             this.transitRouterRouteEntryType = builder.transitRouterRouteEntryType;
         }
@@ -184,6 +216,27 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return operationalMode
+         */
+        public Boolean getOperationalMode() {
+            return this.operationalMode;
+        }
+
+        /**
+         * @return prefixListId
+         */
+        public String getPrefixListId() {
+            return this.prefixListId;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
         }
 
         /**
@@ -222,10 +275,38 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return transitRouterRouteEntryNextHopResourceId
+         */
+        public String getTransitRouterRouteEntryNextHopResourceId() {
+            return this.transitRouterRouteEntryNextHopResourceId;
+        }
+
+        /**
+         * @return transitRouterRouteEntryNextHopResourceType
+         */
+        public String getTransitRouterRouteEntryNextHopResourceType() {
+            return this.transitRouterRouteEntryNextHopResourceType;
+        }
+
+        /**
          * @return transitRouterRouteEntryNextHopType
          */
         public String getTransitRouterRouteEntryNextHopType() {
             return this.transitRouterRouteEntryNextHopType;
+        }
+
+        /**
+         * @return transitRouterRouteEntryOriginResourceId
+         */
+        public String getTransitRouterRouteEntryOriginResourceId() {
+            return this.transitRouterRouteEntryOriginResourceId;
+        }
+
+        /**
+         * @return transitRouterRouteEntryOriginResourceType
+         */
+        public String getTransitRouterRouteEntryOriginResourceType() {
+            return this.transitRouterRouteEntryOriginResourceType;
         }
 
         /**
@@ -244,17 +325,29 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private Boolean operationalMode; 
+            private String prefixListId; 
+            private String tag; 
             private String transitRouterRouteEntryDescription; 
             private String transitRouterRouteEntryDestinationCidrBlock; 
             private String transitRouterRouteEntryId; 
             private String transitRouterRouteEntryName; 
             private String transitRouterRouteEntryNextHopId; 
+            private String transitRouterRouteEntryNextHopResourceId; 
+            private String transitRouterRouteEntryNextHopResourceType; 
             private String transitRouterRouteEntryNextHopType; 
+            private String transitRouterRouteEntryOriginResourceId; 
+            private String transitRouterRouteEntryOriginResourceType; 
             private String transitRouterRouteEntryStatus; 
             private String transitRouterRouteEntryType; 
 
             /**
-             * CreateTime.
+             * The time when the route entry was created.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+             * 
+             * >  This parameter is returned only for static routes.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -262,7 +355,43 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryDescription.
+             * Indicates whether the route can be managed. Valid values: 
+             * <p>
+             * 
+             * - **true**: The route can be managed. You can delete the route.
+             * - **false**: The route cannot be managed because it is automatically generated by the system.
+             */
+            public Builder operationalMode(Boolean operationalMode) {
+                this.operationalMode = operationalMode;
+                return this;
+            }
+
+            /**
+             * PrefixListId.
+             */
+            public Builder prefixListId(String prefixListId) {
+                this.prefixListId = prefixListId;
+                return this;
+            }
+
+            /**
+             * The tag of the route. 
+             * <p>
+             * 
+             * Valid value: **PermitVbr**, which indicates that the rote is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.  
+             * 
+             * >  This parameter is returned only for routes that are automatically generated by the system and use IP addresses from the CIDR block of the transit router.
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            /**
+             * The description of the route.
+             * <p>
+             * 
+             * >  This parameter is returned only for static routes.
              */
             public Builder transitRouterRouteEntryDescription(String transitRouterRouteEntryDescription) {
                 this.transitRouterRouteEntryDescription = transitRouterRouteEntryDescription;
@@ -270,7 +399,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryDestinationCidrBlock.
+             * The destination CIDR block of the route.
              */
             public Builder transitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
                 this.transitRouterRouteEntryDestinationCidrBlock = transitRouterRouteEntryDestinationCidrBlock;
@@ -278,7 +407,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryId.
+             * The ID of the route entry.
+             * <p>
+             * 
+             * >  This parameter is returned only for static routes.
              */
             public Builder transitRouterRouteEntryId(String transitRouterRouteEntryId) {
                 this.transitRouterRouteEntryId = transitRouterRouteEntryId;
@@ -286,7 +418,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryName.
+             * The name of the route.
+             * <p>
+             * 
+             * >  This parameter is returned only for static routes.
              */
             public Builder transitRouterRouteEntryName(String transitRouterRouteEntryName) {
                 this.transitRouterRouteEntryName = transitRouterRouteEntryName;
@@ -294,7 +429,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryNextHopId.
+             * The ID of the next hop.
              */
             public Builder transitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
                 this.transitRouterRouteEntryNextHopId = transitRouterRouteEntryNextHopId;
@@ -302,7 +437,27 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryNextHopType.
+             * TransitRouterRouteEntryNextHopResourceId.
+             */
+            public Builder transitRouterRouteEntryNextHopResourceId(String transitRouterRouteEntryNextHopResourceId) {
+                this.transitRouterRouteEntryNextHopResourceId = transitRouterRouteEntryNextHopResourceId;
+                return this;
+            }
+
+            /**
+             * TransitRouterRouteEntryNextHopResourceType.
+             */
+            public Builder transitRouterRouteEntryNextHopResourceType(String transitRouterRouteEntryNextHopResourceType) {
+                this.transitRouterRouteEntryNextHopResourceType = transitRouterRouteEntryNextHopResourceType;
+                return this;
+            }
+
+            /**
+             * The type of next hop. Valid values:
+             * <p>
+             * 
+             * *   **BlackHole**: a blackhole route. Packets destined for the destination CIDR block of the route are dropped.
+             * *   **Attachment**: a network instance connection. Packets destined for the destination CIDR block of the route entry are forwarded to the specified network instance connection.
              */
             public Builder transitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
                 this.transitRouterRouteEntryNextHopType = transitRouterRouteEntryNextHopType;
@@ -310,7 +465,28 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryStatus.
+             * TransitRouterRouteEntryOriginResourceId.
+             */
+            public Builder transitRouterRouteEntryOriginResourceId(String transitRouterRouteEntryOriginResourceId) {
+                this.transitRouterRouteEntryOriginResourceId = transitRouterRouteEntryOriginResourceId;
+                return this;
+            }
+
+            /**
+             * TransitRouterRouteEntryOriginResourceType.
+             */
+            public Builder transitRouterRouteEntryOriginResourceType(String transitRouterRouteEntryOriginResourceType) {
+                this.transitRouterRouteEntryOriginResourceType = transitRouterRouteEntryOriginResourceType;
+                return this;
+            }
+
+            /**
+             * The status of the route. Valid values: 
+             * <p>
+             * 
+             * - **Creating**: The route is being created.
+             * - **Active**: The rule is available.
+             * - **Deleting**: The rule is being deleted.
              */
             public Builder transitRouterRouteEntryStatus(String transitRouterRouteEntryStatus) {
                 this.transitRouterRouteEntryStatus = transitRouterRouteEntryStatus;
@@ -318,7 +494,11 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryType.
+             * The type of the route. Valid values: 
+             * <p>
+             * 
+             * - **Static**: a static route
+             * - **Propagated**: an automatically learned route
              */
             public Builder transitRouterRouteEntryType(String transitRouterRouteEntryType) {
                 this.transitRouterRouteEntryType = transitRouterRouteEntryType;

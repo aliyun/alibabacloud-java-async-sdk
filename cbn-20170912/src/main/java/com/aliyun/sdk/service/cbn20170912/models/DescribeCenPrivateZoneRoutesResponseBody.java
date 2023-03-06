@@ -110,7 +110,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -118,7 +118,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -126,7 +126,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -134,7 +134,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateZoneDnsServers.
+         * The IP address of the DNS server used by PrivateZone.
          */
         public Builder privateZoneDnsServers(String privateZoneDnsServers) {
             this.privateZoneDnsServers = privateZoneDnsServers;
@@ -142,7 +142,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateZoneInfos.
+         * The configuration details of PrivateZone.
          */
         public Builder privateZoneInfos(PrivateZoneInfos privateZoneInfos) {
             this.privateZoneInfos = privateZoneInfos;
@@ -150,7 +150,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -234,7 +234,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccessRegionId.
+             * The ID of the region where PrivateZone is accessed.
              */
             public Builder accessRegionId(String accessRegionId) {
                 this.accessRegionId = accessRegionId;
@@ -242,7 +242,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * HostRegionId.
+             * The ID of the region where PrivateZone is deployed.
              */
             public Builder hostRegionId(String hostRegionId) {
                 this.hostRegionId = hostRegionId;
@@ -250,7 +250,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * HostVpcId.
+             * The ID of the virtual private cloud (VPC) that is associated with PrivateZone.
              */
             public Builder hostVpcId(String hostVpcId) {
                 this.hostVpcId = hostVpcId;
@@ -258,7 +258,12 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of PrivateZone. Valid values:
+             * <p>
+             * 
+             * *   **Creating**: being created
+             * *   **Active**: available
+             * *   **Deleting**: being deleted
              */
             public Builder status(String status) {
                 this.status = status;

@@ -101,17 +101,17 @@ public class DeleteCenBandwidthPackageRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCenBandwidthPackageRequest response) {
-            super(response);
-            this.cenBandwidthPackageId = response.cenBandwidthPackageId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteCenBandwidthPackageRequest request) {
+            super(request);
+            this.cenBandwidthPackageId = request.cenBandwidthPackageId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenBandwidthPackageId.
+         * The ID of the bandwidth plan that you want to delete.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);

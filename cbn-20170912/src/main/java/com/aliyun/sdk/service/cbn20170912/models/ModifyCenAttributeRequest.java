@@ -140,20 +140,20 @@ public class ModifyCenAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCenAttributeRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.description = response.description;
-            this.name = response.name;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.protectionLevel = response.protectionLevel;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyCenAttributeRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.description = request.description;
+            this.name = request.name;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.protectionLevel = request.protectionLevel;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -162,7 +162,10 @@ public class ModifyCenAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the CEN instance.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -171,7 +174,10 @@ public class ModifyCenAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the CEN instance.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -198,7 +204,10 @@ public class ModifyCenAttributeRequest extends Request {
         }
 
         /**
-         * ProtectionLevel.
+         * The level of CIDR block overlapping.
+         * <p>
+         * 
+         * Set the value to **REDUCED** (default). This value specifies that CIDR blocks can overlap but cannot be the same.
          */
         public Builder protectionLevel(String protectionLevel) {
             this.putQueryParameter("ProtectionLevel", protectionLevel);

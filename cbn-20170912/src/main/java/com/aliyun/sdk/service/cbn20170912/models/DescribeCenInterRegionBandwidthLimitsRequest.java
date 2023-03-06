@@ -126,19 +126,19 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCenInterRegionBandwidthLimitsRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeCenInterRegionBandwidthLimitsRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -165,7 +165,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +174,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -50,7 +50,11 @@ public class CheckTransitRouterServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enabled.
+         * Indicates whether the transit router feature is activated.
+         * <p>
+         * 
+         * *   **true**: activated
+         * *   If this value is not returned, the system prompts that the current account does not have the transit router feature activated.
          */
         public Builder enabled(String enabled) {
             this.enabled = enabled;
@@ -58,7 +62,7 @@ public class CheckTransitRouterServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

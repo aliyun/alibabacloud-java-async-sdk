@@ -115,18 +115,18 @@ public class UnassociateCenBandwidthPackageRequest extends Request {
             super();
         } 
 
-        private Builder(UnassociateCenBandwidthPackageRequest response) {
-            super(response);
-            this.cenBandwidthPackageId = response.cenBandwidthPackageId;
-            this.cenId = response.cenId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UnassociateCenBandwidthPackageRequest request) {
+            super(request);
+            this.cenBandwidthPackageId = request.cenBandwidthPackageId;
+            this.cenId = request.cenId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CenBandwidthPackageId.
+         * The ID of the bandwidth plan.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -135,7 +135,7 @@ public class UnassociateCenBandwidthPackageRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);

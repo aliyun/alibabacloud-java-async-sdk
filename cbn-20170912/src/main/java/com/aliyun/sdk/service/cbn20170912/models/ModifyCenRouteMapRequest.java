@@ -68,6 +68,10 @@ public class ModifyCenRouteMapRequest extends Request {
     private String mapResult;
 
     @Query
+    @NameInMap("MatchAddressType")
+    private String matchAddressType;
+
+    @Query
     @NameInMap("MatchAsns")
     private java.util.List < Integer > matchAsns;
 
@@ -158,6 +162,7 @@ public class ModifyCenRouteMapRequest extends Request {
         this.destinationInstanceIdsReverseMatch = builder.destinationInstanceIdsReverseMatch;
         this.destinationRouteTableIds = builder.destinationRouteTableIds;
         this.mapResult = builder.mapResult;
+        this.matchAddressType = builder.matchAddressType;
         this.matchAsns = builder.matchAsns;
         this.matchCommunitySet = builder.matchCommunitySet;
         this.nextPriority = builder.nextPriority;
@@ -280,6 +285,13 @@ public class ModifyCenRouteMapRequest extends Request {
      */
     public String getMapResult() {
         return this.mapResult;
+    }
+
+    /**
+     * @return matchAddressType
+     */
+    public String getMatchAddressType() {
+        return this.matchAddressType;
     }
 
     /**
@@ -422,6 +434,7 @@ public class ModifyCenRouteMapRequest extends Request {
         private Boolean destinationInstanceIdsReverseMatch; 
         private java.util.List < String > destinationRouteTableIds; 
         private String mapResult; 
+        private String matchAddressType; 
         private java.util.List < Integer > matchAsns; 
         private java.util.List < String > matchCommunitySet; 
         private Integer nextPriority; 
@@ -445,43 +458,48 @@ public class ModifyCenRouteMapRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCenRouteMapRequest response) {
-            super(response);
-            this.asPathMatchMode = response.asPathMatchMode;
-            this.cenId = response.cenId;
-            this.cenRegionId = response.cenRegionId;
-            this.cidrMatchMode = response.cidrMatchMode;
-            this.communityMatchMode = response.communityMatchMode;
-            this.communityOperateMode = response.communityOperateMode;
-            this.description = response.description;
-            this.destinationChildInstanceTypes = response.destinationChildInstanceTypes;
-            this.destinationCidrBlocks = response.destinationCidrBlocks;
-            this.destinationInstanceIds = response.destinationInstanceIds;
-            this.destinationInstanceIdsReverseMatch = response.destinationInstanceIdsReverseMatch;
-            this.destinationRouteTableIds = response.destinationRouteTableIds;
-            this.mapResult = response.mapResult;
-            this.matchAsns = response.matchAsns;
-            this.matchCommunitySet = response.matchCommunitySet;
-            this.nextPriority = response.nextPriority;
-            this.operateCommunitySet = response.operateCommunitySet;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.preference = response.preference;
-            this.prependAsPath = response.prependAsPath;
-            this.priority = response.priority;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeMapId = response.routeMapId;
-            this.routeTypes = response.routeTypes;
-            this.sourceChildInstanceTypes = response.sourceChildInstanceTypes;
-            this.sourceInstanceIds = response.sourceInstanceIds;
-            this.sourceInstanceIdsReverseMatch = response.sourceInstanceIdsReverseMatch;
-            this.sourceRegionIds = response.sourceRegionIds;
-            this.sourceRouteTableIds = response.sourceRouteTableIds;
+        private Builder(ModifyCenRouteMapRequest request) {
+            super(request);
+            this.asPathMatchMode = request.asPathMatchMode;
+            this.cenId = request.cenId;
+            this.cenRegionId = request.cenRegionId;
+            this.cidrMatchMode = request.cidrMatchMode;
+            this.communityMatchMode = request.communityMatchMode;
+            this.communityOperateMode = request.communityOperateMode;
+            this.description = request.description;
+            this.destinationChildInstanceTypes = request.destinationChildInstanceTypes;
+            this.destinationCidrBlocks = request.destinationCidrBlocks;
+            this.destinationInstanceIds = request.destinationInstanceIds;
+            this.destinationInstanceIdsReverseMatch = request.destinationInstanceIdsReverseMatch;
+            this.destinationRouteTableIds = request.destinationRouteTableIds;
+            this.mapResult = request.mapResult;
+            this.matchAddressType = request.matchAddressType;
+            this.matchAsns = request.matchAsns;
+            this.matchCommunitySet = request.matchCommunitySet;
+            this.nextPriority = request.nextPriority;
+            this.operateCommunitySet = request.operateCommunitySet;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.preference = request.preference;
+            this.prependAsPath = request.prependAsPath;
+            this.priority = request.priority;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeMapId = request.routeMapId;
+            this.routeTypes = request.routeTypes;
+            this.sourceChildInstanceTypes = request.sourceChildInstanceTypes;
+            this.sourceInstanceIds = request.sourceInstanceIds;
+            this.sourceInstanceIdsReverseMatch = request.sourceInstanceIdsReverseMatch;
+            this.sourceRegionIds = request.sourceRegionIds;
+            this.sourceRouteTableIds = request.sourceRouteTableIds;
         } 
 
         /**
-         * AsPathMatchMode.
+         * The match method that is used to match routes against the AS paths. Valid values:
+         * <p>
+         * 
+         * *   **Include**: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS paths specified in the match condition.
+         * *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.
          */
         public Builder asPathMatchMode(String asPathMatchMode) {
             this.putQueryParameter("AsPathMatchMode", asPathMatchMode);
@@ -490,7 +508,7 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -499,7 +517,10 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * CenRegionId.
+         * The ID of the region where the routing policy is applied.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -508,7 +529,16 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * CidrMatchMode.
+         * The match method that is used to match routes against the prefix list. Valid values:
+         * <p>
+         * 
+         * *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
+         * 
+         *     For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.
+         * 
+         * *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
+         * 
+         *     For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
          */
         public Builder cidrMatchMode(String cidrMatchMode) {
             this.putQueryParameter("CidrMatchMode", cidrMatchMode);
@@ -517,7 +547,11 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * CommunityMatchMode.
+         * The match method that is used to match routes against the community. Valid values:
+         * <p>
+         * 
+         * *   **Include**: fuzzy match. A route meets the match condition if the community of the route overlaps with the community specified in the match condition.
+         * *   **Complete**: exact match. A route meets the match condition only if the community of the route is the same as the community specified in the match condition.
          */
         public Builder communityMatchMode(String communityMatchMode) {
             this.putQueryParameter("CommunityMatchMode", communityMatchMode);
@@ -526,7 +560,13 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * CommunityOperateMode.
+         * The action that is performed on the community. Valid values:
+         * <p>
+         * 
+         * *   **Additive**: adds the community to the route.
+         * *   **Replace**: replaces the original community of the route.
+         * 
+         * This parameter specifies the action to be performed when a route meets the match condition.
          */
         public Builder communityOperateMode(String communityOperateMode) {
             this.putQueryParameter("CommunityOperateMode", communityOperateMode);
@@ -535,7 +575,10 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the routing policy.
+         * <p>
+         * 
+         * The description cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, hyphens (-), periods (.), and underscores (\_).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -544,7 +587,20 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * DestinationChildInstanceTypes.
+         * The types of destination network instance to which the routes point. The following types of network instances are supported:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * 
+         * *   **VBR**: VBR
+         * 
+         * *   **CCN**: CCN instance
+         * 
+         * *   **VPN**: IPsec connection
+         * 
+         *     > This parameter does not take effect only if the IPsec connection or the SSL service is associated with a VPN gateway, and the VPN gateway is connected to the transit router through the VPC associated with the VPN gateway. This parameter takes effect only if the IPsec connection is directly connected to the transit router.
+         * 
+         * The destination network instance types are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
          */
         public Builder destinationChildInstanceTypes(java.util.List < String > destinationChildInstanceTypes) {
             this.putQueryParameter("DestinationChildInstanceTypes", destinationChildInstanceTypes);
@@ -553,7 +609,10 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlocks.
+         * The prefix list against which routes are matched.
+         * <p>
+         * 
+         * You must specify the IP addresses in CIDR notation. You can enter at most 32 CIDR blocks.
          */
         public Builder destinationCidrBlocks(java.util.List < String > destinationCidrBlocks) {
             this.putQueryParameter("DestinationCidrBlocks", destinationCidrBlocks);
@@ -562,7 +621,18 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * DestinationInstanceIds.
+         * The IDs of the destination network instances to which the routes point. The following network instance types are supported:
+         * <p>
+         * 
+         * *   VPC
+         * *   VBR
+         * *   CCN instance
+         * *   SAG instance
+         * *   The ID of the IPsec connection.
+         * 
+         * You can enter at most 32 IDs.
+         * 
+         * >  The destination network instance IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
          */
         public Builder destinationInstanceIds(java.util.List < String > destinationInstanceIds) {
             this.putQueryParameter("DestinationInstanceIds", destinationInstanceIds);
@@ -571,7 +641,11 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * DestinationInstanceIdsReverseMatch.
+         * Specifies whether to exclude the destination network instance IDs. Valid values:
+         * <p>
+         * 
+         * *   **false** (default value): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
+         * *   **true**: A route meets the match condition if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
          */
         public Builder destinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
             this.putQueryParameter("DestinationInstanceIdsReverseMatch", destinationInstanceIdsReverseMatch);
@@ -580,7 +654,10 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * DestinationRouteTableIds.
+         * The IDs of the destination route tables to which routes are evaluated. You can enter at most 32 route table IDs.
+         * <p>
+         * 
+         * >  The destination route table IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to route tables in the current region.
          */
         public Builder destinationRouteTableIds(java.util.List < String > destinationRouteTableIds) {
             this.putQueryParameter("DestinationRouteTableIds", destinationRouteTableIds);
@@ -589,7 +666,11 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * MapResult.
+         * The action to be performed on a route that meets all match conditions. Valid values:
+         * <p>
+         * 
+         * *   **Permit**: the route is permitted.
+         * *   **Deny**: the route is denied.
          */
         public Builder mapResult(String mapResult) {
             this.putQueryParameter("MapResult", mapResult);
@@ -598,7 +679,25 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * MatchAsns.
+         * The type of IP address in the match condition. Valid values:
+         * <p>
+         * 
+         * *   **IPv4**: IPv4 address
+         * *   **IPv6**: IPv6 address
+         * 
+         * This parameter can be empty. If no value is specified, all types of IP address are a match.
+         */
+        public Builder matchAddressType(String matchAddressType) {
+            this.putQueryParameter("MatchAddressType", matchAddressType);
+            this.matchAddressType = matchAddressType;
+            return this;
+        }
+
+        /**
+         * The AS paths against which routes are matched.
+         * <p>
+         * 
+         * >  Only the AS-SEQUENCE parameter is supported. The AS-SET, AS-CONFED-SEQUENCE, and AS-CONFED-SET parameters are not supported. In other words, only the AS number list is supported. Sets and sub-lists are not supported.
          */
         public Builder matchAsns(java.util.List < Integer > matchAsns) {
             this.putQueryParameter("MatchAsns", matchAsns);
@@ -607,7 +706,14 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * MatchCommunitySet.
+         * The community against which routes are matched.
+         * <p>
+         * 
+         * Specify the community in the format of n:m. Valid values of n and m: **1** to **65535**. Each community must comply with the RFC 1997 standard. The RFC 8092 standard that defines Border Gateway Protocol (BGP) large communities is not supported.
+         * 
+         * You can specify at most 32 communities.
+         * 
+         * >  If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.
          */
         public Builder matchCommunitySet(java.util.List < String > matchCommunitySet) {
             this.putQueryParameter("MatchCommunitySet", matchCommunitySet);
@@ -616,7 +722,12 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * NextPriority.
+         * The priority of the routing policy that you want to associate with the current one.
+         * <p>
+         * 
+         * *   This parameter takes effect only when the **MapResult** parameter is set to **Permit**. This way, the permitted route is matched against the next routing policy.
+         * *   The region and direction of the routing policy to be associated must be the same as those of the current routing policy.
+         * *   The priority of the routing policy to be associated must be lower than the priority of the current routing policy.
          */
         public Builder nextPriority(Integer nextPriority) {
             this.putQueryParameter("NextPriority", nextPriority);
@@ -625,7 +736,14 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * OperateCommunitySet.
+         * The community set on which actions are performed.
+         * <p>
+         * 
+         * Specify the community in the format of n:m. Valid values of n and m: **1** to **65535**. Each community must comply with RFC 1997. The RFC 8092 standard that defines BGP large communities is not supported.
+         * 
+         * You can specify at most 32 communities.
+         * 
+         * >  If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.
          */
         public Builder operateCommunitySet(java.util.List < String > operateCommunitySet) {
             this.putQueryParameter("OperateCommunitySet", operateCommunitySet);
@@ -652,7 +770,12 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * Preference.
+         * The new priority of the route.
+         * <p>
+         * 
+         * Valid values: **1** to **100**. The default priority is **50**. A smaller value indicates a higher priority.
+         * 
+         * This parameter specifies the action to be performed when a route meets the match condition.
          */
         public Builder preference(Integer preference) {
             this.putQueryParameter("Preference", preference);
@@ -661,7 +784,15 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * PrependAsPath.
+         * The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.
+         * <p>
+         * 
+         * The AS paths vary based on the direction in which the routing policy is applied:
+         * 
+         * *   If AS paths are prepended to a routing policy that is applied in the inbound direction, you must specify source network instance IDs and the source region in the match condition. In addition, the source region must be the same as the region where the routing policy is applied.
+         * *   If AS paths are prepended to a routing policy that is applied in the outbound direction, you must specify destination network instance IDs in the match condition.
+         * 
+         * This parameter specifies the action to be performed when a route meets the match condition.
          */
         public Builder prependAsPath(java.util.List < Long > prependAsPath) {
             this.putQueryParameter("PrependAsPath", prependAsPath);
@@ -670,7 +801,10 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the routing policy. Valid values: **1** to **100**. A smaller value indicates a higher priority.
+         * <p>
+         * 
+         * >  You cannot specify the same priority for routing policies that apply in the same region and direction. The system matches routes against the match conditions of routing policies in descending order of priority. A smaller value indicates a higher priority. You must set the priorities to proper values.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -697,7 +831,7 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * RouteMapId.
+         * The ID of the routing policy.
          */
         public Builder routeMapId(String routeMapId) {
             this.putQueryParameter("RouteMapId", routeMapId);
@@ -706,7 +840,12 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * RouteTypes.
+         * The type of route to be matched against the match conditions. Valid values: The following route types are supported:
+         * <p>
+         * 
+         * *   **System**: system routes that are automatically generated by the system.
+         * *   **Custom**: custom routes that are manually added.
+         * *   **BGP**: routes that are advertised over Border Gateway Protocol (BGP).
          */
         public Builder routeTypes(java.util.List < String > routeTypes) {
             this.putQueryParameter("RouteTypes", routeTypes);
@@ -715,7 +854,19 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * SourceChildInstanceTypes.
+         * The types of source network instance to which the routes belong. The following types of network instances are supported:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * 
+         * *   **VBR**: VBR
+         * 
+         * *   **CCN**: CCN instance
+         * 
+         * *   **VPN**: VPN gateway or IPsec connection
+         * 
+         *     *   This parameter takes effect only if the IPsec connection or the SSL service is associated with a VPN gateway, the VPC associated with the VPN gateway is connected to the transit router, and the VPN gateway has BGP dynamic routing enabled.
+         *     *   This parameter takes effect if the IPsec connection is directly connected to a transit router.
          */
         public Builder sourceChildInstanceTypes(java.util.List < String > sourceChildInstanceTypes) {
             this.putQueryParameter("SourceChildInstanceTypes", sourceChildInstanceTypes);
@@ -724,7 +875,16 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * SourceInstanceIds.
+         * The IDs of the source network instances from which routes are evaluated. The following network instance types are supported:
+         * <p>
+         * 
+         * *   Virtual private cloud (VPC)
+         * *   Virtual border router (VBR)
+         * *   Cloud Connect Network (CCN) instance
+         * *   Smart Access Gateway (SAG) instance
+         * *   The ID of the IPsec connection.
+         * 
+         * You can enter at most 32 IDs.
          */
         public Builder sourceInstanceIds(java.util.List < String > sourceInstanceIds) {
             this.putQueryParameter("SourceInstanceIds", sourceInstanceIds);
@@ -733,7 +893,11 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * SourceInstanceIdsReverseMatch.
+         * Specifies whether to exclude the source network instance IDs. Valid values:
+         * <p>
+         * 
+         * *   **false** (default value): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
+         * *   **true**: A route is a match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
          */
         public Builder sourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
             this.putQueryParameter("SourceInstanceIdsReverseMatch", sourceInstanceIdsReverseMatch);
@@ -742,7 +906,10 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * SourceRegionIds.
+         * The IDs of the source regions from which routes are evaluated. You can enter at most 32 region IDs.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder sourceRegionIds(java.util.List < String > sourceRegionIds) {
             this.putQueryParameter("SourceRegionIds", sourceRegionIds);
@@ -751,7 +918,7 @@ public class ModifyCenRouteMapRequest extends Request {
         }
 
         /**
-         * SourceRouteTableIds.
+         * The IDs of the source route tables from which routes are evaluated. You can enter at most 32 route table IDs.
          */
         public Builder sourceRouteTableIds(java.util.List < String > sourceRouteTableIds) {
             this.putQueryParameter("SourceRouteTableIds", sourceRouteTableIds);

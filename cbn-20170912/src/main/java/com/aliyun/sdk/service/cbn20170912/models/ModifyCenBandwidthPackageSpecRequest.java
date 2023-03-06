@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyCenBandwidthPackageSpecRequest extends Request {
     @Query
     @NameInMap("Bandwidth")
-    @Validation(required = true)
     private Integer bandwidth;
 
     @Query
@@ -115,18 +114,21 @@ public class ModifyCenBandwidthPackageSpecRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyCenBandwidthPackageSpecRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.cenBandwidthPackageId = response.cenBandwidthPackageId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyCenBandwidthPackageSpecRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.cenBandwidthPackageId = request.cenBandwidthPackageId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * Bandwidth.
+         * The new bandwidth limit of the bandwidth plan. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **2** to **10000**.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -135,7 +137,7 @@ public class ModifyCenBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * CenBandwidthPackageId.
+         * The ID of the bandwidth plan.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);

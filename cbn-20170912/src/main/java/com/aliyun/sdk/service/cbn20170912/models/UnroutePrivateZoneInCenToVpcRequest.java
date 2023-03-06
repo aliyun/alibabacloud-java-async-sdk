@@ -115,18 +115,21 @@ public class UnroutePrivateZoneInCenToVpcRequest extends Request {
             super();
         } 
 
-        private Builder(UnroutePrivateZoneInCenToVpcRequest response) {
-            super(response);
-            this.accessRegionId = response.accessRegionId;
-            this.cenId = response.cenId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(UnroutePrivateZoneInCenToVpcRequest request) {
+            super(request);
+            this.accessRegionId = request.accessRegionId;
+            this.cenId = request.cenId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AccessRegionId.
+         * The ID of the region where PrivateZone is accessed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -135,7 +138,7 @@ public class UnroutePrivateZoneInCenToVpcRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);

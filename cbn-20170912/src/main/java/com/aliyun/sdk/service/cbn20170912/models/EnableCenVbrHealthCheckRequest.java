@@ -210,25 +210,25 @@ public class EnableCenVbrHealthCheckRequest extends Request {
             super();
         } 
 
-        private Builder(EnableCenVbrHealthCheckRequest response) {
-            super(response);
-            this.cenId = response.cenId;
-            this.healthCheckInterval = response.healthCheckInterval;
-            this.healthCheckOnly = response.healthCheckOnly;
-            this.healthCheckSourceIp = response.healthCheckSourceIp;
-            this.healthCheckTargetIp = response.healthCheckTargetIp;
-            this.healthyThreshold = response.healthyThreshold;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.vbrInstanceId = response.vbrInstanceId;
-            this.vbrInstanceOwnerId = response.vbrInstanceOwnerId;
-            this.vbrInstanceRegionId = response.vbrInstanceRegionId;
+        private Builder(EnableCenVbrHealthCheckRequest request) {
+            super(request);
+            this.cenId = request.cenId;
+            this.healthCheckInterval = request.healthCheckInterval;
+            this.healthCheckOnly = request.healthCheckOnly;
+            this.healthCheckSourceIp = request.healthCheckSourceIp;
+            this.healthCheckTargetIp = request.healthCheckTargetIp;
+            this.healthyThreshold = request.healthyThreshold;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.vbrInstanceId = request.vbrInstanceId;
+            this.vbrInstanceOwnerId = request.vbrInstanceOwnerId;
+            this.vbrInstanceRegionId = request.vbrInstanceRegionId;
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -237,7 +237,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * HealthCheckInterval.
+         * The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: **2**. Valid values: **2 to 3**.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -246,7 +246,18 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * HealthCheckOnly.
+         * Specifies whether to enable probing during the health check. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * 
+         *         If you enable probing, the system does not switch to another route if the detected route is not reachable. 
+         * 
+         *           Make sure that a redundant route is available. Otherwise, network disconnections may occur. 
+         * 
+         * *   **false** (default): no
+         * 
+         *         Probing is disabled by default. If a redundant route is specified, the system switches to the redundant route if the detected route is not reachable.
          */
         public Builder healthCheckOnly(Boolean healthCheckOnly) {
             this.putQueryParameter("HealthCheckOnly", healthCheckOnly);
@@ -255,7 +266,11 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * HealthCheckSourceIp.
+         * The source IP address for the health check. You can set the source IP address in the following ways:
+         * <p>
+         * 
+         * *   **Automatic IP Address** (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.
+         * *   **Custom IP Address**: You must specify an idle IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot be the IP address of the VBR on the Alibaba Cloud side, the IP address of the VBR on the customer side, or other IP addresses with which the VBR communicates through the CEN instance.
          */
         public Builder healthCheckSourceIp(String healthCheckSourceIp) {
             this.putQueryParameter("HealthCheckSourceIp", healthCheckSourceIp);
@@ -264,7 +279,10 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * HealthCheckTargetIp.
+         * The destination IP address for the health check.
+         * <p>
+         * 
+         * Set the destination IP address to the IP address of the VBR on the customer side.
          */
         public Builder healthCheckTargetIp(String healthCheckTargetIp) {
             this.putQueryParameter("HealthCheckTargetIp", healthCheckTargetIp);
@@ -273,7 +291,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * HealthyThreshold.
+         * The number of probe packets that are sent during a health check. Unit: packets. Valid values: **3 to 8**. Default value: **8**.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -318,7 +336,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * VbrInstanceId.
+         * The ID of the VBR.
          */
         public Builder vbrInstanceId(String vbrInstanceId) {
             this.putQueryParameter("VbrInstanceId", vbrInstanceId);
@@ -327,7 +345,10 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * VbrInstanceOwnerId.
+         * The ID of the Alibaba Cloud account to which the VBR belongs.
+         * <p>
+         * 
+         * > The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
          */
         public Builder vbrInstanceOwnerId(Long vbrInstanceOwnerId) {
             this.putQueryParameter("VbrInstanceOwnerId", vbrInstanceOwnerId);
@@ -336,7 +357,10 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * VbrInstanceRegionId.
+         * The ID of the region where the VBR is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
             this.putQueryParameter("VbrInstanceRegionId", vbrInstanceRegionId);

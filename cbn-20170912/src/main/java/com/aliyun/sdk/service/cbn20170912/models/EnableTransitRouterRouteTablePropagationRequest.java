@@ -141,20 +141,25 @@ public class EnableTransitRouterRouteTablePropagationRequest extends Request {
             super();
         } 
 
-        private Builder(EnableTransitRouterRouteTablePropagationRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentId = response.transitRouterAttachmentId;
-            this.transitRouterRouteTableId = response.transitRouterRouteTableId;
+        private Builder(EnableTransitRouterRouteTablePropagationRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterRouteTableId = request.transitRouterRouteTableId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +168,11 @@ public class EnableTransitRouterRouteTablePropagationRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): sends the request. If the request passes the precheck, the route learning correlation is created.
+         * *   **true**: sends a request for precheck only. No route learning correlation is created after the request passes the precheck. If you use this value, the system checks whether the required parameters are set, and whether the request syntax is valid. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -208,7 +217,7 @@ public class EnableTransitRouterRouteTablePropagationRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the network instance connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -217,7 +226,7 @@ public class EnableTransitRouterRouteTablePropagationRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableId.
+         * The ID of the route table of the Enterprise Edition transit router.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

@@ -71,6 +71,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TransitRouterAttachmentDescription")
     private String transitRouterAttachmentDescription;
 
@@ -98,6 +102,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.transitRouterAttachmentDescription = builder.transitRouterAttachmentDescription;
         this.transitRouterAttachmentName = builder.transitRouterAttachmentName;
         this.transitRouterId = builder.transitRouterId;
@@ -215,6 +220,13 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return transitRouterAttachmentDescription
      */
     public String getTransitRouterAttachmentDescription() {
@@ -250,6 +262,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentName; 
         private String transitRouterId; 
@@ -258,29 +271,34 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTransitRouterPeerAttachmentRequest response) {
-            super(response);
-            this.autoPublishRouteEnabled = response.autoPublishRouteEnabled;
-            this.bandwidth = response.bandwidth;
-            this.bandwidthType = response.bandwidthType;
-            this.cenBandwidthPackageId = response.cenBandwidthPackageId;
-            this.cenId = response.cenId;
-            this.clientToken = response.clientToken;
-            this.dryRun = response.dryRun;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.peerTransitRouterId = response.peerTransitRouterId;
-            this.peerTransitRouterRegionId = response.peerTransitRouterRegionId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transitRouterAttachmentDescription = response.transitRouterAttachmentDescription;
-            this.transitRouterAttachmentName = response.transitRouterAttachmentName;
-            this.transitRouterId = response.transitRouterId;
+        private Builder(CreateTransitRouterPeerAttachmentRequest request) {
+            super(request);
+            this.autoPublishRouteEnabled = request.autoPublishRouteEnabled;
+            this.bandwidth = request.bandwidth;
+            this.bandwidthType = request.bandwidthType;
+            this.cenBandwidthPackageId = request.cenBandwidthPackageId;
+            this.cenId = request.cenId;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.peerTransitRouterId = request.peerTransitRouterId;
+            this.peerTransitRouterRegionId = request.peerTransitRouterRegionId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
+            this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
+            this.transitRouterAttachmentName = request.transitRouterAttachmentName;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
-         * AutoPublishRouteEnabled.
+         * Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no.
+         * *   **true**: yes.
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -289,7 +307,14 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The bandwidth value of the inter-region connection. Unit: Mbit/s.
+         * <p>
+         * 
+         * *   If you set **BandwidthType** to **BandwidthPackage**, this parameter specifies the bandwidth that is available for the inter-region connection.
+         * 
+         * <!---->
+         * 
+         * *   If you set **BandwidthType** to **DataTransfer**, this parameter specifies the bandwidth limit of the inter-region connection.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -298,7 +323,12 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * BandwidthType.
+         * The method that is used to allocate bandwidth to the inter-region connection. Valid values:
+         * <p>
+         * 
+         * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+         * 
+         * **DataTransfer**: uses pay-by-data-transfer bandwidth.
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -307,7 +337,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * CenBandwidthPackageId.
+         * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
+         * <p>
+         * 
+         * >  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -316,7 +349,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -325,7 +358,12 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -334,7 +372,11 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): checks the request. If the request passes the check, the inter-region connection is created.
+         * *   **true**: checks the request but does not perform the operation. The inter-region connection is not created after the request passes the check. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -361,7 +403,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * PeerTransitRouterId.
+         * The ID of the peer transit router.
          */
         public Builder peerTransitRouterId(String peerTransitRouterId) {
             this.putQueryParameter("PeerTransitRouterId", peerTransitRouterId);
@@ -370,7 +412,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * PeerTransitRouterRegionId.
+         * The ID of the region where the peer transit router is deployed.
          */
         public Builder peerTransitRouterRegionId(String peerTransitRouterRegionId) {
             this.putQueryParameter("PeerTransitRouterRegionId", peerTransitRouterRegionId);
@@ -379,7 +421,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the local Enterprise Edition transit router is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -406,7 +451,19 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentDescription.
+         * The tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The description of the inter-region connection.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -415,7 +472,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentName.
+         * The name of the inter-region connection.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -424,7 +484,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the local Enterprise Edition transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -439,4 +499,75 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag keys of the resources. 
+             * <p>
+             * 
+             * The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  
+             * 
+             * You can specify at most 20 tag keys.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag values of the resources. 
+             * <p>
+             * 
+             * The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  
+             * 
+             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
