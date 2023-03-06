@@ -33,6 +33,10 @@ public class ApplyAddRequest extends Request {
     private String departName;
 
     @Body
+    @NameInMap("extend_field")
+    private String extendField;
+
+    @Body
     @NameInMap("external_traveler_list")
     private java.util.List < ExternalTravelerList> externalTravelerList;
 
@@ -152,6 +156,7 @@ public class ApplyAddRequest extends Request {
         this.corpName = builder.corpName;
         this.departId = builder.departId;
         this.departName = builder.departName;
+        this.extendField = builder.extendField;
         this.externalTravelerList = builder.externalTravelerList;
         this.externalTravelerStandard = builder.externalTravelerStandard;
         this.flightBudget = builder.flightBudget;
@@ -227,6 +232,13 @@ public class ApplyAddRequest extends Request {
      */
     public String getDepartName() {
         return this.departName;
+    }
+
+    /**
+     * @return extendField
+     */
+    public String getExtendField() {
+        return this.extendField;
     }
 
     /**
@@ -424,6 +436,7 @@ public class ApplyAddRequest extends Request {
         private String corpName; 
         private String departId; 
         private String departName; 
+        private String extendField; 
         private java.util.List < ExternalTravelerList> externalTravelerList; 
         private ExternalTravelerStandard externalTravelerStandard; 
         private Long flightBudget; 
@@ -463,6 +476,7 @@ public class ApplyAddRequest extends Request {
             this.corpName = request.corpName;
             this.departId = request.departId;
             this.departName = request.departName;
+            this.extendField = request.extendField;
             this.externalTravelerList = request.externalTravelerList;
             this.externalTravelerStandard = request.externalTravelerStandard;
             this.flightBudget = request.flightBudget;
@@ -534,6 +548,15 @@ public class ApplyAddRequest extends Request {
         public Builder departName(String departName) {
             this.putBodyParameter("depart_name", departName);
             this.departName = departName;
+            return this;
+        }
+
+        /**
+         * 可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账
+         */
+        public Builder extendField(String extendField) {
+            this.putBodyParameter("extend_field", extendField);
+            this.extendField = extendField;
             return this;
         }
 

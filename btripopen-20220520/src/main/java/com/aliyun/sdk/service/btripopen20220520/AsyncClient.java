@@ -92,11 +92,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FlightItineraryScanQueryResponse> flightItineraryScanQuery(FlightItineraryScanQueryRequest request);
 
+    CompletableFuture<FlightListingSearchResponse> flightListingSearch(FlightListingSearchRequest request);
+
     CompletableFuture<FlightOrderDetailInfoResponse> flightOrderDetailInfo(FlightOrderDetailInfoRequest request);
 
     CompletableFuture<FlightOrderListQueryResponse> flightOrderListQuery(FlightOrderListQueryRequest request);
 
     CompletableFuture<FlightOrderQueryResponse> flightOrderQuery(FlightOrderQueryRequest request);
+
+    CompletableFuture<FlightOtaSearchResponse> flightOtaSearch(FlightOtaSearchRequest request);
 
     CompletableFuture<FlightPayOrderResponse> flightPayOrder(FlightPayOrderRequest request);
 
@@ -127,6 +131,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InvoiceRuleSaveResponse> invoiceRuleSave(InvoiceRuleSaveRequest request);
 
     CompletableFuture<InvoiceSearchResponse> invoiceSearch(InvoiceSearchRequest request);
+
+    CompletableFuture<IsvRuleSaveResponse> isvRuleSave(IsvRuleSaveRequest request);
 
     CompletableFuture<IsvUserSaveResponse> isvUserSave(IsvUserSaveRequest request);
 

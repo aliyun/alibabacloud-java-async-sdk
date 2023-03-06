@@ -1484,6 +1484,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         private String departName;
 
+        @NameInMap("extend_field")
+        private String extendField;
+
         @NameInMap("external_traveler_list")
         private java.util.List < ExternalTravelerList> externalTravelerList;
 
@@ -1571,6 +1574,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.corpName = builder.corpName;
             this.departId = builder.departId;
             this.departName = builder.departName;
+            this.extendField = builder.extendField;
             this.externalTravelerList = builder.externalTravelerList;
             this.flightBudget = builder.flightBudget;
             this.gmtCreate = builder.gmtCreate;
@@ -1661,6 +1665,13 @@ public class ApplyQueryResponseBody extends TeaModel {
          */
         public String getDepartName() {
             return this.departName;
+        }
+
+        /**
+         * @return extendField
+         */
+        public String getExtendField() {
+            return this.extendField;
         }
 
         /**
@@ -1854,6 +1865,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String corpName; 
             private String departId; 
             private String departName; 
+            private String extendField; 
             private java.util.List < ExternalTravelerList> externalTravelerList; 
             private Long flightBudget; 
             private String gmtCreate; 
@@ -1942,6 +1954,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder departName(String departName) {
                 this.departName = departName;
+                return this;
+            }
+
+            /**
+             * 补充描述，账单中将会体现此字段的值。可以用于企业的统计和对账
+             */
+            public Builder extendField(String extendField) {
+                this.extendField = extendField;
                 return this;
             }
 
