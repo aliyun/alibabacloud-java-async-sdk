@@ -72,6 +72,10 @@ public class SendChatappMessageRequest extends Request {
     private String tag;
 
     @Body
+    @NameInMap("TaskId")
+    private String taskId;
+
+    @Body
     @NameInMap("TemplateCode")
     private String templateCode;
 
@@ -113,6 +117,7 @@ public class SendChatappMessageRequest extends Request {
         this.messageType = builder.messageType;
         this.payload = builder.payload;
         this.tag = builder.tag;
+        this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
         this.templateParams = builder.templateParams;
         this.to = builder.to;
@@ -233,6 +238,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return templateCode
      */
     public String getTemplateCode() {
@@ -289,6 +301,7 @@ public class SendChatappMessageRequest extends Request {
         private String messageType; 
         private java.util.List < String > payload; 
         private String tag; 
+        private String taskId; 
         private String templateCode; 
         private java.util.Map < String, String > templateParams; 
         private String to; 
@@ -316,6 +329,7 @@ public class SendChatappMessageRequest extends Request {
             this.messageType = request.messageType;
             this.payload = request.payload;
             this.tag = request.tag;
+            this.taskId = request.taskId;
             this.templateCode = request.templateCode;
             this.templateParams = request.templateParams;
             this.to = request.to;
@@ -329,8 +343,8 @@ public class SendChatappMessageRequest extends Request {
          * <p>
          * 
          * *   **whatsapp**
-         * *   viber, which is under development
-         * *   line, which is under development
+         * *   **viber**. This message channel is supported only when you set the Type parameter to message.
+         * *   line. The feature ChatApp sends messages by using Line is under development.
          */
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -342,6 +356,8 @@ public class SendChatappMessageRequest extends Request {
          * The content of the message.
          * <p>
          * 
+         * **Usage notes when you set the ChannelType parameter to whatsapp**
+         * 
          * *   When you set the **MessageType** parameter to **text**, the **text** parameter is required and the **caption** parameter cannot be specified.
          * *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
          * *   When you set the **MessageType** parameter to **video**, the **link** parameter is required.
@@ -352,6 +368,17 @@ public class SendChatappMessageRequest extends Request {
          * *   When you set the **MessageType** parameter to **location**, the **longitude** and **latitude** parameters are required.
          * *   When you set the **MessageType** parameter to **sticker**, the **link** parameter is required, and the **caption** and **fileName** parameters are invalid.
          * *   When you set the **MessageType** parameter to **reaction**, the **messageId** and **emoji** parameters are required.
+         * 
+         * **Usage notes when you set the ChannelType parameter to viber**
+         * 
+         * *   When you set the **MessageType** parameter to **text**, the **text** parameter is required.
+         * *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
+         * *   When you set the **MessageType** parameter to **video**, the **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
+         * *   When you set the **MessageType** parameter to **document**, the **link**, **fileName**, and **fileType** parameters are required.
+         * *   When you set the **MessageType** parameter to **text_button**, the **text**, **caption**, and **action** parameters are required.
+         * *   When you set the **MessageType** parameter to **text_image_button**, the **text**, **link**, **caption**, and **action** parameters are required.
+         * *   When you set the **MessageType** parameter to **text_video**, the **text**, **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
+         * *   When you set the **MessageType** parameter to **text_video_button**, the **text**, **link**, **thumbnail**, **fileSize**, **duration**, and **caption** parameters are required, and the **action** parameter is invalid.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -396,7 +423,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The ID of the fallback policy. You can create a fallback policy and view information about the policy in the console.
+         * The ID of the fallback strategy. You can create a fallback strategy and view the information in the console.
          */
         public Builder fallBackId(String fallBackId) {
             this.putBodyParameter("FallBackId", fallBackId);
@@ -426,7 +453,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The message type when the ChannelType parameter is set to viber. Valid values: pormotion and transition.
+         * The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -447,6 +474,8 @@ public class SendChatappMessageRequest extends Request {
          * The type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:
          * <p>
          * 
+         * **When you set the ChannelType parameter to whatsapp**
+         * 
          * *   **text**: the text message.
          * *   **image**: the image message.
          * *   **video**: the video message.
@@ -458,7 +487,18 @@ public class SendChatappMessageRequest extends Request {
          * *   **sticker**: the sticker message.
          * *   **reaction**: the reaction message.
          * 
-         * >  For more information about parameters of location, contacts, interactive, and media, see [Parameters of a message template](~~454530~~).
+         * **When you set the ChannelType parameter to viber**
+         * 
+         * *   **text**: the text message.
+         * *   **image**: the image message.
+         * *   **video**: the video message.
+         * *   **document**: the document message.
+         * *   **text_button**: messages that contain the text and button media objects.
+         * *   **text_image_button**: messages that contain multiple media objects, including the text, image, and button.
+         * *   **text_video**: messages that contain the text and video media objects.
+         * *   **text_video_button**: messages that contain multiple media objects, including text, video, and button.
+         * 
+         * >  For more information, see [Parameters of a message template](~~454530~~).
          */
         public Builder messageType(String messageType) {
             this.putBodyParameter("MessageType", messageType);
@@ -482,6 +522,15 @@ public class SendChatappMessageRequest extends Request {
         public Builder tag(String tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * 任务ID，由客户传入，在状态报告时会返回
+         */
+        public Builder taskId(String taskId) {
+            this.putBodyParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 
@@ -514,7 +563,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The tracking data when the ChannelType parameter is set to viber.
+         * The tracking ID when the ChannelType parameter is set to viber.
          */
         public Builder trackingData(String trackingData) {
             this.putBodyParameter("TrackingData", trackingData);
@@ -523,7 +572,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600, in seconds.
+         * The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("Ttl", ttl);

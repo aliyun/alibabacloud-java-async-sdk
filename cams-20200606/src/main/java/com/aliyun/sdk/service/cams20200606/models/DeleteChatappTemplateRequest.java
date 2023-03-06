@@ -107,7 +107,7 @@ public class DeleteChatappTemplateRequest extends Request {
         }
 
         /**
-         * The unique identifier of the WhatsApp account that you register.
+         * The ID of the WhatsApp account that you register.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -116,7 +116,7 @@ public class DeleteChatappTemplateRequest extends Request {
         }
 
         /**
-         * Assigned by ISV for RAM user authentication and authorization.
+         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

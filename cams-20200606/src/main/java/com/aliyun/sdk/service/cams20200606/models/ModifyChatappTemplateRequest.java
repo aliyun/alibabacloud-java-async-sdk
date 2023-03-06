@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyChatappTemplateRequest extends Request {
     @Body
+    @NameInMap("Category")
+    private String category;
+
+    @Body
     @NameInMap("Components")
     @Validation(required = true)
     private java.util.List < Components> components;
@@ -44,8 +48,13 @@ public class ModifyChatappTemplateRequest extends Request {
     @Validation(required = true)
     private String templateCode;
 
+    @Body
+    @NameInMap("TemplateType")
+    private String templateType;
+
     private ModifyChatappTemplateRequest(Builder builder) {
         super(builder);
+        this.category = builder.category;
         this.components = builder.components;
         this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
@@ -53,6 +62,7 @@ public class ModifyChatappTemplateRequest extends Request {
         this.isvCode = builder.isvCode;
         this.language = builder.language;
         this.templateCode = builder.templateCode;
+        this.templateType = builder.templateType;
     }
 
     public static Builder builder() {
@@ -66,6 +76,13 @@ public class ModifyChatappTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -117,7 +134,15 @@ public class ModifyChatappTemplateRequest extends Request {
         return this.templateCode;
     }
 
+    /**
+     * @return templateType
+     */
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static final class Builder extends Request.Builder<ModifyChatappTemplateRequest, Builder> {
+        private String category; 
         private java.util.List < Components> components; 
         private String custSpaceId; 
         private String custWabaId; 
@@ -125,6 +150,7 @@ public class ModifyChatappTemplateRequest extends Request {
         private String isvCode; 
         private String language; 
         private String templateCode; 
+        private String templateType; 
 
         private Builder() {
             super();
@@ -132,6 +158,7 @@ public class ModifyChatappTemplateRequest extends Request {
 
         private Builder(ModifyChatappTemplateRequest request) {
             super(request);
+            this.category = request.category;
             this.components = request.components;
             this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
@@ -139,10 +166,20 @@ public class ModifyChatappTemplateRequest extends Request {
             this.isvCode = request.isvCode;
             this.language = request.language;
             this.templateCode = request.templateCode;
+            this.templateType = request.templateType;
         } 
 
         /**
-         * The list of components of the message template.
+         * Viber修改模板时，可以修改模板Category(Whatsapp修改时此参数无效）
+         */
+        public Builder category(String category) {
+            this.putBodyParameter("Category", category);
+            this.category = category;
+            return this;
+        }
+
+        /**
+         * The components of the message template.
          */
         public Builder components(java.util.List < Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -152,7 +189,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * Isv customer space id
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -161,7 +198,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the WhatApp Business account of the ISV customer.
+         * The ID of the WhatsApp Business account under the ISV account.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -180,7 +217,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
+         * The ISV verification code, which is used to verify whether the user is authorized by ISV.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -189,7 +226,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The language.
+         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -203,6 +240,15 @@ public class ModifyChatappTemplateRequest extends Request {
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
             this.templateCode = templateCode;
+            return this;
+        }
+
+        /**
+         * 修改模板的模板类型，取值为WHATSAPP/VIBER， 当未传递此值时，默认值为WHATSAPP
+         */
+        public Builder templateType(String templateType) {
+            this.putBodyParameter("TemplateType", templateType);
+            this.templateType = templateType;
             return this;
         }
 
@@ -297,7 +343,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The text of the message to be sent.
+             * The text of the message that is sent.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -318,7 +364,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The URL to be visited after clicking the button.
+             * The URL to be visited after users click the button.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -351,14 +397,23 @@ public class ModifyChatappTemplateRequest extends Request {
         @NameInMap("Caption")
         private String caption;
 
+        @NameInMap("Duration")
+        private Integer duration;
+
         @NameInMap("FileName")
         private String fileName;
+
+        @NameInMap("FileType")
+        private String fileType;
 
         @NameInMap("Format")
         private String format;
 
         @NameInMap("Text")
         private String text;
+
+        @NameInMap("ThumbUrl")
+        private String thumbUrl;
 
         @NameInMap("Type")
         @Validation(required = true)
@@ -370,9 +425,12 @@ public class ModifyChatappTemplateRequest extends Request {
         private Components(Builder builder) {
             this.buttons = builder.buttons;
             this.caption = builder.caption;
+            this.duration = builder.duration;
             this.fileName = builder.fileName;
+            this.fileType = builder.fileType;
             this.format = builder.format;
             this.text = builder.text;
+            this.thumbUrl = builder.thumbUrl;
             this.type = builder.type;
             this.url = builder.url;
         }
@@ -400,10 +458,24 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
          * @return fileName
          */
         public String getFileName() {
             return this.fileName;
+        }
+
+        /**
+         * @return fileType
+         */
+        public String getFileType() {
+            return this.fileType;
         }
 
         /**
@@ -418,6 +490,13 @@ public class ModifyChatappTemplateRequest extends Request {
          */
         public String getText() {
             return this.text;
+        }
+
+        /**
+         * @return thumbUrl
+         */
+        public String getThumbUrl() {
+            return this.thumbUrl;
         }
 
         /**
@@ -437,9 +516,12 @@ public class ModifyChatappTemplateRequest extends Request {
         public static final class Builder {
             private java.util.List < Buttons> buttons; 
             private String caption; 
+            private Integer duration; 
             private String fileName; 
+            private String fileType; 
             private String format; 
             private String text; 
+            private String thumbUrl; 
             private String type; 
             private String url; 
 
@@ -463,7 +545,15 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The name of the file.
+             * Viber视频消息的视频时长，取值范围 0 - 600
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * The name of the file
              * <p>
              * 
              * > : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.
@@ -474,7 +564,15 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the media resource.
+             * Viber文件消息的文件类型
+             */
+            public Builder fileType(String fileType) {
+                this.fileType = fileType;
+                return this;
+            }
+
+            /**
+             * The type of the media resources that are included in the message.
              * <p>
              * 
              * *   **TEXT**: text
@@ -488,10 +586,18 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The text of the message to be sent.
+             * The text of the message that is sent.
              */
             public Builder text(String text) {
                 this.text = text;
+                return this;
+            }
+
+            /**
+             * Viber带视频消息的缩略图
+             */
+            public Builder thumbUrl(String thumbUrl) {
+                this.thumbUrl = thumbUrl;
                 return this;
             }
 

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateAccountWebhookResponseBody} extends {@link TeaModel}
+ * {@link SubmitIsvCustomerTermsResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateAccountWebhookResponseBody</p>
+ * <p>SubmitIsvCustomerTermsResponseBody</p>
  */
-public class UpdateAccountWebhookResponseBody extends TeaModel {
+public class SubmitIsvCustomerTermsResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -21,7 +21,7 @@ public class UpdateAccountWebhookResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private UpdateAccountWebhookResponseBody(Builder builder) {
+    private SubmitIsvCustomerTermsResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -31,7 +31,7 @@ public class UpdateAccountWebhookResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateAccountWebhookResponseBody create() {
+    public static SubmitIsvCustomerTermsResponseBody create() {
         return builder().build();
     }
 
@@ -62,11 +62,7 @@ public class UpdateAccountWebhookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -74,7 +70,7 @@ public class UpdateAccountWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -82,15 +78,15 @@ public class UpdateAccountWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateAccountWebhookResponseBody build() {
-            return new UpdateAccountWebhookResponseBody(this);
+        public SubmitIsvCustomerTermsResponseBody build() {
+            return new SubmitIsvCustomerTermsResponseBody(this);
         } 
 
     } 

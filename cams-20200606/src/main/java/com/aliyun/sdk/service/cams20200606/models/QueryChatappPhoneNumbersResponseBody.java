@@ -274,7 +274,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             private String verifiedName; 
 
             /**
-             * 号码校验状态。
+             * The verification status of the phone number.
              */
             public Builder codeVerificationStatus(String codeVerificationStatus) {
                 this.codeVerificationStatus = codeVerificationStatus;
@@ -282,7 +282,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * 号码发送量。
+             * The maximum number of messages that can be sent to users by using the phone number.
              */
             public Builder messagingLimitTier(String messagingLimitTier) {
                 this.messagingLimitTier = messagingLimitTier;
@@ -290,7 +290,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * 名称状态。
+             * The status of the business name.
              */
             public Builder nameStatus(String nameStatus) {
                 this.nameStatus = nameStatus;
@@ -298,7 +298,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * 新名称审核状态。
+             * The review status of the new business name.
              */
             public Builder newNameStatus(String newNameStatus) {
                 this.newNameStatus = newNameStatus;
@@ -314,7 +314,13 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The quality rating of the phone number. Valid values: GREEN, YELLOW, RED, and UNKNOWN.
+             * The quality rating of the phone number. Valid values:
+             * <p>
+             * 
+             * *   **GREEN**
+             * *   **YELLOW**
+             * *   **RED**
+             * *   **UNKNOWN**
              */
             public Builder qualityRating(String qualityRating) {
                 this.qualityRating = qualityRating;
@@ -322,7 +328,20 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the phone number. Valid values: PENDING, DELETED, MIGRATED, BANNED, RESTRICTED, RATE_LIMITED, FLAGGED, CONNECTED, DISCONNECTED, UNKNOWN, and UNVERIFIED.
+             * The status of the phone number.
+             * <p>
+             * 
+             * *   PENDING
+             * *   DELETED
+             * *   MIGRATED
+             * *   BANNED
+             * *   RESTRICTED
+             * *   RATE_LIMITED
+             * *   FLAGGED
+             * *   CONNECTED
+             * *   DISCONNECTED
+             * *   UNKNOWN
+             * *   UNVERIFIED
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +349,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The status report notification URL.
+             * The callback URL to which status reports are sent by using HTTP callbacks.
              */
             public Builder statusCallbackUrl(String statusCallbackUrl) {
                 this.statusCallbackUrl = statusCallbackUrl;
@@ -346,7 +365,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The MO message notification URL.
+             * The callback URL to which MO messages are sent by using HTTP callbacks.
              */
             public Builder upCallbackUrl(String upCallbackUrl) {
                 this.upCallbackUrl = upCallbackUrl;
@@ -362,7 +381,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the company to which the phone number is associated with.
+             * The name of the company with which the phone number is associated.
              */
             public Builder verifiedName(String verifiedName) {
                 this.verifiedName = verifiedName;

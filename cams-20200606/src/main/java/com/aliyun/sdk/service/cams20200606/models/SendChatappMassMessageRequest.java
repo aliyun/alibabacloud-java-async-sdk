@@ -305,7 +305,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The message type when the ChannelType parameter is set to viber. Valid values: pormotion and transition.
+         * Viber消息类型，取值：pormotion或transation。
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -333,7 +333,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The tag information when the ChannelType parameter is set to viber.
+         * Viber消息发送时tag信息。
          */
         public Builder tag(String tag) {
             this.putBodyParameter("Tag", tag);
@@ -342,7 +342,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The task ID.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -351,7 +351,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The encoding of the message template.
+         * The code of the message template.
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -360,7 +360,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600, in seconds.
+         * Viber消息发送超时时间，单位：秒，取值范围 30~1209600。
          */
         public Builder ttl(Long ttl) {
             this.putBodyParameter("Ttl", ttl);
@@ -427,7 +427,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String to; 
 
             /**
-             * payload
+             * The payload.
              */
             public Builder payload(java.util.List < String > payload) {
                 this.payload = payload;

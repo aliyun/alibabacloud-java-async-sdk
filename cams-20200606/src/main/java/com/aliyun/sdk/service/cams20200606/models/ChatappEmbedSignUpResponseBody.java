@@ -190,7 +190,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The audit status of the WhatsApp Business account.
+             * The review status of the WhatsApp Business account.
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;

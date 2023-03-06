@@ -55,7 +55,7 @@ public class ChatappEmbedSignUpRequest extends Request {
         } 
 
         /**
-         * The InputToken returned by the embedded signup.
+         * The InputToken returned after the embedded signup flow is complete.
          */
         public Builder inputToken(String inputToken) {
             this.putBodyParameter("InputToken", inputToken);

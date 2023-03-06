@@ -97,7 +97,7 @@ public class UpdateAccountWebhookRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -106,7 +106,7 @@ public class UpdateAccountWebhookRequest extends Request {
         }
 
         /**
-         * 是否使用Http方式接收回执（Y: 是， N: 否）
+         * Specifies whether to use HTTP callbacks to receive receipts. Valid values: Y and N. A value of Y indicates that HTTP callbacks are used to receive receipts. A value of N indicates that HTTP callbacks are not used to receive receipts.
          */
         public Builder httpFlag(String httpFlag) {
             this.putQueryParameter("HttpFlag", httpFlag);
@@ -115,7 +115,7 @@ public class UpdateAccountWebhookRequest extends Request {
         }
 
         /**
-         * 是否使用队列方式接收回执（Y: 是， N: 否）
+         * Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values: Y and N. A value of Y indicates that MNS queues are used to receive receipts. A value of N indicates that MNS queues are not used to receive receipts.
          */
         public Builder queueFlag(String queueFlag) {
             this.putQueryParameter("QueueFlag", queueFlag);
@@ -124,7 +124,7 @@ public class UpdateAccountWebhookRequest extends Request {
         }
 
         /**
-         * http方式通知回调地址
+         * The callback URL to which status reports are sent by using HTTP callbacks.
          */
         public Builder statusCallbackUrl(String statusCallbackUrl) {
             this.putQueryParameter("StatusCallbackUrl", statusCallbackUrl);

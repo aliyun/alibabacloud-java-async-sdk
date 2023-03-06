@@ -118,7 +118,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
-         * The type of the verification code. Valid values: SMS and VOICE.
+         * The method to obtain the verification code. Valid values: SMS and VOICE.
          */
         public Builder method(String method) {
             this.putBodyParameter("Method", method);

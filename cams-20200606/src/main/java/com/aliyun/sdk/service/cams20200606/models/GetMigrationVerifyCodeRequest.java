@@ -100,7 +100,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -109,7 +109,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * 语言
+         * The language.
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -118,7 +118,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * 验证码方式（sms/voice)
+         * The method to obtain the verification code. Valid values: sms and voice.
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -127,7 +127,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * 号码
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

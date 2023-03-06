@@ -94,7 +94,7 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         }
 
         /**
-         * The space ID of the ISV user to which the phone number is migrated.
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);

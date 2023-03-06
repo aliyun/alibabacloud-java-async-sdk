@@ -282,7 +282,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The quantity of phone numbers to which messages can be sent in a day.
+             * The maximum number of messages that can be sent to users by using the phone number.
              */
             public Builder messagingLimitTier(String messagingLimitTier) {
                 this.messagingLimitTier = messagingLimitTier;
@@ -314,7 +314,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The quality of the phone number. Valid values: GREEN, YELLOW, and RED.
+             * The quality rating of the phone number. Valid values: GREEN, YELLOW, and RED.
              */
             public Builder qualityRating(String qualityRating) {
                 this.qualityRating = qualityRating;
@@ -330,7 +330,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL to which status reports are sent via HTTP callbacks.
+             * The callback URL to which status reports are sent by using HTTP callbacks.
              */
             public Builder statusCallbackUrl(String statusCallbackUrl) {
                 this.statusCallbackUrl = statusCallbackUrl;
@@ -346,7 +346,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL to which MO messages are sent via HTTP callbacks.
+             * The callback URL to which MO messages are sent by using HTTP callbacks.
              */
             public Builder upCallbackUrl(String upCallbackUrl) {
                 this.upCallbackUrl = upCallbackUrl;

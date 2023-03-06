@@ -85,7 +85,7 @@ public class ChatappMigrationVerifiedRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -94,7 +94,7 @@ public class ChatappMigrationVerifiedRequest extends Request {
         }
 
         /**
-         * 号码
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -103,7 +103,7 @@ public class ChatappMigrationVerifiedRequest extends Request {
         }
 
         /**
-         * 验证码
+         * The verification code.
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

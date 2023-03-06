@@ -85,7 +85,7 @@ public class ChatappVerifyAndRegisterRequest extends Request {
         } 
 
         /**
-         * The space ID of the ISV user with which the phone number is associated.
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -94,7 +94,7 @@ public class ChatappVerifyAndRegisterRequest extends Request {
         }
 
         /**
-         * The phone number that you want to use to send WhatsApp business messages to your customers.
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

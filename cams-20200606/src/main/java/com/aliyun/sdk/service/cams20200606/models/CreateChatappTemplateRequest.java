@@ -420,14 +420,23 @@ public class CreateChatappTemplateRequest extends Request {
         @NameInMap("Caption")
         private String caption;
 
+        @NameInMap("Duration")
+        private Integer duration;
+
         @NameInMap("FileName")
         private String fileName;
+
+        @NameInMap("FileType")
+        private String fileType;
 
         @NameInMap("Format")
         private String format;
 
         @NameInMap("Text")
         private String text;
+
+        @NameInMap("ThumbUrl")
+        private String thumbUrl;
 
         @NameInMap("Type")
         @Validation(required = true)
@@ -439,9 +448,12 @@ public class CreateChatappTemplateRequest extends Request {
         private Components(Builder builder) {
             this.buttons = builder.buttons;
             this.caption = builder.caption;
+            this.duration = builder.duration;
             this.fileName = builder.fileName;
+            this.fileType = builder.fileType;
             this.format = builder.format;
             this.text = builder.text;
+            this.thumbUrl = builder.thumbUrl;
             this.type = builder.type;
             this.url = builder.url;
         }
@@ -469,10 +481,24 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
          * @return fileName
          */
         public String getFileName() {
             return this.fileName;
+        }
+
+        /**
+         * @return fileType
+         */
+        public String getFileType() {
+            return this.fileType;
         }
 
         /**
@@ -487,6 +513,13 @@ public class CreateChatappTemplateRequest extends Request {
          */
         public String getText() {
             return this.text;
+        }
+
+        /**
+         * @return thumbUrl
+         */
+        public String getThumbUrl() {
+            return this.thumbUrl;
         }
 
         /**
@@ -506,9 +539,12 @@ public class CreateChatappTemplateRequest extends Request {
         public static final class Builder {
             private java.util.List < Buttons> buttons; 
             private String caption; 
+            private Integer duration; 
             private String fileName; 
+            private String fileType; 
             private String format; 
             private String text; 
+            private String thumbUrl; 
             private String type; 
             private String url; 
 
@@ -529,10 +565,26 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
+             * Viber视频消息的视频时长，取值范围 0 - 600
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
              * The name of the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * Viber文件消息的文件类型
+             */
+            public Builder fileType(String fileType) {
+                this.fileType = fileType;
                 return this;
             }
 
@@ -555,6 +607,14 @@ public class CreateChatappTemplateRequest extends Request {
              */
             public Builder text(String text) {
                 this.text = text;
+                return this;
+            }
+
+            /**
+             * Viber带视频消息的缩略图
+             */
+            public Builder thumbUrl(String thumbUrl) {
+                this.thumbUrl = thumbUrl;
                 return this;
             }
 

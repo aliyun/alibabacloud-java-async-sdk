@@ -135,7 +135,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * Specifies whether to use HTTP to receive receipts. Valid values: Y and N. A value of Y indicates that HTTP is used to receive receipts. A value of N indicates that HTTP is not used to receive receipts.
+         * Specifies whether to use HTTP callbacks to receive receipts. Valid values: Y and N. A value of Y indicates that HTTP callbacks are used to receive receipts. A value of N indicates that HTTP callbacks are not used to receive receipts.
          */
         public Builder httpFlag(String httpFlag) {
             this.putQueryParameter("HttpFlag", httpFlag);
@@ -162,7 +162,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * The callback URL to which status reports are sent via HTTP callbacks.
+         * The callback URL to which status reports are sent by using HTTP callbacks.
          */
         public Builder statusCallbackUrl(String statusCallbackUrl) {
             this.putQueryParameter("StatusCallbackUrl", statusCallbackUrl);
@@ -171,7 +171,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * The callback URL to which mobile originated (MO) messages are sent via HTTP callbacks.
+         * The callback URL to which mobile originated (MO) messages are sent by using HTTP callbacks.
          */
         public Builder upCallbackUrl(String upCallbackUrl) {
             this.putQueryParameter("UpCallbackUrl", upCallbackUrl);
