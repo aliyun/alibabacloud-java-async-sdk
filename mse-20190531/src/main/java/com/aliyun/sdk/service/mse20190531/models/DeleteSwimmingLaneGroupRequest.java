@@ -18,13 +18,27 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
 
     @Query
     @NameInMap("GroupId")
-    @Validation(required = true)
     private Long groupId;
+
+    @Query
+    @NameInMap("Namespace")
+    private String namespace;
+
+    @Query
+    @NameInMap("Region")
+    private String region;
+
+    @Query
+    @NameInMap("name")
+    private String name;
 
     private DeleteSwimmingLaneGroupRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.groupId = builder.groupId;
+        this.namespace = builder.namespace;
+        this.region = builder.region;
+        this.name = builder.name;
     }
 
     public static Builder builder() {
@@ -54,9 +68,33 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
         return this.groupId;
     }
 
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
     public static final class Builder extends Request.Builder<DeleteSwimmingLaneGroupRequest, Builder> {
         private String acceptLanguage; 
         private Long groupId; 
+        private String namespace; 
+        private String region; 
+        private String name; 
 
         private Builder() {
             super();
@@ -66,6 +104,9 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.groupId = request.groupId;
+            this.namespace = request.namespace;
+            this.region = request.region;
+            this.name = request.name;
         } 
 
         /**
@@ -87,6 +128,33 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * Region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("name", name);
+            this.name = name;
             return this;
         }
 

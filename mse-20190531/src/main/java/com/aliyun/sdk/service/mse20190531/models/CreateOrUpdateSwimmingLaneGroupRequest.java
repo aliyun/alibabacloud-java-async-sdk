@@ -66,6 +66,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private String namespace;
 
     @Query
+    @NameInMap("RecordCanaryDetail")
+    private Boolean recordCanaryDetail;
+
+    @Query
     @NameInMap("Region")
     private String region;
 
@@ -96,6 +100,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
         this.name = builder.name;
         this.namespace = builder.namespace;
+        this.recordCanaryDetail = builder.recordCanaryDetail;
         this.region = builder.region;
         this.source = builder.source;
         this.status = builder.status;
@@ -207,6 +212,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     }
 
     /**
+     * @return recordCanaryDetail
+     */
+    public Boolean getRecordCanaryDetail() {
+        return this.recordCanaryDetail;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -248,6 +260,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private Boolean messageQueueGrayEnable; 
         private String name; 
         private String namespace; 
+        private Boolean recordCanaryDetail; 
         private String region; 
         private String source; 
         private Integer status; 
@@ -272,6 +285,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             this.messageQueueGrayEnable = request.messageQueueGrayEnable;
             this.name = request.name;
             this.namespace = request.namespace;
+            this.recordCanaryDetail = request.recordCanaryDetail;
             this.region = request.region;
             this.source = request.source;
             this.status = request.status;
@@ -396,6 +410,15 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * RecordCanaryDetail.
+         */
+        public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
+            this.putQueryParameter("RecordCanaryDetail", recordCanaryDetail);
+            this.recordCanaryDetail = recordCanaryDetail;
             return this;
         }
 
