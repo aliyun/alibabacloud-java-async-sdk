@@ -609,6 +609,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RunTriggerNodeResponse> runTriggerNode(RunTriggerNodeRequest request);
 
+    CompletableFuture<SaveDataServiceApiTestResultResponse> saveDataServiceApiTestResult(SaveDataServiceApiTestResultRequest request);
+
     CompletableFuture<ScanSensitiveDataResponse> scanSensitiveData(ScanSensitiveDataRequest request);
 
     /**
