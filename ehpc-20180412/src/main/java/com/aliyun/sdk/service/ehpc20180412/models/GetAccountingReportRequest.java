@@ -168,7 +168,7 @@ public class GetAccountingReportRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -177,7 +177,12 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * Dim.
+         * The layers at which you want to query the bandwidth and traffic data. Valid values:
+         * <p>
+         * 
+         * *   user: Query by user.
+         * *   queue: Query by queue.
+         * *   instance: Query by instance.
          */
         public Builder dim(String dim) {
             this.putQueryParameter("Dim", dim);
@@ -186,7 +191,7 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -195,7 +200,12 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * FilterValue.
+         * The actual name of the dimension to be queried. Valid values:
+         * <p>
+         * 
+         * *   If you set the value of the parameter Dim to user, the value of FilterValue is the name of the specified user.
+         * *   If you set the value of the parameter Dim to queue, the value of FilterValue is the name of the specified queue.
+         * *   If you set the value of the parameter Dim to instance, the value of FilterValue is the instance name.
          */
         public Builder filterValue(String filterValue) {
             this.putQueryParameter("FilterValue", filterValue);
@@ -204,7 +214,7 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the job.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -213,7 +223,10 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of entries to return on each page. Valid values: 1 to 50.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -222,7 +235,12 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The page number of the returned page.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +249,12 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * ReportType.
+         * The query type. Valid values:
+         * <p>
+         * 
+         * *   total_report: Queries the number of CPU cores in different dimensions.
+         * *   job_report: Collects the historical node data of a node.
+         * *   number_report: Queries job information in different dimensions.
          */
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);
@@ -240,7 +263,7 @@ public class GetAccountingReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

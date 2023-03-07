@@ -50,7 +50,11 @@ public class StartVisualServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * The status of the VNC Remote visualization service. Valid values:
+         * <p>
+         * 
+         * *   Service started
+         * *   Service stopped
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +62,7 @@ public class StartVisualServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

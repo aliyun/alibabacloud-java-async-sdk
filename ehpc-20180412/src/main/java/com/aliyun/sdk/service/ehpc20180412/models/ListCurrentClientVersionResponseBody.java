@@ -50,7 +50,7 @@ public class ListCurrentClientVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClientVersion.
+         * The latest version number of the E-HPC client.
          */
         public Builder clientVersion(String clientVersion) {
             this.clientVersion = clientVersion;
@@ -58,7 +58,7 @@ public class ListCurrentClientVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

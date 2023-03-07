@@ -105,7 +105,7 @@ public class InspectImageRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster where the image whose Inspect information you want to view resides.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -114,7 +114,7 @@ public class InspectImageRequest extends Request {
         }
 
         /**
-         * ContainerType.
+         * The container type of the image. Set the value to singularity.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -123,7 +123,7 @@ public class InspectImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the image whose Inspect information you want to view.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);

@@ -70,7 +70,10 @@ public class UninstallSoftwareRequest extends Request {
         } 
 
         /**
-         * Application.
+         * The name of the software that you want to uninstall.
+         * <p>
+         * 
+         * You can call the [ListInstalledSoftware](~~188591~~) operation to query the software that is installed in the cluster.
          */
         public Builder application(String application) {
             this.putQueryParameter("Application", application);
@@ -79,7 +82,10 @@ public class UninstallSoftwareRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

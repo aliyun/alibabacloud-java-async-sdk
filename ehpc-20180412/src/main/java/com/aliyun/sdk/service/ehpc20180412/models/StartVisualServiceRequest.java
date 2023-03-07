@@ -85,7 +85,7 @@ public class StartVisualServiceRequest extends Request {
         } 
 
         /**
-         * CidrIp.
+         * A public IP address of logon nodes in the cluster.
          */
         public Builder cidrIp(String cidrIp) {
             this.putQueryParameter("CidrIp", cidrIp);
@@ -94,7 +94,7 @@ public class StartVisualServiceRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -103,7 +103,7 @@ public class StartVisualServiceRequest extends Request {
         }
 
         /**
-         * Port.
+         * The fixed port. Set the value to 12016
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

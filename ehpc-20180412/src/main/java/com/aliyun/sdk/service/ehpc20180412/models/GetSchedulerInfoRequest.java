@@ -85,7 +85,7 @@ public class GetSchedulerInfoRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class GetSchedulerInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +145,16 @@ public class GetSchedulerInfoRequest extends Request {
             private String schedName; 
 
             /**
-             * SchedName.
+             * The name of the scheduler. Valid values:
+             * <p>
+             * 
+             * *   pbs
+             * *   pbs19
+             * *   slurm
+             * *   slurm19
+             * *   slurm20
+             * 
+             * Valid values of N: 0 to 100
              */
             public Builder schedName(String schedName) {
                 this.schedName = schedName;

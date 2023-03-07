@@ -62,7 +62,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         private Boolean supportSpotInstance; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Series.
+         * The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes of the E-HPC cluster.
          */
         public Builder series(Series series) {
             this.series = series;
@@ -78,7 +78,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * SupportSpotInstance.
+         * Indicates whether spot instances are supported.
          */
         public Builder supportSpotInstance(Boolean supportSpotInstance) {
             this.supportSpotInstance = supportSpotInstance;
@@ -265,7 +265,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             private Manager manager; 
 
             /**
-             * Compute.
+             * The list of recommended ECS instance types for compute nodes.
              */
             public Builder compute(Compute compute) {
                 this.compute = compute;
@@ -273,7 +273,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Login.
+             * The list of recommended ECS instance types for logon nodes.
              */
             public Builder login(Login login) {
                 this.login = login;
@@ -281,7 +281,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Manager.
+             * The list of recommended ECS instance types for management nodes.
              */
             public Builder manager(Manager manager) {
                 this.manager = manager;
@@ -346,7 +346,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             private String seriesName; 
 
             /**
-             * Roles.
+             * The recommended ECS instance types for various nodes of the E-HPC cluster.
              */
             public Builder roles(Roles roles) {
                 this.roles = roles;
@@ -354,7 +354,13 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SeriesId.
+             * The ID of the ECS instance series. Valid values:
+             * <p>
+             * 
+             * *   HighCompute: high computing
+             * *   HighMem: high storage
+             * *   GPU
+             * *   All: all options.
              */
             public Builder seriesId(String seriesId) {
                 this.seriesId = seriesId;
@@ -362,7 +368,13 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SeriesName.
+             * The name of the instance series. Valid values:
+             * <p>
+             * 
+             * *   SeriesHighCompute
+             * *   SeriesHighMem
+             * *   SeriesGPU
+             * *   SeriesAll
              */
             public Builder seriesName(String seriesName) {
                 this.seriesName = seriesName;

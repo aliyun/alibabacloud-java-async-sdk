@@ -86,7 +86,7 @@ public class ListTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The list of task information.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -118,7 +118,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries of the task.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class ListTasksResponseBody extends TeaModel {
             private Integer totalSteps; 
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -262,7 +262,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStep.
+             * The current step of the task.
              */
             public Builder currentStep(Integer currentStep) {
                 this.currentStep = currentStep;
@@ -270,7 +270,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Errors.
+             * The list of error messages returned for the task.
+             * <p>
+             * 
+             * For information about error messages and their solutions, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/EHPC).
              */
             public Builder errors(String errors) {
                 this.errors = errors;
@@ -278,7 +281,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Request.
+             * The request parameters of the task. The value is a JSON string.
              */
             public Builder request(String request) {
                 this.request = request;
@@ -286,7 +289,11 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The result of the task. Valid values:
+             * <p>
+             * 
+             * *   If TaskType is set to CreateCluster and AddComputes, the value is in the `{\"Instances\":[]}` format, which indicates the information of the nodes added to the cluster.
+             * *   If TaskType is set to a value other than CreateCluster and AddComputes, the value is in the `{}` format.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -294,7 +301,13 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   Processing: The task is running.
+             * *   Success: The task is completed.
+             * *   Fail: The task failed.
+             * *   PartialFail: The task partially failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -302,7 +315,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -310,7 +323,18 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   CreateCluster: creates a cluster by calling the [CreateCluster](~~87100~~) operation.
+             * *   StartCluster: starts a cluster by calling the [StartCluster](~~200345~~) operation.
+             * *   StopCluster: stops a cluster by calling the [StopCluster](~~200346~~) operation.
+             * *   DeleteCluster: releases a cluster by calling the [DeleteCluster](~~87110~~) operation.
+             * *   AddComputes: adds nodes to a cluster by calling the [AddNodes](~~87147~~) operation.
+             * *   StartComputes: starts nodes by calling the [StartNodes](~~87159~~) operation.
+             * *   ResetCompute: resets nodes by calling the [ResetNodes](~~87158~~) operation.
+             * *   StopComputes: stops nodes by calling the [StopNodes](~~87160~~) operation.
+             * *   DeleteComputes: deletes nodes by calling the [DeleteNodes](~~87155~~) operation.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -318,7 +342,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSteps.
+             * The total number of steps of the task.
              */
             public Builder totalSteps(Integer totalSteps) {
                 this.totalSteps = totalSteps;

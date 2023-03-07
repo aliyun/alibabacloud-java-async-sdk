@@ -82,7 +82,7 @@ public class ListCommunityImagesRequest extends Request {
         } 
 
         /**
-         * BaseOsTag.
+         * The tag of the base operating system (BOS).
          */
         public Builder baseOsTag(String baseOsTag) {
             this.putQueryParameter("BaseOsTag", baseOsTag);
@@ -91,7 +91,10 @@ public class ListCommunityImagesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster. If the cluster supports multiple operating systems, all community images in the region where the cluster resides are queried.
+         * <p>
+         * 
+         * If you do not specify the cluster ID, the community images that are supported by all clusters are queried.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -100,7 +103,7 @@ public class ListCommunityImagesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the Elastic Compute Service (ECS) instance. If you do not specify the instance type, the community images that are supported by all instance types are queried.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

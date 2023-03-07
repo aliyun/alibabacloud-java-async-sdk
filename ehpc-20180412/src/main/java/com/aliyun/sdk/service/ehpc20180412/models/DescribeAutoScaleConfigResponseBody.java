@@ -218,7 +218,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         private String uid; 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -226,7 +226,13 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterType.
+         * The type of the scheduler. Valid values:
+         * <p>
+         * 
+         * *   pbs
+         * *   slurm
+         * *   opengridscheduler
+         * *   deadline
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -234,7 +240,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAutoGrow.
+         * Indicates whether auto scale-out is enabled.
          */
         public Builder enableAutoGrow(Boolean enableAutoGrow) {
             this.enableAutoGrow = enableAutoGrow;
@@ -242,7 +248,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAutoShrink.
+         * Indicates whether auto scale-in is enabled.
          */
         public Builder enableAutoShrink(Boolean enableAutoShrink) {
             this.enableAutoShrink = enableAutoShrink;
@@ -250,7 +256,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ExcludeNodes.
+         * The list of nodes on which auto scaling is not enabled.
          */
         public Builder excludeNodes(String excludeNodes) {
             this.excludeNodes = excludeNodes;
@@ -258,7 +264,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ExtraNodesGrowRatio.
+         * The ratio of added nodes to the original ones. Valid values: 0 to 100.
          */
         public Builder extraNodesGrowRatio(Integer extraNodesGrowRatio) {
             this.extraNodesGrowRatio = extraNodesGrowRatio;
@@ -266,7 +272,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GrowIntervalInMinutes.
+         * The scale-out interval. The interval at which the compute nodes were scaled out. Valid values: 2 to 10.
          */
         public Builder growIntervalInMinutes(Integer growIntervalInMinutes) {
             this.growIntervalInMinutes = growIntervalInMinutes;
@@ -274,7 +280,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GrowRatio.
+         * The percentage of the added nodes. Valid values: 1 to 100.
          */
         public Builder growRatio(Integer growRatio) {
             this.growRatio = growRatio;
@@ -282,7 +288,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GrowTimeoutInMinutes.
+         * The timeout period before the node was started. Valid values: 10 to 60.
          */
         public Builder growTimeoutInMinutes(Integer growTimeoutInMinutes) {
             this.growTimeoutInMinutes = growTimeoutInMinutes;
@@ -290,7 +296,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNodesInCluster.
+         * The maximum number of compute nodes in the cluster. This parameter indicates the largest number of nodes that can be added to the cluster.
          */
         public Builder maxNodesInCluster(Integer maxNodesInCluster) {
             this.maxNodesInCluster = maxNodesInCluster;
@@ -298,7 +304,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,7 +312,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ShrinkIdleTimes.
+         * The number of consecutive idle times of a node during a scale-in check. Valid values: 2 to 5.
          */
         public Builder shrinkIdleTimes(Integer shrinkIdleTimes) {
             this.shrinkIdleTimes = shrinkIdleTimes;
@@ -314,7 +320,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ShrinkIntervalInMinutes.
+         * The scale-in interval. The interval at which the compute nodes were scaled in. Valid values: 2 to 10.
          */
         public Builder shrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
             this.shrinkIntervalInMinutes = shrinkIntervalInMinutes;
@@ -322,7 +328,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SpotPriceLimit.
+         * The maximum hourly rate of the instance. The value is accurate to three decimal places. It takes effect only when SpotStrategy is set to SpotWithPriceLimit.
          */
         public Builder spotPriceLimit(String spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
@@ -330,7 +336,12 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SpotStrategy.
+         * The bidding policy for the compute nodes. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible one with a user-defined maximum hourly rate.
+         * *   SpotAsPriceGo: The instance is created as a pay-as-you-go instance that is automatically priced based on the Alibaba Cloud Marketplace.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
@@ -338,7 +349,7 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Uid.
+         * The ID of the user.
          */
         public Builder uid(String uid) {
             this.uid = uid;

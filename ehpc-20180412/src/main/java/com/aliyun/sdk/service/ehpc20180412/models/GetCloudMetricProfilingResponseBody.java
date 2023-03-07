@@ -50,7 +50,7 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
         private SvgUrls svgUrls; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
         }
 
         /**
-         * SvgUrls.
+         * The list of profiling results.
          */
         public Builder svgUrls(SvgUrls svgUrls) {
             this.svgUrls = svgUrls;
@@ -134,7 +134,7 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Name.
+             * The name of the SVG file that contains the profiling results.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -142,7 +142,7 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the SVG file. Unit: bytes.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -150,7 +150,7 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the SVG file.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -158,7 +158,7 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL of the Object Storage Service (OSS) bucket where the scalable vector graphics (SVG) file is stored.
              */
             public Builder url(String url) {
                 this.url = url;

@@ -78,7 +78,7 @@ public class UpdateClusterVolumesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -120,7 +120,12 @@ public class UpdateClusterVolumesRequest extends Request {
             private String name; 
 
             /**
-             * Name.
+             * The node type on which the nth additional mounted file system is mounted. Valid values:
+             * <p>
+             * 
+             * *   Manager: management node
+             * *   Login: logon node
+             * *   Compute: compute node
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +262,7 @@ public class UpdateClusterVolumesRequest extends Request {
             private String volumeType; 
 
             /**
-             * JobQueue.
+             * The queue name of the nth attached mounted filesystem.
              */
             public Builder jobQueue(String jobQueue) {
                 this.jobQueue = jobQueue;
@@ -265,7 +270,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * LocalDirectory.
+             * The on-premises mount directory for the nth additional mounted file system.
              */
             public Builder localDirectory(String localDirectory) {
                 this.localDirectory = localDirectory;
@@ -273,7 +278,11 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * Location.
+             * The storage location of the nth attached mounted file system. Valid values:
+             * <p>
+             * 
+             * *   OnPremise: hybrid cloud cluster
+             * *   PublicCloud: public cloud cluster
              */
             public Builder location(String location) {
                 this.location = location;
@@ -281,7 +290,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * RemoteDirectory.
+             * The remote directory to be mounted by the nth additional mounted file system.
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -297,7 +306,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * VolumeId.
+             * The ID of the nth additional mounted file system.
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -305,7 +314,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * VolumeMountpoint.
+             * The domain name of the mount target for the nth additional mounted file system.
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -313,7 +322,11 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * VolumeProtocol.
+             * The protocol type of the nth additional mounted file system. Valid values:
+             * <p>
+             * 
+             * *   NFS
+             * *   SMB
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -321,7 +334,10 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * VolumeType.
+             * The type of the nth additional mounted file system. Currently, only NAS is supported.
+             * <p>
+             * 
+             * Valid values of N: 1 to 10.
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;

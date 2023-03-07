@@ -98,7 +98,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -106,7 +106,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Logs.
+         * The details about operations logs.
          */
         public Builder logs(Logs logs) {
             this.logs = logs;
@@ -114,7 +114,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries that are returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
             private String operation; 
 
             /**
-             * CreateTime.
+             * The time when the log was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +222,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The severity level of the log entry.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -230,7 +230,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The content of the log entry.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -238,7 +238,7 @@ public class ListClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Operation.
+             * The name of the operation.
              */
             public Builder operation(String operation) {
                 this.operation = operation;

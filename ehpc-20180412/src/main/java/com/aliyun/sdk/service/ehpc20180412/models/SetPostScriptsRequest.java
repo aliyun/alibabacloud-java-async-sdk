@@ -84,7 +84,10 @@ public class SetPostScriptsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +105,7 @@ public class SetPostScriptsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the cluster resides. You can call the [ListRegions](~~188593~~) operation to query the latest region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +159,7 @@ public class SetPostScriptsRequest extends Request {
             private String url; 
 
             /**
-             * Args.
+             * The parameter that is used to run the Nth post-installation script. Valid values of N: 1 to 16.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -164,7 +167,7 @@ public class SetPostScriptsRequest extends Request {
             }
 
             /**
-             * Url.
+             * The URL that is used to download the Nth post-installation script. Valid values of N: 1 to 16.
              */
             public Builder url(String url) {
                 this.url = url;

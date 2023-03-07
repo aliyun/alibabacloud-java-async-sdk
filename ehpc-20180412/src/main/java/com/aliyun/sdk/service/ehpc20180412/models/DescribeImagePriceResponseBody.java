@@ -98,7 +98,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         private Float tradePrice; 
 
         /**
-         * Amount.
+         * The number of images that you want to purchase.
          */
         public Builder amount(Integer amount) {
             this.amount = amount;
@@ -106,7 +106,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * DiscountPrice.
+         * The discount that is applied.
          */
         public Builder discountPrice(Float discountPrice) {
             this.discountPrice = discountPrice;
@@ -114,7 +114,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -122,7 +122,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * OriginalPrice.
+         * The original price of the image.
          */
         public Builder originalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
@@ -130,7 +130,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * TradePrice.
+         * The final price of the image.
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;

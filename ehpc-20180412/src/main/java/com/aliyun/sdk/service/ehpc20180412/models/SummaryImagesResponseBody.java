@@ -50,7 +50,7 @@ public class SummaryImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImagesName.
+         * The names of all images in the cluster.
          */
         public Builder imagesName(String imagesName) {
             this.imagesName = imagesName;
@@ -58,7 +58,7 @@ public class SummaryImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

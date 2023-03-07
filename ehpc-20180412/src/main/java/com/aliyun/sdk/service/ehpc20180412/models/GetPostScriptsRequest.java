@@ -70,7 +70,10 @@ public class GetPostScriptsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +82,10 @@ public class GetPostScriptsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * You can call the [ListRegions](~~188593~~) operation to query the latest region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

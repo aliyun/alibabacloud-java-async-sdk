@@ -55,7 +55,10 @@ public class ListInstalledSoftwareRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

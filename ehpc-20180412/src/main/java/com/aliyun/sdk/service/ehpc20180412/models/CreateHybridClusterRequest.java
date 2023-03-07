@@ -608,7 +608,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -617,7 +617,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * ClientVersion.
+         * The version of the client. By default, the latest version is used.
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -626,7 +626,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * ComputeSpotPriceLimit.
+         * The maximum hourly price for the ECS instance under the compute node. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.
          */
         public Builder computeSpotPriceLimit(Float computeSpotPriceLimit) {
             this.putQueryParameter("ComputeSpotPriceLimit", computeSpotPriceLimit);
@@ -635,7 +635,14 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * ComputeSpotStrategy.
+         * The preemption policy of the compute nodes. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The compute nodes are pay-as-you-go instances.
+         * *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
+         * *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
+         * 
+         * Default value: NoSpot
          */
         public Builder computeSpotStrategy(String computeSpotStrategy) {
             this.putQueryParameter("ComputeSpotStrategy", computeSpotStrategy);
@@ -644,7 +651,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the cluster. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.
+         * <p>
+         * 
+         * Default value: null
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -653,7 +663,13 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The type of the domain account service. Valid values:
+         * <p>
+         * 
+         * *   nis
+         * *   ldap
+         * 
+         * Default value: nis
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -662,7 +678,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * EhpcVersion.
+         * The version of E-HPC. By default, the latest version is used.
          */
         public Builder ehpcVersion(String ehpcVersion) {
             this.putQueryParameter("EhpcVersion", ehpcVersion);
@@ -671,7 +687,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -680,7 +696,13 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * ImageOwnerAlias.
+         * The type of the image. Valid values:
+         * <p>
+         * 
+         * *   system: public image
+         * *   self: custom image
+         * *   others: shared image
+         * *   marketplace: Alibaba Cloud Marketplace image
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -689,7 +711,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * JobQueue.
+         * The default queue of the scale-out nodes.
          */
         public Builder jobQueue(String jobQueue) {
             this.putQueryParameter("JobQueue", jobQueue);
@@ -698,7 +720,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the AccessKey pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>
+         * 
+         * >  For more information, see [Create an SSH key pair](~~51793~~).
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -707,7 +732,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Location.
+         * The location where the cluster resides. Set the value to OnPremise.
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);
@@ -716,7 +741,13 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * MultiOs.
+         * Specifies whether the cluster supports multiple operating systems. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false
          */
         public Builder multiOs(Boolean multiOs) {
             this.putQueryParameter("MultiOs", multiOs);
@@ -725,7 +756,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the cluster. The name must be 2 to 64 characters in length, and can contain only letters, digits, hyphens (-), and underscores (\_). It must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -743,7 +774,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * OnPremiseVolumeLocalPath.
+         * The path in which the on-premises file system is mounted on the nodes on the cloud.
          */
         public Builder onPremiseVolumeLocalPath(String onPremiseVolumeLocalPath) {
             this.putQueryParameter("OnPremiseVolumeLocalPath", onPremiseVolumeLocalPath);
@@ -752,7 +783,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * OnPremiseVolumeMountPoint.
+         * The mount target of the on-premises file system.
          */
         public Builder onPremiseVolumeMountPoint(String onPremiseVolumeMountPoint) {
             this.putQueryParameter("OnPremiseVolumeMountPoint", onPremiseVolumeMountPoint);
@@ -761,7 +792,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * OnPremiseVolumeProtocol.
+         * The type of the protocol that is used by the on-premises file system. Only NFS is supported.
          */
         public Builder onPremiseVolumeProtocol(String onPremiseVolumeProtocol) {
             this.putQueryParameter("OnPremiseVolumeProtocol", onPremiseVolumeProtocol);
@@ -770,7 +801,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * OnPremiseVolumeRemotePath.
+         * The mount path of the on-premises file system.
          */
         public Builder onPremiseVolumeRemotePath(String onPremiseVolumeRemotePath) {
             this.putQueryParameter("OnPremiseVolumeRemotePath", onPremiseVolumeRemotePath);
@@ -788,7 +819,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * OsTag.
+         * The image tag of the operating system. You can call the [ListImages](~~87213~~) operation to query the image tag.
          */
         public Builder osTag(String osTag) {
             this.putQueryParameter("OsTag", osTag);
@@ -797,7 +828,12 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * Password.
+         * The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:
+         * <p>
+         * 
+         * `() ~ ! @ # $ % ^ & * - = + | { } [ ] : ; ‘ < > , . ? /`
+         * 
+         * >  We recommend that you use HTTPS to call the API operation to prevent password leakage.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -824,7 +860,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * RemoteDirectory.
+         * The remote directory to which the file system is mounted.
          */
         public Builder remoteDirectory(String remoteDirectory) {
             this.putQueryParameter("RemoteDirectory", remoteDirectory);
@@ -833,7 +869,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -842,7 +878,11 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * SchedulerPreInstall.
+         * Specifies whether the scheduler is preinstalled for the image. Valid values:
+         * <p>
+         * 
+         * *   true: The scheduler is preinstalled. When you create or add a node, you do not need to install the scheduler.
+         * *   false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.
          */
         public Builder schedulerPreInstall(Boolean schedulerPreInstall) {
             this.putQueryParameter("SchedulerPreInstall", schedulerPreInstall);
@@ -851,7 +891,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * You can select an existing security group.
+         * <p>
+         * 
+         * >  If you specify this parameter, you cannot specify the `SecurityGroupName` parameter at the same time.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -860,7 +903,10 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * SecurityGroupName.
+         * If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.
+         * <p>
+         * 
+         * >  If you specify this parameter, you cannot specify the `SecurityGroupId` parameter at the same time.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -869,7 +915,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -878,7 +924,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * VolumeId.
+         * The ID of the file system. NAS file systems cannot be automatically created.
          */
         public Builder volumeId(String volumeId) {
             this.putQueryParameter("VolumeId", volumeId);
@@ -887,7 +933,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * VolumeMountpoint.
+         * The mount target of the file system. Mount targets cannot be automatically created for NAS file systems.
          */
         public Builder volumeMountpoint(String volumeMountpoint) {
             this.putQueryParameter("VolumeMountpoint", volumeMountpoint);
@@ -896,7 +942,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * VolumeProtocol.
+         * The type of the protocol that is used by the file system. Only NFS is supported.
          */
         public Builder volumeProtocol(String volumeProtocol) {
             this.putQueryParameter("VolumeProtocol", volumeProtocol);
@@ -905,7 +951,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * VolumeType.
+         * The type of the file system. Only NAS file systems are supported.
          */
         public Builder volumeType(String volumeType) {
             this.putQueryParameter("VolumeType", volumeType);
@@ -914,7 +960,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the cluster belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -932,7 +978,7 @@ public class CreateHybridClusterRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -975,7 +1021,7 @@ public class CreateHybridClusterRequest extends Request {
             private String instanceType; 
 
             /**
-             * InstanceType.
+             * The instance type of the compute nodes.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1016,7 +1062,7 @@ public class CreateHybridClusterRequest extends Request {
             private String instanceType; 
 
             /**
-             * InstanceType.
+             * The instance type of the management node on the cloud. Only Proxy Mode is supported.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1120,7 +1166,7 @@ public class CreateHybridClusterRequest extends Request {
             private String tag; 
 
             /**
-             * Tag.
+             * The tag of the application. Valid values of N: 1 to 5.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1221,7 +1267,13 @@ public class CreateHybridClusterRequest extends Request {
             private String schedulerType; 
 
             /**
-             * AccountType.
+             * The service type of the domain account to which the on-premises node in the cluster belongs. Valid values:
+             * <p>
+             * 
+             * *   nis
+             * *   ldap
+             * 
+             * Default value: nis
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -1229,7 +1281,7 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * Dir.
+             * The directory of the on-premises node in the cluster.
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -1237,7 +1289,7 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * HostName.
+             * The hostname of the on-premises node in the cluster.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1245,7 +1297,7 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * IpAddress.
+             * The IP address of the on-premises node in the cluster.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1253,7 +1305,12 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * Role.
+             * The role of the on-premises node in the cluster. Valid values:
+             * <p>
+             * 
+             * *   Manager: management node
+             * *   Login: logon node
+             * *   Compute: compute node
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1261,7 +1318,15 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * SchedulerType.
+             * The scheduler type of the on-premises node in the cluster. Valid values:
+             * <p>
+             * 
+             * *   pbs
+             * *   slurm
+             * *   opengridscheduler
+             * *   deadline
+             * 
+             * Default value: pbs
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -1375,7 +1440,7 @@ public class CreateHybridClusterRequest extends Request {
             private String url; 
 
             /**
-             * Args.
+             * The parameters that are used to run the post-installation script. Valid values of N: 1 to 16.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -1383,7 +1448,7 @@ public class CreateHybridClusterRequest extends Request {
             }
 
             /**
-             * Url.
+             * The full path of the post-installation script. Valid values of N: 1 to 16.
              */
             public Builder url(String url) {
                 this.url = url;

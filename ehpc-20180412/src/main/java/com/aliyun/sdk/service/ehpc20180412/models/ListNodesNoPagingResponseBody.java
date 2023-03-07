@@ -50,7 +50,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Nodes.
+         * The information about nodes.
          */
         public Builder nodes(Nodes nodes) {
             this.nodes = nodes;
@@ -58,7 +58,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * HostName.
+             * The name of the node.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -154,7 +154,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the node.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +162,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -170,7 +170,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the node.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -178,7 +178,16 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the node. Valid values:
+             * <p>
+             * 
+             * *   uninit: The node is being installed.
+             * *   exception: An exception has occurred on the node.
+             * *   running: The node is running.
+             * *   initing: The node is being initialized.
+             * *   releasing: The node is being released.
+             * *   untracking: The node is not added to the cluster.
+             * *   stopped: The node is stopped.
              */
             public Builder status(String status) {
                 this.status = status;

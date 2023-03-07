@@ -84,7 +84,7 @@ public class AddLocalNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class AddLocalNodesRequest extends Request {
         }
 
         /**
-         * Nodes.
+         * The information of the local node. A JSON string that contains the HostName, IpAddress, CpuCores, and Memory (Unit: MB) of the local node.
          */
         public Builder nodes(String nodes) {
             this.putQueryParameter("Nodes", nodes);
@@ -102,7 +102,7 @@ public class AddLocalNodesRequest extends Request {
         }
 
         /**
-         * Queue.
+         * The queue to which to add the local node.
          */
         public Builder queue(String queue) {
             this.putQueryParameter("Queue", queue);

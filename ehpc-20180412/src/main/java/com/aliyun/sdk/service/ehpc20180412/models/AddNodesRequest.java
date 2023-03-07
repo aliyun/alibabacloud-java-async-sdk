@@ -114,6 +114,10 @@ public class AddNodesRequest extends Request {
     private Integer minCount;
 
     @Query
+    @NameInMap("NetworkInterfaceTrafficMode")
+    private String networkInterfaceTrafficMode;
+
+    @Query
     @NameInMap("Period")
     private Integer period;
 
@@ -171,6 +175,7 @@ public class AddNodesRequest extends Request {
         this.internetMaxBandWidthOut = builder.internetMaxBandWidthOut;
         this.jobQueue = builder.jobQueue;
         this.minCount = builder.minCount;
+        this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.sync = builder.sync;
@@ -363,6 +368,13 @@ public class AddNodesRequest extends Request {
     }
 
     /**
+     * @return networkInterfaceTrafficMode
+     */
+    public String getNetworkInterfaceTrafficMode() {
+        return this.networkInterfaceTrafficMode;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -443,6 +455,7 @@ public class AddNodesRequest extends Request {
         private Integer internetMaxBandWidthOut; 
         private String jobQueue; 
         private Integer minCount; 
+        private String networkInterfaceTrafficMode; 
         private Integer period; 
         private String periodUnit; 
         private Boolean sync; 
@@ -482,6 +495,7 @@ public class AddNodesRequest extends Request {
             this.internetMaxBandWidthOut = request.internetMaxBandWidthOut;
             this.jobQueue = request.jobQueue;
             this.minCount = request.minCount;
+            this.networkInterfaceTrafficMode = request.networkInterfaceTrafficMode;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.sync = request.sync;
@@ -493,7 +507,13 @@ public class AddNodesRequest extends Request {
         } 
 
         /**
-         * AllocatePublicAddress.
+         * Specifies whether to allocate a public IP address to the compute nodes. Valid values:
+         * <p>
+         * 
+         * *   true: A public IP address is allocated to the compute nodes.
+         * *   false: A public IP address is not allocated to the compute nodes.
+         * 
+         * Default value: false
          */
         public Builder allocatePublicAddress(Boolean allocatePublicAddress) {
             this.putQueryParameter("AllocatePublicAddress", allocatePublicAddress);
@@ -502,7 +522,13 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal. The parameter takes effect only when EcsChargeType is set to PrePaid. Valid values:
+         * <p>
+         * 
+         * *   true: enables auto-renewal
+         * *   false: disables auto-renewal
+         * 
+         * Default value: true
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -511,7 +537,13 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * AutoRenewPeriod.
+         * The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.
+         * <p>
+         * 
+         * *   If PeriodUnit is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.
+         * *   If PeriodUnit is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.
+         * 
+         * Default value: 1
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -520,7 +552,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -529,7 +561,10 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -538,7 +573,13 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * ComputeEnableHt.
+         * Specifies whether the compute nodes support hyper-threading. Valid values:
+         * <p>
+         * 
+         * *   true: Hyper-threading is supported.
+         * *   false: Hyper-threading is not supported.
+         * 
+         * Default value: true
          */
         public Builder computeEnableHt(Boolean computeEnableHt) {
             this.putQueryParameter("ComputeEnableHt", computeEnableHt);
@@ -547,11 +588,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * 抢占式实例的保留时长，单位为小时。取值范围：0~6。
-         * <p>
-         * - 保留时长2~6正在邀测中，如需开通请提交工单。
-         * - 取值为0，则为无保护期模式。
-         * 默认值：1。
+         * The protection period of the preemptible instance. Unit: hours. Valid values: 0 and 1. A value of 0 indicates that the preemptible instance has no protection period.
          */
         public Builder computeSpotDuration(Integer computeSpotDuration) {
             this.putQueryParameter("ComputeSpotDuration", computeSpotDuration);
@@ -560,7 +597,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * 抢占实例中断模式。目前仅支持Terminate（默认）直接释放实例。
+         * The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which indicates that the instance is released.
          */
         public Builder computeSpotInterruptionBehavior(String computeSpotInterruptionBehavior) {
             this.putQueryParameter("ComputeSpotInterruptionBehavior", computeSpotInterruptionBehavior);
@@ -569,7 +606,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * ComputeSpotPriceLimit.
+         * The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter only takes effect when SpotStrategy is set to SpotWithPriceLimit.
          */
         public Builder computeSpotPriceLimit(String computeSpotPriceLimit) {
             this.putQueryParameter("ComputeSpotPriceLimit", computeSpotPriceLimit);
@@ -578,7 +615,14 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * ComputeSpotStrategy.
+         * The preemption policy of the compute nodes. The parameter only takes effect when EcsChargeType is set to PostPaid. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The compute nodes are pay-as-you-go instances.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
+         * 
+         * Default value: NoSpot
          */
         public Builder computeSpotStrategy(String computeSpotStrategy) {
             this.putQueryParameter("ComputeSpotStrategy", computeSpotStrategy);
@@ -587,7 +631,12 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * Count.
+         * The number of compute nodes that you want to add. Valid values: 1 to 99. The value of this parameter is greater than that of the MinCount parameter.
+         * <p>
+         * 
+         * *   If the number of available ECS instances is less than the value of the MinCount parameter, the compute nodes cannot be added.
+         * *   If the number of available ECS instances is greater than the value of the MinCount parameter and less than that of the Count parameter, the compute nodes are added based on the value of the MinCount parameter.
+         * *   If the number of available ECS instances is greater than the value of the Count parameter, the compute nodes are added based on the value of the Count parameter.
          */
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
@@ -596,7 +645,13 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * CreateMode.
+         * The mode in which the compute nodes are added. Valid values:
+         * <p>
+         * 
+         * *   manual: The compute nodes are manually added.
+         * *   autoscale: The compute nodes are automatically added.
+         * 
+         * Default value: manual
          */
         public Builder createMode(String createMode) {
             this.putQueryParameter("CreateMode", createMode);
@@ -614,7 +669,15 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * EcsChargeType.
+         * The billing method of the compute nodes. Valid values:
+         * <p>
+         * 
+         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription
+         * 
+         * Default value: PostPaid
+         * 
+         * If the parameter is set to PrePaid, auto-renewal is enabled by default. After the E-HPC cluster is released, auto-renewal is disabled.
          */
         public Builder ecsChargeType(String ecsChargeType) {
             this.putQueryParameter("EcsChargeType", ecsChargeType);
@@ -623,7 +686,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * HostNamePrefix.
+         * The prefix of the hostname. You can specify the parameter to manage the compute nodes in an efficient manner.
          */
         public Builder hostNamePrefix(String hostNamePrefix) {
             this.putQueryParameter("HostNamePrefix", hostNamePrefix);
@@ -632,7 +695,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * HostNameSuffix.
+         * The suffix of the hostname. You can specify the parameter to manage the compute nodes in an efficient manner.
          */
         public Builder hostNameSuffix(String hostNameSuffix) {
             this.putQueryParameter("HostNameSuffix", hostNameSuffix);
@@ -641,7 +704,16 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image that is specified for the compute nodes. The image must meet the following requirements:
+         * <p>
+         * 
+         * *   The operating system that is specified by the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.
+         * 
+         * > If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of the cluster nodes is Windows.
+         * 
+         * *   The major version of the image specified for the compute nodes that you want to add is the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.
+         * 
+         * You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the image ID.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -650,7 +722,15 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * ImageOwnerAlias.
+         * The type of the image. Valid values:
+         * <p>
+         * 
+         * *   system: public image
+         * *   self: custom image
+         * *   others: shared image
+         * *   marketplace: Alibaba Cloud Marketplace image
+         * 
+         * Default value: system
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -659,7 +739,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type of the compute nodes. The default value is the instance type that was specified when you created the E-HPC cluster or the last time when you added compute nodes.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -668,7 +748,11 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The billing method of the elastic IP address (EIP). Valid values:
+         * <p>
+         * 
+         * *   PayByBandwidth: pay-by-bandwidth
+         * *   PayByTraffic: pay-by-traffic
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -677,7 +761,11 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * InternetMaxBandWidthIn.
+         * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
+         * <p>
+         * 
+         * *   If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of the parameter are 1 to 10 and the default value is 10.
+         * *   If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the amount of the outbound bandwidth that is purchased.
          */
         public Builder internetMaxBandWidthIn(Integer internetMaxBandWidthIn) {
             this.putQueryParameter("InternetMaxBandWidthIn", internetMaxBandWidthIn);
@@ -686,7 +774,10 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * InternetMaxBandWidthOut.
+         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
+         * <p>
+         * 
+         * Default value: 0
          */
         public Builder internetMaxBandWidthOut(Integer internetMaxBandWidthOut) {
             this.putQueryParameter("InternetMaxBandWidthOut", internetMaxBandWidthOut);
@@ -695,7 +786,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * JobQueue.
+         * The queue to which the compute nodes are added.
          */
         public Builder jobQueue(String jobQueue) {
             this.putQueryParameter("JobQueue", jobQueue);
@@ -704,7 +795,14 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * MinCount.
+         * The minimum number of the compute nodes that you want to add. Valid values: 1 to 99. The value of the parameter is less than that of the Count parameter.
+         * <p>
+         * 
+         * *   If the number of available ECS instances is less than the value of the MinCount parameter, the compute nodes cannot be added.
+         * *   If the number of available ECS instances is greater than the value of the MinCount parameter and less than that of the Count parameter, the compute nodes are added based on the value of the MinCount parameter.
+         * *   If the number of available ECS instances is greater than the value of the Count parameter, the compute nodes are added based on the value of the Count parameter.
+         * 
+         * Default value: 1
          */
         public Builder minCount(Integer minCount) {
             this.putQueryParameter("MinCount", minCount);
@@ -713,7 +811,22 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * Period.
+         * NetworkInterfaceTrafficMode.
+         */
+        public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+
+        /**
+         * The duration of the subscription. The unit of the duration is specified by the PeriodUnit parameter. The parameter only takes effect when InstanceChargeType is set to PrePaid. Valid values:
+         * <p>
+         * 
+         * *   If PeriodUnit is set to Week, the valid values of the Period parameter are 1, 2, 3, and 4.
+         * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * 
+         * Default value: 1
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -722,7 +835,13 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the subscription period. Valid values:
+         * <p>
+         * 
+         * *   Week
+         * *   Month
+         * 
+         * Default value: Month
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -731,7 +850,13 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * Sync.
+         * Specifies whether to set the API operation as a synchronous operation. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false
          */
         public Builder sync(Boolean sync) {
             this.putQueryParameter("Sync", sync);
@@ -740,7 +865,17 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * SystemDiskLevel.
+         * The performance level of the ESSD that is used as the system disk. Valid values:
+         * <p>
+         * 
+         * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+         * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+         * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+         * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+         * 
+         * Default value: PL1
+         * 
+         * For more information about ESSD performance parameters, see [ESSD](~~122389~~).
          */
         public Builder systemDiskLevel(String systemDiskLevel) {
             this.putQueryParameter("SystemDiskLevel", systemDiskLevel);
@@ -749,7 +884,12 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * The size of the system disk. Unit: GiB
+         * <p>
+         * 
+         * Valid values: 40 to 500
+         * 
+         * Default value: 40
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);
@@ -758,7 +898,15 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * SystemDiskType.
+         * The type of the system disk. Valid values:
+         * <p>
+         * 
+         * *   cloud_efficiency: ultra disk.
+         * *   cloud_ssd: SSD.
+         * *   cloud_essd: ESSD.
+         * *   cloud: basic disk. Disks of this type are retired.
+         * 
+         * Default value: cloud_efficiency
          */
         public Builder systemDiskType(String systemDiskType) {
             this.putQueryParameter("SystemDiskType", systemDiskType);
@@ -767,7 +915,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -776,7 +924,7 @@ public class AddNodesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -878,7 +1026,17 @@ public class AddNodesRequest extends Request {
             private Integer dataDiskSize; 
 
             /**
-             * DataDiskCategory.
+             * The type of the data disk. Valid values:
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: SSD
+             * *   cloud_essd: ESSD
+             * *   cloud: basic disk
+             * 
+             * Default value: cloud_efficiency
+             * 
+             * Valid values of N: 0 to 16
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -886,7 +1044,15 @@ public class AddNodesRequest extends Request {
             }
 
             /**
-             * DataDiskDeleteWithInstance.
+             * Specifies whether the data disk is released when the node is released. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: true
+             * 
+             * Valid values of N: 0 to 16
              */
             public Builder dataDiskDeleteWithInstance(Boolean dataDiskDeleteWithInstance) {
                 this.dataDiskDeleteWithInstance = dataDiskDeleteWithInstance;
@@ -894,7 +1060,15 @@ public class AddNodesRequest extends Request {
             }
 
             /**
-             * DataDiskEncrypted.
+             * Specifies whether to encrypt the data disk. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false
+             * 
+             * Valid values of N: 0 to 16
              */
             public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
                 this.dataDiskEncrypted = dataDiskEncrypted;
@@ -902,7 +1076,10 @@ public class AddNodesRequest extends Request {
             }
 
             /**
-             * DataDiskKMSKeyId.
+             * The KMS key ID of the data disk.
+             * <p>
+             * 
+             * Valid values of N: 0 to 16
              */
             public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
                 this.dataDiskKMSKeyId = dataDiskKMSKeyId;
@@ -910,7 +1087,17 @@ public class AddNodesRequest extends Request {
             }
 
             /**
-             * DataDiskPerformanceLevel.
+             * The performance level of the ESSD used as the data disk. The parameter only takes effect only when the DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values:
+             * <p>
+             * 
+             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+             * 
+             * Default value: PL1
+             * 
+             * Valid values of N: 0 to 16
              */
             public Builder dataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
                 this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
@@ -918,7 +1105,14 @@ public class AddNodesRequest extends Request {
             }
 
             /**
-             * DataDiskSize.
+             * The size of the data disk. Unit: GB
+             * <p>
+             * 
+             * Valid values: 40 to 500
+             * 
+             * Default value: 40
+             * 
+             * Valid values of N: 0 to 16
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;

@@ -50,7 +50,7 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         private SoftwareList softwareList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * SoftwareList.
+         * The list of installed software.
          */
         public Builder softwareList(SoftwareList softwareList) {
             this.softwareList = softwareList;
@@ -134,7 +134,7 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             private String softwareVersion; 
 
             /**
-             * SoftwareId.
+             * The ID of the software.
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -142,7 +142,7 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareName.
+             * The name of the software.
              */
             public Builder softwareName(String softwareName) {
                 this.softwareName = softwareName;
@@ -150,7 +150,11 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareStatus.
+             * The status of the software. Valid values:
+             * <p>
+             * 
+             * *   Installing: The software is being installed.
+             * *   Installed: The software is installed.
              */
             public Builder softwareStatus(String softwareStatus) {
                 this.softwareStatus = softwareStatus;
@@ -158,7 +162,7 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareVersion.
+             * The version of the software.
              */
             public Builder softwareVersion(String softwareVersion) {
                 this.softwareVersion = softwareVersion;
@@ -199,7 +203,7 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
             private java.util.List < SoftwareListSoftwareList> softwareList; 
 
             /**
-             * SoftwareList.
+             * The list of installed software.
              */
             public Builder softwareList(java.util.List < SoftwareListSoftwareList> softwareList) {
                 this.softwareList = softwareList;

@@ -86,7 +86,7 @@ public class ListClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Clusters.
+         * The list of clusters.
          */
         public Builder clusters(Clusters clusters) {
             this.clusters = clusters;
@@ -94,7 +94,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * ExceptionCount.
+             * The number of abnormal nodes.
              */
             public Builder exceptionCount(Integer exceptionCount) {
                 this.exceptionCount = exceptionCount;
@@ -214,7 +214,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * NormalCount.
+             * The number of normal nodes.
              */
             public Builder normalCount(Integer normalCount) {
                 this.normalCount = normalCount;
@@ -222,7 +222,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingCount.
+             * The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
              */
             public Builder operatingCount(Integer operatingCount) {
                 this.operatingCount = operatingCount;
@@ -230,7 +230,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StoppedCount.
+             * The number of stopped nodes.
              */
             public Builder stoppedCount(Integer stoppedCount) {
                 this.stoppedCount = stoppedCount;
@@ -238,7 +238,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of nodes.
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -327,7 +327,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * ExceptionCount.
+             * The number of abnormal nodes.
              */
             public Builder exceptionCount(Integer exceptionCount) {
                 this.exceptionCount = exceptionCount;
@@ -335,7 +335,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * NormalCount.
+             * The number of normal nodes.
              */
             public Builder normalCount(Integer normalCount) {
                 this.normalCount = normalCount;
@@ -343,7 +343,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingCount.
+             * The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
              */
             public Builder operatingCount(Integer operatingCount) {
                 this.operatingCount = operatingCount;
@@ -351,7 +351,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StoppedCount.
+             * The number of stopped nodes.
              */
             public Builder stoppedCount(Integer stoppedCount) {
                 this.stoppedCount = stoppedCount;
@@ -359,7 +359,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of management nodes.
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -424,7 +424,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer memory; 
 
             /**
-             * Cpu.
+             * The number of CPU cores. Unit: cores.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -432,7 +432,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The number of GPU cards. Unit: cards.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -440,7 +440,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size. Unit: MiB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -505,7 +505,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer memory; 
 
             /**
-             * Cpu.
+             * The number of CPU cores. Unit: cores.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -513,7 +513,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The number of GPU cards. Unit: cards.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -521,7 +521,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size. Unit: MiB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -946,7 +946,11 @@ public class ListClustersResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AccountType.
+             * The server type of the account. Valid values:
+             * <p>
+             * 
+             * *   nis
+             * *   ldap
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -954,7 +958,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * BaseOsTag.
+             * The operating system tag of the base image. The tag was used only by the management node.
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -962,7 +966,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClientVersion.
+             * The version of the client.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -970,7 +974,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeSpotPriceLimit.
+             * The maximum hourly price for the ECS instance under the compute node. The return value can be accurate to three decimal places.
              */
             public Builder computeSpotPriceLimit(Float computeSpotPriceLimit) {
                 this.computeSpotPriceLimit = computeSpotPriceLimit;
@@ -978,7 +982,12 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeSpotStrategy.
+             * The bidding method of the compute nodes. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The instances of the compute node are pay-as-you-go instances.
+             * *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
+             * *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
              */
             public Builder computeSpotStrategy(String computeSpotStrategy) {
                 this.computeSpotStrategy = computeSpotStrategy;
@@ -986,7 +995,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Computes.
+             * The information about compute nodes.
              */
             public Builder computes(Computes computes) {
                 this.computes = computes;
@@ -994,7 +1003,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of compute nodes in the cluster.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1002,7 +1011,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1010,7 +1019,13 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DeployMode.
+             * The mode in which the cluster was deployed. Valid values:
+             * <p>
+             * 
+             * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
+             * *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
+             * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
+             * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1018,7 +1033,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1026,7 +1041,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * EhpcVersion.
+             * The version of E-HPC.
              */
             public Builder ehpcVersion(String ehpcVersion) {
                 this.ehpcVersion = ehpcVersion;
@@ -1034,7 +1049,13 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * HasPlugin.
+             * Indicates whether plug-ins were used in the cluster. Valid values:
+             * <p>
+             * 
+             * *   true: Plug-ins are used.
+             * *   false: Plug-ins are not used.
+             * 
+             * Default value: false
              */
             public Builder hasPlugin(Boolean hasPlugin) {
                 this.hasPlugin = hasPlugin;
@@ -1042,7 +1063,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the cluster.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1050,7 +1071,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1058,7 +1079,13 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * *   system: public image
+             * *   self: custom image
+             * *   others: shared image
+             * *   marketplace: Alibaba Cloud Marketplace image
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -1066,7 +1093,11 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * The billing method of the nodes in the cluster. Valid values:
+             * <p>
+             * 
+             * *   PostPaid: pay-as-you-go
+             * *   PrePaid: subscription
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1074,7 +1105,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the compute nodes.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1082,7 +1113,11 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * IsComputeEss.
+             * Indicates whether a scaling group was enabled. Valid values:
+             * <p>
+             * 
+             * *   true: A scaling group is enabled.
+             * *   false: No scaling group is enabled.
              */
             public Builder isComputeEss(Boolean isComputeEss) {
                 this.isComputeEss = isComputeEss;
@@ -1090,7 +1125,11 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The location where the cluster was deployed. Valid values:
+             * <p>
+             * 
+             * *   OnPremise: The cluster is deployed on a hybrid cloud.
+             * *   PublicCloud: The cluster is deployed on a public cloud.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1098,7 +1137,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LoginNodes.
+             * The list of logon nodes.
              */
             public Builder loginNodes(String loginNodes) {
                 this.loginNodes = loginNodes;
@@ -1106,7 +1145,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Managers.
+             * The list of management nodes.
              */
             public Builder managers(Managers managers) {
                 this.managers = managers;
@@ -1114,7 +1153,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1122,7 +1161,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * NodePrefix.
+             * The prefix of the node.
              */
             public Builder nodePrefix(String nodePrefix) {
                 this.nodePrefix = nodePrefix;
@@ -1130,7 +1169,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * NodeSuffix.
+             * The suffix of the node.
              */
             public Builder nodeSuffix(String nodeSuffix) {
                 this.nodeSuffix = nodeSuffix;
@@ -1138,7 +1177,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * The operating system tag of the image.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -1146,7 +1185,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1154,7 +1193,13 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerType.
+             * The type of the scheduler. Valid values:
+             * <p>
+             * 
+             * *   pbs
+             * *   slurm
+             * *   opengridscheduler
+             * *   deadline
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -1162,7 +1207,15 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   uninit: The cluster is not initialized.
+             * *   creating: The cluster is being created.
+             * *   init: The cluster is being initialized.
+             * *   running: The cluster is running.
+             * *   exception: The cluster encounters an exception.
+             * *   releasing: The cluster is being released.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1170,7 +1223,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResources.
+             * The statistics of all resources in the cluster.
              */
             public Builder totalResources(TotalResources totalResources) {
                 this.totalResources = totalResources;
@@ -1178,7 +1231,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * UsedResources.
+             * The number of consumed resources in the cluster.
              */
             public Builder usedResources(UsedResources usedResources) {
                 this.usedResources = usedResources;
@@ -1186,7 +1239,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1194,7 +1247,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1202,7 +1255,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

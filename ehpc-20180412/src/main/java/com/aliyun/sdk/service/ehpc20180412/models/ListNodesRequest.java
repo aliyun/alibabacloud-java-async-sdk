@@ -196,7 +196,10 @@ public class ListNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -205,7 +208,18 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter options of the node list.
+         * <p>
+         * 
+         * Format: {"status":"node_status"}. Replace node_status with the node status. Valid values of node_status:
+         * 
+         * *   uninit: The node is being installed.
+         * *   exception: An exception has occurred on the node.
+         * *   running: The node is running.
+         * *   initing: The node is being initialized.
+         * *   releasing: The node is being released.
+         * *   untracking: The node is not added to the cluster.
+         * *   stopped: The node is stopped.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -214,7 +228,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * HostName.
+         * The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -223,7 +237,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * HostNamePrefix.
+         * The prefix of the hostname. You can query nodes that have a specified prefix.
          */
         public Builder hostNamePrefix(String hostNamePrefix) {
             this.putQueryParameter("HostNamePrefix", hostNamePrefix);
@@ -232,7 +246,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * HostNameSuffix.
+         * The suffix of the hostname. You can query nodes that have a specified suffix.
          */
         public Builder hostNameSuffix(String hostNameSuffix) {
             this.putQueryParameter("HostNameSuffix", hostNameSuffix);
@@ -241,7 +255,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +264,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 100.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +276,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The private IP address of the node.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -268,7 +285,12 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Role.
+         * The type of the node. Valid values:
+         * <p>
+         * 
+         * *   Manager: management node
+         * *   Login: logon node
+         * *   Compute: compute node
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -277,7 +299,15 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * The sorting method of the node list. Valid values:
+         * <p>
+         * 
+         * *   Forward: sorts the nodes in chronological order.
+         * *   Backward: sorts the nodes in reverse chronological order.
+         * 
+         * Default value: Forward
+         * 
+         * >  Sequence is used in combination with SortBy. If SortBy is set to AddedTime and Sequence is set to Forward, nodes are sorted by the time that they were added in chronological order.
          */
         public Builder sequence(String sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -286,7 +316,11 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * The sorting method of the node list. Valid values:
+         * <p>
+         * 
+         * *   AddedTime: sorts the nodes by the time that they were added.
+         * *   HostName: sorts the nodes by their host names.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

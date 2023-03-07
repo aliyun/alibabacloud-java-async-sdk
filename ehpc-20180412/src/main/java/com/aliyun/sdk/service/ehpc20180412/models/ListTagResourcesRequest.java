@@ -112,7 +112,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * 下一个查询开始Token
+         * The token used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -121,7 +121,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 地域
+         * The ID of the region to which the resource belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +139,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resource. Set the value to cluster, which indicates E-HPC clusters.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -202,7 +202,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +210,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

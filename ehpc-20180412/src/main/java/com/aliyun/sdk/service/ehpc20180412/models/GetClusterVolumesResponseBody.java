@@ -62,7 +62,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         private Volumes volumes; 
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -70,7 +70,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * Volumes.
+         * The array of the file system mounted to the E-HPC cluster.
          */
         public Builder volumes(Volumes volumes) {
             this.volumes = volumes;
@@ -118,7 +118,12 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * The type of the node on which the file system is mounted. Valid values:
+             * <p>
+             * 
+             * *   Compute: compute node
+             * *   Manager: management node
+             * *   Login: logon node
              */
             public Builder name(String name) {
                 this.name = name;
@@ -308,7 +313,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             private String volumeType; 
 
             /**
-             * JobQueue.
+             * The queue of the job.
              */
             public Builder jobQueue(String jobQueue) {
                 this.jobQueue = jobQueue;
@@ -316,7 +321,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalDirectory.
+             * The local mount directory.
              */
             public Builder localDirectory(String localDirectory) {
                 this.localDirectory = localDirectory;
@@ -324,7 +329,11 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The type of cluster. Valid values:
+             * <p>
+             * 
+             * *   OnPremise: The cluster is deployed on a hybrid cloud.
+             * *   PublicCloud: The cluster is deployed on a public cloud.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -332,7 +341,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * MustKeep.
+             * Indicates whether the resource can be unmounted.
              */
             public Builder mustKeep(Boolean mustKeep) {
                 this.mustKeep = mustKeep;
@@ -340,7 +349,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteDirectory.
+             * The remote mount directory.
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -348,7 +357,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * The array of the node on which the file system is mounted.
              */
             public Builder roles(Roles roles) {
                 this.roles = roles;
@@ -356,7 +365,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeId.
+             * The ID of the file system.
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -364,7 +373,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeMountpoint.
+             * The address of the mount target.
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -372,7 +381,11 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeProtocol.
+             * The storage protocol type of the file system. Valid values:
+             * <p>
+             * 
+             * *   NFS
+             * *   SMB
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -380,7 +393,10 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeType.
+             * The type of the file system. Valid values:
+             * <p>
+             * 
+             * *   NAS
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;

@@ -84,7 +84,10 @@ public class StopNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +105,14 @@ public class StopNodesRequest extends Request {
         }
 
         /**
-         * Role.
+         * The role of the node. Valid values:
+         * <p>
+         * 
+         * *   Manager: management node
+         * *   Login: logon node
+         * *   Compute: compute node
+         * 
+         * Default value: Compute
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -144,7 +154,10 @@ public class StopNodesRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the Nth node that you want to stop. Valid values of N: 1 to 100
+             * <p>
+             * 
+             * You can call the [ListNodes](~~87161~~) operation to query the IDs of the compute nodes.
              */
             public Builder id(String id) {
                 this.id = id;

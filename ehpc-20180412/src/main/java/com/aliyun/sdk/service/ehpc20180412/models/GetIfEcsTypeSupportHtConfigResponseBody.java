@@ -74,7 +74,14 @@ public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
         private Boolean supportHtConfig; 
 
         /**
-         * DefaultHtEnabled.
+         * Indicates whether Hyper-Threading is enabled by default. Valid values:
+         * <p>
+         * 
+         * *   true: Hyper-Threading is enabled by default.
+         * 
+         * *   false: Hyper-Threading is disabled by default
+         * 
+         * > By default, Hyper-Threading is not enabled for the SCC specification family, while Hyper-Threading is enabled for other specification families by default.
          */
         public Builder defaultHtEnabled(Boolean defaultHtEnabled) {
             this.defaultHtEnabled = defaultHtEnabled;
@@ -82,7 +89,7 @@ public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceType.
+         * The instance type of the ECS instance.
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -90,7 +97,7 @@ public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +105,11 @@ public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SupportHtConfig.
+         * Indicates whether hyper-threading is supported. Valid values:
+         * <p>
+         * 
+         * *   true: Hyper-Threading is supported.
+         * *   false: Hyper-Threading is not supported.
          */
         public Builder supportHtConfig(Boolean supportHtConfig) {
             this.supportHtConfig = supportHtConfig;

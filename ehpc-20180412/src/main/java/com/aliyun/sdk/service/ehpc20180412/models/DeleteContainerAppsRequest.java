@@ -97,7 +97,10 @@ public class DeleteContainerAppsRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the containerized application that you want to delete. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * You can call the [ListContainerApps](~~87333~~) operation to query the ID of the containerized application.
              */
             public Builder id(String id) {
                 this.id = id;

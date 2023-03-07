@@ -69,7 +69,7 @@ public class UpgradeClientRequest extends Request {
         } 
 
         /**
-         * ClientVersion.
+         * The version to which the client will be upgraded. By default, the client is upgraded to the latest version. You can call the [ListCurrentClientVersion](~~87223~~) operation to query the latest version number of the Elastic High Performance Computing (E-HPC) client.
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -78,7 +78,7 @@ public class UpgradeClientRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

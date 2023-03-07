@@ -96,7 +96,11 @@ public class ListAvailableEcsTypesRequest extends Request {
         } 
 
         /**
-         * InstanceChargeType.
+         * The billing method of the ECS instances. Valid values:
+         * <p>
+         * 
+         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -105,7 +109,13 @@ public class ListAvailableEcsTypesRequest extends Request {
         }
 
         /**
-         * ShowSoldOut.
+         * Specifies whether the ECS instances are sold out. Valid values:
+         * <p>
+         * 
+         * *   false: available
+         * *   true: sold out
+         * 
+         * Default value: false
          */
         public Builder showSoldOut(Boolean showSoldOut) {
             this.putQueryParameter("ShowSoldOut", showSoldOut);
@@ -114,7 +124,12 @@ public class ListAvailableEcsTypesRequest extends Request {
         }
 
         /**
-         * SpotStrategy.
+         * The preemption policy of the ECS instances. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The ECS instances are pay-as-you-go instances.
+         * *   SpotWithPriceLimit: The ECS instances are preemptible instances that have a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The ECS instances are preemptible instances for which the market price at the time of purchase is used as the bid price.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -123,7 +138,7 @@ public class ListAvailableEcsTypesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

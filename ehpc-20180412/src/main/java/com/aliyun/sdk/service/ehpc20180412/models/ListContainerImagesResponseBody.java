@@ -98,7 +98,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DBInfo.
+         * The information of the database.
          */
         public Builder DBInfo(String DBInfo) {
             this.DBInfo = DBInfo;
@@ -106,7 +106,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * The array of local images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -114,7 +114,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -250,7 +250,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             private String updateDateTime; 
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -258,7 +258,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Repository.
+             * The name of the repository.
              */
             public Builder repository(String repository) {
                 this.repository = repository;
@@ -266,7 +266,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -274,7 +274,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             }
 
             /**
-             * System.
+             * The container system of the image.
              */
             public Builder system(String system) {
                 this.system = system;
@@ -282,7 +282,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tags of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -290,7 +290,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the container. Set the value to singularity.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -298,7 +298,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDateTime.
+             * The time when the image was updated.
              */
             public Builder updateDateTime(String updateDateTime) {
                 this.updateDateTime = updateDateTime;
@@ -339,7 +339,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
             private java.util.List < ImagesImages> images; 
 
             /**
-             * Images.
+             * The array of local images.
              */
             public Builder images(java.util.List < ImagesImages> images) {
                 this.images = images;

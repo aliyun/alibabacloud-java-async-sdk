@@ -98,7 +98,13 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * ChargeType.
+         * The billing method of the ECS instances. Valid values:
+         * <p>
+         * 
+         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription
+         * 
+         * Default value: PostPaid
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -116,7 +122,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order. The order can be set only as a purchase order. Valid value: INSTANCE-BUY.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -125,7 +131,14 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * PriceUnit.
+         * The billing cycle of the Elastic Compute Service (ECS) instances. This parameter takes effect only when the ChargeType parameter is set to PrePaid. Valid values:
+         * <p>
+         * 
+         * *   Month: pay-by-month
+         * *   Year: pay-by-year
+         * *   Hour: pay-by-hour
+         * 
+         * Default value: Hour
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -215,7 +228,17 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * category.
+             * The type of the data disk. Valid values:
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: SSD
+             * *   cloud_essd: ESSD
+             * *   cloud: basic disk
+             * 
+             * Default value: cloud_efficiency
+             * 
+             * Valid values of N: 0 to 4
              */
             public Builder category(String category) {
                 this.category = category;
@@ -223,7 +246,15 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * deleteWithInstance.
+             * Specifies whether the data disk is released when the node is released. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: true
+             * 
+             * Valid values of N: 0 to 4
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -231,7 +262,15 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * encrypted.
+             * Specifies whether to encrypt the data disk. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false
+             * 
+             * Valid values of N: 0 to 4
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -239,7 +278,17 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * performanceLevel.
+             * The performance level of the ESSD used as the data disk. This parameter takes effect only when the Commodities.N.DataDisks.N.category parameter is set to cloud_essd. Default value: PL1. Valid values:
+             * <p>
+             * 
+             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+             * 
+             * Default value: PL1
+             * 
+             * Valid values of N: 0 to 4
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -247,7 +296,14 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * size.
+             * The size of the data disk. Unit: GB.
+             * <p>
+             * 
+             * Valid values: 40 to 500
+             * 
+             * Default value: 40
+             * 
+             * Valid values of N: 0 to 4
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -412,7 +468,12 @@ public class DescribePriceRequest extends Request {
             private Integer systemDiskSize; 
 
             /**
-             * Amount.
+             * The node quantity of the type. Valid values: 1 to 1000.
+             * <p>
+             * 
+             * Default value: 1
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -428,7 +489,10 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the node.
+             * <p>
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -436,7 +500,13 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * InternetChargeType.
+             * The EIP billing method of the node. Valid values:
+             * <p>
+             * 
+             * *   PayByBandwidth: pay-by-bandwidth
+             * *   PayByTraffic: pay-by-traffic
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -444,7 +514,14 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * InternetMaxBandWidthOut.
+             * The maximum outbound public bandwidth of the node. Unit: Mbit/s.
+             * <p>
+             * 
+             * Valid values: 0 to 100
+             * 
+             * Default value: 0
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder internetMaxBandWidthOut(Integer internetMaxBandWidthOut) {
                 this.internetMaxBandWidthOut = internetMaxBandWidthOut;
@@ -452,7 +529,10 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * NetworkType.
+             * The network type of the node. Valid value: VPC.
+             * <p>
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -460,7 +540,14 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * NodeType.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   Compute: compute node
+             * *   Manager: management node
+             * *   Login: logon node
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -468,7 +555,16 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * Period.
+             * The subscription duration of the node. Valid values:
+             * <p>
+             * 
+             * *   If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.
+             * *   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+             * *   If PriceUnit is set to Hour, the valid value of the Period parameter is 1.
+             * 
+             * Default value: 1
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -476,7 +572,17 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * SystemDiskCategory.
+             * The system disk type of the node. Valid values:
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: SSD
+             * *   cloud_essd: ESSD
+             * *   cloud: basic disk
+             * 
+             * Default value: cloud_efficiency
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -484,7 +590,17 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * SystemDiskPerformanceLevel.
+             * The performance level of the ESSD used as the system disk. This parameter takes effect only when the Commodities.N.SystemDiskCategory parameter is set to cloud_essd. Default value: PL1. Valid values:
+             * <p>
+             * 
+             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+             * 
+             * Default value: PL1
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -492,7 +608,14 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * SystemDiskSize.
+             * The system disk size of the node. Unit: GB.
+             * <p>
+             * 
+             * Valid values: 40 to 500
+             * 
+             * Default value: 40
+             * 
+             * Valid values of N: 1 to 10
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

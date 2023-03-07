@@ -68,7 +68,7 @@ public class ListImagesRequest extends Request {
         } 
 
         /**
-         * BaseOsTag.
+         * The image tag of the operating system. The tag is used only for management nodes.
          */
         public Builder baseOsTag(String baseOsTag) {
             this.putQueryParameter("BaseOsTag", baseOsTag);
@@ -77,7 +77,11 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type of the node.
+         * <p>
+         * 
+         * *   If a value is passed to the parameter, the list of images that are supported by the specified instance type is queried.
+         * *   If no value is passed to the parameter, the list of images that are supported by all instance types is queried.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

@@ -54,7 +54,10 @@ public class InitializeEHPCRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the service-linked role is created.
+         * <p>
+         * 
+         * You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by E-HPC.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

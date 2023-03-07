@@ -70,7 +70,10 @@ public class DeleteQueueRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +82,10 @@ public class DeleteQueueRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the queue that you want to delete.
+         * <p>
+         * 
+         * You can call the [ListQueues](~~92176~~) operation to query the name of the queue.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);

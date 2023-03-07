@@ -69,7 +69,7 @@ public class ListClustersRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -78,7 +78,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 50.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -50,7 +50,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MetricLogs.
+         * The list of the performance data.
          */
         public Builder metricLogs(MetricLogs metricLogs) {
             this.metricLogs = metricLogs;
@@ -58,7 +58,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             private Integer time; 
 
             /**
-             * DiskDevice.
+             * The name of the disk.
              */
             public Builder diskDevice(String diskDevice) {
                 this.diskDevice = diskDevice;
@@ -166,7 +166,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * The hostname of the node.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -174,7 +174,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the node.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -182,7 +182,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricData.
+             * A JSON-serialized string that contains values for multiple performance metrics.
              */
             public Builder metricData(String metricData) {
                 this.metricData = metricData;
@@ -190,7 +190,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterface.
+             * The name of the network interface.
              */
             public Builder networkInterface(String networkInterface) {
                 this.networkInterface = networkInterface;
@@ -198,7 +198,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The timestamp of the log. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder time(Integer time) {
                 this.time = time;

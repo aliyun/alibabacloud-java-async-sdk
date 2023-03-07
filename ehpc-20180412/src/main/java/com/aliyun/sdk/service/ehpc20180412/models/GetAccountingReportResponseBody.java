@@ -110,7 +110,7 @@ public class GetAccountingReportResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The list serialized in the JSON format. The list contains multiple records.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -118,7 +118,7 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * Metrics.
+         * The list serialized in the JSON format. The list contains the column names of each record in the Data.
          */
         public Builder metrics(String metrics) {
             this.metrics = metrics;
@@ -126,7 +126,7 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +134,7 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCoreTime.
+         * The total number of CPU cores in the queried cluster.
          */
         public Builder totalCoreTime(Integer totalCoreTime) {
             this.totalCoreTime = totalCoreTime;
@@ -158,7 +158,7 @@ public class GetAccountingReportResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -198,7 +198,7 @@ public class GetAccountingReportResponseBody extends TeaModel {
             private java.util.List < String > data; 
 
             /**
-             * Data.
+             * The list serialized in the JSON format. The list contains multiple records.
              */
             public Builder data(java.util.List < String > data) {
                 this.data = data;

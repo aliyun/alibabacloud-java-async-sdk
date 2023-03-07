@@ -122,7 +122,7 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to manage.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -131,7 +131,7 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * ContainerType.
+         * The type of the container. Set the value to singularity.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -140,7 +140,7 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * ImageTag.
+         * The tag of the image. Default value: latest.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -149,7 +149,7 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * Repository.
+         * The name of the repository.
          */
         public Builder repository(String repository) {
             this.putQueryParameter("Repository", repository);

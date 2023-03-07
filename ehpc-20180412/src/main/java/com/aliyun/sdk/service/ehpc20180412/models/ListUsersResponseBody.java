@@ -86,7 +86,7 @@ public class ListUsersResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The list of users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -182,7 +182,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AddTime.
+             * The time when the user was created.
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -190,7 +190,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The name of the permission group. Valid values:
+             * <p>
+             * 
+             * *   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.
+             * *   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -198,7 +202,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The username.
              */
             public Builder name(String name) {
                 this.name = name;

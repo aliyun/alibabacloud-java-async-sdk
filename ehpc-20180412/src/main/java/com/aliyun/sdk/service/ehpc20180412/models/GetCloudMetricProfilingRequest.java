@@ -84,7 +84,7 @@ public class GetCloudMetricProfilingRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class GetCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * ProfilingId.
+         * The profiling ID. You can call the [ListCloudMetricProfilings](~~188711~~) operation to obtain the profiling ID.
          */
         public Builder profilingId(String profilingId) {
             this.putQueryParameter("ProfilingId", profilingId);
@@ -102,7 +102,7 @@ public class GetCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

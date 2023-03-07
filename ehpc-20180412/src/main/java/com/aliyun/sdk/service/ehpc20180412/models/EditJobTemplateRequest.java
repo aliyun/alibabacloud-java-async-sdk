@@ -341,7 +341,10 @@ public class EditJobTemplateRequest extends Request {
         } 
 
         /**
-         * ArrayRequest.
+         * The job array.
+         * <p>
+         * 
+         * Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.
          */
         public Builder arrayRequest(String arrayRequest) {
             this.putQueryParameter("ArrayRequest", arrayRequest);
@@ -350,7 +353,14 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * ClockTime.
+         * The maximum running time of the job. Valid formats:
+         * <p>
+         * 
+         * *   hh:mm:ss
+         * *   mm:ss
+         * *   ss
+         * 
+         * We recommend that you use the hh:mm:ss format. If the maximum running time is 12 hours, set the value to 12:00:00.
          */
         public Builder clockTime(String clockTime) {
             this.putQueryParameter("ClockTime", clockTime);
@@ -359,7 +369,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * CommandLine.
+         * The command that is used to run the job.
          */
         public Builder commandLine(String commandLine) {
             this.putQueryParameter("CommandLine", commandLine);
@@ -368,7 +378,10 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Gpu.
+         * The maximum GPU usage required by a single compute node. Valid values: 1 to 8.
+         * <p>
+         * 
+         * The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.
          */
         public Builder gpu(Integer gpu) {
             this.putQueryParameter("Gpu", gpu);
@@ -377,7 +390,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * InputFileUrl.
+         * The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
          */
         public Builder inputFileUrl(String inputFileUrl) {
             this.putQueryParameter("InputFileUrl", inputFileUrl);
@@ -386,7 +399,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Mem.
+         * The maximum memory usage required by a single compute node. Unit: GB, MB, or KB. The unit is case-insensitive.
          */
         public Builder mem(String mem) {
             this.putQueryParameter("Mem", mem);
@@ -395,7 +408,10 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the job template.
+         * <p>
+         * 
+         * You can call the [ListJobTemplates](~~87248~~) operation to obtain the job template name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -404,7 +420,10 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Node.
+         * The number of the compute nodes. Valid values: 1 to 500.
+         * <p>
+         * 
+         * >  If the parameter is not specified, the Task, Thread, Mem, and Gpu parameters become invalid.
          */
         public Builder node(Integer node) {
             this.putQueryParameter("Node", node);
@@ -413,7 +432,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * PackagePath.
+         * The path that is used to run the job.
          */
         public Builder packagePath(String packagePath) {
             this.putQueryParameter("PackagePath", packagePath);
@@ -422,7 +441,10 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+         * <p>
+         * 
+         * Default value: 0
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -431,7 +453,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Queue.
+         * The name of the queue.
          */
         public Builder queue(String queue) {
             this.putQueryParameter("Queue", queue);
@@ -440,7 +462,11 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * ReRunable.
+         * Specifies whether the job can be rerun. Valid values:
+         * <p>
+         * 
+         * *   true: The job can be rerun.
+         * *   false: The job cannot be rerun.
          */
         public Builder reRunable(Boolean reRunable) {
             this.putQueryParameter("ReRunable", reRunable);
@@ -449,7 +475,10 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * RunasUser.
+         * The name of the user that runs the job.
+         * <p>
+         * 
+         * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
          */
         public Builder runasUser(String runasUser) {
             this.putQueryParameter("RunasUser", runasUser);
@@ -458,7 +487,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * StderrRedirectPath.
+         * The output file path of stderr.
          */
         public Builder stderrRedirectPath(String stderrRedirectPath) {
             this.putQueryParameter("StderrRedirectPath", stderrRedirectPath);
@@ -467,7 +496,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * StdoutRedirectPath.
+         * The output file path of stdout.
          */
         public Builder stdoutRedirectPath(String stdoutRedirectPath) {
             this.putQueryParameter("StdoutRedirectPath", stdoutRedirectPath);
@@ -476,7 +505,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Task.
+         * The number of tasks required by a single compute node. Valid values: 1 to 1000.
          */
         public Builder task(Integer task) {
             this.putQueryParameter("Task", task);
@@ -485,7 +514,10 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the job template.
+         * <p>
+         * 
+         * You can call the [ListJobTemplates](~~87248~~) operation to obtain the job template ID.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -494,7 +526,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Thread.
+         * The number of threads required by a single compute node. Valid values: 1 to 1000.
          */
         public Builder thread(Integer thread) {
             this.putQueryParameter("Thread", thread);
@@ -503,7 +535,12 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * UnzipCmd.
+         * The command that is used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:
+         * <p>
+         * 
+         * *   tar xzf: decompresses GZIP files.
+         * *   tar xf: decompresses TAR files.
+         * *   unzip: decompresses ZIP files.
          */
         public Builder unzipCmd(String unzipCmd) {
             this.putQueryParameter("UnzipCmd", unzipCmd);
@@ -512,7 +549,7 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * Variables.
+         * The runtime variables passed to the job. They can be accessed by using environment variables in the executable file.
          */
         public Builder variables(String variables) {
             this.putQueryParameter("Variables", variables);
@@ -521,7 +558,11 @@ public class EditJobTemplateRequest extends Request {
         }
 
         /**
-         * WithUnzipCmd.
+         * Specifies whether to decompress the job files downloaded from an OSS bucket. Valid values:
+         * <p>
+         * 
+         * *   true: The job files are decompressed.
+         * *   false: The job files are not decompressed.
          */
         public Builder withUnzipCmd(Boolean withUnzipCmd) {
             this.putQueryParameter("WithUnzipCmd", withUnzipCmd);

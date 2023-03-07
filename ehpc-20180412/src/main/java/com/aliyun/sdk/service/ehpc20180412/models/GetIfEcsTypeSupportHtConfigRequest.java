@@ -55,7 +55,7 @@ public class GetIfEcsTypeSupportHtConfigRequest extends Request {
         } 
 
         /**
-         * InstanceType.
+         * The instance type of the ECS instance.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

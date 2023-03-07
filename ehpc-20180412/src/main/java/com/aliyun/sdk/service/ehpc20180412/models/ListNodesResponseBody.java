@@ -86,7 +86,7 @@ public class ListNodesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Nodes.
+         * The information about nodes.
          */
         public Builder nodes(Nodes nodes) {
             this.nodes = nodes;
@@ -94,7 +94,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -223,7 +223,7 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer memory; 
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -231,7 +231,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The number of GPUs.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -239,7 +239,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory capacity. Unit: GB
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -304,7 +304,7 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer memory; 
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -312,7 +312,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The number of GPUs.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -320,7 +320,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory capacity. Unit: GB
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -661,7 +661,7 @@ public class ListNodesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AddTime.
+             * The time when the node was added to the cluster.
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -669,7 +669,11 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateMode.
+             * The mode in which the compute nodes are added. Valid values:
+             * <p>
+             * 
+             * *   manual: The compute nodes are manually added.
+             * *   autoscale: The compute nodes are automatically added.
              */
             public Builder createMode(String createMode) {
                 this.createMode = createMode;
@@ -677,7 +681,11 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedByEhpc.
+             * Indicates whether the node was created by using E-HPC.
+             * <p>
+             * 
+             * *   true: The node is created by using E-HPC.
+             * *   false: The node is not created by using E-HPC.
              */
             public Builder createdByEhpc(Boolean createdByEhpc) {
                 this.createdByEhpc = createdByEhpc;
@@ -685,7 +693,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * Indicates whether the subscription node expired. For a pay-as-you-go node, false is returned.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -693,7 +701,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the subscription node expires. For a pay-as-you-go node, a null value is returned.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -701,7 +709,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The name of the node.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -709,7 +717,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HtEnabled.
+             * Indicates whether hyper-threading is enabled.
              */
             public Builder htEnabled(Boolean htEnabled) {
                 this.htEnabled = htEnabled;
@@ -717,7 +725,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the node.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -725,7 +733,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -733,7 +741,13 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * *   system: public image
+             * *   self: custom image
+             * *   others: shared image
+             * *   marketplace: Alibaba Cloud Marketplace image
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -741,7 +755,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance types of the node.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -749,7 +763,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * The IP address of the node.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -757,7 +771,11 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The location where the node was deployed. Valid values:
+             * <p>
+             * 
+             * *   OnPremise: The node is deployed on your data center.
+             * *   PublicCloud: The node is deployed on the public cloud.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -765,7 +783,15 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * LockReason.
+             * The reason why the node was locked. Valid values:
+             * <p>
+             * 
+             * *   financial: The node is locked due to overdue payments.
+             * *   security: The node is locked for security reasons.
+             * *   recycling: The preemptible node is locked and pending release.
+             * *   dedicatedhostfinancial: The node is locked due to the overdue payments of the dedicated host.
+             * 
+             * By default, an empty string is returned.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -773,7 +799,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddress.
+             * The public IP address of the node.
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -781,7 +807,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -789,7 +815,17 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   Scheduler: primary scheduling node
+             * *   SchedulerBackup: secondary scheduling node
+             * *   Account: primary domain server node
+             * *   AccountBackup: secondary domain server node
+             * *   Login: logon node
+             * *   Compute: compute node
+             * 
+             * Scheduling nodes and domain server nodes are management nodes.
              */
             public Builder roles(Roles roles) {
                 this.roles = roles;
@@ -797,7 +833,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The bidding method of the compute nodes.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -805,7 +841,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * StateInSched.
+             * The status of the node displayed on the scheduler. The status varies with the scheduler.
              */
             public Builder stateInSched(String stateInSched) {
                 this.stateInSched = stateInSched;
@@ -813,7 +849,16 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the node. Valid values:
+             * <p>
+             * 
+             * *   uninit: The node is being installed.
+             * *   exception: An exception has occurred on the node.
+             * *   running: The node is running.
+             * *   initing: The node is being initialized.
+             * *   releasing: The node is being released.
+             * *   untracking: The node is not added to the cluster.
+             * *   stopped: The node is stopped.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -821,7 +866,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResources.
+             * The statistics of the resources used by the node.
              */
             public Builder totalResources(TotalResources totalResources) {
                 this.totalResources = totalResources;
@@ -829,7 +874,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedResources.
+             * The usage of the compute nodes in the cluster. For other types of nodes, an empty value is returned.
              */
             public Builder usedResources(UsedResources usedResources) {
                 this.usedResources = usedResources;
@@ -837,7 +882,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -845,7 +890,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the client.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -853,7 +898,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -861,7 +906,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -50,7 +50,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContainerAppInfo.
+         * The information of the containerized application.
          */
         public Builder containerAppInfo(ContainerAppInfo containerAppInfo) {
             this.containerAppInfo = containerAppInfo;
@@ -58,7 +58,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CreateTime.
+             * The time when the containerized application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +178,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the containerized application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +186,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the containerized application.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -194,7 +194,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * ImageTag.
+             * The tags of the image.
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -202,7 +202,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the containerized application.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +210,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * Repository.
+             * The name of the repository.
              */
             public Builder repository(String repository) {
                 this.repository = repository;
@@ -218,7 +218,7 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the container. Set the value to singularity.
              */
             public Builder type(String type) {
                 this.type = type;

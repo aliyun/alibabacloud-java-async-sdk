@@ -86,7 +86,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Clusters.
+         * The list of clusters.
          */
         public Builder clusters(Clusters clusters) {
             this.clusters = clusters;
@@ -94,7 +94,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Valid values: 1 to 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +302,11 @@ public class ListClustersMetaResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AccountType.
+             * The server type of the account. Valid values:
+             * <p>
+             * 
+             * *   nis
+             * *   ldap
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -310,7 +314,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * ClientVersion.
+             * The version of the client.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -318,7 +322,13 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * DeployMode.
+             * The mode in which the cluster is deployed. Valid values:
+             * <p>
+             * 
+             * *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
+             * *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
+             * *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
+             * *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -326,7 +336,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +344,13 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * HasPlugin.
+             * Indicates whether the cluster uses a plug-in. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false
              */
             public Builder hasPlugin(Boolean hasPlugin) {
                 this.hasPlugin = hasPlugin;
@@ -342,7 +358,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the cluster.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -350,7 +366,11 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * IsComputeEss.
+             * Indicates whether a scaling group is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: A scaling group is enabled.
+             * *   false: No scaling group is enabled.
              */
             public Builder isComputeEss(Boolean isComputeEss) {
                 this.isComputeEss = isComputeEss;
@@ -358,7 +378,11 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The location where the cluster is deployed. Valid values:
+             * <p>
+             * 
+             * *   OnPremise: The cluster is deployed on a hybrid cloud.
+             * *   PublicCloud: The cluster is deployed on a public cloud.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -366,7 +390,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -374,7 +398,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * The image tag of the operating system.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -382,7 +406,13 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerType.
+             * The type of the scheduler. Valid values:
+             * <p>
+             * 
+             * *   pbs
+             * *   slurm
+             * *   opengridscheduler
+             * *   deadline
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -390,7 +420,15 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   uninit: The cluster is not initialized.
+             * *   creating: The cluster is being created.
+             * *   init: The cluster is being initialized.
+             * *   running: The cluster is running.
+             * *   exception: The cluster encounters an exception.
+             * *   releasing: The cluster is being released.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -398,7 +436,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

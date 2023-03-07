@@ -137,7 +137,10 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -146,7 +149,7 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the job file. The content is encoded in Base64.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -155,7 +158,10 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * RunasUser.
+         * The user to which the job belongs.
+         * <p>
+         * 
+         * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
          */
         public Builder runasUser(String runasUser) {
             this.putQueryParameter("RunasUser", runasUser);
@@ -164,7 +170,7 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * RunasUserPassword.
+         * The password of the user.
          */
         public Builder runasUserPassword(String runasUserPassword) {
             this.putQueryParameter("RunasUserPassword", runasUserPassword);
@@ -173,7 +179,7 @@ public class CreateJobFileRequest extends Request {
         }
 
         /**
-         * TargetFile.
+         * The name of the job file.
          */
         public Builder targetFile(String targetFile) {
             this.putQueryParameter("TargetFile", targetFile);

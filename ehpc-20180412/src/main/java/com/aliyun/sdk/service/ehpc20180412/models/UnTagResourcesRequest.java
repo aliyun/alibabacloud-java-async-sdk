@@ -112,7 +112,13 @@ public class UnTagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -121,7 +127,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the resource belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +145,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to cluster, which indicates E-HPC clusters.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

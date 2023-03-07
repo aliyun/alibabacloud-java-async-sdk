@@ -86,7 +86,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * The list of job templates.
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -118,7 +118,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -398,7 +398,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             private Boolean withUnzipCmd; 
 
             /**
-             * ArrayRequest.
+             * The job array.
+             * <p>
+             * 
+             * Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.
              */
             public Builder arrayRequest(String arrayRequest) {
                 this.arrayRequest = arrayRequest;
@@ -406,7 +409,12 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ClockTime.
+             * The maximum running time of the job. Valid formats:
+             * <p>
+             * 
+             * *   hh:mm:ss
+             * *   mm:ss
+             * *   ss
              */
             public Builder clockTime(String clockTime) {
                 this.clockTime = clockTime;
@@ -414,7 +422,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CommandLine.
+             * The command that was used to run the job.
              */
             public Builder commandLine(String commandLine) {
                 this.commandLine = commandLine;
@@ -422,7 +430,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The maximum GPU usage required by a single compute node. Valid values: 1 to 8.
+             * <p>
+             * 
+             * The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -430,7 +441,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the job template.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -438,7 +449,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * InputFileUrl.
+             * The URL of the job files that were uploaded to an Object Storage Service (OSS) bucket.
              */
             public Builder inputFileUrl(String inputFileUrl) {
                 this.inputFileUrl = inputFileUrl;
@@ -446,7 +457,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * The maximum memory usage of a single compute node. The unit can be GB, MB, or KB, and is case-insensitive.
              */
             public Builder mem(String mem) {
                 this.mem = mem;
@@ -454,7 +465,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the job template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -462,7 +473,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Node.
+             * The number of the compute nodes. Valid values: 1 to 500.
              */
             public Builder node(Integer node) {
                 this.node = node;
@@ -470,7 +481,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PackagePath.
+             * The path that was used to run the job.
              */
             public Builder packagePath(String packagePath) {
                 this.packagePath = packagePath;
@@ -478,7 +489,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -486,7 +497,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Queue.
+             * The queue of the job.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -494,7 +505,11 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ReRunable.
+             * Indicates whether the job can be rerun. Valid values:
+             * <p>
+             * 
+             * *   true: The job can be rerun.
+             * *   false: The job cannot be rerun.
              */
             public Builder reRunable(Boolean reRunable) {
                 this.reRunable = reRunable;
@@ -502,7 +517,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RunasUser.
+             * The name of the user that ran the job.
              */
             public Builder runasUser(String runasUser) {
                 this.runasUser = runasUser;
@@ -510,7 +525,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * StderrRedirectPath.
+             * The output file path of stderr.
              */
             public Builder stderrRedirectPath(String stderrRedirectPath) {
                 this.stderrRedirectPath = stderrRedirectPath;
@@ -518,7 +533,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * StdoutRedirectPath.
+             * The output file path of stdout.
              */
             public Builder stdoutRedirectPath(String stdoutRedirectPath) {
                 this.stdoutRedirectPath = stdoutRedirectPath;
@@ -526,7 +541,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Task.
+             * The number of tasks required by a single compute node. Valid values: 1 to 1000.
              */
             public Builder task(Integer task) {
                 this.task = task;
@@ -534,7 +549,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Thread.
+             * The number of threads required by a single compute node. Valid values: 1 to 1000.
              */
             public Builder thread(Integer thread) {
                 this.thread = thread;
@@ -542,7 +557,12 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UnzipCmd.
+             * The command that was used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:
+             * <p>
+             * 
+             * *   tar xzf: decompresses GZIP files.
+             * *   tar xf: decompresses TAR files.
+             * *   unzip: decompresses ZIP files.
              */
             public Builder unzipCmd(String unzipCmd) {
                 this.unzipCmd = unzipCmd;
@@ -550,7 +570,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Variables.
+             * The environment variables of the job.
              */
             public Builder variables(String variables) {
                 this.variables = variables;
@@ -558,7 +578,11 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * WithUnzipCmd.
+             * Indicates whether to decompress the job files downloaded from an OSS bucket. Valid values:
+             * <p>
+             * 
+             * *   true: The job files are decompressed.
+             * *   false: The job files are not decompressed.
              */
             public Builder withUnzipCmd(Boolean withUnzipCmd) {
                 this.withUnzipCmd = withUnzipCmd;

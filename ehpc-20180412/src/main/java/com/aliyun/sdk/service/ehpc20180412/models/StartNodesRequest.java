@@ -84,7 +84,10 @@ public class StartNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +105,14 @@ public class StartNodesRequest extends Request {
         }
 
         /**
-         * Role.
+         * The role of the node. Valid values:
+         * <p>
+         * 
+         * *   Manager: management node
+         * *   Login: logon node
+         * *   Compute: compute node
+         * 
+         * Default value: Compute
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -144,7 +154,10 @@ public class StartNodesRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the Nth node. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * Make sure that the node is in the Stopped state. You can call the [ListNodes](~~87161~~) operation to query the status of the node.
              */
             public Builder id(String id) {
                 this.id = id;

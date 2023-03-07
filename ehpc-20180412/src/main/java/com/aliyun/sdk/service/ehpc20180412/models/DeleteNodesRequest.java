@@ -98,7 +98,10 @@ public class DeleteNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -116,7 +119,10 @@ public class DeleteNodesRequest extends Request {
         }
 
         /**
-         * ReleaseInstance.
+         * Specifies whether to release the instances that are created by using E-HPC.
+         * <p>
+         * 
+         * Default value: true
          */
         public Builder releaseInstance(Boolean releaseInstance) {
             this.putQueryParameter("ReleaseInstance", releaseInstance);
@@ -125,7 +131,11 @@ public class DeleteNodesRequest extends Request {
         }
 
         /**
-         * Sync.
+         * Specifies whether to directly delete the node. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder sync(Boolean sync) {
             this.putQueryParameter("Sync", sync);
@@ -167,7 +177,10 @@ public class DeleteNodesRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the compute node that you want to delete. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * You can call the [DescribeCluster](~~87126~~) operation to query the IDs of the nodes in the cluster.
              */
             public Builder id(String id) {
                 this.id = id;

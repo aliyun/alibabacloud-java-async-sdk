@@ -62,7 +62,7 @@ public class InvokeShellCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CommandId.
+         * The ID of the command. It is used to query the running status of the command.
          */
         public Builder commandId(String commandId) {
             this.commandId = commandId;
@@ -70,7 +70,7 @@ public class InvokeShellCommandResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIds.
+         * The list of IDs of the instances on which you want to run the command.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -78,7 +78,7 @@ public class InvokeShellCommandResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

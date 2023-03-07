@@ -100,7 +100,7 @@ public class ModifyVisualServicePasswdRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +109,12 @@ public class ModifyVisualServicePasswdRequest extends Request {
         }
 
         /**
-         * Passwd.
+         * The connection password of the VNC remote visualization service. The password must be 8 to 30 characters in length and include at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
+         * <p>
+         * 
+         * `()~! @#$%^&*-_+=|{}[]:;\"/<>,.? /`
+         * 
+         * >  You must use HTTPS to call the API to ensure that the password remains confidential.
          */
         public Builder passwd(String passwd) {
             this.putQueryParameter("Passwd", passwd);
@@ -118,7 +123,7 @@ public class ModifyVisualServicePasswdRequest extends Request {
         }
 
         /**
-         * RunasUser.
+         * The username of the cluster. Default value: root user. You can call the [ListUsers](~~188572~~) operation to query all users in a cluster.
          */
         public Builder runasUser(String runasUser) {
             this.putQueryParameter("RunasUser", runasUser);
@@ -127,7 +132,7 @@ public class ModifyVisualServicePasswdRequest extends Request {
         }
 
         /**
-         * RunasUserPassword.
+         * The user password of the cluster.
          */
         public Builder runasUserPassword(String runasUserPassword) {
             this.putQueryParameter("RunasUserPassword", runasUserPassword);

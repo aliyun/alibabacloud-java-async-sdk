@@ -242,7 +242,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         private String uid; 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -250,7 +250,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterType.
+         * The type of the scheduler. Valid values:
+         * <p>
+         * 
+         * *   slurm
+         * *   pbs
+         * *   opengridscheduler
+         * *   deadline
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -258,7 +264,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAutoGrow.
+         * Indicates whether the cluster enabled auto scale-out. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enableAutoGrow(Boolean enableAutoGrow) {
             this.enableAutoGrow = enableAutoGrow;
@@ -266,7 +276,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAutoShrink.
+         * Indicates whether the cluster enabled auto scale-in. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enableAutoShrink(Boolean enableAutoShrink) {
             this.enableAutoShrink = enableAutoShrink;
@@ -274,7 +288,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ExcludeNodes.
+         * The compute nodes that were excluded from the list of auto scaling nodes. Multiple compute nodes were separated with commas (,).
          */
         public Builder excludeNodes(String excludeNodes) {
             this.excludeNodes = excludeNodes;
@@ -282,7 +296,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ExtraNodesGrowRatio.
+         * The percentage of extra compute nodes. Valid values: 0 to 100.
+         * <p>
+         * 
+         * If you need to add 100 compute nodes and the value of the ExtraNodesGrowRatio parameter is 2, 102 compute nodes are added.
          */
         public Builder extraNodesGrowRatio(Integer extraNodesGrowRatio) {
             this.extraNodesGrowRatio = extraNodesGrowRatio;
@@ -290,7 +307,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GrowIntervalInMinutes.
+         * The interval between two consecutive rounds of scale-in. Unit: minutes. Valid values: 2 to 10.
+         * <p>
+         * 
+         * >  An interval may exist during multiple rounds of a scale-out task or between two consecutive scale-out tasks.
          */
         public Builder growIntervalInMinutes(Integer growIntervalInMinutes) {
             this.growIntervalInMinutes = growIntervalInMinutes;
@@ -298,7 +318,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GrowRatio.
+         * The percentage of each round of scale-out. Valid values: 1 to 100.
+         * <p>
+         * 
+         * If you set GrowRatio to 50, the scale-out has two rounds. Each round completes half of the scale-out.
          */
         public Builder growRatio(Integer growRatio) {
             this.growRatio = growRatio;
@@ -306,7 +329,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GrowTimeoutInMinutes.
+         * The timeout period before the scale-out nodes were started. Unit: minutes. Valid values: 10 to 60.
+         * <p>
+         * 
+         * If the scale-out timeout period has been reached but the scale-out nodes still do not reach the Running state, the system resets them.
          */
         public Builder growTimeoutInMinutes(Integer growTimeoutInMinutes) {
             this.growTimeoutInMinutes = growTimeoutInMinutes;
@@ -314,7 +340,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ImageId.
+         * The image ID of the compute nodes in the queue.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -322,7 +348,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNodesInCluster.
+         * The maximum number of compute nodes that can be added in the cluster. Valid values: 0 to 500.
          */
         public Builder maxNodesInCluster(Integer maxNodesInCluster) {
             this.maxNodesInCluster = maxNodesInCluster;
@@ -330,7 +356,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Queues.
+         * The auto scaling configuration of the queue.
+         * <p>
+         * 
+         * >  If auto scaling is enabled for the cluster and queue at the same time, the queue settings prevail.
          */
         public Builder queues(Queues queues) {
             this.queues = queues;
@@ -338,7 +367,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -346,7 +375,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ShrinkIdleTimes.
+         * The number of consecutive times that a compute node is idle during the resource scale-in check. Valid values: 2 to 5.
+         * <p>
+         * 
+         * If the parameter is set to 3, a compute node is idle for more than three consecutive times. In this case, the node is released.
          */
         public Builder shrinkIdleTimes(Integer shrinkIdleTimes) {
             this.shrinkIdleTimes = shrinkIdleTimes;
@@ -354,7 +386,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ShrinkIntervalInMinutes.
+         * The interval between two consecutive rounds of scale-out. Unit: minutes. Valid values: 2 to 10.
          */
         public Builder shrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
             this.shrinkIntervalInMinutes = shrinkIntervalInMinutes;
@@ -362,7 +394,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SpotPriceLimit.
+         * The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
@@ -370,7 +402,12 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SpotStrategy.
+         * The preemption policy of the compute nodes. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The compute nodes are pay-as-you-go instances.
+         * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
@@ -378,7 +415,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Uid.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder uid(String uid) {
             this.uid = uid;
@@ -478,7 +515,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             private Integer dataDiskSize; 
 
             /**
-             * DataDiskCategory.
+             * The type of the data disk. Valid values:
+             * <p>
+             * 
+             * - cloud_efficiency: ultra disk
+             * - cloud_ssd: SSD
+             * - cloud_essd: ESSD
+             * - cloud: basic disk
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -486,7 +529,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskDeleteWithInstance.
+             * Indicates whether the data disk is released when the node is released. Valid values:
+             * <p>
+             * 
+             * - true
+             * - false
              */
             public Builder dataDiskDeleteWithInstance(Boolean dataDiskDeleteWithInstance) {
                 this.dataDiskDeleteWithInstance = dataDiskDeleteWithInstance;
@@ -494,7 +541,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskEncrypted.
+             * Indicates whether the data disk is encrypted. Valid values:
+             * <p>
+             * 
+             * - true
+             * - false
              */
             public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
                 this.dataDiskEncrypted = dataDiskEncrypted;
@@ -502,7 +553,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskKMSKeyId.
+             * The KMS key ID of the data disk.
              */
             public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
                 this.dataDiskKMSKeyId = dataDiskKMSKeyId;
@@ -510,7 +561,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskPerformanceLevel.
+             * The performance level of the ESSD used as the data disk. The parameter takes effect only when the DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values: 
+             * <p>
+             * 
+             * - PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+             * - PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * - PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+             * - PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              */
             public Builder dataDiskPerformanceLevel(String dataDiskPerformanceLevel) {
                 this.dataDiskPerformanceLevel = dataDiskPerformanceLevel;
@@ -518,7 +575,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskSize.
+             * The capacity of the data disk. Unit: GB.
+             * <p>
+             * 
+             * Valid values: 40 to 500
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -684,7 +744,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * HostNamePrefix.
+             * The prefix of the hostname. You can query compute nodes that have a specified prefix.
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -692,7 +752,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the node.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -716,7 +776,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPriceLimit.
+             * The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -724,7 +784,12 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The bidding method of the compute nodes. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The compute nodes are pay-as-you-go instances.
+             * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -732,7 +797,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -740,7 +805,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1038,7 +1103,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             private Integer systemDiskSize; 
 
             /**
-             * DataDisks.
+             * The list of data disks.
              */
             public Builder dataDisks(DataDisks dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1046,7 +1111,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAutoGrow.
+             * Indicates whether the queue enabled auto scale-out. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableAutoGrow(Boolean enableAutoGrow) {
                 this.enableAutoGrow = enableAutoGrow;
@@ -1054,7 +1123,11 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAutoShrink.
+             * Indicates whether the queue enabled auto scale-in. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableAutoShrink(Boolean enableAutoShrink) {
                 this.enableAutoShrink = enableAutoShrink;
@@ -1062,7 +1135,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * HostNamePrefix.
+             * The prefix of the queue name. You can query queues that have a specified prefix.
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -1070,7 +1143,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * HostNameSuffix.
+             * The suffix of the queue name. You can query queues that have a specified suffix.
              */
             public Builder hostNameSuffix(String hostNameSuffix) {
                 this.hostNameSuffix = hostNameSuffix;
@@ -1078,7 +1151,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the compute nodes that were automatically added in the queue.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1086,7 +1159,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypes.
+             * The specification information of the compute nodes.
              */
             public Builder instanceTypes(InstanceTypes instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1094,7 +1167,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MaxNodesInQueue.
+             * The maximum number of compute nodes that can be added in a queue. Valid values: 0 to 500.
              */
             public Builder maxNodesInQueue(Integer maxNodesInQueue) {
                 this.maxNodesInQueue = maxNodesInQueue;
@@ -1102,7 +1175,10 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MaxNodesPerCycle.
+             * The maximum number of compute nodes that can be added in each round of scale-out. Valid values: 0 to 99.  
+             * <p>
+             * 
+             * Default value: 0.
              */
             public Builder maxNodesPerCycle(Long maxNodesPerCycle) {
                 this.maxNodesPerCycle = maxNodesPerCycle;
@@ -1110,7 +1186,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MinNodesInQueue.
+             * The minimum number of compute nodes that can be retained in a queue. Valid values: 0 to 50.
              */
             public Builder minNodesInQueue(Integer minNodesInQueue) {
                 this.minNodesInQueue = minNodesInQueue;
@@ -1118,7 +1194,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MinNodesPerCycle.
+             * The minimum number of compute nodes that can be added in each round of scale-out. Valid values: 1 to 99.  
+             * <p>
+             * 
+             * Default value: 1. 
+             * 
+             * If the compute nodes that you want to add in a round is less than the minimum compute nodes that can be added, the value of this parameter is automatically changed to the number of compute nodes that you want to add. This ensures that compute nodes can be added as expected.  
+             * 
+             * >  The configuration takes effect only for the minimum compute nodes that can be added in the current round.
              */
             public Builder minNodesPerCycle(Long minNodesPerCycle) {
                 this.minNodesPerCycle = minNodesPerCycle;
@@ -1126,7 +1209,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * QueueImageId.
+             * The image ID of the compute nodes in the queue.
              */
             public Builder queueImageId(String queueImageId) {
                 this.queueImageId = queueImageId;
@@ -1134,7 +1217,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The name of the queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -1142,7 +1225,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the compute nodes belong.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1150,7 +1233,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPriceLimit.
+             * The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -1158,7 +1241,12 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The preemption policy of the compute nodes. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The compute nodes are pay-as-you-go instances.
+             * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1166,7 +1254,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskCategory.
+             * The type of the system disk. Valid values:
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: SSD
+             * *   cloud_essd: ESSD
+             * *   cloud: basic disk
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1174,7 +1268,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskLevel.
+             * The performance level of the system disk. Valid values:
+             * <p>
+             * 
+             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              */
             public Builder systemDiskLevel(String systemDiskLevel) {
                 this.systemDiskLevel = systemDiskLevel;
@@ -1182,7 +1282,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * The size of the system disk. Unit: GB. Valid values: 40 to 500.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

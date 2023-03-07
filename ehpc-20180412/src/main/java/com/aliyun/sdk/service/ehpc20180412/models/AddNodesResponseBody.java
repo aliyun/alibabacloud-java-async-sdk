@@ -62,7 +62,10 @@ public class AddNodesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * InstanceIds.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  AddNodes is an asynchronous API operation. If a request succeeds, a response is immediately generated before ECS instances are created. Therefore, the value of the parameter is null. You can call the [ListNodes](~~87161~~) operation to obtain the IDs of the ECS instances.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -70,7 +73,7 @@ public class AddNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class AddNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

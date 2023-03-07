@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * 下一个查询开始Token，NextToken为空说明没有下一个
+         * The token that is required for the next query. If the NextToken parameter is empty, no subsequent query will be sent.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 资源列表
+         * The list of tags.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 资源ID
+             * The ID of the resource. Set the value to the ID of the cluster.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * The type of the resource. Set the value to cluster, which indicates E-HPC clusters.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +170,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签键
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

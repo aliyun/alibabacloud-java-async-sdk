@@ -38,7 +38,7 @@ public class SyncUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

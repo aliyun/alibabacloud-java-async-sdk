@@ -86,7 +86,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries that are returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         }
 
         /**
-         * Profilings.
+         * The profiling information of a specified cluster.
          */
         public Builder profilings(Profilings profilings) {
             this.profilings = profilings;
@@ -110,7 +110,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             private String triggerTime; 
 
             /**
-             * Duration.
+             * The duration of the profiling process. Unit: seconds
+             * <p>
+             * 
+             * Valid values: 10 to 300
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -238,7 +241,10 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * Freq.
+             * The frequency of the profiling process. Unit: Hz
+             * <p>
+             * 
+             * Valid values: 1 to 2000
              */
             public Builder freq(Integer freq) {
                 this.freq = freq;
@@ -246,7 +252,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The name of the host.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -254,7 +260,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the node.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -262,7 +268,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The ID of the profiling process.
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -270,7 +276,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * ProfilingId.
+             * The ID of the profiling process.
              */
             public Builder profilingId(String profilingId) {
                 this.profilingId = profilingId;
@@ -278,7 +284,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerTime.
+             * The time when the profiling process is triggered.
              */
             public Builder triggerTime(String triggerTime) {
                 this.triggerTime = triggerTime;

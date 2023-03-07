@@ -62,7 +62,7 @@ public class CreateClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +70,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
+         * <p>
+         * 
+         * >  CreateCluster is an asynchronous API operation. If a request succeeds, a response is immediately generated before nodes are created. You can call the [ListTasks](~~268225~~) operation to query the result of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

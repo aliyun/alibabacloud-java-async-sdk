@@ -50,7 +50,7 @@ public class StopClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class StopClusterResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

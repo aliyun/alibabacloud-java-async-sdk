@@ -50,7 +50,7 @@ public class InspectImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageStatus.
+         * The status of the image.
          */
         public Builder imageStatus(ImageStatus imageStatus) {
             this.imageStatus = imageStatus;
@@ -58,7 +58,7 @@ public class InspectImageResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class InspectImageResponseBody extends TeaModel {
             private String schemaVersion; 
 
             /**
-             * BootStrap.
+             * The version of the bootstrapper used by the container image.
              */
             public Builder bootStrap(String bootStrap) {
                 this.bootStrap = bootStrap;
@@ -166,7 +166,7 @@ public class InspectImageResponseBody extends TeaModel {
             }
 
             /**
-             * BuildArch.
+             * The architecture used to build the image.
              */
             public Builder buildArch(String buildArch) {
                 this.buildArch = buildArch;
@@ -174,7 +174,7 @@ public class InspectImageResponseBody extends TeaModel {
             }
 
             /**
-             * BuildDate.
+             * The date on which the image was built.
              */
             public Builder buildDate(String buildDate) {
                 this.buildDate = buildDate;
@@ -182,7 +182,7 @@ public class InspectImageResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerVersion.
+             * The container version of the image.
              */
             public Builder containerVersion(String containerVersion) {
                 this.containerVersion = containerVersion;
@@ -190,7 +190,7 @@ public class InspectImageResponseBody extends TeaModel {
             }
 
             /**
-             * DefFrom.
+             * The mode in which the image was built.
              */
             public Builder defFrom(String defFrom) {
                 this.defFrom = defFrom;
@@ -198,7 +198,7 @@ public class InspectImageResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaVersion.
+             * The singularity version and kernel version of the image.
              */
             public Builder schemaVersion(String schemaVersion) {
                 this.schemaVersion = schemaVersion;
@@ -239,7 +239,7 @@ public class InspectImageResponseBody extends TeaModel {
             private ImageInspectInfo imageInspectInfo; 
 
             /**
-             * ImageInspectInfo.
+             * The list of Inspect information about the image.
              */
             public Builder imageInspectInfo(ImageInspectInfo imageInspectInfo) {
                 this.imageInspectInfo = imageInspectInfo;

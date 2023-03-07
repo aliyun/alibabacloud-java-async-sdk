@@ -86,7 +86,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * FileSystemList.
+         * The list of file systems.
          */
         public Builder fileSystemList(FileSystemList fileSystemList) {
             this.fileSystemList = fileSystemList;
@@ -94,7 +94,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             private String vswId; 
 
             /**
-             * AccessGroup.
+             * The name of the permission group that applied to the mount target.
              */
             public Builder accessGroup(String accessGroup) {
                 this.accessGroup = accessGroup;
@@ -226,7 +226,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetDomain.
+             * The domain name of the mount target.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -234,7 +234,11 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type of the mount target. Valid values:
+             * <p>
+             * 
+             * *   Vpc: virtual private cloud (VPC)
+             * *   Classic: the classic network
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -242,7 +246,13 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the mount target. Valid values:
+             * <p>
+             * 
+             * *   Active: The mount target is available.
+             * *   Inactive: The mount target is inactive.
+             * *   Pending: The mount target is being created or modified.
+             * *   Deleting: The mount target is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +260,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -258,7 +268,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * VswId.
+             * The ID of the vSwitch.
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -340,7 +350,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             private String packageId; 
 
             /**
-             * PackageId.
+             * The ID of the storage plan.
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -590,7 +600,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * BandWidth.
+             * The bandwidth of the file system. Unit: MB/s.
              */
             public Builder bandWidth(Integer bandWidth) {
                 this.bandWidth = bandWidth;
@@ -598,7 +608,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * The capacity of the file system. Unit: GiB.
              */
             public Builder capacity(Integer capacity) {
                 this.capacity = capacity;
@@ -606,7 +616,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the file system was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -614,7 +624,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Destription.
+             * The description of the file system.
              */
             public Builder destription(String destription) {
                 this.destription = destription;
@@ -622,7 +632,11 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptType.
+             * Indicates whether the file system is encrypted. Valid values:
+             * <p>
+             * 
+             * *   0: The file system is not encrypted.
+             * *   1: The file system is encrypted.
              */
             public Builder encryptType(Integer encryptType) {
                 this.encryptType = encryptType;
@@ -630,7 +644,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -638,7 +652,11 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemType.
+             * The type of the file system. Valid values:
+             * <p>
+             * 
+             * *   standard: General-purpose NAS file system
+             * *   extreme: Extreme NAS file system
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -646,7 +664,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * MeteredSize.
+             * The used capacity of the file system. Unit: bytes.
              */
             public Builder meteredSize(Integer meteredSize) {
                 this.meteredSize = meteredSize;
@@ -654,7 +672,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetList.
+             * The list of mount targets.
              */
             public Builder mountTargetList(MountTargetList mountTargetList) {
                 this.mountTargetList = mountTargetList;
@@ -662,7 +680,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageList.
+             * The list of storage plans.
              */
             public Builder packageList(PackageList packageList) {
                 this.packageList = packageList;
@@ -670,7 +688,11 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The protocol type of the file system. Valid values:
+             * <p>
+             * 
+             * - NFS
+             * - SMB
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -678,7 +700,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -686,7 +708,15 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the file system. Valid values:
+             * <p>
+             * 
+             * - Pending: The file system is being created or modified.
+             * - Running: The file system is available.
+             * - Stopped: The file system is stopped.
+             * - Extending: The file system is being scaled out.
+             * - Stopping: The file system is being stopped.
+             * - Deleting: The file system is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -694,7 +724,11 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type of the file system. 
+             * <p>
+             * 
+             * - If FileSystemType is set to standard, the StorageType parameter has the following valid values: Capacity and Performance.
+             * - If FileSystemType is set to extreme, the StorageType parameter has the following valid values: standard and advance.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -702,7 +736,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

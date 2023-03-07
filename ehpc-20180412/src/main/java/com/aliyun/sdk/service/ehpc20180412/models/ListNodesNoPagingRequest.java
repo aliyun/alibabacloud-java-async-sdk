@@ -97,7 +97,10 @@ public class ListNodesNoPagingRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -106,7 +109,7 @@ public class ListNodesNoPagingRequest extends Request {
         }
 
         /**
-         * HostName.
+         * The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -115,7 +118,14 @@ public class ListNodesNoPagingRequest extends Request {
         }
 
         /**
-         * Role.
+         * The type of the node. Valid values:
+         * <p>
+         * 
+         * *   Manager: management node
+         * *   Login: logon node
+         * *   Compute: compute node
+         * 
+         * Default value: Compute
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -124,7 +134,13 @@ public class ListNodesNoPagingRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * The sorting method of the node list. Valid values:
+         * <p>
+         * 
+         * *   Forward: sorts the nodes in chronological order.
+         * *   Backward: sorts the nodes in reverse chronological order.
+         * 
+         * Default value: Forward
          */
         public Builder sequence(String sequence) {
             this.putQueryParameter("Sequence", sequence);

@@ -127,7 +127,7 @@ public class RunCloudMetricProfilingRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -136,7 +136,12 @@ public class RunCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The duration of the profiling process. Unit: seconds.
+         * <p>
+         * 
+         * Value values: 10 to 300
+         * 
+         * Default value: 30
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -145,7 +150,12 @@ public class RunCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * Freq.
+         * The sampling frequency. Unit: Hz
+         * <p>
+         * 
+         * Valid values: 1 to 2000
+         * 
+         * Default value: 2000
          */
         public Builder freq(Integer freq) {
             this.putQueryParameter("Freq", freq);
@@ -154,7 +164,7 @@ public class RunCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * HostName.
+         * The name of the host.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -163,7 +173,7 @@ public class RunCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * The ID of the profiling process.
          */
         public Builder processId(Integer processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -172,7 +182,7 @@ public class RunCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the cluster resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

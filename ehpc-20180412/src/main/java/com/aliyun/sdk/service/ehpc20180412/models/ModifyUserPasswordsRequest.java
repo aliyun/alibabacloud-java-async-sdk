@@ -93,7 +93,10 @@ public class ModifyUserPasswordsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the E-HPC cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -156,7 +159,10 @@ public class ModifyUserPasswordsRequest extends Request {
             private String password; 
 
             /**
-             * Name.
+             * The name of the Nth user whose password you want to modify. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -164,7 +170,17 @@ public class ModifyUserPasswordsRequest extends Request {
             }
 
             /**
-             * Password.
+             * The password of the Nth user. The password must be 8 to 30 characters in length and contain three of the following items:
+             * <p>
+             * 
+             * *   Uppercase letter
+             * *   Lowercase letter
+             * *   Digit
+             * *   Special character: `()~!@#$%^&*-_+=|{}[]:;\"/<>,.?/`
+             * 
+             * Valid values of N: 1 to 100
+             * 
+             * >  We recommend that you use HTTPS to call the AddUsers operation to ensure that the password remains confidential.
              */
             public Builder password(String password) {
                 this.password = password;

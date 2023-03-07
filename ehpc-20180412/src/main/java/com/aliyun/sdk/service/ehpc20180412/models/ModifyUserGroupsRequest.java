@@ -93,7 +93,10 @@ public class ModifyUserGroupsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -156,7 +159,11 @@ public class ModifyUserGroupsRequest extends Request {
             private String name; 
 
             /**
-             * Group.
+             * The new permission group of the user. Valid values:
+             * <p>
+             * 
+             * *   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.
+             * *   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -164,7 +171,10 @@ public class ModifyUserGroupsRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the user whose permissions you want to modify. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;

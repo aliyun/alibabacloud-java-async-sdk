@@ -86,7 +86,7 @@ public class ListVolumesResponseBody extends TeaModel {
         private Volumes volumes; 
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * Volumes.
+         * The information of file systems that are mounted on E-HPC clusters.
          */
         public Builder volumes(Volumes volumes) {
             this.volumes = volumes;
@@ -254,7 +254,7 @@ public class ListVolumesResponseBody extends TeaModel {
             private String volumeType; 
 
             /**
-             * JobQueue.
+             * The queue to which the job belongs.
              */
             public Builder jobQueue(String jobQueue) {
                 this.jobQueue = jobQueue;
@@ -262,7 +262,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * LocalDirectory.
+             * The local mount directory.
              */
             public Builder localDirectory(String localDirectory) {
                 this.localDirectory = localDirectory;
@@ -270,7 +270,11 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The location where the cluster was deployed. Valid values:
+             * <p>
+             * 
+             * *   OnPremise: The cluster is deployed on a hybrid cloud.
+             * *   PublicCloud: The cluster is deployed on a public cloud.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -278,7 +282,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteDirectory.
+             * The remote directory on which the file system is mounted.
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -286,7 +290,12 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The type of the node on which the file system is mounted. Valid values:
+             * <p>
+             * 
+             * *   Manager: management node
+             * *   Login: logon node
+             * *   Compute: compute node
              */
             public Builder role(String role) {
                 this.role = role;
@@ -294,7 +303,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeId.
+             * The ID of the file system.
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -302,7 +311,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeMountpoint.
+             * The domain name of the mount target.
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -310,7 +319,11 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeProtocol.
+             * The type of the storage protocol. Valid values:
+             * <p>
+             * 
+             * *   NFS
+             * *   SMB
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -318,7 +331,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeType.
+             * The type of the additional file system. Only NAS is supported.
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;
@@ -496,7 +509,7 @@ public class ListVolumesResponseBody extends TeaModel {
             private String volumeType; 
 
             /**
-             * AdditionalVolumes.
+             * The information of additional file systems mounted on E-HPC clusters.
              */
             public Builder additionalVolumes(AdditionalVolumes additionalVolumes) {
                 this.additionalVolumes = additionalVolumes;
@@ -504,7 +517,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -512,7 +525,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -520,7 +533,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -528,7 +541,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteDirectory.
+             * The remote directory on which the file system is mounted.
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -536,7 +549,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeId.
+             * The ID of the file system.
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -544,7 +557,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeMountpoint.
+             * The domain name of the mount target.
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -552,7 +565,11 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeProtocol.
+             * The type of the storage protocol. Valid values:
+             * <p>
+             * 
+             * *   NFS
+             * *   SMB
              */
             public Builder volumeProtocol(String volumeProtocol) {
                 this.volumeProtocol = volumeProtocol;
@@ -560,7 +577,7 @@ public class ListVolumesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeType.
+             * The type of the file system that is mounted on the cluster. Only NAS is supported.
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;

@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+      *
+     */
     @Override
     public CompletableFuture<AddContainerAppResponse> addContainerApp(AddContainerAppRequest request) {
         try {
@@ -53,6 +57,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The compute nodes to be added are in the Stopped state.
+      * *   After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.
+      * *   The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.
+      *
+     */
     @Override
     public CompletableFuture<AddExistedNodesResponse> addExistedNodes(AddExistedNodesRequest request) {
         try {
@@ -137,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
+      *
+     */
     @Override
     public CompletableFuture<ApplyNodesResponse> applyNodes(ApplyNodesRequest request) {
         try {
@@ -151,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
         try {
@@ -249,6 +267,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+      *
+     */
     @Override
     public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
         try {
@@ -361,6 +383,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
+      *
+     */
     @Override
     public CompletableFuture<DeleteNodesResponse> deleteNodes(DeleteNodesRequest request) {
         try {
@@ -403,6 +429,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+      *
+     */
     @Override
     public CompletableFuture<DeleteUsersResponse> deleteUsers(DeleteUsersRequest request) {
         try {
@@ -599,6 +629,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ****
+      *
+     */
     @Override
     public CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request) {
         try {
@@ -1285,6 +1319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you succeed in calling an asynchronous API operation, a response is generated before a resulting task is completed. Therefore, to query the result of the task, you can use the TaskId parameter returned by the API operation.
+      *
+     */
     @Override
     public CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request) {
         try {
@@ -1355,6 +1393,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+      *
+     */
     @Override
     public CompletableFuture<ModifyClusterAttributesResponse> modifyClusterAttributes(ModifyClusterAttributesRequest request) {
         try {
@@ -1481,6 +1523,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the [ListClusters](~~87116~~) operation to query the ID and status of a cluster.
+      * We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:
+      * *   The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.
+      * *   The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on Apsara File Storage NAS file systems is retained.
+      * *   The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.
+      *
+     */
     @Override
     public CompletableFuture<RecoverClusterResponse> recoverCluster(RecoverClusterRequest request) {
         try {
@@ -1509,6 +1559,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.
+      *
+     */
     @Override
     public CompletableFuture<ResetNodesResponse> resetNodes(ResetNodesRequest request) {
         try {
@@ -1537,6 +1591,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+      *
+     */
     @Override
     public CompletableFuture<SetAutoScaleConfigResponse> setAutoScaleConfig(SetAutoScaleConfigRequest request) {
         try {
@@ -1691,6 +1749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the *economical mode*, you are no longer charged for its computing resources. For more information, see [Economical mode](~~63353~~).
+      *
+     */
     @Override
     public CompletableFuture<StopClusterResponse> stopCluster(StopClusterRequest request) {
         try {
@@ -1761,6 +1823,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
+      *
+     */
     @Override
     public CompletableFuture<SubmitJobResponse> submitJob(SubmitJobRequest request) {
         try {
@@ -1873,6 +1939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+      *
+     */
     @Override
     public CompletableFuture<UpdateQueueConfigResponse> updateQueueConfig(UpdateQueueConfigRequest request) {
         try {

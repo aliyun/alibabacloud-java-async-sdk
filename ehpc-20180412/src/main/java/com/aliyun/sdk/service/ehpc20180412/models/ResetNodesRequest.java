@@ -70,7 +70,10 @@ public class ResetNodesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,7 +124,10 @@ public class ResetNodesRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the compute node that you want to reset. Valid values of N: 1 to 100
+             * <p>
+             * 
+             * You can call the [ListNodes](~~87161~~) operation to query the IDs of the compute nodes.
              */
             public Builder id(String id) {
                 this.id = id;

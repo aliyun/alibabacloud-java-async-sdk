@@ -70,7 +70,10 @@ public class ListInvocationStatusRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +82,10 @@ public class ListInvocationStatusRequest extends Request {
         }
 
         /**
-         * CommandId.
+         * The ID of the command.
+         * <p>
+         * 
+         * You can call the [ListCommands](~~87388~~) operation to query the command ID.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);

@@ -169,7 +169,12 @@ public class GetCloudMetricLogsRequest extends Request {
         } 
 
         /**
-         * AggregationInterval.
+         * The data aggregation interval. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: 1, 10, 60, 600, and 3600.
+         * 
+         * Default value: 1
          */
         public Builder aggregationInterval(Integer aggregationInterval) {
             this.putQueryParameter("AggregationInterval", aggregationInterval);
@@ -178,7 +183,15 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * AggregationType.
+         * The data aggregation type. Valid values:
+         * <p>
+         * 
+         * *   sum: the sum of the data
+         * *   avg: the average value
+         * *   max: the maximum value
+         * *   min: the minimum value
+         * 
+         * Aggregation is disabled by default.
          */
         public Builder aggregationType(String aggregationType) {
             this.putQueryParameter("AggregationType", aggregationType);
@@ -187,7 +200,7 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -196,7 +209,13 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter conditions. A JSON string consisting of one or more key:value pairs. Value range of key:
+         * <p>
+         * 
+         * *   InstanceId: the ID of the node
+         * *   Hostname: the hostname of the node
+         * *   NetworkInterface: the name of the network interface
+         * *   DiskDevice: the name of the disk
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -205,7 +224,7 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * From.
+         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -214,7 +233,11 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * MetricCategories.
+         * The category of the output performance metrics. Separate multiple metrics with commas (,). Valid values:
+         * <p>
+         * 
+         * *   cpu
+         * *   memory
          */
         public Builder metricCategories(String metricCategories) {
             this.putQueryParameter("MetricCategories", metricCategories);
@@ -223,7 +246,13 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * MetricScope.
+         * The dimensions of the performance metric. Valid values:
+         * <p>
+         * 
+         * *   machine
+         * *   process
+         * *   network
+         * *   disk
          */
         public Builder metricScope(String metricScope) {
             this.putQueryParameter("MetricScope", metricScope);
@@ -232,7 +261,10 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * Logs are returned in reverse order of timestamps.
+         * <p>
+         * 
+         * Default value: false
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -241,7 +273,7 @@ public class GetCloudMetricLogsRequest extends Request {
         }
 
         /**
-         * To.
+         * The end of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);

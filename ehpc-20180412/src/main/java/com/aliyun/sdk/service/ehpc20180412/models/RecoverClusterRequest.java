@@ -139,7 +139,13 @@ public class RecoverClusterRequest extends Request {
         } 
 
         /**
-         * AccountType.
+         * The service type of the domain account. Valid values:
+         * <p>
+         * 
+         * *   nis
+         * *   ldap
+         * 
+         * Default value: nis
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -148,7 +154,10 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * ClientVersion.
+         * The version of the E-HPC client. The default value is the latest version of the client.
+         * <p>
+         * 
+         * You can call the [ListCurrentClientVersion](~~87223~~) operation to query the current version of the E-HPC client.
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -157,7 +166,10 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster. The cluster must be in the Exception state.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID and status.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -166,7 +178,10 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
+         * <p>
+         * 
+         * You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the images that are supported by E-HPC.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -175,7 +190,14 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * ImageOwnerAlias.
+         * The type of the image. Valid values:
+         * <p>
+         * 
+         * *   system: public image
+         * *   self: custom image
+         * *   others: shared image
+         * 
+         * Default value: system
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -184,7 +206,10 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * OsTag.
+         * The image tag of the operating system.
+         * <p>
+         * 
+         * You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the image tags supported by Elastic High Performance Computing (E-HPC).
          */
         public Builder osTag(String osTag) {
             this.putQueryParameter("OsTag", osTag);
@@ -193,7 +218,15 @@ public class RecoverClusterRequest extends Request {
         }
 
         /**
-         * SchedulerType.
+         * The type of the scheduler. Valid values:
+         * <p>
+         * 
+         * *   pbs
+         * *   slurm
+         * *   opengridscheduler
+         * *   deadline
+         * 
+         * Default value: pbs
          */
         public Builder schedulerType(String schedulerType) {
             this.putQueryParameter("SchedulerType", schedulerType);

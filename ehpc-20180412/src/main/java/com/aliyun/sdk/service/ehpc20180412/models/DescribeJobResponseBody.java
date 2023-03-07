@@ -50,7 +50,7 @@ public class DescribeJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * The list of returned job information.
          */
         public Builder message(Message message) {
             this.message = message;
@@ -58,7 +58,7 @@ public class DescribeJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeJobResponseBody extends TeaModel {
             private String jobInfo; 
 
             /**
-             * JobInfo.
+             * The details of the job.
              */
             public Builder jobInfo(String jobInfo) {
                 this.jobInfo = jobInfo;

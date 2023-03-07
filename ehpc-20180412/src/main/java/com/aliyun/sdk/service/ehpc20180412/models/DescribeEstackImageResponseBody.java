@@ -86,7 +86,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ImageList.
+         * The array of base images.
          */
         public Builder imageList(ImageList imageList) {
             this.imageList = imageList;
@@ -94,7 +94,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of images.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             private String recentUpdateTime; 
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -214,7 +214,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image.
              */
             public Builder imageSize(Integer imageSize) {
                 this.imageSize = imageSize;
@@ -222,7 +222,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * The type of the image.
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -230,7 +230,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * The download URL of the image.
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -238,7 +238,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
             }
 
             /**
-             * RecentUpdateTime.
+             * The time when the image was last modified.
              */
             public Builder recentUpdateTime(String recentUpdateTime) {
                 this.recentUpdateTime = recentUpdateTime;

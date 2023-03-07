@@ -58,7 +58,7 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +151,7 @@ public class ListQueuesResponseBody extends TeaModel {
             private Float spotPriceLimit; 
 
             /**
-             * InstanceType.
+             * The specifications of the ECS instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -159,7 +159,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPriceLimit.
+             * The maximum hourly price of the preemptible instance. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -349,7 +349,7 @@ public class ListQueuesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ComputeInstanceType.
+             * The instance type of the compute nodes.
              */
             public Builder computeInstanceType(ComputeInstanceType computeInstanceType) {
                 this.computeInstanceType = computeInstanceType;
@@ -357,7 +357,12 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAutoGrow.
+             * Indicates whether the queue enabled auto scale-out. Valid values:
+             * <p>
+             * 
+             * true: The queue enabled auto scale-out.
+             * 
+             * false: The queue disabled auto scale-out.
              */
             public Builder enableAutoGrow(Boolean enableAutoGrow) {
                 this.enableAutoGrow = enableAutoGrow;
@@ -365,7 +370,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * HostNamePrefix.
+             * The prefix of the host name.
              */
             public Builder hostNamePrefix(String hostNamePrefix) {
                 this.hostNamePrefix = hostNamePrefix;
@@ -373,7 +378,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * HostNameSuffix.
+             * The suffix of the host name.
              */
             public Builder hostNameSuffix(String hostNameSuffix) {
                 this.hostNameSuffix = hostNameSuffix;
@@ -381,7 +386,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -389,7 +394,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The name of the queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -397,7 +402,7 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the queue belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -413,7 +418,14 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The preemption policy of the compute nodes. Valid values:
+             * <p>
+             * 
+             * NoSpot: The instances of the compute node are pay-as-you-go instances.
+             * 
+             * SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
+             * 
+             * SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -421,7 +433,12 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the queue. Valid values:
+             * <p>
+             * 
+             * Execution: Queues in which jobs can be executed.
+             * 
+             * Router: Queues in which jobs cannot be executed but are forwarded to the bounded Execution queue for processing.
              */
             public Builder type(String type) {
                 this.type = type;

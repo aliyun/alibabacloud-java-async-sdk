@@ -50,7 +50,7 @@ public class GetVisualServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * The response message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +58,7 @@ public class GetVisualServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

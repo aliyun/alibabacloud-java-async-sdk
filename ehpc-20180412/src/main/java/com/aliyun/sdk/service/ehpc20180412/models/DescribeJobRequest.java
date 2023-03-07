@@ -93,7 +93,10 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +105,10 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the job.
+         * <p>
+         * 
+         * You can call the [ListJobs](~~87251~~) operation to query the job ID.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

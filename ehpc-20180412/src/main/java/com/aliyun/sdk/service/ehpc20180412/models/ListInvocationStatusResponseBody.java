@@ -74,7 +74,7 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CommandId.
+         * The ID of the command.
          */
         public Builder commandId(String commandId) {
             this.commandId = commandId;
@@ -82,7 +82,7 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InvokeInstances.
+         * The list of statuses. A list is returned for each node.
          */
         public Builder invokeInstances(InvokeInstances invokeInstances) {
             this.invokeInstances = invokeInstances;
@@ -90,7 +90,13 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InvokeStatus.
+         * The overall status of all nodes in the cluster. Valid values:
+         * <p>
+         * 
+         * - Finished
+         * - Running
+         * - Failed
+         * - Stopped
          */
         public Builder invokeStatus(String invokeStatus) {
             this.invokeStatus = invokeStatus;
@@ -98,7 +104,7 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +156,7 @@ public class ListInvocationStatusResponseBody extends TeaModel {
             private String instanceInvokeStatus; 
 
             /**
-             * InstanceId.
+             * The ID of the node.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -158,7 +164,13 @@ public class ListInvocationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceInvokeStatus.
+             * The status of the node. Valid values:
+             * <p>
+             * 
+             * *   Finished
+             * *   Running
+             * *   Failed
+             * *   Stopped
              */
             public Builder instanceInvokeStatus(String instanceInvokeStatus) {
                 this.instanceInvokeStatus = instanceInvokeStatus;

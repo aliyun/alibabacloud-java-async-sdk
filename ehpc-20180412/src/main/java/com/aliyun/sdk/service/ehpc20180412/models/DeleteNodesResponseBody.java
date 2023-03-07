@@ -50,7 +50,7 @@ public class DeleteNodesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DeleteNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
+         * <p>
+         * 
+         * *   If you set the Sync parameter to true, the DeleteNodes operation is synchronous. Valid value: Not Available.
+         * *   If you set the Sync parameter to false, the DeleteNodes operation is asynchronous. You can call the [ListTasks](~~268225~~) operation to query the result of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

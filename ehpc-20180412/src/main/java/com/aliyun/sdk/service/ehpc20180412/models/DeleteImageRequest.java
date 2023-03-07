@@ -121,7 +121,10 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -130,7 +133,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ContainerType.
+         * The type of the container. Set the value to singularity.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -139,7 +142,10 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * ImageTag.
+         * The tags of the image.
+         * <p>
+         * 
+         * Default value: latest
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -148,7 +154,10 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * Repository.
+         * The name of the repository.
+         * <p>
+         * 
+         * You can call the [ListContainerImages](~~87348~~) operation to query the name of the repository.
          */
         public Builder repository(String repository) {
             this.putQueryParameter("Repository", repository);

@@ -127,7 +127,10 @@ public class ListInvocationResultsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -136,7 +139,10 @@ public class ListInvocationResultsRequest extends Request {
         }
 
         /**
-         * CommandId.
+         * The ID of the command.
+         * <p>
+         * 
+         * You can call the [ListCommands](~~87388~~) operation to query the command ID.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -154,7 +160,13 @@ public class ListInvocationResultsRequest extends Request {
         }
 
         /**
-         * InvokeRecordStatus.
+         * The status of the command that you want to query. Valid values:
+         * <p>
+         * 
+         * *   Finished
+         * *   Running
+         * *   Failed
+         * *   Stopped
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
@@ -163,7 +175,12 @@ public class ListInvocationResultsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Page numbers start from 1.
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -172,7 +189,10 @@ public class ListInvocationResultsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 50.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +234,10 @@ public class ListInvocationResultsRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the node on which the command is run.
+             * <p>
+             * 
+             * >  The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.
              */
             public Builder id(String id) {
                 this.id = id;

@@ -86,7 +86,7 @@ public class ListCommandsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Commands.
+         * The list of commands.
          */
         public Builder commands(Commands commands) {
             this.commands = commands;
@@ -94,7 +94,7 @@ public class ListCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on the current page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class ListCommandsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * CommandContent.
+             * The content of the command.
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -202,7 +202,7 @@ public class ListCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * CommandId.
+             * The ID of the command.
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -210,7 +210,7 @@ public class ListCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * The timeout period. Unit: seconds.
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;
@@ -218,7 +218,7 @@ public class ListCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingDir.
+             * The working directory of the command.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;

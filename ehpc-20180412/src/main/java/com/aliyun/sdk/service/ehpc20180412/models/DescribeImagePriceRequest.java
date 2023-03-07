@@ -129,7 +129,10 @@ public class DescribeImagePriceRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * The number of images that you want to purchase. Valid values: 1 to 1000.
+         * <p>
+         * 
+         * Default value: 1
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -138,7 +141,7 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -147,7 +150,7 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order. The order can be set only as a purchase order. Valid value: INSTANCE-BUY.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -156,7 +159,14 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration. Valid values:
+         * <p>
+         * 
+         * *   If PriceUnit is set to Day, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, and 30.
+         * *   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+         * *   If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.
+         * 
+         * Default value: 1
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -165,7 +175,14 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * PriceUnit.
+         * The unit of the subscription duration. Valid values:
+         * <p>
+         * 
+         * *   Day
+         * *   Month
+         * *   Year
+         * 
+         * Default value: Day
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -174,7 +191,7 @@ public class DescribeImagePriceRequest extends Request {
         }
 
         /**
-         * SkuCode.
+         * The stock keeping unit (SKU) of the image. Valid value: package.
          */
         public Builder skuCode(String skuCode) {
             this.putQueryParameter("SkuCode", skuCode);

@@ -50,7 +50,7 @@ public class ListImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OsTags.
+         * The list of images that are supported by E-HPC.
          */
         public Builder osTags(OsTags osTags) {
             this.osTags = osTags;
@@ -58,7 +58,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,6 +81,12 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("ImageId")
         private String imageId;
 
+        @NameInMap("OSName")
+        private String OSName;
+
+        @NameInMap("OSNameEn")
+        private String OSNameEn;
+
         @NameInMap("OsTag")
         private String osTag;
 
@@ -94,6 +100,8 @@ public class ListImagesResponseBody extends TeaModel {
             this.architecture = builder.architecture;
             this.baseOsTag = builder.baseOsTag;
             this.imageId = builder.imageId;
+            this.OSName = builder.OSName;
+            this.OSNameEn = builder.OSNameEn;
             this.osTag = builder.osTag;
             this.platform = builder.platform;
             this.version = builder.version;
@@ -129,6 +137,20 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return OSName
+         */
+        public String getOSName() {
+            return this.OSName;
+        }
+
+        /**
+         * @return OSNameEn
+         */
+        public String getOSNameEn() {
+            return this.OSNameEn;
+        }
+
+        /**
          * @return osTag
          */
         public String getOsTag() {
@@ -153,12 +175,18 @@ public class ListImagesResponseBody extends TeaModel {
             private String architecture; 
             private String baseOsTag; 
             private String imageId; 
+            private String OSName; 
+            private String OSNameEn; 
             private String osTag; 
             private String platform; 
             private String version; 
 
             /**
-             * Architecture.
+             * The architecture of the operating system. Valid values:
+             * <p>
+             * 
+             * *   i386
+             * *   x86\_64
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -166,7 +194,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * BaseOsTag.
+             * The image tag of the operating system. The tag is used only for management nodes.
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -174,7 +202,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -182,7 +210,23 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * OSName.
+             */
+            public Builder OSName(String OSName) {
+                this.OSName = OSName;
+                return this;
+            }
+
+            /**
+             * OSNameEn.
+             */
+            public Builder OSNameEn(String OSNameEn) {
+                this.OSNameEn = OSNameEn;
+                return this;
+            }
+
+            /**
+             * The image tag of the cluster.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -190,7 +234,11 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The operating system. Valid values:
+             * <p>
+             * 
+             * *   CentOS
+             * *   windows
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -198,7 +246,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the operating system.
              */
             public Builder version(String version) {
                 this.version = version;

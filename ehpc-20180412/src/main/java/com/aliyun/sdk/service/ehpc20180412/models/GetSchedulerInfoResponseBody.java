@@ -50,7 +50,7 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
         private java.util.List < SchedInfo> schedInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SchedInfo.
+         * The settings of the scheduler.
          */
         public Builder schedInfo(java.util.List < SchedInfo> schedInfo) {
             this.schedInfo = schedInfo;
@@ -110,7 +110,7 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
             private String schedName; 
 
             /**
-             * Configuration.
+             * The detailed settings of the scheduler.
              */
             public Builder configuration(String configuration) {
                 this.configuration = configuration;
@@ -118,7 +118,7 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SchedName.
+             * The type of the scheduler.
              */
             public Builder schedName(String schedName) {
                 this.schedName = schedName;

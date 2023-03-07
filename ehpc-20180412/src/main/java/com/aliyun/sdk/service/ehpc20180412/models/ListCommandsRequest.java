@@ -98,7 +98,10 @@ public class ListCommandsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +110,7 @@ public class ListCommandsRequest extends Request {
         }
 
         /**
-         * CommandId.
+         * The ID of the command.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -116,7 +119,12 @@ public class ListCommandsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
+         * <p>
+         * 
+         * Page number starts from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +133,12 @@ public class ListCommandsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

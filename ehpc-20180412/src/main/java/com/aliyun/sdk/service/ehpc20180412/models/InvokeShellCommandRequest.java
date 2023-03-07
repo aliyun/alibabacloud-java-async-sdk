@@ -112,7 +112,10 @@ public class InvokeShellCommandRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,7 +124,7 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * Command.
+         * The content of the command. The value must be 2 to 2,048 characters in length.
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -139,7 +142,10 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period. If a command times out, the command process is terminated. Unit: seconds.
+         * <p>
+         * 
+         * Default value: 60
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -148,7 +154,7 @@ public class InvokeShellCommandRequest extends Request {
         }
 
         /**
-         * WorkingDir.
+         * The working directory of the command. Default value: /root.
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);
@@ -190,7 +196,10 @@ public class InvokeShellCommandRequest extends Request {
             private String id; 
 
             /**
-             * Id.
+             * The ID of the node on which the command is run.
+             * <p>
+             * 
+             * >  The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.
              */
             public Builder id(String id) {
                 this.id = id;

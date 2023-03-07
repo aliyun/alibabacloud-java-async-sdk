@@ -62,7 +62,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         private Boolean supportSpotInstance; 
 
         /**
-         * InstanceTypeFamilies.
+         * The instance family to which the instance type belongs.
          */
         public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -70,7 +70,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         }
 
         /**
-         * SupportSpotInstance.
+         * Specifies whether preemptible instances are supported. Valid values:
+         * <p>
+         * 
+         * *   false: not supported
+         * *   true: supported
          */
         public Builder supportSpotInstance(Boolean supportSpotInstance) {
             this.supportSpotInstance = supportSpotInstance;
@@ -291,7 +295,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             private ZoneIds zoneIds; 
 
             /**
-             * CpuCoreCount.
+             * The number of vCPUs.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -299,7 +303,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * EniQuantity.
+             * The maximum number of elastic network interfaces (ENIs) that can be bound to an ECS instance.
              */
             public Builder eniQuantity(Integer eniQuantity) {
                 this.eniQuantity = eniQuantity;
@@ -307,7 +311,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GPUAmount.
+             * The number of GPUs of an ECS instance.
              */
             public Builder GPUAmount(Integer GPUAmount) {
                 this.GPUAmount = GPUAmount;
@@ -315,7 +319,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GPUSpec.
+             * The GPU type of the ECS instance.
              */
             public Builder GPUSpec(String GPUSpec) {
                 this.GPUSpec = GPUSpec;
@@ -323,7 +327,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceBandwidthRx.
+             * The maximum inbound internal bandwidth. Unit: Kbit/s.
              */
             public Builder instanceBandwidthRx(Integer instanceBandwidthRx) {
                 this.instanceBandwidthRx = instanceBandwidthRx;
@@ -331,7 +335,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceBandwidthTx.
+             * The maximum outbound internal bandwidth. Unit: Kbit/s.
              */
             public Builder instanceBandwidthTx(Integer instanceBandwidthTx) {
                 this.instanceBandwidthTx = instanceBandwidthTx;
@@ -339,7 +343,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstancePpsRx.
+             * The inbound packet forwarding rate over the internal network. Unit: pps
              */
             public Builder instancePpsRx(Integer instancePpsRx) {
                 this.instancePpsRx = instancePpsRx;
@@ -347,7 +351,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstancePpsTx.
+             * The outbound packet forwarding rate over the internal network. Unit: pps
              */
             public Builder instancePpsTx(Integer instancePpsTx) {
                 this.instancePpsTx = instancePpsTx;
@@ -355,7 +359,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeId.
+             * The ID of the ECS instance type.
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -363,7 +367,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * The memory size of the ECS instance. Unit: GiB
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -371,7 +375,11 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   SoldOut
+             * *   Available
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,7 +387,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneIds.
+             * The list of zone IDs.
              */
             public Builder zoneIds(ZoneIds zoneIds) {
                 this.zoneIds = zoneIds;
@@ -485,7 +493,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             private Types types; 
 
             /**
-             * Generation.
+             * The instance family.
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -493,7 +501,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamilyId.
+             * The ID of the instance family. For more information, see [Instance families](~~25378~~).
              */
             public Builder instanceTypeFamilyId(String instanceTypeFamilyId) {
                 this.instanceTypeFamilyId = instanceTypeFamilyId;
@@ -501,7 +509,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Types.
+             * The list of instance types.
              */
             public Builder types(Types types) {
                 this.types = types;

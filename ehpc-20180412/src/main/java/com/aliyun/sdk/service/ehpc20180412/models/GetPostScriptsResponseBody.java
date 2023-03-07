@@ -50,7 +50,7 @@ public class GetPostScriptsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PostInstallScripts.
+         * The post-installation scripts.
          */
         public Builder postInstallScripts(java.util.List < PostInstallScripts> postInstallScripts) {
             this.postInstallScripts = postInstallScripts;
@@ -58,7 +58,7 @@ public class GetPostScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetPostScriptsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Args.
+             * The parameter that is used to run the Nth post-installation script. Valid values of N: 1 to 16.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -118,7 +118,7 @@ public class GetPostScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL that is used to download the Nth post-installation script. Valid values of N: 1 to 16.
              */
             public Builder url(String url) {
                 this.url = url;

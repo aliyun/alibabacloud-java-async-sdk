@@ -154,7 +154,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -163,7 +163,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * ContainerType.
+         * The type of the image. Set the value to singularity.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -172,7 +172,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the image.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -181,7 +181,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * ImagePath.
+         * The path where the image is stored in the OSS bucket.
          */
         public Builder imagePath(String imagePath) {
             this.putQueryParameter("ImagePath", imagePath);
@@ -190,7 +190,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * OSSBucket.
+         * The OSS bucket.
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -199,7 +199,7 @@ public class GetUserImageRequest extends Request {
         }
 
         /**
-         * OSSEndPoint.
+         * The endpoint of OSS.
          */
         public Builder OSSEndPoint(String OSSEndPoint) {
             this.putQueryParameter("OSSEndPoint", OSSEndPoint);

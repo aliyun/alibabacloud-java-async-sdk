@@ -139,7 +139,7 @@ public class ModifyClusterAttributesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to modify.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -148,7 +148,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new cluster description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -157,7 +157,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -166,7 +166,13 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * ImageOwnerAlias.
+         * The new image type of the cluster. Valid values:
+         * <p>
+         * 
+         * *   system: public image
+         * *   self: custom image
+         * *   others: shared image
+         * *   marketplace: Alibaba Cloud Marketplace image
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -175,7 +181,7 @@ public class ModifyClusterAttributesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The new cluster name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

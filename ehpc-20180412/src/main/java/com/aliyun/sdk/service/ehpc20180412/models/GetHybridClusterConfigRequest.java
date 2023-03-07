@@ -69,7 +69,7 @@ public class GetHybridClusterConfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,7 +78,10 @@ public class GetHybridClusterConfigRequest extends Request {
         }
 
         /**
-         * Node.
+         * The name of the on-premises compute node. You can call this operation to query the configurations of the on-premises compute node.
+         * <p>
+         * 
+         * By default, the operation queries the configurations of a cluster.
          */
         public Builder node(String node) {
             this.putQueryParameter("Node", node);

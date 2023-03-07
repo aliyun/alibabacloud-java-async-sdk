@@ -96,7 +96,7 @@ public class ListCustomImagesRequest extends Request {
         } 
 
         /**
-         * BaseOsTag.
+         * The image tag of the base operating system. The tag is used only by the management node.
          */
         public Builder baseOsTag(String baseOsTag) {
             this.putQueryParameter("BaseOsTag", baseOsTag);
@@ -105,7 +105,10 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster where the application resides. If the cluster supports multiple operating systems, all the images in the region where the cluster resides are queried.
+         * <p>
+         * 
+         * By default, if you do not specify the cluster ID, the images that are supported by all the clusters is queried.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -114,7 +117,11 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * ImageOwnerAlias.
+         * The source of the image. Valid values:
+         * <p>
+         * 
+         * *   self: custom image
+         * *   others: shared image
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -123,7 +130,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * Specify the type of the instance. By default, if you do not specify the type of the instance, the list of images that are supported by all the instance types are queried.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

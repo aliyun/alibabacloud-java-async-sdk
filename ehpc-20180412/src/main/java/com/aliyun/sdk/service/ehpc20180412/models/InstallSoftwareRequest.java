@@ -70,7 +70,10 @@ public class InstallSoftwareRequest extends Request {
         } 
 
         /**
-         * Application.
+         * The name of the software that you want to install.
+         * <p>
+         * 
+         * You can call the [ListSoftwares](~~87216~~) operation to query the software that can be installed.
          */
         public Builder application(String application) {
             this.putQueryParameter("Application", application);
@@ -79,7 +82,10 @@ public class InstallSoftwareRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

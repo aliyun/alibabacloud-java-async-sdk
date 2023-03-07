@@ -50,7 +50,7 @@ public class AddLocalNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceIds.
+         * The local nodes in the cluster.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -58,7 +58,7 @@ public class AddLocalNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

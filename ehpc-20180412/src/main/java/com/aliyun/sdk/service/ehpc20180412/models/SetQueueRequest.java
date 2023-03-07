@@ -85,7 +85,10 @@ public class SetQueueRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -103,7 +106,10 @@ public class SetQueueRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the destination queue.
+         * <p>
+         * 
+         * You can call the [ListQueues](~~92176~~) operation to query the queue name.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -145,7 +151,10 @@ public class SetQueueRequest extends Request {
             private String name; 
 
             /**
-             * Name.
+             * The name of the compute node that you want to move. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * You can call the [ListNodes](~~87161~~) operation to query the names of the compute nodes.
              */
             public Builder name(String name) {
                 this.name = name;

@@ -98,7 +98,7 @@ public class ListCloudMetricProfilingsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +107,12 @@ public class ListCloudMetricProfilingsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +121,10 @@ public class ListCloudMetricProfilingsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 50
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +133,7 @@ public class ListCloudMetricProfilingsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

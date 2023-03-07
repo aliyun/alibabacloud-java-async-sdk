@@ -251,7 +251,7 @@ public class ListJobsWithFiltersRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to enable asynchronous query.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -260,7 +260,10 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -269,7 +272,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * CreateTimeEnd.
+         * The latest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -278,7 +281,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * The earliest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -287,7 +290,11 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * ExecuteOrder.
+         * The order in which jobs are sorted based on the execution time. Valid values:
+         * <p>
+         * 
+         * *   asc: ascending order
+         * *   desc: descending order
          */
         public Builder executeOrder(String executeOrder) {
             this.putQueryParameter("ExecuteOrder", executeOrder);
@@ -296,7 +303,7 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * JobName.
+         * The name of the job. Fuzzy match is supported.
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -305,7 +312,14 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * JobStatus.
+         * The status of the job. Valid values:
+         * <p>
+         * 
+         * *   all
+         * *   finished
+         * *   notfinish
+         * 
+         * Default value: all
          */
         public Builder jobStatus(String jobStatus) {
             this.putQueryParameter("JobStatus", jobStatus);
@@ -323,7 +337,12 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -332,7 +351,10 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 50.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -341,7 +363,11 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * PendOrder.
+         * The order in which jobs are sorted based on the time when they queue. Valid values:
+         * <p>
+         * 
+         * *   asc: ascending order
+         * *   desc: descending order
          */
         public Builder pendOrder(String pendOrder) {
             this.putQueryParameter("PendOrder", pendOrder);
@@ -359,7 +385,10 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -368,7 +397,11 @@ public class ListJobsWithFiltersRequest extends Request {
         }
 
         /**
-         * SubmitOrder.
+         * The order in which jobs are sorted based on the time when they are submitted. Valid values:
+         * <p>
+         * 
+         * *   asc: ascending order
+         * *   desc: descending order
          */
         public Builder submitOrder(String submitOrder) {
             this.putQueryParameter("SubmitOrder", submitOrder);

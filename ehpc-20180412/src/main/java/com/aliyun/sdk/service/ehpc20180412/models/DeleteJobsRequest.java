@@ -84,7 +84,10 @@ public class DeleteJobsRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to use an asynchronous link to delete the jobs.
+         * <p>
+         * 
+         * Default value: false
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -93,7 +96,10 @@ public class DeleteJobsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +108,12 @@ public class DeleteJobsRequest extends Request {
         }
 
         /**
-         * Jobs.
+         * The list of jobs that you want to delete. Maximum number of jobs: 100. Minimum number of jobs: 1.
+         * <p>
+         * 
+         * Format: `[{"Id": "0.sched****"},{"Id": "1.sched****"}]`. Separate multiple jobs with commas (,).
+         * 
+         * You can call the [ListJobs](~~87251~~) operation to query the job ID.
          */
         public Builder jobs(String jobs) {
             this.putQueryParameter("Jobs", jobs);

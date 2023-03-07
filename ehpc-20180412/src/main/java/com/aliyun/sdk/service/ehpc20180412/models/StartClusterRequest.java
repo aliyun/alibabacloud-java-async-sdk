@@ -55,7 +55,7 @@ public class StartClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to start.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

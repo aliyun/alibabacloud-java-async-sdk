@@ -69,7 +69,7 @@ public class ListQueuesRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to enable asynchronous query.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -78,7 +78,7 @@ public class ListQueuesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

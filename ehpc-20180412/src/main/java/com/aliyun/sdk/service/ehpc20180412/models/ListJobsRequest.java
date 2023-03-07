@@ -126,7 +126,10 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -135,7 +138,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The name of the user that runs the job.
+         * <p>
+         * 
+         * You can call the [ListUsers](~~188572~~) operation to query the users in the cluster.
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -144,7 +150,12 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,7 +164,10 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 50.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -162,7 +176,13 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * Rerunable.
+         * Specifies whether the job can be rerun. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false
          */
         public Builder rerunable(String rerunable) {
             this.putQueryParameter("Rerunable", rerunable);
@@ -171,7 +191,12 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * State.
+         * The status of the job. Valid values:
+         * <p>
+         * 
+         * *   all
+         * *   finished
+         * *   notfinish
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

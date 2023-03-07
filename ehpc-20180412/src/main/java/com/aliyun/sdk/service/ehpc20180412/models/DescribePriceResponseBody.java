@@ -62,7 +62,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private Float totalTradePrice; 
 
         /**
-         * Prices.
+         * The array of cluster prices. If you query the prices of multiple nodes in the cluster, the sequence of the prices in the returned value of PriceInfo is the same as that of the nodes in the request parameters. For example, the first price in the value of PriceInfo is the price of the first node specified in the request parameters.
          */
         public Builder prices(Prices prices) {
             this.prices = prices;
@@ -70,7 +70,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalTradePrice.
+         * The total price.
+         * <p>
+         * 
+         * Unit: USD
          */
         public Builder totalTradePrice(Float totalTradePrice) {
             this.totalTradePrice = totalTradePrice;
@@ -154,7 +157,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * Currency.
+             * The currency that is used to measure the price. Valid values:
+             * <p>
+             * 
+             * USD
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -162,7 +168,12 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   Manager: management node
+             * *   Login: logon node
+             * *   Compute: compute node
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -170,7 +181,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price of the image.
+             * <p>
+             * 
+             * Unit: USD
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -178,7 +192,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The final price.
+             * <p>
+             * 
+             * Unit: USD
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;

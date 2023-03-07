@@ -69,7 +69,10 @@ public class ModifyContainerAppAttributesRequest extends Request {
         } 
 
         /**
-         * ContainerId.
+         * The ID of the container.
+         * <p>
+         * 
+         * You can call the [ListContainerApps](~~87333~~) operation to query the ID of the containerized application.
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -78,7 +81,7 @@ public class ModifyContainerAppAttributesRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the containerized application.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

@@ -98,7 +98,10 @@ public class ListContainerImagesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +110,7 @@ public class ListContainerImagesRequest extends Request {
         }
 
         /**
-         * ContainerType.
+         * The type of the container. Set the value to singularity.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -116,7 +119,12 @@ public class ListContainerImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +133,10 @@ public class ListContainerImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 50.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

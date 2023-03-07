@@ -70,7 +70,10 @@ public class AddQueueRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +82,7 @@ public class AddQueueRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the queue. The name must be 1 to 63 characters in length and start with a letter. It can contain letters, digits, and underscores (\_).
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);

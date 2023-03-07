@@ -50,7 +50,7 @@ public class DescribeImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageInfo.
+         * The information of the image.
          */
         public Builder imageInfo(ImageInfo imageInfo) {
             this.imageInfo = imageInfo;
@@ -58,7 +58,7 @@ public class DescribeImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeImageResponseBody extends TeaModel {
             private String updateDateTime; 
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -178,7 +178,7 @@ public class DescribeImageResponseBody extends TeaModel {
             }
 
             /**
-             * Repository.
+             * The name of the repository.
              */
             public Builder repository(String repository) {
                 this.repository = repository;
@@ -186,7 +186,7 @@ public class DescribeImageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -194,7 +194,7 @@ public class DescribeImageResponseBody extends TeaModel {
             }
 
             /**
-             * System.
+             * The container system.
              */
             public Builder system(String system) {
                 this.system = system;
@@ -202,7 +202,7 @@ public class DescribeImageResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag of the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -210,7 +210,11 @@ public class DescribeImageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * *   shifter
+             * *   docker
              */
             public Builder type(String type) {
                 this.type = type;
@@ -218,7 +222,7 @@ public class DescribeImageResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDateTime.
+             * The time when the image was last updated.
              */
             public Builder updateDateTime(String updateDateTime) {
                 this.updateDateTime = updateDateTime;

@@ -112,7 +112,7 @@ public class AddContainerAppRequest extends Request {
         } 
 
         /**
-         * ContainerType.
+         * The type of the container. Set the value to singularity.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -121,7 +121,7 @@ public class AddContainerAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the container.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -130,7 +130,12 @@ public class AddContainerAppRequest extends Request {
         }
 
         /**
-         * ImageTag.
+         * The tags of the image.
+         * <p>
+         * 
+         * The repository stores a type of images such as Ubuntu images. Tags are used to identify the images. Examples: 16.04, 17.04, and latest.
+         * 
+         * Default value: latest
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -139,7 +144,7 @@ public class AddContainerAppRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the container. The name must be 2 to 64 characters in length. It must start with a letter and can contain letters, digits, hyphens (-), and underscores (\_).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +153,10 @@ public class AddContainerAppRequest extends Request {
         }
 
         /**
-         * Repository.
+         * The name of the repository. The image that has the same name as the repository is pulled.
+         * <p>
+         * 
+         * For information about image names, visit [Docker Hub official website](https://hub.docker.com/search?q=\&type=image).
          */
         public Builder repository(String repository) {
             this.putQueryParameter("Repository", repository);

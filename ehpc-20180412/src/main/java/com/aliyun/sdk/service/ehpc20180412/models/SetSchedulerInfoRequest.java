@@ -113,7 +113,10 @@ public class SetSchedulerInfoRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -131,7 +134,10 @@ public class SetSchedulerInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by Elastic High Performance Computing (E-HPC).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +209,10 @@ public class SetSchedulerInfoRequest extends Request {
             private String queue; 
 
             /**
-             * AclUsers.
+             * The user that can use the queue. Separate multiple users with commas (`,`).
+             * <p>
+             * 
+             * If you specify users, you must specify the PbsInfo.N.AclLimit.N.Queue parameter.
              */
             public Builder aclUsers(String aclUsers) {
                 this.aclUsers = aclUsers;
@@ -211,7 +220,10 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * Queue.
+             * AclLimit specifies the queue that has limits when it is used. Valid values of N: 0 to 100.
+             * <p>
+             * 
+             * If you set `PbsInfo.N.AclLimit.N.Queue` to `workq` and `PbsInfo.N.AclLimit.N.AclUsers` to `user1,user2`, workq can be used only by user1 and user2.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -312,7 +324,7 @@ public class SetSchedulerInfoRequest extends Request {
             private String user; 
 
             /**
-             * Cpus.
+             * The maximum number of vCPUs that can be used for nodes in a queue.
              */
             public Builder cpus(Integer cpus) {
                 this.cpus = cpus;
@@ -320,7 +332,7 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * MaxJobs.
+             * The maximum number of jobs that can be submitted to the cluster. If the total number of running jobs and queuing jobs exceeds the value, no more jobs can be submitted.
              */
             public Builder maxJobs(Integer maxJobs) {
                 this.maxJobs = maxJobs;
@@ -328,7 +340,12 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * Mem.
+             * The maximum memory resources that can be used in a queue. Units:
+             * <p>
+             * 
+             * *   gb
+             * *   mb
+             * *   kb
              */
             public Builder mem(String mem) {
                 this.mem = mem;
@@ -336,7 +353,7 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * Nodes.
+             * The maximum number of nodes that can be used in a queue.
              */
             public Builder nodes(Integer nodes) {
                 this.nodes = nodes;
@@ -344,7 +361,14 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * Queue.
+             * PbsInfo specifies the number of PBS schedulers that can be configured in the cluster. Valid values of N: 0 to 100.
+             * <p>
+             * 
+             * ResourceLimit specifies the maximum number of queue resources that can be used. Valid values of N: 0 to 100.
+             * 
+             * Queue specifies the name of the queue that is used to run jobs.
+             * 
+             * If one of the User, Cpus, Nodes, and Mem parameters is set in ResourceLimit, you must specify the Queue parameter.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -352,7 +376,7 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * User.
+             * The name of the user that runs jobs.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -461,7 +485,12 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * JobHistoryDuration.
+             * The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.
+             * <p>
+             * 
+             * Valid values: 1 to 30
+             * 
+             * Default value: 14
              */
             public Builder jobHistoryDuration(Integer jobHistoryDuration) {
                 this.jobHistoryDuration = jobHistoryDuration;
@@ -477,7 +506,14 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * SchedInterval.
+             * PbsInfo specifies the number of PBS schedulers that can be configured in the cluster. Valid values of N: 0 to 100.
+             * <p>
+             * 
+             * SchedInterval specifies the scheduling period. Unit: seconds.
+             * 
+             * A scheduling period is the interval between two consecutive running jobs. If you set SchedInterval to 60, another job can be run 60 seconds after a job starts running.
+             * 
+             * Default value: 60
              */
             public Builder schedInterval(Integer schedInterval) {
                 this.schedInterval = schedInterval;
@@ -485,7 +521,7 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * SchedMaxJobs.
+             * The maximum number of jobs that can be scheduled in the cluster. If the total number of running jobs and queuing jobs exceeds the value, no more jobs can be submitted. Default value: 20000.
              */
             public Builder schedMaxJobs(Integer schedMaxJobs) {
                 this.schedMaxJobs = schedMaxJobs;
@@ -493,7 +529,7 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * SchedMaxQueuedJobs.
+             * The maximum number of queuing jobs that can be scheduled in the cluster. If the number of queuing jobs exceeds the value, no more jobs can be submitted. Default value: 10000.
              */
             public Builder schedMaxQueuedJobs(Integer schedMaxQueuedJobs) {
                 this.schedMaxQueuedJobs = schedMaxQueuedJobs;
@@ -535,7 +571,16 @@ public class SetSchedulerInfoRequest extends Request {
             private String schedName; 
 
             /**
-             * SchedName.
+             * The name of the scheduler. Valid values:
+             * <p>
+             * 
+             * *   pbs
+             * *   pbs19
+             * *   slurm
+             * *   slurm19
+             * *   slurm20
+             * 
+             * >  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.
              */
             public Builder schedName(String schedName) {
                 this.schedName = schedName;
@@ -588,7 +633,10 @@ public class SetSchedulerInfoRequest extends Request {
             private Integer schedInterval; 
 
             /**
-             * BackfillInterval.
+             * The backfill scheduling period. Unit: seconds.
+             * <p>
+             * 
+             * Default value: 60
              */
             public Builder backfillInterval(Integer backfillInterval) {
                 this.backfillInterval = backfillInterval;
@@ -596,7 +644,12 @@ public class SetSchedulerInfoRequest extends Request {
             }
 
             /**
-             * SchedInterval.
+             * SlurmInfo specifies the number of Slurm schedulers that can be configured in the cluster. Valid values of N: 0 to 100.
+             * <p>
+             * 
+             * SchedInterval specifies the scheduling period. Unit: seconds.
+             * 
+             * Default value: 60
              */
             public Builder schedInterval(Integer schedInterval) {
                 this.schedInterval = schedInterval;

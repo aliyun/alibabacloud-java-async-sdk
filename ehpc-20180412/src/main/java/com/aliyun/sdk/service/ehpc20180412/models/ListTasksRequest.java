@@ -113,7 +113,15 @@ public class ListTasksRequest extends Request {
         } 
 
         /**
-         * Archived.
+         * Specifies whether to display the response history of the asynchronous API operation. Valid values:
+         * <p>
+         * 
+         * *   true: displays the current response and response history of the asynchronous API operation.
+         * *   false: displays only the current response of the asynchronous API operation. If no tasks are running, `[]` is returned.
+         * 
+         * Default value: false
+         * 
+         * >  If you specify the TaskId parameter, the Archived parameter is invalid.
          */
         public Builder archived(Boolean archived) {
             this.putQueryParameter("Archived", archived);
@@ -122,7 +130,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -131,7 +142,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Valid values: 1 to 999.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -140,7 +151,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 50.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +163,18 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task. You can call the following asynchronous API operations to obtain the task ID.
+         * <p>
+         * 
+         * *   [CreateCluster](~~87100~~)
+         * *   [StartCluster](~~200345~~)
+         * *   [StopCluster](~~200346~~)
+         * *   [DeleteCluster](~~87110~~)
+         * *   [AddNodes](~~87147~~)
+         * *   [StartNodes](~~87159~~)
+         * *   [ResetNodes](~~87158~~)
+         * *   [StopNodes](~~87160~~)
+         * *   [DeleteNodes](~~87155~~)
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

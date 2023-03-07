@@ -99,7 +99,10 @@ public class UpdateQueueConfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +111,10 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * ComputeInstanceType.
+         * The instance type of the node.
+         * <p>
+         * 
+         * You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.
          */
         public Builder computeInstanceType(String computeInstanceType) {
             this.putQueryParameter("ComputeInstanceType", computeInstanceType);
@@ -117,7 +123,7 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the queue.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -126,7 +132,10 @@ public class UpdateQueueConfigRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

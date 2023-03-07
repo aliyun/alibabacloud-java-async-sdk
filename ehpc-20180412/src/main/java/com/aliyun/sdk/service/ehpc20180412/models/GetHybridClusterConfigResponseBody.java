@@ -50,7 +50,13 @@ public class GetHybridClusterConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterConfig.
+         * The configurations returned.
+         * <p>
+         * 
+         * *   If the parameter Node is null, you can obtain the configurations of the hybrid cloud cluster.
+         * *   If the parameter Node is a specified on-premises compute node, you can obtain the configurations of the on-premises compute node.
+         * 
+         * This parameter is returned in the ini format. You can use this parameter to configure on-premises cluster nodes.
          */
         public Builder clusterConfig(String clusterConfig) {
             this.clusterConfig = clusterConfig;
@@ -58,7 +64,7 @@ public class GetHybridClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

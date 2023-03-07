@@ -50,7 +50,7 @@ public class SubmitJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The ID of the job.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +58,7 @@ public class SubmitJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

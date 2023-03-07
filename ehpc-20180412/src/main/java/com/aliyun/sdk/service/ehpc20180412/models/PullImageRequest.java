@@ -98,7 +98,7 @@ public class PullImageRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class PullImageRequest extends Request {
         }
 
         /**
-         * ContainerType.
+         * The type of the image. Default value: shifter.
          */
         public Builder containerType(String containerType) {
             this.putQueryParameter("ContainerType", containerType);
@@ -116,7 +116,7 @@ public class PullImageRequest extends Request {
         }
 
         /**
-         * ImageTag.
+         * The tag of the image. Default value: latest.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -125,7 +125,7 @@ public class PullImageRequest extends Request {
         }
 
         /**
-         * Repository.
+         * The name of the repository.
          */
         public Builder repository(String repository) {
             this.putQueryParameter("Repository", repository);

@@ -125,7 +125,7 @@ public class CreateGWSClusterRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * VPC ID。
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

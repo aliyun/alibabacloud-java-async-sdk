@@ -50,7 +50,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Images.
+         * The list of community images, including custom images and shared images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -58,7 +58,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Architecture.
+             * The architecture of the operating system. Valid values:
+             * <p>
+             * 
+             * *   i386
+             * *   x86\_64
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -142,7 +146,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * The tag of the OS image.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -150,7 +154,21 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The distribution of the operating system. Valid values:
+             * <p>
+             * 
+             * *   CentOS
+             * *   Ubuntu
+             * *   SUSE
+             * *   OpenSUSE
+             * *   Debian
+             * *   CoreOS
+             * *   Aliyun
+             * *   Windows Server 2003
+             * *   Windows Server 2008
+             * *   Windows Server 2012
+             * *   Others Linux
+             * *   Customized Linux
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -158,7 +176,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the operating system.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -247,7 +265,11 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Architecture.
+             * The architecture of the operating system. Valid values:
+             * <p>
+             * 
+             * *   i386
+             * *   x86\_64
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -255,7 +277,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * BaseOsTag.
+             * The tag of the BOS image.
              */
             public Builder baseOsTag(String baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -263,7 +285,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * The tag of the OS image.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -271,7 +293,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The operating system.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -279,7 +301,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the operating system.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -464,7 +486,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * BaseOsTag.
+             * The tag of the BOS image.
              */
             public Builder baseOsTag(BaseOsTag baseOsTag) {
                 this.baseOsTag = baseOsTag;
@@ -472,7 +494,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the image.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -480,7 +502,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -488,7 +510,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -496,7 +518,11 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * The type of the image. Valid values:
+             * <p>
+             * 
+             * *   self: custom image
+             * *   others: shared image
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -504,7 +530,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OsTag.
+             * An array of OS images that are supported by E-HPC.
              */
             public Builder osTag(OsTag osTag) {
                 this.osTag = osTag;
@@ -512,7 +538,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * PostInstallScript.
+             * The script that is run after the image is installed.
              */
             public Builder postInstallScript(String postInstallScript) {
                 this.postInstallScript = postInstallScript;
@@ -520,7 +546,12 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * PricingCycle.
+             * The billing unit of the image. Valid values:
+             * <p>
+             * 
+             * *   Hour
+             * *   Month
+             * *   Year
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;
@@ -528,7 +559,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The Alibaba Cloud Marketplace product code of the image.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -536,7 +567,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the image. Unit: GiB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -544,7 +575,11 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SkuCode.
+             * The stock keeping unit (SKU) of the image. Valid values:
+             * <p>
+             * 
+             * *   ECS: pay-as-you-go
+             * *   package: subscription
              */
             public Builder skuCode(String skuCode) {
                 this.skuCode = skuCode;
@@ -552,7 +587,13 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image. Valid values:
+             * <p>
+             * 
+             * *   UnAvailable: The image is unavailable.
+             * *   Available: The image is available.
+             * *   Creating: The image is being created.
+             * *   CreateFailed: The image failed to be created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -560,7 +601,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The owner of the image.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
