@@ -17,6 +17,14 @@ public class ImportServicesRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("FcServiceName")
+    private String fcServiceName;
+
+    @Query
+    @NameInMap("FcVersion")
+    private String fcVersion;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -35,6 +43,8 @@ public class ImportServicesRequest extends Request {
     private ImportServicesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.fcServiceName = builder.fcServiceName;
+        this.fcVersion = builder.fcVersion;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.serviceList = builder.serviceList;
         this.sourceType = builder.sourceType;
@@ -59,6 +69,20 @@ public class ImportServicesRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return fcServiceName
+     */
+    public String getFcServiceName() {
+        return this.fcServiceName;
+    }
+
+    /**
+     * @return fcVersion
+     */
+    public String getFcVersion() {
+        return this.fcVersion;
     }
 
     /**
@@ -91,6 +115,8 @@ public class ImportServicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ImportServicesRequest, Builder> {
         private String acceptLanguage; 
+        private String fcServiceName; 
+        private String fcVersion; 
         private String gatewayUniqueId; 
         private java.util.List < ServiceList> serviceList; 
         private String sourceType; 
@@ -103,6 +129,8 @@ public class ImportServicesRequest extends Request {
         private Builder(ImportServicesRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.fcServiceName = request.fcServiceName;
+            this.fcVersion = request.fcVersion;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.serviceList = request.serviceList;
             this.sourceType = request.sourceType;
@@ -119,6 +147,24 @@ public class ImportServicesRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * FcServiceName.
+         */
+        public Builder fcServiceName(String fcServiceName) {
+            this.putQueryParameter("FcServiceName", fcServiceName);
+            this.fcServiceName = fcServiceName;
+            return this;
+        }
+
+        /**
+         * FcVersion.
+         */
+        public Builder fcVersion(String fcVersion) {
+            this.putQueryParameter("FcVersion", fcVersion);
+            this.fcVersion = fcVersion;
             return this;
         }
 
