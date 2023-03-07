@@ -7,19 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteRemindResponseBody} extends {@link TeaModel}
+ * {@link SubmitDataServiceApiResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteRemindResponseBody</p>
+ * <p>SubmitDataServiceApiResponseBody</p>
  */
-public class DeleteRemindResponseBody extends TeaModel {
+public class SubmitDataServiceApiResponseBody extends TeaModel {
     @NameInMap("Data")
     private Boolean data;
 
     @NameInMap("ErrorCode")
     private String errorCode;
-
-    @NameInMap("ErrorMessage")
-    private String errorMessage;
 
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -30,10 +27,9 @@ public class DeleteRemindResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private DeleteRemindResponseBody(Builder builder) {
+    private SubmitDataServiceApiResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
-        this.errorMessage = builder.errorMessage;
         this.httpStatusCode = builder.httpStatusCode;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -43,7 +39,7 @@ public class DeleteRemindResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteRemindResponseBody create() {
+    public static SubmitDataServiceApiResponseBody create() {
         return builder().build();
     }
 
@@ -59,13 +55,6 @@ public class DeleteRemindResponseBody extends TeaModel {
      */
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    /**
-     * @return errorMessage
-     */
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     /**
@@ -92,13 +81,12 @@ public class DeleteRemindResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean data; 
         private String errorCode; 
-        private String errorMessage; 
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Indicates whether the custom alert rule is deleted. Valid values: true and false. The value true indicates that the custom alert rule is deleted. The value false indicates that the custom alert rule fails to be deleted.
+         * Data.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -106,7 +94,7 @@ public class DeleteRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,15 +102,7 @@ public class DeleteRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
-         */
-        public Builder errorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +110,7 @@ public class DeleteRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,15 +118,15 @@ public class DeleteRemindResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public DeleteRemindResponseBody build() {
-            return new DeleteRemindResponseBody(this);
+        public SubmitDataServiceApiResponseBody build() {
+            return new SubmitDataServiceApiResponseBody(this);
         } 
 
     } 

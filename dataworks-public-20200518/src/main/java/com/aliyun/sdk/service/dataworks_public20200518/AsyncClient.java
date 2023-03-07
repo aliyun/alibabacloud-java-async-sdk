@@ -639,6 +639,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
+    CompletableFuture<SubmitDataServiceApiResponse> submitDataServiceApi(SubmitDataServiceApiRequest request);
+
     CompletableFuture<SubmitFileResponse> submitFile(SubmitFileRequest request);
 
     CompletableFuture<SuspendInstanceResponse> suspendInstance(SuspendInstanceRequest request);
