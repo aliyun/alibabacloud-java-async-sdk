@@ -23,6 +23,10 @@ public class DeleteQualityFollowerRequest extends Request {
     private Long followerId;
 
     @Body
+    @NameInMap("ProjectId")
+    private Long projectId;
+
+    @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
@@ -31,6 +35,7 @@ public class DeleteQualityFollowerRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.followerId = builder.followerId;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
     }
 
@@ -62,6 +67,13 @@ public class DeleteQualityFollowerRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -71,6 +83,7 @@ public class DeleteQualityFollowerRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteQualityFollowerRequest, Builder> {
         private String regionId; 
         private Long followerId; 
+        private Long projectId; 
         private String projectName; 
 
         private Builder() {
@@ -81,6 +94,7 @@ public class DeleteQualityFollowerRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.followerId = request.followerId;
+            this.projectId = request.projectId;
             this.projectName = request.projectName;
         } 
 
@@ -99,6 +113,15 @@ public class DeleteQualityFollowerRequest extends Request {
         public Builder followerId(Long followerId) {
             this.putBodyParameter("FollowerId", followerId);
             this.followerId = followerId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

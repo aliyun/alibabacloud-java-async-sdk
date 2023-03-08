@@ -18,6 +18,10 @@ public class GetQualityRuleRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("ProjectId")
+    private Long projectId;
+
+    @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
@@ -30,6 +34,7 @@ public class GetQualityRuleRequest extends Request {
     private GetQualityRuleRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.ruleId = builder.ruleId;
     }
@@ -55,6 +60,13 @@ public class GetQualityRuleRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -70,6 +82,7 @@ public class GetQualityRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetQualityRuleRequest, Builder> {
         private String regionId; 
+        private Long projectId; 
         private String projectName; 
         private Long ruleId; 
 
@@ -80,6 +93,7 @@ public class GetQualityRuleRequest extends Request {
         private Builder(GetQualityRuleRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.projectId = request.projectId;
             this.projectName = request.projectName;
             this.ruleId = request.ruleId;
         } 
@@ -90,6 +104,15 @@ public class GetQualityRuleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

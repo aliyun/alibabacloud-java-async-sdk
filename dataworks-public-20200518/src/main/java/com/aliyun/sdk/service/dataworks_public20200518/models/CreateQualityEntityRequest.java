@@ -32,6 +32,10 @@ public class CreateQualityEntityRequest extends Request {
     private String matchExpression;
 
     @Body
+    @NameInMap("ProjectId")
+    private Long projectId;
+
+    @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
@@ -47,6 +51,7 @@ public class CreateQualityEntityRequest extends Request {
         this.entityLevel = builder.entityLevel;
         this.envType = builder.envType;
         this.matchExpression = builder.matchExpression;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.tableName = builder.tableName;
     }
@@ -93,6 +98,13 @@ public class CreateQualityEntityRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -111,6 +123,7 @@ public class CreateQualityEntityRequest extends Request {
         private Integer entityLevel; 
         private String envType; 
         private String matchExpression; 
+        private Long projectId; 
         private String projectName; 
         private String tableName; 
 
@@ -124,6 +137,7 @@ public class CreateQualityEntityRequest extends Request {
             this.entityLevel = request.entityLevel;
             this.envType = request.envType;
             this.matchExpression = request.matchExpression;
+            this.projectId = request.projectId;
             this.projectName = request.projectName;
             this.tableName = request.tableName;
         } 
@@ -161,6 +175,15 @@ public class CreateQualityEntityRequest extends Request {
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
             this.matchExpression = matchExpression;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

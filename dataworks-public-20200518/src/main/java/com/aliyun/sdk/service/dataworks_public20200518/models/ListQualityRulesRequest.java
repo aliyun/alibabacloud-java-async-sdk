@@ -32,6 +32,10 @@ public class ListQualityRulesRequest extends Request {
     private Integer pageSize;
 
     @Body
+    @NameInMap("ProjectId")
+    private Long projectId;
+
+    @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
@@ -42,6 +46,7 @@ public class ListQualityRulesRequest extends Request {
         this.entityId = builder.entityId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
     }
 
@@ -87,6 +92,13 @@ public class ListQualityRulesRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -98,6 +110,7 @@ public class ListQualityRulesRequest extends Request {
         private Long entityId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Long projectId; 
         private String projectName; 
 
         private Builder() {
@@ -110,6 +123,7 @@ public class ListQualityRulesRequest extends Request {
             this.entityId = request.entityId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
             this.projectName = request.projectName;
         } 
 
@@ -146,6 +160,15 @@ public class ListQualityRulesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

@@ -28,6 +28,10 @@ public class DeleteQualityEntityRequest extends Request {
     private String envType;
 
     @Body
+    @NameInMap("ProjectId")
+    private Long projectId;
+
+    @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
@@ -37,6 +41,7 @@ public class DeleteQualityEntityRequest extends Request {
         this.regionId = builder.regionId;
         this.entityId = builder.entityId;
         this.envType = builder.envType;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
     }
 
@@ -75,6 +80,13 @@ public class DeleteQualityEntityRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -85,6 +97,7 @@ public class DeleteQualityEntityRequest extends Request {
         private String regionId; 
         private Long entityId; 
         private String envType; 
+        private Long projectId; 
         private String projectName; 
 
         private Builder() {
@@ -96,6 +109,7 @@ public class DeleteQualityEntityRequest extends Request {
             this.regionId = request.regionId;
             this.entityId = request.entityId;
             this.envType = request.envType;
+            this.projectId = request.projectId;
             this.projectName = request.projectName;
         } 
 
@@ -123,6 +137,15 @@ public class DeleteQualityEntityRequest extends Request {
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
             this.envType = envType;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

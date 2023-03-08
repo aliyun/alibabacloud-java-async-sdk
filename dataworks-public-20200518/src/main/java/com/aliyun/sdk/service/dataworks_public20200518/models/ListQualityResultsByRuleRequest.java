@@ -32,6 +32,10 @@ public class ListQualityResultsByRuleRequest extends Request {
     private Integer pageSize;
 
     @Body
+    @NameInMap("ProjectId")
+    private Long projectId;
+
+    @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
@@ -52,6 +56,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         this.endDate = builder.endDate;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.ruleId = builder.ruleId;
         this.startDate = builder.startDate;
@@ -99,6 +104,13 @@ public class ListQualityResultsByRuleRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -124,6 +136,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         private String endDate; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Long projectId; 
         private String projectName; 
         private Long ruleId; 
         private String startDate; 
@@ -138,6 +151,7 @@ public class ListQualityResultsByRuleRequest extends Request {
             this.endDate = request.endDate;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
             this.projectName = request.projectName;
             this.ruleId = request.ruleId;
             this.startDate = request.startDate;
@@ -179,6 +193,15 @@ public class ListQualityResultsByRuleRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

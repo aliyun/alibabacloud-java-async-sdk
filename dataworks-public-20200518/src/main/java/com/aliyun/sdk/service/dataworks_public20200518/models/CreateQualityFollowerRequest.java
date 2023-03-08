@@ -33,6 +33,10 @@ public class CreateQualityFollowerRequest extends Request {
     private String follower;
 
     @Body
+    @NameInMap("ProjectId")
+    private Long projectId;
+
+    @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
@@ -43,6 +47,7 @@ public class CreateQualityFollowerRequest extends Request {
         this.alarmMode = builder.alarmMode;
         this.entityId = builder.entityId;
         this.follower = builder.follower;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
     }
 
@@ -88,6 +93,13 @@ public class CreateQualityFollowerRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -99,6 +111,7 @@ public class CreateQualityFollowerRequest extends Request {
         private Integer alarmMode; 
         private Long entityId; 
         private String follower; 
+        private Long projectId; 
         private String projectName; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class CreateQualityFollowerRequest extends Request {
             this.alarmMode = request.alarmMode;
             this.entityId = request.entityId;
             this.follower = request.follower;
+            this.projectId = request.projectId;
             this.projectName = request.projectName;
         } 
 
@@ -147,6 +161,15 @@ public class CreateQualityFollowerRequest extends Request {
         public Builder follower(String follower) {
             this.putBodyParameter("Follower", follower);
             this.follower = follower;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

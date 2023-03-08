@@ -27,6 +27,10 @@ public class GetQualityEntityRequest extends Request {
     private String matchExpression;
 
     @Body
+    @NameInMap("ProjectId")
+    private Long projectId;
+
+    @Body
     @NameInMap("ProjectName")
     @Validation(required = true, maxLength = 1024, minLength = 1)
     private String projectName;
@@ -41,6 +45,7 @@ public class GetQualityEntityRequest extends Request {
         this.regionId = builder.regionId;
         this.envType = builder.envType;
         this.matchExpression = builder.matchExpression;
+        this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.tableName = builder.tableName;
     }
@@ -80,6 +85,13 @@ public class GetQualityEntityRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -97,6 +109,7 @@ public class GetQualityEntityRequest extends Request {
         private String regionId; 
         private String envType; 
         private String matchExpression; 
+        private Long projectId; 
         private String projectName; 
         private String tableName; 
 
@@ -109,6 +122,7 @@ public class GetQualityEntityRequest extends Request {
             this.regionId = request.regionId;
             this.envType = request.envType;
             this.matchExpression = request.matchExpression;
+            this.projectId = request.projectId;
             this.projectName = request.projectName;
             this.tableName = request.tableName;
         } 
@@ -137,6 +151,15 @@ public class GetQualityEntityRequest extends Request {
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
             this.matchExpression = matchExpression;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 
