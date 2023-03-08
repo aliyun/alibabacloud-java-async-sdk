@@ -71,71 +71,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     } 
 
-    public static class CodeMapping extends TeaModel {
-        @NameInMap("ResourceGroup")
-        private String resourceGroup;
-
-        @NameInMap("Tag")
-        private String tag;
-
-        private CodeMapping(Builder builder) {
-            this.resourceGroup = builder.resourceGroup;
-            this.tag = builder.tag;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CodeMapping create() {
-            return builder().build();
-        }
-
-        /**
-         * @return resourceGroup
-         */
-        public String getResourceGroup() {
-            return this.resourceGroup;
-        }
-
-        /**
-         * @return tag
-         */
-        public String getTag() {
-            return this.tag;
-        }
-
-        public static final class Builder {
-            private String resourceGroup; 
-            private String tag; 
-
-            /**
-             * ResourceGroup.
-             */
-            public Builder resourceGroup(String resourceGroup) {
-                this.resourceGroup = resourceGroup;
-                return this;
-            }
-
-            /**
-             * Tag.
-             */
-            public Builder tag(String tag) {
-                this.tag = tag;
-                return this;
-            }
-
-            public CodeMapping build() {
-                return new CodeMapping(this);
-            } 
-
-        } 
-
-    }
     public static class ResourceTypes extends TeaModel {
-        @NameInMap("CodeMapping")
-        private CodeMapping codeMapping;
-
         @NameInMap("FilterKeys")
         private java.util.List < String > filterKeys;
 
@@ -149,7 +85,6 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private String resourceTypeName;
 
         private ResourceTypes(Builder builder) {
-            this.codeMapping = builder.codeMapping;
             this.filterKeys = builder.filterKeys;
             this.productName = builder.productName;
             this.resourceType = builder.resourceType;
@@ -162,13 +97,6 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
         public static ResourceTypes create() {
             return builder().build();
-        }
-
-        /**
-         * @return codeMapping
-         */
-        public CodeMapping getCodeMapping() {
-            return this.codeMapping;
         }
 
         /**
@@ -200,19 +128,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private CodeMapping codeMapping; 
             private java.util.List < String > filterKeys; 
             private String productName; 
             private String resourceType; 
             private String resourceTypeName; 
-
-            /**
-             * CodeMapping.
-             */
-            public Builder codeMapping(CodeMapping codeMapping) {
-                this.codeMapping = codeMapping;
-                return this;
-            }
 
             /**
              * 支持的过滤条件
