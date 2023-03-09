@@ -25,13 +25,16 @@ public class ListAppInstanceGroupRequest extends Request {
     private String appInstanceGroupName;
 
     @Query
+    @NameInMap("NodeInstanceType")
+    private String nodeInstanceType;
+
+    @Query
     @NameInMap("PageNumber")
-    @Validation(required = true)
     private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     @Query
@@ -52,6 +55,7 @@ public class ListAppInstanceGroupRequest extends Request {
         this.appCenterImageId = builder.appCenterImageId;
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceGroupName = builder.appInstanceGroupName;
+        this.nodeInstanceType = builder.nodeInstanceType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.productType = builder.productType;
@@ -94,6 +98,13 @@ public class ListAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return nodeInstanceType
+     */
+    public String getNodeInstanceType() {
+        return this.nodeInstanceType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -132,6 +143,7 @@ public class ListAppInstanceGroupRequest extends Request {
         private String appCenterImageId; 
         private String appInstanceGroupId; 
         private String appInstanceGroupName; 
+        private String nodeInstanceType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String productType; 
@@ -147,6 +159,7 @@ public class ListAppInstanceGroupRequest extends Request {
             this.appCenterImageId = request.appCenterImageId;
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceGroupName = request.appInstanceGroupName;
+            this.nodeInstanceType = request.nodeInstanceType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.productType = request.productType;
@@ -178,6 +191,15 @@ public class ListAppInstanceGroupRequest extends Request {
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putQueryParameter("AppInstanceGroupName", appInstanceGroupName);
             this.appInstanceGroupName = appInstanceGroupName;
+            return this;
+        }
+
+        /**
+         * NodeInstanceType.
+         */
+        public Builder nodeInstanceType(String nodeInstanceType) {
+            this.putQueryParameter("NodeInstanceType", nodeInstanceType);
+            this.nodeInstanceType = nodeInstanceType;
             return this;
         }
 

@@ -7,36 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateAppInstanceGroupImageRequest} extends {@link RequestModel}
+ * {@link GetAppInstanceGroupRequest} extends {@link RequestModel}
  *
- * <p>UpdateAppInstanceGroupImageRequest</p>
+ * <p>GetAppInstanceGroupRequest</p>
  */
-public class UpdateAppInstanceGroupImageRequest extends Request {
-    @Query
-    @NameInMap("AppCenterImageId")
-    @Validation(required = true)
-    private String appCenterImageId;
-
+public class GetAppInstanceGroupRequest extends Request {
     @Query
     @NameInMap("AppInstanceGroupId")
     @Validation(required = true)
     private String appInstanceGroupId;
 
     @Query
-    @NameInMap("BizRegionId")
-    @Validation(required = true)
-    private String bizRegionId;
-
-    @Query
     @NameInMap("ProductType")
     @Validation(required = true)
     private String productType;
 
-    private UpdateAppInstanceGroupImageRequest(Builder builder) {
+    private GetAppInstanceGroupRequest(Builder builder) {
         super(builder);
-        this.appCenterImageId = builder.appCenterImageId;
         this.appInstanceGroupId = builder.appInstanceGroupId;
-        this.bizRegionId = builder.bizRegionId;
         this.productType = builder.productType;
     }
 
@@ -44,20 +32,13 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateAppInstanceGroupImageRequest create() {
+    public static GetAppInstanceGroupRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return appCenterImageId
-     */
-    public String getAppCenterImageId() {
-        return this.appCenterImageId;
     }
 
     /**
@@ -68,45 +49,25 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
     }
 
     /**
-     * @return bizRegionId
-     */
-    public String getBizRegionId() {
-        return this.bizRegionId;
-    }
-
-    /**
      * @return productType
      */
     public String getProductType() {
         return this.productType;
     }
 
-    public static final class Builder extends Request.Builder<UpdateAppInstanceGroupImageRequest, Builder> {
-        private String appCenterImageId; 
+    public static final class Builder extends Request.Builder<GetAppInstanceGroupRequest, Builder> {
         private String appInstanceGroupId; 
-        private String bizRegionId; 
         private String productType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateAppInstanceGroupImageRequest request) {
+        private Builder(GetAppInstanceGroupRequest request) {
             super(request);
-            this.appCenterImageId = request.appCenterImageId;
             this.appInstanceGroupId = request.appInstanceGroupId;
-            this.bizRegionId = request.bizRegionId;
             this.productType = request.productType;
         } 
-
-        /**
-         * AppCenterImageId.
-         */
-        public Builder appCenterImageId(String appCenterImageId) {
-            this.putQueryParameter("AppCenterImageId", appCenterImageId);
-            this.appCenterImageId = appCenterImageId;
-            return this;
-        }
 
         /**
          * AppInstanceGroupId.
@@ -114,15 +75,6 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putQueryParameter("AppInstanceGroupId", appInstanceGroupId);
             this.appInstanceGroupId = appInstanceGroupId;
-            return this;
-        }
-
-        /**
-         * BizRegionId.
-         */
-        public Builder bizRegionId(String bizRegionId) {
-            this.putQueryParameter("BizRegionId", bizRegionId);
-            this.bizRegionId = bizRegionId;
             return this;
         }
 
@@ -136,8 +88,8 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         }
 
         @Override
-        public UpdateAppInstanceGroupImageRequest build() {
-            return new UpdateAppInstanceGroupImageRequest(this);
+        public GetAppInstanceGroupRequest build() {
+            return new GetAppInstanceGroupRequest(this);
         } 
 
     } 

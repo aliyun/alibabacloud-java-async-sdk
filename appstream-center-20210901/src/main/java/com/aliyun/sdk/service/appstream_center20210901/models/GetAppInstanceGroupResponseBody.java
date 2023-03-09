@@ -7,61 +7,35 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListAppInstanceGroupResponseBody} extends {@link TeaModel}
+ * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
  *
- * <p>ListAppInstanceGroupResponseBody</p>
+ * <p>GetAppInstanceGroupResponseBody</p>
  */
-public class ListAppInstanceGroupResponseBody extends TeaModel {
+public class GetAppInstanceGroupResponseBody extends TeaModel {
     @NameInMap("AppInstanceGroupModels")
-    private java.util.List < AppInstanceGroupModels> appInstanceGroupModels;
-
-    @NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    @NameInMap("PageSize")
-    private Integer pageSize;
+    private AppInstanceGroupModels appInstanceGroupModels;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
-    private Integer totalCount;
-
-    private ListAppInstanceGroupResponseBody(Builder builder) {
+    private GetAppInstanceGroupResponseBody(Builder builder) {
         this.appInstanceGroupModels = builder.appInstanceGroupModels;
-        this.pageNumber = builder.pageNumber;
-        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListAppInstanceGroupResponseBody create() {
+    public static GetAppInstanceGroupResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return appInstanceGroupModels
      */
-    public java.util.List < AppInstanceGroupModels> getAppInstanceGroupModels() {
+    public AppInstanceGroupModels getAppInstanceGroupModels() {
         return this.appInstanceGroupModels;
-    }
-
-    /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     /**
@@ -71,41 +45,15 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
-        private java.util.List < AppInstanceGroupModels> appInstanceGroupModels; 
-        private Integer pageNumber; 
-        private Integer pageSize; 
+        private AppInstanceGroupModels appInstanceGroupModels; 
         private String requestId; 
-        private Integer totalCount; 
 
         /**
          * AppInstanceGroupModels
          */
-        public Builder appInstanceGroupModels(java.util.List < AppInstanceGroupModels> appInstanceGroupModels) {
+        public Builder appInstanceGroupModels(AppInstanceGroupModels appInstanceGroupModels) {
             this.appInstanceGroupModels = appInstanceGroupModels;
-            return this;
-        }
-
-        /**
-         * PageNumber.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
         }
 
@@ -117,42 +65,22 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * TotalCount.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        public ListAppInstanceGroupResponseBody build() {
-            return new ListAppInstanceGroupResponseBody(this);
+        public GetAppInstanceGroupResponseBody build() {
+            return new GetAppInstanceGroupResponseBody(this);
         } 
 
     } 
 
     public static class Apps extends TeaModel {
-        @NameInMap("AppIcon")
-        private String appIcon;
-
         @NameInMap("AppId")
         private String appId;
 
         @NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppVersion")
-        private String appVersion;
-
-        @NameInMap("AppVersionName")
-        private String appVersionName;
-
         private Apps(Builder builder) {
-            this.appIcon = builder.appIcon;
             this.appId = builder.appId;
             this.appName = builder.appName;
-            this.appVersion = builder.appVersion;
-            this.appVersionName = builder.appVersionName;
         }
 
         public static Builder builder() {
@@ -161,13 +89,6 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
         public static Apps create() {
             return builder().build();
-        }
-
-        /**
-         * @return appIcon
-         */
-        public String getAppIcon() {
-            return this.appIcon;
         }
 
         /**
@@ -184,34 +105,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             return this.appName;
         }
 
-        /**
-         * @return appVersion
-         */
-        public String getAppVersion() {
-            return this.appVersion;
-        }
-
-        /**
-         * @return appVersionName
-         */
-        public String getAppVersionName() {
-            return this.appVersionName;
-        }
-
         public static final class Builder {
-            private String appIcon; 
             private String appId; 
             private String appName; 
-            private String appVersion; 
-            private String appVersionName; 
-
-            /**
-             * AppIcon.
-             */
-            public Builder appIcon(String appIcon) {
-                this.appIcon = appIcon;
-                return this;
-            }
 
             /**
              * AppId.
@@ -226,22 +122,6 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
-                return this;
-            }
-
-            /**
-             * AppVersion.
-             */
-            public Builder appVersion(String appVersion) {
-                this.appVersion = appVersion;
-                return this;
-            }
-
-            /**
-             * AppVersionName.
-             */
-            public Builder appVersionName(String appVersionName) {
-                this.appVersionName = appVersionName;
                 return this;
             }
 
@@ -883,6 +763,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppCenterImageId")
         private String appCenterImageId;
 
+        @NameInMap("AppCenterImageName")
+        private String appCenterImageName;
+
         @NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
@@ -892,14 +775,8 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppInstanceType")
         private String appInstanceType;
 
-        @NameInMap("AppPolicyId")
-        private String appPolicyId;
-
         @NameInMap("Apps")
         private java.util.List < Apps> apps;
-
-        @NameInMap("ChargeResourceMode")
-        private String chargeResourceMode;
 
         @NameInMap("ChargeType")
         private String chargeType;
@@ -940,12 +817,11 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         private AppInstanceGroupModels(Builder builder) {
             this.amount = builder.amount;
             this.appCenterImageId = builder.appCenterImageId;
+            this.appCenterImageName = builder.appCenterImageName;
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.appInstanceGroupName = builder.appInstanceGroupName;
             this.appInstanceType = builder.appInstanceType;
-            this.appPolicyId = builder.appPolicyId;
             this.apps = builder.apps;
-            this.chargeResourceMode = builder.chargeResourceMode;
             this.chargeType = builder.chargeType;
             this.expiredTime = builder.expiredTime;
             this.gmtCreate = builder.gmtCreate;
@@ -983,6 +859,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return appCenterImageName
+         */
+        public String getAppCenterImageName() {
+            return this.appCenterImageName;
+        }
+
+        /**
          * @return appInstanceGroupId
          */
         public String getAppInstanceGroupId() {
@@ -1004,24 +887,10 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * @return appPolicyId
-         */
-        public String getAppPolicyId() {
-            return this.appPolicyId;
-        }
-
-        /**
          * @return apps
          */
         public java.util.List < Apps> getApps() {
             return this.apps;
-        }
-
-        /**
-         * @return chargeResourceMode
-         */
-        public String getChargeResourceMode() {
-            return this.chargeResourceMode;
         }
 
         /**
@@ -1111,12 +980,11 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public static final class Builder {
             private Integer amount; 
             private String appCenterImageId; 
+            private String appCenterImageName; 
             private String appInstanceGroupId; 
             private String appInstanceGroupName; 
             private String appInstanceType; 
-            private String appPolicyId; 
             private java.util.List < Apps> apps; 
-            private String chargeResourceMode; 
             private String chargeType; 
             private String expiredTime; 
             private String gmtCreate; 
@@ -1147,6 +1015,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * AppCenterImageName.
+             */
+            public Builder appCenterImageName(String appCenterImageName) {
+                this.appCenterImageName = appCenterImageName;
+                return this;
+            }
+
+            /**
              * AppInstanceGroupId.
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
@@ -1171,26 +1047,10 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AppPolicyId.
-             */
-            public Builder appPolicyId(String appPolicyId) {
-                this.appPolicyId = appPolicyId;
-                return this;
-            }
-
-            /**
              * Apps.
              */
             public Builder apps(java.util.List < Apps> apps) {
                 this.apps = apps;
-                return this;
-            }
-
-            /**
-             * ChargeResourceMode.
-             */
-            public Builder chargeResourceMode(String chargeResourceMode) {
-                this.chargeResourceMode = chargeResourceMode;
                 return this;
             }
 
