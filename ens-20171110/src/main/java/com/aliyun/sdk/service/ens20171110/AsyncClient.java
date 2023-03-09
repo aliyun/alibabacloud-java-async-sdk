@@ -98,6 +98,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDeviceInternetPortResponse> deleteDeviceInternetPort(DeleteDeviceInternetPortRequest request);
 
+    CompletableFuture<DeleteDiskResponse> deleteDisk(DeleteDiskRequest request);
+
     CompletableFuture<DeleteEnsRouteEntryResponse> deleteEnsRouteEntry(DeleteEnsRouteEntryRequest request);
 
     CompletableFuture<DeleteEpnInstanceResponse> deleteEpnInstance(DeleteEpnInstanceRequest request);
@@ -293,6 +295,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDeviceInternetPortResponse> getDeviceInternetPort(GetDeviceInternetPortRequest request);
 
     CompletableFuture<GetOssStorageAndAccByBucketsResponse> getOssStorageAndAccByBuckets(GetOssStorageAndAccByBucketsRequest request);
+
+    CompletableFuture<GetOssUsageDataResponse> getOssUsageData(GetOssUsageDataRequest request);
 
     CompletableFuture<ImportKeyPairResponse> importKeyPair(ImportKeyPairRequest request);
 

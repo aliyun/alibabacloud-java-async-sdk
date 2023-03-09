@@ -23,19 +23,18 @@ public class CreateImageRequest extends Request {
 
     @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     @Query
-    @NameInMap("product")
-    private String product;
+    @NameInMap("SnapshotId")
+    private String snapshotId;
 
     private CreateImageRequest(Builder builder) {
         super(builder);
         this.deleteAfterImageUpload = builder.deleteAfterImageUpload;
         this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
-        this.product = builder.product;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
@@ -73,17 +72,17 @@ public class CreateImageRequest extends Request {
     }
 
     /**
-     * @return product
+     * @return snapshotId
      */
-    public String getProduct() {
-        return this.product;
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
     public static final class Builder extends Request.Builder<CreateImageRequest, Builder> {
         private String deleteAfterImageUpload; 
         private String imageName; 
         private String instanceId; 
-        private String product; 
+        private String snapshotId; 
 
         private Builder() {
             super();
@@ -94,7 +93,7 @@ public class CreateImageRequest extends Request {
             this.deleteAfterImageUpload = request.deleteAfterImageUpload;
             this.imageName = request.imageName;
             this.instanceId = request.instanceId;
-            this.product = request.product;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
@@ -125,11 +124,11 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * product.
+         * SnapshotId.
          */
-        public Builder product(String product) {
-            this.putQueryParameter("product", product);
-            this.product = product;
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
             return this;
         }
 
