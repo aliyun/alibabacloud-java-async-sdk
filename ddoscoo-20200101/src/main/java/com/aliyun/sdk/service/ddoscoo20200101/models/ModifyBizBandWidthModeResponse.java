@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateWebRuleTfResponse} extends {@link TeaModel}
+ * {@link ModifyBizBandWidthModeResponse} extends {@link TeaModel}
  *
- * <p>CreateWebRuleTfResponse</p>
+ * <p>ModifyBizBandWidthModeResponse</p>
  */
-public class CreateWebRuleTfResponse extends Response {
+public class ModifyBizBandWidthModeResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateWebRuleTfResponseBody body;
+    private ModifyBizBandWidthModeResponseBody body;
 
-    private CreateWebRuleTfResponse(BuilderImpl builder) {
+    private ModifyBizBandWidthModeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreateWebRuleTfResponse create() {
+    public static ModifyBizBandWidthModeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreateWebRuleTfResponse extends Response {
     /**
      * @return body
      */
-    public CreateWebRuleTfResponseBody getBody() {
+    public ModifyBizBandWidthModeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateWebRuleTfResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyBizBandWidthModeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateWebRuleTfResponseBody body);
+        Builder body(ModifyBizBandWidthModeResponseBody body);
 
         @Override
-        CreateWebRuleTfResponse build();
+        ModifyBizBandWidthModeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateWebRuleTfResponse, Builder>
+            extends Response.BuilderImpl<ModifyBizBandWidthModeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateWebRuleTfResponseBody body; 
+        private ModifyBizBandWidthModeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateWebRuleTfResponse response) {
+        private BuilderImpl(ModifyBizBandWidthModeResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreateWebRuleTfResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateWebRuleTfResponseBody body) {
+        public Builder body(ModifyBizBandWidthModeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateWebRuleTfResponse build() {
-            return new CreateWebRuleTfResponse(this);
+        public ModifyBizBandWidthModeResponse build() {
+            return new ModifyBizBandWidthModeResponse(this);
         } 
 
     } 

@@ -12,13 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackSourceCidrRequest</p>
  */
 public class DescribeBackSourceCidrRequest extends Request {
-    @Query
-    @NameInMap("Line")
-    private String line;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("IpVersion")
+    private String ipVersion;
+
+    @Query
+    @NameInMap("Line")
+    private String line;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -26,8 +30,9 @@ public class DescribeBackSourceCidrRequest extends Request {
 
     private DescribeBackSourceCidrRequest(Builder builder) {
         super(builder);
-        this.line = builder.line;
         this.regionId = builder.regionId;
+        this.ipVersion = builder.ipVersion;
+        this.line = builder.line;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -45,17 +50,24 @@ public class DescribeBackSourceCidrRequest extends Request {
     }
 
     /**
-     * @return line
-     */
-    public String getLine() {
-        return this.line;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
+    }
+
+    /**
+     * @return line
+     */
+    public String getLine() {
+        return this.line;
     }
 
     /**
@@ -66,29 +78,22 @@ public class DescribeBackSourceCidrRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeBackSourceCidrRequest, Builder> {
-        private String line; 
         private String regionId; 
+        private String ipVersion; 
+        private String line; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeBackSourceCidrRequest response) {
-            super(response);
-            this.line = response.line;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeBackSourceCidrRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.ipVersion = request.ipVersion;
+            this.line = request.line;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * Line.
-         */
-        public Builder line(String line) {
-            this.putQueryParameter("Line", line);
-            this.line = line;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -100,7 +105,29 @@ public class DescribeBackSourceCidrRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The IP version of the back-to-origin CIDR block.
+         * <p>
+         * 
+         * *   **Ipv4**
+         * *   **Ipv6**
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
+            return this;
+        }
+
+        /**
+         * The Internet service provider (ISP) line that you want to query.
+         */
+        public Builder line(String line) {
+            this.putQueryParameter("Line", line);
+            this.line = line;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

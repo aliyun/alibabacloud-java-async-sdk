@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteWebRuleTfResponseBody} extends {@link TeaModel}
+ * {@link ModifyOcspStatusResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteWebRuleTfResponseBody</p>
+ * <p>ModifyOcspStatusResponseBody</p>
  */
-public class DeleteWebRuleTfResponseBody extends TeaModel {
+public class ModifyOcspStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteWebRuleTfResponseBody(Builder builder) {
+    private ModifyOcspStatusResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DeleteWebRuleTfResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteWebRuleTfResponseBody create() {
+    public static ModifyOcspStatusResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class DeleteWebRuleTfResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteWebRuleTfResponseBody build() {
-            return new DeleteWebRuleTfResponseBody(this);
+        public ModifyOcspStatusResponseBody build() {
+            return new ModifyOcspStatusResponseBody(this);
         } 
 
     } 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSchedulerRulesRequest</p>
  */
 public class DescribeSchedulerRulesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
@@ -20,10 +24,6 @@ public class DescribeSchedulerRulesRequest extends Request {
     @NameInMap("PageSize")
     @Validation(required = true)
     private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -35,9 +35,9 @@ public class DescribeSchedulerRulesRequest extends Request {
 
     private DescribeSchedulerRulesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.ruleName = builder.ruleName;
     }
@@ -56,6 +56,13 @@ public class DescribeSchedulerRulesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -67,13 +74,6 @@ public class DescribeSchedulerRulesRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -91,9 +91,9 @@ public class DescribeSchedulerRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSchedulerRulesRequest, Builder> {
+        private String regionId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String resourceGroupId; 
         private String ruleName; 
 
@@ -101,32 +101,14 @@ public class DescribeSchedulerRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSchedulerRulesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.ruleName = response.ruleName;
+        private Builder(DescribeSchedulerRulesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.ruleName = request.ruleName;
         } 
-
-        /**
-         * PageNumber.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -138,7 +120,25 @@ public class DescribeSchedulerRulesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -147,7 +147,7 @@ public class DescribeSchedulerRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

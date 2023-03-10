@@ -77,15 +77,19 @@ public class DescribeDDosEventAreaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDDosEventAreaRequest response) {
-            super(response);
-            this.eventType = response.eventType;
-            this.ip = response.ip;
-            this.startTime = response.startTime;
+        private Builder(DescribeDDosEventAreaRequest request) {
+            super(request);
+            this.eventType = request.eventType;
+            this.ip = request.ip;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EventType.
+         * The type of the attack event that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **defense**: attack events that trigger traffic scrubbing
+         * *   **blackhole**: attack events that trigger blackhole filtering
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -94,7 +98,7 @@ public class DescribeDDosEventAreaRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -103,7 +107,10 @@ public class DescribeDDosEventAreaRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The UNIX timestamp when the query starts. Unit: seconds.
+         * <p>
+         * 
+         * > You can call the [DescribeDDosAllEventList](~~188604~~) operation to query the beginning time of all attack events.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -62,7 +62,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         private java.util.List < WebRules> webRules; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of forwarding rules.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
 
         /**
-         * WebRules.
+         * An array that consists of the configurations of the forwarding rule.
          */
         public Builder webRules(java.util.List < WebRules> webRules) {
             this.webRules = webRules;
@@ -91,6 +91,95 @@ public class DescribeWebRulesResponseBody extends TeaModel {
 
     } 
 
+    public static class GmCert extends TeaModel {
+        @NameInMap("CertId")
+        private String certId;
+
+        @NameInMap("GmEnable")
+        private Long gmEnable;
+
+        @NameInMap("GmOnly")
+        private Long gmOnly;
+
+        private GmCert(Builder builder) {
+            this.certId = builder.certId;
+            this.gmEnable = builder.gmEnable;
+            this.gmOnly = builder.gmOnly;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GmCert create() {
+            return builder().build();
+        }
+
+        /**
+         * @return certId
+         */
+        public String getCertId() {
+            return this.certId;
+        }
+
+        /**
+         * @return gmEnable
+         */
+        public Long getGmEnable() {
+            return this.gmEnable;
+        }
+
+        /**
+         * @return gmOnly
+         */
+        public Long getGmOnly() {
+            return this.gmOnly;
+        }
+
+        public static final class Builder {
+            private String certId; 
+            private Long gmEnable; 
+            private Long gmOnly; 
+
+            /**
+             * The ID of the SM certificate.
+             */
+            public Builder certId(String certId) {
+                this.certId = certId;
+                return this;
+            }
+
+            /**
+             * Indicates whether Enable SM Certificate-based Verification is turned on.
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
+             */
+            public Builder gmEnable(Long gmEnable) {
+                this.gmEnable = gmEnable;
+                return this;
+            }
+
+            /**
+             * Indicates whether Allow Access Only from SM Certificates-based Clients is turned on.
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
+             */
+            public Builder gmOnly(Long gmOnly) {
+                this.gmOnly = gmOnly;
+                return this;
+            }
+
+            public GmCert build() {
+                return new GmCert(this);
+            } 
+
+        } 
+
+    }
     public static class ProxyTypes extends TeaModel {
         @NameInMap("ProxyPorts")
         private java.util.List < String > proxyPorts;
@@ -130,7 +219,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private String proxyType; 
 
             /**
-             * ProxyPorts.
+             * An array that consists of ports.
              */
             public Builder proxyPorts(java.util.List < String > proxyPorts) {
                 this.proxyPorts = proxyPorts;
@@ -138,7 +227,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyType.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **http**
+             * *   **https**
+             * *   **websocket**
+             * *   **websockets**
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;
@@ -191,7 +286,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private Integer rsType; 
 
             /**
-             * RealServer.
+             * The address of the origin server.
              */
             public Builder realServer(String realServer) {
                 this.realServer = realServer;
@@ -199,7 +294,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RsType.
+             * The type of the origin server address. Valid values:
+             * <p>
+             * 
+             * *   **0**: IP address
+             * *   **1**: domain name The domain name of the origin server is returned if you deploy proxies, such as Web Application Firewall (WAF), between the origin server and the instance. In this case, the address of the proxy, such as the CNAME provided by WAF, is returned.
              */
             public Builder rsType(Integer rsType) {
                 this.rsType = rsType;
@@ -237,6 +336,9 @@ public class DescribeWebRulesResponseBody extends TeaModel {
 
         @NameInMap("Domain")
         private String domain;
+
+        @NameInMap("GmCert")
+        private GmCert gmCert;
 
         @NameInMap("Http2Enable")
         private Boolean http2Enable;
@@ -289,6 +391,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             this.cname = builder.cname;
             this.customCiphers = builder.customCiphers;
             this.domain = builder.domain;
+            this.gmCert = builder.gmCert;
             this.http2Enable = builder.http2Enable;
             this.http2HttpsEnable = builder.http2HttpsEnable;
             this.https2HttpEnable = builder.https2HttpEnable;
@@ -367,6 +470,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
          */
         public String getDomain() {
             return this.domain;
+        }
+
+        /**
+         * @return gmCert
+         */
+        public GmCert getGmCert() {
+            return this.gmCert;
         }
 
         /**
@@ -476,6 +586,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private String cname; 
             private java.util.List < String > customCiphers; 
             private String domain; 
+            private GmCert gmCert; 
             private Boolean http2Enable; 
             private Boolean http2HttpsEnable; 
             private Boolean https2HttpEnable; 
@@ -492,7 +603,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private java.util.List < String > whiteList; 
 
             /**
-             * BlackList.
+             * An array that consists of the IP addresses in the blacklist for the domain name.
              */
             public Builder blackList(java.util.List < String > blackList) {
                 this.blackList = blackList;
@@ -500,7 +611,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CcEnabled.
+             * Indicates whether the Frequency Control policy is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder ccEnabled(Boolean ccEnabled) {
                 this.ccEnabled = ccEnabled;
@@ -508,7 +623,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CcRuleEnabled.
+             * Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder ccRuleEnabled(Boolean ccRuleEnabled) {
                 this.ccRuleEnabled = ccRuleEnabled;
@@ -516,7 +635,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CcTemplate.
+             * The mode of the Frequency Control policy. Valid values:
+             * <p>
+             * 
+             * *   **default**: the Normal mode
+             * *   **gf_under_attack**: the Emergency mode
+             * *   **gf_sos_verify**: the Strict mode
+             * *   **gf_sos_verify**: the Super Strict mode
              */
             public Builder ccTemplate(String ccTemplate) {
                 this.ccTemplate = ccTemplate;
@@ -524,7 +649,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -532,7 +657,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Cname.
+             * The CNAME provided by the Anti-DDoS Pro or Anti-DDoS Premium instance to which the domain name is added.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -540,7 +665,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomCiphers.
+             * An array that consists of custom cipher suites.
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -548,7 +673,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -556,7 +681,19 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Http2Enable.
+             * The SM certificate settings.
+             */
+            public Builder gmCert(GmCert gmCert) {
+                this.gmCert = gmCert;
+                return this;
+            }
+
+            /**
+             * Indicates whether Enable HTTP/2 is turned on. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder http2Enable(Boolean http2Enable) {
                 this.http2Enable = http2Enable;
@@ -564,7 +701,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Http2HttpsEnable.
+             * Indicates whether Enable HTTPS Routing is turned on. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder http2HttpsEnable(Boolean http2HttpsEnable) {
                 this.http2HttpsEnable = http2HttpsEnable;
@@ -572,7 +713,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Https2HttpEnable.
+             * Indicates whether Enable HTTP is turned on. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder https2HttpEnable(Boolean https2HttpEnable) {
                 this.https2HttpEnable = https2HttpEnable;
@@ -580,7 +725,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OcspEnabled.
+             * Indicates whether the Online Certificate Status Protocol (OCSP) feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder ocspEnabled(Boolean ocspEnabled) {
                 this.ocspEnabled = ocspEnabled;
@@ -588,7 +737,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyMode.
+             * The scheduling algorithm for back-to-origin traffic. Valid values:
+             * <p>
+             * 
+             * *   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.
+             * *   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.
+             * *   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.
              */
             public Builder policyMode(String policyMode) {
                 this.policyMode = policyMode;
@@ -596,7 +750,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyEnabled.
+             * Indicates whether the forwarding rule is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder proxyEnabled(Boolean proxyEnabled) {
                 this.proxyEnabled = proxyEnabled;
@@ -604,7 +762,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyTypes.
+             * An array that consists of the details of the protocol type and port number.
              */
             public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
                 this.proxyTypes = proxyTypes;
@@ -612,7 +770,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PunishReason.
+             * The reason why the domain name is invalid. Valid values:
+             * <p>
+             * 
+             * *   **1**: No ICP filing is completed for the domain name.
+             * *   **2**: The business for which you registered the domain name does not meet regulatory requirements.
+             * 
+             * If the two reasons are both involved, the value **2** is returned.
              */
             public Builder punishReason(Integer punishReason) {
                 this.punishReason = punishReason;
@@ -620,7 +784,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PunishStatus.
+             * Indicates whether the domain name is invalid. Valid values:
+             * <p>
+             * 
+             * *   **true**: The domain name is invalid. You can view the specific reasons from the **PunishReason** parameter.
+             * *   **false**: The domain name is valid.
              */
             public Builder punishStatus(Boolean punishStatus) {
                 this.punishStatus = punishStatus;
@@ -628,7 +796,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RealServers.
+             * An array that consists of the details of the origin server address.
              */
             public Builder realServers(java.util.List < RealServers> realServers) {
                 this.realServers = realServers;
@@ -636,7 +804,11 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Ssl13Enabled.
+             * Indicates whether TLS 1.3 is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder ssl13Enabled(Boolean ssl13Enabled) {
                 this.ssl13Enabled = ssl13Enabled;
@@ -644,7 +816,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SslCiphers.
+             * The type of the cipher suite. Valid values:
+             * <p>
+             * 
+             * *   **default**: custom cipher suite
+             * *   **all**: all cipher suites, which contain strong and weak cipher suites
+             * *   **strong**: strong cipher suites
              */
             public Builder sslCiphers(String sslCiphers) {
                 this.sslCiphers = sslCiphers;
@@ -652,7 +829,12 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SslProtocols.
+             * The version of the Transport Layer Security (TLS) protocol. Valid values:
+             * <p>
+             * 
+             * *   **tls1.0**: TLS 1.0 or later
+             * *   **tls1.1**: TLS 1.1 or later
+             * *   **tls1.2**: TLS 1.2 or later
              */
             public Builder sslProtocols(String sslProtocols) {
                 this.sslProtocols = sslProtocols;
@@ -660,7 +842,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteList.
+             * An array that consists of the IP addresses in the whitelist for the domain name.
              */
             public Builder whiteList(java.util.List < String > whiteList) {
                 this.whiteList = whiteList;

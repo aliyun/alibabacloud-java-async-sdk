@@ -62,7 +62,7 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RemainCount.
+         * The remaining quota that you can use the Diversion from Origin Server policy.
          */
         public Builder remainCount(Integer remainCount) {
             this.remainCount = remainCount;
@@ -70,7 +70,7 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total quota that you can use the Diversion from Origin Server policy.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

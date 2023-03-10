@@ -134,7 +134,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         private java.util.List < SecRealServers> secRealServers; 
 
         /**
-         * BackendPort.
+         * The port of the origin server.
          */
         public Builder backendPort(Integer backendPort) {
             this.backendPort = backendPort;
@@ -142,7 +142,11 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BakMode.
+         * The mode that is used to forward service traffic. Valid values:
+         * <p>
+         * 
+         * *   0: the default mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin IP address that you specified when you created the port forwarding rule. You can call the [CreateNetworkRules](~~157482~~) operation to create a port forwarding rule.
+         * *   1: the origin redundancy mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary or secondary origin servers. You can call the [ConfigLayer4RulePolicy](~~312684~~) operation to configure IP addresses.
          */
         public Builder bakMode(String bakMode) {
             this.bakMode = bakMode;
@@ -150,7 +154,11 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentIndex.
+         * The origin server that is used to receive service traffic. Valid values:
+         * <p>
+         * 
+         * *   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.
+         * *   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.
          */
         public Builder currentIndex(Integer currentIndex) {
             this.currentIndex = currentIndex;
@@ -158,7 +166,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ForwardProtocol.
+         * The type of the protocol.
          */
         public Builder forwardProtocol(String forwardProtocol) {
             this.forwardProtocol = forwardProtocol;
@@ -166,7 +174,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * FrontendPort.
+         * The forwarding port.
          */
         public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = frontendPort;
@@ -174,7 +182,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -182,7 +190,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PriRealServers.
+         * An array that consists of the information about the primary origin server, including the IP addresses, forwarding protocol, and forwarding port.
          */
         public Builder priRealServers(java.util.List < PriRealServers> priRealServers) {
             this.priRealServers = priRealServers;
@@ -190,7 +198,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +206,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SecRealServers.
+         * An array that consists of the information about the secondary origin server, including the IP addresses, forwarding protocol, and forwarding port.
          */
         public Builder secRealServers(java.util.List < SecRealServers> secRealServers) {
             this.secRealServers = secRealServers;
@@ -298,7 +306,11 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             private String realServer; 
 
             /**
-             * CurrentIndex.
+             * The origin server that is used to receive service traffic. Valid values:
+             * <p>
+             * 
+             * *   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.
+             * *   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.
              */
             public Builder currentIndex(Integer currentIndex) {
                 this.currentIndex = currentIndex;
@@ -306,7 +318,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Eip.
+             * The IP address of the instance.
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -314,7 +326,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * FrontendPort.
+             * The forwarding port.
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -322,7 +334,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,7 +342,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The type of the protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -338,7 +350,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RealServer.
+             * The IP address of the primary origin server.
              */
             public Builder realServer(String realServer) {
                 this.realServer = realServer;
@@ -439,7 +451,11 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             private String realServer; 
 
             /**
-             * CurrentIndex.
+             * The origin server that is used to receive service traffic. Valid values:
+             * <p>
+             * 
+             * *   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.
+             * *   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.
              */
             public Builder currentIndex(Integer currentIndex) {
                 this.currentIndex = currentIndex;
@@ -447,7 +463,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Eip.
+             * The IP address of the instance.
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -455,7 +471,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * FrontendPort.
+             * The forwarding port.
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -463,7 +479,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -471,7 +487,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The type of the protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -479,7 +495,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RealServer.
+             * The IP address of the secondary origin server.
              */
             public Builder realServer(String realServer) {
                 this.realServer = realServer;

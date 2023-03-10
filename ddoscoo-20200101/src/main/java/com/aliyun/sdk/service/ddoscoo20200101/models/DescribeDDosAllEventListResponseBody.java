@@ -62,7 +62,7 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * AttackEvents.
+         * An array that consists of attack events.
          */
         public Builder attackEvents(java.util.List < AttackEvents> attackEvents) {
             this.attackEvents = attackEvents;
@@ -70,7 +70,7 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of DDoS attack events.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -202,7 +202,18 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * Area.
+             * The source location or region from which the attack was initiated. Valid values:
+             * <p>
+             * 
+             * *   **cn**: Chinese mainland
+             * *   **alb-cn-hongkong-gf-2**: China (Hongkong)
+             * *   **alb-us-west-1-gf-2**: US (Silicon Valley)
+             * *   **alb-ap-northeast-1-gf-1**: Japan (Tokyo)
+             * *   **alb-ap-southeast-gf-1**: Singapore
+             * *   **alb-eu-central-1-gf-1**: Germany (Frankfurt)
+             * *   **alb-eu-central-1-gf-1** or **selb-eu-west-1-gf-1a**: UK (London)
+             * *   **alb-us-east-gf-1**: US (Virginia)
+             * *   **CT-yundi**: China (Hongkong) This value is returned only for Anti-DDoS Premium instances of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -210,7 +221,7 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -218,7 +229,13 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the DDoS attack event. Valid values:
+             * <p>
+             * 
+             * *   **web-cc**: resource exhaustion attacks
+             * *   **cc**: connection flood attacks
+             * *   **defense**: DDoS attacks that trigger traffic scrubbing
+             * *   **blackhole**: DDoS attacks that trigger blackhole filtering
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -226,7 +243,12 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The attacked object. The attacked object varies based on the attack event type. The following list describes different attacked objects of different attack event types:
+             * <p>
+             * 
+             * *   If **EventType** is set to **web-cc**, the value of this parameter indicates the domain name of the attacked website.
+             * *   If **EventType** is set to **cc**, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
+             * *   If **EventType** is set to **defense** or **blackhole**, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -234,7 +256,7 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Mbps.
+             * The peak bandwidth of the attack traffic. Unit: Mbit/s.
              */
             public Builder mbps(Long mbps) {
                 this.mbps = mbps;
@@ -242,7 +264,10 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The attacked port.
+             * <p>
+             * 
+             * > If **EventType** is set to **web-cc**, this parameter is not returned.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -250,7 +275,7 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Pps.
+             * The peak packet forwarding rate of attack traffic. Unit: packets per second (pps).
              */
             public Builder pps(Long pps) {
                 this.pps = pps;
@@ -258,7 +283,7 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

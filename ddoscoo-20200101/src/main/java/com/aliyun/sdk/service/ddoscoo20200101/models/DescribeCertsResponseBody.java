@@ -50,7 +50,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Certs.
+         * The certificate information about the website.
          */
         public Builder certs(java.util.List < Certs> certs) {
             this.certs = certs;
@@ -58,7 +58,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             private String startDate; 
 
             /**
-             * Common.
+             * The domain name that is associated with the certificate.
              */
             public Builder common(String common) {
                 this.common = common;
@@ -178,7 +178,11 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainRelated.
+             * Indicates whether the certificate is associated with the domain name. Valid values:
+             * <p>
+             * 
+             * *   **true**: The certificate is associated with the domain name.
+             * *   **false**: The certificate is not associated with the domain name.
              */
             public Builder domainRelated(Boolean domainRelated) {
                 this.domainRelated = domainRelated;
@@ -186,7 +190,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * The expiration date of the certificate. string
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -194,7 +198,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the certificate.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -202,7 +206,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The certificate authority (CA) that issued the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -210,7 +214,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the certificate.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +222,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * StartDate.
+             * The issuance date of the certificate. string
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;

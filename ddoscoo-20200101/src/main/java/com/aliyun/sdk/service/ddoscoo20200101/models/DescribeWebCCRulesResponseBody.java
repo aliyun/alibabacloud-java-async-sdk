@@ -62,7 +62,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         private java.util.List < WebCCRules> webCCRules; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned custom frequency control rules.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         }
 
         /**
-         * WebCCRules.
+         * An array that consists of the details of the custom frequency control rule.
          */
         public Builder webCCRules(java.util.List < WebCCRules> webCCRules) {
             this.webCCRules = webCCRules;
@@ -190,7 +190,11 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * Act.
+             * The blocking type. Valid values:
+             * <p>
+             * 
+             * *   **close**: blocks requests.
+             * *   **captcha**: enables Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification.
              */
             public Builder act(String act) {
                 this.act = act;
@@ -198,7 +202,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of requests that are allowed from an individual IP address. Valid values: **2** to **2000**.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -206,7 +210,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * The check intervals. Valid values: **5** to **10800**. Unit: seconds.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -214,7 +218,11 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The match mode. Valid values:
+             * <p>
+             * 
+             * *   **prefix**: prefix match
+             * *   **match**: exact match
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -222,7 +230,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +238,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * The blocking duration. Valid values: **1** to **1440**. Unit: minutes.
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -238,7 +246,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * The check path.
              */
             public Builder uri(String uri) {
                 this.uri = uri;

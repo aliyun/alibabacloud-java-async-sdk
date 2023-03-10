@@ -62,7 +62,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * NextToken.
+         * The query token that is returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * An array consisting of the details of the tags that are added to the Anti-DDoS Pro instance.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The ID of the Anti-DDoS Pro instance.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource. The value is fixed as **INSTANCE**, which indicates an Anti-DDoS Pro instance.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +170,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The key of the tag that is added to the Anti-DDoS Pro instance.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of the tag that is added to the Anti-DDoS Pro instance.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWebCCRuleRequest</p>
  */
 public class CreateWebCCRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Act")
     @Validation(required = true)
@@ -42,10 +46,6 @@ public class CreateWebCCRuleRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
@@ -62,13 +62,13 @@ public class CreateWebCCRuleRequest extends Request {
 
     private CreateWebCCRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.act = builder.act;
         this.count = builder.count;
         this.domain = builder.domain;
         this.interval = builder.interval;
         this.mode = builder.mode;
         this.name = builder.name;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.ttl = builder.ttl;
         this.uri = builder.uri;
@@ -85,6 +85,13 @@ public class CreateWebCCRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -130,13 +137,6 @@ public class CreateWebCCRuleRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -158,13 +158,13 @@ public class CreateWebCCRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateWebCCRuleRequest, Builder> {
+        private String regionId; 
         private String act; 
         private Integer count; 
         private String domain; 
         private Integer interval; 
         private String mode; 
         private String name; 
-        private String regionId; 
         private String resourceGroupId; 
         private Integer ttl; 
         private String uri; 
@@ -173,73 +173,19 @@ public class CreateWebCCRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateWebCCRuleRequest response) {
-            super(response);
-            this.act = response.act;
-            this.count = response.count;
-            this.domain = response.domain;
-            this.interval = response.interval;
-            this.mode = response.mode;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.ttl = response.ttl;
-            this.uri = response.uri;
+        private Builder(CreateWebCCRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.act = request.act;
+            this.count = request.count;
+            this.domain = request.domain;
+            this.interval = request.interval;
+            this.mode = request.mode;
+            this.name = request.name;
+            this.resourceGroupId = request.resourceGroupId;
+            this.ttl = request.ttl;
+            this.uri = request.uri;
         } 
-
-        /**
-         * Act.
-         */
-        public Builder act(String act) {
-            this.putQueryParameter("Act", act);
-            this.act = act;
-            return this;
-        }
-
-        /**
-         * Count.
-         */
-        public Builder count(Integer count) {
-            this.putQueryParameter("Count", count);
-            this.count = count;
-            return this;
-        }
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * Interval.
-         */
-        public Builder interval(Integer interval) {
-            this.putQueryParameter("Interval", interval);
-            this.interval = interval;
-            return this;
-        }
-
-        /**
-         * Mode.
-         */
-        public Builder mode(String mode) {
-            this.putQueryParameter("Mode", mode);
-            this.mode = mode;
-            return this;
-        }
-
-        /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -251,7 +197,74 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The blocking type. Valid values:
+         * <p>
+         * 
+         * *   **close**: blocks the request.
+         * *   **captcha**: enables Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification.
+         */
+        public Builder act(String act) {
+            this.putQueryParameter("Act", act);
+            this.act = act;
+            return this;
+        }
+
+        /**
+         * The number of requests that are allowed from an individual IP address. Valid values: **2** to **2000**.
+         */
+        public Builder count(Integer count) {
+            this.putQueryParameter("Count", count);
+            this.count = count;
+            return this;
+        }
+
+        /**
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The detection interval. Valid values: **5** to **10800**. Unit: seconds.
+         */
+        public Builder interval(Integer interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
+            return this;
+        }
+
+        /**
+         * The match mode. Valid values:
+         * <p>
+         * 
+         * *   **prefix**: prefix match.
+         * *   **match**: exact match.
+         * 
+         * > If the **Uri** of the check path contains parameters, you must set the value to Prefix Match.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
+         * The name of the rule. The name can be up to 128 characters in length and contain letters, digits, and underscores (\_).
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -260,7 +273,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * The blocking duration. Valid values: **1** to **1440**. Unit: minutes.
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -269,7 +282,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Uri.
+         * The check path.
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);

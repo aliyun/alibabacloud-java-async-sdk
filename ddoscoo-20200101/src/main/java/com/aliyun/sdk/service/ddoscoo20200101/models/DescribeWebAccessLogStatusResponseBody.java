@@ -74,7 +74,7 @@ public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
         private Boolean slsStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SlsLogstore.
+         * The Logstore of the instance.
          */
         public Builder slsLogstore(String slsLogstore) {
             this.slsLogstore = slsLogstore;
@@ -90,7 +90,7 @@ public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SlsProject.
+         * The Log Service project of the instance.
          */
         public Builder slsProject(String slsProject) {
             this.slsProject = slsProject;
@@ -98,7 +98,11 @@ public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SlsStatus.
+         * Indicates whether the Log Analysis feature is enabled for the website. Valid values:
+         * <p>
+         * 
+         * *   **true**: enabled
+         * *   **false**: disabled
          */
         public Builder slsStatus(Boolean slsStatus) {
             this.slsStatus = slsStatus;

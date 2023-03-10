@@ -75,11 +75,11 @@ public class DeleteAsyncTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAsyncTaskRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.taskId = response.taskId;
+        private Builder(DeleteAsyncTaskRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -92,7 +92,7 @@ public class DeleteAsyncTaskRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -101,7 +101,10 @@ public class DeleteAsyncTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task that you want to delete.
+         * <p>
+         * 
+         * > You can call the [DescribeAsyncTasks](~~159405~~) operation to query the IDs of all asynchronous export tasks.
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

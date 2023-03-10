@@ -116,18 +116,22 @@ public class DeleteTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.tagKey = response.tagKey;
+        private Builder(DeleteTagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the specified resource. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes.
+         * *   **false** no. This is the default value.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -136,7 +140,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +149,10 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -154,7 +161,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * An array consisting of the IDs of instances from which you want to remove tags.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -163,7 +170,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -172,7 +179,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * An array consisting of the keys of the tags that you want to remove.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

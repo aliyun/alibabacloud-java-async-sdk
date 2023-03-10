@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyWebRuleTfResponse} extends {@link TeaModel}
+ * {@link DescribeHeadersResponse} extends {@link TeaModel}
  *
- * <p>ModifyWebRuleTfResponse</p>
+ * <p>DescribeHeadersResponse</p>
  */
-public class ModifyWebRuleTfResponse extends Response {
+public class DescribeHeadersResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ModifyWebRuleTfResponseBody body;
+    private DescribeHeadersResponseBody body;
 
-    private ModifyWebRuleTfResponse(BuilderImpl builder) {
+    private DescribeHeadersResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ModifyWebRuleTfResponse create() {
+    public static DescribeHeadersResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ModifyWebRuleTfResponse extends Response {
     /**
      * @return body
      */
-    public ModifyWebRuleTfResponseBody getBody() {
+    public DescribeHeadersResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyWebRuleTfResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeHeadersResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ModifyWebRuleTfResponseBody body);
+        Builder body(DescribeHeadersResponseBody body);
 
         @Override
-        ModifyWebRuleTfResponse build();
+        DescribeHeadersResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyWebRuleTfResponse, Builder>
+            extends Response.BuilderImpl<DescribeHeadersResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ModifyWebRuleTfResponseBody body; 
+        private DescribeHeadersResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyWebRuleTfResponse response) {
+        private BuilderImpl(DescribeHeadersResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ModifyWebRuleTfResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ModifyWebRuleTfResponseBody body) {
+        public Builder body(DescribeHeadersResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyWebRuleTfResponse build() {
-            return new ModifyWebRuleTfResponse(this);
+        public DescribeHeadersResponse build() {
+            return new DescribeHeadersResponse(this);
         } 
 
     } 

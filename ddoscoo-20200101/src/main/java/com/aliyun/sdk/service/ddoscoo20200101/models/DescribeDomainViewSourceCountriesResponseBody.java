@@ -50,7 +50,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
         private java.util.List < SourceCountrys> sourceCountrys; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * SourceCountrys.
+         * An array consisting of the country or area from which the requests are sent.
          */
         public Builder sourceCountrys(java.util.List < SourceCountrys> sourceCountrys) {
             this.sourceCountrys = sourceCountrys;
@@ -110,7 +110,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
             private String countryId; 
 
             /**
-             * Count.
+             * The total number of requests.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
             }
 
             /**
-             * CountryId.
+             * The abbreviation of the country or area. For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **cn** indicates China, and **us** indicates the United States.
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;

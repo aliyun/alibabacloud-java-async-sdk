@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceRemarkRequest</p>
  */
 public class ModifyInstanceRemarkRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Remark")
@@ -28,8 +28,8 @@ public class ModifyInstanceRemarkRequest extends Request {
 
     private ModifyInstanceRemarkRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.remark = builder.remark;
     }
 
@@ -47,17 +47,17 @@ public class ModifyInstanceRemarkRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -68,29 +68,20 @@ public class ModifyInstanceRemarkRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceRemarkRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String remark; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyInstanceRemarkRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.remark = response.remark;
+        private Builder(ModifyInstanceRemarkRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.remark = request.remark;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -102,7 +93,22 @@ public class ModifyInstanceRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The description of the instance.
+         * <p>
+         * 
+         * The value can contain letters, digits, and some special characters, such as`, . + - * / _` The value can be up to 500 characters in length.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

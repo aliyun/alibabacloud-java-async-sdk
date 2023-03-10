@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyHealthCheckConfigRequest</p>
  */
 public class ModifyHealthCheckConfigRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ForwardProtocol")
     @Validation(required = true)
@@ -32,17 +36,13 @@ public class ModifyHealthCheckConfigRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ModifyHealthCheckConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.forwardProtocol = builder.forwardProtocol;
         this.frontendPort = builder.frontendPort;
         this.healthCheck = builder.healthCheck;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -56,6 +56,13 @@ public class ModifyHealthCheckConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -86,35 +93,41 @@ public class ModifyHealthCheckConfigRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyHealthCheckConfigRequest, Builder> {
+        private String regionId; 
         private String forwardProtocol; 
         private Integer frontendPort; 
         private String healthCheck; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyHealthCheckConfigRequest response) {
-            super(response);
-            this.forwardProtocol = response.forwardProtocol;
-            this.frontendPort = response.frontendPort;
-            this.healthCheck = response.healthCheck;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(ModifyHealthCheckConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.forwardProtocol = request.forwardProtocol;
+            this.frontendPort = request.frontendPort;
+            this.healthCheck = request.healthCheck;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * ForwardProtocol.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The forwarding protocol. Valid values:
+         * <p>
+         * 
+         * *   **tcp**
+         * *   **udp**
          */
         public Builder forwardProtocol(String forwardProtocol) {
             this.putQueryParameter("ForwardProtocol", forwardProtocol);
@@ -123,7 +136,7 @@ public class ModifyHealthCheckConfigRequest extends Request {
         }
 
         /**
-         * FrontendPort.
+         * The forwarding port.
          */
         public Builder frontendPort(Integer frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -132,7 +145,32 @@ public class ModifyHealthCheckConfigRequest extends Request {
         }
 
         /**
-         * HealthCheck.
+         * The details of the health check configuration. This parameter is a JSON string. The string contains the following fields:
+         * <p>
+         * 
+         * *   **Type**: the protocol type. This field is required and must be of the STRING type. Valid values: **tcp** (Layer 4) and **http** (Layer 7).
+         * 
+         * *   **Domain**: the domain name, which must be of the STRING type.
+         * 
+         *     **
+         * 
+         *     **Note**This parameter is returned only when the Layer 7 health check configuration is queried.
+         * 
+         * *   **Uri**: the check path, which must be of the STRING type.
+         * 
+         *     **
+         * 
+         *     **Note**This parameter is returned only when the Layer 7 health check configuration is queried.
+         * 
+         * *   **Timeout**: the response timeout period, which must be of the INTEGER type. Valid values: **1** to **30**. Unit: seconds.
+         * 
+         * *   **Port**: the port on which you want to perform the health check, which must be of the INTEGER type.
+         * 
+         * *   **Interval**: the health check interval, which must be of the INTEGER type. Valid values: **1** to **30**. Unit: seconds.
+         * 
+         * *   **Up**: the number of consecutive successful health checks that must occur before declaring a port healthy, which must be of the INTEGER type. Valid values: **1** to **10**.
+         * 
+         * *   **Down**: the number of consecutive failed health checks that must occur before declaring a port unhealthy, which must be of the INTEGER type. Valid values: **1** to **10**.
          */
         public Builder healthCheck(String healthCheck) {
             this.putQueryParameter("HealthCheck", healthCheck);
@@ -141,20 +179,14 @@ public class ModifyHealthCheckConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

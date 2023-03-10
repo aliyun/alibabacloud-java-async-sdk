@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainResourceRequest</p>
  */
 public class DescribeDomainResourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     private String domain;
@@ -33,18 +37,14 @@ public class DescribeDomainResourceRequest extends Request {
     @NameInMap("QueryDomainPattern")
     private String queryDomainPattern;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeDomainResourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryDomainPattern = builder.queryDomainPattern;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -58,6 +58,13 @@ public class DescribeDomainResourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -95,37 +102,39 @@ public class DescribeDomainResourceRequest extends Request {
         return this.queryDomainPattern;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDomainResourceRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private java.util.List < String > instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryDomainPattern; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainResourceRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.instanceIds = response.instanceIds;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryDomainPattern = response.queryDomainPattern;
-            this.regionId = response.regionId;
+        private Builder(DescribeDomainResourceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.instanceIds = request.instanceIds;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryDomainPattern = request.queryDomainPattern;
         } 
 
         /**
-         * Domain.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The domain name of the website that you want to query.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -134,7 +143,7 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * An array that consists of the IDs of instances to query.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -143,7 +152,7 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +161,7 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,20 +170,15 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * QueryDomainPattern.
+         * The match mode. Valid values:
+         * <p>
+         * 
+         * *   **fuzzy**: fuzzy match. This is the default value.
+         * *   **exact**: exact match.
          */
         public Builder queryDomainPattern(String queryDomainPattern) {
             this.putQueryParameter("QueryDomainPattern", queryDomainPattern);
             this.queryDomainPattern = queryDomainPattern;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

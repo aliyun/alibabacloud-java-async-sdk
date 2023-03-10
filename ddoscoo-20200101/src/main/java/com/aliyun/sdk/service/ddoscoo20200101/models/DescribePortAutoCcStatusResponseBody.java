@@ -50,7 +50,7 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PortAutoCcStatus.
+         * An array that consists of the configurations of the Intelligent Protection policy.
          */
         public Builder portAutoCcStatus(java.util.List < PortAutoCcStatus> portAutoCcStatus) {
             this.portAutoCcStatus = portAutoCcStatus;
@@ -58,7 +58,7 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,12 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             private String webSwitch; 
 
             /**
-             * Mode.
+             * The mode of the Intelligent Protection policy. Valid values:
+             * <p>
+             * 
+             * *   **normal**
+             * *   **loose**
+             * *   **strict**
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -142,7 +147,11 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Switch.
+             * The status of the Intelligent Protection policy. Valid values:
+             * <p>
+             * 
+             * *   **on**: enabled
+             * *   **off**: disabled
              */
             public Builder _switch(String _switch) {
                 this._switch = _switch;
@@ -150,7 +159,12 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * WebMode.
+             * The protection mode for ports 80 and 443. Valid values:
+             * <p>
+             * 
+             * *   **normal**
+             * *   **loose**
+             * *   **strict**
              */
             public Builder webMode(String webMode) {
                 this.webMode = webMode;
@@ -158,7 +172,11 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
             }
 
             /**
-             * WebSwitch.
+             * The status of the Intelligent Protection policy for ports 80 and 443. Valid values:
+             * <p>
+             * 
+             * *   **on**: enabled
+             * *   **off**: disabled
              */
             public Builder webSwitch(String webSwitch) {
                 this.webSwitch = webSwitch;

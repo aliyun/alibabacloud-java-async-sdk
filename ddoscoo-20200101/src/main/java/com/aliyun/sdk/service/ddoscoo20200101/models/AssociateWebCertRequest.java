@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateWebCertRequest</p>
  */
 public class AssociateWebCertRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Cert")
     private String cert;
@@ -33,22 +37,18 @@ public class AssociateWebCertRequest extends Request {
     @NameInMap("Key")
     private String key;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private AssociateWebCertRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.cert = builder.cert;
         this.certId = builder.certId;
         this.certName = builder.certName;
         this.domain = builder.domain;
         this.key = builder.key;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -63,6 +63,13 @@ public class AssociateWebCertRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -101,13 +108,6 @@ public class AssociateWebCertRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -115,73 +115,28 @@ public class AssociateWebCertRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssociateWebCertRequest, Builder> {
+        private String regionId; 
         private String cert; 
         private Integer certId; 
         private String certName; 
         private String domain; 
         private String key; 
-        private String regionId; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AssociateWebCertRequest response) {
-            super(response);
-            this.cert = response.cert;
-            this.certId = response.certId;
-            this.certName = response.certName;
-            this.domain = response.domain;
-            this.key = response.key;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(AssociateWebCertRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.cert = request.cert;
+            this.certId = request.certId;
+            this.certName = request.certName;
+            this.domain = request.domain;
+            this.key = request.key;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * Cert.
-         */
-        public Builder cert(String cert) {
-            this.putQueryParameter("Cert", cert);
-            this.cert = cert;
-            return this;
-        }
-
-        /**
-         * CertId.
-         */
-        public Builder certId(Integer certId) {
-            this.putQueryParameter("CertId", certId);
-            this.certId = certId;
-            return this;
-        }
-
-        /**
-         * CertName.
-         */
-        public Builder certName(String certName) {
-            this.putQueryParameter("CertName", certName);
-            this.certName = certName;
-            return this;
-        }
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * Key.
-         */
-        public Builder key(String key) {
-            this.putQueryParameter("Key", key);
-            this.key = key;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -193,7 +148,67 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The public key of the certificate that you want to associate. This parameter must be used together with the **CertName** and **Key** parameters.
+         * <p>
+         * 
+         * > If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.
+         */
+        public Builder cert(String cert) {
+            this.putQueryParameter("Cert", cert);
+            this.cert = cert;
+            return this;
+        }
+
+        /**
+         * The ID of the certificate that you want to associate. If the certificate that you want to associate has been issued in Certificate Management Service, you can specify the certificate ID to associate the certificate.
+         * <p>
+         * 
+         * > If you specify the certificate ID, you do not need to specify a value for the **CertName**, **Cert**, and **Key** parameters.
+         */
+        public Builder certId(Integer certId) {
+            this.putQueryParameter("CertId", certId);
+            this.certId = certId;
+            return this;
+        }
+
+        /**
+         * The name of the certificate that you want to associate. This parameter must be used together with the **Cert** and **Key** parameters.
+         * <p>
+         * 
+         * > If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.
+         */
+        public Builder certName(String certName) {
+            this.putQueryParameter("CertName", certName);
+            this.certName = certName;
+            return this;
+        }
+
+        /**
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The private key of the certificate that you want to associate. This parameter must be used together with the **CertName** and **Cert** parameters.
+         * <p>
+         * 
+         * > If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.
+         */
+        public Builder key(String key) {
+            this.putQueryParameter("Key", key);
+            this.key = key;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

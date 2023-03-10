@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOpEntitiesRequest</p>
  */
 public class DescribeOpEntitiesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     @Validation(required = true)
@@ -35,10 +39,6 @@ public class DescribeOpEntitiesRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
@@ -50,12 +50,12 @@ public class DescribeOpEntitiesRequest extends Request {
 
     private DescribeOpEntitiesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.entityObject = builder.entityObject;
         this.entityType = builder.entityType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
@@ -71,6 +71,13 @@ public class DescribeOpEntitiesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -109,13 +116,6 @@ public class DescribeOpEntitiesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -130,12 +130,12 @@ public class DescribeOpEntitiesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeOpEntitiesRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private String entityObject; 
         private Integer entityType; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -143,62 +143,17 @@ public class DescribeOpEntitiesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeOpEntitiesRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.entityObject = response.entityObject;
-            this.entityType = response.entityType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.startTime = response.startTime;
+        private Builder(DescribeOpEntitiesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.entityObject = request.entityObject;
+            this.entityType = request.entityType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
         } 
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * EntityObject.
-         */
-        public Builder entityObject(String entityObject) {
-            this.putQueryParameter("EntityObject", entityObject);
-            this.entityObject = entityObject;
-            return this;
-        }
-
-        /**
-         * EntityType.
-         */
-        public Builder entityType(Integer entityType) {
-            this.putQueryParameter("EntityType", entityType);
-            this.entityType = entityType;
-            return this;
-        }
-
-        /**
-         * PageNumber.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -210,7 +165,61 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>
+         * 
+         * > The time must be in the latest 30 days.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The operation object that you want to query.
+         */
+        public Builder entityObject(String entityObject) {
+            this.putQueryParameter("EntityObject", entityObject);
+            this.entityObject = entityObject;
+            return this;
+        }
+
+        /**
+         * The type of the operation object that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **1**: the IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance
+         * *   **2**: Anti-DDoS plans
+         * *   **3**: ECS instances
+         * *   **4**: all logs
+         */
+        public Builder entityType(Integer entityType) {
+            this.putQueryParameter("EntityType", entityType);
+            this.entityType = entityType;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Maximum value: **50**.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -219,7 +228,10 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>
+         * 
+         * > The time must be in the latest 30 days.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

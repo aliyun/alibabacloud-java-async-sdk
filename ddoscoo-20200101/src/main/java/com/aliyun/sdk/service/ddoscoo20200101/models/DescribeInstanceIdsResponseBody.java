@@ -50,7 +50,7 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceIds.
+         * An array that consists of the ID, version, description, and IP address type of the instance.
          */
         public Builder instanceIds(java.util.List < InstanceIds> instanceIds) {
             this.instanceIds = instanceIds;
@@ -58,7 +58,7 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,14 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             private String remark; 
 
             /**
-             * Edition.
+             * The mitigation plan of the instance. Valid values:
+             * <p>
+             * 
+             * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
+             * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
+             * *   **2**: Anti-DDoS Premium instance of the CMA mitigation plan
+             * *   **3**: Anti-DDoS Premium instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan
+             * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
              */
             public Builder edition(Integer edition) {
                 this.edition = edition;
@@ -154,7 +161,7 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -162,7 +169,11 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * IpMode.
+             * The IP address-based forwarding mode of the instance. Valid values:
+             * <p>
+             * 
+             * *   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.
+             * *   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.
              */
             public Builder ipMode(String ipMode) {
                 this.ipMode = ipMode;
@@ -170,7 +181,11 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * The IP version of the protocol of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Ipv4**
+             * *   **Ipv6**
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -178,7 +193,7 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The description of the instance.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

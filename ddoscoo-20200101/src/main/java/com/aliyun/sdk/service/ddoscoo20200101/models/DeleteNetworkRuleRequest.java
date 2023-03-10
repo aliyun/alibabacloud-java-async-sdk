@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteNetworkRuleRequest</p>
  */
 public class DeleteNetworkRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("NetworkRule")
     @Validation(required = true)
     private String networkRule;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DeleteNetworkRuleRequest(Builder builder) {
         super(builder);
-        this.networkRule = builder.networkRule;
         this.regionId = builder.regionId;
+        this.networkRule = builder.networkRule;
     }
 
     public static Builder builder() {
@@ -41,41 +41,32 @@ public class DeleteNetworkRuleRequest extends Request {
     }
 
     /**
-     * @return networkRule
-     */
-    public String getNetworkRule() {
-        return this.networkRule;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return networkRule
+     */
+    public String getNetworkRule() {
+        return this.networkRule;
+    }
+
     public static final class Builder extends Request.Builder<DeleteNetworkRuleRequest, Builder> {
-        private String networkRule; 
         private String regionId; 
+        private String networkRule; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteNetworkRuleRequest response) {
-            super(response);
-            this.networkRule = response.networkRule;
-            this.regionId = response.regionId;
+        private Builder(DeleteNetworkRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.networkRule = request.networkRule;
         } 
-
-        /**
-         * NetworkRule.
-         */
-        public Builder networkRule(String networkRule) {
-            this.putQueryParameter("NetworkRule", networkRule);
-            this.networkRule = networkRule;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,20 @@ public class DeleteNetworkRuleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * An array that consists of the information about the port forwarding rule. This parameter is a JSON string. The string contains the following fields:
+         * <p>
+         * 
+         * *   **InstanceId**: the ID of the instance. This field is required and must be of the STRING type.
+         * *   **Protocol**: the forwarding protocol. This field is required and must be of the STRING type. Valid values: **tcp** and **udp**.
+         * *   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.
+         */
+        public Builder networkRule(String networkRule) {
+            this.putQueryParameter("NetworkRule", networkRule);
+            this.networkRule = networkRule;
             return this;
         }
 

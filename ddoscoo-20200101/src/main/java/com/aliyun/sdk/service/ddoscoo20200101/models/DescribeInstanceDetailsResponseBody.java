@@ -50,7 +50,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceDetails.
+         * The IP address and ISP line information about the instance.
          */
         public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
             this.instanceDetails = instanceDetails;
@@ -58,7 +58,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Eip.
+             * The IP address of the instance.
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -142,7 +142,11 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * IpMode.
+             * The IP address-based forwarding mode of the instance. Valid values:
+             * <p>
+             * 
+             * *   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.
+             * *   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.
              */
             public Builder ipMode(String ipMode) {
                 this.ipMode = ipMode;
@@ -150,7 +154,11 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * The IP version of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **Ipv4**: IPv4
+             * *   **Ipv6**: IPv6
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -158,7 +166,11 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   **normal**
+             * *   **expired**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -223,7 +235,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             private String line; 
 
             /**
-             * EipInfos.
+             * The information about the IP address of the instance.
              */
             public Builder eipInfos(java.util.List < EipInfos> eipInfos) {
                 this.eipInfos = eipInfos;
@@ -231,7 +243,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -239,7 +251,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Line.
+             * The protection line of the instance.
              */
             public Builder line(String line) {
                 this.line = line;

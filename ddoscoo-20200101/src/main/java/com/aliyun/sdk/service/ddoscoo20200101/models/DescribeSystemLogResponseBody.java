@@ -62,7 +62,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
         }
 
         /**
-         * SystemLog.
+         * An array that consists of details of the billing logs for the burstable clean bandwidth.
          */
         public Builder systemLog(java.util.List < SystemLog> systemLog) {
             this.systemLog = systemLog;
@@ -78,7 +78,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of billing logs for the burstable clean bandwidth.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -202,7 +202,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * EntityObject.
+             * The IP address of the instance.
              */
             public Builder entityObject(String entityObject) {
                 this.entityObject = entityObject;
@@ -210,7 +210,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The type of the system log. The value is fixed as **20**, which indicates the billing logs for burstable clean bandwidth.
              */
             public Builder entityType(Integer entityType) {
                 this.entityType = entityType;
@@ -218,7 +218,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the bill was generated. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -226,7 +226,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the bill was last modified. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -234,7 +234,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * OpAccount.
+             * The ID of the Alibaba Cloud account to which the bill belongs.
              */
             public Builder opAccount(String opAccount) {
                 this.opAccount = opAccount;
@@ -242,7 +242,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * OpAction.
+             * The operation type. The value is fixed as **100**, which indicates the billing logs for the burstable clean bandwidth that you increased.
              */
             public Builder opAction(Integer opAction) {
                 this.opAction = opAction;
@@ -250,7 +250,19 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * OpDesc.
+             * The details of the bill. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
+             * <p>
+             * 
+             * *   **newEntity**: the bill record, which contains the following fields. Data type: object.
+             * 
+             *     *   **billValue**: the usage of the burstable clean bandwidth within a month. Unit: Mbit/s. Data type: integer.
+             *     *   **instanceId**: the ID of the instance. Data type: string.
+             *     *   **ip**: the IP address of the instance. Data type: string.
+             *     *   **maxBw**: the peak service traffic (monthly 95th percentile bandwidth) within a month. Unit: Mbit/s. Data type: string.
+             *     *   **month**: the month in which the bill of the previous calendar month is issued. This value is a UNIX timestamp. Unit: milliseconds. Data type: long.
+             *     *   **overBandwidth**: the peak service traffic minus the clean bandwidth of the instance. Unit: Mbit/s. Data type: integer.
+             *     *   **peakTime**: the time in point of the peak service traffic that is measured for billing. This value is a UNIX timestamp. Unit: seconds. Data type: long.
+             *     *   **startTimestamp**: the beginning of the time range for the peak service traffic range. This value is a UNIX timestamp. Unit: seconds. Data type: long.
              */
             public Builder opDesc(String opDesc) {
                 this.opDesc = opDesc;
@@ -258,7 +270,12 @@ public class DescribeSystemLogResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the bill. Valid values:
+             * <p>
+             * 
+             * *   **0**: to be billed
+             * *   **1**: billed
+             * *   **2**: terminated
              */
             public Builder status(Integer status) {
                 this.status = status;

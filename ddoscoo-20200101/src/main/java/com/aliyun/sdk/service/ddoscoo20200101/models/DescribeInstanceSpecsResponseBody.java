@@ -50,7 +50,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceSpecs.
+         * An array that consists of the specifications of instances.
          */
         public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -58,7 +58,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,6 +78,12 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("BaseBandwidth")
         private Integer baseBandwidth;
 
+        @NameInMap("ConnLimit")
+        private Long connLimit;
+
+        @NameInMap("CpsLimit")
+        private Long cpsLimit;
+
         @NameInMap("DefenseCount")
         private Integer defenseCount;
 
@@ -89,6 +95,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
         @NameInMap("ElasticBw")
         private Integer elasticBw;
+
+        @NameInMap("ElasticBwModel")
+        private String elasticBwModel;
 
         @NameInMap("FunctionVersion")
         private String functionVersion;
@@ -108,10 +117,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         private InstanceSpecs(Builder builder) {
             this.bandwidthMbps = builder.bandwidthMbps;
             this.baseBandwidth = builder.baseBandwidth;
+            this.connLimit = builder.connLimit;
+            this.cpsLimit = builder.cpsLimit;
             this.defenseCount = builder.defenseCount;
             this.domainLimit = builder.domainLimit;
             this.elasticBandwidth = builder.elasticBandwidth;
             this.elasticBw = builder.elasticBw;
+            this.elasticBwModel = builder.elasticBwModel;
             this.functionVersion = builder.functionVersion;
             this.instanceId = builder.instanceId;
             this.portLimit = builder.portLimit;
@@ -142,6 +154,20 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
+         * @return connLimit
+         */
+        public Long getConnLimit() {
+            return this.connLimit;
+        }
+
+        /**
+         * @return cpsLimit
+         */
+        public Long getCpsLimit() {
+            return this.cpsLimit;
+        }
+
+        /**
          * @return defenseCount
          */
         public Integer getDefenseCount() {
@@ -167,6 +193,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
          */
         public Integer getElasticBw() {
             return this.elasticBw;
+        }
+
+        /**
+         * @return elasticBwModel
+         */
+        public String getElasticBwModel() {
+            return this.elasticBwModel;
         }
 
         /**
@@ -207,10 +240,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer bandwidthMbps; 
             private Integer baseBandwidth; 
+            private Long connLimit; 
+            private Long cpsLimit; 
             private Integer defenseCount; 
             private Integer domainLimit; 
             private Integer elasticBandwidth; 
             private Integer elasticBw; 
+            private String elasticBwModel; 
             private String functionVersion; 
             private String instanceId; 
             private Integer portLimit; 
@@ -218,7 +254,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer siteLimit; 
 
             /**
-             * BandwidthMbps.
+             * The clean bandwidth of normal services. Unit: Mbit/s.
              */
             public Builder bandwidthMbps(Integer bandwidthMbps) {
                 this.bandwidthMbps = bandwidthMbps;
@@ -226,7 +262,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * BaseBandwidth.
+             * The basic protection bandwidth. Unit: Gbit/s.
              */
             public Builder baseBandwidth(Integer baseBandwidth) {
                 this.baseBandwidth = baseBandwidth;
@@ -234,7 +270,26 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseCount.
+             * The specification of concurrent connections of the instance.
+             */
+            public Builder connLimit(Long connLimit) {
+                this.connLimit = connLimit;
+                return this;
+            }
+
+            /**
+             * The specification of new connections of the instance.
+             */
+            public Builder cpsLimit(Long cpsLimit) {
+                this.cpsLimit = cpsLimit;
+                return this;
+            }
+
+            /**
+             * The number of available advanced mitigation sessions for this month. If **-1** is returned, advanced mitigation capabilities are unlimited.
+             * <p>
+             * 
+             * > This parameter is returned only when **RegionId** is set to **ap-southeast-1**. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Premium instances are queried.
              */
             public Builder defenseCount(Integer defenseCount) {
                 this.defenseCount = defenseCount;
@@ -242,7 +297,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainLimit.
+             * The number of domain names that can be protected by the instance.
              */
             public Builder domainLimit(Integer domainLimit) {
                 this.domainLimit = domainLimit;
@@ -250,7 +305,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticBandwidth.
+             * The burstable protection bandwidth. Unit: Gbit/s.
              */
             public Builder elasticBandwidth(Integer elasticBandwidth) {
                 this.elasticBandwidth = elasticBandwidth;
@@ -258,7 +313,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticBw.
+             * The burstable clean bandwidth. Unit: Mbit/s.
              */
             public Builder elasticBw(Integer elasticBw) {
                 this.elasticBw = elasticBw;
@@ -266,7 +321,26 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionVersion.
+             * The metering method of the burstable clean bandwidth. Valid values:
+             * <p>
+             * 
+             * *   **day**: the metering method of daily 95th percentile
+             * *   **month**: the metering method of monthly 95th percentile
+             */
+            public Builder elasticBwModel(String elasticBwModel) {
+                this.elasticBwModel = elasticBwModel;
+                return this;
+            }
+
+            /**
+             * The function plan of the instance. Valid values:
+             * <p>
+             * 
+             * *   **default**: Standard
+             * *   **enhance**: Enhanced
+             * *   **cnhk**: Chinese Mainland Acceleration (CMA)
+             * *   **cnhk_default**: Secure Chinese Mainland Acceleration (Sec-CMA) standard function plan
+             * *   **cnhk_enhance**: Sec-CMA enhanced function plan
              */
             public Builder functionVersion(String functionVersion) {
                 this.functionVersion = functionVersion;
@@ -274,7 +348,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -282,7 +356,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * PortLimit.
+             * The number of ports that can be protected by the instance.
              */
             public Builder portLimit(Integer portLimit) {
                 this.portLimit = portLimit;
@@ -290,7 +364,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * QpsLimit.
+             * The clean queries per second (QPS) of normal services.
              */
             public Builder qpsLimit(Integer qpsLimit) {
                 this.qpsLimit = qpsLimit;
@@ -298,7 +372,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteLimit.
+             * The number of sites that can be protected by the instance.
              */
             public Builder siteLimit(Integer siteLimit) {
                 this.siteLimit = siteLimit;

@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSceneDefenseObjectsRequest</p>
  */
 public class DescribeSceneDefenseObjectsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PolicyId")
     @Validation(required = true)
     private String policyId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -27,8 +27,8 @@ public class DescribeSceneDefenseObjectsRequest extends Request {
 
     private DescribeSceneDefenseObjectsRequest(Builder builder) {
         super(builder);
-        this.policyId = builder.policyId;
         this.regionId = builder.regionId;
+        this.policyId = builder.policyId;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -46,17 +46,17 @@ public class DescribeSceneDefenseObjectsRequest extends Request {
     }
 
     /**
-     * @return policyId
-     */
-    public String getPolicyId() {
-        return this.policyId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return policyId
+     */
+    public String getPolicyId() {
+        return this.policyId;
     }
 
     /**
@@ -67,29 +67,20 @@ public class DescribeSceneDefenseObjectsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSceneDefenseObjectsRequest, Builder> {
-        private String policyId; 
         private String regionId; 
+        private String policyId; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeSceneDefenseObjectsRequest response) {
-            super(response);
-            this.policyId = response.policyId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeSceneDefenseObjectsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.policyId = request.policyId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * PolicyId.
-         */
-        public Builder policyId(String policyId) {
-            this.putQueryParameter("PolicyId", policyId);
-            this.policyId = policyId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -101,7 +92,22 @@ public class DescribeSceneDefenseObjectsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the policy that you want to query.
+         * <p>
+         * 
+         * > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+         */
+        public Builder policyId(String policyId) {
+            this.putQueryParameter("PolicyId", policyId);
+            this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

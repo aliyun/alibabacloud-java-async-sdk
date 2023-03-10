@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDomainResourceRequest</p>
  */
 public class CreateDomainResourceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     @Validation(required = true)
@@ -36,10 +40,6 @@ public class CreateDomainResourceRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > realServers;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RsType")
     @Validation(required = true)
@@ -47,12 +47,12 @@ public class CreateDomainResourceRequest extends Request {
 
     private CreateDomainResourceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.httpsExt = builder.httpsExt;
         this.instanceIds = builder.instanceIds;
         this.proxyTypes = builder.proxyTypes;
         this.realServers = builder.realServers;
-        this.regionId = builder.regionId;
         this.rsType = builder.rsType;
     }
 
@@ -67,6 +67,13 @@ public class CreateDomainResourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -105,13 +112,6 @@ public class CreateDomainResourceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return rsType
      */
     public Integer getRsType() {
@@ -119,73 +119,28 @@ public class CreateDomainResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDomainResourceRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private String httpsExt; 
         private java.util.List < String > instanceIds; 
         private java.util.List < ProxyTypes> proxyTypes; 
         private java.util.List < String > realServers; 
-        private String regionId; 
         private Integer rsType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateDomainResourceRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.httpsExt = response.httpsExt;
-            this.instanceIds = response.instanceIds;
-            this.proxyTypes = response.proxyTypes;
-            this.realServers = response.realServers;
-            this.regionId = response.regionId;
-            this.rsType = response.rsType;
+        private Builder(CreateDomainResourceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.httpsExt = request.httpsExt;
+            this.instanceIds = request.instanceIds;
+            this.proxyTypes = request.proxyTypes;
+            this.realServers = request.realServers;
+            this.rsType = request.rsType;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * HttpsExt.
-         */
-        public Builder httpsExt(String httpsExt) {
-            this.putQueryParameter("HttpsExt", httpsExt);
-            this.httpsExt = httpsExt;
-            return this;
-        }
-
-        /**
-         * InstanceIds.
-         */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
-            return this;
-        }
-
-        /**
-         * ProxyTypes.
-         */
-        public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
-            this.putQueryParameter("ProxyTypes", proxyTypes);
-            this.proxyTypes = proxyTypes;
-            return this;
-        }
-
-        /**
-         * RealServers.
-         */
-        public Builder realServers(java.util.List < String > realServers) {
-            this.putQueryParameter("RealServers", realServers);
-            this.realServers = realServers;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -197,7 +152,72 @@ public class CreateDomainResourceRequest extends Request {
         }
 
         /**
-         * RsType.
+         * The domain name of the website that you want to add to the Anti-DDoS Pro or Anti-DDoS Premium instance.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The advanced HTTPS settings. This parameter takes effect only when the value of the **ProxyType** parameter includes **https**. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
+         * <p>
+         * 
+         * *   **Http2https**: specifies whether to turn on Enforce HTTPS Routing. This field is optional and must be an integer. Valid values: **0** and **1**. The value 0 indicates that Enforce HTTPS Routing is turned off. The value 1 indicates that Enforce HTTPS Routing is turned on. The default value is 0.
+         * 
+         *     If your website supports both HTTP and HTTPS, this feature meets your business requirements. If you enable this feature, all HTTP requests to access the website are redirected to HTTPS requests on the standard port 443.
+         * 
+         * *   **Https2http**: specifies whether to turn on Enable HTTP. This field is optional and must be an integer. Valid values: **0** and **1**. The value 0 indicates that Enable HTTP is turned off. The value 1 indicates that Enable HTTP is turned on. The default value is 0.
+         * 
+         *     If your website does not support HTTPS, this feature meets your business requirements If this feature is enabled, all HTTPS requests are redirected to HTTP requests and forwarded to origin servers. This feature can redirect WebSockets requests to WebSocket requests. Requests are redirected over the standard port 80.
+         * 
+         * *   **Http2**: specifies whether to turn on Enable HTTP/2. This field is optional. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on. The default value is 0.
+         * 
+         *     After you turn on the switch, HTTP/2 is used.
+         */
+        public Builder httpsExt(String httpsExt) {
+            this.putQueryParameter("HttpsExt", httpsExt);
+            this.httpsExt = httpsExt;
+            return this;
+        }
+
+        /**
+         * An array consisting of the IDs of instances that you want to associate.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * An array that consists of the details of the protocol type and port number.
+         */
+        public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
+            this.putQueryParameter("ProxyTypes", proxyTypes);
+            this.proxyTypes = proxyTypes;
+            return this;
+        }
+
+        /**
+         * An array that consists of the addresses of origin servers.
+         */
+        public Builder realServers(java.util.List < String > realServers) {
+            this.putQueryParameter("RealServers", realServers);
+            this.realServers = realServers;
+            return this;
+        }
+
+        /**
+         * The address type of the origin server. Valid values:
+         * <p>
+         * 
+         * *   **0**: IP address
+         * 
+         * *   **1**: domain name
+         * 
+         *     If you deploy proxies, such as a Web Application Firewall (WAF) instance, between the origin server and the Anti-DDoS Pro or Anti-DDoS Premium instance, set the value to 1. If you use the domain name, you must enter the address of the proxy, such as the CNAME of WAF.
          */
         public Builder rsType(Integer rsType) {
             this.putQueryParameter("RsType", rsType);
@@ -252,7 +272,7 @@ public class CreateDomainResourceRequest extends Request {
             private String proxyType; 
 
             /**
-             * ProxyPorts.
+             * An array that consists of port numbers.
              */
             public Builder proxyPorts(java.util.List < Integer > proxyPorts) {
                 this.proxyPorts = proxyPorts;
@@ -260,7 +280,13 @@ public class CreateDomainResourceRequest extends Request {
             }
 
             /**
-             * ProxyType.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **http**
+             * *   **https**
+             * *   **websocket**
+             * *   **websockets**
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;

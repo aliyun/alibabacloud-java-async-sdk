@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDDoSEventsResponseBody extends TeaModel {
     @NameInMap("DDoSEvents")
-    private java.util.List < DDoSEvents> DDoSEvents;
+    private java.util.List < DDoSEvents> dDoSEvents;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -22,7 +22,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
     private Long total;
 
     private DescribeDDoSEventsResponseBody(Builder builder) {
-        this.DDoSEvents = builder.DDoSEvents;
+        this.dDoSEvents = builder.dDoSEvents;
         this.requestId = builder.requestId;
         this.total = builder.total;
     }
@@ -36,10 +36,10 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
     }
 
     /**
-     * @return DDoSEvents
+     * @return dDoSEvents
      */
     public java.util.List < DDoSEvents> getDDoSEvents() {
-        return this.DDoSEvents;
+        return this.dDoSEvents;
     }
 
     /**
@@ -57,20 +57,20 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DDoSEvents> DDoSEvents; 
+        private java.util.List < DDoSEvents> dDoSEvents; 
         private String requestId; 
         private Long total; 
 
         /**
-         * DDoSEvents.
+         * The DDoS attack events.
          */
-        public Builder DDoSEvents(java.util.List < DDoSEvents> DDoSEvents) {
-            this.DDoSEvents = DDoSEvents;
+        public Builder dDoSEvents(java.util.List < DDoSEvents> dDoSEvents) {
+            this.dDoSEvents = dDoSEvents;
             return this;
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of returned attack events.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -202,7 +202,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * Bps.
+             * The bandwidth of attack traffic. Unit: bit/s.
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
@@ -210,7 +210,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the DDoS attack stopped. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -218,7 +218,11 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the attack event. Valid values:
+             * <p>
+             * 
+             * *   **defense**: traffic scrubbing events
+             * *   **blackhole**: blackhole filtering events
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -226,7 +230,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The attacked IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -234,7 +238,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The attacked port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -242,7 +246,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Pps.
+             * The packet forwarding rate of attack traffic. Unit: packets per second (pps).
              */
             public Builder pps(Long pps) {
                 this.pps = pps;
@@ -250,7 +254,17 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region from which the attack was launched. Valid values:
+             * <p>
+             * 
+             * *   **cn**: a region in the Chinese mainland
+             * *   **alb-ap-northeast-1-gf-x**: Japan (Tokyo)
+             * *   **alb-ap-southeast-gf-x**: Singapore
+             * *   **alb-cn-hongkong-gf-x**: Hong Kong (China)
+             * *   **alb-eu-central-1-gf-x**: Germany (Frankfurt)
+             * *   **alb-us-west-1-gf-x**: US (Silicon Valley)
+             * 
+             * > The values except **cn** are returned only when **RegionId** is set to **ap-southeast-1**.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -258,7 +272,7 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the DDoS attack started. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

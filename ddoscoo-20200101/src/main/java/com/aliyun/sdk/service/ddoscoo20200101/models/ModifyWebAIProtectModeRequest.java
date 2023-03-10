@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyWebAIProtectModeRequest</p>
  */
 public class ModifyWebAIProtectModeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Config")
     @Validation(required = true)
@@ -22,19 +26,15 @@ public class ModifyWebAIProtectModeRequest extends Request {
     @Validation(required = true)
     private String domain;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ModifyWebAIProtectModeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.config = builder.config;
         this.domain = builder.domain;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -52,6 +52,13 @@ public class ModifyWebAIProtectModeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return config
      */
     public String getConfig() {
@@ -66,13 +73,6 @@ public class ModifyWebAIProtectModeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -80,40 +80,22 @@ public class ModifyWebAIProtectModeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyWebAIProtectModeRequest, Builder> {
+        private String regionId; 
         private String config; 
         private String domain; 
-        private String regionId; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyWebAIProtectModeRequest response) {
-            super(response);
-            this.config = response.config;
-            this.domain = response.domain;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(ModifyWebAIProtectModeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.config = request.config;
+            this.domain = request.domain;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * Config.
-         */
-        public Builder config(String config) {
-            this.putQueryParameter("Config", config);
-            this.config = config;
-            return this;
-        }
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -125,7 +107,40 @@ public class ModifyWebAIProtectModeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The details of the Intelligent Protection policy. This parameter is a JSON string. The string contains the following fields:
+         * <p>
+         * 
+         * *   **AiTemplate**: the level of the Intelligent Protection policy. This field is required and must be of the STRING type. Valid values:
+         * 
+         *     *   **level30**: the Low level
+         *     *   **level60**: the Normal level
+         *     *   **level90**: the Strict level
+         * 
+         * *   **AiMode**: the mode of the Intelligent Protection policy. This field is required and must be of the string type. Valid values:
+         * 
+         *     *   **watch**: the Warning mode
+         *     *   **defense**: the Defense mode
+         */
+        public Builder config(String config) {
+            this.putQueryParameter("Config", config);
+            this.config = config;
+            return this;
+        }
+
+        /**
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for a domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

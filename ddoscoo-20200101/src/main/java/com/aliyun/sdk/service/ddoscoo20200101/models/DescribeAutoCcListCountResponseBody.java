@@ -62,7 +62,7 @@ public class DescribeAutoCcListCountResponseBody extends TeaModel {
         private Integer whiteCount; 
 
         /**
-         * BlackCount.
+         * The total number of IP addresses in the blacklist.
          */
         public Builder blackCount(Integer blackCount) {
             this.blackCount = blackCount;
@@ -70,7 +70,7 @@ public class DescribeAutoCcListCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAutoCcListCountResponseBody extends TeaModel {
         }
 
         /**
-         * WhiteCount.
+         * The total number of IP addresses in the whitelist.
          */
         public Builder whiteCount(Integer whiteCount) {
             this.whiteCount = whiteCount;

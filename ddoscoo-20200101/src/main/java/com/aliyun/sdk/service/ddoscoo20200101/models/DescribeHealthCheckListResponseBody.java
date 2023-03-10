@@ -50,7 +50,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HealthCheckList.
+         * An array that consists of information about the health check configuration.
          */
         public Builder healthCheckList(java.util.List < HealthCheckList> healthCheckList) {
             this.healthCheckList = healthCheckList;
@@ -58,7 +58,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,10 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * Domain.
+             * The domain name.
+             * <p>
+             * 
+             * > This parameter is returned only when the Layer 7 health check configuration is queried.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -190,7 +193,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * Down.
+             * The number of consecutive failed health checks that must occur before a port is declared unhealthy. Valid values: **1** to **10**.
              */
             public Builder down(Integer down) {
                 this.down = down;
@@ -198,7 +201,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * The interval at which checks are performed. Valid values: **1** to **30**. Unit: seconds.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -206,7 +209,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port that was checked.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -214,7 +217,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * The response timeout period. Valid values: **1** to **30**. Unit: seconds.
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -222,7 +225,11 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**: The Layer 4 health check configuration was queried.
+             * *   **http**: The Layer 7 health check configuration was queried.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -230,7 +237,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * Up.
+             * The number of consecutive successful health checks that must occur before a port is declared healthy. Valid values: **1** to **10**.
              */
             public Builder up(Integer up) {
                 this.up = up;
@@ -238,7 +245,10 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * The check path.
+             * <p>
+             * 
+             * > This parameter is returned only when the Layer 7 health check configuration is queried.
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -315,7 +325,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * FrontendPort.
+             * The forwarding port.
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -323,7 +333,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheck.
+             * The health check configuration.
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
@@ -331,7 +341,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -339,7 +349,11 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The forwarding protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

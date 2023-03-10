@@ -62,7 +62,7 @@ public class DescribePortResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * NetworkRules.
+         * An array that consists of port forwarding rules.
          */
         public Builder networkRules(java.util.List < NetworkRules> networkRules) {
             this.networkRules = networkRules;
@@ -70,7 +70,7 @@ public class DescribePortResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribePortResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of port forwarding rules returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -178,7 +178,7 @@ public class DescribePortResponseBody extends TeaModel {
             private java.util.List < String > realServers; 
 
             /**
-             * BackendPort.
+             * The port of the origin server.
              */
             public Builder backendPort(Integer backendPort) {
                 this.backendPort = backendPort;
@@ -186,7 +186,7 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * FrontendPort.
+             * The forwarding port.
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -194,7 +194,11 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * FrontendProtocol.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder frontendProtocol(String frontendProtocol) {
                 this.frontendProtocol = frontendProtocol;
@@ -202,7 +206,7 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the port forwarding rule is applied.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +214,11 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * IsAutoCreate.
+             * Indicates whether the port forwarding rule is automatically created by the instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder isAutoCreate(Boolean isAutoCreate) {
                 this.isAutoCreate = isAutoCreate;
@@ -218,7 +226,7 @@ public class DescribePortResponseBody extends TeaModel {
             }
 
             /**
-             * RealServers.
+             * An array that consists of IP addresses of origin servers.
              */
             public Builder realServers(java.util.List < String > realServers) {
                 this.realServers = realServers;

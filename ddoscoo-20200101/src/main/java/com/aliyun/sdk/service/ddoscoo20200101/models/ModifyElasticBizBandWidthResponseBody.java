@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateWebRuleTfResponseBody} extends {@link TeaModel}
+ * {@link ModifyElasticBizBandWidthResponseBody} extends {@link TeaModel}
  *
- * <p>CreateWebRuleTfResponseBody</p>
+ * <p>ModifyElasticBizBandWidthResponseBody</p>
  */
-public class CreateWebRuleTfResponseBody extends TeaModel {
+public class ModifyElasticBizBandWidthResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateWebRuleTfResponseBody(Builder builder) {
+    private ModifyElasticBizBandWidthResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class CreateWebRuleTfResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateWebRuleTfResponseBody create() {
+    public static ModifyElasticBizBandWidthResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class CreateWebRuleTfResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateWebRuleTfResponseBody build() {
-            return new CreateWebRuleTfResponseBody(this);
+        public ModifyElasticBizBandWidthResponseBody build() {
+            return new ModifyElasticBizBandWidthResponseBody(this);
         } 
 
     } 

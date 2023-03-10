@@ -74,7 +74,7 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cps.
+         * The peak of connection flood attacks. Unit: connections per seconds (CPS).
          */
         public Builder cps(Long cps) {
             this.cps = cps;
@@ -82,7 +82,7 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * Mbps.
+         * The peak of volumetric attacks. Unit: Mbit/s.
          */
         public Builder mbps(Long mbps) {
             this.mbps = mbps;
@@ -90,7 +90,7 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * Qps.
+         * The peak of resource exhaustion attacks. Unit: queries per second (QPS).
          */
         public Builder qps(Long qps) {
             this.qps = qps;
@@ -98,7 +98,7 @@ public class DescribeDDosEventMaxResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

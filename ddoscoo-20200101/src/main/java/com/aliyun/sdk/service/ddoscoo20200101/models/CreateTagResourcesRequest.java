@@ -103,17 +103,17 @@ public class CreateTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTagResourcesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.tags = response.tags;
+        private Builder(CreateTagResourcesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tags = request.tags;
         } 
 
         /**
-         * RegionId.
+         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -122,7 +122,10 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -131,7 +134,7 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * An array consisting of the IDs of the Anti-DDoS Pro instances to which you want to add the tag.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -140,7 +143,7 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +152,7 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * An array that consists of the tags to add.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -203,7 +206,7 @@ public class CreateTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag to add.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,7 +214,7 @@ public class CreateTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag to add.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainStatusCodeListRequest</p>
  */
 public class DescribeDomainStatusCodeListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     private String domain;
@@ -30,10 +34,6 @@ public class DescribeDomainStatusCodeListRequest extends Request {
     @Validation(required = true)
     private String queryType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
@@ -45,11 +45,11 @@ public class DescribeDomainStatusCodeListRequest extends Request {
 
     private DescribeDomainStatusCodeListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.queryType = builder.queryType;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
@@ -65,6 +65,13 @@ public class DescribeDomainStatusCodeListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,13 +103,6 @@ public class DescribeDomainStatusCodeListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -117,11 +117,11 @@ public class DescribeDomainStatusCodeListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDomainStatusCodeListRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private Long endTime; 
         private Long interval; 
         private String queryType; 
-        private String regionId; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -129,52 +129,16 @@ public class DescribeDomainStatusCodeListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainStatusCodeListRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.queryType = response.queryType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainStatusCodeListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.queryType = request.queryType;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * Interval.
-         */
-        public Builder interval(Long interval) {
-            this.putQueryParameter("Interval", interval);
-            this.interval = interval;
-            return this;
-        }
-
-        /**
-         * QueryType.
-         */
-        public Builder queryType(String queryType) {
-            this.putQueryParameter("QueryType", queryType);
-            this.queryType = queryType;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -186,7 +150,53 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The domain name of the website. If you do not specify this parameter, the statistics on response status codes of all domain names are queried.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The interval for returning data. Unit: seconds.
+         */
+        public Builder interval(Long interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
+            return this;
+        }
+
+        /**
+         * The source of the statistics. Valid values:
+         * <p>
+         * 
+         * *   **gf**: Anti-DDoS Pro or Anti-DDoS Premium
+         * *   **upstrem**: origin server
+         */
+        public Builder queryType(String queryType) {
+            this.putQueryParameter("QueryType", queryType);
+            this.queryType = queryType;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -195,7 +205,10 @@ public class DescribeDomainStatusCodeListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the event. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

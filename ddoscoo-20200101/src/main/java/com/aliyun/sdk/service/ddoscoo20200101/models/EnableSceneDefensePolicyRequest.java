@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnableSceneDefensePolicyRequest</p>
  */
 public class EnableSceneDefensePolicyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PolicyId")
     @Validation(required = true)
     private String policyId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private EnableSceneDefensePolicyRequest(Builder builder) {
         super(builder);
-        this.policyId = builder.policyId;
         this.regionId = builder.regionId;
+        this.policyId = builder.policyId;
     }
 
     public static Builder builder() {
@@ -41,41 +41,32 @@ public class EnableSceneDefensePolicyRequest extends Request {
     }
 
     /**
-     * @return policyId
-     */
-    public String getPolicyId() {
-        return this.policyId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return policyId
+     */
+    public String getPolicyId() {
+        return this.policyId;
+    }
+
     public static final class Builder extends Request.Builder<EnableSceneDefensePolicyRequest, Builder> {
-        private String policyId; 
         private String regionId; 
+        private String policyId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(EnableSceneDefensePolicyRequest response) {
-            super(response);
-            this.policyId = response.policyId;
-            this.regionId = response.regionId;
+        private Builder(EnableSceneDefensePolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.policyId = request.policyId;
         } 
-
-        /**
-         * PolicyId.
-         */
-        public Builder policyId(String policyId) {
-            this.putQueryParameter("PolicyId", policyId);
-            this.policyId = policyId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,18 @@ public class EnableSceneDefensePolicyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the policy that you want to enable.
+         * <p>
+         * 
+         * > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+         */
+        public Builder policyId(String policyId) {
+            this.putQueryParameter("PolicyId", policyId);
+            this.policyId = policyId;
             return this;
         }
 

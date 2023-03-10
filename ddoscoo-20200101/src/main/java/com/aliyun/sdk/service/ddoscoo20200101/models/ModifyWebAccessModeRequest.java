@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyWebAccessModeRequest</p>
  */
 public class ModifyWebAccessModeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AccessMode")
     @Validation(required = true)
@@ -22,15 +26,11 @@ public class ModifyWebAccessModeRequest extends Request {
     @Validation(required = true)
     private String domain;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ModifyWebAccessModeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.accessMode = builder.accessMode;
         this.domain = builder.domain;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class ModifyWebAccessModeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return accessMode
      */
     public Integer getAccessMode() {
@@ -60,31 +67,38 @@ public class ModifyWebAccessModeRequest extends Request {
         return this.domain;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyWebAccessModeRequest, Builder> {
+        private String regionId; 
         private Integer accessMode; 
         private String domain; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyWebAccessModeRequest response) {
-            super(response);
-            this.accessMode = response.accessMode;
-            this.domain = response.domain;
-            this.regionId = response.regionId;
+        private Builder(ModifyWebAccessModeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.accessMode = request.accessMode;
+            this.domain = request.domain;
         } 
 
         /**
-         * AccessMode.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium. Valid values:
+         * <p>
+         * 
+         * *   **0**: A record mode
+         * *   **1**: anti-DDoS mode
+         * *   **2**: origin redundancy mode
          */
         public Builder accessMode(Integer accessMode) {
             this.putQueryParameter("AccessMode", accessMode);
@@ -93,20 +107,14 @@ public class ModifyWebAccessModeRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

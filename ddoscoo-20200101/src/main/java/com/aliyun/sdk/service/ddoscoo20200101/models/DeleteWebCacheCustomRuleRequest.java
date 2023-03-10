@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteWebCacheCustomRuleRequest</p>
  */
 public class DeleteWebCacheCustomRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     @Validation(required = true)
     private String domain;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -32,8 +32,8 @@ public class DeleteWebCacheCustomRuleRequest extends Request {
 
     private DeleteWebCacheCustomRuleRequest(Builder builder) {
         super(builder);
-        this.domain = builder.domain;
         this.regionId = builder.regionId;
+        this.domain = builder.domain;
         this.resourceGroupId = builder.resourceGroupId;
         this.ruleNames = builder.ruleNames;
     }
@@ -52,17 +52,17 @@ public class DeleteWebCacheCustomRuleRequest extends Request {
     }
 
     /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
     }
 
     /**
@@ -80,8 +80,8 @@ public class DeleteWebCacheCustomRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteWebCacheCustomRuleRequest, Builder> {
-        private String domain; 
         private String regionId; 
+        private String domain; 
         private String resourceGroupId; 
         private java.util.List < String > ruleNames; 
 
@@ -89,22 +89,13 @@ public class DeleteWebCacheCustomRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteWebCacheCustomRuleRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.ruleNames = response.ruleNames;
+        private Builder(DeleteWebCacheCustomRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.resourceGroupId = request.resourceGroupId;
+            this.ruleNames = request.ruleNames;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -116,7 +107,22 @@ public class DeleteWebCacheCustomRuleRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The domain name for which you want to delete the custom rules of the Static Page Caching policy.
+         * <p>
+         * 
+         * > You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -125,7 +131,7 @@ public class DeleteWebCacheCustomRuleRequest extends Request {
         }
 
         /**
-         * RuleNames.
+         * An array consisting of the names of the rules that you want to delete.
          */
         public Builder ruleNames(java.util.List < String > ruleNames) {
             this.putQueryParameter("RuleNames", ruleNames);

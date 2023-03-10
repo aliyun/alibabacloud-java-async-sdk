@@ -50,7 +50,7 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cidrs.
+         * An array that consists of the back-to-origin CIDR blocks of the instance.
          */
         public Builder cidrs(java.util.List < String > cidrs) {
             this.cidrs = cidrs;
@@ -58,7 +58,7 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

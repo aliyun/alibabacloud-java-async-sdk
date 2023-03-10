@@ -50,7 +50,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         private java.util.List < StatusList> statusList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StatusList.
+         * An array that consists of details of the Diversion from Origin Server configurations of the instance.
          */
         public Builder statusList(java.util.List < StatusList> statusList) {
             this.statusList = statusList;
@@ -134,7 +134,11 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * BlockStatus.
+             * The blocking status of the network traffic. Valid values:
+             * <p>
+             * 
+             * *   **areablock**: Network traffic is blocked.
+             * *   **normal**: Network traffic is not blocked.
              */
             public Builder blockStatus(String blockStatus) {
                 this.blockStatus = blockStatus;
@@ -142,7 +146,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the blocking. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -150,7 +154,11 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Line.
+             * The Internet service provider (ISP) line from which the traffic is blocked. Valid values:
+             * <p>
+             * 
+             * *   **ct**: China Telecom (International)
+             * *   **cut**: China Unicom (International)
              */
             public Builder line(String line) {
                 this.line = line;
@@ -158,7 +166,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the blocking. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -211,7 +219,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * BlockStatusList.
+             * An array that consists of details of the Diversion from Origin Server configuration.
              */
             public Builder blockStatusList(java.util.List < BlockStatusList> blockStatusList) {
                 this.blockStatusList = blockStatusList;
@@ -219,7 +227,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;

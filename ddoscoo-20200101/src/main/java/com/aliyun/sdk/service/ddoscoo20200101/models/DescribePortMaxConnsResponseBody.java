@@ -50,7 +50,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PortMaxConns.
+         * An array consisting of the details of the maximum number of connections that are established over a port of the instance.
          */
         public Builder portMaxConns(java.util.List < PortMaxConns> portMaxConns) {
             this.portMaxConns = portMaxConns;
@@ -58,7 +58,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * Cps.
+             * The maximum number of connections per second (CPS).
              */
             public Builder cps(Long cps) {
                 this.cps = cps;
@@ -130,7 +130,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -138,7 +138,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port of the instance.
              */
             public Builder port(String port) {
                 this.port = port;

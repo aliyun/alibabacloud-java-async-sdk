@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHealthCheckListRequest</p>
  */
 public class DescribeHealthCheckListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("NetworkRules")
     @Validation(required = true)
     private String networkRules;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeHealthCheckListRequest(Builder builder) {
         super(builder);
-        this.networkRules = builder.networkRules;
         this.regionId = builder.regionId;
+        this.networkRules = builder.networkRules;
     }
 
     public static Builder builder() {
@@ -41,41 +41,32 @@ public class DescribeHealthCheckListRequest extends Request {
     }
 
     /**
-     * @return networkRules
-     */
-    public String getNetworkRules() {
-        return this.networkRules;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return networkRules
+     */
+    public String getNetworkRules() {
+        return this.networkRules;
+    }
+
     public static final class Builder extends Request.Builder<DescribeHealthCheckListRequest, Builder> {
-        private String networkRules; 
         private String regionId; 
+        private String networkRules; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeHealthCheckListRequest response) {
-            super(response);
-            this.networkRules = response.networkRules;
-            this.regionId = response.regionId;
+        private Builder(DescribeHealthCheckListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.networkRules = request.networkRules;
         } 
-
-        /**
-         * NetworkRules.
-         */
-        public Builder networkRules(String networkRules) {
-            this.putQueryParameter("NetworkRules", networkRules);
-            this.networkRules = networkRules;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,20 @@ public class DescribeHealthCheckListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The information about the port forwarding rule. This parameter is a JSON string. The string contains the following fields:
+         * <p>
+         * 
+         * *   **InstanceId**: the ID of the instance. This field is required and must be of the STRING type.
+         * *   **Protocol**: the forwarding protocol. This field is required and must be of the STRING type. Valid values: **tcp** and **udp**.
+         * *   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.
+         */
+        public Builder networkRules(String networkRules) {
+            this.putQueryParameter("NetworkRules", networkRules);
+            this.networkRules = networkRules;
             return this;
         }
 

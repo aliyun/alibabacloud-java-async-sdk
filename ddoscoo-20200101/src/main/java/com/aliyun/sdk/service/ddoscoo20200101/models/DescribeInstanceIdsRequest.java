@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceIdsRequest</p>
  */
 public class DescribeInstanceIdsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Edition")
     private Integer edition;
@@ -20,19 +24,15 @@ public class DescribeInstanceIdsRequest extends Request {
     @NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeInstanceIdsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.edition = builder.edition;
         this.instanceIds = builder.instanceIds;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -50,6 +50,13 @@ public class DescribeInstanceIdsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return edition
      */
     public Integer getEdition() {
@@ -64,13 +71,6 @@ public class DescribeInstanceIdsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -78,40 +78,22 @@ public class DescribeInstanceIdsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceIdsRequest, Builder> {
+        private String regionId; 
         private Integer edition; 
         private java.util.List < String > instanceIds; 
-        private String regionId; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeInstanceIdsRequest response) {
-            super(response);
-            this.edition = response.edition;
-            this.instanceIds = response.instanceIds;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeInstanceIdsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.edition = request.edition;
+            this.instanceIds = request.instanceIds;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * Edition.
-         */
-        public Builder edition(Integer edition) {
-            this.putQueryParameter("Edition", edition);
-            this.edition = edition;
-            return this;
-        }
-
-        /**
-         * InstanceIds.
-         */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -123,7 +105,34 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The type of the instance that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
+         * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
+         * *   **2**: Anti-DDoS Premium instance of the Chinese Mainland Acceleration (CMA) mitigation plan
+         * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+         */
+        public Builder edition(Integer edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
+
+        /**
+         * An array that consists of the IDs of instances to query.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

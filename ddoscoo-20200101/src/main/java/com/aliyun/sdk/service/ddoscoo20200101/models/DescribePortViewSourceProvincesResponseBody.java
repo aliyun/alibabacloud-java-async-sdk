@@ -50,7 +50,7 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         private java.util.List < SourceProvinces> sourceProvinces; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         }
 
         /**
-         * SourceProvinces.
+         * Details about the administrative region in China from which the requests are sent.
          */
         public Builder sourceProvinces(java.util.List < SourceProvinces> sourceProvinces) {
             this.sourceProvinces = sourceProvinces;
@@ -110,7 +110,10 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
             private String provinceId; 
 
             /**
-             * Count.
+             * The total number of requests that are sent from the ISP.
+             * <p>
+             * 
+             * > This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different administrative regions in China.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +121,10 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
             }
 
             /**
-             * ProvinceId.
+             * The ID of the administrative region in China from which the requests are sent. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.
+             * <p>
+             * 
+             * > For more information, see [Location parameters](~~167926~~).
              */
             public Builder provinceId(String provinceId) {
                 this.provinceId = provinceId;

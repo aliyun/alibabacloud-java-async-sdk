@@ -86,7 +86,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TagKeys.
+         * An array that consists of the details of the tag key.
          */
         public Builder tagKeys(java.util.List < TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
@@ -118,7 +118,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             private String tagKey; 
 
             /**
-             * TagCount.
+             * The number of Anti-DDoS Pro instances to which the tag key is added.
              */
             public Builder tagCount(Integer tagCount) {
                 this.tagCount = tagCount;
@@ -178,7 +178,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;

@@ -50,7 +50,7 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         private java.util.List < SourceCountrys> sourceCountrys; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * SourceCountrys.
+         * An array consisting of countries or areas from which the requests are sent.
          */
         public Builder sourceCountrys(java.util.List < SourceCountrys> sourceCountrys) {
             this.sourceCountrys = sourceCountrys;
@@ -110,7 +110,7 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
             private String countryId; 
 
             /**
-             * Count.
+             * The number of requests.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,10 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
             }
 
             /**
-             * CountryId.
+             * The abbreviation of the country or area. For example, **cn** indicates China and **us** indicates the United States.
+             * <p>
+             * 
+             * > For more information, see [Location parameters](~~167926~~).
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;

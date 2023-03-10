@@ -50,7 +50,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         private java.util.List < WebCustomPorts> webCustomPorts; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         }
 
         /**
-         * WebCustomPorts.
+         * An array consisting of information about supported custom ports that are used by a website.
          */
         public Builder webCustomPorts(java.util.List < WebCustomPorts> webCustomPorts) {
             this.webCustomPorts = webCustomPorts;
@@ -110,7 +110,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
             private String proxyType; 
 
             /**
-             * ProxyPorts.
+             * An array that consists of supported custom ports.
              */
             public Builder proxyPorts(java.util.List < String > proxyPorts) {
                 this.proxyPorts = proxyPorts;
@@ -118,7 +118,11 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyType.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **http**
+             * *   **https**
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;

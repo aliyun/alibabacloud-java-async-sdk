@@ -50,7 +50,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Domains.
+         * An array consisting of details of the domain name for which the forwarding rules are configured.
          */
         public Builder domains(java.util.List < String > domains) {
             this.domains = domains;
@@ -58,7 +58,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

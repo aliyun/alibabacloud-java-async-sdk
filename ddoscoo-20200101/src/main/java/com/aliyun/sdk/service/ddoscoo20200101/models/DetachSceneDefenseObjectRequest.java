@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachSceneDefenseObjectRequest</p>
  */
 public class DetachSceneDefenseObjectRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ObjectType")
     private String objectType;
@@ -26,16 +30,12 @@ public class DetachSceneDefenseObjectRequest extends Request {
     @Validation(required = true)
     private String policyId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DetachSceneDefenseObjectRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.objectType = builder.objectType;
         this.objects = builder.objects;
         this.policyId = builder.policyId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class DetachSceneDefenseObjectRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,33 +79,35 @@ public class DetachSceneDefenseObjectRequest extends Request {
         return this.policyId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DetachSceneDefenseObjectRequest, Builder> {
+        private String regionId; 
         private String objectType; 
         private String objects; 
         private String policyId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DetachSceneDefenseObjectRequest response) {
-            super(response);
-            this.objectType = response.objectType;
-            this.objects = response.objects;
-            this.policyId = response.policyId;
-            this.regionId = response.regionId;
+        private Builder(DetachSceneDefenseObjectRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.objectType = request.objectType;
+            this.objects = request.objects;
+            this.policyId = request.policyId;
         } 
 
         /**
-         * ObjectType.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The type of the object. Set the value to **Domain**, which indicates a domain name.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -107,7 +116,7 @@ public class DetachSceneDefenseObjectRequest extends Request {
         }
 
         /**
-         * Objects.
+         * The protection asset that you want to remove from a policy. Separate multiple protection assets with commas (,).
          */
         public Builder objects(String objects) {
             this.putQueryParameter("Objects", objects);
@@ -116,20 +125,14 @@ public class DetachSceneDefenseObjectRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * The ID of the policy.
+         * <p>
+         * 
+         * > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
             this.policyId = policyId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

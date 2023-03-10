@@ -7,28 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteWebRuleTfRequest} extends {@link RequestModel}
+ * {@link DescribeHeadersRequest} extends {@link RequestModel}
  *
- * <p>DeleteWebRuleTfRequest</p>
+ * <p>DescribeHeadersRequest</p>
  */
-public class DeleteWebRuleTfRequest extends Request {
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
-    private String domain;
-
+public class DescribeHeadersRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
+    @NameInMap("Domain")
+    @Validation(required = true)
+    private String domain;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    private DeleteWebRuleTfRequest(Builder builder) {
+    private DescribeHeadersRequest(Builder builder) {
         super(builder);
-        this.domain = builder.domain;
         this.regionId = builder.regionId;
+        this.domain = builder.domain;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -36,20 +36,13 @@ public class DeleteWebRuleTfRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteWebRuleTfRequest create() {
+    public static DescribeHeadersRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
     }
 
     /**
@@ -60,36 +53,34 @@ public class DeleteWebRuleTfRequest extends Request {
     }
 
     /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteWebRuleTfRequest, Builder> {
-        private String domain; 
+    public static final class Builder extends Request.Builder<DescribeHeadersRequest, Builder> {
         private String regionId; 
+        private String domain; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteWebRuleTfRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeHeadersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -97,6 +88,15 @@ public class DeleteWebRuleTfRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Domain.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
             return this;
         }
 
@@ -110,8 +110,8 @@ public class DeleteWebRuleTfRequest extends Request {
         }
 
         @Override
-        public DeleteWebRuleTfRequest build() {
-            return new DeleteWebRuleTfRequest(this);
+        public DescribeHeadersRequest build() {
+            return new DescribeHeadersRequest(this);
         } 
 
     } 

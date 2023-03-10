@@ -115,18 +115,21 @@ public class DescribeTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTagResourcesRequest response) {
-            super(response);
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceIds = response.resourceIds;
-            this.resourceType = response.resourceType;
-            this.tags = response.tags;
+        private Builder(DescribeTagResourcesRequest request) {
+            super(request);
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceIds = request.resourceIds;
+            this.resourceType = request.resourceType;
+            this.tags = request.tags;
         } 
 
         /**
-         * NextToken.
+         * The query token. Set the value to the value of **NextToken** that is returned in the last call.
+         * <p>
+         * 
+         * > You do not need to configure this parameter if you call this operation for the first time.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -135,7 +138,7 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -144,7 +147,10 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -153,7 +159,7 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * An array consisting of IDs of the Anti-DDoS Pro instances that you want to query.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -162,7 +168,7 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -171,7 +177,7 @@ public class DescribeTagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * An array consisting of tags that you want to query. Each tag consists of a tag **key** and a tag **value**.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -225,7 +231,14 @@ public class DescribeTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag that you want to query.
+             * <p>
+             * 
+             * > 
+             * 
+             * *   You must specify at least one of the **ResourceIds.N** and **Tags.N.Key** parameters.
+             * 
+             * *   You can call the [DescribeTagKeys](~~159785~~) operation to query all tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +246,7 @@ public class DescribeTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag that you want to query.
              */
             public Builder value(String value) {
                 this.value = value;

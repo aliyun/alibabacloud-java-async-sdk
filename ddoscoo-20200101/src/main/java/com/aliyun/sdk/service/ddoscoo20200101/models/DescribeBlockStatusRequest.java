@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBlockStatusRequest</p>
  */
 public class DescribeBlockStatusRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceIds")
     @Validation(required = true)
     private java.util.List < String > instanceIds;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -27,8 +27,8 @@ public class DescribeBlockStatusRequest extends Request {
 
     private DescribeBlockStatusRequest(Builder builder) {
         super(builder);
-        this.instanceIds = builder.instanceIds;
         this.regionId = builder.regionId;
+        this.instanceIds = builder.instanceIds;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -46,17 +46,17 @@ public class DescribeBlockStatusRequest extends Request {
     }
 
     /**
-     * @return instanceIds
-     */
-    public java.util.List < String > getInstanceIds() {
-        return this.instanceIds;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -67,29 +67,20 @@ public class DescribeBlockStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeBlockStatusRequest, Builder> {
-        private java.util.List < String > instanceIds; 
         private String regionId; 
+        private java.util.List < String > instanceIds; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeBlockStatusRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeBlockStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceIds = request.instanceIds;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * InstanceIds.
-         */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -101,7 +92,22 @@ public class DescribeBlockStatusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * An array consisting of information about the IDs of the instances that you want to query.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

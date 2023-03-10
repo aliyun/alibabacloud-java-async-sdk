@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyWebPreciseAccessRuleRequest</p>
  */
 public class ModifyWebPreciseAccessRuleRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     @Validation(required = true)
@@ -20,10 +24,6 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
     @Query
     @NameInMap("Expires")
     private Integer expires;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -36,9 +36,9 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
 
     private ModifyWebPreciseAccessRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.expires = builder.expires;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.rules = builder.rules;
     }
@@ -57,6 +57,13 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return domain
      */
     public String getDomain() {
@@ -68,13 +75,6 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
      */
     public Integer getExpires() {
         return this.expires;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -92,9 +92,9 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyWebPreciseAccessRuleRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private Integer expires; 
-        private String regionId; 
         private String resourceGroupId; 
         private String rules; 
 
@@ -102,32 +102,14 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyWebPreciseAccessRuleRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.expires = response.expires;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.rules = response.rules;
+        private Builder(ModifyWebPreciseAccessRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.expires = request.expires;
+            this.resourceGroupId = request.resourceGroupId;
+            this.rules = request.rules;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * Expires.
-         */
-        public Builder expires(Integer expires) {
-            this.putQueryParameter("Expires", expires);
-            this.expires = expires;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -139,7 +121,28 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The validity period of the rule. Unit: seconds. This parameter takes effect only when **action** of a rule is **block**. Access requests that match the rule are blocked within the specified validity period of the rule. If you do not specify this parameter, this rule takes effect all the time.
+         */
+        public Builder expires(Integer expires) {
+            this.putQueryParameter("Expires", expires);
+            this.expires = expires;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -148,7 +151,34 @@ public class ModifyWebPreciseAccessRuleRequest extends Request {
         }
 
         /**
-         * Rules.
+         * The settings of the accurate access control rule. This parameter is a JSON string. The following list describes the fields in the value of the parameter:
+         * <p>
+         * 
+         * *   **action**: the action that is performed if the rule is matched. This field is required and must be of the string type. Valid values:
+         * 
+         *     *   **accept**: allows the requests that match the rule.
+         *     *   **block**: blocks the requests that match the rule.
+         *     *   **challenge**: implements a CAPTCHA for the requests that match the rule.
+         * 
+         * *   **name**: the name of the rule. This field is required and must be of the string type.
+         * 
+         * *   **condition**: the match conditions. This field is required and must be of the map type. A match condition contains the following parameters.
+         * 
+         *     **
+         * 
+         *     **Note**The AND logical operator is used to define the relationship among multiple match conditions.
+         * 
+         *     *   **field**: the match field. This parameter is required and must be of the string type.
+         * 
+         *     *   **match_method**: the logical relation. This parameter is required and must be of the string type.
+         * 
+         *         **
+         * 
+         *         **Note**For information about the mappings between the **field** and **match_method** parameters, see the Mappings between the field and match_method parameters table in this topic.
+         * 
+         *     *   **content**: the match content. This parameter is required and must be of the string type.
+         * 
+         * *   **header_name**: the HTTP header. This parameter is optional and must be of the string type. This parameter takes effect only when **field** is **header**.
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePortRequest</p>
  */
 public class DescribePortRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("FrontendPort")
     private Integer frontendPort;
@@ -35,18 +39,14 @@ public class DescribePortRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribePortRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.frontendPort = builder.frontendPort;
         this.frontendProtocol = builder.frontendProtocol;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -60,6 +60,13 @@ public class DescribePortRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,37 +104,39 @@ public class DescribePortRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribePortRequest, Builder> {
+        private String regionId; 
         private Integer frontendPort; 
         private String frontendProtocol; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribePortRequest response) {
-            super(response);
-            this.frontendPort = response.frontendPort;
-            this.frontendProtocol = response.frontendProtocol;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribePortRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.frontendPort = request.frontendPort;
+            this.frontendProtocol = request.frontendProtocol;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * FrontendPort.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The forwarding port to query. Valid values: **0** to **65535**.
          */
         public Builder frontendPort(Integer frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -136,7 +145,11 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * FrontendProtocol.
+         * The type of the forwarding protocol to query. Valid values:
+         * <p>
+         * 
+         * *   **tcp**
+         * *   **udp**
          */
         public Builder frontendProtocol(String frontendProtocol) {
             this.putQueryParameter("FrontendProtocol", frontendProtocol);
@@ -145,7 +158,10 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to query.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,7 +170,7 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. For example, if you want to obtain results on the first page, set the value to **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -163,20 +179,11 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

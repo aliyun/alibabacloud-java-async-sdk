@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainAttackEventsRequest</p>
  */
 public class DescribeDomainAttackEventsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     private String domain;
@@ -31,10 +35,6 @@ public class DescribeDomainAttackEventsRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
@@ -46,11 +46,11 @@ public class DescribeDomainAttackEventsRequest extends Request {
 
     private DescribeDomainAttackEventsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
@@ -66,6 +66,13 @@ public class DescribeDomainAttackEventsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -97,13 +104,6 @@ public class DescribeDomainAttackEventsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -118,11 +118,11 @@ public class DescribeDomainAttackEventsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDomainAttackEventsRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private Long endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -130,52 +130,16 @@ public class DescribeDomainAttackEventsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainAttackEventsRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainAttackEventsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * PageNumber.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -187,7 +151,49 @@ public class DescribeDomainAttackEventsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -196,7 +202,10 @@ public class DescribeDomainAttackEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

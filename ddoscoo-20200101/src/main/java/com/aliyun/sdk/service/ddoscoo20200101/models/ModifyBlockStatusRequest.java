@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBlockStatusRequest</p>
  */
 public class ModifyBlockStatusRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Duration")
     private Integer duration;
@@ -26,10 +30,6 @@ public class ModifyBlockStatusRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > lines;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Status")
     @Validation(required = true)
@@ -37,10 +37,10 @@ public class ModifyBlockStatusRequest extends Request {
 
     private ModifyBlockStatusRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.duration = builder.duration;
         this.instanceId = builder.instanceId;
         this.lines = builder.lines;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -55,6 +55,13 @@ public class ModifyBlockStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +86,6 @@ public class ModifyBlockStatusRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -93,51 +93,24 @@ public class ModifyBlockStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyBlockStatusRequest, Builder> {
+        private String regionId; 
         private Integer duration; 
         private String instanceId; 
         private java.util.List < String > lines; 
-        private String regionId; 
         private String status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyBlockStatusRequest response) {
-            super(response);
-            this.duration = response.duration;
-            this.instanceId = response.instanceId;
-            this.lines = response.lines;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(ModifyBlockStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.duration = request.duration;
+            this.instanceId = request.instanceId;
+            this.lines = request.lines;
+            this.status = request.status;
         } 
-
-        /**
-         * Duration.
-         */
-        public Builder duration(Integer duration) {
-            this.putQueryParameter("Duration", duration);
-            this.duration = duration;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Lines.
-         */
-        public Builder lines(java.util.List < String > lines) {
-            this.putQueryParameter("Lines", lines);
-            this.lines = lines;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -149,7 +122,44 @@ public class ModifyBlockStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The blocking period. Valid values: **15** to **43200**. Unit: minutes.
+         * <p>
+         * 
+         * > If you set **Status** to **do**, you must also specify this parameter.
+         */
+        public Builder duration(Integer duration) {
+            this.putQueryParameter("Duration", duration);
+            this.duration = duration;
+            return this;
+        }
+
+        /**
+         * The ID of the Anti-DDoS Pro instance to manage.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * An array consisting of the Internet service provider (ISP) lines from which traffic is blocked.
+         */
+        public Builder lines(java.util.List < String > lines) {
+            this.putQueryParameter("Lines", lines);
+            this.lines = lines;
+            return this;
+        }
+
+        /**
+         * Specifies the status of the Diversion from Origin Server policy. Valid values:
+         * <p>
+         * 
+         * *   **do**: enables the policy.
+         * *   **undo**: disables the policy.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

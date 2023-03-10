@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePortRequest</p>
  */
 public class CreatePortRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BackendPort")
     private String backendPort;
@@ -36,18 +40,14 @@ public class CreatePortRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > realServers;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private CreatePortRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backendPort = builder.backendPort;
         this.frontendPort = builder.frontendPort;
         this.frontendProtocol = builder.frontendProtocol;
         this.instanceId = builder.instanceId;
         this.realServers = builder.realServers;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -61,6 +61,13 @@ public class CreatePortRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -98,37 +105,39 @@ public class CreatePortRequest extends Request {
         return this.realServers;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreatePortRequest, Builder> {
+        private String regionId; 
         private String backendPort; 
         private String frontendPort; 
         private String frontendProtocol; 
         private String instanceId; 
         private java.util.List < String > realServers; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreatePortRequest response) {
-            super(response);
-            this.backendPort = response.backendPort;
-            this.frontendPort = response.frontendPort;
-            this.frontendProtocol = response.frontendProtocol;
-            this.instanceId = response.instanceId;
-            this.realServers = response.realServers;
-            this.regionId = response.regionId;
+        private Builder(CreatePortRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.backendPort = request.backendPort;
+            this.frontendPort = request.frontendPort;
+            this.frontendProtocol = request.frontendProtocol;
+            this.instanceId = request.instanceId;
+            this.realServers = request.realServers;
         } 
 
         /**
-         * BackendPort.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The port of the origin server. Valid values: **0** to **65535**.
          */
         public Builder backendPort(String backendPort) {
             this.putQueryParameter("BackendPort", backendPort);
@@ -137,7 +146,7 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * FrontendPort.
+         * The forwarding port. Valid values: **0** to **65535**.
          */
         public Builder frontendPort(String frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -146,7 +155,11 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * FrontendProtocol.
+         * The type of the protocol. Valid values:
+         * <p>
+         * 
+         * *   **tcp**
+         * *   **udp**
          */
         public Builder frontendProtocol(String frontendProtocol) {
             this.putQueryParameter("FrontendProtocol", frontendProtocol);
@@ -155,7 +168,10 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -164,20 +180,11 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * RealServers.
+         * An array that consists of the IP addresses of origin servers.
          */
         public Builder realServers(java.util.List < String > realServers) {
             this.putQueryParameter("RealServers", realServers);
             this.realServers = realServers;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

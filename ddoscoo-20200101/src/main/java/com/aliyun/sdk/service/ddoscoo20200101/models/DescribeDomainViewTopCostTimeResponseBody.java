@@ -50,7 +50,7 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
         private java.util.List < UrlList> urlList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
         }
 
         /**
-         * UrlList.
+         * The URLs which require the longest time to respond to requests.
          */
         public Builder urlList(java.util.List < UrlList> urlList) {
             this.urlList = urlList;
@@ -122,7 +122,7 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * CostTime.
+             * The response duration. Unit: milliseconds.
              */
             public Builder costTime(Float costTime) {
                 this.costTime = costTime;
@@ -130,7 +130,7 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +138,7 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL that is Base64-encoded.
              */
             public Builder url(String url) {
                 this.url = url;

@@ -61,10 +61,10 @@ public class DescribeDefenseCountStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDefenseCountStatisticsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeDefenseCountStatisticsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -77,7 +77,10 @@ public class DescribeDefenseCountStatisticsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

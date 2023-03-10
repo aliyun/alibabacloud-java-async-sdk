@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainViewTopUrlRequest</p>
  */
 public class DescribeDomainViewTopUrlRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     private String domain;
@@ -20,10 +24,6 @@ public class DescribeDomainViewTopUrlRequest extends Request {
     @NameInMap("EndTime")
     @Validation(required = true)
     private Long endTime;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -41,9 +41,9 @@ public class DescribeDomainViewTopUrlRequest extends Request {
 
     private DescribeDomainViewTopUrlRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
         this.top = builder.top;
@@ -63,6 +63,13 @@ public class DescribeDomainViewTopUrlRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return domain
      */
     public String getDomain() {
@@ -74,13 +81,6 @@ public class DescribeDomainViewTopUrlRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -105,9 +105,9 @@ public class DescribeDomainViewTopUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDomainViewTopUrlRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private Long endTime; 
-        private String regionId; 
         private String resourceGroupId; 
         private Long startTime; 
         private Integer top; 
@@ -116,33 +116,15 @@ public class DescribeDomainViewTopUrlRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainViewTopUrlRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.endTime = response.endTime;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.startTime = response.startTime;
-            this.top = response.top;
+        private Builder(DescribeDomainViewTopUrlRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.endTime = request.endTime;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
+            this.top = request.top;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -154,7 +136,31 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -163,7 +169,10 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -172,7 +181,7 @@ public class DescribeDomainViewTopUrlRequest extends Request {
         }
 
         /**
-         * Top.
+         * The number of URLs to query. Valid values: **1** to **100**.
          */
         public Builder top(Integer top) {
             this.putQueryParameter("Top", top);

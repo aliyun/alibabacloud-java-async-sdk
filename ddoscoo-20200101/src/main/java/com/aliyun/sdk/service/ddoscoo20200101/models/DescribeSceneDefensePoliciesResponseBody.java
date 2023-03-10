@@ -62,7 +62,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Policies.
+         * An array that consists of the configurations of the scenario-specific custom policy.
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -70,7 +70,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,7 +158,12 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             private String oldValue; 
 
             /**
-             * NewValue.
+             * The protection rule that is applied when the policy takes effect.
+             * <p>
+             * 
+             * If you set **PolicyType** to **1**, the value is **{"cc_rule_enable": false }**. The value indicates that the Frequency Control policy is disabled.
+             * 
+             * If you set **PolicyType** to **2**, the value is **{"ai_rule_enable": 0}**. The value indicates that the Intelligent Protection policy is disabled.
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -162,7 +171,11 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The protection policy whose status is changed when the policy takes effect. Valid values:
+             * <p>
+             * 
+             * *   **1**: indicates that the Frequency Control policy is changed.
+             * *   **2**: indicates that the Intelligent Protection policy is changed.
              */
             public Builder policyType(Integer policyType) {
                 this.policyType = policyType;
@@ -170,7 +183,16 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The running status of the policy. Valid values:
+             * <p>
+             * 
+             * *   **0**: The policy has not been issued or is restored.
+             * *   **1**: The policy is pending.
+             * *   **2**: The policy is being restored.
+             * *   **3**: The policy takes effect.
+             * *   **4**: The policy fails to take effect.
+             * *   **5**:The policy fails to be restored.
+             * *   **6**: The configurations of the protected objects for the policy does not exist because the configurations may be deleted.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -178,7 +200,12 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * oldValue.
+             * The protection rule that is applied before the policy takes effect.
+             * <p>
+             * 
+             * If you set **PolicyType** to **1**, the value is **{"cc_rule_enable": true}**. The value indicates that the Frequency Control policy is enabled.
+             * 
+             * If you set **PolicyType** to **2**, the value is **{"ai_rule_enable": 1}**. The value indicates that the Intelligent Protection policy is enabled.
              */
             public Builder oldValue(String oldValue) {
                 this.oldValue = oldValue;
@@ -315,7 +342,12 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             private String template; 
 
             /**
-             * Done.
+             * The execution status of the policy. Valid values:
+             * <p>
+             * 
+             * *   **1**: not executed or execution completed
+             * *   **0**: being executed
+             * *   **-1**: execution failed
              */
             public Builder done(Integer done) {
                 this.done = done;
@@ -323,7 +355,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time at which the policy expires. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -331,7 +363,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -339,7 +371,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectCount.
+             * The number of objects that are protected by the policy.
              */
             public Builder objectCount(Integer objectCount) {
                 this.objectCount = objectCount;
@@ -347,7 +379,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * The ID of the policy.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -355,7 +387,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimePolicies.
+             * The running rules of the policy.
              */
             public Builder runtimePolicies(java.util.List < RuntimePolicies> runtimePolicies) {
                 this.runtimePolicies = runtimePolicies;
@@ -363,7 +395,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time at which the policy takes effect. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -371,7 +403,13 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the policy. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: pending enabling
+             * *   **2**: enabled
+             * *   **3**: expired
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -379,7 +417,11 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The type of the template that is used to create the policy. Valid values:
+             * <p>
+             * 
+             * *   **promotion**: the Important Activity template
+             * *   **bypass**: the Forward All template
              */
             public Builder template(String template) {
                 this.template = template;

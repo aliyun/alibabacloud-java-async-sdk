@@ -61,10 +61,10 @@ public class DescribeLogStoreExistStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLogStoreExistStatusRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeLogStoreExistStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -77,7 +77,7 @@ public class DescribeLogStoreExistStatusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

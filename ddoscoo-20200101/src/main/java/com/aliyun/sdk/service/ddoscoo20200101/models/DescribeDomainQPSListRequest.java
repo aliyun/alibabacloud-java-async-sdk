@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainQPSListRequest</p>
  */
 public class DescribeDomainQPSListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     private String domain;
@@ -26,10 +30,6 @@ public class DescribeDomainQPSListRequest extends Request {
     @Validation(required = true)
     private Long interval;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
@@ -41,10 +41,10 @@ public class DescribeDomainQPSListRequest extends Request {
 
     private DescribeDomainQPSListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
@@ -60,6 +60,13 @@ public class DescribeDomainQPSListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -84,13 +91,6 @@ public class DescribeDomainQPSListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -105,10 +105,10 @@ public class DescribeDomainQPSListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDomainQPSListRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private Long endTime; 
         private Long interval; 
-        private String regionId; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -116,42 +116,15 @@ public class DescribeDomainQPSListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainQPSListRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainQPSListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * Interval.
-         */
-        public Builder interval(Long interval) {
-            this.putQueryParameter("Interval", interval);
-            this.interval = interval;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -163,7 +136,40 @@ public class DescribeDomainQPSListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The domain name of the website. If you do not specify this parameter, the statistics on the QPS of all domain names are queried.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The interval for returning data. Unit: seconds.
+         */
+        public Builder interval(Long interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -172,7 +178,10 @@ public class DescribeDomainQPSListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

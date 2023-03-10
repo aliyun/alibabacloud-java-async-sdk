@@ -87,12 +87,12 @@ public class DescribeSceneDefensePoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSceneDefensePoliciesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.status = response.status;
-            this.template = response.template;
+        private Builder(DescribeSceneDefensePoliciesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.status = request.status;
+            this.template = request.template;
         } 
 
         /**
@@ -105,7 +105,10 @@ public class DescribeSceneDefensePoliciesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -114,7 +117,13 @@ public class DescribeSceneDefensePoliciesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the policy. Valid values:
+         * <p>
+         * 
+         * *   **0**: disabled
+         * *   **1**: pending enabling
+         * *   **2**: enabled
+         * *   **3**: expired
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -123,7 +132,11 @@ public class DescribeSceneDefensePoliciesRequest extends Request {
         }
 
         /**
-         * Template.
+         * The type of the template that is used to create the policy. Valid values:
+         * <p>
+         * 
+         * *   **promotion**: the Important Activity template
+         * *   **bypass**: the Forward All template
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

@@ -50,7 +50,7 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
         private Boolean slsAuthStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SlsAuthStatus.
+         * Indicates whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder slsAuthStatus(Boolean slsAuthStatus) {
             this.slsAuthStatus = slsAuthStatus;

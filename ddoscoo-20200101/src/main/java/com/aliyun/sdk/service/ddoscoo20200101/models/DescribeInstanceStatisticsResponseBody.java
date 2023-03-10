@@ -50,7 +50,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceStatistics.
+         * The statistics on the instances.
          */
         public Builder instanceStatistics(java.util.List < InstanceStatistics> instanceStatistics) {
             this.instanceStatistics = instanceStatistics;
@@ -58,7 +58,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer siteUsage; 
 
             /**
-             * DefenseCountUsage.
+             * The number of advanced mitigation sessions that are used in this month.
+             * <p>
+             * 
+             * > This parameter is returned only if Anti-DDoS Premium instances are queried.
              */
             public Builder defenseCountUsage(Integer defenseCountUsage) {
                 this.defenseCountUsage = defenseCountUsage;
@@ -154,7 +157,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainUsage.
+             * The number of domain names that are protected by the instance.
              */
             public Builder domainUsage(Integer domainUsage) {
                 this.domainUsage = domainUsage;
@@ -162,7 +165,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +173,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * PortUsage.
+             * The number of ports that are protected by the instance.
              */
             public Builder portUsage(Integer portUsage) {
                 this.portUsage = portUsage;
@@ -178,7 +181,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteUsage.
+             * The number of websites that are protected by the instance.
              */
             public Builder siteUsage(Integer siteUsage) {
                 this.siteUsage = siteUsage;

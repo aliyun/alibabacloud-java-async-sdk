@@ -50,7 +50,7 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainModes.
+         * An array consisting of the modes in which the website service is added.
          */
         public Builder domainModes(java.util.List < DomainModes> domainModes) {
             this.domainModes = domainModes;
@@ -58,7 +58,7 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,12 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
             private String domain; 
 
             /**
-             * AccessMode.
+             * The mode in which the website service is added. Valid values:
+             * <p>
+             * 
+             * *   **0**: A record
+             * *   **1**: anti-DDoS mode
+             * *   **2**: origin redundancy mode
              */
             public Builder accessMode(Integer accessMode) {
                 this.accessMode = accessMode;
@@ -118,7 +123,7 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;

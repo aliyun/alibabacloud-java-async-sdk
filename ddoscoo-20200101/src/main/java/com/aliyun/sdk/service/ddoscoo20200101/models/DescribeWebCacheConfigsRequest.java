@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebCacheConfigsRequest</p>
  */
 public class DescribeWebCacheConfigsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domains")
     @Validation(required = true)
     private java.util.List < String > domains;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -27,8 +27,8 @@ public class DescribeWebCacheConfigsRequest extends Request {
 
     private DescribeWebCacheConfigsRequest(Builder builder) {
         super(builder);
-        this.domains = builder.domains;
         this.regionId = builder.regionId;
+        this.domains = builder.domains;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -46,17 +46,17 @@ public class DescribeWebCacheConfigsRequest extends Request {
     }
 
     /**
-     * @return domains
-     */
-    public java.util.List < String > getDomains() {
-        return this.domains;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return domains
+     */
+    public java.util.List < String > getDomains() {
+        return this.domains;
     }
 
     /**
@@ -67,29 +67,20 @@ public class DescribeWebCacheConfigsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeWebCacheConfigsRequest, Builder> {
-        private java.util.List < String > domains; 
         private String regionId; 
+        private java.util.List < String > domains; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeWebCacheConfigsRequest response) {
-            super(response);
-            this.domains = response.domains;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeWebCacheConfigsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domains = request.domains;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * Domains.
-         */
-        public Builder domains(java.util.List < String > domains) {
-            this.putQueryParameter("Domains", domains);
-            this.domains = domains;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -101,7 +92,19 @@ public class DescribeWebCacheConfigsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * An array consisting of domain names for which you want to query the Static Page Caching configurations.
+         */
+        public Builder domains(java.util.List < String > domains) {
+            this.putQueryParameter("Domains", domains);
+            this.domains = domains;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBlackholeStatusRequest</p>
  */
 public class ModifyBlackholeStatusRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BlackholeStatus")
     @Validation(required = true)
@@ -22,15 +26,11 @@ public class ModifyBlackholeStatusRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ModifyBlackholeStatusRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.blackholeStatus = builder.blackholeStatus;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +47,13 @@ public class ModifyBlackholeStatusRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return blackholeStatus
      */
     public String getBlackholeStatus() {
@@ -60,31 +67,33 @@ public class ModifyBlackholeStatusRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyBlackholeStatusRequest, Builder> {
+        private String regionId; 
         private String blackholeStatus; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyBlackholeStatusRequest response) {
-            super(response);
-            this.blackholeStatus = response.blackholeStatus;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(ModifyBlackholeStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.blackholeStatus = request.blackholeStatus;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * BlackholeStatus.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The action that you want to perform on the instance. Set the value to **undo**, which indicates that you want to deactivate blackhole filtering.
          */
         public Builder blackholeStatus(String blackholeStatus) {
             this.putQueryParameter("BlackholeStatus", blackholeStatus);
@@ -93,20 +102,14 @@ public class ModifyBlackholeStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -62,7 +62,7 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DomainAttackEvents.
+         * An array that consists of the details of the DDoS attack event.
          */
         public Builder domainAttackEvents(java.util.List < DomainAttackEvents> domainAttackEvents) {
             this.domainAttackEvents = domainAttackEvents;
@@ -70,7 +70,7 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned DDoS attack events.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,7 +154,7 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * Domain.
+             * The attacked domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -162,7 +162,7 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the DDoS attack stopped. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -170,7 +170,7 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQps.
+             * The peak attack QPS.
              */
             public Builder maxQps(Long maxQps) {
                 this.maxQps = maxQps;
@@ -178,7 +178,7 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the DDoS attack started. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

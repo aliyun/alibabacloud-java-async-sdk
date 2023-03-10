@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeL7RsPolicyRequest</p>
  */
 public class DescribeL7RsPolicyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     @Validation(required = true)
@@ -21,19 +25,15 @@ public class DescribeL7RsPolicyRequest extends Request {
     @NameInMap("RealServers")
     private java.util.List < String > realServers;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeL7RsPolicyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.domain = builder.domain;
         this.realServers = builder.realServers;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -51,6 +51,13 @@ public class DescribeL7RsPolicyRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return domain
      */
     public String getDomain() {
@@ -65,13 +72,6 @@ public class DescribeL7RsPolicyRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -79,40 +79,22 @@ public class DescribeL7RsPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeL7RsPolicyRequest, Builder> {
+        private String regionId; 
         private String domain; 
         private java.util.List < String > realServers; 
-        private String regionId; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeL7RsPolicyRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.realServers = response.realServers;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeL7RsPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.realServers = request.realServers;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * RealServers.
-         */
-        public Builder realServers(java.util.List < String > realServers) {
-            this.putQueryParameter("RealServers", realServers);
-            this.realServers = realServers;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -124,7 +106,31 @@ public class DescribeL7RsPolicyRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The domain name of the website to query.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query the domain names for which forwarding rules are configured.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * An array that consists of N addresses of origin servers to query. The maximum value of N is 200. You can specify up to 200 addresses.
+         */
+        public Builder realServers(java.util.List < String > realServers) {
+            this.putQueryParameter("RealServers", realServers);
+            this.realServers = realServers;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see [Create a resource group](~~94485~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

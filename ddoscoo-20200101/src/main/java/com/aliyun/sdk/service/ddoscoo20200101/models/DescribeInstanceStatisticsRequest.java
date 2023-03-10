@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceStatisticsRequest</p>
  */
 public class DescribeInstanceStatisticsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceIds")
     @Validation(required = true)
     private java.util.List < String > instanceIds;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeInstanceStatisticsRequest(Builder builder) {
         super(builder);
-        this.instanceIds = builder.instanceIds;
         this.regionId = builder.regionId;
+        this.instanceIds = builder.instanceIds;
     }
 
     public static Builder builder() {
@@ -41,41 +41,32 @@ public class DescribeInstanceStatisticsRequest extends Request {
     }
 
     /**
-     * @return instanceIds
-     */
-    public java.util.List < String > getInstanceIds() {
-        return this.instanceIds;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstanceStatisticsRequest, Builder> {
-        private java.util.List < String > instanceIds; 
         private String regionId; 
+        private java.util.List < String > instanceIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeInstanceStatisticsRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.regionId = response.regionId;
+        private Builder(DescribeInstanceStatisticsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceIds = request.instanceIds;
         } 
-
-        /**
-         * InstanceIds.
-         */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,18 @@ public class DescribeInstanceStatisticsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance that you want to query.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
             return this;
         }
 

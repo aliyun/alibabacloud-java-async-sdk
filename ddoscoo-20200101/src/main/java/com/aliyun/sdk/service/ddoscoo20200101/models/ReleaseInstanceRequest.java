@@ -12,20 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReleaseInstanceRequest</p>
  */
 public class ReleaseInstanceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     @Host
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
     private ReleaseInstanceRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
     }
 
     public static Builder builder() {
@@ -42,41 +42,32 @@ public class ReleaseInstanceRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public static final class Builder extends Request.Builder<ReleaseInstanceRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ReleaseInstanceRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(ReleaseInstanceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -84,6 +75,18 @@ public class ReleaseInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance that you want to release.
+         * <p>
+         * 
+         * > You can release only expired instances. You can call the [DescribeInstances](~~91478~~) operation to query the IDs and expiration status of all instances.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

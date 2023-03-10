@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesRequest</p>
  */
 public class DescribeInstancesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Edition")
     private Integer edition;
@@ -46,10 +50,6 @@ public class DescribeInstancesRequest extends Request {
     @Validation(required = true)
     private String pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Remark")
     private String remark;
@@ -68,6 +68,7 @@ public class DescribeInstancesRequest extends Request {
 
     private DescribeInstancesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.edition = builder.edition;
         this.enabled = builder.enabled;
         this.expireEndTime = builder.expireEndTime;
@@ -76,7 +77,6 @@ public class DescribeInstancesRequest extends Request {
         this.ip = builder.ip;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.remark = builder.remark;
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
@@ -94,6 +94,13 @@ public class DescribeInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -153,13 +160,6 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return remark
      */
     public String getRemark() {
@@ -188,6 +188,7 @@ public class DescribeInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
+        private String regionId; 
         private Integer edition; 
         private Integer enabled; 
         private Long expireEndTime; 
@@ -196,7 +197,6 @@ public class DescribeInstancesRequest extends Request {
         private String ip; 
         private String pageNumber; 
         private String pageSize; 
-        private String regionId; 
         private String remark; 
         private String resourceGroupId; 
         private java.util.List < Integer > status; 
@@ -206,94 +206,22 @@ public class DescribeInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstancesRequest response) {
-            super(response);
-            this.edition = response.edition;
-            this.enabled = response.enabled;
-            this.expireEndTime = response.expireEndTime;
-            this.expireStartTime = response.expireStartTime;
-            this.instanceIds = response.instanceIds;
-            this.ip = response.ip;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.remark = response.remark;
-            this.resourceGroupId = response.resourceGroupId;
-            this.status = response.status;
-            this.tag = response.tag;
+        private Builder(DescribeInstancesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.edition = request.edition;
+            this.enabled = request.enabled;
+            this.expireEndTime = request.expireEndTime;
+            this.expireStartTime = request.expireStartTime;
+            this.instanceIds = request.instanceIds;
+            this.ip = request.ip;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.remark = request.remark;
+            this.resourceGroupId = request.resourceGroupId;
+            this.status = request.status;
+            this.tag = request.tag;
         } 
-
-        /**
-         * Edition.
-         */
-        public Builder edition(Integer edition) {
-            this.putQueryParameter("Edition", edition);
-            this.edition = edition;
-            return this;
-        }
-
-        /**
-         * Enabled.
-         */
-        public Builder enabled(Integer enabled) {
-            this.putQueryParameter("Enabled", enabled);
-            this.enabled = enabled;
-            return this;
-        }
-
-        /**
-         * ExpireEndTime.
-         */
-        public Builder expireEndTime(Long expireEndTime) {
-            this.putQueryParameter("ExpireEndTime", expireEndTime);
-            this.expireEndTime = expireEndTime;
-            return this;
-        }
-
-        /**
-         * ExpireStartTime.
-         */
-        public Builder expireStartTime(Long expireStartTime) {
-            this.putQueryParameter("ExpireStartTime", expireStartTime);
-            this.expireStartTime = expireStartTime;
-            return this;
-        }
-
-        /**
-         * InstanceIds.
-         */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
-            return this;
-        }
-
-        /**
-         * Ip.
-         */
-        public Builder ip(String ip) {
-            this.putQueryParameter("Ip", ip);
-            this.ip = ip;
-            return this;
-        }
-
-        /**
-         * PageNumber.
-         */
-        public Builder pageNumber(String pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(String pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -305,7 +233,89 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The mitigation plan of the instance to query. Valid values:
+         * <p>
+         * 
+         * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
+         * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
+         * *   **2**: Anti-DDoS Premium instance of the Chinese Mainland Acceleration (CMA) mitigation plan
+         * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+         */
+        public Builder edition(Integer edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
+
+        /**
+         * The traffic forwarding status of the instance to query. Valid values:
+         * <p>
+         * 
+         * *   **0**: The instance no longer forwards service traffic.
+         * *   **1**: The instance forwards service traffic as expected.
+         */
+        public Builder enabled(Integer enabled) {
+            this.putQueryParameter("Enabled", enabled);
+            this.enabled = enabled;
+            return this;
+        }
+
+        /**
+         * The end of the time range to query. Instances whose expiration time is earlier than the point in time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
+         */
+        public Builder expireEndTime(Long expireEndTime) {
+            this.putQueryParameter("ExpireEndTime", expireEndTime);
+            this.expireEndTime = expireEndTime;
+            return this;
+        }
+
+        /**
+         * The beginning of the time range to query. Instances whose expiration time is later than the point in time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
+         */
+        public Builder expireStartTime(Long expireStartTime) {
+            this.putQueryParameter("ExpireStartTime", expireStartTime);
+            this.expireStartTime = expireStartTime;
+            return this;
+        }
+
+        /**
+         * An array that consists of the IDs of instances to query.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * The IP address of the instance to query.
+         */
+        public Builder ip(String ip) {
+            this.putQueryParameter("Ip", ip);
+            this.ip = ip;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNumber(String pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The description of the instance to query. Fuzzy match is supported.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -314,7 +324,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -323,7 +336,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * An array that consists of the states of the instances to query.
          */
         public Builder status(java.util.List < Integer > status) {
             this.putQueryParameter("Status", status);
@@ -332,7 +345,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * An array consisting of the tags that are added to the instance to query.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -386,7 +399,13 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:
+             * <p>
+             * 
+             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).
+             * *   Separate multiple tags with commas (,).
+             * 
+             * > : The tag key (**Key**) and tag value (**Value**) must be specified in pairs.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +413,13 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:
+             * <p>
+             * 
+             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).
+             * *   Separate multiple tags with commas (,).
+             * 
+             * > : The tag key (**Key**) and tag value (**Value**) must be specified in pairs.
              */
             public Builder value(String value) {
                 this.value = value;

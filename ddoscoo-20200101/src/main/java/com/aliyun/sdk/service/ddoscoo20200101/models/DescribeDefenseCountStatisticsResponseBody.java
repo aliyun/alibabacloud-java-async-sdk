@@ -50,7 +50,7 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DefenseCountStatistics.
+         * The statistics on the number of advanced mitigation sessions.
          */
         public Builder defenseCountStatistics(DefenseCountStatistics defenseCountStatistics) {
             this.defenseCountStatistics = defenseCountStatistics;
@@ -58,7 +58,7 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             private Integer secHighSpeedCountRemain; 
 
             /**
-             * DefenseCountTotalUsageOfCurrentMonth.
+             * The number of advanced mitigation sessions that are used within the current calendar month.
              */
             public Builder defenseCountTotalUsageOfCurrentMonth(Integer defenseCountTotalUsageOfCurrentMonth) {
                 this.defenseCountTotalUsageOfCurrentMonth = defenseCountTotalUsageOfCurrentMonth;
@@ -142,7 +142,7 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowPackCountRemain.
+             * The number of available global advanced mitigation sessions for the Insurance mitigation plan.
              */
             public Builder flowPackCountRemain(Integer flowPackCountRemain) {
                 this.flowPackCountRemain = flowPackCountRemain;
@@ -150,7 +150,7 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxUsableDefenseCountCurrentMonth.
+             * The maximum number of advanced mitigation sessions available for the current calendar month. The advanced mitigation sessions include the advanced mitigation sessions that are provided free of charge and the global advanced mitigation sessions that you purchase.
              */
             public Builder maxUsableDefenseCountCurrentMonth(Integer maxUsableDefenseCountCurrentMonth) {
                 this.maxUsableDefenseCountCurrentMonth = maxUsableDefenseCountCurrentMonth;
@@ -158,7 +158,7 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SecHighSpeedCountRemain.
+             * The number of available global advanced mitigation sessions for the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.
              */
             public Builder secHighSpeedCountRemain(Integer secHighSpeedCountRemain) {
                 this.secHighSpeedCountRemain = secHighSpeedCountRemain;

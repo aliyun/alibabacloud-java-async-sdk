@@ -50,7 +50,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainQPSList.
+         * An array that consists of the statistics on the QPS of the website.
          */
         public Builder domainQPSList(java.util.List < DomainQPSList> domainQPSList) {
             this.domainQPSList = domainQPSList;
@@ -58,7 +58,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             private Long totalQps; 
 
             /**
-             * AttackQps.
+             * The attack QPS.
              */
             public Builder attackQps(Long attackQps) {
                 this.attackQps = attackQps;
@@ -202,7 +202,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * CacheHits.
+             * The number of cache hits.
              */
             public Builder cacheHits(Long cacheHits) {
                 this.cacheHits = cacheHits;
@@ -210,7 +210,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The index number of the returned data.
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -218,7 +218,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAttackQps.
+             * The peak attack QPS.
              */
             public Builder maxAttackQps(Long maxAttackQps) {
                 this.maxAttackQps = maxAttackQps;
@@ -226,7 +226,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxNormalQps.
+             * The peak of normal QPS.
              */
             public Builder maxNormalQps(Long maxNormalQps) {
                 this.maxNormalQps = maxNormalQps;
@@ -234,7 +234,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQps.
+             * The peak of total QPS.
              */
             public Builder maxQps(Long maxQps) {
                 this.maxQps = maxQps;
@@ -242,7 +242,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -250,7 +250,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of requests.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -258,7 +258,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQps.
+             * The total QPS.
              */
             public Builder totalQps(Long totalQps) {
                 this.totalQps = totalQps;

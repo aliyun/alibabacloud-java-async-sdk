@@ -63,14 +63,17 @@ public class DescribeInstanceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.productType = response.productType;
+        private Builder(DescribeInstanceStatusRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.productType = request.productType;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance to query.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +82,11 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the instance to query. Valid values:
+         * <p>
+         * 
+         * *   **1**: an Anti-DDoS Pro instance
+         * *   **2**: an Anti-DDoS Premium instance
          */
         public Builder productType(Integer productType) {
             this.putQueryParameter("ProductType", productType);

@@ -50,7 +50,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BlackholeStatus.
+         * An array that consists of the blackhole filtering status of the instance.
          */
         public Builder blackholeStatus(java.util.List < BlackholeStatus> blackholeStatus) {
             this.blackholeStatus = blackholeStatus;
@@ -58,7 +58,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * BlackStatus.
+             * Indicates whether blackhole filtering is triggered for the instance. Valid values:
+             * <p>
+             * 
+             * *   **blackhole**: yes
+             * *   **normal**: no
              */
             public Builder blackStatus(String blackStatus) {
                 this.blackStatus = blackStatus;
@@ -142,7 +146,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -150,7 +154,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -158,7 +162,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

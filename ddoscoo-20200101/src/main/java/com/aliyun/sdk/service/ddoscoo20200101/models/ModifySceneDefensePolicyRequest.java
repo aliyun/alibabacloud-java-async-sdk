@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySceneDefensePolicyRequest</p>
  */
 public class ModifySceneDefensePolicyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     @Validation(required = true)
@@ -27,10 +31,6 @@ public class ModifySceneDefensePolicyRequest extends Request {
     @Validation(required = true)
     private String policyId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -43,10 +43,10 @@ public class ModifySceneDefensePolicyRequest extends Request {
 
     private ModifySceneDefensePolicyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.name = builder.name;
         this.policyId = builder.policyId;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.template = builder.template;
     }
@@ -62,6 +62,13 @@ public class ModifySceneDefensePolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -86,13 +93,6 @@ public class ModifySceneDefensePolicyRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -107,10 +107,10 @@ public class ModifySceneDefensePolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifySceneDefensePolicyRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private String name; 
         private String policyId; 
-        private String regionId; 
         private Long startTime; 
         private String template; 
 
@@ -118,42 +118,15 @@ public class ModifySceneDefensePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySceneDefensePolicyRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.name = response.name;
-            this.policyId = response.policyId;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.template = response.template;
+        private Builder(ModifySceneDefensePolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.name = request.name;
+            this.policyId = request.policyId;
+            this.startTime = request.startTime;
+            this.template = request.template;
         } 
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * PolicyId.
-         */
-        public Builder policyId(String policyId) {
-            this.putQueryParameter("PolicyId", policyId);
-            this.policyId = policyId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -165,7 +138,37 @@ public class ModifySceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The end time of the policy. The value is a UNIX timestamp. Unit: milliseconds.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The name of the policy.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The ID of the policy that you want to modify.
+         * <p>
+         * 
+         * > You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.
+         */
+        public Builder policyId(String policyId) {
+            this.putQueryParameter("PolicyId", policyId);
+            this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * The start time of the policy. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -174,7 +177,11 @@ public class ModifySceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * Template.
+         * The template of the policy. Valid values:
+         * <p>
+         * 
+         * *   **promotion**: important activity
+         * *   **bypass**: all traffic forwarded
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

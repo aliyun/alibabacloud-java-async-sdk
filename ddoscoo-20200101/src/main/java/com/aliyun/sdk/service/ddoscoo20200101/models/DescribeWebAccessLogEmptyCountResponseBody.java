@@ -50,7 +50,7 @@ public class DescribeWebAccessLogEmptyCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableCount.
+         * The remaining quota that you can clear the Logstore.
          */
         public Builder availableCount(Integer availableCount) {
             this.availableCount = availableCount;
@@ -58,7 +58,7 @@ public class DescribeWebAccessLogEmptyCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

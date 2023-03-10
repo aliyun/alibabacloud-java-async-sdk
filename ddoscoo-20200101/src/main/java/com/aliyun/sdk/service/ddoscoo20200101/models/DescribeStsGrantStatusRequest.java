@@ -75,11 +75,11 @@ public class DescribeStsGrantStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStsGrantStatusRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.role = response.role;
+        private Builder(DescribeStsGrantStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.role = request.role;
         } 
 
         /**
@@ -92,7 +92,10 @@ public class DescribeStsGrantStatusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not configure this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -101,7 +104,10 @@ public class DescribeStsGrantStatusRequest extends Request {
         }
 
         /**
-         * Role.
+         * The name of the RAM role to query. Set the value to **AliyunDDoSCOODefaultRole**, which indicates the default role of Anti-DDoS Pro or Anti-DDoS Premium.
+         * <p>
+         * 
+         * > Anti-DDoS Pro or Anti-DDoS Premium uses the default role to access other cloud services.
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);

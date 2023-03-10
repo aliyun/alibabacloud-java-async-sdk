@@ -50,7 +50,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Config.
+         * The configuration of blocked locations.
          */
         public Builder config(Config config) {
             this.config = config;
@@ -58,7 +58,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             private String regionBlockSwitch; 
 
             /**
-             * Countries.
+             * An array consisting of the codes of the countries or areas from which the requests are blocked.
              */
             public Builder countries(java.util.List < String > countries) {
                 this.countries = countries;
@@ -130,7 +130,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             }
 
             /**
-             * Provinces.
+             * An array consisting of the codes of the administrative regions in China from which the requests are blocked.
              */
             public Builder provinces(java.util.List < String > provinces) {
                 this.provinces = provinces;
@@ -138,7 +138,11 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             }
 
             /**
-             * RegionBlockSwitch.
+             * The status of the Location Blacklist policy. Valid values:
+             * <p>
+             * 
+             * *   **on**: enabled
+             * *   **off**: disabled
              */
             public Builder regionBlockSwitch(String regionBlockSwitch) {
                 this.regionBlockSwitch = regionBlockSwitch;

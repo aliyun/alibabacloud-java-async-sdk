@@ -50,7 +50,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         private java.util.List < SourceProvinces> sourceProvinces; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         }
 
         /**
-         * SourceProvinces.
+         * An array consisting of the details of the administrative region in China from which the requests are sent.
          */
         public Builder sourceProvinces(java.util.List < SourceProvinces> sourceProvinces) {
             this.sourceProvinces = sourceProvinces;
@@ -110,7 +110,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
             private String provinceId; 
 
             /**
-             * Count.
+             * The total number of requests.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
             }
 
             /**
-             * ProvinceId.
+             * The ID of the region inside China. For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.
              */
             public Builder provinceId(String provinceId) {
                 this.provinceId = provinceId;

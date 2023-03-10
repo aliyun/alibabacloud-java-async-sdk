@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCnameReusesRequest</p>
  */
 public class DescribeCnameReusesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domains")
     @Validation(required = true)
     private java.util.List < String > domains;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -27,8 +27,8 @@ public class DescribeCnameReusesRequest extends Request {
 
     private DescribeCnameReusesRequest(Builder builder) {
         super(builder);
-        this.domains = builder.domains;
         this.regionId = builder.regionId;
+        this.domains = builder.domains;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -46,17 +46,17 @@ public class DescribeCnameReusesRequest extends Request {
     }
 
     /**
-     * @return domains
-     */
-    public java.util.List < String > getDomains() {
-        return this.domains;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return domains
+     */
+    public java.util.List < String > getDomains() {
+        return this.domains;
     }
 
     /**
@@ -67,29 +67,20 @@ public class DescribeCnameReusesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCnameReusesRequest, Builder> {
-        private java.util.List < String > domains; 
         private String regionId; 
+        private java.util.List < String > domains; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCnameReusesRequest response) {
-            super(response);
-            this.domains = response.domains;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeCnameReusesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domains = request.domains;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * Domains.
-         */
-        public Builder domains(java.util.List < String > domains) {
-            this.putQueryParameter("Domains", domains);
-            this.domains = domains;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -101,7 +92,19 @@ public class DescribeCnameReusesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * An array that consists of the domain names of websites.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domains(java.util.List < String > domains) {
+            this.putQueryParameter("Domains", domains);
+            this.domains = domains;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

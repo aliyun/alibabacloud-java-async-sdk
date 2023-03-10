@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLayer4RulePolicyRequest</p>
  */
 public class DescribeLayer4RulePolicyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Listeners")
     @Validation(required = true)
     private String listeners;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeLayer4RulePolicyRequest(Builder builder) {
         super(builder);
-        this.listeners = builder.listeners;
         this.regionId = builder.regionId;
+        this.listeners = builder.listeners;
     }
 
     public static Builder builder() {
@@ -41,41 +41,32 @@ public class DescribeLayer4RulePolicyRequest extends Request {
     }
 
     /**
-     * @return listeners
-     */
-    public String getListeners() {
-        return this.listeners;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return listeners
+     */
+    public String getListeners() {
+        return this.listeners;
+    }
+
     public static final class Builder extends Request.Builder<DescribeLayer4RulePolicyRequest, Builder> {
-        private String listeners; 
         private String regionId; 
+        private String listeners; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLayer4RulePolicyRequest response) {
-            super(response);
-            this.listeners = response.listeners;
-            this.regionId = response.regionId;
+        private Builder(DescribeLayer4RulePolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.listeners = request.listeners;
         } 
-
-        /**
-         * Listeners.
-         */
-        public Builder listeners(String listeners) {
-            this.putQueryParameter("Listeners", listeners);
-            this.listeners = listeners;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,26 @@ public class DescribeLayer4RulePolicyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The port forwarding rule that you want to query.
+         * <p>
+         * 
+         * This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can query only one port forwarding rule at a time.
+         * 
+         * > You can call the [DescribeNetworkRules](~~157484~~) to query existing port forwarding rules.
+         * 
+         * Each port forwarding rule contains the following fields:
+         * 
+         * *   **InstanceId**: the ID of the instance. This field is required and must be of the string type.
+         * *   **Protocol**: the forwarding protocol. This field is required and must be of the string type. Valid values: **tcp** and **udp**.
+         * *   **FrontendPort**: the forwarding port. This field is required and must be of the integer type.
+         */
+        public Builder listeners(String listeners) {
+            this.putQueryParameter("Listeners", listeners);
+            this.listeners = listeners;
             return this;
         }
 

@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAutoCcWhitelistRequest</p>
  */
 public class DeleteAutoCcWhitelistRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("Whitelist")
@@ -28,8 +28,8 @@ public class DeleteAutoCcWhitelistRequest extends Request {
 
     private DeleteAutoCcWhitelistRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.whitelist = builder.whitelist;
     }
 
@@ -47,17 +47,17 @@ public class DeleteAutoCcWhitelistRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -68,29 +68,20 @@ public class DeleteAutoCcWhitelistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAutoCcWhitelistRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String whitelist; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteAutoCcWhitelistRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.whitelist = response.whitelist;
+        private Builder(DeleteAutoCcWhitelistRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.whitelist = request.whitelist;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -102,7 +93,22 @@ public class DeleteAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The IP addresses that you want to manage. This parameter is a JSON string. This parameter is a JSON string. The string contains the following field:
+         * <p>
+         * 
+         * *   **src**: the IP address. This field is required and must be of the string type.
          */
         public Builder whitelist(String whitelist) {
             this.putQueryParameter("Whitelist", whitelist);

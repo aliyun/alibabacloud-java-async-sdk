@@ -50,7 +50,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
         private java.util.List < UrlList> urlList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * UrlList.
+         * An array consisting of the URLs that receive the most requests.
          */
         public Builder urlList(java.util.List < UrlList> urlList) {
             this.urlList = urlList;
@@ -122,7 +122,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Count.
+             * The total number of requests.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -130,7 +130,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +138,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL that is Base64-encoded.
              */
             public Builder url(String url) {
                 this.url = url;

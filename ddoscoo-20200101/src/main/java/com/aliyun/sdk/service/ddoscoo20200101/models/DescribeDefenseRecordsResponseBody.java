@@ -62,7 +62,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DefenseRecords.
+         * An array that consists of details of the log of an advanced mitigation session.
          */
         public Builder defenseRecords(java.util.List < DefenseRecords> defenseRecords) {
             this.defenseRecords = defenseRecords;
@@ -70,7 +70,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of advanced mitigation sessions.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -178,7 +178,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * AttackPeak.
+             * The peak attack traffic. Unit: bit/s.
              */
             public Builder attackPeak(Long attackPeak) {
                 this.attackPeak = attackPeak;
@@ -186,7 +186,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -194,7 +194,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EventCount.
+             * The number of attacks.
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -202,7 +202,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +210,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -218,7 +218,11 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the advanced mitigation session. Valid values:
+             * <p>
+             * 
+             * *   **0**: The advanced mitigation session is being used.
+             * *   **1**: The advanced mitigation session is used.
              */
             public Builder status(Integer status) {
                 this.status = status;

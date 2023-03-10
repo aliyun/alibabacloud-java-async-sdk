@@ -50,7 +50,7 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Isps.
+         * An array that consists of the ISPs for the volumetric attack.
          */
         public Builder isps(java.util.List < Isps> isps) {
             this.isps = isps;
@@ -58,7 +58,7 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
             private String isp; 
 
             /**
-             * InPkts.
+             * The number of request packets that were sent from the ISP.
              */
             public Builder inPkts(Long inPkts) {
                 this.inPkts = inPkts;
@@ -118,7 +118,27 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The code of the ISP. Valid values:
+             * <p>
+             * 
+             * *   **100017**: China Telecom
+             * *   **100026**: China Unicom
+             * *   **100025**: China Mobile
+             * *   **100027**: China Education and Research Network
+             * *   **100020**: China Mobile Tietong
+             * *   **1000143**: Dr.Peng Telecom & Media Group
+             * *   **100080**: Beijing Gehua CATV Network
+             * *   **1000139**: National Radio and Television Administration
+             * *   **100023**: Oriental Cable Network
+             * *   **100063**: Founder Broadband
+             * *   **1000337**: China Internet Exchange
+             * *   **100021**: 21Vianet Group
+             * *   **1000333**: Wasu Media Holding
+             * *   **100093**: Wangsu Science & Technology
+             * *   **1000401**: Tencent
+             * *   **100099**: Baidu
+             * *   **1000323**: Alibaba Cloud
+             * *   **100098**: Alibaba
              */
             public Builder isp(String isp) {
                 this.isp = isp;

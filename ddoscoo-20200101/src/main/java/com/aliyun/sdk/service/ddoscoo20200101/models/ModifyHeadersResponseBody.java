@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ConfigNetworkRulesTfResponseBody} extends {@link TeaModel}
+ * {@link ModifyHeadersResponseBody} extends {@link TeaModel}
  *
- * <p>ConfigNetworkRulesTfResponseBody</p>
+ * <p>ModifyHeadersResponseBody</p>
  */
-public class ConfigNetworkRulesTfResponseBody extends TeaModel {
+public class ModifyHeadersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ConfigNetworkRulesTfResponseBody(Builder builder) {
+    private ModifyHeadersResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class ConfigNetworkRulesTfResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ConfigNetworkRulesTfResponseBody create() {
+    public static ModifyHeadersResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class ConfigNetworkRulesTfResponseBody extends TeaModel {
             return this;
         }
 
-        public ConfigNetworkRulesTfResponseBody build() {
-            return new ConfigNetworkRulesTfResponseBody(this);
+        public ModifyHeadersResponseBody build() {
+            return new ModifyHeadersResponseBody(this);
         } 
 
     } 

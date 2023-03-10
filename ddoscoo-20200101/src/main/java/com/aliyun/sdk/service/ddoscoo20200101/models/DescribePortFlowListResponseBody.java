@@ -50,7 +50,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PortFlowList.
+         * The returned traffic data.
          */
         public Builder portFlowList(java.util.List < PortFlowList> portFlowList) {
             this.portFlowList = portFlowList;
@@ -58,7 +58,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * AttackBps.
+             * The bandwidth of attack traffic. Unit: bit/s.
              */
             public Builder attackBps(Long attackBps) {
                 this.attackBps = attackBps;
@@ -202,7 +202,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * AttackPps.
+             * The packet forwarding rate of attack traffic. Unit: pps.
              */
             public Builder attackPps(Long attackPps) {
                 this.attackPps = attackPps;
@@ -210,7 +210,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * InBps.
+             * The inbound bandwidth. Unit: bit/s.
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -218,7 +218,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * InPps.
+             * The packet forwarding rate of inbound traffic. Unit: packets per second.
              */
             public Builder inPps(Long inPps) {
                 this.inPps = inPps;
@@ -226,7 +226,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The index number of the returned data.
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -234,7 +234,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * OutBps.
+             * The outbound bandwidth. Unit: bit/s.
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -242,7 +242,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * OutPps.
+             * The packet forwarding rate of outbound traffic. Unit: packets per second (pps).
              */
             public Builder outPps(Long outPps) {
                 this.outPps = outPps;
@@ -250,7 +250,17 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The source region of the traffic. Valid values:
+             * <p>
+             * 
+             * *   **cn**: mainland China
+             * *   **alb-ap-northeast-1-gf-x**: Japan (Tokyo)
+             * *   **alb-ap-southeast-gf-x**: Singapore
+             * *   **alb-cn-hongkong-gf-x**: Hong Kong (China)
+             * *   **alb-eu-central-1-gf-x**: Germany (Frankfurt)
+             * *   **alb-us-west-1-gf-x**: US (Silicon Valley)
+             * 
+             * > The values except **cn** are returned only when **RegionId** is set to **ap-southeast-1**.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -258,7 +268,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder time(Long time) {
                 this.time = time;

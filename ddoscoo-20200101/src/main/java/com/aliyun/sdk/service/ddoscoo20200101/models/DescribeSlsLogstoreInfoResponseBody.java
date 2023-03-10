@@ -98,7 +98,7 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         private Long used; 
 
         /**
-         * LogStore.
+         * The Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance.
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -106,7 +106,7 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Project.
+         * The Logstore project of the Anti-DDoS Pro or Anti-DDoS Premium instance.
          */
         public Builder project(String project) {
             this.project = project;
@@ -114,7 +114,7 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Quota.
+         * The available log storage capacity. Unit: bytes.
          */
         public Builder quota(Long quota) {
             this.quota = quota;
@@ -122,7 +122,7 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Ttl.
+         * The log storage duration. Unit: days.
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -138,7 +138,10 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Used.
+         * The used log storage capacity. Unit: bytes.
+         * <p>
+         * 
+         * > The statistics on Log Service are delayed for about two hours.
          */
         public Builder used(Long used) {
             this.used = used;

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePortViewSourceProvincesRequest</p>
  */
 public class DescribePortViewSourceProvincesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     private Long endTime;
@@ -20,10 +24,6 @@ public class DescribePortViewSourceProvincesRequest extends Request {
     @NameInMap("InstanceIds")
     @Validation(required = true)
     private java.util.List < String > instanceIds;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -36,9 +36,9 @@ public class DescribePortViewSourceProvincesRequest extends Request {
 
     private DescribePortViewSourceProvincesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.instanceIds = builder.instanceIds;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
@@ -57,6 +57,13 @@ public class DescribePortViewSourceProvincesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return endTime
      */
     public Long getEndTime() {
@@ -68,13 +75,6 @@ public class DescribePortViewSourceProvincesRequest extends Request {
      */
     public java.util.List < String > getInstanceIds() {
         return this.instanceIds;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -92,9 +92,9 @@ public class DescribePortViewSourceProvincesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePortViewSourceProvincesRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private java.util.List < String > instanceIds; 
-        private String regionId; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -102,32 +102,14 @@ public class DescribePortViewSourceProvincesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePortViewSourceProvincesRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceIds = response.instanceIds;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.startTime = response.startTime;
+        private Builder(DescribePortViewSourceProvincesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.instanceIds = request.instanceIds;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
         } 
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * InstanceIds.
-         */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -139,7 +121,31 @@ public class DescribePortViewSourceProvincesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not configure this parameter, the current system time is used as the end time.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The IDs of instances to query.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see [Create a resource group](~~94485~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -148,7 +154,10 @@ public class DescribePortViewSourceProvincesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

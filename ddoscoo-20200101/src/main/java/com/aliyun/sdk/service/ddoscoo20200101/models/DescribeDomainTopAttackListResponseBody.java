@@ -50,7 +50,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AttackList.
+         * The peak QPS of the website.
          */
         public Builder attackList(java.util.List < AttackList> attackList) {
             this.attackList = attackList;
@@ -58,7 +58,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             private String domain; 
 
             /**
-             * Attack.
+             * The attack QPS. Unit: QPS
              */
             public Builder attack(Long attack) {
                 this.attack = attack;
@@ -130,7 +130,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of all QPS, which includes normal and attack QPS. Unit: QPS.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -138,7 +138,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;

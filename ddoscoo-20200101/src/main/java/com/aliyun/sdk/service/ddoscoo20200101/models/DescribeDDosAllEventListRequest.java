@@ -104,17 +104,17 @@ public class DescribeDDosAllEventListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDDosAllEventListRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.eventType = response.eventType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(DescribeDDosAllEventListRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.eventType = request.eventType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The DDoS attack events occur before **EndTime** are queried. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +123,17 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The type of the DDoS attack events you want to query. Valid values:
+         * <p>
+         * 
+         * *   **web-cc**: resource exhaustion attacks
+         * *   **cc**: connection flood attacks
+         * *   **defense**: DDoS attacks that trigger traffic scrubbing
+         * *   **blackhole**: DDoS attacks that trigger blackhole filtering
+         * 
+         * If you want to query multiple types of DDoS attack events, separate them with commas (,).
+         * 
+         * If you do not configure this parameter, DDoS attack events of all types are queried.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -132,7 +142,7 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -141,7 +151,7 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,7 +160,7 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The DDoS attack events occur after **StartTime** are queried. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -86,7 +86,7 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ActConns.
+         * The number of active connections.
          */
         public Builder actConns(Long actConns) {
             this.actConns = actConns;
@@ -94,7 +94,7 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         }
 
         /**
-         * Conns.
+         * The number of concurrent connections.
          */
         public Builder conns(Long conns) {
             this.conns = conns;
@@ -102,7 +102,7 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         }
 
         /**
-         * Cps.
+         * The number of new connections.
          */
         public Builder cps(Long cps) {
             this.cps = cps;
@@ -110,7 +110,7 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         }
 
         /**
-         * InActConns.
+         * The number of inactive connections.
          */
         public Builder inActConns(Long inActConns) {
             this.inActConns = inActConns;
@@ -118,7 +118,7 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

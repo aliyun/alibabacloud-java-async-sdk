@@ -62,7 +62,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Attributes.
+         * The details of the parameters for back-to-origin.
          */
         public Builder attributes(java.util.List < Attributes> attributes) {
             this.attributes = attributes;
@@ -70,7 +70,12 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyMode.
+         * The scheduling algorithm for back-to-origin traffic. Valid values:
+         * <p>
+         * 
+         * *   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.
+         * *   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.
+         * *   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.
          */
         public Builder proxyMode(String proxyMode) {
             this.proxyMode = proxyMode;
@@ -78,7 +83,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Weight.
+             * The weight of the origin server. This parameter takes effect only when **ProxyMode** is set to **rr**.
+             * <p>
+             * 
+             * Valid values: **1** to **100**. Default value: **100**. A server with a higher weight receives more requests.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -183,7 +191,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Integer rsType; 
 
             /**
-             * Attribute.
+             * The parameter for back-to-origin.
              */
             public Builder attribute(Attribute attribute) {
                 this.attribute = attribute;
@@ -191,7 +199,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RealServer.
+             * The address of the origin server.
              */
             public Builder realServer(String realServer) {
                 this.realServer = realServer;
@@ -199,7 +207,11 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RsType.
+             * The address type of the origin server. Valid values:
+             * <p>
+             * 
+             * *   **0**: IP address
+             * *   **1**: domain name
              */
             public Builder rsType(Integer rsType) {
                 this.rsType = rsType;

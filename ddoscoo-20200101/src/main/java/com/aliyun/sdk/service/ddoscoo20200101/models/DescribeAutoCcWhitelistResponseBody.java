@@ -62,7 +62,7 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * AutoCcWhitelist.
+         * An array that consists of details of the IP address in the whitelist of the instance.
          */
         public Builder autoCcWhitelist(java.util.List < AutoCcWhitelist> autoCcWhitelist) {
             this.autoCcWhitelist = autoCcWhitelist;
@@ -70,7 +70,7 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned IP addresses in the whitelist.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,7 +154,7 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DestIp.
+             * The IP address of the instance.
              */
             public Builder destIp(String destIp) {
                 this.destIp = destIp;
@@ -162,7 +162,7 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The validity period of the IP address in the whitelist. Unit: seconds. **0** indicates that the IP address in the whitelist never expires.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -170,7 +170,7 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIp.
+             * The IP addresses that is contained in the IP address whitelist.
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;
@@ -178,7 +178,11 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The mode of how an IP address is added to the whitelist. Valid values:
+             * <p>
+             * 
+             * *   **manual**: manually added
+             * *   **auto**: automatically added
              */
             public Builder type(String type) {
                 this.type = type;

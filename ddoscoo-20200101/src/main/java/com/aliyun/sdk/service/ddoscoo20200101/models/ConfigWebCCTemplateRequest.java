@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigWebCCTemplateRequest</p>
  */
 public class ConfigWebCCTemplateRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domain")
     @Validation(required = true)
     private String domain;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -32,8 +32,8 @@ public class ConfigWebCCTemplateRequest extends Request {
 
     private ConfigWebCCTemplateRequest(Builder builder) {
         super(builder);
-        this.domain = builder.domain;
         this.regionId = builder.regionId;
+        this.domain = builder.domain;
         this.resourceGroupId = builder.resourceGroupId;
         this.template = builder.template;
     }
@@ -52,17 +52,17 @@ public class ConfigWebCCTemplateRequest extends Request {
     }
 
     /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
     }
 
     /**
@@ -80,8 +80,8 @@ public class ConfigWebCCTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ConfigWebCCTemplateRequest, Builder> {
-        private String domain; 
         private String regionId; 
+        private String domain; 
         private String resourceGroupId; 
         private String template; 
 
@@ -89,22 +89,13 @@ public class ConfigWebCCTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigWebCCTemplateRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.template = response.template;
+        private Builder(ConfigWebCCTemplateRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domain = request.domain;
+            this.resourceGroupId = request.resourceGroupId;
+            this.template = request.template;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -116,7 +107,19 @@ public class ConfigWebCCTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -125,7 +128,13 @@ public class ConfigWebCCTemplateRequest extends Request {
         }
 
         /**
-         * Template.
+         * The mode of the Frequency Control policy. Valid values:
+         * <p>
+         * 
+         * *   **default**: Normal
+         * *   **gf_under_attack**: Emergency
+         * *   **gf_sos_verify**: Strict
+         * *   **gf_sos_enhance**: Super Strict
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

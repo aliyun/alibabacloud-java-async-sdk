@@ -62,7 +62,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +70,13 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * The status of the instance. Valid values:
+         * <p>
+         * 
+         * *   **1**: normal
+         * *   **2**: expired
+         * *   **3**: overdue
+         * *   **4**: released
          */
         public Builder instanceStatus(Integer instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -78,7 +84,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

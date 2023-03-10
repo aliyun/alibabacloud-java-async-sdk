@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSystemLogRequest</p>
  */
 public class DescribeSystemLogRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     @Validation(required = true)
@@ -35,10 +39,6 @@ public class DescribeSystemLogRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("StartTime")
     @Validation(required = true)
@@ -46,12 +46,12 @@ public class DescribeSystemLogRequest extends Request {
 
     private DescribeSystemLogRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.entityObject = builder.entityObject;
         this.entityType = builder.entityType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -66,6 +66,13 @@ public class DescribeSystemLogRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -104,13 +111,6 @@ public class DescribeSystemLogRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -118,73 +118,28 @@ public class DescribeSystemLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSystemLogRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private String entityObject; 
         private Integer entityType; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private Long startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeSystemLogRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.entityObject = response.entityObject;
-            this.entityType = response.entityType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeSystemLogRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.entityObject = request.entityObject;
+            this.entityType = request.entityType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * EntityObject.
-         */
-        public Builder entityObject(String entityObject) {
-            this.putQueryParameter("EntityObject", entityObject);
-            this.entityObject = entityObject;
-            return this;
-        }
-
-        /**
-         * EntityType.
-         */
-        public Builder entityType(Integer entityType) {
-            this.putQueryParameter("EntityType", entityType);
-            this.entityType = entityType;
-            return this;
-        }
-
-        /**
-         * PageNumber.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -196,7 +151,58 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The end of the time range to query. The bills of the burstable clean bandwidth that are issued before this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The IP address of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceDetails](~~91490~~) operation to query the IP addresses of all instances.
+         */
+        public Builder entityObject(String entityObject) {
+            this.putQueryParameter("EntityObject", entityObject);
+            this.entityObject = entityObject;
+            return this;
+        }
+
+        /**
+         * The type of the system log. Set the value to **20**, which indicates the billing logs for the burstable clean bandwidth.
+         * <p>
+         * 
+         * > You must specify this parameter. Otherwise, the call fails.
+         */
+        public Builder entityType(Integer entityType) {
+            this.putQueryParameter("EntityType", entityType);
+            this.entityType = entityType;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The beginning of the time range to query. The bills of the burstable clean bandwidth that are issued after this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

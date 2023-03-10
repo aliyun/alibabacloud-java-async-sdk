@@ -62,7 +62,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SlsConfigStatus.
+         * Indicates whether the log analysis feature is enabled for domain names.
          */
         public Builder slsConfigStatus(java.util.List < SlsConfigStatus> slsConfigStatus) {
             this.slsConfigStatus = slsConfigStatus;
@@ -78,7 +78,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +130,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
             private Boolean enable; 
 
             /**
-             * Domain.
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +138,11 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the log analysis feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;

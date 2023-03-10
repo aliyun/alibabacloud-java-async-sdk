@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeNetworkRulesTfResponse} extends {@link TeaModel}
+ * {@link ModifyHeadersResponse} extends {@link TeaModel}
  *
- * <p>DescribeNetworkRulesTfResponse</p>
+ * <p>ModifyHeadersResponse</p>
  */
-public class DescribeNetworkRulesTfResponse extends Response {
+public class ModifyHeadersResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeNetworkRulesTfResponseBody body;
+    private ModifyHeadersResponseBody body;
 
-    private DescribeNetworkRulesTfResponse(BuilderImpl builder) {
+    private ModifyHeadersResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeNetworkRulesTfResponse create() {
+    public static ModifyHeadersResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeNetworkRulesTfResponse extends Response {
     /**
      * @return body
      */
-    public DescribeNetworkRulesTfResponseBody getBody() {
+    public ModifyHeadersResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeNetworkRulesTfResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyHeadersResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeNetworkRulesTfResponseBody body);
+        Builder body(ModifyHeadersResponseBody body);
 
         @Override
-        DescribeNetworkRulesTfResponse build();
+        ModifyHeadersResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeNetworkRulesTfResponse, Builder>
+            extends Response.BuilderImpl<ModifyHeadersResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeNetworkRulesTfResponseBody body; 
+        private ModifyHeadersResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeNetworkRulesTfResponse response) {
+        private BuilderImpl(ModifyHeadersResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeNetworkRulesTfResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeNetworkRulesTfResponseBody body) {
+        public Builder body(ModifyHeadersResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeNetworkRulesTfResponse build() {
-            return new DescribeNetworkRulesTfResponse(this);
+        public ModifyHeadersResponse build() {
+            return new ModifyHeadersResponse(this);
         } 
 
     } 

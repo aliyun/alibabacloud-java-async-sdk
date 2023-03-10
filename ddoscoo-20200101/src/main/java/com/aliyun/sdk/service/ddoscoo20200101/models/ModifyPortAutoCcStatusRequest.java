@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPortAutoCcStatusRequest</p>
  */
 public class ModifyPortAutoCcStatusRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -22,10 +26,6 @@ public class ModifyPortAutoCcStatusRequest extends Request {
     @Validation(required = true)
     private String mode;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Switch")
     @Validation(required = true)
@@ -33,9 +33,9 @@ public class ModifyPortAutoCcStatusRequest extends Request {
 
     private ModifyPortAutoCcStatusRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.mode = builder.mode;
-        this.regionId = builder.regionId;
         this._switch = builder._switch;
     }
 
@@ -53,6 +53,13 @@ public class ModifyPortAutoCcStatusRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -67,13 +74,6 @@ public class ModifyPortAutoCcStatusRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return _switch
      */
     public String get_switch() {
@@ -81,40 +81,22 @@ public class ModifyPortAutoCcStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPortAutoCcStatusRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String mode; 
-        private String regionId; 
         private String _switch; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyPortAutoCcStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.mode = response.mode;
-            this.regionId = response.regionId;
-            this._switch = response._switch;
+        private Builder(ModifyPortAutoCcStatusRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.mode = request.mode;
+            this._switch = request._switch;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Mode.
-         */
-        public Builder mode(String mode) {
-            this.putQueryParameter("Mode", mode);
-            this.mode = mode;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -126,7 +108,37 @@ public class ModifyPortAutoCcStatusRequest extends Request {
         }
 
         /**
-         * Switch.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The mode of the Intelligent Protection policy. Valid values:
+         * <p>
+         * 
+         * *   **normal**
+         * *   **loose**
+         * *   **strict**
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
+         * Specifies the status of the Intelligent Protection policy. Valid values:
+         * <p>
+         * 
+         * *   **on**: enables the policy.
+         * *   **off**: disables the policy.
          */
         public Builder _switch(String _switch) {
             this.putQueryParameter("Switch", _switch);

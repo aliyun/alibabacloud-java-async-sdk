@@ -62,7 +62,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * AutoCcBlacklist.
+         * An array that consists of the details of the IP addresses in the blacklist of the instance.
          */
         public Builder autoCcBlacklist(java.util.List < AutoCcBlacklist> autoCcBlacklist) {
             this.autoCcBlacklist = autoCcBlacklist;
@@ -70,7 +70,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned IP addresses in the blacklist.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,7 +154,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DestIp.
+             * The IP address of the instance.
              */
             public Builder destIp(String destIp) {
                 this.destIp = destIp;
@@ -162,7 +162,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The validity period of the IP address in the blacklist. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -170,7 +170,7 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIp.
+             * The IP address in the blacklist.
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;
@@ -178,7 +178,11 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The mode of how the IP address is added to the blacklist. Valid values:
+             * <p>
+             * 
+             * *   **manual**: manually added
+             * *   **auto**: automatically added
              */
             public Builder type(String type) {
                 this.type = type;

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoCcListCountRequest</p>
  */
 public class DescribeAutoCcListCountRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -21,15 +25,11 @@ public class DescribeAutoCcListCountRequest extends Request {
     @NameInMap("QueryType")
     private String queryType;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeAutoCcListCountRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.queryType = builder.queryType;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -46,6 +46,13 @@ public class DescribeAutoCcListCountRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -59,31 +66,36 @@ public class DescribeAutoCcListCountRequest extends Request {
         return this.queryType;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAutoCcListCountRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String queryType; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAutoCcListCountRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.queryType = response.queryType;
-            this.regionId = response.regionId;
+        private Builder(DescribeAutoCcListCountRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.queryType = request.queryType;
         } 
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the **DescribeInstanceIds** operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,20 +104,15 @@ public class DescribeAutoCcListCountRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The mode of how an IP address is added to the whitelist or blacklist. Valid values:
+         * <p>
+         * 
+         * *   **manual**: manually added
+         * *   **auto**: automatically added
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
             this.queryType = queryType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

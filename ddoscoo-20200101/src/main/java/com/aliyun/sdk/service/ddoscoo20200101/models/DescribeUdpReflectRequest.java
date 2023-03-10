@@ -62,14 +62,17 @@ public class DescribeUdpReflectRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUdpReflectRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(DescribeUdpReflectRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance to query.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +81,11 @@ public class DescribeUdpReflectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: Chinese mainland, which indicates an Anti-DDoS Pro instance. This is the default value.
+         * *   **ap-southeast-1**: outside the Chinese mainland, which indicates an Anti-DDoS Premium instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

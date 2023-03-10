@@ -50,7 +50,7 @@ public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Qps.
+         * The peak queries per second (QPS) of DDoS attacks. Units: QPS.
          */
         public Builder qps(Long qps) {
             this.qps = qps;
@@ -58,7 +58,7 @@ public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

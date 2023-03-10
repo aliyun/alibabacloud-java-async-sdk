@@ -50,7 +50,7 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
         private java.util.List < String > udpSports; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
         }
 
         /**
-         * UdpSports.
+         * An array consisting of the source ports of the UDP traffic that are filtered out by the filtering policies for UDP reflection attacks.
          */
         public Builder udpSports(java.util.List < String > udpSports) {
             this.udpSports = udpSports;

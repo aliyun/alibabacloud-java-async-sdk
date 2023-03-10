@@ -50,7 +50,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainCacheConfigs.
+         * An array that consists of Static Page Caching configurations.
          */
         public Builder domainCacheConfigs(java.util.List < DomainCacheConfigs> domainCacheConfigs) {
             this.domainCacheConfigs = domainCacheConfigs;
@@ -58,7 +58,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * CacheTtl.
+             * The expiration time of the page cache. Unit: seconds.
              */
             public Builder cacheTtl(Long cacheTtl) {
                 this.cacheTtl = cacheTtl;
@@ -142,7 +142,12 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The cache mode. Valid values:
+             * <p>
+             * 
+             * *   **standard**: The standard cache mode is used.
+             * *   **aggressive**: The enhanced cache mode is used.
+             * *   **bypass**: No data is cached.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -150,7 +155,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +163,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * The path to the cached page.
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -235,7 +240,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             private String mode; 
 
             /**
-             * CustomRules.
+             * An array that consists of custom caching rules.
              */
             public Builder customRules(java.util.List < CustomRules> customRules) {
                 this.customRules = customRules;
@@ -243,7 +248,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -251,7 +256,11 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * The status of the Static Page Caching policy. Valid values:
+             * <p>
+             * 
+             * *   **1**: enabled
+             * *   **0**: disabled
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -259,7 +268,12 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The cache mode. Valid values:
+             * <p>
+             * 
+             * *   **standard**: The standard cache mode is used.
+             * *   **aggressive**: The enhanced cache mode is used.
+             * *   **bypass**: No data is cached.
              */
             public Builder mode(String mode) {
                 this.mode = mode;

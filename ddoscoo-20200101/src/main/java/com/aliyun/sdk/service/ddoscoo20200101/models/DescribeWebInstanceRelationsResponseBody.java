@@ -50,7 +50,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         private java.util.List < WebInstanceRelations> webInstanceRelations; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * WebInstanceRelations.
+         * The information about the instances to which a website service is added.
          */
         public Builder webInstanceRelations(java.util.List < WebInstanceRelations> webInstanceRelations) {
             this.webInstanceRelations = webInstanceRelations;
@@ -122,7 +122,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * EipList.
+             * The IP addresses of the instance.
              */
             public Builder eipList(java.util.List < String > eipList) {
                 this.eipList = eipList;
@@ -130,7 +130,11 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionVersion.
+             * The function plan of the instance. Valid values:
+             * <p>
+             * 
+             * *   **default**: Standard function plan
+             * *   **enhance**: Enhanced function plan
              */
             public Builder functionVersion(String functionVersion) {
                 this.functionVersion = functionVersion;
@@ -138,7 +142,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -191,7 +195,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             private java.util.List < InstanceDetails> instanceDetails; 
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -199,7 +203,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDetails.
+             * The information about the instance to which a website service is added.
              */
             public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
                 this.instanceDetails = instanceDetails;

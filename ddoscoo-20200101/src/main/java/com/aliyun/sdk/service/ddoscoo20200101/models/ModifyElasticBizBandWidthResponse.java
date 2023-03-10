@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteNetworkRulesTfResponse} extends {@link TeaModel}
+ * {@link ModifyElasticBizBandWidthResponse} extends {@link TeaModel}
  *
- * <p>DeleteNetworkRulesTfResponse</p>
+ * <p>ModifyElasticBizBandWidthResponse</p>
  */
-public class DeleteNetworkRulesTfResponse extends Response {
+public class ModifyElasticBizBandWidthResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteNetworkRulesTfResponseBody body;
+    private ModifyElasticBizBandWidthResponseBody body;
 
-    private DeleteNetworkRulesTfResponse(BuilderImpl builder) {
+    private ModifyElasticBizBandWidthResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DeleteNetworkRulesTfResponse create() {
+    public static ModifyElasticBizBandWidthResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DeleteNetworkRulesTfResponse extends Response {
     /**
      * @return body
      */
-    public DeleteNetworkRulesTfResponseBody getBody() {
+    public ModifyElasticBizBandWidthResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteNetworkRulesTfResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyElasticBizBandWidthResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DeleteNetworkRulesTfResponseBody body);
+        Builder body(ModifyElasticBizBandWidthResponseBody body);
 
         @Override
-        DeleteNetworkRulesTfResponse build();
+        ModifyElasticBizBandWidthResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteNetworkRulesTfResponse, Builder>
+            extends Response.BuilderImpl<ModifyElasticBizBandWidthResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DeleteNetworkRulesTfResponseBody body; 
+        private ModifyElasticBizBandWidthResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteNetworkRulesTfResponse response) {
+        private BuilderImpl(ModifyElasticBizBandWidthResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DeleteNetworkRulesTfResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteNetworkRulesTfResponseBody body) {
+        public Builder body(ModifyElasticBizBandWidthResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteNetworkRulesTfResponse build() {
-            return new DeleteNetworkRulesTfResponse(this);
+        public ModifyElasticBizBandWidthResponse build() {
+            return new ModifyElasticBizBandWidthResponse(this);
         } 
 
     } 

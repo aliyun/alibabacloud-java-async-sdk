@@ -50,7 +50,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConnsList.
+         * An array that consists of the connections established over the port.
          */
         public Builder connsList(java.util.List < ConnsList> connsList) {
             this.connsList = connsList;
@@ -58,7 +58,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -87,16 +87,12 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         @NameInMap("Index")
         private Long index;
 
-        @NameInMap("Time")
-        private Long time;
-
         private ConnsList(Builder builder) {
             this.actConns = builder.actConns;
             this.conns = builder.conns;
             this.cps = builder.cps;
             this.inActConns = builder.inActConns;
             this.index = builder.index;
-            this.time = builder.time;
         }
 
         public static Builder builder() {
@@ -142,23 +138,15 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             return this.index;
         }
 
-        /**
-         * @return time
-         */
-        public Long getTime() {
-            return this.time;
-        }
-
         public static final class Builder {
             private Long actConns; 
             private Long conns; 
             private Long cps; 
             private Long inActConns; 
             private Long index; 
-            private Long time; 
 
             /**
-             * ActConns.
+             * The number of active connections.
              */
             public Builder actConns(Long actConns) {
                 this.actConns = actConns;
@@ -166,7 +154,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * Conns.
+             * The number of concurrent connections.
              */
             public Builder conns(Long conns) {
                 this.conns = conns;
@@ -174,7 +162,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * Cps.
+             * The new connection creation rate.
              */
             public Builder cps(Long cps) {
                 this.cps = cps;
@@ -182,7 +170,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * InActConns.
+             * The number of inactive connections.
              */
             public Builder inActConns(Long inActConns) {
                 this.inActConns = inActConns;
@@ -190,18 +178,10 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The index number of the returned data.
              */
             public Builder index(Long index) {
                 this.index = index;
-                return this;
-            }
-
-            /**
-             * Time.
-             */
-            public Builder time(Long time) {
-                this.time = time;
                 return this;
             }
 

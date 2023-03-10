@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebAccessModeRequest</p>
  */
 public class DescribeWebAccessModeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Domains")
     @Validation(required = true)
     private java.util.List < String > domains;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DescribeWebAccessModeRequest(Builder builder) {
         super(builder);
-        this.domains = builder.domains;
         this.regionId = builder.regionId;
+        this.domains = builder.domains;
     }
 
     public static Builder builder() {
@@ -41,41 +41,32 @@ public class DescribeWebAccessModeRequest extends Request {
     }
 
     /**
-     * @return domains
-     */
-    public java.util.List < String > getDomains() {
-        return this.domains;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return domains
+     */
+    public java.util.List < String > getDomains() {
+        return this.domains;
+    }
+
     public static final class Builder extends Request.Builder<DescribeWebAccessModeRequest, Builder> {
-        private java.util.List < String > domains; 
         private String regionId; 
+        private java.util.List < String > domains; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeWebAccessModeRequest response) {
-            super(response);
-            this.domains = response.domains;
-            this.regionId = response.regionId;
+        private Builder(DescribeWebAccessModeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.domains = request.domains;
         } 
-
-        /**
-         * Domains.
-         */
-        public Builder domains(java.util.List < String > domains) {
-            this.putQueryParameter("Domains", domains);
-            this.domains = domains;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,18 @@ public class DescribeWebAccessModeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The domain name of the website.
+         * <p>
+         * 
+         * > A forwarding rule must be configured for a domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         */
+        public Builder domains(java.util.List < String > domains) {
+            this.putQueryParameter("Domains", domains);
+            this.domains = domains;
             return this;
         }
 

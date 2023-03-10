@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkRulesRequest</p>
  */
 public class CreateNetworkRulesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("NetworkRules")
     @Validation(required = true)
     private String networkRules;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private CreateNetworkRulesRequest(Builder builder) {
         super(builder);
-        this.networkRules = builder.networkRules;
         this.regionId = builder.regionId;
+        this.networkRules = builder.networkRules;
     }
 
     public static Builder builder() {
@@ -41,41 +41,32 @@ public class CreateNetworkRulesRequest extends Request {
     }
 
     /**
-     * @return networkRules
-     */
-    public String getNetworkRules() {
-        return this.networkRules;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return networkRules
+     */
+    public String getNetworkRules() {
+        return this.networkRules;
+    }
+
     public static final class Builder extends Request.Builder<CreateNetworkRulesRequest, Builder> {
-        private String networkRules; 
         private String regionId; 
+        private String networkRules; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateNetworkRulesRequest response) {
-            super(response);
-            this.networkRules = response.networkRules;
-            this.regionId = response.regionId;
+        private Builder(CreateNetworkRulesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.networkRules = request.networkRules;
         } 
-
-        /**
-         * NetworkRules.
-         */
-        public Builder networkRules(String networkRules) {
-            this.putQueryParameter("NetworkRules", networkRules);
-            this.networkRules = networkRules;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,22 @@ public class CreateNetworkRulesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The details of the port forwarding rule. This parameter is a JSON string. The string contains the following fields:
+         * <p>
+         * 
+         * *   **InstanceId**: the ID of the instance. This field is required and must be of the STRING type.
+         * *   **Protocol**: the forwarding protocol. This field is required and must be of the STRING type. Valid values: **tcp** and **udp**.
+         * *   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.
+         * *   **BackendPort**: the port of the origin server. This field is required and must be of the INTEGER type.
+         * *   **RealServers**: the IP addresses of the origin server. This field is required and must be a JSON array. You can specify up to 20 IP addresses.
+         */
+        public Builder networkRules(String networkRules) {
+            this.putQueryParameter("NetworkRules", networkRules);
+            this.networkRules = networkRules;
             return this;
         }
 

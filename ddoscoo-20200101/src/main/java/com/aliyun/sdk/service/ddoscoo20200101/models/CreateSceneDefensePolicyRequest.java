@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSceneDefensePolicyRequest</p>
  */
 public class CreateSceneDefensePolicyRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     @Validation(required = true)
@@ -21,10 +25,6 @@ public class CreateSceneDefensePolicyRequest extends Request {
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("StartTime")
@@ -38,9 +38,9 @@ public class CreateSceneDefensePolicyRequest extends Request {
 
     private CreateSceneDefensePolicyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.name = builder.name;
-        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.template = builder.template;
     }
@@ -59,6 +59,13 @@ public class CreateSceneDefensePolicyRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return endTime
      */
     public Long getEndTime() {
@@ -70,13 +77,6 @@ public class CreateSceneDefensePolicyRequest extends Request {
      */
     public String getName() {
         return this.name;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -94,9 +94,9 @@ public class CreateSceneDefensePolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSceneDefensePolicyRequest, Builder> {
+        private String regionId; 
         private Long endTime; 
         private String name; 
-        private String regionId; 
         private Long startTime; 
         private String template; 
 
@@ -104,32 +104,14 @@ public class CreateSceneDefensePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSceneDefensePolicyRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.template = response.template;
+        private Builder(CreateSceneDefensePolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.name = request.name;
+            this.startTime = request.startTime;
+            this.template = request.template;
         } 
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -141,7 +123,25 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The end time of the policy. This value is a UNIX timestamp. Units: milliseconds.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The name of the policy.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The start time of the policy. This value is a UNIX timestamp. Units: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -150,7 +150,11 @@ public class CreateSceneDefensePolicyRequest extends Request {
         }
 
         /**
-         * Template.
+         * The template of the policy. Valid values:
+         * <p>
+         * 
+         * *   **promotion**: important activity
+         * *   **bypass**: all traffic forwarded
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyNetworkRuleAttributeRequest</p>
  */
 public class ModifyNetworkRuleAttributeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Config")
     @Validation(required = true)
@@ -32,17 +36,13 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ModifyNetworkRuleAttributeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.config = builder.config;
         this.forwardProtocol = builder.forwardProtocol;
         this.frontendPort = builder.frontendPort;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -56,6 +56,13 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -86,35 +93,40 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ModifyNetworkRuleAttributeRequest, Builder> {
+        private String regionId; 
         private String config; 
         private String forwardProtocol; 
         private Integer frontendPort; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyNetworkRuleAttributeRequest response) {
-            super(response);
-            this.config = response.config;
-            this.forwardProtocol = response.forwardProtocol;
-            this.frontendPort = response.frontendPort;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(ModifyNetworkRuleAttributeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.config = request.config;
+            this.forwardProtocol = request.forwardProtocol;
+            this.frontendPort = request.frontendPort;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * Config.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The session persistence settings of the port forwarding rule. This parameter is a JSON string. The string contains the following fields:
+         * <p>
+         * 
+         * *   **PersistenceTimeout**: The timeout period of session persistence. This field is required and must be of the integer type. Valid values: **30** to **3600**. Unit: seconds. Default value: **0**. A value of 0 indicates that session persistence is disabled.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -123,7 +135,11 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         }
 
         /**
-         * ForwardProtocol.
+         * The forwarding protocol. Valid values:
+         * <p>
+         * 
+         * *   **tcp**
+         * *   **udp**
          */
         public Builder forwardProtocol(String forwardProtocol) {
             this.putQueryParameter("ForwardProtocol", forwardProtocol);
@@ -132,7 +148,7 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         }
 
         /**
-         * FrontendPort.
+         * The forwarding port.
          */
         public Builder frontendPort(Integer frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -141,20 +157,14 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

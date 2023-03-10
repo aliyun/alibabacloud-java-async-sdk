@@ -62,7 +62,7 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Objects.
+         * The information about the protected assets.
          */
         public Builder objects(java.util.List < Objects> objects) {
             this.objects = objects;
@@ -70,7 +70,7 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +146,7 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
             private String vip; 
 
             /**
-             * Domain.
+             * The domain name that is protected by the policy.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -150,7 +154,7 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * The ID of the policy.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -158,7 +162,7 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Vip.
+             * The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance that is protected by the policy.
              */
             public Builder vip(String vip) {
                 this.vip = vip;

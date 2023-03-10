@@ -63,14 +63,14 @@ public class DescribeAttackAnalysisMaxQpsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAttackAnalysisMaxQpsRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.startTime = response.startTime;
+        private Builder(DescribeAttackAnalysisMaxQpsRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -79,7 +79,7 @@ public class DescribeAttackAnalysisMaxQpsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

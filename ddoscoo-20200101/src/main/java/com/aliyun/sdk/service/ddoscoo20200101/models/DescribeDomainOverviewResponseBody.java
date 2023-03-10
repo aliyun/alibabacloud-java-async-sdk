@@ -62,7 +62,7 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MaxHttp.
+         * The peak queries per second (QPS) during HTTP traffic scrubbing. Unit: QPS.
          */
         public Builder maxHttp(Long maxHttp) {
             this.maxHttp = maxHttp;
@@ -70,7 +70,7 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * MaxHttps.
+         * The peak QPS during HTTPS traffic scrubbing. Unit: QPS.
          */
         public Builder maxHttps(Long maxHttps) {
             this.maxHttps = maxHttps;
@@ -78,7 +78,7 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

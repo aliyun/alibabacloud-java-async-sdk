@@ -75,11 +75,11 @@ public class ModifyFullLogTtlRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyFullLogTtlRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.ttl = response.ttl;
+        private Builder(ModifyFullLogTtlRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.ttl = request.ttl;
         } 
 
         /**
@@ -92,7 +92,7 @@ public class ModifyFullLogTtlRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -101,7 +101,7 @@ public class ModifyFullLogTtlRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * The log storage duration of a website. Valid values: **30** to **180**. Unit: days.
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);

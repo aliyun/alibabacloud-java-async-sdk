@@ -50,7 +50,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HealthCheckStatus.
+         * An array that consists of the details of the health status of the origin server.
          */
         public Builder healthCheckStatus(java.util.List < HealthCheckStatus> healthCheckStatus) {
             this.healthCheckStatus = healthCheckStatus;
@@ -58,7 +58,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Address.
+             * The IP address of the origin server.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -118,7 +118,11 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The health state of the IP address. Valid values:
+             * <p>
+             * 
+             * *   **normal**: healthy
+             * *   **abnormal**: unhealthy
              */
             public Builder status(String status) {
                 this.status = status;
@@ -207,7 +211,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * FrontendPort.
+             * The forwarding port.
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -215,7 +219,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -223,7 +227,11 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The forwarding protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -231,7 +239,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RealServerStatusList.
+             * An array that consists of the health states of the IP addresses of the origin server.
              */
             public Builder realServerStatusList(java.util.List < RealServerStatusList> realServerStatusList) {
                 this.realServerStatusList = realServerStatusList;
@@ -239,7 +247,11 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The health status of the origin server. Valid values:
+             * <p>
+             * 
+             * *   **normal**: healthy
+             * *   **abnormal**: unhealthy
              */
             public Builder status(String status) {
                 this.status = status;

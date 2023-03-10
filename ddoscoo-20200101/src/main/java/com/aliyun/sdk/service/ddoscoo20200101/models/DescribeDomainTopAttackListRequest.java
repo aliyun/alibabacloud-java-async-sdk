@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainTopAttackListRequest</p>
  */
 public class DescribeDomainTopAttackListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EndTime")
     @Validation(required = true)
     private Long endTime;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -32,8 +32,8 @@ public class DescribeDomainTopAttackListRequest extends Request {
 
     private DescribeDomainTopAttackListRequest(Builder builder) {
         super(builder);
-        this.endTime = builder.endTime;
         this.regionId = builder.regionId;
+        this.endTime = builder.endTime;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
@@ -52,17 +52,17 @@ public class DescribeDomainTopAttackListRequest extends Request {
     }
 
     /**
-     * @return endTime
-     */
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -80,8 +80,8 @@ public class DescribeDomainTopAttackListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDomainTopAttackListRequest, Builder> {
-        private Long endTime; 
         private String regionId; 
+        private Long endTime; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -89,22 +89,13 @@ public class DescribeDomainTopAttackListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainTopAttackListRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainTopAttackListRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.endTime = request.endTime;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
         } 
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -116,7 +107,19 @@ public class DescribeDomainTopAttackListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -125,7 +128,10 @@ public class DescribeDomainTopAttackListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

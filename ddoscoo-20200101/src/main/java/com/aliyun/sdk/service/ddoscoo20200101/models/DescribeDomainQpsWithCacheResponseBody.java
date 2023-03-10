@@ -170,7 +170,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         private java.util.List < String > totals; 
 
         /**
-         * Blocks.
+         * An array that consists of the attack QPS.
          */
         public Builder blocks(java.util.List < String > blocks) {
             this.blocks = blocks;
@@ -178,7 +178,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * CacheHits.
+         * An array consisting of cache hit ratios.
          */
         public Builder cacheHits(java.util.List < String > cacheHits) {
             this.cacheHits = cacheHits;
@@ -186,7 +186,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * CcBlockQps.
+         * An array consisting of the QPS that is blocked by the Frequency Control policy.
          */
         public Builder ccBlockQps(java.util.List < String > ccBlockQps) {
             this.ccBlockQps = ccBlockQps;
@@ -194,7 +194,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * CcJsQps.
+         * An array consisting of the QPS for which the Frequency Control policy triggers Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA).
          */
         public Builder ccJsQps(java.util.List < String > ccJsQps) {
             this.ccJsQps = ccJsQps;
@@ -202,7 +202,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * The intervals between every two adjacent records. Unit: seconds.
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -210,7 +210,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * IpBlockQps.
+         * An array consisting of the QPS that is blocked by the blacklist for domain names.
          */
         public Builder ipBlockQps(java.util.List < String > ipBlockQps) {
             this.ipBlockQps = ipBlockQps;
@@ -218,7 +218,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * PreciseBlocks.
+         * An array consisting of the QPS that is blocked by the Accurate Access Control policy.
          */
         public Builder preciseBlocks(java.util.List < String > preciseBlocks) {
             this.preciseBlocks = preciseBlocks;
@@ -226,7 +226,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * PreciseJsQps.
+         * An array consisting of the QPS for which the Accurate Access Control policy triggers the JavaScript challenge.
          */
         public Builder preciseJsQps(java.util.List < String > preciseJsQps) {
             this.preciseJsQps = preciseJsQps;
@@ -234,7 +234,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * RegionBlocks.
+         * An array consisting of the QPS that is blocked by the Location Blacklist policy.
          */
         public Builder regionBlocks(java.util.List < String > regionBlocks) {
             this.regionBlocks = regionBlocks;
@@ -242,7 +242,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -258,7 +258,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         }
 
         /**
-         * Totals.
+         * An array consisting of the total QPS.
          */
         public Builder totals(java.util.List < String > totals) {
             this.totals = totals;

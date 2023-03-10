@@ -50,7 +50,7 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CnameReuses.
+         * An array that consists of the CNAME reuse information.
          */
         public Builder cnameReuses(java.util.List < CnameReuses> cnameReuses) {
             this.cnameReuses = cnameReuses;
@@ -58,7 +58,7 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
             private Integer enable; 
 
             /**
-             * Cname.
+             * The CNAME record that is reused by the website.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -130,7 +130,7 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +138,11 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether CNAME reuse is enabled. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;

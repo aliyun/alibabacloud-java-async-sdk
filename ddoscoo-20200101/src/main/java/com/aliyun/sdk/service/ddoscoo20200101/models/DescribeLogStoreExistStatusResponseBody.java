@@ -50,7 +50,11 @@ public class DescribeLogStoreExistStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExistStatus.
+         * Indicates whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder existStatus(Boolean existStatus) {
             this.existStatus = existStatus;
@@ -58,7 +62,7 @@ public class DescribeLogStoreExistStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

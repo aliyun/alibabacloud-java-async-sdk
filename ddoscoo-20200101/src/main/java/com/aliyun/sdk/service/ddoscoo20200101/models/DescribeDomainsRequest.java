@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainsRequest</p>
  */
 public class DescribeDomainsRequest extends Request {
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("InstanceIds")
+    private java.util.List < String > instanceIds;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -26,8 +26,8 @@ public class DescribeDomainsRequest extends Request {
 
     private DescribeDomainsRequest(Builder builder) {
         super(builder);
-        this.instanceIds = builder.instanceIds;
         this.regionId = builder.regionId;
+        this.instanceIds = builder.instanceIds;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -45,17 +45,17 @@ public class DescribeDomainsRequest extends Request {
     }
 
     /**
-     * @return instanceIds
-     */
-    public java.util.List < String > getInstanceIds() {
-        return this.instanceIds;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -66,29 +66,20 @@ public class DescribeDomainsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDomainsRequest, Builder> {
-        private java.util.List < String > instanceIds; 
         private String regionId; 
+        private java.util.List < String > instanceIds; 
         private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainsRequest response) {
-            super(response);
-            this.instanceIds = response.instanceIds;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeDomainsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceIds = request.instanceIds;
+            this.resourceGroupId = request.resourceGroupId;
         } 
-
-        /**
-         * InstanceIds.
-         */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
-            this.putQueryParameter("InstanceIds", instanceIds);
-            this.instanceIds = instanceIds;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -100,7 +91,22 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the instance that you want to query.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            this.putQueryParameter("InstanceIds", instanceIds);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see [Create a resource group](~~94485~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -62,7 +62,7 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AsyncTasks.
+         * An array that consists of the details of the asynchronous export tasks.
          */
         public Builder asyncTasks(java.util.List < AsyncTasks> asyncTasks) {
             this.asyncTasks = asyncTasks;
@@ -70,7 +70,7 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of asynchronous export tasks that are returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,7 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
             private Integer taskType; 
 
             /**
-             * EndTime.
+             * The end time of the task. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -198,7 +198,7 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the task. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -206,7 +206,7 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the job.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -214,7 +214,16 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskParams.
+             * The task parameter. The value is a JSON string. The returned field in the value varies based on the value of **TaskType**.
+             * <p>
+             * 
+             * If **TaskType** is set to **1**, **3**, **4**, **5**, or **6**, the following filed is returned:
+             * 
+             * *   **instanceId**: the ID of the instance. Data type: string.
+             * 
+             * If **TaskType** is set to **2**, the following field is returned:
+             * 
+             * *   **domain**: the domain name of the website. Data type: string.
              */
             public Builder taskParams(String taskParams) {
                 this.taskParams = taskParams;
@@ -222,7 +231,18 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskResult.
+             * The execution result of the task. The value is a JSON string. The returned fields in the value vary based on the value of **TaskType**.
+             * <p>
+             * 
+             * If **TaskType** is set to **1**, **3**, **4**, **5**, or **6**, the following fields are returned:
+             * 
+             * *   **instanceId**: the ID of the instance. Data type: string.
+             * *   **url**: the URL to download the exported file from Object Storage Service (OSS). Data type: string.
+             * 
+             * If **TaskType** is set to **2**, the following fields are returned:
+             * 
+             * *   **domain**: the domain name of the website. Data type: string.
+             * *   **url**: the URL to download the exported file from OSS. Data type: string.
              */
             public Builder taskResult(String taskResult) {
                 this.taskResult = taskResult;
@@ -230,7 +250,13 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **0**: indicates that the task is being initialized.
+             * *   **1**: indicates that the task is in progress.
+             * *   **2**: indicates that the task is successful.
+             * *   **3**: indicates that the task failed.
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -238,7 +264,15 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **1**: the task to export the port forwarding rules of an instance
+             * *   **2**: the task to export the forwarding rules of a website protected by an instance
+             * *   **3**: the task to export the sessions and health check settings of an instance
+             * *   **4**: the task to export the mitigation policies of an instance
+             * *   **5**: the task to download the blacklist for destination IP addresses of an instance
+             * *   **6**: the task to download the whitelist for destination IP addresses of an instance
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;

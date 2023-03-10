@@ -91,16 +91,20 @@ public class DescribeDDosEventSrcIpRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDDosEventSrcIpRequest response) {
-            super(response);
-            this.eventType = response.eventType;
-            this.ip = response.ip;
-            this.range = response.range;
-            this.startTime = response.startTime;
+        private Builder(DescribeDDosEventSrcIpRequest request) {
+            super(request);
+            this.eventType = request.eventType;
+            this.ip = request.ip;
+            this.range = request.range;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EventType.
+         * The type of the attack event that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **defense**: attack events that trigger traffic scrubbing
+         * *   **blackhole**: attack events that trigger blackhole filtering
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -109,7 +113,7 @@ public class DescribeDDosEventSrcIpRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -118,7 +122,7 @@ public class DescribeDDosEventSrcIpRequest extends Request {
         }
 
         /**
-         * Range.
+         * The number of source IP addresses that you want to return. The source IP addresses are returned in descending order of attack traffic. By default, the top **five** source IP addresses are returned.
          */
         public Builder range(Long range) {
             this.putQueryParameter("Range", range);
@@ -127,7 +131,10 @@ public class DescribeDDosEventSrcIpRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The UNIX timestamp when the query starts. Unit: seconds.
+         * <p>
+         * 
+         * > You can call the [DescribeDDosAllEventList](~~188604~~) operation to query the beginning time of all attack events.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

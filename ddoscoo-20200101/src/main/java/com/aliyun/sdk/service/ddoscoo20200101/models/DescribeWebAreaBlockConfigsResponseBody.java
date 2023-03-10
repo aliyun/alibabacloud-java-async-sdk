@@ -50,7 +50,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AreaBlockConfigs.
+         * An array that consists of the configurations of the Location Blacklist (Domain Names) policy.
          */
         public Builder areaBlockConfigs(java.util.List < AreaBlockConfigs> areaBlockConfigs) {
             this.areaBlockConfigs = areaBlockConfigs;
@@ -58,7 +58,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Block.
+             * Indicates whether the location is blocked. Valid values:
+             * <p>
+             * 
+             * *   **0**: yes
+             * *   **1**: no
              */
             public Builder block(Integer block) {
                 this.block = block;
@@ -118,7 +122,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The name of the location.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -171,7 +175,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             private java.util.List < RegionList> regionList; 
 
             /**
-             * Domain.
+             * The domain name of the website.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -179,7 +183,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionList.
+             * The configuration of the blocked locations.
              */
             public Builder regionList(java.util.List < RegionList> regionList) {
                 this.regionList = regionList;

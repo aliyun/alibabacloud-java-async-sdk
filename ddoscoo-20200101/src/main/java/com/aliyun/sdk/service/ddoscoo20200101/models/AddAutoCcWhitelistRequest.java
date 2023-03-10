@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddAutoCcWhitelistRequest</p>
  */
 public class AddAutoCcWhitelistRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ExpireTime")
     private Integer expireTime;
@@ -21,10 +25,6 @@ public class AddAutoCcWhitelistRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("Whitelist")
     @Validation(required = true)
@@ -32,9 +32,9 @@ public class AddAutoCcWhitelistRequest extends Request {
 
     private AddAutoCcWhitelistRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.expireTime = builder.expireTime;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
         this.whitelist = builder.whitelist;
     }
 
@@ -52,6 +52,13 @@ public class AddAutoCcWhitelistRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return expireTime
      */
     public Integer getExpireTime() {
@@ -66,13 +73,6 @@ public class AddAutoCcWhitelistRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return whitelist
      */
     public String getWhitelist() {
@@ -80,40 +80,22 @@ public class AddAutoCcWhitelistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddAutoCcWhitelistRequest, Builder> {
+        private String regionId; 
         private Integer expireTime; 
         private String instanceId; 
-        private String regionId; 
         private String whitelist; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddAutoCcWhitelistRequest response) {
-            super(response);
-            this.expireTime = response.expireTime;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.whitelist = response.whitelist;
+        private Builder(AddAutoCcWhitelistRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.expireTime = request.expireTime;
+            this.instanceId = request.instanceId;
+            this.whitelist = request.whitelist;
         } 
-
-        /**
-         * ExpireTime.
-         */
-        public Builder expireTime(Integer expireTime) {
-            this.putQueryParameter("ExpireTime", expireTime);
-            this.expireTime = expireTime;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -125,7 +107,34 @@ public class AddAutoCcWhitelistRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * This parameter is deprecated.
+         * <p>
+         * 
+         * > This parameter indicates the validity period of the IP address blacklist. By default, the traffic from the IP addresses that you add to the whitelist is always allowed. You do not need to set this parameter.
+         */
+        public Builder expireTime(Integer expireTime) {
+            this.putQueryParameter("ExpireTime", expireTime);
+            this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The configuration of the IP addresses that you want to add to the whitelist. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
+         * <p>
+         * 
+         * *   **src**: the IP address that you want to add. This parameter is required. Data type: string.
          */
         public Builder whitelist(String whitelist) {
             this.putQueryParameter("Whitelist", whitelist);

@@ -75,11 +75,11 @@ public class DeleteSchedulerRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSchedulerRuleRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.ruleName = response.ruleName;
+        private Builder(DeleteSchedulerRuleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.ruleName = request.ruleName;
         } 
 
         /**
@@ -92,7 +92,7 @@ public class DeleteSchedulerRuleRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -101,7 +101,7 @@ public class DeleteSchedulerRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the scheduling rule that you want to delete.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

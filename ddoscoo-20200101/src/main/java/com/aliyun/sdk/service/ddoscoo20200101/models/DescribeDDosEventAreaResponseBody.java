@@ -50,7 +50,7 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Areas.
+         * The information about the source region from which the volumetric attack was initiated.
          */
         public Builder areas(java.util.List < Areas> areas) {
             this.areas = areas;
@@ -58,7 +58,7 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
             private Long inPkts; 
 
             /**
-             * Area.
+             * The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -118,7 +118,7 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
             }
 
             /**
-             * InPkts.
+             * The number of request packets that were sent from the source region.
              */
             public Builder inPkts(Long inPkts) {
                 this.inPkts = inPkts;

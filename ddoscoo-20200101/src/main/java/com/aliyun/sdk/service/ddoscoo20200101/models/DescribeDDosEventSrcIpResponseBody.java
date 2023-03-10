@@ -50,7 +50,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ips.
+         * An array that consists of information about the source IP address of the volumetric attack.
          */
         public Builder ips(java.util.List < Ips> ips) {
             this.ips = ips;
@@ -58,7 +58,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             private String srcIp; 
 
             /**
-             * AreaId.
+             * The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -130,7 +130,27 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The Internet service provider (ISP) for the volumetric attack. Valid values:
+             * <p>
+             * 
+             * *   **100017**: China Telecom
+             * *   **100026**: China Unicom
+             * *   **100025**: China Mobile
+             * *   **100027**: China Education and Research Network
+             * *   **100020**: China Mobile Tietong
+             * *   **1000143**: Dr.Peng Telecom & Media Group
+             * *   **100080**: Beijing Gehua CATV Network
+             * *   **1000139**: National Radio and Television Administration
+             * *   **100023**: Oriental Cable Network
+             * *   **100063**: Founder Broadband
+             * *   **1000337**: China Internet Exchange
+             * *   **100021**: 21Vianet Group
+             * *   **1000333**: Wasu Media Holding
+             * *   **100093**: Wangsu Science & Technology
+             * *   **1000401**: Tencent
+             * *   **100099**: Baidu
+             * *   **1000323**: Alibaba Cloud
+             * *   **100098**: Alibaba
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -138,7 +158,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * The source IP address of the volumetric attack.
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
