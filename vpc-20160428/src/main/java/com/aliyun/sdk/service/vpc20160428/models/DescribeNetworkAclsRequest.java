@@ -58,6 +58,10 @@ public class DescribeNetworkAclsRequest extends Request {
     private String resourceType;
 
     @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -74,6 +78,7 @@ public class DescribeNetworkAclsRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
+        this.tags = builder.tags;
         this.vpcId = builder.vpcId;
     }
 
@@ -168,6 +173,13 @@ public class DescribeNetworkAclsRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -186,6 +198,7 @@ public class DescribeNetworkAclsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
+        private java.util.List < Tags> tags; 
         private String vpcId; 
 
         private Builder() {
@@ -205,6 +218,7 @@ public class DescribeNetworkAclsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
+            this.tags = request.tags;
             this.vpcId = request.vpcId;
         } 
 
@@ -308,6 +322,15 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * VpcId.
          */
         public Builder vpcId(String vpcId) {
@@ -323,4 +346,65 @@ public class DescribeNetworkAclsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

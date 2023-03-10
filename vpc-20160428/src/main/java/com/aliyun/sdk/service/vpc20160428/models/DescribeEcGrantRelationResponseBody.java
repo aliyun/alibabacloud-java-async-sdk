@@ -158,6 +158,9 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         private String gmtCreate;
 
+        @NameInMap("GrantType")
+        private String grantType;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -185,6 +188,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         private EcGrantRelations(Builder builder) {
             this.aliUid = builder.aliUid;
             this.gmtCreate = builder.gmtCreate;
+            this.grantType = builder.grantType;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceRouterId = builder.instanceRouterId;
@@ -215,6 +219,13 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
          */
         public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        /**
+         * @return grantType
+         */
+        public String getGrantType() {
+            return this.grantType;
         }
 
         /**
@@ -276,6 +287,7 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         public static final class Builder {
             private Long aliUid; 
             private String gmtCreate; 
+            private String grantType; 
             private String instanceId; 
             private String instanceName; 
             private String instanceRouterId; 
@@ -298,6 +310,14 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * GrantType.
+             */
+            public Builder grantType(String grantType) {
+                this.grantType = grantType;
                 return this;
             }
 

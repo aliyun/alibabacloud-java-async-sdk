@@ -7,26 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateHaVipRequest} extends {@link RequestModel}
+ * {@link CreateDefaultVSwitchRequest} extends {@link RequestModel}
  *
- * <p>CreateHaVipRequest</p>
+ * <p>CreateDefaultVSwitchRequest</p>
  */
-public class CreateHaVipRequest extends Request {
+public class CreateDefaultVSwitchRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
-    @NameInMap("Description")
-    private String description;
-
-    @Query
-    @NameInMap("IpAddress")
-    private String ipAddress;
-
-    @Query
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("Ipv6CidrBlock")
+    private Integer ipv6CidrBlock;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -42,10 +34,6 @@ public class CreateHaVipRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -54,30 +42,27 @@ public class CreateHaVipRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("VSwitchId")
+    @NameInMap("ZoneId")
     @Validation(required = true)
-    private String vSwitchId;
+    private String zoneId;
 
-    private CreateHaVipRequest(Builder builder) {
+    private CreateDefaultVSwitchRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.description = builder.description;
-        this.ipAddress = builder.ipAddress;
-        this.name = builder.name;
+        this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.vSwitchId = builder.vSwitchId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateHaVipRequest create() {
+    public static CreateDefaultVSwitchRequest create() {
         return builder().build();
     }
 
@@ -94,24 +79,10 @@ public class CreateHaVipRequest extends Request {
     }
 
     /**
-     * @return description
+     * @return ipv6CidrBlock
      */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return ipAddress
-     */
-    public String getIpAddress() {
-        return this.ipAddress;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
+    public Integer getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
     }
 
     /**
@@ -136,13 +107,6 @@ public class CreateHaVipRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -157,42 +121,36 @@ public class CreateHaVipRequest extends Request {
     }
 
     /**
-     * @return vSwitchId
+     * @return zoneId
      */
-    public String getVSwitchId() {
-        return this.vSwitchId;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
-    public static final class Builder extends Request.Builder<CreateHaVipRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateDefaultVSwitchRequest, Builder> {
         private String clientToken; 
-        private String description; 
-        private String ipAddress; 
-        private String name; 
+        private Integer ipv6CidrBlock; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String vSwitchId; 
+        private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateHaVipRequest request) {
+        private Builder(CreateDefaultVSwitchRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.description = request.description;
-            this.ipAddress = request.ipAddress;
-            this.name = request.name;
+            this.ipv6CidrBlock = request.ipv6CidrBlock;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.vSwitchId = request.vSwitchId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -205,29 +163,11 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * Description.
+         * Ipv6CidrBlock.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * IpAddress.
-         */
-        public Builder ipAddress(String ipAddress) {
-            this.putQueryParameter("IpAddress", ipAddress);
-            this.ipAddress = ipAddress;
-            return this;
-        }
-
-        /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
+            this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
+            this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
@@ -259,15 +199,6 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -286,17 +217,17 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * ZoneId.
          */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 
         @Override
-        public CreateHaVipRequest build() {
-            return new CreateHaVipRequest(this);
+        public CreateDefaultVSwitchRequest build() {
+            return new CreateDefaultVSwitchRequest(this);
         } 
 
     } 

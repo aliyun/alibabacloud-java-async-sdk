@@ -593,12 +593,79 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class TrafficMirrorFilters extends TeaModel {
         @NameInMap("EgressRules")
         private java.util.List < EgressRules> egressRules;
 
         @NameInMap("IngressRules")
         private java.util.List < IngressRules> ingressRules;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("TrafficMirrorFilterDescription")
         private String trafficMirrorFilterDescription;
@@ -615,6 +682,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         private TrafficMirrorFilters(Builder builder) {
             this.egressRules = builder.egressRules;
             this.ingressRules = builder.ingressRules;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
             this.trafficMirrorFilterDescription = builder.trafficMirrorFilterDescription;
             this.trafficMirrorFilterId = builder.trafficMirrorFilterId;
             this.trafficMirrorFilterName = builder.trafficMirrorFilterName;
@@ -641,6 +710,20 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
          */
         public java.util.List < IngressRules> getIngressRules() {
             return this.ingressRules;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -674,6 +757,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < EgressRules> egressRules; 
             private java.util.List < IngressRules> ingressRules; 
+            private String resourceGroupId; 
+            private java.util.List < Tags> tags; 
             private String trafficMirrorFilterDescription; 
             private String trafficMirrorFilterId; 
             private String trafficMirrorFilterName; 
@@ -692,6 +777,22 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              */
             public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
                 this.ingressRules = ingressRules;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

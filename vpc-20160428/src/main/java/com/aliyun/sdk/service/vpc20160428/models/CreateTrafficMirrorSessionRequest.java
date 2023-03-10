@@ -47,6 +47,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -96,6 +100,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         this.packetLength = builder.packetLength;
         this.priority = builder.priority;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.trafficMirrorFilterId = builder.trafficMirrorFilterId;
@@ -177,6 +182,13 @@ public class CreateTrafficMirrorSessionRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -248,6 +260,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         private Integer packetLength; 
         private Integer priority; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String trafficMirrorFilterId; 
@@ -272,6 +285,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
             this.packetLength = request.packetLength;
             this.priority = request.priority;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.trafficMirrorFilterId = request.trafficMirrorFilterId;
@@ -352,6 +366,15 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

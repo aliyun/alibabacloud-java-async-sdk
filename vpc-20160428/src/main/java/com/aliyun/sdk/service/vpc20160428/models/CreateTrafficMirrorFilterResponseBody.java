@@ -15,11 +15,15 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("TrafficMirrorFilterId")
     private String trafficMirrorFilterId;
 
     private CreateTrafficMirrorFilterResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.trafficMirrorFilterId = builder.trafficMirrorFilterId;
     }
 
@@ -39,6 +43,13 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return trafficMirrorFilterId
      */
     public String getTrafficMirrorFilterId() {
@@ -47,6 +58,7 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private String resourceGroupId; 
         private String trafficMirrorFilterId; 
 
         /**
@@ -54,6 +66,14 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

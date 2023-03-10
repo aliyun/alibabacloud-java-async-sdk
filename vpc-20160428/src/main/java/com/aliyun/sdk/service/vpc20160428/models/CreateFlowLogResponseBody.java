@@ -18,12 +18,16 @@ public class CreateFlowLogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Success")
     private String success;
 
     private CreateFlowLogResponseBody(Builder builder) {
         this.flowLogId = builder.flowLogId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.success = builder.success;
     }
 
@@ -50,6 +54,13 @@ public class CreateFlowLogResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return success
      */
     public String getSuccess() {
@@ -59,6 +70,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
     public static final class Builder {
         private String flowLogId; 
         private String requestId; 
+        private String resourceGroupId; 
         private String success; 
 
         /**
@@ -74,6 +86,14 @@ public class CreateFlowLogResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -42,12 +42,20 @@ public class ListTrafficMirrorSessionsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     @Query
     @NameInMap("TrafficMirrorFilterId")
@@ -83,8 +91,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.priority = builder.priority;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tags = builder.tags;
         this.trafficMirrorFilterId = builder.trafficMirrorFilterId;
         this.trafficMirrorSessionIds = builder.trafficMirrorSessionIds;
         this.trafficMirrorSessionName = builder.trafficMirrorSessionName;
@@ -156,6 +166,13 @@ public class ListTrafficMirrorSessionsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -167,6 +184,13 @@ public class ListTrafficMirrorSessionsRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -219,8 +243,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         private Long ownerId; 
         private Integer priority; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tags> tags; 
         private String trafficMirrorFilterId; 
         private java.util.List < String > trafficMirrorSessionIds; 
         private String trafficMirrorSessionName; 
@@ -241,8 +267,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
             this.ownerId = request.ownerId;
             this.priority = request.priority;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
             this.trafficMirrorFilterId = request.trafficMirrorFilterId;
             this.trafficMirrorSessionIds = request.trafficMirrorSessionIds;
             this.trafficMirrorSessionName = request.trafficMirrorSessionName;
@@ -315,6 +343,15 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -329,6 +366,15 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -393,4 +439,65 @@ public class ListTrafficMirrorSessionsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

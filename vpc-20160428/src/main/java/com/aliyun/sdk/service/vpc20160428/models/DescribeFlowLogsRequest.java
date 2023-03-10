@@ -54,6 +54,10 @@ public class DescribeFlowLogsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceId")
     private String resourceId;
 
@@ -72,6 +76,10 @@ public class DescribeFlowLogsRequest extends Request {
     @Query
     @NameInMap("Status")
     private String status;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     @Query
     @NameInMap("TrafficType")
@@ -93,11 +101,13 @@ public class DescribeFlowLogsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.projectName = builder.projectName;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
         this.status = builder.status;
+        this.tags = builder.tags;
         this.trafficType = builder.trafficType;
         this.vpcId = builder.vpcId;
     }
@@ -186,6 +196,13 @@ public class DescribeFlowLogsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -221,6 +238,13 @@ public class DescribeFlowLogsRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return trafficType
      */
     public String getTrafficType() {
@@ -245,11 +269,13 @@ public class DescribeFlowLogsRequest extends Request {
         private Integer pageSize; 
         private String projectName; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
         private String status; 
+        private java.util.List < Tags> tags; 
         private String trafficType; 
         private String vpcId; 
 
@@ -269,11 +295,13 @@ public class DescribeFlowLogsRequest extends Request {
             this.pageSize = request.pageSize;
             this.projectName = request.projectName;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
             this.status = request.status;
+            this.tags = request.tags;
             this.trafficType = request.trafficType;
             this.vpcId = request.vpcId;
         } 
@@ -369,6 +397,15 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceId.
          */
         public Builder resourceId(String resourceId) {
@@ -414,6 +451,15 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * TrafficType.
          */
         public Builder trafficType(String trafficType) {
@@ -438,4 +484,65 @@ public class DescribeFlowLogsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

@@ -111,6 +111,67 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class TrafficMirrorSessions extends TeaModel {
         @NameInMap("Enabled")
         private Boolean enabled;
@@ -120,6 +181,12 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
         @NameInMap("Priority")
         private Integer priority;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("TrafficMirrorFilterId")
         private String trafficMirrorFilterId;
@@ -155,6 +222,8 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             this.enabled = builder.enabled;
             this.packetLength = builder.packetLength;
             this.priority = builder.priority;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
             this.trafficMirrorFilterId = builder.trafficMirrorFilterId;
             this.trafficMirrorSessionBusinessStatus = builder.trafficMirrorSessionBusinessStatus;
             this.trafficMirrorSessionDescription = builder.trafficMirrorSessionDescription;
@@ -194,6 +263,20 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
          */
         public Integer getPriority() {
             return this.priority;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -270,6 +353,8 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             private Boolean enabled; 
             private Integer packetLength; 
             private Integer priority; 
+            private String resourceGroupId; 
+            private java.util.List < Tags> tags; 
             private String trafficMirrorFilterId; 
             private String trafficMirrorSessionBusinessStatus; 
             private String trafficMirrorSessionDescription; 
@@ -302,6 +387,22 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

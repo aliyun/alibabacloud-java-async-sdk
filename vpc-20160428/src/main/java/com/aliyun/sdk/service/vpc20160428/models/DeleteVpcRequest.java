@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteVpcRequest extends Request {
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("ForceDelete")
+    private Boolean forceDelete;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -39,6 +47,8 @@ public class DeleteVpcRequest extends Request {
 
     private DeleteVpcRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
+        this.forceDelete = builder.forceDelete;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -58,6 +68,20 @@ public class DeleteVpcRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return forceDelete
+     */
+    public Boolean getForceDelete() {
+        return this.forceDelete;
     }
 
     /**
@@ -103,6 +127,8 @@ public class DeleteVpcRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteVpcRequest, Builder> {
+        private Boolean dryRun; 
+        private Boolean forceDelete; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -116,6 +142,8 @@ public class DeleteVpcRequest extends Request {
 
         private Builder(DeleteVpcRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
+            this.forceDelete = request.forceDelete;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -123,6 +151,24 @@ public class DeleteVpcRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * ForceDelete.
+         */
+        public Builder forceDelete(Boolean forceDelete) {
+            this.putQueryParameter("ForceDelete", forceDelete);
+            this.forceDelete = forceDelete;
+            return this;
+        }
 
         /**
          * OwnerAccount.

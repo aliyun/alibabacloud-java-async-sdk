@@ -7,26 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateHaVipRequest} extends {@link RequestModel}
+ * {@link CreateDefaultVpcRequest} extends {@link RequestModel}
  *
- * <p>CreateHaVipRequest</p>
+ * <p>CreateDefaultVpcRequest</p>
  */
-public class CreateHaVipRequest extends Request {
+public class CreateDefaultVpcRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
-    @NameInMap("Description")
-    private String description;
+    @NameInMap("EnableIpv6")
+    private Boolean enableIpv6;
 
     @Query
-    @NameInMap("IpAddress")
-    private String ipAddress;
-
-    @Query
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("Ipv6CidrBlock")
+    private String ipv6CidrBlock;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -53,31 +49,24 @@ public class CreateHaVipRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
-    private String vSwitchId;
-
-    private CreateHaVipRequest(Builder builder) {
+    private CreateDefaultVpcRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.description = builder.description;
-        this.ipAddress = builder.ipAddress;
-        this.name = builder.name;
+        this.enableIpv6 = builder.enableIpv6;
+        this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateHaVipRequest create() {
+    public static CreateDefaultVpcRequest create() {
         return builder().build();
     }
 
@@ -94,24 +83,17 @@ public class CreateHaVipRequest extends Request {
     }
 
     /**
-     * @return description
+     * @return enableIpv6
      */
-    public String getDescription() {
-        return this.description;
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
     }
 
     /**
-     * @return ipAddress
+     * @return ipv6CidrBlock
      */
-    public String getIpAddress() {
-        return this.ipAddress;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
+    public String getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
     }
 
     /**
@@ -156,43 +138,32 @@ public class CreateHaVipRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return vSwitchId
-     */
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public static final class Builder extends Request.Builder<CreateHaVipRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateDefaultVpcRequest, Builder> {
         private String clientToken; 
-        private String description; 
-        private String ipAddress; 
-        private String name; 
+        private Boolean enableIpv6; 
+        private String ipv6CidrBlock; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String vSwitchId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateHaVipRequest request) {
+        private Builder(CreateDefaultVpcRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.description = request.description;
-            this.ipAddress = request.ipAddress;
-            this.name = request.name;
+            this.enableIpv6 = request.enableIpv6;
+            this.ipv6CidrBlock = request.ipv6CidrBlock;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -205,29 +176,20 @@ public class CreateHaVipRequest extends Request {
         }
 
         /**
-         * Description.
+         * EnableIpv6.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
+        public Builder enableIpv6(Boolean enableIpv6) {
+            this.putQueryParameter("EnableIpv6", enableIpv6);
+            this.enableIpv6 = enableIpv6;
             return this;
         }
 
         /**
-         * IpAddress.
+         * Ipv6CidrBlock.
          */
-        public Builder ipAddress(String ipAddress) {
-            this.putQueryParameter("IpAddress", ipAddress);
-            this.ipAddress = ipAddress;
-            return this;
-        }
-
-        /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
+            this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
@@ -285,18 +247,9 @@ public class CreateHaVipRequest extends Request {
             return this;
         }
 
-        /**
-         * VSwitchId.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
         @Override
-        public CreateHaVipRequest build() {
-            return new CreateHaVipRequest(this);
+        public CreateDefaultVpcRequest build() {
+            return new CreateDefaultVpcRequest(this);
         } 
 
     } 

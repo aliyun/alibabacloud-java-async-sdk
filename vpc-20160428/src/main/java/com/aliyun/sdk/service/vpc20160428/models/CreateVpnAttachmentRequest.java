@@ -92,6 +92,10 @@ public class CreateVpnAttachmentRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private CreateVpnAttachmentRequest(Builder builder) {
         super(builder);
         this.autoConfigRoute = builder.autoConfigRoute;
@@ -113,6 +117,7 @@ public class CreateVpnAttachmentRequest extends Request {
         this.remoteSubnet = builder.remoteSubnet;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -261,6 +266,13 @@ public class CreateVpnAttachmentRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateVpnAttachmentRequest, Builder> {
         private Boolean autoConfigRoute; 
         private String bgpConfig; 
@@ -281,6 +293,7 @@ public class CreateVpnAttachmentRequest extends Request {
         private String remoteSubnet; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -307,6 +320,7 @@ public class CreateVpnAttachmentRequest extends Request {
             this.remoteSubnet = request.remoteSubnet;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -480,6 +494,15 @@ public class CreateVpnAttachmentRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public CreateVpnAttachmentRequest build() {
             return new CreateVpnAttachmentRequest(this);
@@ -487,4 +510,65 @@ public class CreateVpnAttachmentRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

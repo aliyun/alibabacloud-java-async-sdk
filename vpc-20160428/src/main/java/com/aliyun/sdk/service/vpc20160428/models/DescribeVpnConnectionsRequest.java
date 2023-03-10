@@ -46,6 +46,10 @@ public class DescribeVpnConnectionsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VpnConnectionId")
     private String vpnConnectionId;
 
@@ -63,6 +67,7 @@ public class DescribeVpnConnectionsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.vpnConnectionId = builder.vpnConnectionId;
         this.vpnGatewayId = builder.vpnGatewayId;
     }
@@ -137,6 +142,13 @@ public class DescribeVpnConnectionsRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vpnConnectionId
      */
     public String getVpnConnectionId() {
@@ -159,6 +171,7 @@ public class DescribeVpnConnectionsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String vpnConnectionId; 
         private String vpnGatewayId; 
 
@@ -176,6 +189,7 @@ public class DescribeVpnConnectionsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
             this.vpnConnectionId = request.vpnConnectionId;
             this.vpnGatewayId = request.vpnGatewayId;
         } 
@@ -253,6 +267,15 @@ public class DescribeVpnConnectionsRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * VpnConnectionId.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
@@ -277,4 +300,65 @@ public class DescribeVpnConnectionsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

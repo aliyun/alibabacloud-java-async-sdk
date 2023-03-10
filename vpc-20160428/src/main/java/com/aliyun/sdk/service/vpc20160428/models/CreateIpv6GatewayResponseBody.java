@@ -18,9 +18,13 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private CreateIpv6GatewayResponseBody(Builder builder) {
         this.ipv6GatewayId = builder.ipv6GatewayId;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -45,9 +49,17 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private String ipv6GatewayId; 
         private String requestId; 
+        private String resourceGroupId; 
 
         /**
          * Ipv6GatewayId.
@@ -62,6 +74,14 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

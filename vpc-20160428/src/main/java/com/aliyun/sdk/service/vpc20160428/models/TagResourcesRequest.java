@@ -45,7 +45,6 @@ public class TagResourcesRequest extends Request {
 
     @Query
     @NameInMap("Tag")
-    @Validation(required = true)
     private java.util.List < Tag> tag;
 
     private TagResourcesRequest(Builder builder) {

@@ -433,6 +433,108 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class VpnConnectionTag extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private VpnConnectionTag(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpnConnectionTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public VpnConnectionTag build() {
+                return new VpnConnectionTag(this);
+            } 
+
+        } 
+
+    }
     public static class VcoHealthCheck extends TeaModel {
         @NameInMap("Dip")
         private String dip;
@@ -813,6 +915,9 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Tag")
+        private VpnConnectionTag tag;
+
         @NameInMap("TransitRouterId")
         private String transitRouterId;
 
@@ -851,6 +956,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             this.spec = builder.spec;
             this.state = builder.state;
             this.status = builder.status;
+            this.tag = builder.tag;
             this.transitRouterId = builder.transitRouterId;
             this.transitRouterName = builder.transitRouterName;
             this.vcoHealthCheck = builder.vcoHealthCheck;
@@ -1001,6 +1107,13 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tag
+         */
+        public VpnConnectionTag getTag() {
+            return this.tag;
+        }
+
+        /**
          * @return transitRouterId
          */
         public String getTransitRouterId() {
@@ -1062,6 +1175,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             private String spec; 
             private String state; 
             private String status; 
+            private VpnConnectionTag tag; 
             private String transitRouterId; 
             private String transitRouterName; 
             private VcoHealthCheck vcoHealthCheck; 
@@ -1218,6 +1332,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(VpnConnectionTag tag) {
+                this.tag = tag;
                 return this;
             }
 
