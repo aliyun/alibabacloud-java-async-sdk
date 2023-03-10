@@ -1,0 +1,215 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ecd20201002.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link EncryptPasswordRequest} extends {@link RequestModel}
+ *
+ * <p>EncryptPasswordRequest</p>
+ */
+public class EncryptPasswordRequest extends Request {
+    @Query
+    @NameInMap("ClientId")
+    @Validation(required = true)
+    private String clientId;
+
+    @Query
+    @NameInMap("DirectoryId")
+    private String directoryId;
+
+    @Query
+    @NameInMap("LoginToken")
+    @Validation(required = true)
+    private String loginToken;
+
+    @Query
+    @NameInMap("OfficeSiteId")
+    private String officeSiteId;
+
+    @Query
+    @NameInMap("Password")
+    @Validation(required = true)
+    private String password;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("SessionId")
+    @Validation(required = true)
+    private String sessionId;
+
+    private EncryptPasswordRequest(Builder builder) {
+        super(builder);
+        this.clientId = builder.clientId;
+        this.directoryId = builder.directoryId;
+        this.loginToken = builder.loginToken;
+        this.officeSiteId = builder.officeSiteId;
+        this.password = builder.password;
+        this.regionId = builder.regionId;
+        this.sessionId = builder.sessionId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static EncryptPasswordRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return clientId
+     */
+    public String getClientId() {
+        return this.clientId;
+    }
+
+    /**
+     * @return directoryId
+     */
+    public String getDirectoryId() {
+        return this.directoryId;
+    }
+
+    /**
+     * @return loginToken
+     */
+    public String getLoginToken() {
+        return this.loginToken;
+    }
+
+    /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    /**
+     * @return password
+     */
+    public String getPassword() {
+        return this.password;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    public static final class Builder extends Request.Builder<EncryptPasswordRequest, Builder> {
+        private String clientId; 
+        private String directoryId; 
+        private String loginToken; 
+        private String officeSiteId; 
+        private String password; 
+        private String regionId; 
+        private String sessionId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(EncryptPasswordRequest request) {
+            super(request);
+            this.clientId = request.clientId;
+            this.directoryId = request.directoryId;
+            this.loginToken = request.loginToken;
+            this.officeSiteId = request.officeSiteId;
+            this.password = request.password;
+            this.regionId = request.regionId;
+            this.sessionId = request.sessionId;
+        } 
+
+        /**
+         * ClientId.
+         */
+        public Builder clientId(String clientId) {
+            this.putQueryParameter("ClientId", clientId);
+            this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * DirectoryId.
+         */
+        public Builder directoryId(String directoryId) {
+            this.putQueryParameter("DirectoryId", directoryId);
+            this.directoryId = directoryId;
+            return this;
+        }
+
+        /**
+         * LoginToken.
+         */
+        public Builder loginToken(String loginToken) {
+            this.putQueryParameter("LoginToken", loginToken);
+            this.loginToken = loginToken;
+            return this;
+        }
+
+        /**
+         * OfficeSiteId.
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.putQueryParameter("OfficeSiteId", officeSiteId);
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
+         * Password.
+         */
+        public Builder password(String password) {
+            this.putQueryParameter("Password", password);
+            this.password = password;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.putQueryParameter("SessionId", sessionId);
+            this.sessionId = sessionId;
+            return this;
+        }
+
+        @Override
+        public EncryptPasswordRequest build() {
+            return new EncryptPasswordRequest(this);
+        } 
+
+    } 
+
+}
