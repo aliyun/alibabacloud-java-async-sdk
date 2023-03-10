@@ -62,6 +62,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RenewAppInstanceGroupResponse> renewAppInstanceGroup(RenewAppInstanceGroupRequest request);
 
+    CompletableFuture<UnbindResponse> unbind(UnbindRequest request);
+
     CompletableFuture<UpdateAppInstanceGroupImageResponse> updateAppInstanceGroupImage(UpdateAppInstanceGroupImageRequest request);
 
 }
