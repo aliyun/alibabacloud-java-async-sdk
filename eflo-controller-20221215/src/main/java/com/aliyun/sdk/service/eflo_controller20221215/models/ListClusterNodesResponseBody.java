@@ -1,0 +1,456 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.eflo_controller20221215.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListClusterNodesResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListClusterNodesResponseBody</p>
+ */
+public class ListClusterNodesResponseBody extends TeaModel {
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @NameInMap("Nodes")
+    private java.util.List < Nodes> nodes;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private ListClusterNodesResponseBody(Builder builder) {
+        this.nextToken = builder.nextToken;
+        this.nodes = builder.nodes;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListClusterNodesResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return nodes
+     */
+    public java.util.List < Nodes> getNodes() {
+        return this.nodes;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String nextToken; 
+        private java.util.List < Nodes> nodes; 
+        private String requestId; 
+
+        /**
+         * 本次调用返回的查询凭证值。
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * 节点列表
+         */
+        public Builder nodes(java.util.List < Nodes> nodes) {
+            this.nodes = nodes;
+            return this;
+        }
+
+        /**
+         * Id of the request
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public ListClusterNodesResponseBody build() {
+            return new ListClusterNodesResponseBody(this);
+        } 
+
+    } 
+
+    public static class Networks extends TeaModel {
+        @NameInMap("BondName")
+        private String bondName;
+
+        @NameInMap("Ip")
+        private String ip;
+
+        @NameInMap("SubnetId")
+        private String subnetId;
+
+        @NameInMap("VpdId")
+        private String vpdId;
+
+        private Networks(Builder builder) {
+            this.bondName = builder.bondName;
+            this.ip = builder.ip;
+            this.subnetId = builder.subnetId;
+            this.vpdId = builder.vpdId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Networks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bondName
+         */
+        public String getBondName() {
+            return this.bondName;
+        }
+
+        /**
+         * @return ip
+         */
+        public String getIp() {
+            return this.ip;
+        }
+
+        /**
+         * @return subnetId
+         */
+        public String getSubnetId() {
+            return this.subnetId;
+        }
+
+        /**
+         * @return vpdId
+         */
+        public String getVpdId() {
+            return this.vpdId;
+        }
+
+        public static final class Builder {
+            private String bondName; 
+            private String ip; 
+            private String subnetId; 
+            private String vpdId; 
+
+            /**
+             * BondName.
+             */
+            public Builder bondName(String bondName) {
+                this.bondName = bondName;
+                return this;
+            }
+
+            /**
+             * Ip.
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
+                return this;
+            }
+
+            /**
+             * SubnetId.
+             */
+            public Builder subnetId(String subnetId) {
+                this.subnetId = subnetId;
+                return this;
+            }
+
+            /**
+             * VpdId.
+             */
+            public Builder vpdId(String vpdId) {
+                this.vpdId = vpdId;
+                return this;
+            }
+
+            public Networks build() {
+                return new Networks(this);
+            } 
+
+        } 
+
+    }
+    public static class Nodes extends TeaModel {
+        @NameInMap("CreateTime")
+        private String createTime;
+
+        @NameInMap("ExpiredTime")
+        private String expiredTime;
+
+        @NameInMap("Hostname")
+        private String hostname;
+
+        @NameInMap("ImageId")
+        private String imageId;
+
+        @NameInMap("MachineType")
+        private String machineType;
+
+        @NameInMap("Networks")
+        private java.util.List < Networks> networks;
+
+        @NameInMap("NodeGroupId")
+        private String nodeGroupId;
+
+        @NameInMap("NodeGroupName")
+        private String nodeGroupName;
+
+        @NameInMap("NodeId")
+        private String nodeId;
+
+        @NameInMap("OperatingState")
+        private String operatingState;
+
+        @NameInMap("Sn")
+        private String sn;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
+        private Nodes(Builder builder) {
+            this.createTime = builder.createTime;
+            this.expiredTime = builder.expiredTime;
+            this.hostname = builder.hostname;
+            this.imageId = builder.imageId;
+            this.machineType = builder.machineType;
+            this.networks = builder.networks;
+            this.nodeGroupId = builder.nodeGroupId;
+            this.nodeGroupName = builder.nodeGroupName;
+            this.nodeId = builder.nodeId;
+            this.operatingState = builder.operatingState;
+            this.sn = builder.sn;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Nodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return expiredTime
+         */
+        public String getExpiredTime() {
+            return this.expiredTime;
+        }
+
+        /**
+         * @return hostname
+         */
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return machineType
+         */
+        public String getMachineType() {
+            return this.machineType;
+        }
+
+        /**
+         * @return networks
+         */
+        public java.util.List < Networks> getNetworks() {
+            return this.networks;
+        }
+
+        /**
+         * @return nodeGroupId
+         */
+        public String getNodeGroupId() {
+            return this.nodeGroupId;
+        }
+
+        /**
+         * @return nodeGroupName
+         */
+        public String getNodeGroupName() {
+            return this.nodeGroupName;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return operatingState
+         */
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
+        /**
+         * @return sn
+         */
+        public String getSn() {
+            return this.sn;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String createTime; 
+            private String expiredTime; 
+            private String hostname; 
+            private String imageId; 
+            private String machineType; 
+            private java.util.List < Networks> networks; 
+            private String nodeGroupId; 
+            private String nodeGroupName; 
+            private String nodeId; 
+            private String operatingState; 
+            private String sn; 
+            private String zoneId; 
+
+            /**
+             * 创建时间
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * 机器过期时间
+             */
+            public Builder expiredTime(String expiredTime) {
+                this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * 主机名
+             */
+            public Builder hostname(String hostname) {
+                this.hostname = hostname;
+                return this;
+            }
+
+            /**
+             * 系统镜像id
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * 机型
+             */
+            public Builder machineType(String machineType) {
+                this.machineType = machineType;
+                return this;
+            }
+
+            /**
+             * Networks.
+             */
+            public Builder networks(java.util.List < Networks> networks) {
+                this.networks = networks;
+                return this;
+            }
+
+            /**
+             * 节点组id
+             */
+            public Builder nodeGroupId(String nodeGroupId) {
+                this.nodeGroupId = nodeGroupId;
+                return this;
+            }
+
+            /**
+             * 节点组名称
+             */
+            public Builder nodeGroupName(String nodeGroupName) {
+                this.nodeGroupName = nodeGroupName;
+                return this;
+            }
+
+            /**
+             * 节点id
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * 节点状态
+             */
+            public Builder operatingState(String operatingState) {
+                this.operatingState = operatingState;
+                return this;
+            }
+
+            /**
+             * 机器sn
+             */
+            public Builder sn(String sn) {
+                this.sn = sn;
+                return this;
+            }
+
+            /**
+             * 可用区id
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public Nodes build() {
+                return new Nodes(this);
+            } 
+
+        } 
+
+    }
+}
