@@ -12,7 +12,7 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetProjectRequest</p>
  */
 public class GetProjectRequest extends Request {
-    @Host
+    @Query
     @NameInMap("project")
     @Validation(required = true)
     private String project;
@@ -58,7 +58,7 @@ public class GetProjectRequest extends Request {
          * project.
          */
         public Builder project(String project) {
-            this.putHostParameter("project", project);
+            this.putQueryParameter("project", project);
             this.project = project;
             return this;
         }

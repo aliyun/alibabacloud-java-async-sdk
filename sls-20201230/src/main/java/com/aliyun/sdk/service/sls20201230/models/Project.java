@@ -35,6 +35,9 @@ public class Project extends TeaModel {
     @NameInMap("region")
     private String region;
 
+    @NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     private Project(Builder builder) {
         this.createTime = builder.createTime;
         this.lastModifyTime = builder.lastModifyTime;
@@ -43,6 +46,7 @@ public class Project extends TeaModel {
         this.projectOwner = builder.projectOwner;
         this.projectStatus = builder.projectStatus;
         this.region = builder.region;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -102,6 +106,13 @@ public class Project extends TeaModel {
         return this.region;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder {
         private String createTime; 
         private String lastModifyTime; 
@@ -110,6 +121,7 @@ public class Project extends TeaModel {
         private String projectOwner; 
         private String projectStatus; 
         private String region; 
+        private String resourceGroupId; 
 
         /**
          * 创建时间
@@ -164,6 +176,14 @@ public class Project extends TeaModel {
          */
         public Builder region(String region) {
             this.region = region;
+            return this;
+        }
+
+        /**
+         * 资源组Id
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
