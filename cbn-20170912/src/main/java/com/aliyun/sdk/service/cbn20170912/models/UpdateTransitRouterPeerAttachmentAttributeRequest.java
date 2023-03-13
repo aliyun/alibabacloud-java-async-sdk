@@ -227,8 +227,8 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:
          * <p>
          * 
-         * *   **false** (default): no.
-         * *   **true**: yes.
+         * *   **false** (default): no
+         * *   **true**: yes
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -253,9 +253,8 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * The bandwidth allocation method. Valid values:
          * <p>
          * 
-         * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
-         * 
-         * **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
+         * *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+         * *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -267,7 +266,9 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
          * <p>
          * 
-         * >  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
+         * **
+         * 
+         * If you set **BandwidthType** to DataTransfer, you do not need to set this parameter.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -279,7 +280,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.
          * 
          * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
@@ -290,11 +291,11 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:
+         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
          * <p>
          * 
-         * *   **false** (default): checks the request. If the request passes the check, the inter-region connection is modified.
-         * *   **true**: prechecks the request but does not perform the operation. The cross-region connection is not modified after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.
+         * *   **false** (default): performs a dry run and sends the request.
+         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -339,7 +340,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the cross-region connection.
+         * The new description of the inter-region connection.
          * <p>
          * 
          * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.

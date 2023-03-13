@@ -214,7 +214,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
          * 
          * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
@@ -228,7 +228,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
          * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          * *   **false** (default): performs a dry run and sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
@@ -478,7 +478,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
              * The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
              * <p>
              * 
-             * The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets are considered a match regardless of the DSCP value.
+             * The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets with all destination ports are matched.
              * 
              * You can specify at most two ports. Take note of the following rules:
              * 
@@ -486,7 +486,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
              * *   If you enter two port numbers such as 1 and 200, the system matches the packets whose destination ports fall between 1 and 200.
              * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets with all destination ports are matched.
              * 
-             * You can create up to 50 traffic classification rules at a time. You can specify a destination port range for each traffic classification rule.
+             * You can create up to 50 traffic classification rules in each call. You can specify a destination port range for each traffic classification rule.
              */
             public Builder dstPortRange(java.util.List < Integer > dstPortRange) {
                 this.dstPortRange = dstPortRange;
@@ -527,7 +527,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
              * 
              * The traffic classification rule matches the packets whose source IP addresses fall within the specified source CIDR block. If you do not set this parameter, packets with all source IP addresses are matched.
              * 
-             * You can create up to 50 traffic classification rules at a time. You can specify a source CIDR block for each traffic classification rule.
+             * You can create up to 50 traffic classification rules in each call. You can specify a source CIDR block for each traffic classification rule.
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;
@@ -538,7 +538,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
              * The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
              * <p>
              * 
-             * The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets are considered a match regardless of the source port.
+             * The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets with all source ports are matched.
              * 
              * You can specify at most two ports. Take note of the following rules:
              * 
@@ -546,7 +546,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
              * *   If you enter two port numbers such as 1 and 200, the system matches the packets whose source ports fall between 1 and 200.
              * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets with all source ports are matched.
              * 
-             * You can create up to 50 traffic classification rules at a time. You can specify a source port range for each traffic classification rule.
+             * You can create up to 50 traffic classification rules in each call. You can specify a source port range for each traffic classification rule.
              */
             public Builder srcPortRange(java.util.List < Integer > srcPortRange) {
                 this.srcPortRange = srcPortRange;
@@ -557,7 +557,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
              * The description of the traffic classification rule.
              * <p>
              * 
-             * You can create up to 50 traffic classification rules at a time. You can specify a description for each traffic classification rule.
+             * You can create up to 50 traffic classification rules in each call. You can specify a description for each traffic classification rule.
              * 
              * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
              */
@@ -570,7 +570,7 @@ public class CreateTrafficMarkingPolicyRequest extends Request {
              * The name of the traffic classification rule.
              * <p>
              * 
-             * You can create up to 50 traffic classification rules at a time. You can specify a name for each traffic classification rule.
+             * You can create up to 50 traffic classification rules in each call. You can specify a name for each traffic classification rule.
              * 
              * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
              */

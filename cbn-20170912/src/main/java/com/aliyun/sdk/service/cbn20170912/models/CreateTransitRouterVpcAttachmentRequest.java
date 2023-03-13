@@ -287,9 +287,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -298,7 +298,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
+         * Specifies whether to perform a dry run. Default values:
          * <p>
          * 
          * *   **false** (default): performs a dry run and sends the request.
@@ -416,7 +416,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
          * The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.
          * <p>
          * 
-         * > If you want to connect to a network instance that belongs to a different account, this parameter is required.
+         * > If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
          */
         public Builder vpcOwnerId(Long vpcOwnerId) {
             this.putQueryParameter("VpcOwnerId", vpcOwnerId);
@@ -425,7 +425,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * A vSwitch in a zone of the Enterprise Edition transit router.
+         * A zone that supports Enterprise Edition transit routers.
          * <p>
          * 
          * You can specify at most 10 zones.
@@ -555,7 +555,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             private String zoneId; 
 
             /**
-             * A vSwitch in a zone of the Enterprise Edition transit router.
+             * A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.
              * <p>
              * 
              * You can specify vSwitches for at most 10 zones in each call.

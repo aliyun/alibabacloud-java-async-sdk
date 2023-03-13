@@ -348,7 +348,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
          * The ID of the Alibaba Cloud account to which the VBR belongs.
          * <p>
          * 
-         * > The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
+         * > This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
          */
         public Builder vbrInstanceOwnerId(Long vbrInstanceOwnerId) {
             this.putQueryParameter("VbrInstanceOwnerId", vbrInstanceOwnerId);

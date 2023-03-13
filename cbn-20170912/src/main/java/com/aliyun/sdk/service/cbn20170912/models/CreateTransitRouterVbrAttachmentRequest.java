@@ -287,11 +287,11 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
+         * Specifies whether to perform a dry run. Default values:
          * <p>
          * 
          * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -318,10 +318,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * The region ID of the VBR.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,7 +405,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
          * The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.
          * <p>
          * 
-         * > If you want to connect to a network instance that belongs to a different account, this parameter is required.
+         * > If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
          */
         public Builder vbrOwnerId(Long vbrOwnerId) {
             this.putQueryParameter("VbrOwnerId", vbrOwnerId);

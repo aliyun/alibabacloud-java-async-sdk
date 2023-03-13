@@ -145,7 +145,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
          * The time when the network instance was attached to the CEN instance.
          * <p>
          * 
-         * The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+         * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
          */
         public Builder childInstanceAttachTime(String childInstanceAttachTime) {
             this.childInstanceAttachTime = childInstanceAttachTime;
@@ -177,7 +177,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The region ID of the network instance.
+         * The ID of the region where the network instance is deployed.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.childInstanceRegionId = childInstanceRegionId;
@@ -206,12 +206,12 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the network instance is attached to the CEN instance.
+         * Indicates whether the network instance is attached to the CEN instance. Valid values:
          * <p>
          * 
-         * *   **Attaching**: The network instance is being attached to the CEN instance.
-         * *   **Attached**: The network instance is attached to the CEN instance.
-         * *   **Detaching**: The network instance is being detached from the CEN instance.
+         * *   **Attaching**: being attached to the CEN instance.
+         * *   **Attached**: attached to the CEN instance.
+         * *   **Detaching**: being detached from the CEN instance.
          */
         public Builder status(String status) {
             this.status = status;

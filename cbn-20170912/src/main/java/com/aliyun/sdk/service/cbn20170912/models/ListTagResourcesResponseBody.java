@@ -62,11 +62,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The token that determines the start point of the query. Valid values:
          * <p>
          * 
-         * *   If **NextToken** is empty, it indicates that no next query is to be sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the next query.
+         * *   If **NextToken** was not returned, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -82,7 +82,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The resources and tags.
+         * A list of resources and tags.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -166,10 +166,28 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The type of the resource. Valid values:
              * <p>
              * 
-             * The value is **cen**, which specifies CEN instances.
+             * **Cen**: CEN instance
+             * 
+             * **BandwidthPackage**: bandwidth plan
+             * 
+             * **TransitRouter**: transit router
+             * 
+             * **TransitRouterVpcAttachment**: virtual private cloud (VPC) connection
+             * 
+             * **TransitRouterVbrAttachment**: virtual border router (VBR) connection
+             * 
+             * **TransitRouterPeerAttachment**: inter-region connection
+             * 
+             * **TransitRouterVpnAttachment**: VPN connection
+             * 
+             * **TransitRouterRouteTable**: route table
+             * 
+             * **Flowlog**: flow log
+             * 
+             * **TransitRouterMulticastDomain**: multicast domain
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

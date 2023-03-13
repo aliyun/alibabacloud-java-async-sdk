@@ -51,10 +51,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateCenBandwidthPackageResponse> associateCenBandwidthPackage(AssociateCenBandwidthPackageRequest request);
 
     /**
-      * # Usage notes
-      * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you have knowledge of the following rules:
+      * After you create a network instance connection on a transit router, you can configure an associated forwarding correlation to associate the network instance connection with a route table. Then, the network instance connection can forward network traffic based on the associated route table. Before you begin, we recommend that you read and understand the following rules:
       * *   Only Enterprise Edition transit routers support associated forwarding correlations. For more information about the regions and zones that support Enterprise Edition transit routers, see [Transit routers](~~181681~~).
-      * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the system background. You can call the **ListTransitRouterRouteTableAssociations** operation to query the status of an associated forwarding correlation.
+      * *   **AssociateTransitRouterAttachmentWithRouteTable** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call **ListTransitRouterRouteTableAssociations** to query the status of an associated forwarding correlation.
       *     *   If an associated forwarding correlation is in the **Associating** state, the associated forwarding correlation is being created. You can query the associated forwarding correlation but cannot perform other operations.
       *     *   If an associated forwarding correlation is in the **Active** state, the associated forwarding correlation is created.
       *
@@ -71,11 +70,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateTransitRouterMulticastDomainResponse> associateTransitRouterMulticastDomain(AssociateTransitRouterMulticastDomainRequest request);
 
     /**
-      * ## Description
-      * CEN allows you to attach a network instance that belongs to another Alibaba Cloud account. Before you attach the network instance, CEN must acquire permissions to access the network instance that belongs to another Alibaba Cloud account.
-      * *   For more information about how to grant CEN permissions on accessing virtual private clouds (VPCs) that belong to another Alibaba Cloud account, see [GrantInstanceToCen](~~126224~~).
-      * *   For more information about how to grant CEN permissions on accessing Cloud Connect Network (CCN) instances that belong to another Alibaba Cloud account, see [GrantInstanceToCbn](~~126141~~).
-      * *   By default, you cannot grant CEN permissions on accessing virtual border routers (VBRs) that belong to another Alibaba Cloud account. To grant the permissions, you must [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+      * CEN allows you to attach a network instance that belongs to another Alibaba Cloud account to your CEN instance. Before you attach the network instance, CEN must acquire permissions to access the network instance that belongs to another Alibaba Cloud account.
+      * *   For more information about how to grant CEN permissions on virtual private clouds (VPCs) that belong to another Alibaba Cloud account, see [GrantInstanceToCen](~~126224~~).
+      * *   For more information about how to grant CEN permissions on Cloud Connect Network (CCN) instances that belong to another Alibaba Cloud account, see [GrantInstanceToCbn](~~126141~~).
+      * *   By default, you cannot grant permissions on virtual border routers (VBRs) that belong to another Alibaba Cloud account to a CEN instance. If you need to use this feature, contact your account manager.
       *
      */
     CompletableFuture<AttachCenChildInstanceResponse> attachCenChildInstance(AttachCenChildInstanceRequest request);
@@ -167,9 +165,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFlowlogResponse> createFlowlog(CreateFlowlogRequest request);
 
     /**
-      * # Usage notes
       * *   Only Enterprise Edition transit routers support traffic marking policies.
-      * *   **CreateTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the **ListTrafficMarkingPolicies** operation to query the status of a traffic marking policy.
+      * *   **CreateTrafficMarkingPolicy** is an asynchronous operation. After you send a request, the system returns a traffic marking policy ID and runs the task in the background. You can call the **ListTrafficMarkingPolicies** operation to query the status of a traffic marking policy.
       *     *   If a traffic marking policy is in the **Creating** state, the traffic marking policy is being created. You can query the traffic marking policy but cannot perform other operations.
       *     *   If a traffic marking policy is in the **Active** state, the traffic marking policy is created.
       *
@@ -212,8 +209,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTransitRouterCidrResponse> createTransitRouterCidr(CreateTransitRouterCidrRequest request);
 
     /**
-      * Before you call this operation, have knowledge of the following rules:
-      * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your account manager or [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182201.top-nav.ditem-sub.39ed4c8fjeoZww#/ticket/createIndex) to apply for multicast resources.
+      * Before you call this operation, read the following rules:
+      * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://selfservice.console.aliyun.com/ticket/category/cbn/today) to apply for multicast resources.
       * *   Make sure that an Enterprise Edition transit router is deployed in the region where you want to create the multicast domain, and the multicast feature is enabled for the Enterprise Edition transit router. For more information, see [CreateTransitRouter](~~261169~~).
       *     If an Enterprise Edition transit router was created before you apply for multicast resources, the transit router does not support multicast. You can delete the transit router and create a new one. For more information about how to delete an Enterprise Edition transit router, see [DeleteTransitRouter](~~261218~~).
       * *   When you call **CreateTransitRouterMulticastDomain**, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
@@ -269,7 +266,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   You can use the following methods to connect a VBR to an Enterprise Edition transit router:
       *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VBR connection, set the **VbrId** and **TransitRouterId** parameters.
       *     *   If no Enterprise Edition transit router is created in the region where you want to create a VBR connection, set the **VbrId**, **CenId**, and **RegionId** parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.
-      * *   **CreateTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the ID of the VBR connection is returned but the operation is still being performed in the system background. You can call the **ListTransitRouterVbrAttachments** operation to query the status of a VBR connection.
+      * *   **CreateTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the system returns a VBR connection ID and runs the task in the background. You can call the **ListTransitRouterVbrAttachments** operation to query the status of a VBR connection.
       *     *   If a VBR is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
       *     *   If a VBR connection is in the **Attached** state, the VBR connection is created.
       *
@@ -502,7 +499,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTransitRouterVbrAttachmentResponse> deleteTransitRouterVbrAttachment(DeleteTransitRouterVbrAttachmentRequest request);
 
     /**
-      * **DeleteTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the system background. You can call the **ListTransitRouterVpcAttachments** operation to query the status of a VPC connection.
+      * **DeleteTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterVpcAttachments** operation to query the status of a VPC connection.
       * *   If a VPC is in the **Detaching** state, the VPC connection is being deleted. You can query the VPC connection but cannot perform other operations.
       * *   If a VPC connection cannot be found, it is deleted.
       * ## Prerequisites
@@ -511,7 +508,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   No route learning correlation is established between the VPC connection and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](~~260945~~).
       * *   The route table of the VPC does not contain routes that point to the VPC connection. For more information about how to delete routes from a VPC route table, see [DeleteRouteEntry](~~36013~~).
       * *   The route tables of the Enterprise Edition transit router do not contain a custom route entry whose next hop is the network instance connection. For more information about how to delete custom routes from the route tables of an Enterprise Edition transit router, see [DeleteTransitRouterRouteEntry](~~261240~~).
-      * *   The route tables of the Enterprise Edition transit router do not contain a route that is generated from a prefix list and the next hop is the VPC connection. You can delete routes from a route table by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](~~445486~~).
+      * *   The route tables of the Enterprise Edition transit router do not contain a route that is generated from a prefix list and the next hop is the VPC connection. You can delete such routes by disassociating the route table from the prefix list. For more information, see [DeleteTransitRouterPrefixListAssociation](~~445486~~).
       *
      */
     CompletableFuture<DeleteTransitRouterVpcAttachmentResponse> deleteTransitRouterVpcAttachment(DeleteTransitRouterVpcAttachmentRequest request);
@@ -692,11 +689,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGrantVSwitchesToCenResponse> listGrantVSwitchesToCen(ListGrantVSwitchesToCenRequest request);
 
     /**
-      * To call this operation, you must set at least one of **ResourceId** and **Tag.N.Key**.
-      * *   If you set only **ResourceId**, the tags that are added to the specified CEN instances are returned.
+      * To call this operation, you must set at least one of **ResourceId.N** and **Tag.N.Key**.
+      * *   If you set only **ResourceId.N**, the tags that are added to the specified CEN instances are returned.
       * *   If you set only **Tag.N.Key**, the CEN instances that have the specified tags are returned.
-      * *   If you set both **ResourceId** and **Tag.N.Key**, the specified tags that are added to the specified CEN instances are returned.
-      *     *   Make sure that the CEN instance specified by **ResourceId** has the tag specified by **Tag.N.Key**. Otherwise, the response returns null.
+      * *   If you set both **ResourceId.N** and **Tag.N.Key**, the specified tags that are added to the specified CEN instances are returned.
+      *     *   Make sure that the CEN instance specified by **ResourceId.N** has the tag specified by **Tag.N.Key**. Otherwise, the response returns null.
       *     *   If multiple tag keys are specified, the logical operator among these tag keys is **AND**.
       *
      */
@@ -832,8 +829,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCenBandwidthPackageSpecResponse> modifyCenBandwidthPackageSpec(ModifyCenBandwidthPackageSpecRequest request);
 
     /**
-      * ## Usage notes
-      * `ModifyCenRouteMap` is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call `DescribeCenRouteMaps` to query the status of a routing policy.
+      * `ModifyCenRouteMap` is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the `DescribeCenRouteMaps` operation to query the status of a routing policy.
       * *   **Modifying**: indicates that the system is modifying the routing policy. You can only query the routing policy, but cannot perform other operations.
       * *   **Active**: indicates that the routing policy is modified.
       *
@@ -1072,8 +1068,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTransitRouterResponse> updateTransitRouter(UpdateTransitRouterRequest request);
 
     /**
-      * ## Usage notes
-      * **UpdateTransitRouterPeerAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterPeerAttachments** to query the status of an inter-region connection.
+      * **UpdateTransitRouterPeerAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the system background. You can call the **ListTransitRouterPeerAttachments** operation to query the status of an inter-region connection.
       * *   If an inter-region connection is in the **Modifying** state, the inter-region connection is being modified. You can query the inter-region connection but cannot perform other operations.
       * *   If an inter-region connection is in the **Attached** state, the inter-region connection is modified.
       *
@@ -1094,8 +1089,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTransitRouterVbrAttachmentAttributeResponse> updateTransitRouterVbrAttachmentAttribute(UpdateTransitRouterVbrAttachmentAttributeRequest request);
 
     /**
-      * ## Usage notes
-      * **UpdateTransitRouterVpcAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns the **request ID** but the operation is still being performed in the system background. You can call **ListTransitRouterVpcAttachments** to query the status of a VPC connection.
+      * **UpdateTransitRouterVpcAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterVpcAttachments** operation to query the status of a VPC connection.
       * *   If a VPC connection is in the **Modifying** state, the VPC connection is being modified. You can query the VPC connection but cannot perform other operations.
       * *   If a VPC connection is in the **Attached** state, the VPC connection is modified.
       *

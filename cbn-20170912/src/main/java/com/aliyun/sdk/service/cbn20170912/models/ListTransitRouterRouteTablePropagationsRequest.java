@@ -249,7 +249,12 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the route learning correlation. Valid values:
+         * <p>
+         * 
+         * *   **Active**: available
+         * *   **Enabling**: being enabled
+         * *   **Disabling**: being disabled
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -267,7 +272,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentResourceId.
+         * The ID of the next hop.
          */
         public Builder transitRouterAttachmentResourceId(String transitRouterAttachmentResourceId) {
             this.putQueryParameter("TransitRouterAttachmentResourceId", transitRouterAttachmentResourceId);
@@ -276,7 +281,13 @@ public class ListTransitRouterRouteTablePropagationsRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentResourceType.
+         * The type of next hop. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VBR**: virtual border router (VBR)
+         * *   **TR**: transit router
+         * *   **VPN**: VPN connection
          */
         public Builder transitRouterAttachmentResourceType(String transitRouterAttachmentResourceType) {
             this.putQueryParameter("TransitRouterAttachmentResourceType", transitRouterAttachmentResourceType);

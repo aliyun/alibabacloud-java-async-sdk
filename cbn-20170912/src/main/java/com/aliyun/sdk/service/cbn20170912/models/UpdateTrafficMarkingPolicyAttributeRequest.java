@@ -195,7 +195,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
         } 
 
         /**
-         * AddTrafficMatchRules.
+         * The traffic classification rules to be added to the traffic marking policy.
          */
         public Builder addTrafficMatchRules(java.util.List < AddTrafficMatchRules> addTrafficMatchRules) {
             this.putQueryParameter("AddTrafficMatchRules", addTrafficMatchRules);
@@ -216,7 +216,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
         }
 
         /**
-         * DeleteTrafficMatchRules.
+         * The traffic classification rules to be deleted from the traffic marking policy.
          */
         public Builder deleteTrafficMatchRules(java.util.List < DeleteTrafficMatchRules> deleteTrafficMatchRules) {
             this.putQueryParameter("DeleteTrafficMatchRules", deleteTrafficMatchRules);
@@ -424,7 +424,12 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             private String trafficMatchRuleName; 
 
             /**
-             * DstCidr.
+             * The destination CIDR block that is used to match packets.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets whose destination IP addresses fall within the specified destination CIDR block. If you do not set this parameter, packets are considered a match regardless of the destination IP address.
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a destination CIDR block for each traffic classification rule.
              */
             public Builder dstCidr(String dstCidr) {
                 this.dstCidr = dstCidr;
@@ -432,7 +437,18 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * DstPortRange.
+             * The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets are considered a match regardless of the destination port.
+             * 
+             * You can specify at most two ports. Take note of the following rules:
+             * 
+             * *   If you enter only one port number such as 1, the system matches the packets whose destination port is port 1.
+             * *   If you enter two port numbers such as 1 and 200, the system matches the packets whose destination ports fall between 1 and 200.
+             * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the destination port.
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a destination port range for each traffic classification rule.
              */
             public Builder dstPortRange(java.util.List < Integer > dstPortRange) {
                 this.dstPortRange = dstPortRange;
@@ -440,7 +456,14 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * MatchDscp.
+             * The differentiated services code point (DSCP) value that is used to match packets. Valid values: **0** to **63**.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets that contain the specified DSCP value. If you do not set this parameter, packets are considered a match regardless of the DSCP value.
+             * 
+             * >  The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a DSCP value for each traffic classification rule.
              */
             public Builder matchDscp(Integer matchDscp) {
                 this.matchDscp = matchDscp;
@@ -448,7 +471,12 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol that is used to match packets.
+             * <p>
+             * 
+             * Valid values: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [Cloud Enterprise Network (CEN) console](https://cen.console.aliyun.com/cen/list).
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a protocol for each traffic classification rule.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -456,7 +484,12 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * SrcCidr.
+             * The source CIDR block that is used to match packets.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets whose source IP addresses fall within the specified source CIDR block. If you do not set this parameter, packets are considered a match regardless of the source IP address.
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a source CIDR block for each traffic classification rule.
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;
@@ -464,7 +497,18 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * SrcPortRange.
+             * The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
+             * <p>
+             * 
+             * The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets are considered a match regardless of the source port.
+             * 
+             * You can specify at most two ports. Take note of the following rules:
+             * 
+             * *   If you enter only one port number such as 1, the system matches the packets whose source port is 1.
+             * *   If you enter two port numbers such as 1 and 200, the system matches the packets whose source ports fall between 1 and 200.
+             * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a source port range for each traffic classification rule.
              */
             public Builder srcPortRange(java.util.List < Integer > srcPortRange) {
                 this.srcPortRange = srcPortRange;
@@ -472,7 +516,12 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * TrafficMatchRuleDescription.
+             * The description of the traffic classification rule.
+             * <p>
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a description for each traffic classification rule.
+             * 
+             * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
              */
             public Builder trafficMatchRuleDescription(String trafficMatchRuleDescription) {
                 this.trafficMatchRuleDescription = trafficMatchRuleDescription;
@@ -480,7 +529,12 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * TrafficMatchRuleName.
+             * The name of the traffic classification rule.
+             * <p>
+             * 
+             * You can create up to 50 traffic classification rules at a time. You can specify a name for each traffic classification rule.
+             * 
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
              */
             public Builder trafficMatchRuleName(String trafficMatchRuleName) {
                 this.trafficMatchRuleName = trafficMatchRuleName;
@@ -605,7 +659,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             private String trafficMatchRuleName; 
 
             /**
-             * DstCidr.
+             * The destination CIDR block that is used to match data packets.
              */
             public Builder dstCidr(String dstCidr) {
                 this.dstCidr = dstCidr;
@@ -613,7 +667,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * DstPortRange.
+             * The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
              */
             public Builder dstPortRange(java.util.List < Integer > dstPortRange) {
                 this.dstPortRange = dstPortRange;
@@ -621,7 +675,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * MatchDscp.
+             * The DSCP value that is used to match packets.
              */
             public Builder matchDscp(Integer matchDscp) {
                 this.matchDscp = matchDscp;
@@ -629,7 +683,10 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol that is used to match packets.
+             * <p>
+             * 
+             * Valid values: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [Cloud Enterprise Network (CEN) console](https://cen.console.aliyun.com/cen/list).
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -637,7 +694,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * SrcCidr.
+             * The source CIDR block that is used to match packets.
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;
@@ -645,7 +702,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * SrcPortRange.
+             * The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
              */
             public Builder srcPortRange(java.util.List < Integer > srcPortRange) {
                 this.srcPortRange = srcPortRange;
@@ -653,7 +710,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * TrafficMatchRuleDescription.
+             * The description of the traffic classification rule.
              */
             public Builder trafficMatchRuleDescription(String trafficMatchRuleDescription) {
                 this.trafficMatchRuleDescription = trafficMatchRuleDescription;
@@ -661,7 +718,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
             }
 
             /**
-             * TrafficMatchRuleName.
+             * The name of the traffic classification rule.
              */
             public Builder trafficMatchRuleName(String trafficMatchRuleName) {
                 this.trafficMatchRuleName = trafficMatchRuleName;

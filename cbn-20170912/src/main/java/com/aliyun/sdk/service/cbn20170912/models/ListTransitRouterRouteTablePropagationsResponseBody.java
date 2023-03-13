@@ -217,10 +217,10 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
              * The type of next hop. Valid values:
              * <p>
              * 
-             * *   **VPC**: virtual private cloud (VPC)
-             * *   **CCN**: Cloud Connect Network (CCN) instance
-             * *   **VBR**: virtual border router (VBR)
+             * *   **VPC**: VPC
+             * *   **VBR**: VBR
              * *   **TR**: transit router
+             * *   **VPN**: VPN connection
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -231,8 +231,8 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
              * The status of the route learning correlation. Valid values:
              * <p>
              * 
-             * *   **Enabling**: enabling
-             * *   **Disabling**: disabling
+             * *   **Enabling**: being enabled
+             * *   **Disabling**: being disabled
              * *   **Active**: available
              * *   **Deleted**: deleted
              */

@@ -21,6 +21,10 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
     private Boolean dryRun;
 
     @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -45,6 +49,7 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.force = builder.force;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -77,6 +82,13 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -117,6 +129,7 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteTransitRouterPeerAttachmentRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private Boolean force; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -131,6 +144,7 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.force = request.force;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -162,6 +176,15 @@ public class DeleteTransitRouterPeerAttachmentRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 

@@ -191,7 +191,7 @@ public class AttachCenChildInstanceRequest extends Request {
          * The ID of the Alibaba Cloud account to which the network instance belongs.
          * <p>
          * 
-         * >  This parameter is required if you want to attach a network instance that belongs to another Alibaba Cloud account.
+         * > If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.putQueryParameter("ChildInstanceOwnerId", childInstanceOwnerId);
@@ -200,7 +200,7 @@ public class AttachCenChildInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the network instance.
+         * The ID of the region where the network instance is deployed.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -215,8 +215,8 @@ public class AttachCenChildInstanceRequest extends Request {
          * The type of the network instance. Valid values:
          * <p>
          * 
-         * *   **VPC**: VPC
-         * *   **VBR**: VBR
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VBR**: virtual border router (VBR)
          * *   **CCN**: CCN instance
          */
         public Builder childInstanceType(String childInstanceType) {

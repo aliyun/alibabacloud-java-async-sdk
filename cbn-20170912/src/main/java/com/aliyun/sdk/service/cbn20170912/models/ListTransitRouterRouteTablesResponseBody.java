@@ -254,6 +254,9 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         @NameInMap("Tags")
         private java.util.List < Tags> tags;
 
+        @NameInMap("TransitRouterId")
+        private String transitRouterId;
+
         @NameInMap("TransitRouterRouteTableDescription")
         private String transitRouterRouteTableDescription;
 
@@ -274,6 +277,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.routeTableOptions = builder.routeTableOptions;
             this.tags = builder.tags;
+            this.transitRouterId = builder.transitRouterId;
             this.transitRouterRouteTableDescription = builder.transitRouterRouteTableDescription;
             this.transitRouterRouteTableId = builder.transitRouterRouteTableId;
             this.transitRouterRouteTableName = builder.transitRouterRouteTableName;
@@ -318,6 +322,13 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
 
         /**
+         * @return transitRouterId
+         */
+        public String getTransitRouterId() {
+            return this.transitRouterId;
+        }
+
+        /**
          * @return transitRouterRouteTableDescription
          */
         public String getTransitRouterRouteTableDescription() {
@@ -357,6 +368,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             private String regionId; 
             private RouteTableOptions routeTableOptions; 
             private java.util.List < Tags> tags; 
+            private String transitRouterId; 
             private String transitRouterRouteTableDescription; 
             private String transitRouterRouteTableId; 
             private String transitRouterRouteTableName; 
@@ -395,6 +407,14 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TransitRouterId.
+             */
+            public Builder transitRouterId(String transitRouterId) {
+                this.transitRouterId = transitRouterId;
                 return this;
             }
 

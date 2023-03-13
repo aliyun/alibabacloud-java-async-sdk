@@ -139,7 +139,7 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the bandwidth plan
+         * The ID of the bandwidth plan.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -151,7 +151,7 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
          * The new description of the bandwidth plan.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter or Chinese character but cannot start with ` http://  `or `https://`.
+         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -163,7 +163,7 @@ public class ModifyCenBandwidthPackageAttributeRequest extends Request {
          * The new name of the bandwidth plan.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter or Chinese character but cannot start with `http://` or `https://`.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

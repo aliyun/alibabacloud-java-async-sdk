@@ -94,7 +94,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The array of routes.
+         * A list of routes.
          */
         public Builder publishedRouteEntries(PublishedRouteEntries publishedRouteEntries) {
             this.publishedRouteEntries = publishedRouteEntries;
@@ -222,12 +222,12 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the peer network instance on which conflicting routes are found. Valid values:
+             * The type of the peer network instance on which the conflicting routes are found. Valid values:
              * <p>
              * 
-             * *   **VPC**
-             * *   **VBR**
-             * *   **CCN**
+             * *   **VPC**: VPC
+             * *   **VBR**: VBR
+             * *   **CCN**: CCN instance
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -235,7 +235,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the peer network instance on which conflicting routes are found is deployed.
+             * The ID of the region where the peer network instance on which the conflicting routes are found is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -243,10 +243,10 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the route error. Valid values:
+             * The cause of the route confliction. Valid values:
              * <p>
              * 
-             * *   **conflict**: Routes have the same destination CIDR block.
+             * *   **conflict**: The routes have the same destination CIDR block.
              * *   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.
              */
             public Builder status(String status) {
@@ -421,7 +421,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The array of conflicting routes.
+             * A list of conflicting routes.
              */
             public Builder conflicts(Conflicts conflicts) {
                 this.conflicts = conflicts;
@@ -449,26 +449,26 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Instance**: ECS instance
-             * *   **HaVip**: HAVIP
-             * *   **RouterInterface**: router interface
-             * *   **NetworkInterface**: ENI
-             * *   **VpnGateway**: VPN gateway
-             * *   **IPv6Gateway**: IPv6 gateway
-             * *   **NatGateway**: NAT gateway
+             * *   **HaVip**: high-availability virtual IP address (HAVIP).
+             * *   **RouterInterface**: router interface.
+             * *   **NetworkInterface**: elastic network interface (ENI).
+             * *   **VpnGateway**: VPN gateway.
+             * *   **IPv6Gateway**: IPv6 gateway.
+             * *   **NatGateway**: NAT gateway.
              * *   **Attachment**: network instance connection
              * *   **service**: cloud service
-             * *   **VBR**: virtual border router
+             * *   **VBR**: VBR
              * *   **CCN**: CCN instance
-             * *   **VPC**: virtual private cloud
+             * *   **VPC**: VPC
              * *   **local**: system route. No next hop is specified.
              * *   **TR**: transit router
-             * *   **BlackHole**: blackhole route. No next hop is specified.
-             * *   **EcRouterInterface**: router interface for Express Connect
+             * *   \*\*BlackHole\*\*: blackhole route. No next hop is specified.
+             * *   \*\*EcRouterInterface\*\*: router interface for Express Connect
              * *   **HealthCheck**: health check
              * *   **AS**: access gateway for CCN
-             * *   **classic**: classic network-type instance
+             * *   **classicLink**: classic network-type instance
              * *   **GatewayEndpoint**: gateway endpoint
-             * *   **CPE**: data center connected by VBRs
+             * *   **CPE**: data center connected to the VBR
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;

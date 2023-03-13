@@ -193,7 +193,7 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the network instance attached to the CEN instance.
+         * The ID of the network instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -214,7 +214,7 @@ public class DescribePublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the route table configured on the network instance.
+         * The ID of the route table of the network instance.
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -226,9 +226,9 @@ public class DescribePublishedRouteEntriesRequest extends Request {
          * The type of the network instance. Valid values:
          * <p>
          * 
-         * *   **VPC**
-         * *   **VBR**
-         * *   **CCN**
+         * *   **VPC**: VPC
+         * *   **VBR**: VBR
+         * *   **CCN**: Cloud Connect Network (CCN) instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);

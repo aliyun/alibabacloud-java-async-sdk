@@ -47,7 +47,6 @@ public class ListTransitRouterRouteTablesRequest extends Request {
 
     @Query
     @NameInMap("TransitRouterId")
-    @Validation(required = true)
     private String transitRouterId;
 
     @Query

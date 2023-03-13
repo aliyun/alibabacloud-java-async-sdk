@@ -174,7 +174,7 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the network instance.
+         * The ID of the region where the network instance is deployed.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -189,9 +189,9 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends Request {
          * The type of the network instance. Valid values:
          * <p>
          * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VBR**: virtual border router (VBR)
-         * *   **CCN**: Cloud Connect Network (CCN) instance
+         * *   **VPC**: VPC
+         * *   **VBR**: VBR
+         * *   **CCN**: CCN instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);

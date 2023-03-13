@@ -167,11 +167,11 @@ public class DeleteTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
+         * Specifies whether to perform a dry run. Default values:
          * <p>
          * 
-         * *   **false** (default): sends the request. After the request passes the precheck, the VPC connection is deleted.
-         * *   **true**: sends a precheck request but does not delete the VPC connection. If you use this value, the system checks the required parameters and the request syntax. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.
+         * *   **false** (default): performs a dry run and sends the request.
+         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);

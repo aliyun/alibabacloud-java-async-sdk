@@ -125,7 +125,7 @@ public class ModifyCenBandwidthPackageSpecRequest extends Request {
         } 
 
         /**
-         * The new bandwidth limit of the bandwidth plan. Unit: Mbit/s.
+         * The new maximum bandwidth value of the bandwidth plan. Unit: Mbit/s.
          * <p>
          * 
          * Valid values: **2** to **10000**.
