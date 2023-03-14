@@ -1,0 +1,275 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.bpstudio20210931.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetTemplateResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetTemplateResponseBody</p>
+ */
+public class GetTemplateResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
+    @NameInMap("Data")
+    private Data data;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private GetTemplateResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.data = builder.data;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetTemplateResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private Integer code; 
+        private Data data; 
+        private String message; 
+        private String requestId; 
+
+        /**
+         * Code.
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public GetTemplateResponseBody build() {
+            return new GetTemplateResponseBody(this);
+        } 
+
+    } 
+
+    public static class Data extends TeaModel {
+        @NameInMap("CreateTime")
+        private String createTime;
+
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("ImageURL")
+        private String imageURL;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("TemplateId")
+        private String templateId;
+
+        @NameInMap("TopoURL")
+        private String topoURL;
+
+        private Data(Builder builder) {
+            this.createTime = builder.createTime;
+            this.description = builder.description;
+            this.imageURL = builder.imageURL;
+            this.name = builder.name;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.templateId = builder.templateId;
+            this.topoURL = builder.topoURL;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return imageURL
+         */
+        public String getImageURL() {
+            return this.imageURL;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return topoURL
+         */
+        public String getTopoURL() {
+            return this.topoURL;
+        }
+
+        public static final class Builder {
+            private String createTime; 
+            private String description; 
+            private String imageURL; 
+            private String name; 
+            private String resourceGroupId; 
+            private String templateId; 
+            private String topoURL; 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ImageURL.
+             */
+            public Builder imageURL(String imageURL) {
+                this.imageURL = imageURL;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * TopoURL.
+             */
+            public Builder topoURL(String topoURL) {
+                this.topoURL = topoURL;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+}

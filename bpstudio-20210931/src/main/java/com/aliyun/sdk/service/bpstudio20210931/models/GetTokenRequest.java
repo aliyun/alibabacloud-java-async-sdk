@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.bpstudio20210931.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetTokenRequest} extends {@link RequestModel}
+ *
+ * <p>GetTokenRequest</p>
+ */
+public class GetTokenRequest extends Request {
+    @Body
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    private GetTokenRequest(Builder builder) {
+        super(builder);
+        this.resourceGroupId = builder.resourceGroupId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetTokenRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public static final class Builder extends Request.Builder<GetTokenRequest, Builder> {
+        private String resourceGroupId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetTokenRequest request) {
+            super(request);
+            this.resourceGroupId = request.resourceGroupId;
+        } 
+
+        /**
+         * 资源组ID
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        @Override
+        public GetTokenRequest build() {
+            return new GetTokenRequest(this);
+        } 
+
+    } 
+
+}
