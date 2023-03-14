@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddDirectionalGroupResponse> addDirectionalGroup(AddDirectionalGroupRequest request);
 
+    CompletableFuture<AddTagsToCardResponse> addTagsToCard(AddTagsToCardRequest request);
+
     CompletableFuture<BatchAddDirectionalAddressResponse> batchAddDirectionalAddress(BatchAddDirectionalAddressRequest request);
 
     CompletableFuture<DeleteDirectionalAddressResponse> deleteDirectionalAddress(DeleteDirectionalAddressRequest request);
@@ -39,6 +41,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCardFlowInfoResponse> getCardFlowInfo(GetCardFlowInfoRequest request);
 
     CompletableFuture<GetCardLatestFlowResponse> getCardLatestFlow(GetCardLatestFlowRequest request);
+
+    CompletableFuture<GetCardRealStatusResponse> getCardRealStatus(GetCardRealStatusRequest request);
 
     CompletableFuture<GetCardStatusStatisticsResponse> getCardStatusStatistics(GetCardStatusStatisticsRequest request);
 

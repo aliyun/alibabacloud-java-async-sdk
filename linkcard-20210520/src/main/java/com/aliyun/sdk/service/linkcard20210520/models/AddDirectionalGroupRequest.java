@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AddDirectionalGroupRequest extends Request {
     @Query
     @NameInMap("GroupName")
-    @Validation(required = true)
+    @Validation(required = true, maxLength = 30)
     private String groupName;
 
     private AddDirectionalGroupRequest(Builder builder) {
