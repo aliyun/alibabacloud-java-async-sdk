@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ddoscoo20171228.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeHealthCheckStatusListResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeHealthCheckStatusListResponse</p>
+ */
+public class DescribeHealthCheckStatusListResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeHealthCheckStatusListResponseBody body;
+
+    private DescribeHealthCheckStatusListResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static DescribeHealthCheckStatusListResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeHealthCheckStatusListResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeHealthCheckStatusListResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(DescribeHealthCheckStatusListResponseBody body);
+
+        @Override
+        DescribeHealthCheckStatusListResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeHealthCheckStatusListResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private DescribeHealthCheckStatusListResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeHealthCheckStatusListResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeHealthCheckStatusListResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeHealthCheckStatusListResponse build() {
+            return new DescribeHealthCheckStatusListResponse(this);
+        } 
+
+    } 
+
+}

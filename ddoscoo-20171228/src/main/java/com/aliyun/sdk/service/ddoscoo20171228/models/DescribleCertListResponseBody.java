@@ -1,0 +1,235 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ddoscoo20171228.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribleCertListResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribleCertListResponseBody</p>
+ */
+public class DescribleCertListResponseBody extends TeaModel {
+    @NameInMap("CertList")
+    private java.util.List < CertList> certList;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private DescribleCertListResponseBody(Builder builder) {
+        this.certList = builder.certList;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribleCertListResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return certList
+     */
+    public java.util.List < CertList> getCertList() {
+        return this.certList;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private java.util.List < CertList> certList; 
+        private String requestId; 
+
+        /**
+         * CertList.
+         */
+        public Builder certList(java.util.List < CertList> certList) {
+            this.certList = certList;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DescribleCertListResponseBody build() {
+            return new DescribleCertListResponseBody(this);
+        } 
+
+    } 
+
+    public static class CertList extends TeaModel {
+        @NameInMap("Common")
+        private String common;
+
+        @NameInMap("DomainRelated")
+        private Boolean domainRelated;
+
+        @NameInMap("EndDate")
+        private String endDate;
+
+        @NameInMap("Id")
+        private Integer id;
+
+        @NameInMap("Issuer")
+        private String issuer;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("StartDate")
+        private String startDate;
+
+        private CertList(Builder builder) {
+            this.common = builder.common;
+            this.domainRelated = builder.domainRelated;
+            this.endDate = builder.endDate;
+            this.id = builder.id;
+            this.issuer = builder.issuer;
+            this.name = builder.name;
+            this.startDate = builder.startDate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return common
+         */
+        public String getCommon() {
+            return this.common;
+        }
+
+        /**
+         * @return domainRelated
+         */
+        public Boolean getDomainRelated() {
+            return this.domainRelated;
+        }
+
+        /**
+         * @return endDate
+         */
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        /**
+         * @return id
+         */
+        public Integer getId() {
+            return this.id;
+        }
+
+        /**
+         * @return issuer
+         */
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return startDate
+         */
+        public String getStartDate() {
+            return this.startDate;
+        }
+
+        public static final class Builder {
+            private String common; 
+            private Boolean domainRelated; 
+            private String endDate; 
+            private Integer id; 
+            private String issuer; 
+            private String name; 
+            private String startDate; 
+
+            /**
+             * Common.
+             */
+            public Builder common(String common) {
+                this.common = common;
+                return this;
+            }
+
+            /**
+             * DomainRelated.
+             */
+            public Builder domainRelated(Boolean domainRelated) {
+                this.domainRelated = domainRelated;
+                return this;
+            }
+
+            /**
+             * EndDate.
+             */
+            public Builder endDate(String endDate) {
+                this.endDate = endDate;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Integer id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Issuer.
+             */
+            public Builder issuer(String issuer) {
+                this.issuer = issuer;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * StartDate.
+             */
+            public Builder startDate(String startDate) {
+                this.startDate = startDate;
+                return this;
+            }
+
+            public CertList build() {
+                return new CertList(this);
+            } 
+
+        } 
+
+    }
+}

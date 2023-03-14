@@ -1,0 +1,119 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ddoscoo20171228.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeElasticBandwidthSpecRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeElasticBandwidthSpecRequest</p>
+ */
+public class DescribeElasticBandwidthSpecRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("SourceIp")
+    private String sourceIp;
+
+    private DescribeElasticBandwidthSpecRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
+        this.sourceIp = builder.sourceIp;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeElasticBandwidthSpecRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return sourceIp
+     */
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeElasticBandwidthSpecRequest, Builder> {
+        private String regionId; 
+        private String instanceId; 
+        private String sourceIp; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeElasticBandwidthSpecRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.sourceIp = request.sourceIp;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * SourceIp.
+         */
+        public Builder sourceIp(String sourceIp) {
+            this.putQueryParameter("SourceIp", sourceIp);
+            this.sourceIp = sourceIp;
+            return this;
+        }
+
+        @Override
+        public DescribeElasticBandwidthSpecRequest build() {
+            return new DescribeElasticBandwidthSpecRequest(this);
+        } 
+
+    } 
+
+}
