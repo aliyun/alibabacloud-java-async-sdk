@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpgradeInstanceImageVersionResponse} extends {@link TeaModel}
+ * {@link ListUserPublicKeysResponse} extends {@link TeaModel}
  *
- * <p>UpgradeInstanceImageVersionResponse</p>
+ * <p>ListUserPublicKeysResponse</p>
  */
-public class UpgradeInstanceImageVersionResponse extends Response {
+public class ListUserPublicKeysResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private UpgradeInstanceImageVersionResponseBody body;
+    private ListUserPublicKeysResponseBody body;
 
-    private UpgradeInstanceImageVersionResponse(BuilderImpl builder) {
+    private ListUserPublicKeysResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static UpgradeInstanceImageVersionResponse create() {
+    public static ListUserPublicKeysResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class UpgradeInstanceImageVersionResponse extends Response {
     /**
      * @return body
      */
-    public UpgradeInstanceImageVersionResponseBody getBody() {
+    public ListUserPublicKeysResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpgradeInstanceImageVersionResponse, Builder> {
+    public interface Builder extends Response.Builder<ListUserPublicKeysResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(UpgradeInstanceImageVersionResponseBody body);
+        Builder body(ListUserPublicKeysResponseBody body);
 
         @Override
-        UpgradeInstanceImageVersionResponse build();
+        ListUserPublicKeysResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpgradeInstanceImageVersionResponse, Builder>
+            extends Response.BuilderImpl<ListUserPublicKeysResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private UpgradeInstanceImageVersionResponseBody body; 
+        private ListUserPublicKeysResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpgradeInstanceImageVersionResponse response) {
+        private BuilderImpl(ListUserPublicKeysResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class UpgradeInstanceImageVersionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpgradeInstanceImageVersionResponseBody body) {
+        public Builder body(ListUserPublicKeysResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpgradeInstanceImageVersionResponse build() {
-            return new UpgradeInstanceImageVersionResponse(this);
+        public ListUserPublicKeysResponse build() {
+            return new ListUserPublicKeysResponse(this);
         } 
 
     } 

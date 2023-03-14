@@ -83,7 +83,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the bastion host.
+         * <p>
+         * 
+         * > The description can contain only letters, digits, underscores (\_), and hyphens (-). The description can be up to 30 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,7 +95,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host.
+         * <p>
+         * 
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +107,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host.
+         * <p>
+         * 
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceUpgradeInfoResponse} extends {@link TeaModel}
+ * {@link DeleteUserPublicKeyResponse} extends {@link TeaModel}
  *
- * <p>GetInstanceUpgradeInfoResponse</p>
+ * <p>DeleteUserPublicKeyResponse</p>
  */
-public class GetInstanceUpgradeInfoResponse extends Response {
+public class DeleteUserPublicKeyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetInstanceUpgradeInfoResponseBody body;
+    private DeleteUserPublicKeyResponseBody body;
 
-    private GetInstanceUpgradeInfoResponse(BuilderImpl builder) {
+    private DeleteUserPublicKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetInstanceUpgradeInfoResponse create() {
+    public static DeleteUserPublicKeyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetInstanceUpgradeInfoResponse extends Response {
     /**
      * @return body
      */
-    public GetInstanceUpgradeInfoResponseBody getBody() {
+    public DeleteUserPublicKeyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetInstanceUpgradeInfoResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteUserPublicKeyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetInstanceUpgradeInfoResponseBody body);
+        Builder body(DeleteUserPublicKeyResponseBody body);
 
         @Override
-        GetInstanceUpgradeInfoResponse build();
+        DeleteUserPublicKeyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetInstanceUpgradeInfoResponse, Builder>
+            extends Response.BuilderImpl<DeleteUserPublicKeyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetInstanceUpgradeInfoResponseBody body; 
+        private DeleteUserPublicKeyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetInstanceUpgradeInfoResponse response) {
+        private BuilderImpl(DeleteUserPublicKeyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetInstanceUpgradeInfoResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetInstanceUpgradeInfoResponseBody body) {
+        public Builder body(DeleteUserPublicKeyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetInstanceUpgradeInfoResponse build() {
-            return new GetInstanceUpgradeInfoResponse(this);
+        public DeleteUserPublicKeyResponse build() {
+            return new DeleteUserPublicKeyResponse(this);
         } 
 
     } 

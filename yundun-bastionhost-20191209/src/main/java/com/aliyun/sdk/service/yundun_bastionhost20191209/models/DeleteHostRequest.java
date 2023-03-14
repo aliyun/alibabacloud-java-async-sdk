@@ -84,7 +84,10 @@ public class DeleteHostRequest extends Request {
         } 
 
         /**
-         * HostId.
+         * The ID of the host that you want to delete.
+         * <p>
+         * 
+         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
          */
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
@@ -93,7 +96,10 @@ public class DeleteHostRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Bastionhost instance where you want to delete the host.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +108,10 @@ public class DeleteHostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Bastionhost instance where you want to delete the host.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

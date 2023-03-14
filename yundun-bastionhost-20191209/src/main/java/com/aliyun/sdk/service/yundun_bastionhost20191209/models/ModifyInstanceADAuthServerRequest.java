@@ -243,7 +243,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         } 
 
         /**
-         * Account.
+         * The username of the account that is used for the AD server.
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -252,7 +252,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * BaseDN.
+         * The Base distinguished name (DN).
          */
         public Builder baseDN(String baseDN) {
             this.putQueryParameter("BaseDN", baseDN);
@@ -261,7 +261,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain on the AD server.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -270,7 +270,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * EmailMapping.
+         * The field that is used to indicate the email address of a user on the AD server.
          */
         public Builder emailMapping(String emailMapping) {
             this.putQueryParameter("EmailMapping", emailMapping);
@@ -279,7 +279,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The condition that is used to filter users.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -288,7 +288,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -297,7 +297,11 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * IsSSL.
+         * Specifies whether to support SSL. Valid values:
+         * <p>
+         * 
+         * *   **true**: supports SSL.
+         * *   **false**: does not support SSL.
          */
         public Builder isSSL(String isSSL) {
             this.putQueryParameter("IsSSL", isSSL);
@@ -306,7 +310,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * MobileMapping.
+         * The field that is used to indicate the mobile phone number of a user on the AD server.
          */
         public Builder mobileMapping(String mobileMapping) {
             this.putQueryParameter("MobileMapping", mobileMapping);
@@ -315,7 +319,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * NameMapping.
+         * The field that is used to indicate the name of a user on the AD server.
          */
         public Builder nameMapping(String nameMapping) {
             this.putQueryParameter("NameMapping", nameMapping);
@@ -324,7 +328,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the account that is used for the AD server.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -333,7 +337,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port that is used to access the AD server.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -342,7 +346,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -351,7 +355,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * Server.
+         * The address of the AD server.
          */
         public Builder server(String server) {
             this.putQueryParameter("Server", server);
@@ -360,7 +364,7 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * StandbyServer.
+         * The address of the secondary AD server.
          */
         public Builder standbyServer(String standbyServer) {
             this.putQueryParameter("StandbyServer", standbyServer);

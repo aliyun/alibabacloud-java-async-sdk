@@ -139,7 +139,7 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The IDs of the bastion hosts.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,7 +148,16 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * The state of the bastion host. Valid values:
+         * <p>
+         * 
+         * *   **PENDING**: The bastion host is not initialized.
+         * *   **CREATING**: The bastion host is being created.
+         * *   **RUNNING**: The bastion host is running.
+         * *   **EXPIRED**: The bastion host expired.
+         * *   **CREATE_FAILED**: The bastion host fails to be created.
+         * *   **UPGRADING**: The configurations of the bastion host are being changed.
+         * *   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -157,7 +166,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +175,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +184,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -184,7 +193,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the bastion host belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -193,7 +202,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -247,7 +256,7 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the bastion host.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,7 +264,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value of the bastion host.
              */
             public Builder value(String value) {
                 this.value = value;

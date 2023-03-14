@@ -113,7 +113,7 @@ public class CreateHostShareKeyRequest extends Request {
         } 
 
         /**
-         * HostShareKeyName.
+         * The name of the shared key that you want to create. The name can be a maximum of 128 characters in length.
          */
         public Builder hostShareKeyName(String hostShareKeyName) {
             this.putQueryParameter("HostShareKeyName", hostShareKeyName);
@@ -122,7 +122,7 @@ public class CreateHostShareKeyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +131,7 @@ public class CreateHostShareKeyRequest extends Request {
         }
 
         /**
-         * PassPhrase.
+         * The password of the private key. The value is a Base64-encoded string.
          */
         public Builder passPhrase(String passPhrase) {
             this.putQueryParameter("PassPhrase", passPhrase);
@@ -140,7 +140,7 @@ public class CreateHostShareKeyRequest extends Request {
         }
 
         /**
-         * PrivateKey.
+         * The private key. The value is a Base64-encoded string.
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -149,7 +149,7 @@ public class CreateHostShareKeyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

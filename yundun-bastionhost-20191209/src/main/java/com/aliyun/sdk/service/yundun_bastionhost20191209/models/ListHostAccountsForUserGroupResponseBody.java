@@ -62,7 +62,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * HostAccounts.
+         * The host accounts returned.
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,7 +70,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of host accounts returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -166,7 +166,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * HostAccountId.
+             * The ID of the host account.
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -174,7 +174,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountName.
+             * The name of the host account.
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -182,7 +182,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host for which the host accounts were queried.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -190,7 +190,11 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * IsAuthorized.
+             * Indicates whether the user group is authorized to manage the host account. Valid values:
+             * <p>
+             * 
+             * *   **true**: The user group is authorized to manage the host account.
+             * *   **false**: The user group is not authorized to manage the host account.
              */
             public Builder isAuthorized(Boolean isAuthorized) {
                 this.isAuthorized = isAuthorized;
@@ -198,7 +202,11 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * The protocol that is used by the host account. Valid values:
+             * <p>
+             * 
+             * *   **SSH**
+             * *   **RDP**
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

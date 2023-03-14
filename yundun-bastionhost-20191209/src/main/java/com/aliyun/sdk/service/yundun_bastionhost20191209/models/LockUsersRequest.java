@@ -84,7 +84,10 @@ public class LockUsersRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the bastion host to which the users to be locked belong.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +96,10 @@ public class LockUsersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host to which the users to be locked belong.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +108,10 @@ public class LockUsersRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * The ID of the user to be locked. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [ListUsers](~~204522~~) operation to query the IDs of users.
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

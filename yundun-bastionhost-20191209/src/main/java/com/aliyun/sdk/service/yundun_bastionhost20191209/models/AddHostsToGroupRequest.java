@@ -99,7 +99,10 @@ public class AddHostsToGroupRequest extends Request {
         } 
 
         /**
-         * HostGroupId.
+         * The ID of the host group to which you want to add hosts.
+         * <p>
+         * 
+         * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -108,7 +111,10 @@ public class AddHostsToGroupRequest extends Request {
         }
 
         /**
-         * HostIds.
+         * The ID of the host that you want to add to the host group. The value is a JSON string. You can add up to 100 host IDs.
+         * <p>
+         * 
+         * >  You can call the [ListHosts](~~200665~~) operation to query the IDs of hosts.
          */
         public Builder hostIds(String hostIds) {
             this.putQueryParameter("HostIds", hostIds);
@@ -117,7 +123,10 @@ public class AddHostsToGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host for which you want to add hosts to the host group.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +135,10 @@ public class AddHostsToGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host for which you want to add hosts to the host group.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

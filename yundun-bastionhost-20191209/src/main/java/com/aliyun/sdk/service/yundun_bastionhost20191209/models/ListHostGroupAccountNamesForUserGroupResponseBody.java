@@ -50,7 +50,7 @@ public class ListHostGroupAccountNamesForUserGroupResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * HostAccountNames.
+         * The names of host accounts returned.
          */
         public Builder hostAccountNames(java.util.List < String > hostAccountNames) {
             this.hostAccountNames = hostAccountNames;
@@ -58,7 +58,7 @@ public class ListHostGroupAccountNamesForUserGroupResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HostShareKey.
+         * The details of the shared key.
          */
         public Builder hostShareKey(HostShareKey hostShareKey) {
             this.hostShareKey = hostShareKey;
@@ -58,7 +58,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             private String privateKeyFingerPrint; 
 
             /**
-             * HostShareKeyId.
+             * The ID of the shared key.
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -142,7 +142,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyName.
+             * The name of the shared key.
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
@@ -150,7 +150,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyKeyAt.
+             * The time when the information about the shared key was last modified.
              */
             public Builder lastModifyKeyAt(Long lastModifyKeyAt) {
                 this.lastModifyKeyAt = lastModifyKeyAt;
@@ -158,7 +158,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateKeyFingerPrint.
+             * The fingerprint of the private key.
              */
             public Builder privateKeyFingerPrint(String privateKeyFingerPrint) {
                 this.privateKeyFingerPrint = privateKeyFingerPrint;

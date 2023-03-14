@@ -99,7 +99,10 @@ public class AttachHostGroupAccountsToUserGroupRequest extends Request {
         } 
 
         /**
-         * HostGroups.
+         * The ID of the host group and the name of the host account that you want to authorize the user group to manage. You can specify up to 10 host group IDs and up to 10 host account names for each host group. You can specify only host group IDs. In this case, the user group is authorized to manage only the specified host groups. For more information about this parameter, see the "Description of the HostGroups parameter" section of this topic.
+         * <p>
+         * 
+         * >  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group and the [ListHostAccounts](~~204372~~) operation to query the name of the host account.
          */
         public Builder hostGroups(String hostGroups) {
             this.putQueryParameter("HostGroups", hostGroups);
@@ -108,7 +111,10 @@ public class AttachHostGroupAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host for which you want to authorize the user group to manage the specified host groups and host accounts.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +123,10 @@ public class AttachHostGroupAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host for which you want to authorize the user group to manage the specified host groups and host accounts.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +135,10 @@ public class AttachHostGroupAccountsToUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * The ID of the user group that you want to authorize to manage the specified host groups and host accounts.
+         * <p>
+         * 
+         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

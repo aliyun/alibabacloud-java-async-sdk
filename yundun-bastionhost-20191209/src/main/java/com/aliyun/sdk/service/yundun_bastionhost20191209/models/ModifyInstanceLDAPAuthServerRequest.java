@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyInstanceLDAPAuthServerRequest extends Request {
     @Query
     @NameInMap("Account")
+    @Validation(required = true)
     private String account;
 
     @Query
     @NameInMap("BaseDN")
+    @Validation(required = true)
     private String baseDN;
 
     @Query
@@ -55,6 +57,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
 
     @Query
     @NameInMap("Port")
+    @Validation(required = true)
     private String port;
 
     @Query
@@ -63,6 +66,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
 
     @Query
     @NameInMap("Server")
+    @Validation(required = true)
     private String server;
 
     @Query
@@ -237,7 +241,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         } 
 
         /**
-         * Account.
+         * The username of the account that is used for the LDAP server.
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -246,7 +250,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * BaseDN.
+         * The Base distinguished name (DN).
          */
         public Builder baseDN(String baseDN) {
             this.putQueryParameter("BaseDN", baseDN);
@@ -255,7 +259,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * EmailMapping.
+         * The field that is used to indicate the email address of a user on the LDAP server.
          */
         public Builder emailMapping(String emailMapping) {
             this.putQueryParameter("EmailMapping", emailMapping);
@@ -264,7 +268,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The condition that is used to filter users.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -273,7 +277,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -282,7 +286,11 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * IsSSL.
+         * Specifies whether to support SSL. Valid values:
+         * <p>
+         * 
+         * *   **true**: supports SSL.
+         * *   **false**: does not support SSL.
          */
         public Builder isSSL(String isSSL) {
             this.putQueryParameter("IsSSL", isSSL);
@@ -291,7 +299,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * LoginNameMapping.
+         * The field that is used to indicate the logon name of a user on the LDAP server.
          */
         public Builder loginNameMapping(String loginNameMapping) {
             this.putQueryParameter("LoginNameMapping", loginNameMapping);
@@ -300,7 +308,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * MobileMapping.
+         * The field that is used to indicate the mobile phone number of a user on the LDAP server.
          */
         public Builder mobileMapping(String mobileMapping) {
             this.putQueryParameter("MobileMapping", mobileMapping);
@@ -309,7 +317,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * NameMapping.
+         * The field that is used to indicate the name of a user on the LDAP server.
          */
         public Builder nameMapping(String nameMapping) {
             this.putQueryParameter("NameMapping", nameMapping);
@@ -318,7 +326,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the account that is used for the LDAP server.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -327,7 +335,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port that is used to access the LDAP server.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -336,7 +344,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -345,7 +353,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * Server.
+         * The address of the LDAP server.
          */
         public Builder server(String server) {
             this.putQueryParameter("Server", server);
@@ -354,7 +362,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends Request {
         }
 
         /**
-         * StandbyServer.
+         * The address of the secondary LDAP server.
          */
         public Builder standbyServer(String standbyServer) {
             this.putQueryParameter("StandbyServer", standbyServer);

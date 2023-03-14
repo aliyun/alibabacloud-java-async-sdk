@@ -83,7 +83,10 @@ public class DeleteHostShareKeyRequest extends Request {
         } 
 
         /**
-         * HostShareKeyId.
+         * The ID of the shared key.
+         * <p>
+         * 
+         * >  You must specify this parameter.
          */
         public Builder hostShareKeyId(String hostShareKeyId) {
             this.putQueryParameter("HostShareKeyId", hostShareKeyId);
@@ -92,7 +95,7 @@ public class DeleteHostShareKeyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +104,7 @@ public class DeleteHostShareKeyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

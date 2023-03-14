@@ -62,7 +62,7 @@ public class ListUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of users that were queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The list of users that were queried.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -98,6 +98,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         private String displayName;
 
+        @NameInMap("EffectiveEndTime")
+        private Long effectiveEndTime;
+
+        @NameInMap("EffectiveStartTime")
+        private Long effectiveStartTime;
+
         @NameInMap("Email")
         private String email;
 
@@ -107,11 +113,20 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("MobileCountryCode")
         private String mobileCountryCode;
 
+        @NameInMap("NeedResetPassword")
+        private Boolean needResetPassword;
+
         @NameInMap("Source")
         private String source;
 
         @NameInMap("SourceUserId")
         private String sourceUserId;
+
+        @NameInMap("TwoFactorMethods")
+        private java.util.List < String > twoFactorMethods;
+
+        @NameInMap("TwoFactorStatus")
+        private String twoFactorStatus;
 
         @NameInMap("UserId")
         private String userId;
@@ -125,11 +140,16 @@ public class ListUsersResponseBody extends TeaModel {
         private Users(Builder builder) {
             this.comment = builder.comment;
             this.displayName = builder.displayName;
+            this.effectiveEndTime = builder.effectiveEndTime;
+            this.effectiveStartTime = builder.effectiveStartTime;
             this.email = builder.email;
             this.mobile = builder.mobile;
             this.mobileCountryCode = builder.mobileCountryCode;
+            this.needResetPassword = builder.needResetPassword;
             this.source = builder.source;
             this.sourceUserId = builder.sourceUserId;
+            this.twoFactorMethods = builder.twoFactorMethods;
+            this.twoFactorStatus = builder.twoFactorStatus;
             this.userId = builder.userId;
             this.userName = builder.userName;
             this.userState = builder.userState;
@@ -158,6 +178,20 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectiveEndTime
+         */
+        public Long getEffectiveEndTime() {
+            return this.effectiveEndTime;
+        }
+
+        /**
+         * @return effectiveStartTime
+         */
+        public Long getEffectiveStartTime() {
+            return this.effectiveStartTime;
+        }
+
+        /**
          * @return email
          */
         public String getEmail() {
@@ -179,6 +213,13 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return needResetPassword
+         */
+        public Boolean getNeedResetPassword() {
+            return this.needResetPassword;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -190,6 +231,20 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public String getSourceUserId() {
             return this.sourceUserId;
+        }
+
+        /**
+         * @return twoFactorMethods
+         */
+        public java.util.List < String > getTwoFactorMethods() {
+            return this.twoFactorMethods;
+        }
+
+        /**
+         * @return twoFactorStatus
+         */
+        public String getTwoFactorStatus() {
+            return this.twoFactorStatus;
         }
 
         /**
@@ -216,17 +271,22 @@ public class ListUsersResponseBody extends TeaModel {
         public static final class Builder {
             private String comment; 
             private String displayName; 
+            private Long effectiveEndTime; 
+            private Long effectiveStartTime; 
             private String email; 
             private String mobile; 
             private String mobileCountryCode; 
+            private Boolean needResetPassword; 
             private String source; 
             private String sourceUserId; 
+            private java.util.List < String > twoFactorMethods; 
+            private String twoFactorStatus; 
             private String userId; 
             private String userName; 
             private java.util.List < String > userState; 
 
             /**
-             * Comment.
+             * The description of the user.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -234,7 +294,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -242,7 +302,23 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * EffectiveEndTime.
+             */
+            public Builder effectiveEndTime(Long effectiveEndTime) {
+                this.effectiveEndTime = effectiveEndTime;
+                return this;
+            }
+
+            /**
+             * EffectiveStartTime.
+             */
+            public Builder effectiveStartTime(Long effectiveStartTime) {
+                this.effectiveStartTime = effectiveStartTime;
+                return this;
+            }
+
+            /**
+             * The email address of the user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -250,7 +326,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * The mobile number of the user.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -258,7 +334,28 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * MobileCountryCode.
+             * The country where the mobile number of the user is registered. Valid values:
+             * <p>
+             * 
+             * *   **CN**: the Chinese mainland, whose country calling code is +86
+             * *   **HK**: Hong Kong (China), whose country calling code is +852
+             * *   **MO**: Macau (China), whose country calling code is +853
+             * *   **TW**: Taiwan (China), whose country calling code is +886
+             * *   **RU**: Russia, whose country calling code is +7
+             * *   **SG**: Singapore, whose country calling code is +65
+             * *   **MY**: Malaysia, whose country calling code is +60
+             * *   **ID**: Indonesia, whose country calling code is +62
+             * *   **DE**: Germany, whose country calling code is +49
+             * *   **AU**: Australia, whose country calling code is +61
+             * *   **US**: United States, whose country calling code is +1
+             * *   **AE**: United Arab Emirates, whose country calling code is +971
+             * *   **JP**: Japan, whose country calling code is +81
+             * *   **GB**: United Kingdom, whose country calling code is +44
+             * *   **IN**: India, whose country calling code is +91
+             * *   **KR**: South Korea, whose country calling code is +82
+             * *   **PH**: Philippines, whose country calling code is +63
+             * *   **CH**: Switzerland, whose country calling code is +41
+             * *   **SE**: Sweden, whose country calling code is +46
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -266,7 +363,19 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * NeedResetPassword.
+             */
+            public Builder needResetPassword(Boolean needResetPassword) {
+                this.needResetPassword = needResetPassword;
+                return this;
+            }
+
+            /**
+             * The source of the user. Valid values:
+             * <p>
+             * 
+             * *   **Local**: a local user
+             * *   **Ram**: a RAM user
              */
             public Builder source(String source) {
                 this.source = source;
@@ -274,7 +383,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUserId.
+             * The unique ID of the user.
+             * <p>
+             * 
+             * >  This parameter uniquely identifies a RAM user of the Bastionhost instance. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.
              */
             public Builder sourceUserId(String sourceUserId) {
                 this.sourceUserId = sourceUserId;
@@ -282,7 +394,23 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * TwoFactorMethods.
+             */
+            public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
+                this.twoFactorMethods = twoFactorMethods;
+                return this;
+            }
+
+            /**
+             * TwoFactorStatus.
+             */
+            public Builder twoFactorStatus(String twoFactorStatus) {
+                this.twoFactorStatus = twoFactorStatus;
+                return this;
+            }
+
+            /**
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -290,7 +418,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The logon name of the user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -298,7 +426,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserState.
+             * The statuses of the user.
              */
             public Builder userState(java.util.List < String > userState) {
                 this.userState = userState;

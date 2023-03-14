@@ -50,7 +50,7 @@ public class CreateHostShareKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HostShareKeyId.
+         * The ID of the shared key.
          */
         public Builder hostShareKeyId(Long hostShareKeyId) {
             this.hostShareKeyId = hostShareKeyId;
@@ -58,7 +58,7 @@ public class CreateHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

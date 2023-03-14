@@ -50,7 +50,7 @@ public class CreateUserGroupResponseBody extends TeaModel {
         private String userGroupId; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroupId.
+         * The ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.userGroupId = userGroupId;

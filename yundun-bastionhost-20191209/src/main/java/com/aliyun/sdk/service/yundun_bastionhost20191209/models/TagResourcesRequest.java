@@ -99,7 +99,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the Bastionhost instances to which tags need to be created and bound.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -108,7 +108,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -117,7 +117,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
+         * <p>
+         * 
+         * Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -126,7 +129,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -180,7 +183,14 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the instance.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20.
+             * 
+             * > 
+             * *   The key can be up to 128 characters in length but cannot be an empty string.
+             * *   The key cannot start with **aliyun** or **acs:**. It cannot contain **http://** or **https://**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -188,7 +198,14 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the instance.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20.
+             * 
+             * > 
+             * *   The value can be up to 128 characters in length or an empty string.
+             * *   The value cannot start with **aliyun** or **acs:**. It cannot contain **http://** or **https://**.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -98,7 +98,10 @@ public class StartInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the bastion host that you want to enable.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,7 +110,7 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,7 +119,7 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * SecurityGroupIds.
+         * The IDs of the security groups.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -125,7 +128,7 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * The ID of the vSwitch to which the bastion host belongs.
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);

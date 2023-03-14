@@ -112,7 +112,7 @@ public class ModifyUserGroupRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * The new description of the user group. The value can be up to 500 characters in length.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -121,7 +121,10 @@ public class ModifyUserGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Bastionhost instance where you want to modify the information of the user group.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +133,10 @@ public class ModifyUserGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Bastionhost instance where you want to modify the information of the user group.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +145,10 @@ public class ModifyUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * The ID of the user group that you want to modify.
+         * <p>
+         * 
+         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -148,7 +157,7 @@ public class ModifyUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupName.
+         * The new name of the user group. The value can be up to 128 characters in length.
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);

@@ -50,7 +50,7 @@ public class CreateHostGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HostGroupId.
+         * The ID of the host group.
          */
         public Builder hostGroupId(String hostGroupId) {
             this.hostGroupId = hostGroupId;
@@ -58,7 +58,7 @@ public class CreateHostGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

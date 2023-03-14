@@ -21,6 +21,14 @@ public class CreateUserRequest extends Request {
     private String displayName;
 
     @Query
+    @NameInMap("EffectiveEndTime")
+    private Long effectiveEndTime;
+
+    @Query
+    @NameInMap("EffectiveStartTime")
+    private Long effectiveStartTime;
+
+    @Query
     @NameInMap("Email")
     private String email;
 
@@ -36,6 +44,10 @@ public class CreateUserRequest extends Request {
     @Query
     @NameInMap("MobileCountryCode")
     private String mobileCountryCode;
+
+    @Query
+    @NameInMap("NeedResetPassword")
+    private Boolean needResetPassword;
 
     @Query
     @NameInMap("Password")
@@ -55,6 +67,14 @@ public class CreateUserRequest extends Request {
     private String sourceUserId;
 
     @Query
+    @NameInMap("TwoFactorMethods")
+    private String twoFactorMethods;
+
+    @Query
+    @NameInMap("TwoFactorStatus")
+    private String twoFactorStatus;
+
+    @Query
     @NameInMap("UserName")
     @Validation(required = true)
     private String userName;
@@ -63,14 +83,19 @@ public class CreateUserRequest extends Request {
         super(builder);
         this.comment = builder.comment;
         this.displayName = builder.displayName;
+        this.effectiveEndTime = builder.effectiveEndTime;
+        this.effectiveStartTime = builder.effectiveStartTime;
         this.email = builder.email;
         this.instanceId = builder.instanceId;
         this.mobile = builder.mobile;
         this.mobileCountryCode = builder.mobileCountryCode;
+        this.needResetPassword = builder.needResetPassword;
         this.password = builder.password;
         this.regionId = builder.regionId;
         this.source = builder.source;
         this.sourceUserId = builder.sourceUserId;
+        this.twoFactorMethods = builder.twoFactorMethods;
+        this.twoFactorStatus = builder.twoFactorStatus;
         this.userName = builder.userName;
     }
 
@@ -102,6 +127,20 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return effectiveEndTime
+     */
+    public Long getEffectiveEndTime() {
+        return this.effectiveEndTime;
+    }
+
+    /**
+     * @return effectiveStartTime
+     */
+    public Long getEffectiveStartTime() {
+        return this.effectiveStartTime;
+    }
+
+    /**
      * @return email
      */
     public String getEmail() {
@@ -127,6 +166,13 @@ public class CreateUserRequest extends Request {
      */
     public String getMobileCountryCode() {
         return this.mobileCountryCode;
+    }
+
+    /**
+     * @return needResetPassword
+     */
+    public Boolean getNeedResetPassword() {
+        return this.needResetPassword;
     }
 
     /**
@@ -158,6 +204,20 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return twoFactorMethods
+     */
+    public String getTwoFactorMethods() {
+        return this.twoFactorMethods;
+    }
+
+    /**
+     * @return twoFactorStatus
+     */
+    public String getTwoFactorStatus() {
+        return this.twoFactorStatus;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
@@ -167,14 +227,19 @@ public class CreateUserRequest extends Request {
     public static final class Builder extends Request.Builder<CreateUserRequest, Builder> {
         private String comment; 
         private String displayName; 
+        private Long effectiveEndTime; 
+        private Long effectiveStartTime; 
         private String email; 
         private String instanceId; 
         private String mobile; 
         private String mobileCountryCode; 
+        private Boolean needResetPassword; 
         private String password; 
         private String regionId; 
         private String source; 
         private String sourceUserId; 
+        private String twoFactorMethods; 
+        private String twoFactorStatus; 
         private String userName; 
 
         private Builder() {
@@ -185,19 +250,24 @@ public class CreateUserRequest extends Request {
             super(request);
             this.comment = request.comment;
             this.displayName = request.displayName;
+            this.effectiveEndTime = request.effectiveEndTime;
+            this.effectiveStartTime = request.effectiveStartTime;
             this.email = request.email;
             this.instanceId = request.instanceId;
             this.mobile = request.mobile;
             this.mobileCountryCode = request.mobileCountryCode;
+            this.needResetPassword = request.needResetPassword;
             this.password = request.password;
             this.regionId = request.regionId;
             this.source = request.source;
             this.sourceUserId = request.sourceUserId;
+            this.twoFactorMethods = request.twoFactorMethods;
+            this.twoFactorStatus = request.twoFactorStatus;
             this.userName = request.userName;
         } 
 
         /**
-         * Comment.
+         * The remarks of the user that you want to add. The remarks can be up to 500 characters in length.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -206,7 +276,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * The display name of the user that you want to add. This display name can be up to 128 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -215,7 +285,25 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Email.
+         * 有效期结束时间戳。单位秒
+         */
+        public Builder effectiveEndTime(Long effectiveEndTime) {
+            this.putQueryParameter("EffectiveEndTime", effectiveEndTime);
+            this.effectiveEndTime = effectiveEndTime;
+            return this;
+        }
+
+        /**
+         * 开始生效时间戳，单位秒
+         */
+        public Builder effectiveStartTime(Long effectiveStartTime) {
+            this.putQueryParameter("EffectiveStartTime", effectiveStartTime);
+            this.effectiveStartTime = effectiveStartTime;
+            return this;
+        }
+
+        /**
+         * The email address of the user that you want to add.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -224,7 +312,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host to which you want to add a user.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -233,7 +324,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * The mobile phone number of the user that you want to add.
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -242,7 +333,28 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * MobileCountryCode.
+         * The country where the mobile number of the user is registered. Default value: **CN**. Valid values:
+         * <p>
+         * 
+         * *   **CN**: the Chinese mainland, whose country calling code is +86
+         * *   **HK**: Hong Kong (China), whose country calling code is +852
+         * *   **MO**: Macau (China), whose country calling code is +853
+         * *   **TW**: Taiwan (China), whose country calling code is +886
+         * *   **RU**: Russia, whose country calling code is +7
+         * *   **SG**: Singapore, whose country calling code is +65
+         * *   **MY**: Malaysia, whose country calling code is +60
+         * *   **ID**: Indonesia, whose country calling code is +62
+         * *   **DE**: Germany, whose country calling code is +49
+         * *   **AU**: Australia, whose country calling code is +61
+         * *   **US**: US, whose country calling code is +1
+         * *   **AE**: United Arab Emirates, whose country calling code is +971
+         * *   **JP**: Japan, whose country calling code is +81
+         * *   **GB**: UK, whose country calling code is +44
+         * *   **IN**: India, whose country calling code is +91
+         * *   **KR**: Republic of Korea, whose country calling code is +82
+         * *   **PH**: Philippines, whose country calling code is +63
+         * *   **CH**: Switzerland, whose country calling code is +41
+         * *   **SE**: Sweden, whose country calling code is +46
          */
         public Builder mobileCountryCode(String mobileCountryCode) {
             this.putQueryParameter("MobileCountryCode", mobileCountryCode);
@@ -251,7 +363,19 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Password.
+         * 下次登录是否需要重置密码
+         */
+        public Builder needResetPassword(Boolean needResetPassword) {
+            this.putQueryParameter("NeedResetPassword", needResetPassword);
+            this.needResetPassword = needResetPassword;
+            return this;
+        }
+
+        /**
+         * The logon password of the user that you want to add. The logon password can be up to 128 characters in length.
+         * <p>
+         * 
+         * >  This parameter is required if the **Source** parameter is set to **Local**.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -260,7 +384,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host to which you want to add a user.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -269,7 +396,13 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the user that you want to add. Valid values:
+         * <p>
+         * 
+         * - **Local**: a local user
+         * - **Ram**: a RAM user
+         * - **AD** : an AD-authenticated user
+         * - **LDAP** : an LDAP-authenticated user
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -278,7 +411,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * SourceUserId.
+         * The unique identifier of the user that you want to add.
+         * <p>
+         * 
+         * >  This parameter uniquely identifies a RAM user of the bastion host. This parameter is required if the **Source** parameter is set to **Ram**. You can call the [ListUsers](~~28684~~) operation to obtain the unique identifier of the user from the **UserId** response parameter.
          */
         public Builder sourceUserId(String sourceUserId) {
             this.putQueryParameter("SourceUserId", sourceUserId);
@@ -287,7 +423,25 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * TwoFactorMethods.
+         */
+        public Builder twoFactorMethods(String twoFactorMethods) {
+            this.putQueryParameter("TwoFactorMethods", twoFactorMethods);
+            this.twoFactorMethods = twoFactorMethods;
+            return this;
+        }
+
+        /**
+         * TwoFactorStatus.
+         */
+        public Builder twoFactorStatus(String twoFactorStatus) {
+            this.putQueryParameter("TwoFactorStatus", twoFactorStatus);
+            this.twoFactorStatus = twoFactorStatus;
+            return this;
+        }
+
+        /**
+         * The logon name of the user that you want to add. The logon name can contain only letters, digits, and underscores (\_) and can be up to 128 characters in length.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

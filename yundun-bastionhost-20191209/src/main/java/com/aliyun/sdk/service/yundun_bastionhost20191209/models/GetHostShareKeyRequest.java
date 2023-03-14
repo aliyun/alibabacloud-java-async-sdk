@@ -84,7 +84,7 @@ public class GetHostShareKeyRequest extends Request {
         } 
 
         /**
-         * HostShareKeyId.
+         * The ID of the shared key whose details you want to query.
          */
         public Builder hostShareKeyId(String hostShareKeyId) {
             this.putQueryParameter("HostShareKeyId", hostShareKeyId);
@@ -93,7 +93,7 @@ public class GetHostShareKeyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class GetHostShareKeyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

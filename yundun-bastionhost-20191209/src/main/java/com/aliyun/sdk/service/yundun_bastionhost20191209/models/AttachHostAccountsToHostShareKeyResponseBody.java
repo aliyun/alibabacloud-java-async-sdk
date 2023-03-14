@@ -50,7 +50,7 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * The result of the call.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -134,7 +134,7 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * The error code returned. If **OK** is returned, the association was successful. If another error code is returned, the association failed.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -142,7 +142,7 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountId.
+             * The ID of the host account.
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -150,7 +150,7 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyId.
+             * The ID of the shared key.
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -158,7 +158,7 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;

@@ -62,7 +62,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * HostGroups.
+         * The host groups returned.
          */
         public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
             this.hostGroups = hostGroups;
@@ -70,7 +70,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of host groups returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -154,7 +154,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             private Integer memberCount; 
 
             /**
-             * Comment.
+             * The description of the host group.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -162,7 +162,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HostGroupId.
+             * The ID of the host group.
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -170,7 +170,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HostGroupName.
+             * The name of the host group.
              */
             public Builder hostGroupName(String hostGroupName) {
                 this.hostGroupName = hostGroupName;
@@ -178,7 +178,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MemberCount.
+             * The number of hosts in the host group.
              */
             public Builder memberCount(Integer memberCount) {
                 this.memberCount = memberCount;

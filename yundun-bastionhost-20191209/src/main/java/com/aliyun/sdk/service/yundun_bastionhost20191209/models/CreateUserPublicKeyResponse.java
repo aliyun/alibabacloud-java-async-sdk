@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyInstanceUpgradePeriodResponse} extends {@link TeaModel}
+ * {@link CreateUserPublicKeyResponse} extends {@link TeaModel}
  *
- * <p>ModifyInstanceUpgradePeriodResponse</p>
+ * <p>CreateUserPublicKeyResponse</p>
  */
-public class ModifyInstanceUpgradePeriodResponse extends Response {
+public class CreateUserPublicKeyResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ModifyInstanceUpgradePeriodResponseBody body;
+    private CreateUserPublicKeyResponseBody body;
 
-    private ModifyInstanceUpgradePeriodResponse(BuilderImpl builder) {
+    private CreateUserPublicKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ModifyInstanceUpgradePeriodResponse create() {
+    public static CreateUserPublicKeyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ModifyInstanceUpgradePeriodResponse extends Response {
     /**
      * @return body
      */
-    public ModifyInstanceUpgradePeriodResponseBody getBody() {
+    public CreateUserPublicKeyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyInstanceUpgradePeriodResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateUserPublicKeyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ModifyInstanceUpgradePeriodResponseBody body);
+        Builder body(CreateUserPublicKeyResponseBody body);
 
         @Override
-        ModifyInstanceUpgradePeriodResponse build();
+        CreateUserPublicKeyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyInstanceUpgradePeriodResponse, Builder>
+            extends Response.BuilderImpl<CreateUserPublicKeyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ModifyInstanceUpgradePeriodResponseBody body; 
+        private CreateUserPublicKeyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyInstanceUpgradePeriodResponse response) {
+        private BuilderImpl(CreateUserPublicKeyResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ModifyInstanceUpgradePeriodResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ModifyInstanceUpgradePeriodResponseBody body) {
+        public Builder body(CreateUserPublicKeyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyInstanceUpgradePeriodResponse build() {
-            return new ModifyInstanceUpgradePeriodResponse(this);
+        public CreateUserPublicKeyResponse build() {
+            return new CreateUserPublicKeyResponse(this);
         } 
 
     } 

@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyInstanceUpgradePeriodResponseBody} extends {@link TeaModel}
+ * {@link DeleteUserPublicKeyResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyInstanceUpgradePeriodResponseBody</p>
+ * <p>DeleteUserPublicKeyResponseBody</p>
  */
-public class ModifyInstanceUpgradePeriodResponseBody extends TeaModel {
+public class DeleteUserPublicKeyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ModifyInstanceUpgradePeriodResponseBody(Builder builder) {
+    private DeleteUserPublicKeyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class ModifyInstanceUpgradePeriodResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyInstanceUpgradePeriodResponseBody create() {
+    public static DeleteUserPublicKeyResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class ModifyInstanceUpgradePeriodResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyInstanceUpgradePeriodResponseBody build() {
-            return new ModifyInstanceUpgradePeriodResponseBody(this);
+        public DeleteUserPublicKeyResponseBody build() {
+            return new DeleteUserPublicKeyResponseBody(this);
         } 
 
     } 

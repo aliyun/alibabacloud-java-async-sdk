@@ -112,7 +112,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * The token for starting the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -121,7 +121,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Bastionhost instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +130,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of instances. The ID is up to 20.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,7 +139,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
+         * <p>
+         * 
+         * Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +151,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -202,7 +205,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +216,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

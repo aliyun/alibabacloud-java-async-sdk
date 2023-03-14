@@ -69,7 +69,10 @@ public class DisableInstancePublicAccessRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the bastion host whose Internet access you want to disable.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +81,7 @@ public class DisableInstancePublicAccessRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -154,7 +154,7 @@ public class ModifyHostRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * The new description of the host. The value can be up to 500 characters in length.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -163,7 +163,10 @@ public class ModifyHostRequest extends Request {
         }
 
         /**
-         * HostId.
+         * The ID of the host.
+         * <p>
+         * 
+         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
          */
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
@@ -172,7 +175,7 @@ public class ModifyHostRequest extends Request {
         }
 
         /**
-         * HostName.
+         * The new name of the host. The name can be up to 128 characters.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -181,7 +184,7 @@ public class ModifyHostRequest extends Request {
         }
 
         /**
-         * HostPrivateAddress.
+         * The new internal endpoint of the host. You can set this parameter to a domain name or an IP address.
          */
         public Builder hostPrivateAddress(String hostPrivateAddress) {
             this.putQueryParameter("HostPrivateAddress", hostPrivateAddress);
@@ -190,7 +193,7 @@ public class ModifyHostRequest extends Request {
         }
 
         /**
-         * HostPublicAddress.
+         * The new public endpoint of the host. You can set this parameter to a domain name or an IP address.
          */
         public Builder hostPublicAddress(String hostPublicAddress) {
             this.putQueryParameter("HostPublicAddress", hostPublicAddress);
@@ -199,7 +202,10 @@ public class ModifyHostRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Bastionhost instance where you want to modify the information of the host.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -208,7 +214,11 @@ public class ModifyHostRequest extends Request {
         }
 
         /**
-         * OSType.
+         * The new operating system of the host. Valid values:
+         * <p>
+         * 
+         * *   **Linux**
+         * *   **Windows**
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -217,7 +227,10 @@ public class ModifyHostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Bastionhost instance where you want to modify the information of the host.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceTwoFactorRequest extends Request {
     @Query
-    @NameInMap("DingTalkConfig")
-    private String dingTalkConfig;
-
-    @Query
     @NameInMap("EnableTwoFactor")
     private String enableTwoFactor;
 
@@ -24,10 +20,6 @@ public class ModifyInstanceTwoFactorRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Query
-    @NameInMap("MessageLanguage")
-    private String messageLanguage;
 
     @Query
     @NameInMap("RegionId")
@@ -43,10 +35,8 @@ public class ModifyInstanceTwoFactorRequest extends Request {
 
     private ModifyInstanceTwoFactorRequest(Builder builder) {
         super(builder);
-        this.dingTalkConfig = builder.dingTalkConfig;
         this.enableTwoFactor = builder.enableTwoFactor;
         this.instanceId = builder.instanceId;
-        this.messageLanguage = builder.messageLanguage;
         this.regionId = builder.regionId;
         this.skipTwoFactorTime = builder.skipTwoFactorTime;
         this.twoFactorMethods = builder.twoFactorMethods;
@@ -66,13 +56,6 @@ public class ModifyInstanceTwoFactorRequest extends Request {
     }
 
     /**
-     * @return dingTalkConfig
-     */
-    public String getDingTalkConfig() {
-        return this.dingTalkConfig;
-    }
-
-    /**
      * @return enableTwoFactor
      */
     public String getEnableTwoFactor() {
@@ -84,13 +67,6 @@ public class ModifyInstanceTwoFactorRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return messageLanguage
-     */
-    public String getMessageLanguage() {
-        return this.messageLanguage;
     }
 
     /**
@@ -115,10 +91,8 @@ public class ModifyInstanceTwoFactorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceTwoFactorRequest, Builder> {
-        private String dingTalkConfig; 
         private String enableTwoFactor; 
         private String instanceId; 
-        private String messageLanguage; 
         private String regionId; 
         private String skipTwoFactorTime; 
         private String twoFactorMethods; 
@@ -129,26 +103,19 @@ public class ModifyInstanceTwoFactorRequest extends Request {
 
         private Builder(ModifyInstanceTwoFactorRequest request) {
             super(request);
-            this.dingTalkConfig = request.dingTalkConfig;
             this.enableTwoFactor = request.enableTwoFactor;
             this.instanceId = request.instanceId;
-            this.messageLanguage = request.messageLanguage;
             this.regionId = request.regionId;
             this.skipTwoFactorTime = request.skipTwoFactorTime;
             this.twoFactorMethods = request.twoFactorMethods;
         } 
 
         /**
-         * DingTalkConfig.
-         */
-        public Builder dingTalkConfig(String dingTalkConfig) {
-            this.putQueryParameter("DingTalkConfig", dingTalkConfig);
-            this.dingTalkConfig = dingTalkConfig;
-            return this;
-        }
-
-        /**
-         * EnableTwoFactor.
+         * Specifies whether to enable two-factor authentication. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables two-factor authentication.
+         * *   **false**: disables two-factor authentication.
          */
         public Builder enableTwoFactor(String enableTwoFactor) {
             this.putQueryParameter("EnableTwoFactor", enableTwoFactor);
@@ -157,7 +124,10 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -166,16 +136,10 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * MessageLanguage.
-         */
-        public Builder messageLanguage(String messageLanguage) {
-            this.putQueryParameter("MessageLanguage", messageLanguage);
-            this.messageLanguage = messageLanguage;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The region ID of the bastion host.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -184,7 +148,7 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * SkipTwoFactorTime.
+         * The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: 0 to 168. Unit: hours. If you set this parameter to 0, the local user must pass two-factor authentication every time the local user logs on to the bastion host.
          */
         public Builder skipTwoFactorTime(String skipTwoFactorTime) {
             this.putQueryParameter("SkipTwoFactorTime", skipTwoFactorTime);
@@ -193,7 +157,12 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * TwoFactorMethods.
+         * One or more methods that are used to send a verification code if two-factor authentication is enabled. If you set the EnableTwoFactor parameter to true, you must specify at least one method. Valid values:
+         * <p>
+         * 
+         * *   **sms**: text message
+         * *   **email**: email
+         * *   **dingtalk**: Notice in DingTalk
          */
         public Builder twoFactorMethods(String twoFactorMethods) {
             this.putQueryParameter("TwoFactorMethods", twoFactorMethods);

@@ -50,7 +50,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * The result of the call.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -134,7 +134,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * The error code. If **OK** is returned, the disassociation was successful. If a different error code is returned, the disassociation failed.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -142,7 +142,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountId.
+             * The ID of the host account.
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -150,7 +150,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyId.
+             * The ID of the shared key.
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -158,7 +158,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;

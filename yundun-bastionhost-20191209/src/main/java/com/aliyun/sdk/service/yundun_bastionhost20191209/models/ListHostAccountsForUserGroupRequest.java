@@ -141,7 +141,7 @@ public class ListHostAccountsForUserGroupRequest extends Request {
         } 
 
         /**
-         * HostAccountName.
+         * The name of the host account that you want to query. Exact match is supported.
          */
         public Builder hostAccountName(String hostAccountName) {
             this.putQueryParameter("HostAccountName", hostAccountName);
@@ -150,7 +150,10 @@ public class ListHostAccountsForUserGroupRequest extends Request {
         }
 
         /**
-         * HostId.
+         * The ID of the host for which you want to query the host accounts that the user group is authorized to manage.
+         * <p>
+         * 
+         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
          */
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
@@ -159,7 +162,10 @@ public class ListHostAccountsForUserGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Bastionhost instance where you want to query the host accounts that the user group is authorized to manage on the host.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,7 +174,7 @@ public class ListHostAccountsForUserGroupRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -177,7 +183,12 @@ public class ListHostAccountsForUserGroupRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.
+         * 
+         * >  We recommend that you do not leave the PageSize parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -186,7 +197,10 @@ public class ListHostAccountsForUserGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Bastionhost instance where you want to query the host accounts that the user group is authorized to manage on the host.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +209,10 @@ public class ListHostAccountsForUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * The ID of the user group for which you want to query authorized host accounts.
+         * <p>
+         * 
+         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

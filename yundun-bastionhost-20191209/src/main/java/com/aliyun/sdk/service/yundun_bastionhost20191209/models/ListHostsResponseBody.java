@@ -62,7 +62,7 @@ public class ListHostsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Hosts.
+         * The hosts that were queried.
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.hosts = hosts;
@@ -70,7 +70,7 @@ public class ListHostsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListHostsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of hosts that were queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +238,11 @@ public class ListHostsResponseBody extends TeaModel {
             private String sourceInstanceState; 
 
             /**
-             * ActiveAddressType.
+             * The endpoint type of the host. Valid values:
+             * <p>
+             * 
+             * *   **Public**: a public endpoint
+             * *   **Private**: an internal endpoint
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -246,7 +250,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The description of the host.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -254,7 +258,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountCount.
+             * The number of host accounts of the host.
              */
             public Builder hostAccountCount(Integer hostAccountCount) {
                 this.hostAccountCount = hostAccountCount;
@@ -262,7 +266,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -270,7 +274,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The name of the host.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -278,7 +282,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostPrivateAddress.
+             * The internal endpoint of the host. You can set this parameter to a domain name or an IP address.
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -286,7 +290,7 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * HostPublicAddress.
+             * The public endpoint of the host. You can set this parameter to a domain name or an IP address.
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -294,7 +298,11 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * The operating system of the host. Valid values:
+             * <p>
+             * 
+             * *   **Linux**
+             * *   **Windows**
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -302,7 +310,12 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of the host. Valid values:
+             * <p>
+             * 
+             * *   **Local**: an on-premises host
+             * *   **Ecs**: an Elastic Compute Service (ECS) instance
+             * *   **Rds**: a host in a dedicated cluster
              */
             public Builder source(String source) {
                 this.source = source;
@@ -310,7 +323,10 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * The ID of the ECS instance or dedicated cluster host that was queried.
+             * <p>
+             * 
+             * >  No value is returned for this parameter if the **Source** parameter is set to **Local**.
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -318,7 +334,12 @@ public class ListHostsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceState.
+             * The status of the host. Valid values:
+             * <p>
+             * 
+             * - **Normal**: The host is normal.
+             * 
+             * - **Release**: The host is released.
              */
             public Builder sourceInstanceState(String sourceInstanceState) {
                 this.sourceInstanceState = sourceInstanceState;

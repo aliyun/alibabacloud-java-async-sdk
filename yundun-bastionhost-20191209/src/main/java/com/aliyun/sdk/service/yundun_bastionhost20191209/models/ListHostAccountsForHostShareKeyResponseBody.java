@@ -62,7 +62,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * HostAccounts.
+         * An array that consists of the host accounts that are associated with the shared key.
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,7 +70,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of the host accounts that are associated with the shared key.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,7 +154,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * HostAccountName.
+             * The name of the host account.
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -162,7 +162,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -170,7 +170,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * HostsAccountId.
+             * The ID of the host account.
              */
             public Builder hostsAccountId(String hostsAccountId) {
                 this.hostsAccountId = hostsAccountId;
@@ -178,7 +178,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * The O&M protocol.
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

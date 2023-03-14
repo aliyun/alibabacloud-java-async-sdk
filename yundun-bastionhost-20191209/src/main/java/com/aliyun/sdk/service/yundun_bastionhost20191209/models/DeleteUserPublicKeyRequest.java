@@ -7,28 +7,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceUpgradeInfoRequest} extends {@link RequestModel}
+ * {@link DeleteUserPublicKeyRequest} extends {@link RequestModel}
  *
- * <p>GetInstanceUpgradeInfoRequest</p>
+ * <p>DeleteUserPublicKeyRequest</p>
  */
-public class GetInstanceUpgradeInfoRequest extends Request {
+public class DeleteUserPublicKeyRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
 
     @Query
-    @NameInMap("Lang")
-    private String lang;
+    @NameInMap("PublicKeyId")
+    @Validation(required = true)
+    private String publicKeyId;
 
     @Query
     @NameInMap("RegionId")
     private String regionId;
 
-    private GetInstanceUpgradeInfoRequest(Builder builder) {
+    private DeleteUserPublicKeyRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.lang = builder.lang;
+        this.publicKeyId = builder.publicKeyId;
         this.regionId = builder.regionId;
     }
 
@@ -36,7 +37,7 @@ public class GetInstanceUpgradeInfoRequest extends Request {
         return new Builder();
     }
 
-    public static GetInstanceUpgradeInfoRequest create() {
+    public static DeleteUserPublicKeyRequest create() {
         return builder().build();
     }
 
@@ -53,10 +54,10 @@ public class GetInstanceUpgradeInfoRequest extends Request {
     }
 
     /**
-     * @return lang
+     * @return publicKeyId
      */
-    public String getLang() {
-        return this.lang;
+    public String getPublicKeyId() {
+        return this.publicKeyId;
     }
 
     /**
@@ -66,24 +67,27 @@ public class GetInstanceUpgradeInfoRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetInstanceUpgradeInfoRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteUserPublicKeyRequest, Builder> {
         private String instanceId; 
-        private String lang; 
+        private String publicKeyId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetInstanceUpgradeInfoRequest request) {
+        private Builder(DeleteUserPublicKeyRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.lang = request.lang;
+            this.publicKeyId = request.publicKeyId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * InstanceId.
+         * Specifies the region ID of the bastion host on which you want to delete the public key from the user.
+         * <p>
+         * 
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,16 +96,16 @@ public class GetInstanceUpgradeInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The ID of the public key.
          */
-        public Builder lang(String lang) {
-            this.putQueryParameter("Lang", lang);
-            this.lang = lang;
+        public Builder publicKeyId(String publicKeyId) {
+            this.putQueryParameter("PublicKeyId", publicKeyId);
+            this.publicKeyId = publicKeyId;
             return this;
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -110,8 +114,8 @@ public class GetInstanceUpgradeInfoRequest extends Request {
         }
 
         @Override
-        public GetInstanceUpgradeInfoRequest build() {
-            return new GetInstanceUpgradeInfoRequest(this);
+        public DeleteUserPublicKeyRequest build() {
+            return new DeleteUserPublicKeyRequest(this);
         } 
 
     } 

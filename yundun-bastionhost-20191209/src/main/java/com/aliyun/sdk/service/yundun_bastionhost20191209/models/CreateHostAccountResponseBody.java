@@ -50,7 +50,7 @@ public class CreateHostAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HostAccountId.
+         * The ID of the host account.
          */
         public Builder hostAccountId(String hostAccountId) {
             this.hostAccountId = hostAccountId;
@@ -58,7 +58,7 @@ public class CreateHostAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

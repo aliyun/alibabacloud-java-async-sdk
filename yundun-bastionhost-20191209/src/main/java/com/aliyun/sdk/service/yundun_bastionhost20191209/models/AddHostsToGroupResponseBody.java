@@ -50,7 +50,7 @@ public class AddHostsToGroupResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AddHostsToGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * The result of the call.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -134,7 +134,22 @@ public class AddHostsToGroupResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * The return code that indicates whether the call was successful. Valid values:
+             * <p>
+             * 
+             * *   **OK**: The call was successful.
+             * 
+             * *   **UNEXPECTED**: An unknown error occurred.
+             * 
+             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
+             * 
+             *  > Make sure that the request parameters are valid and call the operation again.
+             * 
+             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
+             * 
+             * > Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.
+             * 
+             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -142,7 +157,7 @@ public class AddHostsToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostGroupId.
+             * The ID of the host group.
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -150,7 +165,7 @@ public class AddHostsToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -158,7 +173,7 @@ public class AddHostsToGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * This parameter is deprecated.
              */
             public Builder message(String message) {
                 this.message = message;

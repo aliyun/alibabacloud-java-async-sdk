@@ -62,7 +62,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * HostShareKeys.
+         * An array that consists of the shared keys.
          */
         public Builder hostShareKeys(java.util.List < HostShareKeys> hostShareKeys) {
             this.hostShareKeys = hostShareKeys;
@@ -70,7 +70,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of the shared keys.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -166,7 +166,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             private String privateKeyFingerPrint; 
 
             /**
-             * HostAccountCount.
+             * The number of the associated host accounts.
              */
             public Builder hostAccountCount(Long hostAccountCount) {
                 this.hostAccountCount = hostAccountCount;
@@ -174,7 +174,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyId.
+             * The ID of the host account.
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -182,7 +182,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyName.
+             * The name of the shared key.
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
@@ -190,7 +190,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyKeyAt.
+             * The time when the shared key was last modified.
              */
             public Builder lastModifyKeyAt(Long lastModifyKeyAt) {
                 this.lastModifyKeyAt = lastModifyKeyAt;
@@ -198,7 +198,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateKeyFingerPrint.
+             * The fingerprint of the private key.
              */
             public Builder privateKeyFingerPrint(String privateKeyFingerPrint) {
                 this.privateKeyFingerPrint = privateKeyFingerPrint;

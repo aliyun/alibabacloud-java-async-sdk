@@ -62,7 +62,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Instances.
+         * An array that consists of the queried bastion hosts.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -70,7 +70,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of bastion hosts that are queried.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +298,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * Description.
+             * The description of the bastion host.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +306,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The timestamp when the bastion host expires. Unit: milliseconds.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -314,7 +314,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * The image version of the bastion host.
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -322,7 +322,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the bastion host.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,7 +330,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * The state of the bastion host. Valid values:
+             * <p>
+             * 
+             * *   **PENDING**: The bastion host is not initialized.
+             * *   **CREATING**: The bastion host is being created.
+             * *   **RUNNING**: The bastion host is running.
+             * *   **EXPIRED**: The bastion host expired.
+             * *   **CREATE_FAILED**: The bastion host fails to be created.
+             * *   **UPGRADING**: The configurations of the bastion host are being changed.
+             * *   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -338,7 +347,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEndpoint.
+             * The public O\&M address of the bastion host.
              */
             public Builder internetEndpoint(String internetEndpoint) {
                 this.internetEndpoint = internetEndpoint;
@@ -346,7 +355,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetEndpoint.
+             * The private O\&M address of the bastion host.
              */
             public Builder intranetEndpoint(String intranetEndpoint) {
                 this.intranetEndpoint = intranetEndpoint;
@@ -354,7 +363,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Legacy.
+             * Indicates whether the bastion host runs an earlier version. Valid values:
+             * <p>
+             * 
+             * *   **true**: indicates that the bastion host runs V2 or V3.1.
+             * *   **false**:indicates that the bastion host runs V3.2.
              */
             public Builder legacy(Boolean legacy) {
                 this.legacy = legacy;
@@ -362,7 +375,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseCode.
+             * The license code of the bastion host.
              */
             public Builder licenseCode(String licenseCode) {
                 this.licenseCode = licenseCode;
@@ -370,7 +383,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PlanCode.
+             * The edition of the bastion host. Valid values:
+             * <p>
+             * 
+             * *   **cloudbastion**: Basic
+             * *   **cloudbastion_ha**: Enterprise
              */
             public Builder planCode(String planCode) {
                 this.planCode = planCode;
@@ -378,7 +395,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicNetworkAccess.
+             * Indicates whether the bastion host can be accessed from the Internet. Valid values:
+             * <p>
+             * 
+             * *   **true**: The bastion host can be accessed from the Internet.
+             * *   **false**: The bastion host cannot be accessed from the Internet.
              */
             public Builder publicNetworkAccess(Boolean publicNetworkAccess) {
                 this.publicNetworkAccess = publicNetworkAccess;
@@ -386,7 +407,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the bastion host.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -394,7 +415,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the bastion host belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -402,7 +423,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -410,7 +431,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the bastion host belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -418,7 +439,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The ID of the vSwitch to which the bastion host belongs.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

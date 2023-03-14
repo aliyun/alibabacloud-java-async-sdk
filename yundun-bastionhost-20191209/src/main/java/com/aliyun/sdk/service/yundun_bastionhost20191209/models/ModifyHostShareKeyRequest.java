@@ -126,7 +126,7 @@ public class ModifyHostShareKeyRequest extends Request {
         } 
 
         /**
-         * HostShareKeyId.
+         * The ID of the shared key whose information you want to modify.
          */
         public Builder hostShareKeyId(String hostShareKeyId) {
             this.putQueryParameter("HostShareKeyId", hostShareKeyId);
@@ -135,7 +135,7 @@ public class ModifyHostShareKeyRequest extends Request {
         }
 
         /**
-         * HostShareKeyName.
+         * The name of the shared key.
          */
         public Builder hostShareKeyName(String hostShareKeyName) {
             this.putQueryParameter("HostShareKeyName", hostShareKeyName);
@@ -144,7 +144,7 @@ public class ModifyHostShareKeyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +153,7 @@ public class ModifyHostShareKeyRequest extends Request {
         }
 
         /**
-         * PassPhrase.
+         * The password of the private key. The value is a Base64-encoded string.
          */
         public Builder passPhrase(String passPhrase) {
             this.putQueryParameter("PassPhrase", passPhrase);
@@ -162,7 +162,7 @@ public class ModifyHostShareKeyRequest extends Request {
         }
 
         /**
-         * PrivateKey.
+         * The private key. The value is a Base64-encoded string.
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -171,7 +171,7 @@ public class ModifyHostShareKeyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

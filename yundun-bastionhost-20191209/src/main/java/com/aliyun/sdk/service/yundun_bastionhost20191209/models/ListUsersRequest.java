@@ -195,7 +195,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * DisplayName.
+         * The display name of the user to be queried. Only exact match is supported.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -204,7 +204,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Bastionhost instance to which the users to be queried belong.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -213,7 +216,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * The mobile number of the user to be queried. Only exact match is supported.
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -222,7 +225,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +234,12 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * The value of the PageSize parameter must not exceed 100. By default, the number of entries on each page is 20. If you do not set the PageSize parameter, 20 entries are returned per page by default.
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +248,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Bastionhost instance to which the users to be queried belong.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -249,7 +260,11 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the user to be queried. Valid values:
+         * <p>
+         * 
+         * *   **Local**: a local user
+         * *   **Ram**: a RAM user
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -258,7 +273,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * SourceUserId.
+         * The unique ID of the user to be queried. Only exact match is supported.
+         * <p>
+         * 
+         * >  This parameter uniquely identifies a RAM user of the Bastionhost instance. This parameter takes effect only when the **Source** parameter is set to **Ram**. You can call the [ListUsers](~~28684~~) operation to obtain the unique ID of the user from the **UserId** response parameter.
          */
         public Builder sourceUserId(String sourceUserId) {
             this.putQueryParameter("SourceUserId", sourceUserId);
@@ -267,7 +285,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * The ID of the user group to be queried.
+         * <p>
+         * 
+         * >  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -276,7 +297,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The logon name of the user to be queried. Only exact match is supported.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -285,7 +306,12 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * UserState.
+         * The status of the user to be queried. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: The user can access the Bastionhost instance.
+         * *   **Frozen**: The user is locked and cannot access the Bastionhost instance.
+         * *   **Expired**: The user has expired and cannot access the Bastionhost instance.
          */
         public Builder userState(String userState) {
             this.putQueryParameter("UserState", userState);

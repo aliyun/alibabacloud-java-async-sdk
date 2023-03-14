@@ -111,7 +111,10 @@ public class ListUserGroupsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the bastion host on which you want to query user groups.
+         * <p>
+         * 
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,7 +123,7 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -129,7 +132,11 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.\
+         * <p>
+         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * 
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +145,10 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host on which you want to query user groups.
+         * <p>
+         * 
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +157,7 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
-         * UserGroupName.
+         * The name of the user group that you want to query. Only exact match is supported.
          */
         public Builder userGroupName(String userGroupName) {
             this.putQueryParameter("UserGroupName", userGroupName);

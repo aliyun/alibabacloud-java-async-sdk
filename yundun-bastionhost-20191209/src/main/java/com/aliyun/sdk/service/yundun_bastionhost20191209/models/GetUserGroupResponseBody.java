@@ -50,7 +50,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         private UserGroup userGroup; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroup.
+         * The details of the user group returned.
          */
         public Builder userGroup(UserGroup userGroup) {
             this.userGroup = userGroup;
@@ -122,7 +122,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             private String userGroupName; 
 
             /**
-             * Comment.
+             * The description of the user group.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -130,7 +130,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * The ID of the user group.
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -138,7 +138,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * The name of the user group.
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

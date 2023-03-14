@@ -98,7 +98,7 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -107,7 +107,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +116,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Bastionhost instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
+         * <p>
+         * 
+         * Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

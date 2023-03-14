@@ -50,7 +50,7 @@ public class GetHostResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Host.
+         * The information of the host that was queried.
          */
         public Builder host(GetHostResponseBodyHost host) {
             this.host = host;
@@ -58,7 +58,7 @@ public class GetHostResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetHostResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * HostFingerPrint.
+             * The fingerprint of the host. This parameter uniquely identifies a host.
              */
             public Builder hostFingerPrint(String hostFingerPrint) {
                 this.hostFingerPrint = hostFingerPrint;
@@ -130,7 +130,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The service port of the host.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -138,7 +138,11 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * The protocol that is used to connect to the host. Valid values:
+             * <p>
+             * 
+             * *   **SSH**
+             * *   **RDP**
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
@@ -299,7 +303,11 @@ public class GetHostResponseBody extends TeaModel {
             private String sourceInstanceState; 
 
             /**
-             * ActiveAddressType.
+             * The endpoint type of the host. Valid values:
+             * <p>
+             * 
+             * *   **Public**: a public endpoint
+             * *   **Private**: an internal endpoint
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -307,7 +315,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The description of the host.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -315,7 +323,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -323,7 +331,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The name of the host.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -331,7 +339,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * HostPrivateAddress.
+             * The internal endpoint of the host. You can set this parameter to a domain name or an IP address.
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -339,7 +347,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * HostPublicAddress.
+             * The public endpoint of the host. You can set this parameter to a domain name or an IP address.
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -347,7 +355,11 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * The operating system of the host. Valid values:
+             * <p>
+             * 
+             * *   **Linux**
+             * *   **Windows**
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -355,7 +367,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * Protocols.
+             * The protocol information of the host.
              */
             public Builder protocols(java.util.List < Protocols> protocols) {
                 this.protocols = protocols;
@@ -363,7 +375,12 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of the host. Valid values:
+             * <p>
+             * 
+             * *   **Local**: an on-premises host
+             * *   **Ecs**: an Elastic Compute Service (ECS) instance
+             * *   **Rds**: a host in a dedicated cluster
              */
             public Builder source(String source) {
                 this.source = source;
@@ -371,7 +388,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * The ID of the ECS instance or dedicated cluster host that was queried.
+             * <p>
+             * 
+             * >  No value is returned for this parameter if the **Source** parameter is set to **Local**.
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -379,7 +399,12 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceState.
+             * The status of the host. Valid values:
+             * <p>
+             * 
+             * - **Normal**: The host is normal.
+             * 
+             * - **Release**: The host is released.
              */
             public Builder sourceInstanceState(String sourceInstanceState) {
                 this.sourceInstanceState = sourceInstanceState;

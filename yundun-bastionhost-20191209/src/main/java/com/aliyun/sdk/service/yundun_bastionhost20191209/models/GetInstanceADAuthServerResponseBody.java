@@ -50,7 +50,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AD.
+         * The settings of AD authentication.
          */
         public Builder ad(Ad ad) {
             this.ad = ad;
@@ -58,7 +58,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             private String standbyServer; 
 
             /**
-             * Account.
+             * The distinguished name (DN) of the AD server account.
              */
             public Builder account(String account) {
                 this.account = account;
@@ -238,7 +238,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * BaseDN.
+             * The Base DN of the AD server.
              */
             public Builder baseDN(String baseDN) {
                 this.baseDN = baseDN;
@@ -246,7 +246,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain on the AD server.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -254,7 +254,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * EmailMapping.
+             * The field that is used to indicate the email address of a user on the AD server.
              */
             public Builder emailMapping(String emailMapping) {
                 this.emailMapping = emailMapping;
@@ -262,7 +262,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * Filter.
+             * The condition that is used to filter users.
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -270,7 +270,11 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * HasPassword.
+             * Indicates whether passwords are required. Valid values:
+             * <p>
+             * 
+             * *   **true**: required
+             * *   **false**: not required
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -278,7 +282,11 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * IsSSL.
+             * Indicates whether SSL is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: supported
+             * *   **false**: not supported
              */
             public Builder isSSL(Boolean isSSL) {
                 this.isSSL = isSSL;
@@ -286,7 +294,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * MobileMapping.
+             * The field that is used to indicate the mobile phone number of a user on the AD server.
              */
             public Builder mobileMapping(String mobileMapping) {
                 this.mobileMapping = mobileMapping;
@@ -294,7 +302,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * NameMapping.
+             * The field that is used to indicate the name of a user on the AD server.
              */
             public Builder nameMapping(String nameMapping) {
                 this.nameMapping = nameMapping;
@@ -302,7 +310,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port that is used to access the AD server.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -310,7 +318,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * Server.
+             * The address of the AD server.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -318,7 +326,7 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyServer.
+             * The address of the secondary AD server.
              */
             public Builder standbyServer(String standbyServer) {
                 this.standbyServer = standbyServer;

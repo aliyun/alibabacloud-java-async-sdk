@@ -62,7 +62,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Hosts.
+         * The hosts returned.
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.hosts = hosts;
@@ -70,7 +70,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of hosts returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,11 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             private String OSType; 
 
             /**
-             * ActiveAddressType.
+             * The endpoint type of the host. Valid values:
+             * <p>
+             * 
+             * *   **Public**: a public endpoint
+             * *   **Private**: an internal endpoint
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -198,7 +202,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The description of the host.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -206,7 +210,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -214,7 +218,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The name of the host.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -222,7 +226,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostPrivateAddress.
+             * The internal endpoint of the host. The value is a domain name or an IP address.
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -230,7 +234,7 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostPublicAddress.
+             * The public endpoint of the host. The value is a domain name or an IP address.
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -238,7 +242,11 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * The operating system of the host. Valid values:
+             * <p>
+             * 
+             * *   **Linux**
+             * *   **Windows**
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;

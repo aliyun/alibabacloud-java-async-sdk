@@ -7,15 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteHostGroupResponseBody} extends {@link TeaModel}
+ * {@link CreateUserPublicKeyResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteHostGroupResponseBody</p>
+ * <p>CreateUserPublicKeyResponseBody</p>
  */
-public class DeleteHostGroupResponseBody extends TeaModel {
+public class CreateUserPublicKeyResponseBody extends TeaModel {
+    @NameInMap("PublicKeyId")
+    private String publicKeyId;
+
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteHostGroupResponseBody(Builder builder) {
+    private CreateUserPublicKeyResponseBody(Builder builder) {
+        this.publicKeyId = builder.publicKeyId;
         this.requestId = builder.requestId;
     }
 
@@ -23,8 +27,15 @@ public class DeleteHostGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteHostGroupResponseBody create() {
+    public static CreateUserPublicKeyResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return publicKeyId
+     */
+    public String getPublicKeyId() {
+        return this.publicKeyId;
     }
 
     /**
@@ -35,7 +46,16 @@ public class DeleteHostGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String publicKeyId; 
         private String requestId; 
+
+        /**
+         * The ID of the public key.
+         */
+        public Builder publicKeyId(String publicKeyId) {
+            this.publicKeyId = publicKeyId;
+            return this;
+        }
 
         /**
          * The ID of the request, which is used to locate and troubleshoot issues.
@@ -45,8 +65,8 @@ public class DeleteHostGroupResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteHostGroupResponseBody build() {
-            return new DeleteHostGroupResponseBody(this);
+        public CreateUserPublicKeyResponseBody build() {
+            return new CreateUserPublicKeyResponseBody(this);
         } 
 
     } 

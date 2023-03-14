@@ -98,7 +98,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
         } 
 
         /**
-         * AuthorizedSecurityGroups.
+         * The IDs of authorized security group.
          */
         public Builder authorizedSecurityGroups(java.util.List < String > authorizedSecurityGroups) {
             this.putQueryParameter("AuthorizedSecurityGroups", authorizedSecurityGroups);
@@ -107,7 +107,10 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the bastion host.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +119,11 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -125,7 +132,7 @@ public class ConfigInstanceSecurityGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

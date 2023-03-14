@@ -100,7 +100,7 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the bastion host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,10 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the bastion host is moved.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the resource group ID of the bastion host.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -118,7 +121,10 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the bastion host for which you want to change the resource group.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -127,7 +133,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **INSTANCE**, which indicates that the resource is a bastion host.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

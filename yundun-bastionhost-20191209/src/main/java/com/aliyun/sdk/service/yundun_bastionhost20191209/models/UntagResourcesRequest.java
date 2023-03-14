@@ -113,7 +113,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to delete all tags that are added to the bastion host.
+         * <p>
+         * 
+         * *   If you specify TagKey.N, the value of this parameter can only be **false**, which indicates that only a specified tag is deleted.
+         * *   If you do not specify TagKey.N and the value of this parameter is **true**, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is **false**, no tags are deleted.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -122,7 +126,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host to query.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +138,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs. You can specify a maximum of 20 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,7 +147,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
+         * <p>
+         * 
+         * Set the value to **INSTANCE**, which indicates that the resource is a bastion host.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +159,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag keys of the resource.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

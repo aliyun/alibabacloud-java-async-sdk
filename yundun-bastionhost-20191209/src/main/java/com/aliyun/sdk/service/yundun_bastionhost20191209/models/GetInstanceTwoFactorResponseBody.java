@@ -50,7 +50,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Config.
+         * The settings of two-factor authentication.
          */
         public Builder config(Config config) {
             this.config = config;
@@ -58,7 +58,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,96 +71,9 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
 
     } 
 
-    public static class DingTalkConfig extends TeaModel {
-        @NameInMap("AgentId")
-        private String agentId;
-
-        @NameInMap("AppKey")
-        private String appKey;
-
-        @NameInMap("HasAppSecret")
-        private Boolean hasAppSecret;
-
-        private DingTalkConfig(Builder builder) {
-            this.agentId = builder.agentId;
-            this.appKey = builder.appKey;
-            this.hasAppSecret = builder.hasAppSecret;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DingTalkConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return agentId
-         */
-        public String getAgentId() {
-            return this.agentId;
-        }
-
-        /**
-         * @return appKey
-         */
-        public String getAppKey() {
-            return this.appKey;
-        }
-
-        /**
-         * @return hasAppSecret
-         */
-        public Boolean getHasAppSecret() {
-            return this.hasAppSecret;
-        }
-
-        public static final class Builder {
-            private String agentId; 
-            private String appKey; 
-            private Boolean hasAppSecret; 
-
-            /**
-             * AgentId.
-             */
-            public Builder agentId(String agentId) {
-                this.agentId = agentId;
-                return this;
-            }
-
-            /**
-             * AppKey.
-             */
-            public Builder appKey(String appKey) {
-                this.appKey = appKey;
-                return this;
-            }
-
-            /**
-             * HasAppSecret.
-             */
-            public Builder hasAppSecret(Boolean hasAppSecret) {
-                this.hasAppSecret = hasAppSecret;
-                return this;
-            }
-
-            public DingTalkConfig build() {
-                return new DingTalkConfig(this);
-            } 
-
-        } 
-
-    }
     public static class Config extends TeaModel {
-        @NameInMap("DingTalkConfig")
-        private DingTalkConfig dingTalkConfig;
-
         @NameInMap("EnableTwoFactor")
         private Boolean enableTwoFactor;
-
-        @NameInMap("MessageLanguage")
-        private String messageLanguage;
 
         @NameInMap("SkipTwoFactorTime")
         private Long skipTwoFactorTime;
@@ -169,9 +82,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         private java.util.List < String > twoFactorMethods;
 
         private Config(Builder builder) {
-            this.dingTalkConfig = builder.dingTalkConfig;
             this.enableTwoFactor = builder.enableTwoFactor;
-            this.messageLanguage = builder.messageLanguage;
             this.skipTwoFactorTime = builder.skipTwoFactorTime;
             this.twoFactorMethods = builder.twoFactorMethods;
         }
@@ -185,24 +96,10 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         }
 
         /**
-         * @return dingTalkConfig
-         */
-        public DingTalkConfig getDingTalkConfig() {
-            return this.dingTalkConfig;
-        }
-
-        /**
          * @return enableTwoFactor
          */
         public Boolean getEnableTwoFactor() {
             return this.enableTwoFactor;
-        }
-
-        /**
-         * @return messageLanguage
-         */
-        public String getMessageLanguage() {
-            return this.messageLanguage;
         }
 
         /**
@@ -220,22 +117,16 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private DingTalkConfig dingTalkConfig; 
             private Boolean enableTwoFactor; 
-            private String messageLanguage; 
             private Long skipTwoFactorTime; 
             private java.util.List < String > twoFactorMethods; 
 
             /**
-             * DingTalkConfig.
-             */
-            public Builder dingTalkConfig(DingTalkConfig dingTalkConfig) {
-                this.dingTalkConfig = dingTalkConfig;
-                return this;
-            }
-
-            /**
-             * EnableTwoFactor.
+             * Indicates whether two-factor authentication is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder enableTwoFactor(Boolean enableTwoFactor) {
                 this.enableTwoFactor = enableTwoFactor;
@@ -243,15 +134,10 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             }
 
             /**
-             * MessageLanguage.
-             */
-            public Builder messageLanguage(String messageLanguage) {
-                this.messageLanguage = messageLanguage;
-                return this;
-            }
-
-            /**
-             * SkipTwoFactorTime.
+             * The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.
+             * <p>
+             * 
+             * >  If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.
              */
             public Builder skipTwoFactorTime(Long skipTwoFactorTime) {
                 this.skipTwoFactorTime = skipTwoFactorTime;
@@ -259,7 +145,7 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             }
 
             /**
-             * TwoFactorMethods.
+             * Indicates one or more methods that are used to send verification codes if two-factor authentication is enabled.
              */
             public Builder twoFactorMethods(java.util.List < String > twoFactorMethods) {
                 this.twoFactorMethods = twoFactorMethods;

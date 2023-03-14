@@ -50,7 +50,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * The result of the call.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -122,7 +122,14 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * The return code that indicates whether the user was authorized to manage the specified host account. Valid values:
+             * <p>
+             * 
+             * *   **OK**: The call was successful.
+             * *   **UNEXPECTED**: An unknown error occurred.
+             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
+             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
+             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +137,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountName.
+             * The name of the host account.
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -138,7 +145,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * This parameter is deprecated.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -227,7 +234,14 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Code.
+             * The return code that indicates whether the call was successful. Valid values:
+             * <p>
+             * 
+             * *   **OK**: The call was successful.
+             * *   **UNEXPECTED**: An unknown error occurred.
+             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
+             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
+             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -235,7 +249,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountNames.
+             * The result of authorizing the user to manage the specified host accounts.
              */
             public Builder hostAccountNames(java.util.List < HostAccountNames> hostAccountNames) {
                 this.hostAccountNames = hostAccountNames;
@@ -243,7 +257,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * HostGroupId.
+             * The ID of the host group.
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -251,7 +265,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * This parameter is deprecated.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -259,7 +273,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

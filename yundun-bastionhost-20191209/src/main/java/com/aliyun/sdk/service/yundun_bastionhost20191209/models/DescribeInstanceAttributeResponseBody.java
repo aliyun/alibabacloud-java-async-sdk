@@ -50,7 +50,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceAttribute.
+         * The attribute information about the bastion host.
          */
         public Builder instanceAttribute(InstanceAttribute instanceAttribute) {
             this.instanceAttribute = instanceAttribute;
@@ -58,7 +58,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private Integer standardPort; 
 
             /**
-             * CustomPort.
+             * The custom port.
+             * <p>
+             * 
+             * > : You can change only the SSH and RDP ports. If O\&M ports are not specified, the value of the StandardPort parameter is returned.
              */
             public Builder customPort(Integer customPort) {
                 this.customPort = customPort;
@@ -118,7 +121,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StandardPort.
+             * The standard port of the bastion host. Valid values:
+             * <p>
+             * 
+             * *   **SSH**: 60022
+             * *   **RDP**: 63389
+             * *   **HTTPS**: 443
              */
             public Builder standardPort(Integer standardPort) {
                 this.standardPort = standardPort;
@@ -135,6 +143,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class InstanceAttribute extends TeaModel {
         @NameInMap("AuthorizedSecurityGroups")
         private java.util.List < String > authorizedSecurityGroups;
+
+        @NameInMap("DbOperationModule")
+        private String dbOperationModule;
 
         @NameInMap("Description")
         private String description;
@@ -213,6 +224,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         private InstanceAttribute(Builder builder) {
             this.authorizedSecurityGroups = builder.authorizedSecurityGroups;
+            this.dbOperationModule = builder.dbOperationModule;
             this.description = builder.description;
             this.eniInstanceId = builder.eniInstanceId;
             this.expireTime = builder.expireTime;
@@ -253,6 +265,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public java.util.List < String > getAuthorizedSecurityGroups() {
             return this.authorizedSecurityGroups;
+        }
+
+        /**
+         * @return dbOperationModule
+         */
+        public String getDbOperationModule() {
+            return this.dbOperationModule;
         }
 
         /**
@@ -432,6 +451,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < String > authorizedSecurityGroups; 
+            private String dbOperationModule; 
             private String description; 
             private String eniInstanceId; 
             private Long expireTime; 
@@ -459,7 +479,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String webTerminalModule; 
 
             /**
-             * AuthorizedSecurityGroups.
+             * An array that consists of the IDs of authorized security groups.
              */
             public Builder authorizedSecurityGroups(java.util.List < String > authorizedSecurityGroups) {
                 this.authorizedSecurityGroups = authorizedSecurityGroups;
@@ -467,7 +487,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The status of the database O\&M feature.
+             */
+            public Builder dbOperationModule(String dbOperationModule) {
+                this.dbOperationModule = dbOperationModule;
+                return this;
+            }
+
+            /**
+             * The remarks of the bastion host.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -475,7 +503,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EniInstanceId.
+             * The ID of the elastic network interface (ENI).
              */
             public Builder eniInstanceId(String eniInstanceId) {
                 this.eniInstanceId = eniInstanceId;
@@ -483,7 +511,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the bastion host expires.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -491,7 +519,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the bastion host.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -499,7 +527,16 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * The status of the bastion host. Valid values:
+             * <p>
+             * 
+             * *   **PENDING**: The bastion host is not initialized.
+             * *   **CREATING**: The bastion host is being created.
+             * *   **RUNNING**: The bastion host is running.
+             * *   **EXPIRED**: The bastion host expired.
+             * *   **CREATE_FAILED**: The bastion host fails to be created.
+             * *   **UPGRADING**: The configurations of the bastion host are being changed.
+             * *   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -507,7 +544,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEndpoint.
+             * The public endpoint of the bastion host.
              */
             public Builder internetEndpoint(String internetEndpoint) {
                 this.internetEndpoint = internetEndpoint;
@@ -515,7 +552,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetEndpoint.
+             * The internal endpoint of the bastion host.
              */
             public Builder intranetEndpoint(String intranetEndpoint) {
                 this.intranetEndpoint = intranetEndpoint;
@@ -523,7 +560,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseCode.
+             * The license code.
              */
             public Builder licenseCode(String licenseCode) {
                 this.licenseCode = licenseCode;
@@ -531,7 +568,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyPasswordModule.
+             * The status of the automatic password change feature.
+             * <p>
+             * 
+             * *   **Enable**
+             * *   **Disable**
              */
             public Builder modifyPasswordModule(String modifyPasswordModule) {
                 this.modifyPasswordModule = modifyPasswordModule;
@@ -539,7 +580,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkProxyModule.
+             * The status of the network domain feature.
+             * <p>
+             * 
+             * *   **Enable**
+             * *   **Disable**
              */
             public Builder networkProxyModule(String networkProxyModule) {
                 this.networkProxyModule = networkProxyModule;
@@ -547,7 +592,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * An array that consists of the O\&M ports of the bastion host.
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -555,7 +600,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateExportIps.
+             * An array that consists of the egress private IP addresses of the bastion host.
              */
             public Builder privateExportIps(java.util.List < String > privateExportIps) {
                 this.privateExportIps = privateExportIps;
@@ -563,7 +608,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateWhiteList.
+             * An array that consists of private IP addresses in a whitelist for the bastion host.
              */
             public Builder privateWhiteList(java.util.List < String > privateWhiteList) {
                 this.privateWhiteList = privateWhiteList;
@@ -571,7 +616,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PublicExportIps.
+             * An array that consists of the egress public IP addresses of the bastion host.
              */
             public Builder publicExportIps(java.util.List < String > publicExportIps) {
                 this.publicExportIps = publicExportIps;
@@ -579,7 +624,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIps.
+             * An array that consists of the public IP addresses of the bastion host.
              */
             public Builder publicIps(java.util.List < String > publicIps) {
                 this.publicIps = publicIps;
@@ -587,7 +632,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PublicNetworkAccess.
+             * Indicates whether the bastion host can be accessed over the Internet.
              */
             public Builder publicNetworkAccess(Boolean publicNetworkAccess) {
                 this.publicNetworkAccess = publicNetworkAccess;
@@ -595,7 +640,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PublicWhiteList.
+             * An array that consists of public IP addresses in a whitelist for the bastion host.
              */
             public Builder publicWhiteList(java.util.List < String > publicWhiteList) {
                 this.publicWhiteList = publicWhiteList;
@@ -603,7 +648,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the bastion host resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -611,7 +656,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the bastion host belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -619,7 +664,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * An array that consists of the IDs of the security groups to which the bastion host belongs.
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -627,7 +672,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the bastion host was purchased.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -635,7 +680,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * The storage capacity of the bastion host.
              */
             public Builder storage(Long storage) {
                 this.storage = storage;
@@ -643,7 +688,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the bastion host belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -651,7 +696,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The ID of the vSwitch to which the bastion host belongs.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -659,7 +704,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * WebTerminalModule.
+             * The status of the web terminal.
+             * <p>
+             * 
+             * *   **Enable**
+             * *   **Disable**
              */
             public Builder webTerminalModule(String webTerminalModule) {
                 this.webTerminalModule = webTerminalModule;

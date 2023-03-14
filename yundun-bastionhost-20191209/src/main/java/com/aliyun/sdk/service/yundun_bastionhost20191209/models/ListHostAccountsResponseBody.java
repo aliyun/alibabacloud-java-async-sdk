@@ -62,7 +62,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * HostAccounts.
+         * An array that consists of the queried host accounts.
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,7 +70,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of host accounts that are queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +202,13 @@ public class ListHostAccountsResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * HasPassword.
+             * Indicates whether a password is configured for the host account.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: A password is configured for the host account.
+             * *   false: No passwords are configured for the host account.
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -210,7 +216,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountId.
+             * The ID of the host account.
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -218,7 +224,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAccountName.
+             * The name of the host account.
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -226,7 +232,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -234,7 +240,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyId.
+             * The ID of the shared key.
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -242,7 +248,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyName.
+             * The name of the shared key.
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
@@ -250,7 +256,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateKeyFingerprint.
+             * The fingerprint of the private key for the host account.
              */
             public Builder privateKeyFingerprint(String privateKeyFingerprint) {
                 this.privateKeyFingerprint = privateKeyFingerprint;
@@ -258,7 +264,13 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * The protocol that is used by the host.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SSH
+             * *   RDP
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

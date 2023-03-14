@@ -16,9 +16,14 @@ public class DescribeRegionsRequest extends Request {
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -41,8 +46,16 @@ public class DescribeRegionsRequest extends Request {
         return this.acceptLanguage;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
         private String acceptLanguage; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -51,14 +64,29 @@ public class DescribeRegionsRequest extends Request {
         private Builder(DescribeRegionsRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AcceptLanguage.
+         * The natural language in which responses are returned. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese. This is the default value.
+         * *   **en-US**: English.
+         * *   **ja**: Japanese.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
