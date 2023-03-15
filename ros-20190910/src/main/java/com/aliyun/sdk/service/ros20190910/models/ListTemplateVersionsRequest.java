@@ -84,7 +84,12 @@ public class ListTemplateVersionsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of results to be returned in a single call when the NextToken parameter is used for the query.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 50.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -93,7 +98,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the NextToken value that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -102,7 +107,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template. This parameter applies to shared and private templates.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

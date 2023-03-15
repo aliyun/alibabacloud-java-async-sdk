@@ -86,7 +86,7 @@ public class ListStacksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,12 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +107,7 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +115,7 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * Stacks.
+         * The list of stacks.
          */
         public Builder stacks(java.util.List < Stacks> stacks) {
             this.stacks = stacks;
@@ -118,7 +123,7 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of stacks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +223,7 @@ public class ListStacksResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * Action.
+             * The name of the API operation that belongs to another Alibaba Cloud service.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -226,7 +231,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * The error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -234,7 +239,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalResourceId.
+             * The logical ID of the resource on which an operation fails to be performed.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -242,7 +247,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -250,7 +255,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -258,7 +263,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource on which an operation fails to be performed.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -311,7 +316,7 @@ public class ListStacksResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the stack.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -319,7 +324,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value of the stack.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -564,7 +569,7 @@ public class ListStacksResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -572,7 +577,11 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * DisableRollback.
+             * Indicates whether rollback is disabled when the stack fails to be created. Default value: false. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder disableRollback(Boolean disableRollback) {
                 this.disableRollback = disableRollback;
@@ -580,7 +589,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * DriftDetectionTime.
+             * The time when the last successful drift detection was performed on the stack.
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -588,7 +597,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * OperationInfo.
+             * The supplementary information that is returned when an operation fails to be performed on the stack.
+             * <p>
+             * 
+             * >  This parameter is returned if an operation fails to be performed on the stack. The system returns at least one sub-property. Example: An error occurred when the API operation of another Alibaba Cloud service was called.
              */
             public Builder operationInfo(OperationInfo operationInfo) {
                 this.operationInfo = operationInfo;
@@ -596,7 +608,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * ParentStackId.
+             * The ID of the parent stack.
              */
             public Builder parentStackId(String parentStackId) {
                 this.parentStackId = parentStackId;
@@ -604,7 +616,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -612,7 +624,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -620,7 +632,11 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceManaged.
+             * Indicates whether the stack is a managed stack. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -628,7 +644,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the service to which the managed stack belongs.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -636,7 +652,12 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * StackDriftStatus.
+             * The state of the stack on which the last successful drift detection was performed. Valid values:
+             * <p>
+             * 
+             * *   DRIFTED: Drift detection is being performed on the stack.
+             * *   NOT_CHECKED: No successful drift detection is performed on the stack.
+             * *   IN_SYNC: The stack is being synchronized.
              */
             public Builder stackDriftStatus(String stackDriftStatus) {
                 this.stackDriftStatus = stackDriftStatus;
@@ -644,7 +665,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * StackId.
+             * The ID of the stack.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -652,7 +673,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * StackName.
+             * The name of the stack.
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -660,7 +681,11 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * StackType.
+             * The type of the stack. Valid values:
+             * <p>
+             * 
+             * *   ROS: ROS stack. The stack is created by using a Resource Orchestration Service (ROS) template.
+             * *   Terraform: Terraform stack. The stack is created by using a Terraform template.
              */
             public Builder stackType(String stackType) {
                 this.stackType = stackType;
@@ -668,7 +693,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the stack.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -676,7 +701,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * The reason why the stack is in its current state.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -684,7 +709,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the stack.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -692,7 +717,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutInMinutes.
+             * The timeout period that is allowed to create the stack. Unit: minutes.
              */
             public Builder timeoutInMinutes(Integer timeoutInMinutes) {
                 this.timeoutInMinutes = timeoutInMinutes;
@@ -700,7 +725,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the stack was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

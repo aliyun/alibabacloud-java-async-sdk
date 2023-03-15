@@ -50,7 +50,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         private java.util.List < ServiceProvisions> serviceProvisions; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceProvisions.
+         * Details of the service.
          */
         public Builder serviceProvisions(java.util.List < ServiceProvisions> serviceProvisions) {
             this.serviceProvisions = serviceProvisions;
@@ -134,7 +134,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private java.util.Map < String, ? > parameters; 
 
             /**
-             * ApiName.
+             * The name of the API operation.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -142,7 +142,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * ApiProductId.
+             * The ID of the Alibaba Cloud service to which the API operation belongs.
              */
             public Builder apiProductId(String apiProductId) {
                 this.apiProductId = apiProductId;
@@ -150,7 +150,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * ApiType.
+             * The type of the API operation.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Open: public API operation
+             * *   Inner: private API operation
              */
             public Builder apiType(String apiType) {
                 this.apiType = apiType;
@@ -158,7 +164,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * The parameters of the API operation. If a parameter is a variable, use the ${Variable name} format. Only the following variable is supported: ${RegionId}.
              */
             public Builder parameters(java.util.Map < String, ? > parameters) {
                 this.parameters = parameters;
@@ -235,7 +241,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * ApiForCreation.
+             * The information about the API operation that is used to create the RAM role.
              */
             public Builder apiForCreation(ApiForCreation apiForCreation) {
                 this.apiForCreation = apiForCreation;
@@ -243,7 +249,11 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * Created.
+             * Indicates whether the RAM role is created. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder created(Boolean created) {
                 this.created = created;
@@ -251,7 +261,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * Function.
+             * The purpose for which the RAM role is used.
+             * <p>
+             * 
+             * Default value: Default. This value indicates that the RAM role is the default role of the service.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -259,7 +272,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * The name of the RAM role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -312,7 +325,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private java.util.List < Roles> roles; 
 
             /**
-             * AuthorizationURL.
+             * The authorization URL of the RAM role.
+             * <p>
+             * 
+             * >  This parameter is returned if the Created parameter is set to false.
              */
             public Builder authorizationURL(String authorizationURL) {
                 this.authorizationURL = authorizationURL;
@@ -320,7 +336,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * The RAM roles of the service.
              */
             public Builder roles(java.util.List < Roles> roles) {
                 this.roles = roles;
@@ -433,7 +449,11 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * AutoEnableService.
+             * Indicates whether automatic activation for the service is defined in the template. Valid values:
+             * <p>
+             * 
+             * *   true: Automatic activation for the service is defined in the template.
+             * *   false: Manual activation for the service is defined in the template.
              */
             public Builder autoEnableService(Boolean autoEnableService) {
                 this.autoEnableService = autoEnableService;
@@ -441,7 +461,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * DependentServiceNames.
+             * The names of Alibaba Cloud services on which the service depends.
              */
             public Builder dependentServiceNames(java.util.List < String > dependentServiceNames) {
                 this.dependentServiceNames = dependentServiceNames;
@@ -449,7 +469,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableURL.
+             * The URL that points to the activation page of the service.
+             * <p>
+             * 
+             * >  This parameter is returned if the Status parameter is set to Disabled.
              */
             public Builder enableURL(String enableURL) {
                 this.enableURL = enableURL;
@@ -457,7 +480,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleProvision.
+             * The information about the RAM role of the service. If this parameter is empty, no RAM role is associated with the service.
              */
             public Builder roleProvision(RoleProvision roleProvision) {
                 this.roleProvision = roleProvision;
@@ -465,7 +488,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -473,7 +496,12 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The activation status of the service. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The service is activated.
+             * *   Disabled: The service is not activated.
+             * *   Unknown: The activation status of the service is unknown.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -481,7 +509,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * The reason why the service is in the Disabled or Unknown state.
+             * <p>
+             * 
+             * >  This parameter is returned if the Status parameter is set to Disabled or Unknown.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

@@ -55,7 +55,10 @@ public class GetResourceTypeTemplateRequest extends Request {
         } 
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -50,7 +50,7 @@ public class CreateTemplateScratchResponseBody extends TeaModel {
         private String templateScratchId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateTemplateScratchResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateScratchId.
+         * The ID of the scenario.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.templateScratchId = templateScratchId;

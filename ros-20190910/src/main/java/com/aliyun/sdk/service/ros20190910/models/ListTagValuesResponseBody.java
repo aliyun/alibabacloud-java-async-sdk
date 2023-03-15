@@ -62,7 +62,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * NextToken.
+         * The token that is used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * Values.
+         * The tag values.
          */
         public Builder values(java.util.List < String > values) {
             this.values = values;

@@ -122,7 +122,13 @@ public class SetTemplatePermissionRequest extends Request {
         }
 
         /**
-         * ShareOption.
+         * The sharing option.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ShareToAccounts: shares the template with other Alibaba Cloud accounts.
+         * *   CancelSharing: unshares the template.
          */
         public Builder shareOption(String shareOption) {
             this.putQueryParameter("ShareOption", shareOption);
@@ -131,7 +137,7 @@ public class SetTemplatePermissionRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -140,7 +146,10 @@ public class SetTemplatePermissionRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version of the template that you want to share. This parameter takes effect when the ShareOption parameter is set to ShareToAccounts and the VersionOption parameter is set to Specified.
+         * <p>
+         * 
+         * Valid values: v1 to v100.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -149,7 +158,15 @@ public class SetTemplatePermissionRequest extends Request {
         }
 
         /**
-         * VersionOption.
+         * The version option for template sharing. This parameter takes effect when the ShareOption parameter is set to ShareToAccounts.
+         * <p>
+         * 
+         * Default value: AllVersions. Valid values:
+         * 
+         * *   AllVersions: shares all versions of the template.
+         * *   Latest: shares only the latest version of the template. If the shared template is updated, the latest version of the template is shared with the destination account.
+         * *   Current: shares only the current version of the template. The current version of the template is shared with the destination account even if the template is updated.
+         * *   Specified: shares only one specific version of the template.
          */
         public Builder versionOption(String versionOption) {
             this.putQueryParameter("VersionOption", versionOption);

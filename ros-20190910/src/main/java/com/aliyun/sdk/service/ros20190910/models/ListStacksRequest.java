@@ -195,7 +195,12 @@ public class ListStacksRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +209,12 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +223,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * ParentStackId.
+         * The ID of the parent stack.
          */
         public Builder parentStackId(String parentStackId) {
             this.putQueryParameter("ParentStackId", parentStackId);
@@ -222,7 +232,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +241,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -240,7 +253,14 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * ShowNestedStack.
+         * Specifies whether to return nested stacks. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * 
+         * *   false
+         * 
+         * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
          */
         public Builder showNestedStack(Boolean showNestedStack) {
             this.putQueryParameter("ShowNestedStack", showNestedStack);
@@ -249,7 +269,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack. If you want to query the basic information about the stack, you can use this parameter and do not need to call the GetStack operation.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -339,7 +359,10 @@ public class ListStacksRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the stack.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -347,7 +370,10 @@ public class ListStacksRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the stack.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

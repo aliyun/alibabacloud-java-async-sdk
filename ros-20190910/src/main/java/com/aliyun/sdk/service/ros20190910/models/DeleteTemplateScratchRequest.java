@@ -70,7 +70,10 @@ public class DeleteTemplateScratchRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region in which the scenario is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +82,7 @@ public class DeleteTemplateScratchRequest extends Request {
         }
 
         /**
-         * TemplateScratchId.
+         * The ID of the scenario.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);

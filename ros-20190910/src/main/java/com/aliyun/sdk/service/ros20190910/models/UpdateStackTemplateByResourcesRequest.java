@@ -126,7 +126,12 @@ public class UpdateStackTemplateByResourcesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
+         * <p>
+         * 
+         * The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * For more information, see [How to ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -135,7 +140,13 @@ public class UpdateStackTemplateByResourcesRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only preview the corrected template in this request. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true: returns the content of the corrected template and does not correct the template. After Resource Orchestration Service (ROS) compares the corrected template with the original template, ROS determines whether to execute the correction.
+         * *   false: corrects the template to eliminate drift.
+         * 
+         * >  We recommend that you set the DryRun parameter to true to preview the corrected template. If the template content meets expectations, set the DryRun parameter to false to execute the correction.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -153,7 +164,7 @@ public class UpdateStackTemplateByResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +173,7 @@ public class UpdateStackTemplateByResourcesRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -171,7 +182,11 @@ public class UpdateStackTemplateByResourcesRequest extends Request {
         }
 
         /**
-         * TemplateFormat.
+         * The format of the returned template. Default value: JSON. Valid values:
+         * <p>
+         * 
+         * *   JSON
+         * *   YAML
          */
         public Builder templateFormat(String templateFormat) {
             this.putQueryParameter("TemplateFormat", templateFormat);

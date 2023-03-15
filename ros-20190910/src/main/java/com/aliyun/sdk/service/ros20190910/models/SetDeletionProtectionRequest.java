@@ -85,7 +85,13 @@ public class SetDeletionProtectionRequest extends Request {
         } 
 
         /**
-         * DeletionProtection.
+         * Indicates whether stack deletion protection is enabled. Valid values:
+         * <p>
+         * 
+         * *   Enabled: enables the stack deletion protection.
+         * *   Disabled (default): Resource stack deletion protection is Disabled. You can use the console or API(DeleteStack) to release the stack resources.
+         * 
+         * >  The deletion of nested stacks is the same as the root stack.
          */
         public Builder deletionProtection(String deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -94,7 +100,7 @@ public class SetDeletionProtectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +109,10 @@ public class SetDeletionProtectionRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
+         * <p>
+         * 
+         * The delete protection attribute of a nested stack is determined by the root stack and remains unchanged from the root stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

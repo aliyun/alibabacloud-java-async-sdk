@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetTemplateParameterConstraintsRequest} extends {@link RequestModel}
+ * {@link GetTemplateRecommendParametersRequest} extends {@link RequestModel}
  *
- * <p>GetTemplateParameterConstraintsRequest</p>
+ * <p>GetTemplateRecommendParametersRequest</p>
  */
-public class GetTemplateParameterConstraintsRequest extends Request {
+public class GetTemplateRecommendParametersRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -21,21 +21,9 @@ public class GetTemplateParameterConstraintsRequest extends Request {
     private java.util.List < Parameters> parameters;
 
     @Query
-    @NameInMap("ParametersKeyFilter")
-    private java.util.List < String > parametersKeyFilter;
-
-    @Query
-    @NameInMap("ParametersOrder")
-    private java.util.List < String > parametersOrder;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
-
-    @Query
-    @NameInMap("StackId")
-    private String stackId;
 
     @Query
     @NameInMap("TemplateBody")
@@ -53,14 +41,11 @@ public class GetTemplateParameterConstraintsRequest extends Request {
     @NameInMap("TemplateVersion")
     private String templateVersion;
 
-    private GetTemplateParameterConstraintsRequest(Builder builder) {
+    private GetTemplateRecommendParametersRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.parameters = builder.parameters;
-        this.parametersKeyFilter = builder.parametersKeyFilter;
-        this.parametersOrder = builder.parametersOrder;
         this.regionId = builder.regionId;
-        this.stackId = builder.stackId;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateURL = builder.templateURL;
@@ -71,7 +56,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         return new Builder();
     }
 
-    public static GetTemplateParameterConstraintsRequest create() {
+    public static GetTemplateRecommendParametersRequest create() {
         return builder().build();
     }
 
@@ -95,31 +80,10 @@ public class GetTemplateParameterConstraintsRequest extends Request {
     }
 
     /**
-     * @return parametersKeyFilter
-     */
-    public java.util.List < String > getParametersKeyFilter() {
-        return this.parametersKeyFilter;
-    }
-
-    /**
-     * @return parametersOrder
-     */
-    public java.util.List < String > getParametersOrder() {
-        return this.parametersOrder;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return stackId
-     */
-    public String getStackId() {
-        return this.stackId;
     }
 
     /**
@@ -150,13 +114,10 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         return this.templateVersion;
     }
 
-    public static final class Builder extends Request.Builder<GetTemplateParameterConstraintsRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetTemplateRecommendParametersRequest, Builder> {
         private String clientToken; 
         private java.util.List < Parameters> parameters; 
-        private java.util.List < String > parametersKeyFilter; 
-        private java.util.List < String > parametersOrder; 
         private String regionId; 
-        private String stackId; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -166,14 +127,11 @@ public class GetTemplateParameterConstraintsRequest extends Request {
             super();
         } 
 
-        private Builder(GetTemplateParameterConstraintsRequest request) {
+        private Builder(GetTemplateRecommendParametersRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.parameters = request.parameters;
-            this.parametersKeyFilter = request.parametersKeyFilter;
-            this.parametersOrder = request.parametersOrder;
             this.regionId = request.regionId;
-            this.stackId = request.stackId;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateURL = request.templateURL;
@@ -181,12 +139,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-         * 
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,33 +157,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The parameters whose values you want to query.
-         */
-        public Builder parametersKeyFilter(java.util.List < String > parametersKeyFilter) {
-            String parametersKeyFilterShrink = shrink(parametersKeyFilter, "ParametersKeyFilter", "json");
-            this.putQueryParameter("ParametersKeyFilter", parametersKeyFilterShrink);
-            this.parametersKeyFilter = parametersKeyFilter;
-            return this;
-        }
-
-        /**
-         * The order in which associated parameters are arranged.
-         * <p>
-         * 
-         * >  By default, the order of the associated parameters specified in the `Metadata` section of the template is used.
-         */
-        public Builder parametersOrder(java.util.List < String > parametersOrder) {
-            String parametersOrderShrink = shrink(parametersOrder, "ParametersOrder", "json");
-            this.putQueryParameter("ParametersOrder", parametersOrderShrink);
-            this.parametersOrder = parametersOrder;
-            return this;
-        }
-
-        /**
-         * The region ID of the template.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,21 +166,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * StackId.
-         */
-        public Builder stackId(String stackId) {
-            this.putQueryParameter("StackId", stackId);
-            this.stackId = stackId;
-            return this;
-        }
-
-        /**
-         * The structure that contains the template body.
-         * <p>
-         * 
-         * The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -262,10 +175,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
-         * <p>
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -274,10 +184,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-         * <p>
-         * 
-         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * TemplateURL.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -286,10 +193,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * The version of the template. If you do not specify this parameter, the latest version is used.
-         * <p>
-         * 
-         * >  This parameter takes effect only if the TemplateId parameter is specified.
+         * TemplateVersion.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -298,22 +202,24 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         @Override
-        public GetTemplateParameterConstraintsRequest build() {
-            return new GetTemplateParameterConstraintsRequest(this);
+        public GetTemplateRecommendParametersRequest build() {
+            return new GetTemplateRecommendParametersRequest(this);
         } 
 
     } 
 
     public static class Parameters extends TeaModel {
+        @NameInMap("ParameterCandidateValues")
+        private java.util.List < String > parameterCandidateValues;
+
         @NameInMap("ParameterKey")
-        @Validation(required = true)
         private String parameterKey;
 
         @NameInMap("ParameterValue")
-        @Validation(required = true)
         private String parameterValue;
 
         private Parameters(Builder builder) {
+            this.parameterCandidateValues = builder.parameterCandidateValues;
             this.parameterKey = builder.parameterKey;
             this.parameterValue = builder.parameterValue;
         }
@@ -324,6 +230,13 @@ public class GetTemplateParameterConstraintsRequest extends Request {
 
         public static Parameters create() {
             return builder().build();
+        }
+
+        /**
+         * @return parameterCandidateValues
+         */
+        public java.util.List < String > getParameterCandidateValues() {
+            return this.parameterCandidateValues;
         }
 
         /**
@@ -341,14 +254,20 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < String > parameterCandidateValues; 
             private String parameterKey; 
             private String parameterValue; 
 
             /**
-             * The name of parameter N in the template.
-             * <p>
-             * 
-             * >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.
+             * ParameterCandidateValues.
+             */
+            public Builder parameterCandidateValues(java.util.List < String > parameterCandidateValues) {
+                this.parameterCandidateValues = parameterCandidateValues;
+                return this;
+            }
+
+            /**
+             * ParameterKey.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -356,10 +275,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
             }
 
             /**
-             * The value of parameter N in the template.
-             * <p>
-             * 
-             * >  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

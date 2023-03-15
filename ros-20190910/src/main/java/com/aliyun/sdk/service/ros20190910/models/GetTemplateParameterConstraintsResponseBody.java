@@ -50,7 +50,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ParameterConstraints.
+         * The constraints of the parameters.
          */
         public Builder parameterConstraints(java.util.List < ParameterConstraints> parameterConstraints) {
             this.parameterConstraints = parameterConstraints;
@@ -58,7 +58,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -348,7 +348,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AllowedValues.
+             * The values of the parameter.
              */
             public Builder allowedValues(java.util.List < String > allowedValues) {
                 this.allowedValues = allowedValues;
@@ -356,7 +356,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * AssociationParameterNames.
+             * The names of the associated parameters.
              */
             public Builder associationParameterNames(java.util.List < String > associationParameterNames) {
                 this.associationParameterNames = associationParameterNames;
@@ -364,7 +364,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Behavior.
+             * The behavior of the parameter. Valid values:
+             * <p>
+             * 
+             * *   NoLimit: No limit is imposed on the value of this parameter.
+             * *   NotSupport: The value of this parameter cannot be queried.
+             * *   QueryError: This parameter failed to be queried.
+             * 
+             * >  If the AllowedValues parameter is not returned, the Behavior and BehaviorReason parameters are returned.
              */
             public Builder behavior(String behavior) {
                 this.behavior = behavior;
@@ -372,7 +379,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * BehaviorReason.
+             * The reason why the behavior of the parameter is returned.
              */
             public Builder behaviorReason(String behaviorReason) {
                 this.behaviorReason = behaviorReason;
@@ -380,7 +387,10 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * IllegalValueByParameterConstraints.
+             * The values that do not conform to the parameter constraints.
+             * <p>
+             * 
+             * >  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.
              */
             public Builder illegalValueByParameterConstraints(java.util.List < ? > illegalValueByParameterConstraints) {
                 this.illegalValueByParameterConstraints = illegalValueByParameterConstraints;
@@ -388,7 +398,10 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * IllegalValueByRules.
+             * The values that do not match the rules in the template.
+             * <p>
+             * 
+             * >  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.
              */
             public Builder illegalValueByRules(java.util.List < ? > illegalValueByRules) {
                 this.illegalValueByRules = illegalValueByRules;
@@ -404,7 +417,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterKey.
+             * The name of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -420,7 +433,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the parameter.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -107,7 +107,11 @@ public class CancelStackOperationRequest extends Request {
         }
 
         /**
-         * CancelType.
+         * The method that you want to use to cancel the operation. Default value: Safe. Valid values:
+         * <p>
+         * 
+         * *   Quick: cancels the operation on the stack at the earliest opportunity. In this case, ROS stops scheduling new resources and stops running resources at the earliest opportunity. If you use this method, the resource status may become invalid and subsequent stack operations may be affected.
+         * *   Safe: cancels the operation on the stack in a secure manner. In this case, ROS stops scheduling new resources and waits for running resources to be stopped.
          */
         public Builder cancelType(String cancelType) {
             this.putQueryParameter("CancelType", cancelType);
@@ -116,7 +120,10 @@ public class CancelStackOperationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +132,7 @@ public class CancelStackOperationRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

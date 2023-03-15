@@ -127,7 +127,12 @@ public class GetStackResourceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
+         * <p>
+         * 
+         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * For more information, see [Ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,7 +141,7 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * LogicalResourceId.
+         * The logical ID of the resource defined in the template.
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
@@ -145,7 +150,7 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +168,11 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * ShowResourceAttributes.
+         * Specifies whether to query the resource properties. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder showResourceAttributes(Boolean showResourceAttributes) {
             this.putQueryParameter("ShowResourceAttributes", showResourceAttributes);
@@ -172,7 +181,7 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

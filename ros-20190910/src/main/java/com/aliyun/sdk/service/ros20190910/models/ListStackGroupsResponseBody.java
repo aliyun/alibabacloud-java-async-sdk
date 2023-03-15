@@ -86,7 +86,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * StackGroups.
+         * The list of stack groups.
          */
         public Builder stackGroups(java.util.List < StackGroups> stackGroups) {
             this.stackGroups = stackGroups;
@@ -118,7 +118,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of stack groups.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,13 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private Boolean retainStacksOnAccountRemoval; 
 
             /**
-             * Enabled.
+             * Indicates whether automatic deployment is enabled.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stacks in the stack group from the specified region of the member.
+             * *   false: Automatic deployment is disabled. After you disable automatic deployment, the stacks remain unchanged when you change the member in the folder.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -178,7 +184,15 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RetainStacksOnAccountRemoval.
+             * Indicates whether the stacks within a member are retained when you delete the member from the folder.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true
+             * *   false
+             * 
+             * >  This parameter is returned only if the Enabled parameter is set to true.
              */
             public Builder retainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
                 this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
@@ -231,7 +245,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag that is added to the stack group.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -239,7 +253,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag that is added to the stack group.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -388,7 +402,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * AutoDeployment.
+             * The information about automatic deployment settings.
              */
             public Builder autoDeployment(AutoDeployment autoDeployment) {
                 this.autoDeployment = autoDeployment;
@@ -396,7 +410,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the stack group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -404,7 +418,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DriftDetectionTime.
+             * The time when the last successful drift detection was performed on the stack group.
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -412,7 +426,15 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionModel.
+             * The permission model.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SELF_MANAGED: self-managed permission model
+             * *   SERVICE_MANAGED: service-managed permission model
+             * 
+             * >  For more information about the permission models of stack groups, see [Overview](~~154578~~).
              */
             public Builder permissionModel(String permissionModel) {
                 this.permissionModel = permissionModel;
@@ -420,7 +442,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -428,7 +450,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StackGroupDriftStatus.
+             * The state of the stack group on which the last successful drift detection was performed.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   DRIFTED: The stack group has drifted.
+             * *   NOT_CHECKED: No drift detection is performed on the stack group.
+             * *   IN_SYNC: No drifts are detected on the stack group.
              */
             public Builder stackGroupDriftStatus(String stackGroupDriftStatus) {
                 this.stackGroupDriftStatus = stackGroupDriftStatus;
@@ -436,7 +465,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StackGroupId.
+             * The ID of the stack group.
              */
             public Builder stackGroupId(String stackGroupId) {
                 this.stackGroupId = stackGroupId;
@@ -444,7 +473,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StackGroupName.
+             * The name of the stack group.
              */
             public Builder stackGroupName(String stackGroupName) {
                 this.stackGroupName = stackGroupName;
@@ -452,7 +481,13 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the stack group.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ACTIVE
+             * *   DELETED
              */
             public Builder status(String status) {
                 this.status = status;
@@ -460,7 +495,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are added to the stack group.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

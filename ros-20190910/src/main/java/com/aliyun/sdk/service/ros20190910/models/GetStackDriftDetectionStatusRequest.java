@@ -70,7 +70,10 @@ public class GetStackDriftDetectionStatusRequest extends Request {
         } 
 
         /**
-         * DriftDetectionId.
+         * The ID of the drift detection operation.
+         * <p>
+         * 
+         * You can call the [ListStackResourceDrifts](~~155098~~) operation to obtain the ID of the drift detection operation.
          */
         public Builder driftDetectionId(String driftDetectionId) {
             this.putQueryParameter("DriftDetectionId", driftDetectionId);
@@ -79,7 +82,10 @@ public class GetStackDriftDetectionStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack to be detected for drift.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -50,7 +50,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private java.util.List < String > resourceTypes; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceTypes.
+         * The array of resource types.
          */
         public Builder resourceTypes(java.util.List < String > resourceTypes) {
             this.resourceTypes = resourceTypes;

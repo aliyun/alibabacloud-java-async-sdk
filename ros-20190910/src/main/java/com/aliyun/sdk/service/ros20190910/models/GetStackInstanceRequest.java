@@ -100,7 +100,7 @@ public class GetStackInstanceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region to which the stack group belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,10 @@ public class GetStackInstanceRequest extends Request {
         }
 
         /**
-         * StackGroupName.
+         * The name of the stack group. The name must be unique in a region.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -118,7 +121,13 @@ public class GetStackInstanceRequest extends Request {
         }
 
         /**
-         * StackInstanceAccountId.
+         * The ID of the account to which the stack belongs.
+         * <p>
+         * 
+         * *   If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.
+         * *   If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.
+         * 
+         * >  For more information about the account, see [Overview](~~154578~~).
          */
         public Builder stackInstanceAccountId(String stackInstanceAccountId) {
             this.putQueryParameter("StackInstanceAccountId", stackInstanceAccountId);
@@ -127,7 +136,7 @@ public class GetStackInstanceRequest extends Request {
         }
 
         /**
-         * StackInstanceRegionId.
+         * The ID of the region to which the stack belongs.
          */
         public Builder stackInstanceRegionId(String stackInstanceRegionId) {
             this.putQueryParameter("StackInstanceRegionId", stackInstanceRegionId);

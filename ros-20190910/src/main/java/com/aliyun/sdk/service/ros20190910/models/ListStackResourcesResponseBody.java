@@ -50,7 +50,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * Details about resources.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -218,7 +218,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +226,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DriftDetectionTime.
+             * The most recent point in time when a successful drift detection operation was performed.
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -234,7 +234,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalResourceId.
+             * The logical ID of the resource. The logical ID is the resource name that is defined in the template.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -242,7 +242,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalResourceId.
+             * The physical ID of the resource.
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -250,7 +250,13 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDriftStatus.
+             * The drift status of the resource in the most recent successful drift detection. Valid values:
+             * <p>
+             * 
+             * *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.
+             * *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
+             * *   NOT_CHECKED: ROS did not check whether the actual configuration of the resource differs from its expected template configuration.
+             * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
              */
             public Builder resourceDriftStatus(String resourceDriftStatus) {
                 this.resourceDriftStatus = resourceDriftStatus;
@@ -258,7 +264,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -266,7 +272,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * StackId.
+             * The ID of the stack.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -274,7 +280,10 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * StackName.
+             * The name of the stack.
+             * <p>
+             * 
+             * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -282,7 +291,25 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the resource. Valid values:
+             * <p>
+             * 
+             * *   INIT_COMPLETE: The resource is in the pending creation state.
+             * *   CREATE_COMPLETE: The resource is created.
+             * *   CREATE_FAILED: The resource fails to be created.
+             * *   CREATE_IN_PROGRESS: The resource is being created.
+             * *   UPDATE_IN_PROGRESS: The resource is being updated.
+             * *   UPDATE_FAILED: The resource fails to be updated.
+             * *   UPDATE_COMPLETE: The resource is updated.
+             * *   DELETE_IN_PROGRESS: The resource is being deleted.
+             * *   DELETE_FAILED: The resource fails to be deleted.
+             * *   DELETE_COMPLETE: The resource is deleted.
+             * *   CHECK_IN_PROGRESS: The resource is being validated.
+             * *   CHECK_FAILED: The resource fails to be validated.
+             * *   CHECK_COMPLETE: The resource is validated.
+             * *   IMPORT_IN_PROGRESS: The resource is being imported.
+             * *   IMPORT_FAILED: The resource fails to be imported.
+             * *   IMPORT_COMPLETE: The resource is imported.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +317,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * The reason why the resource is in a specific state.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -298,7 +325,7 @@ public class ListStackResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the resource was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

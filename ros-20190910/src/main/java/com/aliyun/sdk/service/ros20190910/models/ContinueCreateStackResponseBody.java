@@ -62,7 +62,7 @@ public class ContinueCreateStackResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * DryRunResult.
+         * The validation result.
          */
         public Builder dryRunResult(DryRunResult dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -70,7 +70,7 @@ public class ContinueCreateStackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ContinueCreateStackResponseBody extends TeaModel {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -142,7 +142,10 @@ public class ContinueCreateStackResponseBody extends TeaModel {
             private java.util.List < String > parametersNotAllowedToBeModified; 
 
             /**
-             * ParametersAllowedToBeModified.
+             * The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.
+             * <p>
+             * 
+             * >  This parameter is returned only if the DryRun parameter is set to `true`. The value of the ParametersAllowedToBeModified parameter varies based on the values of the Mode, Template\*, RecreatingResources.N, and RecreatingOptions.N parameters.
              */
             public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
                 this.parametersAllowedToBeModified = parametersAllowedToBeModified;
@@ -150,7 +153,12 @@ public class ContinueCreateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersConditionallyAllowedToBeModified.
+             * The parameters that can be modified under specific conditions.
+             * <p>
+             * 
+             * The new values of the parameters determine whether the operation that is performed to modify the parameters causes a validation error.
+             * 
+             * >  This parameter is returned only if the DryRun parameter is set to `true`. The value of the ParametersConditionallyAllowedToBeModified parameter varies based on the values of the Mode, Template\*, RecreatingResources.N, and RecreatingOptions.N parameters.
              */
             public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
                 this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
@@ -158,7 +166,10 @@ public class ContinueCreateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersNotAllowedToBeModified.
+             * The parameters that cannot be modified. The operation that is performed to modify the parameters causes a validation error.
+             * <p>
+             * 
+             * >  This parameter is returned only if the DryRun parameter is set to `true`. The value of the ParametersNotAllowedToBeModified parameter varies based on the values of the Mode, Template\*, RecreatingResources.N, and RecreatingOptions.N parameters.
              */
             public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
                 this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;

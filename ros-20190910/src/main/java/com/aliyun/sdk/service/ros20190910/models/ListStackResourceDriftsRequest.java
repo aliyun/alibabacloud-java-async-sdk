@@ -112,7 +112,12 @@ public class ListStackResourceDriftsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of results to be returned with a single call when the NextToken parameter is used for the query.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 50.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +126,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set this parameter to the NextToken value returned in the last API call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +135,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +153,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

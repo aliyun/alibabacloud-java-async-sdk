@@ -125,7 +125,11 @@ public class ListStackGroupsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * *   Pages start from page 1.
+         * *   Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,7 +138,11 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Valid values: 1 to 50.
+         * *   Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,7 +151,7 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,7 +160,10 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.
+         * <p>
+         * 
+         * >  If you want to obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View basic information about a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -161,7 +172,13 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the stack group. If you do not specify this parameter, the stack groups in all states in the specified region are queried.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ACTIVE
+         * *   DELETED
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -225,7 +242,10 @@ public class ListStackGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the stack group.
+             * <p>
+             * 
+             * >  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +253,7 @@ public class ListStackGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the stack group.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -70,7 +70,7 @@ public class DeleteStackGroupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region to which the stack group belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +79,10 @@ public class DeleteStackGroupRequest extends Request {
         }
 
         /**
-         * StackGroupName.
+         * The name of the stack group. The name must be unique in a region.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or a letter.
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);

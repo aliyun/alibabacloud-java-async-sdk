@@ -139,7 +139,12 @@ public class ListTemplateScratchesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +153,12 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,7 +167,10 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the scenario is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -166,7 +179,12 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the scenario. Valid values:
+         * <p>
+         * 
+         * *   GENERATE_IN_PROGRESS: The scenario is being created.
+         * *   GENERATE_COMPLETE: The scenario is created.
+         * *   GENERATE_FAILED: The scenario fails to be created.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -184,7 +202,7 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * TemplateScratchId.
+         * The ID of the scenario.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -193,7 +211,11 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * TemplateScratchType.
+         * The type of the scenario. Valid values:
+         * <p>
+         * 
+         * *   ResourceImport: resource management
+         * *   ArchitectureReplication: resource replication
          */
         public Builder templateScratchType(String templateScratchType) {
             this.putQueryParameter("TemplateScratchType", templateScratchType);
@@ -248,7 +270,10 @@ public class ListTemplateScratchesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the scenario.
+             * <p>
+             * 
+             * >  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -256,7 +281,7 @@ public class ListTemplateScratchesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the scenario.
              */
             public Builder value(String value) {
                 this.value = value;

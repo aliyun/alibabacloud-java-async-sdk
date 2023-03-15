@@ -62,7 +62,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         private String templateBody; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         }
 
         /**
-         * ResourcesToImport.
+         * The resources that you want to import to a stack in the scenario of the Resource Management type.
+         * <p>
+         * 
+         * >  This parameter is returned only for scenarios of the Resource Management type.
          */
         public Builder resourcesToImport(java.util.List < ResourcesToImport> resourcesToImport) {
             this.resourcesToImport = resourcesToImport;
@@ -78,7 +81,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateBody.
+         * The content of the template that is created for the scenario.
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;
@@ -142,7 +145,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * LogicalResourceId.
+             * The ID of the logical resource.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -150,7 +153,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceIdentifier.
+             * The key-value mappings from string to string. The parameter value is a JSON string that identifies the resource that is imported.
+             * <p>
+             * 
+             * A key is an identifier for a resource, and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and `vpc-bp1m6fww66xbntjyc****"` is a value that is assigned to VpcId.
              */
             public Builder resourceIdentifier(java.util.Map < String, ? > resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;
@@ -158,7 +164,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -70,7 +70,10 @@ public class StopStackGroupOperationRequest extends Request {
         } 
 
         /**
-         * OperationId.
+         * The ID of the operation.
+         * <p>
+         * 
+         * You can call the [ListStackGroupOperations](~~151342~~) operation to obtain the operation ID.
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);
@@ -79,7 +82,7 @@ public class StopStackGroupOperationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -167,7 +167,12 @@ public class GetTemplateEstimateCostRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
+         * <p>
+         * 
+         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * For more information, see [Ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +190,7 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +199,10 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateBody.
+         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -203,7 +211,10 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template. This parameter applies to shared and private templates.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -212,7 +223,12 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateScratchId.
+         * The ID of the scenario.
+         * <p>
+         * 
+         * For more information about how to query the IDs of scenarios, see [ListTemplateScratches](~~363050~~).
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -221,7 +237,10 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateScratchRegionId.
+         * The region ID of the scenario. The default value is the same as the value of the RegionId parameter.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder templateScratchRegionId(String templateScratchRegionId) {
             this.putQueryParameter("TemplateScratchRegionId", templateScratchRegionId);
@@ -230,7 +249,10 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateURL.
+         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -239,7 +261,7 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version of the template. This parameter takes effect only when the TemplateId parameter is specified.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -295,7 +317,17 @@ public class GetTemplateEstimateCostRequest extends Request {
             private String parameterValue; 
 
             /**
-             * ParameterKey.
+             * The name of parameter N. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template.
+             * <p>
+             * 
+             * Maximum value of N: 200.
+             * 
+             * Examples:
+             * 
+             * *   Parameters.1.ParameterKey: `Name`
+             * *   Parameters.2.ParameterKey: `Netmode`
+             * 
+             * >  The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -303,7 +335,17 @@ public class GetTemplateEstimateCostRequest extends Request {
             }
 
             /**
-             * ParameterValue.
+             * The value of parameter N.
+             * <p>
+             * 
+             * Maximum value of N: 200.
+             * 
+             * Examples:
+             * 
+             * *   Parameters.1.ParameterValue: `DemoEip`
+             * *   Parameters.2.ParameterValue: `public`
+             * 
+             * >  The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

@@ -138,7 +138,11 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * IncludeTags.
+         * Specifies whether to query the information about tags. Default value: Disabled. Valid values:
+         * <p>
+         * 
+         * *   Enabled
+         * *   Disabled
          */
         public Builder includeTags(String includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -147,7 +151,12 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +165,12 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +179,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -174,7 +191,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * ShareType.
+         * The sharing type of the template.
+         * <p>
+         * 
+         * Default value: Private. Valid values:
+         * 
+         * *   Private: The template belongs to the template owner.
+         * *   Shared: The template is shared with other users.
+         * *   Official: The template is the shared template of the official version.
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -192,7 +216,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template. This parameter takes effect only when the ShareType parameter is set to Private.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -246,7 +273,10 @@ public class ListTemplatesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N. This parameter takes effect only when the ShareType parameter is set to Private.
+             * <p>
+             * 
+             * You can specify up to 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +284,10 @@ public class ListTemplatesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag N. This parameter takes effect only when the ShareType parameter is set to Private.
+             * <p>
+             * 
+             * You can specify up to 20 tag values.
              */
             public Builder value(String value) {
                 this.value = value;

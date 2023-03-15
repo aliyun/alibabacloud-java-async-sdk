@@ -55,7 +55,7 @@ public class DeleteTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateId.
+         * The ID of the template. This parameter applies to only private templates.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

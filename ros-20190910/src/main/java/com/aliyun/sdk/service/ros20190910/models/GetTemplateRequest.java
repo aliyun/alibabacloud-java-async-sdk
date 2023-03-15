@@ -166,7 +166,10 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * ChangeSetId.
+         * The ID of the change set.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -175,7 +178,13 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * IncludePermission.
+         * Specifies whether to query the template sharing information. Default value: Disabled. Valid values:
+         * <p>
+         * 
+         * *   Enabled
+         * *   Disabled
+         * 
+         * >  Only the template owner can query the template sharing information.
          */
         public Builder includePermission(String includePermission) {
             this.putQueryParameter("IncludePermission", includePermission);
@@ -184,7 +193,13 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * IncludeTags.
+         * Specifies whether to query the information about tags. Default value: Disabled. Valid values:
+         * <p>
+         * 
+         * *   Enabled
+         * *   Disabled
+         * 
+         * >  This parameter only takes effect when you specify the TemplateId parameter.
          */
         public Builder includeTags(String includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -193,7 +208,7 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the stack or stack group defined in the template belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,7 +217,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * StackGroupName.
+         * The name of the stack group.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -211,7 +229,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -220,7 +241,12 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template.
+         * <p>
+         * 
+         * This parameter applies to shared and private templates. If the template is a shared template, the value of the TemplateId parameter is the same as the value of the TemplateARN parameter. You can use the template ID to query a shared template.
+         * 
+         * >  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -229,7 +255,13 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateStage.
+         * The stage of the template. This parameter only takes effect when you specify the StackId, ChangeSetId, or StackGroupName parameter.
+         * <p>
+         * 
+         * Default value: Processed. Valid values:
+         * 
+         * *   Processed: returns the processed template that contains transforms.
+         * *   Original: returns the original template that you specify.
          */
         public Builder templateStage(String templateStage) {
             this.putQueryParameter("TemplateStage", templateStage);
@@ -238,7 +270,12 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version of the template. This parameter only takes effect when you specify the TemplateId parameter.
+         * <p>
+         * 
+         * If the template is a shared template, you can specify this parameter only if you set the VersionOption parameter to AllVersions.
+         * 
+         * Valid values: v1 to v100.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

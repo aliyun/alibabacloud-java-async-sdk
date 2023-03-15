@@ -50,7 +50,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policy.
+         * The information about the policy.
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -58,7 +58,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
             private String resource; 
 
             /**
-             * Action.
+             * The operations that are performed on the specified resource.
              */
             public Builder action(java.util.List < String > action) {
                 this.action = action;
@@ -130,7 +130,11 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Effect.
+             * The effect of the statement. Valid values:
+             * <p>
+             * 
+             * *   Allow
+             * *   Deny
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -138,7 +142,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The object that the statement covers. An asterisk (\*) indicates all resources.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -191,7 +195,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Statement.
+             * The statements that are contained in the policy.
              */
             public Builder statement(java.util.List < Statement> statement) {
                 this.statement = statement;
@@ -199,7 +203,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number.
              */
             public Builder version(String version) {
                 this.version = version;

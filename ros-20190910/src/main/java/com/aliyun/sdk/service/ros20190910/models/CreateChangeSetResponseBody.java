@@ -62,7 +62,7 @@ public class CreateChangeSetResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * ChangeSetId.
+         * The ID of the change set.
          */
         public Builder changeSetId(String changeSetId) {
             this.changeSetId = changeSetId;
@@ -70,7 +70,7 @@ public class CreateChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;

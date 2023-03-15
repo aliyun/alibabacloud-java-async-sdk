@@ -86,7 +86,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * StackGroupOperationResults.
+         * The details of the results of the operation.
          */
         public Builder stackGroupOperationResults(java.util.List < StackGroupOperationResults> stackGroupOperationResults) {
             this.stackGroupOperationResults = stackGroupOperationResults;
@@ -118,7 +118,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of results.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,13 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * AccountId.
+             * The ID of the account to which the stack instance belongs.
+             * <p>
+             * 
+             * *   If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.
+             * *   If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.
+             * 
+             * >  For more information about the account, see [Overview](~~154578~~).
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -214,7 +220,10 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * RdFolderId.
+             * The folder ID of the resource directory.
+             * <p>
+             * 
+             * >  This parameter is returned only when the stack group is granted service-managed permissions.
              */
             public Builder rdFolderId(String rdFolderId) {
                 this.rdFolderId = rdFolderId;
@@ -222,7 +231,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the stack instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -230,7 +239,16 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the operation.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RUNNING: The operation is being performed.
+             * *   SUCCEEDED: The operation succeeded.
+             * *   FAILED: The operation failed.
+             * *   STOPPING: The operation is being stopped.
+             * *   STOPPED: The operation is stopped.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +256,10 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * The reason why the operation is in a specific state.
+             * <p>
+             * 
+             * >  This parameter is returned only when stack instances are in the OUTDATED state.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

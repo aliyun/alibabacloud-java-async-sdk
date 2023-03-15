@@ -55,7 +55,10 @@ public class GetResourceTypeRequest extends Request {
         } 
 
         /**
-         * ResourceType.
+         * The type of the resource.
+         * <p>
+         * 
+         * For more information about resource types supported by Resource Orchestration Service (ROS), see [List of resource types by service](~~127039~~).
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

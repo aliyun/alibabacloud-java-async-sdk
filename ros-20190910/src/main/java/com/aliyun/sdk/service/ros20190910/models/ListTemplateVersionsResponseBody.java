@@ -62,7 +62,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         private java.util.List < Versions> versions; 
 
         /**
-         * NextToken.
+         * The query token that is returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Versions.
+         * The list of versions.
          */
         public Builder versions(java.util.List < Versions> versions) {
             this.versions = versions;
@@ -178,7 +178,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the version was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -186,7 +186,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the version.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -194,7 +194,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the template. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -202,7 +202,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The template name that corresponds to the specified version.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -210,7 +210,12 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The version number.
+             * <p>
+             * 
+             * For a shared template, this parameter is returned only if the VersionOption parameter is set to AllVersions.
+             * 
+             * Valid values: v1 to v100.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -218,7 +223,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the version was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

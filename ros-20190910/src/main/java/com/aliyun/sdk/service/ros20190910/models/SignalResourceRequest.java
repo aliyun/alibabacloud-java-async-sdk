@@ -129,7 +129,12 @@ public class SignalResourceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
+         * <p>
+         * 
+         * The token can be up to 64 characters in length and can contain letters, digits, hyphens (-) and underscores (\_).
+         * 
+         * For more information, see [How to ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -138,7 +143,7 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * LogicalResourceId.
+         * The logical ID of the resource as defined in the template.
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
@@ -147,7 +152,7 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +161,7 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -165,7 +170,12 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the signal. Failure signals can cause stack creation or update to fail. If all signals are warnings, the stack cannot be created or updated. Valid values:
+         * <p>
+         * 
+         * *   SUCCESS
+         * *   FAILURE
+         * *   WARNING
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -174,7 +184,7 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * UniqueId.
+         * The unique ID of the signal. The ID must be 1 to 64 characters in length. If multiple signals are sent to a single resource, each signal must have a unique ID.
          */
         public Builder uniqueId(String uniqueId) {
             this.putQueryParameter("UniqueId", uniqueId);

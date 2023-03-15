@@ -70,7 +70,7 @@ public class DeleteChangeSetRequest extends Request {
         } 
 
         /**
-         * ChangeSetId.
+         * The ID of the change set.
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -79,7 +79,7 @@ public class DeleteChangeSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

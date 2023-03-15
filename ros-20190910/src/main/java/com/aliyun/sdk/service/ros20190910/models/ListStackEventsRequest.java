@@ -149,7 +149,12 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -158,7 +163,12 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -167,7 +177,7 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the stack resides. You can call the [DescribeRegions](~~131035~~) operation to query the most recent list of Alibaba Cloud regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -185,7 +195,7 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

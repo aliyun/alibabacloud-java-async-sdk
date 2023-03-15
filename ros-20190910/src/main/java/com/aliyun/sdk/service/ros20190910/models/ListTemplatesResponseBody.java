@@ -86,7 +86,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
+         * <p>
+         * 
+         * Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +105,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +113,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * The list of templates.
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -118,7 +121,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of templates.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +173,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +181,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -339,7 +342,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the template was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -347,7 +350,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -355,7 +358,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The ID of the Alibaba Cloud account to which the template belongs.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -363,7 +366,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -371,7 +374,13 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The sharing type of the template.
+             * <p>
+             * 
+             * Default value: Private. Valid values:
+             * 
+             * *   Private: The template belongs to the template owner.
+             * *   Shared: The template is shared with other users.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -379,7 +388,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the template.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -387,7 +396,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateARN.
+             * The Alibaba Cloud Resource Name (ARN) of the template.
              */
             public Builder templateARN(String templateARN) {
                 this.templateARN = templateARN;
@@ -395,7 +404,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -403,7 +412,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -411,7 +420,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The latest version of the template.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -419,7 +428,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the template was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -62,7 +62,7 @@ public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NewTemplateBody.
+         * The template content after correction.
          */
         public Builder newTemplateBody(String newTemplateBody) {
             this.newTemplateBody = newTemplateBody;
@@ -70,7 +70,7 @@ public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * OldTemplateBody.
+         * The template content before correction.
          */
         public Builder oldTemplateBody(String oldTemplateBody) {
             this.oldTemplateBody = oldTemplateBody;
@@ -78,7 +78,7 @@ public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

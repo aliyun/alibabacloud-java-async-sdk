@@ -125,7 +125,7 @@ public class CreateTemplateRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the template. The description can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,7 +134,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](~~94475~~)
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -152,7 +155,26 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateBody.
+         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
+         * <p>
+         * 
+         * >  You must specify the TemplateBody or TemplateURL parameter.
+         * 
+         * You can create a Terraform template based on your business requirements. The following sample code provides an example on how to create a Terraform template:
+         * 
+         * ```
+         * 
+         * {
+         *   "ROSTemplateFormatVersion": "2015-09-01",
+         *   "Transform": "Aliyun::Terraform-v1.0",
+         *   "Workspace": {
+         *     "main.tf": "variable  \"name\" {  default = \"auto_provisioning_group\"}"
+         *   },
+         *   "Outputs": {}
+         * }
+         * ```
+         * 
+         * For more information about Terraform templates, see [Structure of Terraform templates](~~184397~~).
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -161,7 +183,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -170,7 +195,14 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateURL.
+         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou.
+         * <p>
+         * 
+         * The template body must be 1 to 1,024 bytes in length.
+         * 
+         * If you do not specify the region of the OSS bucket, the value of the RegionId parameter is used.
+         * 
+         * >  You must specify the TemplateBody or TemplateURL parameter.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -225,7 +257,10 @@ public class CreateTemplateRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that you want to add to the template.
+             * <p>
+             * 
+             * >  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +268,7 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that you want to add to the template.
              */
             public Builder value(String value) {
                 this.value = value;

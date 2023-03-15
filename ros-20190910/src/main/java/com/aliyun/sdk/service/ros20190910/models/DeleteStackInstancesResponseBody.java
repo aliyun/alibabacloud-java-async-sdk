@@ -50,7 +50,7 @@ public class DeleteStackInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OperationId.
+         * The ID of the operation.
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -58,7 +58,7 @@ public class DeleteStackInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

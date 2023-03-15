@@ -62,7 +62,7 @@ public class UpdateStackResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * DryRunResult.
+         * The validation result. This parameter is returned only if the DryRun parameter is set to true.
          */
         public Builder dryRunResult(DryRunResult dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -70,7 +70,7 @@ public class UpdateStackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UpdateStackResponseBody extends TeaModel {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -190,7 +190,7 @@ public class UpdateStackResponseBody extends TeaModel {
             private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified; 
 
             /**
-             * ParametersAllowedToBeModified.
+             * The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.
              */
             public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
                 this.parametersAllowedToBeModified = parametersAllowedToBeModified;
@@ -198,7 +198,12 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersCauseInterruptionIfModified.
+             * The parameters whose changes cause service interruptions. If you change only values of the parameters in a stack template and use the template to update the stack, service interruptions are caused.
+             * <p>
+             * 
+             * > 
+             * *   This parameter is supported only for a small number of resource types.
+             * *   This parameter is valid only for changes that are made on ROS stacks.
              */
             public Builder parametersCauseInterruptionIfModified(java.util.List < String > parametersCauseInterruptionIfModified) {
                 this.parametersCauseInterruptionIfModified = parametersCauseInterruptionIfModified;
@@ -206,7 +211,7 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersConditionallyAllowedToBeModified.
+             * The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.
              */
             public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
                 this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
@@ -214,7 +219,12 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersConditionallyCauseInterruptionIfModified.
+             * The parameters whose changes cause service interruptions under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values and the update type determine whether service interruptions are caused.
+             * <p>
+             * 
+             * > 
+             * *   This parameter is supported only for a small number of resource types.
+             * *   This parameter is valid only for changes that are made on ROS stacks.
              */
             public Builder parametersConditionallyCauseInterruptionIfModified(java.util.List < String > parametersConditionallyCauseInterruptionIfModified) {
                 this.parametersConditionallyCauseInterruptionIfModified = parametersConditionallyCauseInterruptionIfModified;
@@ -222,7 +232,7 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersNotAllowedToBeModified.
+             * The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.
              */
             public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
                 this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;
@@ -230,7 +240,7 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersUncertainlyAllowedToBeModified.
+             * The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.
              */
             public Builder parametersUncertainlyAllowedToBeModified(java.util.List < String > parametersUncertainlyAllowedToBeModified) {
                 this.parametersUncertainlyAllowedToBeModified = parametersUncertainlyAllowedToBeModified;
@@ -238,7 +248,12 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersUncertainlyCauseInterruptionIfModified.
+             * The parameters whose changes cause service interruptions under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether service interruptions are caused.
+             * <p>
+             * 
+             * > 
+             * *   This parameter is supported only for a small number of resource types.
+             * *   This parameter is valid only for changes that are made on ROS stacks.
              */
             public Builder parametersUncertainlyCauseInterruptionIfModified(java.util.List < String > parametersUncertainlyCauseInterruptionIfModified) {
                 this.parametersUncertainlyCauseInterruptionIfModified = parametersUncertainlyCauseInterruptionIfModified;

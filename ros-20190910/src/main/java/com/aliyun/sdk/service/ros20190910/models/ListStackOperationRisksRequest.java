@@ -195,7 +195,12 @@ public class ListStackOperationRisksRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.
+         * <p>
+         * 
+         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * For more information, see [Ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,7 +209,13 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * The type of the operation of which you want to detect risks.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   DeleteStack: detects high risks that may arise in resources when you delete a stack.
+         * *   CreateStack: detect risks of creation failure that may arise when you create a stack. In this case, ROS allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -213,7 +224,13 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * RamRoleName.
+         * The name of the RAM role.
+         * <p>
+         * 
+         * *   If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.
+         * *   If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.
+         * 
+         * The name of the RAM role can be up to 64 bytes in length.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -222,7 +239,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +251,15 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * RetainAllResources.
+         * Specifies whether to retain all resources in the stack.
+         * <p>
+         * 
+         * Default value: false. Valid values:
+         * 
+         * *   true
+         * *   false
+         * 
+         * >  This parameter takes effect when the OperationType parameter is set to DeleteStack.
          */
         public Builder retainAllResources(Boolean retainAllResources) {
             this.putQueryParameter("RetainAllResources", retainAllResources);
@@ -249,7 +277,7 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -258,7 +286,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * TemplateBody.
+         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -267,7 +298,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template. This parameter applies to shared and private templates.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -276,7 +310,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * TemplateURL.
+         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -285,7 +322,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version of the template.
+         * <p>
+         * 
+         * >  This parameter takes effect only when the TemplateId parameter is specified.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

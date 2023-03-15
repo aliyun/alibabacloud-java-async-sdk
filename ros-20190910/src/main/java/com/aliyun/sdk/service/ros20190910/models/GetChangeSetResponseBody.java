@@ -242,7 +242,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         private Integer timeoutInMinutes; 
 
         /**
-         * ChangeSetId.
+         * The ID of the change set.
          */
         public Builder changeSetId(String changeSetId) {
             this.changeSetId = changeSetId;
@@ -250,7 +250,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * ChangeSetName.
+         * The name of the change set.
          */
         public Builder changeSetName(String changeSetName) {
             this.changeSetName = changeSetName;
@@ -258,7 +258,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * ChangeSetType.
+         * The type of the change set.
          */
         public Builder changeSetType(String changeSetType) {
             this.changeSetType = changeSetType;
@@ -266,7 +266,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * Changes.
+         * The changes of the change set.
+         * <p>
+         * 
+         * For more information, see [Data structure](~~155988~~).
          */
         public Builder changes(java.util.List < java.util.Map<String, ?>> changes) {
             this.changes = changes;
@@ -274,7 +277,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the resource was created. The time is displayed in UTC.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -282,7 +285,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the change set.
          */
         public Builder description(String description) {
             this.description = description;
@@ -290,7 +293,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * DisableRollback.
+         * Indicates whether rollback was performed.
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.disableRollback = disableRollback;
@@ -298,7 +301,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * ExecutionStatus.
+         * The execution status of the change set.
          */
         public Builder executionStatus(String executionStatus) {
             this.executionStatus = executionStatus;
@@ -306,7 +309,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * Log.
+         * The logs of the change set.
          */
         public Builder log(Log log) {
             this.log = log;
@@ -314,7 +317,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * The parameters of the stack.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -322,7 +325,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -330,7 +333,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -338,7 +341,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * StackId.
+         * The ID of the stack with which the change set is associated.
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -346,7 +349,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * StackName.
+         * The name of the stack with which the change set is associated.
          */
         public Builder stackName(String stackName) {
             this.stackName = stackName;
@@ -354,7 +357,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the change set.
          */
         public Builder status(String status) {
             this.status = status;
@@ -362,7 +365,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * StatusReason.
+         * The reason why the change set is in its current state.
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -370,7 +373,10 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateBody.
+         * The template body of the change set.
+         * <p>
+         * 
+         * >  This parameter takes effect only when the ShowTemplate parameter is set to true.
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;
@@ -378,7 +384,7 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
 
         /**
-         * TimeoutInMinutes.
+         * The timeout period that is specified for the stack creation or update request.
          */
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             this.timeoutInMinutes = timeoutInMinutes;
@@ -442,7 +448,15 @@ public class GetChangeSetResponseBody extends TeaModel {
             private String stream; 
 
             /**
-             * Command.
+             * The name of the Terraform command. Valid values:
+             * <p>
+             * 
+             * *   apply
+             * *   plan
+             * *   destroy
+             * *   version
+             * 
+             * For more information about the Terraform commands, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/commands).
              */
             public Builder command(String command) {
                 this.command = command;
@@ -450,7 +464,7 @@ public class GetChangeSetResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The content of the output stream.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -458,7 +472,11 @@ public class GetChangeSetResponseBody extends TeaModel {
             }
 
             /**
-             * Stream.
+             * The output stream. Valid values:
+             * <p>
+             * 
+             * *   stdout: the standard output stream.
+             * *   stderr: the standard error stream.
              */
             public Builder stream(String stream) {
                 this.stream = stream;
@@ -499,7 +517,10 @@ public class GetChangeSetResponseBody extends TeaModel {
             private java.util.List < TerraformLogs> terraformLogs; 
 
             /**
-             * TerraformLogs.
+             * The logs of the Terraform stack. This parameter is returned only for the change set of a Terraform stack.
+             * <p>
+             * 
+             * >  This parameter is not returned for change sets that are in the creating state. This parameter indicates the change set creation logs of the Terraform stack.
              */
             public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
@@ -552,7 +573,7 @@ public class GetChangeSetResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * ParameterKey.
+             * The name of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -560,7 +581,7 @@ public class GetChangeSetResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

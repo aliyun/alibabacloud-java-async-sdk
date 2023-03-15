@@ -62,7 +62,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         private java.util.List < RiskResources> riskResources; 
 
         /**
-         * MissingPolicyActions.
+         * The operations on which the permissions are not granted to the Alibaba Cloud account of the caller.
          */
         public Builder missingPolicyActions(java.util.List < String > missingPolicyActions) {
             this.missingPolicyActions = missingPolicyActions;
@@ -70,7 +70,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         }
 
         /**
-         * RiskResources.
+         * The resources that are at risk.
          */
         public Builder riskResources(java.util.List < RiskResources> riskResources) {
             this.riskResources = riskResources;
@@ -202,7 +202,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             private String riskType; 
 
             /**
-             * Code.
+             * The error code that is returned when the risk detection fails.
+             * <p>
+             * 
+             * >  This parameter is not returned if the risk detection is successful.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -210,7 +213,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalResourceId.
+             * The logical ID of the resource. The logical ID is the resource name that is defined in the template.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -218,7 +221,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message that is returned when the risk detection fails.
+             * <p>
+             * 
+             * >  This parameter is not returned if the risk detection is successful.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -226,7 +232,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalResourceId.
+             * The physical ID of the resource. The physical ID is the actual ID of the resource.
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -234,7 +240,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason for the risk.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -242,7 +248,10 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * The ID of the request when the risk detection fails.
+             * <p>
+             * 
+             * >  This parameter is not returned if the risk detection is successful.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -250,7 +259,7 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -258,7 +267,13 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             }
 
             /**
-             * RiskType.
+             * The type of the risk. Valid values:
+             * <p>
+             * 
+             * *   Referenced: The resource is referenced by other resources.
+             * *   MaybeReferenced: The resource may be referenced by other resources.
+             * *   AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.
+             * *   OperationIgnored: The operation does not take effect for the resource.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;

@@ -86,7 +86,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ChangeSets.
+         * The list of change sets.
          */
         public Builder changeSets(java.util.List < ChangeSets> changeSets) {
             this.changeSets = changeSets;
@@ -94,7 +94,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of queried entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -278,7 +278,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * ChangeSetId.
+             * The ID of the change set.
              */
             public Builder changeSetId(String changeSetId) {
                 this.changeSetId = changeSetId;
@@ -286,7 +286,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeSetName.
+             * The name of the change set.
              */
             public Builder changeSetName(String changeSetName) {
                 this.changeSetName = changeSetName;
@@ -294,7 +294,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeSetType.
+             * The type of the change set.
              */
             public Builder changeSetType(String changeSetType) {
                 this.changeSetType = changeSetType;
@@ -302,7 +302,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -310,7 +310,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the change set.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,7 +318,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionStatus.
+             * The execution status of the change set.
              */
             public Builder executionStatus(String executionStatus) {
                 this.executionStatus = executionStatus;
@@ -326,7 +326,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -334,7 +334,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * StackId.
+             * The ID of the stack with which the change set is associated.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -342,7 +342,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * StackName.
+             * The name of the stack with which the change set is associated.
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -350,7 +350,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the change set.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,7 +358,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * The reason why the change set is in its current status.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

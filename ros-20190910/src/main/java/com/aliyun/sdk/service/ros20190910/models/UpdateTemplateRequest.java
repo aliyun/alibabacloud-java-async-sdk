@@ -111,7 +111,7 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the template. It can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -120,7 +120,12 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateBody.
+         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.
+         * <p>
+         * 
+         * If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
+         * 
+         * You can specify only one of the TemplateBody and TemplateURL parameters.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -129,7 +134,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template. This parameter applies to shared and private templates.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -138,7 +143,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -147,7 +155,12 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateURL.
+         * The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 524,288 bytes in length, and the URL can be up to 1,024 bytes in length.
+         * <p>
+         * 
+         * >  If the region of the OSS bucket is not specified, the RegionId value is used.
+         * 
+         * You can specify only one of the TemplateBody and TemplateURL parameters.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);

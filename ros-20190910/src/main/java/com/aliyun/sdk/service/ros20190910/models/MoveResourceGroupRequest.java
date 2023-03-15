@@ -100,7 +100,10 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * NewResourceGroupId.
+         * The ID of the destination resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see [What is a resource group?](~~94475~~)
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -109,7 +112,10 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query region IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -118,7 +124,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -127,7 +133,12 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   stack
+         * *   stackgroup
+         * *   template
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

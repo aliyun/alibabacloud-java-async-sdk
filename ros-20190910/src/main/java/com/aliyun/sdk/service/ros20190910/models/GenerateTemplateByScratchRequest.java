@@ -84,7 +84,7 @@ public class GenerateTemplateByScratchRequest extends Request {
         } 
 
         /**
-         * ProvisionRegionId.
+         * The ID of the region to which the new node belongs.
          */
         public Builder provisionRegionId(String provisionRegionId) {
             this.putQueryParameter("ProvisionRegionId", provisionRegionId);
@@ -93,7 +93,10 @@ public class GenerateTemplateByScratchRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the scenario is created.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +105,10 @@ public class GenerateTemplateByScratchRequest extends Request {
         }
 
         /**
-         * TemplateScratchId.
+         * The ID of the scenario.
+         * <p>
+         * 
+         * For more information about how to query the IDs of scenarios, see [ListTemplateScratches](~~363050~~).
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);

@@ -98,7 +98,7 @@ public class SetStackPolicyRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -107,7 +107,7 @@ public class SetStackPolicyRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -116,7 +116,10 @@ public class SetStackPolicyRequest extends Request {
         }
 
         /**
-         * StackPolicyBody.
+         * The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
+         * <p>
+         * 
+         * You can specify one of the StackPolicyBody and StackPolicyURL parameters, but you cannot specify both of them.
          */
         public Builder stackPolicyBody(String stackPolicyBody) {
             this.putQueryParameter("StackPolicyBody", stackPolicyBody);
@@ -125,7 +128,12 @@ public class SetStackPolicyRequest extends Request {
         }
 
         /**
-         * StackPolicyURL.
+         * The URL for the file that contains the stack policy. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 16,384 bytes in length, and the URL can be up to 1,350 bytes in length.
+         * <p>
+         * 
+         * >  If the region of the OSS bucket is not specified, the RegionId value is used.
+         * 
+         * You can specify one of the StackPolicyBody and StackPolicyURL parameters, but you cannot specify both of them.
          */
         public Builder stackPolicyURL(String stackPolicyURL) {
             this.putQueryParameter("StackPolicyURL", stackPolicyURL);

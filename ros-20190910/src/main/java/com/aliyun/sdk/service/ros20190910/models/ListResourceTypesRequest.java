@@ -54,7 +54,12 @@ public class ListResourceTypesRequest extends Request {
         } 
 
         /**
-         * EntityType.
+         * The entity type. Valid values:
+         * <p>
+         * 
+         * *   All: all resource types.
+         * *   Resource: resources other than DataSource resources. For more information, see [Resources](~~28863~~).
+         * *   DataSource: DataSource resources.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);

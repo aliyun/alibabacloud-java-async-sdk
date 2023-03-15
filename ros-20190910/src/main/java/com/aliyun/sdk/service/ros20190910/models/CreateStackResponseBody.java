@@ -50,7 +50,7 @@ public class CreateStackResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateStackResponseBody extends TeaModel {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;

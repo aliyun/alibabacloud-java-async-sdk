@@ -119,7 +119,12 @@ public class GenerateTemplatePolicyRequest extends Request {
         }
 
         /**
-         * TemplateBody.
+         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.
+         * <p>
+         * 
+         * If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
+         * 
+         * You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -128,7 +133,10 @@ public class GenerateTemplatePolicyRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template. This parameter applies to shared templates and private templates.
+         * <p>
+         * 
+         * You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -137,7 +145,14 @@ public class GenerateTemplatePolicyRequest extends Request {
         }
 
         /**
-         * TemplateURL.
+         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.
+         * <p>
+         * 
+         * >  If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
+         * 
+         * You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * 
+         * The URL can be up to 1,024 bytes in length.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -146,7 +161,7 @@ public class GenerateTemplatePolicyRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version of the template. This parameter takes effect only when the TemplateId parameter is specified.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

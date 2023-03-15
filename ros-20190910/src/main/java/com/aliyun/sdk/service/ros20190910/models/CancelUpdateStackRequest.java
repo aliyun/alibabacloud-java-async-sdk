@@ -84,7 +84,11 @@ public class CancelUpdateStackRequest extends Request {
         } 
 
         /**
-         * CancelType.
+         * The method to cancel the update operation. Valid values:
+         * <p>
+         * 
+         * *   Quick: cancels the update of a stack as soon as possible.
+         * *   Safe: cancels the update of a stack as safely as possible.
          */
         public Builder cancelType(String cancelType) {
             this.putQueryParameter("CancelType", cancelType);
@@ -93,7 +97,7 @@ public class CancelUpdateStackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +106,7 @@ public class CancelUpdateStackRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

@@ -110,7 +110,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         private UpdateInfo updateInfo; 
 
         /**
-         * Description.
+         * The description of the template.
          */
         public Builder description(String description) {
             this.description = description;
@@ -118,7 +118,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Outputs.
+         * The output items of the template.
          */
         public Builder outputs(java.util.List < Outputs> outputs) {
             this.outputs = outputs;
@@ -126,7 +126,10 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * The parameters in the Parameters section of the template.
+         * <p>
+         * 
+         * The Parameters section contains the parameters that you must specify when you use the template to create a stack. You can use the parameters to specify the stack details, such as the username, the password, and the Elastic Compute Service (ECS) instance type in the specified region.
          */
         public Builder parameters(java.util.List < java.util.Map<String, ?>> parameters) {
             this.parameters = parameters;
@@ -134,7 +137,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +145,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceTypes.
+         * The resource types that are used in the template.
          */
         public Builder resourceTypes(ResourceTypes resourceTypes) {
             this.resourceTypes = resourceTypes;
@@ -150,7 +153,12 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The regular resources that are defined in the template.
+         * <p>
+         * 
+         * > 
+         * *   For a Resource Orchestration Service (ROS) template, the resource whose definition contains the `Count` parameter is not displayed as a list.
+         * *   For a Terraform template, the resource whose definition contains the `count` or `for_each` parameter is not displayed as a list.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -158,7 +166,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateInfo.
+         * The update information about the stack.
          */
         public Builder updateInfo(UpdateInfo updateInfo) {
             this.updateInfo = updateInfo;
@@ -222,7 +230,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             private String outputKey; 
 
             /**
-             * Description.
+             * The description of the output item.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +238,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The alias of the output item.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -238,7 +246,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * OutputKey.
+             * The name of the output item.
              */
             public Builder outputKey(String outputKey) {
                 this.outputKey = outputKey;
@@ -291,7 +299,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             private java.util.List < String > resources; 
 
             /**
-             * DataSources.
+             * The DataSource resource types.
              */
             public Builder dataSources(java.util.List < String > dataSources) {
                 this.dataSources = dataSources;
@@ -299,7 +307,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Resources.
+             * The regular resource types.
              */
             public Builder resources(java.util.List < String > resources) {
                 this.resources = resources;
@@ -364,7 +372,33 @@ public class ValidateTemplateResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * LogicalResourceIdPattern.
+             * The pattern in which the logical IDs of regular resources are formed.
+             * <p>
+             * 
+             * If resources are defined in an ROS template, the following rules apply:
+             * 
+             * *   Resource whose definition does not contain the `Count` parameter: If the resource name defined in the template is `server`, the value of the LogicalResourceIdPattern and `ResourcePath` parameters is `server`.
+             * *   Resource whose definition contains the `Count` parameter: If the resource name defined in the template is `server`, the value of the LogicalResourceIdPattern parameter is `server[*]`, and the value of the `ResourcePath` parameter is `server`.
+             * 
+             * If resources and [modules](https://www.terraform.io/language/modules) are defined in a Terraform template, the following rules apply:
+             * 
+             * *   Resource and module whose definitions do not contain the [count](https://www.terraform.io/language/meta-arguments/count) or [for_each](https://www.terraform.io/language/meta-arguments/for_each) parameter: If the resource name defined in the template is `server`, the value of the LogicalResourceIdPattern and `ResourcePath` parameters is `server`.
+             * *   Resource and module whose definitions contain the [count](https://www.terraform.io/language/meta-arguments/count) or [for_each](https://www.terraform.io/language/meta-arguments/for_each) parameter: If the resource name defined in the template is `server`, the value of the LogicalResourceIdPattern parameter is `server[*]`, and the value of the `ResourcePath` parameter is `server`.
+             * 
+             * Examples of the LogicalResourceIdPattern parameter for resources in a Terraform template:
+             * 
+             * *   Valid values of the LogicalResourceIdPattern parameter if a resource belongs to the root module:
+             * 
+             *     *   `server`: In this case, the `count` or `for_each` parameter is not contained in the resource. The value of the `ResourcePath` parameter is `server`.
+             *     *   `server[*]`: In this case, the `count` or `for_each` parameter is contained in the resource. The value of the `ResourcePath` parameter is `server`.
+             * 
+             * *   Valid values of the LogicalResourceIdPattern parameter if a resource belongs to a child module:
+             * 
+             *     *   `app.server`: In this case, the `count` or `for_each` parameter is not contained in the `app` module and the `server` resource. The value of the `ResourcePath` parameter is `app.server`.
+             *     *   `app.server[*]`: In this case, the `count` or `for_each` parameter is contained in the `server` resource, but not in the `app` module. The value of the `ResourcePath` parameter is `app.server`.
+             *     *   `app[*].server`: In this case, the `count` or `for_each` parameter is contained in the `app` module, but not in the `server` resource. The value of the `ResourcePath` parameter is `app.server`.
+             *     *   `app[*].server[*]`: In this case, the `count` or `for_each` parameter is contained in the `app` module and the `server` resource. The value of the `ResourcePath` parameter is `app.server`.
+             *     *   `app.app_group[*].server`: In this case, the `count` or `for_each` parameter is contained in the `app_group` module, but not in the `app` module and the `server` resource. The value of the `ResourcePath` parameter is `app.app_group.server`. The `app_group` module is a child module of the `app` module.
              */
             public Builder logicalResourceIdPattern(String logicalResourceIdPattern) {
                 this.logicalResourceIdPattern = logicalResourceIdPattern;
@@ -372,7 +406,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourcePath.
+             * The path of the regular resource. In most cases, the path of a regular resource is the same as the resource name.
              */
             public Builder resourcePath(String resourcePath) {
                 this.resourcePath = resourcePath;
@@ -380,7 +414,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The regular resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -493,7 +527,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified; 
 
             /**
-             * ParametersAllowedToBeModified.
+             * The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.
              */
             public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
                 this.parametersAllowedToBeModified = parametersAllowedToBeModified;
@@ -501,7 +535,12 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersCauseInterruptionIfModified.
+             * The parameters whose changes cause service interruptions. If you change only values of the parameters in a stack template and use the template to update the stack, service interruptions are caused.
+             * <p>
+             * 
+             * > 
+             * *   This parameter is supported only for a small number of resource types.
+             * *   This parameter is valid only for changes that are made on ROS stacks.
              */
             public Builder parametersCauseInterruptionIfModified(java.util.List < String > parametersCauseInterruptionIfModified) {
                 this.parametersCauseInterruptionIfModified = parametersCauseInterruptionIfModified;
@@ -509,7 +548,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersConditionallyAllowedToBeModified.
+             * The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.
              */
             public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
                 this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
@@ -517,7 +556,12 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersConditionallyCauseInterruptionIfModified.
+             * The parameters whose changes cause service interruptions under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values and the update type determine whether service interruptions are caused.
+             * <p>
+             * 
+             * > 
+             * *   This parameter is supported only for a small number of resource types.
+             * *   This parameter is valid only for changes that are made on ROS stacks.
              */
             public Builder parametersConditionallyCauseInterruptionIfModified(java.util.List < String > parametersConditionallyCauseInterruptionIfModified) {
                 this.parametersConditionallyCauseInterruptionIfModified = parametersConditionallyCauseInterruptionIfModified;
@@ -525,7 +569,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersNotAllowedToBeModified.
+             * The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.
              */
             public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
                 this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;
@@ -533,7 +577,7 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersUncertainlyAllowedToBeModified.
+             * The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.
              */
             public Builder parametersUncertainlyAllowedToBeModified(java.util.List < String > parametersUncertainlyAllowedToBeModified) {
                 this.parametersUncertainlyAllowedToBeModified = parametersUncertainlyAllowedToBeModified;
@@ -541,7 +585,12 @@ public class ValidateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersUncertainlyCauseInterruptionIfModified.
+             * The parameters whose changes cause service interruptions under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether service interruptions are caused.
+             * <p>
+             * 
+             * > 
+             * *   This parameter is supported only for a small number of resource types.
+             * *   This parameter is valid only for changes that are made on ROS stacks.
              */
             public Builder parametersUncertainlyCauseInterruptionIfModified(java.util.List < String > parametersUncertainlyCauseInterruptionIfModified) {
                 this.parametersUncertainlyCauseInterruptionIfModified = parametersUncertainlyCauseInterruptionIfModified;

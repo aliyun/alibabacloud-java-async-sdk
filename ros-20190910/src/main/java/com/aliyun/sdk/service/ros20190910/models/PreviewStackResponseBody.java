@@ -50,7 +50,7 @@ public class PreviewStackResponseBody extends TeaModel {
         private Stack stack; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class PreviewStackResponseBody extends TeaModel {
         }
 
         /**
-         * Stack.
+         * The information about the stack that is previewed.
          */
         public Builder stack(Stack stack) {
             this.stack = stack;
@@ -122,7 +122,15 @@ public class PreviewStackResponseBody extends TeaModel {
             private String stream; 
 
             /**
-             * Command.
+             * The name of the Terraform command. Valid values:
+             * <p>
+             * 
+             * *   apply
+             * *   plan
+             * *   destroy
+             * *   version
+             * 
+             * For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).
              */
             public Builder command(String command) {
                 this.command = command;
@@ -130,7 +138,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The content of the output stream that is returned after the command is run.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -138,7 +146,11 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Stream.
+             * The output stream. Valid values:
+             * <p>
+             * 
+             * *   stdout: standard output stream
+             * *   stderr: standard error stream
              */
             public Builder stream(String stream) {
                 this.stream = stream;
@@ -179,7 +191,10 @@ public class PreviewStackResponseBody extends TeaModel {
             private java.util.List < TerraformLogs> terraformLogs; 
 
             /**
-             * TerraformLogs.
+             * The log that is generated when a Terraform stack is run. This parameter is returned only if the stack is a Terraform stack.
+             * <p>
+             * 
+             * >  You can use this parameter to preview the logs of a Terraform stack.
              */
             public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
@@ -232,7 +247,7 @@ public class PreviewStackResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * ParameterKey.
+             * The name of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -240,7 +255,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -389,7 +404,7 @@ public class PreviewStackResponseBody extends TeaModel {
             private java.util.Map < String, ? > stack; 
 
             /**
-             * AcsResourceType.
+             * The type of the resource that belongs to an Alibaba Cloud service.
              */
             public Builder acsResourceType(String acsResourceType) {
                 this.acsResourceType = acsResourceType;
@@ -397,7 +412,13 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Action.
+             * The action that is performed on resources. Valid values:
+             * <p>
+             * 
+             * *   Add
+             * *   Modify
+             * *   Remove
+             * *   None
              */
             public Builder action(String action) {
                 this.action = action;
@@ -405,7 +426,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the resource.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -413,7 +434,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalResourceId.
+             * The logical ID of the resource.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -421,7 +442,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalResourceId.
+             * The physical ID of the resource.
+             * <p>
+             * 
+             * This parameter is returned only if the Action parameter is set to Modify or Remove.
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -429,7 +453,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The properties of the resource.
              */
             public Builder properties(java.util.Map < String, ? > properties) {
                 this.properties = properties;
@@ -437,7 +461,14 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Replacement.
+             * Indicates whether a replacement update is performed on the template. Valid values:
+             * <p>
+             * 
+             * *   True: A replacement update is performed on the template.
+             * *   False: A change is made on the template.
+             * *   Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.
+             * 
+             * >  This parameter is returned only if the Action parameter is set to Modify.
              */
             public Builder replacement(String replacement) {
                 this.replacement = replacement;
@@ -445,7 +476,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * RequiredBy.
+             * The resources on which the stack depends.
              */
             public Builder requiredBy(java.util.List < String > requiredBy) {
                 this.requiredBy = requiredBy;
@@ -453,7 +484,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -461,7 +492,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Stack.
+             * The information about the nested stack. The data structure of the value is the same as the data structure of the entire response.
              */
             public Builder stack(java.util.Map < String, ? > stack) {
                 this.stack = stack;
@@ -610,7 +641,7 @@ public class PreviewStackResponseBody extends TeaModel {
             private Integer timeoutInMinutes; 
 
             /**
-             * Description.
+             * The description of the stack.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -618,7 +649,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * DisableRollback.
+             * Indicates whether rollback is disabled for the resources when the stack fails to be created.
              */
             public Builder disableRollback(Boolean disableRollback) {
                 this.disableRollback = disableRollback;
@@ -626,7 +657,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Log.
+             * The log that is generated when the stack is run.
              */
             public Builder log(Log log) {
                 this.log = log;
@@ -634,7 +665,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * The parameters of the stack.
              */
             public Builder parameters(java.util.List < Parameters> parameters) {
                 this.parameters = parameters;
@@ -642,7 +673,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the stack.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -650,7 +681,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * Resources.
+             * The resources in the stack.
              */
             public Builder resources(java.util.List < Resources> resources) {
                 this.resources = resources;
@@ -658,7 +689,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * StackName.
+             * The name of the stack.
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -666,7 +697,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * StackPolicyBody.
+             * The structure that contains the stack policy body.
              */
             public Builder stackPolicyBody(java.util.Map < String, ? > stackPolicyBody) {
                 this.stackPolicyBody = stackPolicyBody;
@@ -674,7 +705,7 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateDescription.
+             * The description of the template.
              */
             public Builder templateDescription(String templateDescription) {
                 this.templateDescription = templateDescription;
@@ -682,7 +713,10 @@ public class PreviewStackResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutInMinutes.
+             * The timeout period that is allowed to create the stack.
+             * <p>
+             * 
+             * Unit: minutes.
              */
             public Builder timeoutInMinutes(Integer timeoutInMinutes) {
                 this.timeoutInMinutes = timeoutInMinutes;

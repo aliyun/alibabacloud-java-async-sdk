@@ -84,7 +84,7 @@ public class ExecuteChangeSetRequest extends Request {
         } 
 
         /**
-         * ChangeSetId.
+         * The ID of the change set.
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -93,7 +93,12 @@ public class ExecuteChangeSetRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
+         * <p>
+         * 
+         * The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * For more information, see [How to ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -102,7 +107,7 @@ public class ExecuteChangeSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

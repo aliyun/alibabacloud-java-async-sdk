@@ -50,7 +50,7 @@ public class GetStackPolicyResponseBody extends TeaModel {
         private java.util.Map < String, ? > stackPolicyBody; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetStackPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * StackPolicyBody.
+         * The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
          */
         public Builder stackPolicyBody(java.util.Map < String, ? > stackPolicyBody) {
             this.stackPolicyBody = stackPolicyBody;

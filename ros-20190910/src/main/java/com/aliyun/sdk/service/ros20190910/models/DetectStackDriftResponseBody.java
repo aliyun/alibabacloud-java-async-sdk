@@ -50,7 +50,7 @@ public class DetectStackDriftResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DriftDetectionId.
+         * The ID of the drift detection.
          */
         public Builder driftDetectionId(String driftDetectionId) {
             this.driftDetectionId = driftDetectionId;
@@ -58,7 +58,7 @@ public class DetectStackDriftResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

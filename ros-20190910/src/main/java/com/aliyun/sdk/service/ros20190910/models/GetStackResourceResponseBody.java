@@ -206,7 +206,10 @@ public class GetStackResourceResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * CreateTime.
+         * The time when the resource was created.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -214,7 +217,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the resource.
          */
         public Builder description(String description) {
             this.description = description;
@@ -222,7 +225,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * DriftDetectionTime.
+         * The time when the last successful drift detection was performed on the stack.
          */
         public Builder driftDetectionTime(String driftDetectionTime) {
             this.driftDetectionTime = driftDetectionTime;
@@ -230,7 +233,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * LogicalResourceId.
+         * The logical ID of the resource defined in the template.
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.logicalResourceId = logicalResourceId;
@@ -238,7 +241,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * The metadata.
          */
         public Builder metadata(java.util.Map < String, ? > metadata) {
             this.metadata = metadata;
@@ -246,7 +249,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * PhysicalResourceId.
+         * The physical ID of the resource.
          */
         public Builder physicalResourceId(String physicalResourceId) {
             this.physicalResourceId = physicalResourceId;
@@ -254,7 +257,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -262,7 +265,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceAttributes.
+         * The list of the resource properties.
          */
         public Builder resourceAttributes(java.util.List < java.util.Map<String, ?>> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
@@ -270,7 +273,13 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceDriftStatus.
+         * The status of the resource in the last successful drift detection. Valid values:
+         * <p>
+         * 
+         * *   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.
+         * *   MODIFIED: The actual configuration of the resource differs from its expected template configuration.
+         * *   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.
+         * *   IN_SYNC: The actual configuration of the resource matches its expected template configuration.
          */
         public Builder resourceDriftStatus(String resourceDriftStatus) {
             this.resourceDriftStatus = resourceDriftStatus;
@@ -278,7 +287,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -286,7 +295,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -294,7 +303,10 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * StackName.
+         * The name of the stack.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
          */
         public Builder stackName(String stackName) {
             this.stackName = stackName;
@@ -302,7 +314,23 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the resource. Valid values:
+         * <p>
+         * 
+         * *   CREATE_COMPLETE
+         * *   CREATE_FAILED
+         * *   CREATE_IN_PROGRESS
+         * *   UPDATE_IN_PROGRESS
+         * *   UPDATE_FAILED
+         * *   UPDATE_COMPLETE
+         * *   DELETE_IN_PROGRESS
+         * *   DELETE_FAILED
+         * *   CHECK_IN_PROGRESS
+         * *   CHECK_FAILED
+         * *   CHECK_COMPLETE
+         * *   IMPORT_IN_PROGRESS
+         * *   IMPORT_FAILED
+         * *   IMPORT_COMPLETE
          */
         public Builder status(String status) {
             this.status = status;
@@ -310,7 +338,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * StatusReason.
+         * The reason why the resource is in its current state.
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -318,7 +346,10 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The time when the resource was updated.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

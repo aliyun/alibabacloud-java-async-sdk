@@ -84,7 +84,7 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -93,7 +93,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the tag key. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,13 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   stack: stack
+         * *   stackgroup: stack group
+         * *   template: template
+         * *   templatescratch: scenario
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -154,7 +154,7 @@ public class ListChangeSetsRequest extends Request {
         } 
 
         /**
-         * ChangeSetId.
+         * The ID of the change set. If detailed information about the change set is not required, you can use this parameter to replace the GetChangeSet operation.
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -181,7 +181,12 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +195,12 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +209,7 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +218,7 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

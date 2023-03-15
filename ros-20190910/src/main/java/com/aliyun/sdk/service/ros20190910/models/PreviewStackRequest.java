@@ -279,7 +279,12 @@ public class PreviewStackRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <p>
+         * 
+         * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
+         * 
+         * For more information, see [Ensure idempotence](~~134212~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -288,7 +293,11 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * DisableRollback.
+         * Specifies whether to disable rollback for the resources when the stack fails to be created. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putQueryParameter("DisableRollback", disableRollback);
@@ -297,7 +306,13 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * EnablePreConfig.
+         * Specifies whether to query the parameters that want to use in compliance precheck.
+         * <p>
+         * 
+         * Default value: false. Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder enablePreConfig(Boolean enablePreConfig) {
             this.putQueryParameter("EnablePreConfig", enablePreConfig);
@@ -306,7 +321,12 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * Parallelism.
+         * The maximum number of concurrent operations that can be performed on resources. This parameter takes effect only for Terraform stacks.
+         * <p>
+         * 
+         * By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.
+         * 
+         * >  If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave it empty, the default value of Terraform is used. In most cases, the default value of Terraform is 10.
          */
         public Builder parallelism(Long parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -324,7 +344,7 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -333,7 +353,12 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack. You can use this parameter to preview a stack that you want to update.
+         * <p>
+         * 
+         * > 
+         * *   You must specify only one of the StackName and StackId parameters.
+         * *   In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -342,7 +367,12 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * StackName.
+         * The name of the stack. You can use this parameter to preview the stack that you want to create.
+         * <p>
+         * 
+         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.
+         * 
+         * >  You must specify only one of the StackName and StackId parameters.
          */
         public Builder stackName(String stackName) {
             this.putQueryParameter("StackName", stackName);
@@ -351,7 +381,10 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * StackPolicyBody.
+         * The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
+         * <p>
+         * 
+         * >  You can specify only one of the StackPolicyBody and StackPolicyURL parameters.
          */
         public Builder stackPolicyBody(String stackPolicyBody) {
             this.putQueryParameter("StackPolicyBody", stackPolicyBody);
@@ -360,7 +393,12 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * StackPolicyURL.
+         * The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
+         * <p>
+         * 
+         * >  You can specify only one of the StackPolicyBody and StackPolicyURL parameters.
+         * 
+         * The URL can be up to 1,350 bytes in length.
          */
         public Builder stackPolicyURL(String stackPolicyURL) {
             this.putQueryParameter("StackPolicyURL", stackPolicyURL);
@@ -369,7 +407,10 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * TemplateBody.
+         * The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateBody(String templateBody) {
             this.putQueryParameter("TemplateBody", templateBody);
@@ -378,7 +419,10 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template. This parameter applies to shared templates and private templates.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -387,7 +431,12 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * TemplateScratchId.
+         * The ID of the scenario.
+         * <p>
+         * 
+         * For more information about how to query the IDs of scenarios, see [ListTemplateScratches](~~363050~~).
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -396,7 +445,10 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * TemplateScratchRegionId.
+         * The region ID of the scenario. The default value is the same as the value of the RegionId parameter.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder templateScratchRegionId(String templateScratchRegionId) {
             this.putQueryParameter("TemplateScratchRegionId", templateScratchRegionId);
@@ -405,7 +457,10 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * TemplateURL.
+         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -414,7 +469,7 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version of the template. This parameter takes effect only when the TemplateId parameter is specified.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -423,7 +478,12 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * TimeoutInMinutes.
+         * The timeout period that is allowed to create the stack.
+         * <p>
+         * 
+         * Unit: minutes.
+         * 
+         * Default value: 60.
          */
         public Builder timeoutInMinutes(Long timeoutInMinutes) {
             this.putQueryParameter("TimeoutInMinutes", timeoutInMinutes);
@@ -479,7 +539,10 @@ public class PreviewStackRequest extends Request {
             private String parameterValue; 
 
             /**
-             * ParameterKey.
+             * The name of parameter N. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template. Maximum value of N: 200.
+             * <p>
+             * 
+             * >  If you specify Parameters, you must specify Parameters.N.ParameterKey.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -487,7 +550,10 @@ public class PreviewStackRequest extends Request {
             }
 
             /**
-             * ParameterValue.
+             * The value of parameter N. Maximum value of N: 200.
+             * <p>
+             * 
+             * >  If you specify Parameters, you must specify Parameters.N.ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
