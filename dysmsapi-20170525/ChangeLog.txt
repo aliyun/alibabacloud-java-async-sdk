@@ -1,3 +1,6 @@
+2023-03-15 Version: 2.0.23
+- Generated java-async 2017-05-25 for Dysmsapi.
+
 2022-11-01 Version: 2.0.22
 - Add custom content for QueryCardSmsTemplateReport.
 
