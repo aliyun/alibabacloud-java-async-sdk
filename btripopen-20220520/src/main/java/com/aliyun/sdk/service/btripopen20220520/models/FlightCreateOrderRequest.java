@@ -625,6 +625,12 @@ public class FlightCreateOrderRequest extends Request {
         @Validation(required = true)
         private String name;
 
+        @NameInMap("nationality")
+        private String nationality;
+
+        @NameInMap("nationality_code")
+        private String nationalityCode;
+
         @NameInMap("out_user_id")
         @Validation(required = true)
         private String outUserId;
@@ -647,6 +653,8 @@ public class FlightCreateOrderRequest extends Request {
             this.certType = builder.certType;
             this.certValidDate = builder.certValidDate;
             this.name = builder.name;
+            this.nationality = builder.nationality;
+            this.nationalityCode = builder.nationalityCode;
             this.outUserId = builder.outUserId;
             this.phone = builder.phone;
             this.sex = builder.sex;
@@ -704,6 +712,20 @@ public class FlightCreateOrderRequest extends Request {
         }
 
         /**
+         * @return nationality
+         */
+        public String getNationality() {
+            return this.nationality;
+        }
+
+        /**
+         * @return nationalityCode
+         */
+        public String getNationalityCode() {
+            return this.nationalityCode;
+        }
+
+        /**
          * @return outUserId
          */
         public String getOutUserId() {
@@ -738,6 +760,8 @@ public class FlightCreateOrderRequest extends Request {
             private String certType; 
             private String certValidDate; 
             private String name; 
+            private String nationality; 
+            private String nationalityCode; 
             private String outUserId; 
             private String phone; 
             private Integer sex; 
@@ -788,6 +812,22 @@ public class FlightCreateOrderRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * nationality.
+             */
+            public Builder nationality(String nationality) {
+                this.nationality = nationality;
+                return this;
+            }
+
+            /**
+             * nationality_code.
+             */
+            public Builder nationalityCode(String nationalityCode) {
+                this.nationalityCode = nationalityCode;
                 return this;
             }
 

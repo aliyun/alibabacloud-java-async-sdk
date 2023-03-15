@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class TrainOrderQueryV2Request extends Request {
     @Query
     @NameInMap("order_id")
+    @Validation(required = true)
     private Long orderId;
 
     @Query

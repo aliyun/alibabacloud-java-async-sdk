@@ -114,7 +114,7 @@ public class FlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
-         * 数据
+         * module
          */
         public Builder module(Module module) {
             this.module = module;
@@ -916,7 +916,7 @@ public class FlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -1575,7 +1575,7 @@ public class FlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -2181,7 +2181,7 @@ public class FlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;

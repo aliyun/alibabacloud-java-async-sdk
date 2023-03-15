@@ -795,7 +795,7 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -1454,7 +1454,7 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -2060,7 +2060,7 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -3940,7 +3940,7 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -4599,7 +4599,7 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
@@ -5205,7 +5205,7 @@ public class FlightOtaSearchResponseBody extends TeaModel {
             }
 
             /**
-             * ptc.
+             * PTC
              */
             public Builder ptc(String ptc) {
                 this.ptc = ptc;
