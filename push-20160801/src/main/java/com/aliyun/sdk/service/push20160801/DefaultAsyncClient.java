@@ -164,6 +164,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<CheckDeviceResponse> checkDevice(CheckDeviceRequest request) {
         try {
@@ -220,6 +224,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<ListSummaryAppsResponse> listSummaryApps(ListSummaryAppsRequest request) {
         try {

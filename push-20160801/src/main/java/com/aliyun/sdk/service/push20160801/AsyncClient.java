@@ -28,6 +28,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckCertificateResponse> checkCertificate(CheckCertificateRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CheckDeviceResponse> checkDevice(CheckDeviceRequest request);
 
     CompletableFuture<CheckDevicesResponse> checkDevices(CheckDevicesRequest request);
@@ -36,6 +40,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ContinuouslyPushResponse> continuouslyPush(ContinuouslyPushRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListSummaryAppsResponse> listSummaryApps(ListSummaryAppsRequest request);
 
     CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request);

@@ -110,6 +110,12 @@ public class MassPushRequest extends Request {
         @NameInMap("AndroidExtParameters")
         private String androidExtParameters;
 
+        @NameInMap("AndroidHuaweiReceiptId")
+        private String androidHuaweiReceiptId;
+
+        @NameInMap("AndroidHuaweiTargetUserType")
+        private Integer androidHuaweiTargetUserType;
+
         @NameInMap("AndroidImageUrl")
         private String androidImageUrl;
 
@@ -121,6 +127,9 @@ public class MassPushRequest extends Request {
 
         @NameInMap("AndroidMessageHuaweiUrgency")
         private String androidMessageHuaweiUrgency;
+
+        @NameInMap("AndroidMessageVivoCategory")
+        private String androidMessageVivoCategory;
 
         @NameInMap("AndroidMusic")
         private String androidMusic;
@@ -293,10 +302,13 @@ public class MassPushRequest extends Request {
             this.androidBigPictureUrl = builder.androidBigPictureUrl;
             this.androidBigTitle = builder.androidBigTitle;
             this.androidExtParameters = builder.androidExtParameters;
+            this.androidHuaweiReceiptId = builder.androidHuaweiReceiptId;
+            this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
             this.androidImageUrl = builder.androidImageUrl;
             this.androidInboxBody = builder.androidInboxBody;
             this.androidMessageHuaweiCategory = builder.androidMessageHuaweiCategory;
             this.androidMessageHuaweiUrgency = builder.androidMessageHuaweiUrgency;
+            this.androidMessageVivoCategory = builder.androidMessageVivoCategory;
             this.androidMusic = builder.androidMusic;
             this.androidNotificationBarPriority = builder.androidNotificationBarPriority;
             this.androidNotificationBarType = builder.androidNotificationBarType;
@@ -395,6 +407,20 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * @return androidHuaweiReceiptId
+         */
+        public String getAndroidHuaweiReceiptId() {
+            return this.androidHuaweiReceiptId;
+        }
+
+        /**
+         * @return androidHuaweiTargetUserType
+         */
+        public Integer getAndroidHuaweiTargetUserType() {
+            return this.androidHuaweiTargetUserType;
+        }
+
+        /**
          * @return androidImageUrl
          */
         public String getAndroidImageUrl() {
@@ -420,6 +446,13 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidMessageHuaweiUrgency() {
             return this.androidMessageHuaweiUrgency;
+        }
+
+        /**
+         * @return androidMessageVivoCategory
+         */
+        public String getAndroidMessageVivoCategory() {
+            return this.androidMessageVivoCategory;
         }
 
         /**
@@ -792,10 +825,13 @@ public class MassPushRequest extends Request {
             private String androidBigPictureUrl; 
             private String androidBigTitle; 
             private String androidExtParameters; 
+            private String androidHuaweiReceiptId; 
+            private Integer androidHuaweiTargetUserType; 
             private String androidImageUrl; 
             private String androidInboxBody; 
             private String androidMessageHuaweiCategory; 
             private String androidMessageHuaweiUrgency; 
+            private String androidMessageVivoCategory; 
             private String androidMusic; 
             private Integer androidNotificationBarPriority; 
             private Integer androidNotificationBarType; 
@@ -890,6 +926,22 @@ public class MassPushRequest extends Request {
             }
 
             /**
+             * AndroidHuaweiReceiptId.
+             */
+            public Builder androidHuaweiReceiptId(String androidHuaweiReceiptId) {
+                this.androidHuaweiReceiptId = androidHuaweiReceiptId;
+                return this;
+            }
+
+            /**
+             * AndroidHuaweiTargetUserType.
+             */
+            public Builder androidHuaweiTargetUserType(Integer androidHuaweiTargetUserType) {
+                this.androidHuaweiTargetUserType = androidHuaweiTargetUserType;
+                return this;
+            }
+
+            /**
              * AndroidImageUrl.
              */
             public Builder androidImageUrl(String androidImageUrl) {
@@ -918,6 +970,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidMessageHuaweiUrgency(String androidMessageHuaweiUrgency) {
                 this.androidMessageHuaweiUrgency = androidMessageHuaweiUrgency;
+                return this;
+            }
+
+            /**
+             * AndroidMessageVivoCategory.
+             */
+            public Builder androidMessageVivoCategory(String androidMessageVivoCategory) {
+                this.androidMessageVivoCategory = androidMessageVivoCategory;
                 return this;
             }
 

@@ -33,6 +33,14 @@ public class PushRequest extends Request {
     private String androidExtParameters;
 
     @Query
+    @NameInMap("AndroidHuaweiReceiptId")
+    private String androidHuaweiReceiptId;
+
+    @Query
+    @NameInMap("AndroidHuaweiTargetUserType")
+    private Integer androidHuaweiTargetUserType;
+
+    @Query
     @NameInMap("AndroidImageUrl")
     private String androidImageUrl;
 
@@ -47,6 +55,10 @@ public class PushRequest extends Request {
     @Query
     @NameInMap("AndroidMessageHuaweiUrgency")
     private String androidMessageHuaweiUrgency;
+
+    @Query
+    @NameInMap("AndroidMessageVivoCategory")
+    private String androidMessageVivoCategory;
 
     @Query
     @NameInMap("AndroidMusic")
@@ -300,10 +312,13 @@ public class PushRequest extends Request {
         this.androidBigPictureUrl = builder.androidBigPictureUrl;
         this.androidBigTitle = builder.androidBigTitle;
         this.androidExtParameters = builder.androidExtParameters;
+        this.androidHuaweiReceiptId = builder.androidHuaweiReceiptId;
+        this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
         this.androidImageUrl = builder.androidImageUrl;
         this.androidInboxBody = builder.androidInboxBody;
         this.androidMessageHuaweiCategory = builder.androidMessageHuaweiCategory;
         this.androidMessageHuaweiUrgency = builder.androidMessageHuaweiUrgency;
+        this.androidMessageVivoCategory = builder.androidMessageVivoCategory;
         this.androidMusic = builder.androidMusic;
         this.androidNotificationBarPriority = builder.androidNotificationBarPriority;
         this.androidNotificationBarType = builder.androidNotificationBarType;
@@ -413,6 +428,20 @@ public class PushRequest extends Request {
     }
 
     /**
+     * @return androidHuaweiReceiptId
+     */
+    public String getAndroidHuaweiReceiptId() {
+        return this.androidHuaweiReceiptId;
+    }
+
+    /**
+     * @return androidHuaweiTargetUserType
+     */
+    public Integer getAndroidHuaweiTargetUserType() {
+        return this.androidHuaweiTargetUserType;
+    }
+
+    /**
      * @return androidImageUrl
      */
     public String getAndroidImageUrl() {
@@ -438,6 +467,13 @@ public class PushRequest extends Request {
      */
     public String getAndroidMessageHuaweiUrgency() {
         return this.androidMessageHuaweiUrgency;
+    }
+
+    /**
+     * @return androidMessageVivoCategory
+     */
+    public String getAndroidMessageVivoCategory() {
+        return this.androidMessageVivoCategory;
     }
 
     /**
@@ -852,10 +888,13 @@ public class PushRequest extends Request {
         private String androidBigPictureUrl; 
         private String androidBigTitle; 
         private String androidExtParameters; 
+        private String androidHuaweiReceiptId; 
+        private Integer androidHuaweiTargetUserType; 
         private String androidImageUrl; 
         private String androidInboxBody; 
         private String androidMessageHuaweiCategory; 
         private String androidMessageHuaweiUrgency; 
+        private String androidMessageVivoCategory; 
         private String androidMusic; 
         private Integer androidNotificationBarPriority; 
         private Integer androidNotificationBarType; 
@@ -926,10 +965,13 @@ public class PushRequest extends Request {
             this.androidBigPictureUrl = request.androidBigPictureUrl;
             this.androidBigTitle = request.androidBigTitle;
             this.androidExtParameters = request.androidExtParameters;
+            this.androidHuaweiReceiptId = request.androidHuaweiReceiptId;
+            this.androidHuaweiTargetUserType = request.androidHuaweiTargetUserType;
             this.androidImageUrl = request.androidImageUrl;
             this.androidInboxBody = request.androidInboxBody;
             this.androidMessageHuaweiCategory = request.androidMessageHuaweiCategory;
             this.androidMessageHuaweiUrgency = request.androidMessageHuaweiUrgency;
+            this.androidMessageVivoCategory = request.androidMessageVivoCategory;
             this.androidMusic = request.androidMusic;
             this.androidNotificationBarPriority = request.androidNotificationBarPriority;
             this.androidNotificationBarType = request.androidNotificationBarType;
@@ -1036,6 +1078,24 @@ public class PushRequest extends Request {
         }
 
         /**
+         * AndroidHuaweiReceiptId.
+         */
+        public Builder androidHuaweiReceiptId(String androidHuaweiReceiptId) {
+            this.putQueryParameter("AndroidHuaweiReceiptId", androidHuaweiReceiptId);
+            this.androidHuaweiReceiptId = androidHuaweiReceiptId;
+            return this;
+        }
+
+        /**
+         * AndroidHuaweiTargetUserType.
+         */
+        public Builder androidHuaweiTargetUserType(Integer androidHuaweiTargetUserType) {
+            this.putQueryParameter("AndroidHuaweiTargetUserType", androidHuaweiTargetUserType);
+            this.androidHuaweiTargetUserType = androidHuaweiTargetUserType;
+            return this;
+        }
+
+        /**
          * AndroidImageUrl.
          */
         public Builder androidImageUrl(String androidImageUrl) {
@@ -1068,6 +1128,15 @@ public class PushRequest extends Request {
         public Builder androidMessageHuaweiUrgency(String androidMessageHuaweiUrgency) {
             this.putQueryParameter("AndroidMessageHuaweiUrgency", androidMessageHuaweiUrgency);
             this.androidMessageHuaweiUrgency = androidMessageHuaweiUrgency;
+            return this;
+        }
+
+        /**
+         * AndroidMessageVivoCategory.
+         */
+        public Builder androidMessageVivoCategory(String androidMessageVivoCategory) {
+            this.putQueryParameter("AndroidMessageVivoCategory", androidMessageVivoCategory);
+            this.androidMessageVivoCategory = androidMessageVivoCategory;
             return this;
         }
 
