@@ -72,12 +72,6 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
     } 
 
     public static class Permissions extends TeaModel {
-        @NameInMap("OwnerId")
-        private String ownerId;
-
-        @NameInMap("ParentId")
-        private String parentId;
-
         @NameInMap("ResourceId")
         private String resourceId;
 
@@ -91,8 +85,6 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         private String roleType;
 
         private Permissions(Builder builder) {
-            this.ownerId = builder.ownerId;
-            this.parentId = builder.parentId;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
             this.roleName = builder.roleName;
@@ -105,20 +97,6 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
 
         public static Permissions create() {
             return builder().build();
-        }
-
-        /**
-         * @return ownerId
-         */
-        public String getOwnerId() {
-            return this.ownerId;
-        }
-
-        /**
-         * @return parentId
-         */
-        public String getParentId() {
-            return this.parentId;
         }
 
         /**
@@ -150,28 +128,10 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String ownerId; 
-            private String parentId; 
             private String resourceId; 
             private String resourceType; 
             private String roleName; 
             private String roleType; 
-
-            /**
-             * OwnerId.
-             */
-            public Builder ownerId(String ownerId) {
-                this.ownerId = ownerId;
-                return this;
-            }
-
-            /**
-             * ParentId.
-             */
-            public Builder parentId(String parentId) {
-                this.parentId = parentId;
-                return this;
-            }
 
             /**
              * ResourceId.

@@ -72,7 +72,8 @@ public class GrantUserPermissionsRequest extends Request {
          * Permissions.
          */
         public Builder permissions(java.util.List < Permissions> permissions) {
-            this.putQueryParameter("Permissions", permissions);
+            String permissionsShrink = shrink(permissions, "Permissions", "json");
+            this.putQueryParameter("Permissions", permissionsShrink);
             this.permissions = permissions;
             return this;
         }
