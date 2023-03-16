@@ -18,6 +18,10 @@ public class SetAutoScaleConfigRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("ComputeEnableHt")
+    private Boolean computeEnableHt;
+
+    @Query
     @NameInMap("EnableAutoGrow")
     private Boolean enableAutoGrow;
 
@@ -78,6 +82,7 @@ public class SetAutoScaleConfigRequest extends Request {
     private SetAutoScaleConfigRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.computeEnableHt = builder.computeEnableHt;
         this.enableAutoGrow = builder.enableAutoGrow;
         this.enableAutoShrink = builder.enableAutoShrink;
         this.excludeNodes = builder.excludeNodes;
@@ -112,6 +117,13 @@ public class SetAutoScaleConfigRequest extends Request {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return computeEnableHt
+     */
+    public Boolean getComputeEnableHt() {
+        return this.computeEnableHt;
     }
 
     /**
@@ -214,6 +226,7 @@ public class SetAutoScaleConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetAutoScaleConfigRequest, Builder> {
         private String clusterId; 
+        private Boolean computeEnableHt; 
         private Boolean enableAutoGrow; 
         private Boolean enableAutoShrink; 
         private String excludeNodes; 
@@ -236,6 +249,7 @@ public class SetAutoScaleConfigRequest extends Request {
         private Builder(SetAutoScaleConfigRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.computeEnableHt = request.computeEnableHt;
             this.enableAutoGrow = request.enableAutoGrow;
             this.enableAutoShrink = request.enableAutoShrink;
             this.excludeNodes = request.excludeNodes;
@@ -258,6 +272,15 @@ public class SetAutoScaleConfigRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ComputeEnableHt.
+         */
+        public Builder computeEnableHt(Boolean computeEnableHt) {
+            this.putQueryParameter("ComputeEnableHt", computeEnableHt);
+            this.computeEnableHt = computeEnableHt;
             return this;
         }
 

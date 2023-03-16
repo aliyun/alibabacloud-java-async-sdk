@@ -50,7 +50,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Imagegw.
+         * The information about the image gateway configuration file.
          */
         public Builder imagegw(Imagegw imagegw) {
             this.imagegw = imagegw;
@@ -58,7 +58,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * Authentication.
+             * The authentication method of the image repository. Valid values:
+             * <p>
+             * 
+             * *   http
+             * *   https
              */
             public Builder authentication(String authentication) {
                 this.authentication = authentication;
@@ -142,7 +146,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The source address of the image repository.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -150,7 +154,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteType.
+             * The type of the image repository.
              */
             public Builder remoteType(String remoteType) {
                 this.remoteType = remoteType;
@@ -158,7 +162,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * URL.
+             * The URL of the image repository.
              */
             public Builder URL(String URL) {
                 this.URL = URL;
@@ -300,7 +304,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             private String updateDateTime; 
 
             /**
-             * DefaultImageLocation.
+             * The default address of the image repository.
              */
             public Builder defaultImageLocation(String defaultImageLocation) {
                 this.defaultImageLocation = defaultImageLocation;
@@ -308,7 +312,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ImageExpirationTimeout.
+             * The time when the image expires.
              */
             public Builder imageExpirationTimeout(String imageExpirationTimeout) {
                 this.imageExpirationTimeout = imageExpirationTimeout;
@@ -316,7 +320,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Locations.
+             * An array of the image repository addresses.
              */
             public Builder locations(Locations locations) {
                 this.locations = locations;
@@ -324,7 +328,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MongoDBURI.
+             * The information about the image gateway database.
              */
             public Builder mongoDBURI(String mongoDBURI) {
                 this.mongoDBURI = mongoDBURI;
@@ -332,7 +336,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PullUpdateTimeout.
+             * The timeout period for pulling images.
              */
             public Builder pullUpdateTimeout(Long pullUpdateTimeout) {
                 this.pullUpdateTimeout = pullUpdateTimeout;
@@ -340,7 +344,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDateTime.
+             * The time when the file was updated.
              */
             public Builder updateDateTime(String updateDateTime) {
                 this.updateDateTime = updateDateTime;

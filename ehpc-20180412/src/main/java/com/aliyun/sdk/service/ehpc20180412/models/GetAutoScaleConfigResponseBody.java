@@ -18,6 +18,9 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
     @NameInMap("ClusterType")
     private String clusterType;
 
+    @NameInMap("ComputeEnableHt")
+    private Boolean computeEnableHt;
+
     @NameInMap("EnableAutoGrow")
     private Boolean enableAutoGrow;
 
@@ -69,6 +72,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
     private GetAutoScaleConfigResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
         this.clusterType = builder.clusterType;
+        this.computeEnableHt = builder.computeEnableHt;
         this.enableAutoGrow = builder.enableAutoGrow;
         this.enableAutoShrink = builder.enableAutoShrink;
         this.excludeNodes = builder.excludeNodes;
@@ -107,6 +111,13 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
      */
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    /**
+     * @return computeEnableHt
+     */
+    public Boolean getComputeEnableHt() {
+        return this.computeEnableHt;
     }
 
     /**
@@ -224,6 +235,7 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String clusterId; 
         private String clusterType; 
+        private Boolean computeEnableHt; 
         private Boolean enableAutoGrow; 
         private Boolean enableAutoShrink; 
         private String excludeNodes; 
@@ -260,6 +272,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * ComputeEnableHt.
+         */
+        public Builder computeEnableHt(Boolean computeEnableHt) {
+            this.computeEnableHt = computeEnableHt;
             return this;
         }
 

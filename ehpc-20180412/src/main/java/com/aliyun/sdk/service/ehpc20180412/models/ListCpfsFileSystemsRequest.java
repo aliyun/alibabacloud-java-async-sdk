@@ -83,7 +83,10 @@ public class ListCpfsFileSystemsRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
+         * <p>
+         * 
+         * By default, the information about all CPFSs and their mount targets within your account are queried.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -92,7 +95,12 @@ public class ListCpfsFileSystemsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -101,7 +109,10 @@ public class ListCpfsFileSystemsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 50.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

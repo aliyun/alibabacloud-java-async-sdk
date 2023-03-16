@@ -125,7 +125,7 @@ public class DescribeGWSInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the visualization service.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -134,7 +134,7 @@ public class DescribeGWSInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the visualization instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -143,7 +143,12 @@ public class DescribeGWSInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +157,10 @@ public class DescribeGWSInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 50.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +169,10 @@ public class DescribeGWSInstancesRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username of the entity whose instances you want to query.
+         * <p>
+         * 
+         * >  If this parameter is not specified, instances of all users are queried.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -170,7 +181,10 @@ public class DescribeGWSInstancesRequest extends Request {
         }
 
         /**
-         * UserUid.
+         * The user ID of the entity whose instances you want to query.
+         * <p>
+         * 
+         * >  If this parameter is not specified, instances of all users are queried.
          */
         public Builder userUid(Long userUid) {
             this.putQueryParameter("UserUid", userUid);

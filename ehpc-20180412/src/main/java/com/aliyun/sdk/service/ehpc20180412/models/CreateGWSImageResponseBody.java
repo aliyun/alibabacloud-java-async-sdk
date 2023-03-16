@@ -50,7 +50,7 @@ public class CreateGWSImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageId.
+         * The image ID of the visualization instance.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -58,7 +58,7 @@ public class CreateGWSImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

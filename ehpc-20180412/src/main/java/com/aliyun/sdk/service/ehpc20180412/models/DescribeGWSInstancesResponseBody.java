@@ -86,7 +86,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * The list of visualization instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +94,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the current page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -198,7 +198,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppPath.
+             * The execution directory of the application.
              */
             public Builder appPath(String appPath) {
                 this.appPath = appPath;
@@ -388,7 +388,10 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             private String workMode; 
 
             /**
-             * AppList.
+             * The list of application information.
+             * <p>
+             * 
+             * >  If the WorkMode parameter is set to Desktop, an empty value is returned in this parameter.
              */
             public Builder appList(AppList appList) {
                 this.appList = appList;
@@ -396,7 +399,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the visualizatio service.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -404,7 +407,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the visualization instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -412,7 +415,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the visualization instance expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -420,7 +423,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the visualization instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -428,7 +431,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the visualization instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -436,7 +439,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the visualization instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -444,7 +447,19 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the visualization instance. Valid values:
+             * <p>
+             * 
+             * *   Creating: The instance is being created.
+             * *   Starting: The instance is being started.
+             * *   Stopping: The instance is being stopped.
+             * *   Stopped: The instance is stopped.
+             * *   Initializing: The instance is being initialized.
+             * *   Unregistered: The instance is not registered.
+             * *   Registered: The instance is registered.
+             * *   InUse: The instance is in use.
+             * *   Missing: The instance cannot be found.
+             * *   Cloning: An image is being generated based on the instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -452,7 +467,10 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username of the entity to which the visualization instance is assigned.
+             * <p>
+             * 
+             * >  If the instance is not assigned to a specified user, this parameter is empty.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -460,7 +478,11 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkMode.
+             * The working mode of the visualization instance. Valid values:
+             * <p>
+             * 
+             * *   Desktop
+             * *   Application
              */
             public Builder workMode(String workMode) {
                 this.workMode = workMode;

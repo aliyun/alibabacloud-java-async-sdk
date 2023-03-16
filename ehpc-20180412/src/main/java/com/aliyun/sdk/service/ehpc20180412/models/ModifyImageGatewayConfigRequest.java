@@ -190,7 +190,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -199,7 +199,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * DBPassword.
+         * The password that is used to log on to the database instance.
          */
         public Builder DBPassword(String DBPassword) {
             this.putQueryParameter("DBPassword", DBPassword);
@@ -208,7 +208,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * DBServerInfo.
+         * The URI of the database.
          */
         public Builder DBServerInfo(String DBServerInfo) {
             this.putQueryParameter("DBServerInfo", DBServerInfo);
@@ -217,7 +217,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * DBType.
+         * The type of the database. Set the value to mongodb.
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -226,7 +226,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * DBUsername.
+         * The username of the account that is used to log on to the database.
          */
         public Builder DBUsername(String DBUsername) {
             this.putQueryParameter("DBUsername", DBUsername);
@@ -235,7 +235,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * DefaultRepoLocation.
+         * The default repository service. Set the value to registry-1.docker.io.
          */
         public Builder defaultRepoLocation(String defaultRepoLocation) {
             this.putQueryParameter("DefaultRepoLocation", defaultRepoLocation);
@@ -244,7 +244,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * ImageExpirationTimeout.
+         * The timeout period for deleting images.
          */
         public Builder imageExpirationTimeout(String imageExpirationTimeout) {
             this.putQueryParameter("ImageExpirationTimeout", imageExpirationTimeout);
@@ -253,7 +253,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * PullUpdateTimeout.
+         * The timeout period for pulling images.
          */
         public Builder pullUpdateTimeout(Integer pullUpdateTimeout) {
             this.putQueryParameter("PullUpdateTimeout", pullUpdateTimeout);
@@ -262,7 +262,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * Repo.
+         * The information about the repository.
          */
         public Builder repo(java.util.List < Repo> repo) {
             this.putQueryParameter("Repo", repo);
@@ -328,7 +328,13 @@ public class ModifyImageGatewayConfigRequest extends Request {
             private String URL; 
 
             /**
-             * Auth.
+             * The authentication method of the repository. Valid values:
+             * <p>
+             * 
+             * *   http
+             * *   https
+             * 
+             * Default value: http.
              */
             public Builder auth(String auth) {
                 this.auth = auth;
@@ -336,7 +342,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
             }
 
             /**
-             * Location.
+             * The address of the repository N.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -344,7 +350,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
             }
 
             /**
-             * URL.
+             * The URL of the repository. The URL is required to add a repository address.
              */
             public Builder URL(String URL) {
                 this.URL = URL;

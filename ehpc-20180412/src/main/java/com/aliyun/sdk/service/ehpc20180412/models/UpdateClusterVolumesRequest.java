@@ -158,6 +158,9 @@ public class UpdateClusterVolumesRequest extends Request {
         @NameInMap("VolumeId")
         private String volumeId;
 
+        @NameInMap("VolumeMountOption")
+        private String volumeMountOption;
+
         @NameInMap("VolumeMountpoint")
         private String volumeMountpoint;
 
@@ -174,6 +177,7 @@ public class UpdateClusterVolumesRequest extends Request {
             this.remoteDirectory = builder.remoteDirectory;
             this.roles = builder.roles;
             this.volumeId = builder.volumeId;
+            this.volumeMountOption = builder.volumeMountOption;
             this.volumeMountpoint = builder.volumeMountpoint;
             this.volumeProtocol = builder.volumeProtocol;
             this.volumeType = builder.volumeType;
@@ -230,6 +234,13 @@ public class UpdateClusterVolumesRequest extends Request {
         }
 
         /**
+         * @return volumeMountOption
+         */
+        public String getVolumeMountOption() {
+            return this.volumeMountOption;
+        }
+
+        /**
          * @return volumeMountpoint
          */
         public String getVolumeMountpoint() {
@@ -257,6 +268,7 @@ public class UpdateClusterVolumesRequest extends Request {
             private String remoteDirectory; 
             private java.util.List < Roles> roles; 
             private String volumeId; 
+            private String volumeMountOption; 
             private String volumeMountpoint; 
             private String volumeProtocol; 
             private String volumeType; 
@@ -310,6 +322,14 @@ public class UpdateClusterVolumesRequest extends Request {
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
+                return this;
+            }
+
+            /**
+             * VolumeMountOption.
+             */
+            public Builder volumeMountOption(String volumeMountOption) {
+                this.volumeMountOption = volumeMountOption;
                 return this;
             }
 

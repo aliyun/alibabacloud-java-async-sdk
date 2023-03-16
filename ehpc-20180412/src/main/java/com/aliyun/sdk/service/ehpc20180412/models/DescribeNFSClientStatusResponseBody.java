@@ -62,7 +62,7 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The list of results.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,7 +78,12 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The deployment status of the NFS client. Valid values:
+         * <p>
+         * 
+         * *   NotInstalled: The client is not installed.
+         * *   Running: The client is being installed.
+         * *   Finished: The client is installed on the instance.
          */
         public Builder status(String status) {
             this.status = status;
@@ -142,7 +147,7 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * ExitCode.
+             * The Base64-decoded Output parameter value. A True in the last line indicates successful installation. Otherwise, the installation fails.
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -150,7 +155,7 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeRecordStatus.
+             * The status of the invocation record, which is the same as the value of the Status parameter.
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
@@ -158,7 +163,7 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * The execution result of the command.
              */
             public Builder output(String output) {
                 this.output = output;

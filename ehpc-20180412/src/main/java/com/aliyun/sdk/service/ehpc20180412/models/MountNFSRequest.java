@@ -113,7 +113,7 @@ public class MountNFSRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the visualization instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -122,7 +122,7 @@ public class MountNFSRequest extends Request {
         }
 
         /**
-         * MountDir.
+         * The local mount directory.
          */
         public Builder mountDir(String mountDir) {
             this.putQueryParameter("MountDir", mountDir);
@@ -131,7 +131,7 @@ public class MountNFSRequest extends Request {
         }
 
         /**
-         * NfsDir.
+         * The address of the mount target.
          */
         public Builder nfsDir(String nfsDir) {
             this.putQueryParameter("NfsDir", nfsDir);
@@ -140,7 +140,11 @@ public class MountNFSRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The type of the protocol. Valid values:
+         * <p>
+         * 
+         * *   nfs
+         * *   smb
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -149,7 +153,7 @@ public class MountNFSRequest extends Request {
         }
 
         /**
-         * RemoteDir.
+         * The remote mount address.
          */
         public Builder remoteDir(String remoteDir) {
             this.putQueryParameter("RemoteDir", remoteDir);

@@ -98,7 +98,11 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CallerType.
+         * The type of the account. Valid values:
+         * <p>
+         * 
+         * *   sub: a RAM user.
+         * *   parent: an Alibaba Cloud account.
          */
         public Builder callerType(String callerType) {
             this.callerType = callerType;
@@ -106,7 +110,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Clusters.
+         * The information of the visualization services.
          */
         public Builder clusters(Clusters clusters) {
             this.clusters = clusters;
@@ -114,7 +118,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +126,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on the current page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +134,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -226,7 +230,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ClusterId.
+             * The ID of the visualization service.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -234,7 +238,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the visualization service was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -242,7 +246,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The number of visualization instances.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -250,7 +254,13 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the visualization services. Valid values:
+             * <p>
+             * 
+             * *   creating: The service is being created.
+             * *   starting: The service is being started.
+             * *   running: The service is running.
+             * *   deleted: The service is deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +268,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -55,7 +55,7 @@ public class DescribeNFSClientStatusRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the visualization instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

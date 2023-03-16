@@ -69,7 +69,7 @@ public class CreateGWSImageRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the visualization instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class CreateGWSImageRequest extends Request {
         }
 
         /**
-         * Name.
+         * The image name of the visualization instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -55,7 +55,7 @@ public class DeleteGWSClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the visualization service.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

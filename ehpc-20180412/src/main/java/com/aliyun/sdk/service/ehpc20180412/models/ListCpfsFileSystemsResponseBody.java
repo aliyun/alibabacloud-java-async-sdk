@@ -86,7 +86,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * FileSystemList.
+         * The list of file systems.
          */
         public Builder fileSystemList(FileSystemList fileSystemList) {
             this.fileSystemList = fileSystemList;
@@ -94,7 +94,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on the current page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             private String vswId; 
 
             /**
-             * MountTargetDomain.
+             * The domain where the mount target resides.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -214,7 +214,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -222,7 +222,13 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the mount target. Valid values:
+             * <p>
+             * 
+             * *   Active: The mount target is available.
+             * *   Inactive: The mount target is unavailable.
+             * *   Pending: The mount target is being mounted.
+             * *   Deleting: The mount target is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -230,7 +236,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -238,7 +244,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VswId.
+             * The vSwitch ID of the instance.
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -404,7 +410,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Capacity.
+             * The capacity of the file system. Unit: GiB.
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -412,7 +418,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the file system was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -420,7 +426,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Destription.
+             * The description of the file system.
              */
             public Builder destription(String destription) {
                 this.destription = destription;
@@ -428,7 +434,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -436,7 +442,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetList.
+             * The mount targets.
              */
             public Builder mountTargetList(MountTargetList mountTargetList) {
                 this.mountTargetList = mountTargetList;
@@ -444,7 +450,11 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The protocol type that is applied to the mounted file system. Valid values:
+             * <p>
+             * 
+             * *   NFS
+             * *   SMB
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -452,7 +462,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -460,7 +470,7 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

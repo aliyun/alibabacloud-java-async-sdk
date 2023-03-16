@@ -431,7 +431,7 @@ public class SubmitJobRequest extends Request {
          * Specifies whether to use an asynchronous link to submit the job.
          * <p>
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -456,7 +456,7 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
          * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
@@ -510,7 +510,7 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.
+         * The URL of the job file that is uploaded to an Object Storage Service (OSS) bucket.
          */
         public Builder inputFileUrl(String inputFileUrl) {
             this.putQueryParameter("InputFileUrl", inputFileUrl);
@@ -552,7 +552,7 @@ public class SubmitJobRequest extends Request {
          * The number of compute nodes required to run the job.
          * <p>
          * 
-         * >  If the parameter is not specified, the Task, Thread, Mem, and Gpu parameters become invalid.
+         * > If the parameter is not specified, the Cpu, Task, Thread, Mem, and Gpu parameters become invalid.
          */
         public Builder node(Integer node) {
             this.putQueryParameter("Node", node);
@@ -579,10 +579,10 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+         * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
          * <p>
          * 
-         * Default value: 0
+         * Default value: 0.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -616,7 +616,7 @@ public class SubmitJobRequest extends Request {
         }
 
         /**
-         * The user password.
+         * The password that corresponds to the username.
          */
         public Builder runasUserPassword(String runasUserPassword) {
             this.putQueryParameter("RunasUserPassword", runasUserPassword);
@@ -763,10 +763,10 @@ public class SubmitJobRequest extends Request {
             }
 
             /**
-             * The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.
+             * The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.
              * <p>
              * 
-             * Default value: 0
+             * Default value: 0.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

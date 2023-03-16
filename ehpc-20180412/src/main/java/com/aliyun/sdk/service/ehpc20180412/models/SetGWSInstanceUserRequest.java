@@ -83,7 +83,7 @@ public class SetGWSInstanceUserRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the visualization instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class SetGWSInstanceUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The name of the user.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -101,7 +101,7 @@ public class SetGWSInstanceUserRequest extends Request {
         }
 
         /**
-         * UserUid.
+         * The ID of the user.
          */
         public Builder userUid(String userUid) {
             this.putQueryParameter("UserUid", userUid);
