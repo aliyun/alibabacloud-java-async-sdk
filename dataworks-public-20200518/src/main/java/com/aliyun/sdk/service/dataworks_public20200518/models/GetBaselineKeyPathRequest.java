@@ -109,7 +109,7 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * BaselineId.
+         * The ID of the baseline.
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -118,7 +118,7 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * Bizdate.
+         * The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -127,7 +127,7 @@ public class GetBaselineKeyPathRequest extends Request {
         }
 
         /**
-         * InGroupId.
+         * The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.
          */
         public Builder inGroupId(Integer inGroupId) {
             this.putBodyParameter("InGroupId", inGroupId);

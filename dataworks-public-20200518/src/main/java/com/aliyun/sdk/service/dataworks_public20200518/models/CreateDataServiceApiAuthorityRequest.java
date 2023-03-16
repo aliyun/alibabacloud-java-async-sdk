@@ -139,7 +139,7 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -148,7 +148,7 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * AuthorizedProjectId.
+         * The ID of the workspace to which the access permissions on the API are granted.
          */
         public Builder authorizedProjectId(Long authorizedProjectId) {
             this.putBodyParameter("AuthorizedProjectId", authorizedProjectId);
@@ -157,7 +157,7 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the validity period of the access permissions. The time must be a UNIX timestamp. Unit: seconds. Example: 1600531564, which indicates 2020-09-20 00:06:04 (UTC+8).
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -166,7 +166,7 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -175,7 +175,7 @@ public class CreateDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

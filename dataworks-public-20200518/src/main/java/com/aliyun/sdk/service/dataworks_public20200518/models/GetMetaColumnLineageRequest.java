@@ -191,7 +191,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the E-MapReduce (EMR) cluster. Configure this parameter only when you query data in an EMR compute engine instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -200,7 +200,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * ColumnGuid.
+         * The GUID of the field.
          */
         public Builder columnGuid(String columnGuid) {
             this.putQueryParameter("ColumnGuid", columnGuid);
@@ -209,7 +209,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * ColumnName.
+         * The name of the field.
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -218,7 +218,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -227,7 +227,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * The name of the database.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -236,7 +236,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * Direction.
+         * Specifies whether to query the ancestor or descendant lineage of the field. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -245,7 +245,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -254,7 +254,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +263,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the metatable.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

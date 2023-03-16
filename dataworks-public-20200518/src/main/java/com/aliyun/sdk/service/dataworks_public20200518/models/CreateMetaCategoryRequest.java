@@ -107,7 +107,7 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The remarks of the category.
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -116,7 +116,7 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the category.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -125,7 +125,7 @@ public class CreateMetaCategoryRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * The ID of the parent category.
          */
         public Builder parentId(Long parentId) {
             this.putBodyParameter("ParentId", parentId);

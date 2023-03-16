@@ -98,7 +98,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The business data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * Content.
+             * The description of the metatable.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -246,7 +246,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the metatable was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -254,7 +254,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * The creator of the metatable.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -262,7 +262,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * The name of the user who created the metatable.
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -270,7 +270,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the metatable was modified.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -278,7 +278,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number.
              */
             public Builder version(Long version) {
                 this.version = version;

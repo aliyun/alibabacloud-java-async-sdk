@@ -98,7 +98,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information about the category.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +178,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
             private Long categoryId; 
 
             /**
-             * CategoryId.
+             * The ID of the category.
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;

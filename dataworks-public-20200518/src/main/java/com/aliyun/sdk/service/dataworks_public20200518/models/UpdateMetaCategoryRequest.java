@@ -107,7 +107,7 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * The ID of the category.
          */
         public Builder categoryId(Long categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -116,7 +116,7 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The remarks of the category.
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -125,7 +125,7 @@ public class UpdateMetaCategoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the category.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

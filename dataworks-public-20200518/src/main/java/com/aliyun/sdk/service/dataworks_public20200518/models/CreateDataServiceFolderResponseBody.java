@@ -50,7 +50,7 @@ public class CreateDataServiceFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FolderId.
+         * The ID of the created folder.
          */
         public Builder folderId(Long folderId) {
             this.folderId = folderId;
@@ -58,7 +58,7 @@ public class CreateDataServiceFolderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

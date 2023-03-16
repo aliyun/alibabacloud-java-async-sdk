@@ -94,7 +94,7 @@ public class DeleteFromMetaCategoryRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * The ID of the category.
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -103,7 +103,7 @@ public class DeleteFromMetaCategoryRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The GUID of the metatable.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

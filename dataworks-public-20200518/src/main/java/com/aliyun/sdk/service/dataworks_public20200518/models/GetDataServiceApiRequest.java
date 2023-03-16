@@ -109,7 +109,7 @@ public class GetDataServiceApiRequest extends Request {
         }
 
         /**
-         * ApiId.
+         * The ID of the DataService Studio API.
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -118,7 +118,7 @@ public class GetDataServiceApiRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -127,7 +127,7 @@ public class GetDataServiceApiRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

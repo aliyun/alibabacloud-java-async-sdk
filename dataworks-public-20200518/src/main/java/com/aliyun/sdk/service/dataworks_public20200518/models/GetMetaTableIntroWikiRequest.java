@@ -93,7 +93,7 @@ public class GetMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The GUID of the metatable.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -102,7 +102,7 @@ public class GetMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * WikiVersion.
+         * The version of the instructions.
          */
         public Builder wikiVersion(Long wikiVersion) {
             this.putQueryParameter("WikiVersion", wikiVersion);

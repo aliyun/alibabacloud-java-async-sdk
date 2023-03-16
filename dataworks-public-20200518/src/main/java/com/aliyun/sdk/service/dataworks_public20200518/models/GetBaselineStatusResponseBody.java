@@ -98,7 +98,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the baseline instance.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -262,7 +262,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * EndCast.
+             * The timestamp of the predicted time when the instance finished running.
              */
             public Builder endCast(Long endCast) {
                 this.endCast = endCast;
@@ -270,7 +270,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The timestamp of the actual time when the instance finished running.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -278,7 +278,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -286,7 +286,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -294,7 +294,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -302,7 +302,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -310,7 +310,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -318,7 +318,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -443,7 +443,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * EndCast.
+             * The timestamp of the predicted time when the instance finished running.
              */
             public Builder endCast(Long endCast) {
                 this.endCast = endCast;
@@ -451,7 +451,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The timestamp of the actual time when the instance finished running.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -459,7 +459,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -467,7 +467,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -475,7 +475,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -483,7 +483,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -491,7 +491,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -499,7 +499,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -720,7 +720,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * BaselineId.
+             * The ID of the baseline.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -728,7 +728,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineName.
+             * The name of the baseline.
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -736,7 +736,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Bizdate.
+             * The data timestamp of the baseline instance.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -744,7 +744,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * BlockInstance.
+             * The information about the key instance.
              */
             public Builder blockInstance(BlockInstance blockInstance) {
                 this.blockInstance = blockInstance;
@@ -752,7 +752,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Buffer.
+             * The margin of the baseline instance. Unit: seconds.
              */
             public Builder buffer(Float buffer) {
                 this.buffer = buffer;
@@ -760,7 +760,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndCast.
+             * The timestamp of the predicted time when the baseline instance finished running.
              */
             public Builder endCast(Long endCast) {
                 this.endCast = endCast;
@@ -768,7 +768,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpTime.
+             * The timestamp of the alerting time of the baseline instance.
              */
             public Builder expTime(Long expTime) {
                 this.expTime = expTime;
@@ -776,7 +776,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FinishStatus.
+             * The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running.
              */
             public Builder finishStatus(String finishStatus) {
                 this.finishStatus = finishStatus;
@@ -784,7 +784,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -792,7 +792,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InGroupId.
+             * The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -800,7 +800,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastInstance.
+             * The information about the last generated instance.
              */
             public Builder lastInstance(LastInstance lastInstance) {
                 this.lastInstance = lastInstance;
@@ -808,7 +808,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -816,7 +816,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the baseline. Valid values: 1, 2, 5, 7, and 8.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -824,7 +824,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the baseline belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -832,7 +832,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SlaTime.
+             * The timestamp of the committed completion time of the baseline instance.
              */
             public Builder slaTime(Long slaTime) {
                 this.slaTime = slaTime;
@@ -840,7 +840,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time.
              */
             public Builder status(String status) {
                 this.status = status;

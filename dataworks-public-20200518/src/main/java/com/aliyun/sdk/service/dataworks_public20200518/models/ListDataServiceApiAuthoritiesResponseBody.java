@@ -98,7 +98,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The APIs on which other users are granted the access permissions.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +214,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * CreatedTime.
+             * The time when the access permissions on the API were granted to other users.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -222,7 +222,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * The ID of the Alibaba Cloud account used by the user who granted other users the access permissions on the API.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -230,7 +230,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the validity period of the authorization.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -238,7 +238,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the access permissions on the API are granted.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -399,7 +399,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * ApiId.
+             * The ID of the API.
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -407,7 +407,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The name of the API.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -415,7 +415,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * ApiPath.
+             * The path of the API.
              */
             public Builder apiPath(String apiPath) {
                 this.apiPath = apiPath;
@@ -423,7 +423,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * ApiStatus.
+             * The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.
              */
             public Builder apiStatus(Integer apiStatus) {
                 this.apiStatus = apiStatus;
@@ -431,7 +431,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizationRecords.
+             * The authorization records.
              */
             public Builder authorizationRecords(java.util.List < AuthorizationRecords> authorizationRecords) {
                 this.authorizationRecords = authorizationRecords;
@@ -439,7 +439,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the API was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -447,7 +447,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * The ID of the Alibaba Cloud account used by the API owner.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -455,7 +455,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -463,7 +463,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the API was last updated.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -471,7 +471,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -479,7 +479,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -556,7 +556,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * ApiAuthorizationList.
+             * The APIs on which other users are granted the access permissions and the authorization records.
              */
             public Builder apiAuthorizationList(java.util.List < ApiAuthorizationList> apiAuthorizationList) {
                 this.apiAuthorizationList = apiAuthorizationList;
@@ -564,7 +564,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -572,7 +572,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -580,7 +580,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

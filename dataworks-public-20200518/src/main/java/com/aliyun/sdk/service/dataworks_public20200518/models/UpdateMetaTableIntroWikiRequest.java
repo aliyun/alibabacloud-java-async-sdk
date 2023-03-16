@@ -94,7 +94,7 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * Content.
+         * The details of the instructions on how to use the metatable.
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -103,7 +103,7 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The GUID of the metatable. Specify the GUID in the format of odps.{projectName}.{tableName}.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

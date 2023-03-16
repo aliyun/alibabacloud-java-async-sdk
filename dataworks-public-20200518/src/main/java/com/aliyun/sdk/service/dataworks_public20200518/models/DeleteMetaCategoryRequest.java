@@ -79,7 +79,7 @@ public class DeleteMetaCategoryRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * The ID of the category.
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);

@@ -98,7 +98,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The business data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -226,7 +226,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * ClusterId.
+             * The ID of the EMR cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -234,7 +234,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnGuid.
+             * The GUID of the field.
              */
             public Builder columnGuid(String columnGuid) {
                 this.columnGuid = columnGuid;
@@ -242,7 +242,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The name of the field.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -250,7 +250,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The name of the database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -258,7 +258,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the metatable.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -335,7 +335,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DataEntityList.
+             * The list of metatables in the compute engine instance.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -343,7 +343,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -351,7 +351,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -359,7 +359,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of fields.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

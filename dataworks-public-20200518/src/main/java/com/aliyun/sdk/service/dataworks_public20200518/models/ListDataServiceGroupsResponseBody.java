@@ -50,7 +50,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupPagingResult.
+         * The paging result for the business processes.
          */
         public Builder groupPagingResult(GroupPagingResult groupPagingResult) {
             this.groupPagingResult = groupPagingResult;
@@ -58,7 +58,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * ApiGatewayGroupId.
+             * The ID of the API group that is associated with the business process in the API Gateway console.
              */
             public Builder apiGatewayGroupId(String apiGatewayGroupId) {
                 this.apiGatewayGroupId = apiGatewayGroupId;
@@ -202,7 +202,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the business process was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -210,7 +210,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -218,7 +218,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the business process.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +226,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the business process.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -234,7 +234,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the business process.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -242,7 +242,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the business process was modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -250,7 +250,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -258,7 +258,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -335,7 +335,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Groups.
+             * The business processes.
              */
             public Builder groups(java.util.List < Groups> groups) {
                 this.groups = groups;
@@ -343,7 +343,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -351,7 +351,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -359,7 +359,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

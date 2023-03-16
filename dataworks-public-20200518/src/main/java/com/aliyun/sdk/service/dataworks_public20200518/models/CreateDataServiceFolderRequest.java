@@ -139,7 +139,7 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * FolderName.
+         * The name of the folder.
          */
         public Builder folderName(String folderName) {
             this.putBodyParameter("FolderName", folderName);
@@ -148,7 +148,7 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the desired workflow to which the folder belongs.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -157,7 +157,7 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * The ID of the desired parent folder of the folder. The ID of the root folder in a workflow is 0. The ID of the folder created by users in a workflow is greater than 0.
          */
         public Builder parentId(Long parentId) {
             this.putBodyParameter("ParentId", parentId);
@@ -166,7 +166,7 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -175,7 +175,7 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);
