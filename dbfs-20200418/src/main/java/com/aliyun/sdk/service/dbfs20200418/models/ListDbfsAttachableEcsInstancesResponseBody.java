@@ -92,6 +92,9 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
     } 
 
     public static class EcsLabelInfo extends TeaModel {
+        @NameInMap("ImageId")
+        private String imageId;
+
         @NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
@@ -111,6 +114,7 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
         private String value;
 
         private EcsLabelInfo(Builder builder) {
+            this.imageId = builder.imageId;
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.OSName = builder.OSName;
             this.status = builder.status;
@@ -125,6 +129,13 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
 
         public static EcsLabelInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
         }
 
         /**
@@ -170,12 +181,21 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String imageId; 
             private String instanceTypeFamily; 
             private String OSName; 
             private String status; 
             private String zoneId; 
             private String label; 
             private String value; 
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
 
             /**
              * InstanceTypeFamily.

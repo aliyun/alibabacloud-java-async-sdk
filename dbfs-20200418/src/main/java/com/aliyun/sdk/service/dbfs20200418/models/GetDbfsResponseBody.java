@@ -183,7 +183,7 @@ public class GetDbfsResponseBody extends TeaModel {
         @NameInMap("SnapshotCount")
         private Integer snapshotCount;
 
-        @NameInMap("totalSize")
+        @NameInMap("TotalSize")
         private Long totalSize;
 
         private SnapshotInfo(Builder builder) {
@@ -260,7 +260,7 @@ public class GetDbfsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * TotalSize.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

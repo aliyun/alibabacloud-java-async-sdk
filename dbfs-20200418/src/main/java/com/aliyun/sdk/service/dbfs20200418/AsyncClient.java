@@ -54,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetServiceLinkedRoleResponse> getServiceLinkedRole(GetServiceLinkedRoleRequest request);
 
+    CompletableFuture<GetSnapshotLinkResponse> getSnapshotLink(GetSnapshotLinkRequest request);
+
     CompletableFuture<ListAutoSnapshotPoliciesResponse> listAutoSnapshotPolicies(ListAutoSnapshotPoliciesRequest request);
 
     CompletableFuture<ListAutoSnapshotPolicyAppliedDbfsResponse> listAutoSnapshotPolicyAppliedDbfs(ListAutoSnapshotPolicyAppliedDbfsRequest request);
@@ -67,6 +69,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDbfsAttachedEcsInstancesResponse> listDbfsAttachedEcsInstances(ListDbfsAttachedEcsInstancesRequest request);
 
     CompletableFuture<ListSnapshotResponse> listSnapshot(ListSnapshotRequest request);
+
+    CompletableFuture<ListSnapshotLinksResponse> listSnapshotLinks(ListSnapshotLinksRequest request);
 
     CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
 

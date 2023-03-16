@@ -7,14 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListAutoSnapshotPolicyUnappliedDbfsResponseBody} extends {@link TeaModel}
+ * {@link ListSnapshotLinksResponseBody} extends {@link TeaModel}
  *
- * <p>ListAutoSnapshotPolicyUnappliedDbfsResponseBody</p>
+ * <p>ListSnapshotLinksResponseBody</p>
  */
-public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
-    @NameInMap("DbfsList")
-    private java.util.List < DbfsList> dbfsList;
-
+public class ListSnapshotLinksResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -24,14 +21,17 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SnapshotLinks")
+    private java.util.List < SnapshotLinks> snapshotLinks;
+
     @NameInMap("TotalCount")
     private Integer totalCount;
 
-    private ListAutoSnapshotPolicyUnappliedDbfsResponseBody(Builder builder) {
-        this.dbfsList = builder.dbfsList;
+    private ListSnapshotLinksResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.snapshotLinks = builder.snapshotLinks;
         this.totalCount = builder.totalCount;
     }
 
@@ -39,15 +39,8 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListAutoSnapshotPolicyUnappliedDbfsResponseBody create() {
+    public static ListSnapshotLinksResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return dbfsList
-     */
-    public java.util.List < DbfsList> getDbfsList() {
-        return this.dbfsList;
     }
 
     /**
@@ -72,6 +65,13 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
     }
 
     /**
+     * @return snapshotLinks
+     */
+    public java.util.List < SnapshotLinks> getSnapshotLinks() {
+        return this.snapshotLinks;
+    }
+
+    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
@@ -79,19 +79,11 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DbfsList> dbfsList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
+        private java.util.List < SnapshotLinks> snapshotLinks; 
         private Integer totalCount; 
-
-        /**
-         * DbfsList.
-         */
-        public Builder dbfsList(java.util.List < DbfsList> dbfsList) {
-            this.dbfsList = dbfsList;
-            return this;
-        }
 
         /**
          * PageNumber.
@@ -118,6 +110,14 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
         }
 
         /**
+         * SnapshotLinks.
+         */
+        public Builder snapshotLinks(java.util.List < SnapshotLinks> snapshotLinks) {
+            this.snapshotLinks = snapshotLinks;
+            return this;
+        }
+
+        /**
          * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
@@ -125,27 +125,71 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
             return this;
         }
 
-        public ListAutoSnapshotPolicyUnappliedDbfsResponseBody build() {
-            return new ListAutoSnapshotPolicyUnappliedDbfsResponseBody(this);
+        public ListSnapshotLinksResponseBody build() {
+            return new ListSnapshotLinksResponseBody(this);
         } 
 
     } 
 
-    public static class DbfsList extends TeaModel {
+    public static class EcsList extends TeaModel {
+        @NameInMap("EcsId")
+        private String ecsId;
+
+        private EcsList(Builder builder) {
+            this.ecsId = builder.ecsId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EcsList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ecsId
+         */
+        public String getEcsId() {
+            return this.ecsId;
+        }
+
+        public static final class Builder {
+            private String ecsId; 
+
+            /**
+             * EcsId.
+             */
+            public Builder ecsId(String ecsId) {
+                this.ecsId = ecsId;
+                return this;
+            }
+
+            public EcsList build() {
+                return new EcsList(this);
+            } 
+
+        } 
+
+    }
+    public static class SnapshotLinks extends TeaModel {
+        @NameInMap("EcsList")
+        private java.util.List < EcsList> ecsList;
+
         @NameInMap("FsId")
         private String fsId;
 
         @NameInMap("FsName")
         private String fsName;
 
-        @NameInMap("RegionId")
-        private String regionId;
-
-        @NameInMap("SizeG")
-        private Long sizeG;
+        @NameInMap("LinkId")
+        private String linkId;
 
         @NameInMap("SnapshotCount")
         private Integer snapshotCount;
+
+        @NameInMap("SourceSize")
+        private Integer sourceSize;
 
         @NameInMap("Status")
         private String status;
@@ -153,12 +197,13 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
         @NameInMap("TotalSize")
         private Long totalSize;
 
-        private DbfsList(Builder builder) {
+        private SnapshotLinks(Builder builder) {
+            this.ecsList = builder.ecsList;
             this.fsId = builder.fsId;
             this.fsName = builder.fsName;
-            this.regionId = builder.regionId;
-            this.sizeG = builder.sizeG;
+            this.linkId = builder.linkId;
             this.snapshotCount = builder.snapshotCount;
+            this.sourceSize = builder.sourceSize;
             this.status = builder.status;
             this.totalSize = builder.totalSize;
         }
@@ -167,8 +212,15 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static DbfsList create() {
+        public static SnapshotLinks create() {
             return builder().build();
+        }
+
+        /**
+         * @return ecsList
+         */
+        public java.util.List < EcsList> getEcsList() {
+            return this.ecsList;
         }
 
         /**
@@ -186,17 +238,10 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionId
+         * @return linkId
          */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
-         * @return sizeG
-         */
-        public Long getSizeG() {
-            return this.sizeG;
+        public String getLinkId() {
+            return this.linkId;
         }
 
         /**
@@ -204,6 +249,13 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
          */
         public Integer getSnapshotCount() {
             return this.snapshotCount;
+        }
+
+        /**
+         * @return sourceSize
+         */
+        public Integer getSourceSize() {
+            return this.sourceSize;
         }
 
         /**
@@ -221,16 +273,25 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < EcsList> ecsList; 
             private String fsId; 
             private String fsName; 
-            private String regionId; 
-            private Long sizeG; 
+            private String linkId; 
             private Integer snapshotCount; 
+            private Integer sourceSize; 
             private String status; 
             private Long totalSize; 
 
             /**
-             * DBFS实例ID
+             * EcsList.
+             */
+            public Builder ecsList(java.util.List < EcsList> ecsList) {
+                this.ecsList = ecsList;
+                return this;
+            }
+
+            /**
+             * FsId.
              */
             public Builder fsId(String fsId) {
                 this.fsId = fsId;
@@ -238,7 +299,7 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
             }
 
             /**
-             * DBFS实例名称
+             * FsName.
              */
             public Builder fsName(String fsName) {
                 this.fsName = fsName;
@@ -246,18 +307,10 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * LinkId.
              */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * 容量（GB）
-             */
-            public Builder sizeG(Long sizeG) {
-                this.sizeG = sizeG;
+            public Builder linkId(String linkId) {
+                this.linkId = linkId;
                 return this;
             }
 
@@ -266,6 +319,14 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
              */
             public Builder snapshotCount(Integer snapshotCount) {
                 this.snapshotCount = snapshotCount;
+                return this;
+            }
+
+            /**
+             * SourceSize.
+             */
+            public Builder sourceSize(Integer sourceSize) {
+                this.sourceSize = sourceSize;
                 return this;
             }
 
@@ -285,8 +346,8 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
                 return this;
             }
 
-            public DbfsList build() {
-                return new DbfsList(this);
+            public SnapshotLinks build() {
+                return new SnapshotLinks(this);
             } 
 
         } 

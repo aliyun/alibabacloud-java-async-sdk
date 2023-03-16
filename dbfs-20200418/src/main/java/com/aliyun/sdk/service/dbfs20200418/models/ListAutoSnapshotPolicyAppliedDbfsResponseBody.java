@@ -145,13 +145,13 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
         private Long sizeG;
 
         @NameInMap("SnapshotCount")
-        private String snapshotCount;
+        private Integer snapshotCount;
 
         @NameInMap("Status")
         private String status;
 
         @NameInMap("TotalSize")
-        private String totalSize;
+        private Long totalSize;
 
         private DbfsList(Builder builder) {
             this.fsId = builder.fsId;
@@ -202,7 +202,7 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
         /**
          * @return snapshotCount
          */
-        public String getSnapshotCount() {
+        public Integer getSnapshotCount() {
             return this.snapshotCount;
         }
 
@@ -216,7 +216,7 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
         /**
          * @return totalSize
          */
-        public String getTotalSize() {
+        public Long getTotalSize() {
             return this.totalSize;
         }
 
@@ -225,9 +225,9 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
             private String fsName; 
             private String regionId; 
             private Long sizeG; 
-            private String snapshotCount; 
+            private Integer snapshotCount; 
             private String status; 
-            private String totalSize; 
+            private Long totalSize; 
 
             /**
              * DBFS实例ID
@@ -264,7 +264,7 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
             /**
              * SnapshotCount.
              */
-            public Builder snapshotCount(String snapshotCount) {
+            public Builder snapshotCount(Integer snapshotCount) {
                 this.snapshotCount = snapshotCount;
                 return this;
             }
@@ -280,7 +280,7 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
             /**
              * TotalSize.
              */
-            public Builder totalSize(String totalSize) {
+            public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
                 return this;
             }

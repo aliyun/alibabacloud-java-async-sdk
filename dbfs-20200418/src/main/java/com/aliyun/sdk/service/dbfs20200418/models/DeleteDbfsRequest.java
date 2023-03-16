@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteDbfsRequest extends Request {
     @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
     @NameInMap("FsId")
     @Validation(required = true)
     private String fsId;
@@ -24,6 +28,7 @@ public class DeleteDbfsRequest extends Request {
 
     private DeleteDbfsRequest(Builder builder) {
         super(builder);
+        this.force = builder.force;
         this.fsId = builder.fsId;
         this.regionId = builder.regionId;
     }
@@ -42,6 +47,13 @@ public class DeleteDbfsRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return fsId
      */
     public String getFsId() {
@@ -56,6 +68,7 @@ public class DeleteDbfsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDbfsRequest, Builder> {
+        private Boolean force; 
         private String fsId; 
         private String regionId; 
 
@@ -65,9 +78,19 @@ public class DeleteDbfsRequest extends Request {
 
         private Builder(DeleteDbfsRequest request) {
             super(request);
+            this.force = request.force;
             this.fsId = request.fsId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * 是否强制删除。
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
 
         /**
          * FsId.
