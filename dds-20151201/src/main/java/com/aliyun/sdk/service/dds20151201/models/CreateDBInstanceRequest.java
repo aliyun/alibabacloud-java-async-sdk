@@ -540,7 +540,7 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
          * *   These special characters include ! # $ % ^ & \* ( ) \_ + - =
-         * *   The password must be 8 to 32 characters in length.
+         * *   The password is 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -588,10 +588,10 @@ public class CreateDBInstanceRequest extends Request {
          * The billing method of the instance. Valid values:
          * <p>
          * 
-         * *   **PostPaid:** pay-as-you-go
-         * *   **PrePaid:** subscription
+         * *   **PostPaid**: pay-as-you-go
+         * *   **PrePaid**: subscription
          * 
-         * > If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.
+         * > If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -641,7 +641,7 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * *   The name must start with a letter.
          * *   The name can contain digits, letters, underscores (\_), and hyphens (-).
-         * *   It must be 2 to 256 characters in length.
+         * *   The name must be 2 to 256 characters in length.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -653,7 +653,7 @@ public class CreateDBInstanceRequest extends Request {
          * The storage capacity of the instance. Unit: GB.
          * <p>
          * 
-         * The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).
+         * The values that can be specified for this parameter are subject to the instance types. For more information, see [Replica set instance types](~~311410~~).
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -683,7 +683,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The version of the database engine. Valid values:
+         * The database engine version of the instance.
          * <p>
          * 
          * *   **6.0**
@@ -725,7 +725,7 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * > 
          * 
-         * *   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
+         * *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
          * 
          * *   The value of this parameter cannot be the same as the value of the **ZoneId** or **SecondaryZoneId** parameter.
          */
@@ -878,7 +878,7 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * > 
          * 
-         * *   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
+         * *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
          * 
          * *   The value of this parameter cannot be the same as the value of the **ZoneId** or **HiddenZoneId** parameter.
          */
@@ -921,7 +921,7 @@ public class CreateDBInstanceRequest extends Request {
          * The ID of the source instance.
          * <p>
          * 
-         * > This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter. If you call this operation to restore an instance from the recycle bin, this parameter is required. The **BackupId** and **RestoreTime** parameters are not required.
+         * > This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter. If you call this operation to restore an instance from the recycle bin, only this parameter is required. The **BackupId** and **RestoreTime** parameters are not required.
          */
         public Builder srcDBInstanceId(String srcDBInstanceId) {
             this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);
@@ -949,9 +949,9 @@ public class CreateDBInstanceRequest extends Request {
          * The storage type of the instance. Valid values:
          * <p>
          * 
-         * *   **cloud_essd1** :ESSD PL1
-         * *   **cloud_essd2**: ESSD PL2
-         * *   **cloud_essd3**: ESSD PL3
+         * *   **cloud_essd1** :ESSD PL1.
+         * *   **cloud_essd2**: ESSD PL2.
+         * *   **cloud_essd3**: ESSD PL3.
          * *   **local_ssd**: local SSD
          */
         public Builder storageType(String storageType) {
@@ -970,7 +970,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * The VPC ID of the instance.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

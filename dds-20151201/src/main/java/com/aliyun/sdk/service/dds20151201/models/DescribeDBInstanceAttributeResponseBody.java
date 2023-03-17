@@ -484,7 +484,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the Mongos node.
+             * The instance type of the mongos node.
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -524,7 +524,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the instance.
+             * The VPC ID of the node.
              * <p>
              * 
              * > This parameter is returned if the network type of the instance is VPC.
@@ -535,7 +535,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the instance.
+             * The vSwitch ID of the node.
              * <p>
              * 
              * > This parameter is returned if the network type of the instance is VPC.
@@ -1121,7 +1121,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1129,7 +1129,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1786,7 +1786,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the instance.
+             * The instance type.
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -1810,7 +1810,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceOrderStatus.
+             * The status of the orders generated for the instance. Valid values:
+             * <p>
+             * 
+             * *   **all_completed**: All orders are being produced or complete.
+             * *   **order_unpaid**: The instance has unpaid orders.
+             * *   **order_wait_for_produce**: The order is being delivered for production.
+             * 
+             * >  The order production process includes placing an order, paying for an order, delivering an order for production, producing an order, and complete.
+             * 
+             * *   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.
+             * *   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.
              */
             public Builder DBInstanceOrderStatus(String DBInstanceOrderStatus) {
                 this.DBInstanceOrderStatus = DBInstanceOrderStatus;
@@ -1821,7 +1831,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * Indicates whether release protection is enabled for the instance. Valid values:
              * <p>
              * 
-             * *   **true**: Release protection is enabled.
+             * *   **true**: enabled
              * *   **false**: disabled
              */
             public Builder DBInstanceReleaseProtection(Boolean DBInstanceReleaseProtection) {
@@ -1851,7 +1861,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **replicate**: replica set instance
              * *   **sharding**: sharded cluster instance
-             * *   **serverless**: serverless instance
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -1859,7 +1868,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 实例数据销毁时间，格式为yyyy-MM-ddTHH:mm:ssZ（UTC时间）。
+             * The time when the instance data was destroyed. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -1867,7 +1876,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The engine of the instance.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1875,7 +1884,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The engine version of the instance.
+             * The database engine version of the instance.
              * <p>
              * 
              * *   **6.0**
@@ -2169,7 +2178,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The storage type of the instance. Valid values:
              * <p>
              * 
-             * **cloud_essd1** :ESSD PL1. **cloud_essd2**: ESSD of PL2. **cloud_essd3**: ESSD of PL3. **local_ssd**: local SSD.
+             * **cloud_essd1** :ESSD PL1 **cloud_essd2**: ESSD of PL2. **cloud_essd3**: ESSD of PL3. **local_ssd**: local SSD.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

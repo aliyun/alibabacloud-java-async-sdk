@@ -206,7 +206,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * The list of resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -242,7 +242,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of tags that you want to associate with the resources. You can specify up to 20 tags.
+         * The tags that are attached to the resources.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -301,9 +301,10 @@ public class TagResourcesRequest extends Request {
              * The key of tag.
              * <p>
              * 
-             * * The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-             * * It can be up to 64 characters in length.
-             * * The key cannot be an empty string.
+             * N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:
+             * 
+             * - **Tag.1.Key** specifies the key of the first tag.
+             * - **Tag.2.Key** specifies the key of the second tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -314,9 +315,10 @@ public class TagResourcesRequest extends Request {
              * The value of tag.
              * <p>
              * 
-             * - The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-             * - It can be up to 128 characters in length.
-             * - The value can be an empty string.
+             * N specifies the serial number of the tag. The following example shows how to calculate consumption intervals: 
+             * 
+             * - **Tag.1.Value** specifies the value of the first tag.
+             * - **Tag.2.Value** specifies the value of the second tag.
              */
             public Builder value(String value) {
                 this.value = value;

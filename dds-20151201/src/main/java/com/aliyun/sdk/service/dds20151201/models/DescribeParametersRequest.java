@@ -26,6 +26,10 @@ public class DescribeParametersRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("ExtraParam")
+    private String extraParam;
+
+    @Query
     @NameInMap("NodeId")
     private String nodeId;
 
@@ -54,6 +58,7 @@ public class DescribeParametersRequest extends Request {
         this.regionId = builder.regionId;
         this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
+        this.extraParam = builder.extraParam;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -94,6 +99,13 @@ public class DescribeParametersRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return extraParam
+     */
+    public String getExtraParam() {
+        return this.extraParam;
     }
 
     /**
@@ -142,6 +154,7 @@ public class DescribeParametersRequest extends Request {
         private String regionId; 
         private String characterType; 
         private String DBInstanceId; 
+        private String extraParam; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -158,6 +171,7 @@ public class DescribeParametersRequest extends Request {
             this.regionId = request.regionId;
             this.characterType = request.characterType;
             this.DBInstanceId = request.DBInstanceId;
+            this.extraParam = request.extraParam;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -197,6 +211,15 @@ public class DescribeParametersRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * ExtraParam.
+         */
+        public Builder extraParam(String extraParam) {
+            this.putQueryParameter("ExtraParam", extraParam);
+            this.extraParam = extraParam;
             return this;
         }
 

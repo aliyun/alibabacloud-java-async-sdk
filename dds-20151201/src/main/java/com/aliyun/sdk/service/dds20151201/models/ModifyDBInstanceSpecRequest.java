@@ -322,7 +322,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
          * The instance type. For more information, see [Instance types](~~57141~~). You can also call the [DescribeAvailableResource](~~149719~~) operation to view instance types.
          * <p>
          * 
-         * >  You must specify at least one of the DBInstanceClass and **DBInstanceStorage** parameters.
+         * > You must specify at least one of the DBInstanceClass and **DBInstanceStorage** parameters.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -343,8 +343,11 @@ public class ModifyDBInstanceSpecRequest extends Request {
          * The storage capacity of the instance. Valid values: 10 to 3000. The value must be a multiple of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance types. For more information, see [Instance types](~~57141~~).
          * <p>
          * 
-         * > * You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.
-         * > * Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.
+         * > 
+         * 
+         * *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.
+         * 
+         * *   Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.
          */
         public Builder DBInstanceStorage(String DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -366,7 +369,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * ExtraParam.
+         * Additional parameter
          */
         public Builder extraParam(String extraParam) {
             this.putQueryParameter("ExtraParam", extraParam);
@@ -375,13 +378,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * The type of the modification. Valid values:
+         * The type of the configuration change. Default value: DOWNGRADE. Valid values:
          * <p>
          * 
          * *   **UPGRADE**
          * *   **DOWNGRADE**
          * 
-         * >  This parameter can be configured only when the billing method of the instance is subscription.
+         * > This parameter can be configured only when the billing method of the instance is subscription.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -413,7 +416,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
          * 
          * If your instance has only **Classic Network** and **VPC** endpoints, you must apply for a public endpoint or release the classic network endpoint for the instance before you can change the **Read-only Nodes** value.
          * 
-         * >  You can go to the **Database Connections** page to view the types of networks that are enabled.
+         * > You can go to the **Database Connections** page to view the types of networks that are enabled.
          */
         public Builder readonlyReplicas(String readonlyReplicas) {
             this.putQueryParameter("ReadonlyReplicas", readonlyReplicas);
@@ -428,7 +431,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
          * *   Valid values of replica set instances: **3**, **5**, and **7**
          * *   Valid values of standalone instances: **1**
          * 
-         * >  This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).
+         * > This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).
          */
         public Builder replicationFactor(String replicationFactor) {
             this.putQueryParameter("ReplicationFactor", replicationFactor);
