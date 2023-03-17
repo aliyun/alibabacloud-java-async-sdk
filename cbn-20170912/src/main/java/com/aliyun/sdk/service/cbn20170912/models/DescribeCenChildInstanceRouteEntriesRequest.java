@@ -241,7 +241,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRouteTableId.
+         * The ID of the route table of the network instance.
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -253,9 +253,9 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
          * The type of the network instance. Valid values:
          * <p>
          * 
-         * *   **VPC**
-         * *   **VBR**
-         * *   **CCN**
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VBR**: virtual border router (VBR)
+         * *   **CCN**: Cloud Connect Network (CCN) instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -318,14 +318,14 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
         }
 
         /**
-         * The status of the routes that you want to query. Valid values:
+         * The status of the route. Valid values:
          * <p>
          * 
-         * *   **Active**: active routes
-         * *   **Candidate**: standby routes
-         * *   **Rejected**: rejected routes
-         * *   **Prohibited**: prohibited routes
-         * *   **All** (default value): all routes
+         * *   **Active**: available
+         * *   **Candidate**: standby
+         * *   **Rejected**: rejected
+         * *   **Prohibited**: prohibited
+         * *   **All** (default): all routes
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

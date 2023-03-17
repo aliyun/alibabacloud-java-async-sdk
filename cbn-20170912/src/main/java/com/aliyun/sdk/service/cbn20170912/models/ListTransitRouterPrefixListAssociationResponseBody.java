@@ -102,7 +102,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         }
 
         /**
-         * The information about the prefix list.
+         * A list of prefix lists.
          */
         public Builder prefixLists(java.util.List < PrefixLists> prefixLists) {
             this.prefixLists = prefixLists;
@@ -118,7 +118,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         }
 
         /**
-         * The number of entries returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -245,7 +245,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
              * The ID of the next hop.
              * <p>
              * 
-             * >  If the value is **BlackHole**, all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.
+             * > A value of **BlackHole** indicates that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -261,7 +261,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
             }
 
             /**
-             * The type of the next hop.
+             * The type of the next hop. Valid values:
              * <p>
              * 
              * *   **BlackHole**: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.

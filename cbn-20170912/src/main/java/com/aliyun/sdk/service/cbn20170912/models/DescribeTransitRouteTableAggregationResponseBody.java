@@ -141,8 +141,8 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         @NameInMap("RouteType")
         private String routeType;
 
-        @NameInMap("Scop")
-        private String scop;
+        @NameInMap("Scope")
+        private String scope;
 
         @NameInMap("Status")
         private String status;
@@ -157,7 +157,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             this.description = builder.description;
             this.name = builder.name;
             this.routeType = builder.routeType;
-            this.scop = builder.scop;
+            this.scope = builder.scope;
             this.status = builder.status;
             this.trRouteTableId = builder.trRouteTableId;
             this.transitRouteTableAggregationCidr = builder.transitRouteTableAggregationCidr;
@@ -193,10 +193,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
-         * @return scop
+         * @return scope
          */
-        public String getScop() {
-            return this.scop;
+        public String getScope() {
+            return this.scope;
         }
 
         /**
@@ -224,7 +224,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String routeType; 
-            private String scop; 
+            private String scope; 
             private String status; 
             private String trRouteTableId; 
             private String transitRouteTableAggregationCidr; 
@@ -254,10 +254,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * Scop.
+             * Scope.
              */
-            public Builder scop(String scop) {
-                this.scop = scop;
+            public Builder scope(String scope) {
+                this.scope = scope;
                 return this;
             }
 

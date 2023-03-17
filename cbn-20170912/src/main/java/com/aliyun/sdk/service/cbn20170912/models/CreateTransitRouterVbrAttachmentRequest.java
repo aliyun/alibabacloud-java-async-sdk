@@ -276,7 +276,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
          * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
@@ -287,7 +287,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default values:
+         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
          * <p>
          * 
          * *   **false** (default): performs a dry run and sends the request.
@@ -318,10 +318,10 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The region ID of the VBR.
+         * The ID of the region where the VBR is deployed.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,7 +405,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends Request {
          * The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.
          * <p>
          * 
-         * > If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
+         * > If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.
          */
         public Builder vbrOwnerId(Long vbrOwnerId) {
             this.putQueryParameter("VbrOwnerId", vbrOwnerId);

@@ -232,11 +232,11 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
+         * The token that determines the start point of the query. Valid values:
          * <p>
          * 
          * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * *   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -340,9 +340,9 @@ public class ListTransitRouterRouteTablesRequest extends Request {
          * The status of the route table. Valid values:
          * <p>
          * 
-         * *   **Creating**: being created
-         * *   **Deleting**: being deleted
-         * *   **Active**: available
+         * *   **Creating**: The route table is being created.
+         * *   **Deleting**: The route table is being deleted.
+         * *   **Active**: The route table is available.
          */
         public Builder transitRouterRouteTableStatus(String transitRouterRouteTableStatus) {
             this.putQueryParameter("TransitRouterRouteTableStatus", transitRouterRouteTableStatus);
@@ -355,7 +355,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
          * <p>
          * 
          * *   **Custom**: a custom route table
-         * *   **System**: the default system route table
+         * *   **System**: the default route table
          */
         public Builder transitRouterRouteTableType(String transitRouterRouteTableType) {
             this.putQueryParameter("TransitRouterRouteTableType", transitRouterRouteTableType);
@@ -400,8 +400,8 @@ public class ListTransitRouterRouteTablesRequest extends Request {
              * Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:
              * <p>
              * 
-             * *   **disable**: no If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit route with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
-             * *   **enable**: yes If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * *   **disable**: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * *   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
              */
             public Builder multiRegionECMP(String multiRegionECMP) {
                 this.multiRegionECMP = multiRegionECMP;
@@ -457,7 +457,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
              * The tag key.
              * <p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              * 
              * You can specify at most 20 tag keys.
              */

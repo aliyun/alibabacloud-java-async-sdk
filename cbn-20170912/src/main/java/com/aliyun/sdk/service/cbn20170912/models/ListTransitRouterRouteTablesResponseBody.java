@@ -86,7 +86,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         private java.util.List < TransitRouterRouteTables> transitRouterRouteTables; 
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -97,8 +97,8 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
          * The token that determines the start point of the next query. Valid values:
          * <p>
          * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
          * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * *   If a value of **NextToken** is not returned, it indicates that no additional results exist.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -165,8 +165,8 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
              * Indicates whether ECMP routing is enabled. Valid values:
              * <p>
              * 
-             * *   **disable**: disabled If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit route with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
-             * *   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * *   **disable**: ECMP routing is disabled. If ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * *   **enable**: ECMP routing is enabled. If ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
              */
             public Builder multiRegionECMP(String multiRegionECMP) {
                 this.multiRegionECMP = multiRegionECMP;
@@ -403,7 +403,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * A list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -446,9 +446,9 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
              * The status of the route table. Valid values:
              * <p>
              * 
-             * *   **Creating**: being created
-             * *   **Deleting**: being deleted
-             * *   **Active**: available
+             * *   **Creating**: The route table is being created.
+             * *   **Deleting**: The route table is being deleted.
+             * *   **Active**: The route table is available.
              */
             public Builder transitRouterRouteTableStatus(String transitRouterRouteTableStatus) {
                 this.transitRouterRouteTableStatus = transitRouterRouteTableStatus;
@@ -460,7 +460,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Custom**: a custom route table
-             * *   **System**: the default system route table
+             * *   **System**: the default route table
              */
             public Builder transitRouterRouteTableType(String transitRouterRouteTableType) {
                 this.transitRouterRouteTableType = transitRouterRouteTableType;

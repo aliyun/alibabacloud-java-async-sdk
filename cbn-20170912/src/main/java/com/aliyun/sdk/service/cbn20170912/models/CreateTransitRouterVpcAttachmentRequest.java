@@ -275,7 +275,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The billing method. The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
+         * The billing method. Valid values: The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -287,7 +287,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
          * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
@@ -298,7 +298,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default values:
+         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:
          * <p>
          * 
          * *   **false** (default): performs a dry run and sends the request.
@@ -386,7 +386,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
          * The name of the VPC connection.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -425,10 +425,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * A zone that supports Enterprise Edition transit routers.
+         * A vSwitch in a zone of the Enterprise Edition transit router.
          * <p>
          * 
-         * You can specify at most 10 zones.
+         * You can specify at most 10 vSwitches in each call.
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
@@ -555,7 +555,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             private String zoneId; 
 
             /**
-             * A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.
+             * A vSwitch in a zone of the Enterprise Edition transit router.
              * <p>
              * 
              * You can specify vSwitches for at most 10 zones in each call.
@@ -566,7 +566,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             }
 
             /**
-             * The ID of the zone that supports Enterprise Edition transit routers.
+             * The ID of the zone supported by Enterprise Edition transit routers.
              * <p>
              * 
              * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.

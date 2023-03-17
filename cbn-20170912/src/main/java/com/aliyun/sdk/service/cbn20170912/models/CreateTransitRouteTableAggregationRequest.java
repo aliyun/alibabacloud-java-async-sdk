@@ -50,9 +50,9 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
     private String transitRouteTableAggregationName;
 
     @Query
-    @NameInMap("TransitRouteTableAggregationScop")
+    @NameInMap("TransitRouteTableAggregationScope")
     @Validation(required = true)
-    private String transitRouteTableAggregationScop;
+    private String transitRouteTableAggregationScope;
 
     @Query
     @NameInMap("TransitRouteTableId")
@@ -70,7 +70,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         this.transitRouteTableAggregationCidr = builder.transitRouteTableAggregationCidr;
         this.transitRouteTableAggregationDescription = builder.transitRouteTableAggregationDescription;
         this.transitRouteTableAggregationName = builder.transitRouteTableAggregationName;
-        this.transitRouteTableAggregationScop = builder.transitRouteTableAggregationScop;
+        this.transitRouteTableAggregationScope = builder.transitRouteTableAggregationScope;
         this.transitRouteTableId = builder.transitRouteTableId;
     }
 
@@ -151,10 +151,10 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
     }
 
     /**
-     * @return transitRouteTableAggregationScop
+     * @return transitRouteTableAggregationScope
      */
-    public String getTransitRouteTableAggregationScop() {
-        return this.transitRouteTableAggregationScop;
+    public String getTransitRouteTableAggregationScope() {
+        return this.transitRouteTableAggregationScope;
     }
 
     /**
@@ -174,7 +174,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         private String transitRouteTableAggregationCidr; 
         private String transitRouteTableAggregationDescription; 
         private String transitRouteTableAggregationName; 
-        private String transitRouteTableAggregationScop; 
+        private String transitRouteTableAggregationScope; 
         private String transitRouteTableId; 
 
         private Builder() {
@@ -192,7 +192,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
             this.transitRouteTableAggregationCidr = request.transitRouteTableAggregationCidr;
             this.transitRouteTableAggregationDescription = request.transitRouteTableAggregationDescription;
             this.transitRouteTableAggregationName = request.transitRouteTableAggregationName;
-            this.transitRouteTableAggregationScop = request.transitRouteTableAggregationScop;
+            this.transitRouteTableAggregationScope = request.transitRouteTableAggregationScope;
             this.transitRouteTableId = request.transitRouteTableId;
         } 
 
@@ -200,9 +200,9 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may different for each request.
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -211,11 +211,11 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:
+         * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
-         * *   **false** (default): sends the request. If the request passes the precheck, the aggregate route is added.
-         * *   **true**: prechecks the request but does not create the aggregate route. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request.
+         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -290,7 +290,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
          * The name of the aggregate route.
          * <p>
          * 
-         * The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.
+         * The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.
          */
         public Builder transitRouteTableAggregationName(String transitRouteTableAggregationName) {
             this.putQueryParameter("TransitRouteTableAggregationName", transitRouteTableAggregationName);
@@ -299,14 +299,11 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * The scope of networks that you want to advertise the aggregate route.
-         * <p>
-         * 
-         * Set the value to **VPC**, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.
+         * TransitRouteTableAggregationScope.
          */
-        public Builder transitRouteTableAggregationScop(String transitRouteTableAggregationScop) {
-            this.putQueryParameter("TransitRouteTableAggregationScop", transitRouteTableAggregationScop);
-            this.transitRouteTableAggregationScop = transitRouteTableAggregationScop;
+        public Builder transitRouteTableAggregationScope(String transitRouteTableAggregationScope) {
+            this.putQueryParameter("TransitRouteTableAggregationScope", transitRouteTableAggregationScope);
+            this.transitRouteTableAggregationScope = transitRouteTableAggregationScope;
             return this;
         }
 

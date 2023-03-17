@@ -255,7 +255,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
          * The ID of the next hop.
          * <p>
          * 
-         * >  Enter **BlackHole** if you want to query the prefix list that generates blackhole routes.
+         * > Set the value to **BlackHole** if you want to query the prefix list that generates blackhole routes.
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
