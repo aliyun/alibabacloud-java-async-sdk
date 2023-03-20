@@ -39,7 +39,6 @@ public class BtripBillInfoAdjustRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-corp-token")
-    @Validation(required = true)
     private String xAcsBtripCorpToken;
 
     private BtripBillInfoAdjustRequest(Builder builder) {

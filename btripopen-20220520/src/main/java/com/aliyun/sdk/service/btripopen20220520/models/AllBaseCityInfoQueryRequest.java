@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AllBaseCityInfoQueryRequest extends Request {
     @Header
     @NameInMap("x-acs-btrip-access-token")
-    @Validation(required = true)
     private String xAcsBtripAccessToken;
 
     private AllBaseCityInfoQueryRequest(Builder builder) {

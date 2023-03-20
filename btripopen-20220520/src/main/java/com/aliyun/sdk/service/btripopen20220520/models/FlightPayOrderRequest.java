@@ -38,7 +38,6 @@ public class FlightPayOrderRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-corp-token")
-    @Validation(required = true)
     private String xAcsBtripCorpToken;
 
     private FlightPayOrderRequest(Builder builder) {

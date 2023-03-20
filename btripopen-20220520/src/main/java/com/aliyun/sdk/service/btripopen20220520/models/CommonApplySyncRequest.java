@@ -41,7 +41,6 @@ public class CommonApplySyncRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
-    @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
     private CommonApplySyncRequest(Builder builder) {

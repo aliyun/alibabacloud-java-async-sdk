@@ -30,7 +30,6 @@ public class ApplyQueryRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
-    @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
     private ApplyQueryRequest(Builder builder) {

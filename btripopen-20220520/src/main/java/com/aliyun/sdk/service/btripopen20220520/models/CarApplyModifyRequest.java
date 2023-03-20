@@ -37,7 +37,6 @@ public class CarApplyModifyRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
-    @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
     private CarApplyModifyRequest(Builder builder) {

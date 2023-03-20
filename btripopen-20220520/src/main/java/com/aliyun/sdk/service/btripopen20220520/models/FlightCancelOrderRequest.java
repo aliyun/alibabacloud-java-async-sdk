@@ -19,7 +19,6 @@ public class FlightCancelOrderRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-corp-token")
-    @Validation(required = true)
     private String xAcsBtripCorpToken;
 
     private FlightCancelOrderRequest(Builder builder) {

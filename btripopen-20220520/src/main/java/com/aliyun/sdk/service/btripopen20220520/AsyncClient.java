@@ -134,6 +134,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InvoiceModifyResponse> invoiceModify(InvoiceModifyRequest request);
 
+    CompletableFuture<InvoiceRuleAddResponse> invoiceRuleAdd(InvoiceRuleAddRequest request);
+
+    CompletableFuture<InvoiceRuleDeleteResponse> invoiceRuleDelete(InvoiceRuleDeleteRequest request);
+
     CompletableFuture<InvoiceRuleSaveResponse> invoiceRuleSave(InvoiceRuleSaveRequest request);
 
     CompletableFuture<InvoiceSearchResponse> invoiceSearch(InvoiceSearchRequest request);

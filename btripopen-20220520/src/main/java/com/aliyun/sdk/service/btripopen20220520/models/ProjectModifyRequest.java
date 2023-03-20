@@ -36,7 +36,6 @@ public class ProjectModifyRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
-    @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
     private ProjectModifyRequest(Builder builder) {

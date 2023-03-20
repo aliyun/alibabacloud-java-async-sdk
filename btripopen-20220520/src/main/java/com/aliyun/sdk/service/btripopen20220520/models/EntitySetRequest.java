@@ -23,7 +23,6 @@ public class EntitySetRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
-    @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
     private EntitySetRequest(Builder builder) {

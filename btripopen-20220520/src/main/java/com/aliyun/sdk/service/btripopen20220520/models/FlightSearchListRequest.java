@@ -74,7 +74,6 @@ public class FlightSearchListRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-corp-token")
-    @Validation(required = true)
     private String xAcsBtripCorpToken;
 
     private FlightSearchListRequest(Builder builder) {

@@ -77,7 +77,6 @@ public class FlightRefundApplyRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-corp-token")
-    @Validation(required = true)
     private String xAcsBtripCorpToken;
 
     private FlightRefundApplyRequest(Builder builder) {

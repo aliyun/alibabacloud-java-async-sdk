@@ -22,7 +22,6 @@ public class TicketChangingDetailRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-corp-token")
-    @Validation(required = true)
     private String xAcsBtripCorpToken;
 
     private TicketChangingDetailRequest(Builder builder) {

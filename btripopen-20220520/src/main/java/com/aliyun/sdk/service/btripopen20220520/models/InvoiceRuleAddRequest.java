@@ -7,18 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InvoiceRuleSaveRequest} extends {@link RequestModel}
+ * {@link InvoiceRuleAddRequest} extends {@link RequestModel}
  *
- * <p>InvoiceRuleSaveRequest</p>
+ * <p>InvoiceRuleAddRequest</p>
  */
-public class InvoiceRuleSaveRequest extends Request {
-    @Body
-    @NameInMap("all_employe")
-    @Validation(required = true)
-    private Boolean allEmploye;
-
+public class InvoiceRuleAddRequest extends Request {
     @Body
     @NameInMap("entities")
+    @Validation(required = true)
     private java.util.List < Entities> entities;
 
     @Body
@@ -27,35 +23,27 @@ public class InvoiceRuleSaveRequest extends Request {
     private String thirdPartId;
 
     @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
-    private String xAcsBtripSoCorpToken;
+    @NameInMap("x-acs-btrip-corp-token")
+    private String xAcsBtripCorpToken;
 
-    private InvoiceRuleSaveRequest(Builder builder) {
+    private InvoiceRuleAddRequest(Builder builder) {
         super(builder);
-        this.allEmploye = builder.allEmploye;
         this.entities = builder.entities;
         this.thirdPartId = builder.thirdPartId;
-        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
+        this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static InvoiceRuleSaveRequest create() {
+    public static InvoiceRuleAddRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return allEmploye
-     */
-    public Boolean getAllEmploye() {
-        return this.allEmploye;
     }
 
     /**
@@ -73,41 +61,30 @@ public class InvoiceRuleSaveRequest extends Request {
     }
 
     /**
-     * @return xAcsBtripSoCorpToken
+     * @return xAcsBtripCorpToken
      */
-    public String getXAcsBtripSoCorpToken() {
-        return this.xAcsBtripSoCorpToken;
+    public String getXAcsBtripCorpToken() {
+        return this.xAcsBtripCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<InvoiceRuleSaveRequest, Builder> {
-        private Boolean allEmploye; 
+    public static final class Builder extends Request.Builder<InvoiceRuleAddRequest, Builder> {
         private java.util.List < Entities> entities; 
         private String thirdPartId; 
-        private String xAcsBtripSoCorpToken; 
+        private String xAcsBtripCorpToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InvoiceRuleSaveRequest request) {
+        private Builder(InvoiceRuleAddRequest request) {
             super(request);
-            this.allEmploye = request.allEmploye;
             this.entities = request.entities;
             this.thirdPartId = request.thirdPartId;
-            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
+            this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
         /**
-         * 是否全员适用
-         */
-        public Builder allEmploye(Boolean allEmploye) {
-            this.putBodyParameter("all_employe", allEmploye);
-            this.allEmploye = allEmploye;
-            return this;
-        }
-
-        /**
-         * 当非全员时，启用该适用名单
+         * 实体列表
          */
         public Builder entities(java.util.List < Entities> entities) {
             String entitiesShrink = shrink(entities, "entities", "json");
@@ -117,7 +94,7 @@ public class InvoiceRuleSaveRequest extends Request {
         }
 
         /**
-         * third_part_id.
+         * 第三方发票id
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putBodyParameter("third_part_id", thirdPartId);
@@ -126,35 +103,38 @@ public class InvoiceRuleSaveRequest extends Request {
         }
 
         /**
-         * x-acs-btrip-so-corp-token.
+         * x-acs-btrip-corp-token.
          */
-        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
-            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
-            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
+        public Builder xAcsBtripCorpToken(String xAcsBtripCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-corp-token", xAcsBtripCorpToken);
+            this.xAcsBtripCorpToken = xAcsBtripCorpToken;
             return this;
         }
 
         @Override
-        public InvoiceRuleSaveRequest build() {
-            return new InvoiceRuleSaveRequest(this);
+        public InvoiceRuleAddRequest build() {
+            return new InvoiceRuleAddRequest(this);
         } 
 
     } 
 
     public static class Entities extends TeaModel {
-        @NameInMap("id")
-        private String id;
+        @NameInMap("entity_id")
+        @Validation(required = true)
+        private String entityId;
 
-        @NameInMap("name")
-        private String name;
+        @NameInMap("entity_name")
+        @Validation(required = true)
+        private String entityName;
 
-        @NameInMap("type")
-        private Integer type;
+        @NameInMap("entity_type")
+        @Validation(required = true)
+        private String entityType;
 
         private Entities(Builder builder) {
-            this.id = builder.id;
-            this.name = builder.name;
-            this.type = builder.type;
+            this.entityId = builder.entityId;
+            this.entityName = builder.entityName;
+            this.entityType = builder.entityType;
         }
 
         public static Builder builder() {
@@ -166,52 +146,52 @@ public class InvoiceRuleSaveRequest extends Request {
         }
 
         /**
-         * @return id
+         * @return entityId
          */
-        public String getId() {
-            return this.id;
+        public String getEntityId() {
+            return this.entityId;
         }
 
         /**
-         * @return name
+         * @return entityName
          */
-        public String getName() {
-            return this.name;
+        public String getEntityName() {
+            return this.entityName;
         }
 
         /**
-         * @return type
+         * @return entityType
          */
-        public Integer getType() {
-            return this.type;
+        public String getEntityType() {
+            return this.entityType;
         }
 
         public static final class Builder {
-            private String id; 
-            private String name; 
-            private Integer type; 
+            private String entityId; 
+            private String entityName; 
+            private String entityType; 
 
             /**
-             * id.
+             * 实体id
              */
-            public Builder id(String id) {
-                this.id = id;
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
                 return this;
             }
 
             /**
-             * name.
+             * 实体name
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder entityName(String entityName) {
+                this.entityName = entityName;
                 return this;
             }
 
             /**
-             * type.
+             * 实体类型：1员工，2部门，3角色，4第三方部门
              */
-            public Builder type(Integer type) {
-                this.type = type;
+            public Builder entityType(String entityType) {
+                this.entityType = entityType;
                 return this;
             }
 

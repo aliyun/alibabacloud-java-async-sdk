@@ -23,7 +23,6 @@ public class QueryReimbursementOrderRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-corp-token")
-    @Validation(required = true)
     private String xAcsBtripCorpToken;
 
     private QueryReimbursementOrderRequest(Builder builder) {
