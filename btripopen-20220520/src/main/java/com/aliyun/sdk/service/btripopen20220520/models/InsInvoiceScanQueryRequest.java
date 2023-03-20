@@ -7,14 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link VatInvoiceScanQueryRequest} extends {@link RequestModel}
+ * {@link InsInvoiceScanQueryRequest} extends {@link RequestModel}
  *
- * <p>VatInvoiceScanQueryRequest</p>
+ * <p>InsInvoiceScanQueryRequest</p>
  */
-public class VatInvoiceScanQueryRequest extends Request {
+public class InsInvoiceScanQueryRequest extends Request {
     @Query
     @NameInMap("bill_date")
-    @Validation(required = true)
     private String billDate;
 
     @Query
@@ -36,10 +35,9 @@ public class VatInvoiceScanQueryRequest extends Request {
 
     @Header
     @NameInMap("x-acs-btrip-so-corp-token")
-    @Validation(required = true)
     private String xAcsBtripSoCorpToken;
 
-    private VatInvoiceScanQueryRequest(Builder builder) {
+    private InsInvoiceScanQueryRequest(Builder builder) {
         super(builder);
         this.billDate = builder.billDate;
         this.billId = builder.billId;
@@ -53,7 +51,7 @@ public class VatInvoiceScanQueryRequest extends Request {
         return new Builder();
     }
 
-    public static VatInvoiceScanQueryRequest create() {
+    public static InsInvoiceScanQueryRequest create() {
         return builder().build();
     }
 
@@ -104,7 +102,7 @@ public class VatInvoiceScanQueryRequest extends Request {
         return this.xAcsBtripSoCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<VatInvoiceScanQueryRequest, Builder> {
+    public static final class Builder extends Request.Builder<InsInvoiceScanQueryRequest, Builder> {
         private String billDate; 
         private Long billId; 
         private Long invoiceSubTaskId; 
@@ -116,7 +114,7 @@ public class VatInvoiceScanQueryRequest extends Request {
             super();
         } 
 
-        private Builder(VatInvoiceScanQueryRequest request) {
+        private Builder(InsInvoiceScanQueryRequest request) {
             super(request);
             this.billDate = request.billDate;
             this.billId = request.billId;
@@ -181,8 +179,8 @@ public class VatInvoiceScanQueryRequest extends Request {
         }
 
         @Override
-        public VatInvoiceScanQueryRequest build() {
-            return new VatInvoiceScanQueryRequest(this);
+        public InsInvoiceScanQueryRequest build() {
+            return new InsInvoiceScanQueryRequest(this);
         } 
 
     } 

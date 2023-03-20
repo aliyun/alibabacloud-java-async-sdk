@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AccessTokenResponse> accessToken(AccessTokenRequest request);
 
+    CompletableFuture<AddInvoiceEntityResponse> addInvoiceEntity(AddInvoiceEntityRequest request);
+
     CompletableFuture<AddressGetResponse> addressGet(AddressGetRequest request);
 
     CompletableFuture<AirportSearchResponse> airportSearch(AirportSearchRequest request);
@@ -69,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CostCenterQueryResponse> costCenterQuery(CostCenterQueryRequest request);
 
     CompletableFuture<CostCenterSaveResponse> costCenterSave(CostCenterSaveRequest request);
+
+    CompletableFuture<DeleteInvoiceEntityResponse> deleteInvoiceEntity(DeleteInvoiceEntityRequest request);
 
     CompletableFuture<DepartmentSaveResponse> departmentSave(DepartmentSaveRequest request);
 
@@ -121,6 +125,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HotelOrderQueryResponse> hotelOrderQuery(HotelOrderQueryRequest request);
 
     CompletableFuture<IeFlightBillSettlementQueryResponse> ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request);
+
+    CompletableFuture<InsInvoiceScanQueryResponse> insInvoiceScanQuery(InsInvoiceScanQueryRequest request);
 
     CompletableFuture<InvoiceAddResponse> invoiceAdd(InvoiceAddRequest request);
 

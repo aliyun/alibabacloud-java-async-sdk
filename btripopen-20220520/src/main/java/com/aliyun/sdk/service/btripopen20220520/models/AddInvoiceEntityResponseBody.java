@@ -7,16 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CorpTokenResponseBody} extends {@link TeaModel}
+ * {@link AddInvoiceEntityResponseBody} extends {@link TeaModel}
  *
- * <p>CorpTokenResponseBody</p>
+ * <p>AddInvoiceEntityResponseBody</p>
  */
-public class CorpTokenResponseBody extends TeaModel {
+public class AddInvoiceEntityResponseBody extends TeaModel {
     @NameInMap("code")
     private String code;
-
-    @NameInMap("data")
-    private Data data;
 
     @NameInMap("message")
     private String message;
@@ -33,9 +30,8 @@ public class CorpTokenResponseBody extends TeaModel {
     @NameInMap("traceId")
     private String traceId;
 
-    private CorpTokenResponseBody(Builder builder) {
+    private AddInvoiceEntityResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
@@ -47,7 +43,7 @@ public class CorpTokenResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CorpTokenResponseBody create() {
+    public static AddInvoiceEntityResponseBody create() {
         return builder().build();
     }
 
@@ -56,13 +52,6 @@ public class CorpTokenResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return data
-     */
-    public Data getData() {
-        return this.data;
     }
 
     /**
@@ -102,7 +91,6 @@ public class CorpTokenResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Data data; 
         private String message; 
         private Module module; 
         private String requestId; 
@@ -110,7 +98,7 @@ public class CorpTokenResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * 错误码
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,15 +106,7 @@ public class CorpTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 请使用module字段（作废）
-         */
-        public Builder data(Data data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * 错误信息
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +122,7 @@ public class CorpTokenResponseBody extends TeaModel {
         }
 
         /**
-         * pop请求id
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,87 +145,22 @@ public class CorpTokenResponseBody extends TeaModel {
             return this;
         }
 
-        public CorpTokenResponseBody build() {
-            return new CorpTokenResponseBody(this);
+        public AddInvoiceEntityResponseBody build() {
+            return new AddInvoiceEntityResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @NameInMap("expire")
-        private Long expire;
-
-        @NameInMap("token")
-        private String token;
-
-        private Data(Builder builder) {
-            this.expire = builder.expire;
-            this.token = builder.token;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return expire
-         */
-        public Long getExpire() {
-            return this.expire;
-        }
-
-        /**
-         * @return token
-         */
-        public String getToken() {
-            return this.token;
-        }
-
-        public static final class Builder {
-            private Long expire; 
-            private String token; 
-
-            /**
-             * 过期时间，单位ms，token在存储时，不要接近expire的时间，最好远小于expire
-             */
-            public Builder expire(Long expire) {
-                this.expire = expire;
-                return this;
-            }
-
-            /**
-             * 令牌
-             */
-            public Builder token(String token) {
-                this.token = token;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
     public static class Module extends TeaModel {
-        @NameInMap("expire")
-        private Long expire;
+        @NameInMap("add_num")
+        private Integer addNum;
 
-        @NameInMap("start")
-        private Long start;
-
-        @NameInMap("token")
-        private String token;
+        @NameInMap("selected_user_num")
+        private Integer selectedUserNum;
 
         private Module(Builder builder) {
-            this.expire = builder.expire;
-            this.start = builder.start;
-            this.token = builder.token;
+            this.addNum = builder.addNum;
+            this.selectedUserNum = builder.selectedUserNum;
         }
 
         public static Builder builder() {
@@ -257,52 +172,36 @@ public class CorpTokenResponseBody extends TeaModel {
         }
 
         /**
-         * @return expire
+         * @return addNum
          */
-        public Long getExpire() {
-            return this.expire;
+        public Integer getAddNum() {
+            return this.addNum;
         }
 
         /**
-         * @return start
+         * @return selectedUserNum
          */
-        public Long getStart() {
-            return this.start;
-        }
-
-        /**
-         * @return token
-         */
-        public String getToken() {
-            return this.token;
+        public Integer getSelectedUserNum() {
+            return this.selectedUserNum;
         }
 
         public static final class Builder {
-            private Long expire; 
-            private Long start; 
-            private String token; 
+            private Integer addNum; 
+            private Integer selectedUserNum; 
 
             /**
-             * 过期时间，单位ms，token在存储时，不要接近expire的时间，最好远小于expire
+             * add_num.
              */
-            public Builder expire(Long expire) {
-                this.expire = expire;
+            public Builder addNum(Integer addNum) {
+                this.addNum = addNum;
                 return this;
             }
 
             /**
-             * 开始时间
+             * selected_user_num.
              */
-            public Builder start(Long start) {
-                this.start = start;
-                return this;
-            }
-
-            /**
-             * 令牌
-             */
-            public Builder token(String token) {
-                this.token = token;
+            public Builder selectedUserNum(Integer selectedUserNum) {
+                this.selectedUserNum = selectedUserNum;
                 return this;
             }
 

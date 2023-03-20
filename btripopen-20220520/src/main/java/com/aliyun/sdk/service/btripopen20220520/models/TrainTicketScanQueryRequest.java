@@ -31,6 +31,7 @@ public class TrainTicketScanQueryRequest extends Request {
 
     @Query
     @NameInMap("page_size")
+    @Validation(maximum = 100)
     private Integer pageSize;
 
     @Header

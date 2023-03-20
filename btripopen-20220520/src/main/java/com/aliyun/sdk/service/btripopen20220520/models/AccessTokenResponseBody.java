@@ -27,6 +27,9 @@ public class AccessTokenResponseBody extends TeaModel {
     @NameInMap("requestId")
     private String requestId;
 
+    @NameInMap("success")
+    private Boolean success;
+
     @NameInMap("traceId")
     private String traceId;
 
@@ -36,6 +39,7 @@ public class AccessTokenResponseBody extends TeaModel {
         this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
+        this.success = builder.success;
         this.traceId = builder.traceId;
     }
 
@@ -83,6 +87,13 @@ public class AccessTokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
      * @return traceId
      */
     public String getTraceId() {
@@ -95,6 +106,7 @@ public class AccessTokenResponseBody extends TeaModel {
         private String message; 
         private Module module; 
         private String requestId; 
+        private Boolean success; 
         private String traceId; 
 
         /**
@@ -134,6 +146,14 @@ public class AccessTokenResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
