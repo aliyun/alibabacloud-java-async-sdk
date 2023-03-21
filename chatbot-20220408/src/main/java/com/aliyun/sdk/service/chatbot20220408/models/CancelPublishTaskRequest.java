@@ -100,7 +100,7 @@ public class CancelPublishTaskRequest extends Request {
         }
 
         /**
-         * 任务ID
+         * 发布任务Id
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

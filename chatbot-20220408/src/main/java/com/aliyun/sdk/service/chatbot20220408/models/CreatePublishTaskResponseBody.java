@@ -138,7 +138,7 @@ public class CreatePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * job失败信息
+         * 发布任务失败信息
          */
         public Builder error(String error) {
             this.error = error;
@@ -146,7 +146,7 @@ public class CreatePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务Id
+         * 发布任务Id
          */
         public Builder id(Long id) {
             this.id = id;
@@ -170,7 +170,7 @@ public class CreatePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务Id
+         * 发布任务Id，冗余字段，建议使用Id字段获取发布任务Id
          */
         public Builder response(String response) {
             this.response = response;
@@ -178,7 +178,7 @@ public class CreatePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务状态
+         * 任务状态（ FE_RUNNING：正在发布中 FE_SUCCESS：发布成功 FE_FAILED：发布失败 FE_ABORTED：发布取消）
          */
         public Builder status(String status) {
             this.status = status;

@@ -141,10 +141,14 @@ public class ListAgentResponseBody extends TeaModel {
         @NameInMap("AgentName")
         private String agentName;
 
+        @NameInMap("InstanceInfos")
+        private java.util.Map < String, ? > instanceInfos;
+
         private Data(Builder builder) {
             this.agentId = builder.agentId;
             this.agentKey = builder.agentKey;
             this.agentName = builder.agentName;
+            this.instanceInfos = builder.instanceInfos;
         }
 
         public static Builder builder() {
@@ -176,10 +180,18 @@ public class ListAgentResponseBody extends TeaModel {
             return this.agentName;
         }
 
+        /**
+         * @return instanceInfos
+         */
+        public java.util.Map < String, ? > getInstanceInfos() {
+            return this.instanceInfos;
+        }
+
         public static final class Builder {
             private Long agentId; 
             private String agentKey; 
             private String agentName; 
+            private java.util.Map < String, ? > instanceInfos; 
 
             /**
              * AgentId.
@@ -202,6 +214,14 @@ public class ListAgentResponseBody extends TeaModel {
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
+                return this;
+            }
+
+            /**
+             * InstanceInfos.
+             */
+            public Builder instanceInfos(java.util.Map < String, ? > instanceInfos) {
+                this.instanceInfos = instanceInfos;
                 return this;
             }
 

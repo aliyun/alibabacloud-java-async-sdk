@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAgentRequest extends Request {
     @Query
+    @NameInMap("AgentName")
+    private String agentName;
+
+    @Query
+    @NameInMap("GoodsCodes")
+    private String goodsCodes;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -22,6 +30,8 @@ public class ListAgentRequest extends Request {
 
     private ListAgentRequest(Builder builder) {
         super(builder);
+        this.agentName = builder.agentName;
+        this.goodsCodes = builder.goodsCodes;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -40,6 +50,20 @@ public class ListAgentRequest extends Request {
     }
 
     /**
+     * @return agentName
+     */
+    public String getAgentName() {
+        return this.agentName;
+    }
+
+    /**
+     * @return goodsCodes
+     */
+    public String getGoodsCodes() {
+        return this.goodsCodes;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -54,6 +78,8 @@ public class ListAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAgentRequest, Builder> {
+        private String agentName; 
+        private String goodsCodes; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -63,9 +89,29 @@ public class ListAgentRequest extends Request {
 
         private Builder(ListAgentRequest request) {
             super(request);
+            this.agentName = request.agentName;
+            this.goodsCodes = request.goodsCodes;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * AgentName.
+         */
+        public Builder agentName(String agentName) {
+            this.putQueryParameter("AgentName", agentName);
+            this.agentName = agentName;
+            return this;
+        }
+
+        /**
+         * GoodsCodes.
+         */
+        public Builder goodsCodes(String goodsCodes) {
+            this.putQueryParameter("GoodsCodes", goodsCodes);
+            this.goodsCodes = goodsCodes;
+            return this;
+        }
 
         /**
          * PageNumber.
