@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteHoneypotProbeRequest extends Request {
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("ProbeId")
     @Validation(required = true)
     private String probeId;
 
     private DeleteHoneypotProbeRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
         this.probeId = builder.probeId;
     }
 
@@ -36,6 +41,13 @@ public class DeleteHoneypotProbeRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return probeId
      */
     public String getProbeId() {
@@ -43,6 +55,7 @@ public class DeleteHoneypotProbeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteHoneypotProbeRequest, Builder> {
+        private String lang; 
         private String probeId; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class DeleteHoneypotProbeRequest extends Request {
 
         private Builder(DeleteHoneypotProbeRequest request) {
             super(request);
+            this.lang = request.lang;
             this.probeId = request.probeId;
         } 
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
 
         /**
          * The ID of the probe.

@@ -99,11 +99,11 @@ public class ExportRecordRequest extends Request {
          * *   **lkm**: the list of fingerprints for kernel modules
          * *   **webserver**: the list of fingerprints for websites
          * *   **imageVulExport**: the list of image system vulnerabilities
-         * *   **imageBaseLineExport**: the list of baseline check results for images
+         * *   **imageBaseLineExport**: the list of check results for image baselines
          * *   **imageAffectedMaliciousExport**: the list of check results for malicious image samples
-         * *   **baselineCspm**: the list of check results for configuration assessment
-         * *   **attack**: the list of alerts for attack analysis
-         * *   **accessKey**: the list of alerts that are generated for AccessKey pair leaks
+         * *   **baseline**: the list of check results for configuration assessment
+         * *   **attack**: the list of alert events for attack analysis
+         * *   **accessKey**: the list of alert events that are generated for AccessKey pair leaks
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);
@@ -128,7 +128,7 @@ public class ExportRecordRequest extends Request {
          * The conditions that are used to filter check results.
          * <p>
          * 
-         * >  This operation is a common export operation for multiple features of Security Center. The available configuration fields of this parameter vary based on the features. We recommend that you do not specify this parameter when you call the operation. You can export an information list without specifying this parameter, and then filter data in the exported Excel file.
+         * > This operation is a common export operation for multiple features of Security Center. The available configuration fields of this parameter vary based on the features. We recommend that you do not specify this parameter when you call the operation. You can export an information list without specifying this parameter, and then filter data in the exported Excel file.
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);

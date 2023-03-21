@@ -283,7 +283,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             private String vulType; 
 
             /**
-             * An array consisting of the servers to which the configurations are applied.
+             * An array that consists of available servers.
              */
             public Builder targets(java.util.List < Targets> targets) {
                 this.targets = targets;

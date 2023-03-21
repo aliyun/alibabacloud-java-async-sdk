@@ -55,7 +55,10 @@ public class DeletePrivateRegistryRequest extends Request {
         } 
 
         /**
-         * RegistryId.
+         * The ID of the image repository.
+         * <p>
+         * 
+         * > You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.
          */
         public Builder registryId(Long registryId) {
             this.putQueryParameter("RegistryId", registryId);

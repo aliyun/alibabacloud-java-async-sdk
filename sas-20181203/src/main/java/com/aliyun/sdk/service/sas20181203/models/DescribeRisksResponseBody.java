@@ -70,7 +70,7 @@ public class DescribeRisksResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the baselines.
+         * An array that consists of baselines.
          */
         public Builder risks(java.util.List < Risks> risks) {
             this.risks = risks;
@@ -222,7 +222,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline sub type.
+             * The name of the baseline subtype.
              */
             public Builder subRiskType(String subRiskType) {
                 this.subRiskType = subRiskType;
@@ -230,7 +230,7 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the baseline sub type.
+             * The display name of the baseline subtype.
              */
             public Builder subTypeAlias(String subTypeAlias) {
                 this.subTypeAlias = subTypeAlias;

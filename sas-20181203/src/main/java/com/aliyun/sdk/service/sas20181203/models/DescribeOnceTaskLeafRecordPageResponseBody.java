@@ -92,11 +92,29 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     } 
 
     public static class TaskImageInfo extends TeaModel {
+        @NameInMap("AppName")
+        private String appName;
+
+        @NameInMap("ClusterId")
+        private String clusterId;
+
+        @NameInMap("ClusterName")
+        private String clusterName;
+
         @NameInMap("Digest")
         private String digest;
 
         @NameInMap("Image")
         private String image;
+
+        @NameInMap("NodeInstanceId")
+        private String nodeInstanceId;
+
+        @NameInMap("NodeIp")
+        private String nodeIp;
+
+        @NameInMap("NodeName")
+        private String nodeName;
 
         @NameInMap("Pod")
         private String pod;
@@ -120,8 +138,14 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         private String tag;
 
         private TaskImageInfo(Builder builder) {
+            this.appName = builder.appName;
+            this.clusterId = builder.clusterId;
+            this.clusterName = builder.clusterName;
             this.digest = builder.digest;
             this.image = builder.image;
+            this.nodeInstanceId = builder.nodeInstanceId;
+            this.nodeIp = builder.nodeIp;
+            this.nodeName = builder.nodeName;
             this.pod = builder.pod;
             this.regionId = builder.regionId;
             this.repoId = builder.repoId;
@@ -140,6 +164,27 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterName
+         */
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        /**
          * @return digest
          */
         public String getDigest() {
@@ -151,6 +196,27 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
          */
         public String getImage() {
             return this.image;
+        }
+
+        /**
+         * @return nodeInstanceId
+         */
+        public String getNodeInstanceId() {
+            return this.nodeInstanceId;
+        }
+
+        /**
+         * @return nodeIp
+         */
+        public String getNodeIp() {
+            return this.nodeIp;
+        }
+
+        /**
+         * @return nodeName
+         */
+        public String getNodeName() {
+            return this.nodeName;
         }
 
         /**
@@ -203,8 +269,14 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appName; 
+            private String clusterId; 
+            private String clusterName; 
             private String digest; 
             private String image; 
+            private String nodeInstanceId; 
+            private String nodeIp; 
+            private String nodeName; 
             private String pod; 
             private String regionId; 
             private String repoId; 
@@ -212,6 +284,30 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             private String repoNamespace; 
             private String repoRegionId; 
             private String tag; 
+
+            /**
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ClusterName.
+             */
+            public Builder clusterName(String clusterName) {
+                this.clusterName = clusterName;
+                return this;
+            }
 
             /**
              * Digest.
@@ -226,6 +322,30 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
              */
             public Builder image(String image) {
                 this.image = image;
+                return this;
+            }
+
+            /**
+             * NodeInstanceId.
+             */
+            public Builder nodeInstanceId(String nodeInstanceId) {
+                this.nodeInstanceId = nodeInstanceId;
+                return this;
+            }
+
+            /**
+             * NodeIp.
+             */
+            public Builder nodeIp(String nodeIp) {
+                this.nodeIp = nodeIp;
+                return this;
+            }
+
+            /**
+             * NodeName.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
                 return this;
             }
 

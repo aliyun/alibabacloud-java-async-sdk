@@ -118,7 +118,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * The information about the honeypot.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -298,7 +298,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             private java.util.List < String > state; 
 
             /**
-             * The name of the management node to which the honeypot is deployed.
+             * The name of the management node.
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -354,7 +354,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom configuration for the honeypot.
+             * The custom ID of the honeypot.
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -362,7 +362,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the status information of the honeypot.
+             * An array that consists of the status information about the honeypot.
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;

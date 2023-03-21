@@ -33,6 +33,10 @@ public class ListInterceptionHistoryRequest extends Request {
     private java.util.List < Integer > interceptionTypes;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("PageSize")
     private Integer pageSize;
 
@@ -47,6 +51,7 @@ public class ListInterceptionHistoryRequest extends Request {
         this.endTime = builder.endTime;
         this.historyName = builder.historyName;
         this.interceptionTypes = builder.interceptionTypes;
+        this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
     }
@@ -100,6 +105,13 @@ public class ListInterceptionHistoryRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -119,6 +131,7 @@ public class ListInterceptionHistoryRequest extends Request {
         private Long endTime; 
         private String historyName; 
         private java.util.List < Integer > interceptionTypes; 
+        private String lang; 
         private Integer pageSize; 
         private Long startTime; 
 
@@ -133,6 +146,7 @@ public class ListInterceptionHistoryRequest extends Request {
             this.endTime = request.endTime;
             this.historyName = request.historyName;
             this.interceptionTypes = request.interceptionTypes;
+            this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
@@ -179,6 +193,15 @@ public class ListInterceptionHistoryRequest extends Request {
         public Builder interceptionTypes(java.util.List < Integer > interceptionTypes) {
             this.putQueryParameter("InterceptionTypes", interceptionTypes);
             this.interceptionTypes = interceptionTypes;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

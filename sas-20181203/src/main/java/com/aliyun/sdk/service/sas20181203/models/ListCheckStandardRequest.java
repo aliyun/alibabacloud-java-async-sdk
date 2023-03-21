@@ -110,7 +110,7 @@ public class ListCheckStandardRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * The instance IDs of the cloud services to which the check items belong.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -119,7 +119,7 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * InstanceSubTypes.
+         * The subtypes of cloud services.
          */
         public Builder instanceSubTypes(java.util.List < String > instanceSubTypes) {
             this.putQueryParameter("InstanceSubTypes", instanceSubTypes);
@@ -128,7 +128,7 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * InstanceTypes.
+         * The asset types of cloud services.
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -137,7 +137,11 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +150,10 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * Vendors.
+         * The cloud service providers. Valid values:
+         * <p>
+         * 
+         * *   **ALIYUN**: Alibaba Cloud
          */
         public Builder vendors(java.util.List < String > vendors) {
             this.putQueryParameter("Vendors", vendors);

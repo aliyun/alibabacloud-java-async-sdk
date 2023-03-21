@@ -22,6 +22,10 @@ public class UpdateHoneypotRequest extends Request {
     private String honeypotName;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("Meta")
     private String meta;
 
@@ -29,6 +33,7 @@ public class UpdateHoneypotRequest extends Request {
         super(builder);
         this.honeypotId = builder.honeypotId;
         this.honeypotName = builder.honeypotName;
+        this.lang = builder.lang;
         this.meta = builder.meta;
     }
 
@@ -60,6 +65,13 @@ public class UpdateHoneypotRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return meta
      */
     public String getMeta() {
@@ -69,6 +81,7 @@ public class UpdateHoneypotRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateHoneypotRequest, Builder> {
         private String honeypotId; 
         private String honeypotName; 
+        private String lang; 
         private String meta; 
 
         private Builder() {
@@ -79,6 +92,7 @@ public class UpdateHoneypotRequest extends Request {
             super(request);
             this.honeypotId = request.honeypotId;
             this.honeypotName = request.honeypotName;
+            this.lang = request.lang;
             this.meta = request.meta;
         } 
 
@@ -86,7 +100,7 @@ public class UpdateHoneypotRequest extends Request {
          * The ID of the honeypot.
          * <p>
          * 
-         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+         * > You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -104,10 +118,19 @@ public class UpdateHoneypotRequest extends Request {
         }
 
         /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
          * The custom configuration of the honeypot.
          * <p>
          * 
-         * >  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the configurations of honeypots from the **Template** response parameter.
+         * > You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the configurations of honeypots from the **Template** response parameter.
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);

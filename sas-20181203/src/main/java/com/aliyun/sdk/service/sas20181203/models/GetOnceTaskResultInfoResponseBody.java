@@ -98,7 +98,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CollectTime.
+         * The execution time of the task.
          */
         public Builder collectTime(Long collectTime) {
             this.collectTime = collectTime;
@@ -106,7 +106,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * FinishCount.
+         * The number of tasks that were completed.
          */
         public Builder finishCount(Integer finishCount) {
             this.finishCount = finishCount;
@@ -114,7 +114,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the scan task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -130,7 +130,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInfo.
+         * The information about the task.
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -138,7 +138,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -178,7 +178,13 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is not started.
+             * *   **START**: The task is started.
+             * *   **SUCCESS**: The task is complete.
+             * *   **TIMEOUT**: The task times out.
              */
             public Builder status(String status) {
                 this.status = status;

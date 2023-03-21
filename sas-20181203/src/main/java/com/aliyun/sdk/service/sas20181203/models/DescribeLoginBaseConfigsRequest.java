@@ -120,7 +120,7 @@ public class DescribeLoginBaseConfigsRequest extends Request {
          * 
          * *   **Target**: the UUID or group ID of the server to add or delete.
          * 
-         * >  If targetType is set to uuid, the value of Target is the UUID of the server. If targetType is set to groupId, the value of Target is the group ID of the server. If targetType is set to global, the value of Target is a hyphen (-).
+         * > If targetType is set to uuid, the value of Target is the UUID of the server. If targetType is set to groupId, the value of Target is the group ID of the server. If targetType is set to global, the value of Target is a hyphen (-).
          * 
          * *   **targetType**: the type of the server to which the configuration is applied. Valid values:
          * 

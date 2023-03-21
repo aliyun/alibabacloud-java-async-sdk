@@ -82,7 +82,11 @@ public class DescribeTotalStatisticsRequest extends Request {
         } 
 
         /**
-         * From.
+         * The source of data. Default value: **aqs**. Valid values:
+         * <p>
+         * 
+         * *   **sas**: Security Center
+         * *   **aqs**: Server Guard
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -91,7 +95,10 @@ public class DescribeTotalStatisticsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the asset group.
+         * <p>
+         * 
+         * > You can call the [DescribeAllGroups](~~130972~~) operation to query the IDs of asset groups.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -100,7 +107,7 @@ public class DescribeTotalStatisticsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The name or public IP address of the asset.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

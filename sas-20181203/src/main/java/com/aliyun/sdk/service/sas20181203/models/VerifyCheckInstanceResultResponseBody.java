@@ -118,11 +118,11 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The operation code of the configuration assessment task. Valid values:
+             * The operation code of the task that checks the configurations of cloud services. Valid values:
              * <p>
              * 
-             * *   **Throttling**: frequency limit
-             * *   **ActionTrialUnauthorized**: an error that is related to unauthorized operations
+             * *   **Throttling**
+             * *   **ActionTrialUnauthorized**
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;

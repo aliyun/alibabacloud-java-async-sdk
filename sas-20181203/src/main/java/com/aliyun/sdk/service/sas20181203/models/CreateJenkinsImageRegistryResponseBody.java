@@ -74,7 +74,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * Data.
+         * The result of creating the image repository.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +90,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * TimeCost.
+         * The time consumed. Unit: seconds.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;
@@ -342,7 +342,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * 黑名单
+             * The blacklist.
              */
             public Builder blackList(String blackList) {
                 this.blackList = blackList;
@@ -350,7 +350,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 域名
+             * The domain name of the image repository.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -358,7 +358,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 创建日期
+             * The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -366,7 +366,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 更改日期
+             * The update time. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -374,7 +374,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 唯一ID
+             * The ID of the image repository.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -382,7 +382,11 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 网络类型 1：公网 2：vpc
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **1**: Internet
+             * *   **2**: VPC
              */
             public Builder netType(Integer netType) {
                 this.netType = netType;
@@ -390,7 +394,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 密码
+             * The password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -398,7 +402,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 资产保存天数
+             * The number of days during which assets can be retained.
              */
             public Builder persistenceDay(Integer persistenceDay) {
                 this.persistenceDay = persistenceDay;
@@ -406,7 +410,11 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 协议类型 1：http 2:https
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **1**: HTTP
+             * *   **2**: HTTPS
              */
             public Builder protocolType(Integer protocolType) {
                 this.protocolType = protocolType;
@@ -414,7 +422,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像仓库所在的regionId
+             * The region ID of the image repository.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -422,7 +430,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 主机Ip地址
+             * The IP address of the image repository.
              */
             public Builder registryHostIp(String registryHostIp) {
                 this.registryHostIp = registryHostIp;
@@ -430,7 +438,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像仓库别名
+             * The alias of the image repository.
              */
             public Builder registryName(String registryName) {
                 this.registryName = registryName;
@@ -438,7 +446,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 容器镜像服务类型 harbor，quory
+             * The type of the image repository. Valid values:
+             * <p>
+             * 
+             * *   **CI/CD**: Jenkins
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -446,7 +457,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * token 用户的唯一标识
+             * The authentication token of the user.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -454,7 +465,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 每小时扫描任务数
+             * The number of images that can be scanned per hour.
              */
             public Builder transPerHour(Integer transPerHour) {
                 this.transPerHour = transPerHour;
@@ -462,7 +473,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -470,7 +481,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -478,7 +489,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * 白名单
+             * The whitelist.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;

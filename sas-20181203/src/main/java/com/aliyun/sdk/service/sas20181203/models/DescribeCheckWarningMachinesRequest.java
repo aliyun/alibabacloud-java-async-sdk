@@ -99,7 +99,7 @@ public class DescribeCheckWarningMachinesRequest extends Request {
          * The ID of the check item.
          * <p>
          * 
-         * > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
+         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -124,7 +124,7 @@ public class DescribeCheckWarningMachinesRequest extends Request {
          * The ID of the baseline.
          * <p>
          * 
-         * > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
+         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -133,14 +133,10 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The status of the check item.
+         * Specifies whether the check item passed the baseline check. Valid values:
          * <p>
-         * 
-         * > This parameter indicates the status of the check item. Valid values:
-         * 
-         * *   1: failed
-         * 
-         * *   3: passed
+         * *   **1**: no
+         * *   **3**: yes
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

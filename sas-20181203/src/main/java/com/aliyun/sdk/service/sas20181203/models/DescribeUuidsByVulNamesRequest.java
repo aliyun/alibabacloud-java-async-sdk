@@ -255,7 +255,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
          * Specifies whether the vulnerability is handled. Valid values:
          * <p>
          * 
-         * **y**: yes. **n**: no.
+         * **y**: The vulnerability is handled. **n**: The vulnerability is not handled.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -364,7 +364,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         }
 
         /**
-         * The tag that is added to the vulnerability.
+         * The tag of the vulnerability.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -391,10 +391,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
          * 
          * *   **cve**: Linux software vulnerability
          * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerabilities
+         * *   **cms**: Web-CMS vulnerability
          * *   **app**: application vulnerability
-         * *   **emg**: urgent vulnerabilities
-         * *   **sca**: vulnerabilities that are detected based on software component analysis
+         * *   **emg**: urgent vulnerability
+         * *   **sca**: vulnerability that is detected based on software component analysis
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

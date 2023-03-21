@@ -55,7 +55,7 @@ public class SetRegistryScanDayNumRequest extends Request {
         } 
 
         /**
-         * The scan cycle of image repositories.
+         * The cycle at which you want to scan your images. Unit: days.
          */
         public Builder scanDayNum(Integer scanDayNum) {
             this.putQueryParameter("ScanDayNum", scanDayNum);

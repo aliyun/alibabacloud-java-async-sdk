@@ -96,7 +96,13 @@ public class ChangeCheckConfigRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end time of the check. The value specifies a point in time in a day. The time period that is specified by the start time and end time must be one of the following time periods:
+         * <p>
+         * 
+         * *   **00:00 to 06:00:** If you set the StartTime parameter to 0, you must set the EndTime parameter to 6.
+         * *   **06:00 to 12:00**: If you set the StartTime parameter to 6, you must set the EndTime parameter to 12.
+         * *   **12:00 to 18:00**: If you set the StartTime parameter to 12, you must set the EndTime parameter to 18.
+         * *  **18:00 to 24:00:** If you set the StartTime parameter to 18, you must set the EndTime parameter to 24.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,7 +111,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the bastion host to query.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -114,7 +123,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * StandardIds.
+         * An array that consists of the information about the check item.
          */
         public Builder standardIds(java.util.List < Long > standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
@@ -123,7 +132,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the check. The value specifies a point in time in a day.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

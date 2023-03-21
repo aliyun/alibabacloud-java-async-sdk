@@ -50,7 +50,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageRegistryInfos.
+         * An array that consists of the image repositories.
          */
         public Builder imageRegistryInfos(java.util.List < ImageRegistryInfos> imageRegistryInfos) {
             this.imageRegistryInfos = imageRegistryInfos;
@@ -58,7 +58,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -302,7 +302,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * AliUid.
+             * The ID of the user.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -310,7 +310,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name of the image repository.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -318,7 +318,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the image repository.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -326,7 +326,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * JenkinsEnv.
+             * The information about the Jenkins environment.
              */
             public Builder jenkinsEnv(String jenkinsEnv) {
                 this.jenkinsEnv = jenkinsEnv;
@@ -334,7 +334,11 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **1**: Internet
+             * *   **2**: VPC
              */
             public Builder netType(Long netType) {
                 this.netType = netType;
@@ -342,7 +346,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * The password used to log on to the image repository.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -350,7 +354,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * PersistenceDay.
+             * The number of days during which assets can be retained.
              */
             public Builder persistenceDay(Long persistenceDay) {
                 this.persistenceDay = persistenceDay;
@@ -358,7 +362,11 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **1**: HTTP
+             * *   **2**: HTTPS
              */
             public Builder protocolType(Long protocolType) {
                 this.protocolType = protocolType;
@@ -366,7 +374,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the server.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -374,7 +382,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryHostIp.
+             * The IP address of the image repository.
              */
             public Builder registryHostIp(String registryHostIp) {
                 this.registryHostIp = registryHostIp;
@@ -382,7 +390,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryName.
+             * The alias of the image repository.
              */
             public Builder registryName(String registryName) {
                 this.registryName = registryName;
@@ -390,7 +398,13 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * The type of the image repository. Valid values:
+             * <p>
+             * 
+             * *   **acr**: Container Registry
+             * *   **harbor**: Harbor
+             * *   **quay**: Quay
+             * *   **CI/CD**: Jenkins
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -398,7 +412,11 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryVersion.
+             * The version of the image repository. Valid values:
+             * <p>
+             * 
+             * *   **V1**: V1.0
+             * *   **V2**: V2.0
              */
             public Builder registryVersion(String registryVersion) {
                 this.registryVersion = registryVersion;
@@ -406,7 +424,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * The authentication token of the user.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -414,7 +432,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * TransPerHour.
+             * The number of images that can be scanned per hour.
              */
             public Builder transPerHour(Integer transPerHour) {
                 this.transPerHour = transPerHour;
@@ -422,7 +440,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username used to log on to the image repository.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -430,7 +448,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -438,7 +456,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteList.
+             * The whitelist of IP addresses.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;

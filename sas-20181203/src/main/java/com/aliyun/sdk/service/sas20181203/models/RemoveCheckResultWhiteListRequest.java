@@ -82,7 +82,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         } 
 
         /**
-         * CheckGroupId.
+         * This parameter is deprecated.
          */
         public Builder checkGroupId(String checkGroupId) {
             this.putQueryParameter("CheckGroupId", checkGroupId);
@@ -91,7 +91,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * CheckIds.
+         * The IDs of check items.
          */
         public Builder checkIds(java.util.List < Long > checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -100,7 +100,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * Type.
+         * This parameter is deprecated.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

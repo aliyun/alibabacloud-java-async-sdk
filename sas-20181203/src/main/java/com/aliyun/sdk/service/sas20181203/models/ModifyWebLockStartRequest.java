@@ -196,7 +196,7 @@ public class ModifyWebLockStartRequest extends Request {
          * The directory for which you want to disable web tamper proofing.
          * <p>
          * 
-         * >  If you set **Mode** to **blacklist**, you must specify this parameter.
+         * > If you set **Mode** to **blacklist**, you must specify this parameter.
          */
         public Builder exclusiveDir(String exclusiveDir) {
             this.putQueryParameter("ExclusiveDir", exclusiveDir);
@@ -208,7 +208,7 @@ public class ModifyWebLockStartRequest extends Request {
          * The file for which you want to disable web tamper proofing.
          * <p>
          * 
-         * >  If you set **Mode** to **blacklist**, you must specify this parameter.
+         * > If you set **Mode** to **blacklist**, you must specify this parameter.
          */
         public Builder exclusiveFile(String exclusiveFile) {
             this.putQueryParameter("ExclusiveFile", exclusiveFile);
@@ -217,7 +217,7 @@ public class ModifyWebLockStartRequest extends Request {
         }
 
         /**
-         * The type of file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:
+         * The type of the file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:
          * <p>
          * 
          * *   php
@@ -235,7 +235,7 @@ public class ModifyWebLockStartRequest extends Request {
          * *   gif
          * *   png
          * 
-         * >  If you set **Mode** to **blacklist**, you must specify this parameter.
+         * > If you set **Mode** to **blacklist**, you must specify this parameter.
          */
         public Builder exclusiveFileType(String exclusiveFileType) {
             this.putQueryParameter("ExclusiveFileType", exclusiveFileType);
@@ -244,7 +244,7 @@ public class ModifyWebLockStartRequest extends Request {
         }
 
         /**
-         * The type of file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:
+         * The type of the file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:
          * <p>
          * 
          * *   php
@@ -262,7 +262,7 @@ public class ModifyWebLockStartRequest extends Request {
          * *   gif
          * *   png
          * 
-         * >  If you set **Mode** to **whitelist**, you must specify this parameter.
+         * > If you set **Mode** to **whitelist**, you must specify this parameter.
          */
         public Builder inclusiveFileType(String inclusiveFileType) {
             this.putQueryParameter("InclusiveFileType", inclusiveFileType);
@@ -273,7 +273,7 @@ public class ModifyWebLockStartRequest extends Request {
         /**
          * The local path to the backup files of the protected directory.\
          * <p>
-         * The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples of directory formats:
+         * The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples:
          * 
          * *   Linux server: /usr/local/aegis/bak
          * *   Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak
@@ -289,7 +289,7 @@ public class ModifyWebLockStartRequest extends Request {
          * <p>
          * 
          * *   **whitelist**: In this mode, web tamper proofing is enabled for the specified directories and file types.
-         * *   **blacklist**: In this mode, web tamper proofing is enabled for the unspecified sub-directories, file types, and files in the protected directories.
+         * *   **blacklist**: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

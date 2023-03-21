@@ -58,7 +58,7 @@ public class DescribeUniSupportRegionResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the regions that are supported.
+         * An array consisting of the region that is supported by anti-ransomware for databases.
          */
         public Builder uniSupportRegion(java.util.List < String > uniSupportRegion) {
             this.uniSupportRegion = uniSupportRegion;

@@ -191,9 +191,9 @@ public class OperateCommonTargetConfigRequest extends Request {
          * *   **alidetect-scan-enable**: local file detection
          * *   **ACTION-TRIAL-PERMISSION**: data delivery of ActionTrail
          * *   **alidetect**: local file detection engine
-         * *   **container_prevent_escape**: container escape prevention
-         * *   **image_repo**: repository image scan
-         * *   **proc_filter_switch**: log filtering
+         * *   **container\_prevent\_escape**: container escape prevention
+         * *   **image\_repo**: repository image scan
+         * *   **proc\_filter\_switch**: log filtering
          * *   **agentless**: agentless detection
          * *   **rasp**: application protection
          * *   **sensitiveFile**: sensitive file detection

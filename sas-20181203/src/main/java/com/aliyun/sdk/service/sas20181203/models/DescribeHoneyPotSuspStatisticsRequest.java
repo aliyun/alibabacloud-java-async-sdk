@@ -18,6 +18,10 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
     private String from;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("StatisticsDays")
     @Validation(required = true)
     private Integer statisticsDays;
@@ -30,6 +34,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
     private DescribeHoneyPotSuspStatisticsRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
+        this.lang = builder.lang;
         this.statisticsDays = builder.statisticsDays;
         this.statisticsKeyType = builder.statisticsKeyType;
     }
@@ -55,6 +60,13 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return statisticsDays
      */
     public Integer getStatisticsDays() {
@@ -70,6 +82,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeHoneyPotSuspStatisticsRequest, Builder> {
         private String from; 
+        private String lang; 
         private Integer statisticsDays; 
         private String statisticsKeyType; 
 
@@ -80,6 +93,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         private Builder(DescribeHoneyPotSuspStatisticsRequest request) {
             super(request);
             this.from = request.from;
+            this.lang = request.lang;
             this.statisticsDays = request.statisticsDays;
             this.statisticsKeyType = request.statisticsKeyType;
         } 
@@ -90,6 +104,15 @@ public class DescribeHoneyPotSuspStatisticsRequest extends Request {
         public Builder from(String from) {
             this.putQueryParameter("From", from);
             this.from = from;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

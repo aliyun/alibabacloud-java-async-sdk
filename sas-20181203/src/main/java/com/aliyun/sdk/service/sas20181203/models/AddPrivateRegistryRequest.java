@@ -217,7 +217,7 @@ public class AddPrivateRegistryRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name of the image repository.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -226,7 +226,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * ExtraParam.
+         * The additional parameter of the image repository. This parameter is required when you set the RegistryType parameter to **quay**. Valid values:
+         * <p>
+         * 
+         * *   **namespace**
+         * *   **authToken**
          */
         public Builder extraParam(String extraParam) {
             this.putQueryParameter("ExtraParam", extraParam);
@@ -235,7 +239,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * NetType.
+         * The network type. Valid values:
+         * <p>
+         * 
+         * *   **1**: Internet
+         * *   **2**: virtual private cloud (VPC)
          */
         public Builder netType(Long netType) {
             this.putQueryParameter("NetType", netType);
@@ -244,7 +252,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password that is used to log on to the image repository.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -253,7 +261,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The type of the protocol. Valid values:
+         * <p>
+         * 
+         * *   **1**: HTTP
+         * *   **2**: HTTPS
          */
         public Builder protocolType(Long protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -262,7 +274,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * RegistryHostIp.
+         * The IP address of the image repository.
          */
         public Builder registryHostIp(String registryHostIp) {
             this.putQueryParameter("RegistryHostIp", registryHostIp);
@@ -271,7 +283,10 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * RegistryRegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * > You can call the [ListImageRegistryRegions](~~ListImageRegistryRegions~~) operation to query the IDs of supported regions.
          */
         public Builder registryRegionId(String registryRegionId) {
             this.putQueryParameter("RegistryRegionId", registryRegionId);
@@ -280,7 +295,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * RegistryType.
+         * The type of the private image repository. Valid values:
+         * <p>
+         * 
+         * *   **harbor**
+         * *   **quay**
          */
         public Builder registryType(String registryType) {
             this.putQueryParameter("RegistryType", registryType);
@@ -289,7 +308,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * RegistryVersion.
+         * The version of the image repository. Valid values:
+         * <p>
+         * 
+         * *   **V1**
+         * *   **V2**
          */
         public Builder registryVersion(String registryVersion) {
             this.putQueryParameter("RegistryVersion", registryVersion);
@@ -298,7 +321,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * TransPerHour.
+         * The number of images that are scanned per hour.
          */
         public Builder transPerHour(Integer transPerHour) {
             this.putQueryParameter("TransPerHour", transPerHour);
@@ -307,7 +330,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username that is used to log on to the image repository.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -316,7 +339,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

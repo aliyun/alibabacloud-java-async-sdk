@@ -86,7 +86,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         private Integer startTime; 
 
         /**
-         * CycleDays.
+         * An array that consists of days in a week on which an automatic check is performed.
          */
         public Builder cycleDays(java.util.List < Integer > cycleDays) {
             this.cycleDays = cycleDays;
@@ -94,7 +94,13 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 检查结束时间小时
+         * The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:
+         * <p>
+         * 
+         * *   **00:00 to 06:00:** The StartTime parameter is set to 0 and the EndTime parameter is set to 6.
+         * *   **06:00 to 12:00**: The StartTime parameter is set to 6 and the EndTime parameter is set to 12.
+         * *   **12:00 to 18:00**: The StartTime parameter is set to 12 and the EndTime parameter is set to 18.
+         * *   **18:00 to 24:00:** The StartTime parameter is set to 18 and the EndTime parameter is set to 24.
          */
         public Builder endTime(Integer endTime) {
             this.endTime = endTime;
@@ -102,7 +108,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +116,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Standards.
+         * An array that consists of the information about the check items.
          */
         public Builder standards(java.util.List < Standards> standards) {
             this.standards = standards;
@@ -118,7 +124,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 检查开始时间小时
+         * The start time of the check. The value indicates a point in time.
          */
         public Builder startTime(Integer startTime) {
             this.startTime = startTime;
@@ -194,7 +200,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * id
+             * The ID of the check item.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -202,7 +208,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * The name of the check item.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -210,7 +216,11 @@ public class GetCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the check item. Valid values:
+             * <p>
+             * 
+             * *   **ON**: enabled
+             * *   **OFF**: disabled
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +228,12 @@ public class GetCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the check item. Valid values:
+             * <p>
+             * 
+             * *   **RISK**: cloud service configuration management
+             * *   **IDENTITY_PERMISSION**: identity and permission management
+             * *   **COMPLIANCE**: compliance
              */
             public Builder type(String type) {
                 this.type = type;

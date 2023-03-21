@@ -150,8 +150,8 @@ public class DescribeWebLockFileEventsRequest extends Request {
          * Specifies whether the event on web tamper proofing is handled. Valid values:
          * <p>
          * 
-         * *   **n**: no
-         * *   **y**: yes
+         * *   **n**: The event on web tamper proofing is handled.
+         * *   **y**: The event on web tamper proofing is not handled.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -181,7 +181,7 @@ public class DescribeWebLockFileEventsRequest extends Request {
          * The name of the asset.
          * <p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the names of assets.
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the names of assets.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

@@ -54,7 +54,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         } 
 
         /**
-         * CheckIds.
+         * The IDs of the check items.
          */
         public Builder checkIds(java.util.List < Long > checkIds) {
             this.putQueryParameter("CheckIds", checkIds);

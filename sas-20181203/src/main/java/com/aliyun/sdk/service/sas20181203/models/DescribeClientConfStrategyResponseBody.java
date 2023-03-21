@@ -62,7 +62,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * TargetList.
+         * An array that consists of the configurations.
          */
         public Builder targetList(java.util.List < TargetList> targetList) {
             this.targetList = targetList;
@@ -78,7 +78,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Uuid.
+             * The UUID of the Security Center agent.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

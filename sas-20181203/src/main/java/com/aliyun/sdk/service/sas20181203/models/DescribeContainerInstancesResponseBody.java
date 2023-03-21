@@ -62,7 +62,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContainerInstanceList.
+         * An array that consists of the information about containers.
          */
         public Builder containerInstanceList(java.util.List < ContainerInstanceList> containerInstanceList) {
             this.containerInstanceList = containerInstanceList;
@@ -70,7 +70,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -454,7 +454,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * AlarmCount.
+             * The number of alerts.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -462,7 +462,11 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmStatus.
+             * Indicates whether alerts are generated for the container. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -470,7 +474,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -478,7 +482,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -486,7 +490,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -494,7 +498,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -502,7 +506,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The timestamp when the cluster was created. Unit: milliseconds.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -510,7 +514,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HcCount.
+             * The number of baseline risks.
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
@@ -518,7 +522,11 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HcStatus.
+             * Indicates whether baseline risks are detected. Valid values:
+             * <p>
+             * 
+             * *   **NO**
+             * *   **YES**
              */
             public Builder hcStatus(String hcStatus) {
                 this.hcStatus = hcStatus;
@@ -526,7 +534,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostIp.
+             * The IP address of the server.
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -534,7 +542,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -542,7 +550,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageDigest.
+             * The digest value of the image.
              */
             public Builder imageDigest(String imageDigest) {
                 this.imageDigest = imageDigest;
@@ -550,7 +558,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -558,7 +566,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRepoName.
+             * The name of the image repository.
              */
             public Builder imageRepoName(String imageRepoName) {
                 this.imageRepoName = imageRepoName;
@@ -566,7 +574,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRepoNamespace.
+             * The namespace to which the image repository belongs.
              */
             public Builder imageRepoNamespace(String imageRepoNamespace) {
                 this.imageRepoNamespace = imageRepoNamespace;
@@ -574,7 +582,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRepoTag.
+             * The tag that is added to the image.
              */
             public Builder imageRepoTag(String imageRepoTag) {
                 this.imageRepoTag = imageRepoTag;
@@ -582,7 +590,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUuid.
+             * The UUID of the image.
              */
             public Builder imageUuid(String imageUuid) {
                 this.imageUuid = imageUuid;
@@ -590,7 +598,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of the asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -598,7 +606,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -606,7 +614,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInfo.
+             * The node information.
              */
             public Builder nodeInfo(String nodeInfo) {
                 this.nodeInfo = nodeInfo;
@@ -614,7 +622,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -622,7 +630,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Pod.
+             * The pod.
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -630,7 +638,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PodIp.
+             * The IP address of the pod.
              */
             public Builder podIp(String podIp) {
                 this.podIp = podIp;
@@ -638,7 +646,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the container.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -646,7 +654,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * The number of risks.
              */
             public Builder riskCount(String riskCount) {
                 this.riskCount = riskCount;
@@ -654,7 +662,11 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * Indicates whether risks exist. Valid values:
+             * <p>
+             * 
+             * *   **NO**
+             * *   **YES**
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -662,7 +674,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateMark.
+             * The update identifier of the container.
              */
             public Builder updateMark(String updateMark) {
                 this.updateMark = updateMark;
@@ -670,7 +682,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulCount.
+             * The number of vulnerabilities that are detected in the container cluster.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -678,7 +690,11 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulStatus.
+             * Indicates whether vulnerabilities are detected in the container. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
@@ -755,7 +771,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -763,7 +779,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -771,7 +787,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -779,7 +795,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

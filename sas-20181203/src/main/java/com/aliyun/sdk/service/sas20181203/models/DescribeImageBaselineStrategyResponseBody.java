@@ -50,7 +50,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         private Strategy strategy; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Strategy.
+         * An array that consists of the information about the baseline check policy.
          */
         public Builder strategy(Strategy strategy) {
             this.strategy = strategy;
@@ -122,7 +122,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             private String nameKey; 
 
             /**
-             * ClassKey.
+             * The key of the baseline type.
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -130,7 +130,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ItemKey.
+             * The key of the baseline check item.
              */
             public Builder itemKey(String itemKey) {
                 this.itemKey = itemKey;
@@ -138,7 +138,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * NameKey.
+             * The key of the name for the baseline.
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -239,7 +239,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * BaselineItemList.
+             * An array that contains the baselines.
              */
             public Builder baselineItemList(java.util.List < BaselineItemList> baselineItemList) {
                 this.baselineItemList = baselineItemList;
@@ -247,7 +247,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SelectedItemCount.
+             * The number of selected baseline check items.
              */
             public Builder selectedItemCount(Integer selectedItemCount) {
                 this.selectedItemCount = selectedItemCount;
@@ -255,7 +255,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * The ID of the baseline check policy.
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -263,7 +263,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * The name of the baseline check policy.
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -271,7 +271,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemCount.
+             * The total number of baseline check items.
              */
             public Builder totalItemCount(Integer totalItemCount) {
                 this.totalItemCount = totalItemCount;
@@ -279,7 +279,12 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the baseline check policy. Valid values:
+             * <p>
+             * 
+             * *   **default**: the default policy
+             * *   **full**: a policy that uses all baselines
+             * *   **normal**: a policy that uses general baselines
              */
             public Builder type(String type) {
                 this.type = type;

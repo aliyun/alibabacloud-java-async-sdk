@@ -232,10 +232,10 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The additional type of the vulnerability. You can specify this parameter when you query application vulnerabilities. Set the value to **sca**. If you set **Type** to **app**, you must specify this parameter.
+         * The additional type of the vulnerabilities. You need to specify this parameter when you query application vulnerabilities. Set the value to **sca**. If you set **Type** to **app**, you must specify this parameter.
          * <p>
          * 
-         * >  If you set this parameter to **sca**, application vulnerabilities and the vulnerabilities that are detected based on software component analysis are queried. If you do not specify this parameter, only application vulnerabilities are queried.
+         * > If you set this parameter to **sca**, application vulnerabilities and the vulnerabilities that are detected based on software component analysis are queried. If you do not specify this parameter, only application vulnerabilities are queried.
          */
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
@@ -253,7 +253,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Specifies whether the vulnerability is fixed. Valid values:
+         * Specifies whether the vulnerabilities are fixed. Valid values:
          * <p>
          * 
          * *   **y**: yes
@@ -269,7 +269,7 @@ public class DescribeVulListRequest extends Request {
          * The ID of the asset group.
          * <p>
          * 
-         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -332,7 +332,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The type of the vulnerabilities. Valid values:
+         * The type of the vulnerability. Valid values:
          * <p>
          * 
          * *   **cve**: Linux software vulnerability

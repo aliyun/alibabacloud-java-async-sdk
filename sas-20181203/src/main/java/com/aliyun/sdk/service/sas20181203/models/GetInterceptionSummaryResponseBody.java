@@ -81,6 +81,9 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
         @NameInMap("ClusterCount")
         private Integer clusterCount;
 
+        @NameInMap("InterceptionCountInDays")
+        private Integer interceptionCountInDays;
+
         @NameInMap("OpenClusterCount")
         private Integer openClusterCount;
 
@@ -103,6 +106,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             this.closeClusterCount = builder.closeClusterCount;
             this.closeRuleCount = builder.closeRuleCount;
             this.clusterCount = builder.clusterCount;
+            this.interceptionCountInDays = builder.interceptionCountInDays;
             this.openClusterCount = builder.openClusterCount;
             this.openRuleCount = builder.openRuleCount;
             this.riskCount180Day = builder.riskCount180Day;
@@ -138,6 +142,13 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
          */
         public Integer getClusterCount() {
             return this.clusterCount;
+        }
+
+        /**
+         * @return interceptionCountInDays
+         */
+        public Integer getInterceptionCountInDays() {
+            return this.interceptionCountInDays;
         }
 
         /**
@@ -186,6 +197,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             private Integer closeClusterCount; 
             private Integer closeRuleCount; 
             private Integer clusterCount; 
+            private Integer interceptionCountInDays; 
             private Integer openClusterCount; 
             private Integer openRuleCount; 
             private Long riskCount180Day; 
@@ -214,6 +226,14 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
+                return this;
+            }
+
+            /**
+             * InterceptionCountInDays.
+             */
+            public Builder interceptionCountInDays(Integer interceptionCountInDays) {
+                this.interceptionCountInDays = interceptionCountInDays;
                 return this;
             }
 

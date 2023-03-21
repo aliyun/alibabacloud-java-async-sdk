@@ -85,7 +85,10 @@ public class SetClusterInterceptionConfigRequest extends Request {
         } 
 
         /**
-         * ClusterIds.
+         * The ID of the cluster. Separate multiple cluster IDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [ListClusterInterceptionConfig](~~ListClusterInterceptionConfig~~) operation to query the IDs of clusters.
          */
         public Builder clusterIds(String clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -94,7 +97,11 @@ public class SetClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * SwitchOn.
+         * Specifies whether to turn on the switch. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder switchOn(Integer switchOn) {
             this.putQueryParameter("SwitchOn", switchOn);
@@ -103,7 +110,12 @@ public class SetClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * SwitchType.
+         * The type of the switch that you want to configure. Valid values:
+         * <p>
+         * 
+         * *   **0**: the interception switch
+         * *   **1**: the interception type switch
+         * *   **2**: the interception history switch
          */
         public Builder switchType(Integer switchType) {
             this.putQueryParameter("SwitchType", switchType);

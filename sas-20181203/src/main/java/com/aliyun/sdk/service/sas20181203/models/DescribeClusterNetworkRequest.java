@@ -70,7 +70,10 @@ public class DescribeClusterNetworkRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end timestamp of the query. Unit: milliseconds.
+         * <p>
+         * 
+         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -79,7 +82,10 @@ public class DescribeClusterNetworkRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start timestamp of the query. Unit: milliseconds.
+         * <p>
+         * 
+         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

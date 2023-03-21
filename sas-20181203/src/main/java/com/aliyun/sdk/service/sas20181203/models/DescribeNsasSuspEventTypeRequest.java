@@ -225,7 +225,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
          * The UUIDs of servers. Separate multiple UUIDs with commas (,).
          * <p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

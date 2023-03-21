@@ -54,7 +54,7 @@ public class VerifyCheckResultRequest extends Request {
         } 
 
         /**
-         * An array that consists of IDs of check items.
+         * An array that consists of the IDs of risk items.
          */
         public Builder checkIds(java.util.List < Long > checkIds) {
             this.putQueryParameter("CheckIds", checkIds);

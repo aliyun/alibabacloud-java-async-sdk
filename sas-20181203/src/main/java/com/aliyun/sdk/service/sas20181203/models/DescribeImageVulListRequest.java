@@ -453,8 +453,8 @@ public class DescribeImageVulListRequest extends Request {
          * Specifies whether the vulnerability is handled. Valid values:
          * <p>
          * 
-         * *   **y**: yes
-         * *   **n**: no
+         * *   **y**: handled
+         * *   **n**: unhandled
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -639,7 +639,7 @@ public class DescribeImageVulListRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Set the value to **CVE**, which indicates image vulnerabilities.
+         * The type of the vulnerability. Set the value to **cve**, which indicates image vulnerabilities.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

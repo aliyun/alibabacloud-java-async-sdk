@@ -69,7 +69,7 @@ public class AddTagWithUuidRequest extends Request {
         } 
 
         /**
-         * TagName.
+         * The name of the tag.
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -78,7 +78,10 @@ public class AddTagWithUuidRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUIDs of the servers. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

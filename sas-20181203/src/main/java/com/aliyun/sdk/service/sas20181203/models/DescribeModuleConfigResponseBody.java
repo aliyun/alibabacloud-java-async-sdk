@@ -118,11 +118,11 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -335,7 +335,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration items.
+             * An array that consists of the configuration items.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;

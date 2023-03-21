@@ -186,7 +186,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The item display name of the check item.
+             * The display name of the requirement item for the check item.
              */
             public Builder requirementShowName(String requirementShowName) {
                 this.requirementShowName = requirementShowName;
@@ -399,7 +399,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The check policies.
+             * An array that consists of the check policies.
              */
             public Builder checkPolicies(java.util.List < CheckPolicies> checkPolicies) {
                 this.checkPolicies = checkPolicies;
@@ -503,7 +503,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the check item. Valid values:
+             * The status of the check item. Valid values:
              * <p>
              * 
              * *   **PASS**
@@ -526,7 +526,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that whether this check item needs trial permission.
+             * Indicates whether the TRIAL permission is required.
              */
             public Builder trialPermission(Boolean trialPermission) {
                 this.trialPermission = trialPermission;

@@ -126,7 +126,7 @@ public class ModifyWebLockStatusRequest extends Request {
          * *   **on**: enables web tamper proofing
          * *   **off**: disables web tamper proofing
          * 
-         * >  After you disable web tamper proofing for the specified server, one quota is released.
+         * > After you disable web tamper proofing for the specified server, one quota is released.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

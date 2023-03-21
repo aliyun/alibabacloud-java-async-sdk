@@ -137,7 +137,7 @@ public class DescribeRiskCheckItemResultRequest extends Request {
          * The ID of the check item.
          * <p>
          * 
-         * >  For more information about the IDs and details of the check items that can be used in configuration assessment, see [DescribeRiskCheckResult](~~DescribeRiskCheckResult~~).
+         * > For more information about the IDs and details of the check items that can be used in configuration assessment, see [DescribeRiskCheckResult](~~DescribeRiskCheckResult~~).
          */
         public Builder itemId(Long itemId) {
             this.putQueryParameter("ItemId", itemId);
@@ -162,7 +162,7 @@ public class DescribeRiskCheckItemResultRequest extends Request {
          * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
          * <p>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

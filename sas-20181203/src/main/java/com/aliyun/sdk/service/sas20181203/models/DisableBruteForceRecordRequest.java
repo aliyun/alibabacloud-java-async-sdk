@@ -126,7 +126,7 @@ public class DisableBruteForceRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that is specified in the policy.
+         * The IP address that you want to specify in the policy.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -135,7 +135,7 @@ public class DisableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that is specified in the policy. Valid values:
+         * The traffic direction that you want to specify in the policy. Valid values:
          * <p>
          * 
          * *   **in**: inbound

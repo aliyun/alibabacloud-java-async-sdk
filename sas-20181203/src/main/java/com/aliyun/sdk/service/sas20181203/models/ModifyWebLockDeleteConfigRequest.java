@@ -98,8 +98,9 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the protected directory that you want to delete. 
+         * The ID of the protected directory that you want to delete.
          * <p>
+         * 
          * > You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the IDs of protected directories.
          */
         public Builder id(Integer id) {
@@ -131,9 +132,10 @@ public class ModifyWebLockDeleteConfigRequest extends Request {
         }
 
         /**
-         * The UUID of the server for which you want to delete the protected directory. 
+         * The UUID of the server for which you want to delete the protected directory.
          * <p>
-         * > You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the UUID of servers.
+         * 
+         * > You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

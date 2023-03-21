@@ -28,6 +28,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddPrivateRegistryResponse> addPrivateRegistry(AddPrivateRegistryRequest request);
 
+    /**
+      * Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.
+      *
+     */
     CompletableFuture<AddTagWithUuidResponse> addTagWithUuid(AddTagWithUuidRequest request);
 
     CompletableFuture<AddUninstallClientsByUuidsResponse> addUninstallClientsByUuids(AddUninstallClientsByUuidsRequest request);
@@ -43,6 +47,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelOnceTaskResponse> cancelOnceTask(CancelOnceTaskRequest request);
 
     CompletableFuture<ChangeCheckConfigResponse> changeCheckConfig(ChangeCheckConfigRequest request);
+
+    CompletableFuture<ChangeCheckCustomConfigResponse> changeCheckCustomConfig(ChangeCheckCustomConfigRequest request);
 
     CompletableFuture<CheckQuaraFileIdResponse> checkQuaraFileId(CheckQuaraFileIdRequest request);
 
@@ -70,8 +76,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFileDetectResponse> createFileDetect(CreateFileDetectRequest request);
 
     /**
-      * You can call the this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
-      * The form upload method is provided by OSS. For more information, see [Form upload](https://www.alibabacloud.com/help/en/object-storage-service/latest/upload-objects-form-upload).
+      * You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
+      * The form upload method is provided by OSS. For more information, see [Form upload](~~84788~~).
       * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
      */
@@ -180,16 +186,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAgentInstallStatusResponse> describeAgentInstallStatus(DescribeAgentInstallStatusRequest request);
 
     CompletableFuture<DescribeAlarmEventDetailResponse> describeAlarmEventDetail(DescribeAlarmEventDetailRequest request);
-
-    /**
-      * The alert aggregation feature of Security Center analyzes the paths of alerts to aggregate multiple alerts generated on the intrusions that are launched from the same IP address or service, or on the same user.
-      * You can call the DescribeAlarmEventList or DescribeSuspEvents operation to query alert events.
-      * *   If your Security Center runs the Enterprise or Ultimate edition and you turned on **Alert Association** on the **Feature Settings** page of the Security Center console, you can call the DescribeAlarmEventList operation to query alert events.
-      * *   If your Security Center runs the Enterprise or Ultimate edition but you turned off **Alert Association** on the **Feature Settings** page of the Security Center console, you can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query alert events.
-      * *   If your Security Center does not run the Enterprise or Ultimate edition, you can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query alert events.
-      *
-     */
-    CompletableFuture<DescribeAlarmEventListResponse> describeAlarmEventList(DescribeAlarmEventListRequest request);
 
     CompletableFuture<DescribeAlarmEventStackInfoResponse> describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request);
 
@@ -505,24 +501,28 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the ListCheckInstanceResult operation.
       *
      */
     CompletableFuture<DescribeRiskCheckItemResultResponse> describeRiskCheckItemResult(DescribeRiskCheckItemResultRequest request);
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the ListCheckResult operation.
       *
      */
     CompletableFuture<DescribeRiskCheckResultResponse> describeRiskCheckResult(DescribeRiskCheckResultRequest request);
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the GetCheckSummary operation.
       *
      */
     CompletableFuture<DescribeRiskCheckSummaryResponse> describeRiskCheckSummary(DescribeRiskCheckSummaryRequest request);
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the ListCheckStandard operation instead.
       *
      */
     CompletableFuture<DescribeRiskItemTypeResponse> describeRiskItemType(DescribeRiskItemTypeRequest request);
@@ -550,6 +550,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the GetCheckConfig operation.
       *
      */
     CompletableFuture<DescribeSecurityCheckScheduleConfigResponse> describeSecurityCheckScheduleConfig(DescribeSecurityCheckScheduleConfigRequest request);
@@ -713,7 +714,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   The list of servers on the Host page.
       * *   The lists of image system vulnerabilities, image application vulnerabilities, image baseline check results, and malicious image samples on the Image Security page.
       * *   The list of attack analysis data on the Attack Awareness page.
-      * *   The list of check results for AccessKey pair leaks on the AccessKey Leak page.
+      * *   The list of check results for AccessKey pair leaks on the AK leak detection page.
       *
      */
     CompletableFuture<ExportRecordResponse> exportRecord(ExportRecordRequest request);
@@ -871,8 +872,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInterceptionHistoryResponse> listInterceptionHistory(ListInterceptionHistoryRequest request);
 
-    CompletableFuture<ListInterceptionImageResponse> listInterceptionImage(ListInterceptionImageRequest request);
-
     CompletableFuture<ListInterceptionRulePageResponse> listInterceptionRulePage(ListInterceptionRulePageRequest request);
 
     CompletableFuture<ListInterceptionTargetPageResponse> listInterceptionTargetPage(ListInterceptionTargetPageRequest request);
@@ -979,18 +978,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the following operations:
+      * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
+      * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
       *
      */
     CompletableFuture<ModifyRiskCheckStatusResponse> modifyRiskCheckStatus(ModifyRiskCheckStatusRequest request);
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the following operations:
+      * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
+      * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
       *
      */
     CompletableFuture<ModifyRiskSingleResultStatusResponse> modifyRiskSingleResultStatus(ModifyRiskSingleResultStatusRequest request);
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the ChangeCheckConfig operation.
       *
      */
     CompletableFuture<ModifySecurityCheckScheduleConfigResponse> modifySecurityCheckScheduleConfig(ModifySecurityCheckScheduleConfigRequest request);
@@ -1084,12 +1090,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryDiscoverDatabaseResponse> queryDiscoverDatabase(QueryDiscoverDatabaseRequest request);
 
-    /**
-      * You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as [GetSuspiciousStatistics](~~GetSuspiciousStatistics~~) and [DeleteGroup](~~DeleteGroup~~), you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-     */
     CompletableFuture<QueryGroupIdByGroupNameResponse> queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request);
 
     CompletableFuture<QueryGroupedSecurityEventMarkMissListResponse> queryGroupedSecurityEventMarkMissList(QueryGroupedSecurityEventMarkMissListRequest request);
@@ -1122,7 +1122,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the SubmitCheck operation.
       *
      */
     CompletableFuture<StartBaselineSecurityCheckResponse> startBaselineSecurityCheck(StartBaselineSecurityCheckRequest request);
@@ -1140,7 +1139,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * > You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
       * **Prerequisites**
       * *   The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the [PauseClient](~~PauseClient~~) operation to disable the agent.
-      * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](~~197280~~).
+      * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine).
       *
      */
     CompletableFuture<UnbindAegisResponse> unbindAegis(UnbindAegisRequest request);

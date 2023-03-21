@@ -142,7 +142,10 @@ public class ModifyInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The name of the application.
+         * <p>
+         * 
+         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -151,7 +154,10 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * ImageList.
+         * An array that consists of images.
+         * <p>
+         * 
+         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
          */
         public Builder imageList(java.util.List < String > imageList) {
             this.putQueryParameter("ImageList", imageList);
@@ -160,7 +166,10 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
+         * <p>
+         * 
+         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -169,7 +178,10 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * TagList.
+         * An array that consists of tags.
+         * <p>
+         * 
+         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
          */
         public Builder tagList(java.util.List < String > tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -178,7 +190,10 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the network object.
+         * <p>
+         * 
+         * > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to obtain the value of this parameter.
          */
         public Builder targetId(Long targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -187,7 +202,7 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * TargetName.
+         * The name.
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -196,7 +211,10 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The object type. Valid values:
+         * <p>
+         * 
+         * *   **IMAGE**
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

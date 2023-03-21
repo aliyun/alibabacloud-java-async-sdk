@@ -514,7 +514,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The domain name of the website.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -525,7 +525,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The path to the kernel module file.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **lkm**.
+             * > This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder filepath(String filepath) {
                 this.filepath = filepath;
@@ -584,7 +584,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The listening protocol that the website uses.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder listenProtocol(String listenProtocol) {
                 this.listenProtocol = listenProtocol;
@@ -595,7 +595,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The name of the module.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **lkm**.
+             * > This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -618,7 +618,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The permissions on the root directory of the website.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder pathMode(String pathMode) {
                 this.pathMode = pathMode;
@@ -629,7 +629,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The process ID (PID) of the process that runs the website service.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -640,7 +640,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The port of the website.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -651,7 +651,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The timestamp when the process was started. Unit: milliseconds.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder processStarted(Long processStarted) {
                 this.processStarted = processStarted;
@@ -659,7 +659,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * The ID of the region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -670,7 +670,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The type of the website.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -681,7 +681,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The size of the kernel module.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **lkm**.
+             * > This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -692,7 +692,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The number of times that the kernel module is referenced.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **lkm**.
+             * > This parameter is returned only when **Biz** is set to **lkm**.
              */
             public Builder usedByCount(Integer usedByCount) {
                 this.usedByCount = usedByCount;
@@ -703,7 +703,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The user who started the process of the website.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -722,7 +722,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              * The path to the root directory of the website.
              * <p>
              * 
-             * >  This parameter is returned only when **Biz** is set to **web_server**.
+             * > This parameter is returned only when **Biz** is set to **web_server**.
              */
             public Builder webPath(String webPath) {
                 this.webPath = webPath;

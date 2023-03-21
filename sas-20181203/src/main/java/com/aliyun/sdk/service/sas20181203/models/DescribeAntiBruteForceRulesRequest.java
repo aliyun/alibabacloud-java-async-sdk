@@ -122,7 +122,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
          * The ID of the defense rule.
          * <p>
          * 
-         * >  You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to query the IDs of defense rules.
+         * > You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to query the IDs of defense rules.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

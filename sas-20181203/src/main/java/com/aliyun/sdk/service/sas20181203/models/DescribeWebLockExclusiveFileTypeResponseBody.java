@@ -78,7 +78,7 @@ public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of files that have web tamper proofing disabled.
+         * The total number of types of the files that have web tamper proofing disabled.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

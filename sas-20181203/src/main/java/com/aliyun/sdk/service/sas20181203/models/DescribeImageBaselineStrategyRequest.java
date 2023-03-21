@@ -68,7 +68,11 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,7 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the baseline check policy.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

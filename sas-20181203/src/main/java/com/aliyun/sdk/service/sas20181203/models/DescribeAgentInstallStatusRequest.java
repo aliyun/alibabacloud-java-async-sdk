@@ -22,6 +22,7 @@ public class DescribeAgentInstallStatusRequest extends Request {
 
     @Query
     @NameInMap("Uuids")
+    @Validation(required = true)
     private String uuids;
 
     private DescribeAgentInstallStatusRequest(Builder builder) {

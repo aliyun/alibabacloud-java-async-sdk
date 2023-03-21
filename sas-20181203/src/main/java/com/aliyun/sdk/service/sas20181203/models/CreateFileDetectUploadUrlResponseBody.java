@@ -150,7 +150,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The policy that poses limits on file upload. For example, the policy limits the size of the file.
+             * The policy that poses limits on file upload. For example, the policy can limit the size of the file.
              */
             public Builder policy(String policy) {
                 this.policy = policy;

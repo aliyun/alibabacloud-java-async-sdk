@@ -21,6 +21,10 @@ public class UpdateHoneypotProbeRequest extends Request {
     private String displayName;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("Ping")
     private Boolean ping;
 
@@ -37,6 +41,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         super(builder);
         this.arp = builder.arp;
         this.displayName = builder.displayName;
+        this.lang = builder.lang;
         this.ping = builder.ping;
         this.probeId = builder.probeId;
         this.serviceIpList = builder.serviceIpList;
@@ -70,6 +75,13 @@ public class UpdateHoneypotProbeRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return ping
      */
     public Boolean getPing() {
@@ -93,6 +105,7 @@ public class UpdateHoneypotProbeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateHoneypotProbeRequest, Builder> {
         private Boolean arp; 
         private String displayName; 
+        private String lang; 
         private Boolean ping; 
         private String probeId; 
         private java.util.List < String > serviceIpList; 
@@ -105,13 +118,14 @@ public class UpdateHoneypotProbeRequest extends Request {
             super(request);
             this.arp = request.arp;
             this.displayName = request.displayName;
+            this.lang = request.lang;
             this.ping = request.ping;
             this.probeId = request.probeId;
             this.serviceIpList = request.serviceIpList;
         } 
 
         /**
-         * Indicates whether address resolution protocol (ARP) is enabled for the check type.
+         * Specifies whether address resolution protocol (ARP) is enabled for the check type.
          */
         public Builder arp(Boolean arp) {
             this.putQueryParameter("Arp", arp);
@@ -129,7 +143,16 @@ public class UpdateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * Indicates whether ping is enabled for the check type.
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Specifies whether ping is enabled for the check type.
          */
         public Builder ping(Boolean ping) {
             this.putQueryParameter("Ping", ping);
@@ -141,7 +164,7 @@ public class UpdateHoneypotProbeRequest extends Request {
          * The ID of the probe.
          * <p>
          * 
-         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

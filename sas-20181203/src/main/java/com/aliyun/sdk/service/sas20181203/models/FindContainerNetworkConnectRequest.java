@@ -138,7 +138,10 @@ public class FindContainerNetworkConnectRequest extends Request {
         } 
 
         /**
-         * CriteriaType.
+         * The type of the information that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **EDGE**: connection information
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -147,7 +150,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -156,7 +159,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * DstNode.
+         * The information about the destination node.
          */
         public Builder dstNode(DstNode dstNode) {
             String dstNodeShrink = shrink(dstNode, "DstNode", "json");
@@ -166,7 +169,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the network connection.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -175,7 +178,10 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +190,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * SrcNode.
+         * The information about the source node.
          */
         public Builder srcNode(SrcNode srcNode) {
             String srcNodeShrink = shrink(srcNode, "SrcNode", "json");
@@ -194,7 +200,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the network connection.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -296,7 +302,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             private String podName; 
 
             /**
-             * AppName.
+             * The name of the container application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -304,7 +310,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * ClusterId.
+             * The ID of the container cluster.
+             * <p>
+             * 
+             * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -312,7 +321,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace of the cluster.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -320,7 +329,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * NodeIds.
+             * The list of node IDs.
              */
             public Builder nodeIds(java.util.List < String > nodeIds) {
                 this.nodeIds = nodeIds;
@@ -328,7 +337,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * NodeType.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   **app**: application, which indicates that the node type is application.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -336,7 +348,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * PodName.
+             * The name of the pod.
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -437,7 +449,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             private String podName; 
 
             /**
-             * AppName.
+             * The name of the container application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -445,7 +457,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * ClusterId.
+             * The ID of the container cluster.
+             * <p>
+             * 
+             * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -453,7 +468,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace of the cluster.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -461,7 +476,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * NodeIds.
+             * The list of node IDs.
              */
             public Builder nodeIds(java.util.List < String > nodeIds) {
                 this.nodeIds = nodeIds;
@@ -469,7 +484,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * NodeType.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   **app**: application, which indicates that the node type is application.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -477,7 +495,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * PodName.
+             * The name of the pod.
              */
             public Builder podName(String podName) {
                 this.podName = podName;

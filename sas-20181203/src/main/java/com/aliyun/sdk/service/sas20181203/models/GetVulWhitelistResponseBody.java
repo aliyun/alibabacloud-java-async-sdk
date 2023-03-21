@@ -210,11 +210,11 @@ public class GetVulWhitelistResponseBody extends TeaModel {
              *     *   **Uuid**: server
              *     *   **GroupId**: server group
              * 
-             * *   **groupIds**: the IDs of server groups.
+             * *   **groupIds**: the ID of the server group
              * 
-             * *   **uuids**: the UUIDs of servers.
+             * *   **uuids**: the UUID of the server
              * 
-             * >  If this parameter is empty, the rule is applied to all assets.
+             * > If this parameter is empty, the rule is applied to all types of assets.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -241,7 +241,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
              *     *   **sys**: Windows system vulnerability
              *     *   **cms**: Web-CMS vulnerability
              *     *   **app**: application vulnerability
-             *     *   **emg**: urgent vulnerability
+             *     *   **emg**: urgent vulnerabilities
              * 
              * *   **AliasName**: the alias of the vulnerability.
              */

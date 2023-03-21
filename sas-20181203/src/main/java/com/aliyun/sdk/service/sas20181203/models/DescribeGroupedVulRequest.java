@@ -254,10 +254,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability.
+         * The types of the vulnerabilities.
          * <p>
          * 
-         * >  This parameter is valid only for application vulnerabilities and vulnerabilities that are detected based on software component analysis.
+         * > This parameter is valid only for application vulnerabilities and vulnerabilities that are detected based on software component analysis.
          */
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
@@ -287,7 +287,7 @@ public class DescribeGroupedVulRequest extends Request {
          * Specifies whether the vulnerability is handled. Valid values:
          * <p>
          * 
-         * **y**: yes **n**: no
+         * **y**: handled **n**: The vulnerability is not handled.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -318,7 +318,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
+         * The priorities to fix the vulnerabilities. Separate multiple priorities with commas (,). Valid values:
          * <p>
          * 
          * *   **asap**: high
@@ -341,7 +341,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The tag that is used to filter vulnerabilities. Valid values:
+         * The tag that is used to search for the vulnerabilities. Valid values:
          * <p>
          * 
          * *   Restart required
@@ -384,7 +384,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers. Separate multiple UUIDs with commas (,).
+         * The UUID of the server. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

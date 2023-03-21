@@ -78,10 +78,10 @@ public class DeleteTagWithUuidRequest extends Request {
         }
 
         /**
-         * The list of server UUIDs.
+         * The UUIDs of servers.
          * <p>
          * 
-         * >  If the UuidList parameter is configured, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not configured, Security Center removes the tag from all servers.
+         * > If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

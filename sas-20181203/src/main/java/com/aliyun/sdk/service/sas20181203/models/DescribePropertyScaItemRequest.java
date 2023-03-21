@@ -138,7 +138,14 @@ public class DescribePropertyScaItemRequest extends Request {
         } 
 
         /**
-         * Biz.
+         * The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:
+         * <p>
+         * 
+         * *   **sca**: middleware
+         * *   **sca_database**: database
+         * *   **sca_web**: web service
+         * 
+         * > If you do not specify this parameter, the default value **sca** is used, which indicates that middleware fingerprints are queried.
          */
         public Builder biz(String biz) {
             this.putQueryParameter("Biz", biz);
@@ -147,7 +154,7 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -156,7 +163,11 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * ForceFlush.
+         * Specifies whether to forcefully refresh the data that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -165,7 +176,11 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +189,10 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +201,22 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * SearchInfo.
+         * The search keyword. You must specify this parameter based on the value of the **SearchItem** parameter.
+         * <p>
+         * 
+         * *   If the **SearchItem** parameter is set to **name**, you must enter the name of an asset fingerprint.
+         * 
+         * *   If the **SearchItem** parameter is set to **type**, you must enter the type of an asset fingerprint. Valid values:
+         * 
+         *     *   **system_service**: system service
+         *     *   **software_library**: software library
+         *     *   **docker_component**: container component
+         *     *   **database**: database
+         *     *   **web_container**: web container
+         *     *   **jar**: JAR package
+         *     *   **web_framework**: web framework
+         * 
+         * > You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.
          */
         public Builder searchInfo(String searchInfo) {
             this.putQueryParameter("SearchInfo", searchInfo);
@@ -192,7 +225,13 @@ public class DescribePropertyScaItemRequest extends Request {
         }
 
         /**
-         * SearchItem.
+         * The type of the search condition. Valid values:
+         * <p>
+         * 
+         * *   **name**: the name of a database, middleware, or web service
+         * *   **type**: the type of a database, middleware, or web service
+         * 
+         * > You must specify both the **SearchItem** and **SearchInfo** parameters before you can query the asset fingerprints based on the specified name or type.
          */
         public Builder searchItem(String searchItem) {
             this.putQueryParameter("SearchItem", searchItem);

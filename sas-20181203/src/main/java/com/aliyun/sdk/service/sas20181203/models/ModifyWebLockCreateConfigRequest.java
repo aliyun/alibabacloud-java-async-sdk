@@ -237,7 +237,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
          * The directory for which you want to disable web tamper proofing.
          * <p>
          * 
-         * >  If you set **Mode** to **blacklist**, you must specify this parameter.
+         * > If you set **Mode** to **blacklist**, you must specify this parameter.
          */
         public Builder exclusiveDir(String exclusiveDir) {
             this.putQueryParameter("ExclusiveDir", exclusiveDir);
@@ -249,7 +249,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
          * The file for which you want to disable web tamper proofing.
          * <p>
          * 
-         * >  If you set **Mode** to **blacklist**, you must specify this parameter.
+         * > If you set **Mode** to **blacklist**, you must specify this parameter.
          */
         public Builder exclusiveFile(String exclusiveFile) {
             this.putQueryParameter("ExclusiveFile", exclusiveFile);
@@ -276,7 +276,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
          * *   gif
          * *   png
          * 
-         * >  If you set **Mode** to **blacklist**, you must specify this parameter.
+         * > If you set **Mode** to **blacklist**, you must specify this parameter.
          */
         public Builder exclusiveFileType(String exclusiveFileType) {
             this.putQueryParameter("ExclusiveFileType", exclusiveFileType);
@@ -288,7 +288,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
          * The file for which you want to enable web tamper proofing.
          * <p>
          * 
-         * >  If you set **Mode** to **whitelist**, you must specify this parameter.
+         * > If you set **Mode** to **whitelist**, you must specify this parameter.
          */
         public Builder inclusiveFile(String inclusiveFile) {
             this.putQueryParameter("InclusiveFile", inclusiveFile);
@@ -315,7 +315,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
          * *   gif
          * *   png
          * 
-         * >  If you set **Mode** to **whitelist**, you must specify this parameter.
+         * > If you set **Mode** to **whitelist**, you must specify this parameter.
          */
         public Builder inclusiveFileType(String inclusiveFileType) {
             this.putQueryParameter("InclusiveFileType", inclusiveFileType);
@@ -324,7 +324,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
+         * The language of the content within the request and response. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese
@@ -371,7 +371,7 @@ public class ModifyWebLockCreateConfigRequest extends Request {
          * The UUID of the server for which you want to add a directory to protect.
          * <p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

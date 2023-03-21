@@ -97,7 +97,7 @@ public class DescribeBackUpExportInfoRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -106,7 +106,10 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * ExportType.
+         * The type of archived information. Valid values:
+         * <p>
+         * 
+         * *   **suspiciousExport**: alert event
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);
@@ -115,7 +118,11 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +131,7 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

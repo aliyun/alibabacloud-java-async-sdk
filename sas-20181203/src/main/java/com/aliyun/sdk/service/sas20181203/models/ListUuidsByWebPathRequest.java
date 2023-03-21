@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListUuidsByWebPathRequest extends Request {
     @Query
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     private Integer currentPage;
 
     @Query
     @NameInMap("PageSize")
+    @Validation(required = true)
     private Integer pageSize;
 
     @Query

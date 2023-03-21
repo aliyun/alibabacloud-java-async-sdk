@@ -18,6 +18,10 @@ public class CreateHoneypotPresetRequest extends Request {
     private String honeypotImageName;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("Meta")
     @Validation(required = true)
     private String meta;
@@ -35,6 +39,7 @@ public class CreateHoneypotPresetRequest extends Request {
     private CreateHoneypotPresetRequest(Builder builder) {
         super(builder);
         this.honeypotImageName = builder.honeypotImageName;
+        this.lang = builder.lang;
         this.meta = builder.meta;
         this.nodeId = builder.nodeId;
         this.presetName = builder.presetName;
@@ -61,6 +66,13 @@ public class CreateHoneypotPresetRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return meta
      */
     public String getMeta() {
@@ -83,6 +95,7 @@ public class CreateHoneypotPresetRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateHoneypotPresetRequest, Builder> {
         private String honeypotImageName; 
+        private String lang; 
         private String meta; 
         private String nodeId; 
         private String presetName; 
@@ -94,6 +107,7 @@ public class CreateHoneypotPresetRequest extends Request {
         private Builder(CreateHoneypotPresetRequest request) {
             super(request);
             this.honeypotImageName = request.honeypotImageName;
+            this.lang = request.lang;
             this.meta = request.meta;
             this.nodeId = request.nodeId;
             this.presetName = request.presetName;
@@ -105,6 +119,15 @@ public class CreateHoneypotPresetRequest extends Request {
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
             this.honeypotImageName = honeypotImageName;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

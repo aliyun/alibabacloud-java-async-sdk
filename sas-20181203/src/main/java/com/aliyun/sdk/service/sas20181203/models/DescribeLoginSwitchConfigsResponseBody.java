@@ -62,7 +62,7 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConfigList.
+         * The configuration item returned.
          */
         public Builder configList(java.util.List < ConfigList> configList) {
             this.configList = configList;
@@ -70,7 +70,7 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The number of returned configuration items.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -78,7 +78,7 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,12 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Item.
+             * The type of the alert that you enabled or disabled. Valid values:
+             * <p>
+             * 
+             * *   **login\_common_ip**: alerts for unapproved logon IP addresses
+             * *   **login\_common_time**: alerts for unapproved logon time ranges
+             * *   **login\_common_account**: alerts for unapproved logon accounts
              */
             public Builder item(String item) {
                 this.item = item;
@@ -138,7 +143,11 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the Log Service feature. Valid values:
+             * <p>
+             * 
+             * *   **0**: The feature is disabled.
+             * *   **1**: The feature is enabled.
              */
             public Builder status(Integer status) {
                 this.status = status;

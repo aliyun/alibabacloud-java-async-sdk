@@ -50,7 +50,7 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The adding result.
          */
         public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

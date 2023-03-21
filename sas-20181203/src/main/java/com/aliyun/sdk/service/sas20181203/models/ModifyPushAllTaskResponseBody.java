@@ -50,7 +50,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results of security check tasks.
+         * PushTaskRsp.
          */
         public Builder pushTaskRsp(PushTaskRsp pushTaskRsp) {
             this.pushTaskRsp = pushTaskRsp;
@@ -58,7 +58,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the server group to which the server belongs.
+             * GroupId.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -214,7 +214,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -222,7 +222,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -230,7 +230,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * Ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -238,7 +238,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The message that describes the security check failure.
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -246,13 +246,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Security Center agent is online. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
-             * 
-             * >  If the Security Center agent of the server is offline, Security Center does not protect the server.
+             * Online.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -260,7 +254,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system version of the server.
+             * OsVersion.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -268,7 +262,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the server resides.
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -276,11 +270,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the security check task is successful. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
+             * Success.
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -288,7 +278,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -329,7 +319,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             private java.util.List < PushTaskResultList> pushTaskResultList; 
 
             /**
-             * An array consisting of the servers on which security check tasks failed.
+             * PushTaskResultList.
              */
             public Builder pushTaskResultList(java.util.List < PushTaskResultList> pushTaskResultList) {
                 this.pushTaskResultList = pushTaskResultList;

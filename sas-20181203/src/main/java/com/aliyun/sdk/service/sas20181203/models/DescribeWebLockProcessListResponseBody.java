@@ -94,7 +94,7 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the processes.
+         * An array that consists of details about the process.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -293,8 +293,8 @@ public class DescribeWebLockProcessListResponseBody extends TeaModel {
              * Indicates whether the process is added to the process whitelist. Valid values:
              * <p>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * *   **1**: The process is added to the process whitelist.
+             * *   **0**: The process is not added to the process whitelist.
              */
             public Builder status(Integer status) {
                 this.status = status;

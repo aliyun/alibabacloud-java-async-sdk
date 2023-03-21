@@ -82,7 +82,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         } 
 
         /**
-         * CheckGroupId.
+         * The ID of the group to which the check item belongs.
          */
         public Builder checkGroupId(String checkGroupId) {
             this.putQueryParameter("CheckGroupId", checkGroupId);
@@ -91,7 +91,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * CheckId.
+         * The ID of the check item.
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -100,7 +100,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The instance IDs of assets.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

@@ -50,7 +50,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The handling result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +254,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AliUid.
+             * The ID of the user.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -262,7 +262,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name of the image repository.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -270,7 +270,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the image repository.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -278,7 +278,11 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **1**: Internet
+             * *   **2**: VPC
              */
             public Builder netType(Long netType) {
                 this.netType = netType;
@@ -286,7 +290,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * The password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -294,7 +298,11 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **1**: HTTP
+             * *   **2**: HTTPS
              */
             public Builder protocolType(Long protocolType) {
                 this.protocolType = protocolType;
@@ -302,7 +310,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the image repository.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -310,7 +318,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryHostIp.
+             * The IP address of the image repository.
              */
             public Builder registryHostIp(String registryHostIp) {
                 this.registryHostIp = registryHostIp;
@@ -318,7 +326,11 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * The type of the image repository. Valid values:
+             * <p>
+             * 
+             * *   **harbor**
+             * *   **quay**
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -326,7 +338,12 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryVersion.
+             * The version of the image repository. Default value: -. Valid values:
+             * <p>
+             * 
+             * *   **-**: the default version
+             * *   **V1**
+             * *   **V2**
              */
             public Builder registryVersion(String registryVersion) {
                 this.registryVersion = registryVersion;
@@ -334,7 +351,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * The value of the token.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -342,7 +359,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * TransPerHour.
+             * The number of scan tasks that are performed per hour.
              */
             public Builder transPerHour(Integer transPerHour) {
                 this.transPerHour = transPerHour;
@@ -350,7 +367,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -358,7 +375,7 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

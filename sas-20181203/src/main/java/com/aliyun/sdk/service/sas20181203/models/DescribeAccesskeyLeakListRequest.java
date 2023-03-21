@@ -125,7 +125,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
          * <p>
          * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
          * 
-         * > : We recommend that you do not leave this parameter empty.
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

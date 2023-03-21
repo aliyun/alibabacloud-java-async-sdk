@@ -118,7 +118,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the vulnerabilities.
+         * An array that consists of the details about the vulnerability.
          */
         public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -753,7 +753,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operating system for your asset.
+             * The name of the operating system.
              */
             public Builder os(String os) {
                 this.os = os;
@@ -777,7 +777,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the information about RPM Package Manager (RPM) packages.
+             * The RPM Package Manager (RPM) packages.
              */
             public Builder rpmEntityList(java.util.List < RpmEntityList> rpmEntityList) {
                 this.rpmEntityList = rpmEntityList;
@@ -791,7 +791,7 @@ public class DescribeVulListResponseBody extends TeaModel {
              * *   **1**: unfixed
              * *   **2**: fix failed
              * *   3: rollback failed
-             * *   **4**: being fixed
+             * *   **4**: fixing
              * *   **5**: being rolled back
              * *   **6**: being verified
              * *   **7**: fixed
@@ -885,6 +885,12 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("PrimaryId")
         private Long primaryId;
 
+        @NameInMap("RaspDefend")
+        private Integer raspDefend;
+
+        @NameInMap("RaspStatus")
+        private Integer raspStatus;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -931,6 +937,8 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.osName = builder.osName;
             this.osVersion = builder.osVersion;
             this.primaryId = builder.primaryId;
+            this.raspDefend = builder.raspDefend;
+            this.raspStatus = builder.raspStatus;
             this.regionId = builder.regionId;
             this.related = builder.related;
             this.repairTs = builder.repairTs;
@@ -1077,6 +1085,20 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return raspDefend
+         */
+        public Integer getRaspDefend() {
+            return this.raspDefend;
+        }
+
+        /**
+         * @return raspStatus
+         */
+        public Integer getRaspStatus() {
+            return this.raspStatus;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -1158,6 +1180,8 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String osName; 
             private String osVersion; 
             private Long primaryId; 
+            private Integer raspDefend; 
+            private Integer raspStatus; 
             private String regionId; 
             private String related; 
             private Long repairTs; 
@@ -1169,7 +1193,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The alias of the vulnerability.
+             * The name of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -1177,7 +1201,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Security Center that is authorized to scan the asset. Valid values:
+             * The edition of Security Center that is authorized to protect the asset. Valid values:
              * <p>
              * 
              * *   **1**: Basic edition
@@ -1193,7 +1217,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Security Center is authorized to scan the asset. Valid values:
+             * Indicates whether Security Center is authorized to protect the asset. Valid values:
              * <p>
              * 
              * *   **true**: yes
@@ -1292,7 +1316,7 @@ public class DescribeVulListResponseBody extends TeaModel {
              * *   **later**: medium
              * *   **nntf**: low
              * 
-             * >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
+             * > We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -1336,7 +1360,23 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * RaspDefend.
+             */
+            public Builder raspDefend(Integer raspDefend) {
+                this.raspDefend = raspDefend;
+                return this;
+            }
+
+            /**
+             * RaspStatus.
+             */
+            public Builder raspStatus(Integer raspStatus) {
+                this.raspStatus = raspStatus;
+                return this;
+            }
+
+            /**
+             * The ID of the region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1382,7 +1422,7 @@ public class DescribeVulListResponseBody extends TeaModel {
              * *   **1**: unfixed
              * *   **2**: fix failed
              * *   **3**: rollback failed
-             * *   **4**: being fixed
+             * *   **4**: fixing
              * *   **5**: being rolled back
              * *   **6**: being verified
              * *   **7**: fixed
@@ -1415,6 +1455,7 @@ public class DescribeVulListResponseBody extends TeaModel {
              * *   **cms**: Web-CMS vulnerability
              * *   **emg**: urgent vulnerability
              * *   **app**: application vulnerability
+             * *   **sca**: application vulnerability that is detected by using software component analysis
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1422,7 +1463,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance UUID of the asset.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

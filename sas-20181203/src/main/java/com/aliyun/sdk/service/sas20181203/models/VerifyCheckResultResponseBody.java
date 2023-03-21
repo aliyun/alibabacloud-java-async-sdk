@@ -50,7 +50,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;

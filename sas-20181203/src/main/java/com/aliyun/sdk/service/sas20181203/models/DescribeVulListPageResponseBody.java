@@ -62,7 +62,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the vulnerabilities.
+         * The response parameters.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -229,8 +229,8 @@ public class DescribeVulListPageResponseBody extends TeaModel {
              * Indicates whether the vulnerability was detected based on version comparison. Valid values:
              * <p>
              * 
-             * *   1: yes
-             * *   0: no
+             * *   1: The vulnerability was detected based on version comparison.
+             * *   0: The vulnerability was not detected based on version comparison.
              */
             public Builder isAegis(Integer isAegis) {
                 this.isAegis = isAegis;
@@ -241,8 +241,8 @@ public class DescribeVulListPageResponseBody extends TeaModel {
              * Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:
              * <p>
              * 
-             * *   1: yes
-             * *   0: no
+             * *   1: The vulnerability was detected based on POC verification.
+             * *   0: The vulnerability was not detected based on POC verification.
              */
             public Builder isSas(Integer isSas) {
                 this.isSas = isSas;

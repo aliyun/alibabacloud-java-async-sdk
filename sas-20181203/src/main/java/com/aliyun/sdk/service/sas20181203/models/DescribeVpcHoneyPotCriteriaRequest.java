@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcHoneyPotCriteriaRequest</p>
  */
 public class DescribeVpcHoneyPotCriteriaRequest extends Request {
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
     private DescribeVpcHoneyPotCriteriaRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class DescribeVpcHoneyPotCriteriaRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
     public static final class Builder extends Request.Builder<DescribeVpcHoneyPotCriteriaRequest, Builder> {
+        private String lang; 
 
         private Builder() {
             super();
@@ -37,7 +50,17 @@ public class DescribeVpcHoneyPotCriteriaRequest extends Request {
 
         private Builder(DescribeVpcHoneyPotCriteriaRequest request) {
             super(request);
+            this.lang = request.lang;
         } 
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
 
         @Override
         public DescribeVpcHoneyPotCriteriaRequest build() {

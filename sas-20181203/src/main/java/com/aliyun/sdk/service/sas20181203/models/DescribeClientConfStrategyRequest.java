@@ -70,7 +70,7 @@ public class DescribeClientConfStrategyRequest extends Request {
         } 
 
         /**
-         * Tag.
+         * The tag that is added to the server.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -79,7 +79,12 @@ public class DescribeClientConfStrategyRequest extends Request {
         }
 
         /**
-         * TagValue.
+         * The value of the tag. Valid values:
+         * <p>
+         * 
+         * *   major
+         * *   advanced
+         * *   basic
          */
         public Builder tagValue(String tagValue) {
             this.putQueryParameter("TagValue", tagValue);

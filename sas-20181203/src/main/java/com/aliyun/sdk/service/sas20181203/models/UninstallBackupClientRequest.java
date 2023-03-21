@@ -99,7 +99,7 @@ public class UninstallBackupClientRequest extends Request {
          * The UUID of the server from which you want to uninstall the anti-ransomware agent.
          * <p>
          * 
-         * >  You must specify at least one of the UuidList and Uuid parameters.
+         * > You must specify at least one of the UuidList and Uuid parameters.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -111,7 +111,7 @@ public class UninstallBackupClientRequest extends Request {
          * The UUIDs of the servers from which you want to uninstall the anti-ransomware agent.
          * <p>
          * 
-         * >  You must specify at least one of the UuidList and Uuid parameters.
+         * > You must specify at least one of the UuidList and Uuid parameters.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

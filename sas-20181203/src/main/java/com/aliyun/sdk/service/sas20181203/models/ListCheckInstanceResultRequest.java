@@ -199,7 +199,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The instance ID of the check item.
+         * The ID of the instance.
          */
         public Builder instanceIdKey(String instanceIdKey) {
             this.putQueryParameter("InstanceIdKey", instanceIdKey);
@@ -217,7 +217,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The instance name of the check item.
+         * The name of the instance.
          */
         public Builder instanceNameKey(String instanceNameKey) {
             this.putQueryParameter("InstanceNameKey", instanceNameKey);
@@ -257,7 +257,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The type of the condition based on which the check items are sorted. Set the value to **STATUS**.
+         * The sort type of the instances.
          */
         public Builder sortTypes(java.util.List < String > sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);

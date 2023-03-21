@@ -70,7 +70,7 @@ public class DescribeClientConfSetupRequest extends Request {
         } 
 
         /**
-         * StrategyTag.
+         * The tag that is added to the configurations.
          */
         public Builder strategyTag(String strategyTag) {
             this.putQueryParameter("StrategyTag", strategyTag);
@@ -79,7 +79,14 @@ public class DescribeClientConfSetupRequest extends Request {
         }
 
         /**
-         * StrategyTagValue.
+         * The value of the tag:
+         * <p>
+         * 
+         * - advanced
+         * 
+         * - basic
+         * 
+         * - major
          */
         public Builder strategyTagValue(String strategyTagValue) {
             this.putQueryParameter("StrategyTagValue", strategyTagValue);

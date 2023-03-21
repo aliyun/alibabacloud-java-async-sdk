@@ -50,7 +50,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterNetwork.
+         * Information about the network topology edge in the cluster.
          */
         public Builder clusterNetwork(ClusterNetwork clusterNetwork) {
             this.clusterNetwork = clusterNetwork;
@@ -58,7 +58,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             private String srcNodeType; 
 
             /**
-             * DstNodeId.
+             * The ID of the destination node.
              */
             public Builder dstNodeId(String dstNodeId) {
                 this.dstNodeId = dstNodeId;
@@ -166,7 +166,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DstNodeType.
+             * The type of the destination node. Valid values:
+             * <p>
+             * 
+             * *   **cluster**: a cluster
              */
             public Builder dstNodeType(String dstNodeType) {
                 this.dstNodeType = dstNodeType;
@@ -174,7 +177,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the topology edge.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -182,7 +185,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the topology edge.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -190,7 +193,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * SrcNodeId.
+             * The ID of the source node.
              */
             public Builder srcNodeId(String srcNodeId) {
                 this.srcNodeId = srcNodeId;
@@ -198,7 +201,11 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * SrcNodeType.
+             * The type of the source node. Valid values:
+             * <p>
+             * 
+             * *   **cluster**: a cluster
+             * *   **internet**: a network node in another cluster
              */
             public Builder srcNodeType(String srcNodeType) {
                 this.srcNodeType = srcNodeType;
@@ -311,7 +318,11 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CnnfSwitch.
+             * The micro-segmentation switch. Valid values:
+             * <p>
+             * 
+             * *   **0**: The switch is turned off.
+             * *   **1**: The switch is turned on.
              */
             public Builder cnnfSwitch(Integer cnnfSwitch) {
                 this.cnnfSwitch = cnnfSwitch;
@@ -319,7 +330,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the node.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -327,7 +338,11 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptionType.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **0**: classic network
+             * *   **1**: virtual private cloud (VPC)
              */
             public Builder interceptionType(Integer interceptionType) {
                 this.interceptionType = interceptionType;
@@ -335,7 +350,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +358,11 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * NetTopoSwitch.
+             * The network topology switch. Valid values:
+             * <p>
+             * 
+             * *   **ON**
+             * *   **OFF**
              */
             public Builder netTopoSwitch(String netTopoSwitch) {
                 this.netTopoSwitch = netTopoSwitch;
@@ -351,7 +370,14 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   **3**: high
+             * *   **2**: medium
+             * *   **1**: low
+             * *   **0**: warning
+             * *   **-1**: unknown
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -359,7 +385,11 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   **cluster**: a cluster
+             * *   **internet**: a node in another cluster
              */
             public Builder type(String type) {
                 this.type = type;
@@ -412,7 +442,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             private java.util.List < Node> node; 
 
             /**
-             * Edge.
+             * An array that consists of information about the topology edge.
              */
             public Builder edge(java.util.List < Edge> edge) {
                 this.edge = edge;
@@ -420,7 +450,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Node.
+             * An array that consists of information about the node.
              */
             public Builder node(java.util.List < Node> node) {
                 this.node = node;

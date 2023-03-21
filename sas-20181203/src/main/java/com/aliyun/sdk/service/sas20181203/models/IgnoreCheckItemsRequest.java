@@ -143,11 +143,10 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the risk item. Valid values:
+         * The operation that you want to perform on the risk item.Valid values:
          * <p>
-         * 
-         * *   **1**: ignores a risk item
-         * *   **2**: cancels ignoring a risk item
+         * *  **1**: adds the risk item to the whitelist
+         * *  **2**: removes the risk item from the whitelist
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);
@@ -159,7 +158,7 @@ public class IgnoreCheckItemsRequest extends Request {
          * The UUIDs of the servers.
          * <p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);
@@ -213,7 +212,7 @@ public class IgnoreCheckItemsRequest extends Request {
             private String riskType; 
 
             /**
-             * The IDs of the check items.
+             * The ID of the check item.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -221,7 +220,7 @@ public class IgnoreCheckItemsRequest extends Request {
             }
 
             /**
-             * The baseline type of the risk item.
+             * The baseline type of the check item.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;

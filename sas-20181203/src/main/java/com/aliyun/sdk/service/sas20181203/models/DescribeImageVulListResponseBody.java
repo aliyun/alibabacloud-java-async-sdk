@@ -824,7 +824,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the package of the software that has the vulnerability can be upgraded by using Security Center. Valid values:
+             * Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:
              * <p>
              * 
              * *   **true**: yes
@@ -892,7 +892,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -900,7 +900,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -908,7 +908,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -932,7 +932,12 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousSource.
+             * The source of the malicious file. Valid values:
+             * <p>
+             * 
+             * *   **agentless**: agentless detection
+             * *   **image**: image
+             * *   **container**: container
              */
             public Builder maliciousSource(String maliciousSource) {
                 this.maliciousSource = maliciousSource;
@@ -1017,7 +1022,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * ScanTime.
+             * The timestamp of the scan. Unit: milliseconds.
              */
             public Builder scanTime(Long scanTime) {
                 this.scanTime = scanTime;
@@ -1045,7 +1050,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the asset on which the vulnerability is detected.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -1053,7 +1058,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset on which the vulnerability is detected.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -1061,7 +1066,11 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the asset on which the vulnerability is detected. Valid values:
+             * <p>
+             * 
+             * *   **ECS_IMAGE**: image
+             * *   **ECS_SNAPSHOT**: snapshot
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -1069,7 +1078,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. The value is fixed as CVE, which indicates image vulnerabilities.
+             * The type of the vulnerability. The value is fixed as cve, which indicates image vulnerabilities.
              */
             public Builder type(String type) {
                 this.type = type;

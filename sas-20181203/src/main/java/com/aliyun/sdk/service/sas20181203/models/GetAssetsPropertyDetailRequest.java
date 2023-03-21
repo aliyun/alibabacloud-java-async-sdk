@@ -179,7 +179,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
          * The name of the aggregation item for the asset fingerprint that you want to query.
          * <p>
          * 
-         * >  You can call the [GetAssetsPropertyItem](~~GetAssetsPropertyItem~~) operation to query the names of aggregation items.
+         * > You can call the [GetAssetsPropertyItem](~~GetAssetsPropertyItem~~) operation to query the names of aggregation items.
          */
         public Builder itemName(String itemName) {
             this.putQueryParameter("ItemName", itemName);
@@ -204,7 +204,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
          * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
          * <p>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +234,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
          * The UUID of the server.
          * <p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -298,6 +298,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
              * *   If **Biz** is set to **web_server**, **remarkItemName** specifies a domain name.
              * 
              * *   If **Biz** is set to **lkm**, **remarkItemName** specifies a module name.
+             * 
              * *   If **Biz** is set to **autorun**, **remarkItemName** specifies the path to a startup item.
              */
             public Builder name(String name) {

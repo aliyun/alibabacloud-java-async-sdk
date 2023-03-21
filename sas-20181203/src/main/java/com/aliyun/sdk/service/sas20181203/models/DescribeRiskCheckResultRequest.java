@@ -208,7 +208,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         } 
 
         /**
-         * The type of the cloud service whose configuration assessment result you want to query. For more information about the description of the cloud service specified by this parameter, see the check item table in the "Response parameters" section of this topic.
+         * The cloud service whose configuration check results you want to query. For more information about the check items for the cloud service, see the check item table in the "Response parameters" section of this topic.
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -236,7 +236,7 @@ public class DescribeRiskCheckResultRequest extends Request {
          * *   **5**: monitoring and alerting
          * *   **6**: basic security protection
          * 
-         * >  If you do not specify this parameter, all types of check items are queried by default.
+         * > If you do not specify this parameter, all types of check items are queried.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -267,7 +267,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The name of the check item. For more information about the description of the check item name, see the check item table in the "Response parameters" section of this topic.
+         * The name of the check item. For more information about the check item, see the check item table in the "Response parameters" section of this topic.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -285,11 +285,11 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * Specifies whether the check item is supported by the cloud service. Valid values:
+         * Specifies whether the check item is supported by the edition of Security Center that you purchase. Valid values:
          * <p>
          * 
-         * *   **enabled**: The check item is supported by the cloud service.
-         * *   **disabled**: The check item is not supported by the cloud service.
+         * *   **enabled**: yes
+         * *   **disabled**: no
          */
         public Builder queryFlag(String queryFlag) {
             this.putQueryParameter("QueryFlag", queryFlag);
@@ -330,7 +330,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The status of the check result. Valid values:
+         * The status of the check results. Valid values:
          * <p>
          * 
          * *   **pass**

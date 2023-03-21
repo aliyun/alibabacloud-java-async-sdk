@@ -94,7 +94,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of alerts events by risk level.
+         * The statistics of alerts by risk level.
          */
         public Builder eventLevels(EventLevels eventLevels) {
             this.eventLevels = eventLevels;

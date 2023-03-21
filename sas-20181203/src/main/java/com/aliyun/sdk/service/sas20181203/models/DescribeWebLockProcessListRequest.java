@@ -108,7 +108,7 @@ public class DescribeWebLockProcessListRequest extends Request {
          * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
          * <p>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,8 +129,8 @@ public class DescribeWebLockProcessListRequest extends Request {
          * Specifies whether the process is added to the process whitelist. Valid values:
          * <p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * *   **1**: The process is added to the process whitelist.
+         * *   **0**: The process is not added to the process whitelist.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

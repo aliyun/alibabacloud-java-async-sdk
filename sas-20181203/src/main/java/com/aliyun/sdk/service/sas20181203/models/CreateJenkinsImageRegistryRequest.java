@@ -264,7 +264,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         } 
 
         /**
-         * 主机域名
+         * The domain name of the image repository.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -273,7 +273,11 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 镜像仓库附加参数
+         * The additional parameters of the image repository. The value of this parameter contains the following fields:
+         * <p>
+         * 
+         * *   **namespace**: the namespace
+         * *   **authToken**: the authorization token
          */
         public Builder extraParam(String extraParam) {
             this.putBodyParameter("ExtraParam", extraParam);
@@ -282,7 +286,11 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 网络类型 1：公网 2：vpc
+         * The network type. Valid values:
+         * <p>
+         * 
+         * *   **1**: Internet
+         * *   **2**: Virtual Private Cloud (VPC)
          */
         public Builder netType(Integer netType) {
             this.putBodyParameter("NetType", netType);
@@ -291,7 +299,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 密码
+         * The password.
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -300,7 +308,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 资产有效天数
+         * The number of days during which assets can be retained.
          */
         public Builder persistenceDay(Integer persistenceDay) {
             this.putBodyParameter("PersistenceDay", persistenceDay);
@@ -309,7 +317,11 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 协议类型 1：http 2:https
+         * The type of the protocol. Valid values:
+         * <p>
+         * 
+         * *   **1**: HTTP
+         * *   **2**: HTTPS
          */
         public Builder protocolType(Integer protocolType) {
             this.putBodyParameter("ProtocolType", protocolType);
@@ -318,7 +330,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 镜像仓库所在的regionId
+         * The region ID of the image repository.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -327,7 +339,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 主机Ip地址
+         * The IP address of the image repository.
          */
         public Builder registryHostIp(String registryHostIp) {
             this.putBodyParameter("RegistryHostIp", registryHostIp);
@@ -336,7 +348,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 镜像仓别名
+         * The alias of the image repository.
          */
         public Builder registryName(String registryName) {
             this.putBodyParameter("RegistryName", registryName);
@@ -345,7 +357,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 容器镜像服务类型 harbor，quory
+         * The type of the image repository. Valid values:
+         * <p>
+         * 
+         * *   **CI/CD**: Jenkins
          */
         public Builder registryType(String registryType) {
             this.putBodyParameter("RegistryType", registryType);
@@ -354,7 +369,12 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 私有库版本
+         * The version of the image repository. Default value: -. Valid values:
+         * <p>
+         * 
+         * *   **-**: the default version
+         * *   **V1**: V1.0
+         * *   **V2**: V2.0
          */
         public Builder registryVersion(String registryVersion) {
             this.putBodyParameter("RegistryVersion", registryVersion);
@@ -363,7 +383,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -372,7 +392,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 每小时扫描的镜像数
+         * The number of images that can be scanned per hour.
          */
         public Builder transPerHour(Integer transPerHour) {
             this.putBodyParameter("TransPerHour", transPerHour);
@@ -381,7 +401,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 用户名
+         * The username.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -390,7 +410,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * vpcId 类型
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -399,7 +419,7 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * 白名单
+         * The whitelist of IP addresses.
          */
         public Builder whiteList(String whiteList) {
             this.putBodyParameter("WhiteList", whiteList);

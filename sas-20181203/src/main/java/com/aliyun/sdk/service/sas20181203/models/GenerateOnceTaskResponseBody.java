@@ -110,7 +110,13 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CanCreate.
+         * Indicates whether you can create more scan tasks. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
+         * 
+         * > By default, a maximum of 10 scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create a scan task by calling this operation. You must wait for at least one of the 10 existing scan tasks to complete before you can create a scan task.
          */
         public Builder canCreate(Boolean canCreate) {
             this.canCreate = canCreate;
@@ -118,7 +124,7 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CollectTime.
+         * The collection time.
          */
         public Builder collectTime(Long collectTime) {
             this.collectTime = collectTime;
@@ -126,7 +132,7 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * FinishCount.
+         * The number of scan tasks that are complete.
          */
         public Builder finishCount(Integer finishCount) {
             this.finishCount = finishCount;
@@ -134,7 +140,7 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * LastTask.
+         * The ID of the last scan task.
          */
         public Builder lastTask(String lastTask) {
             this.lastTask = lastTask;
@@ -142,7 +148,7 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +156,7 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the scan task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -158,7 +164,7 @@ public class GenerateOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of scan tasks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

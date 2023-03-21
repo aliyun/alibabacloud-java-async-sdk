@@ -136,7 +136,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
          * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
          * <p>
          * 
-         * >  If you do not specify this parameter, an empty list is returned.
+         * > If you do not specify this parameter, an empty list is returned.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

@@ -50,7 +50,7 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AuthStatus.
+         * The authorization status of image scans.
          */
         public Builder authStatus(AuthStatus authStatus) {
             this.authStatus = authStatus;
@@ -58,7 +58,7 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,10 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * Status.
+             * Indicates whether Security Center is authorized to scan images. Valid values:
+             * <p>
+             * * **true**: yes 
+             * * **false**: no
              */
             public Builder status(Boolean status) {
                 this.status = status;

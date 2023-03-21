@@ -485,7 +485,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The policy for incremental backup.
+             * The details of the policy for incremental backup.
              */
             public Builder incPlan(IncPlan incPlan) {
                 this.incPlan = incPlan;

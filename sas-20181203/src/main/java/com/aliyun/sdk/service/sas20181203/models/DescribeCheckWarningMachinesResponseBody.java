@@ -62,7 +62,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of the servers.
+         * The number of the servers on which the same risk item is detected.
          */
         public Builder count(Integer count) {
             this.count = count;

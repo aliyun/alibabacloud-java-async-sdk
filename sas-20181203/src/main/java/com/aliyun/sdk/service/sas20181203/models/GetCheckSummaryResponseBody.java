@@ -50,7 +50,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         private java.util.List < Summarys> summarys; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Summarys.
+         * An array that consists of the summary information about the configuration checks on cloud services.
          */
         public Builder summarys(java.util.List < Summarys> summarys) {
             this.summarys = summarys;
@@ -170,7 +170,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * FailCount.
+             * The number of risk items.
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -178,7 +178,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the check item.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -186,7 +186,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * PassCount.
+             * The number of passed check items.
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -194,7 +194,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelHighCount.
+             * The number of **high-risk** items.
              */
             public Builder riskLevelHighCount(Integer riskLevelHighCount) {
                 this.riskLevelHighCount = riskLevelHighCount;
@@ -202,7 +202,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelLowCount.
+             * The number of **low-risk** items.
              */
             public Builder riskLevelLowCount(Integer riskLevelLowCount) {
                 this.riskLevelLowCount = riskLevelLowCount;
@@ -210,7 +210,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelMediumCount.
+             * The number of **medium-risk** items.
              */
             public Builder riskLevelMediumCount(Integer riskLevelMediumCount) {
                 this.riskLevelMediumCount = riskLevelMediumCount;
@@ -218,7 +218,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * The name of the check item.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -295,7 +295,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * FailCount.
+             * The number of detected risk items.
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -303,7 +303,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * PassCount.
+             * The number of check items that pass the check.
              */
             public Builder passCount(Long passCount) {
                 this.passCount = passCount;
@@ -311,7 +311,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Standards.
+             * An array that consist of the standard IDs of check items.
              */
             public Builder standards(java.util.List < Standards> standards) {
                 this.standards = standards;
@@ -319,7 +319,12 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the check item. Valid values:
+             * <p>
+             * 
+             * *   **COMPLIANCE**: compliance
+             * *   **RISK**: security risk
+             * *   **IDENTITY_PERMISSION**: identity and permission
              */
             public Builder type(String type) {
                 this.type = type;

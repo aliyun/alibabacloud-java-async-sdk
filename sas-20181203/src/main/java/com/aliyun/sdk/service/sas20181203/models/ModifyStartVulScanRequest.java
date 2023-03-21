@@ -68,17 +68,7 @@ public class ModifyStartVulScanRequest extends Request {
         } 
 
         /**
-         * The types of vulnerabilities that can be detected. Valid values:
-         * <p>
-         * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerabilities
-         * *   **app**: application vulnerabilities
-         * *   **emg**: urgent vulnerabilities
-         * *   **image**: container image vulnerabilities
-         * 
-         * > If you leave this parameter empty, all types of vulnerabilities can be detected.
+         * Types.
          */
         public Builder types(String types) {
             this.putQueryParameter("Types", types);
@@ -87,7 +77,7 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers.
+         * Uuids.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPrivateRegistryTypeRequest</p>
  */
 public class ListPrivateRegistryTypeRequest extends Request {
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
     private ListPrivateRegistryTypeRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class ListPrivateRegistryTypeRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
     public static final class Builder extends Request.Builder<ListPrivateRegistryTypeRequest, Builder> {
+        private String lang; 
 
         private Builder() {
             super();
@@ -37,7 +50,17 @@ public class ListPrivateRegistryTypeRequest extends Request {
 
         private Builder(ListPrivateRegistryTypeRequest request) {
             super(request);
+            this.lang = request.lang;
         } 
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
 
         @Override
         public ListPrivateRegistryTypeRequest build() {

@@ -69,7 +69,7 @@ public class QueryGroupIdByGroupNameRequest extends Request {
         } 
 
         /**
-         * The name of the asset group.
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -78,7 +78,7 @@ public class QueryGroupIdByGroupNameRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

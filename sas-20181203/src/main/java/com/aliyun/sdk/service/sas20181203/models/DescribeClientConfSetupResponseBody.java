@@ -50,7 +50,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClientConf.
+         * The configurations of the Security Center agent.
          */
         public Builder clientConf(ClientConf clientConf) {
             this.clientConf = clientConf;
@@ -58,7 +58,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             private String strategyTagValue; 
 
             /**
-             * Config.
+             * The configurations of the usage for the Security Center agent.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -130,7 +130,7 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyTag.
+             * The tag that is added to the configuration.
              */
             public Builder strategyTag(String strategyTag) {
                 this.strategyTag = strategyTag;
@@ -138,7 +138,14 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyTagValue.
+             * The value of the tag:
+             * <p>
+             * 
+             * - advanced
+             * 
+             * - basic
+             * 
+             * - major
              */
             public Builder strategyTagValue(String strategyTagValue) {
                 this.strategyTagValue = strategyTagValue;

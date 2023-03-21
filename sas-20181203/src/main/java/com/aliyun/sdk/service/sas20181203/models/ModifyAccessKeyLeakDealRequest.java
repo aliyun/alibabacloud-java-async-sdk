@@ -97,7 +97,10 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the AccessKey pair leak.
+         * <p>
+         * 
+         * > You can call the [DescribeAccesskeyLeakList](~~DescribeAccesskeyLeakList~~) operation to query the ID. You must specify at least one of the Id and **IdList** parameters.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -106,7 +109,7 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
         }
 
         /**
-         * IdList.
+         * The IDs of AccessKey pair leaks.
          */
         public Builder idList(java.util.List < Long > idList) {
             this.putQueryParameter("IdList", idList);
@@ -115,7 +118,7 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks that are added.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -124,7 +127,12 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
         }
 
         /**
-         * Type.
+         * The method to handle the AccessKey pair leak. Valid values:
+         * <p>
+         * 
+         * *   **manual**: manually handle
+         * *   **disable**: disable
+         * *   **add-whitelist**: add to the whitelist
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

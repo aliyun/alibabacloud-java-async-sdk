@@ -169,7 +169,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
          * The search conditions that are used to filter assets. The value of this parameter is in the JSON format and is case-sensitive.
          * <p>
          * 
-         * >  A search condition can be an instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
+         * > A search condition can be an instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -187,7 +187,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * The importance of the asset. Valid values:
+         * The importance level of the asset. Valid values:
          * <p>
          * 
          * *   **2**: an important asset
@@ -214,7 +214,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * The logical relationship among multiple search conditions. Valid values:
+         * The logical operator that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:
          * <p>
          * 
          * *   **OR**: The search conditions are evaluated by using a logical **OR**.
@@ -240,11 +240,11 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to internationalize the name of the default group. Default value: **false** . Valid values:
+         * Specifies whether to internationalize the name of the **default** group. Default value: **false**. Valid values:
          * <p>
          * 
-         * *   **true**: The system returns the Chinese name of the default group for the GroupTrace response parameter.************
-         * *   **false**: The system returns default for the GroupTrace response parameter.
+         * *   **true**: The system returns the Chinese name of the default group for the **GroupTrace** response parameter.********
+         * *   **false**: The system returns default for the **GroupTrace** response parameter.
          */
         public Builder noGroupTrace(Boolean noGroupTrace) {
             this.putQueryParameter("NoGroupTrace", noGroupTrace);

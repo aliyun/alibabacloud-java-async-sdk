@@ -82,8 +82,9 @@ public class DescribeRiskItemTypeRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Chinese and English are supported.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
+         * 
          * *   **zh**: Chinese
          * *   **en**: English
          */

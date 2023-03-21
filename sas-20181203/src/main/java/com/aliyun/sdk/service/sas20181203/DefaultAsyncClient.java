@@ -167,6 +167,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.
+      *
+     */
     @Override
     public CompletableFuture<AddTagWithUuidResponse> addTagWithUuid(AddTagWithUuidRequest request) {
         try {
@@ -274,6 +278,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ChangeCheckConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ChangeCheckCustomConfigResponse> changeCheckCustomConfig(ChangeCheckCustomConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChangeCheckCustomConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeCheckCustomConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeCheckCustomConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -425,8 +443,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
-      * The form upload method is provided by OSS. For more information, see [Form upload](https://www.alibabacloud.com/help/en/object-storage-service/latest/upload-objects-form-upload).
+      * You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
+      * The form upload method is provided by OSS. For more information, see [Form upload](~~84788~~).
       * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
       *
      */
@@ -1071,28 +1089,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeAlarmEventDetailResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * The alert aggregation feature of Security Center analyzes the paths of alerts to aggregate multiple alerts generated on the intrusions that are launched from the same IP address or service, or on the same user.
-      * You can call the DescribeAlarmEventList or DescribeSuspEvents operation to query alert events.
-      * *   If your Security Center runs the Enterprise or Ultimate edition and you turned on **Alert Association** on the **Feature Settings** page of the Security Center console, you can call the DescribeAlarmEventList operation to query alert events.
-      * *   If your Security Center runs the Enterprise or Ultimate edition but you turned off **Alert Association** on the **Feature Settings** page of the Security Center console, you can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query alert events.
-      * *   If your Security Center does not run the Enterprise or Ultimate edition, you can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query alert events.
-      *
-     */
-    @Override
-    public CompletableFuture<DescribeAlarmEventListResponse> describeAlarmEventList(DescribeAlarmEventListRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAlarmEventList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAlarmEventListResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeAlarmEventListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3068,6 +3064,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the ListCheckInstanceResult operation.
       *
      */
     @Override
@@ -3086,6 +3083,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the ListCheckResult operation.
       *
      */
     @Override
@@ -3104,6 +3102,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the GetCheckSummary operation.
       *
      */
     @Override
@@ -3122,6 +3121,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the ListCheckStandard operation instead.
       *
      */
     @Override
@@ -3257,6 +3257,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the GetCheckConfig operation.
       *
      */
     @Override
@@ -4260,7 +4261,7 @@ public final class DefaultAsyncClient implements AsyncClient {
       * *   The list of servers on the Host page.
       * *   The lists of image system vulnerabilities, image application vulnerabilities, image baseline check results, and malicious image samples on the Image Security page.
       * *   The list of attack analysis data on the Attack Awareness page.
-      * *   The list of check results for AccessKey pair leaks on the AccessKey Leak page.
+      * *   The list of check results for AccessKey pair leaks on the AK leak detection page.
       *
      */
     @Override
@@ -5259,20 +5260,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<ListInterceptionImageResponse> listInterceptionImage(ListInterceptionImageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListInterceptionImage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInterceptionImageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListInterceptionImageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<ListInterceptionRulePageResponse> listInterceptionRulePage(ListInterceptionRulePageRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -5918,6 +5905,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the following operations:
+      * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
+      * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
       *
      */
     @Override
@@ -5936,6 +5926,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the following operations:
+      * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
+      * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
       *
      */
     @Override
@@ -5954,6 +5947,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * This operation is phased out. You can use the ChangeCheckConfig operation.
       *
      */
     @Override
@@ -6515,12 +6509,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as [GetSuspiciousStatistics](~~GetSuspiciousStatistics~~) and [DeleteGroup](~~DeleteGroup~~), you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-     */
     @Override
     public CompletableFuture<QueryGroupIdByGroupNameResponse> queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request) {
         try {
@@ -6733,7 +6721,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the SubmitCheck operation.
       *
      */
     @Override
@@ -6811,7 +6798,7 @@ public final class DefaultAsyncClient implements AsyncClient {
       * > You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
       * **Prerequisites**
       * *   The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the [PauseClient](~~PauseClient~~) operation to disable the agent.
-      * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](~~197280~~).
+      * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine).
       *
      */
     @Override

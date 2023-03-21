@@ -99,7 +99,7 @@ public class GenerateOnceTaskRequest extends Request {
         } 
 
         /**
-         * Param.
+         * The additional information.
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -108,7 +108,7 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the scan task.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -117,7 +117,12 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the scan task. Valid values:
+         * <p>
+         * 
+         * *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
+         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
+         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -126,7 +131,12 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the scan task. Valid values:
+         * <p>
+         * 
+         * *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
+         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
+         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

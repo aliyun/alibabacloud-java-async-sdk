@@ -29,10 +29,6 @@ public class ListHoneypotAlarmEventsRequest extends Request {
     private Integer pageSize;
 
     @Body
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @Body
     @NameInMap("RiskLevelList")
     private java.util.List < String > riskLevelList;
 
@@ -46,7 +42,6 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         this.dealed = builder.dealed;
         this.dstIp = builder.dstIp;
         this.pageSize = builder.pageSize;
-        this.requestId = builder.requestId;
         this.riskLevelList = builder.riskLevelList;
         this.srcIp = builder.srcIp;
     }
@@ -93,13 +88,6 @@ public class ListHoneypotAlarmEventsRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return riskLevelList
      */
     public java.util.List < String > getRiskLevelList() {
@@ -118,7 +106,6 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         private String dealed; 
         private String dstIp; 
         private Integer pageSize; 
-        private String requestId; 
         private java.util.List < String > riskLevelList; 
         private String srcIp; 
 
@@ -132,7 +119,6 @@ public class ListHoneypotAlarmEventsRequest extends Request {
             this.dealed = request.dealed;
             this.dstIp = request.dstIp;
             this.pageSize = request.pageSize;
-            this.requestId = request.requestId;
             this.riskLevelList = request.riskLevelList;
             this.srcIp = request.srcIp;
         } 
@@ -175,15 +161,6 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
-         */
-        public Builder requestId(String requestId) {
-            this.putBodyParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

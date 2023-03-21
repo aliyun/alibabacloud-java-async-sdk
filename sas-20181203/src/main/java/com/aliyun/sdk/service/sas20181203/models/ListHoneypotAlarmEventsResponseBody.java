@@ -367,7 +367,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was first detected.
+             * The timestamp when the alert event was first generated.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -375,7 +375,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was last detected.
+             * The timestamp when the alert event was last generated.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -394,7 +394,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
              * The handling status of the alert event. Valid values:
              * <p>
              * 
-             * *   **1**: pending handling
+             * *   **1**: pending
              * *   **2**: ignored
              * *   **4**: confirmed
              */

@@ -419,7 +419,7 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the anti-ransomware agent. Valid values:
+             * The status of the agent. Valid values:
              * <p>
              * 
              * *   **UNKNOWN**: unknown
@@ -498,7 +498,7 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the Hybrid Backup Recovery (HBR) agent that is used to back up the data of the database.
+             * The UUID of the agent that is used to back up the data of the database.
              */
             public Builder instanceUuid(String instanceUuid) {
                 this.instanceUuid = instanceUuid;

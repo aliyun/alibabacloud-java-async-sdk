@@ -50,7 +50,7 @@ public class ModifyInterceptionTargetResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ModifyInterceptionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder result(Boolean result) {
             this.result = result;

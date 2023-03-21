@@ -84,7 +84,7 @@ public class DeleteLoginBaseConfigRequest extends Request {
         } 
 
         /**
-         * The configuration item that you want to delete. The items vary based on the type of logon configurations. Valid values:
+         * The content of the logon security settings to delete. The content varies based on the type of the logon security settings. Valid values:
          * <p>
          * 
          * *   **login\_common_ip**: approved logon IP addresses
@@ -110,7 +110,7 @@ public class DeleteLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * The UUID of the server whose logon configurations you want to delete.
+         * The UUID of the server whose logon security settings you want to delete.
          * <p>
          * 
          * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
@@ -122,7 +122,7 @@ public class DeleteLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * The type of logon configurations to delete. Valid values:
+         * The type of the logon security settings to delete. Valid values:
          * <p>
          * 
          * *   **login\_common_ip**: approved logon IP addresses

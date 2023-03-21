@@ -70,7 +70,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the servers.
+         * The information about the server.
          */
         public Builder targets(java.util.List < Targets> targets) {
             this.targets = targets;
@@ -142,7 +142,7 @@ public class DescribeTargetResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The tag that is added to the server. This parameter can be empty.
+             * The flag that is added to the server. This parameter can be empty.
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -158,11 +158,11 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The condition by which vulnerability scan is enabled for the server. Valid values:
+             * The type of the object. Valid values:
              * <p>
              * 
-             * *   **uuid**: the UUID of the server
-             * *   **groupId**: the ID of the server group
+             * *   **uuid**: a server
+             * *   **groupId**: a server group
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

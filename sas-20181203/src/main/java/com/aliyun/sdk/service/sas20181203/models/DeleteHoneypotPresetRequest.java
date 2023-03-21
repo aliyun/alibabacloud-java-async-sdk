@@ -17,9 +17,14 @@ public class DeleteHoneypotPresetRequest extends Request {
     @Validation(required = true)
     private String honeypotPresetId;
 
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
     private DeleteHoneypotPresetRequest(Builder builder) {
         super(builder);
         this.honeypotPresetId = builder.honeypotPresetId;
+        this.lang = builder.lang;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class DeleteHoneypotPresetRequest extends Request {
         return this.honeypotPresetId;
     }
 
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
     public static final class Builder extends Request.Builder<DeleteHoneypotPresetRequest, Builder> {
         private String honeypotPresetId; 
+        private String lang; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class DeleteHoneypotPresetRequest extends Request {
         private Builder(DeleteHoneypotPresetRequest request) {
             super(request);
             this.honeypotPresetId = request.honeypotPresetId;
+            this.lang = request.lang;
         } 
 
         /**
@@ -63,6 +77,15 @@ public class DeleteHoneypotPresetRequest extends Request {
         public Builder honeypotPresetId(String honeypotPresetId) {
             this.putQueryParameter("HoneypotPresetId", honeypotPresetId);
             this.honeypotPresetId = honeypotPresetId;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

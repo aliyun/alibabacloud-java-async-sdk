@@ -262,7 +262,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the image that is used for the honeypot.
+             * The display name of the honeypot image.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -270,7 +270,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image that is used for the honeypot.
+             * The name of the honeypot image.
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;

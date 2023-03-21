@@ -62,7 +62,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         }
 
         /**
-         * PropertyItems.
+         * An array that consists of the information about middleware fingerprints.
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -78,7 +78,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +162,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +170,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -255,7 +255,16 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             private String typeDisplay; 
 
             /**
-             * BizType.
+             * The type of the middleware, database, or web service. Valid values:
+             * <p>
+             * 
+             * *   **system_service**: system service
+             * *   **software_library**: software library
+             * *   **docker_component**: container component
+             * *   **database**: database
+             * *   **web_container**: web container
+             * *   **jar**: JAR package
+             * *   **web_framework**: web framework
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -263,7 +272,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of servers on which the middleware is run.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -271,7 +280,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the middleware.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -279,7 +288,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * TypeDisplay.
+             * The display name of the middleware type.
              */
             public Builder typeDisplay(String typeDisplay) {
                 this.typeDisplay = typeDisplay;

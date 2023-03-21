@@ -203,7 +203,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The risk level of the check item. Default value: null, which indicates that check items of all risk levels are queried. Valid values:
+         * The risk level. Default value: null, which indicates that check items at all risk levels are queried.Valid values:
          * <p>
          * *   **high**
          * *   **medium**
@@ -225,7 +225,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The status of the check item. Default value: null, which indicates that check items in all states are queried. Valid values:
+         * The risk status. Default value: null, which indicates that check items in all states are queried.Valid values:
          * <p>
          * *   **1**: failed
          * *   **3**: passed
@@ -237,7 +237,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The name of the condition that is used to query containers.
+         * The name of the field that is used to query containers.
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -246,7 +246,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The value of the condition that is used to query containers.
+         * The value of the field that is used to query containers.
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -267,7 +267,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
          * The ID of the asset group.
          * <p>
          * 
-         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -292,7 +292,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
          * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
          * <p>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -301,7 +301,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The baseline type.
+         * The type of the baseline.
          */
         public Builder riskType(String riskType) {
             this.putQueryParameter("RiskType", riskType);

@@ -373,7 +373,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FailCount.
+             * The number of tasks that failed.
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -381,7 +381,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task. Unit: %.
+             * The progress of the task. Unit: percent (%).
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -389,7 +389,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ResultInfo.
+             * The execution result of the task.
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -397,7 +397,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * The number of tasks that succeeded.
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -454,7 +454,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
              * The text description of the status for the task. Valid values:
              * <p>
              * 
-             * *   **INIT**: The task is to be started.
+             * *   **INIT**: The task is pending start.
              * *   **START**: The task is started.
              * *   **DISPATCH**: The self-check command is issued.
              * *   **SUCCESS**: The self-check is complete.
@@ -471,7 +471,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
              * <p>
              * 
              * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
-             * *   **CLIENT\_DEV_OPS**: an O&M task of Cloud Assistant
+             * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
              * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
              */
             public Builder taskType(String taskType) {

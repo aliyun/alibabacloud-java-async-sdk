@@ -83,7 +83,7 @@ public class DescribeWebLockConfigListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and the response. Valid values:
+         * The language of the content within the request and response. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese
@@ -105,7 +105,7 @@ public class DescribeWebLockConfigListRequest extends Request {
         }
 
         /**
-         * The UUID of the server for which you want to query the configurations.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

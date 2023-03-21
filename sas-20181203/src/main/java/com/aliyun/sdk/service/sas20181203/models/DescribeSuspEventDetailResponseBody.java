@@ -245,8 +245,8 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
          * Indicates whether the online processing of exceptions is supported, such as blocking an exception, adding an exception to the whitelist, and ignoring an exception. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**: The online processing of exceptions is supported.
+         * *   **false**: The online processing of exceptions is not supported.
          */
         public Builder canBeDealOnLine(Boolean canBeDealOnLine) {
             this.canBeDealOnLine = canBeDealOnLine;
@@ -262,7 +262,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the exception.
+         * An array that consists of the details of the exception.
          */
         public Builder details(java.util.List < Details> details) {
             this.details = details;
@@ -351,7 +351,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The severity of the exception. Valid values:
+         * The risk level of the exception. Valid values:
          * <p>
          * 
          * *   **serious**
@@ -473,7 +473,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The format in which the details about the exception are displayed.
+             * The format in which the details of the exception are displayed.
              * <p>
              * 
              * Valid values:

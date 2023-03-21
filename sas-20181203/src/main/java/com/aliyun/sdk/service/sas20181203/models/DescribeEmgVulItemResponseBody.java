@@ -305,7 +305,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
              * The progress of the urgent vulnerability detection task. Valid values: 0 to 100.
              * <p>
              * 
-             * >  This parameter is returned only when an urgent vulnerability is being detected.
+             * > This parameter is returned only when an urgent vulnerability is being detected.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;

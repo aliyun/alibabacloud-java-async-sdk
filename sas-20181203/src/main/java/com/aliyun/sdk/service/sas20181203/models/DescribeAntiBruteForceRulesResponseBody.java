@@ -321,7 +321,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
              * *   **true**: yes
              * *   **false**: no
              * 
-             * >  The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.
+             * > The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.
              */
             public Builder defaultRule(Boolean defaultRule) {
                 this.defaultRule = defaultRule;

@@ -136,7 +136,7 @@ public class DescribeVulDetailsRequest extends Request {
          * *   **cve**: Linux software vulnerability
          * *   **sys**: Windows system vulnerability
          * *   **cms**: Web-CMS vulnerability
-         * *   **app**: application vulnerability
+         * *   **app**: application vulnerabilitiy
          * *   **emg**: urgent vulnerability
          * *   **sca**: vulnerability that is detected based on software component analysis
          */

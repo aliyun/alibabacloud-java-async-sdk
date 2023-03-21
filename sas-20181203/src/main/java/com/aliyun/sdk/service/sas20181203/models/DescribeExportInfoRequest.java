@@ -56,6 +56,9 @@ public class DescribeExportInfoRequest extends Request {
 
         /**
          * The ID of the export task.
+         * <p>
+         * 
+         * > You can call the [ExportRecord](~~ExportRecord~~) operation to query the IDs of export tasks.
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

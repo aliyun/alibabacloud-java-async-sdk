@@ -62,7 +62,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -78,7 +78,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * 是否能创建新的任务
+             * Indicates whether you can create more scan tasks.
              */
             public Builder canCreate(Boolean canCreate) {
                 this.canCreate = canCreate;
@@ -222,7 +222,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 采集时间.
+             * The collection time.
              */
             public Builder collectTime(Long collectTime) {
                 this.collectTime = collectTime;
@@ -230,7 +230,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务运行时间.
+             * The execution time of the task.
              */
             public Builder execTime(Long execTime) {
                 this.execTime = execTime;
@@ -238,7 +238,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 完成数量
+             * The number of scan tasks that are complete.
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -246,7 +246,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务进度
+             * The progress of the task.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -254,7 +254,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务结果
+             * The execution result of the task.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -262,7 +262,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态
+             * The status of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +270,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -278,7 +278,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 总任务数量
+             * The total number of scan tasks.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

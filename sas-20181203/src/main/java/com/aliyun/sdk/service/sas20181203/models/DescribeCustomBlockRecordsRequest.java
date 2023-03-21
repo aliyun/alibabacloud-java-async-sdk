@@ -110,7 +110,7 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         } 
 
         /**
-         * BlockIp.
+         * The IP address that you want to block by using the defense rule.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -119,7 +119,7 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -128,7 +128,7 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +146,12 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the defense rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: invalid
+         * *   **1**: enabled
+         * *   **2**: failed
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

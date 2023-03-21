@@ -128,6 +128,9 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         @NameInMap("TaskType")
         private String taskType;
 
+        @NameInMap("VulAlias")
+        private String vulAlias;
+
         private BuildTasks(Builder builder) {
             this.buildTaskId = builder.buildTaskId;
             this.finishTime = builder.finishTime;
@@ -141,6 +144,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             this.repoNamespace = builder.repoNamespace;
             this.status = builder.status;
             this.taskType = builder.taskType;
+            this.vulAlias = builder.vulAlias;
         }
 
         public static Builder builder() {
@@ -235,6 +239,13 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             return this.taskType;
         }
 
+        /**
+         * @return vulAlias
+         */
+        public String getVulAlias() {
+            return this.vulAlias;
+        }
+
         public static final class Builder {
             private String buildTaskId; 
             private String finishTime; 
@@ -248,6 +259,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             private String repoNamespace; 
             private Integer status; 
             private String taskType; 
+            private String vulAlias; 
 
             /**
              * The ID of the task.
@@ -347,6 +359,14 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
+                return this;
+            }
+
+            /**
+             * VulAlias.
+             */
+            public Builder vulAlias(String vulAlias) {
+                this.vulAlias = vulAlias;
                 return this;
             }
 

@@ -39,6 +39,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("IsNewContainerVersion")
     private Boolean isNewContainerVersion;
 
+    @NameInMap("IsNewMultiVersion")
+    private Boolean isNewMultiVersion;
+
     @NameInMap("IsOverBalance")
     private Boolean isOverBalance;
 
@@ -100,6 +103,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.imageScanCapacity = builder.imageScanCapacity;
         this.instanceId = builder.instanceId;
         this.isNewContainerVersion = builder.isNewContainerVersion;
+        this.isNewMultiVersion = builder.isNewMultiVersion;
         this.isOverBalance = builder.isOverBalance;
         this.isTrialVersion = builder.isTrialVersion;
         this.lastTrailEndTime = builder.lastTrailEndTime;
@@ -188,6 +192,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Boolean getIsNewContainerVersion() {
         return this.isNewContainerVersion;
+    }
+
+    /**
+     * @return isNewMultiVersion
+     */
+    public Boolean getIsNewMultiVersion() {
+        return this.isNewMultiVersion;
     }
 
     /**
@@ -319,6 +330,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long imageScanCapacity; 
         private String instanceId; 
         private Boolean isNewContainerVersion; 
+        private Boolean isNewMultiVersion; 
         private Boolean isOverBalance; 
         private Integer isTrialVersion; 
         private Long lastTrailEndTime; 
@@ -431,6 +443,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder isNewContainerVersion(Boolean isNewContainerVersion) {
             this.isNewContainerVersion = isNewContainerVersion;
+            return this;
+        }
+
+        /**
+         * IsNewMultiVersion.
+         */
+        public Builder isNewMultiVersion(Boolean isNewMultiVersion) {
+            this.isNewMultiVersion = isNewMultiVersion;
             return this;
         }
 

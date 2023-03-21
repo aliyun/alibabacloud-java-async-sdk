@@ -74,7 +74,11 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * Data.
+         * The result of the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: successful
+         * *   **false**: failed
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -82,7 +86,7 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +94,7 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * TimeCost.
+         * The time consumed. Unit: seconds.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

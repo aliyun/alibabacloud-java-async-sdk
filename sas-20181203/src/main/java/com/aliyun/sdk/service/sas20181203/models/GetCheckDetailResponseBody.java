@@ -15,6 +15,9 @@ public class GetCheckDetailResponseBody extends TeaModel {
     @NameInMap("AssistInfo")
     private AssistInfo assistInfo;
 
+    @NameInMap("CustomConfigs")
+    private java.util.List < CustomConfigs> customConfigs;
+
     @NameInMap("Description")
     private Description description;
 
@@ -26,6 +29,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
 
     private GetCheckDetailResponseBody(Builder builder) {
         this.assistInfo = builder.assistInfo;
+        this.customConfigs = builder.customConfigs;
         this.description = builder.description;
         this.requestId = builder.requestId;
         this.solution = builder.solution;
@@ -44,6 +48,13 @@ public class GetCheckDetailResponseBody extends TeaModel {
      */
     public AssistInfo getAssistInfo() {
         return this.assistInfo;
+    }
+
+    /**
+     * @return customConfigs
+     */
+    public java.util.List < CustomConfigs> getCustomConfigs() {
+        return this.customConfigs;
     }
 
     /**
@@ -69,6 +80,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private AssistInfo assistInfo; 
+        private java.util.List < CustomConfigs> customConfigs; 
         private Description description; 
         private String requestId; 
         private Solution solution; 
@@ -78,6 +90,14 @@ public class GetCheckDetailResponseBody extends TeaModel {
          */
         public Builder assistInfo(AssistInfo assistInfo) {
             this.assistInfo = assistInfo;
+            return this;
+        }
+
+        /**
+         * CustomConfigs.
+         */
+        public Builder customConfigs(java.util.List < CustomConfigs> customConfigs) {
+            this.customConfigs = customConfigs;
             return this;
         }
 
@@ -191,6 +211,127 @@ public class GetCheckDetailResponseBody extends TeaModel {
 
             public AssistInfo build() {
                 return new AssistInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class CustomConfigs extends TeaModel {
+        @NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("ShowName")
+        private String showName;
+
+        @NameInMap("TypeDefine")
+        private String typeDefine;
+
+        @NameInMap("Value")
+        private String value;
+
+        private CustomConfigs(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.name = builder.name;
+            this.showName = builder.showName;
+            this.typeDefine = builder.typeDefine;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return showName
+         */
+        public String getShowName() {
+            return this.showName;
+        }
+
+        /**
+         * @return typeDefine
+         */
+        public String getTypeDefine() {
+            return this.typeDefine;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private String name; 
+            private String showName; 
+            private String typeDefine; 
+            private String value; 
+
+            /**
+             * DefaultValue.
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ShowName.
+             */
+            public Builder showName(String showName) {
+                this.showName = showName;
+                return this;
+            }
+
+            /**
+             * TypeDefine.
+             */
+            public Builder typeDefine(String typeDefine) {
+                this.typeDefine = typeDefine;
+                return this;
+            }
+
+            /**
+             * The content in the help information about the risk item when the Type parameter is set to text.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public CustomConfigs build() {
+                return new CustomConfigs(this);
             } 
 
         } 

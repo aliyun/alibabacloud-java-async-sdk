@@ -55,7 +55,10 @@ public class UninstallUniBackupAgentRequest extends Request {
         } 
 
         /**
-         * PolicyId.
+         * The ID of the anti-ransomware policy.
+         * <p>
+         * 
+         * > You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);

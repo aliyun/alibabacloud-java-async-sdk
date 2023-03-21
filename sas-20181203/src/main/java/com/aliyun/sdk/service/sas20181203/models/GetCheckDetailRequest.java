@@ -21,10 +21,15 @@ public class GetCheckDetailRequest extends Request {
     @NameInMap("Lang")
     private String lang;
 
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
     private GetCheckDetailRequest(Builder builder) {
         super(builder);
         this.checkId = builder.checkId;
         this.lang = builder.lang;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class GetCheckDetailRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<GetCheckDetailRequest, Builder> {
         private Long checkId; 
         private String lang; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -66,6 +79,7 @@ public class GetCheckDetailRequest extends Request {
             super(request);
             this.checkId = request.checkId;
             this.lang = request.lang;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class GetCheckDetailRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

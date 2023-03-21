@@ -314,7 +314,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
              * *   Malicious process (on-premises threat detection)
              * *   Trusted exception
              * 
-             * For more information about alert types, see [Alerts](~~191144~~).
+             * For more information about alert types, see [Alerts](https://www.alibabacloud.com/help/en/security-center/latest/events-overview).
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;

@@ -110,7 +110,7 @@ public class DescribeBruteForceRecordsRequest extends Request {
         } 
 
         /**
-         * The IP address that is blocked by the defense rule.
+         * The IP address that is blocked.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);

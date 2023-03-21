@@ -382,7 +382,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
              * *   **4**: deprecated
              * *   **8**: marked as false positive
              * *   **10**: added to the whitelist
-             * *   **16**: being handled
+             * *   **16**: handling
              * *   **32**: defended
              * *   **64**: invalid
              * *   **128**: deleted
@@ -454,7 +454,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the event on web tamper proofing. Valid values: **medium**.
+             * The severity of the event on web tamper proofing. Valid values: **medium**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -478,7 +478,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the process.
+             * The path to the process.
              */
             public Builder processPath(String processPath) {
                 this.processPath = processPath;
@@ -494,7 +494,7 @@ public class DescribeWebLockFileEventsResponseBody extends TeaModel {
              * *   **4**: deprecated
              * *   **8**: marked as false positive
              * *   **10**: added to the whitelist
-             * *   **16**: being handled
+             * *   **16**: handling
              * *   **32**: defended
              * *   **64**: invalid
              * *   **128**: deleted

@@ -82,7 +82,10 @@ public class CreateContainerScanTaskRequest extends Request {
         } 
 
         /**
-         * 集群id
+         * The ID of the cluster to which the container belongs.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -91,7 +94,7 @@ public class CreateContainerScanTaskRequest extends Request {
         }
 
         /**
-         * ContainerIds.
+         * The ID of the container.
          */
         public Builder containerIds(String containerIds) {
             this.putQueryParameter("ContainerIds", containerIds);
@@ -100,7 +103,11 @@ public class CreateContainerScanTaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

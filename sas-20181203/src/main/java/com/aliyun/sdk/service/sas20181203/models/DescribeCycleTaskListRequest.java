@@ -106,7 +106,7 @@ public class DescribeCycleTaskListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -118,9 +118,9 @@ public class DescribeCycleTaskListRequest extends Request {
          * The name of the task. Valid values:
          * <p>
          * 
-         * *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
+         * *   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task
          * *   **IMAGE_SCAN**: image scan task
-         * *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * *   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -132,9 +132,9 @@ public class DescribeCycleTaskListRequest extends Request {
          * The type of the task. Valid values:
          * <p>
          * 
-         * *   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task
+         * *   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task
          * *   **IMAGE_SCAN**: image scan task
-         * *   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * *   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

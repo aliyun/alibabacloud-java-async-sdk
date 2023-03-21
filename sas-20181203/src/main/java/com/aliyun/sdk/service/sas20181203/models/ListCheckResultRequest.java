@@ -37,6 +37,10 @@ public class ListCheckResultRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("RequirementIds")
     private java.util.List < Long > requirementIds;
 
@@ -57,6 +61,10 @@ public class ListCheckResultRequest extends Request {
     private java.util.List < String > statuses;
 
     @Query
+    @NameInMap("Types")
+    private java.util.List < String > types;
+
+    @Query
     @NameInMap("Vendors")
     private java.util.List < String > vendors;
 
@@ -68,11 +76,13 @@ public class ListCheckResultRequest extends Request {
         this.instanceTypes = builder.instanceTypes;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.requirementIds = builder.requirementIds;
         this.riskLevels = builder.riskLevels;
         this.sortTypes = builder.sortTypes;
         this.standardIds = builder.standardIds;
         this.statuses = builder.statuses;
+        this.types = builder.types;
         this.vendors = builder.vendors;
     }
 
@@ -132,6 +142,13 @@ public class ListCheckResultRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return requirementIds
      */
     public java.util.List < Long > getRequirementIds() {
@@ -167,6 +184,13 @@ public class ListCheckResultRequest extends Request {
     }
 
     /**
+     * @return types
+     */
+    public java.util.List < String > getTypes() {
+        return this.types;
+    }
+
+    /**
      * @return vendors
      */
     public java.util.List < String > getVendors() {
@@ -180,11 +204,13 @@ public class ListCheckResultRequest extends Request {
         private java.util.List < String > instanceTypes; 
         private String lang; 
         private Integer pageSize; 
+        private String regionId; 
         private java.util.List < Long > requirementIds; 
         private java.util.List < String > riskLevels; 
         private java.util.List < String > sortTypes; 
         private java.util.List < Long > standardIds; 
         private java.util.List < String > statuses; 
+        private java.util.List < String > types; 
         private java.util.List < String > vendors; 
 
         private Builder() {
@@ -199,11 +225,13 @@ public class ListCheckResultRequest extends Request {
             this.instanceTypes = request.instanceTypes;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.requirementIds = request.requirementIds;
             this.riskLevels = request.riskLevels;
             this.sortTypes = request.sortTypes;
             this.standardIds = request.standardIds;
             this.statuses = request.statuses;
+            this.types = request.types;
             this.vendors = request.vendors;
         } 
 
@@ -268,7 +296,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Default value: **zh**. Valid values:
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese
@@ -290,6 +318,15 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * The IDs of requirement items.
          */
         public Builder requirementIds(java.util.List < Long > requirementIds) {
@@ -299,7 +336,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The severities of check items. Separate multiple severities with commas (,). Valid values:
+         * The risk levels of check items. Separate multiple risk levels with commas (,). Valid values:
          * <p>
          * 
          * *   **HIGH**
@@ -317,7 +354,7 @@ public class ListCheckResultRequest extends Request {
          * <p>
          * 
          * *   **RISK_LEVEL**: risk level
-         * *   **STATUS**: state
+         * *   **STATUS**: status
          */
         public Builder sortTypes(java.util.List < String > sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);
@@ -335,7 +372,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The states of check items. Separate multiple states with commas (,). Valid values:
+         * The status of check items. Separate multiple status with commas (,). Valid values:
          * <p>
          * 
          * *   **PASS**
@@ -347,6 +384,15 @@ public class ListCheckResultRequest extends Request {
         public Builder statuses(java.util.List < String > statuses) {
             this.putQueryParameter("Statuses", statuses);
             this.statuses = statuses;
+            return this;
+        }
+
+        /**
+         * Types.
+         */
+        public Builder types(java.util.List < String > types) {
+            this.putQueryParameter("Types", types);
+            this.types = types;
             return this;
         }
 

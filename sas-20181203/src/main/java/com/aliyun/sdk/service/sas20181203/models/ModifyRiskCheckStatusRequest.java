@@ -136,7 +136,7 @@ public class ModifyRiskCheckStatusRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
+         * The language of the content within the request and response. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese
@@ -170,8 +170,8 @@ public class ModifyRiskCheckStatusRequest extends Request {
          * The method to handle the check item. Valid values:
          * <p>
          * 
-         * *   **ignored**: ignores the check item.
-         * *   **reset**: cancels ignoring the check item.
+         * *   **ignored**: ignores the check item
+         * *   **reset**: cancels ignoring the check item
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

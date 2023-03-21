@@ -74,7 +74,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Instances.
+         * An array that consists of the details of the cloud assets.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -82,7 +82,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -90,7 +90,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +286,11 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private Integer vendor; 
 
             /**
-             * AlarmStatus.
+             * Indicates whether alerts are generated for the cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -290,7 +298,64 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetSubType.
+             * The subtype of the cloud asset. The subtype of the cloud service. Valid values:
+             * <p>
+             * 
+             * *   **0**: ECS
+             *     * **0**: instance
+             *     * **1**: disk (storage)
+             *     * **2**: security group
+             * *   **1**: SLB
+             *     * **0**: SLB
+             *     * **1**: Application Load Balancer (ALB)
+             * *   **3**: ApsaraDB RDS
+             *     * **0**: instance
+             * *   **4**: MongoDB
+             *     * **0**: instance
+             * *   **5**: Redis
+             *     * **0**: instance
+             * *   **6**: Container Registry
+             *     * **1**: Enterprise Edition
+             *     * **2**: Personal Edition
+             * *   **8**: ACK
+             *     * **0**: cluster
+             * *   **9**: VPC
+             *     * **0**: NAT gateway
+             *     * **1**:EIP
+             *     * **2**:VPN
+             *     * **3**:FLOW_LOG
+             * *   **11**: ActionTrail
+             *     * **0**: trail
+             * *   **12**: CDN
+             *     * **0**: instance
+             * *   **13**: Certificate Management Service (formerly SSL Certificates Service)
+             *      * **0**: certificate
+             * *   **14**: Apsara Devops
+             *     * **0**: organization
+             * *   **16**: Anti-DDoS
+             *     * **0**: instance
+             * *   **17**: WAF
+             *     * **0**: domain name
+             * *   **18**: OSS
+             *     * **0**:Bucket
+             * *   **19**: PolarDB
+             *     * **0**: cluster
+             * *   **20**: ApsaraDB RDS for PostgreSQL
+             *     * **0**: instance
+             * *   **21**: MSE
+             *     * **0**: cluster
+             * *   **22**: NAS
+             *     * **0**: file system
+             * *   **23**: DSC
+             *     * **0**: instance
+             * *   **24**: EIP
+             *     * **0**: Anycast EIP
+             * *   **25**: IDaaS EIAM
+             *     * **0**: instance
+             * *   **26**: PolarDB-X
+             *     * **0**: instance
+             * *   **27**: Elasticsearch
+             *     * **0**: instance
              */
             public Builder assetSubType(String assetSubType) {
                 this.assetSubType = assetSubType;
@@ -298,7 +363,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetSubTypeName.
+             * The subtype name of the cloud asset.
              */
             public Builder assetSubTypeName(String assetSubTypeName) {
                 this.assetSubTypeName = assetSubTypeName;
@@ -306,7 +371,33 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   **0**: Elastic Compute Service (ECS)
+             * *   **1**: Server Load Balancer (SLB)
+             * *   **3**: ApsaraDB RDS
+             * *   **4**: ApsaraDB for MongoDB (MongoDB)
+             * *   **5**: ApsaraDB for Redis (Redis)
+             * *   **6**: Container Registry
+             * *   **8**: Container Service for Kubernetes (ACK)
+             * *   **9**: Virtual Private Cloud (VPC)
+             * *   **11**: ActionTrail
+             * *   **12**: Alibaba Cloud CDN (CDN)
+             * *   **13**: Certificate Management Service (formerly SSL Certificates Service)
+             * *   **14**: Apsara Devops
+             * *   **16**: Anti-DDoS
+             * *   **17**: Web Application Firewall (WAF)
+             * *   **18**: Object Storage Service (OSS)
+             * *   **19**: PolarDB
+             * *   **20**: ApsaraDB RDS for PostgreSQL
+             * *   **21**: Microservices Engine (MSE)
+             * *   **22**: Apsara File Storage NAS (NAS)
+             * *   **23**: Data Security Center (DSC)
+             * *   **24**: Elastic IP Address (EIP)
+             * *   **25**: IDaaS EIAM
+             * *   **26**: PolarDB-X
+             * *   **27**: Elasticsearch
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -314,7 +405,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetTypeName.
+             * The type name of the cloud asset.
              */
             public Builder assetTypeName(String assetTypeName) {
                 this.assetTypeName = assetTypeName;
@@ -322,7 +413,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the instance was created.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -330,7 +421,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of the cloud asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +429,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name of the cloud asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -346,7 +437,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -354,7 +445,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the cloud asset.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -362,7 +453,11 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * Indicates whether risks are detected on the cloud asset. Valid values:
+             * <p>
+             * 
+             * *   **YES**
+             * *   **NO**
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -370,7 +465,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityInfo.
+             * The security information about the cloud asset.
              */
             public Builder securityInfo(String securityInfo) {
                 this.securityInfo = securityInfo;
@@ -378,7 +473,14 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The type of the cloud asset by source. Valid values:
+             * <p>
+             * 
+             * *   **0**: an asset provided by Alibaba Cloud
+             * *   **1**: a third-party cloud asset
+             * *   **2**: an asset in a data center
+             * *   **3**, **4**, **5**, and **7**: other cloud asset
+             * *   **8**: a lightweight asset
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
@@ -455,7 +557,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -463,7 +565,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -471,7 +573,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +581,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of cloud assets.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

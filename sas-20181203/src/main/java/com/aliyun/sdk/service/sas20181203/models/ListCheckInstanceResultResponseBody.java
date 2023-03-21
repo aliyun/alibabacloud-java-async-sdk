@@ -206,7 +206,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the check result for the instance.
+             * The check result ID of the instance.
              */
             public Builder id(Long id) {
                 this.id = id;

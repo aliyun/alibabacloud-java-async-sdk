@@ -69,7 +69,7 @@ public class DeleteCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * The ID of the record that you want to delete.
+         * The ID of the IP address blocking policy.
          * <p>
          * 
          * > You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the ID.

@@ -168,7 +168,7 @@ public class DescribeOnceTaskRequest extends Request {
          * The ID of the root task.
          * <p>
          * 
-         * >  You must specify at least one of the **TaskType** and **RootTaskId** parameters.
+         * > You must specify at least one of the **TaskType** and **RootTaskId** parameters.
          */
         public Builder rootTaskId(String rootTaskId) {
             this.putQueryParameter("RootTaskId", rootTaskId);
@@ -186,7 +186,7 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -199,10 +199,10 @@ public class DescribeOnceTaskRequest extends Request {
          * <p>
          * 
          * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
-         * *   **CLIENT\_DEV_OPS**: an O&M task of Cloud Assistant
+         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
          * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
          * 
-         * >  You must specify at least one of the **TaskType** and **RootTaskId** parameters.
+         * > You must specify at least one of the **TaskType** and **RootTaskId** parameters.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

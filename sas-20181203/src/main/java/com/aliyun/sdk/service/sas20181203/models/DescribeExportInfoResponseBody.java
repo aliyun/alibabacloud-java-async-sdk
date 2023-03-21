@@ -181,10 +181,7 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message that shows the task result.
-         * <p>
-         * 
-         * The value is fixed as success, which indicates that the export task is complete.
+         * The message that shows the task result. The value is fixed as **success**, which indicates that the task is complete.
          */
         public Builder message(String message) {
             this.message = message;

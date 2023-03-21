@@ -94,7 +94,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the vulnerabilities.
+         * An array that consists of the details about the vulnerability.
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -153,6 +153,9 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         @NameInMap("NntfCount")
         private Integer nntfCount;
 
+        @NameInMap("RaspDefend")
+        private Integer raspDefend;
+
         @NameInMap("Tags")
         private String tags;
 
@@ -170,6 +173,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             this.laterCount = builder.laterCount;
             this.name = builder.name;
             this.nntfCount = builder.nntfCount;
+            this.raspDefend = builder.raspDefend;
             this.tags = builder.tags;
             this.totalFixCount = builder.totalFixCount;
             this.type = builder.type;
@@ -233,6 +237,13 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
+         * @return raspDefend
+         */
+        public Integer getRaspDefend() {
+            return this.raspDefend;
+        }
+
+        /**
          * @return tags
          */
         public String getTags() {
@@ -261,6 +272,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             private Integer laterCount; 
             private String name; 
             private Integer nntfCount; 
+            private Integer raspDefend; 
             private String tags; 
             private Long totalFixCount; 
             private String type; 
@@ -318,6 +330,14 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
+                return this;
+            }
+
+            /**
+             * RaspDefend.
+             */
+            public Builder raspDefend(Integer raspDefend) {
+                this.raspDefend = raspDefend;
                 return this;
             }
 

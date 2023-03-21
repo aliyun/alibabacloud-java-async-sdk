@@ -190,7 +190,7 @@ public class DescribeEventLevelCountRequest extends Request {
          * <p>
          * 
          * *   **containerId**: the ID of the container
-         * *   **uuid**: the ID of the asset
+         * *   **uuid**: the UUID of the asset
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

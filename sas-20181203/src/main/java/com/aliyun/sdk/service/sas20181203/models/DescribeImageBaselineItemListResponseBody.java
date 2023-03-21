@@ -62,7 +62,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BaselineItemInfos.
+         * An array that consists of baseline check items.
          */
         public Builder baselineItemInfos(java.util.List < BaselineItemInfos> baselineItemInfos) {
             this.baselineItemInfos = baselineItemInfos;
@@ -70,7 +70,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +202,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             private Integer whiteList; 
 
             /**
-             * BaselineClassAlias.
+             * The alias of the baseline type.
              */
             public Builder baselineClassAlias(String baselineClassAlias) {
                 this.baselineClassAlias = baselineClassAlias;
@@ -210,7 +210,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineClassKey.
+             * The key of the baseline type.
              */
             public Builder baselineClassKey(String baselineClassKey) {
                 this.baselineClassKey = baselineClassKey;
@@ -218,7 +218,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineItemAlias.
+             * The alias of the baseline check item.
              */
             public Builder baselineItemAlias(String baselineItemAlias) {
                 this.baselineItemAlias = baselineItemAlias;
@@ -226,7 +226,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineItemKey.
+             * The key of the baseline check item.
              */
             public Builder baselineItemKey(String baselineItemKey) {
                 this.baselineItemKey = baselineItemKey;
@@ -234,7 +234,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineNameAlias.
+             * The alias of the baseline.
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -242,7 +242,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineNameKey.
+             * The key of the baseline name.
              */
             public Builder baselineNameKey(String baselineNameKey) {
                 this.baselineNameKey = baselineNameKey;
@@ -250,7 +250,13 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the baseline risk item. Valid values:
+             * <p>
+             * 
+             * *   **0**: unfixed
+             * *   **1**: fixed
+             * *   **2**: pending verification
+             * *   **3**: fixing failed
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -258,7 +264,11 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteList.
+             * Indicates whether the baseline check item is added to the whitelist. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder whiteList(Integer whiteList) {
                 this.whiteList = whiteList;
@@ -335,7 +345,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -343,7 +353,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -351,7 +361,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -359,7 +369,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

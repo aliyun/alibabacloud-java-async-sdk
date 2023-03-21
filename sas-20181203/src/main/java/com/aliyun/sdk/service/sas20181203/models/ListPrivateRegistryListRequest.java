@@ -54,7 +54,13 @@ public class ListPrivateRegistryListRequest extends Request {
         } 
 
         /**
-         * RegistryType.
+         * The type of the image repository. Valid values:
+         * <p>
+         * 
+         * *   **acr**: Container Registry
+         * *   **harbor**: Harbor
+         * *   **quay**: Quay
+         * *   **CI/CD**: Jenkins
          */
         public Builder registryType(String registryType) {
             this.putQueryParameter("RegistryType", registryType);

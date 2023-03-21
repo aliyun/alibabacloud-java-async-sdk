@@ -85,7 +85,7 @@ public class OperateAgentClientInstallRequest extends Request {
          * The IDs of the servers on which you want to install the Security Center agent. Separate multiple IDs with commas (,).
          * <p>
          * 
-         * >  You must specify at least one of the **InstanceIds** and **Uuids** parameters before you can call this operation.
+         * > You must specify at least one of the **InstanceIds** and **Uuids** parameters before you can call this operation.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -94,7 +94,11 @@ public class OperateAgentClientInstallRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +110,7 @@ public class OperateAgentClientInstallRequest extends Request {
          * The UUIDs of the servers on which you want to install the Security Center agent. Separate multiple UUIDs with commas (,).
          * <p>
          * 
-         * >  You must specify at least one of the **InstanceIds** and **Uuids** parameters before you can call this operation.
+         * > You must specify at least one of the **InstanceIds** and **Uuids** parameters before you can call this operation.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

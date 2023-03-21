@@ -270,7 +270,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task first run.
+             * The first time when the task starts.
              */
             public Builder firstDateStr(Long firstDateStr) {
                 this.firstDateStr = firstDateStr;
@@ -286,7 +286,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task when the task last run.
+             * The ID of the task when the task last runs.
              */
             public Builder lastTaskId(String lastTaskId) {
                 this.lastTaskId = lastTaskId;
@@ -330,7 +330,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time before the next task starts. Unit: hours.
+             * The period of time before the task starts for the next time. Unit: hours.
              */
             public Builder targetStartTime(Integer targetStartTime) {
                 this.targetStartTime = targetStartTime;

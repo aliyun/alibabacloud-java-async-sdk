@@ -167,7 +167,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         } 
 
         /**
-         * BaselineClassKey.
+         * The key of the baseline type.
          */
         public Builder baselineClassKey(String baselineClassKey) {
             this.putQueryParameter("BaselineClassKey", baselineClassKey);
@@ -176,7 +176,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * BaselineNameKey.
+         * The key of the baseline name.
          */
         public Builder baselineNameKey(String baselineNameKey) {
             this.putQueryParameter("BaselineNameKey", baselineNameKey);
@@ -185,7 +185,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -194,7 +194,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * ImageUuid.
+         * The UUID of the image.
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -203,7 +203,11 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -212,7 +216,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -221,7 +225,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The types of the assets that are scanned.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -230,7 +234,13 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the baseline risk item. Valid values:
+         * <p>
+         * 
+         * *   **0**: unfixed
+         * *   **1**: fixed
+         * *   **2**: pending verification
+         * *   **3**: fixing failed
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -239,7 +249,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUIDs of images.
          */
         public Builder uuids(java.util.List < String > uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -170,6 +170,9 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         @NameInMap("InternetIp")
         private String internetIp;
 
+        @NameInMap("IntranetIp")
+        private String intranetIp;
+
         @NameInMap("Ip")
         private String ip;
 
@@ -201,6 +204,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
+            this.intranetIp = builder.intranetIp;
             this.ip = builder.ip;
             this.link = builder.link;
             this.md5 = builder.md5;
@@ -259,6 +263,13 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
          */
         public String getInternetIp() {
             return this.internetIp;
+        }
+
+        /**
+         * @return intranetIp
+         */
+        public String getIntranetIp() {
+            return this.intranetIp;
         }
 
         /**
@@ -324,6 +335,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
+            private String intranetIp; 
             private String ip; 
             private String link; 
             private String md5; 
@@ -378,6 +390,14 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * IntranetIp.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
                 return this;
             }
 

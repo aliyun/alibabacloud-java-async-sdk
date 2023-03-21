@@ -724,7 +724,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when Security Center is authorized to scan the asset.
+             * The timestamp when Security Center is authorized to scan the asset. Unit: milliseconds.
              */
             public Builder authModifyTime(Long authModifyTime) {
                 this.authModifyTime = authModifyTime;
@@ -763,7 +763,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Security Center is authorized to scan the asset. Valid values:
+             * Indicates whether Security Center is authorized to protect the asset. Valid values:
              * <p>
              * 
              * *   **true**: yes
@@ -804,7 +804,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the CPU cores used by the asset.
+             * The number of the CPU cores for the asset.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -868,7 +868,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether baseline risks are detected on the asset. Valid values:
+             * Indicates whether baseline risk items are detected on the asset. Valid values:
              * <p>
              * 
              * *   **YES**
@@ -888,7 +888,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The importance of the asset. Valid values:
+             * The importance level of the asset. Valid values:
              * <p>
              * 
              * *   **2**: an important asset
@@ -973,7 +973,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory. Unit: MB.
+             * The memory size. Unit: MB.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -989,7 +989,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The kernel version of the asset.
+             * The version of the operating system that the asset runs.
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -1029,7 +1029,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of baseline risks that are detected on the asset. The value of this parameter is in the JSON format and contains the following fields:
+             * The statistics about baseline risks that are detected on the asset. The value of this parameter is in the JSON format and contains the following fields:
              * <p>
              * 
              * *   **account**: the number of accounts that are used to log on from unapproved logon locations and whose passwords are cracked
@@ -1038,7 +1038,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              * *   **baselineHigh**: the number of high-risk baseline risks
              * *   **baselineLow**: the number of low-risk baseline risks
              * *   **baselineMedium**: the number of medium-risk baseline risks
-             * *   **baselineNum**: the total number of configuration  risks
+             * *   **baselineNum**: the total number of baseline risks
              * *   **cmsNum**: the number of Web-CMS vulnerabilities
              * *   **containerAsap**: the number of high-risk vulnerabilities that are detected on containers
              * *   **containerLater**: the number of medium-risk vulnerabilities that are detected on containers
@@ -1048,7 +1048,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              * *   **containerSuspicious**: the number of alerts whose Emergency level is Suspicious on containers
              * *   **cveNum**: the number of Linux software vulnerabilities
              * *   **emgNum**: the number of urgent vulnerabilities
-             * *   **health**: the number of baseline alerts that are unhandled
+             * *   **health**: the number of baseline risks that are unhandled
              * *   **imageBaselineHigh**: the number of high-risk baseline risks that are detected on images
              * *   **imageBaselineLow**: the number of low-risk baseline risks that are detected on images
              * *   **imageBaselineMedium**: the number of medium-risk baseline risks that are detected on images
@@ -1061,7 +1061,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              * *   **imageVulNntf**: the number of low-risk vulnerabilities that are detected on an image
              * *   **laterVulCount**: the number of medium-risk vulnerabilities
              * *   **newSuspicious**: the number of alerts
-             * *   **nntfVulCount**: the number of low-risk vulnerabilities.
+             * *   **nntfVulCount**: the number of low-risk vulnerabilities
              * *   **remindNum**: the number of alerts whose Emergency level is Reminder
              * *   **scaNum**: the number of vulnerabilities that are detected based on software component analysis
              * *   **seriousNum**: the number of alerts whose Emergency level is Urgent
@@ -1069,7 +1069,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              * *   **suspicious**: the total number of alerts
              * *   **sysNum**: the number of Windows system vulnerabilities
              * *   **trojan**: the number of trojans
-             * *   **uuid**: the UUIDs of assets
+             * *   **uuid**: the UUID of the asset
              * *   **vul**: the number of vulnerabilities
              * *   **weakPWNum**: the number of weak passwords
              */
@@ -1135,14 +1135,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset by source. Valid values:
+             * The category of the service provider (SP) for the asset. Valid values:
              * <p>
              * 
-             * *   **0**: an asset provided by Alibaba Cloud.
-             * *   **1**: a third-party cloud server
-             * *   **2**: a server in a data center
-             * *   **3**, **4**, **5**, and **7**: other cloud asset
-             * *   **8**: a lightweight asset
+             * *   **0**: The asset is provided by Alibaba Cloud.
+             * *   **1**: The asset is not provided by Alibaba Cloud.
+             * *   **2**: The asset resides in a data center.
+             * *   **3**, **4**, **5**, and **7**: other cloud asset.
+             * *   **8**: a light-weight asset.
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
@@ -1150,7 +1150,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service provider (SP) for the asset.
+             * The name of the SP for the asset.
              * <p>
              * 
              * Valid values:
@@ -1159,8 +1159,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              * *   **OUT**: a third-party service provider
              * *   **IDC**: a data center
              * *   **TENCENT**: Tencent Cloud
-             * *   **HUAWEICLOUD**: Huawei Cloud
-             * *   **Microsoft**: Microsoft
+             * *   **HUAWEICLOUD**: HUAWEI CLOUD
+             * *   **Microsoft**: Microsoft Azure
              * *   **AWS**: Amazon Web Services (AWS)
              * *   **TRIPARTITE**: a lightweight server
              */

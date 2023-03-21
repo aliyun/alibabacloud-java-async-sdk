@@ -138,6 +138,9 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         @NameInMap("AsapCount")
         private Integer asapCount;
 
+        @NameInMap("CanFix")
+        private String canFix;
+
         @NameInMap("GmtLast")
         private Long gmtLast;
 
@@ -165,6 +168,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         private GroupedVulItems(Builder builder) {
             this.aliasName = builder.aliasName;
             this.asapCount = builder.asapCount;
+            this.canFix = builder.canFix;
             this.gmtLast = builder.gmtLast;
             this.lastScanTime = builder.lastScanTime;
             this.laterCount = builder.laterCount;
@@ -195,6 +199,13 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
          */
         public Integer getAsapCount() {
             return this.asapCount;
+        }
+
+        /**
+         * @return canFix
+         */
+        public String getCanFix() {
+            return this.canFix;
         }
 
         /**
@@ -256,6 +267,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public static final class Builder {
             private String aliasName; 
             private Integer asapCount; 
+            private String canFix; 
             private Long gmtLast; 
             private Long lastScanTime; 
             private Integer laterCount; 
@@ -278,6 +290,14 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
              */
             public Builder asapCount(Integer asapCount) {
                 this.asapCount = asapCount;
+                return this;
+            }
+
+            /**
+             * CanFix.
+             */
+            public Builder canFix(String canFix) {
+                this.canFix = canFix;
                 return this;
             }
 
@@ -336,7 +356,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the vulnerability. Valid values:
+             * The tag of the vulnerability. Valid values:
              * <p>
              * 
              * *   Restart required

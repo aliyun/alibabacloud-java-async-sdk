@@ -62,7 +62,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List.
+         * An array consisting of the servers on which the alerts are generated.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String riskName; 
 
             /**
-             * RiskId.
+             * The ID of the baseline.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -138,7 +138,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * RiskName.
+             * The name of the baseline.
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -191,7 +191,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String riskName; 
 
             /**
-             * RiskId.
+             * The ID of the baseline.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -199,7 +199,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * RiskName.
+             * The name of the baseline.
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -384,7 +384,15 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private java.util.List < WarningRiskList> warningRiskList; 
 
             /**
-             * AuthVersion.
+             * The edition of Security Center that is authorized to protect the asset. Valid values:
+             * <p>
+             * 
+             * *   **1**: Basic edition (Unauthorized)
+             * *   **6**: Anti-virus edition
+             * *   **5**: Advanced edition
+             * *   **3**: Enterprise edition
+             * *   **7**: Ultimate edition
+             * *   **10**: Value-added Plan edition
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -392,7 +400,11 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Bind.
+             * Indicates whether Security Center is authorized to scan the asset. Valid values:
+             * <p>
+             * 
+             * *   **true**: Security Center is authorized to scan the asset.
+             * *   **false**: Security Center is not authorized to scan the asset.
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -400,7 +412,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * FixList.
+             * An array consisting of the details about the baselines for which the risk item can be fixed.
              */
             public Builder fixList(java.util.List < FixList> fixList) {
                 this.fixList = fixList;
@@ -408,7 +420,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -416,7 +428,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -424,7 +436,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the affected asset.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -432,7 +444,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the affected asset.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -440,7 +452,11 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * PortOpen.
+             * Indicates whether a port on the server is accessible over the Internet. Valid values:
+             * <p>
+             * 
+             * *   **true**: A port on the server is accessible over the Internet.
+             * *   **false**: No ports on the server are accessible over the Internet.
              */
             public Builder portOpen(Boolean portOpen) {
                 this.portOpen = portOpen;
@@ -448,7 +464,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Prompt.
+             * The prompt for the risk item.
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -456,7 +472,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the asset.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -464,7 +480,20 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the check item.
+             * <p>
+             * 
+             * > Valid values:
+             * 
+             * *   1: failed
+             * 
+             * *   2: verifying
+             * 
+             * *   3: passed
+             * 
+             * *   6: ignored
+             * 
+             * *   7: fixing
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -472,7 +501,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -480,7 +509,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * WarningRiskList.
+             * An array consisting of the details about the baselines based on which the risk item is detected.
              */
             public Builder warningRiskList(java.util.List < WarningRiskList> warningRiskList) {
                 this.warningRiskList = warningRiskList;
@@ -557,7 +586,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of affected assets returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -565,7 +594,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -573,7 +602,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -581,7 +610,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of affected assets.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -50,7 +50,7 @@ public class StartDiscoverDatabaseTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CreateMark.
+         * The ID of the scan task.
          */
         public Builder createMark(String createMark) {
             this.createMark = createMark;
@@ -58,7 +58,7 @@ public class StartDiscoverDatabaseTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

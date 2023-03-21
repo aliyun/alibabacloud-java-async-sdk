@@ -98,7 +98,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         private java.util.List < VulWhitelists> vulWhitelists; 
 
         /**
-         * Count.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -138,7 +138,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the whitelist of vulnerabilities.
+         * An array that consists of information about the whitelist of vulnerabilities.
          */
         public Builder vulWhitelists(java.util.List < VulWhitelists> vulWhitelists) {
             this.vulWhitelists = vulWhitelists;
@@ -285,16 +285,16 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
              * The application scope of the rule. The value is a JSON string that contains the following fields:
              * <p>
              * 
-             * *   **type**: the type of the asset to which the rule is applied. Valid values:
+             * *   **type**: the type of the assets to which the rule is applied. Valid values:
              * 
-             *        -  **Uuid**: server
-             *        -  **GroupId**: server group
+             *     *   **Uuid**: server
+             *     *   **GroupId**: server group
              * 
-             * *   **groupIds**: the IDs of server groups.
+             * *   **groupIds**: the ID of the server group
              * 
-             * *   **uuids**: the UUIDs of servers.
+             * *   **uuids**: the UUID of the server
              * 
-             * >  If this field is empty, the rule is applied to all assets.
+             * > If this field is empty, the rule is applied to all assets.
              */
             public Builder targetInfo(String targetInfo) {
                 this.targetInfo = targetInfo;
@@ -310,7 +310,12 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * Whitelist.
+             * The information about the vulnerability. The value of this parameter is in the JSON format. Valid values:
+             * <p>
+             * 
+             * *   **name**: the name of the vulnerability
+             * *   **type**: the type of the vulnerability.
+             * *   **aliasName**: the alias of the vulnerability
              */
             public Builder whitelist(String whitelist) {
                 this.whitelist = whitelist;

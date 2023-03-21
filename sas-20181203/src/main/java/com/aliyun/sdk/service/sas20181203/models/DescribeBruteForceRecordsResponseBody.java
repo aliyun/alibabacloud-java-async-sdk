@@ -258,7 +258,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address that is blocked.
+             * The blocked IP address.
              */
             public Builder blockIp(String blockIp) {
                 this.blockIp = blockIp;
@@ -266,7 +266,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned when the defense rule fails to block an IP address.
+             * The error code returned when the defense rule fails to block the IP address.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -274,7 +274,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key ID of the database.
+             * The ID of the primary key in the table of records on the blocked IP address.
              */
             public Builder id(Long id) {
                 this.id = id;

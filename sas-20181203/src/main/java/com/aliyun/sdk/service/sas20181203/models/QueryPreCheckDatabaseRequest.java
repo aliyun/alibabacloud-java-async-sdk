@@ -83,7 +83,10 @@ public class QueryPreCheckDatabaseRequest extends Request {
         } 
 
         /**
-         * InstanceUuid.
+         * The UUID of the agent that is used to back up the data of the database.
+         * <p>
+         * 
+         * > You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.
          */
         public Builder instanceUuid(String instanceUuid) {
             this.putQueryParameter("InstanceUuid", instanceUuid);
@@ -92,7 +95,10 @@ public class QueryPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the database precheck task.
+         * <p>
+         * 
+         * > You can call the [StartPreCheckDatabase](~~StartPreCheckDatabase~~) operation to query the ID of the database precheck task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -101,7 +107,7 @@ public class QueryPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * UniRegionId.
+         * The region ID of the server that hosts the database.
          */
         public Builder uniRegionId(String uniRegionId) {
             this.putQueryParameter("UniRegionId", uniRegionId);

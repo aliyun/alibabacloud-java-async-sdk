@@ -190,7 +190,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

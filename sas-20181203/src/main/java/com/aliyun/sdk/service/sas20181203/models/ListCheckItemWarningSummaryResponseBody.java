@@ -260,9 +260,9 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             /**
              * The risk level of the check item.Valid values:
              * <p>
-             *  *   **high**
-             *  *   **medium**
-             *  *   **low**
+             * *   **high**
+             * *  **medium**
+             * *   **low**
              */
             public Builder checkLevel(String checkLevel) {
                 this.checkLevel = checkLevel;
@@ -286,7 +286,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline type.
+             * The type of the baseline.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
@@ -294,10 +294,11 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item.Valid values:
+             * The risk status of the check item.Valid values:
              * <p>
-             * *   **1**: failed
-             * *   **3**: passed
+             * *  **1**: failed
+             * 
+             * *  **3**: passed
              */
             public Builder status(Integer status) {
                 this.status = status;

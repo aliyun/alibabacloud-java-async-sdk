@@ -210,7 +210,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             private String resourceName; 
 
             /**
-             * The details about the check result.
+             * The details about the check results.
              */
             public Builder contentResource(java.util.Map < String, ? > contentResource) {
                 this.contentResource = contentResource;
@@ -437,7 +437,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item. For more information about the description of the check item ID, see the check item table in the "Response parameters" section of this topic.
+             * The ID of the check item. For more information about the check item, see the check item table in the "Response parameters" section of this topic.
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -453,7 +453,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the risks that are detected for the check item can be fixed. Valid values:
+             * Indicates whether the risks that are detected based on the check item can be fixed. Valid values:
              * <p>
              * 
              * *   **enabled**: yes
@@ -494,7 +494,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the check result. The check items are sorted based on the sequence number.
+             * The sequence number in the check results. The check items are sorted based on the sequence number.
              */
             public Builder sort(Integer sort) {
                 this.sort = sort;
@@ -502,11 +502,11 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the check item is supported by the cloud service. Valid values:
+             * Indicates whether the check item is supported by the edition of Security Center that you purchase. Valid values:
              * <p>
              * 
-             * *   **enabled**: The check item is supported by the cloud service.
-             * *   **disable**: The check item is not supported by the cloud service.
+             * *   **enabled**: yes
+             * *   **disable**: no
              */
             public Builder startStatus(String startStatus) {
                 this.startStatus = startStatus;
@@ -514,7 +514,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check result. Valid values:
+             * The status of the check results. Valid values:
              * <p>
              * 
              * *   **pass**

@@ -121,8 +121,8 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
              * The status of the check item after the check is finished. Valid values:
              * <p>
              * 
-             * *   **pass**: The check item passes the check, which indicates that the check item is normal.
-             * *   **failed**: The check item fails the check, which indicates that risks are detected for the check item.
+             * *   **pass**: The check item passed the check, which indicates that the check item is normal.
+             * *   **failed**: The check item failed the check, which indicates that risks are detected based on the check item.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -259,7 +259,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
              * <p>
              * 
              * *   **finish**: The check is finished.
-             * *   **running**: The check is in process.
+             * *   **running**: The check is in progress.
              * *   **waiting**: The check is pending.
              * *   **notStart**: The check is not started.
              */
@@ -492,7 +492,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the check items that fail the check.
+             * The number of the check items that failed the check.
              */
             public Builder disabledRiskCount(Integer disabledRiskCount) {
                 this.disabledRiskCount = disabledRiskCount;
@@ -500,7 +500,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the check items that pass the check.
+             * The number of the check items that passed the check.
              */
             public Builder enabledRiskCount(Integer enabledRiskCount) {
                 this.enabledRiskCount = enabledRiskCount;

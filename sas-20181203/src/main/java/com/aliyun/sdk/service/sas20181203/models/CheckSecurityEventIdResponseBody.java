@@ -53,7 +53,7 @@ public class CheckSecurityEventIdResponseBody extends TeaModel {
          * Indicates whether the alert events are generated on the server. Valid values:
          * <p>
          * 
-         * *   **true**: yes
+         * *   **true**
          * *   **false**: no
          */
         public Builder data(Boolean data) {

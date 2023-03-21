@@ -360,7 +360,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
          * The ID of the container cluster.
          * <p>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the ID of the container cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -414,7 +414,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The tag that is added to the image.
+         * The tag of the image.
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -426,8 +426,8 @@ public class DescribeImageGroupedVulListRequest extends Request {
          * Specifies whether to query the vulnerabilities in the latest images. If you do not specify this parameter, the vulnerabilities in all images are queried. Valid values:
          * <p>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * *   **0**: does not query the vulnerabilities in the latest images.
+         * *   **1**: queries the vulnerabilities in the latest images.
          */
         public Builder isLatest(Integer isLatest) {
             this.putQueryParameter("IsLatest", isLatest);
@@ -535,7 +535,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * An array consisting of the types of the assets that you want to scan.
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -557,7 +557,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The UUIDs of the assets. Separate multiple UUIDs with commas (,).
+         * The UUID of the asset. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

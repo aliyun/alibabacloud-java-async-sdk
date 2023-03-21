@@ -96,7 +96,7 @@ public class DescribePropertyCronItemRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +105,11 @@ public class DescribePropertyCronItemRequest extends Request {
         }
 
         /**
-         * ForceFlush.
+         * Specifies whether to forcefully refresh the data that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -114,7 +118,7 @@ public class DescribePropertyCronItemRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +127,7 @@ public class DescribePropertyCronItemRequest extends Request {
         }
 
         /**
-         * Source.
+         * The path to the scheduled task.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

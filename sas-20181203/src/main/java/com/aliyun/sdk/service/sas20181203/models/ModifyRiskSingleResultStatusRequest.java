@@ -171,7 +171,7 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
          * <p>
          * 
          * *   **ignored**: ignores the risk item.
-         * *   **failed**: cancels the ignore operation on the risk item.
+         * *   **failed**: cancels ignoring the risk item.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -180,7 +180,7 @@ public class ModifyRiskSingleResultStatusRequest extends Request {
         }
 
         /**
-         * The ID of the check task to which the affected asset belongs.
+         * The ID of the check task to which the affected assets belong.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

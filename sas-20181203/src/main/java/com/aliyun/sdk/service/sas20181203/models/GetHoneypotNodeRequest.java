@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetHoneypotNodeRequest extends Request {
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("NodeId")
     @Validation(required = true)
     private String nodeId;
 
     private GetHoneypotNodeRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
         this.nodeId = builder.nodeId;
     }
 
@@ -36,6 +41,13 @@ public class GetHoneypotNodeRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return nodeId
      */
     public String getNodeId() {
@@ -43,6 +55,7 @@ public class GetHoneypotNodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetHoneypotNodeRequest, Builder> {
+        private String lang; 
         private String nodeId; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class GetHoneypotNodeRequest extends Request {
 
         private Builder(GetHoneypotNodeRequest request) {
             super(request);
+            this.lang = request.lang;
             this.nodeId = request.nodeId;
         } 
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
 
         /**
          * The ID of the management node.

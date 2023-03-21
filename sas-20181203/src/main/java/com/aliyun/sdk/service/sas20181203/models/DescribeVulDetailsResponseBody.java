@@ -524,7 +524,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -532,7 +532,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -540,7 +540,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -612,7 +612,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the asset on which the vulnerability is detected.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -620,7 +620,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset on which the vulnerability is detected.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
