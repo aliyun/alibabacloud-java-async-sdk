@@ -51,7 +51,6 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     @Body
     @NameInMap("NodePool")
-    @Validation(required = true)
     private NodePool nodePool;
 
     @Body
@@ -76,6 +75,10 @@ public class CreateAppInstanceGroupRequest extends Request {
     @Body
     @NameInMap("PromotionId")
     private String promotionId;
+
+    @Body
+    @NameInMap("RuntimePolicy")
+    private RuntimePolicy runtimePolicy;
 
     @Body
     @NameInMap("SessionTimeout")
@@ -106,6 +109,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         this.preOpenAppId = builder.preOpenAppId;
         this.productType = builder.productType;
         this.promotionId = builder.promotionId;
+        this.runtimePolicy = builder.runtimePolicy;
         this.sessionTimeout = builder.sessionTimeout;
         this.userInfo = builder.userInfo;
         this.users = builder.users;
@@ -223,6 +227,13 @@ public class CreateAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return runtimePolicy
+     */
+    public RuntimePolicy getRuntimePolicy() {
+        return this.runtimePolicy;
+    }
+
+    /**
      * @return sessionTimeout
      */
     public Integer getSessionTimeout() {
@@ -258,6 +269,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private String preOpenAppId; 
         private String productType; 
         private String promotionId; 
+        private RuntimePolicy runtimePolicy; 
         private Integer sessionTimeout; 
         private UserInfo userInfo; 
         private java.util.List < String > users; 
@@ -282,6 +294,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             this.preOpenAppId = request.preOpenAppId;
             this.productType = request.productType;
             this.promotionId = request.promotionId;
+            this.runtimePolicy = request.runtimePolicy;
             this.sessionTimeout = request.sessionTimeout;
             this.userInfo = request.userInfo;
             this.users = request.users;
@@ -412,6 +425,16 @@ public class CreateAppInstanceGroupRequest extends Request {
         public Builder promotionId(String promotionId) {
             this.putBodyParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * RuntimePolicy.
+         */
+        public Builder runtimePolicy(RuntimePolicy runtimePolicy) {
+            String runtimePolicyShrink = shrink(runtimePolicy, "RuntimePolicy", "json");
+            this.putBodyParameter("RuntimePolicy", runtimePolicyShrink);
+            this.runtimePolicy = runtimePolicy;
             return this;
         }
 
@@ -739,15 +762,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         private Integer maxScalingAmount;
 
         @NameInMap("NodeAmount")
-        @Validation(required = true)
         private Integer nodeAmount;
 
         @NameInMap("NodeCapacity")
-        @Validation(required = true)
         private Integer nodeCapacity;
 
         @NameInMap("NodeInstanceType")
-        @Validation(required = true)
         private String nodeInstanceType;
 
         @NameInMap("RecurrenceSchedules")
@@ -993,6 +1013,47 @@ public class CreateAppInstanceGroupRequest extends Request {
 
             public NodePool build() {
                 return new NodePool(this);
+            } 
+
+        } 
+
+    }
+    public static class RuntimePolicy extends TeaModel {
+        @NameInMap("SessionType")
+        private String sessionType;
+
+        private RuntimePolicy(Builder builder) {
+            this.sessionType = builder.sessionType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RuntimePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sessionType
+         */
+        public String getSessionType() {
+            return this.sessionType;
+        }
+
+        public static final class Builder {
+            private String sessionType; 
+
+            /**
+             * SessionType.
+             */
+            public Builder sessionType(String sessionType) {
+                this.sessionType = sessionType;
+                return this;
+            }
+
+            public RuntimePolicy build() {
+                return new RuntimePolicy(this);
             } 
 
         } 

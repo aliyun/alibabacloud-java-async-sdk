@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UnbindRequest extends Request {
     @Body
     @NameInMap("AppInstanceGroupId")
+    @Validation(required = true)
     private String appInstanceGroupId;
 
     @Body
@@ -22,6 +23,7 @@ public class UnbindRequest extends Request {
 
     @Body
     @NameInMap("EndUserId")
+    @Validation(required = true)
     private String endUserId;
 
     @Body
