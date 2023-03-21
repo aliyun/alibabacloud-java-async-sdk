@@ -16,7 +16,7 @@ public class PredictModelResponseBody extends TeaModel {
     private Integer code;
 
     @NameInMap("Data")
-    private String data;
+    private java.util.Map < String, ? > data;
 
     @NameInMap("Message")
     private String message;
@@ -49,7 +49,7 @@ public class PredictModelResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public java.util.Map < String, ? > getData() {
         return this.data;
     }
 
@@ -69,7 +69,7 @@ public class PredictModelResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private String data; 
+        private java.util.Map < String, ? > data; 
         private String message; 
         private String requestId; 
 
@@ -84,7 +84,7 @@ public class PredictModelResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
             return this;
         }

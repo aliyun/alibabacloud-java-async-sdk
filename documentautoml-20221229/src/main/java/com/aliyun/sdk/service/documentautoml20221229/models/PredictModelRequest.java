@@ -28,7 +28,6 @@ public class PredictModelRequest extends Request {
 
     @Query
     @NameInMap("ModelVersion")
-    @Validation(required = true)
     private String modelVersion;
 
     private PredictModelRequest(Builder builder) {
