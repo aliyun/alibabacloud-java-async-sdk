@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PredictTemplateModelRequest extends Request {
     @Query
+    @NameInMap("BinaryToText")
+    private Boolean binaryToText;
+
+    @Query
     @NameInMap("Content")
     @Validation(required = true)
     private String content;
@@ -24,6 +28,7 @@ public class PredictTemplateModelRequest extends Request {
 
     private PredictTemplateModelRequest(Builder builder) {
         super(builder);
+        this.binaryToText = builder.binaryToText;
         this.content = builder.content;
         this.taskId = builder.taskId;
     }
@@ -42,6 +47,13 @@ public class PredictTemplateModelRequest extends Request {
     }
 
     /**
+     * @return binaryToText
+     */
+    public Boolean getBinaryToText() {
+        return this.binaryToText;
+    }
+
+    /**
      * @return content
      */
     public String getContent() {
@@ -56,6 +68,7 @@ public class PredictTemplateModelRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PredictTemplateModelRequest, Builder> {
+        private Boolean binaryToText; 
         private String content; 
         private Long taskId; 
 
@@ -65,9 +78,19 @@ public class PredictTemplateModelRequest extends Request {
 
         private Builder(PredictTemplateModelRequest request) {
             super(request);
+            this.binaryToText = request.binaryToText;
             this.content = request.content;
             this.taskId = request.taskId;
         } 
+
+        /**
+         * BinaryToText.
+         */
+        public Builder binaryToText(Boolean binaryToText) {
+            this.putQueryParameter("BinaryToText", binaryToText);
+            this.binaryToText = binaryToText;
+            return this;
+        }
 
         /**
          * Content.
