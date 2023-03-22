@@ -42,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAppInstanceGroupResponse> listAppInstanceGroup(ListAppInstanceGroupRequest request);
 
+    CompletableFuture<ListAppInstancesResponse> listAppInstances(ListAppInstancesRequest request);
+
     CompletableFuture<ListNodeInstanceTypeResponse> listNodeInstanceType(ListNodeInstanceTypeRequest request);
 
     CompletableFuture<ListOtaTaskResponse> listOtaTask(ListOtaTaskRequest request);
