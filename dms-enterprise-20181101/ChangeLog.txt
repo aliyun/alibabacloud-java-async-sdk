@@ -1,3 +1,6 @@
+2023-03-23 Version: 1.44.1
+- Supported Java Async SDK to process 1, 0 as boolean true,false.
+
 2023-01-13 Version: 1.44.0
 - Supported GetProxy, ListProxies to return RegionId information.
 - Supported SearchDatabase to return CatalogName information.

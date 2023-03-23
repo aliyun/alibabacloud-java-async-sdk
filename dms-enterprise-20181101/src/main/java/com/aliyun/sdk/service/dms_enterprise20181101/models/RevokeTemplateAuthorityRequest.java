@@ -7,36 +7,42 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetLogicDatabaseRequest} extends {@link RequestModel}
+ * {@link RevokeTemplateAuthorityRequest} extends {@link RequestModel}
  *
- * <p>GetLogicDatabaseRequest</p>
+ * <p>RevokeTemplateAuthorityRequest</p>
  */
-public class GetLogicDatabaseRequest extends Request {
+public class RevokeTemplateAuthorityRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("DbId")
+    @NameInMap("TemplateId")
     @Validation(required = true)
-    private String dbId;
+    private Long templateId;
 
     @Query
     @NameInMap("Tid")
     private Long tid;
 
-    private GetLogicDatabaseRequest(Builder builder) {
+    @Query
+    @NameInMap("UserIds")
+    @Validation(required = true)
+    private String userIds;
+
+    private RevokeTemplateAuthorityRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.dbId = builder.dbId;
+        this.templateId = builder.templateId;
         this.tid = builder.tid;
+        this.userIds = builder.userIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetLogicDatabaseRequest create() {
+    public static RevokeTemplateAuthorityRequest create() {
         return builder().build();
     }
 
@@ -53,10 +59,10 @@ public class GetLogicDatabaseRequest extends Request {
     }
 
     /**
-     * @return dbId
+     * @return templateId
      */
-    public String getDbId() {
-        return this.dbId;
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
     /**
@@ -66,20 +72,29 @@ public class GetLogicDatabaseRequest extends Request {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetLogicDatabaseRequest, Builder> {
+    /**
+     * @return userIds
+     */
+    public String getUserIds() {
+        return this.userIds;
+    }
+
+    public static final class Builder extends Request.Builder<RevokeTemplateAuthorityRequest, Builder> {
         private String regionId; 
-        private String dbId; 
+        private Long templateId; 
         private Long tid; 
+        private String userIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetLogicDatabaseRequest request) {
+        private Builder(RevokeTemplateAuthorityRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.dbId = request.dbId;
+            this.templateId = request.templateId;
             this.tid = request.tid;
+            this.userIds = request.userIds;
         } 
 
         /**
@@ -92,19 +107,16 @@ public class GetLogicDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the logical database. You can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the ID of the logical database.
+         * TemplateId.
          */
-        public Builder dbId(String dbId) {
-            this.putQueryParameter("DbId", dbId);
-            this.dbId = dbId;
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -112,9 +124,18 @@ public class GetLogicDatabaseRequest extends Request {
             return this;
         }
 
+        /**
+         * UserIds.
+         */
+        public Builder userIds(String userIds) {
+            this.putQueryParameter("UserIds", userIds);
+            this.userIds = userIds;
+            return this;
+        }
+
         @Override
-        public GetLogicDatabaseRequest build() {
-            return new GetLogicDatabaseRequest(this);
+        public RevokeTemplateAuthorityRequest build() {
+            return new RevokeTemplateAuthorityRequest(this);
         } 
 
     } 

@@ -7,40 +7,40 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateScenarioRequest} extends {@link RequestModel}
+ * {@link UpdateAuthorityTemplateRequest} extends {@link RequestModel}
  *
- * <p>UpdateScenarioRequest</p>
+ * <p>UpdateAuthorityTemplateRequest</p>
  */
-public class UpdateScenarioRequest extends Request {
+public class UpdateAuthorityTemplateRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
     @NameInMap("Description")
+    @Validation(required = true)
     private String description;
 
     @Query
-    @NameInMap("ScenarioId")
+    @NameInMap("Name")
     @Validation(required = true)
-    private String scenarioId;
+    private String name;
 
     @Query
-    @NameInMap("ScenarioName")
+    @NameInMap("TemplateId")
     @Validation(required = true)
-    private String scenarioName;
+    private Long templateId;
 
     @Query
     @NameInMap("Tid")
-    @Validation(minimum = 1)
     private Long tid;
 
-    private UpdateScenarioRequest(Builder builder) {
+    private UpdateAuthorityTemplateRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.description = builder.description;
-        this.scenarioId = builder.scenarioId;
-        this.scenarioName = builder.scenarioName;
+        this.name = builder.name;
+        this.templateId = builder.templateId;
         this.tid = builder.tid;
     }
 
@@ -48,7 +48,7 @@ public class UpdateScenarioRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateScenarioRequest create() {
+    public static UpdateAuthorityTemplateRequest create() {
         return builder().build();
     }
 
@@ -72,17 +72,17 @@ public class UpdateScenarioRequest extends Request {
     }
 
     /**
-     * @return scenarioId
+     * @return name
      */
-    public String getScenarioId() {
-        return this.scenarioId;
+    public String getName() {
+        return this.name;
     }
 
     /**
-     * @return scenarioName
+     * @return templateId
      */
-    public String getScenarioName() {
-        return this.scenarioName;
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
     /**
@@ -92,23 +92,23 @@ public class UpdateScenarioRequest extends Request {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<UpdateScenarioRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateAuthorityTemplateRequest, Builder> {
         private String regionId; 
         private String description; 
-        private String scenarioId; 
-        private String scenarioName; 
+        private String name; 
+        private Long templateId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateScenarioRequest request) {
+        private Builder(UpdateAuthorityTemplateRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.description = request.description;
-            this.scenarioId = request.scenarioId;
-            this.scenarioName = request.scenarioName;
+            this.name = request.name;
+            this.templateId = request.templateId;
             this.tid = request.tid;
         } 
 
@@ -122,7 +122,7 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The description of the business scenario.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,28 +131,25 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the business scenario.
+         * Name.
          */
-        public Builder scenarioId(String scenarioId) {
-            this.putQueryParameter("ScenarioId", scenarioId);
-            this.scenarioId = scenarioId;
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
         /**
-         * The name of the business scenario.
+         * TemplateId.
          */
-        public Builder scenarioName(String scenarioName) {
-            this.putQueryParameter("ScenarioName", scenarioName);
-            this.scenarioName = scenarioName;
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -161,8 +158,8 @@ public class UpdateScenarioRequest extends Request {
         }
 
         @Override
-        public UpdateScenarioRequest build() {
-            return new UpdateScenarioRequest(this);
+        public UpdateAuthorityTemplateRequest build() {
+            return new UpdateAuthorityTemplateRequest(this);
         } 
 
     } 

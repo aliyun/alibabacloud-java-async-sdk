@@ -93,7 +93,14 @@ public class GetTableTopologyRequest extends Request {
         }
 
         /**
-         * TableGuid.
+         * The GUID of the table in Data Management (DMS).
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You can call the [ListLogicTables](~~141875~~) operation with ReturnGuid set to true to query the GUIDs of logical tables in a specific logical database.
+         * 
+         * *   You can call the [ListTables](~~141878~~) operation with ReturnGuid set to true to query the GUIDs of tables in a specific physical database.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -102,7 +109,10 @@ public class GetTableTopologyRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the "View information about the current tenant" section of the [Tenant information](~~181330~~) topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

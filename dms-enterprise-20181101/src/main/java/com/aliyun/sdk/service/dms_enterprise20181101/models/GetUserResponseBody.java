@@ -86,7 +86,7 @@ public class GetUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class GetUserResponseBody extends TeaModel {
          * <p>
          * 
          * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * *   **false**: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -467,8 +467,11 @@ public class GetUserResponseBody extends TeaModel {
              * The DingTalk chatbot URL that is used to receive notifications.
              * <p>
              * 
-             * > * The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * > * The system does not return this parameter if the user has not set a DingTalk chatbot URL.
+             * > 
+             * 
+             * *   The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * 
+             * *   The system does not return this parameter if the user has not set a DingTalk chatbot URL.
              */
             public Builder dingRobot(String dingRobot) {
                 this.dingRobot = dingRobot;
@@ -479,8 +482,11 @@ public class GetUserResponseBody extends TeaModel {
              * The email address that is used to receive notifications.
              * <p>
              * 
-             * > * The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * > * The system does not return this parameter if the user has not set an email address.
+             * > 
+             * 
+             * *   The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * 
+             * *   The system does not return this parameter if the user has not set an email address.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -488,7 +494,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the user logged on to the console.
+             * The last point in time when the user logged on to the console.
              */
             public Builder lastLoginTime(String lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -512,11 +518,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number that is used to receive notifications.
+             * The mobile number of the user.
              * <p>
              * 
-             * > * The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
-             * > * The system does not return this parameter if the user has not set a mobile phone number.
+             * > 
+             * 
+             * *   The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.
+             * 
+             * *   The system does not return this parameter if the user has not set a mobile phone number.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -535,9 +544,9 @@ public class GetUserResponseBody extends TeaModel {
              * The notification method. The system returns one or more values. Valid values:
              * <p>
              * 
-             * *   **SMS**: text message.
+             * *   **SMS**: text message
              * *   **EMAIL**: email.
-             * *   **DingTalk**: DingTalk.
+             * *   **DINGDING**: DingTalk.
              * *   **DINGROBOT**: DingTalk chatbot.
              * *   **WEBHOOK**: webhook.
              */
@@ -550,7 +559,7 @@ public class GetUserResponseBody extends TeaModel {
              * The UID of the Alibaba Cloud account of the user.
              * <p>
              * 
-             * >  An Alibaba Cloud account can contain one or more RAM users.
+             * > An Alibaba Cloud account can contain one or more RAM users.
              */
             public Builder parentUid(Long parentUid) {
                 this.parentUid = parentUid;
@@ -558,14 +567,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the role that is assigned to the user. Valid values:
-             * <p>
-             * 
-             * *   **1**: a regular user role.
-             * *   **2**: a database administrator (DBA) role.
-             * *   **3**: a DMS administrator role.
-             * *   **4**: a security administrator role.
-             * *   **6**: a schema read-only user role.
+             * The list of role IDs.
              */
             public Builder roleIdList(RoleIdList roleIdList) {
                 this.roleIdList = roleIdList;
@@ -573,14 +575,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the role that is assigned to the user. Valid values:
-             * <p>
-             * 
-             * *   **USER**: a regular user.
-             * *   **DBA** : a DBA.
-             * *   **ADMIN**: a DMS administrator.
-             * *   **SECURITY_ADMIN**: a security administrator.
-             * *   **STRUCT_READ_ONLY**: a schema read-only user.
+             * The list of role names.
              */
             public Builder roleNameList(RoleNameList roleNameList) {
                 this.roleNameList = roleNameList;
@@ -592,7 +587,7 @@ public class GetUserResponseBody extends TeaModel {
              * <p>
              * 
              * *   **NONE**: no signature.
-             * *   **HMAC\_SHA1**: HMAC_SHA1.
+             * *   **HMAC_SHA1**: HMAC_SHA1.
              */
             public Builder signatureMethod(String signatureMethod) {
                 this.signatureMethod = signatureMethod;
@@ -632,8 +627,11 @@ public class GetUserResponseBody extends TeaModel {
              * The webhook URL that is used to receive notifications.
              * <p>
              * 
-             * > * If the user has set a webhook URL, DMS sends notifications to the specified URL.
-             * > * The system does not return this parameter if the user has not set a webhook URL.
+             * > 
+             * 
+             * *   If the user has set a webhook URL, DMS sends notifications to the specified URL.
+             * 
+             * *   The system does not return this parameter if the user has not set a webhook URL.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

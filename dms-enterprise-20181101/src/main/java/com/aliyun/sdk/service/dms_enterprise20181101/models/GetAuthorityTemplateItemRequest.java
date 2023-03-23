@@ -7,28 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetLogicDatabaseRequest} extends {@link RequestModel}
+ * {@link GetAuthorityTemplateItemRequest} extends {@link RequestModel}
  *
- * <p>GetLogicDatabaseRequest</p>
+ * <p>GetAuthorityTemplateItemRequest</p>
  */
-public class GetLogicDatabaseRequest extends Request {
+public class GetAuthorityTemplateItemRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("DbId")
+    @NameInMap("TemplateId")
     @Validation(required = true)
-    private String dbId;
+    private Long templateId;
 
     @Query
     @NameInMap("Tid")
     private Long tid;
 
-    private GetLogicDatabaseRequest(Builder builder) {
+    private GetAuthorityTemplateItemRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.dbId = builder.dbId;
+        this.templateId = builder.templateId;
         this.tid = builder.tid;
     }
 
@@ -36,7 +36,7 @@ public class GetLogicDatabaseRequest extends Request {
         return new Builder();
     }
 
-    public static GetLogicDatabaseRequest create() {
+    public static GetAuthorityTemplateItemRequest create() {
         return builder().build();
     }
 
@@ -53,10 +53,10 @@ public class GetLogicDatabaseRequest extends Request {
     }
 
     /**
-     * @return dbId
+     * @return templateId
      */
-    public String getDbId() {
-        return this.dbId;
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
     /**
@@ -66,19 +66,19 @@ public class GetLogicDatabaseRequest extends Request {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetLogicDatabaseRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetAuthorityTemplateItemRequest, Builder> {
         private String regionId; 
-        private String dbId; 
+        private Long templateId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetLogicDatabaseRequest request) {
+        private Builder(GetAuthorityTemplateItemRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.dbId = request.dbId;
+            this.templateId = request.templateId;
             this.tid = request.tid;
         } 
 
@@ -92,19 +92,16 @@ public class GetLogicDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the logical database. You can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the ID of the logical database.
+         * TemplateId.
          */
-        public Builder dbId(String dbId) {
-            this.putQueryParameter("DbId", dbId);
-            this.dbId = dbId;
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -113,8 +110,8 @@ public class GetLogicDatabaseRequest extends Request {
         }
 
         @Override
-        public GetLogicDatabaseRequest build() {
-            return new GetLogicDatabaseRequest(this);
+        public GetAuthorityTemplateItemRequest build() {
+            return new GetAuthorityTemplateItemRequest(this);
         } 
 
     } 

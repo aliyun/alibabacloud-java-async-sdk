@@ -17,11 +17,8 @@ public class GetProxyRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("InstanceId")
-    private Long instanceId;
-
-    @Query
     @NameInMap("ProxyId")
+    @Validation(required = true)
     private Long proxyId;
 
     @Query
@@ -32,7 +29,6 @@ public class GetProxyRequest extends Request {
     private GetProxyRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.instanceId = builder.instanceId;
         this.proxyId = builder.proxyId;
         this.tid = builder.tid;
     }
@@ -58,13 +54,6 @@ public class GetProxyRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public Long getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return proxyId
      */
     public Long getProxyId() {
@@ -80,7 +69,6 @@ public class GetProxyRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetProxyRequest, Builder> {
         private String regionId; 
-        private Long instanceId; 
         private Long proxyId; 
         private Long tid; 
 
@@ -91,7 +79,6 @@ public class GetProxyRequest extends Request {
         private Builder(GetProxyRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.instanceId = request.instanceId;
             this.proxyId = request.proxyId;
             this.tid = request.tid;
         } 
@@ -102,15 +89,6 @@ public class GetProxyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the database instance. You can call the [ListInstances](https://www.alibabacloud.com/help/en/data-management-service/latest/listinstances) or [GetInstance](https://www.alibabacloud.com/help/en/data-management-service/latest/getinstance) operation to query the database instance ID.
-         */
-        public Builder instanceId(Long instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
             return this;
         }
 

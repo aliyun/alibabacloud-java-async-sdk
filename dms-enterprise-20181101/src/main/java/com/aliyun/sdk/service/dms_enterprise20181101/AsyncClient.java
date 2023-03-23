@@ -62,6 +62,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CloseOrderResponse> closeOrder(CloseOrderRequest request);
 
+    CompletableFuture<CreateAuthorityTemplateResponse> createAuthorityTemplate(CreateAuthorityTemplateRequest request);
+
     /**
       * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
       *
@@ -229,6 +231,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetApprovalDetailResponse> getApprovalDetail(GetApprovalDetailRequest request);
 
+    CompletableFuture<GetAuthorityTemplateResponse> getAuthorityTemplate(GetAuthorityTemplateRequest request);
+
+    CompletableFuture<GetAuthorityTemplateItemResponse> getAuthorityTemplateItem(GetAuthorityTemplateItemRequest request);
+
     CompletableFuture<GetDBTaskSQLJobLogResponse> getDBTaskSQLJobLog(GetDBTaskSQLJobLogRequest request);
 
     CompletableFuture<GetDBTopologyResponse> getDBTopology(GetDBTopologyRequest request);
@@ -342,6 +348,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserActiveTenantResponse> getUserActiveTenant(GetUserActiveTenantRequest request);
 
     CompletableFuture<GetUserUploadFileJobResponse> getUserUploadFileJob(GetUserUploadFileJobRequest request);
+
+    CompletableFuture<GrantTemplateAuthorityResponse> grantTemplateAuthority(GrantTemplateAuthorityRequest request);
 
     CompletableFuture<GrantUserPermissionResponse> grantUserPermission(GrantUserPermissionRequest request);
 
@@ -504,6 +512,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RetryDataCorrectPreCheckResponse> retryDataCorrectPreCheck(RetryDataCorrectPreCheckRequest request);
 
+    CompletableFuture<RevokeTemplateAuthorityResponse> revokeTemplateAuthority(RevokeTemplateAuthorityRequest request);
+
     CompletableFuture<RevokeUserPermissionResponse> revokeUserPermission(RevokeUserPermissionRequest request);
 
     CompletableFuture<SearchDatabaseResponse> searchDatabase(SearchDatabaseRequest request);
@@ -523,6 +533,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SyncDatabaseMetaResponse> syncDatabaseMeta(SyncDatabaseMetaRequest request);
 
     CompletableFuture<SyncInstanceMetaResponse> syncInstanceMeta(SyncInstanceMetaRequest request);
+
+    CompletableFuture<UpdateAuthorityTemplateResponse> updateAuthorityTemplate(UpdateAuthorityTemplateRequest request);
 
     /**
       * Before you call the UpdateInstance operation, call the [GetInstance](~~141567~~) or [ListInstances](~~141936~~) operation to obtain the complete information about the instance.

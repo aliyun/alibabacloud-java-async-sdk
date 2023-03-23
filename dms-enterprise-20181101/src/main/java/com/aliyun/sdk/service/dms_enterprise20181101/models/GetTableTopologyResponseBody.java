@@ -86,7 +86,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         private TableTopology tableTopology; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * TableTopology.
+         * The topology information.
          */
         public Builder tableTopology(TableTopology tableTopology) {
             this.tableTopology = tableTopology;
@@ -278,7 +278,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             private String tableNameList; 
 
             /**
-             * DbId.
+             * The ID of the physical database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -286,7 +286,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -294,7 +294,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbSearchName.
+             * The name that is used to search for the database.
              */
             public Builder dbSearchName(String dbSearchName) {
                 this.dbSearchName = dbSearchName;
@@ -302,7 +302,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The database engine.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -310,7 +310,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the physical database belongs.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -318,7 +318,14 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceResourceId.
+             * The ID of the resource related to the instance. The resource corresponds with the database instance type returned in the InstanceSource parameter.
+             * <p>
+             * 
+             * *   **RDS**:The ID of the ApsaraDB RDS instance.
+             * *   **ECS_OWN**: The ID of the Elastic Compute Service (ECS) instance.
+             * *   **PUBLIC_OWN**: This parameter is left empty for self-managed database instances that are connected over the Internet.
+             * *   **VPC_ID**:The ID of the virtual private cloud (VPC).
+             * *   **GATEWAY**: The ID of the database gateway.
              */
             public Builder instanceResourceId(String instanceResourceId) {
                 this.instanceResourceId = instanceResourceId;
@@ -326,7 +333,14 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSource.
+             * The type of the database instance. Valid values:
+             * <p>
+             * 
+             * *   **RDS**: an ApsaraDB RDS instance.
+             * *   **ECS_OWN**: a self-managed database that is deployed on an ECS instance
+             * *   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.
+             * *   **VPC_ID**: a self-managed database instance in a VPC that is connected over Express Connect circuits.
+             * *   **GATEWAY**: a database instance connected by using a database gateway.
              */
             public Builder instanceSource(String instanceSource) {
                 this.instanceSource = instanceSource;
@@ -334,7 +348,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -342,7 +356,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableCount.
+             * The number of tables.
              */
             public Builder tableCount(Long tableCount) {
                 this.tableCount = tableCount;
@@ -350,7 +364,12 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableNameExpr.
+             * The expression of the names of logical tables.
+             * <p>
+             * 
+             * **
+             * 
+             * **Description**This parameter is not returned for physical tables.
              */
             public Builder tableNameExpr(String tableNameExpr) {
                 this.tableNameExpr = tableNameExpr;
@@ -358,7 +377,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableNameList.
+             * The names of tables.
+             * <p>
+             * 
+             * > The table names are separated by commas (,).
              */
             public Builder tableNameList(String tableNameList) {
                 this.tableNameList = tableNameList;
@@ -435,7 +457,11 @@ public class GetTableTopologyResponseBody extends TeaModel {
             private java.util.List < TableTopologyInfoList> tableTopologyInfoList; 
 
             /**
-             * Logic.
+             * Indicates whether the table is a logical table. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -443,7 +469,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The GUID of the table in DMS.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -451,7 +477,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -459,7 +485,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableTopologyInfoList.
+             * Information of the topology of the table.
              */
             public Builder tableTopologyInfoList(java.util.List < TableTopologyInfoList> tableTopologyInfoList) {
                 this.tableTopologyInfoList = tableTopologyInfoList;

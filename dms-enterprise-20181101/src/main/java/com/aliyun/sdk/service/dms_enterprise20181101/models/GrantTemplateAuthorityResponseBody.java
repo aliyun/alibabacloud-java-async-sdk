@@ -7,31 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateTaskResponseBody} extends {@link TeaModel}
+ * {@link GrantTemplateAuthorityResponseBody} extends {@link TeaModel}
  *
- * <p>CreateTaskResponseBody</p>
+ * <p>GrantTemplateAuthorityResponseBody</p>
  */
-public class CreateTaskResponseBody extends TeaModel {
+public class GrantTemplateAuthorityResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
     @NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("NodeId")
-    private Long nodeId;
-
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("Result")
+    private Boolean result;
 
     @NameInMap("Success")
     private Boolean success;
 
-    private CreateTaskResponseBody(Builder builder) {
+    private GrantTemplateAuthorityResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
-        this.nodeId = builder.nodeId;
         this.requestId = builder.requestId;
+        this.result = builder.result;
         this.success = builder.success;
     }
 
@@ -39,7 +39,7 @@ public class CreateTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateTaskResponseBody create() {
+    public static GrantTemplateAuthorityResponseBody create() {
         return builder().build();
     }
 
@@ -58,17 +58,17 @@ public class CreateTaskResponseBody extends TeaModel {
     }
 
     /**
-     * @return nodeId
-     */
-    public Long getNodeId() {
-        return this.nodeId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return result
+     */
+    public Boolean getResult() {
+        return this.result;
     }
 
     /**
@@ -81,12 +81,12 @@ public class CreateTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private Long nodeId; 
         private String requestId; 
+        private Boolean result; 
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,15 +102,7 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task node returned when the task was created.
-         */
-        public Builder nodeId(Long nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-
-        /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,19 +110,23 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * Result.
+         */
+        public Builder result(Boolean result) {
+            this.result = result;
+            return this;
+        }
+
+        /**
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateTaskResponseBody build() {
-            return new CreateTaskResponseBody(this);
+        public GrantTemplateAuthorityResponseBody build() {
+            return new GrantTemplateAuthorityResponseBody(this);
         } 
 
     } 

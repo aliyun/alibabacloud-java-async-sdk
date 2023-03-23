@@ -7,28 +7,33 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetLogicDatabaseRequest} extends {@link RequestModel}
+ * {@link CreateAuthorityTemplateRequest} extends {@link RequestModel}
  *
- * <p>GetLogicDatabaseRequest</p>
+ * <p>CreateAuthorityTemplateRequest</p>
  */
-public class GetLogicDatabaseRequest extends Request {
+public class CreateAuthorityTemplateRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("DbId")
+    @NameInMap("Description")
+    private String description;
+
+    @Query
+    @NameInMap("Name")
     @Validation(required = true)
-    private String dbId;
+    private String name;
 
     @Query
     @NameInMap("Tid")
     private Long tid;
 
-    private GetLogicDatabaseRequest(Builder builder) {
+    private CreateAuthorityTemplateRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.dbId = builder.dbId;
+        this.description = builder.description;
+        this.name = builder.name;
         this.tid = builder.tid;
     }
 
@@ -36,7 +41,7 @@ public class GetLogicDatabaseRequest extends Request {
         return new Builder();
     }
 
-    public static GetLogicDatabaseRequest create() {
+    public static CreateAuthorityTemplateRequest create() {
         return builder().build();
     }
 
@@ -53,10 +58,17 @@ public class GetLogicDatabaseRequest extends Request {
     }
 
     /**
-     * @return dbId
+     * @return description
      */
-    public String getDbId() {
-        return this.dbId;
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -66,19 +78,21 @@ public class GetLogicDatabaseRequest extends Request {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetLogicDatabaseRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateAuthorityTemplateRequest, Builder> {
         private String regionId; 
-        private String dbId; 
+        private String description; 
+        private String name; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetLogicDatabaseRequest request) {
+        private Builder(CreateAuthorityTemplateRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.dbId = request.dbId;
+            this.description = request.description;
+            this.name = request.name;
             this.tid = request.tid;
         } 
 
@@ -92,19 +106,25 @@ public class GetLogicDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the logical database. You can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the ID of the logical database.
+         * Description.
          */
-        public Builder dbId(String dbId) {
-            this.putQueryParameter("DbId", dbId);
-            this.dbId = dbId;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -113,8 +133,8 @@ public class GetLogicDatabaseRequest extends Request {
         }
 
         @Override
-        public GetLogicDatabaseRequest build() {
-            return new GetLogicDatabaseRequest(this);
+        public CreateAuthorityTemplateRequest build() {
+            return new CreateAuthorityTemplateRequest(this);
         } 
 
     } 

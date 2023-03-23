@@ -86,7 +86,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * The status code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the logical database.
+         * The details of the logical database.
          */
         public Builder logicDatabase(LogicDatabase logicDatabase) {
             this.logicDatabase = logicDatabase;
@@ -118,11 +118,11 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * - true: The request is successful.
-         * - false: The request fails.
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -409,7 +409,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseIds.
+             * The IDs of database shards of the logical database.
              */
             public Builder databaseIds(DatabaseIds databaseIds) {
                 this.databaseIds = databaseIds;
@@ -417,7 +417,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. For more information about the valid values of the DbType parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).
+             * The database engine. For more information about the valid values of the DbType parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -428,14 +428,14 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
              * The type of the environment to which the database belongs. Valid values:
              * <p>
              * 
-             * - product: production environment
-             * - dev: development environment
-             * - pre: staging environment
-             * - test: test environment
-             * - sit: SIT environment
-             * - uat: user acceptance testing (UAT) environment
-             * - pet: stress testing environment
-             * - stag: STAG environment
+             * *   product: production environment
+             * *   dev: development environment
+             * *   pre: pre-release environment
+             * *   test: test environment
+             * *   sit: system integration testing (SIT) environment
+             * *   uat: user acceptance testing (UAT) environment
+             * *   pet: stress testing environment
+             * *   stag: staging environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;

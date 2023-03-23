@@ -105,7 +105,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -114,7 +114,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * The UID of the user. You can view your UID by moving the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console.
+         * The UID of the Alibaba Cloud account. You can view your UID by moving the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);
