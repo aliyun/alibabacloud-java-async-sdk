@@ -12,7 +12,7 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>DeleteProjectRequest</p>
  */
 public class DeleteProjectRequest extends Request {
-    @Query
+    @Host
     @NameInMap("project")
     @Validation(required = true)
     private String project;
@@ -58,7 +58,7 @@ public class DeleteProjectRequest extends Request {
          * projetc 名称。
          */
         public Builder project(String project) {
-            this.putQueryParameter("project", project);
+            this.putHostParameter("project", project);
             this.project = project;
             return this;
         }

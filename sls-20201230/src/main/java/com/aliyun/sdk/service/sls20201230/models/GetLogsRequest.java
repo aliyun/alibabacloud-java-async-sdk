@@ -25,7 +25,7 @@ public class GetLogsRequest extends Request {
     @Query
     @NameInMap("from")
     @Validation(required = true)
-    private Long from;
+    private Integer from;
 
     @Query
     @NameInMap("line")
@@ -51,7 +51,7 @@ public class GetLogsRequest extends Request {
     @Query
     @NameInMap("to")
     @Validation(required = true)
-    private Long to;
+    private Integer to;
 
     @Query
     @NameInMap("topic")
@@ -101,7 +101,7 @@ public class GetLogsRequest extends Request {
     /**
      * @return from
      */
-    public Long getFrom() {
+    public Integer getFrom() {
         return this.from;
     }
 
@@ -143,7 +143,7 @@ public class GetLogsRequest extends Request {
     /**
      * @return to
      */
-    public Long getTo() {
+    public Integer getTo() {
         return this.to;
     }
 
@@ -157,13 +157,13 @@ public class GetLogsRequest extends Request {
     public static final class Builder extends Request.Builder<GetLogsRequest, Builder> {
         private String project; 
         private String logstore; 
-        private Long from; 
+        private Integer from; 
         private Long line; 
         private Long offset; 
         private Boolean powerSql; 
         private String query; 
         private Boolean reverse; 
-        private Long to; 
+        private Integer to; 
         private String topic; 
 
         private Builder() {
@@ -209,7 +209,7 @@ public class GetLogsRequest extends Request {
          * 请求参数from和to定义的时间区间遵循左闭右开原则，即该时间区间包括区间开始时间点，但不包括区间结束时间点。如果from和to的值相同，则为无效区间，函数直接返回错误。
          * Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
          */
-        public Builder from(Long from) {
+        public Builder from(Integer from) {
             this.putQueryParameter("from", from);
             this.from = from;
             return this;
@@ -286,7 +286,7 @@ public class GetLogsRequest extends Request {
          * 请求参数from和to定义的时间区间遵循左闭右开原则，即该时间区间包括区间开始时间点，但不包括区间结束时间点。如果from和to的值相同，则为无效区间，函数直接返回错误。
          * Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
          */
-        public Builder to(Long to) {
+        public Builder to(Integer to) {
             this.putQueryParameter("to", to);
             this.to = to;
             return this;
