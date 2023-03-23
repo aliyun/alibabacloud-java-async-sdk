@@ -58,7 +58,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about request logs returned.
+         * The list of request logs.
          */
         public Builder requestLogs(RequestLogs requestLogs) {
             this.requestLogs = requestLogs;
@@ -77,6 +77,21 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
         @NameInMap("ApiName")
         private String apiName;
+
+        @NameInMap("AppName")
+        private String appName;
+
+        @NameInMap("BackendRequestEnd")
+        private Long backendRequestEnd;
+
+        @NameInMap("BackendRequestStart")
+        private Long backendRequestStart;
+
+        @NameInMap("BackendResponseEnd")
+        private Long backendResponseEnd;
+
+        @NameInMap("BackendResponseStart")
+        private Long backendResponseStart;
 
         @NameInMap("ClientIp")
         private String clientIp;
@@ -104,6 +119,18 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
         @NameInMap("Exception")
         private String exception;
+
+        @NameInMap("FrontRequestEnd")
+        private Long frontRequestEnd;
+
+        @NameInMap("FrontRequestStart")
+        private Long frontRequestStart;
+
+        @NameInMap("FrontResponseEnd")
+        private Long frontResponseEnd;
+
+        @NameInMap("FrontResponseStart")
+        private Long frontResponseStart;
 
         @NameInMap("GroupId")
         private String groupId;
@@ -180,6 +207,11 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         private RequestLog(Builder builder) {
             this.apiId = builder.apiId;
             this.apiName = builder.apiName;
+            this.appName = builder.appName;
+            this.backendRequestEnd = builder.backendRequestEnd;
+            this.backendRequestStart = builder.backendRequestStart;
+            this.backendResponseEnd = builder.backendResponseEnd;
+            this.backendResponseStart = builder.backendResponseStart;
             this.clientIp = builder.clientIp;
             this.clientNonce = builder.clientNonce;
             this.consumerAppId = builder.consumerAppId;
@@ -189,6 +221,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
             this.exception = builder.exception;
+            this.frontRequestEnd = builder.frontRequestEnd;
+            this.frontRequestStart = builder.frontRequestStart;
+            this.frontResponseEnd = builder.frontResponseEnd;
+            this.frontResponseStart = builder.frontResponseStart;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
             this.httpMethod = builder.httpMethod;
@@ -235,6 +271,41 @@ public class QueryRequestLogsResponseBody extends TeaModel {
          */
         public String getApiName() {
             return this.apiName;
+        }
+
+        /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
+        }
+
+        /**
+         * @return backendRequestEnd
+         */
+        public Long getBackendRequestEnd() {
+            return this.backendRequestEnd;
+        }
+
+        /**
+         * @return backendRequestStart
+         */
+        public Long getBackendRequestStart() {
+            return this.backendRequestStart;
+        }
+
+        /**
+         * @return backendResponseEnd
+         */
+        public Long getBackendResponseEnd() {
+            return this.backendResponseEnd;
+        }
+
+        /**
+         * @return backendResponseStart
+         */
+        public Long getBackendResponseStart() {
+            return this.backendResponseStart;
         }
 
         /**
@@ -298,6 +369,34 @@ public class QueryRequestLogsResponseBody extends TeaModel {
          */
         public String getException() {
             return this.exception;
+        }
+
+        /**
+         * @return frontRequestEnd
+         */
+        public Long getFrontRequestEnd() {
+            return this.frontRequestEnd;
+        }
+
+        /**
+         * @return frontRequestStart
+         */
+        public Long getFrontRequestStart() {
+            return this.frontRequestStart;
+        }
+
+        /**
+         * @return frontResponseEnd
+         */
+        public Long getFrontResponseEnd() {
+            return this.frontResponseEnd;
+        }
+
+        /**
+         * @return frontResponseStart
+         */
+        public Long getFrontResponseStart() {
+            return this.frontResponseStart;
         }
 
         /**
@@ -471,6 +570,11 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public static final class Builder {
             private String apiId; 
             private String apiName; 
+            private String appName; 
+            private Long backendRequestEnd; 
+            private Long backendRequestStart; 
+            private Long backendResponseEnd; 
+            private Long backendResponseStart; 
             private String clientIp; 
             private String clientNonce; 
             private String consumerAppId; 
@@ -480,6 +584,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String exception; 
+            private Long frontRequestEnd; 
+            private Long frontRequestStart; 
+            private Long frontResponseEnd; 
+            private Long frontResponseStart; 
             private String groupId; 
             private String groupName; 
             private String httpMethod; 
@@ -514,7 +622,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * The name of the API
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -522,7 +630,47 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that sent the request.
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
+
+            /**
+             * BackendRequestEnd.
+             */
+            public Builder backendRequestEnd(Long backendRequestEnd) {
+                this.backendRequestEnd = backendRequestEnd;
+                return this;
+            }
+
+            /**
+             * BackendRequestStart.
+             */
+            public Builder backendRequestStart(Long backendRequestStart) {
+                this.backendRequestStart = backendRequestStart;
+                return this;
+            }
+
+            /**
+             * BackendResponseEnd.
+             */
+            public Builder backendResponseEnd(Long backendResponseEnd) {
+                this.backendResponseEnd = backendResponseEnd;
+                return this;
+            }
+
+            /**
+             * BackendResponseStart.
+             */
+            public Builder backendResponseStart(Long backendResponseStart) {
+                this.backendResponseStart = backendResponseStart;
+                return this;
+            }
+
+            /**
+             * The IP address of the client that sends the request.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -562,7 +710,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The requested domain name.
+             * The domain name of the request.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -570,7 +718,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * The error code returned if the request failed.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -586,7 +734,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The specific error message that was returned by the backend service.
+             * The specific error message returned by the backend service.
              */
             public Builder exception(String exception) {
                 this.exception = exception;
@@ -594,7 +742,39 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group to which the API belongs.
+             * FrontRequestEnd.
+             */
+            public Builder frontRequestEnd(Long frontRequestEnd) {
+                this.frontRequestEnd = frontRequestEnd;
+                return this;
+            }
+
+            /**
+             * FrontRequestStart.
+             */
+            public Builder frontRequestStart(Long frontRequestStart) {
+                this.frontRequestStart = frontRequestStart;
+                return this;
+            }
+
+            /**
+             * FrontResponseEnd.
+             */
+            public Builder frontResponseEnd(Long frontResponseEnd) {
+                this.frontResponseEnd = frontResponseEnd;
+                return this;
+            }
+
+            /**
+             * FrontResponseStart.
+             */
+            public Builder frontResponseStart(Long frontResponseStart) {
+                this.frontResponseStart = frontResponseStart;
+                return this;
+            }
+
+            /**
+             * The ID of the API group to which the API belongs.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -602,7 +782,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * The name of the API group to which the API belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -626,7 +806,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, initialRequestId in the log of API-2 represents the ID of the request from API-1.
+             * The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, the initialRequestId parameter in the log of API-2 indicates the ID of the request from API-1.
              */
             public Builder initialRequestId(String initialRequestId) {
                 this.initialRequestId = initialRequestId;
@@ -634,7 +814,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway instance to which the API belongs.
+             * The ID of the API Gateway instance to which the API belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -658,7 +838,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The request body. The maximum size of the request body is 1,024 bytes.
+             * The request body. A request body cannot exceed 1,024 bytes in size.
              */
             public Builder requestBody(String requestBody) {
                 this.requestBody = requestBody;
@@ -706,7 +886,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The request time. The time is displayed in UTC.
+             * The request time, in UTC.
              */
             public Builder requestTime(String requestTime) {
                 this.requestTime = requestTime;
@@ -714,7 +894,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The response body. The maximum size of the response body is 1,024 bytes.
+             * The response body. A response body cannot exceed 1,024 bytes in size.
              */
             public Builder responseBody(String responseBody) {
                 this.responseBody = responseBody;
@@ -722,7 +902,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The response headers.
+             * The headers in the API response.
              */
             public Builder responseHeaders(String responseHeaders) {
                 this.responseHeaders = responseHeaders;
@@ -738,7 +918,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total time that was consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
+             * The total time consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
              */
             public Builder serviceLatency(String serviceLatency) {
                 this.serviceLatency = serviceLatency;
@@ -770,7 +950,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total period of time that the request consumed. Unit: milliseconds.
+             * The total time consumed by the request. Unit: milliseconds.
              */
             public Builder totalLatency(String totalLatency) {
                 this.totalLatency = totalLatency;

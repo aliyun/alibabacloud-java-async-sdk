@@ -86,7 +86,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the ACL. The information is an array of IpControlInfo data. The information does not include specific policies.
+         * The information about the ACL. The information is an array that consists of IpControlInfo data. The information does not include specific policies.
          */
         public Builder ipControlInfos(IpControlInfos ipControlInfos) {
             this.ipControlInfos = ipControlInfos;
@@ -238,7 +238,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * Description
+             * The description of the ACL.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +278,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the API is located.
+             * The ID of the region in which the ACL is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

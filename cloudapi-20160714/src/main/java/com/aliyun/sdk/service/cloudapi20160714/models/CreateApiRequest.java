@@ -705,8 +705,6 @@ public class CreateApiRequest extends Request {
          * *   **REGISTER**: registered APIs
          * *   **UNREGISTER**: unregistered APIs
          * *   **NOTIFY**: downstream notification APIs
-         * 
-         * For more information, see [Two-way communication](~~66031~~).
          */
         public Builder webSocketApiType(String webSocketApiType) {
             this.putQueryParameter("WebSocketApiType", webSocketApiType);

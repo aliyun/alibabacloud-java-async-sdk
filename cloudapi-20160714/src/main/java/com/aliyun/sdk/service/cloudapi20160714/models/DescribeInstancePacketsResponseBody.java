@@ -50,7 +50,7 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstancePackets.
+         * The list of inbound and outbound data packets in the instance.
          */
         public Builder instancePackets(InstancePackets instancePackets) {
             this.instancePackets = instancePackets;
@@ -58,7 +58,7 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * Item.
+             * The metric. Valid values:
+             * <p>
+             * 
+             * *   InstancePacketRX: inbound data packets
+             * *   InstancePacketTX: outbound data packets
              */
             public Builder item(String item) {
                 this.item = item;
@@ -130,7 +134,7 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemTime.
+             * The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -138,7 +142,7 @@ public class DescribeInstancePacketsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The number of inbound and outbound data packets in the instance.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

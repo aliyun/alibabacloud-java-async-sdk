@@ -50,7 +50,12 @@ public class ModifyVpcAccessAndUpdateApisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The task ID.
+         * The ID of the asynchronous task.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If the associated API is updated, you can use the task ID in the **DescribeUpdateVpcInfoTask** operation to query the update result.
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;

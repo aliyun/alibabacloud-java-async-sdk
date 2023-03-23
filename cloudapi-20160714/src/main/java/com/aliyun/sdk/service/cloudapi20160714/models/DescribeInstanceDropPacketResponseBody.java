@@ -50,7 +50,7 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceDropPacket.
+         * The list of dropped packets in the instance.
          */
         public Builder instanceDropPacket(InstanceDropPacket instanceDropPacket) {
             this.instanceDropPacket = instanceDropPacket;
@@ -58,7 +58,7 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * Item.
+             * The metric. Valid values:
+             * <p>
+             * 
+             * *   InstanceDropPacketRX: the number of inbound packets dropped in the instance per second.
+             * *   InstanceDropPacketTX: the number of outbound packets dropped in the instance per second.
              */
             public Builder item(String item) {
                 this.item = item;
@@ -130,7 +134,7 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             }
 
             /**
-             * ItemTime.
+             * The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -138,7 +142,7 @@ public class DescribeInstanceDropPacketResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The number of dropped packets in the instance.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

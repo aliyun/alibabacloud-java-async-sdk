@@ -50,7 +50,7 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceLatency.
+         * The list of average latencies in the instance.
          */
         public Builder instanceLatency(InstanceLatency instanceLatency) {
             this.instanceLatency = instanceLatency;
@@ -58,7 +58,7 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * Item.
+             * The metric. Valid values:
+             * <p>
+             * 
+             * *   gatewayLatency API: the processing latency of API Gateway
+             * *   latency: the processing latency of the backend service.
              */
             public Builder item(String item) {
                 this.item = item;
@@ -130,7 +134,7 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
             }
 
             /**
-             * ItemTime.
+             * The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -138,7 +142,7 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The value of the average latency.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

@@ -24,6 +24,12 @@ public class DescribeDomainResponseBody extends TeaModel {
     @NameInMap("CertificatePrivateKey")
     private String certificatePrivateKey;
 
+    @NameInMap("CertificateValidEnd")
+    private Long certificateValidEnd;
+
+    @NameInMap("CertificateValidStart")
+    private Long certificateValidStart;
+
     @NameInMap("DomainBindingStatus")
     private String domainBindingStatus;
 
@@ -56,6 +62,8 @@ public class DescribeDomainResponseBody extends TeaModel {
         this.certificateId = builder.certificateId;
         this.certificateName = builder.certificateName;
         this.certificatePrivateKey = builder.certificatePrivateKey;
+        this.certificateValidEnd = builder.certificateValidEnd;
+        this.certificateValidStart = builder.certificateValidStart;
         this.domainBindingStatus = builder.domainBindingStatus;
         this.domainCNAMEStatus = builder.domainCNAMEStatus;
         this.domainLegalStatus = builder.domainLegalStatus;
@@ -101,6 +109,20 @@ public class DescribeDomainResponseBody extends TeaModel {
      */
     public String getCertificatePrivateKey() {
         return this.certificatePrivateKey;
+    }
+
+    /**
+     * @return certificateValidEnd
+     */
+    public Long getCertificateValidEnd() {
+        return this.certificateValidEnd;
+    }
+
+    /**
+     * @return certificateValidStart
+     */
+    public Long getCertificateValidStart() {
+        return this.certificateValidStart;
     }
 
     /**
@@ -171,6 +193,8 @@ public class DescribeDomainResponseBody extends TeaModel {
         private String certificateId; 
         private String certificateName; 
         private String certificatePrivateKey; 
+        private Long certificateValidEnd; 
+        private Long certificateValidStart; 
         private String domainBindingStatus; 
         private String domainCNAMEStatus; 
         private String domainLegalStatus; 
@@ -214,6 +238,22 @@ public class DescribeDomainResponseBody extends TeaModel {
          */
         public Builder certificatePrivateKey(String certificatePrivateKey) {
             this.certificatePrivateKey = certificatePrivateKey;
+            return this;
+        }
+
+        /**
+         * CertificateValidEnd.
+         */
+        public Builder certificateValidEnd(Long certificateValidEnd) {
+            this.certificateValidEnd = certificateValidEnd;
+            return this;
+        }
+
+        /**
+         * CertificateValidStart.
+         */
+        public Builder certificateValidStart(Long certificateValidStart) {
+            this.certificateValidStart = certificateValidStart;
             return this;
         }
 

@@ -50,7 +50,7 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceQps.
+         * The list of requests sent to the APIs in the instance.
          */
         public Builder instanceQps(InstanceQps instanceQps) {
             this.instanceQps = instanceQps;
@@ -58,7 +58,7 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * ItemTime.
+             * The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +118,7 @@ public class DescribeInstanceQpsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The number of requests sent to the APIs in the instance.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

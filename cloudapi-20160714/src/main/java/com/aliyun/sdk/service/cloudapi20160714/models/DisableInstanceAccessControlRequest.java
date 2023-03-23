@@ -107,7 +107,7 @@ public class DisableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * AddressIPVersion.
+         * The IP version. Valid values: **ipv4** and **ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);

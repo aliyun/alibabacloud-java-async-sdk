@@ -545,7 +545,7 @@ public class ModifyApiConfigurationRequest extends Request {
         } 
 
         /**
-         * If **AuthType** is set to **APP**, this value must be passed to specify the signature algorithm. If you do not specify a value, HmacSHA256 is used by default. Valid values:
+         * If the **AuthType** parameter is set to **APP**, you must include this parameter to specify the signature algorithm. If you do not specify a value, HmacSHA256 is used by default. Valid values:
          * <p>
          * 
          * *   HmacSHA256
@@ -576,13 +576,13 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * If **AuthType** is set to **APP**, the valid values are:
+         * If the **AuthType** parameter is set to **APP**, the valid values are:
          * <p>
          * 
-         * *   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.
+         * *   **DEFAULT**: The default value that is used if no other values are passed. This value indicates that the settings of the group are used.
          * *   **DISABLE**: The authentication is disabled.
-         * *   **HEADER: AppCode can be placed in the Header parameter for authentication.**
-         * *   **HEADER_QUERY: AppCode can be placed in the Header or Query parameter for authentication.
+         * *   **HEADER**: AppCode can be placed in the Header parameter for authentication.
+         * *   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.
          */
         public Builder appCodeAuthType(String appCodeAuthType) {
             this.putQueryParameter("AppCodeAuthType", appCodeAuthType);
@@ -606,7 +606,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the backend service. This parameter takes effect only when UseBackendService is set to TRUE.
+         * The name of the backend service. This parameter takes effect only when the UseBackendService parameter is set to TRUE.
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -615,10 +615,10 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * This parameter takes effect only when the RequestMode parameter is set to MAPPING.********
+         * This parameter takes effect only when the **RequestMode** parameter is set to **MAPPING**.
          * <p>
          * 
-         * The server data transmission method used for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data in key-value pairs is transmitted as forms. STREAM indicates that data is transmitted as byte streams.
+         * The format in which data is transmitted to the server for POST and PUT requests. Valid values: **FORM** and **STREAM**. FORM indicates that data is transmitted in the key-value pair format. STREAM indicates that data is transmitted as byte streams.
          */
         public Builder bodyFormat(String bodyFormat) {
             this.putQueryParameter("BodyFormat", bodyFormat);
@@ -667,9 +667,9 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * *   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.
+         * *   Specifies whether to call the API only in an internal network. If the **DisableInternet** parameter is set to **true**, the API can be called only in an internal network.
          * <p>
-         * *   If you set **DisableInternet** to **false**, the limit if lifted.
+         * *   If the **DisableInternet** parameter is set to **false**, the API can be called over the Internet and in an internal network.
          */
         public Builder disableInternet(Boolean disableInternet) {
             this.putQueryParameter("DisableInternet", disableInternet);
@@ -699,9 +699,9 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
+         * *   Specifies whether to forcibly check X-Ca-Nonce. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcibly checked. X-Ca-Nonce is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
          * <p>
-         * *   If you set **ForceNonceCheck** to **false**, the check is not performed. If you do not set this parameter, the original value is used.
+         * *   If the **ForceNonceCheck** parameter is set to **false**, X-Ca-Nonce is not checked. If you do not modify this parameter when you modify an API, the original value is used.
          */
         public Builder forceNonceCheck(Boolean forceNonceCheck) {
             this.putQueryParameter("ForceNonceCheck", forceNonceCheck);
@@ -799,7 +799,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * The API request path. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the API request path is ` /object/add  `.
+         * The path of the API request. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the path of the API request is `/object/add`.
          */
         public Builder requestPath(String requestPath) {
             this.putQueryParameter("RequestPath", requestPath);
@@ -868,11 +868,11 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * The protocols that are used to access backend services. Valid values:
+         * The protocol that is used to access backend services. Valid values:
          * <p>
          * 
-         * *   HTTP: for backend services that use HTTP or HTTPS
-         * *   VPC: for backend services that use VPC
+         * *   Http: for backend services that use HTTP or HTTPS
+         * *   Vpc: for backend services that use VPC
          * *   FC: for Function Compute
          * *   OSS: for Object Storage Service
          * *   Mock: for backend services that use the Mock mode
@@ -887,7 +887,7 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * The timeout period of the backend service, in millisecond.
+         * The timeout period of the backend service. Unit: milliseconds.
          */
         public Builder serviceTimeout(Integer serviceTimeout) {
             this.putQueryParameter("ServiceTimeout", serviceTimeout);
@@ -896,11 +896,11 @@ public class ModifyApiConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the created backend service. Valid values:
+         * Specifies whether to use the information about the created backend service. Valid values:
          * <p>
          * 
-         * *   TRUE: The created backend service is used.
-         * *   FALSE: The custom backend service information is used.
+         * *   TRUE: uses the information about the created backend service.
+         * *   FALSE: uses the information about the custom backend service.
          */
         public Builder useBackendService(Boolean useBackendService) {
             this.putQueryParameter("UseBackendService", useBackendService);
@@ -912,8 +912,8 @@ public class ModifyApiConfigurationRequest extends Request {
          * Specifies whether to make the API public. Valid values:
          * <p>
          * 
-         * *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
-         * *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+         * *   **PUBLIC:** The API is public. If this parameter is set to PUBLIC, the API is displayed on the APIs page for all users after the API is published to the production environment.
+         * *   **PRIVATE:** The API is private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);

@@ -50,7 +50,7 @@ public class DescribeInstanceDropConnectionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceDropConnections.
+         * The list of dropped connections in the instance.
          */
         public Builder instanceDropConnections(InstanceDropConnections instanceDropConnections) {
             this.instanceDropConnections = instanceDropConnections;
@@ -58,7 +58,7 @@ public class DescribeInstanceDropConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeInstanceDropConnectionsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * ItemTime.
+             * The monitoring time. The time follows the ISO 8601 standard. Format: YYYY-MM-DDThh:mm:ssZ
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +118,7 @@ public class DescribeInstanceDropConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The number of dropped packets in the instance.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

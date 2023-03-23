@@ -306,8 +306,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApiHistoriesResponse> describeApiHistories(DescribeApiHistoriesRequest request);
 
     /**
-      * *   This API is intended for API providers.
-      * *   API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.
+      * You can call this operation to query the definition of a specified published version of an API.
+      * *   This operation is intended for API providers.
+      * *   Each time an API is published, API Gateway records the publishing details, such as the time and the API definition. You can use the version number obtained from other API operations to query the details of an API definition that is published on a specific occasion.
       *
      */
     CompletableFuture<DescribeApiHistoryResponse> describeApiHistory(DescribeApiHistoryRequest request);
@@ -484,9 +485,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   This operation is intended for API providers.
-      * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+      * *   This operation is used to query the ACLs in a region. Region is a system parameter.
       * *   You can filter the query results by ACL ID, name, or type.
-      * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the [DescribeIpControlPolicyItems](https://help.aliyun.com/document_detail/65532.html?spm=a2c4g.11186623.2.14.615b13acrFZFaH) operation.
+      * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~65532~~) operation.
       *
      */
     CompletableFuture<DescribeIpControlsResponse> describeIpControls(DescribeIpControlsRequest request);
@@ -517,7 +518,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePluginsResponse> describePlugins(DescribePluginsRequest request);
 
     /**
-      * *   This API is intended for API providers.
+      * *   This operation is intended for API callers.
       * *   This operation supports pagination.
       *
      */
@@ -750,6 +751,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveVpcAccessAndAbolishApisResponse> removeVpcAccessAndAbolishApis(RemoveVpcAccessAndAbolishApisRequest request);
 
+    /**
+      * The new AppCode takes effect about 2 seconds after you call this operation.
+      *
+     */
     CompletableFuture<ResetAppCodeResponse> resetAppCode(ResetAppCodeRequest request);
 
     /**

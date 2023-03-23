@@ -23,6 +23,15 @@ public class DescribePluginsByApiRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    @Validation(maximum = 100, minimum = 1)
+    private Integer pageSize;
+
+    @Query
     @NameInMap("SecurityToken")
     private String securityToken;
 
@@ -35,6 +44,8 @@ public class DescribePluginsByApiRequest extends Request {
         super(builder);
         this.apiId = builder.apiId;
         this.groupId = builder.groupId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
         this.stageName = builder.stageName;
     }
@@ -67,6 +78,20 @@ public class DescribePluginsByApiRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -83,6 +108,8 @@ public class DescribePluginsByApiRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePluginsByApiRequest, Builder> {
         private String apiId; 
         private String groupId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String securityToken; 
         private String stageName; 
 
@@ -94,6 +121,8 @@ public class DescribePluginsByApiRequest extends Request {
             super(request);
             this.apiId = request.apiId;
             this.groupId = request.groupId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
             this.stageName = request.stageName;
         } 
@@ -108,11 +137,29 @@ public class DescribePluginsByApiRequest extends Request {
         }
 
         /**
-         * The ID of the group to which the API to be queried belongs.
+         * The ID of the group to which the API belongs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -126,12 +173,12 @@ public class DescribePluginsByApiRequest extends Request {
         }
 
         /**
-         * The runtime environment of the API. Valid values:
+         * The environment in which the API is running. Valid values:
          * <p>
          * 
-         * *   **RELEASE**
-         * *   **PRE: the pre-release environment**
-         * *   **TEST**
+         * *   **RELEASE**: production
+         * *   **PRE**: staging
+         * *   **TEST**: test
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

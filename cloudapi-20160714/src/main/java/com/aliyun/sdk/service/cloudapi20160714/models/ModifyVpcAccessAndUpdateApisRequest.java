@@ -176,7 +176,14 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The unique custom name for the authorization.
+         * The name of the VPC authorization.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.
+         * 
+         * *   You must set this parameter to the name of the current VPC authorization.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -186,6 +193,11 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
 
         /**
          * Specifies whether to update the associated API.
+         * <p>
+         * 
+         * **
+         * 
+         * **Warning:** If you want to update the VPC authorization of a published API, you must set this parameter to true. Otherwise, the update will not be synchronized to the backend service of the API.
          */
         public Builder needBatchWork(Boolean needBatchWork) {
             this.putQueryParameter("NeedBatchWork", needBatchWork);
@@ -194,7 +206,7 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The port number to be modified.
+         * The new port number.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -203,7 +215,12 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * Specifies whether to refresh the VPC authorization.
+         * Specifies whether to update the VPC authorization.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If the ID of the instance in your VPC is changed but the IP address of the instance remains unchanged, you can set this parameter to true to update the VPC authorization.
          */
         public Builder refresh(Boolean refresh) {
             this.putQueryParameter("Refresh", refresh);
@@ -221,7 +238,7 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The password.
+         * The token of the request.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -239,7 +256,7 @@ public class ModifyVpcAccessAndUpdateApisRequest extends Request {
         }
 
         /**
-         * The authorized backend host.
+         * The hostname of the backend service.
          */
         public Builder vpcTargetHostName(String vpcTargetHostName) {
             this.putQueryParameter("VpcTargetHostName", vpcTargetHostName);

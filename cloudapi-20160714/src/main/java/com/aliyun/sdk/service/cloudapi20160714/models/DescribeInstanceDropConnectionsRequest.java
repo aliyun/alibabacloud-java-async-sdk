@@ -114,7 +114,7 @@ public class DescribeInstanceDropConnectionsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +123,7 @@ public class DescribeInstanceDropConnectionsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the dedicated instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,7 +132,12 @@ public class DescribeInstanceDropConnectionsRequest extends Request {
         }
 
         /**
-         * SbcName.
+         * The statistical metric. Valid values:
+         * <p>
+         * 
+         * *   Maximum
+         * *   Minimum
+         * *   Average
          */
         public Builder sbcName(String sbcName) {
             this.putQueryParameter("SbcName", sbcName);
@@ -150,7 +155,7 @@ public class DescribeInstanceDropConnectionsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

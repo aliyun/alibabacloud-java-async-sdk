@@ -146,8 +146,8 @@ public class DescribeIpControlsRequest extends Request {
          * The type of the ACL. Valid values:
          * <p>
          * 
-         * *   **ALLOW**: an IP address whitelist
-         * *   **REFUSE**: an IP address blacklist
+         * *   **ALLOW**: a whitelist
+         * *   **REFUSE**: a blacklist
          */
         public Builder ipControlType(String ipControlType) {
             this.putQueryParameter("IpControlType", ipControlType);

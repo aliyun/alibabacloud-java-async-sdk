@@ -233,6 +233,168 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    public static class NetworkInterfaceAttribute extends TeaModel {
+        @NameInMap("CidrBlock")
+        private String cidrBlock;
+
+        @NameInMap("NetworkInterfaceId")
+        private String networkInterfaceId;
+
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @NameInMap("VswitchId")
+        private String vswitchId;
+
+        @NameInMap("ZoneId")
+        private String zoneId;
+
+        private NetworkInterfaceAttribute(Builder builder) {
+            this.cidrBlock = builder.cidrBlock;
+            this.networkInterfaceId = builder.networkInterfaceId;
+            this.securityGroupId = builder.securityGroupId;
+            this.vswitchId = builder.vswitchId;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaceAttribute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cidrBlock
+         */
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        /**
+         * @return networkInterfaceId
+         */
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String cidrBlock; 
+            private String networkInterfaceId; 
+            private String securityGroupId; 
+            private String vswitchId; 
+            private String zoneId; 
+
+            /**
+             * CidrBlock.
+             */
+            public Builder cidrBlock(String cidrBlock) {
+                this.cidrBlock = cidrBlock;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(String networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public NetworkInterfaceAttribute build() {
+                return new NetworkInterfaceAttribute(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkInterfaceAttributes extends TeaModel {
+        @NameInMap("NetworkInterfaceAttribute")
+        private java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute;
+
+        private NetworkInterfaceAttributes(Builder builder) {
+            this.networkInterfaceAttribute = builder.networkInterfaceAttribute;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaceAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkInterfaceAttribute
+         */
+        public java.util.List < NetworkInterfaceAttribute> getNetworkInterfaceAttribute() {
+            return this.networkInterfaceAttribute;
+        }
+
+        public static final class Builder {
+            private java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute; 
+
+            /**
+             * NetworkInterfaceAttribute.
+             */
+            public Builder networkInterfaceAttribute(java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute) {
+                this.networkInterfaceAttribute = networkInterfaceAttribute;
+                return this;
+            }
+
+            public NetworkInterfaceAttributes build() {
+                return new NetworkInterfaceAttributes(this);
+            } 
+
+        } 
+
+    }
     public static class InstanceAttribute extends TeaModel {
         @NameInMap("AclId")
         private String aclId;
@@ -249,8 +411,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClassicEgressAddress")
         private String classicEgressAddress;
 
+        @NameInMap("ConnectVpcId")
+        private String connectVpcId;
+
         @NameInMap("CreatedTime")
         private String createdTime;
+
+        @NameInMap("DedicatedInstanceType")
+        private String dedicatedInstanceType;
 
         @NameInMap("EgressIpv6Enable")
         private Boolean egressIpv6Enable;
@@ -276,6 +444,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
+        @NameInMap("InstanceCidrBlock")
+        private String instanceCidrBlock;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -299,6 +470,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("IntranetSegments")
         private String intranetSegments;
+
+        @NameInMap("NetworkInterfaceAttributes")
+        private NetworkInterfaceAttributes networkInterfaceAttributes;
 
         @NameInMap("RegionId")
         private String regionId;
@@ -342,7 +516,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.aclStatus = builder.aclStatus;
             this.aclType = builder.aclType;
             this.classicEgressAddress = builder.classicEgressAddress;
+            this.connectVpcId = builder.connectVpcId;
             this.createdTime = builder.createdTime;
+            this.dedicatedInstanceType = builder.dedicatedInstanceType;
             this.egressIpv6Enable = builder.egressIpv6Enable;
             this.expiredTime = builder.expiredTime;
             this.httpsPolicies = builder.httpsPolicies;
@@ -351,6 +527,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.IPV6AclStatus = builder.IPV6AclStatus;
             this.IPV6AclType = builder.IPV6AclType;
             this.instanceChargeType = builder.instanceChargeType;
+            this.instanceCidrBlock = builder.instanceCidrBlock;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceRpsLimit = builder.instanceRpsLimit;
@@ -359,6 +536,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.internetEgressAddress = builder.internetEgressAddress;
             this.intranetSegments = builder.intranetSegments;
+            this.networkInterfaceAttributes = builder.networkInterfaceAttributes;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.supportIpv6 = builder.supportIpv6;
@@ -417,10 +595,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return connectVpcId
+         */
+        public String getConnectVpcId() {
+            return this.connectVpcId;
+        }
+
+        /**
          * @return createdTime
          */
         public String getCreatedTime() {
             return this.createdTime;
+        }
+
+        /**
+         * @return dedicatedInstanceType
+         */
+        public String getDedicatedInstanceType() {
+            return this.dedicatedInstanceType;
         }
 
         /**
@@ -480,6 +672,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceCidrBlock
+         */
+        public String getInstanceCidrBlock() {
+            return this.instanceCidrBlock;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -533,6 +732,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getIntranetSegments() {
             return this.intranetSegments;
+        }
+
+        /**
+         * @return networkInterfaceAttributes
+         */
+        public NetworkInterfaceAttributes getNetworkInterfaceAttributes() {
+            return this.networkInterfaceAttributes;
         }
 
         /**
@@ -625,7 +831,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String aclStatus; 
             private String aclType; 
             private String classicEgressAddress; 
+            private String connectVpcId; 
             private String createdTime; 
+            private String dedicatedInstanceType; 
             private Boolean egressIpv6Enable; 
             private String expiredTime; 
             private String httpsPolicies; 
@@ -634,6 +842,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String IPV6AclStatus; 
             private String IPV6AclType; 
             private String instanceChargeType; 
+            private String instanceCidrBlock; 
             private String instanceId; 
             private String instanceName; 
             private Integer instanceRpsLimit; 
@@ -642,6 +851,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceType; 
             private String internetEgressAddress; 
             private String intranetSegments; 
+            private NetworkInterfaceAttributes networkInterfaceAttributes; 
             private String regionId; 
             private String status; 
             private Boolean supportIpv6; 
@@ -704,10 +914,26 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ConnectVpcId.
+             */
+            public Builder connectVpcId(String connectVpcId) {
+                this.connectVpcId = connectVpcId;
+                return this;
+            }
+
+            /**
              * The time when the instance was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
+                return this;
+            }
+
+            /**
+             * DedicatedInstanceType.
+             */
+            public Builder dedicatedInstanceType(String dedicatedInstanceType) {
+                this.dedicatedInstanceType = dedicatedInstanceType;
                 return this;
             }
 
@@ -780,6 +1006,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceCidrBlock.
+             */
+            public Builder instanceCidrBlock(String instanceCidrBlock) {
+                this.instanceCidrBlock = instanceCidrBlock;
+                return this;
+            }
+
+            /**
              * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
@@ -844,6 +1078,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder intranetSegments(String intranetSegments) {
                 this.intranetSegments = intranetSegments;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceAttributes.
+             */
+            public Builder networkInterfaceAttributes(NetworkInterfaceAttributes networkInterfaceAttributes) {
+                this.networkInterfaceAttributes = networkInterfaceAttributes;
                 return this;
             }
 

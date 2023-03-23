@@ -102,7 +102,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         }
 
         /**
-         * The returned plug-in information. It is an array consisting of PluginAttribute data.
+         * The plug-in information. The information is an array that consists of PluginAttribute data.
          */
         public Builder plugins(Plugins plugins) {
             this.plugins = plugins;
@@ -242,7 +242,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The creation time (UTC) of the plug-in.
+             * The time when the plug-in was created. The time is displayed in UTC.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -250,7 +250,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The plug-in description.
+             * The description of the plug-in.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +258,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the plug-in.
+             * The time when the plug-in was last modified. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -298,7 +298,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the plug-in is located.
+             * The region where the plug-in resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -38,10 +38,6 @@ public class CreateAppRequest extends Request {
     private String securityToken;
 
     @Query
-    @NameInMap("Source")
-    private String source;
-
-    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -53,7 +49,6 @@ public class CreateAppRequest extends Request {
         this.appSecret = builder.appSecret;
         this.description = builder.description;
         this.securityToken = builder.securityToken;
-        this.source = builder.source;
         this.tag = builder.tag;
     }
 
@@ -113,13 +108,6 @@ public class CreateAppRequest extends Request {
     }
 
     /**
-     * @return source
-     */
-    public String getSource() {
-        return this.source;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -133,7 +121,6 @@ public class CreateAppRequest extends Request {
         private String appSecret; 
         private String description; 
         private String securityToken; 
-        private String source; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -148,7 +135,6 @@ public class CreateAppRequest extends Request {
             this.appSecret = request.appSecret;
             this.description = request.description;
             this.securityToken = request.securityToken;
-            this.source = request.source;
             this.tag = request.tag;
         } 
 
@@ -203,15 +189,6 @@ public class CreateAppRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * The creation mode. An app can be created by using the console or calling the API operation.
-         */
-        public Builder source(String source) {
-            this.putQueryParameter("Source", source);
-            this.source = source;
             return this;
         }
 

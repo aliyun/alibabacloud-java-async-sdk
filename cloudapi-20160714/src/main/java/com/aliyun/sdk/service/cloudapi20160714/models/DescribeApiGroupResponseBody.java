@@ -42,6 +42,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("CustomerConfigs")
     private String customerConfigs;
 
+    @NameInMap("DedicatedInstanceType")
+    private String dedicatedInstanceType;
+
     @NameInMap("DefaultDomain")
     private String defaultDomain;
 
@@ -119,6 +122,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         this.customDomains = builder.customDomains;
         this.customTraceConfig = builder.customTraceConfig;
         this.customerConfigs = builder.customerConfigs;
+        this.dedicatedInstanceType = builder.dedicatedInstanceType;
         this.defaultDomain = builder.defaultDomain;
         this.description = builder.description;
         this.groupId = builder.groupId;
@@ -219,6 +223,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public String getCustomerConfigs() {
         return this.customerConfigs;
+    }
+
+    /**
+     * @return dedicatedInstanceType
+     */
+    public String getDedicatedInstanceType() {
+        return this.dedicatedInstanceType;
     }
 
     /**
@@ -386,6 +397,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private CustomDomains customDomains; 
         private String customTraceConfig; 
         private String customerConfigs; 
+        private String dedicatedInstanceType; 
         private String defaultDomain; 
         private String description; 
         private String groupId; 
@@ -490,6 +502,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public Builder customerConfigs(String customerConfigs) {
             this.customerConfigs = customerConfigs;
+            return this;
+        }
+
+        /**
+         * DedicatedInstanceType.
+         */
+        public Builder dedicatedInstanceType(String dedicatedInstanceType) {
+            this.dedicatedInstanceType = dedicatedInstanceType;
             return this;
         }
 

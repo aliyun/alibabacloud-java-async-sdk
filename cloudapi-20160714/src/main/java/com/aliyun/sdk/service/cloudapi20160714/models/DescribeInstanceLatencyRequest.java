@@ -114,7 +114,7 @@ public class DescribeInstanceLatencyRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +123,7 @@ public class DescribeInstanceLatencyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,7 +141,12 @@ public class DescribeInstanceLatencyRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The environment in which the API is requested. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**: the production environment
+         * *   **PRE**: the pre-release environment
+         * *   **TEST**: the test environment
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -150,7 +155,7 @@ public class DescribeInstanceLatencyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

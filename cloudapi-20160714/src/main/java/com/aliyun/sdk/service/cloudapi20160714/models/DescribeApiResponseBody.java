@@ -733,8 +733,6 @@ public class DescribeApiResponseBody extends TeaModel {
          * *   **REGISTER**: registered APIs
          * *   **UNREGISTER**: unregistered APIs
          * *   **NOTIFY**: downstream notification
-         * 
-         * For more information, see [Two-way communication](~~66031~~).
          */
         public Builder resultType(String resultType) {
             this.resultType = resultType;
