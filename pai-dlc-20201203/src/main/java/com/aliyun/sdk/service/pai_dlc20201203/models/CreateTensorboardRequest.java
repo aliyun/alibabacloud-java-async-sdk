@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateTensorboardRequest extends Request {
     @Body
+    @NameInMap("Cpu")
+    private Long cpu;
+
+    @Body
     @NameInMap("DataSourceId")
     private String dataSourceId;
 
@@ -35,6 +39,10 @@ public class CreateTensorboardRequest extends Request {
     @Body
     @NameInMap("MaxRunningTimeMinutes")
     private Long maxRunningTimeMinutes;
+
+    @Body
+    @NameInMap("Memory")
+    private Long memory;
 
     @Body
     @NameInMap("Options")
@@ -66,12 +74,14 @@ public class CreateTensorboardRequest extends Request {
 
     private CreateTensorboardRequest(Builder builder) {
         super(builder);
+        this.cpu = builder.cpu;
         this.dataSourceId = builder.dataSourceId;
         this.dataSourceType = builder.dataSourceType;
         this.dataSources = builder.dataSources;
         this.displayName = builder.displayName;
         this.jobId = builder.jobId;
         this.maxRunningTimeMinutes = builder.maxRunningTimeMinutes;
+        this.memory = builder.memory;
         this.options = builder.options;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
@@ -92,6 +102,13 @@ public class CreateTensorboardRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cpu
+     */
+    public Long getCpu() {
+        return this.cpu;
     }
 
     /**
@@ -134,6 +151,13 @@ public class CreateTensorboardRequest extends Request {
      */
     public Long getMaxRunningTimeMinutes() {
         return this.maxRunningTimeMinutes;
+    }
+
+    /**
+     * @return memory
+     */
+    public Long getMemory() {
+        return this.memory;
     }
 
     /**
@@ -186,12 +210,14 @@ public class CreateTensorboardRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTensorboardRequest, Builder> {
+        private Long cpu; 
         private String dataSourceId; 
         private String dataSourceType; 
         private java.util.List < DataSourceItem > dataSources; 
         private String displayName; 
         private String jobId; 
         private Long maxRunningTimeMinutes; 
+        private Long memory; 
         private String options; 
         private String sourceId; 
         private String sourceType; 
@@ -206,12 +232,14 @@ public class CreateTensorboardRequest extends Request {
 
         private Builder(CreateTensorboardRequest request) {
             super(request);
+            this.cpu = request.cpu;
             this.dataSourceId = request.dataSourceId;
             this.dataSourceType = request.dataSourceType;
             this.dataSources = request.dataSources;
             this.displayName = request.displayName;
             this.jobId = request.jobId;
             this.maxRunningTimeMinutes = request.maxRunningTimeMinutes;
+            this.memory = request.memory;
             this.options = request.options;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
@@ -220,6 +248,15 @@ public class CreateTensorboardRequest extends Request {
             this.uri = request.uri;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Cpu.
+         */
+        public Builder cpu(Long cpu) {
+            this.putBodyParameter("Cpu", cpu);
+            this.cpu = cpu;
+            return this;
+        }
 
         /**
          * DataSource Id
@@ -272,6 +309,15 @@ public class CreateTensorboardRequest extends Request {
         public Builder maxRunningTimeMinutes(Long maxRunningTimeMinutes) {
             this.putBodyParameter("MaxRunningTimeMinutes", maxRunningTimeMinutes);
             this.maxRunningTimeMinutes = maxRunningTimeMinutes;
+            return this;
+        }
+
+        /**
+         * Memory.
+         */
+        public Builder memory(Long memory) {
+            this.putBodyParameter("Memory", memory);
+            this.memory = memory;
             return this;
         }
 

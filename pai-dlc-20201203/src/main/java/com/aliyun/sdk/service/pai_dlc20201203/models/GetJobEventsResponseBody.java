@@ -19,7 +19,7 @@ public class GetJobEventsResponseBody extends TeaModel {
     private String jobId;
 
     @NameInMap("RequestId")
-    private Integer requestId;
+    private String requestId;
 
     private GetJobEventsResponseBody(Builder builder) {
         this.events = builder.events;
@@ -52,14 +52,14 @@ public class GetJobEventsResponseBody extends TeaModel {
     /**
      * @return requestId
      */
-    public Integer getRequestId() {
+    public String getRequestId() {
         return this.requestId;
     }
 
     public static final class Builder {
         private java.util.List < String > events; 
         private String jobId; 
-        private Integer requestId; 
+        private String requestId; 
 
         /**
          * 事件
@@ -80,7 +80,7 @@ public class GetJobEventsResponseBody extends TeaModel {
         /**
          * 请求ID
          */
-        public Builder requestId(Integer requestId) {
+        public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }

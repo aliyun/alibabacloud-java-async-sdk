@@ -87,11 +87,17 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("ResourceLevel")
     private String resourceLevel;
 
+    @NameInMap("RestartTimes")
+    private String restartTimes;
+
     @NameInMap("Settings")
     private JobSettings settings;
 
     @NameInMap("Status")
     private String status;
+
+    @NameInMap("SubStatus")
+    private String subStatus;
 
     @NameInMap("ThirdpartyLibDir")
     private String thirdpartyLibDir;
@@ -137,8 +143,10 @@ public class GetJobResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
         this.resourceLevel = builder.resourceLevel;
+        this.restartTimes = builder.restartTimes;
         this.settings = builder.settings;
         this.status = builder.status;
+        this.subStatus = builder.subStatus;
         this.thirdpartyLibDir = builder.thirdpartyLibDir;
         this.thirdpartyLibs = builder.thirdpartyLibs;
         this.userCommand = builder.userCommand;
@@ -331,6 +339,13 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return restartTimes
+     */
+    public String getRestartTimes() {
+        return this.restartTimes;
+    }
+
+    /**
      * @return settings
      */
     public JobSettings getSettings() {
@@ -342,6 +357,13 @@ public class GetJobResponseBody extends TeaModel {
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return subStatus
+     */
+    public String getSubStatus() {
+        return this.subStatus;
     }
 
     /**
@@ -412,8 +434,10 @@ public class GetJobResponseBody extends TeaModel {
         private String requestId; 
         private String resourceId; 
         private String resourceLevel; 
+        private String restartTimes; 
         private JobSettings settings; 
         private String status; 
+        private String subStatus; 
         private String thirdpartyLibDir; 
         private java.util.List < String > thirdpartyLibs; 
         private String userCommand; 
@@ -622,6 +646,14 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * 作业已使用的重试次数和最大重试次数
+         */
+        public Builder restartTimes(String restartTimes) {
+            this.restartTimes = restartTimes;
+            return this;
+        }
+
+        /**
          * 作业额外参数配置
          */
         public Builder settings(JobSettings settings) {
@@ -634,6 +666,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * 作业子状态，如抢占重试状态
+         */
+        public Builder subStatus(String subStatus) {
+            this.subStatus = subStatus;
             return this;
         }
 
@@ -872,8 +912,14 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("PodUid")
         private String podUid;
 
+        @NameInMap("ResourceType")
+        private String resourceType;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("SubStatus")
+        private String subStatus;
 
         @NameInMap("Type")
         private String type;
@@ -885,7 +931,9 @@ public class GetJobResponseBody extends TeaModel {
             this.ip = builder.ip;
             this.podId = builder.podId;
             this.podUid = builder.podUid;
+            this.resourceType = builder.resourceType;
             this.status = builder.status;
+            this.subStatus = builder.subStatus;
             this.type = builder.type;
         }
 
@@ -940,10 +988,24 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return subStatus
+         */
+        public String getSubStatus() {
+            return this.subStatus;
         }
 
         /**
@@ -960,7 +1022,9 @@ public class GetJobResponseBody extends TeaModel {
             private String ip; 
             private String podId; 
             private String podUid; 
+            private String resourceType; 
             private String status; 
+            private String subStatus; 
             private String type; 
 
             /**
@@ -1012,10 +1076,26 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
+             * Pod资源使用类型
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
              * Pod状态
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Pod子状态，如抢占状态
+             */
+            public Builder subStatus(String subStatus) {
+                this.subStatus = subStatus;
                 return this;
             }
 
@@ -1056,8 +1136,14 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("PodUid")
         private String podUid;
 
+        @NameInMap("ResourceType")
+        private String resourceType;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("SubStatus")
+        private String subStatus;
 
         @NameInMap("Type")
         private String type;
@@ -1070,7 +1156,9 @@ public class GetJobResponseBody extends TeaModel {
             this.ip = builder.ip;
             this.podId = builder.podId;
             this.podUid = builder.podUid;
+            this.resourceType = builder.resourceType;
             this.status = builder.status;
+            this.subStatus = builder.subStatus;
             this.type = builder.type;
         }
 
@@ -1132,10 +1220,24 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return subStatus
+         */
+        public String getSubStatus() {
+            return this.subStatus;
         }
 
         /**
@@ -1153,7 +1255,9 @@ public class GetJobResponseBody extends TeaModel {
             private String ip; 
             private String podId; 
             private String podUid; 
+            private String resourceType; 
             private String status; 
+            private String subStatus; 
             private String type; 
 
             /**
@@ -1213,10 +1317,26 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
+             * Pod资源使用类型
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
              * Pod状态
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Pod子状态，如抢占状态
+             */
+            public Builder subStatus(String subStatus) {
+                this.subStatus = subStatus;
                 return this;
             }
 

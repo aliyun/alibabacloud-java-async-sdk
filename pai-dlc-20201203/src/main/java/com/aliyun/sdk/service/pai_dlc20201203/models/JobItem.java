@@ -84,6 +84,9 @@ public class JobItem extends TeaModel {
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("SubStatus")
+    private String subStatus;
+
     @NameInMap("ThirdpartyLibDir")
     private String thirdpartyLibDir;
 
@@ -127,6 +130,7 @@ public class JobItem extends TeaModel {
         this.resourceName = builder.resourceName;
         this.settings = builder.settings;
         this.status = builder.status;
+        this.subStatus = builder.subStatus;
         this.thirdpartyLibDir = builder.thirdpartyLibDir;
         this.thirdpartyLibs = builder.thirdpartyLibs;
         this.userCommand = builder.userCommand;
@@ -312,6 +316,13 @@ public class JobItem extends TeaModel {
     }
 
     /**
+     * @return subStatus
+     */
+    public String getSubStatus() {
+        return this.subStatus;
+    }
+
+    /**
      * @return thirdpartyLibDir
      */
     public String getThirdpartyLibDir() {
@@ -378,6 +389,7 @@ public class JobItem extends TeaModel {
         private String resourceName; 
         private JobSettings settings; 
         private String status; 
+        private String subStatus; 
         private String thirdpartyLibDir; 
         private java.util.List < String > thirdpartyLibs; 
         private String userCommand; 
@@ -574,6 +586,14 @@ public class JobItem extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * 作业子状态，如抢占重试状态
+         */
+        public Builder subStatus(String subStatus) {
+            this.subStatus = subStatus;
             return this;
         }
 

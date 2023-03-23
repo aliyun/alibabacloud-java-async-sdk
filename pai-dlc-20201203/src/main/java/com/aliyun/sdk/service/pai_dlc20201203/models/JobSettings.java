@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JobSettings</p>
  */
 public class JobSettings extends TeaModel {
+    @NameInMap("AdvancedSettings")
+    private java.util.Map < String, ? > advancedSettings;
+
     @NameInMap("BusinessUserId")
     private String businessUserId;
 
@@ -33,6 +36,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("ErrorMonitoringArgs")
     private String errorMonitoringArgs;
 
+    @NameInMap("OversoldType")
+    private String oversoldType;
+
     @NameInMap("PipelineId")
     private String pipelineId;
 
@@ -40,6 +46,7 @@ public class JobSettings extends TeaModel {
     private java.util.Map < String, String > tags;
 
     private JobSettings(Builder builder) {
+        this.advancedSettings = builder.advancedSettings;
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
@@ -47,6 +54,7 @@ public class JobSettings extends TeaModel {
         this.enableRDMA = builder.enableRDMA;
         this.enableTideResource = builder.enableTideResource;
         this.errorMonitoringArgs = builder.errorMonitoringArgs;
+        this.oversoldType = builder.oversoldType;
         this.pipelineId = builder.pipelineId;
         this.tags = builder.tags;
     }
@@ -57,6 +65,13 @@ public class JobSettings extends TeaModel {
 
     public static JobSettings create() {
         return builder().build();
+    }
+
+    /**
+     * @return advancedSettings
+     */
+    public java.util.Map < String, ? > getAdvancedSettings() {
+        return this.advancedSettings;
     }
 
     /**
@@ -109,6 +124,13 @@ public class JobSettings extends TeaModel {
     }
 
     /**
+     * @return oversoldType
+     */
+    public String getOversoldType() {
+        return this.oversoldType;
+    }
+
+    /**
      * @return pipelineId
      */
     public String getPipelineId() {
@@ -123,6 +145,7 @@ public class JobSettings extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map < String, ? > advancedSettings; 
         private String businessUserId; 
         private String caller; 
         private Boolean enableErrorMonitoringInAIMaster; 
@@ -130,8 +153,17 @@ public class JobSettings extends TeaModel {
         private Boolean enableRDMA; 
         private Boolean enableTideResource; 
         private String errorMonitoringArgs; 
+        private String oversoldType; 
         private String pipelineId; 
         private java.util.Map < String, String > tags; 
+
+        /**
+         * 额外高级参数配置
+         */
+        public Builder advancedSettings(java.util.Map < String, ? > advancedSettings) {
+            this.advancedSettings = advancedSettings;
+            return this;
+        }
 
         /**
          * 作业关联用户ID
@@ -186,6 +218,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder errorMonitoringArgs(String errorMonitoringArgs) {
             this.errorMonitoringArgs = errorMonitoringArgs;
+            return this;
+        }
+
+        /**
+         * 作业的超卖资源使用方式（不接受/可接受/只接受）
+         */
+        public Builder oversoldType(String oversoldType) {
+            this.oversoldType = oversoldType;
             return this;
         }
 

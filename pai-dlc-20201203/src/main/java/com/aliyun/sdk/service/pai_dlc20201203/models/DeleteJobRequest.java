@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteJobRequest extends Request {
     @Path
     @NameInMap("JobId")
+    @Validation(required = true)
     private String jobId;
 
     private DeleteJobRequest(Builder builder) {

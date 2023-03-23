@@ -21,6 +21,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("Image")
     private String image;
 
+    @NameInMap("ImageConfig")
+    private ImageConfig imageConfig;
+
     @NameInMap("PodCount")
     private Long podCount;
 
@@ -37,6 +40,7 @@ public class JobSpec extends TeaModel {
         this.ecsSpec = builder.ecsSpec;
         this.extraPodSpec = builder.extraPodSpec;
         this.image = builder.image;
+        this.imageConfig = builder.imageConfig;
         this.podCount = builder.podCount;
         this.resourceConfig = builder.resourceConfig;
         this.type = builder.type;
@@ -73,6 +77,13 @@ public class JobSpec extends TeaModel {
     }
 
     /**
+     * @return imageConfig
+     */
+    public ImageConfig getImageConfig() {
+        return this.imageConfig;
+    }
+
+    /**
      * @return podCount
      */
     public Long getPodCount() {
@@ -104,6 +115,7 @@ public class JobSpec extends TeaModel {
         private String ecsSpec; 
         private ExtraPodSpec extraPodSpec; 
         private String image; 
+        private ImageConfig imageConfig; 
         private Long podCount; 
         private ResourceConfig resourceConfig; 
         private String type; 
@@ -130,6 +142,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder image(String image) {
             this.image = image;
+            return this;
+        }
+
+        /**
+         * 私有镜像配置
+         */
+        public Builder imageConfig(ImageConfig imageConfig) {
+            this.imageConfig = imageConfig;
             return this;
         }
 
