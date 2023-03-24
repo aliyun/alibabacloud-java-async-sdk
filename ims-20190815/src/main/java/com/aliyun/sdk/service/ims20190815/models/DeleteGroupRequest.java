@@ -54,7 +54,7 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * The name of the RAM user group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

@@ -97,7 +97,10 @@ public class BindMFADeviceRequest extends Request {
         } 
 
         /**
-         * AuthenticationCode1.
+         * The first verification code.
+         * <p>
+         * 
+         * >  You can call the [CreateVirtualMFADevice](~~186179~~) operation to create an MFA device and generate a key (value of `Base32StringSeed`). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.
          */
         public Builder authenticationCode1(String authenticationCode1) {
             this.putQueryParameter("AuthenticationCode1", authenticationCode1);
@@ -106,7 +109,10 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * AuthenticationCode2.
+         * The second verification code.
+         * <p>
+         * 
+         * >  You can call the [CreateVirtualMFADevice](~~186179~~) operation to create an MFA device and generate a key (value of `Base32StringSeed`). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.
          */
         public Builder authenticationCode2(String authenticationCode2) {
             this.putQueryParameter("AuthenticationCode2", authenticationCode2);
@@ -115,7 +121,10 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * SerialNumber.
+         * The serial number of the MFA device.
+         * <p>
+         * 
+         * >  You can call the [CreateVirtualMFADevice](~~186179~~) operation to obtain the serial number of the MFA device.
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);
@@ -124,7 +133,7 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

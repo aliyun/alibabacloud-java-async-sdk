@@ -55,7 +55,7 @@ public class DeleteSAMLProviderRequest extends Request {
         } 
 
         /**
-         * SAMLProviderName.
+         * The name of the IdP that you want to delete.
          */
         public Builder SAMLProviderName(String SAMLProviderName) {
             this.putQueryParameter("SAMLProviderName", SAMLProviderName);

@@ -82,7 +82,7 @@ public class ListUsersForGroupRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * The name of the RAM user group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -91,7 +91,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * Marker.
+         * The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -100,7 +100,10 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * MaxItems.
+         * The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 100.
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);

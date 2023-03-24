@@ -50,7 +50,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MFADevice.
+         * The information of the MFA device.
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -58,7 +58,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * SerialNumber.
+             * The serial number of the MFA device.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

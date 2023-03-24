@@ -82,7 +82,7 @@ public class SetUserSsoSettingsRequest extends Request {
         } 
 
         /**
-         * AuxiliaryDomain.
+         * The auxiliary domain name.
          */
         public Builder auxiliaryDomain(String auxiliaryDomain) {
             this.putQueryParameter("AuxiliaryDomain", auxiliaryDomain);
@@ -91,7 +91,10 @@ public class SetUserSsoSettingsRequest extends Request {
         }
 
         /**
-         * MetadataDocument.
+         * The metadata file, which is Base64-encoded.
+         * <p>
+         * 
+         * The file is provided by an IdP that supports SAML 2.0.
          */
         public Builder metadataDocument(String metadataDocument) {
             this.putQueryParameter("MetadataDocument", metadataDocument);
@@ -100,7 +103,11 @@ public class SetUserSsoSettingsRequest extends Request {
         }
 
         /**
-         * SsoEnabled.
+         * Specifies whether to enable SSO for the RAM user. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder ssoEnabled(Boolean ssoEnabled) {
             this.putQueryParameter("SsoEnabled", ssoEnabled);

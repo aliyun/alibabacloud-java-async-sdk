@@ -50,7 +50,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         private SAMLProvider SAMLProvider; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         }
 
         /**
-         * SAMLProvider.
+         * The information about the IdP.
          */
         public Builder SAMLProvider(SAMLProvider SAMLProvider) {
             this.SAMLProvider = SAMLProvider;
@@ -146,7 +146,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the IdP.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -154,7 +154,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The point in time at which the IdP was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -162,7 +162,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the IdP.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +170,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * SAMLProviderName.
+             * The name of the IdP.
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -178,7 +178,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The point in time at which the information about the IdP was modified. The time is displayed in UTC.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

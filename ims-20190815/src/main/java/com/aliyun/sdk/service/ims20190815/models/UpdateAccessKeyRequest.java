@@ -84,7 +84,11 @@ public class UpdateAccessKeyRequest extends Request {
         } 
 
         /**
-         * Status.
+         * The status of the AccessKey pair. Valid values:
+         * <p>
+         * 
+         * *   Active
+         * *   Inactive
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -93,7 +97,7 @@ public class UpdateAccessKeyRequest extends Request {
         }
 
         /**
-         * UserAccessKeyId.
+         * The AccessKey ID of the AccessKey pair for which you want to modify the status.
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);
@@ -102,7 +106,10 @@ public class UpdateAccessKeyRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
+         * <p>
+         * 
+         * If this parameter is empty, the status of the AccessKey pair for the current user is modified.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

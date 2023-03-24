@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
+      *
+     */
     @Override
     public CompletableFuture<AddClientIdToOIDCProviderResponse> addClientIdToOIDCProvider(AddClientIdToOIDCProviderRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
+      *
+     */
     @Override
     public CompletableFuture<AddFingerprintToOIDCProviderResponse> addFingerprintToOIDCProvider(AddFingerprintToOIDCProviderRequest request) {
         try {
@@ -95,6 +103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](~~43765~~) is set to `True`. The value True indicates that RAM users can change their passwords.
+      *
+     */
     @Override
     public CompletableFuture<ChangePasswordResponse> changePassword(ChangePasswordRequest request) {
         try {
@@ -179,6 +191,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
+      * ## Prerequisites
+      * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
+      * ## Limits
+      * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+      * - You can add a maximum of 20 client IDs to an OIDC IdP.
+      * - You can add a maximum of five fingerprints to an OIDC IdP.
+      *
+     */
     @Override
     public CompletableFuture<CreateOIDCProviderResponse> createOIDCProvider(CreateOIDCProviderRequest request) {
         try {
@@ -207,6 +229,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to create a RAM user named `test`.
+      *
+     */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
         try {
@@ -277,6 +303,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
+      *
+     */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
         try {
@@ -305,6 +335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
+      *
+     */
     @Override
     public CompletableFuture<DeleteOIDCProviderResponse> deleteOIDCProvider(DeleteOIDCProviderRequest request) {
         try {
@@ -529,6 +563,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+      *
+     */
     @Override
     public CompletableFuture<GetOIDCProviderResponse> getOIDCProvider(GetOIDCProviderRequest request) {
         try {
@@ -585,6 +623,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example to show how to query the information about a RAM user named `test@example.onaliyun.com`.
+      *
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -697,6 +739,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+      *
+     */
     @Override
     public CompletableFuture<ListOIDCProvidersResponse> listOIDCProviders(ListOIDCProvidersRequest request) {
         try {
@@ -739,6 +785,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * *   `ResourceId.N`
+      * *   `Tag.N.Key`
+      * *   `Tag.N.Key` and `Tag.N.Value`
+      *
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -753,6 +806,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call the following API operations to query the information about all RAM users:
+      * *   ListUsers: queries the details of all RAM users.
+      * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+      *
+     */
     @Override
     public CompletableFuture<ListUserBasicInfosResponse> listUserBasicInfos(ListUserBasicInfosRequest request) {
         try {
@@ -767,6 +826,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call the following API operations to query the information about all RAM users:
+      * *   ListUsers: queries the details of all RAM users.
+      * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+      *
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -809,6 +874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
+      *
+     */
     @Override
     public CompletableFuture<RemoveClientIdFromOIDCProviderResponse> removeClientIdFromOIDCProvider(RemoveClientIdFromOIDCProviderRequest request) {
         try {
@@ -823,6 +892,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
+      *
+     */
     @Override
     public CompletableFuture<RemoveFingerprintFromOIDCProviderResponse> removeFingerprintFromOIDCProvider(RemoveFingerprintFromOIDCProviderRequest request) {
         try {
@@ -879,6 +952,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
+      *
+     */
     @Override
     public CompletableFuture<SetSecurityPreferenceResponse> setSecurityPreference(SetSecurityPreferenceRequest request) {
         try {
@@ -1005,6 +1082,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
+      *
+     */
     @Override
     public CompletableFuture<UpdateOIDCProviderResponse> updateOIDCProvider(UpdateOIDCProviderRequest request) {
         try {
@@ -1019,6 +1100,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to change the description of an IdP named `test-provider` to `This is a new provider.`
+      *
+     */
     @Override
     public CompletableFuture<UpdateSAMLProviderResponse> updateSAMLProvider(UpdateSAMLProviderRequest request) {
         try {
@@ -1033,6 +1118,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example to show how to modify the name of a RAM user from `test@example.onaliyun.com` to `new@example.onaliyun.com`.
+      *
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {

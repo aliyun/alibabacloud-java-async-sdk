@@ -83,7 +83,7 @@ public class CreateSAMLProviderRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,7 +92,10 @@ public class CreateSAMLProviderRequest extends Request {
         }
 
         /**
-         * EncodedSAMLMetadataDocument.
+         * The metadata file, which is Base64 encoded.
+         * <p>
+         * 
+         * The file is provided by an IdP that supports SAML 2.0.
          */
         public Builder encodedSAMLMetadataDocument(String encodedSAMLMetadataDocument) {
             this.putQueryParameter("EncodedSAMLMetadataDocument", encodedSAMLMetadataDocument);
@@ -101,7 +104,10 @@ public class CreateSAMLProviderRequest extends Request {
         }
 
         /**
-         * SAMLProviderName.
+         * The name of the IdP.
+         * <p>
+         * 
+         * The value can be up to 128 characters in length. The name can contain letters, digits,`  periods (.), hyphens (-), and underscores (_) `. The name cannot start or end with`  periods (.), hyphens (-), or underscores (_) `.
          */
         public Builder SAMLProviderName(String SAMLProviderName) {
             this.putQueryParameter("SAMLProviderName", SAMLProviderName);

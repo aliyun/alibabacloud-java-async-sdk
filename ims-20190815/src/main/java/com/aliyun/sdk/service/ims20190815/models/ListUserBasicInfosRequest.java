@@ -82,7 +82,7 @@ public class ListUserBasicInfosRequest extends Request {
         } 
 
         /**
-         * Marker.
+         * The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -91,7 +91,10 @@ public class ListUserBasicInfosRequest extends Request {
         }
 
         /**
-         * MaxItems.
+         * The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.
+         * <p>
+         * 
+         * Valid values: 1 to 1000. Default value: 100.
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);
@@ -154,7 +157,10 @@ public class ListUserBasicInfosRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. N must be consecutive.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -162,7 +168,10 @@ public class ListUserBasicInfosRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. N must be consecutive.
              */
             public Builder value(String value) {
                 this.value = value;

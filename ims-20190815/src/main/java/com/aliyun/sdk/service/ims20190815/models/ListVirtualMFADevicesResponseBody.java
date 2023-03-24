@@ -74,7 +74,11 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         private VirtualMFADevices virtualMFADevices; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +86,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +94,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualMFADevices.
+         * The information of the MFA device.
          */
         public Builder virtualMFADevices(VirtualMFADevices virtualMFADevices) {
             this.virtualMFADevices = virtualMFADevices;
@@ -162,7 +166,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * DisplayName.
+             * The display name of the RAM user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -170,7 +174,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the RAM user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -178,7 +182,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * The logon name of the RAM user.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;
@@ -243,7 +247,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             private User user; 
 
             /**
-             * ActivateDate.
+             * The time when the MFA device was activated.
              */
             public Builder activateDate(String activateDate) {
                 this.activateDate = activateDate;
@@ -251,7 +255,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * The serial number of the MFA device.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -259,7 +263,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The information of the RAM user that has an MFA device bound.
              */
             public Builder user(User user) {
                 this.user = user;

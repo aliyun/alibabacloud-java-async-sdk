@@ -82,7 +82,10 @@ public class GetUserRequest extends Request {
         } 
 
         /**
-         * UserAccessKeyId.
+         * The AccessKey ID of the RAM user.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);
@@ -91,7 +94,10 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the RAM user.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -100,7 +106,14 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
+         * <p>
+         * 
+         * The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name.
+         * 
+         * The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<AccountAlias>.onaliyun.com` must be 1 to 64 characters in length.
+         * 
+         * >  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

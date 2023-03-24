@@ -82,7 +82,10 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * Comments.
+         * The description.
+         * <p>
+         * 
+         * The value can be up to 128 characters in length.
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -91,7 +94,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * The display name of the RAM user group.
+         * <p>
+         * 
+         * The name can be up to 24 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -100,7 +106,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the RAM user group. You must specify this parameter.
+         * <p>
+         * 
+         * The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

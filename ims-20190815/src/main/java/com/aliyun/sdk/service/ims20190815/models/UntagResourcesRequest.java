@@ -110,7 +110,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * 是否全部删除，只针对TagKey.N为空时有效。 取值范围： true  false True False  默认是 false
+         * Specifies whether to remove all tags from the resources. Valid values:
+         * <p>
+         * 
+         * *   true: remove all tags from the resources.
+         * *   false: does not remove all tags from the resources. This is the default value.
+         * 
+         * >  This parameter takes effect only when the TagKey.N parameter is not specified in the request.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -137,7 +143,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   user: a RAM user
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

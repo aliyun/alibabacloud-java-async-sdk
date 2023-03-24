@@ -138,7 +138,10 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * NewComments.
+         * The new description of the RAM user.
+         * <p>
+         * 
+         * The description must be 1 to 128 characters in length.
          */
         public Builder newComments(String newComments) {
             this.putQueryParameter("NewComments", newComments);
@@ -147,7 +150,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewDisplayName.
+         * The new display name of the RAM user.
+         * <p>
+         * 
+         * The name must be 1 to 24 characters in length.
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -156,7 +162,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewEmail.
+         * The new email address of the RAM user.
+         * <p>
+         * 
+         * >  This parameter applies only to the China site (aliyun.com).
          */
         public Builder newEmail(String newEmail) {
             this.putQueryParameter("NewEmail", newEmail);
@@ -165,7 +174,12 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewMobilePhone.
+         * The new mobile phone number of the RAM user.
+         * <p>
+         * 
+         * Format: Country calling code-Mobile phone number.
+         * 
+         * >  This parameter applies only to the China site (aliyun.com).
          */
         public Builder newMobilePhone(String newMobilePhone) {
             this.putQueryParameter("NewMobilePhone", newMobilePhone);
@@ -174,7 +188,12 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewUserPrincipalName.
+         * The new logon name of the RAM user.
+         * <p>
+         * 
+         * The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` is the name of the RAM user. `<AccountAlias>.onaliyun.com` is the default domain name.
+         * 
+         * The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.
          */
         public Builder newUserPrincipalName(String newUserPrincipalName) {
             this.putQueryParameter("NewUserPrincipalName", newUserPrincipalName);
@@ -183,7 +202,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the RAM user.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -192,7 +214,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

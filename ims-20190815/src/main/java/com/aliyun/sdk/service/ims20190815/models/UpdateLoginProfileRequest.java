@@ -111,7 +111,11 @@ public class UpdateLoginProfileRequest extends Request {
         } 
 
         /**
-         * MFABindRequired.
+         * Specifies whether multi-factor authentication (MFA) must be enabled. Valid values:
+         * <p>
+         * 
+         * *   true. The value true indicates that the RAM user must bind an MFA device at the next logon.
+         * *   false.
          */
         public Builder MFABindRequired(Boolean MFABindRequired) {
             this.putQueryParameter("MFABindRequired", MFABindRequired);
@@ -120,7 +124,10 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * Password.
+         * The new password that is used to log on to the console.
+         * <p>
+         * 
+         * The password must meet the complexity requirements.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -129,7 +136,11 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * PasswordResetRequired.
+         * Specifies whether the RAM user must reset the password at the next logon. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder passwordResetRequired(Boolean passwordResetRequired) {
             this.putQueryParameter("PasswordResetRequired", passwordResetRequired);
@@ -138,7 +149,11 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of password-based logon. Valid values:
+         * <p>
+         * 
+         * *   Active
+         * *   Inactive
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -147,7 +162,7 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

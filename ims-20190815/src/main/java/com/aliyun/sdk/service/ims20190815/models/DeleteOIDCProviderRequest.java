@@ -54,7 +54,7 @@ public class DeleteOIDCProviderRequest extends Request {
         } 
 
         /**
-         * OIDCProviderName.
+         * The name of the OIDC IdP.
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

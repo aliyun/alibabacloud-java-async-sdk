@@ -50,7 +50,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessKeys.
+         * The list of AccessKey pairs.
          */
         public Builder accessKeys(AccessKeys accessKeys) {
             this.accessKeys = accessKeys;
@@ -58,7 +58,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -142,7 +142,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the AccessKey pair was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -150,7 +150,11 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the AccessKey pair. Valid values:
+             * <p>
+             * 
+             * *   Active
+             * *   Inactive
              */
             public Builder status(String status) {
                 this.status = status;
@@ -158,7 +162,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the AccessKey pair was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

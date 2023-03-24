@@ -69,7 +69,7 @@ public class DeleteAccessKeyRequest extends Request {
         } 
 
         /**
-         * UserAccessKeyId.
+         * The ID of the AccessKey pair that you want to delete.
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);
@@ -78,7 +78,10 @@ public class DeleteAccessKeyRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
+         * <p>
+         * 
+         * If this parameter is empty, the AccessKey pair of the current user is deleted.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

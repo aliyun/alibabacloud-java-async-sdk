@@ -194,7 +194,11 @@ public class SetPasswordPolicyRequest extends Request {
         } 
 
         /**
-         * HardExpire.
+         * Specifies whether to disable logon after the password expires. Valid values:
+         * <p>
+         * 
+         * *   true: After the password expires, you cannot use the password to log on to the console. You can log on to the console only after you reset the password by using your Alibaba Cloud account or as a RAM user that has administrative rights.
+         * *   false: After the password expires, you can change the password to log on to the console. This is the default value.
          */
         public Builder hardExpire(Boolean hardExpire) {
             this.putQueryParameter("HardExpire", hardExpire);
@@ -203,7 +207,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MaxLoginAttemps.
+         * The maximum number of password retries. If you enter the wrong passwords for the specified consecutive times, the account is locked for one hour.
+         * <p>
+         * 
+         * Valid values: 0 to 32.
+         * 
+         * The default value is 0, which indicates that the password retries are not limited.
          */
         public Builder maxLoginAttemps(Integer maxLoginAttemps) {
             this.putQueryParameter("MaxLoginAttemps", maxLoginAttemps);
@@ -212,7 +221,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MaxPasswordAge.
+         * The validity period of the password.
+         * <p>
+         * 
+         * Valid values: 0 to 1095. Unit: days.
+         * 
+         * The default value is 0, which indicates that the password never expires.
          */
         public Builder maxPasswordAge(Integer maxPasswordAge) {
             this.putQueryParameter("MaxPasswordAge", maxPasswordAge);
@@ -221,7 +235,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MinimumPasswordDifferentCharacter.
+         * The minimum number of unique characters in the password.
+         * <p>
+         * 
+         * Valid values: 0 to 8.
+         * 
+         * The default value is 0, which indicates that no limits are imposed on the number of unique characters in a password.
          */
         public Builder minimumPasswordDifferentCharacter(Integer minimumPasswordDifferentCharacter) {
             this.putQueryParameter("MinimumPasswordDifferentCharacter", minimumPasswordDifferentCharacter);
@@ -230,7 +249,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MinimumPasswordLength.
+         * The minimum number of characters in the password.
+         * <p>
+         * 
+         * Valid values: 8 to 32. Default value: 8.
          */
         public Builder minimumPasswordLength(Integer minimumPasswordLength) {
             this.putQueryParameter("MinimumPasswordLength", minimumPasswordLength);
@@ -239,7 +261,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * PasswordNotContainUserName.
+         * Specifies whether to exclude the username from the password. Valid values:
+         * <p>
+         * 
+         * *   true: A password cannot contain the username.
+         * *   false: A password can contain the username. This is the default value.
          */
         public Builder passwordNotContainUserName(Boolean passwordNotContainUserName) {
             this.putQueryParameter("PasswordNotContainUserName", passwordNotContainUserName);
@@ -248,7 +274,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * PasswordReusePrevention.
+         * The policy for password history check.
+         * <p>
+         * 
+         * The previous N passwords cannot be reused. Valid values of N: 0 to 24.
+         * 
+         * The default value is 0, which indicates that RAM users can reuse previous passwords.
          */
         public Builder passwordReusePrevention(Integer passwordReusePrevention) {
             this.putQueryParameter("PasswordReusePrevention", passwordReusePrevention);
@@ -257,7 +288,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireLowercaseCharacters.
+         * Specifies whether the password must contain lowercase letters. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
             this.putQueryParameter("RequireLowercaseCharacters", requireLowercaseCharacters);
@@ -266,7 +301,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireNumbers.
+         * Specifies whether the password must contain digits. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder requireNumbers(Boolean requireNumbers) {
             this.putQueryParameter("RequireNumbers", requireNumbers);
@@ -275,7 +314,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireSymbols.
+         * Specifies whether the password must contain special characters. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder requireSymbols(Boolean requireSymbols) {
             this.putQueryParameter("RequireSymbols", requireSymbols);
@@ -284,7 +327,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireUppercaseCharacters.
+         * Specifies whether the password must contain uppercase letters. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
             this.putQueryParameter("RequireUppercaseCharacters", requireUppercaseCharacters);

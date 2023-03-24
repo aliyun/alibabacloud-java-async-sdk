@@ -55,7 +55,10 @@ public class CreateVirtualMFADeviceRequest extends Request {
         } 
 
         /**
-         * VirtualMFADeviceName.
+         * The name of the MFA device.
+         * <p>
+         * 
+         * The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).
          */
         public Builder virtualMFADeviceName(String virtualMFADeviceName) {
             this.putQueryParameter("VirtualMFADeviceName", virtualMFADeviceName);

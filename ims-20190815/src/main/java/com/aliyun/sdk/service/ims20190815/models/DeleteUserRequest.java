@@ -68,7 +68,10 @@ public class DeleteUserRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * The ID of the RAM user.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -77,7 +80,10 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

@@ -50,7 +50,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         private SAMLProvider SAMLProvider; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         }
 
         /**
-         * SAMLProvider.
+         * The information of the IdP.
          */
         public Builder SAMLProvider(SAMLProvider SAMLProvider) {
             this.SAMLProvider = SAMLProvider;
@@ -158,7 +158,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the IdP.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -166,7 +166,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The creation time.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -174,7 +174,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -182,7 +182,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedSAMLMetadataDocument.
+             * The metadata file, which is Base64 encoded.
              */
             public Builder encodedSAMLMetadataDocument(String encodedSAMLMetadataDocument) {
                 this.encodedSAMLMetadataDocument = encodedSAMLMetadataDocument;
@@ -190,7 +190,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * SAMLProviderName.
+             * The name of the IdP.
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -198,7 +198,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The update time.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

@@ -70,7 +70,10 @@ public class ChangePasswordRequest extends Request {
         } 
 
         /**
-         * NewPassword.
+         * The new password that is used to log on to the console.
+         * <p>
+         * 
+         * The password must meet the complexity requirements. For more information, see [GetPasswordPolicy](~~186691~~).
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);
@@ -79,7 +82,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
-         * OldPassword.
+         * The old password that is used to log on to the console.
          */
         public Builder oldPassword(String oldPassword) {
             this.putQueryParameter("OldPassword", oldPassword);

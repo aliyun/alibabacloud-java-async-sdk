@@ -124,7 +124,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * 下一个查询开始Token
+         * The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -133,7 +133,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +163,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   user: a RAM user
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -223,7 +229,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. N must be consecutive.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +240,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. N must be consecutive.
              */
             public Builder value(String value) {
                 this.value = value;

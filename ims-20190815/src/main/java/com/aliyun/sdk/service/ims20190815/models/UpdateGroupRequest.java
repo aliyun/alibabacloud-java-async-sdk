@@ -96,7 +96,7 @@ public class UpdateGroupRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * The name of the RAM user group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -105,7 +105,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * NewComments.
+         * The new description.
+         * <p>
+         * 
+         * The value can be up to 128 characters in length.
          */
         public Builder newComments(String newComments) {
             this.putQueryParameter("NewComments", newComments);
@@ -114,7 +117,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * NewDisplayName.
+         * The new display name of the RAM user group.
+         * <p>
+         * 
+         * The name can be up to 24 characters in length.
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -123,7 +129,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * NewGroupName.
+         * The new name of the RAM user group.
+         * <p>
+         * 
+         * The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder newGroupName(String newGroupName) {
             this.putQueryParameter("NewGroupName", newGroupName);

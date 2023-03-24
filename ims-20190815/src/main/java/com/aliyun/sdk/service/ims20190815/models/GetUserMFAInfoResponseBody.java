@@ -62,7 +62,11 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsMFAEnable.
+         * Indicates whether the MFA device is enabled. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isMFAEnable(Boolean isMFAEnable) {
             this.isMFAEnable = isMFAEnable;
@@ -70,7 +74,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * MFADevice.
+         * The information about the MFA device.
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -78,7 +82,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +134,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * SerialNumber.
+             * The serial number of the MFA device.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -138,7 +142,11 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the MFA device. Valid values:
+             * <p>
+             * 
+             * *   VMFA: virtual MFA device
+             * *   U2F: Universal 2nd Factor (U2F) security key
              */
             public Builder type(String type) {
                 this.type = type;

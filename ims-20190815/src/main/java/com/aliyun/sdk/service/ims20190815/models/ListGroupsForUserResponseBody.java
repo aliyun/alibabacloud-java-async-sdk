@@ -50,7 +50,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Groups.
+         * The information of the RAM user groups.
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -58,7 +58,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             private String joinDate; 
 
             /**
-             * Comments.
+             * The description.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -154,7 +154,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the RAM user group.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -162,7 +162,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the RAM user group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -170,7 +170,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the RAM user group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -178,7 +178,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * JoinDate.
+             * The time when the RAM user was added.
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;

@@ -68,7 +68,12 @@ public class AddFingerprintToOIDCProviderRequest extends Request {
         } 
 
         /**
-         * Fingerprint.
+         * The fingerprint of the HTTPS certificate.
+         * <p>
+         * 
+         * The fingerprint can contain letters and digits.
+         * 
+         * The fingerprint can be up to 40 characters in length.
          */
         public Builder fingerprint(String fingerprint) {
             this.putQueryParameter("Fingerprint", fingerprint);
@@ -77,7 +82,7 @@ public class AddFingerprintToOIDCProviderRequest extends Request {
         }
 
         /**
-         * OIDCProviderName.
+         * The name of the OIDC IdP.
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

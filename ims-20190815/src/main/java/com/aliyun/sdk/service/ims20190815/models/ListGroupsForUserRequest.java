@@ -55,7 +55,7 @@ public class ListGroupsForUserRequest extends Request {
         } 
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

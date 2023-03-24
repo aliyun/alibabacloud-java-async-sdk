@@ -50,7 +50,11 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsMFAEnable.
+         * Indicates whether MFA is enabled. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isMFAEnable(Boolean isMFAEnable) {
             this.isMFAEnable = isMFAEnable;
@@ -58,7 +62,7 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

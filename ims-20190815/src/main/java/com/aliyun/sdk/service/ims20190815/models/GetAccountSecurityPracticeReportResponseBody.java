@@ -50,7 +50,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountSecurityPracticeInfo.
+         * The information of the security report for the Alibaba Cloud account.
          */
         public Builder accountSecurityPracticeInfo(AccountSecurityPracticeInfo accountSecurityPracticeInfo) {
             this.accountSecurityPracticeInfo = accountSecurityPracticeInfo;
@@ -58,7 +58,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,11 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             private Integer unusedAkNum; 
 
             /**
-             * BindMfa.
+             * Indicates whether MFA is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder bindMfa(Boolean bindMfa) {
                 this.bindMfa = bindMfa;
@@ -202,7 +206,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * OldAkNum.
+             * The number of old AccessKey pairs for the Alibaba Cloud account.
              */
             public Builder oldAkNum(Integer oldAkNum) {
                 this.oldAkNum = oldAkNum;
@@ -210,7 +214,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * RootWithAccessKey.
+             * The number of AccessKey pairs for the Alibaba Cloud account.
              */
             public Builder rootWithAccessKey(Integer rootWithAccessKey) {
                 this.rootWithAccessKey = rootWithAccessKey;
@@ -218,7 +222,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * SubUser.
+             * The number of RAM users within the Alibaba Cloud account.
              */
             public Builder subUser(Integer subUser) {
                 this.subUser = subUser;
@@ -226,7 +230,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserBindMfa.
+             * The number of RAM users that have MFA devices bound.
              */
             public Builder subUserBindMfa(Integer subUserBindMfa) {
                 this.subUserBindMfa = subUserBindMfa;
@@ -234,7 +238,12 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserPwdLevel.
+             * The complexity level of the password for the RAM user. Valid values:
+             * <p>
+             * 
+             * *   low
+             * *   mid
+             * *   high
              */
             public Builder subUserPwdLevel(String subUserPwdLevel) {
                 this.subUserPwdLevel = subUserPwdLevel;
@@ -242,7 +251,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserWithOldAccessKey.
+             * The number of RAM users that use the old AccessKey pairs.
              */
             public Builder subUserWithOldAccessKey(Integer subUserWithOldAccessKey) {
                 this.subUserWithOldAccessKey = subUserWithOldAccessKey;
@@ -250,7 +259,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserWithUnusedAccessKey.
+             * The number of RAM users that have no AccessKey pairs.
              */
             public Builder subUserWithUnusedAccessKey(Integer subUserWithUnusedAccessKey) {
                 this.subUserWithUnusedAccessKey = subUserWithUnusedAccessKey;
@@ -258,7 +267,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * UnusedAkNum.
+             * The number of AccessKey pairs that are not used for the Alibaba Cloud account.
              */
             public Builder unusedAkNum(Integer unusedAkNum) {
                 this.unusedAkNum = unusedAkNum;
@@ -311,7 +320,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             private Integer score; 
 
             /**
-             * AccountSecurityPracticeUserInfo.
+             * The information of the security report for the Alibaba Cloud account.
              */
             public Builder accountSecurityPracticeUserInfo(AccountSecurityPracticeUserInfo accountSecurityPracticeUserInfo) {
                 this.accountSecurityPracticeUserInfo = accountSecurityPracticeUserInfo;
@@ -319,7 +328,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The security score of the Alibaba Cloud account.
              */
             public Builder score(Integer score) {
                 this.score = score;

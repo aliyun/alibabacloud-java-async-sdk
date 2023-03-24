@@ -48,6 +48,10 @@ public class SetSecurityPreferenceRequest extends Request {
     @NameInMap("OperationForRiskLogin")
     private String operationForRiskLogin;
 
+    @Query
+    @NameInMap("VerificationTypes")
+    private java.util.List < String > verificationTypes;
+
     private SetSecurityPreferenceRequest(Builder builder) {
         super(builder);
         this.allowUserToChangePassword = builder.allowUserToChangePassword;
@@ -59,6 +63,7 @@ public class SetSecurityPreferenceRequest extends Request {
         this.loginSessionDuration = builder.loginSessionDuration;
         this.MFAOperationForLogin = builder.MFAOperationForLogin;
         this.operationForRiskLogin = builder.operationForRiskLogin;
+        this.verificationTypes = builder.verificationTypes;
     }
 
     public static Builder builder() {
@@ -137,6 +142,13 @@ public class SetSecurityPreferenceRequest extends Request {
         return this.operationForRiskLogin;
     }
 
+    /**
+     * @return verificationTypes
+     */
+    public java.util.List < String > getVerificationTypes() {
+        return this.verificationTypes;
+    }
+
     public static final class Builder extends Request.Builder<SetSecurityPreferenceRequest, Builder> {
         private Boolean allowUserToChangePassword; 
         private Boolean allowUserToManageAccessKeys; 
@@ -147,6 +159,7 @@ public class SetSecurityPreferenceRequest extends Request {
         private Integer loginSessionDuration; 
         private String MFAOperationForLogin; 
         private String operationForRiskLogin; 
+        private java.util.List < String > verificationTypes; 
 
         private Builder() {
             super();
@@ -163,10 +176,15 @@ public class SetSecurityPreferenceRequest extends Request {
             this.loginSessionDuration = request.loginSessionDuration;
             this.MFAOperationForLogin = request.MFAOperationForLogin;
             this.operationForRiskLogin = request.operationForRiskLogin;
+            this.verificationTypes = request.verificationTypes;
         } 
 
         /**
-         * AllowUserToChangePassword.
+         * Specifies whether RAM users can change their passwords. Valid values:
+         * <p>
+         * 
+         * *   true: yes. This is the default value.
+         * *   false: no.
          */
         public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
             this.putQueryParameter("AllowUserToChangePassword", allowUserToChangePassword);
@@ -175,7 +193,11 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * AllowUserToManageAccessKeys.
+         * Specifies whether RAM users can manage their AccessKey pairs. Valid values:
+         * <p>
+         * 
+         * *   true: yes.
+         * *   false: no. This is the default value.
          */
         public Builder allowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
             this.putQueryParameter("AllowUserToManageAccessKeys", allowUserToManageAccessKeys);
@@ -184,7 +206,11 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * AllowUserToManageMFADevices.
+         * Specifies whether RAM users can manage their MFA devices. Valid values:
+         * <p>
+         * 
+         * *   true: yes. This is the default value.
+         * *   false: no.
          */
         public Builder allowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
             this.putQueryParameter("AllowUserToManageMFADevices", allowUserToManageMFADevices);
@@ -193,7 +219,11 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * AllowUserToManagePersonalDingTalk.
+         * Specifies whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:
+         * <p>
+         * 
+         * *   true: yes. This is the default value.
+         * *   false: no.
          */
         public Builder allowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
             this.putQueryParameter("AllowUserToManagePersonalDingTalk", allowUserToManagePersonalDingTalk);
@@ -202,7 +232,11 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * EnableSaveMFATicket.
+         * Specifies whether to remember the MFA devices for seven days. Valid values:
+         * <p>
+         * 
+         * *   true: yes.
+         * *   false: no. This is the default value.
          */
         public Builder enableSaveMFATicket(Boolean enableSaveMFATicket) {
             this.putQueryParameter("EnableSaveMFATicket", enableSaveMFATicket);
@@ -211,7 +245,15 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * LoginNetworkMasks.
+         * The subnet mask that specifies the IP addresses from which you can log on to the Alibaba Cloud Management Console. This parameter takes effect on password-based logon and single sign-on (SSO). However, this parameter does not take effect on API calls that are authenticated by using AccessKey pairs.
+         * <p>
+         * 
+         * *   If you specify a subnet mask, RAM users can use only the IP addresses in the subnet mask to log on to the Alibaba Cloud Management Console.
+         * *   If you do not specify a subnet mask, RAM users can use all IP addresses to log on to the Alibaba Cloud Management Console.
+         * 
+         * If you need to specify multiple subnet masks, separate the subnet masks with semicolons (;). Example: 192.168.0.0/16;10.0.0.0/8.
+         * 
+         * You can specify up to 25 subnet masks. The total length of the subnet masks can be a maximum of 512 characters.
          */
         public Builder loginNetworkMasks(String loginNetworkMasks) {
             this.putQueryParameter("LoginNetworkMasks", loginNetworkMasks);
@@ -220,7 +262,12 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * LoginSessionDuration.
+         * The validity period of the logon session of RAM users.
+         * <p>
+         * 
+         * Valid values: 1 to 24. Unit: hours.
+         * 
+         * Default value: 6.
          */
         public Builder loginSessionDuration(Integer loginSessionDuration) {
             this.putQueryParameter("LoginSessionDuration", loginSessionDuration);
@@ -229,7 +276,12 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * MFAOperationForLogin.
+         * Specifies whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. This parameter is used to replace the EnforceMFAForLogin parameter. The EnforceMFAForLogin parameter is still valid. However, we recommend that you use the MFAOperationForLogin parameter. Valid values:
+         * <p>
+         * 
+         * *   mandatory: MFA is required for all RAM users. If you use the EnforceMFAForLogin parameter, set the value to true.
+         * *   independent: User-specific settings are applied. This is the default value. If you use the EnforceMFAForLogin parameter, set the value to false.
+         * *   adaptive: MFA is required only for RAM users who initiated unusual logons.
          */
         public Builder MFAOperationForLogin(String MFAOperationForLogin) {
             this.putQueryParameter("MFAOperationForLogin", MFAOperationForLogin);
@@ -238,11 +290,25 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * OperationForRiskLogin.
+         * Specifies whether to enable MFA for RAM users who initiated unusual logons. Valid values:
+         * <p>
+         * 
+         * *   autonomous: yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA. This is the default value.
+         * *   enforceVerify: no.
          */
         public Builder operationForRiskLogin(String operationForRiskLogin) {
             this.putQueryParameter("OperationForRiskLogin", operationForRiskLogin);
             this.operationForRiskLogin = operationForRiskLogin;
+            return this;
+        }
+
+        /**
+         * VerificationTypes.
+         */
+        public Builder verificationTypes(java.util.List < String > verificationTypes) {
+            String verificationTypesShrink = shrink(verificationTypes, "VerificationTypes", "json");
+            this.putQueryParameter("VerificationTypes", verificationTypesShrink);
+            this.verificationTypes = verificationTypes;
             return this;
         }
 

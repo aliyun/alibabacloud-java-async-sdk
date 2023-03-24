@@ -50,7 +50,7 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         private UserSsoSettings userSsoSettings; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * UserSsoSettings.
+         * The configurations of user-based SSO.
          */
         public Builder userSsoSettings(UserSsoSettings userSsoSettings) {
             this.userSsoSettings = userSsoSettings;
@@ -122,7 +122,7 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
             private Boolean ssoEnabled; 
 
             /**
-             * AuxiliaryDomain.
+             * The auxiliary domain name.
              */
             public Builder auxiliaryDomain(String auxiliaryDomain) {
                 this.auxiliaryDomain = auxiliaryDomain;
@@ -130,7 +130,7 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * MetadataDocument.
+             * The metadata file, which is Base64-encoded.
              */
             public Builder metadataDocument(String metadataDocument) {
                 this.metadataDocument = metadataDocument;
@@ -138,7 +138,7 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * SsoEnabled.
+             * Indicates whether user-based SSO is enabled.
              */
             public Builder ssoEnabled(Boolean ssoEnabled) {
                 this.ssoEnabled = ssoEnabled;

@@ -82,7 +82,14 @@ public class UpdateOIDCProviderRequest extends Request {
         } 
 
         /**
-         * ClientIds.
+         * The ID of the client. If you want to specify multiple fingerprints, separate the fingerprints with commas (,).
+         * <p>
+         * 
+         * The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are `periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)`.
+         * 
+         * The client ID can be up to 64 characters in length.
+         * 
+         * >  If you specify this parameter, all the client IDs of the OIDC IdP are replaced. If you need to only add or remove a client ID, call the AddClientIdToOIDCProvider or RemoveClientIdFromOIDCProvider operation. For more information, see [AddClientIdToOIDCProvider](~~332057~~) or [RemoveClientIdFromOIDCProvider](~~332058~~).
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("ClientIds", clientIds);
@@ -91,7 +98,10 @@ public class UpdateOIDCProviderRequest extends Request {
         }
 
         /**
-         * NewDescription.
+         * The description of the OIDC IdP.
+         * <p>
+         * 
+         * The description can be up to 256 characters in length.
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -100,7 +110,7 @@ public class UpdateOIDCProviderRequest extends Request {
         }
 
         /**
-         * OIDCProviderName.
+         * The name of the OIDC IdP.
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

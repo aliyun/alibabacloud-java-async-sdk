@@ -74,7 +74,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * 请求返回结果是否被截断
+         * Indicates whether the response is truncated. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +86,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 下一个查询开始Token，NextToken为空说明没有下一个
+         * The marker. This parameter is returned only if the value of IsTruncated is true. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +94,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 资源列表
+         * An array consisting of tags that are added to resources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -174,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 资源ID
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -182,7 +186,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * The type of the resource. Valid values:
+             * <p>
+             * 
+             * *   user: a RAM user
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -190,7 +197,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签键
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -198,7 +205,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

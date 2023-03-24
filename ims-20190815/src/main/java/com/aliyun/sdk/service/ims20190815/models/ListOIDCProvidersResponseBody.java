@@ -74,7 +74,11 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +86,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +94,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * OIDCProviders.
+         * The information about the OIDC IdP.
          */
         public Builder OIDCProviders(OIDCProviders OIDCProviders) {
             this.OIDCProviders = OIDCProviders;
@@ -98,7 +102,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +250,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -254,7 +258,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIds.
+             * The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).
              */
             public Builder clientIds(String clientIds) {
                 this.clientIds = clientIds;
@@ -262,7 +266,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the OIDC IdP was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -270,7 +274,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the OIDC IdP.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +282,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprints.
+             * The fingerprint of the HTTPS certificate. If multiple fingerprints are returned, the fingerprints are separated by commas (,).
              */
             public Builder fingerprints(String fingerprints) {
                 this.fingerprints = fingerprints;
@@ -286,7 +290,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The timestamp when the OIDC IdP was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -294,7 +298,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The timestamp when the OIDC IdP was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -302,7 +306,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * IssuerUrl.
+             * The URL of the issuer.
              */
             public Builder issuerUrl(String issuerUrl) {
                 this.issuerUrl = issuerUrl;
@@ -310,7 +314,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * OIDCProviderName.
+             * The name of the OIDC IdP.
              */
             public Builder OIDCProviderName(String OIDCProviderName) {
                 this.OIDCProviderName = OIDCProviderName;
@@ -318,7 +322,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the OIDC IdP was modified. The time is displayed in UTC.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

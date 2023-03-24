@@ -50,7 +50,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessKey.
+         * The information of the AccessKey pair.
          */
         public Builder accessKey(AccessKey accessKey) {
             this.accessKey = accessKey;
@@ -58,7 +58,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID provided to you by Alibaba Cloud.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -142,7 +142,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * The AccessKey secret provided to you by Alibaba Cloud.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -150,7 +150,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the AccessKey pair was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -158,7 +158,11 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the AccessKey pair. Valid values:
+             * <p>
+             * 
+             * *   Active
+             * *   Inactive
              */
             public Builder status(String status) {
                 this.status = status;

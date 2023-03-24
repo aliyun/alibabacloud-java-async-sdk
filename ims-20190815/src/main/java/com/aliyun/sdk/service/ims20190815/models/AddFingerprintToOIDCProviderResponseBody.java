@@ -50,7 +50,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OIDCProvider.
+         * The name of the OIDC IdP.
          */
         public Builder OIDCProvider(OIDCProvider OIDCProvider) {
             this.OIDCProvider = OIDCProvider;
@@ -58,7 +58,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -214,7 +214,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIds.
+             * The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).
              */
             public Builder clientIds(String clientIds) {
                 this.clientIds = clientIds;
@@ -222,7 +222,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the OIDC IdP was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -230,7 +230,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the OIDC IdP.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +238,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprints.
+             * The fingerprint of the HTTPS certificate. If multiple fingerprints are returned, the fingerprints are separated by commas (,).
              */
             public Builder fingerprints(String fingerprints) {
                 this.fingerprints = fingerprints;
@@ -246,7 +246,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The timestamp when the OIDC IdP was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -254,7 +254,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The timestamp when the OIDC IdP was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -262,7 +262,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * IssuerUrl.
+             * The URL of the issuer.
              */
             public Builder issuerUrl(String issuerUrl) {
                 this.issuerUrl = issuerUrl;
@@ -270,7 +270,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * OIDCProviderName.
+             * The name of the OIDC IdP.
              */
             public Builder OIDCProviderName(String OIDCProviderName) {
                 this.OIDCProviderName = OIDCProviderName;
@@ -278,7 +278,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the OIDC IdP was modified. The time is displayed in UTC.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

@@ -50,7 +50,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         private SecurityPreference securityPreference; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityPreference.
+         * The details of security preferences.
          */
         public Builder securityPreference(SecurityPreference securityPreference) {
             this.securityPreference = securityPreference;
@@ -98,7 +98,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageAccessKeys; 
 
             /**
-             * AllowUserToManageAccessKeys.
+             * Specifies whether RAM users can manage their AccessKey pairs. Valid values:
+             * <p>
+             * 
+             * *   true: yes
+             * *   false: no
              */
             public Builder allowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
                 this.allowUserToManageAccessKeys = allowUserToManageAccessKeys;
@@ -199,7 +203,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private String operationForRiskLogin; 
 
             /**
-             * AllowUserToChangePassword.
+             * Specifies whether RAM users can change their passwords. Valid values:
+             * <p>
+             * 
+             * *   true: yes
+             * *   false: no
              */
             public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
                 this.allowUserToChangePassword = allowUserToChangePassword;
@@ -207,7 +215,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSaveMFATicket.
+             * Specifies whether to remember the multi-factor authentication (MFA) devices for seven days. Valid values:
+             * <p>
+             * 
+             * *   true: yes
+             * *   false: no
              */
             public Builder enableSaveMFATicket(Boolean enableSaveMFATicket) {
                 this.enableSaveMFATicket = enableSaveMFATicket;
@@ -215,7 +227,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * LoginNetworkMasks.
+             * The subnet mask.
              */
             public Builder loginNetworkMasks(String loginNetworkMasks) {
                 this.loginNetworkMasks = loginNetworkMasks;
@@ -223,7 +235,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * LoginSessionDuration.
+             * The validity period of the logon session of RAM users. Unit: hours.
              */
             public Builder loginSessionDuration(Integer loginSessionDuration) {
                 this.loginSessionDuration = loginSessionDuration;
@@ -231,7 +243,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * MFAOperationForLogin.
+             * Specifies whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. This parameter is used to replace the EnforceMFAForLogin parameter. The EnforceMFAForLogin parameter is still valid. However, we recommend that you use the MFAOperationForLogin parameter. Valid values:
+             * <p>
+             * 
+             * *   mandatory: MFA is required for all RAM users. If you use the EnforceMFAForLogin parameter, set the value to true.
+             * *   independent: User-specific settings are applied. This is the default value. If you use the EnforceMFAForLogin parameter, set the value to false.
+             * *   adaptive: MFA is required only for RAM users who initiated unusual logons.
              */
             public Builder MFAOperationForLogin(String MFAOperationForLogin) {
                 this.MFAOperationForLogin = MFAOperationForLogin;
@@ -239,7 +256,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * OperationForRiskLogin.
+             * Specifies whether to enable MFA for RAM users who initiated unusual logons. Valid values:
+             * <p>
+             * 
+             * *   autonomous: yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA. This is the default value.
+             * *   enforceVerify: no.
              */
             public Builder operationForRiskLogin(String operationForRiskLogin) {
                 this.operationForRiskLogin = operationForRiskLogin;
@@ -280,7 +301,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageMFADevices; 
 
             /**
-             * AllowUserToManageMFADevices.
+             * Indicates whether RAM users can manage their MFA devices. Valid values:
+             * <p>
+             * 
+             * *   true: yes
+             * *   false: no
              */
             public Builder allowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
                 this.allowUserToManageMFADevices = allowUserToManageMFADevices;
@@ -321,7 +346,11 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManagePersonalDingTalk; 
 
             /**
-             * AllowUserToManagePersonalDingTalk.
+             * Specifies whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:
+             * <p>
+             * 
+             * *   true: yes
+             * *   false: no
              */
             public Builder allowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
                 this.allowUserToManagePersonalDingTalk = allowUserToManagePersonalDingTalk;
@@ -330,6 +359,47 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
             public PersonalInfoPreference build() {
                 return new PersonalInfoPreference(this);
+            } 
+
+        } 
+
+    }
+    public static class VerificationPreference extends TeaModel {
+        @NameInMap("VerificationTypes")
+        private java.util.List < String > verificationTypes;
+
+        private VerificationPreference(Builder builder) {
+            this.verificationTypes = builder.verificationTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VerificationPreference create() {
+            return builder().build();
+        }
+
+        /**
+         * @return verificationTypes
+         */
+        public java.util.List < String > getVerificationTypes() {
+            return this.verificationTypes;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > verificationTypes; 
+
+            /**
+             * VerificationTypes.
+             */
+            public Builder verificationTypes(java.util.List < String > verificationTypes) {
+                this.verificationTypes = verificationTypes;
+                return this;
+            }
+
+            public VerificationPreference build() {
+                return new VerificationPreference(this);
             } 
 
         } 
@@ -348,11 +418,15 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("PersonalInfoPreference")
         private PersonalInfoPreference personalInfoPreference;
 
+        @NameInMap("VerificationPreference")
+        private VerificationPreference verificationPreference;
+
         private SecurityPreference(Builder builder) {
             this.accessKeyPreference = builder.accessKeyPreference;
             this.loginProfilePreference = builder.loginProfilePreference;
             this.MFAPreference = builder.MFAPreference;
             this.personalInfoPreference = builder.personalInfoPreference;
+            this.verificationPreference = builder.verificationPreference;
         }
 
         public static Builder builder() {
@@ -391,14 +465,22 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             return this.personalInfoPreference;
         }
 
+        /**
+         * @return verificationPreference
+         */
+        public VerificationPreference getVerificationPreference() {
+            return this.verificationPreference;
+        }
+
         public static final class Builder {
             private AccessKeyPreference accessKeyPreference; 
             private LoginProfilePreference loginProfilePreference; 
             private MFAPreference MFAPreference; 
             private PersonalInfoPreference personalInfoPreference; 
+            private VerificationPreference verificationPreference; 
 
             /**
-             * AccessKeyPreference.
+             * The AccessKey pair preference.
              */
             public Builder accessKeyPreference(AccessKeyPreference accessKeyPreference) {
                 this.accessKeyPreference = accessKeyPreference;
@@ -406,7 +488,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * LoginProfilePreference.
+             * The logon preference.
              */
             public Builder loginProfilePreference(LoginProfilePreference loginProfilePreference) {
                 this.loginProfilePreference = loginProfilePreference;
@@ -414,7 +496,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * MFAPreference.
+             * The MFA preference.
              */
             public Builder MFAPreference(MFAPreference MFAPreference) {
                 this.MFAPreference = MFAPreference;
@@ -422,10 +504,18 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * PersonalInfoPreference.
+             * The personal information preference.
              */
             public Builder personalInfoPreference(PersonalInfoPreference personalInfoPreference) {
                 this.personalInfoPreference = personalInfoPreference;
+                return this;
+            }
+
+            /**
+             * VerificationPreference.
+             */
+            public Builder verificationPreference(VerificationPreference verificationPreference) {
+                this.verificationPreference = verificationPreference;
                 return this;
             }
 

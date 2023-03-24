@@ -50,7 +50,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         private SAMLProvider SAMLProvider; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
         }
 
         /**
-         * SAMLProvider.
+         * The information of the IdP.
          */
         public Builder SAMLProvider(SAMLProvider SAMLProvider) {
             this.SAMLProvider = SAMLProvider;
@@ -146,7 +146,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the IdP.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -154,7 +154,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The creation time.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -162,7 +162,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +170,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * SAMLProviderName.
+             * The name of the IdP.
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -178,7 +178,7 @@ public class CreateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The update time.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

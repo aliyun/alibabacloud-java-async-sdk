@@ -111,7 +111,11 @@ public class CreateLoginProfileRequest extends Request {
         } 
 
         /**
-         * MFABindRequired.
+         * Specifies whether multi-factor authentication (MFA) must be enabled. Valid values:
+         * <p>
+         * 
+         * *   true: MFA must be enabled. The RAM user must bind an MFA device at the next logon.
+         * *   false: MFA is not enabled. This is the default value.
          */
         public Builder MFABindRequired(Boolean MFABindRequired) {
             this.putQueryParameter("MFABindRequired", MFABindRequired);
@@ -120,7 +124,10 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password that is used to log on to the console.
+         * <p>
+         * 
+         * The password must meet the complexity requirements.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -129,7 +136,11 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * PasswordResetRequired.
+         * Specifies whether the RAM user must reset the password at the next logon. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder passwordResetRequired(Boolean passwordResetRequired) {
             this.putQueryParameter("PasswordResetRequired", passwordResetRequired);
@@ -138,7 +149,11 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of password-based logon. Valid values:
+         * <p>
+         * 
+         * *   Active: Password-based logon is enabled. This is the default value.
+         * *   Inactive: Password-based logon is disabled.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -147,7 +162,7 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

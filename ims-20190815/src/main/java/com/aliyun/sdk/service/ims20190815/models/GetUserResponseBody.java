@@ -50,7 +50,7 @@ public class GetUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * The information about the RAM user.
          */
         public Builder user(User user) {
             this.user = user;
@@ -110,7 +110,7 @@ public class GetUserResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -320,7 +320,7 @@ public class GetUserResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * Comments.
+             * The description.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -328,7 +328,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the RAM user was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -336,7 +336,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the RAM user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -344,7 +344,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the RAM user.
+             * <p>
+             * 
+             * >  This parameter is valid only on the China site (aliyun.com).
              */
             public Builder email(String email) {
                 this.email = email;
@@ -352,7 +355,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginDate.
+             * The last time when the RAM user logged on to the Alibaba Cloud Management Console.
              */
             public Builder lastLoginDate(String lastLoginDate) {
                 this.lastLoginDate = lastLoginDate;
@@ -360,7 +363,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * MobilePhone.
+             * The mobile phone number of the RAM user.
+             * <p>
+             * 
+             * >  This parameter is valid only on the China site (aliyun.com).
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -368,7 +374,12 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The source of the RAM user. Valid values:
+             * <p>
+             * 
+             * *   Manual: The RAM user is manually created in the RAM console.
+             * *   SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).
+             * *   CloudSSO: The RAM user is mapped from a CloudSSO user.
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -376,7 +387,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * An array that consists of tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -384,7 +395,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the information about the RAM user was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -392,7 +403,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the RAM user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -400,7 +411,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * The logon name of the RAM user.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

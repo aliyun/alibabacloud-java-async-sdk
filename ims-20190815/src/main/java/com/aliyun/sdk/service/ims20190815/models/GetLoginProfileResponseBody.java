@@ -50,7 +50,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LoginProfile.
+         * The logon information.
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -58,7 +58,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * LastLoginTime.
+             * The last time when the RAM user logged on to the console.
              */
             public Builder lastLoginTime(String lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -166,7 +166,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * MFABindRequired.
+             * Indicates whether multi-factor authentication (MFA) must be enabled.
              */
             public Builder MFABindRequired(Boolean MFABindRequired) {
                 this.MFABindRequired = MFABindRequired;
@@ -174,7 +174,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordResetRequired.
+             * Indicates whether the RAM user must reset the password at the next logon.
              */
             public Builder passwordResetRequired(Boolean passwordResetRequired) {
                 this.passwordResetRequired = passwordResetRequired;
@@ -182,7 +182,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of password-based logon.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -190,7 +190,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The update time.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -198,7 +198,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * The logon name of the RAM user.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

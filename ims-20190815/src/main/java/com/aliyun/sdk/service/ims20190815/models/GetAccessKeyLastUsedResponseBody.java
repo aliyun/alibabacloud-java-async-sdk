@@ -50,7 +50,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessKeyLastUsed.
+         * The details of the time when the AccessKey pair was used for the last time.
          */
         public Builder accessKeyLastUsed(AccessKeyLastUsed accessKeyLastUsed) {
             this.accessKeyLastUsed = accessKeyLastUsed;
@@ -58,7 +58,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * LastUsedDate.
+             * The time when the AccessKey pair was used for the last time.
              */
             public Builder lastUsedDate(String lastUsedDate) {
                 this.lastUsedDate = lastUsedDate;

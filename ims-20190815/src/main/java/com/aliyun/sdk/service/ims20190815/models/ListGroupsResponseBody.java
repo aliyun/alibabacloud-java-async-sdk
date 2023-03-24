@@ -74,7 +74,7 @@ public class ListGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Groups.
+         * The information of the RAM user groups.
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -82,7 +82,11 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -90,7 +94,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -98,7 +102,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +202,7 @@ public class ListGroupsResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Comments.
+             * The description.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -206,7 +210,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The creation time.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -214,7 +218,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the RAM user group.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -222,7 +226,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the RAM user group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -230,7 +234,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the RAM user group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -238,7 +242,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The update time.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

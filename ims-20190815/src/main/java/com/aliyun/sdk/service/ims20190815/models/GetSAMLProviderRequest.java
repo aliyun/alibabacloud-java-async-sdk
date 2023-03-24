@@ -55,7 +55,7 @@ public class GetSAMLProviderRequest extends Request {
         } 
 
         /**
-         * SAMLProviderName.
+         * The name of the IdP.
          */
         public Builder SAMLProviderName(String SAMLProviderName) {
             this.putQueryParameter("SAMLProviderName", SAMLProviderName);

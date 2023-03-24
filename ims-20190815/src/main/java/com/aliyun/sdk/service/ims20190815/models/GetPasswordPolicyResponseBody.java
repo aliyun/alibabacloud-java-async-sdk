@@ -50,7 +50,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PasswordPolicy.
+         * The details of the password policy.
          */
         public Builder passwordPolicy(PasswordPolicy passwordPolicy) {
             this.passwordPolicy = passwordPolicy;
@@ -58,7 +58,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             private Boolean requireUppercaseCharacters; 
 
             /**
-             * HardExpire.
+             * Indicates whether to disable logon after the password expires.
              */
             public Builder hardExpire(Boolean hardExpire) {
                 this.hardExpire = hardExpire;
@@ -226,7 +226,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLoginAttemps.
+             * The maximum number of password retries.
              */
             public Builder maxLoginAttemps(Integer maxLoginAttemps) {
                 this.maxLoginAttemps = maxLoginAttemps;
@@ -234,7 +234,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPasswordAge.
+             * The validity period of the password.
              */
             public Builder maxPasswordAge(Integer maxPasswordAge) {
                 this.maxPasswordAge = maxPasswordAge;
@@ -242,7 +242,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumPasswordDifferentCharacter.
+             * The minimum number of unique characters in the password.
              */
             public Builder minimumPasswordDifferentCharacter(Integer minimumPasswordDifferentCharacter) {
                 this.minimumPasswordDifferentCharacter = minimumPasswordDifferentCharacter;
@@ -250,7 +250,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumPasswordLength.
+             * The minimum number of characters in the password.
              */
             public Builder minimumPasswordLength(Integer minimumPasswordLength) {
                 this.minimumPasswordLength = minimumPasswordLength;
@@ -258,7 +258,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordNotContainUserName.
+             * Indicates whether to exclude the username from the password.
              */
             public Builder passwordNotContainUserName(Boolean passwordNotContainUserName) {
                 this.passwordNotContainUserName = passwordNotContainUserName;
@@ -266,7 +266,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordReusePrevention.
+             * The policy for password history check.
              */
             public Builder passwordReusePrevention(Integer passwordReusePrevention) {
                 this.passwordReusePrevention = passwordReusePrevention;
@@ -274,7 +274,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RequireLowercaseCharacters.
+             * Indicates whether the password must contain lowercase letters.
              */
             public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
                 this.requireLowercaseCharacters = requireLowercaseCharacters;
@@ -282,7 +282,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RequireNumbers.
+             * Indicates whether the password must contain digits.
              */
             public Builder requireNumbers(Boolean requireNumbers) {
                 this.requireNumbers = requireNumbers;
@@ -290,7 +290,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RequireSymbols.
+             * Indicates whether the password must contain special characters.
              */
             public Builder requireSymbols(Boolean requireSymbols) {
                 this.requireSymbols = requireSymbols;
@@ -298,7 +298,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RequireUppercaseCharacters.
+             * Indicates whether the password must contain uppercase letters.
              */
             public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
                 this.requireUppercaseCharacters = requireUppercaseCharacters;

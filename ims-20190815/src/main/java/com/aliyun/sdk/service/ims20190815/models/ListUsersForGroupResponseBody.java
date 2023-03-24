@@ -74,7 +74,11 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +86,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +94,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The information of RAM users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -174,7 +178,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * DisplayName.
+             * The display name of the RAM user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -182,7 +186,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JoinDate.
+             * The time when the RAM user was added.
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;
@@ -190,7 +194,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the RAM user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -198,7 +202,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * The logon name of the RAM user.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

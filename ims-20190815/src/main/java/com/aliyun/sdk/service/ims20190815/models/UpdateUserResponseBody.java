@@ -50,7 +50,7 @@ public class UpdateUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * The information of the RAM user.
          */
         public Builder user(User user) {
             this.user = user;
@@ -206,7 +206,7 @@ public class UpdateUserResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * Comments.
+             * The description of the RAM user.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -214,7 +214,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the RAM user was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -222,7 +222,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the RAM user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -230,7 +230,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the RAM user.
+             * <p>
+             * 
+             * >  This parameter applies only to the China site (aliyun.com).
              */
             public Builder email(String email) {
                 this.email = email;
@@ -238,7 +241,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginDate.
+             * The last time when the RAM user logged on to the console.
              */
             public Builder lastLoginDate(String lastLoginDate) {
                 this.lastLoginDate = lastLoginDate;
@@ -246,7 +249,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * MobilePhone.
+             * The mobile phone number of the RAM user.
+             * <p>
+             * 
+             * >  This parameter applies only to the China site (aliyun.com).
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -262,7 +268,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the information of the RAM user was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -270,7 +276,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the RAM user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -278,7 +284,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * The logon name of the RAM user.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

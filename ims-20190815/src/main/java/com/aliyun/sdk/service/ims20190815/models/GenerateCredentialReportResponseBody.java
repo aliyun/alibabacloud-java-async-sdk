@@ -50,7 +50,7 @@ public class GenerateCredentialReportResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,12 @@ public class GenerateCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The generation status of the user credential report. Valid values:
+         * <p>
+         * 
+         * *   STARTED: The user credential report starts to generate.
+         * *   INPROGRESS: The user credential report is being generated.
+         * *   COMPLETED: The user credential report is generated.
          */
         public Builder state(String state) {
             this.state = state;

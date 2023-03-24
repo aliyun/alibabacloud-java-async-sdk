@@ -68,7 +68,12 @@ public class RemoveClientIdFromOIDCProviderRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * The client ID that you want to remove.
+         * <p>
+         * 
+         * The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are `periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)`.
+         * 
+         * The client ID can be up to 64 characters in length.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -77,7 +82,7 @@ public class RemoveClientIdFromOIDCProviderRequest extends Request {
         }
 
         /**
-         * OIDCProviderName.
+         * The name of the OIDC IdP.
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

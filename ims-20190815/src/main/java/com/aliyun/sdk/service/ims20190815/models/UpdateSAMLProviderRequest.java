@@ -83,7 +83,10 @@ public class UpdateSAMLProviderRequest extends Request {
         } 
 
         /**
-         * NewDescription.
+         * The new description.
+         * <p>
+         * 
+         * >  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -92,7 +95,10 @@ public class UpdateSAMLProviderRequest extends Request {
         }
 
         /**
-         * NewEncodedSAMLMetadataDocument.
+         * The new metadata file.
+         * <p>
+         * 
+         * >  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.
          */
         public Builder newEncodedSAMLMetadataDocument(String newEncodedSAMLMetadataDocument) {
             this.putQueryParameter("NewEncodedSAMLMetadataDocument", newEncodedSAMLMetadataDocument);
@@ -101,7 +107,7 @@ public class UpdateSAMLProviderRequest extends Request {
         }
 
         /**
-         * SAMLProviderName.
+         * The name of the IdP whose information you want to modify.
          */
         public Builder SAMLProviderName(String SAMLProviderName) {
             this.putQueryParameter("SAMLProviderName", SAMLProviderName);

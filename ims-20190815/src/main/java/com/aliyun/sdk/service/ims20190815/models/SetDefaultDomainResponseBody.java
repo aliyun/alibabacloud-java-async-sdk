@@ -50,7 +50,7 @@ public class SetDefaultDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DefaultDomainName.
+         * The default domain name.
          */
         public Builder defaultDomainName(String defaultDomainName) {
             this.defaultDomainName = defaultDomainName;
@@ -58,7 +58,7 @@ public class SetDefaultDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

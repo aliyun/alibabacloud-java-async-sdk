@@ -114,7 +114,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * The type of the resource. Valid value:
+         * <p>
+         * 
+         * *   user: a RAM user
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -177,7 +180,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * The key of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -185,7 +191,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The value of tag N.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

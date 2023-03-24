@@ -74,7 +74,11 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         private SAMLProviders SAMLProviders; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +86,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +94,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * SAMLProviders.
+         * The information of the IdP.
          */
         public Builder SAMLProviders(SAMLProviders SAMLProviders) {
             this.SAMLProviders = SAMLProviders;
@@ -186,7 +190,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the IdP.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -194,7 +198,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The creation time.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -202,7 +206,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,7 +214,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * SAMLProviderName.
+             * The name of the IdP.
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -218,7 +222,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The update time.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

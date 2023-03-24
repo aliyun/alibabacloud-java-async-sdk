@@ -62,7 +62,10 @@ public class GetCredentialReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The content of the user credential report.
+         * <p>
+         * 
+         * The report is Base64-encoded. After you decode the report, the credential report is in the CSV format.
          */
         public Builder content(String content) {
             this.content = content;
@@ -70,7 +73,7 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * GeneratedTime.
+         * The time when the user credential report was generated.
          */
         public Builder generatedTime(String generatedTime) {
             this.generatedTime = generatedTime;
@@ -78,7 +81,7 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

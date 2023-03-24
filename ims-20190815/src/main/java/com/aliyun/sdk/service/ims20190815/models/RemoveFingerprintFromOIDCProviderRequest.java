@@ -68,7 +68,7 @@ public class RemoveFingerprintFromOIDCProviderRequest extends Request {
         } 
 
         /**
-         * Fingerprint.
+         * The fingerprint that you want to remove.
          */
         public Builder fingerprint(String fingerprint) {
             this.putQueryParameter("Fingerprint", fingerprint);
@@ -77,7 +77,7 @@ public class RemoveFingerprintFromOIDCProviderRequest extends Request {
         }
 
         /**
-         * OIDCProviderName.
+         * The name of the OIDC IdP.
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

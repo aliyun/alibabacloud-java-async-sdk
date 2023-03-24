@@ -74,7 +74,11 @@ public class ListUsersResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +86,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The parameter that is used to obtain the truncated part. It takes effect only when `IsTruncated` is set to `true`.
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +94,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * An array that consists of the information about the RAM user.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -150,7 +154,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -158,7 +162,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -360,7 +364,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * Comments.
+             * The description.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -368,7 +372,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the RAM user was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -376,7 +380,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the RAM user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -384,7 +388,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the RAM user.
+             * <p>
+             * 
+             * >  This parameter is valid only on the China site (aliyun.com).
              */
             public Builder email(String email) {
                 this.email = email;
@@ -392,7 +399,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginDate.
+             * The last time when the RAM user logged on to the Alibaba Cloud Management Console.
              */
             public Builder lastLoginDate(String lastLoginDate) {
                 this.lastLoginDate = lastLoginDate;
@@ -400,7 +407,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * MobilePhone.
+             * The mobile phone number of the RAM user.
+             * <p>
+             * 
+             * >  This parameter is valid only on the China site (aliyun.com).
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -408,7 +418,12 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The source of the RAM user. Valid values:
+             * <p>
+             * 
+             * *   Manual: The RAM user is manually created in the RAM console.
+             * *   SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).
+             * *   CloudSSO: The RAM user is mapped from a CloudSSO user.
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -416,7 +431,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * An array that consists of tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -424,7 +439,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the information about the RAM user was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -432,7 +447,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the RAM user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -440,7 +455,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * The logon name of the RAM user.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

@@ -50,7 +50,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LoginProfile.
+         * The logon information.
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -58,7 +58,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * MFABindRequired.
+             * Indicates whether MFA must be enabled.
              */
             public Builder MFABindRequired(Boolean MFABindRequired) {
                 this.MFABindRequired = MFABindRequired;
@@ -154,7 +154,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordResetRequired.
+             * Indicates whether the RAM user must reset the password at the next logon.
              */
             public Builder passwordResetRequired(Boolean passwordResetRequired) {
                 this.passwordResetRequired = passwordResetRequired;
@@ -162,7 +162,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of password-based logon.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -170,7 +170,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The update time.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -178,7 +178,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * The logon name of the RAM user.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

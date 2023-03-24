@@ -54,7 +54,10 @@ public class ListAccessKeysRequest extends Request {
         } 
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
+         * <p>
+         * 
+         * If this parameter is empty, the AccessKey pairs of the current user are queried.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

@@ -55,7 +55,7 @@ public class DeleteVirtualMFADeviceRequest extends Request {
         } 
 
         /**
-         * SerialNumber.
+         * The serial number of the MFA device.
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);

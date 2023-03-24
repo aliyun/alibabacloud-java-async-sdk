@@ -50,7 +50,7 @@ public class GetGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Group.
+         * The information of the RAM user group.
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +58,7 @@ public class GetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetGroupResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Comments.
+             * The description.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -166,7 +166,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The creation time.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -174,7 +174,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the RAM user group.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -182,7 +182,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the RAM user group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -190,7 +190,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the RAM user group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -198,7 +198,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The update time.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

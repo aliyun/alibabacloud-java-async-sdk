@@ -54,7 +54,10 @@ public class CreateAccessKeyRequest extends Request {
         } 
 
         /**
-         * UserPrincipalName.
+         * The logon name of the RAM user.
+         * <p>
+         * 
+         * If this parameter is empty, an AccessKey pair is created for the current user.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);
