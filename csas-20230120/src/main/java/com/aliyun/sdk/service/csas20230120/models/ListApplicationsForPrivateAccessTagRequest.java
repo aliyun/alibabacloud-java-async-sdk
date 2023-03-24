@@ -1,0 +1,74 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.csas20230120.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListApplicationsForPrivateAccessTagRequest} extends {@link RequestModel}
+ *
+ * <p>ListApplicationsForPrivateAccessTagRequest</p>
+ */
+public class ListApplicationsForPrivateAccessTagRequest extends Request {
+    @Query
+    @NameInMap("TagIds")
+    @Validation(required = true)
+    private java.util.List < String > tagIds;
+
+    private ListApplicationsForPrivateAccessTagRequest(Builder builder) {
+        super(builder);
+        this.tagIds = builder.tagIds;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListApplicationsForPrivateAccessTagRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return tagIds
+     */
+    public java.util.List < String > getTagIds() {
+        return this.tagIds;
+    }
+
+    public static final class Builder extends Request.Builder<ListApplicationsForPrivateAccessTagRequest, Builder> {
+        private java.util.List < String > tagIds; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListApplicationsForPrivateAccessTagRequest request) {
+            super(request);
+            this.tagIds = request.tagIds;
+        } 
+
+        /**
+         * TagIds.
+         */
+        public Builder tagIds(java.util.List < String > tagIds) {
+            String tagIdsShrink = shrink(tagIds, "TagIds", "json");
+            this.putQueryParameter("TagIds", tagIdsShrink);
+            this.tagIds = tagIds;
+            return this;
+        }
+
+        @Override
+        public ListApplicationsForPrivateAccessTagRequest build() {
+            return new ListApplicationsForPrivateAccessTagRequest(this);
+        } 
+
+    } 
+
+}
