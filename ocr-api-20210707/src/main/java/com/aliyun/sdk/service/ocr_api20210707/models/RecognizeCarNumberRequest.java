@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RecognizeCarNumberRequest extends Request {
     @Query
     @NameInMap("Url")
+    @Validation(maxLength = 2048)
     private String url;
 
     @Body

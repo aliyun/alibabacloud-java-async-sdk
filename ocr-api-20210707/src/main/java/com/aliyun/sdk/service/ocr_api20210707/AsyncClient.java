@@ -150,8 +150,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeTrainInvoiceResponse> recognizeTrainInvoice(RecognizeTrainInvoiceRequest request);
 
-    CompletableFuture<RecognizeTravelCardResponse> recognizeTravelCard(RecognizeTravelCardRequest request);
-
     CompletableFuture<RecognizeUsedCarInvoiceResponse> recognizeUsedCarInvoice(RecognizeUsedCarInvoiceRequest request);
 
     CompletableFuture<RecognizeVehicleCertificationResponse> recognizeVehicleCertification(RecognizeVehicleCertificationRequest request);

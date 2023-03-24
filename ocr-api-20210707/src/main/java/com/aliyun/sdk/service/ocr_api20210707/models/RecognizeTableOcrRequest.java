@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RecognizeTableOcrRequest extends Request {
     @Query
+    @NameInMap("IsHandWriting")
+    private String isHandWriting;
+
+    @Query
     @NameInMap("LineLess")
     private Boolean lineLess;
 
@@ -35,6 +39,7 @@ public class RecognizeTableOcrRequest extends Request {
 
     private RecognizeTableOcrRequest(Builder builder) {
         super(builder);
+        this.isHandWriting = builder.isHandWriting;
         this.lineLess = builder.lineLess;
         this.needRotate = builder.needRotate;
         this.skipDetection = builder.skipDetection;
@@ -53,6 +58,13 @@ public class RecognizeTableOcrRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return isHandWriting
+     */
+    public String getIsHandWriting() {
+        return this.isHandWriting;
     }
 
     /**
@@ -91,6 +103,7 @@ public class RecognizeTableOcrRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecognizeTableOcrRequest, Builder> {
+        private String isHandWriting; 
         private Boolean lineLess; 
         private Boolean needRotate; 
         private Boolean skipDetection; 
@@ -103,12 +116,22 @@ public class RecognizeTableOcrRequest extends Request {
 
         private Builder(RecognizeTableOcrRequest request) {
             super(request);
+            this.isHandWriting = request.isHandWriting;
             this.lineLess = request.lineLess;
             this.needRotate = request.needRotate;
             this.skipDetection = request.skipDetection;
             this.url = request.url;
             this.body = request.body;
         } 
+
+        /**
+         * IsHandWriting.
+         */
+        public Builder isHandWriting(String isHandWriting) {
+            this.putQueryParameter("IsHandWriting", isHandWriting);
+            this.isHandWriting = isHandWriting;
+            return this;
+        }
 
         /**
          * 是否无线条

@@ -18,6 +18,7 @@ public class RecognizeEduQuestionOcrRequest extends Request {
 
     @Query
     @NameInMap("Url")
+    @Validation(maxLength = 2048)
     private String url;
 
     @Body
