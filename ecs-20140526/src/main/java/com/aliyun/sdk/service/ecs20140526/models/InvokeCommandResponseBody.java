@@ -50,7 +50,7 @@ public class InvokeCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the command task.
+         * InvokeId.
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -58,7 +58,7 @@ public class InvokeCommandResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

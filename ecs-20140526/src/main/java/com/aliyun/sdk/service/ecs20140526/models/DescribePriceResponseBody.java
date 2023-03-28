@@ -50,7 +50,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the prices and discount rules.
+         * Details about the prices and promotion rules.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -422,12 +422,12 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The currency unit. 
+             * The currency unit.
              * <p>
              * 
-             * Alibaba Cloud China site (aliyun.com): CNY. 
+             * Alibaba Cloud China site (aliyun.com): CNY
              * 
-             * Alibaba Cloud International site (alibabacloud.com): USD.
+             * Alibaba Cloud International site (alibabacloud.com): USD
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -435,10 +435,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the price. 
+             * Details about the price.
              * <p>
              * 
-             * >  This parameter is in invitational preview and unavailable.
+             * > This parameter is in invitational preview and unavailable.
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;

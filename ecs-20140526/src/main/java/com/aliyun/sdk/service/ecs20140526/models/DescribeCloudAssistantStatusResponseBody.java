@@ -86,7 +86,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Details about the installation status of the Cloud Assistant client.
+         * The information about Cloud Assistant on the instances.
          */
         public Builder instanceCloudAssistantStatusSet(InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet) {
             this.instanceCloudAssistantStatusSet = instanceCloudAssistantStatusSet;
@@ -254,7 +254,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             private Boolean supportSessionManager; 
 
             /**
-             * The number of commands that are being run.
+             * The number of tasks that Cloud Assistant was running on the instance.
              */
             public Builder activeTaskCount(Long activeTaskCount) {
                 this.activeTaskCount = activeTaskCount;
@@ -262,7 +262,11 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Cloud Assistant client is installed on the instance.
+             * Indicates whether Cloud Assistant is running on the instance. Valid values:
+             * <p>
+             * 
+             * *   true: Heartbeats are detected within 1 minute.
+             * *   false: No heartbeats are detected within 1 minute.
              */
             public Builder cloudAssistantStatus(String cloudAssistantStatus) {
                 this.cloudAssistantStatus = cloudAssistantStatus;
@@ -270,7 +274,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the Cloud Assistant client.
+             * The version number of the Cloud Assistant client. This parameter is empty if the Cloud Assistant client is not installed or is not running.
              */
             public Builder cloudAssistantVersion(String cloudAssistantVersion) {
                 this.cloudAssistantVersion = cloudAssistantVersion;
@@ -286,7 +290,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of commands that have been run.
+             * The number of tasks that Cloud Assistant completed on the instance.
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -294,7 +298,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The last heartbeat time of Cloud Assistant.
+             * The most recent heartbeat time of Cloud Assistant. The value is updated once every minute.
              */
             public Builder lastHeartbeatTime(String lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -310,7 +314,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the instance. Valid values:
+             * The operating system of the instance. Valid values:
              * <p>
              * 
              * *   Windows
@@ -322,7 +326,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the version of the Cloud Assistant client supports the session management feature.
+             * Indicates whether Cloud Assistant supports Session Manager on the instance. If Cloud Assistant does not support Session Manager on the instance, an early Cloud Assistant version may be installed on the instance or Session Manager may not be supported in the specified region.
              */
             public Builder supportSessionManager(Boolean supportSessionManager) {
                 this.supportSessionManager = supportSessionManager;

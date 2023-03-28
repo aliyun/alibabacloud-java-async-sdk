@@ -50,7 +50,7 @@ public class RedeployInstanceResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +58,7 @@ public class RedeployInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the redeployment task.
-         * <p>
-         * 
-         * You can call the [DescribeTasks](~~25622~~) operation to query the migration result.
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

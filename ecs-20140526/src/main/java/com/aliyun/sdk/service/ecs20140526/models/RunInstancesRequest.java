@@ -134,6 +134,10 @@ public class RunInstancesRequest extends Request {
     private String imageId;
 
     @Query
+    @NameInMap("ImageOptions")
+    private ImageOptions imageOptions;
+
+    @Query
     @NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
@@ -201,6 +205,10 @@ public class RunInstancesRequest extends Request {
     @Query
     @NameInMap("NetworkInterfaceQueueNumber")
     private Integer networkInterfaceQueueNumber;
+
+    @Query
+    @NameInMap("NetworkOptions")
+    private NetworkOptions networkOptions;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -345,6 +353,7 @@ public class RunInstancesRequest extends Request {
         this.httpTokens = builder.httpTokens;
         this.imageFamily = builder.imageFamily;
         this.imageId = builder.imageId;
+        this.imageOptions = builder.imageOptions;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
@@ -362,6 +371,7 @@ public class RunInstancesRequest extends Request {
         this.minAmount = builder.minAmount;
         this.networkInterface = builder.networkInterface;
         this.networkInterfaceQueueNumber = builder.networkInterfaceQueueNumber;
+        this.networkOptions = builder.networkOptions;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.password = builder.password;
@@ -615,6 +625,13 @@ public class RunInstancesRequest extends Request {
     }
 
     /**
+     * @return imageOptions
+     */
+    public ImageOptions getImageOptions() {
+        return this.imageOptions;
+    }
+
+    /**
      * @return instanceChargeType
      */
     public String getInstanceChargeType() {
@@ -731,6 +748,13 @@ public class RunInstancesRequest extends Request {
      */
     public Integer getNetworkInterfaceQueueNumber() {
         return this.networkInterfaceQueueNumber;
+    }
+
+    /**
+     * @return networkOptions
+     */
+    public NetworkOptions getNetworkOptions() {
+        return this.networkOptions;
     }
 
     /**
@@ -953,6 +977,7 @@ public class RunInstancesRequest extends Request {
         private String httpTokens; 
         private String imageFamily; 
         private String imageId; 
+        private ImageOptions imageOptions; 
         private String instanceChargeType; 
         private String instanceName; 
         private String instanceType; 
@@ -970,6 +995,7 @@ public class RunInstancesRequest extends Request {
         private Integer minAmount; 
         private java.util.List < NetworkInterface> networkInterface; 
         private Integer networkInterfaceQueueNumber; 
+        private NetworkOptions networkOptions; 
         private String ownerAccount; 
         private Long ownerId; 
         private String password; 
@@ -1034,6 +1060,7 @@ public class RunInstancesRequest extends Request {
             this.httpTokens = request.httpTokens;
             this.imageFamily = request.imageFamily;
             this.imageId = request.imageId;
+            this.imageOptions = request.imageOptions;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
@@ -1051,6 +1078,7 @@ public class RunInstancesRequest extends Request {
             this.minAmount = request.minAmount;
             this.networkInterface = request.networkInterface;
             this.networkInterfaceQueueNumber = request.networkInterfaceQueueNumber;
+            this.networkOptions = request.networkOptions;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.password = request.password;
@@ -1144,13 +1172,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to associate an instance on a dedicated host with the dedicated host. Valid values:
-         * <p>
-         * 
-         * *   default: does not associate the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool if the available resources of the original dedicated host are insufficient.
-         * *   host: associates the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance remains on the original dedicated host. If the available resources of the original dedicated host are insufficient, the instance cannot be started.
-         * 
-         * Default value: default.
+         * Affinity.
          */
         public Builder affinity(String affinity) {
             this.putQueryParameter("Affinity", affinity);
@@ -1159,10 +1181,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The number of instances that you want to create. Valid values: 1 to 100.
-         * <p>
-         * 
-         * Default value: 1.
+         * Amount.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -1171,7 +1190,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * Arn.
          */
         public Builder arn(java.util.List < Arn> arn) {
             this.putQueryParameter("Arn", arn);
@@ -1180,12 +1199,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
-         * <p>
-         * 
-         * *   If the value of seconds (`ss`) is not `00`, the time is automatically rounded to the nearest minute based on the value of minutes (`mm`).
-         * *   The specified time must be at least 30 minutes later than the current time.
-         * *   The specified time can be at most three years from the current time.
+         * AutoReleaseTime.
          */
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
@@ -1194,13 +1208,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PrePaid`. Valid values:
-         * <p>
-         * 
-         * *   true: enables auto-renewal.
-         * *   false: does not enable auto-renewal.
-         * 
-         * Default value: false.
+         * AutoRenew.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -1209,13 +1217,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the instance. Valid values:
-         * <p>
-         * 
-         * *   Valid values when PeriodUnit is set to Week: 1, 2, and 3.
-         * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * AutoRenewPeriod.
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -1224,7 +1226,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -1233,11 +1235,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The performance mode of the burstable instance. Valid values:
-         * <p>
-         * 
-         * *   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).
-         * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).
+         * CreditSpecification.
          */
         public Builder creditSpecification(String creditSpecification) {
             this.putQueryParameter("CreditSpecification", creditSpecification);
@@ -1246,7 +1244,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Details about the data disks.
+         * DataDisk.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
@@ -1255,10 +1253,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host on which to create the instance. If you set the `DedicatedHostId` parameter, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.
-         * <p>
-         * 
-         * You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the list of dedicated host IDs.
+         * DedicatedHostId.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -1267,15 +1262,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
-         * <p>
-         * 
-         * *   true: enables release protection for the instance.
-         * *   false: disables release protection for the instance.
-         * 
-         * Default value: false.
-         * 
-         * > This parameter is applicable to only pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+         * DeletionProtection.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -1284,7 +1271,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The number of the deployment set group to which to deploy the instance. If the deployment set specified by the DeploymentSetId parameter uses the high availability group strategy (AvailabilityGroup), you can use the DeploymentSetGroupNo parameter to specify a deployment set group in the deployment set. Valid values: 1 to 7.
+         * DeploymentSetGroupNo.
          */
         public Builder deploymentSetGroupNo(Integer deploymentSetGroupNo) {
             this.putQueryParameter("DeploymentSetGroupNo", deploymentSetGroupNo);
@@ -1293,7 +1280,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set to which to deploy the instance.
+         * DeploymentSetId.
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -1302,7 +1289,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The description of the instance. The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -1311,11 +1298,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
-         * <p>
-         * 
-         * *   true: The validity of the request is checked but the request is not made. Check items include whether required parameters are specified, the request format, service limits, and available ECS resources. If the check fails, the corresponding error code is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-         * *   false: The validity of the request is checked, and the request is made if the check succeeds.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -1324,22 +1307,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The hostname of the instance. Take note of the following items:
-         * <p>
-         * 
-         * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
-         * 
-         * *   For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).
-         * 
-         * *   For instances that run other operating systems such as Linux, take note of the following items:
-         * 
-         *     *   The hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
-         *     *   You can use the `${instance_id}` placeholder to pass instance IDs into the hostname specified by `HostName`. For example, if you set `HostName` to k8s-${instance_id} and the instance is assigned an ID of `i-123abc****`, the hostname of the instance is `k8s-i-123abc****`.
-         * 
-         * When you create multiple instances, you can perform the following operations:
-         * 
-         * *   Batch configure sequential hostnames for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
-         * *   Use the `HostNames.N` parameter to configure different hostnames for instances. You cannot specify both the `HostName` and `HostNames.N` parameters.
+         * HostName.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -1348,7 +1316,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The hostname of instance N. You can use this parameter to specify different hostnames for multiple instances.
+         * HostNames.
          */
         public Builder hostNames(java.util.List < String > hostNames) {
             this.putQueryParameter("HostNames", hostNames);
@@ -1357,7 +1325,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the Elastic High Performance Computing (E-HPC) cluster to which to assign the instance.
+         * HpcClusterId.
          */
         public Builder hpcClusterId(String hpcClusterId) {
             this.putQueryParameter("HpcClusterId", hpcClusterId);
@@ -1366,15 +1334,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the access channel for instance metadata. Valid values:
-         * <p>
-         * 
-         * *   enabled
-         * *   disabled
-         * 
-         * Default value: enabled.
-         * 
-         * > For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
+         * HttpEndpoint.
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -1383,10 +1343,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The HTTP PUT response hop limit for accessing instance metadata. Valid values: 1 to 64.
-         * <p>
-         * 
-         * Default value: 1.
+         * HttpPutResponseHopLimit.
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -1395,15 +1352,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
-         * <p>
-         * 
-         * *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
-         * *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
-         * 
-         * Default value: optional.
-         * 
-         * > For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
+         * HttpTokens.
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);
@@ -1412,13 +1361,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create instances.
-         * <p>
-         * 
-         * *   If you set the `ImageId` parameter, you cannot set the ImageFamily parameter.
-         * *   If you do not set the `ImageId` parameter but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that has the `ImageId` parameter set, you cannot set the ImageFamily parameter.
-         * *   If you do not set the `ImageId` parameter but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that does not have the `ImageId` parameter set, you can set the ImageFamily parameter.
-         * *   If you do not set the `ImageId`, `LaunchTemplateId`, or `LaunchTemplateName` parameter, you can set the ImageFamily parameter.
+         * ImageFamily.
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -1427,7 +1370,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the image to use to create the instance. You can call the [DescribeImages](~~25534~~) operation to query available images. If you do not use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template and do not set the `ImageFamily` parameter to obtain the latest available custom image from the specified image family, you must specify the `ImageId` parameter.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -1436,15 +1379,16 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
-         * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
-         * 
-         * Default value: PostPaid.
-         * 
-         * If you set this parameter to PrePaid, make sure that your account has sufficient balance or credit. Otherwise, an `InvalidPayMethod` error is returned.
+         * ImageOptions.
+         */
+        public Builder imageOptions(ImageOptions imageOptions) {
+            this.putQueryParameter("ImageOptions", imageOptions);
+            this.imageOptions = imageOptions;
+            return this;
+        }
+
+        /**
+         * InstanceChargeType.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -1453,10 +1397,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
-         * <p>
-         * 
-         * When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -1465,11 +1406,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The instance type. If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template, you must set the `InstanceType` parameter.
-         * <p>
-         * 
-         * *   Select an instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Best practices for instance type selection](~~58291~~) to learn about how to select instance types.
-         * *   Query available resources. Call the [DescribeAvailableResource](~~66186~~) operation to query available resources in a specific region or zone.
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -1478,15 +1415,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The billing method for network usage. Valid values:
-         * <p>
-         * 
-         * *   PayByBandwidth: pay-by-bandwidth
-         * *   PayByTraffic: pay-by-traffic
-         * 
-         * Default value: PayByTraffic.
-         * 
-         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * InternetChargeType.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -1495,11 +1424,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
-         * <p>
-         * 
-         * *   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of InternetMaxBandwidthIn are 1 to 10, and the default value is 10.
-         * *   When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.
+         * InternetMaxBandwidthIn.
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
@@ -1508,10 +1433,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
-         * <p>
-         * 
-         * Default value: 0.
+         * InternetMaxBandwidthOut.
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -1520,11 +1442,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is I/O optimized. For instances of [retired instance types](~~55263~~), the default value is none. For instances of other instance types, the default value is optimized. Valid values:
-         * <p>
-         * 
-         * *   none: The instance is not I/O optimized.
-         * *   optimized: The instance is I/O optimized.
+         * IoOptimized.
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -1533,15 +1451,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * IPv6 address N to be assigned to the primary ENI. Valid values of N: 1 to 10.
-         * <p>
-         * 
-         * Example: `Ipv6Address.1=2001:db8:1234:1a00::***`.
-         * 
-         * Take note of the following items:
-         * 
-         * *   If the `Ipv6Address.N` parameter is specified, you must set the `Amount` parameter to 1 and leave the `Ipv6AddressCount` parameter empty.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot set `Ipv6Addresses.N` or `Ipv6AddressCount` and must set `NetworkInterface.N.Ipv6Addresses.N` or `NetworkInterface.N.Ipv6AddressCount`.
+         * Ipv6Address.
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -1550,13 +1460,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.
-         * <p>
-         * 
-         * Take note of the following items:
-         * 
-         * *   You cannot specify both the `Ipv6Addresses.N` and `Ipv6AddressCount` parameters.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `Ipv6Address.N` or `Ipv6AddressCount` but can specify `NetworkInterface.N.Ipv6Address.N` or `NetworkInterface.N.Ipv6AddressCount`.
+         * Ipv6AddressCount.
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -1565,7 +1469,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * Isp.
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -1574,10 +1478,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
-         * <p>
-         * 
-         * > For Windows instances, this parameter is ignored. This parameter is empty by default. The `Password` parameter takes effect even if the KeyPairName parameter is specified.
+         * KeyPairName.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -1586,10 +1487,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).
-         * <p>
-         * 
-         * To use a launch template to create an instance, you must use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify the launch template.
+         * LaunchTemplateId.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -1598,10 +1496,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the launch template.
-         * <p>
-         * 
-         * To use a launch template to create an instance, you must use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify the launch template.
+         * LaunchTemplateName.
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -1610,7 +1505,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The version of the launch template. If you set the `LaunchTemplateId` or `LaunchTemplateName` parameter but do not set the version number of the launch template, the default template version is used.
+         * LaunchTemplateVersion.
          */
         public Builder launchTemplateVersion(Long launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
@@ -1619,11 +1514,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The minimum number of instances that can be created. Valid values: 1 to 100.
-         * <p>
-         * 
-         * *   If the number of instances that available resources are sufficient to create is smaller than the MinAmount value, instances cannot be created.
-         * *   If the number of ECS instances that available resources are sufficient to create is greater than or equal to the MinAmount value, instances are created based on the number of available resources.
+         * MinAmount.
          */
         public Builder minAmount(Integer minAmount) {
             this.putQueryParameter("MinAmount", minAmount);
@@ -1632,7 +1523,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The information of the ENI.
+         * NetworkInterface.
          */
         public Builder networkInterface(java.util.List < NetworkInterface> networkInterface) {
             this.putQueryParameter("NetworkInterface", networkInterface);
@@ -1641,16 +1532,20 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The number of queues supported by the primary ENI. Take note of the following items:
-         * <p>
-         * 
-         * *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.
-         * *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `NetworkInterfaceQueueNumber` but can specify `NetworkInterface.N.QueueNumber`.
+         * NetworkInterfaceQueueNumber.
          */
         public Builder networkInterfaceQueueNumber(Integer networkInterfaceQueueNumber) {
             this.putQueryParameter("NetworkInterfaceQueueNumber", networkInterfaceQueueNumber);
             this.networkInterfaceQueueNumber = networkInterfaceQueueNumber;
+            return this;
+        }
+
+        /**
+         * NetworkOptions.
+         */
+        public Builder networkOptions(NetworkOptions networkOptions) {
+            this.putQueryParameter("NetworkOptions", networkOptions);
+            this.networkOptions = networkOptions;
             return this;
         }
 
@@ -1673,14 +1568,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
-         * <p>
-         * 
-         *     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
-         * 
-         * For Windows instances, the password cannot start with a forward slash (/).
-         * 
-         * > If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.
+         * Password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -1689,15 +1577,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the password preset in the image. Valid values:
-         * <p>
-         * 
-         * *   true: uses the preset password.
-         * *   false: does not use the preset password.
-         * 
-         * Default value: false.
-         * 
-         * > If you set this parameter to true, make sure that you leave the Password parameter empty and the selected image has a preset password.
+         * PasswordInherit.
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -1706,11 +1586,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. The unit is specified by the `PeriodUnit` parameter. This parameter is valid and required only when `InstanceChargeType` is set to `PrePaid`. If the `DedicatedHostId` parameter is specified, the value of Period must not exceed the subscription period of the specified dedicated host. Valid values:
-         * <p>
-         * 
-         * *   Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.
-         * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -1719,11 +1595,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period. Default value: Month. Valid values:
-         * <p>
-         * 
-         * *   Week
-         * *   Month
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -1732,17 +1604,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The private IP address to assign to the instance. To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the `VSwitchId` parameter.
-         * <p>
-         * 
-         * Take note of the following items:
-         * 
-         * *   If the `PrivateIpAddress` parameter is specified, take note of the following items:
-         * 
-         *     *   If `Amount` is set to 1, a single instance is created and the specified private IP address is assigned to the instance.
-         *     *   If `Amount` is set to a numeric value greater than 1, the specified number of instances are created and consecutive private IP addresses starting from the specified one are assigned to the instances. In this case, you cannot specify parameters that start with `NetworkInterface.N` to bind secondary ENIs to the instances.
-         * 
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `PrivateIpAddress` but can specify `NetworkInterface.N.PrimaryIpAddress`.
+         * PrivateIpAddress.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -1751,7 +1613,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.
+         * RamRoleName.
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -1760,7 +1622,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1769,7 +1631,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the instance.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1796,11 +1658,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable security hardening. Valid values:
-         * <p>
-         * 
-         * *   Active: enables security hardening. This value is applicable only to public images.
-         * *   Deactive: does not enable security hardening. This value is applicable to all images.
+         * SecurityEnhancementStrategy.
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -1809,15 +1667,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances that a security group can contain depends on the type of the security group. For more information, see the "Security group limits" section in [Limits](~~25412~~).
-         * <p>
-         * 
-         * > The network type of the new instance must be the same as that of the security group specified by the `SecurityGroupId` parameter. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify the `VSwitchId` parameter.
-         * 
-         * If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template, you must set the SecurityGroupId parameter. Take note of the following items:
-         * 
-         * *   You can set `SecurityGroupId` to specify a single security group or set `SecurityGroupIds.N` to specify one or more security groups. However, you cannot specify both `SecurityGroupId` and `SecurityGroupIds.N`.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify only `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1826,13 +1676,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of security group N to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~101348~~).
-         * <p>
-         * 
-         * Take note of the following items:
-         * 
-         * *   You cannot specify both the `SecurityGroupId` and `SecurityGroupIds.N` parameters.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.
+         * SecurityGroupIds.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -1841,13 +1685,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
-         * <p>
-         * 
-         * *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
-         * *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
-         * 
-         * Default value: 1.
+         * SpotDuration.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -1856,7 +1694,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which specifies to release the instance.
+         * SpotInterruptionBehavior.
          */
         public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
             this.putQueryParameter("SpotInterruptionBehavior", spotInterruptionBehavior);
@@ -1865,7 +1703,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the instance. The value is accurate to three decimal places. This parameter is valid only when the `SpotStrategy` parameter is set to `SpotWithPriceLimit`.
+         * SpotPriceLimit.
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -1874,14 +1712,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:
-         * <p>
-         * 
-         * *   NoSpot: The instance is created as a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
-         * 
-         * Default value: NoSpot.
+         * SpotStrategy.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -1890,7 +1721,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the storage set.
+         * StorageSetId.
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -1899,7 +1730,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum number of partitions in the storage set. Valid values: greater than or equal to 2.
+         * StorageSetPartitionNumber.
          */
         public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.putQueryParameter("StorageSetPartitionNumber", storageSetPartitionNumber);
@@ -1908,7 +1739,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The tags to add to the instance, disks, and primary ENI. You can specify up to 20 tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1917,13 +1748,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to create the instance on a dedicated host. Valid values:
-         * <p>
-         * 
-         * *   default: creates the instance on a non-dedicated host.
-         * *   host: creates the instance on a dedicated host. If you do not set the `DedicatedHostId` parameter, Alibaba Cloud selects a dedicated host for the instance.
-         * 
-         * Default value: default.
+         * Tenancy.
          */
         public Builder tenancy(String tenancy) {
             this.putQueryParameter("Tenancy", tenancy);
@@ -1932,17 +1757,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically append incremental suffixes to the hostname specified by the `HostName` parameter and to the instance name specified by the `InstanceName` parameter when you batch create instances. The incremental suffixes can range from 001 to 999. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * When the `HostName` or `InstanceName` value is set in the `name_prefix[begin_number,bits]` format without `name_suffix`, the `UniqueSuffix` parameter does not take effect. The names are sorted in the specified sequence.
-         * 
-         * For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
+         * UniqueSuffix.
          */
         public Builder uniqueSuffix(Boolean uniqueSuffix) {
             this.putQueryParameter("UniqueSuffix", uniqueSuffix);
@@ -1951,10 +1766,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The user data of the instance. The user data must be encoded in Base64. The raw data can be up to 16 KB in size.
-         * <p>
-         * 
-         * > If the instance type supports [user data](~~~49121~), you can use the UserData parameter to pass in user data. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt UserData values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64, and then decode and decrypt the information in the same way within the instance.
+         * UserData.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -1963,13 +1775,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which to connect to the instance. You must set this parameter when you create an instance of the VPC type. The specified vSwitch and security group must belong to the same VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.
-         * <p>
-         * 
-         * Take note of the following items:
-         * 
-         * *   If you specify the `VSwitchId` parameter, the zone specified by the `ZoneId` parameter must be the zone where the specified vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch resides.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `VSwitchId` but can specify `NetworkInterface.N.VSwitchId`.
+         * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1978,12 +1784,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which to create the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
-         * <p>
-         * 
-         * > If you specify the `VSwitchId` parameter, the zone specified by the `ZoneId` parameter must be the zone where the vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch is located.
-         * 
-         * This parameter is empty by default.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -2049,10 +1850,7 @@ public class RunInstancesRequest extends Request {
             private Integer threadsPerCore; 
 
             /**
-             * The number of CPU cores. This parameter cannot be specified but only uses its default value.
-             * <p>
-             * 
-             * For information about the default value, see [Customize CPU options](~~145895~~).
+             * Core.
              */
             public Builder core(Integer core) {
                 this.core = core;
@@ -2060,7 +1858,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * This parameter is no longer used.
+             * Numa.
              */
             public Builder numa(String numa) {
                 this.numa = numa;
@@ -2068,13 +1866,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: `CpuOptions.Core` value × `CpuOptions.ThreadPerCore` value.
-             * <p>
-             * 
-             * *   The following formula is used to calculate the number of vCPUs of the instance: `CpuOptions.Core` value × CpuOptions.ThreadPerCore value.
-             * *   This parameter is applicable only to specific instance types.
-             * 
-             * For information about valid values and the default value, see [Customize CPU options](~~145895~~).
+             * ThreadsPerCore.
              */
             public Builder threadsPerCore(Integer threadsPerCore) {
                 this.threadsPerCore = threadsPerCore;
@@ -2115,7 +1907,7 @@ public class RunInstancesRequest extends Request {
             private Boolean configured; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * Configured.
              */
             public Builder configured(Boolean configured) {
                 this.configured = configured;
@@ -2168,7 +1960,7 @@ public class RunInstancesRequest extends Request {
             private String matchCriteria; 
 
             /**
-             * The ID of the private pool. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated.
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2176,20 +1968,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The type of the private pool to use to create the instance. A private pool is generated after an elasticity assurance or a capacity reservation takes effect. You can select the private pool when you start an instance. Valid values:
-             * <p>
-             * 
-             * *   Open: open private pool. The system selects a matching open private pool to create the instance. If no matching open private pools are found, resources in the public pool are used. When you set this parameter to Open, you can leave the `PrivatePoolOptions.Id` parameter empty.
-             * *   Target: specified private pool. The system uses the capacity in a specified private pool to create the instance. If the specified private pool is unavailable, the instance cannot be created. If you set this parameter to Target, you must specify the `PrivatePoolOptions.Id` parameter.
-             * *   None: no private pool. The capacity in private pools is not used.
-             * 
-             * Default value: None.
-             * 
-             * In the following scenarios, the PrivatePoolOptions.MatchCriteria parameter can be set only to `None` or left empty:
-             * 
-             * *   A preemptible instance is created.
-             * *   The instance is created in the classic network.
-             * *   The instance is created on a dedicated host.
+             * MatchCriteria.
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;
@@ -2230,17 +2009,7 @@ public class RunInstancesRequest extends Request {
             private String dedicatedHostClusterId; 
 
             /**
-             * The ID of the dedicated host cluster in which to create the instance. After this parameter is specified, the system selects one dedicated host from the specified cluster to create the instance.
-             * <p>
-             * 
-             * > This parameter is valid only when the `Tenancy` parameter is set to `host`.
-             * 
-             * When you specify both the `DedicatedHostId` and `SchedulerOptions.DedicatedHostClusterId` parameters, take note of the following items:
-             * 
-             * *   If the specified dedicated host belongs to the specified dedicated host cluster, the instance is preferentially deployed on the specified dedicated host.
-             * *   If the specified dedicated host does not belong to the specified dedicated host cluster, the instance cannot be created.
-             * 
-             * You can call the [DescribeDedicatedHostClusters](~~184145~~) operation to query the list of dedicated host cluster IDs.
+             * DedicatedHostClusterId.
              */
             public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
                 this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -2293,16 +2062,7 @@ public class RunInstancesRequest extends Request {
             private String trustedSystemMode; 
 
             /**
-             * The confidential computing mode. Set the value to Enclave.
-             * <p>
-             * 
-             * A value of Enclave indicates that an enclave-based confidential computing environment is built on the instance. When you call the `RunInstances` operation, you can set this parameter only for c7, g7, or r7 instances to use enclave-based confidential computing. Take note of the following items:
-             * 
-             * *   The confidential computing feature is in invitational preview. To use this feature, submit a ticket.
-             * *   When you use the ECS API to create instances that support enclave-based confidential computing, you can call only the `RunInstances` operation. The `CreateInstance` operation does not support the `SecurityOptions.ConfidentialComputingMode` parameter.
-             * *   Enclave-based confidential computing is implemented based on the Alibaba Cloud trusted system (vTPM). When you build a confidential computing environment on an instance by using Enclave, the Alibaba Cloud trusted system is enabled for the instance. Therefore, if you set `SecurityOptions.ConfidentialComputingMode` to Enclave when you call this operation, the created instances use enclave-based confidential computing and the Alibaba Cloud trusted system regardless of whether `SecurityOptions.TrustedSystemMode` is set to vTPM.
-             * 
-             * For more information about confidential computing, see [Build a confidential computing environment by using Enclave](~~203433~~).
+             * ConfidentialComputingMode.
              */
             public Builder confidentialComputingMode(String confidentialComputingMode) {
                 this.confidentialComputingMode = confidentialComputingMode;
@@ -2310,23 +2070,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The trusted system mode. Set the value to vTPM.
-             * <p>
-             * 
-             * The trusted system mode supports the following instance families:
-             * 
-             * *   g7, c7, and r7
-             * *   Security-enhanced instance families: g7t, c7t, and r7t
-             * 
-             * When you create instances of the preceding instance families, you must set this parameter. Take note of the following items:
-             * 
-             * *   To use the Alibaba Cloud trusted system, set this parameter to vTPM. Then, the Alibaba Cloud trusted system performs trust verifications when the instances start.
-             * *   If you do not want to use the Alibaba Cloud trusted system, leave this parameter empty. Note that if your created instances use an enclave-based confidential computing environment (with `SecurityOptions.ConfidentialComputingMode` set to Enclave), the Alibaba Cloud trusted system is enabled for the instances.
-             * *   When you use the ECS API to create instances that use the trusted system, you can call only the `RunInstances` operation. The `CreateInstance` operation does not support the `SecurityOptions.TrustedSystemMode` parameter.
-             * 
-             * > If you have configured an instance as a trusted one when you created the instance, you can use only an image that support the trusted system to replace the system disk of the instance.
-             * 
-             * For more information about the trusted system, see [Overview](~~201394~~).
+             * TrustedSystemMode.
              */
             public Builder trustedSystemMode(String trustedSystemMode) {
                 this.trustedSystemMode = trustedSystemMode;
@@ -2499,7 +2243,7 @@ public class RunInstancesRequest extends Request {
             private String storageClusterId; 
 
             /**
-             * The ID of the automatic snapshot policy to apply to the system disk.
+             * AutoSnapshotPolicyId.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -2507,16 +2251,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The category of the system disk. Valid values:
-             * <p>
-             * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD)
-             * *   cloud: basic disk
-             * *   cloud_auto: ESSD AutoPL disk
-             * 
-             * For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2524,7 +2259,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2532,7 +2267,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+             * DiskName.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -2540,15 +2275,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to use as the system disk. Default value: PL1. Valid values:
-             * <p>
-             * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * PerformanceLevel.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -2556,12 +2283,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The size of the system disk. Unit: GiB. Valid values: 20 to 500.
-             * <p>
-             * 
-             * The value of this parameter must be at least 20 and greater than or equal to the image size.
-             * 
-             * Default value: 40 or the image size, whichever is greater.
+             * Size.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -2577,13 +2299,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The algorithm to use to encrypt the system disk. Valid values:
-             * <p>
-             * 
-             * *   ase-256
-             * *   sm4-128
-             * 
-             * Default value: ase-256.
+             * EncryptAlgorithm.
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -2591,15 +2307,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the system disk. Valid values:
-             * <p>
-             * 
-             * *   true: encrypts the data disk.
-             * *   false: does not encrypt the data disk.
-             * 
-             * Default value: false.
-             * 
-             * > The system disks of instances cannot be encrypted during instance creation in Hong Kong Zone D or Singapore Zone A.
+             * Encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -2607,7 +2315,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the KMS key to use for the system disk.
+             * KMSKeyId.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -2623,7 +2331,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+             * StorageClusterId.
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -2688,7 +2396,7 @@ public class RunInstancesRequest extends Request {
             private String rolearn; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * AssumeRoleFor.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -2696,7 +2404,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * RoleType.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -2704,7 +2412,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * Rolearn.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -2913,7 +2621,7 @@ public class RunInstancesRequest extends Request {
             private String storageClusterId; 
 
             /**
-             * The ID of the automatic snapshot policy to apply to data disk N.
+             * AutoSnapshotPolicyId.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -2921,7 +2629,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * BurstingEnabled.
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -2929,16 +2637,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The category of data disk N. Valid values:
-             * <p>
-             * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
-             * *   cloud_auto: ESSD AutoPL disk
-             * 
-             * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2946,13 +2645,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to release data disk N when the instance is released. Valid values:
-             * <p>
-             * 
-             * *   true: releases data disk N when the instance is released.
-             * *   false: does not release data disk N when the instance is released.
-             * 
-             * Default value: true.
+             * DeleteWithInstance.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -2960,7 +2653,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2968,10 +2661,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The mount point of data disk N.
-             * <p>
-             * 
-             * > This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set this parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -2979,7 +2669,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of data disk N. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+             * DiskName.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -2987,13 +2677,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The algorithm to use to encrypt data disk N. Valid values:
-             * <p>
-             * 
-             * *   aes-256
-             * *   sm4-128
-             * 
-             * Default value: aes-256.
+             * EncryptAlgorithm.
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -3001,13 +2685,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt data disk N. Valid values:
-             * <p>
-             * 
-             * *   true: encrypts the data disk.
-             * *   false: does not encrypt the data disk.
-             * 
-             * Default value: false.
+             * Encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -3015,7 +2693,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used for the data disk.
+             * KMSKeyId.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -3023,15 +2701,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Default value: PL1. Valid values:
-             * <p>
-             * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * PerformanceLevel.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -3039,7 +2709,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * ProvisionedIops.
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -3047,25 +2717,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values of this parameter:
-             * <p>
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_essd: depend on the `DataDisk.N.PerformanceLevel` value.
-             * 
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_auto: 40 to 32768.
-             * 
-             * The value of this parameter must be greater than or equal to the size of the snapshot specified by the `SnapshotId` parameter.
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -3073,10 +2725,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
-             * <p>
-             * 
-             * If the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -3084,7 +2733,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as data disk N when you create instances, you must specify this parameter.
+             * StorageClusterId.
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -3093,6 +2742,47 @@ public class RunInstancesRequest extends Request {
 
             public DataDisk build() {
                 return new DataDisk(this);
+            } 
+
+        } 
+
+    }
+    public static class ImageOptions extends TeaModel {
+        @NameInMap("LoginAsNonRoot")
+        private Boolean loginAsNonRoot;
+
+        private ImageOptions(Builder builder) {
+            this.loginAsNonRoot = builder.loginAsNonRoot;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return loginAsNonRoot
+         */
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
+        }
+
+        public static final class Builder {
+            private Boolean loginAsNonRoot; 
+
+            /**
+             * LoginAsNonRoot.
+             */
+            public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
+                this.loginAsNonRoot = loginAsNonRoot;
+                return this;
+            }
+
+            public ImageOptions build() {
+                return new ImageOptions(this);
             } 
 
         } 
@@ -3269,14 +2959,7 @@ public class RunInstancesRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * The description of ENI N.
-             * <p>
-             * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you do not need to set this parameter.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3284,15 +2967,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   Primary
-             * *   Secondary
-             * 
-             * Default value: Secondary.
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -3300,15 +2975,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * IPv6 address N to assign to the primary ENI. Up to 10 IPv6 addresses can be assigned to the primary ENI. Valid values of the second N: 1 to 10.
-             * <p>
-             * 
-             * Example: `Ipv6Address.1=2001:db8:1234:1a00::***`.
-             * 
-             * Take note of the following items:
-             * 
-             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.
-             * *   If you specify this parameter, you must set `Amount` to 1. You cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6AddressCount`.
+             * Ipv6Address.
              */
             public Builder ipv6Address(java.util.List < String > ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -3316,13 +2983,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The number of IPv6 addresses that the system randomly generates for the primary ENI. Valid values: 1 to 10.
-             * <p>
-             * 
-             * Take note of the following items:
-             * 
-             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.
-             * *   If you specify this parameter, you cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6Address.N`.
+             * Ipv6AddressCount.
              */
             public Builder ipv6AddressCount(Long ipv6AddressCount) {
                 this.ipv6AddressCount = ipv6AddressCount;
@@ -3338,13 +2999,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of ENI N.
-             * <p>
-             * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you do not need to set this parameter.
+             * NetworkInterfaceName.
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -3352,16 +3007,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The communication mode of primary ENI N. Valid values:
-             * <p>
-             * 
-             * *   Standard: uses the TCP communication mode.
-             * *   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
-             * 
-             * Take note of the following items:
-             * 
-             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.
-             * *   If you set this parameter to HighPerformance, you can create instances only of the c7re RDMA-enhanced instance family. The maximum number of ENIs in RDMA mode that can be bound to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Instance family](~~25378~~).
+             * NetworkInterfaceTrafficMode.
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -3369,21 +3015,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The primary IP address to assign to ENI N.
-             * <p>
-             * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2.
-             * 
-             *     *   If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified one are assigned to the instances. In this case, you cannot bind secondary ENIs to the instances.
-             *     *   If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot specify `NetworkInterface.2.InstanceType` to Secondary to bind a secondary ENI.
-             * 
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, this parameter is equivalent to `PrivateIpAddress` and you cannot specify both NetworkInterface.N.PrimaryIpAddress and `PrivateIpAddress`.
-             * 
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.
-             * 
-             * > You can bind only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to bind more secondary ENIs.
+             * PrimaryIpAddress.
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -3391,15 +3023,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The number of queues supported by ENI N.
-             * <p>
-             * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can set a primary or secondary ENI. If the value of N is 2, you can set a primary ENI and a secondary ENI.
-             * *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the specified instance type.
-             * *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.
-             * *   If this parameter is set and `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot set the `NetworkInterfaceQueueNumber` parameter.
+             * QueueNumber.
              */
             public Builder queueNumber(Integer queueNumber) {
                 this.queueNumber = queueNumber;
@@ -3407,7 +3031,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * QueuePairNumber.
              */
             public Builder queuePairNumber(Long queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -3415,14 +3039,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the security group to which to assign secondary ENI N.
-             * <p>
-             * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId` and you cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the ECS instance.
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -3430,16 +3047,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of security group N to which to assign ENI N.
-             * <p>
-             * 
-             * *   Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
-             * 
-             * Take note of the following items:
-             * 
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N` and you cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the ECS instance.
+             * SecurityGroupIds.
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -3447,14 +3055,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch to which to connect to ENI N.
-             * <p>
-             * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `VSwitchId` and you cannot specify `VSwitchId`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the vSwitch to which to connect to the instance.
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -3463,6 +3064,47 @@ public class RunInstancesRequest extends Request {
 
             public NetworkInterface build() {
                 return new NetworkInterface(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkOptions extends TeaModel {
+        @NameInMap("EnableJumboFrame")
+        private Boolean enableJumboFrame;
+
+        private NetworkOptions(Builder builder) {
+            this.enableJumboFrame = builder.enableJumboFrame;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableJumboFrame
+         */
+        public Boolean getEnableJumboFrame() {
+            return this.enableJumboFrame;
+        }
+
+        public static final class Builder {
+            private Boolean enableJumboFrame; 
+
+            /**
+             * EnableJumboFrame.
+             */
+            public Builder enableJumboFrame(Boolean enableJumboFrame) {
+                this.enableJumboFrame = enableJumboFrame;
+                return this;
+            }
+
+            public NetworkOptions build() {
+                return new NetworkOptions(this);
             } 
 
         } 
@@ -3507,10 +3149,7 @@ public class RunInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag of the instance, disks, and primary ENI.
-             * <p>
-             * 
-             * The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3518,10 +3157,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag of the instance, disks, and primary ENI.
-             * <p>
-             * 
-             * The tag value can be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

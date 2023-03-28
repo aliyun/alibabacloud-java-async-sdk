@@ -163,7 +163,7 @@ public class AcceptInquiredSystemEventRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * > This parameter is in invitational preview and is unavailable to general users.
          */
         public Builder choice(String choice) {
             this.putQueryParameter("Choice", choice);

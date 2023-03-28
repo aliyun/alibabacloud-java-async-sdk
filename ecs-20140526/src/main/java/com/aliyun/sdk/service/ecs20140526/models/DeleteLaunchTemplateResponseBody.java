@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLaunchTemplateResponseBody</p>
  */
 public class DeleteLaunchTemplateResponseBody extends TeaModel {
+    @NameInMap("LaunchTemplateId")
+    private String launchTemplateId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private DeleteLaunchTemplateResponseBody(Builder builder) {
+        this.launchTemplateId = builder.launchTemplateId;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return launchTemplateId
+     */
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +46,16 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String launchTemplateId; 
         private String requestId; 
+
+        /**
+         * LaunchTemplateId.
+         */
+        public Builder launchTemplateId(String launchTemplateId) {
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
 
         /**
          * The ID of the request.

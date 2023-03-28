@@ -288,14 +288,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The system architecture. Valid values:
-         * <p>
-         * 
-         * *   i386
-         * *   x86\_64
-         * *   arm64
-         * 
-         * Default value: x86\_64.
+         * Architecture.
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -304,15 +297,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The boot mode of the custom image. Valid values:
-         * <p>
-         * 
-         * *   BIOS
-         * *   UEFI
-         * 
-         * Default value: BIOS. If you set the `Architecture` parameter to arm64, the BootMode parameter can only be set to UEFI.
-         * 
-         * >  You must be aware of the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can start normally.
+         * BootMode.
          */
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);
@@ -321,7 +306,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The description of the custom image. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -330,28 +315,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The mode in which to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.
-         * <p>
-         * 
-         * The following items are checked in standard check mode:
-         * 
-         * *   Virtio: whether the virtio driver is installed.
-         * *   Fstab: whether mounting configurations in the fstab file are correct.
-         * *   Grub: whether GRUB configurations are correct.
-         * *   SystemImage: whether the image is valid. Do not import images that are in the ISO format or empty.
-         * *   CloudInit: whether cloud-init is installed.
-         * *   NVMe: whether the NVMe driver is installed.
-         * *   Selinux: whether SElinux is enabled.
-         * *   OnlineResizeFS: whether the root partition can be automatically resized.
-         * *   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).
-         * *   RtcTimeMode: the RTC time mode.
-         * *   Platform: the platform. Example: Linux or Windows.
-         * *   OSVersion: the operating system version. Example: Centos 7.9.
-         * *   Architecture: the architecture. Example: ARM or x86\_64.
-         * *   BootMode: the boot mode. Example: UEFI or Legacy.
-         * *   KernelVersion: the kernel version.
-         * *   CloudAssistant: whether the Cloud Assistant client is installed.
-         * *   SecurityCenterAgent: whether the Security Center agent is installed.
+         * DetectionStrategy.
          */
         public Builder detectionStrategy(String detectionStrategy) {
             this.putQueryParameter("DetectionStrategy", detectionStrategy);
@@ -360,7 +324,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The mappings of the disk devices.
+         * DiskDeviceMapping.
          */
         public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
@@ -369,7 +333,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+         * ImageName.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -378,14 +342,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The type of the license to use to activate the operating system after the source image is imported. Valid values:
-         * <p>
-         * 
-         * *   Auto: ECS checks the operating system of the source image and allocates a license to the operating system. ECS first checks whether the operating system distribution specified by `Platform` has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If not, the license that comes with the source operating system is used.
-         * *   Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by `Platform`.
-         * *   BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key can be used in Alibaba Cloud.
-         * 
-         * Default value: Auto.
+         * LicenseType.
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);
@@ -394,13 +351,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The operating system platform. Valid values:
-         * <p>
-         * 
-         * *   windows
-         * *   linux
-         * 
-         * Default value: linux.
+         * OSType.
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -418,34 +369,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The operating system distribution. Valid values:
-         * <p>
-         * 
-         * *   CentOS
-         * *   CentOS Stream
-         * *   Ubuntu
-         * *   SUSE
-         * *   openSUSE
-         * *   Debian
-         * *   CoreOS
-         * *   Aliyun
-         * *   Anolis
-         * *   AlmaLinux
-         * *   FreeBSD
-         * *   Fedora
-         * *   Rocky Linux
-         * *   UOS
-         * *   Kylin
-         * *   Others Linux
-         * *   Customized Linux
-         * *   Windows Server 2022
-         * *   Windows Server 2019
-         * *   Windows Server 2016
-         * *   Windows Server 2012
-         * *   Windows Server 2008
-         * *   Windows Server 2003
-         * 
-         * Default value: Others Linux.
+         * Platform.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -454,7 +378,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The region ID of the source custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -463,7 +387,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the custom image.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -490,7 +414,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The name of the RAM role to use to import the source image.
+         * RoleName.
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -499,7 +423,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * The tags of the imported custom image.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -601,10 +525,7 @@ public class ImportImageRequest extends Request {
             private String OSSObject; 
 
             /**
-             * The device name of disk N in the custom image.
-             * <p>
-             * 
-             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+             * Device.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -612,10 +533,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The size of the custom image.
-             * <p>
-             * 
-             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use the `DiskDeviceMapping.N.DiskImageSize` parameter.
+             * DiskImSize.
              */
             public Builder diskImSize(Integer diskImSize) {
                 this.diskImSize = diskImSize;
@@ -623,15 +541,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The size of disk N in the custom image.
-             * <p>
-             * 
-             * You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the custom image file. Unit: GiB. Valid values:
-             * 
-             * *   When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.
-             * *   When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.
-             * 
-             * After the source image is uploaded to an OSS bucket, you can view the size of the image in the OSS bucket.
+             * DiskImageSize.
              */
             public Builder diskImageSize(Integer diskImageSize) {
                 this.diskImageSize = diskImageSize;
@@ -639,14 +549,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The format of the custom image. Valid values:
-             * <p>
-             * 
-             * *   RAW
-             * *   VHD
-             * *   QCOW2
-             * 
-             * This parameter is empty by default, which indicates that the system checks the format of the custom image and uses the check result as the value of this parameter.
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -654,10 +557,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The OSS bucket in which the source image is stored.
-             * <p>
-             * 
-             * >  Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the **NoSetRoletoECSServiceAcount** error code is returned when you call the ImportImage operation. For more information, see the `Description` section of this topic.
+             * OSSBucket.
              */
             public Builder OSSBucket(String OSSBucket) {
                 this.OSSBucket = OSSBucket;
@@ -665,7 +565,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The name (key) of the object that the uploaded source image is stored as in the OSS bucket.
+             * OSSObject.
              */
             public Builder OSSObject(String OSSObject) {
                 this.OSSObject = OSSObject;
@@ -718,7 +618,7 @@ public class ImportImageRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -726,7 +626,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

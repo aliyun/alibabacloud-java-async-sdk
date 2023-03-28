@@ -190,7 +190,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The IDs of instances. You can specify up to 100 instance IDs in each request.
+         * The IDs of instances.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +199,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The operating system type of the instance. Valid values:
+         * The operating system of the instance. Valid values:
          * <p>
          * 
          * *   Windows
@@ -244,10 +244,8 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries to return on each page. This parameter does not take effect if you specified the **InstanceId** parameter. Maximum value: 50.
          * <p>
-         * 
-         * Maximum value: 100.
          * 
          * Default value: 10.
          */

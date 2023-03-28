@@ -50,7 +50,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private Topologys topologys; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the topology.
+         * Topologys.
          */
         public Builder topologys(Topologys topologys) {
             this.topologys = topologys;
@@ -110,7 +110,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the host where the ECS instance is deployed. This parameter is encrypted and cannot match the ID of the instance. However, if the values of this parameter for different ECS instances are the same, the ECS instances are deployed on the same host.
+             * HostId.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -118,7 +118,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

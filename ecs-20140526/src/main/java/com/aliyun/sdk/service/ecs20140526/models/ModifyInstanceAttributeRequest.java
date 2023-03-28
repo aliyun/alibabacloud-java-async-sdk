@@ -29,6 +29,10 @@ public class ModifyInstanceAttributeRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("EnableJumboFrame")
+    private Boolean enableJumboFrame;
+
+    @Query
     @NameInMap("HostName")
     private String hostName;
 
@@ -87,6 +91,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         this.creditSpecification = builder.creditSpecification;
         this.deletionProtection = builder.deletionProtection;
         this.description = builder.description;
+        this.enableJumboFrame = builder.enableJumboFrame;
         this.hostName = builder.hostName;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
@@ -141,6 +146,13 @@ public class ModifyInstanceAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableJumboFrame
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.enableJumboFrame;
     }
 
     /**
@@ -239,6 +251,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         private String creditSpecification; 
         private Boolean deletionProtection; 
         private String description; 
+        private Boolean enableJumboFrame; 
         private String hostName; 
         private String instanceId; 
         private String instanceName; 
@@ -263,6 +276,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             this.creditSpecification = request.creditSpecification;
             this.deletionProtection = request.deletionProtection;
             this.description = request.description;
+            this.enableJumboFrame = request.enableJumboFrame;
             this.hostName = request.hostName;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
@@ -311,6 +325,15 @@ public class ModifyInstanceAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableJumboFrame.
+         */
+        public Builder enableJumboFrame(Boolean enableJumboFrame) {
+            this.putQueryParameter("EnableJumboFrame", enableJumboFrame);
+            this.enableJumboFrame = enableJumboFrame;
             return this;
         }
 

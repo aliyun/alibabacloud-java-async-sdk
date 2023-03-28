@@ -86,7 +86,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the instances that were created by using the elasticity assurance.
+         * Details about the instances that match and use the elasticity assurance.
          */
         public Builder elasticityAssuranceItem(ElasticityAssuranceItem elasticityAssuranceItem) {
             this.elasticityAssuranceItem = elasticityAssuranceItem;

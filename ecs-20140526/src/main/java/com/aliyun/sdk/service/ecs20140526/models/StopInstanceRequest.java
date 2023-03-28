@@ -204,7 +204,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * >  This parameter will be removed in the future and is retained only to ensure compatibility. We recommend that you ignore this parameter.
+         * This parameter will be removed in the future and is retained only to ensure compatibility. We recommend that you ignore this parameter.
          */
         public Builder confirmStop(Boolean confirmStop) {
             this.putQueryParameter("ConfirmStop", confirmStop);
@@ -213,11 +213,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Valid values:
+         * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
-         * *   true: The validity of the request is checked, but the request is not made. Check items include the required parameters, service limits, available ECS resources, and the request format. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-         * *   false: The validity of the request is checked, and the request is made if the check succeeds.
+         * *   true: performs a dry run. The system checks the required parameters, the request format, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   false: performs a dry run and the request is made if the request passes the dry run.
          * 
          * Default value: false.
          */
@@ -228,10 +228,10 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly stop the instance. Valid values:
+         * Specifies whether to forcefully stop the instance. Valid values:
          * <p>
          * 
-         * *   true: forcibly stops the instance.
+         * *   true: forcefully stops the instance.
          * *   false: normally stops the instance.
          * 
          * Default value: false.
@@ -243,7 +243,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * >  This parameter is currently in invitational preview and unavailable for general users.
+         * >  This parameter is in invitational preview and is not available for public use.
          */
         public Builder hibernate(Boolean hibernate) {
             this.putQueryParameter("Hibernate", hibernate);
@@ -297,13 +297,13 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The stop mode of the pay-as-you-go instance. Valid values:
+         * The stop mode of the pay-as-you-go instance. Default value: Disabled. Valid values:
          * <p>
          * 
          * *   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](~~63353~~).
          * *   KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for it.
          * 
-         * Default value: If the prerequisites required for enabling economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
+         * Default value: If the prerequisites required for enabling economical mode are met and you have enabled this mode in the ECS console, the default value is `StopCharging`. For more information, see the "Enable economical mode" section in [Economical mode](~~63353#default~~). Otherwise, the default value is `KeepCharging`.
          */
         public Builder stoppedMode(String stoppedMode) {
             this.putQueryParameter("StoppedMode", stoppedMode);

@@ -86,7 +86,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the HPC clusters.
+         * Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.
          */
         public Builder hpcClusters(HpcClusters hpcClusters) {
             this.hpcClusters = hpcClusters;
@@ -118,7 +118,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of HPC clusters queried.
+         * The total number of the HPC clusters.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

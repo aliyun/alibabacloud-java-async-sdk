@@ -192,7 +192,13 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * Category.
+         * The type of the snapshot. Valid values:
+         * <p>
+         * 
+         * *   Standard: normal snapshot
+         * *   Flash: local snapshot
+         * 
+         * Default value: Standard.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -201,7 +207,7 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -228,7 +234,14 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:
+         * <p>
+         * 
+         * *   60
+         * *   600
+         * *   3600
+         * 
+         * Default value: 60
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -237,7 +250,7 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +277,7 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

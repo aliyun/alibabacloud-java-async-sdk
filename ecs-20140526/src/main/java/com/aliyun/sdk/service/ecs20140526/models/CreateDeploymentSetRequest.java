@@ -246,7 +246,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -255,7 +255,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
@@ -302,7 +302,7 @@ public class CreateDeploymentSetRequest extends Request {
          * 
          * Default value: 3.
          * 
-         * >  This parameter is valid only when `Strategy` is set to AvailabilityGroup.
+         * > This parameter takes effect only when `Strategy` is set to AvailabilityGroup.
          */
         public Builder groupCount(Long groupCount) {
             this.putQueryParameter("GroupCount", groupCount);
@@ -311,7 +311,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The emergency solution to use in the following situation: Instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances are failed over from faulty physical machines to normal physical machines. Valid values:
+         * The emergency solution to use in the situation where instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances failover. Valid values:
          * <p>
          * 
          * *   CancelMembershipAndStart: removes the instances from the deployment set and starts the instances immediately after they are failed over.
@@ -344,7 +344,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

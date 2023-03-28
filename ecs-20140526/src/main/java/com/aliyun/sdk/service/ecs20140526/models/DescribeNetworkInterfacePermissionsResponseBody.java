@@ -86,7 +86,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the permissions on ENIs.
+         * Details about the ENI permissions.
          */
         public Builder networkInterfacePermissions(NetworkInterfacePermissions networkInterfacePermissions) {
             this.networkInterfacePermissions = networkInterfacePermissions;
@@ -94,7 +94,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -234,7 +234,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission on the ENI.
+             * The ID of the ENI permission.
              */
             public Builder networkInterfacePermissionId(String networkInterfacePermissionId) {
                 this.networkInterfacePermissionId = networkInterfacePermissionId;
@@ -242,7 +242,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The permission on the ENI.
+             * The ENI permission.
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -250,13 +250,13 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the permission on the ENI. Valid values:
+             * The state of the ENI permission. Valid values:
              * <p>
              * 
              * *   Pending: The permission is being granted.
-             * *   Granted: The permission has been granted.
+             * *   Granted: The permission is granted.
              * *   Revoking: The permission is being revoked.
-             * *   Revoked: The permission has been revoked.
+             * *   Revoked: The permission is revoked.
              */
             public Builder permissionState(String permissionState) {
                 this.permissionState = permissionState;

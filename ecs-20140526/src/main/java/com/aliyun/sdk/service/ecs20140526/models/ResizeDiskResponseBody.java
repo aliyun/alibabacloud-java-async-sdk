@@ -50,7 +50,10 @@ public class ResizeDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * The ID of the order.
+         * <p>
+         * 
+         * >  This parameter is returned only when subscription disks are resized.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +61,7 @@ public class ResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -287,7 +287,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
          * The ID of the launch template.
          * <p>
          * 
-         * You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.
+         * You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -305,7 +305,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * LaunchTemplateVersion.
+         * Version N of the launch template.
          */
         public Builder launchTemplateVersion(java.util.List < Long > launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
@@ -367,7 +367,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
          * The number of entries to return on each page.
          * <p>
          * 
-         * Default value: 10.
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -261,7 +261,15 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   true: enables automatic payment. Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is canceled.
+         * *   false: An order is generated but no payment is made.
+         * 
+         * Default value: true.
+         * 
+         * >  If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -270,7 +278,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -279,7 +287,13 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the validity of the request without actually making the request. Valid values:
+         * <p>
+         * 
+         * *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the `DryRunOperation` error code is returned.
+         * *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned and the request is made.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -288,7 +302,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * IncludeDataDisks.
+         * Specifies whether to change the billing method of all data disks attached to the instance from pay-as-you-go to subscription.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder includeDataDisks(Boolean includeDataDisks) {
             this.putQueryParameter("IncludeDataDisks", includeDataDisks);
@@ -297,7 +314,13 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The new billing method. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: the subscription billing method
+         * *   PostPaid: the pay-as-you-go billing method
+         * 
+         * Default value: PrePaid.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -306,7 +329,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -315,7 +338,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * IsDetailFee.
+         * Specifies whether to return cost details of the order when the billing method is changed from subscription to pay-as-you-go.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder isDetailFee(Boolean isDetailFee) {
             this.putQueryParameter("IsDetailFee", isDetailFee);
@@ -342,7 +368,10 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal period of the subscription instance. If the instance is hosted on a dedicated host, the renewal period of the instance cannot exceed the subscription duration of the dedicated host. Valid values:
+         * <p>
+         * 
+         * Valid values when the `PeriodUnit` parameter is set to Month: `1, 2, 3, 4, 5, 6, 7, 8, 9, and 12`.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -351,7 +380,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the renewal period (`Period`). Valid values:
+         * <p>
+         * 
+         * Month
+         * 
+         * Default value: Month.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -360,7 +394,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance is located. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -177,7 +177,13 @@ public class StartInstancesRequest extends Request {
         }
 
         /**
-         * BatchOptimization.
+         * The batch operation mode. Valid values:
+         * <p>
+         * 
+         * *   AllTogether: In this mode, a success message is returned if all ECS instances are started. If an ECS instance fails the check when you set the DryRun parameter to false, all the specified instances cannot be started and an error message is returned.
+         * *   SuccessFirst: In this mode, each ECS instance is separately started. The response contains the operation results of each ECS instance.
+         * 
+         * Default value: AllTogether.
          */
         public Builder batchOptimization(String batchOptimization) {
             this.putQueryParameter("BatchOptimization", batchOptimization);
@@ -186,7 +192,16 @@ public class StartInstancesRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   true: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
+         * 
+         * > If you set the `BatchOptimization` parameter to `SuccessFirst` and the `DryRun` parameter to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
+         * 
+         * *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -195,7 +210,7 @@ public class StartInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of the ECS instances. You can specify up to 100 ECS instance IDs.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -222,7 +237,7 @@ public class StartInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

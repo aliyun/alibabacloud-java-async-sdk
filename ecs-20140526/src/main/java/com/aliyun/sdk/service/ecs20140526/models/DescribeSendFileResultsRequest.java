@@ -232,7 +232,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose records you want to query.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -241,7 +241,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The ID of the file sending task.
+         * InvokeId.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -250,7 +250,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The name of the file whose records you want to query.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -277,12 +277,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -291,12 +286,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
-         * <p>
-         * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -305,7 +295,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -314,7 +304,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. After you set this parameter, you need to specify ResourceGroupId when you send files to query the file sending results in the specified resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -50,7 +50,7 @@ public class CreateCapacityReservationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PrivatePoolOptionsId.
+         * The ID of the capacity reservation.
          */
         public Builder privatePoolOptionsId(String privatePoolOptionsId) {
             this.privatePoolOptionsId = privatePoolOptionsId;
@@ -58,7 +58,7 @@ public class CreateCapacityReservationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

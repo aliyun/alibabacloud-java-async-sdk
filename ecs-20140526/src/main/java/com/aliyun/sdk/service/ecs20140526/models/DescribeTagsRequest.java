@@ -205,7 +205,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * Category.
+         * > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -223,7 +223,12 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -232,7 +237,12 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -241,7 +251,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -250,7 +260,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource. For example, when ResourceType is set to instance, this parameter is interpreted as the ID of the instance (InstanceId).
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -277,7 +287,23 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource to which the tag is added. Valid values:
+         * <p>
+         * 
+         * *   instance: Elastic Compute Service (ECS) instance
+         * *   disk: disk
+         * *   snapshot: snapshot
+         * *   image: image
+         * *   securitygroup: security group
+         * *   volume: storage volume
+         * *   eni: elastic network interface (ENI)
+         * *   ddh: dedicated host
+         * *   keypair: SSH key pair
+         * *   launchtemplate: launch template
+         * *   reservedinstance: reserved instance
+         * *   snapshotpolicy: automatic snapshot policy
+         * 
+         * All values must be lowercase.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -286,7 +312,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -340,7 +366,7 @@ public class DescribeTagsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -348,7 +374,7 @@ public class DescribeTagsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

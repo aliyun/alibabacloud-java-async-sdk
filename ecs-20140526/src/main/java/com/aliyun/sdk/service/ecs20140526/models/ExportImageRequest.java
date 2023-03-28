@@ -192,16 +192,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The format to export the custom image. Valid values:
-         * <p>
-         * 
-         * - raw.
-         * - vhd.
-         * - qcow2.
-         * - vmdk.
-         * - vdi.
-         * 
-         * Default value: raw.
+         * ImageFormat.
          */
         public Builder imageFormat(String imageFormat) {
             this.putQueryParameter("ImageFormat", imageFormat);
@@ -210,7 +201,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The ID of the custom image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -219,7 +210,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The OSS bucket to which to export the custom image.
+         * OSSBucket.
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -228,7 +219,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The prefix of the object as which to store the custom image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.
+         * OSSPrefix.
          */
         public Builder OSSPrefix(String OSSPrefix) {
             this.putQueryParameter("OSSPrefix", OSSPrefix);
@@ -246,7 +237,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,7 +264,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * The name of the RAM role used to export the custom image.
+         * RoleName.
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

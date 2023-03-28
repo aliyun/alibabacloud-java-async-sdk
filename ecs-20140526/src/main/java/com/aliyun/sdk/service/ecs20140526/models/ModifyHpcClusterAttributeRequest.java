@@ -191,7 +191,7 @@ public class ModifyHpcClusterAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency](~~25693~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,10 +200,7 @@ public class ModifyHpcClusterAttributeRequest extends Request {
         }
 
         /**
-         * The description of the HPC cluster. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
-         * <p>
-         * 
-         * This parameter is empty by default.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -212,7 +209,7 @@ public class ModifyHpcClusterAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the HPC cluster.
+         * HpcClusterId.
          */
         public Builder hpcClusterId(String hpcClusterId) {
             this.putQueryParameter("HpcClusterId", hpcClusterId);
@@ -221,10 +218,7 @@ public class ModifyHpcClusterAttributeRequest extends Request {
         }
 
         /**
-         * The name of the HPC cluster. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, underscores (\_), and hyphens (-).
-         * <p>
-         * 
-         * This parameter is empty by default.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -251,7 +245,7 @@ public class ModifyHpcClusterAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the HPC cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

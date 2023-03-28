@@ -176,7 +176,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. You can enter up to 100 instance IDs.
+         * The IDs of instances. You can specify the IDs of up to 100 instances.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -229,7 +229,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLaunchTemplateVersionResponseBody</p>
  */
 public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
+    @NameInMap("LaunchTemplateId")
+    private String launchTemplateId;
+
     @NameInMap("LaunchTemplateVersionNumber")
     private Long launchTemplateVersionNumber;
 
@@ -19,6 +22,7 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
     private String requestId;
 
     private CreateLaunchTemplateVersionResponseBody(Builder builder) {
+        this.launchTemplateId = builder.launchTemplateId;
         this.launchTemplateVersionNumber = builder.launchTemplateVersionNumber;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
 
     public static CreateLaunchTemplateVersionResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return launchTemplateId
+     */
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
     }
 
     /**
@@ -46,8 +57,17 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String launchTemplateId; 
         private Long launchTemplateVersionNumber; 
         private String requestId; 
+
+        /**
+         * LaunchTemplateId.
+         */
+        public Builder launchTemplateId(String launchTemplateId) {
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
 
         /**
          * The version number of the launch template.

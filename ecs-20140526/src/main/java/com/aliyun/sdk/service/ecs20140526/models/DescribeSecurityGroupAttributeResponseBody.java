@@ -150,7 +150,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID.
+         * The region ID of the security group.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -514,7 +514,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR blocks for outbound access control
+             * The destination CIDR blocks for outbound access control.
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -594,7 +594,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The NIC type of the security group rule.
+             * The type of the network.
              */
             public Builder nicType(String nicType) {
                 this.nicType = nicType;
@@ -610,7 +610,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The port number range.
+             * The port range.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -626,7 +626,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupRuleId.
+             * The ID of the security group rule.
              */
             public Builder securityGroupRuleId(String securityGroupRuleId) {
                 this.securityGroupRuleId = securityGroupRuleId;

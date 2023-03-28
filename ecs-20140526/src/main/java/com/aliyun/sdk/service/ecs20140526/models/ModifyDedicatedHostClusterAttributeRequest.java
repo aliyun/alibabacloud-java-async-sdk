@@ -177,7 +177,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * DedicatedHostClusterId.
+         * The ID of the dedicated host cluster.
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -186,7 +186,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * DedicatedHostClusterName.
+         * The name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot contain `http://` or `https://`.
          */
         public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
             this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
@@ -195,7 +195,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the dedicated host cluster. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -222,7 +222,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

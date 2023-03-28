@@ -693,9 +693,9 @@ public class CreateLaunchTemplateVersionRequest extends Request {
          * The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          * <p>
          * 
-         * *   If the value of `ss` is not `00`, the time is automatically rounded to the nearest minute based on the value of `mm`.
-         * *   The specified time must be at least 30 minutes later than the current time.
-         * *   The specified time can be at most three years from the current time.
+         * *   If the value of seconds (`ss`) is not `00`, the time is automatically rounded to the nearest minute based on the value of minutes (`mm`).
+         * *   The release time must be at least 30 minutes later than the current time.
+         * *   The specified time must be at most three years from the current time.
          */
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
@@ -713,7 +713,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set to which to deploy the instance.
+         * The ID of the deployment set.
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -722,7 +722,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The description of the instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * The instance description. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -740,7 +740,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The hostname of the instance.
+         * The instance hostname.
          * <p>
          * 
          * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
@@ -754,7 +754,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the [DescribeImages](~~25534~~) operation to query available images.
+         * The ID of the image to use to create the instance. You can call the [DescribeImages](~~25534~~) operation to query available images.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -779,7 +779,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
          * <p>
          * 
          * *   PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
-         * *   PostPaid: pay-as-you-go
+         * *   PostPaid: pay-as-you-go.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -812,7 +812,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
          * *   PayByBandwidth: pay-by-bandwidth
          * *   PayByTraffic: pay-by-traffic
          * 
-         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidths may be limited. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -865,10 +865,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
+         * The name of the key pair. This parameter is empty by default.
          * <p>
          * 
-         * *   For Windows instances, this parameter is ignored The `Password` parameter is valid even if the KeyPairName parameter is specified.
+         * *   For Windows instances, this parameter is ignored The `Password` parameter takes effect even if the KeyPairName parameter is specified.
          * *   For Linux instances, the password-based logon method is disabled by default.
          */
         public Builder keyPairName(String keyPairName) {
@@ -936,15 +936,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the password that is preconfigured in the image. Valid values:
+         * Specifies whether to use the preset password of the image. Valid values:
          * <p>
          * 
-         * *   true: uses the password that is preconfigured in the mage.
-         * *   false: does not use the password that is preconfigured in the image.
+         * *   true: uses the preset password of the image.
+         * *   false: does not use the preset password of the image.
          * 
          * Default value: false.
          * 
-         * > If the PasswordInherit parameter is specified, you must leave the Password parameter empty and make sure that the selected image has a password preconfigured.
+         * > If the PasswordInherit parameter is specified, you must leave the Password parameter empty and make sure that the selected image has a password preset.
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -965,7 +965,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
          * The private IP address to assign to the instance.
          * <p>
          * 
-         * To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the `VSwitchId` parameter.
+         * To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the `VSwitchId` parameter.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -983,7 +983,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1023,7 +1023,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
          * <p>
          * 
          * *   Active: enables security hardening. This value is applicable only to public images.
-         * *   Deactive: disables security hardening. This value is applicable to all image types.
+         * *   Deactive: does not enable security hardening. This value is applicable to all images.
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -1044,7 +1044,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of security group N to which to assign the instance. The valid values of N depend on the maximum number of security groups to which the instance can belong. For more information, see [Quantity limits](~~25412~~).
+         * The ID of security group N to which to assign the instance. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see [Limits](~~25412~~).
          * <p>
          * 
          * > The `SecurityGroupId` parameter and the `SecurityGroupIds.N` parameter are mutually exclusive.
@@ -1056,7 +1056,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6
+         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
          * <p>
          * 
          * *   The following protection periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
@@ -1080,12 +1080,12 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The preemption policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:
+         * The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is a pay-as-you-go instance.
+         * *   NoSpot: The instance is a regular pay-as-you-go instance.
          * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -1094,7 +1094,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The tags to add to the instance.
+         * The tags to add to the image template.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1312,8 +1312,8 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * Specifies whether to enable the performance burst feature for the system disk. Valid values:
              * <p>
              * 
-             * *   true: enables the performance burst feature.
-             * *   false: does not enable the performance burst feature.
+             * *   true
+             * *   false
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1327,7 +1327,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * *   cloud: basic disk
              * *   cloud_efficiency: ultra disk
              * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD). You can use the `SystemDisk.PerformanceLevel` parameter to set the performance level of the ESSD to use as the system disk.
+             * *   cloud_essd: enhanced SSD (ESSD) You can use the `SystemDisk.PerformanceLevel` parameter to set the performance level of the ESSD to use as the system disk. cloud_auto: ESSD AutoPL disk.
              * 
              * For non-I/O optimized instances of a retired instance type, the default value is cloud. For other types of instances, the default value is cloud_efficiency.
              */
@@ -1392,7 +1392,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to be used as the system disk. Default value: PL0. Valid values:
+             * The performance level of the ESSD to use as the system disk. Default value: PL0. Valid values:
              * <p>
              * 
              * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
@@ -1597,7 +1597,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             private String snapshotId; 
 
             /**
-             * The ID of the automatic snapshot policy to apply to data disk N.
+             * The ID of the automatic snapshot policy to be applied to data disk N.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -1608,8 +1608,8 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * Specifies whether to enable the performance burst feature for data disk N. Valid values:
              * <p>
              * 
-             * *   true: enables the performance burst feature.
-             * *   false: does not enable the performance burst feature.
+             * *   true
+             * *   false
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1623,7 +1623,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * *   cloud: basic disk
              * *   cloud_efficiency: ultra disk
              * *   cloud_ssd: standard SSD.
-             * *   cloud_essd: ESSD
+             * *   cloud_essd: ESSD cloud_auto: ESSD AutoPL disk
              * 
              * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
              */
@@ -1732,7 +1732,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. If the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot.
+             * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created based on the size of the specified snapshot.
              * <p>
              * 
              * Use snapshots that were created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
@@ -1868,7 +1868,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The instance type.
+             * The type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1888,7 +1888,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * <p>
              * 
              * *   Standard: uses the TCP communication mode.
-             * *   HighPerformance: enables Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
+             * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -1915,7 +1915,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The ID of security group N to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in `SecurityGroupIds.N` depend on the maximum number of security groups to which the secondary ENI can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~). The value of N in `NetworkInterface.N` cannot be greater than 1.
+             * The ID of security group N to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in `SecurityGroupIds.N` depend on the maximum number of security groups to which a secondary ENI can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~). The value of N in `NetworkInterface.N` cannot be greater than 1.
              * <p>
              * 
              * > The `NetworkInterface.N.SecurityGroupId` parameter and the `NetworkInterface.N.SecurityGroupIds.N` parameter are mutually exclusive.
@@ -1926,7 +1926,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch to which to connect the secondary ENI. The instance and the ENI must be located within the same zone of the same VPC, but they can be connected to different vSwitches. The value of N in `NetworkInterface.N` cannot be greater than 1.
+             * The ID of the vSwitch to which to connect the secondary ENI. The instance and the ENI must reside within the same zone of the same VPC, but they can be connected to different vSwitches. The value of N in `NetworkInterface.N` cannot be greater than 1.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

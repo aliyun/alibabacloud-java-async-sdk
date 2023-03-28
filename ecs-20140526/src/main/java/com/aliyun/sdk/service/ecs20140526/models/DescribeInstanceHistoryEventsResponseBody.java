@@ -118,7 +118,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances that were queried.
+         * The total number of instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -336,17 +336,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the cloud disk or local disk. Valid values:
+             * The category of the disk. Valid values:
              * <p>
              * 
-             * *   cloud: basic disk.
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
-             * *   cloud_essd: enhanced SSD (ESSD).
+             * *   cloud: basic disk
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             * *   cloud_essd: enhanced SSD (ESSD) cloud_auto: ESSD AutoPL disk
              * *   local_ssd_pro: I/O-intensive local disk.
-             * *   local_hdd_pro: throughput-intensive local disk.
-             * *   ephemeral: retired local disk.
-             * *   ephemeral_ssd: retired local SSD.
+             * *   local_hdd_pro: throughput-intensive local disk
+             * *   ephemeral: retired local disk
+             * *   ephemeral_ssd: retired local SSD
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -365,8 +365,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              * The type of the disk. Valid values:
              * <p>
              * 
-             * *   system: system disk.
-             * *   data: data disk.
+             * *   system: system disk
+             * *   data: data disk
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -471,6 +471,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class ExtendedAttribute extends TeaModel {
+        @NameInMap("CanAccept")
+        private String canAccept;
+
+        @NameInMap("Code")
+        private String code;
+
         @NameInMap("Device")
         private String device;
 
@@ -492,10 +498,21 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("OnlineRepairPolicy")
         private String onlineRepairPolicy;
 
+        @NameInMap("PunishDomain")
+        private String punishDomain;
+
+        @NameInMap("PunishType")
+        private String punishType;
+
+        @NameInMap("PunishUrl")
+        private String punishUrl;
+
         @NameInMap("Rack")
         private String rack;
 
         private ExtendedAttribute(Builder builder) {
+            this.canAccept = builder.canAccept;
+            this.code = builder.code;
             this.device = builder.device;
             this.diskId = builder.diskId;
             this.hostId = builder.hostId;
@@ -503,6 +520,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             this.inactiveDisks = builder.inactiveDisks;
             this.migrationOptions = builder.migrationOptions;
             this.onlineRepairPolicy = builder.onlineRepairPolicy;
+            this.punishDomain = builder.punishDomain;
+            this.punishType = builder.punishType;
+            this.punishUrl = builder.punishUrl;
             this.rack = builder.rack;
         }
 
@@ -512,6 +532,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         public static ExtendedAttribute create() {
             return builder().build();
+        }
+
+        /**
+         * @return canAccept
+         */
+        public String getCanAccept() {
+            return this.canAccept;
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
         }
 
         /**
@@ -564,6 +598,27 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return punishDomain
+         */
+        public String getPunishDomain() {
+            return this.punishDomain;
+        }
+
+        /**
+         * @return punishType
+         */
+        public String getPunishType() {
+            return this.punishType;
+        }
+
+        /**
+         * @return punishUrl
+         */
+        public String getPunishUrl() {
+            return this.punishUrl;
+        }
+
+        /**
          * @return rack
          */
         public String getRack() {
@@ -571,6 +626,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String canAccept; 
+            private String code; 
             private String device; 
             private String diskId; 
             private String hostId; 
@@ -578,7 +635,26 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private InactiveDisks inactiveDisks; 
             private MigrationOptions migrationOptions; 
             private String onlineRepairPolicy; 
+            private String punishDomain; 
+            private String punishType; 
+            private String punishUrl; 
             private String rack; 
+
+            /**
+             * CanAccept.
+             */
+            public Builder canAccept(String canAccept) {
+                this.canAccept = canAccept;
+                return this;
+            }
+
+            /**
+             * The code of the system event type.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * The device name of the local disk.
@@ -608,8 +684,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              * The type of the host. Valid values:
              * <p>
              * 
-             * *   ddh: dedicated host.
-             * *   managehost: physical machine in a smart hosting pool.
+             * *   ddh: dedicated host
+             * *   managehost: physical machine in a smart hosting pool
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -617,7 +693,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the inactive cloud disks or local disks that have been released and must be removed.
+             * Details about the inactive cloud disks or local disks that have been released and must be cleared.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -625,7 +701,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The migration solution of the instance. Valid value: MigrationOptions. Instances can be migrated only by using migration plans.
+             * The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.
              */
             public Builder migrationOptions(MigrationOptions migrationOptions) {
                 this.migrationOptions = migrationOptions;
@@ -637,6 +713,30 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              */
             public Builder onlineRepairPolicy(String onlineRepairPolicy) {
                 this.onlineRepairPolicy = onlineRepairPolicy;
+                return this;
+            }
+
+            /**
+             * PunishDomain.
+             */
+            public Builder punishDomain(String punishDomain) {
+                this.punishDomain = punishDomain;
+                return this;
+            }
+
+            /**
+             * PunishType.
+             */
+            public Builder punishType(String punishType) {
+                this.punishType = punishType;
+                return this;
+            }
+
+            /**
+             * PunishUrl.
+             */
+            public Builder punishUrl(String punishUrl) {
+                this.punishUrl = punishUrl;
                 return this;
             }
 
@@ -858,7 +958,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that you query.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -882,12 +982,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of a resource. Valid values:
+             * The type of the resource. Valid values:
              * <p>
              * 
-             * *   instance: ECS instance.
-             * *   ddh: dedicated host.
-             * *   managehost: physical machine in a smart hosting pool.
+             * *   instance: ECS instance
+             * *   ddh: dedicated host
+             * *   managehost: physical machine in a smart hosting pool
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

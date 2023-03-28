@@ -168,7 +168,7 @@ public class ModifyStorageSetAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +177,7 @@ public class ModifyStorageSetAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the storage set.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -204,7 +204,7 @@ public class ModifyStorageSetAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the storage set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +231,7 @@ public class ModifyStorageSetAttributeRequest extends Request {
         }
 
         /**
-         * StorageSetId.
+         * The ID of the storage set.
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -240,7 +240,7 @@ public class ModifyStorageSetAttributeRequest extends Request {
         }
 
         /**
-         * StorageSetName.
+         * The name of the storage set.
          */
         public Builder storageSetName(String storageSetName) {
             this.putQueryParameter("StorageSetName", storageSetName);

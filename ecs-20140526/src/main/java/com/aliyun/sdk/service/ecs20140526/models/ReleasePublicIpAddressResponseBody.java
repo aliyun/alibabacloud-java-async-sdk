@@ -50,7 +50,7 @@ public class ReleasePublicIpAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * > This parameter is unavailable.
+         * RemainTimes.
          */
         public Builder remainTimes(String remainTimes) {
             this.remainTimes = remainTimes;
@@ -58,7 +58,7 @@ public class ReleasePublicIpAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

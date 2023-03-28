@@ -62,7 +62,7 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
         private String screenshot; 
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;

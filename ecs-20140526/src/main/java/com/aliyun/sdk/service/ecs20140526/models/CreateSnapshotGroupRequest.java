@@ -260,13 +260,13 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of disk N for which you want to create snapshots. You can specify multiple disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 disks and cannot exceed 32 TiB in size.
+         * The ID of disk N for which you want to create snapshots. You can specify multiple disk IDs across instances with the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 disks and cannot exceed 32 TiB in size.
          * <p>
          * 
-         * Take note of the following items:
+         * When you call this operation, take note of the following items:
          * 
          * *   You cannot specify both DiskId.N and `ExcludeDiskId.N`.
-         * *   If `InstanceId` is set, you can use DiskId.N to specify only disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify disks attached to multiple instances.
+         * *   If `InstanceId` is specified, DiskId.N is only used to specify the disks that are attached to the instance specified by InstanceId.
          */
         public Builder diskId(java.util.List < String > diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -280,7 +280,7 @@ public class CreateSnapshotGroupRequest extends Request {
          * 
          * This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.
          * 
-         * > You cannot specify ExcludeDiskId.N and `DiskId.N`.
+         * > You cannot specify both ExcludeDiskId.N and `DiskId.N`.
          */
         public Builder excludeDiskId(java.util.List < String > excludeDiskId) {
             this.putQueryParameter("ExcludeDiskId", excludeDiskId);
@@ -298,7 +298,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * Specify whether to enable the instant access feature. Valid values:
+         * Specifies whether to enable the instant access feature. Valid values:
          * <p>
          * 
          * *   true: enables the instant access feature.
@@ -318,7 +318,7 @@ public class CreateSnapshotGroupRequest extends Request {
          * 
          * This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration of the instant access feature expires.
          * 
-         * This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when snapshots are released.
+         * This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when the snapshots are released.
          */
         public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
             this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
@@ -399,7 +399,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The list of tags that are associated with the instances.
+         * The tags to add to the snapshot-consistent group.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

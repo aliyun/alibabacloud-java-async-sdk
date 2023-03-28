@@ -204,7 +204,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             private PrivateIpSet privateIpSet; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable for general users.
              */
             public Builder ipv4PrefixSet(Ipv4PrefixSet ipv4PrefixSet) {
                 this.ipv4PrefixSet = ipv4PrefixSet;

@@ -190,14 +190,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The natural language that is used to filter responses. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
-         * <p>
-         * 
-         * *   zh-CN
-         * *   en-US
-         * *   ja
-         * 
-         * Default value: zh-CN.
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -206,13 +199,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The billing method of resources. For more information, see [Billing overview](~~25398~~). Valid values:
-         * <p>
-         * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
-         * 
-         * Default value: PostPaid.
+         * InstanceChargeType.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -239,7 +226,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -266,14 +253,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The bidding policy for pay-as-you-go instances. You can specify this parameter when the `InstanceChargeType` parameter is set to PostPaid. For more information, see [Preemptible instances](~~52088~~). Valid values:
-         * <p>
-         * 
-         * *   NoSpot: The instances are regular pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The instances are preemptible instances with user-defined maximum hourly prices.
-         * *   SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
-         * 
-         * Default value: NoSpot.
+         * SpotStrategy.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -282,13 +262,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * Specifies whether to display detailed information.
-         * <p>
-         * 
-         * *   true: displays detailed information.
-         * *   false: does not display detailed information.
-         * 
-         * Default value: true.
+         * Verbose.
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);

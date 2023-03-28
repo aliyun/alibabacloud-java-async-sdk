@@ -294,13 +294,7 @@ public class DescribeReservedInstancesRequest extends Request {
         } 
 
         /**
-         * The allocation type. Valid values:
-         * <p>
-         * 
-         * *   Normal: queries all reserved instances that belong to the current account.
-         * *   Shared: queries reserved instances that are shared between the main account and linked accounts.
-         * 
-         * Default value: Normal.
+         * AllocationType.
          */
         public Builder allocationType(String allocationType) {
             this.putQueryParameter("AllocationType", allocationType);
@@ -309,7 +303,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The instance type of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -318,7 +312,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The instance family of the reserved instance. For more information about the valid values, see [Instance families](~~25378~~).
+         * InstanceTypeFamily.
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -327,11 +321,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The reason why the reserved instance is locked. Valid values:
-         * <p>
-         * 
-         * *   financial: You have an overdue payment in your account or the reserved instance has expired.
-         * *   security: The reserved instance is locked for security reasons.
+         * LockReason.
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -340,12 +330,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The payment option of the reserved instance. Valid values:
-         * <p>
-         * 
-         * *   No Upfront
-         * *   Partial Upfront
-         * *   All Upfront
+         * OfferingType.
          */
         public Builder offeringType(String offeringType) {
             this.putQueryParameter("OfferingType", offeringType);
@@ -372,10 +357,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -384,10 +366,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
-         * <p>
-         * 
-         * Default value: 10.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -396,7 +375,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -414,7 +393,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The name of the reserved instance.
+         * ReservedInstanceName.
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
@@ -441,13 +420,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The scope of the reserved instance. Valid values:
-         * <p>
-         * 
-         * *   Region: regional
-         * *   Zone: zonal
-         * 
-         * Default value: Region.
+         * Scope.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -474,7 +447,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The zone ID of the reserved instance. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -528,10 +501,7 @@ public class DescribeReservedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length. It cannot start with aliyun or acs: or contain http:// or https://.
-             * <p>
-             * 
-             * If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that are bound with specified tags, call the [ListTagResources](~~110425~~) operation.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -539,7 +509,7 @@ public class DescribeReservedInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

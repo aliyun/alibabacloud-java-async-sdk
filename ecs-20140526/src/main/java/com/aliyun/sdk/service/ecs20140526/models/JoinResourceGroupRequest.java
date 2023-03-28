@@ -202,7 +202,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to add the resource.
+         * The ID of the resource group to which you want to assign the resource.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +211,7 @@ public class JoinResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource. This parameter depends on the ResourceType value. For example, when ResourceType is set to instance, ResourceId can be interpreted as InstanceId.
+         * The ID of the resource. The value of this parameter varies based on the resource type. For example, when ResourceType is set to instance, the ResourceId refers to InstanceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

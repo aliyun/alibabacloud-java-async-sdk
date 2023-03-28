@@ -177,7 +177,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The attribute of the ENI.
+         * The attributes of the ENI.
          */
         public Builder attribute(String attribute) {
             this.putQueryParameter("Attribute", attribute);
@@ -213,7 +213,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

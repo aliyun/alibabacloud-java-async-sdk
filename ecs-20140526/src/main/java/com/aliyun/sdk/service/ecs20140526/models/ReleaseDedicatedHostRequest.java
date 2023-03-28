@@ -149,7 +149,7 @@ public class ReleaseDedicatedHostRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host.
+         * DedicatedHostId.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -176,7 +176,7 @@ public class ReleaseDedicatedHostRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

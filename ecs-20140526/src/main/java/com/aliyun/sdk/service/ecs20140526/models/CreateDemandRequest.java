@@ -299,10 +299,10 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * The name of the demand. The name must be 2 to 128 characters in length and start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          * <p>
          * 
-         * The default value is the instance type name.
+         * The default value is the instance type.
          */
         public Builder demandName(String demandName) {
             this.putQueryParameter("DemandName", demandName);
@@ -311,10 +311,10 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+         * The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard and use the UTC time. The format is yyyy-MM-dd hh:mm:ss.
          * <p>
          * 
-         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. Typically, the interval between the two times cannot be more than 10 days.
+         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -326,8 +326,8 @@ public class CreateDemandRequest extends Request {
          * The billing method of the instance. Default value: PostPaid. Valid values:
          * <p>
          * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription.
+         * *   PostPaid: pay-as-you-go.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -336,7 +336,7 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * The instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Select instance types](~~58291~~) to learn about how to select instance types.
+         * The instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Select instance types](~~58291~~) to learn how to select instance types.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -377,7 +377,7 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period of the resource. Default value: Month. Valid values:
+         * The unit of the subscription period. Default value: Month. Valid values:
          * <p>
          * 
          * *   Day
@@ -391,7 +391,7 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -418,10 +418,10 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+         * The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard and use the UTC time. The default format is yyyy-MM-dd HH:mm:ss.
          * <p>
          * 
-         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. Typically, the interval between the two times cannot be more than 10 days.
+         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -430,10 +430,10 @@ public class CreateDemandRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent list of zones.
          * <p>
          * 
-         * This parameter is empty by default. If you do not specify a zone, the system randomly selects one.
+         * This parameter is empty by default, which indicates that the system randomly selects a zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

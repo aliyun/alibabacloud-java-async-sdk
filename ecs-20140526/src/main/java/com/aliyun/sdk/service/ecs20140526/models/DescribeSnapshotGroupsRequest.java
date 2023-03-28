@@ -238,7 +238,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         } 
 
         /**
-         * AdditionalAttributes.
+         * This parameter is unavailable.
          */
         public Builder additionalAttributes(java.util.List < String > additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
@@ -279,7 +279,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value that is returned in the last call to the DescribeSnapshotGroups operation.
+         * The token that determines the start point of the next query. Set the value to the NextToken value that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -342,7 +342,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * SnapshotGroupId.
+         * The ID of snapshot-consistent group N. Valid values of N: 1 to 10.
          */
         public Builder snapshotGroupId(java.util.List < String > snapshotGroupId) {
             this.putQueryParameter("SnapshotGroupId", snapshotGroupId);
@@ -351,7 +351,12 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of snapshot-consistent group N. Valid values of the second N: 1, 2, and 3. Valid values:
+         * <p>
+         * 
+         * *   progressing: The snapshot-consistent group is being created.
+         * *   accomplished: The snapshot-consistent group is created.
+         * *   failed: The snapshot-consistent group fails to be created.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
@@ -360,7 +365,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the snapshot-consistent group.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

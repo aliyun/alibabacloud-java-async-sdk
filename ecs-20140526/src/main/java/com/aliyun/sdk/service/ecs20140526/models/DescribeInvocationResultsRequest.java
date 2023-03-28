@@ -331,7 +331,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The state of the execution. Valid values:
+         * The execution state of the command. Valid values:
          * <p>
          * 
          * *   Running
@@ -339,7 +339,7 @@ public class DescribeInvocationResultsRequest extends Request {
          * *   Failed
          * *   Stopped
          * 
-         * >  To improve compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
+         * > To ensure compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
@@ -366,7 +366,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the page to return.
          * <p>
          * 
          * Pages start from page 1.
@@ -403,10 +403,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
-         * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -433,7 +430,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -487,7 +484,7 @@ public class DescribeInvocationResultsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
              * <p>
              * 
              * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
@@ -500,7 +497,7 @@ public class DescribeInvocationResultsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.
              * <p>
              * 
              * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.

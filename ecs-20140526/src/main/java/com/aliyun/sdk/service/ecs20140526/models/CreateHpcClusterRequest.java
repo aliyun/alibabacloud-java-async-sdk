@@ -177,7 +177,7 @@ public class CreateHpcClusterRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -186,7 +186,7 @@ public class CreateHpcClusterRequest extends Request {
         }
 
         /**
-         * The description of the HPC cluster. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * The description of the HPC cluster. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
          * <p>
          * 
          * This parameter is empty by default.
@@ -198,7 +198,7 @@ public class CreateHpcClusterRequest extends Request {
         }
 
         /**
-         * The name of the HPC cluster. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, underscores (\_), and hyphens (-).
+         * The name of the HPC cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -207,7 +207,7 @@ public class CreateHpcClusterRequest extends Request {
         }
 
         /**
-         * OwnerAccount.
+         * RAM用户的账号登录名称。
          */
         public Builder ownerAccount(String ownerAccount) {
             this.putQueryParameter("OwnerAccount", ownerAccount);
@@ -216,7 +216,7 @@ public class CreateHpcClusterRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * RAM用户的虚拟账号ID。
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -225,7 +225,7 @@ public class CreateHpcClusterRequest extends Request {
         }
 
         /**
-         * The region ID of the HPC cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the HPC cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +234,7 @@ public class CreateHpcClusterRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * 资源主账号的账号名称。
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -243,7 +243,7 @@ public class CreateHpcClusterRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * 资源主账号的ID，亦即UID。
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

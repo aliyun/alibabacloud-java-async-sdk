@@ -425,7 +425,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The category of the snapshot. Valid values:
+         * The type of the snapshot. Valid values:
          * <p>
          * 
          * *   Standard: normal snapshot
@@ -456,11 +456,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
+         * Specifies whether to perform a dry run. Default value: false. Valid values:
          * <p>
          * 
-         * *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.
-         * *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.
+         * *   true: performs a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+         * *   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -538,7 +538,7 @@ public class DescribeSnapshotsRequest extends Request {
          * The number of the page to return. Pages start from page 1.
          * <p>
          * 
-         * Default value: 1.
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -568,7 +568,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the snapshot belongs. If a resource group is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * The ID of the resource group to which the snapshot belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
          * <p>
          * 
          * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
@@ -625,12 +625,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the snapshot. Default value: all. Valid values:
+         * The type of the snapshot. Valid values:
          * <p>
          * 
          * *   auto: automatic snapshot
          * *   user: manual snapshot
-         * *   all: all snapshot types
+         * *   all: This parameter indicates all snapshot types.
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -660,7 +660,7 @@ public class DescribeSnapshotsRequest extends Request {
          * *   progressing: The snapshot is being created.
          * *   accomplished: The snapshot is created.
          * *   failed: The snapshot fails to be created.
-         * *   all: This value indicates all snapshot states.
+         * *   all: This parameter indicates all snapshot states.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -746,7 +746,7 @@ public class DescribeSnapshotsRequest extends Request {
             }
 
             /**
-             * The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+             * The value of the filter that is used to query resources. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
              */
             public Builder value(String value) {
                 this.value = value;

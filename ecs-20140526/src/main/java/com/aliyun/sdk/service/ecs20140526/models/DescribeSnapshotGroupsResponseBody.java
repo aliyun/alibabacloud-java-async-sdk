@@ -65,7 +65,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
          * The token used to start the next query.
          * <p>
          * 
-         * >  If this parameter is empty, no more data is returned.
+         * > If the return value is empty, no more data exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -133,7 +133,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.
+             * The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -141,7 +141,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.
+             * The tag value of each snapshot in the snapshot- consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -295,11 +295,11 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * Indicates whether the instant access feature is enabled. Valid values:
+             * Indicates whether the instant access feature was enabled. Valid values:
              * <p>
              * 
-             * - true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-             * - false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+             * *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -331,7 +331,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.
+             * The ID of the source disk. This parameter is retained even after the source disk is released.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -342,8 +342,8 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
              * The type of the source disk. Valid values:
              * <p>
              * 
-             * - system: system disk
-             * - data: data disk
+             * *   system: system disk
+             * *   data: data disk
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -351,7 +351,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot-consistent group belongs.
+             * The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot belongs.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -675,7 +675,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * >  This parameter is unavailable.
+             * > This parameter is unavailable.
              */
             public Builder progressStatus(String progressStatus) {
                 this.progressStatus = progressStatus;

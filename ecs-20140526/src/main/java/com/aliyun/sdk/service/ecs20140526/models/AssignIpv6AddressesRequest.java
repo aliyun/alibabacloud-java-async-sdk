@@ -17,6 +17,10 @@ public class AssignIpv6AddressesRequest extends Request {
     private String sourceRegionId;
 
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("Ipv6Address")
     private java.util.List < String > ipv6Address;
 
@@ -62,6 +66,7 @@ public class AssignIpv6AddressesRequest extends Request {
     private AssignIpv6AddressesRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
         this.ipv6Address = builder.ipv6Address;
         this.ipv6AddressCount = builder.ipv6AddressCount;
         this.ipv6Prefix = builder.ipv6Prefix;
@@ -92,6 +97,13 @@ public class AssignIpv6AddressesRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -166,6 +178,7 @@ public class AssignIpv6AddressesRequest extends Request {
 
     public static final class Builder extends Request.Builder<AssignIpv6AddressesRequest, Builder> {
         private String sourceRegionId; 
+        private String clientToken; 
         private java.util.List < String > ipv6Address; 
         private Integer ipv6AddressCount; 
         private java.util.List < String > ipv6Prefix; 
@@ -184,6 +197,7 @@ public class AssignIpv6AddressesRequest extends Request {
         private Builder(AssignIpv6AddressesRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
             this.ipv6Address = request.ipv6Address;
             this.ipv6AddressCount = request.ipv6AddressCount;
             this.ipv6Prefix = request.ipv6Prefix;
@@ -202,6 +216,15 @@ public class AssignIpv6AddressesRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

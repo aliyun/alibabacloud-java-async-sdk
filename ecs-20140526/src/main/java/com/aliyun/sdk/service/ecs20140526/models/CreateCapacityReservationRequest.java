@@ -291,7 +291,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -300,7 +300,10 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -309,7 +312,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the capacity reservation expires. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -318,7 +321,11 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * EndTimeType.
+         * The release mode of the capacity reservation. Valid values:
+         * <p>
+         * 
+         * *   Limited: The capacity reservation is automatically released at the specified time. If you specify this parameter, you must also specify the `EndTime` parameter.
+         * *   Unlimited: The capacity reservation must be manually released. You can release it anytime.
          */
         public Builder endTimeType(String endTimeType) {
             this.putQueryParameter("EndTimeType", endTimeType);
@@ -327,7 +334,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * InstanceAmount.
+         * The total number of instances for which to reserve the capacity of an instance type.
          */
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
@@ -336,7 +343,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type. A capacity reservation can be created to reserve the capacity of only a single instance type. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the instance types provided by ECS.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -363,7 +370,15 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The operating system of the image used by the instance. This parameter corresponds to the `Platform` parameter of regional reserved instances. If the operating system of a capacity reservation matches that of a regional reserved instance, the regional reserved instance can be applied to offset bills of the unused capacity of the capacity reservation. Valid values:
+         * <p>
+         * 
+         * *   Windows: Windows Server operating system.
+         * *   Linux: Linux and UNIX-like operating system.
+         * 
+         * Default value: Linux.
+         * 
+         * > This parameter is unavailable for public use.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -372,7 +387,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -381,7 +396,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which to assign the capacity reservation.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -408,7 +423,10 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the capacity reservation takes effect. The CreateCapacityReservation operation can be called to create only immediate capacity reservations.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the capacity reservation takes effect immediately.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -417,7 +435,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the capacity reservation.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -426,7 +444,7 @@ public class CreateCapacityReservationRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone in which to create the capacity reservation. A capacity reservation can reserve resources within only a single zone.
          */
         public Builder zoneId(java.util.List < String > zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -480,7 +498,13 @@ public class CreateCapacityReservationRequest extends Request {
             private String name; 
 
             /**
-             * MatchCriteria.
+             * The type of the private pool to generate after the capacity reservation takes effect. Valid values:
+             * <p>
+             * 
+             * *   Open: open private pool.
+             * *   Target: targeted private pool.
+             * 
+             * Default value: Open.
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;
@@ -488,7 +512,7 @@ public class CreateCapacityReservationRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the capacity reservation. The description must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
              */
             public Builder name(String name) {
                 this.name = name;
@@ -541,7 +565,7 @@ public class CreateCapacityReservationRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -549,7 +573,7 @@ public class CreateCapacityReservationRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

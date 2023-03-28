@@ -74,7 +74,7 @@ public class RunInstancesResponseBody extends TeaModel {
         private Float tradePrice; 
 
         /**
-         * The IDs of the instances (`InstanceIdSet`).
+         * InstanceIdSets.
          */
         public Builder instanceIdSets(InstanceIdSets instanceIdSets) {
             this.instanceIdSets = instanceIdSets;
@@ -82,7 +82,7 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order. This parameter is returned only when `InstanceChargeType` is set to PrePaid.
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -90,7 +90,7 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The transaction price.
+         * TradePrice.
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;

@@ -22,6 +22,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
 
     @Query
     @NameInMap("InstanceType")
+    @Validation(required = true)
     private String instanceType;
 
     @Query

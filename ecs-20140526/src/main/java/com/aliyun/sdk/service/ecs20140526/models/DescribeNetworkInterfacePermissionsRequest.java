@@ -190,7 +190,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the ENIs to query.
+         * The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -199,7 +199,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The IDs of permissions on the ENI. You can specify up to 100 ENI permission IDs.
+         * The IDs of ENI permissions. You can specify up to 100 ENI permission IDs.
          */
         public Builder networkInterfacePermissionId(java.util.List < String > networkInterfacePermissionId) {
             this.putQueryParameter("NetworkInterfacePermissionId", networkInterfacePermissionId);
@@ -231,7 +231,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
          * 
          * Pages start from page 1.
          * 
-         * Default: 1.
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,7 +254,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the ENI permission. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

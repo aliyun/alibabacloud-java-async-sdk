@@ -559,6 +559,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("InstanceOwnerId")
+        private Long instanceOwnerId;
+
         @NameInMap("InstanceType")
         private String instanceType;
 
@@ -567,6 +570,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         private Instance(Builder builder) {
             this.instanceId = builder.instanceId;
+            this.instanceOwnerId = builder.instanceOwnerId;
             this.instanceType = builder.instanceType;
             this.socketId = builder.socketId;
         }
@@ -587,6 +591,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceOwnerId
+         */
+        public Long getInstanceOwnerId() {
+            return this.instanceOwnerId;
+        }
+
+        /**
          * @return instanceType
          */
         public String getInstanceType() {
@@ -602,6 +613,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceId; 
+            private Long instanceOwnerId; 
             private String instanceType; 
             private String socketId; 
 
@@ -610,6 +622,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceOwnerId.
+             */
+            public Builder instanceOwnerId(Long instanceOwnerId) {
+                this.instanceOwnerId = instanceOwnerId;
                 return this;
             }
 
@@ -1083,6 +1103,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("DedicatedHostName")
         private String dedicatedHostName;
 
+        @NameInMap("DedicatedHostOwnerId")
+        private Long dedicatedHostOwnerId;
+
         @NameInMap("DedicatedHostType")
         private String dedicatedHostType;
 
@@ -1158,6 +1181,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
             this.dedicatedHostId = builder.dedicatedHostId;
             this.dedicatedHostName = builder.dedicatedHostName;
+            this.dedicatedHostOwnerId = builder.dedicatedHostOwnerId;
             this.dedicatedHostType = builder.dedicatedHostType;
             this.description = builder.description;
             this.expiredTime = builder.expiredTime;
@@ -1264,6 +1288,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          */
         public String getDedicatedHostName() {
             return this.dedicatedHostName;
+        }
+
+        /**
+         * @return dedicatedHostOwnerId
+         */
+        public Long getDedicatedHostOwnerId() {
+            return this.dedicatedHostOwnerId;
         }
 
         /**
@@ -1425,6 +1456,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String dedicatedHostClusterId; 
             private String dedicatedHostId; 
             private String dedicatedHostName; 
+            private Long dedicatedHostOwnerId; 
             private String dedicatedHostType; 
             private String description; 
             private String expiredTime; 
@@ -1544,6 +1576,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              */
             public Builder dedicatedHostName(String dedicatedHostName) {
                 this.dedicatedHostName = dedicatedHostName;
+                return this;
+            }
+
+            /**
+             * DedicatedHostOwnerId.
+             */
+            public Builder dedicatedHostOwnerId(Long dedicatedHostOwnerId) {
+                this.dedicatedHostOwnerId = dedicatedHostOwnerId;
                 return this;
             }
 

@@ -50,7 +50,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         private SecurityGroupReferences securityGroupReferences; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the references to the specified security groups.
+         * SecurityGroupReferences.
          */
         public Builder securityGroupReferences(SecurityGroupReferences securityGroupReferences) {
             this.securityGroupReferences = securityGroupReferences;
@@ -110,7 +110,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the security group belongs.
+             * AliUid.
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -118,7 +118,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -212,7 +212,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * Details about the security groups whose rules are referencing the specified security groups.
+             * ReferencingSecurityGroups.
              */
             public Builder referencingSecurityGroups(ReferencingSecurityGroups referencingSecurityGroups) {
                 this.referencingSecurityGroups = referencingSecurityGroups;
@@ -220,7 +220,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the specified security group.
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

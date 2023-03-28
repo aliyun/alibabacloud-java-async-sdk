@@ -150,7 +150,7 @@ public class DetachKeyPairRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances from which you want to unbind the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -159,7 +159,7 @@ public class DetachKeyPairRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The names of SSH key pairs.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -177,7 +177,7 @@ public class DetachKeyPairRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

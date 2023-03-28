@@ -190,7 +190,7 @@ public class GetInstanceScreenshotRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +217,7 @@ public class GetInstanceScreenshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to wake up the instance for which the instance hibernation feature is enabled.
+         * Specifies whether to wake up hibernating instances.
          * <p>
          * 
          * Default value: false.

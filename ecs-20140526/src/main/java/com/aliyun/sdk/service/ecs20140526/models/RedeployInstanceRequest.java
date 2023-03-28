@@ -148,12 +148,7 @@ public class RedeployInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to force stop the instance that is in the Running state.
-         * <p>
-         * 
-         * Default value: false.
-         * 
-         * > A forced stop is equivalent to a power outage and can result in loss of unsaved data. We recommend that you redeploy instances when they are in the Stopped state.
+         * ForceStop.
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -162,7 +157,7 @@ public class RedeployInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

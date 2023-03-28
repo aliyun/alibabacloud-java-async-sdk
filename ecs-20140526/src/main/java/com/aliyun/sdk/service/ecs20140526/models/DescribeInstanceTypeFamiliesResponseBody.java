@@ -50,7 +50,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceTypeFamilies.
+         * Details about instance families.
          */
         public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -58,7 +58,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
             private String instanceTypeFamilyId; 
 
             /**
-             * Generation.
+             * The generation of the instance family.
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -118,7 +118,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamilyId.
+             * The ID of the instance family.
              */
             public Builder instanceTypeFamilyId(String instanceTypeFamilyId) {
                 this.instanceTypeFamilyId = instanceTypeFamilyId;

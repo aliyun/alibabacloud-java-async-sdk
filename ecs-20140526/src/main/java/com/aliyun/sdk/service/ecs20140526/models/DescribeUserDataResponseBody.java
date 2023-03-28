@@ -74,7 +74,7 @@ public class DescribeUserDataResponseBody extends TeaModel {
         private String userData; 
 
         /**
-         * The ID of the instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -82,7 +82,7 @@ public class DescribeUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -90,7 +90,7 @@ public class DescribeUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * The user data of the instance.
+         * UserData.
          */
         public Builder userData(String userData) {
             this.userData = userData;

@@ -154,7 +154,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the SCU. It must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -163,7 +163,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * The name of the SCU. It must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -190,7 +190,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the SCU. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +217,7 @@ public class ModifyStorageCapacityUnitAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the SCU.
+         * StorageCapacityUnitId.
          */
         public Builder storageCapacityUnitId(String storageCapacityUnitId) {
             this.putQueryParameter("StorageCapacityUnitId", storageCapacityUnitId);

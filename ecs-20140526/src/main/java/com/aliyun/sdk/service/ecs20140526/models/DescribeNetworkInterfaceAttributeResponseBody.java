@@ -394,7 +394,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and unavailable to general users.
+         * > This parameter is in invitational preview and is unavailable.
          */
         public Builder attachment(Attachment attachment) {
             this.attachment = attachment;
@@ -402,7 +402,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and unavailable to general users.
+         * > This parameter is in invitational preview and is unavailable.
          */
         public Builder bondInterfaceSpecification(BondInterfaceSpecification bondInterfaceSpecification) {
             this.bondInterfaceSpecification = bondInterfaceSpecification;
@@ -437,7 +437,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and unavailable to general users.
+         * The IPv4 address prefixes of the ENI.
          */
         public Builder ipv4PrefixSets(Ipv4PrefixSets ipv4PrefixSets) {
             this.ipv4PrefixSets = ipv4PrefixSets;
@@ -445,7 +445,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and unavailable to general users.
+         * The IPv6 address prefixes of the ENI.
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
@@ -515,7 +515,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the private IP addresses of the ENI.
+         * Details about the private IP addresses.
          */
         public Builder privateIpSets(PrivateIpSets privateIpSets) {
             this.privateIpSets = privateIpSets;
@@ -546,7 +546,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and unavailable to general users.
+         * > This parameter is in invitational preview and is unavailable.
          */
         public Builder queuePairNumber(Integer queuePairNumber) {
             this.queuePairNumber = queuePairNumber;
@@ -562,7 +562,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the associated instance belongs. If a resource group is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * The ID of the resource group to which the instance belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
          * <p>
          * 
          * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
@@ -597,7 +597,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and unavailable to general users.
+         * > This parameter is in invitational preview and is unavailable.
          */
         public Builder slaveInterfaceSpecification(SlaveInterfaceSpecification slaveInterfaceSpecification) {
             this.slaveInterfaceSpecification = slaveInterfaceSpecification;
@@ -614,7 +614,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * *   Detaching: The ENI is being detached from an instance.
          * *   Deleting: The ENI is being deleted.
          * 
-         * This parameter is empty by default, which indicates that ENIs in all states are queried.
+         * This parameter is empty by default, which indicates that all states are queried.
          */
         public Builder status(String status) {
             this.status = status;
@@ -658,7 +658,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID of the ENI.
+         * The ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -718,7 +718,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The EIP of the ENI.
+             * The EIP.
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -848,7 +848,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String trunkNetworkInterfaceId; 
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder deviceIndex(Integer deviceIndex) {
                 this.deviceIndex = deviceIndex;
@@ -856,7 +856,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -864,7 +864,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder memberNetworkInterfaceIds(MemberNetworkInterfaceIds memberNetworkInterfaceIds) {
                 this.memberNetworkInterfaceIds = memberNetworkInterfaceIds;
@@ -872,11 +872,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The index of the network interface controller (NIC).
+             * 网卡挂载指定的物理网卡索引。
              * <p>
-             * 
-             * *   If the ENI is in the Available state or if no NIC index was specified when the ENI was attached, this parameter has no value.
-             * *   If the ENI is in the InUse state and an NIC index was specified when the ENI was attached, the specified NIC index is returned as the value of this parameter.
+             * - 如果网卡是未挂载（Available）状态或者挂载时未指定索引，则不返回此值。
+             * - 如果网卡是已挂载（InUse）状态且挂载时指定，此值表示网卡挂载指定的物理网卡索引。
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -884,7 +883,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder trunkNetworkInterfaceId(String trunkNetworkInterfaceId) {
                 this.trunkNetworkInterfaceId = trunkNetworkInterfaceId;
@@ -949,7 +948,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String workState; 
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder bondNetworkInterfaceId(String bondNetworkInterfaceId) {
                 this.bondNetworkInterfaceId = bondNetworkInterfaceId;
@@ -957,7 +956,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder slaveNetworkInterfaceId(String slaveNetworkInterfaceId) {
                 this.slaveNetworkInterfaceId = slaveNetworkInterfaceId;
@@ -965,7 +964,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder workState(String workState) {
                 this.workState = workState;
@@ -1059,7 +1058,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private BondInterfaceSpecificationSlaveInterfaceSpecification slaveInterfaceSpecification; 
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder bondMode(String bondMode) {
                 this.bondMode = bondMode;
@@ -1067,7 +1066,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder slaveInterfaceSpecification(BondInterfaceSpecificationSlaveInterfaceSpecification slaveInterfaceSpecification) {
                 this.slaveInterfaceSpecification = slaveInterfaceSpecification;
@@ -1108,7 +1107,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String ipv4Prefix; 
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * The IPv4 address prefix.
              */
             public Builder ipv4Prefix(String ipv4Prefix) {
                 this.ipv4Prefix = ipv4Prefix;
@@ -1190,7 +1189,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String ipv6Prefix; 
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * The IPv6 address prefix.
              */
             public Builder ipv6Prefix(String ipv6Prefix) {
                 this.ipv6Prefix = ipv6Prefix;
@@ -1272,7 +1271,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String ipv6Address; 
 
             /**
-             * The IPv6 address of the ENI.
+             * The IPv6 address assigned to the ENI.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -1366,7 +1365,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String publicIpAddress; 
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -1374,7 +1373,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The EIP of the ENI.
+             * The EIP.
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -1451,7 +1450,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * *   true: The IP address is the primary private IP address.
-             * *   false: The IP address is a secondary private IP address.
+             * *   false: The IP address is the secondary private IP address.
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -1606,7 +1605,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String workState; 
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder bondNetworkInterfaceId(String bondNetworkInterfaceId) {
                 this.bondNetworkInterfaceId = bondNetworkInterfaceId;
@@ -1614,7 +1613,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder slaveNetworkInterfaceId(String slaveNetworkInterfaceId) {
                 this.slaveNetworkInterfaceId = slaveNetworkInterfaceId;
@@ -1622,7 +1621,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and unavailable to general users.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder workState(String workState) {
                 this.workState = workState;
@@ -1675,7 +1674,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1683,7 +1682,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

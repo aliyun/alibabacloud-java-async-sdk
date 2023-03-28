@@ -219,7 +219,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * ImagePipelineId.
+         * The IDs of the image templates. You can specify at most 20 IDs.
          */
         public Builder imagePipelineId(java.util.List < String > imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -228,7 +228,10 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. Valid values: 1 to 500.
+         * <p>
+         * 
+         * Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -237,7 +240,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the image template.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -246,7 +249,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImagePipelines operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -273,7 +276,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -282,7 +285,10 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>
+         * 
+         * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -363,7 +369,7 @@ public class DescribeImagePipelinesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the image template. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -371,7 +377,7 @@ public class DescribeImagePipelinesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the image template. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

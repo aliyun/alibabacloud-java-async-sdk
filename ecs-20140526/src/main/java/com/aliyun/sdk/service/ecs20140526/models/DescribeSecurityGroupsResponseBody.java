@@ -110,7 +110,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The query token returned in this call. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no more results are to be returned.
+         * The pagination token that can be used in the next request to retrieve a new page of results. If the return value of this parameter is empty when you specify the MaxResults and NextToken parameters for a paged query, no more results are to be returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -140,7 +140,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the security group.
+         * The region ID of the security groups.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -156,7 +156,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the security groups.
+         * The information about the security groups.
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -164,7 +164,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of security groups. If the `MaxResults` and `NextToken` parameters are specified in the request, the value of this parameter is not returned.
+         * The total number of security groups. If you specify the `MaxResults` and `NextToken` parameters in the request, this parameter is empty.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -216,7 +216,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the security group.
+             * The tag keys of the security group.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -224,7 +224,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the security group.
+             * The tag values of the security group.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -74,7 +74,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceRamRoleSets.
+         * Details about the instance RAM roles.
          */
         public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
             this.instanceRamRoleSets = instanceRamRoleSets;
@@ -82,7 +82,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance RAM role.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -90,7 +90,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of instance RAM roles returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,7 +150,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
             private String ramRoleName; 
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -158,7 +158,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RamRoleName.
+             * The name of the instance RAM role.
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;

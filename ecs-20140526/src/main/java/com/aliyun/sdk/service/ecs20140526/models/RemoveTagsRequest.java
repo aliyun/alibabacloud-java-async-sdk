@@ -173,7 +173,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +182,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The ID of the resource from which you want to unbind the tags. When the retrieved resources are instances, this parameter can be interpreted as InstanceId.
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -209,16 +209,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
-         * 
-         * *   disk
-         * *   instance
-         * *   image
-         * *   securitygroup
-         * *   snapshot
-         * 
-         * All the preceding values must be in lowercase.
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -227,7 +218,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -281,7 +272,7 @@ public class RemoveTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the resource. Valid values of N: 1 to 20. It cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,7 +280,7 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

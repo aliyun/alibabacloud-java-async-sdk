@@ -205,7 +205,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * AddEntry.
+         * The entries that to be added to the prefix list.
          */
         public Builder addEntry(java.util.List < AddEntry> addEntry) {
             this.putQueryParameter("AddEntry", addEntry);
@@ -214,7 +214,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -241,7 +241,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * PrefixListId.
+         * The ID of the prefix list.
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -250,7 +250,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * PrefixListName.
+         * The name of the prefix list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -259,7 +259,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +268,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * RemoveEntry.
+         * The entries that to be deleted from the prefix list.
          */
         public Builder removeEntry(java.util.List < RemoveEntry> removeEntry) {
             this.putQueryParameter("RemoveEntry", removeEntry);
@@ -341,7 +341,14 @@ public class ModifyPrefixListRequest extends Request {
             private String description; 
 
             /**
-             * Cidr.
+             * The CIDR block of entry N to be added to the prefix list. Valid values of N: 0 to 200.
+             * <p>
+             * 
+             * Take note of the following items when you add the entries:
+             * 
+             * *   The number of entries in the prefix list cannot be greater than the maximum number of entries allowed for the prefix list. You can call the [DescribePrefixListAttributes](~~205872~~) operation to query the maximum number of entries in a specific prefix list.
+             * *   You cannot specify duplicate CIDR blocks.
+             * *   The CIDR blocks cannot be the same as the `RemoveEntry.N.Cidr` values.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -349,7 +356,7 @@ public class ModifyPrefixListRequest extends Request {
             }
 
             /**
-             * Description.
+             * The description in entry N. The description must be 2 to 32 characters in length and cannot start with `http://` or `https://`. Valid values of N: 0 to 200.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -391,7 +398,13 @@ public class ModifyPrefixListRequest extends Request {
             private String cidr; 
 
             /**
-             * Cidr.
+             * The CIDR block of entry N to be deleted from the prefix list. Valid values of N: 0 to 200.
+             * <p>
+             * 
+             * Take note of the following items when you delete the entries:
+             * 
+             * *   You cannot specify duplicate CIDR blocks.
+             * *   The CIDR blocks cannot be the same as the `AddEntry.N.Cidr` values.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;

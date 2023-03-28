@@ -163,7 +163,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * The ID of the disk that you want to restore.
+         * DiskId.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -172,13 +172,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Valid values:
-         * <p>
-         * 
-         * *   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, and resource state limits. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-         * *   false: The validity of the request is checked. If the check succeeds, the request is made.
-         * 
-         * Default value: false.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -223,7 +217,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that you want to use to restore the disk.
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

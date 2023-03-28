@@ -178,7 +178,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -241,10 +241,10 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The trunk network card ID.
+         * The ID of the trunk ENI.
          * <p>
          * 
-         * > This parameter is not online yet and cannot be used.
+         * >  This parameter is unavailable for use.
          */
         public Builder trunkNetworkInstanceId(String trunkNetworkInstanceId) {
             this.putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);

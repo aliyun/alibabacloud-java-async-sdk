@@ -387,7 +387,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -396,7 +396,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The description of the security group rule. The description must be 1 to 512 characters in length.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -405,10 +405,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.
-         * <p>
-         * 
-         * This parameter is empty by default.
+         * DestCidrIp.
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -417,11 +414,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The ID of the destination security group. You must specify at least one of the `DestGroupId` and `DestCidrIp` parameters.
-         * <p>
-         * 
-         * *   If `DestGroupId` is specified but `DestCidrIp` is not specified, the `NicType` parameter must be set to intranet.
-         * *   If both `DestGroupId` and `DestCidrIp` are specified, `DestCidrIp` takes precedence.
+         * DestGroupId.
          */
         public Builder destGroupId(String destGroupId) {
             this.putQueryParameter("DestGroupId", destGroupId);
@@ -430,7 +423,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The logon name of the Alibaba Cloud account that manages the destination security group.
+         * DestGroupOwnerAccount.
          */
         public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
             this.putQueryParameter("DestGroupOwnerAccount", destGroupOwnerAccount);
@@ -439,7 +432,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account (UID) that manages the destination security group.
+         * DestGroupOwnerId.
          */
         public Builder destGroupOwnerId(Long destGroupOwnerId) {
             this.putQueryParameter("DestGroupOwnerId", destGroupOwnerId);
@@ -448,10 +441,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The ID of the destination prefix list. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
-         * <p>
-         * 
-         * If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, this parameter is ignored.
+         * DestPrefixListId.
          */
         public Builder destPrefixListId(String destPrefixListId) {
             this.putQueryParameter("DestPrefixListId", destPrefixListId);
@@ -460,14 +450,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The transport layer protocol. The values of this parameter are case-insensitive. Valid values:
-         * <p>
-         * 
-         * *   icmp
-         * *   gre
-         * *   tcp
-         * *   udp
-         * *   all: All protocols are supported.
+         * IpProtocol.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -476,12 +459,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The destination IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.
-         * <p>
-         * 
-         * >  Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both the Ipv6DestCidrIp parameter and the `DestCidrIp` parameter.
-         * 
-         * This parameter is empty by default.
+         * Ipv6DestCidrIp.
          */
         public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
             this.putQueryParameter("Ipv6DestCidrIp", ipv6DestCidrIp);
@@ -490,12 +468,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The source IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.
-         * <p>
-         * 
-         * >  Only the IP addresses of instances in VPCs are supported. You cannot specify both the Ipv6SourceCidrIp parameter and the `SourceCidrIp` parameter.
-         * 
-         * This parameter is empty by default.
+         * Ipv6SourceCidrIp.
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -504,18 +477,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The network interface controller (NIC) type of the security group rule when the security group is in the classic network. Valid values:
-         * <p>
-         * 
-         * *   internet: public NIC
-         * *   intranet: private NIC
-         * 
-         * Default value: internet.
-         * 
-         * The NicType parameter must be set to intranet in the following cases:
-         * 
-         * *   If the security group is in a VPC, this parameter is required and must be set to intranet.
-         * *   If you specify only `DestGroupId` when you configure access between security groups, this parameter must be set to intranet.
+         * NicType.
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -542,13 +504,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The authorization policy. Valid values:
-         * <p>
-         * 
-         * *   accept: allows access.
-         * *   drop: denies access and returns no responses.
-         * 
-         * Default value: accept.
+         * Policy.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -557,13 +513,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The range of destination ports that correspond to the transport layer protocol. Valid values:
-         * <p>
-         * 
-         * *   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-         * *   When the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.
-         * *   When the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.
-         * *   When the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.
+         * PortRange.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -572,10 +522,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The priority of the security group rule. Valid values: 1 to 100.
-         * <p>
-         * 
-         * Default: 1.
+         * Priority.
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -584,7 +531,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The region ID of the source security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -611,7 +558,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The ID of the source security group.
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -629,10 +576,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.
-         * <p>
-         * 
-         * This parameter is empty by default.
+         * SourceCidrIp.
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -641,13 +585,7 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The range of source ports that correspond to the transport layer protocol. Valid values:
-         * <p>
-         * 
-         * *   When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-         * *   When the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.
-         * *   When the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.
-         * *   When the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.
+         * SourcePortRange.
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);

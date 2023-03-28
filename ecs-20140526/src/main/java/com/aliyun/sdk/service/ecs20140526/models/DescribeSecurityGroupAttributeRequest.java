@@ -193,16 +193,15 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The network interface controller (NIC) type of the security group rule.
+         * The network interface type of the security group rule.
          * <p>
          * 
          * *   Default value for rules of security groups in the classic network: internet. Valid values for rules of security groups in the classic network:
          * 
          *     *   internet
-         * 
          *     *   intranet
          * 
-         *         > You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.
+         *     > You can query security group rules of only one network interface type in a single call. To query security group rules of both network interface types, call the operation twice.
          * 
          * *   When the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.
          * 

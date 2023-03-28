@@ -134,7 +134,7 @@ public class DescribeInstanceTopologyRequest extends Request {
         }
 
         /**
-         * The IDs of one or more ECS instances. You can specify a maximum of 100 instance IDs.
+         * InstanceIds.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -152,7 +152,7 @@ public class DescribeInstanceTopologyRequest extends Request {
         }
 
         /**
-         * The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

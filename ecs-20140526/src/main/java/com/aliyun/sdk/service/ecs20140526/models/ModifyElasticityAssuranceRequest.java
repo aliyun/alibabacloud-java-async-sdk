@@ -148,7 +148,7 @@ public class ModifyElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -175,7 +175,7 @@ public class ModifyElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +248,7 @@ public class ModifyElasticityAssuranceRequest extends Request {
             private String name; 
 
             /**
-             * The ID of the elasticity assurance.
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -256,7 +256,7 @@ public class ModifyElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;

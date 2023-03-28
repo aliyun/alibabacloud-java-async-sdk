@@ -583,7 +583,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The category of the snapshot.
              * <p>
              * 
-             * > This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+             * >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -615,11 +615,11 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instant access feature is enabled. Valid values:
+             * Indicates whether the instant access feature was enabled. Valid values:
              * <p>
              * 
-             * *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-             * *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+             * *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -627,7 +627,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the instant access feature. The instant access feature is automatically disabled when the specified duration expires.
+             * The validity period of the instant access feature. The instant access feature is automatically disabled when the specified period expires.
              * <p>
              * 
              * By default, the value of this parameter is the same as that of `RetentionDays`.
@@ -638,7 +638,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the KMS key used by the data disk.
+             * The ID of the KMS key used for the data disk.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -654,7 +654,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The product code of the Alibaba Cloud Marketplace image.
+             * The product number inherited from Alibaba Cloud Marketplace.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -670,7 +670,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining time that is required to create the snapshot. Unit: seconds.
+             * The remaining time required to create the snapshot. Unit: seconds.
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -678,7 +678,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the snapshot belongs.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -731,7 +731,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.
+             * The ID of the source disk. This parameter is retained even after the source disk is released.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -739,7 +739,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the source disk. Unit: GiB.
+             * The capacity of the source disk for which the snapshot was created. Unit: GiB.
              */
             public Builder sourceDiskSize(String sourceDiskSize) {
                 this.sourceDiskSize = sourceDiskSize;
@@ -807,7 +807,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the snapshot has been used to create images or disks. Valid values:
+             * Indicates whether the snapshot has been used to create custom images or disks. Valid values:
              * <p>
              * 
              * *   image

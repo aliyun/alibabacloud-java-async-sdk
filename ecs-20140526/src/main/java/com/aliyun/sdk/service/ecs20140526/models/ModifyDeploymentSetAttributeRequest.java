@@ -177,7 +177,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set.
+         * DeploymentSetId.
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -186,7 +186,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * DeploymentSetName.
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
@@ -195,7 +195,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -222,7 +222,7 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

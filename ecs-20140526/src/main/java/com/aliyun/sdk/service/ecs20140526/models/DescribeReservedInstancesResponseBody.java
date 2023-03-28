@@ -86,7 +86,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the reserved instances.
+         * ReservedInstances.
          */
         public Builder reservedInstances(ReservedInstances reservedInstances) {
             this.reservedInstances = reservedInstances;
@@ -118,7 +118,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of reserved instances.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +158,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The reason why the reserved instance was locked.
+             * LockReason.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -252,7 +252,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the reserved instance.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -260,7 +260,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the reserved instance.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -546,11 +546,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
-             * <p>
-             * 
-             * *   allocated: The reserved instance is allocated to another account.
-             * *   beAllocated: The reserved instance is allocated by another account.
+             * AllocationStatus.
              */
             public Builder allocationStatus(String allocationStatus) {
                 this.allocationStatus = allocationStatus;
@@ -558,7 +554,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the reserved instance was created.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -566,7 +562,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the reserved instance.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -574,7 +570,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the reserved instance expires.
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -582,7 +578,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pay-as-you-go instances that are of the same instance type as the reserved instance and can be matched to the reserved instance.
+             * InstanceAmount.
              */
             public Builder instanceAmount(Integer instanceAmount) {
                 this.instanceAmount = instanceAmount;
@@ -590,7 +586,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the pay-as-you-go instances that can be matched to the reserved instance.
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -598,7 +594,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The payment option of the reserved instance.
+             * OfferingType.
              */
             public Builder offeringType(String offeringType) {
                 this.offeringType = offeringType;
@@ -606,7 +602,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the lock status of the reserved instance.
+             * OperationLocks.
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -614,11 +610,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the reserved instance. Valid values:
-             * <p>
-             * 
-             * - Windows: Windows Server operating systems
-             * - Linux: Linux and Unix-like operating systems
+             * Platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -626,7 +618,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the reserved instance.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -634,7 +626,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the reserved instance.
+             * ReservedInstanceId.
              */
             public Builder reservedInstanceId(String reservedInstanceId) {
                 this.reservedInstanceId = reservedInstanceId;
@@ -642,7 +634,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the reserved instance.
+             * ReservedInstanceName.
              */
             public Builder reservedInstanceName(String reservedInstanceName) {
                 this.reservedInstanceName = reservedInstanceName;
@@ -650,7 +642,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -658,7 +650,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The scope of the reserved instance.
+             * Scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -666,7 +658,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the reserved instance took effect.
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -674,7 +666,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the reserved instance.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -682,7 +674,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the tags of the reserved instance.
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -690,7 +682,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the reserved instance.
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

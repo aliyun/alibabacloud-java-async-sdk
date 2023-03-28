@@ -33,6 +33,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("EipAddress")
     private EipAddress eipAddress;
 
+    @NameInMap("EnableJumboFrame")
+    private Boolean enableJumboFrame;
+
     @NameInMap("ExpiredTime")
     private String expiredTime;
 
@@ -116,6 +119,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         this.dedicatedHostAttribute = builder.dedicatedHostAttribute;
         this.description = builder.description;
         this.eipAddress = builder.eipAddress;
+        this.enableJumboFrame = builder.enableJumboFrame;
         this.expiredTime = builder.expiredTime;
         this.hostName = builder.hostName;
         this.imageId = builder.imageId;
@@ -198,6 +202,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public EipAddress getEipAddress() {
         return this.eipAddress;
+    }
+
+    /**
+     * @return enableJumboFrame
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.enableJumboFrame;
     }
 
     /**
@@ -383,6 +394,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private DedicatedHostAttribute dedicatedHostAttribute; 
         private String description; 
         private EipAddress eipAddress; 
+        private Boolean enableJumboFrame; 
         private String expiredTime; 
         private String hostName; 
         private String imageId; 
@@ -469,6 +481,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder eipAddress(EipAddress eipAddress) {
             this.eipAddress = eipAddress;
+            return this;
+        }
+
+        /**
+         * EnableJumboFrame.
+         */
+        public Builder enableJumboFrame(Boolean enableJumboFrame) {
+            this.enableJumboFrame = enableJumboFrame;
             return this;
         }
 

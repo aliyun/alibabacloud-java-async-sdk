@@ -222,7 +222,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk that the check item may have.
+             * The risk that is detected on the check item.
              */
             public Builder riskCode(String riskCode) {
                 this.riskCode = riskCode;
@@ -230,13 +230,13 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the severity of the risk that the check item of the imported custom image has. If the check item is at risk, this parameter is returned. If the check item is not at risk, this parameter is not returned.  
+             * Indicates the severity of the risk that is detected on the check item of the imported custom image. If the system detects a risk on the check item, this parameter is returned. If the system does not detect a risk on the check item, this parameter is not returned.
              * <p>
              * 
              * Valid values:
              * 
-             * - High: The check item has a high risk, which may affect instance startup. We strongly recommended that you handle the risk.
-             * - Medium: The check item has a medium risk, which may affect the startup performance or configurations of the instance. We recommend that you handle the risk.
+             * *   High: The check item is a high-risk item that may affect the startup of the instance. We strongly recommended that you fix this item at your earliest convenience.
+             * *   Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you fix this item.
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -349,8 +349,8 @@ public class DescribeImagesResponseBody extends TeaModel {
              * The state of the image check task. Valid values:
              * <p>
              * 
-             * - Processing: The image check task is in progress.
-             * - Finished: The image check task is completed.
+             * *   Processing: The image check task is in progress.
+             * *   Finished: The image check task is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -490,7 +490,7 @@ public class DescribeImagesResponseBody extends TeaModel {
              * The device name of the disk. Example: /dev/xvdb.
              * <p>
              * 
-             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure compatibility.
+             * > This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -538,7 +538,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk.
+             * The size of the cloud disk.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -639,8 +639,8 @@ public class DescribeImagesResponseBody extends TeaModel {
              * Indicates whether the image supports Non-Volatile Memory Express (NVMe). Valid values:
              * <p>
              * 
-             * - supported: The image supports NVMe. Instances created from this image support the NVMe protocol.
-             * - unsupported: The image does not support NVMe. Instances created from this image do not support the NVMe protocol.
+             * *   supported: The image supports NVMe. Instances created from this image also support NVMe.
+             * *   unsupported: The image does not support NVMe. Instances created from this image do not support NVMe.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -1155,7 +1155,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * The image architecture. Valid values:
+             * The architecture of the image. Valid values:
              * <p>
              * 
              * *   i386
@@ -1168,13 +1168,13 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The boot mode of the custom image. Valid values:
+             * The new boot mode of the image. Valid values:
              * <p>
              * 
              * *   BIOS
              * *   UEFI
              * 
-             * >  You must know which boot modes the specified image supports. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances which use this image can start normally.
+             * > You need to be aware of the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can start as expected.
              */
             public Builder bootMode(String bootMode) {
                 this.bootMode = bootMode;
@@ -1206,7 +1206,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The mappings between disks and snapshots in the image.
+             * The mappings between disks and snapshots that belong to the image.
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -1260,7 +1260,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.
+             * The ID of the Alibaba Cloud account to which the image belongs. This parameter is valid only when you query shared images or community images.
              */
             public Builder imageOwnerId(Long imageOwnerId) {
                 this.imageOwnerId = imageOwnerId;
@@ -1284,11 +1284,11 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values: 
+             * Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values:
              * <p>
              * 
-             * - true: The image is publicly available.
-             * - false: The image is not publicly available.
+             * *   true: The image is publicly available.
+             * *   false: The image is not publicly available.
              */
             public Builder isPublic(Boolean isPublic) {
                 this.isPublic = isPublic;
@@ -1331,8 +1331,8 @@ public class DescribeImagesResponseBody extends TeaModel {
              * Indicates whether the image supports logons of non-root users. Valid values:
              * <p>
              * 
-             * - true: The image supports logons of non-root users.
-             * - false: The image does not support logons of non-root users.
+             * *   true: The image supports logons of non-root users.
+             * *   false: The image does not support logons of non-root users.
              */
             public Builder loginAsNonRootSupported(Boolean loginAsNonRootSupported) {
                 this.loginAsNonRootSupported = loginAsNonRootSupported;
@@ -1340,7 +1340,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the operating system.
+             * The display name of the operating system in Chinese.
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -1348,7 +1348,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the operating system.
+             * The display name of the operating system in English.
              */
             public Builder OSNameEn(String OSNameEn) {
                 this.OSNameEn = OSNameEn;
@@ -1356,7 +1356,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
+             * The OS type of the image. Valid values:
              * <p>
              * 
              * *   windows

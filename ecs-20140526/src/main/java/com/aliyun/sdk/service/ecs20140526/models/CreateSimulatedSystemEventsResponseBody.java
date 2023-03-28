@@ -50,7 +50,7 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the simulated events.
+         * The IDs of the simulated system events.
          */
         public Builder eventIdSet(EventIdSet eventIdSet) {
             this.eventIdSet = eventIdSet;

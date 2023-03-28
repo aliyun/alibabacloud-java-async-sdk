@@ -1384,6 +1384,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @NameInMap("Arn")
         private java.util.List < Arn> arn;
 
+        @NameInMap("AutoReleaseTime")
+        private String autoReleaseTime;
+
         @NameInMap("CreditSpecification")
         private String creditSpecification;
 
@@ -1470,6 +1473,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         private LaunchConfiguration(Builder builder) {
             this.arn = builder.arn;
+            this.autoReleaseTime = builder.autoReleaseTime;
             this.creditSpecification = builder.creditSpecification;
             this.dataDisk = builder.dataDisk;
             this.deploymentSetId = builder.deploymentSetId;
@@ -1513,6 +1517,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
          */
         public java.util.List < Arn> getArn() {
             return this.arn;
+        }
+
+        /**
+         * @return autoReleaseTime
+         */
+        public String getAutoReleaseTime() {
+            return this.autoReleaseTime;
         }
 
         /**
@@ -1713,6 +1724,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static final class Builder {
             private java.util.List < Arn> arn; 
+            private String autoReleaseTime; 
             private String creditSpecification; 
             private java.util.List < DataDisk> dataDisk; 
             private String deploymentSetId; 
@@ -1747,6 +1759,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              */
             public Builder arn(java.util.List < Arn> arn) {
                 this.arn = arn;
+                return this;
+            }
+
+            /**
+             * AutoReleaseTime.
+             */
+            public Builder autoReleaseTime(String autoReleaseTime) {
+                this.autoReleaseTime = autoReleaseTime;
                 return this;
             }
 

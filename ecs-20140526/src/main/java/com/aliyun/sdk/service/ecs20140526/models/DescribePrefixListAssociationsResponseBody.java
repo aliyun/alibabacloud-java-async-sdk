@@ -62,7 +62,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The query token returned in this call. If the return value is empty, no more data is returned.
+         * The query token that is returned in this call. If the return value is empty, no more data is returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +130,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The ID of the resource.
+             * Indicates the ID of a resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

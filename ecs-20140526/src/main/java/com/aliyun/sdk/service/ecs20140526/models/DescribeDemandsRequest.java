@@ -266,7 +266,7 @@ public class DescribeDemandsRequest extends Request {
         } 
 
         /**
-         * The ID of the filing ticket. If this parameter is specified, other optional request parameters are ignored.
+         * DemandId.
          */
         public Builder demandId(String demandId) {
             this.putQueryParameter("DemandId", demandId);
@@ -275,15 +275,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The status of the filing ticket or resource consumption. Valid values:
-         * <p>
-         * 
-         * *   Creating: The filing ticket is being created.
-         * *   Active: The filed resources are being supplied.
-         * *   Expired: The filing ticket expires.
-         * *   Finished: The filed resources are consumed.
-         * *   Refused: The filing request is denied. To view the reason for denial, see the `Comment` parameter in the response.
-         * *   Cancelled: The filing request is canceled.
+         * DemandStatus.
          */
         public Builder demandStatus(java.util.List < String > demandStatus) {
             this.putQueryParameter("DemandStatus", demandStatus);
@@ -292,11 +284,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The source of the filed instance. Default value: System. Valid values:
-         * <p>
-         * 
-         * *   Custom: filed on your own.
-         * *   System: filed by Alibaba Cloud.
+         * DemandType.
          */
         public Builder demandType(String demandType) {
             this.putQueryParameter("DemandType", demandType);
@@ -305,11 +293,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default value: false. Valid values:
-         * <p>
-         * 
-         * *   true: performs a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false: performs a dry run and sends the request . If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -318,11 +302,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
-         * 
-         * *   PostPaid: pay-as-you-go
-         * *   PrePaid: subscription
+         * InstanceChargeType.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -331,7 +311,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The instance type of the filed instance.
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -340,7 +320,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The instance family of the filed instance.
+         * InstanceTypeFamily.
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -367,10 +347,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Pages start from page 1.
-         * <p>
-         * 
-         * Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -379,10 +356,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
-         * <p>
-         * 
-         * Default value: 10.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -391,7 +365,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The ID of the region for which to query resources. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -418,7 +392,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The tags that are attached to the resources.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -427,7 +401,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The ID of the zone for which to query resources. You can call the [DescribeZones](~~25610~~) operation to query the most recent region list.
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -481,7 +455,7 @@ public class DescribeDemandsRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is unavailable.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -489,7 +463,7 @@ public class DescribeDemandsRequest extends Request {
             }
 
             /**
-             * > This parameter is unavailable.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

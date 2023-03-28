@@ -270,7 +270,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The name of the image copy. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+         * The name of the image copy. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
          */
         public Builder destinationImageName(String destinationImageName) {
             this.putQueryParameter("DestinationImageName", destinationImageName);
@@ -279,7 +279,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the destination region to which to copy the source custom image.
+         * The ID of the destination region to which to copy the source image.
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -288,7 +288,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * > This parameter is unavailable.
          */
         public Builder encryptAlgorithm(String encryptAlgorithm) {
             this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
@@ -309,7 +309,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the source custom image.
+         * The ID of the source image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -318,7 +318,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the key used to encrypt the image copy.
+         * The ID of the key to use to encrypt the image copy.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -345,7 +345,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The region ID of the source custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the source image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -354,10 +354,10 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the image copy belongs. If you do not specify this parameter, the image copy belongs to the default resource group.
+         * The ID of the resource group to which to assign the image copy. If you do not specify this parameter, the image copy is assigned to the default resource group.
          * <p>
          * 
-         * >  If you use a RAM user that is not authorized to manage the default resource group to call the CopyImage operation and do not specify the `ResourceGroupId` parameter, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CopyImage operation again.
+         * > If you call the CopyImage operation as a Resource Access Management (RAM) user who is not authorized to manage the default resource group and do not specify the `ResourceGroupId` parameter, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -384,7 +384,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The tags of the image copy. You can specify up to 20 tags.
+         * The tags to add to the image copy.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -438,10 +438,7 @@ public class CopyImageRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag of the image copy.
-             * <p>
-             * 
-             * The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The key of tag N to add to the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -449,10 +446,7 @@ public class CopyImageRequest extends Request {
             }
 
             /**
-             * The value of tag of the image copy.
-             * <p>
-             * 
-             * The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+             * The value of tag N to add to the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

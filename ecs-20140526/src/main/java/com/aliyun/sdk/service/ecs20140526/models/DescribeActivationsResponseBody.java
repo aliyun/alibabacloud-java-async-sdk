@@ -371,7 +371,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the activation code is disabled.
+             * Indicates whether the activation code was disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -395,7 +395,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of hosts that are allowed to use the activation code.
+             * The IP address range of hosts that are allowed to use the activation code.
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
