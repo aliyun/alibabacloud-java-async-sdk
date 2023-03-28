@@ -268,7 +268,7 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * RetainResources.
+         * The resource N that you want to retain in the stack.
          */
         public Builder retainResources(java.util.List < String > retainResources) {
             this.putQueryParameter("RetainResources", retainResources);

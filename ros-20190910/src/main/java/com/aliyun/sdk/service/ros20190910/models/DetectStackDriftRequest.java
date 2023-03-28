@@ -112,7 +112,7 @@ public class DetectStackDriftRequest extends Request {
         }
 
         /**
-         * LogicalResourceId.
+         * The logical ID of resource.
          */
         public Builder logicalResourceId(java.util.List < String > logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);

@@ -398,7 +398,7 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -533,7 +533,7 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The value of tag N that you want to add to the template.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

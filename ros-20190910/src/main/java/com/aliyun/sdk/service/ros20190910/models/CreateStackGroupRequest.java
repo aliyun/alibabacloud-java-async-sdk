@@ -315,7 +315,7 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * test
+         * The parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -374,7 +374,7 @@ public class CreateStackGroupRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

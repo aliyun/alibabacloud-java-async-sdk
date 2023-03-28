@@ -113,7 +113,7 @@ public class SetTemplatePermissionRequest extends Request {
         } 
 
         /**
-         * AccountIds.
+         * The list of one or more Alibaba Cloud accounts with which you want to share or unshare the template.
          */
         public Builder accountIds(java.util.List < String > accountIds) {
             this.putQueryParameter("AccountIds", accountIds);

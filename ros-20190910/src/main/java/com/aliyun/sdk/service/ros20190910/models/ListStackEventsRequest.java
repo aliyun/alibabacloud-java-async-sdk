@@ -140,7 +140,7 @@ public class ListStackEventsRequest extends Request {
         } 
 
         /**
-         * LogicalResourceId.
+         * The logical ID of the resource that is defined in the template.
          */
         public Builder logicalResourceId(java.util.List < String > logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
@@ -186,7 +186,7 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The list of resource types.
          */
         public Builder resourceType(java.util.List < String > resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -204,7 +204,7 @@ public class ListStackEventsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the resource.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);

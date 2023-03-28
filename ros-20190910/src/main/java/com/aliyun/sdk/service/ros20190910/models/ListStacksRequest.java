@@ -278,7 +278,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * StackIds.
+         * The ID of stack N.
          */
         public Builder stackIds(java.util.List < String > stackIds) {
             this.putQueryParameter("StackIds", stackIds);
@@ -287,7 +287,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * StackName.
+         * The name of stack N.
          */
         public Builder stackName(java.util.List < String > stackName) {
             this.putQueryParameter("StackName", stackName);
@@ -296,7 +296,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state N of the stack.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
@@ -305,7 +305,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

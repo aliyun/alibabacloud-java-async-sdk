@@ -195,7 +195,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The name of parameter N in the template.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -239,7 +239,7 @@ public class GetTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

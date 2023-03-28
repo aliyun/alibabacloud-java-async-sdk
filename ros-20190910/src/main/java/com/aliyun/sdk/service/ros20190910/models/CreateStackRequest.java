@@ -392,7 +392,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * NotificationURLs.
+         * The callback URL that is used to receive stack event N.
          */
         public Builder notificationURLs(java.util.List < String > notificationURLs) {
             this.putQueryParameter("NotificationURLs", notificationURLs);
@@ -417,7 +417,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * test
+         * The parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -501,7 +501,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * test
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

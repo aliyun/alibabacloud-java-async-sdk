@@ -159,7 +159,7 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * ResourceAttributes.
+         * The name of resource property N that you want to query.
          */
         public Builder resourceAttributes(java.util.List < String > resourceAttributes) {
             this.putQueryParameter("ResourceAttributes", resourceAttributes);

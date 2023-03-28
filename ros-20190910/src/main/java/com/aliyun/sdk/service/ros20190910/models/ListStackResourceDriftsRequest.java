@@ -144,7 +144,7 @@ public class ListStackResourceDriftsRequest extends Request {
         }
 
         /**
-         * ResourceDriftStatus.
+         * The drift status of the resource.
          */
         public Builder resourceDriftStatus(java.util.List < String > resourceDriftStatus) {
             this.putQueryParameter("ResourceDriftStatus", resourceDriftStatus);

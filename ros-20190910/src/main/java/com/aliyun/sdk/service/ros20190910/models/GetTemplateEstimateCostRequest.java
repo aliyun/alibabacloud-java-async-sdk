@@ -181,7 +181,7 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);

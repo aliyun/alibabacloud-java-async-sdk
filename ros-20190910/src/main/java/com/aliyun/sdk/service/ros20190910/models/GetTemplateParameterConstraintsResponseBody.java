@@ -110,7 +110,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * PropertyName.
+             * The name of the resource property.
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
@@ -118,7 +118,10 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type.
+             * <p>
+             * 
+             * You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -183,7 +186,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -191,7 +194,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * The name of the resource.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -199,7 +202,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -409,7 +412,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * NotSupportResources.
+             * The unsupported resources in the template.
              */
             public Builder notSupportResources(java.util.List < NotSupportResources> notSupportResources) {
                 this.notSupportResources = notSupportResources;
@@ -425,7 +428,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryErrors.
+             * The error details that are returned if the request fails.
              */
             public Builder queryErrors(java.util.List < QueryErrors> queryErrors) {
                 this.queryErrors = queryErrors;

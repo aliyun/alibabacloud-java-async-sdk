@@ -152,7 +152,7 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * RetainResources.
+         * The name of resource N that you want to retain.
          */
         public Builder retainResources(java.util.List < String > retainResources) {
             this.putQueryParameter("RetainResources", retainResources);

@@ -139,7 +139,7 @@ public class GetServiceProvisionsRequest extends Request {
         } 
 
         /**
-         * Parameters.
+         * The list of parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -160,7 +160,7 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * Services.
+         * The services.
          */
         public Builder services(java.util.List < Services> services) {
             this.putQueryParameter("Services", services);

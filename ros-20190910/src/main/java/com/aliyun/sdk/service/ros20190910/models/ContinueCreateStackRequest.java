@@ -287,7 +287,7 @@ public class ContinueCreateStackRequest extends Request {
         }
 
         /**
-         * test
+         * The parameters of the template.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -312,7 +312,7 @@ public class ContinueCreateStackRequest extends Request {
         }
 
         /**
-         * test
+         * Option N that ROS adopts when ROS continues to create the stack.
          */
         public Builder recreatingOptions(java.util.List < String > recreatingOptions) {
             this.putQueryParameter("RecreatingOptions", recreatingOptions);
@@ -321,7 +321,7 @@ public class ContinueCreateStackRequest extends Request {
         }
 
         /**
-         * RecreatingResources.
+         * Resource N that ROS continues to create after the resource failed to be created.
          */
         public Builder recreatingResources(java.util.List < String > recreatingResources) {
             this.putQueryParameter("RecreatingResources", recreatingResources);

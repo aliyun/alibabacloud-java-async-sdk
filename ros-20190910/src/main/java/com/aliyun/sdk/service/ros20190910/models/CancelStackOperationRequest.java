@@ -98,7 +98,7 @@ public class CancelStackOperationRequest extends Request {
         } 
 
         /**
-         * test
+         * The operation N that you want to cancel on the stack.
          */
         public Builder allowedStackOperations(java.util.List < String > allowedStackOperations) {
             this.putQueryParameter("AllowedStackOperations", allowedStackOperations);

@@ -323,7 +323,7 @@ public class CreateStackInstancesRequest extends Request {
         }
 
         /**
-         * test
+         * The parameters.
          */
         public Builder parameterOverrides(java.util.List < ParameterOverrides> parameterOverrides) {
             this.putQueryParameter("ParameterOverrides", parameterOverrides);

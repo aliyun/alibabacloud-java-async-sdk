@@ -163,7 +163,7 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * ChangeSetName.
+         * The name of change set.
          */
         public Builder changeSetName(java.util.List < String > changeSetName) {
             this.putQueryParameter("ChangeSetName", changeSetName);
@@ -172,7 +172,7 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * ExecutionStatus.
+         * The execution status of change set.
          */
         public Builder executionStatus(java.util.List < String > executionStatus) {
             this.putQueryParameter("ExecutionStatus", executionStatus);
@@ -227,7 +227,7 @@ public class ListChangeSetsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of change set.
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);

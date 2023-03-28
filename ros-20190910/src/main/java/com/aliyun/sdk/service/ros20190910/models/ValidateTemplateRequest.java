@@ -20,7 +20,7 @@ public class ValidateTemplateRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
-    @Query
+    @Body
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -133,15 +133,10 @@ public class ValidateTemplateRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.
-         * <p>
-         * 
-         * If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * 
-         * You can specify only one of the TemplateBody and TemplateURL parameters.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }

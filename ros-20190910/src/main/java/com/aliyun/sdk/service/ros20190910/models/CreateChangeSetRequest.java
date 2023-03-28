@@ -464,7 +464,7 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * NotificationURLs.
+         * The callback URL that is used to receive stack event N.
          */
         public Builder notificationURLs(java.util.List < String > notificationURLs) {
             this.putQueryParameter("NotificationURLs", notificationURLs);
@@ -496,7 +496,7 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The list of parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -545,7 +545,7 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * ResourcesToImport.
+         * The key-value mapping between strings.
          */
         public Builder resourcesToImport(java.util.List < ResourcesToImport> resourcesToImport) {
             this.putQueryParameter("ResourcesToImport", resourcesToImport);

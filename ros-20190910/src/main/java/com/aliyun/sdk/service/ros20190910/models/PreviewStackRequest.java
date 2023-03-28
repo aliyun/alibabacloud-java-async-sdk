@@ -335,7 +335,7 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * test
+         * The parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);

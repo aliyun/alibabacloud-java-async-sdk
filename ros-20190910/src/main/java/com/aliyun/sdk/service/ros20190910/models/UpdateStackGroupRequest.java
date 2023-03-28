@@ -444,7 +444,7 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * test
+         * The list of parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
