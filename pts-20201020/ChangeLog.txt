@@ -1,0 +1,4 @@
+2023-03-28 Version: 1.0.0
+- Add new API for querying the sample logs of PTS debug plan.
+- Add new return field for global header to PTS scene.
+
