@@ -405,6 +405,453 @@ public class CreateClusterRequest extends Request {
         } 
 
     }
+    public static class Bonds extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Subnet")
+        private String subnet;
+
+        private Bonds(Builder builder) {
+            this.name = builder.name;
+            this.subnet = builder.subnet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Bonds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return subnet
+         */
+        public String getSubnet() {
+            return this.subnet;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String subnet; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Subnet.
+             */
+            public Builder subnet(String subnet) {
+                this.subnet = subnet;
+                return this;
+            }
+
+            public Bonds build() {
+                return new Bonds(this);
+            } 
+
+        } 
+
+    }
+    public static class BondPolicy extends TeaModel {
+        @NameInMap("BondDefaultSubnet")
+        private String bondDefaultSubnet;
+
+        @NameInMap("Bonds")
+        private java.util.List < Bonds> bonds;
+
+        private BondPolicy(Builder builder) {
+            this.bondDefaultSubnet = builder.bondDefaultSubnet;
+            this.bonds = builder.bonds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BondPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bondDefaultSubnet
+         */
+        public String getBondDefaultSubnet() {
+            return this.bondDefaultSubnet;
+        }
+
+        /**
+         * @return bonds
+         */
+        public java.util.List < Bonds> getBonds() {
+            return this.bonds;
+        }
+
+        public static final class Builder {
+            private String bondDefaultSubnet; 
+            private java.util.List < Bonds> bonds; 
+
+            /**
+             * BondDefaultSubnet.
+             */
+            public Builder bondDefaultSubnet(String bondDefaultSubnet) {
+                this.bondDefaultSubnet = bondDefaultSubnet;
+                return this;
+            }
+
+            /**
+             * Bonds.
+             */
+            public Builder bonds(java.util.List < Bonds> bonds) {
+                this.bonds = bonds;
+                return this;
+            }
+
+            public BondPolicy build() {
+                return new BondPolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class MachineTypePolicyBonds extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Subnet")
+        private String subnet;
+
+        private MachineTypePolicyBonds(Builder builder) {
+            this.name = builder.name;
+            this.subnet = builder.subnet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MachineTypePolicyBonds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return subnet
+         */
+        public String getSubnet() {
+            return this.subnet;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String subnet; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Subnet.
+             */
+            public Builder subnet(String subnet) {
+                this.subnet = subnet;
+                return this;
+            }
+
+            public MachineTypePolicyBonds build() {
+                return new MachineTypePolicyBonds(this);
+            } 
+
+        } 
+
+    }
+    public static class MachineTypePolicy extends TeaModel {
+        @NameInMap("Bonds")
+        private java.util.List < MachineTypePolicyBonds> bonds;
+
+        @NameInMap("MachineType")
+        private String machineType;
+
+        private MachineTypePolicy(Builder builder) {
+            this.bonds = builder.bonds;
+            this.machineType = builder.machineType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MachineTypePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bonds
+         */
+        public java.util.List < MachineTypePolicyBonds> getBonds() {
+            return this.bonds;
+        }
+
+        /**
+         * @return machineType
+         */
+        public String getMachineType() {
+            return this.machineType;
+        }
+
+        public static final class Builder {
+            private java.util.List < MachineTypePolicyBonds> bonds; 
+            private String machineType; 
+
+            /**
+             * Bonds.
+             */
+            public Builder bonds(java.util.List < MachineTypePolicyBonds> bonds) {
+                this.bonds = bonds;
+                return this;
+            }
+
+            /**
+             * MachineType.
+             */
+            public Builder machineType(String machineType) {
+                this.machineType = machineType;
+                return this;
+            }
+
+            public MachineTypePolicy build() {
+                return new MachineTypePolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class NodePolicyBonds extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Subnet")
+        private String subnet;
+
+        private NodePolicyBonds(Builder builder) {
+            this.name = builder.name;
+            this.subnet = builder.subnet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodePolicyBonds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return subnet
+         */
+        public String getSubnet() {
+            return this.subnet;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String subnet; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Subnet.
+             */
+            public Builder subnet(String subnet) {
+                this.subnet = subnet;
+                return this;
+            }
+
+            public NodePolicyBonds build() {
+                return new NodePolicyBonds(this);
+            } 
+
+        } 
+
+    }
+    public static class NodePolicy extends TeaModel {
+        @NameInMap("Bonds")
+        private java.util.List < NodePolicyBonds> bonds;
+
+        @NameInMap("NodeId")
+        private String nodeId;
+
+        private NodePolicy(Builder builder) {
+            this.bonds = builder.bonds;
+            this.nodeId = builder.nodeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bonds
+         */
+        public java.util.List < NodePolicyBonds> getBonds() {
+            return this.bonds;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public static final class Builder {
+            private java.util.List < NodePolicyBonds> bonds; 
+            private String nodeId; 
+
+            /**
+             * Bonds.
+             */
+            public Builder bonds(java.util.List < NodePolicyBonds> bonds) {
+                this.bonds = bonds;
+                return this;
+            }
+
+            /**
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            public NodePolicy build() {
+                return new NodePolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class IpAllocationPolicy extends TeaModel {
+        @NameInMap("BondPolicy")
+        private BondPolicy bondPolicy;
+
+        @NameInMap("MachineTypePolicy")
+        private java.util.List < MachineTypePolicy> machineTypePolicy;
+
+        @NameInMap("NodePolicy")
+        private java.util.List < NodePolicy> nodePolicy;
+
+        private IpAllocationPolicy(Builder builder) {
+            this.bondPolicy = builder.bondPolicy;
+            this.machineTypePolicy = builder.machineTypePolicy;
+            this.nodePolicy = builder.nodePolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IpAllocationPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bondPolicy
+         */
+        public BondPolicy getBondPolicy() {
+            return this.bondPolicy;
+        }
+
+        /**
+         * @return machineTypePolicy
+         */
+        public java.util.List < MachineTypePolicy> getMachineTypePolicy() {
+            return this.machineTypePolicy;
+        }
+
+        /**
+         * @return nodePolicy
+         */
+        public java.util.List < NodePolicy> getNodePolicy() {
+            return this.nodePolicy;
+        }
+
+        public static final class Builder {
+            private BondPolicy bondPolicy; 
+            private java.util.List < MachineTypePolicy> machineTypePolicy; 
+            private java.util.List < NodePolicy> nodePolicy; 
+
+            /**
+             * BondPolicy.
+             */
+            public Builder bondPolicy(BondPolicy bondPolicy) {
+                this.bondPolicy = bondPolicy;
+                return this;
+            }
+
+            /**
+             * MachineTypePolicy.
+             */
+            public Builder machineTypePolicy(java.util.List < MachineTypePolicy> machineTypePolicy) {
+                this.machineTypePolicy = machineTypePolicy;
+                return this;
+            }
+
+            /**
+             * NodePolicy.
+             */
+            public Builder nodePolicy(java.util.List < NodePolicy> nodePolicy) {
+                this.nodePolicy = nodePolicy;
+                return this;
+            }
+
+            public IpAllocationPolicy build() {
+                return new IpAllocationPolicy(this);
+            } 
+
+        } 
+
+    }
     public static class VpdSubnets extends TeaModel {
         @NameInMap("SubnetCidr")
         private String subnetCidr;
@@ -709,6 +1156,9 @@ public class CreateClusterRequest extends Request {
 
     }
     public static class Networks extends TeaModel {
+        @NameInMap("IpAllocationPolicy")
+        private java.util.List < IpAllocationPolicy> ipAllocationPolicy;
+
         @NameInMap("NewVpdInfo")
         private NewVpdInfo newVpdInfo;
 
@@ -716,6 +1166,7 @@ public class CreateClusterRequest extends Request {
         private VpdInfo vpdInfo;
 
         private Networks(Builder builder) {
+            this.ipAllocationPolicy = builder.ipAllocationPolicy;
             this.newVpdInfo = builder.newVpdInfo;
             this.vpdInfo = builder.vpdInfo;
         }
@@ -726,6 +1177,13 @@ public class CreateClusterRequest extends Request {
 
         public static Networks create() {
             return builder().build();
+        }
+
+        /**
+         * @return ipAllocationPolicy
+         */
+        public java.util.List < IpAllocationPolicy> getIpAllocationPolicy() {
+            return this.ipAllocationPolicy;
         }
 
         /**
@@ -743,8 +1201,17 @@ public class CreateClusterRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < IpAllocationPolicy> ipAllocationPolicy; 
             private NewVpdInfo newVpdInfo; 
             private VpdInfo vpdInfo; 
+
+            /**
+             * IpAllocationPolicy.
+             */
+            public Builder ipAllocationPolicy(java.util.List < IpAllocationPolicy> ipAllocationPolicy) {
+                this.ipAllocationPolicy = ipAllocationPolicy;
+                return this;
+            }
 
             /**
              * NewVpdInfo.
