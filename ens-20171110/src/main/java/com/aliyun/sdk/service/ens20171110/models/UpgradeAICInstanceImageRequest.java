@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpgradeAICInstanceImageRequest extends Request {
     @Query
     @NameInMap("ImageId")
+    @Validation(required = true)
     private String imageId;
 
     @Query
     @NameInMap("ServerIds")
+    @Validation(required = true)
     private java.util.List < String > serverIds;
 
     @Query

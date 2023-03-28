@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ResetAICInstanceRequest extends Request {
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
     @NameInMap("ServerId")
+    @Validation(required = true)
     private String serverId;
 
     private ResetAICInstanceRequest(Builder builder) {

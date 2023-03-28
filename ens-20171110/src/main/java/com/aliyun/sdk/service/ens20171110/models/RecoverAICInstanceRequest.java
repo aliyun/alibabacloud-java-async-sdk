@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RecoverAICInstanceRequest extends Request {
     @Query
     @NameInMap("ServerId")
+    @Validation(required = true)
     private String serverId;
 
     private RecoverAICInstanceRequest(Builder builder) {

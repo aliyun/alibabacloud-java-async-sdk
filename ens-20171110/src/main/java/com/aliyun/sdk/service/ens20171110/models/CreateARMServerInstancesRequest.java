@@ -45,6 +45,10 @@ public class CreateARMServerInstancesRequest extends Request {
     private String keyPairName;
 
     @Query
+    @NameInMap("NameSpace")
+    private String nameSpace;
+
+    @Query
     @NameInMap("PayType")
     @Validation(required = true)
     private String payType;
@@ -77,6 +81,7 @@ public class CreateARMServerInstancesRequest extends Request {
         this.imageId = builder.imageId;
         this.instanceType = builder.instanceType;
         this.keyPairName = builder.keyPairName;
+        this.nameSpace = builder.nameSpace;
         this.payType = builder.payType;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -147,6 +152,13 @@ public class CreateARMServerInstancesRequest extends Request {
     }
 
     /**
+     * @return nameSpace
+     */
+    public String getNameSpace() {
+        return this.nameSpace;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -189,6 +201,7 @@ public class CreateARMServerInstancesRequest extends Request {
         private String imageId; 
         private String instanceType; 
         private String keyPairName; 
+        private String nameSpace; 
         private String payType; 
         private Integer period; 
         private String periodUnit; 
@@ -208,6 +221,7 @@ public class CreateARMServerInstancesRequest extends Request {
             this.imageId = request.imageId;
             this.instanceType = request.instanceType;
             this.keyPairName = request.keyPairName;
+            this.nameSpace = request.nameSpace;
             this.payType = request.payType;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -275,6 +289,15 @@ public class CreateARMServerInstancesRequest extends Request {
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
             this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * NameSpace.
+         */
+        public Builder nameSpace(String nameSpace) {
+            this.putQueryParameter("NameSpace", nameSpace);
+            this.nameSpace = nameSpace;
             return this;
         }
 

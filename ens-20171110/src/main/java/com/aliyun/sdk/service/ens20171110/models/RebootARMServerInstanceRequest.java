@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RebootARMServerInstanceRequest extends Request {
     @Query
     @NameInMap("ServerId")
+    @Validation(required = true)
     private String serverId;
 
     private RebootARMServerInstanceRequest(Builder builder) {

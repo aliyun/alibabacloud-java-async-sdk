@@ -406,6 +406,9 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         private String expiredTime;
 
+        @NameInMap("Namespace")
+        private String namespace;
+
         @NameInMap("ServerId")
         private String serverId;
 
@@ -423,6 +426,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.ensRegionId = builder.ensRegionId;
             this.expiredTime = builder.expiredTime;
+            this.namespace = builder.namespace;
             this.serverId = builder.serverId;
             this.specName = builder.specName;
             this.state = builder.state;
@@ -466,6 +470,13 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return serverId
          */
         public String getServerId() {
@@ -498,6 +509,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String creationTime; 
             private String ensRegionId; 
             private String expiredTime; 
+            private String namespace; 
             private String serverId; 
             private String specName; 
             private String state; 
@@ -532,6 +544,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
