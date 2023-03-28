@@ -218,7 +218,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The time when the function is invoked. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -248,8 +248,8 @@ public class CreateServiceRequest extends Request {
          * Specifies whether to allow functions to access the Internet. Valid values:
          * <p>
          * 
-         * - **true**: allows functions in the specified service to access the Internet. Default value: true.
-         * - **false**: does not allow functions in the specified service to access the Internet.
+         * *   **true**: allows functions to access the Internet. This is the default value.
+         * *   **false**: does not allow functions to access the Internet.
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.putBodyParameter("internetAccess", internetAccess);
@@ -298,7 +298,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The name of the service. The name contains only letters, digits, hyphens (-), and underscores (_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
+         * The name of the service. The name can contain only letters, digits, hyphens (-), and underscores (\_). It cannot start with a digit or hyphen (-). It must be 1 to 128 characters in length.
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("serviceName", serviceName);
@@ -307,7 +307,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * The configurations of Tracing Analysis. After Function Compute is integrated with Tracing Analysis, you can record the duration of a request in Function Compute, view the cold start time of a function, and record the execution duration of a function. For more information, see [Tracing Analysis](~~189804~~).
+         * The configuration of Tracing Analysis. After Function Compute is integrated with Tracing Analysis, you can record the duration of a request in Function Compute, view the cold start time of a function, and record the execution duration of a function. For more information, see [Tracing Analysis](~~189804~~).
          */
         public Builder tracingConfig(TracingConfig tracingConfig) {
             this.putBodyParameter("tracingConfig", tracingConfig);

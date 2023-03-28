@@ -203,9 +203,7 @@ public class CreateCustomDomainRequest extends Request {
         }
 
         /**
-         * The domain name.
-         * <p>
-         * Enter a custom domain name that has obtained an ICP filing in the Alibaba Cloud ICP Filing system, or a custom domain name whose ICP filing information includes Alibaba Cloud as a service provider.
+         * The domain name. Enter a custom domain name that has obtained an ICP filing in the Alibaba Cloud ICP Filing system, or a custom domain name whose ICP filing information includes Alibaba Cloud as a service provider.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domainName", domainName);

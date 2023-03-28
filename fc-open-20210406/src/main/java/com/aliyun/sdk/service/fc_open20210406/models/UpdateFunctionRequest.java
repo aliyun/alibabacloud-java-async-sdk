@@ -466,7 +466,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The ETag value of the resource. The value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the [CreateFunction](~~415747~~), [GetFunction](~~415750~~), and [UpdateFunction](~~415749~~) operations.
+         * The parameter that is used to ensure that the modified resource is consistent with the resource to be modified. The value of this parameter is returned in the responses of the [CreateFunction](~~415747~~), [GetFunction](~~415750~~), and [UpdateFunction](~~415749~~) operations.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -529,11 +529,11 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * **Function code packages** can be provided with the following two methods. You must use only one of the methods in a request.
+         * The packaged code of the function. **Function code packages** can be provided with the following two methods. You must use only one of the methods in a request.
          * <p>
          * 
-         * *   Specify the name of the **Object Storage Service (OSS) bucket** and **object** where the code package is stored.
-         * *   Specify that the **zipFile** parameter is used as the Base64-encoded content of the ZIP file.
+         * *   Specify the name of the Object Storage Service (OSS) bucket and object where the code package is stored. The names are specified in the **ossBucketName** and **ossObjectName** parameters.
+         * *   Specify the Base64-encoded content of the ZIP file by using the **zipFile** parameter.
          */
         public Builder code(Code code) {
             this.putBodyParameter("code", code);
@@ -551,7 +551,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The configuration of the custom container. After you configure the custom container, Function Compute can execute functions in a container created from a custom image.
+         * The configuration of the custom container. After you configure the custom container, Function Compute can execute the function in a container created from a custom image.
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
             this.putBodyParameter("customContainerConfig", customContainerConfig);
@@ -614,7 +614,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * function的GPU显存规格，单位为MB，为1024MB的倍数
+         * The GPU memory capacity for the function. Unit: MB. The value must be a multiple of 1,024.
          */
         public Builder gpuMemorySize(Integer gpuMemorySize) {
             this.putBodyParameter("gpuMemorySize", gpuMemorySize);
@@ -632,7 +632,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the initializer function is terminated.
+         * The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the Initializer hook is terminated.
          */
         public Builder initializationTimeout(Integer initializationTimeout) {
             this.putBodyParameter("initializationTimeout", initializationTimeout);
@@ -641,7 +641,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The handler of the initializer function. The format is determined by the programming language. For more information, see [Function handlers](~~157704~~).
+         * The handler of the Initializer hook. The format is determined by the programming language. For more information, see [Function handlers](~~157704~~).
          */
         public Builder initializer(String initializer) {
             this.putBodyParameter("initializer", initializer);
@@ -659,7 +659,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
+         * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
          * <p>
          * 
          * The value must be less than or equal to that of the **instanceConcurrency** parameter.
@@ -676,6 +676,9 @@ public class UpdateFunctionRequest extends Request {
          * 
          * *   **e1**: elastic instance
          * *   **c1**: performance instance
+         * *   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)
+         * *   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)
+         * *   **g1**: same as **fc.gpu.tesla.1**
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -687,7 +690,7 @@ public class UpdateFunctionRequest extends Request {
          * The information about layers.
          * <p>
          * 
-         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name and a larger subscript in the layer.
+         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
          */
         public Builder layers(java.util.List < String > layers) {
             this.putBodyParameter("layers", layers);
@@ -696,7 +699,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * The memory size for the function. Unit: MB. The memory size must be a multiple of 64 MB. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
+         * The memory size for the function. Unit: MB. The memory size must be a multiple of 64. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
          */
         public Builder memorySize(Integer memorySize) {
             this.putBodyParameter("memorySize", memorySize);

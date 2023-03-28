@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HTTPTriggerConfig</p>
  */
 public class HTTPTriggerConfig extends TeaModel {
+    @NameInMap("authConfig")
+    private String authConfig;
+
     @NameInMap("authType")
     private String authType;
 
@@ -22,6 +25,7 @@ public class HTTPTriggerConfig extends TeaModel {
     private java.util.List < String > methods;
 
     private HTTPTriggerConfig(Builder builder) {
+        this.authConfig = builder.authConfig;
         this.authType = builder.authType;
         this.disableURLInternet = builder.disableURLInternet;
         this.methods = builder.methods;
@@ -33,6 +37,13 @@ public class HTTPTriggerConfig extends TeaModel {
 
     public static HTTPTriggerConfig create() {
         return builder().build();
+    }
+
+    /**
+     * @return authConfig
+     */
+    public String getAuthConfig() {
+        return this.authConfig;
     }
 
     /**
@@ -57,9 +68,18 @@ public class HTTPTriggerConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private String authConfig; 
         private String authType; 
         private Boolean disableURLInternet; 
         private java.util.List < String > methods; 
+
+        /**
+         * 鉴权配置
+         */
+        public Builder authConfig(String authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
 
         /**
          * 认证类型

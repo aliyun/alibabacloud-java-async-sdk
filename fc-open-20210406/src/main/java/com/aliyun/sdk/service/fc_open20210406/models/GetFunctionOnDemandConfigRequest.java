@@ -154,7 +154,7 @@ public class GetFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the yyyy-mm-ddhh:mm:ss format.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -163,7 +163,7 @@ public class GetFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * The trace ID of the request for Function Compute API, which is also the unique ID of the request.
+         * The unique ID of the trace.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -172,7 +172,7 @@ public class GetFunctionOnDemandConfigRequest extends Request {
         }
 
         /**
-         * The alias of the service or LATEST.
+         * Service alias or LATEST. Other versions are not supported.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

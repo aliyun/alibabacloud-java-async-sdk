@@ -301,13 +301,13 @@ public class ListTriggersResponseBody extends TeaModel {
              * The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
              * <p>
              * 
-             * *   OSS trigger: [OSSTriggerConfig](javascript:void\(0\)).
-             * *   Log Service trigger: [LogTriggerConfig](javascript:void\(0\)).
-             * *   Time trigger: [TimeTriggerConfig](javascript:void\(0\)).
-             * *   HTTP trigger: [HTTPTriggerConfig](javascript:void\(0\)).
+             * *   OSS trigger: [OSSTriggerConfig](~~struct:OSSTriggerConfig~~).
+             * *   Log Service trigger: [LogTriggerConfig](~~struct:LogTriggerConfig~~).
+             * *   Time trigger: [TimeTriggerConfig](~~struct:TimeTriggerConfig~~).
+             * *   HTTP trigger: [HTTPTriggerConfig](~~struct:HTTPTriggerConfig~~).
              * *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
-             * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).
-             * *   MNS topic trigger: [MnsTopicTriggerConfig](javascript:void\(0\)).
+             * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~struct:CDNEventsTriggerConfig~~).
+             * *   MNS topic trigger: [MnsTopicTriggerConfig](~~struct:MnsTopicTriggerConfig~~).
              */
             public Builder triggerConfig(String triggerConfig) {
                 this.triggerConfig = triggerConfig;
@@ -331,7 +331,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.
+             * The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn\_events**, and **mns\_topic**.
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;

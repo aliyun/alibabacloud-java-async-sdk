@@ -18,7 +18,7 @@ public class RoutePolicy extends TeaModel {
 
     @NameInMap("policyItems")
     @Validation(required = true)
-    private PolicyItem policyItems;
+    private java.util.List < PolicyItem > policyItems;
 
     private RoutePolicy(Builder builder) {
         this.condition = builder.condition;
@@ -43,13 +43,13 @@ public class RoutePolicy extends TeaModel {
     /**
      * @return policyItems
      */
-    public PolicyItem getPolicyItems() {
+    public java.util.List < PolicyItem > getPolicyItems() {
         return this.policyItems;
     }
 
     public static final class Builder {
         private byte[] condition; 
-        private PolicyItem policyItems; 
+        private java.util.List < PolicyItem > policyItems; 
 
         /**
          * 条件模式：灰度规则项的逻辑运算。 枚举值： AND:  全部灰度规则项满足则命中。 OR: 任意一个灰度规则项满足则命中。
@@ -62,7 +62,7 @@ public class RoutePolicy extends TeaModel {
         /**
          * 灰度规则项数组
          */
-        public Builder policyItems(PolicyItem policyItems) {
+        public Builder policyItems(java.util.List < PolicyItem > policyItems) {
             this.policyItems = policyItems;
             return this;
         }
