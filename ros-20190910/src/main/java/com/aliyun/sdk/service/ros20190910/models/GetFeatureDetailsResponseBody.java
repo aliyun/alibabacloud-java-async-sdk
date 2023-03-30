@@ -12,11 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFeatureDetailsResponseBody</p>
  */
 public class GetFeatureDetailsResponseBody extends TeaModel {
+    @NameInMap("DriftDetection")
+    private DriftDetection driftDetection;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("ResourceCleaner")
     private ResourceCleaner resourceCleaner;
+
+    @NameInMap("ResourceImport")
+    private ResourceImport resourceImport;
 
     @NameInMap("TemplateParameterConstraints")
     private TemplateParameterConstraints templateParameterConstraints;
@@ -28,8 +34,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     private Terraform terraform;
 
     private GetFeatureDetailsResponseBody(Builder builder) {
+        this.driftDetection = builder.driftDetection;
         this.requestId = builder.requestId;
         this.resourceCleaner = builder.resourceCleaner;
+        this.resourceImport = builder.resourceImport;
         this.templateParameterConstraints = builder.templateParameterConstraints;
         this.templateScratch = builder.templateScratch;
         this.terraform = builder.terraform;
@@ -44,6 +52,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
 
     /**
+     * @return driftDetection
+     */
+    public DriftDetection getDriftDetection() {
+        return this.driftDetection;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +70,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
      */
     public ResourceCleaner getResourceCleaner() {
         return this.resourceCleaner;
+    }
+
+    /**
+     * @return resourceImport
+     */
+    public ResourceImport getResourceImport() {
+        return this.resourceImport;
     }
 
     /**
@@ -79,11 +101,21 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private DriftDetection driftDetection; 
         private String requestId; 
         private ResourceCleaner resourceCleaner; 
+        private ResourceImport resourceImport; 
         private TemplateParameterConstraints templateParameterConstraints; 
         private TemplateScratch templateScratch; 
         private Terraform terraform; 
+
+        /**
+         * DriftDetection.
+         */
+        public Builder driftDetection(DriftDetection driftDetection) {
+            this.driftDetection = driftDetection;
+            return this;
+        }
 
         /**
          * The ID of the request.
@@ -98,6 +130,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
          */
         public Builder resourceCleaner(ResourceCleaner resourceCleaner) {
             this.resourceCleaner = resourceCleaner;
+            return this;
+        }
+
+        /**
+         * ResourceImport.
+         */
+        public Builder resourceImport(ResourceImport resourceImport) {
+            this.resourceImport = resourceImport;
             return this;
         }
 
@@ -131,6 +171,47 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     } 
 
+    public static class DriftDetection extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        private java.util.List < String > supportedResourceTypes;
+
+        private DriftDetection(Builder builder) {
+            this.supportedResourceTypes = builder.supportedResourceTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DriftDetection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedResourceTypes
+         */
+        public java.util.List < String > getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > supportedResourceTypes; 
+
+            /**
+             * SupportedResourceTypes.
+             */
+            public Builder supportedResourceTypes(java.util.List < String > supportedResourceTypes) {
+                this.supportedResourceTypes = supportedResourceTypes;
+                return this;
+            }
+
+            public DriftDetection build() {
+                return new DriftDetection(this);
+            } 
+
+        } 
+
+    }
     public static class SupportedResourceTypes extends TeaModel {
         @NameInMap("ResourceType")
         private String resourceType;
@@ -256,6 +337,108 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
             public ResourceCleaner build() {
                 return new ResourceCleaner(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceImportSupportedResourceTypes extends TeaModel {
+        @NameInMap("ResourceIdentifiers")
+        private java.util.List < String > resourceIdentifiers;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        private ResourceImportSupportedResourceTypes(Builder builder) {
+            this.resourceIdentifiers = builder.resourceIdentifiers;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceImportSupportedResourceTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceIdentifiers
+         */
+        public java.util.List < String > getResourceIdentifiers() {
+            return this.resourceIdentifiers;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > resourceIdentifiers; 
+            private String resourceType; 
+
+            /**
+             * ResourceIdentifiers.
+             */
+            public Builder resourceIdentifiers(java.util.List < String > resourceIdentifiers) {
+                this.resourceIdentifiers = resourceIdentifiers;
+                return this;
+            }
+
+            /**
+             * The resource type that can be cleaned up.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public ResourceImportSupportedResourceTypes build() {
+                return new ResourceImportSupportedResourceTypes(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceImport extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        private java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes;
+
+        private ResourceImport(Builder builder) {
+            this.supportedResourceTypes = builder.supportedResourceTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceImport create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedResourceTypes
+         */
+        public java.util.List < ResourceImportSupportedResourceTypes> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
+        public static final class Builder {
+            private java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes; 
+
+            /**
+             * The resource types that can be cleaned up.
+             */
+            public Builder supportedResourceTypes(java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes) {
+                this.supportedResourceTypes = supportedResourceTypes;
+                return this;
+            }
+
+            public ResourceImport build() {
+                return new ResourceImport(this);
             } 
 
         } 

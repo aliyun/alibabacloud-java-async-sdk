@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteStackRequest extends Request {
     @Query
+    @NameInMap("DeleteOptions")
+    private java.util.List < String > deleteOptions;
+
+    @Query
     @NameInMap("RamRoleName")
     private String ramRoleName;
 
@@ -36,6 +40,7 @@ public class DeleteStackRequest extends Request {
 
     private DeleteStackRequest(Builder builder) {
         super(builder);
+        this.deleteOptions = builder.deleteOptions;
         this.ramRoleName = builder.ramRoleName;
         this.regionId = builder.regionId;
         this.retainAllResources = builder.retainAllResources;
@@ -54,6 +59,13 @@ public class DeleteStackRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return deleteOptions
+     */
+    public java.util.List < String > getDeleteOptions() {
+        return this.deleteOptions;
     }
 
     /**
@@ -92,6 +104,7 @@ public class DeleteStackRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteStackRequest, Builder> {
+        private java.util.List < String > deleteOptions; 
         private String ramRoleName; 
         private String regionId; 
         private Boolean retainAllResources; 
@@ -104,12 +117,22 @@ public class DeleteStackRequest extends Request {
 
         private Builder(DeleteStackRequest request) {
             super(request);
+            this.deleteOptions = request.deleteOptions;
             this.ramRoleName = request.ramRoleName;
             this.regionId = request.regionId;
             this.retainAllResources = request.retainAllResources;
             this.retainResources = request.retainResources;
             this.stackId = request.stackId;
         } 
+
+        /**
+         * DeleteOptions.
+         */
+        public Builder deleteOptions(java.util.List < String > deleteOptions) {
+            this.putQueryParameter("DeleteOptions", deleteOptions);
+            this.deleteOptions = deleteOptions;
+            return this;
+        }
 
         /**
          * The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses credentials of the role to call the APIs of Alibaba Cloud services.
