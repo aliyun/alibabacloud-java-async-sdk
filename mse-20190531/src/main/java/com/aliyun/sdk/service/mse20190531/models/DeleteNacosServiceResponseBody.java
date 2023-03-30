@@ -122,7 +122,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;

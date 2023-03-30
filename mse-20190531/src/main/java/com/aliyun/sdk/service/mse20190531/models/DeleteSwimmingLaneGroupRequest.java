@@ -22,6 +22,7 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
 
     @Query
     @NameInMap("Namespace")
+    @Validation(maxLength = 64)
     private String namespace;
 
     @Query
@@ -132,7 +133,7 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * MSE命名空间名字
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

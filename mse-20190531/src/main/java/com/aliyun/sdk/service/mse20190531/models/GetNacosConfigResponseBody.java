@@ -326,7 +326,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 value of the configuration.
+             * The message digest of the configuration.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;

@@ -319,7 +319,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The IDs of domains.
+         * The list of domain IDs.
          */
         public Builder domainIdListJSON(String domainIdListJSON) {
             this.putQueryParameter("DomainIdListJSON", domainIdListJSON);
@@ -383,7 +383,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Policies.
+         * Routing policy Json string.
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);
@@ -412,7 +412,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The sequence number of the route. (A small value indicates a high priority.)
+         * The sequence number of the route. A small value indicates a high priority.
          */
         public Builder routeOrder(Integer routeOrder) {
             this.putQueryParameter("RouteOrder", routeOrder);
@@ -421,7 +421,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * RouteType.
+         * RouteType: 
+         * <p>
+         * 
+         * Op: Control routing.
          */
         public Builder routeType(String routeType) {
             this.putQueryParameter("RouteType", routeType);
@@ -430,7 +433,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * The information about services.
+         * The services.
          */
         public Builder services(java.util.List < Services> services) {
             String servicesShrink = shrink(services, "Services", "json");
@@ -630,7 +633,7 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * The type of the protocol. Valid values:
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -1454,7 +1457,7 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List < MothedMapList> mothedMapList; 
 
             /**
-             * The name of the service group.
+             * The service group.
              */
             public Builder dubboServiceGroup(String dubboServiceGroup) {
                 this.dubboServiceGroup = dubboServiceGroup;
@@ -1627,7 +1630,7 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * The type of the protocol.
+             * The type of the protocol. Valid values:
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;

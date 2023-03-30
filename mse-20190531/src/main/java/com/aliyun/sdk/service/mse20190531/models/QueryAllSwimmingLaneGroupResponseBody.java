@@ -203,12 +203,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("AppIds")
         private String appIds;
 
-        @NameInMap("DbGrayEnable")
-        private String dbGrayEnable;
-
-        @NameInMap("Enable")
-        private String enable;
-
         @NameInMap("EntryApp")
         private String entryApp;
 
@@ -233,19 +227,11 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Region")
         private String region;
 
-        @NameInMap("Source")
-        private String source;
-
-        @NameInMap("Status")
-        private Integer status;
-
         @NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
             this.appIds = builder.appIds;
-            this.dbGrayEnable = builder.dbGrayEnable;
-            this.enable = builder.enable;
             this.entryApp = builder.entryApp;
             this.id = builder.id;
             this.messageQueueFilterSide = builder.messageQueueFilterSide;
@@ -254,8 +240,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             this.namespace = builder.namespace;
             this.recordCanaryDetail = builder.recordCanaryDetail;
             this.region = builder.region;
-            this.source = builder.source;
-            this.status = builder.status;
             this.userId = builder.userId;
         }
 
@@ -272,20 +256,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
          */
         public String getAppIds() {
             return this.appIds;
-        }
-
-        /**
-         * @return dbGrayEnable
-         */
-        public String getDbGrayEnable() {
-            return this.dbGrayEnable;
-        }
-
-        /**
-         * @return enable
-         */
-        public String getEnable() {
-            return this.enable;
         }
 
         /**
@@ -345,20 +315,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * @return source
-         */
-        public String getSource() {
-            return this.source;
-        }
-
-        /**
-         * @return status
-         */
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return userId
          */
         public String getUserId() {
@@ -367,8 +323,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appIds; 
-            private String dbGrayEnable; 
-            private String enable; 
             private String entryApp; 
             private Long id; 
             private String messageQueueFilterSide; 
@@ -377,12 +331,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             private String namespace; 
             private Boolean recordCanaryDetail; 
             private String region; 
-            private String source; 
-            private Integer status; 
             private String userId; 
 
             /**
-             * AppIds.
+             * 应用Id列表
              */
             public Builder appIds(String appIds) {
                 this.appIds = appIds;
@@ -390,23 +342,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DbGrayEnable.
-             */
-            public Builder dbGrayEnable(String dbGrayEnable) {
-                this.dbGrayEnable = dbGrayEnable;
-                return this;
-            }
-
-            /**
-             * Enable.
-             */
-            public Builder enable(String enable) {
-                this.enable = enable;
-                return this;
-            }
-
-            /**
-             * EntryApp.
+             * 入口应用类型+入口应用Id
              */
             public Builder entryApp(String entryApp) {
                 this.entryApp = entryApp;
@@ -414,7 +350,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * 泳道组Id
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -422,7 +358,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MessageQueueFilterSide.
+             * 在哪一侧实现消息灰度
              */
             public Builder messageQueueFilterSide(String messageQueueFilterSide) {
                 this.messageQueueFilterSide = messageQueueFilterSide;
@@ -430,7 +366,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MessageQueueGrayEnable.
+             * 是否开启消息灰度
              */
             public Builder messageQueueGrayEnable(Boolean messageQueueGrayEnable) {
                 this.messageQueueGrayEnable = messageQueueGrayEnable;
@@ -438,7 +374,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * 泳道组名称
              */
             public Builder name(String name) {
                 this.name = name;
@@ -446,7 +382,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * 泳道所属的MSE命名空间
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -454,7 +390,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RecordCanaryDetail.
+             * 是否记录请求详情（全链路灰度可观测）
              */
             public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
                 this.recordCanaryDetail = recordCanaryDetail;
@@ -462,7 +398,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * 所属地域
              */
             public Builder region(String region) {
                 this.region = region;
@@ -470,23 +406,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
-             */
-            public Builder source(String source) {
-                this.source = source;
-                return this;
-            }
-
-            /**
-             * Status.
-             */
-            public Builder status(Integer status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * UserId.
+             * 泳道所属的用户id
              */
             public Builder userId(String userId) {
                 this.userId = userId;

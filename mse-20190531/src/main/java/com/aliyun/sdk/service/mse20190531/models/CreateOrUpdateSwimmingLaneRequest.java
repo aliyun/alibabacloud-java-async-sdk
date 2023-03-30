@@ -62,6 +62,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -95,6 +100,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         this.id = builder.id;
         this.licenseKey = builder.licenseKey;
         this.name = builder.name;
+        this.namespace = builder.namespace;
         this.regionId = builder.regionId;
         this.source = builder.source;
         this.status = builder.status;
@@ -200,6 +206,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -247,6 +260,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private Long id; 
         private String licenseKey; 
         private String name; 
+        private String namespace; 
         private String regionId; 
         private String source; 
         private Integer status; 
@@ -271,6 +285,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.id = request.id;
             this.licenseKey = request.licenseKey;
             this.name = request.name;
+            this.namespace = request.namespace;
             this.regionId = request.regionId;
             this.source = request.source;
             this.status = request.status;
@@ -390,6 +405,15 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * MSE命名空间名字
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

@@ -166,7 +166,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -514,7 +514,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the information about the temporary node is obtained. Valid values:
+             * Indicates whether the information about the ephemeral node is obtained. Valid values:
              * <p>
              * 
              * *   `true`: yes
@@ -526,7 +526,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of failed checks.
+             * The number of counted failures.
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -614,7 +614,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of successful checks.
+             * The number of counted successes.
              */
             public Builder okCount(Integer okCount) {
                 this.okCount = okCount;

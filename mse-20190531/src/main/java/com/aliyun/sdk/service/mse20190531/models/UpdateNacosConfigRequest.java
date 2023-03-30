@@ -265,7 +265,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the configuration file.
+         * The ID of the configuration.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);

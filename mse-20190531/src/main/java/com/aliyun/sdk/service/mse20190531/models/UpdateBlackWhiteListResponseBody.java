@@ -98,7 +98,7 @@ public class UpdateBlackWhiteListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +122,7 @@ public class UpdateBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Request
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

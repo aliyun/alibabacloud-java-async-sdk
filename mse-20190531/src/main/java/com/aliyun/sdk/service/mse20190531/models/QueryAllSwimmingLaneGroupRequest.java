@@ -18,6 +18,7 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
 
     @Query
     @NameInMap("Namespace")
+    @Validation(maxLength = 64)
     private String namespace;
 
     private QueryAllSwimmingLaneGroupRequest(Builder builder) {
@@ -81,7 +82,7 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * 需要查询的MSE命名空间名字
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

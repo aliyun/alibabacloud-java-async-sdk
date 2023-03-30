@@ -250,7 +250,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of health checks.
+             * The type of health check.
              */
             public Builder healthCheckerType(String healthCheckerType) {
                 this.healthCheckerType = healthCheckerType;
@@ -274,7 +274,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The complete name of the service.
+             * The full name of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -282,7 +282,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the health check is initiated by the server. This parameter is valid only when the service is a temporary service.
+             * Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.
              */
             public Builder useIPPort4Check(Boolean useIPPort4Check) {
                 this.useIPPort4Check = useIPPort4Check;
@@ -406,8 +406,8 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
              * Indicates whether the service is a temporary service. Valid values:
              * <p>
              * 
-             * *   `true`: The service is a temporary service.
-             * *   `false`: The service is not a temporary service.
+             * *   `true`: yes
+             * *   `false`: no
              */
             public Builder ephemeral(Boolean ephemeral) {
                 this.ephemeral = ephemeral;

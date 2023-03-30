@@ -327,7 +327,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was created.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -335,7 +335,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was updated.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;

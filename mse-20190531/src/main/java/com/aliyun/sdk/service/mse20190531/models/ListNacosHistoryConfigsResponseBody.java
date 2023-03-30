@@ -302,7 +302,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             private String opType; 
 
             /**
-             * The tags of the application.
+             * The application tag.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -342,7 +342,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the configuration file.
+             * The format of the configuration file.
              */
             public Builder opType(String opType) {
                 this.opType = opType;

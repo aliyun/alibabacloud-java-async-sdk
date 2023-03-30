@@ -196,7 +196,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the Nacos instance.
          * <p>
          * 
          * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
@@ -208,7 +208,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * The alias of the cluster.
+         * The alias of the Nacos instance.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -229,7 +229,7 @@ public class ListAnsInstancesRequest extends Request {
          * The ID of the instance.
          * <p>
          * 
-         * >  This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

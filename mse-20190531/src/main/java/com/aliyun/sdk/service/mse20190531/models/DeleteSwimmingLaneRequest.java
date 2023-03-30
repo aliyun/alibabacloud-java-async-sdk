@@ -21,10 +21,16 @@ public class DeleteSwimmingLaneRequest extends Request {
     @Validation(required = true)
     private Long laneId;
 
+    @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
+
     private DeleteSwimmingLaneRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.laneId = builder.laneId;
+        this.namespace = builder.namespace;
     }
 
     public static Builder builder() {
@@ -54,9 +60,17 @@ public class DeleteSwimmingLaneRequest extends Request {
         return this.laneId;
     }
 
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public static final class Builder extends Request.Builder<DeleteSwimmingLaneRequest, Builder> {
         private String acceptLanguage; 
         private Long laneId; 
+        private String namespace; 
 
         private Builder() {
             super();
@@ -66,6 +80,7 @@ public class DeleteSwimmingLaneRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.laneId = request.laneId;
+            this.namespace = request.namespace;
         } 
 
         /**
@@ -87,6 +102,15 @@ public class DeleteSwimmingLaneRequest extends Request {
         public Builder laneId(Long laneId) {
             this.putQueryParameter("LaneId", laneId);
             this.laneId = laneId;
+            return this;
+        }
+
+        /**
+         * MSE命名空间名字
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

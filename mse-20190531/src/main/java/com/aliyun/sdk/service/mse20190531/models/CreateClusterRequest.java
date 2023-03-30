@@ -329,16 +329,16 @@ public class CreateClusterRequest extends Request {
          * 
          * \[Professional Edition]
          * 
-         * *   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory
-         * *   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory
-         * *   `MSE_SC_4_8_60_c`: 4 CPU cores and 8 GB of memory
-         * *   `MSE_SC_8_16_60_c`: 8 CPU cores and 16 GB of memory
-         * *   `MSE_SC_16_32_60_c`: 16 CPU cores and 32 GB of memory
+         * *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
+         * *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
+         * *   `MSE_SC_4_8_60_c`: 4 vCPUs and 8 GB of memory
+         * *   `MSE_SC_8_16_60_c`: 8 vCPUs and 16 GB of memory
+         * *   `MSE_SC_16_32_60_c`: 16 vCPUs and 32 GB of memory
          * 
          * \[Developer Edition]
          * 
-         * *   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory
-         * *   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory
+         * *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
+         * *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -389,7 +389,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The disk type of the MSE instance. Valid values:
+         * The disk type. Valid values:
          * <p>
          * 
          * *   alicloud-disk-ssd
@@ -420,7 +420,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the MSE instance.
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -429,7 +429,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Configure this parameter unless otherwise specified. Valid values:
+         * Set this parameter unless otherwise specified. Valid values:
          * <p>
          * 
          * *   `mse_pro`: Professional Edition
@@ -517,7 +517,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information, see [View basic information of a resource group](~~457230~~).
+         * The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](~~457230~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

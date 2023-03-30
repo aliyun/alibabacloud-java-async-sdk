@@ -22,6 +22,11 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
     private Long groupId;
 
     @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
+
+    @Query
     @NameInMap("Tag")
     @Validation(required = true)
     private String tag;
@@ -30,6 +35,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.groupId = builder.groupId;
+        this.namespace = builder.namespace;
         this.tag = builder.tag;
     }
 
@@ -61,6 +67,13 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return tag
      */
     public String getTag() {
@@ -70,6 +83,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
     public static final class Builder extends Request.Builder<ListAppBySwimmingLaneGroupTagRequest, Builder> {
         private String acceptLanguage; 
         private Long groupId; 
+        private String namespace; 
         private String tag; 
 
         private Builder() {
@@ -80,6 +94,7 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.groupId = request.groupId;
+            this.namespace = request.namespace;
             this.tag = request.tag;
         } 
 
@@ -102,6 +117,15 @@ public class ListAppBySwimmingLaneGroupTagRequest extends Request {
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * 需要查询的MSE命名空间名字
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

@@ -18,11 +18,18 @@ public class ListApplicationsWithTagRulesRequest extends Request {
 
     @Query
     @NameInMap("AppId")
+    @Deprecated
     private String appId;
 
     @Query
     @NameInMap("AppName")
+    @Validation(maxLength = 64)
     private String appName;
+
+    @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
 
     @Query
     @NameInMap("PageNumber")
@@ -31,7 +38,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
+    @Validation(required = true, maximum = 50)
     private Integer pageSize;
 
     @Query
@@ -41,7 +48,6 @@ public class ListApplicationsWithTagRulesRequest extends Request {
 
     @Query
     @NameInMap("Source")
-    @Validation(required = true)
     private String source;
 
     private ListApplicationsWithTagRulesRequest(Builder builder) {
@@ -49,6 +55,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
         this.appName = builder.appName;
+        this.namespace = builder.namespace;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
@@ -90,6 +97,13 @@ public class ListApplicationsWithTagRulesRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -121,6 +135,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         private String acceptLanguage; 
         private String appId; 
         private String appName; 
+        private String namespace; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String region; 
@@ -135,6 +150,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
             this.appName = request.appName;
+            this.namespace = request.namespace;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.region = request.region;
@@ -169,6 +185,15 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * 应用所属的MSE命名空间
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

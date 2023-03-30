@@ -444,7 +444,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) in which the instances reside.
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpc(String vpc) {
             this.putQueryParameter("Vpc", vpc);
@@ -453,7 +453,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * The sample rate of Tracing Analysis. Valid values: \[1,100].
+         * The sampling rate of Tracing Analysis. Valid values: \[1,100].
          */
         public Builder xtraceRatio(String xtraceRatio) {
             this.putQueryParameter("XtraceRatio", xtraceRatio);

@@ -262,7 +262,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of abnormal QPS.
+             * The abnormal QPS.
              */
             public Builder expQps(Double expQps) {
                 this.expQps = expQps;
@@ -278,7 +278,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries per second (QPS).
+             * The queries per second (QPS).
              */
             public Builder qps(Double qps) {
                 this.qps = qps;
@@ -423,7 +423,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of abnormal QPS.
+             * The abnormal QPS.
              */
             public Builder expQps(Double expQps) {
                 this.expQps = expQps;
@@ -676,7 +676,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * The metric about the application.
+             * The current metrics.
              */
             public Builder curMetrics(java.util.List < CurMetrics> curMetrics) {
                 this.curMetrics = curMetrics;
@@ -732,7 +732,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the instance resides.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -740,7 +740,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * The service source.
+             * The source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -841,7 +841,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The page number of the returned page.
+             * The number of the page to return.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;

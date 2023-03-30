@@ -21,10 +21,16 @@ public class QueryAllSwimmingLaneRequest extends Request {
     @Validation(required = true)
     private Long groupId;
 
+    @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
+
     private QueryAllSwimmingLaneRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.groupId = builder.groupId;
+        this.namespace = builder.namespace;
     }
 
     public static Builder builder() {
@@ -54,9 +60,17 @@ public class QueryAllSwimmingLaneRequest extends Request {
         return this.groupId;
     }
 
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public static final class Builder extends Request.Builder<QueryAllSwimmingLaneRequest, Builder> {
         private String acceptLanguage; 
         private Long groupId; 
+        private String namespace; 
 
         private Builder() {
             super();
@@ -66,6 +80,7 @@ public class QueryAllSwimmingLaneRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.groupId = request.groupId;
+            this.namespace = request.namespace;
         } 
 
         /**
@@ -87,6 +102,15 @@ public class QueryAllSwimmingLaneRequest extends Request {
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * MSE命名空间名字
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

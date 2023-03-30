@@ -22,6 +22,16 @@ public class GetAppMessageQueueRouteRequest extends Request {
     private String appId;
 
     @Query
+    @NameInMap("AppName")
+    @Validation(maxLength = 64)
+    private String appName;
+
+    @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
+
+    @Query
     @NameInMap("Region")
     @Validation(required = true)
     private String region;
@@ -30,6 +40,8 @@ public class GetAppMessageQueueRouteRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
+        this.appName = builder.appName;
+        this.namespace = builder.namespace;
         this.region = builder.region;
     }
 
@@ -61,6 +73,20 @@ public class GetAppMessageQueueRouteRequest extends Request {
     }
 
     /**
+     * @return appName
+     */
+    public String getAppName() {
+        return this.appName;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -70,6 +96,8 @@ public class GetAppMessageQueueRouteRequest extends Request {
     public static final class Builder extends Request.Builder<GetAppMessageQueueRouteRequest, Builder> {
         private String acceptLanguage; 
         private String appId; 
+        private String appName; 
+        private String namespace; 
         private String region; 
 
         private Builder() {
@@ -80,6 +108,8 @@ public class GetAppMessageQueueRouteRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
+            this.appName = request.appName;
+            this.namespace = request.namespace;
             this.region = request.region;
         } 
 
@@ -102,6 +132,24 @@ public class GetAppMessageQueueRouteRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * 应用名称
+         */
+        public Builder appName(String appName) {
+            this.putQueryParameter("AppName", appName);
+            this.appName = appName;
+            return this;
+        }
+
+        /**
+         * MSE命名空间名字
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

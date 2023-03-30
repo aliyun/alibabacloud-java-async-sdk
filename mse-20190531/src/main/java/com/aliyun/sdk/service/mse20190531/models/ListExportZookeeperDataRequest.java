@@ -96,7 +96,7 @@ public class ListExportZookeeperDataRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * 返回结果显示的语言。取值：zh-CN（默认值）：中文，en-US：英文
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

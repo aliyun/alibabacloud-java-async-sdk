@@ -238,8 +238,8 @@ public class AddGatewaySlbRequest extends Request {
          * The type of the service source. Valid values:
          * <p>
          * 
-         * *   PUB_NET: public network
-         * *   PRIVATE_NET: private network
+         * *   PUB_NET: Internet
+         * *   PRIVATE_NET: VPC
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

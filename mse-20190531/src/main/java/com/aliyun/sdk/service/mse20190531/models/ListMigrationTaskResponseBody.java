@@ -202,7 +202,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The total number of entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -403,7 +403,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The ID of the job.
              */
             public Builder id(Long id) {
                 this.id = id;

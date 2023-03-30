@@ -24,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddGatewayResponse> addGateway(AddGatewayRequest request);
 
+    CompletableFuture<AddGatewayAuthConsumerResponse> addGatewayAuthConsumer(AddGatewayAuthConsumerRequest request);
+
     CompletableFuture<AddGatewayDomainResponse> addGatewayDomain(AddGatewayDomainRequest request);
 
     CompletableFuture<AddGatewayRouteResponse> addGatewayRoute(AddGatewayRouteRequest request);
@@ -55,7 +57,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
     /**
-      * Before you call this API operation, you must make sure that you fully understand the billing method and pricing of MSE.
+      * Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.
       *
      */
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
@@ -100,6 +102,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
 
+    CompletableFuture<DeleteGatewayAuthConsumerResponse> deleteGatewayAuthConsumer(DeleteGatewayAuthConsumerRequest request);
+
+    CompletableFuture<DeleteGatewayAuthConsumerResourceResponse> deleteGatewayAuthConsumerResource(DeleteGatewayAuthConsumerResourceRequest request);
+
     CompletableFuture<DeleteGatewayDomainResponse> deleteGatewayDomain(DeleteGatewayDomainRequest request);
 
     CompletableFuture<DeleteGatewayRouteResponse> deleteGatewayRoute(DeleteGatewayRouteRequest request);
@@ -135,6 +141,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteNacosServiceResponse> deleteNacosService(DeleteNacosServiceRequest request);
+
+    CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
 
     CompletableFuture<DeleteSecurityGroupRuleResponse> deleteSecurityGroupRule(DeleteSecurityGroupRuleRequest request);
 
@@ -176,6 +184,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetGatewayResponse> getGateway(GetGatewayRequest request);
 
+    CompletableFuture<GetGatewayAuthConsumerDetailResponse> getGatewayAuthConsumerDetail(GetGatewayAuthConsumerDetailRequest request);
+
     CompletableFuture<GetGatewayDomainDetailResponse> getGatewayDomainDetail(GetGatewayDomainDetailRequest request);
 
     CompletableFuture<GetGatewayOptionResponse> getGatewayOption(GetGatewayOptionRequest request);
@@ -215,6 +225,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * You can call the GetOverview operation to query overview information about service governance.
       *
+     * @tags msc
      */
     CompletableFuture<GetOverviewResponse> getOverview(GetOverviewRequest request);
 
@@ -289,9 +300,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListGatewayResponse> listGateway(ListGatewayRequest request);
 
+    CompletableFuture<ListGatewayAuthConsumerResponse> listGatewayAuthConsumer(ListGatewayAuthConsumerRequest request);
+
+    CompletableFuture<ListGatewayAuthConsumerResourceResponse> listGatewayAuthConsumerResource(ListGatewayAuthConsumerResourceRequest request);
+
     CompletableFuture<ListGatewayDomainResponse> listGatewayDomain(ListGatewayDomainRequest request);
 
     CompletableFuture<ListGatewayRouteResponse> listGatewayRoute(ListGatewayRouteRequest request);
+
+    CompletableFuture<ListGatewayRouteOnAuthResponse> listGatewayRouteOnAuth(ListGatewayRouteOnAuthRequest request);
 
     CompletableFuture<ListGatewayServiceResponse> listGatewayService(ListGatewayServiceRequest request);
 
@@ -379,6 +396,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryMonitorResponse> queryMonitor(QueryMonitorRequest request);
 
+    CompletableFuture<QueryNamespaceResponse> queryNamespace(QueryNamespaceRequest request);
+
     CompletableFuture<QuerySlbSpecResponse> querySlbSpec(QuerySlbSpecRequest request);
 
     CompletableFuture<QuerySwimmingLaneByIdResponse> querySwimmingLaneById(QuerySwimmingLaneByIdRequest request);
@@ -411,6 +430,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateEngineNamespaceResponse> updateEngineNamespace(UpdateEngineNamespaceRequest request);
 
+    CompletableFuture<UpdateGatewayAuthConsumerResponse> updateGatewayAuthConsumer(UpdateGatewayAuthConsumerRequest request);
+
+    CompletableFuture<UpdateGatewayAuthConsumerResourceResponse> updateGatewayAuthConsumerResource(UpdateGatewayAuthConsumerResourceRequest request);
+
+    CompletableFuture<UpdateGatewayAuthConsumerResourceStatusResponse> updateGatewayAuthConsumerResourceStatus(UpdateGatewayAuthConsumerResourceStatusRequest request);
+
+    CompletableFuture<UpdateGatewayAuthConsumerStatusResponse> updateGatewayAuthConsumerStatus(UpdateGatewayAuthConsumerStatusRequest request);
+
     CompletableFuture<UpdateGatewayDomainResponse> updateGatewayDomain(UpdateGatewayDomainRequest request);
 
     CompletableFuture<UpdateGatewayNameResponse> updateGatewayName(UpdateGatewayNameRequest request);
@@ -418,6 +445,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewayOptionResponse> updateGatewayOption(UpdateGatewayOptionRequest request);
 
     CompletableFuture<UpdateGatewayRouteResponse> updateGatewayRoute(UpdateGatewayRouteRequest request);
+
+    CompletableFuture<UpdateGatewayRouteAuthResponse> updateGatewayRouteAuth(UpdateGatewayRouteAuthRequest request);
 
     CompletableFuture<UpdateGatewayRouteCORSResponse> updateGatewayRouteCORS(UpdateGatewayRouteCORSRequest request);
 

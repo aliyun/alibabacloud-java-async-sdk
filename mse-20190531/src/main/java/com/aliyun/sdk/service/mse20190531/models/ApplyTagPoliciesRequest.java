@@ -18,12 +18,23 @@ public class ApplyTagPoliciesRequest extends Request {
 
     @Query
     @NameInMap("AppId")
+    @Deprecated
     @Validation(required = true)
     private String appId;
 
     @Query
+    @NameInMap("AppName")
+    @Validation(maxLength = 64)
+    private String appName;
+
+    @Query
     @NameInMap("Enable")
     private Boolean enable;
+
+    @Query
+    @NameInMap("Namespace")
+    @Validation(maxLength = 64)
+    private String namespace;
 
     @Query
     @NameInMap("NamespaceId")
@@ -40,14 +51,15 @@ public class ApplyTagPoliciesRequest extends Request {
 
     @Query
     @NameInMap("Source")
-    @Validation(required = true)
     private String source;
 
     private ApplyTagPoliciesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appId = builder.appId;
+        this.appName = builder.appName;
         this.enable = builder.enable;
+        this.namespace = builder.namespace;
         this.namespaceId = builder.namespaceId;
         this.region = builder.region;
         this.rules = builder.rules;
@@ -82,10 +94,24 @@ public class ApplyTagPoliciesRequest extends Request {
     }
 
     /**
+     * @return appName
+     */
+    public String getAppName() {
+        return this.appName;
+    }
+
+    /**
      * @return enable
      */
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
     }
 
     /**
@@ -119,7 +145,9 @@ public class ApplyTagPoliciesRequest extends Request {
     public static final class Builder extends Request.Builder<ApplyTagPoliciesRequest, Builder> {
         private String acceptLanguage; 
         private String appId; 
+        private String appName; 
         private Boolean enable; 
+        private String namespace; 
         private String namespaceId; 
         private String region; 
         private String rules; 
@@ -133,7 +161,9 @@ public class ApplyTagPoliciesRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appId = request.appId;
+            this.appName = request.appName;
             this.enable = request.enable;
+            this.namespace = request.namespace;
             this.namespaceId = request.namespaceId;
             this.region = request.region;
             this.rules = request.rules;
@@ -163,11 +193,29 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
+         * 应用名字
+         */
+        public Builder appName(String appName) {
+            this.putQueryParameter("AppName", appName);
+            this.appName = appName;
+            return this;
+        }
+
+        /**
          * Specifies whether to enable the routing rule.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * 应用所属的MSE命名空间
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

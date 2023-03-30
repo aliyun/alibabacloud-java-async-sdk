@@ -98,7 +98,7 @@ public class AddGatewayResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The return value.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;

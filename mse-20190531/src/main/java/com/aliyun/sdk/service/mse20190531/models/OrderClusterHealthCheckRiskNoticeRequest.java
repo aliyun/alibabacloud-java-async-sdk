@@ -160,7 +160,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable the risk item notification feature.
+         * Specifies whether to disable the notification feature if the risk item occurs.
          * <p>
          * 
          * *   true: disabled
@@ -200,7 +200,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends Request {
         }
 
         /**
-         * The code of the risk.
+         * The ID of the risk item.
          */
         public Builder riskCode(String riskCode) {
             this.putQueryParameter("RiskCode", riskCode);

@@ -236,7 +236,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+         * The ID of the region in which the instance resides. The region is supported by MSE.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

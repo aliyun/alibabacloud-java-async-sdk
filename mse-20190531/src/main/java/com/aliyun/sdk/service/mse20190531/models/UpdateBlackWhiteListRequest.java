@@ -234,7 +234,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Specifies whether to modify the whitelist.
+         * Specifies whether to enable the whitelist feature.
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);

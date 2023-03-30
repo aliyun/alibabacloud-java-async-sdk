@@ -98,7 +98,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The HTTP status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -322,7 +322,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;

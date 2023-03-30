@@ -106,7 +106,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -1195,7 +1195,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was created.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1203,7 +1203,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was last modified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1211,7 +1211,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The group.
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1269,7 +1269,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the service.
+             * The IP addresses.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -1309,7 +1309,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service registered with the service registry.
+             * The name of the service that is registered with the service registry.
              */
             public Builder serviceNameInRegistry(String serviceNameInRegistry) {
                 this.serviceNameInRegistry = serviceNameInRegistry;
@@ -1434,7 +1434,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The page number of the returned page.
+             * The number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;

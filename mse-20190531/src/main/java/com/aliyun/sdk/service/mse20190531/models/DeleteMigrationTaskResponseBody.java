@@ -114,7 +114,7 @@ public class DeleteMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;

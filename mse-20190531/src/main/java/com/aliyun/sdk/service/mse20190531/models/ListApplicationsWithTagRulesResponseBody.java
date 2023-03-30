@@ -411,6 +411,9 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         @NameInMap("AppName")
         private String appName;
 
+        @NameInMap("Namespace")
+        private String namespace;
+
         @NameInMap("RouteRules")
         private java.util.List < RouteRules> routeRules;
 
@@ -420,6 +423,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.namespace = builder.namespace;
             this.routeRules = builder.routeRules;
             this.routeStatus = builder.routeStatus;
         }
@@ -447,6 +451,13 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return routeRules
          */
         public java.util.List < RouteRules> getRouteRules() {
@@ -463,6 +474,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String appName; 
+            private String namespace; 
             private java.util.List < RouteRules> routeRules; 
             private Long routeStatus; 
 
@@ -479,6 +491,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * 应用所属的MSE命名空间
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 

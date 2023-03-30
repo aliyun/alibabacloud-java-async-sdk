@@ -142,7 +142,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -202,7 +202,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

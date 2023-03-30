@@ -323,7 +323,7 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
