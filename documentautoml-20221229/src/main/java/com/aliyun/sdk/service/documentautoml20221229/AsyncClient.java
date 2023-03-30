@@ -18,6 +18,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CreateModelAsyncPredictResponse> createModelAsyncPredict(CreateModelAsyncPredictRequest request);
+
+    CompletableFuture<GetModelAsyncPredictResponse> getModelAsyncPredict(GetModelAsyncPredictRequest request);
+
     CompletableFuture<PredictClassifierModelResponse> predictClassifierModel(PredictClassifierModelRequest request);
 
     CompletableFuture<PredictModelResponse> predictModel(PredictModelRequest request);

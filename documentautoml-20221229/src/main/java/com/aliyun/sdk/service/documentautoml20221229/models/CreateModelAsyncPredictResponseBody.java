@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link PredictClassifierModelResponseBody} extends {@link TeaModel}
+ * {@link CreateModelAsyncPredictResponseBody} extends {@link TeaModel}
  *
- * <p>PredictClassifierModelResponseBody</p>
+ * <p>CreateModelAsyncPredictResponseBody</p>
  */
-public class PredictClassifierModelResponseBody extends TeaModel {
+public class CreateModelAsyncPredictResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
     @NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    private String data;
 
     @NameInMap("Message")
     private String message;
@@ -24,7 +24,7 @@ public class PredictClassifierModelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private PredictClassifierModelResponseBody(Builder builder) {
+    private CreateModelAsyncPredictResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -35,7 +35,7 @@ public class PredictClassifierModelResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static PredictClassifierModelResponseBody create() {
+    public static CreateModelAsyncPredictResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class PredictClassifierModelResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public String getData() {
         return this.data;
     }
 
@@ -69,7 +69,7 @@ public class PredictClassifierModelResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.Map < String, ? > data; 
+        private String data; 
         private String message; 
         private String requestId; 
 
@@ -84,7 +84,7 @@ public class PredictClassifierModelResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
@@ -105,8 +105,8 @@ public class PredictClassifierModelResponseBody extends TeaModel {
             return this;
         }
 
-        public PredictClassifierModelResponseBody build() {
-            return new PredictClassifierModelResponseBody(this);
+        public CreateModelAsyncPredictResponseBody build() {
+            return new CreateModelAsyncPredictResponseBody(this);
         } 
 
     } 
