@@ -98,7 +98,7 @@ public class ListApplicationResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the applications.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The page number of the next page.
          */
         public Builder nextToken(Integer nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +130,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned applications.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -250,7 +250,7 @@ public class ListApplicationResponseBody extends TeaModel {
             private String topoURL; 
 
             /**
-             * 应用ID
+             * The ID of the application.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -258,7 +258,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -266,7 +266,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用的图片链接
+             * The URL of the application architecture image.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -274,7 +274,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用的名称
+             * The name of the application.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +282,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用的资源组
+             * The ID of the resource group to which the application belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -290,7 +290,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用状态：Modified、Verifying、Verified_Failure、Verified_Success、Valuating、Valuating_Failure、Valuating_Success、Deploying、Deployed_Failure、Partially_Deployed_Success、Deployed_Success、Destroying、Destroyed_Failure、Partially_Destroyed_Success、Destroyed_Success等，详见应用状态说明
+             * The status of the application.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +298,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用的拓扑图链接
+             * The URL of the application topology image.
              */
             public Builder topoURL(String topoURL) {
                 this.topoURL = topoURL;

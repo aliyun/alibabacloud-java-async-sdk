@@ -74,7 +74,7 @@ public class GetTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the token.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +198,7 @@ public class GetTokenResponseBody extends TeaModel {
             private String snapshotBucket; 
 
             /**
-             * oss访问access key id
+             * The AccessKey ID that is used to access OSS.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -206,7 +206,7 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * oss访问access key secret id
+             * The AccessKey secret that is used to access OSS.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -214,7 +214,7 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * oss文件保存bucket位置
+             * The OSS bucket that is used to store the architecture image.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -222,7 +222,7 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * oss的endpoint
+             * The OSS endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -230,7 +230,7 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * oss访问token
+             * The token that is used to access the Object Storage Service (OSS) bucket that stores the architecture image.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -238,7 +238,7 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * oss快照保存bucket位置
+             * The OSS bucket that is used to save data snapshots.
              */
             public Builder snapshotBucket(String snapshotBucket) {
                 this.snapshotBucket = snapshotBucket;

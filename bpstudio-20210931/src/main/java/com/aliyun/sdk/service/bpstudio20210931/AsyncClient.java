@@ -38,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListApplicationResponse> listApplication(ListApplicationRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ListTemplateResponse> listTemplate(ListTemplateRequest request);
 
     CompletableFuture<ReleaseApplicationResponse> releaseApplication(ReleaseApplicationRequest request);

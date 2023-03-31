@@ -69,7 +69,7 @@ public class GetApplicationRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * The ID of the application.
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -78,7 +78,7 @@ public class GetApplicationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

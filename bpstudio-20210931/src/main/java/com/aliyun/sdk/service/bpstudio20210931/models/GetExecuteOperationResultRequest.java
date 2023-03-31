@@ -69,7 +69,7 @@ public class GetExecuteOperationResultRequest extends Request {
         } 
 
         /**
-         * 操作ID
+         * The ID of the operation.
          */
         public Builder operationId(String operationId) {
             this.putBodyParameter("OperationId", operationId);
@@ -78,7 +78,7 @@ public class GetExecuteOperationResultRequest extends Request {
         }
 
         /**
-         * 资源组ID，用于资源组相关权限校验
+         * The ID of the resource group. This parameter is specified to verify the permissions on the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

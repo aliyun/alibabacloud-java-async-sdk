@@ -74,7 +74,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 结果码，200代表成功
+         * The HTTP status code. A value of 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status
+         * The details of the operation.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 操作相关输出结果
+             * The output of the operation.
              */
             public Builder arguments(String arguments) {
                 this.arguments = arguments;
@@ -182,7 +182,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             }
 
             /**
-             * 操作相关信息
+             * The returned message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -190,7 +190,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             }
 
             /**
-             * 操作ID
+             * The ID of the operation.
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -198,7 +198,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             }
 
             /**
-             * 当前操作状态
+             * The status of the operation.
              */
             public Builder status(String status) {
                 this.status = status;

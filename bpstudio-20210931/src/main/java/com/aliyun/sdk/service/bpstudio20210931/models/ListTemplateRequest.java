@@ -143,7 +143,7 @@ public class ListTemplateRequest extends Request {
         } 
 
         /**
-         * 搜索关键字
+         * The keyword that is used to search for templates.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -152,7 +152,7 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -161,7 +161,7 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The number of the page to return.
          */
         public Builder nextToken(Integer nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -170,7 +170,11 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * 排序字段
+         * The criterion by which the templates are sorted. Valid values:
+         * <p>
+         * 
+         * *   1: modification time
+         * *   2: creation time
          */
         public Builder orderType(Long orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -179,7 +183,7 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -188,7 +192,7 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * 模板的标签
+         * The tag of the template.
          */
         public Builder tagList(Integer tagList) {
             this.putBodyParameter("TagList", tagList);
@@ -197,7 +201,7 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * 类型
+         * The type of the template.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

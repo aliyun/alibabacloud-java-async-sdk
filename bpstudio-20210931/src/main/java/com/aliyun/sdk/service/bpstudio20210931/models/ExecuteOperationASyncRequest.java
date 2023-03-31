@@ -98,7 +98,44 @@ public class ExecuteOperationASyncRequest extends Request {
         } 
 
         /**
-         * 操作相关参数，根据不同的Operation值，输入对应的参数
+         * The parameters that you need to specify when you perform an operation. The parameters vary based on the operation and are specified in the map format. The following examples show how to specify the parameters if you perform an operation on an ECS instance:
+         * <p>
+         * 
+         * *   The following common parameters need to be specified for operations on an ECS instance:
+         * 
+         * change_type, regionId, instanceId, and appId.
+         * 
+         * *   To change the instance type of an ECS instance, specify the following parameters:
+         * 
+         * { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_instance_type","instance_type":"ecs.hfr7.2xlarge","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * 
+         * *   To stop an ECS instance, specify the following parameters:
+         * 
+         * { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Stopped","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * 
+         * *   To start an ECS instance, specify the following parameters:
+         * 
+         * { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Running","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * 
+         * *   To restart an ECS instance, specify the following parameters:
+         * 
+         * { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Restart","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * 
+         * Enumeration values
+         * 
+         * <!-- -->
+         * 
+         * :
+         * 
+         * *   { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\"change_type\\":\\"modify_instance_type\\",\\"instance_type\\":\\"ecs.hfr7.2xlarge\\",\\"instanceId\\":\\"i-xxxxxxxxx\\",\\"regionId\\":\\"cn-beijing\\",\\"appId\\":\\"xxxxxxxxxxxxx\\"}" }
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\"change_type\\":\\"modify_instance_type\\",\\"instance_type\\":\\"ecs.hfr7.2xlarge\\",\\"instanceId\\":\\"i-xxxxxxxxx\\",\\"regionId\\":\\"cn-beijing\\",\\"appId\\":\\"xxxxxxxxxxxxx\\"}" }
          */
         public Builder attributes(java.util.Map < String, String > attributes) {
             String attributesShrink = shrink(attributes, "Attributes", "json");
@@ -108,7 +145,17 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * 本次操作类型，例如：attachTag，批量打标; assignResourceGroup，批量分配资源组等
+         * The type of the operation to be performed to modify the parameters of an instance of the specified service. Some operations are common to different services, and other operations are specific to each service. For example, set this parameter to one of the following values to perform the corresponding operation on an ECS instance:
+         * <p>
+         * 
+         * *   rename: modifies the name of an ECS instance.
+         * *   modifyInstanceType: changes the instance type of an ECS instance.
+         * *   modifyInstanceType: starts an ECS instance.
+         * *   modifyInstanceType: stops an ECS instance.
+         * *   modifyInstanceType: restarts an ECS instance.
+         * *   addTags: adds tags to an ECS instance.
+         * *   ecsDelete: deletes an ECS instance.
+         * *   modifyPayType: changes the billing method of an ECS instance.
          */
         public Builder operation(String operation) {
             this.putBodyParameter("Operation", operation);
@@ -117,7 +164,7 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * 资源组ID，用于资源组权限校验
+         * The ID of the resource group. This parameter is specified to verify the permissions on the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -126,7 +173,7 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * 资源类型，当前只支持cadt_app
+         * The type of the service. If you want to modify the parameters of an Elastic Compute Service (ECS) instance, set this parameter to ecs.
          */
         public Builder serviceType(String serviceType) {
             this.putBodyParameter("ServiceType", serviceType);

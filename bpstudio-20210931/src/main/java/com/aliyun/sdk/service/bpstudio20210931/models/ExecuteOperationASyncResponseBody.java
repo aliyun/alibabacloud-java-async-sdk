@@ -74,7 +74,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 结果码，200代表成功；其它代表失败。
+         * The HTTP status code. A value of 200 indicates that the request is successful, and other values indicate that the request fails.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * 本次操作ID
+         * The ID of the operation.
          */
         public Builder data(java.util.Map < String, String > data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

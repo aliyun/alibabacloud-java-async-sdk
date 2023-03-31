@@ -98,7 +98,7 @@ public class ListTemplateResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details about templates.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The page number of the returned page.
          */
         public Builder nextToken(Integer nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +130,7 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +262,7 @@ public class ListTemplateResponseBody extends TeaModel {
             private String topoURL; 
 
             /**
-             * 创建时间
+             * The time when the template was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +270,7 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板的图片链接
+             * The URL of the architecture image.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -278,7 +278,7 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板的名称
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,7 +286,7 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -294,7 +294,7 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板的标签的ID
+             * The ID of the tag that is added to the template.
              */
             public Builder tagId(Integer tagId) {
                 this.tagId = tagId;
@@ -302,7 +302,7 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板标签的名称
+             * The name of the tag that is added to the template.
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -310,7 +310,7 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板的ID
+             * The ID of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -318,7 +318,7 @@ public class ListTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板的拓扑图
+             * The URL of the template topology image.
              */
             public Builder topoURL(String topoURL) {
                 this.topoURL = topoURL;

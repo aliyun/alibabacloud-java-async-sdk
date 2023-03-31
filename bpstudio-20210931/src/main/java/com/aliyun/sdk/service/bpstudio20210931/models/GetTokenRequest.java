@@ -54,7 +54,7 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * 资源组ID
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

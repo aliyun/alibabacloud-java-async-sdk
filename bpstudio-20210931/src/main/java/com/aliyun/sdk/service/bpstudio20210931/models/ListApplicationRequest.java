@@ -127,7 +127,7 @@ public class ListApplicationRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The keyword in the application name.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -136,7 +136,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -145,7 +145,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The number of the page to return.
          */
         public Builder nextToken(Integer nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -154,7 +154,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * 排序字段
+         * The field by which the list is sorted. Valid values: 1 and 2. The value 1 specifies that the list is sorted in descending order of application update time, and the value 2 specifies that the list is sorted in descending order of application creation time.
          */
         public Builder orderType(Long orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -163,7 +163,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -172,7 +172,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * 应用的状态
+         * The status of the application.
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

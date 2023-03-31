@@ -74,7 +74,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the application.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 请求失败原因
+         * The message returned for the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +210,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String specification; 
 
             /**
-             * 资源标记
+             * The resource tag.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -218,7 +218,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 区域
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -226,7 +226,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 失败原因
+             * The message returned for verification.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -234,7 +234,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 产品code
+             * The service code.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -242,7 +242,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 实例名
+             * The name of the instance.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -250,7 +250,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 校验结果
+             * The verification result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -258,7 +258,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 规格
+             * The resource specification.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -443,7 +443,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String specification; 
 
             /**
-             * 支付类型
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -451,7 +451,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 数量
+             * The quantity.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -459,7 +459,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 实例名
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -467,7 +467,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 资源标记
+             * The resource tag.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -475,7 +475,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 单价
+             * The unit price.
              */
             public Builder onePrice(Float onePrice) {
                 this.onePrice = onePrice;
@@ -483,7 +483,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 原价
+             * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -491,7 +491,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 时长
+             * The service duration.
              */
             public Builder period(Float period) {
                 this.period = period;
@@ -499,7 +499,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 总价
+             * The total price.
              */
             public Builder price(Float price) {
                 this.price = price;
@@ -507,7 +507,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 单位
+             * The price unit.
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -515,7 +515,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 区域
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -523,7 +523,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 失败原因
+             * The error message that is returned when a price query fails.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -531,7 +531,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 产品code
+             * The service code.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -539,7 +539,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 规格
+             * The instance type.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -664,7 +664,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 支付类型
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -672,7 +672,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 资源标记
+             * The resource tag.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -680,7 +680,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 部署结果
+             * The deployment result.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -688,7 +688,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 产品code
+             * The service code.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -696,7 +696,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID
+             * The ID of the instance.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -704,7 +704,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 实例名称
+             * The name of the instance.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -712,7 +712,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -720,7 +720,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 资源部署结果
+             * The resource deployment result.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -905,7 +905,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String topoURL; 
 
             /**
-             * 应用ID
+             * The ID of the application.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -913,7 +913,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 校验结果列表
+             * The verification results returned.
              */
             public Builder checklist(java.util.List < Checklist> checklist) {
                 this.checklist = checklist;
@@ -921,7 +921,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用创建时间
+             * The time when the application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -929,7 +929,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用描述
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -937,7 +937,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 失败原因
+             * The message returned for deployment.
              */
             public Builder error(String error) {
                 this.error = error;
@@ -945,7 +945,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库中图片地址
+             * The URL of the image in the database.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -953,7 +953,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用名
+             * The name of the application.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -961,7 +961,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 计费结果列表
+             * The billing results.
              */
             public Builder priceList(java.util.List < PriceList> priceList) {
                 this.priceList = priceList;
@@ -969,7 +969,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用所属资源组ID
+             * The ID of the resource group to which the application belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -977,7 +977,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 资源列表
+             * The resources.
              */
             public Builder resourceList(java.util.List < ResourceList> resourceList) {
                 this.resourceList = resourceList;
@@ -985,7 +985,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用状态
+             * The status of the application.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -993,7 +993,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用关联模板ID
+             * The ID of the template associated with the application.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1001,7 +1001,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 应用topo地址
+             * The URL of the application topology image.
              */
             public Builder topoURL(String topoURL) {
                 this.topoURL = topoURL;

@@ -155,7 +155,7 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * 区域ID
+         * The ID of the region.
          */
         public Builder areaId(String areaId) {
             this.putBodyParameter("AreaId", areaId);
@@ -164,7 +164,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 幂等标记
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -173,7 +173,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Configuration.
+         * The parameters that are used to configure the application you want to create. For example, enableMonitor specifies whether to automatically create a CloudMonitor task for the application, and enableReport specifies whether to generate reports.
          */
         public Builder configuration(java.util.Map < String, String > configuration) {
             String configurationShrink = shrink(configuration, "Configuration", "json");
@@ -183,7 +183,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 待替换实例列表
+         * The instances in which you want to create the application. You can create applications in an existing virtual private cloud (VPC).
          */
         public Builder instances(java.util.List < Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
@@ -193,7 +193,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 新建应用名
+         * The name of the application that you want to create.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -202,7 +202,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 应用所属资源组ID
+         * The ID of the resource group to which the application you want to create belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +211,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 模板ID
+         * The ID of the template.
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -220,7 +220,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Variables.
+         * The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.
          */
         public Builder variables(java.util.Map < String, String > variables) {
             String variablesShrink = shrink(variables, "Variables", "json");
@@ -287,7 +287,7 @@ public class CreateApplicationRequest extends Request {
             private String nodeType; 
 
             /**
-             * 实例ID
+             * The ID of the instance.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -295,7 +295,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * 图上实例名
+             * The name of the instance.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -303,7 +303,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * 实例类型
+             * The type of the instance.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

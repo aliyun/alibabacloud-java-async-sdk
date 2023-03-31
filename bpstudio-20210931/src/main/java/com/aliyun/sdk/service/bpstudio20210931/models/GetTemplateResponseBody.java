@@ -74,7 +74,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the template.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,6 +111,107 @@ public class GetTemplateResponseBody extends TeaModel {
 
     } 
 
+    public static class Variables extends TeaModel {
+        @NameInMap("Attribute")
+        private String attribute;
+
+        @NameInMap("DataType")
+        private String dataType;
+
+        @NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @NameInMap("Variable")
+        private String variable;
+
+        private Variables(Builder builder) {
+            this.attribute = builder.attribute;
+            this.dataType = builder.dataType;
+            this.defaultValue = builder.defaultValue;
+            this.variable = builder.variable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Variables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
+         * @return dataType
+         */
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return variable
+         */
+        public String getVariable() {
+            return this.variable;
+        }
+
+        public static final class Builder {
+            private String attribute; 
+            private String dataType; 
+            private String defaultValue; 
+            private String variable; 
+
+            /**
+             * 变量名
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * 变量类型
+             */
+            public Builder dataType(String dataType) {
+                this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * 默认值
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * 变量值
+             */
+            public Builder variable(String variable) {
+                this.variable = variable;
+                return this;
+            }
+
+            public Variables build() {
+                return new Variables(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
@@ -133,6 +234,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("TopoURL")
         private String topoURL;
 
+        @NameInMap("Variables")
+        private java.util.List < Variables> variables;
+
         private Data(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -141,6 +245,7 @@ public class GetTemplateResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.templateId = builder.templateId;
             this.topoURL = builder.topoURL;
+            this.variables = builder.variables;
         }
 
         public static Builder builder() {
@@ -200,6 +305,13 @@ public class GetTemplateResponseBody extends TeaModel {
             return this.topoURL;
         }
 
+        /**
+         * @return variables
+         */
+        public java.util.List < Variables> getVariables() {
+            return this.variables;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String description; 
@@ -208,9 +320,10 @@ public class GetTemplateResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String templateId; 
             private String topoURL; 
+            private java.util.List < Variables> variables; 
 
             /**
-             * CreateTime.
+             * The time when the template was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -218,7 +331,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +339,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ImageURL.
+             * The URL of the architecture image.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -234,7 +347,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -242,7 +355,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -250,7 +363,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -258,10 +371,18 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TopoURL.
+             * The URL of the architecture image file.
              */
             public Builder topoURL(String topoURL) {
                 this.topoURL = topoURL;
+                return this;
+            }
+
+            /**
+             * Variables.
+             */
+            public Builder variables(java.util.List < Variables> variables) {
+                this.variables = variables;
                 return this;
             }
 

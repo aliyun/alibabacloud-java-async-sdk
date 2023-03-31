@@ -74,7 +74,7 @@ public class ReleaseApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ReleaseApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The return value.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ReleaseApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ReleaseApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

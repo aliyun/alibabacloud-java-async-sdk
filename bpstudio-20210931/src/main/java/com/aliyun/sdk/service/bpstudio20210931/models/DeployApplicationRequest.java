@@ -69,7 +69,7 @@ public class DeployApplicationRequest extends Request {
         } 
 
         /**
-         * 应用ID
+         * The ID of the application.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -78,7 +78,7 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
-         * 资源组ID
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
