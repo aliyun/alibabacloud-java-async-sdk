@@ -98,7 +98,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the application.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * ApplicationCode.
+             * The AppCode for simple authentication. You can select simple authentication or signature authentication when you call an API operation.
              */
             public Builder applicationCode(String applicationCode) {
                 this.applicationCode = applicationCode;
@@ -246,7 +246,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationId.
+             * The ID of the application.
              */
             public Builder applicationId(Long applicationId) {
                 this.applicationId = applicationId;
@@ -254,7 +254,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationKey.
+             * The AppKey for signature authentication. You can select simple authentication or signature authentication when you call an API operation.
              */
             public Builder applicationKey(String applicationKey) {
                 this.applicationKey = applicationKey;
@@ -262,7 +262,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationName.
+             * The name of the application.
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -270,7 +270,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationSecret.
+             * The AppSecret for signature authentication. You can select simple authentication or signature authentication when you call an API operation.
              */
             public Builder applicationSecret(String applicationSecret) {
                 this.applicationSecret = applicationSecret;
@@ -278,7 +278,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

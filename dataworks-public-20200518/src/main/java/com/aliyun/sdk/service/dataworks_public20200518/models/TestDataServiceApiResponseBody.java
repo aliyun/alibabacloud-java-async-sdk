@@ -50,7 +50,7 @@ public class TestDataServiceApiResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The information about the test.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class TestDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class TestDataServiceApiResponseBody extends TeaModel {
             private String testId; 
 
             /**
-             * TestId.
+             * The ID of the test.
              */
             public Builder testId(String testId) {
                 this.testId = testId;

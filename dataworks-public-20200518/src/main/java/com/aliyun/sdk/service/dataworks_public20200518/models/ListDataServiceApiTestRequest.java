@@ -93,7 +93,7 @@ public class ListDataServiceApiTestRequest extends Request {
         }
 
         /**
-         * ApiId.
+         * The ID of the DataService Studio API on which tests are performed.
          */
         public Builder apiId(Long apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -102,7 +102,7 @@ public class ListDataServiceApiTestRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

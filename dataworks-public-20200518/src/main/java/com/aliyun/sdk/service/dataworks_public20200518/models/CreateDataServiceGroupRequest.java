@@ -138,7 +138,7 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * ApiGatewayGroupId.
+         * The ID of the API group that is associated with the business process in the API Gateway console. You can log on to the API Gateway console and go to the Group Details page to view the ID.
          */
         public Builder apiGatewayGroupId(String apiGatewayGroupId) {
             this.putBodyParameter("ApiGatewayGroupId", apiGatewayGroupId);
@@ -147,7 +147,7 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the business process.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -156,7 +156,7 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the business process.
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -165,7 +165,7 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -174,7 +174,7 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

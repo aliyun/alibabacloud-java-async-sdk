@@ -149,7 +149,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * API Id
+         * The ID of the DataService Studio API on which the test is performed.
          */
         public Builder apiId(Long apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -158,7 +158,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * BodyContent.
+         * The data of the request body.
          */
         public Builder bodyContent(String bodyContent) {
             this.putBodyParameter("BodyContent", bodyContent);
@@ -167,7 +167,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * BodyParams.
+         * The request parameters that are contained in the request body.
          */
         public Builder bodyParams(java.util.List < BodyParams> bodyParams) {
             this.putBodyParameter("BodyParams", bodyParams);
@@ -176,7 +176,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * HeadParams.
+         * The request parameters that are contained in the request header.
          */
         public Builder headParams(java.util.List < HeadParams> headParams) {
             this.putBodyParameter("HeadParams", headParams);
@@ -185,7 +185,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * PathParams.
+         * The request parameters that are contained in the request path.
          */
         public Builder pathParams(java.util.List < PathParams> pathParams) {
             this.putBodyParameter("PathParams", pathParams);
@@ -194,7 +194,7 @@ public class TestDataServiceApiRequest extends Request {
         }
 
         /**
-         * QueryParam.
+         * The request parameters that are contained in the query.
          */
         public Builder queryParam(java.util.List < QueryParam> queryParam) {
             this.putBodyParameter("QueryParam", queryParam);
@@ -248,7 +248,7 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * ParamKey.
+             * The name of the parameter.
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -256,7 +256,7 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * ParamValue.
+             * The value of the parameter.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -309,7 +309,7 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * ParamKey.
+             * The name of the parameter.
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -317,7 +317,7 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * ParamValue.
+             * The value of the parameter.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -370,7 +370,7 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * ParamKey.
+             * The name of the parameter.
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -378,7 +378,7 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * ParamValue.
+             * The value of the parameter.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -431,7 +431,7 @@ public class TestDataServiceApiRequest extends Request {
             private String paramValue; 
 
             /**
-             * ParamKey.
+             * The name of the parameter.
              */
             public Builder paramKey(String paramKey) {
                 this.paramKey = paramKey;
@@ -439,7 +439,7 @@ public class TestDataServiceApiRequest extends Request {
             }
 
             /**
-             * ParamValue.
+             * The value of the parameter.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;

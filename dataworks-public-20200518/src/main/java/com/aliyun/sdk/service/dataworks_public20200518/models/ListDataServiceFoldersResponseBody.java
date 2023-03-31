@@ -50,7 +50,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FolderPagingResult.
+         * The paging result for the folders.
          */
         public Builder folderPagingResult(FolderPagingResult folderPagingResult) {
             this.folderPagingResult = folderPagingResult;
@@ -58,7 +58,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * CreatedTime.
+             * The time when the folder was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -190,7 +190,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(Long folderId) {
                 this.folderId = folderId;
@@ -198,7 +198,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * FolderName.
+             * The name of the folder.
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -206,7 +206,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the business process to which the folder belongs.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -214,7 +214,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the folder was last modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -222,7 +222,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID of the parent folder. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -230,7 +230,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -238,7 +238,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -315,7 +315,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Folders.
+             * The folders.
              */
             public Builder folders(java.util.List < Folders> folders) {
                 this.folders = folders;
@@ -323,7 +323,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -331,7 +331,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -339,7 +339,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

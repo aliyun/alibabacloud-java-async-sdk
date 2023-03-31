@@ -50,7 +50,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The list of test records.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             private Long testId; 
 
             /**
-             * ApiId.
+             * The ID of the DataService Studio API on which the test is performed.
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -190,7 +190,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * CostTime.
+             * The time that is consumed to complete the test.
              */
             public Builder costTime(Integer costTime) {
                 this.costTime = costTime;
@@ -198,7 +198,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the test was initiated.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -206,7 +206,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * ParamMap.
+             * The request parameters configured for the test.
              */
             public Builder paramMap(String paramMap) {
                 this.paramMap = paramMap;
@@ -214,7 +214,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * RetCode.
+             * The status code returned for the test. If the test is not complete, this parameter is not returned.
              */
             public Builder retCode(Long retCode) {
                 this.retCode = retCode;
@@ -222,7 +222,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * RetResult.
+             * The result returned for the test.
              */
             public Builder retResult(String retResult) {
                 this.retResult = retResult;
@@ -230,7 +230,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the test. Valid values: RUNNING and FINISHED.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +238,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * TestId.
+             * The ID of the test.
              */
             public Builder testId(Long testId) {
                 this.testId = testId;

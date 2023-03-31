@@ -109,7 +109,7 @@ public class GetDataServiceApplicationRequest extends Request {
         }
 
         /**
-         * ApplicationId.
+         * The ID of the application. You can view the information about the application in the API Gateway console.
          */
         public Builder applicationId(Long applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -118,7 +118,7 @@ public class GetDataServiceApplicationRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -127,7 +127,7 @@ public class GetDataServiceApplicationRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

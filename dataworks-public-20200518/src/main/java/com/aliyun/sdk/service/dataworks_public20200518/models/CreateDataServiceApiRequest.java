@@ -62,6 +62,10 @@ public class CreateDataServiceApiRequest extends Request {
     private String registrationDetails;
 
     @Body
+    @NameInMap("RequestContentType")
+    private Integer requestContentType;
+
+    @Body
     @NameInMap("RequestMethod")
     @Validation(required = true)
     private Integer requestMethod;
@@ -114,6 +118,7 @@ public class CreateDataServiceApiRequest extends Request {
         this.projectId = builder.projectId;
         this.protocols = builder.protocols;
         this.registrationDetails = builder.registrationDetails;
+        this.requestContentType = builder.requestContentType;
         this.requestMethod = builder.requestMethod;
         this.resourceGroupId = builder.resourceGroupId;
         this.responseContentType = builder.responseContentType;
@@ -209,6 +214,13 @@ public class CreateDataServiceApiRequest extends Request {
     }
 
     /**
+     * @return requestContentType
+     */
+    public Integer getRequestContentType() {
+        return this.requestContentType;
+    }
+
+    /**
      * @return requestMethod
      */
     public Integer getRequestMethod() {
@@ -282,6 +294,7 @@ public class CreateDataServiceApiRequest extends Request {
         private Long projectId; 
         private String protocols; 
         private String registrationDetails; 
+        private Integer requestContentType; 
         private Integer requestMethod; 
         private Long resourceGroupId; 
         private Integer responseContentType; 
@@ -308,6 +321,7 @@ public class CreateDataServiceApiRequest extends Request {
             this.projectId = request.projectId;
             this.protocols = request.protocols;
             this.registrationDetails = request.registrationDetails;
+            this.requestContentType = request.requestContentType;
             this.requestMethod = request.requestMethod;
             this.resourceGroupId = request.resourceGroupId;
             this.responseContentType = request.responseContentType;
@@ -406,6 +420,15 @@ public class CreateDataServiceApiRequest extends Request {
         public Builder registrationDetails(String registrationDetails) {
             this.putBodyParameter("RegistrationDetails", registrationDetails);
             this.registrationDetails = registrationDetails;
+            return this;
+        }
+
+        /**
+         * RequestContentType.
+         */
+        public Builder requestContentType(Integer requestContentType) {
+            this.putBodyParameter("RequestContentType", requestContentType);
+            this.requestContentType = requestContentType;
             return this;
         }
 

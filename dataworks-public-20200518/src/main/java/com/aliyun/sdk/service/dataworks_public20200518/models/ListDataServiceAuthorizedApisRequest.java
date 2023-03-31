@@ -137,7 +137,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * ApiNameKeyword.
+         * The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.
          */
         public Builder apiNameKeyword(String apiNameKeyword) {
             this.putBodyParameter("ApiNameKeyword", apiNameKeyword);
@@ -146,7 +146,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -155,7 +155,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -164,7 +164,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -173,7 +173,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

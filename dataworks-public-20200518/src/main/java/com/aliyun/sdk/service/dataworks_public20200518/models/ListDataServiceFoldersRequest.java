@@ -152,7 +152,7 @@ public class ListDataServiceFoldersRequest extends Request {
         }
 
         /**
-         * FolderNameKeyword.
+         * The keyword in folder names. The keyword is used to search for folders whose names contain this keyword.
          */
         public Builder folderNameKeyword(String folderNameKeyword) {
             this.putBodyParameter("FolderNameKeyword", folderNameKeyword);
@@ -161,7 +161,7 @@ public class ListDataServiceFoldersRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the business process to which the folders belong.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -170,7 +170,7 @@ public class ListDataServiceFoldersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -179,7 +179,7 @@ public class ListDataServiceFoldersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -188,7 +188,7 @@ public class ListDataServiceFoldersRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -197,7 +197,7 @@ public class ListDataServiceFoldersRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

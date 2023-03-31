@@ -50,7 +50,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ApiId.
+             * The ID of the API on which the test is performed.
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -190,7 +190,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * CostTime.
+             * The time consumed for the test.
              */
             public Builder costTime(String costTime) {
                 this.costTime = costTime;
@@ -198,7 +198,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * DebugInfo.
+             * The debugging information.
              */
             public Builder debugInfo(String debugInfo) {
                 this.debugInfo = debugInfo;
@@ -214,7 +214,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * ParamMap.
+             * The request parameters configured for the test.
              */
             public Builder paramMap(String paramMap) {
                 this.paramMap = paramMap;
@@ -222,7 +222,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * RetCode.
+             * The status code returned for the test. If the test is not complete, this parameter is not returned.
              */
             public Builder retCode(Long retCode) {
                 this.retCode = retCode;
@@ -230,7 +230,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * RetResult.
+             * The result returned for the test.
              */
             public Builder retResult(String retResult) {
                 this.retResult = retResult;
@@ -238,7 +238,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the test. Valid values: RUNNING and FINISHED.
              */
             public Builder status(String status) {
                 this.status = status;
