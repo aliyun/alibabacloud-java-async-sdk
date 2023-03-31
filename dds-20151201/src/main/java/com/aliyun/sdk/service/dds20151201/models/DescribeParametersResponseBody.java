@@ -322,6 +322,9 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParametersParameter extends TeaModel {
+        @NameInMap("CharacterType")
+        private String characterType;
+
         @NameInMap("CheckingCode")
         private String checkingCode;
 
@@ -341,6 +344,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String parameterValue;
 
         private RunningParametersParameter(Builder builder) {
+            this.characterType = builder.characterType;
             this.checkingCode = builder.checkingCode;
             this.forceRestart = builder.forceRestart;
             this.modifiableStatus = builder.modifiableStatus;
@@ -355,6 +359,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         public static RunningParametersParameter create() {
             return builder().build();
+        }
+
+        /**
+         * @return characterType
+         */
+        public String getCharacterType() {
+            return this.characterType;
         }
 
         /**
@@ -400,12 +411,21 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String characterType; 
             private String checkingCode; 
             private String forceRestart; 
             private String modifiableStatus; 
             private String parameterDescription; 
             private String parameterName; 
             private String parameterValue; 
+
+            /**
+             * CharacterType.
+             */
+            public Builder characterType(String characterType) {
+                this.characterType = characterType;
+                return this;
+            }
 
             /**
              * The valid values of the parameter.

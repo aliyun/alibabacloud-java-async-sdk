@@ -94,7 +94,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -118,7 +118,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -278,7 +278,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * The IP addresses of the client.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -310,7 +310,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the thread that is recorded in the SQL audit log entry.
+             * The ID of the thread.
              */
             public Builder threadID(String threadID) {
                 this.threadID = threadID;
@@ -318,7 +318,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the statement execution. Unit: microseconds.
+             * The execution time of the statement. Unit: microseconds.
              */
             public Builder totalExecutionTimes(Long totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;

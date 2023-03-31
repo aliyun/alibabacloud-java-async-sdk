@@ -32,6 +32,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     private String newConnectionString;
 
     @Query
+    @NameInMap("NewPort")
+    private Integer newPort;
+
+    @Query
     @NameInMap("NodeId")
     private String nodeId;
 
@@ -61,6 +65,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         this.currentConnectionString = builder.currentConnectionString;
         this.DBInstanceId = builder.DBInstanceId;
         this.newConnectionString = builder.newConnectionString;
+        this.newPort = builder.newPort;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -111,6 +116,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     /**
+     * @return newPort
+     */
+    public Integer getNewPort() {
+        return this.newPort;
+    }
+
+    /**
      * @return nodeId
      */
     public String getNodeId() {
@@ -157,6 +169,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         private String currentConnectionString; 
         private String DBInstanceId; 
         private String newConnectionString; 
+        private Integer newPort; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -174,6 +187,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             this.currentConnectionString = request.currentConnectionString;
             this.DBInstanceId = request.DBInstanceId;
             this.newConnectionString = request.newConnectionString;
+            this.newPort = request.newPort;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -221,6 +235,15 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         public Builder newConnectionString(String newConnectionString) {
             this.putQueryParameter("NewConnectionString", newConnectionString);
             this.newConnectionString = newConnectionString;
+            return this;
+        }
+
+        /**
+         * NewPort.
+         */
+        public Builder newPort(Integer newPort) {
+            this.putQueryParameter("NewPort", newPort);
+            this.newPort = newPort;
             return this;
         }
 

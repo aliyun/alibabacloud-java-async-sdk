@@ -73,6 +73,10 @@ public class CreateDBInstanceRequest extends Request {
     private String engineVersion;
 
     @Query
+    @NameInMap("GlobalSecurityGroupIds")
+    private String globalSecurityGroupIds;
+
+    @Query
     @NameInMap("HiddenZoneId")
     private String hiddenZoneId;
 
@@ -173,6 +177,7 @@ public class CreateDBInstanceRequest extends Request {
         this.databaseNames = builder.databaseNames;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.globalSecurityGroupIds = builder.globalSecurityGroupIds;
         this.hiddenZoneId = builder.hiddenZoneId;
         this.networkType = builder.networkType;
         this.ownerAccount = builder.ownerAccount;
@@ -305,6 +310,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return globalSecurityGroupIds
+     */
+    public String getGlobalSecurityGroupIds() {
+        return this.globalSecurityGroupIds;
     }
 
     /**
@@ -469,6 +481,7 @@ public class CreateDBInstanceRequest extends Request {
         private String databaseNames; 
         private String engine; 
         private String engineVersion; 
+        private String globalSecurityGroupIds; 
         private String hiddenZoneId; 
         private String networkType; 
         private String ownerAccount; 
@@ -511,6 +524,7 @@ public class CreateDBInstanceRequest extends Request {
             this.databaseNames = request.databaseNames;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
+            this.globalSecurityGroupIds = request.globalSecurityGroupIds;
             this.hiddenZoneId = request.hiddenZoneId;
             this.networkType = request.networkType;
             this.ownerAccount = request.ownerAccount;
@@ -697,6 +711,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * GlobalSecurityGroupIds.
+         */
+        public Builder globalSecurityGroupIds(String globalSecurityGroupIds) {
+            this.putQueryParameter("GlobalSecurityGroupIds", globalSecurityGroupIds);
+            this.globalSecurityGroupIds = globalSecurityGroupIds;
             return this;
         }
 

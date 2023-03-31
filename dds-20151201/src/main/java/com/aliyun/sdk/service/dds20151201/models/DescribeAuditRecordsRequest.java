@@ -293,7 +293,7 @@ public class DescribeAuditRecordsRequest extends Request {
          * The ID of the instance.
          * <p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -311,10 +311,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range that is specified to query the audit log. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          * <p>
          * 
-         * >  The end time must be within 24 hours from the start time. Otherwise, the query fails.
+         * > The end time must be within 24 hours from the start time. Otherwise, the query fails.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -323,13 +323,11 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The form of the audit log that the operation returns. Valid values:
+         * The form of the audit log that the operation returns. Default value: File. Valid values:
          * <p>
          * 
-         * *   **File**: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
+         * *   **File** triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
          * *   **Stream**: returns data streams.
-         * 
-         * Default value: **Stream**.
          */
         public Builder form(String form) {
             this.putQueryParameter("Form", form);
@@ -338,10 +336,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the mongos node or shard node whose audit logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
+         * The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
          * <p>
          * 
-         * >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
+         * > This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -353,8 +351,8 @@ public class DescribeAuditRecordsRequest extends Request {
          * The order of time in which the log entries to return are sorted. Valid values:
          * <p>
          * 
-         * *   asc: The log entries are sorted by time in ascending order.
-         * *   desc: The log entries are sorted by time in descending order.
+         * *   **asc**: The log entries are sorted by time in ascending order.
+         * *   **desc**: The log entries are sorted by time in descending order.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -381,7 +379,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * The number of the page to return. Pages start from page 1. Valid values: any non-zero positive integer. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -390,7 +388,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+         * The number of entries to return per page. Default value: 30. Valid values: **30**, **50**, and **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -444,7 +442,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The user of the database. If you do not specify this parameter, this operation returns records of all users.
+         * The account of the database. If you do not specify this parameter, this operation returns records of all accounts.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

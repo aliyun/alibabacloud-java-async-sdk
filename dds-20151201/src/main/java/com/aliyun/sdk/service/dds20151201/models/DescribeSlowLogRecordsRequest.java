@@ -267,7 +267,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
          * The ID of the instance.
          * <p>
          * 
-         * >  If you specify this parameter to the ID of a sharded cluster instance, you must also specify the `NodeId` parameter.
+         * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the `NodeId` parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -288,8 +288,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
          * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          * <p>
          * 
-         * > * The end time must be later than the start time.
-         * > * The end time must be within 24 hours from the start time. Otherwise, the query fails.
+         * > 
+         * 
+         * *   The end time must be later than the start time.
+         * 
+         * *   The end time must be within 24 hours from the start time. Otherwise, the query fails.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -301,7 +304,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
          * The ID of the shard node.
          * <p>
          * 
-         * >  This parameter is required only when you specify the `DBInstanceId` parameter to the ID of a sharded cluster instance.
+         * > This parameter is required only when you specify the `DBInstanceId` parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -341,7 +344,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

@@ -7,33 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ResetAccountPasswordRequest} extends {@link RequestModel}
+ * {@link ModifyGlobalSecurityIPGroupNameRequest} extends {@link RequestModel}
  *
- * <p>ResetAccountPasswordRequest</p>
+ * <p>ModifyGlobalSecurityIPGroupNameRequest</p>
  */
-public class ResetAccountPasswordRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
+public class ModifyGlobalSecurityIPGroupNameRequest extends Request {
+    @Query
+    @NameInMap("GlobalIgName")
+    @Validation(required = true, maxLength = 120, minLength = 2)
+    private String globalIgName;
 
     @Query
-    @NameInMap("AccountName")
+    @NameInMap("GlobalSecurityGroupId")
     @Validation(required = true)
-    private String accountName;
-
-    @Query
-    @NameInMap("AccountPassword")
-    @Validation(required = true)
-    private String accountPassword;
-
-    @Query
-    @NameInMap("CharacterType")
-    private String characterType;
-
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
-    private String DBInstanceId;
+    private String globalSecurityGroupId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -42,6 +29,11 @@ public class ResetAccountPasswordRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -55,15 +47,13 @@ public class ResetAccountPasswordRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private ResetAccountPasswordRequest(Builder builder) {
+    private ModifyGlobalSecurityIPGroupNameRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.accountName = builder.accountName;
-        this.accountPassword = builder.accountPassword;
-        this.characterType = builder.characterType;
-        this.DBInstanceId = builder.DBInstanceId;
+        this.globalIgName = builder.globalIgName;
+        this.globalSecurityGroupId = builder.globalSecurityGroupId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -73,7 +63,7 @@ public class ResetAccountPasswordRequest extends Request {
         return new Builder();
     }
 
-    public static ResetAccountPasswordRequest create() {
+    public static ModifyGlobalSecurityIPGroupNameRequest create() {
         return builder().build();
     }
 
@@ -83,38 +73,17 @@ public class ResetAccountPasswordRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return globalIgName
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getGlobalIgName() {
+        return this.globalIgName;
     }
 
     /**
-     * @return accountName
+     * @return globalSecurityGroupId
      */
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    /**
-     * @return accountPassword
-     */
-    public String getAccountPassword() {
-        return this.accountPassword;
-    }
-
-    /**
-     * @return characterType
-     */
-    public String getCharacterType() {
-        return this.characterType;
-    }
-
-    /**
-     * @return DBInstanceId
-     */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getGlobalSecurityGroupId() {
+        return this.globalSecurityGroupId;
     }
 
     /**
@@ -129,6 +98,13 @@ public class ResetAccountPasswordRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -152,14 +128,12 @@ public class ResetAccountPasswordRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<ResetAccountPasswordRequest, Builder> {
-        private String regionId; 
-        private String accountName; 
-        private String accountPassword; 
-        private String characterType; 
-        private String DBInstanceId; 
+    public static final class Builder extends Request.Builder<ModifyGlobalSecurityIPGroupNameRequest, Builder> {
+        private String globalIgName; 
+        private String globalSecurityGroupId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -168,66 +142,33 @@ public class ResetAccountPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ResetAccountPasswordRequest request) {
+        private Builder(ModifyGlobalSecurityIPGroupNameRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.accountName = request.accountName;
-            this.accountPassword = request.accountPassword;
-            this.characterType = request.characterType;
-            this.DBInstanceId = request.DBInstanceId;
+            this.globalIgName = request.globalIgName;
+            this.globalSecurityGroupId = request.globalSecurityGroupId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * RegionId.
+         * GlobalIgName.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder globalIgName(String globalIgName) {
+            this.putQueryParameter("GlobalIgName", globalIgName);
+            this.globalIgName = globalIgName;
             return this;
         }
 
         /**
-         * The account for which you want to reset the password. Set the value to **root**.
+         * GlobalSecurityGroupId.
          */
-        public Builder accountName(String accountName) {
-            this.putQueryParameter("AccountName", accountName);
-            this.accountName = accountName;
-            return this;
-        }
-
-        /**
-         * The new password.
-         * <p>
-         * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`
-         * *   The password must be 8 to 32 characters in length.
-         */
-        public Builder accountPassword(String accountPassword) {
-            this.putQueryParameter("AccountPassword", accountPassword);
-            this.accountPassword = accountPassword;
-            return this;
-        }
-
-        /**
-         * CharacterType.
-         */
-        public Builder characterType(String characterType) {
-            this.putQueryParameter("CharacterType", characterType);
-            this.characterType = characterType;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder DBInstanceId(String DBInstanceId) {
-            this.putQueryParameter("DBInstanceId", DBInstanceId);
-            this.DBInstanceId = DBInstanceId;
+        public Builder globalSecurityGroupId(String globalSecurityGroupId) {
+            this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
+            this.globalSecurityGroupId = globalSecurityGroupId;
             return this;
         }
 
@@ -246,6 +187,15 @@ public class ResetAccountPasswordRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -277,8 +227,8 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         @Override
-        public ResetAccountPasswordRequest build() {
-            return new ResetAccountPasswordRequest(this);
+        public ModifyGlobalSecurityIPGroupNameRequest build() {
+            return new ModifyGlobalSecurityIPGroupNameRequest(this);
         } 
 
     } 

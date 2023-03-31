@@ -106,7 +106,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the slow query logs.
+         * Details of the slow query logs.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -326,7 +326,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The data entries that are scanned during indexing.
+             * The number of rows involved in index scans.
              */
             public Builder keysExamined(Long keysExamined) {
                 this.keysExamined = keysExamined;
@@ -342,7 +342,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned.
+             * The number of rows returned by the SQL statement.
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
