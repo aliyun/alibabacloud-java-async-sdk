@@ -18,7 +18,6 @@ public class PredictTemplateModelRequest extends Request {
 
     @Query
     @NameInMap("Content")
-    @Validation(required = true)
     private String content;
 
     @Query
@@ -26,11 +25,16 @@ public class PredictTemplateModelRequest extends Request {
     @Validation(required = true)
     private Long taskId;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private PredictTemplateModelRequest(Builder builder) {
         super(builder);
         this.binaryToText = builder.binaryToText;
         this.content = builder.content;
         this.taskId = builder.taskId;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -67,10 +71,18 @@ public class PredictTemplateModelRequest extends Request {
         return this.taskId;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<PredictTemplateModelRequest, Builder> {
         private Boolean binaryToText; 
         private String content; 
         private Long taskId; 
+        private String body; 
 
         private Builder() {
             super();
@@ -81,6 +93,7 @@ public class PredictTemplateModelRequest extends Request {
             this.binaryToText = request.binaryToText;
             this.content = request.content;
             this.taskId = request.taskId;
+            this.body = request.body;
         } 
 
         /**
@@ -107,6 +120,15 @@ public class PredictTemplateModelRequest extends Request {
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

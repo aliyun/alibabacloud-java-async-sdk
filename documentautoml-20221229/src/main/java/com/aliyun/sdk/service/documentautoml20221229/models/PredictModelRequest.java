@@ -18,7 +18,6 @@ public class PredictModelRequest extends Request {
 
     @Query
     @NameInMap("Content")
-    @Validation(required = true)
     private String content;
 
     @Query
@@ -30,12 +29,17 @@ public class PredictModelRequest extends Request {
     @NameInMap("ModelVersion")
     private String modelVersion;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private PredictModelRequest(Builder builder) {
         super(builder);
         this.binaryToText = builder.binaryToText;
         this.content = builder.content;
         this.modelId = builder.modelId;
         this.modelVersion = builder.modelVersion;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -79,11 +83,19 @@ public class PredictModelRequest extends Request {
         return this.modelVersion;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<PredictModelRequest, Builder> {
         private Boolean binaryToText; 
         private String content; 
         private Long modelId; 
         private String modelVersion; 
+        private String body; 
 
         private Builder() {
             super();
@@ -95,6 +107,7 @@ public class PredictModelRequest extends Request {
             this.content = request.content;
             this.modelId = request.modelId;
             this.modelVersion = request.modelVersion;
+            this.body = request.body;
         } 
 
         /**
@@ -130,6 +143,15 @@ public class PredictModelRequest extends Request {
         public Builder modelVersion(String modelVersion) {
             this.putQueryParameter("ModelVersion", modelVersion);
             this.modelVersion = modelVersion;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

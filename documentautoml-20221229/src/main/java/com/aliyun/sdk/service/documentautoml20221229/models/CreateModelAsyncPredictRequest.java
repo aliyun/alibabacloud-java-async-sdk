@@ -18,7 +18,6 @@ public class CreateModelAsyncPredictRequest extends Request {
 
     @Query
     @NameInMap("Content")
-    @Validation(required = true)
     private String content;
 
     @Query
@@ -38,6 +37,10 @@ public class CreateModelAsyncPredictRequest extends Request {
     @NameInMap("ServiceVersion")
     private String serviceVersion;
 
+    @Body
+    @NameInMap("body")
+    private String body;
+
     private CreateModelAsyncPredictRequest(Builder builder) {
         super(builder);
         this.binaryToText = builder.binaryToText;
@@ -46,6 +49,7 @@ public class CreateModelAsyncPredictRequest extends Request {
         this.modelVersion = builder.modelVersion;
         this.serviceName = builder.serviceName;
         this.serviceVersion = builder.serviceVersion;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -103,6 +107,13 @@ public class CreateModelAsyncPredictRequest extends Request {
         return this.serviceVersion;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<CreateModelAsyncPredictRequest, Builder> {
         private Boolean binaryToText; 
         private String content; 
@@ -110,6 +121,7 @@ public class CreateModelAsyncPredictRequest extends Request {
         private String modelVersion; 
         private String serviceName; 
         private String serviceVersion; 
+        private String body; 
 
         private Builder() {
             super();
@@ -123,6 +135,7 @@ public class CreateModelAsyncPredictRequest extends Request {
             this.modelVersion = request.modelVersion;
             this.serviceName = request.serviceName;
             this.serviceVersion = request.serviceVersion;
+            this.body = request.body;
         } 
 
         /**
@@ -176,6 +189,15 @@ public class CreateModelAsyncPredictRequest extends Request {
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
             this.serviceVersion = serviceVersion;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

@@ -23,14 +23,18 @@ public class PredictClassifierModelRequest extends Request {
 
     @Query
     @NameInMap("Content")
-    @Validation(required = true)
     private String content;
+
+    @Body
+    @NameInMap("body")
+    private String body;
 
     private PredictClassifierModelRequest(Builder builder) {
         super(builder);
         this.autoPrediction = builder.autoPrediction;
         this.classifierId = builder.classifierId;
         this.content = builder.content;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -67,10 +71,18 @@ public class PredictClassifierModelRequest extends Request {
         return this.content;
     }
 
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<PredictClassifierModelRequest, Builder> {
         private Boolean autoPrediction; 
         private Long classifierId; 
         private String content; 
+        private String body; 
 
         private Builder() {
             super();
@@ -81,6 +93,7 @@ public class PredictClassifierModelRequest extends Request {
             this.autoPrediction = request.autoPrediction;
             this.classifierId = request.classifierId;
             this.content = request.content;
+            this.body = request.body;
         } 
 
         /**
@@ -107,6 +120,15 @@ public class PredictClassifierModelRequest extends Request {
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 
