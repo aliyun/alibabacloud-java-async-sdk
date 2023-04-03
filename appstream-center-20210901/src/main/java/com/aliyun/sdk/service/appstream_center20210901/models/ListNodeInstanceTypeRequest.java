@@ -21,6 +21,10 @@ public class ListNodeInstanceTypeRequest extends Request {
     private String language;
 
     @Query
+    @NameInMap("NodeInstanceType")
+    private String nodeInstanceType;
+
+    @Query
     @NameInMap("OsType")
     private String osType;
 
@@ -43,6 +47,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         super(builder);
         this.bizRegionId = builder.bizRegionId;
         this.language = builder.language;
+        this.nodeInstanceType = builder.nodeInstanceType;
         this.osType = builder.osType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -77,6 +82,13 @@ public class ListNodeInstanceTypeRequest extends Request {
     }
 
     /**
+     * @return nodeInstanceType
+     */
+    public String getNodeInstanceType() {
+        return this.nodeInstanceType;
+    }
+
+    /**
      * @return osType
      */
     public String getOsType() {
@@ -107,6 +119,7 @@ public class ListNodeInstanceTypeRequest extends Request {
     public static final class Builder extends Request.Builder<ListNodeInstanceTypeRequest, Builder> {
         private String bizRegionId; 
         private String language; 
+        private String nodeInstanceType; 
         private String osType; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -120,6 +133,7 @@ public class ListNodeInstanceTypeRequest extends Request {
             super(request);
             this.bizRegionId = request.bizRegionId;
             this.language = request.language;
+            this.nodeInstanceType = request.nodeInstanceType;
             this.osType = request.osType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -141,6 +155,15 @@ public class ListNodeInstanceTypeRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * NodeInstanceType.
+         */
+        public Builder nodeInstanceType(String nodeInstanceType) {
+            this.putQueryParameter("NodeInstanceType", nodeInstanceType);
+            this.nodeInstanceType = nodeInstanceType;
             return this;
         }
 

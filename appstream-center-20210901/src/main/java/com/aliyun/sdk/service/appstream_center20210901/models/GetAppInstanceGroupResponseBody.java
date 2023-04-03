@@ -775,6 +775,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppInstanceType")
         private String appInstanceType;
 
+        @NameInMap("AppPolicyId")
+        private String appPolicyId;
+
         @NameInMap("Apps")
         private java.util.List < Apps> apps;
 
@@ -821,6 +824,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.appInstanceGroupName = builder.appInstanceGroupName;
             this.appInstanceType = builder.appInstanceType;
+            this.appPolicyId = builder.appPolicyId;
             this.apps = builder.apps;
             this.chargeType = builder.chargeType;
             this.expiredTime = builder.expiredTime;
@@ -884,6 +888,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
          */
         public String getAppInstanceType() {
             return this.appInstanceType;
+        }
+
+        /**
+         * @return appPolicyId
+         */
+        public String getAppPolicyId() {
+            return this.appPolicyId;
         }
 
         /**
@@ -984,6 +995,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String appInstanceGroupId; 
             private String appInstanceGroupName; 
             private String appInstanceType; 
+            private String appPolicyId; 
             private java.util.List < Apps> apps; 
             private String chargeType; 
             private String expiredTime; 
@@ -1043,6 +1055,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder appInstanceType(String appInstanceType) {
                 this.appInstanceType = appInstanceType;
+                return this;
+            }
+
+            /**
+             * AppPolicyId.
+             */
+            public Builder appPolicyId(String appPolicyId) {
+                this.appPolicyId = appPolicyId;
                 return this;
             }
 

@@ -162,9 +162,177 @@ public class ModifyNodePoolAttributeRequest extends Request {
 
     } 
 
+    public static class TimerPeriods extends TeaModel {
+        @NameInMap("Amount")
+        private Integer amount;
+
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        private TimerPeriods(Builder builder) {
+            this.amount = builder.amount;
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimerPeriods create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Integer amount; 
+            private String endTime; 
+            private String startTime; 
+
+            /**
+             * Amount.
+             */
+            public Builder amount(Integer amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public TimerPeriods build() {
+                return new TimerPeriods(this);
+            } 
+
+        } 
+
+    }
+    public static class RecurrenceSchedules extends TeaModel {
+        @NameInMap("RecurrenceType")
+        private String recurrenceType;
+
+        @NameInMap("RecurrenceValues")
+        private java.util.List < Integer > recurrenceValues;
+
+        @NameInMap("TimerPeriods")
+        private java.util.List < TimerPeriods> timerPeriods;
+
+        private RecurrenceSchedules(Builder builder) {
+            this.recurrenceType = builder.recurrenceType;
+            this.recurrenceValues = builder.recurrenceValues;
+            this.timerPeriods = builder.timerPeriods;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecurrenceSchedules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return recurrenceType
+         */
+        public String getRecurrenceType() {
+            return this.recurrenceType;
+        }
+
+        /**
+         * @return recurrenceValues
+         */
+        public java.util.List < Integer > getRecurrenceValues() {
+            return this.recurrenceValues;
+        }
+
+        /**
+         * @return timerPeriods
+         */
+        public java.util.List < TimerPeriods> getTimerPeriods() {
+            return this.timerPeriods;
+        }
+
+        public static final class Builder {
+            private String recurrenceType; 
+            private java.util.List < Integer > recurrenceValues; 
+            private java.util.List < TimerPeriods> timerPeriods; 
+
+            /**
+             * RecurrenceType.
+             */
+            public Builder recurrenceType(String recurrenceType) {
+                this.recurrenceType = recurrenceType;
+                return this;
+            }
+
+            /**
+             * RecurrenceValues.
+             */
+            public Builder recurrenceValues(java.util.List < Integer > recurrenceValues) {
+                this.recurrenceValues = recurrenceValues;
+                return this;
+            }
+
+            /**
+             * TimerPeriods.
+             */
+            public Builder timerPeriods(java.util.List < TimerPeriods> timerPeriods) {
+                this.timerPeriods = timerPeriods;
+                return this;
+            }
+
+            public RecurrenceSchedules build() {
+                return new RecurrenceSchedules(this);
+            } 
+
+        } 
+
+    }
     public static class NodePoolStrategy extends TeaModel {
         @NameInMap("MaxScalingAmount")
         private Integer maxScalingAmount;
+
+        @NameInMap("NodeAmount")
+        private Integer nodeAmount;
+
+        @NameInMap("RecurrenceSchedules")
+        private java.util.List < RecurrenceSchedules> recurrenceSchedules;
 
         @NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
@@ -175,15 +343,29 @@ public class ModifyNodePoolAttributeRequest extends Request {
         @NameInMap("ScalingUsageThreshold")
         private String scalingUsageThreshold;
 
+        @NameInMap("StrategyDisableDate")
+        private String strategyDisableDate;
+
+        @NameInMap("StrategyEnableDate")
+        private String strategyEnableDate;
+
         @NameInMap("StrategyType")
         private String strategyType;
 
+        @NameInMap("WarmUp")
+        private Boolean warmUp;
+
         private NodePoolStrategy(Builder builder) {
             this.maxScalingAmount = builder.maxScalingAmount;
+            this.nodeAmount = builder.nodeAmount;
+            this.recurrenceSchedules = builder.recurrenceSchedules;
             this.scalingDownAfterIdleMinutes = builder.scalingDownAfterIdleMinutes;
             this.scalingStep = builder.scalingStep;
             this.scalingUsageThreshold = builder.scalingUsageThreshold;
+            this.strategyDisableDate = builder.strategyDisableDate;
+            this.strategyEnableDate = builder.strategyEnableDate;
             this.strategyType = builder.strategyType;
+            this.warmUp = builder.warmUp;
         }
 
         public static Builder builder() {
@@ -199,6 +381,20 @@ public class ModifyNodePoolAttributeRequest extends Request {
          */
         public Integer getMaxScalingAmount() {
             return this.maxScalingAmount;
+        }
+
+        /**
+         * @return nodeAmount
+         */
+        public Integer getNodeAmount() {
+            return this.nodeAmount;
+        }
+
+        /**
+         * @return recurrenceSchedules
+         */
+        public java.util.List < RecurrenceSchedules> getRecurrenceSchedules() {
+            return this.recurrenceSchedules;
         }
 
         /**
@@ -223,24 +419,66 @@ public class ModifyNodePoolAttributeRequest extends Request {
         }
 
         /**
+         * @return strategyDisableDate
+         */
+        public String getStrategyDisableDate() {
+            return this.strategyDisableDate;
+        }
+
+        /**
+         * @return strategyEnableDate
+         */
+        public String getStrategyEnableDate() {
+            return this.strategyEnableDate;
+        }
+
+        /**
          * @return strategyType
          */
         public String getStrategyType() {
             return this.strategyType;
         }
 
+        /**
+         * @return warmUp
+         */
+        public Boolean getWarmUp() {
+            return this.warmUp;
+        }
+
         public static final class Builder {
             private Integer maxScalingAmount; 
+            private Integer nodeAmount; 
+            private java.util.List < RecurrenceSchedules> recurrenceSchedules; 
             private Integer scalingDownAfterIdleMinutes; 
             private Integer scalingStep; 
             private String scalingUsageThreshold; 
+            private String strategyDisableDate; 
+            private String strategyEnableDate; 
             private String strategyType; 
+            private Boolean warmUp; 
 
             /**
              * 最大弹性数量
              */
             public Builder maxScalingAmount(Integer maxScalingAmount) {
                 this.maxScalingAmount = maxScalingAmount;
+                return this;
+            }
+
+            /**
+             * NodeAmount.
+             */
+            public Builder nodeAmount(Integer nodeAmount) {
+                this.nodeAmount = nodeAmount;
+                return this;
+            }
+
+            /**
+             * RecurrenceSchedules.
+             */
+            public Builder recurrenceSchedules(java.util.List < RecurrenceSchedules> recurrenceSchedules) {
+                this.recurrenceSchedules = recurrenceSchedules;
                 return this;
             }
 
@@ -269,10 +507,34 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
+             * StrategyDisableDate.
+             */
+            public Builder strategyDisableDate(String strategyDisableDate) {
+                this.strategyDisableDate = strategyDisableDate;
+                return this;
+            }
+
+            /**
+             * StrategyEnableDate.
+             */
+            public Builder strategyEnableDate(String strategyEnableDate) {
+                this.strategyEnableDate = strategyEnableDate;
+                return this;
+            }
+
+            /**
              * 策略类型，默认为NODE_FIXED
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;
+                return this;
+            }
+
+            /**
+             * WarmUp.
+             */
+            public Builder warmUp(Boolean warmUp) {
+                this.warmUp = warmUp;
                 return this;
             }
 
