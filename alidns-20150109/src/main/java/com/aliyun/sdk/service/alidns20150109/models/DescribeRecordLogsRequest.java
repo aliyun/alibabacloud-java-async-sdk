@@ -154,7 +154,7 @@ public class DescribeRecordLogsRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -163,7 +163,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * The keyword for searches in %KeyWord% mode. The value is not case-sensitive.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -172,7 +172,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -181,7 +181,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +190,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +199,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -208,7 +208,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -217,7 +217,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * endDate.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);

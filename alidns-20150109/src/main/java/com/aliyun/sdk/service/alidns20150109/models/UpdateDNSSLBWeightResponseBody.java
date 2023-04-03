@@ -62,7 +62,7 @@ public class UpdateDNSSLBWeightResponseBody extends TeaModel {
         private Integer weight; 
 
         /**
-         * RecordId.
+         * The ID of the DNS record.
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -70,7 +70,7 @@ public class UpdateDNSSLBWeightResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UpdateDNSSLBWeightResponseBody extends TeaModel {
         }
 
         /**
-         * Weight.
+         * The updated weight.
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

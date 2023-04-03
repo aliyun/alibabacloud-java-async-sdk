@@ -74,7 +74,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainLevel.
+         * The level of the entered domain name.
          */
         public Builder domainLevel(Long domainLevel) {
             this.domainLevel = domainLevel;
@@ -82,7 +82,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -90,7 +90,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RR.
+         * The host record.
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -98,7 +98,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

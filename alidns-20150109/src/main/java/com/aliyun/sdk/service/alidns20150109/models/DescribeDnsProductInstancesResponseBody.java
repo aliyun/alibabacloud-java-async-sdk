@@ -98,7 +98,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DnsProducts.
+         * The list of Alibaba Cloud DNS instances obtained by this operation.
          */
         public Builder dnsProducts(DnsProducts dnsProducts) {
             this.dnsProducts = dnsProducts;
@@ -114,7 +114,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of domain names.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -550,7 +550,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * BindCount.
+             * The number of times you can change domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.
              */
             public Builder bindCount(Long bindCount) {
                 this.bindCount = bindCount;
@@ -558,7 +558,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BindDomainCount.
+             * The number of domain names that can be bound to the DNS instance.
              */
             public Builder bindDomainCount(Long bindDomainCount) {
                 this.bindDomainCount = bindDomainCount;
@@ -566,7 +566,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BindDomainUsedCount.
+             * The number of domain names that have been bound to the DNS instance.
              */
             public Builder bindDomainUsedCount(Long bindDomainUsedCount) {
                 this.bindDomainUsedCount = bindDomainUsedCount;
@@ -574,7 +574,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BindUsedCount.
+             * The number of times you have changed domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.
              */
             public Builder bindUsedCount(Long bindUsedCount) {
                 this.bindUsedCount = bindUsedCount;
@@ -582,7 +582,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DDosDefendFlow.
+             * The DDoS protection traffic. Unit: GB.
              */
             public Builder dDosDefendFlow(Long dDosDefendFlow) {
                 this.dDosDefendFlow = dDosDefendFlow;
@@ -590,7 +590,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DDosDefendQuery.
+             * The DDoS protection frequency. Unit: 10,000 QPS.
              */
             public Builder dDosDefendQuery(Long dDosDefendQuery) {
                 this.dDosDefendQuery = dDosDefendQuery;
@@ -598,7 +598,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsSLBCount.
+             * The number of IP addresses supported by a domain name or line.
              */
             public Builder dnsSLBCount(Long dnsSLBCount) {
                 this.dnsSLBCount = dnsSLBCount;
@@ -606,7 +606,12 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsSecurity.
+             * The DNS security policy. Valid values:
+             * <p>
+             * 
+             * *   **no**: not required.
+             * *   **basic**: anti-DDoS basic.
+             * *   **advanced**: anti-DDoS advanced.
              */
             public Builder dnsSecurity(String dnsSecurity) {
                 this.dnsSecurity = dnsSecurity;
@@ -614,7 +619,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The bound domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -622,7 +627,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time at which the instance expired.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -630,7 +635,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * The UNIX timestamp representing the expiration time of the instance.
              */
             public Builder endTimestamp(Long endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -638,7 +643,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Gslb.
+             * Indicates whether global server load balancing (GSLB) was allowed.
              */
             public Builder gslb(Boolean gslb) {
                 this.gslb = gslb;
@@ -646,7 +651,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ISPLines.
+             * The list of ISP lines.
              */
             public Builder ISPLines(String ISPLines) {
                 this.ISPLines = ISPLines;
@@ -654,7 +659,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ISPRegionLines.
+             * The list of ISP line subdivisions.
              */
             public Builder ISPRegionLines(String ISPRegionLines) {
                 this.ISPRegionLines = ISPRegionLines;
@@ -662,7 +667,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InBlackHole.
+             * Indicates whether the request for domain name resolution was in the black hole.
              */
             public Builder inBlackHole(Boolean inBlackHole) {
                 this.inBlackHole = inBlackHole;
@@ -670,7 +675,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InClean.
+             * Indicates whether the request for domain name resolution was being cleared.
              */
             public Builder inClean(Boolean inClean) {
                 this.inClean = inClean;
@@ -678,7 +683,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Alibaba Cloud DNS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -686,7 +691,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorFrequency.
+             * The monitoring frequency. Unit: minutes.
              */
             public Builder monitorFrequency(Long monitorFrequency) {
                 this.monitorFrequency = monitorFrequency;
@@ -694,7 +699,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorNodeCount.
+             * The number of monitored nodes.
              */
             public Builder monitorNodeCount(Long monitorNodeCount) {
                 this.monitorNodeCount = monitorNodeCount;
@@ -702,7 +707,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorTaskCount.
+             * The number of monitoring tasks.
              */
             public Builder monitorTaskCount(Long monitorTaskCount) {
                 this.monitorTaskCount = monitorTaskCount;
@@ -710,7 +715,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OverseaDDosDefendFlow.
+             * DDoS protection traffic outside China. Unit: GB.
              */
             public Builder overseaDDosDefendFlow(Long overseaDDosDefendFlow) {
                 this.overseaDDosDefendFlow = overseaDDosDefendFlow;
@@ -718,7 +723,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OverseaLine.
+             * The type of the overseas line.
              */
             public Builder overseaLine(String overseaLine) {
                 this.overseaLine = overseaLine;
@@ -734,7 +739,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionLines.
+             * Indicates whether regional lines were allowed.
              */
             public Builder regionLines(Boolean regionLines) {
                 this.regionLines = regionLines;
@@ -742,7 +747,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SearchEngineLines.
+             * The list of search engine lines.
              */
             public Builder searchEngineLines(String searchEngineLines) {
                 this.searchEngineLines = searchEngineLines;
@@ -750,7 +755,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the DNS instance was purchased.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -758,7 +763,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTimestamp.
+             * The UNIX timestamp representing when the DNS instance was purchased.
              */
             public Builder startTimestamp(Long startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -766,7 +771,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SubDomainLevel.
+             * The number of subdomain name levels.
              */
             public Builder subDomainLevel(Long subDomainLevel) {
                 this.subDomainLevel = subDomainLevel;
@@ -774,7 +779,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TTLMinValue.
+             * The minimum TTL. Unit: seconds.
              */
             public Builder TTLMinValue(Long TTLMinValue) {
                 this.TTLMinValue = TTLMinValue;
@@ -782,7 +787,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * URLForwardCount.
+             * The URL forwarding quantity.
              */
             public Builder URLForwardCount(Long URLForwardCount) {
                 this.URLForwardCount = URLForwardCount;
@@ -790,7 +795,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionCode.
+             * The version code of the Alibaba Cloud DNS instance.
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
@@ -798,7 +803,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * The version name of the Alibaba Cloud DNS instance.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

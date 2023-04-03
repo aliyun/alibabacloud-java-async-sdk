@@ -125,7 +125,7 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * AccessLines.
+         * The line codes of access regions.
          */
         public Builder accessLines(String accessLines) {
             this.putQueryParameter("AccessLines", accessLines);
@@ -134,7 +134,7 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * DefaultAddrPoolId.
+         * The ID of the default address pool.
          */
         public Builder defaultAddrPoolId(String defaultAddrPoolId) {
             this.putQueryParameter("DefaultAddrPoolId", defaultAddrPoolId);
@@ -143,7 +143,7 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * FailoverAddrPoolId.
+         * The ID of the failover address pool.
          */
         public Builder failoverAddrPoolId(String failoverAddrPoolId) {
             this.putQueryParameter("FailoverAddrPoolId", failoverAddrPoolId);
@@ -152,7 +152,7 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -161,7 +161,7 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the access policy that you want to query for the GTM instance.
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -170,7 +170,7 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * The name of the access policy.
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

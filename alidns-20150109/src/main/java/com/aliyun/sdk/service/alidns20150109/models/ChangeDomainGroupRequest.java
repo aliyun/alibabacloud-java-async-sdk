@@ -83,7 +83,7 @@ public class ChangeDomainGroupRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +92,7 @@ public class ChangeDomainGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the target domain name group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -101,7 +101,7 @@ public class ChangeDomainGroupRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -153,7 +153,7 @@ public class DescribeDomainLogsRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the domain name group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -162,7 +162,7 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * The keyword for the query in "%KeyWord%" mode. The keyword is not case-sensitive.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -171,7 +171,7 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -180,7 +180,7 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number to return. The page number starts from **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +189,7 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +198,7 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The start time for the query. Format: **YYYY-MM-DD**
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -207,7 +207,11 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of object of which you want to query operation logs. Valid values:
+         * <p>
+         * 
+         * *   domain: domain name
+         * *   slavedns: secondary Domain Name System (DNS)
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -216,7 +220,7 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * endDate.
+         * The end time for the query. Format: **YYYY-MM-DD**
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);

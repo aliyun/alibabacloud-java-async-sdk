@@ -50,7 +50,7 @@ public class AddGtmMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check configuration.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -58,7 +58,7 @@ public class AddGtmMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

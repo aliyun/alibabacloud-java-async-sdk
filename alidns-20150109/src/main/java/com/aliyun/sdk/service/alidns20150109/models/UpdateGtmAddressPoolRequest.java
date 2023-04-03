@@ -136,7 +136,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * AddrPoolId.
+         * The ID of the address pool that you want to modify.
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -145,7 +145,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -154,7 +154,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * MinAvailableAddrNum.
+         * The minimum number of available addresses in the address pool.
          */
         public Builder minAvailableAddrNum(Integer minAvailableAddrNum) {
             this.putQueryParameter("MinAvailableAddrNum", minAvailableAddrNum);
@@ -163,7 +163,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the address pool that you want to modify.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -172,7 +172,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the address pool that you want to modify.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -238,7 +238,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
             private String value; 
 
             /**
-             * LbaWeight.
+             * The weight of the address pool that you want to modify.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -246,7 +246,12 @@ public class UpdateGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * Mode.
+             * The mode of the address pool that you want to modify.
+             * <p>
+             * 
+             * *   **SMART**: Intelligent return
+             * *   **ONLINE**: Always online
+             * *   **OFFLINE**: Always offline
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -254,7 +259,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * Value.
+             * The addresses in the address pool.
              */
             public Builder value(String value) {
                 this.value = value;

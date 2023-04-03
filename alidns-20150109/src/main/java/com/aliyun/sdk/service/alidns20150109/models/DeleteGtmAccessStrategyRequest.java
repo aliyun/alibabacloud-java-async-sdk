@@ -68,7 +68,7 @@ public class DeleteGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +77,7 @@ public class DeleteGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the access policy that you want to delete.
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

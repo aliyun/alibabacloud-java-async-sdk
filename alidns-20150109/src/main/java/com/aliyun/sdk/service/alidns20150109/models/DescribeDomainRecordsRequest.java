@@ -252,7 +252,7 @@ public class DescribeDomainRecordsRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * The order in which the returned DNS records are sorted. Valid values: DESC and ASC. Default value: DESC.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -261,7 +261,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name for which you want to query DNS records.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -270,7 +270,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the domain name group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -279,7 +279,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * The keyword based on which the system queries DNS records.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -288,7 +288,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the domain name.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -297,7 +297,12 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * Line.
+         * The line based on which the system queries DNS records. Default value: **default**.
+         * <p>
+         * 
+         * For more information, see the following topic:
+         * 
+         * [DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm)
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -306,7 +311,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The method that is used to sort the returned DNS records. By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -315,7 +320,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -324,7 +329,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **500**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -333,7 +338,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * RRKeyWord.
+         * The resource record (RR) keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.
          */
         public Builder RRKeyWord(String RRKeyWord) {
             this.putQueryParameter("RRKeyWord", RRKeyWord);
@@ -342,7 +347,17 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * SearchMode.
+         * The search mode. Valid values: **LIKE, EXACT, and ADVANCED**.
+         * <p>
+         * 
+         * *   If you set this parameter to LIKE or EXACT, specify the KeyWord parameter.In this case, the RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters are ignored.
+         * 
+         * *   If you set this parameter to ADVANCED, specify the RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters.
+         * 
+         * *   If you do not specify this parameter, the system determines the search mode based on the following rules:
+         * 
+         *     *   If the KeyWord parameter is specified, the system uses the LIKE mode.
+         *     *   If the KeyWord parameter is not specified, the system queries DNS records based on values of the RRKeyWord and ValueKeyWord parameters in fuzzy match mode, and based on the values of the TypeKeyWord, Type, Line, and Status parameters in exact match mode.
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -351,7 +366,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the DNS records to query. Valid values: **Enable and Disable**.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -360,7 +375,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the DNS records to query. For more information, see the following topic:
+         * <p>
+         * 
+         * [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm)
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -369,7 +387,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * TypeKeyWord.
+         * The type keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in exact match mode. The value is not case-sensitive.
          */
         public Builder typeKeyWord(String typeKeyWord) {
             this.putQueryParameter("TypeKeyWord", typeKeyWord);
@@ -378,7 +396,7 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * ValueKeyWord.
+         * The record value keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.
          */
         public Builder valueKeyWord(String valueKeyWord) {
             this.putQueryParameter("ValueKeyWord", valueKeyWord);

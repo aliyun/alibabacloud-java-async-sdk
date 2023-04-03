@@ -69,7 +69,7 @@ public class RetrieveDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -78,7 +78,7 @@ public class RetrieveDomainRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

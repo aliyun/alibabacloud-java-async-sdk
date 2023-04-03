@@ -99,7 +99,7 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,7 +108,7 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +117,7 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -126,7 +126,7 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

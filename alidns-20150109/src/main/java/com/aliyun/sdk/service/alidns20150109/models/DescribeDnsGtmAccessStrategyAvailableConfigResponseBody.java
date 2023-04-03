@@ -134,7 +134,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         private Boolean suggestSetDefaultLine; 
 
         /**
-         * DomainAddrPools.
+         * The available address pools of the domain name type.
          */
         public Builder domainAddrPools(DomainAddrPools domainAddrPools) {
             this.domainAddrPools = domainAddrPools;
@@ -142,7 +142,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * Ipv4AddrPools.
+         * The available address pools of the IPv4 type.
          */
         public Builder ipv4AddrPools(Ipv4AddrPools ipv4AddrPools) {
             this.ipv4AddrPools = ipv4AddrPools;
@@ -150,7 +150,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * Ipv6AddrPools.
+         * The available address pools of the IPv6 type.
          */
         public Builder ipv6AddrPools(Ipv6AddrPools ipv6AddrPools) {
             this.ipv6AddrPools = ipv6AddrPools;
@@ -158,7 +158,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * Lines.
+         * The source regions.
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -166,7 +166,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +198,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * SuggestSetDefaultLine.
+         * Indicates whether we recommend that you set the source region to global.
          */
         public Builder suggestSetDefaultLine(Boolean suggestSetDefaultLine) {
             this.suggestSetDefaultLine = suggestSetDefaultLine;
@@ -262,7 +262,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String name; 
 
             /**
-             * AddrCount.
+             * The number of addresses in the address pool.
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -270,7 +270,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * Id.
+             * The ID of the address pool.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -278,7 +278,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * Name.
+             * The name of the address pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -384,7 +384,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String name; 
 
             /**
-             * AddrCount.
+             * The number of addresses in the address pool.
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -392,7 +392,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * Id.
+             * The ID of the address pool.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -400,7 +400,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * Name.
+             * The name of the address pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -506,7 +506,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String name; 
 
             /**
-             * AddrCount.
+             * The number of addresses in the address pool.
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -514,7 +514,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * Id.
+             * The ID of the address pool.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -522,7 +522,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * Name.
+             * The name of the address pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -652,7 +652,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String lineName; 
 
             /**
-             * FatherCode.
+             * The parent line code of the source region. Leave it blank if no parent line exists.
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -660,7 +660,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * GroupCode.
+             * The line name of the source region.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -668,7 +668,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * GroupName.
+             * The name of the source region group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -676,7 +676,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * LineCode.
+             * The line code of the source region.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -684,7 +684,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * LineName.
+             * The code of the source region group.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;

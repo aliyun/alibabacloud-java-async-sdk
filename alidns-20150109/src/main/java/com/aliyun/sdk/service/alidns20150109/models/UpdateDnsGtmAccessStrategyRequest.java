@@ -304,7 +304,12 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * DefaultAddrPoolType.
+         * The type of the primary address pool. Valid values:
+         * <p>
+         * 
+         * *   IPV4
+         * *   IPV6
+         * *   DOMAIN
          */
         public Builder defaultAddrPoolType(String defaultAddrPoolType) {
             this.putQueryParameter("DefaultAddrPoolType", defaultAddrPoolType);
@@ -313,7 +318,11 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * DefaultLatencyOptimization.
+         * Specifies whether to enable scheduling optimization for latency resolution for the primary address pool group. Valid values:
+         * <p>
+         * 
+         * *   OPEN: enable
+         * *   CLOSE: disable
          */
         public Builder defaultLatencyOptimization(String defaultLatencyOptimization) {
             this.putQueryParameter("DefaultLatencyOptimization", defaultLatencyOptimization);
@@ -322,7 +331,11 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * DefaultLbaStrategy.
+         * The load balancing policy of the primary address pool group. Valid values:
+         * <p>
+         * 
+         * *   ALL_RR: returns all addresses.
+         * *   RATIO: returns addresses by weight.
          */
         public Builder defaultLbaStrategy(String defaultLbaStrategy) {
             this.putQueryParameter("DefaultLbaStrategy", defaultLbaStrategy);
@@ -331,7 +344,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * DefaultMaxReturnAddrNum.
+         * The maximum number of addresses returned from the primary address pool group.
          */
         public Builder defaultMaxReturnAddrNum(Integer defaultMaxReturnAddrNum) {
             this.putQueryParameter("DefaultMaxReturnAddrNum", defaultMaxReturnAddrNum);
@@ -340,7 +353,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * DefaultMinAvailableAddrNum.
+         * The minimum number of available addresses in the primary address pool group.
          */
         public Builder defaultMinAvailableAddrNum(Integer defaultMinAvailableAddrNum) {
             this.putQueryParameter("DefaultMinAvailableAddrNum", defaultMinAvailableAddrNum);
@@ -358,7 +371,12 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * FailoverAddrPoolType.
+         * The type of the secondary address pool. Valid values:
+         * <p>
+         * 
+         * *   IPV4
+         * *   IPV6
+         * *   DOMAIN
          */
         public Builder failoverAddrPoolType(String failoverAddrPoolType) {
             this.putQueryParameter("FailoverAddrPoolType", failoverAddrPoolType);
@@ -367,7 +385,11 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * FailoverLatencyOptimization.
+         * Specifies whether to enable scheduling optimization for latency resolution for the secondary address pool group. Valid values:
+         * <p>
+         * 
+         * *   OPEN: enable
+         * *   CLOSE: disable
          */
         public Builder failoverLatencyOptimization(String failoverLatencyOptimization) {
             this.putQueryParameter("FailoverLatencyOptimization", failoverLatencyOptimization);
@@ -376,7 +398,11 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * FailoverLbaStrategy.
+         * The load balancing policy of the secondary address pool group. Valid values:
+         * <p>
+         * 
+         * *   ALL_RR: returns all addresses.
+         * *   RATIO: returns addresses by weight.
          */
         public Builder failoverLbaStrategy(String failoverLbaStrategy) {
             this.putQueryParameter("FailoverLbaStrategy", failoverLbaStrategy);
@@ -385,7 +411,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * FailoverMaxReturnAddrNum.
+         * The maximum number of addresses returned from the secondary address pool group.
          */
         public Builder failoverMaxReturnAddrNum(Integer failoverMaxReturnAddrNum) {
             this.putQueryParameter("FailoverMaxReturnAddrNum", failoverMaxReturnAddrNum);
@@ -394,7 +420,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * FailoverMinAvailableAddrNum.
+         * The minimum number of available addresses in the secondary address pool group.
          */
         public Builder failoverMinAvailableAddrNum(Integer failoverMinAvailableAddrNum) {
             this.putQueryParameter("FailoverMinAvailableAddrNum", failoverMinAvailableAddrNum);
@@ -403,7 +429,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -412,7 +438,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * Lines.
+         * The line codes of source regions. For example: `["default", "drpeng"]` indicates Global and Dr. Peng Telecom & Media Group.
          */
         public Builder lines(String lines) {
             this.putQueryParameter("Lines", lines);
@@ -421,7 +447,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the access policy.
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -430,7 +456,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * The name of the access policy.
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -484,7 +510,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
             private Integer lbaWeight; 
 
             /**
-             * Id.
+             * The ID of the address pool in the primary address pool group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -492,7 +518,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address pool in the primary address pool group.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -545,7 +571,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
             private Integer lbaWeight; 
 
             /**
-             * Id.
+             * The ID of the address pool in the secondary address pool group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -553,7 +579,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends Request {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address pool in the secondary address pool group.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;

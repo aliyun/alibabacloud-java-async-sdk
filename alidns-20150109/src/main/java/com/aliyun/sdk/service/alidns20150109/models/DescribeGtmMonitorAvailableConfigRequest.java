@@ -54,7 +54,7 @@ public class DescribeGtmMonitorAvailableConfigRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

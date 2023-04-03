@@ -84,7 +84,7 @@ public class SetDomainDnssecStatusRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name for which you want to set the DNSSEC status.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,7 +93,7 @@ public class SetDomainDnssecStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +102,11 @@ public class SetDomainDnssecStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The DNSSEC status. Valid values:
+         * <p>
+         * 
+         * *   ON: enables DNSSEC for the domain name.
+         * *   OFF: disables DNSSEC for the domain name.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

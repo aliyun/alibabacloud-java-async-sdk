@@ -50,7 +50,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RecordLines.
+         * The list of Alibaba Cloud DNS lines.
          */
         public Builder recordLines(RecordLines recordLines) {
             this.recordLines = recordLines;
@@ -58,7 +58,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * FatherCode.
+             * The code of the parent line. Leave it blank if there is no parent line.
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -142,7 +142,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * LineCode.
+             * The code of the child line.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -150,7 +150,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * LineDisplayName.
+             * The name of the parent line.
              */
             public Builder lineDisplayName(String lineDisplayName) {
                 this.lineDisplayName = lineDisplayName;
@@ -158,7 +158,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * LineName.
+             * The name of the child line.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;

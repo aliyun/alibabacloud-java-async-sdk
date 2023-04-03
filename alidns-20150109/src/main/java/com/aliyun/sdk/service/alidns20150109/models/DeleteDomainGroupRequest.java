@@ -69,7 +69,7 @@ public class DeleteDomainGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the domain name group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -78,7 +78,7 @@ public class DeleteDomainGroupRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

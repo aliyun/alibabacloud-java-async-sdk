@@ -97,7 +97,7 @@ public class DescribeInstanceDomainsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -106,7 +106,7 @@ public class DescribeInstanceDomainsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +115,7 @@ public class DescribeInstanceDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number to return. The page number starts from 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +124,7 @@ public class DescribeInstanceDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Maximum value: 100. Default value: 20.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

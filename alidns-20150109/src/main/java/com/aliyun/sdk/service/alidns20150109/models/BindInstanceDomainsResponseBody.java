@@ -62,7 +62,7 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
         private Integer successCount; 
 
         /**
-         * FailedCount.
+         * The number of domain names that failed to be bound.
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -70,7 +70,7 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * The number of domain names that have been bound.
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;

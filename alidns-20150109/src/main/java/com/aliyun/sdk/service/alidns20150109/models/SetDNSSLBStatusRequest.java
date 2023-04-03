@@ -139,7 +139,7 @@ public class SetDNSSLBStatusRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -148,7 +148,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the subdomain.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -166,7 +166,11 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * Open.
+         * Specifies whether to enable or disable weighted round-robin. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables weighted round-robin. This is the default value.
+         * *   **false**: disables weighted round-robin.
          */
         public Builder open(Boolean open) {
             this.putQueryParameter("Open", open);
@@ -175,7 +179,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * SubDomain.
+         * The subdomain for which you want to configure weighted round-robin. Do not set the value to a string such as aliyun.com. Instead, set the value to @.aliyun.com.
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
@@ -184,7 +188,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the DNS record. Valid values: A and AAAA. Default value: A.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -193,7 +197,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client that you use to configure weighted round-robin.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

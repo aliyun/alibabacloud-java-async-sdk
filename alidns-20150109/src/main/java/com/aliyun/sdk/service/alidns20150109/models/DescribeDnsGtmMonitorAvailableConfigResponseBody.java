@@ -86,7 +86,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainIpv4IspCityNodes.
+         * The monitored nodes that can be used to perform health checks on address pools that contain public domain names that are resolved to IPv4 addresses.
          */
         public Builder domainIpv4IspCityNodes(DomainIpv4IspCityNodes domainIpv4IspCityNodes) {
             this.domainIpv4IspCityNodes = domainIpv4IspCityNodes;
@@ -94,7 +94,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DomainIpv6IspCityNodes.
+         * The monitored nodes that can be used to perform health checks on address pools that contain public domain names that are resolved to IPv6 addresses.
          */
         public Builder domainIpv6IspCityNodes(DomainIpv6IspCityNodes domainIpv6IspCityNodes) {
             this.domainIpv6IspCityNodes = domainIpv6IspCityNodes;
@@ -102,7 +102,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv4IspCityNodes.
+         * The monitored nodes that can be used to perform health checks on address pools that contain public IPv4 addresses.
          */
         public Builder ipv4IspCityNodes(Ipv4IspCityNodes ipv4IspCityNodes) {
             this.ipv4IspCityNodes = ipv4IspCityNodes;
@@ -110,7 +110,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv6IspCityNodes.
+         * The monitored nodes that can be used to perform health checks on address pools that contain public IPv6 addresses.
          */
         public Builder ipv6IspCityNodes(Ipv6IspCityNodes ipv6IspCityNodes) {
             this.ipv6IspCityNodes = ipv6IspCityNodes;
@@ -118,7 +118,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -283,7 +283,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -291,7 +291,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * The display name of the city where the monitored node is deployed.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -299,7 +299,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultSelected.
+             * Indicates whether the monitored node is selected for the health check by default.
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -307,7 +307,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the monitored node belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -315,7 +315,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * The type of the group to which the monitored node belongs. Valid values:
+             * <p>
+             * 
+             * *   BGP: BGP nodes
+             * *   OVERSEAS: nodes outside the Chinese mainland
+             * *   ISP: ISP nodes
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -331,7 +336,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * The code of the ISP to which the monitored node belongs.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -339,7 +344,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * The display name of the ISP to which the monitored node belongs.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -546,7 +551,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -554,7 +559,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * The display name of the city where the monitored node is deployed.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -562,7 +567,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultSelected.
+             * Indicates whether the monitored node is selected for the health check by default.
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -570,7 +575,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the monitored node belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -578,7 +583,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * The type of the group to which the monitored node belongs. Valid values:
+             * <p>
+             * 
+             * *   BGP: BGP nodes
+             * *   OVERSEAS: nodes outside the Chinese mainland
+             * *   ISP: ISP nodes
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -594,7 +604,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * The code of the ISP to which the monitored node belongs.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -602,7 +612,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * The display name of the ISP to which the monitored node belongs.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -809,7 +819,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -817,7 +827,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * The display name of the city where the monitored node is deployed.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -825,7 +835,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultSelected.
+             * Indicates whether the monitored node is selected for the health check by default.
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -833,7 +843,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the monitored node belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -841,7 +851,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * The type of the group to which the monitored node belongs. Valid values:
+             * <p>
+             * 
+             * *   BGP: Border Gateway Protocol (BGP) nodes
+             * *   OVERSEAS: nodes outside the Chinese mainland
+             * *   ISP: ISP nodes
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -857,7 +872,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * The code of the Internet service provider (ISP) to which the monitored node belongs.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -865,7 +880,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * The display name of the ISP to which the monitored node belongs.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -1072,7 +1087,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -1080,7 +1095,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * The display name of the city where the monitored node is deployed.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -1088,7 +1103,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultSelected.
+             * Indicates whether the monitored node is selected for the health check by default.
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -1096,7 +1111,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the monitored node belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1104,7 +1119,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * The type of the group to which the monitored node belongs. Valid values:
+             * <p>
+             * 
+             * *   BGP: BGP nodes
+             * *   OVERSEAS: nodes outside the Chinese mainland
+             * *   ISP: ISP nodes
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -1120,7 +1140,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * The code of the ISP to which the monitored node belongs.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -1128,7 +1148,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * The display name of the ISP to which the monitored node belongs.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;

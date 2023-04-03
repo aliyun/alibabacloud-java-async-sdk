@@ -111,7 +111,7 @@ public class ChangeDomainOfDnsProductRequest extends Request {
         } 
 
         /**
-         * Force.
+         * Specifies whether to force bind a domain name to the instance.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -120,7 +120,7 @@ public class ChangeDomainOfDnsProductRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Alibaba Cloud DNS instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +129,7 @@ public class ChangeDomainOfDnsProductRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,7 +138,7 @@ public class ChangeDomainOfDnsProductRequest extends Request {
         }
 
         /**
-         * NewDomain.
+         * The domain name that you want to bind to the instance. If you do not specify this parameter, this operation unbinds the original domain name from the instance.
          */
         public Builder newDomain(String newDomain) {
             this.putQueryParameter("NewDomain", newDomain);
@@ -147,7 +147,7 @@ public class ChangeDomainOfDnsProductRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

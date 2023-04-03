@@ -143,7 +143,7 @@ public class DescribeDnsGtmLogsRequest extends Request {
         } 
 
         /**
-         * EndTimestamp.
+         * The timestamp that specifies the end of the time range to query.
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -152,7 +152,7 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,7 +161,7 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -170,7 +170,7 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -179,7 +179,7 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +188,7 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +197,7 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The timestamp that specifies the beginning of the time range to query.
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

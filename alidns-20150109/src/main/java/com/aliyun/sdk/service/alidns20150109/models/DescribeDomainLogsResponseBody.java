@@ -86,7 +86,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DomainLogs.
+         * The details about the operation logs that are queried.
          */
         public Builder domainLogs(DomainLogs domainLogs) {
             this.domainLogs = domainLogs;
@@ -94,7 +94,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of operation logs returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of operation logs returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Action.
+             * The operation performed.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -238,7 +238,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ActionTime.
+             * The time when the operation was performed.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -246,7 +246,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ActionTimestamp.
+             * The UNIX timestamp that indicates when the operation was performed.
              */
             public Builder actionTimestamp(Long actionTimestamp) {
                 this.actionTimestamp = actionTimestamp;
@@ -254,7 +254,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * The IP address from which the operation was performed.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -262,7 +262,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -270,7 +270,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message for the operation.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -278,7 +278,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

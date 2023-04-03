@@ -97,7 +97,7 @@ public class DescribeTagsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +106,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number to return. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +115,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Default value: 200.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +124,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resources from which you want to query tags. Set the value to DOMAIN.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

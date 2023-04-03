@@ -62,7 +62,7 @@ public class AddDomainBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -70,7 +70,7 @@ public class AddDomainBackupResponseBody extends TeaModel {
         }
 
         /**
-         * PeriodType.
+         * The backup cycle.
          */
         public Builder periodType(String periodType) {
             this.periodType = periodType;
@@ -78,7 +78,7 @@ public class AddDomainBackupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -84,7 +84,7 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +93,7 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +102,11 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends Request {
         }
 
         /**
-         * StrategyMode.
+         * The access policy type. Valid values:
+         * <p>
+         * 
+         * *   GEO: geographical location-based
+         * *   LATENCY: latency-based
          */
         public Builder strategyMode(String strategyMode) {
             this.putQueryParameter("StrategyMode", strategyMode);

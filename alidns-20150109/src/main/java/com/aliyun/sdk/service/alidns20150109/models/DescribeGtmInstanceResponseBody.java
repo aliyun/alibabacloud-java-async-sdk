@@ -230,7 +230,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         private String versionCode; 
 
         /**
-         * AccessStrategyNum.
+         * The number of access policies of the GTM instance.
          */
         public Builder accessStrategyNum(Integer accessStrategyNum) {
             this.accessStrategyNum = accessStrategyNum;
@@ -238,7 +238,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AddressPoolNum.
+         * The number of address pools of the GTM instance.
          */
         public Builder addressPoolNum(Integer addressPoolNum) {
             this.addressPoolNum = addressPoolNum;
@@ -246,7 +246,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AlertGroup.
+         * The alert group of the GTM instance.
          */
         public Builder alertGroup(String alertGroup) {
             this.alertGroup = alertGroup;
@@ -254,7 +254,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Cname.
+         * The domain name of the GTM instance to which the service domain name is mapped by using a CNAME record.
          */
         public Builder cname(String cname) {
             this.cname = cname;
@@ -262,7 +262,11 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CnameMode.
+         * Indicates whether the CNAME is a custom domain name or is assigned by the system. Valid values:
+         * <p>
+         * 
+         * *   **SYSTEM_ASSIGN**
+         * *   **CUSTOM**
          */
         public Builder cnameMode(String cnameMode) {
             this.cnameMode = cnameMode;
@@ -270,7 +274,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the GTM instance was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -278,7 +282,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * The timestamp that indicates the time when the GTM instance was created.
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -286,7 +290,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * The time when the GTM instance expires.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -294,7 +298,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTimestamp.
+         * The timestamp that indicates the time when the GTM instance expires.
          */
         public Builder expireTimestamp(Long expireTimestamp) {
             this.expireTimestamp = expireTimestamp;
@@ -302,7 +306,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -310,7 +314,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * The name of the GTM instance.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -318,7 +322,11 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * LbaStrategy.
+         * The load balancing policy. Valid values:
+         * <p>
+         * 
+         * *   **ALL_RR**: round robin
+         * *   **RATIO**: weighted round-robin
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.lbaStrategy = lbaStrategy;
@@ -326,7 +334,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -334,7 +342,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -342,7 +350,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Ttl.
+         * The global time to live (TTL).
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -350,7 +358,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserDomainName.
+         * The domain name of the application.
          */
         public Builder userDomainName(String userDomainName) {
             this.userDomainName = userDomainName;
@@ -358,7 +366,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * VersionCode.
+         * The version code.
          */
         public Builder versionCode(String versionCode) {
             this.versionCode = versionCode;

@@ -98,7 +98,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * Logs.
+         * The returned logs.
          */
         public Builder logs(Logs logs) {
             this.logs = logs;
@@ -106,7 +106,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned on all pages.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -262,7 +262,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             private Long operTimestamp; 
 
             /**
-             * Content.
+             * The formatted message content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -270,7 +270,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * The ID of the object on which the operation was performed.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -278,7 +278,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityName.
+             * The name of the object on which the operation was performed.
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -286,7 +286,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The type of the object on which the operation was performed.
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -294,7 +294,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the record.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -302,7 +302,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperAction.
+             * The operation performed.
              */
             public Builder operAction(String operAction) {
                 this.operAction = operAction;
@@ -310,7 +310,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperTime.
+             * The time when the operation was performed.
              */
             public Builder operTime(String operTime) {
                 this.operTime = operTime;
@@ -318,7 +318,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperTimestamp.
+             * The timestamp of the operation.
              */
             public Builder operTimestamp(Long operTimestamp) {
                 this.operTimestamp = operTimestamp;

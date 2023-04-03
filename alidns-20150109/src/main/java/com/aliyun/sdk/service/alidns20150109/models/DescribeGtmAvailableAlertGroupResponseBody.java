@@ -50,7 +50,7 @@ public class DescribeGtmAvailableAlertGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableAlertGroup.
+         * The available alert groups of the GTM instance.
          */
         public Builder availableAlertGroup(String availableAlertGroup) {
             this.availableAlertGroup = availableAlertGroup;
@@ -58,7 +58,7 @@ public class DescribeGtmAvailableAlertGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

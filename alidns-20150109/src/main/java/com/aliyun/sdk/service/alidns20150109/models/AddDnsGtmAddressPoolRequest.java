@@ -230,7 +230,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * Addr.
+         * The addresses in the address pool.
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -239,7 +239,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * EvaluationCount.
+         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -248,7 +248,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance for which you want to create an address pool.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -257,7 +257,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The health check interval. Unit: seconds.
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -266,7 +266,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * IspCityNode.
+         * The monitored nodes.
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -275,7 +275,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -284,7 +284,11 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * LbaStrategy.
+         * The load balancing policy for the address pool. Valid values:
+         * <p>
+         * 
+         * *   ALL_RR: returns all addresses.
+         * *   RATIO: returns addresses by weight.
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.putQueryParameter("LbaStrategy", lbaStrategy);
@@ -293,7 +297,54 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * MonitorExtendInfo.
+         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+         * <p>
+         * 
+         * *   HTTP or HTTPS:
+         * 
+         *     *   port: the port to check.
+         * 
+         *     *   host: the host configuration.
+         * 
+         *     *   path: the health check URL.
+         * 
+         *     *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal.
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   sni: specifies whether to enable Server Name Indication (SNI). This parameter is only required for the HTTPS protocol. Valid values:
+         * 
+         *         *   true: enables SNI.
+         *         *   Other value: disables SNI.
+         * 
+         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
+         * 
+         * *   PING:
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   packetNum: the number of ping packets.
+         * 
+         *     *   packetLossRate: the loss rate of ping packets.
+         * 
+         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
+         * 
+         * *   TCP:
+         * 
+         *     *   port: the port to check.
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -302,7 +353,11 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * MonitorStatus.
+         * Specifies whether to enable the health check. If this parameter is set to OPEN, the system validates the health check configuration. If this parameter is set to CLOSE, the health check configuration is discarded. Default value: CLOSE. Valid values:
+         * <p>
+         * 
+         * *   OPEN: enables the health check.
+         * *   CLOSE: disables the health check.
          */
         public Builder monitorStatus(String monitorStatus) {
             this.putQueryParameter("MonitorStatus", monitorStatus);
@@ -311,7 +366,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the address pool that you want to create.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -320,7 +375,13 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The protocol used for the health check. Valid values:
+         * <p>
+         * 
+         * *   HTTP
+         * *   HTTPS
+         * *   PING
+         * *   TCP
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -329,7 +390,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The health check timeout period. Unit: milliseconds.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -338,7 +399,12 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the address pool. Valid values:
+         * <p>
+         * 
+         * *   IPV4: IPv4 address
+         * *   IPV6: IPv6 address
+         * *   DOMAIN: domain name
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -431,7 +497,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             private String remark; 
 
             /**
-             * Addr.
+             * The address.
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -439,7 +505,16 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * AttributeInfo.
+             * The source region of the address. The value is a JSON string.
+             * <p>
+             * 
+             * *   lineCode: the line code of the source region of the address.
+             * 
+             * *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
+             * 
+             *     *   NO_NEED: no need for rectification
+             *     *   RECTIFIED: rectified
+             *     *   AUTO: automatic rectification
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -447,7 +522,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -455,7 +530,12 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * Mode.
+             * The mode of the address. Valid values:
+             * <p>
+             * 
+             * *   SMART: smart return
+             * *   ONLINE: always online
+             * *   OFFLINE: always offline
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -463,7 +543,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * Remark.
+             * The description of the address.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -516,7 +596,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             private String ispCode; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -524,7 +604,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * IspCode.
+             * The code of the Internet service provider (ISP) to which the monitored node belongs.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

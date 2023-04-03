@@ -82,7 +82,7 @@ public class DescribeSupportLinesRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -91,7 +91,7 @@ public class DescribeSupportLinesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +100,7 @@ public class DescribeSupportLinesRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

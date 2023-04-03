@@ -106,7 +106,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +115,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * LineId.
+         * The unique ID of the custom line.
          */
         public Builder lineId(Long lineId) {
             this.putQueryParameter("LineId", lineId);
@@ -124,7 +124,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * LineName.
+         * The new name of the custom line.
          */
         public Builder lineName(String lineName) {
             this.putQueryParameter("LineName", lineName);
@@ -178,7 +178,7 @@ public class UpdateCustomLineRequest extends Request {
             private String startIp; 
 
             /**
-             * EndIp.
+             * The end IP address of the CIDR block.
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -186,7 +186,7 @@ public class UpdateCustomLineRequest extends Request {
             }
 
             /**
-             * StartIp.
+             * The start IP address of the CIDR block.
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

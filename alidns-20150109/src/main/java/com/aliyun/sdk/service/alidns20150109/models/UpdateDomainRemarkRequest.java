@@ -83,7 +83,7 @@ public class UpdateDomainRemarkRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name in Alibaba Cloud DNS.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +92,7 @@ public class UpdateDomainRemarkRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +101,7 @@ public class UpdateDomainRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The description of your domain name.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

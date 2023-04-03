@@ -98,7 +98,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * GtmInstances.
+         * The returned instances.
          */
         public Builder gtmInstances(java.util.List < GtmInstances> gtmInstances) {
             this.gtmInstances = gtmInstances;
@@ -106,7 +106,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned on all pages.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of returned pages.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -222,7 +222,11 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EmailNotice.
+             * Indicates whether email notifications were configured. Valid values:
+             * <p>
+             * 
+             * *   true: configured
+             * *   false | null: not configured
              */
             public Builder emailNotice(String emailNotice) {
                 this.emailNotice = emailNotice;
@@ -230,7 +234,14 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NoticeType.
+             * The type of the alert event. Valid values:
+             * <p>
+             * 
+             * *   ADDR_ALERT: The address is unavailable.
+             * *   ADDR_RESUME: The address is restored and becomes available.
+             * *   ADDR_POOL_GROUP_UNAVAILABLE: The address pool group is unavailable.
+             * *   ADDR_POOL_GROUP_AVAILABLE: The address pool group is restored and becomes available.
+             * *   ACCESS_STRATEGY_POOL_GROUP_SWITCH: Switchover is triggered between the primary and secondary address pools.
              */
             public Builder noticeType(String noticeType) {
                 this.noticeType = noticeType;
@@ -238,7 +249,11 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SmsNotice.
+             * Indicates whether SMS notifications were configured. Valid values:
+             * <p>
+             * 
+             * *   true: configured
+             * *   false | null: not configured
              */
             public Builder smsNotice(String smsNotice) {
                 this.smsNotice = smsNotice;
@@ -387,7 +402,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             private Integer ttl; 
 
             /**
-             * AlertConfig.
+             * The alert notification methods.
              */
             public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
                 this.alertConfig = alertConfig;
@@ -395,7 +410,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertGroup.
+             * The alert group.
              */
             public Builder alertGroup(String alertGroup) {
                 this.alertGroup = alertGroup;
@@ -403,7 +418,10 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CnameType.
+             * The access type of the CNAME domain name.
+             * <p>
+             * 
+             * *   The value was set to PUBLIC, which indicates Internet access.
              */
             public Builder cnameType(String cnameType) {
                 this.cnameType = cnameType;
@@ -411,7 +429,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -419,7 +437,11 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicCnameMode.
+             * Indicates whether a custom CNAME domain name or a CNAME domain name assigned by the system is used to access GTM over the Internet. Valid values:
+             * <p>
+             * 
+             * *   CUSTOM: a custom CNAME domain name
+             * *   SYSTEM_ASSIGN: a CNAME domain name assigned by the system
              */
             public Builder publicCnameMode(String publicCnameMode) {
                 this.publicCnameMode = publicCnameMode;
@@ -435,7 +457,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicUserDomainName.
+             * The website domain name that the user uses on the Internet.
              */
             public Builder publicUserDomainName(String publicUserDomainName) {
                 this.publicUserDomainName = publicUserDomainName;
@@ -443,7 +465,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicZoneName.
+             * The domain name that is used to access GTM over the Internet.
              */
             public Builder publicZoneName(String publicZoneName) {
                 this.publicZoneName = publicZoneName;
@@ -451,7 +473,11 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyMode.
+             * The type of the access policy. Valid values:
+             * <p>
+             * 
+             * *   LATENCY: latency-based
+             * *   GEO: geographical location-based
              */
             public Builder strategyMode(String strategyMode) {
                 this.strategyMode = strategyMode;
@@ -459,7 +485,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * The global time to live (TTL).
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -544,7 +570,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EmailUsedCount.
+             * The total number of email notifications that were sent.
              */
             public Builder emailUsedCount(Integer emailUsedCount) {
                 this.emailUsedCount = emailUsedCount;
@@ -552,7 +578,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SmsUsedCount.
+             * The total number of SMS notifications that were sent.
              */
             public Builder smsUsedCount(Integer smsUsedCount) {
                 this.smsUsedCount = smsUsedCount;
@@ -560,7 +586,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskUsedCount.
+             * The number of detection tasks that were created.
              */
             public Builder taskUsedCount(Integer taskUsedCount) {
                 this.taskUsedCount = taskUsedCount;
@@ -733,7 +759,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             private String versionCode; 
 
             /**
-             * Config.
+             * The configurations of the instance.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -741,7 +767,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -749,7 +775,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The timestamp that indicates when the instance was created.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -757,7 +783,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the instance expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -765,7 +791,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTimestamp.
+             * The timestamp that indicates when the instance expires.
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
@@ -773,7 +799,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -781,7 +807,10 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentType.
+             * The billing method of the instance.
+             * <p>
+             * 
+             * *   The value is set to Subscription.
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -789,7 +818,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -797,7 +826,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SmsQuota.
+             * The total number of SMS notifications.
              */
             public Builder smsQuota(Integer smsQuota) {
                 this.smsQuota = smsQuota;
@@ -805,7 +834,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskQuota.
+             * The total number of detection tasks.
              */
             public Builder taskQuota(Integer taskQuota) {
                 this.taskQuota = taskQuota;
@@ -813,7 +842,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedQuota.
+             * The used quota.
              */
             public Builder usedQuota(UsedQuota usedQuota) {
                 this.usedQuota = usedQuota;
@@ -821,7 +850,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionCode.
+             * The version of the instance.
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;

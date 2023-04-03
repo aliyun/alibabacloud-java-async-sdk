@@ -153,7 +153,7 @@ public class DescribeDomainsRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the domain name group. If you do not specify this parameter, all domain names are queried by default.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -162,7 +162,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -171,7 +171,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -180,7 +180,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +189,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +198,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -207,7 +207,11 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * SearchMode.
+         * The search mode. Valid values:
+         * <p>
+         * 
+         * *   **LIKE**: fuzzy match.
+         * *   **EXACT**: exact match.
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -216,7 +220,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * Starmark.
+         * Specifies whether to query the starmark of the domain name.
          */
         public Builder starmark(Boolean starmark) {
             this.putQueryParameter("Starmark", starmark);

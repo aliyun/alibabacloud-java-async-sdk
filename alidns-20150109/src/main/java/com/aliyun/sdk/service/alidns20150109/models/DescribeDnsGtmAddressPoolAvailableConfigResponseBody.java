@@ -50,7 +50,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * AttributeInfos.
+         * The supported source regions.
          */
         public Builder attributeInfos(AttributeInfos attributeInfos) {
             this.attributeInfos = attributeInfos;
@@ -58,7 +58,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             private String lineName; 
 
             /**
-             * FatherCode.
+             * The parent line code of the source region.
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -154,7 +154,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * GroupCode.
+             * The code of the source region group.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -162,7 +162,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * GroupName.
+             * The name of the request source group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -170,7 +170,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * LineCode.
+             * The line code of the source region.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -178,7 +178,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * LineName.
+             * The line name of the source region.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;

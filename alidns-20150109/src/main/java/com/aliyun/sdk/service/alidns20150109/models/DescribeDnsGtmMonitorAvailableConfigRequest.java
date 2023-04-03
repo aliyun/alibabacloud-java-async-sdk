@@ -54,7 +54,7 @@ public class DescribeDnsGtmMonitorAvailableConfigRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

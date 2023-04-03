@@ -54,7 +54,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

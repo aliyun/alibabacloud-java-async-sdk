@@ -127,7 +127,7 @@ public class DescribeRecordStatisticsRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -145,7 +145,10 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * <p>
+         * 
+         * The default value is the day when you perform the operation.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -154,7 +157,7 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -163,7 +166,10 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * Rr.
+         * The DNS record.
+         * <p>
+         * 
+         * The host record. For example, to resolve `www.dns-exmaple.com`, you must set Rr to www.
          */
         public Builder rr(String rr) {
             this.putQueryParameter("Rr", rr);
@@ -172,7 +178,10 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * <p>
+         * 
+         * You can only query DNS records of the last 90 days.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

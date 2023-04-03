@@ -129,7 +129,7 @@ public class AddGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * AccessLines.
+         * The line codes of access regions.
          */
         public Builder accessLines(String accessLines) {
             this.putQueryParameter("AccessLines", accessLines);
@@ -138,7 +138,7 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * DefaultAddrPoolId.
+         * The ID of the default address pool.
          */
         public Builder defaultAddrPoolId(String defaultAddrPoolId) {
             this.putQueryParameter("DefaultAddrPoolId", defaultAddrPoolId);
@@ -147,7 +147,10 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * FailoverAddrPoolId.
+         * The ID of the failover address pool.
+         * <p>
+         * 
+         * If the failover address pool is not set, pass the **Empty** value.
          */
         public Builder failoverAddrPoolId(String failoverAddrPoolId) {
             this.putQueryParameter("FailoverAddrPoolId", failoverAddrPoolId);
@@ -156,7 +159,7 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance for which you want to create an access policy.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,7 +168,7 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +177,7 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * The name of the access policy.
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

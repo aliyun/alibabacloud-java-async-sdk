@@ -97,7 +97,7 @@ public class PreviewGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +106,7 @@ public class PreviewGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +115,7 @@ public class PreviewGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on per page. Maximum value: **20**. Default value: **5**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +124,7 @@ public class PreviewGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * RecoveryPlanId.
+         * The ID of the disaster recovery plan that you want to preview.
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.putQueryParameter("RecoveryPlanId", recoveryPlanId);

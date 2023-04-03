@@ -86,7 +86,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * BatchResultDetails.
+         * Detailed information about the batch operation result.
          */
         public Builder batchResultDetails(BatchResultDetails batchResultDetails) {
             this.batchResultDetails = batchResultDetails;
@@ -94,7 +94,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -338,7 +338,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * BatchType.
+             * The type of the batch operation.
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -346,7 +346,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -354,7 +354,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Line.
+             * The line code.
              */
             public Builder line(String line) {
                 this.line = line;
@@ -362,7 +362,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NewRr.
+             * The new host record.
              */
             public Builder newRr(String newRr) {
                 this.newRr = newRr;
@@ -370,7 +370,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NewValue.
+             * The new record value.
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -378,7 +378,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OperateDateStr.
+             * The time when the operation was performed.
              */
             public Builder operateDateStr(String operateDateStr) {
                 this.operateDateStr = operateDateStr;
@@ -386,7 +386,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of an MX-type DNS record.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -394,7 +394,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the execution failure.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -402,7 +402,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * The ID of the DNS record.
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -410,7 +410,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The description of the DNS record.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -418,7 +418,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Rr.
+             * The host record.
              */
             public Builder rr(String rr) {
                 this.rr = rr;
@@ -426,7 +426,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RrStatus.
+             * The status of the DNS record.
              */
             public Builder rrStatus(String rrStatus) {
                 this.rrStatus = rrStatus;
@@ -434,7 +434,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The execution result. Valid values:**true**: The execution succeeded.**false**: The execution failed.
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -442,7 +442,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * The TTL of the DNS record.
              */
             public Builder ttl(String ttl) {
                 this.ttl = ttl;
@@ -450,7 +450,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the DNS record.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -458,7 +458,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the DNS record.
              */
             public Builder value(String value) {
                 this.value = value;

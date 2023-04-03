@@ -69,7 +69,7 @@ public class DescribeDnsGtmMonitorConfigRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +78,7 @@ public class DescribeDnsGtmMonitorConfigRequest extends Request {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check task.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);

@@ -69,7 +69,7 @@ public class DescribeGtmInstanceStatusRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeGtmInstanceStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -50,7 +50,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Addr.
+         * The addresses that were queried.
          */
         public Builder addr(Addr addr) {
             this.addr = addr;
@@ -58,7 +58,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * FatherCode.
+             * The parent line code of the source region.
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -154,7 +154,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupCode.
+             * The code of the source region group.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -162,7 +162,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the source region group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -170,7 +170,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LineCode.
+             * The line code of the source region.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -178,7 +178,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LineName.
+             * The line name of the source region.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -231,7 +231,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             private AttributeInfo attributeInfo; 
 
             /**
-             * Addr.
+             * The address that was queried.
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -239,7 +239,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeInfo.
+             * The source region of the address.
              */
             public Builder attributeInfo(AttributeInfo attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -280,7 +280,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             private java.util.List < AddrAddr> addr; 
 
             /**
-             * Addr.
+             * The address that was queried.
              */
             public Builder addr(java.util.List < AddrAddr> addr) {
                 this.addr = addr;

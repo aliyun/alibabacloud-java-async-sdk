@@ -84,7 +84,7 @@ public class SetDnsGtmMonitorStatusRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -93,7 +93,7 @@ public class SetDnsGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check task.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -102,7 +102,11 @@ public class SetDnsGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether to enable the health check feature. Valid values:
+         * <p>
+         * 
+         * *   OPEN: enable
+         * *   CLOSE: disable
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -97,7 +97,7 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +106,7 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * The ID of the DNS record.
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -115,7 +115,7 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The description of your DNS record.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -124,7 +124,7 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

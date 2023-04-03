@@ -69,7 +69,7 @@ public class DescribeGtmMonitorConfigRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +78,7 @@ public class DescribeGtmMonitorConfigRequest extends Request {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check configuration.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);

@@ -97,7 +97,7 @@ public class AddDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name to be added.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,7 +106,7 @@ public class AddDomainRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the domain name group. The default value is the ID of the default domain name group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -115,7 +115,7 @@ public class AddDomainRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the domain name.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +124,7 @@ public class AddDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

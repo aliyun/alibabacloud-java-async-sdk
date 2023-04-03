@@ -98,7 +98,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * AddrPools.
+         * The returned list of address pools of the GTM instance.
          */
         public Builder addrPools(AddrPools addrPools) {
             this.addrPools = addrPools;
@@ -106,7 +106,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned on all pages.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -310,7 +310,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * AddrCount.
+             * The number of addresses in the address pool.
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -318,7 +318,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AddrPoolId.
+             * The ID of the address pool.
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -326,7 +326,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when this address pool was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -342,7 +342,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * MinAvailableAddrNum.
+             * The minimum number of available addresses in the address pool.
              */
             public Builder minAvailableAddrNum(Integer minAvailableAddrNum) {
                 this.minAvailableAddrNum = minAvailableAddrNum;
@@ -350,7 +350,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorConfigId.
+             * The health check ID of the address pool.
              */
             public Builder monitorConfigId(String monitorConfigId) {
                 this.monitorConfigId = monitorConfigId;
@@ -358,7 +358,12 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorStatus.
+             * Indicates whether health check was enabled for the address pool. Valid values:
+             * <p>
+             * 
+             * *   **OPEN**: Enabled
+             * *   **CLOSE**: Disabled
+             * *   **UNCONFIGURED**: Not configured
              */
             public Builder monitorStatus(String monitorStatus) {
                 this.monitorStatus = monitorStatus;
@@ -366,7 +371,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the address pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -374,7 +379,11 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The availability status of the address pool. Valid values:
+             * <p>
+             * 
+             * *   **AVAILABLE**: Available
+             * *   **NOT_AVAILABLE**: Unavailable
              */
             public Builder status(String status) {
                 this.status = status;
@@ -382,7 +391,11 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the address pool. Valid values:
+             * <p>
+             * 
+             * *   **IP**: IP address
+             * *   **DOMAIN**: Domain name
              */
             public Builder type(String type) {
                 this.type = type;
@@ -390,7 +403,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The last time when the address pool was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -398,7 +411,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * A timestamp that indicates the last time the address pool was updated.
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;

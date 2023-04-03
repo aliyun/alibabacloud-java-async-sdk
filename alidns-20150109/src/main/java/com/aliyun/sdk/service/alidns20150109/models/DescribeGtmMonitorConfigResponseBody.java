@@ -170,7 +170,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * CreateTime.
+         * The time when the health check configuration was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -178,7 +178,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * The timestamp that indicates the time when the health check configuration was created.
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -186,7 +186,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EvaluationCount.
+         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.evaluationCount = evaluationCount;
@@ -194,7 +194,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * The health check interval. Unit: seconds. The value is 60.
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -202,7 +202,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * IspCityNodes.
+         * The monitored nodes.
          */
         public Builder ispCityNodes(IspCityNodes ispCityNodes) {
             this.ispCityNodes = ispCityNodes;
@@ -210,7 +210,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check configuration.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -218,7 +218,27 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorExtendInfo.
+         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+         * <p>
+         * 
+         * HTTP or HTTPS:
+         * 
+         * *   port: the port to check.
+         * *   failureRate: the failure rate.
+         * *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.
+         * *   host: the host configuration.
+         * *   path: the health check URL.
+         * 
+         * PING:
+         * 
+         * *   packetNum: the number of ping packets.
+         * *   packetLossRate: the loss rate of ping packets.
+         * *   failureRate: the failure rate.
+         * 
+         * TCP:
+         * 
+         * *   port: the port to check.
+         * *   failureRate: the failure rate.
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.monitorExtendInfo = monitorExtendInfo;
@@ -226,7 +246,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ProtocolType.
+         * The protocol used for the health check.
          */
         public Builder protocolType(String protocolType) {
             this.protocolType = protocolType;
@@ -234,7 +254,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +262,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Timeout.
+         * The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -250,7 +270,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The time when the health check configuration was last updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -258,7 +278,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * The timestamp that indicates the time when the health check configuration was last updated.
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -358,7 +378,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -366,7 +386,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * The display name of the city where the monitored node is deployed.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -374,7 +394,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCode.
+             * The code of the country where the monitored node is deployed.
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -382,7 +402,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CountryName.
+             * The display name of the country where the monitored node is deployed.
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -390,7 +410,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * The code of the Internet service provider (ISP) to which the monitored node belongs.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -398,7 +418,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * The display name of the ISP to which the monitored node belongs.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;

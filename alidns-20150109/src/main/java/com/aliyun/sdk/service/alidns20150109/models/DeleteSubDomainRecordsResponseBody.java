@@ -62,7 +62,7 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * RR.
+         * The host record.
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -70,7 +70,7 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of deleted DNS records.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

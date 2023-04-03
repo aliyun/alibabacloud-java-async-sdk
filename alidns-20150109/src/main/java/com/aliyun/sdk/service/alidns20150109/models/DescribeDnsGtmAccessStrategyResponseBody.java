@@ -338,7 +338,12 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         private String strategyName; 
 
         /**
-         * AccessMode.
+         * The primary/secondary switchover policy for address pool groups. Valid values:
+         * <p>
+         * 
+         * *   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.
+         * *   DEFAULT: uses the primary address pool group.
+         * *   FAILOVER: uses the secondary address pool group.
          */
         public Builder accessMode(String accessMode) {
             this.accessMode = accessMode;
@@ -346,7 +351,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the access policy was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -354,7 +359,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * The timestamp that indicates when the access policy was created.
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -362,7 +367,11 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultAddrPoolGroupStatus.
+         * The status of the primary address pool group. Valid values:
+         * <p>
+         * 
+         * *   AVAILABLE: available
+         * *   NOT_AVAILABLE: unavailable
          */
         public Builder defaultAddrPoolGroupStatus(String defaultAddrPoolGroupStatus) {
             this.defaultAddrPoolGroupStatus = defaultAddrPoolGroupStatus;
@@ -370,7 +379,12 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultAddrPoolType.
+         * The type of the primary address pool. Valid values:
+         * <p>
+         * 
+         * *   IPV4
+         * *   IPV6
+         * *   DOMAIN
          */
         public Builder defaultAddrPoolType(String defaultAddrPoolType) {
             this.defaultAddrPoolType = defaultAddrPoolType;
@@ -378,7 +392,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultAddrPools.
+         * The address pools in the primary address pool group.
          */
         public Builder defaultAddrPools(DefaultAddrPools defaultAddrPools) {
             this.defaultAddrPools = defaultAddrPools;
@@ -386,7 +400,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultAvailableAddrNum.
+         * The number of available addresses in the primary address pool.
          */
         public Builder defaultAvailableAddrNum(Integer defaultAvailableAddrNum) {
             this.defaultAvailableAddrNum = defaultAvailableAddrNum;
@@ -394,7 +408,11 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultLatencyOptimization.
+         * Indicates whether scheduling optimization for latency resolution was enabled for the primary address pool group. Valid values:
+         * <p>
+         * 
+         * *   OPEN: enabled
+         * *   CLOSE: disabled
          */
         public Builder defaultLatencyOptimization(String defaultLatencyOptimization) {
             this.defaultLatencyOptimization = defaultLatencyOptimization;
@@ -402,7 +420,11 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultLbaStrategy.
+         * The load balancing policy of the primary address pool group. Valid values:
+         * <p>
+         * 
+         * *   ALL_RR: returns all addresses.
+         * *   RATIO: returns addresses by weight.
          */
         public Builder defaultLbaStrategy(String defaultLbaStrategy) {
             this.defaultLbaStrategy = defaultLbaStrategy;
@@ -410,7 +432,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultMaxReturnAddrNum.
+         * The maximum number of addresses returned from the primary address pool group.
          */
         public Builder defaultMaxReturnAddrNum(Integer defaultMaxReturnAddrNum) {
             this.defaultMaxReturnAddrNum = defaultMaxReturnAddrNum;
@@ -418,7 +440,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultMinAvailableAddrNum.
+         * The minimum number of available addresses in the primary address pool group.
          */
         public Builder defaultMinAvailableAddrNum(Integer defaultMinAvailableAddrNum) {
             this.defaultMinAvailableAddrNum = defaultMinAvailableAddrNum;
@@ -426,7 +448,11 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * EffectiveAddrPoolGroupType.
+         * The type of the active address pool group. Valid values:
+         * <p>
+         * 
+         * *   DEFAULT: the primary address pool group
+         * *   FAILOVER: the secondary address pool group
          */
         public Builder effectiveAddrPoolGroupType(String effectiveAddrPoolGroupType) {
             this.effectiveAddrPoolGroupType = effectiveAddrPoolGroupType;
@@ -434,7 +460,11 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverAddrPoolGroupStatus.
+         * The status of the secondary address pool group. Valid values:
+         * <p>
+         * 
+         * *   AVAILABLE: available
+         * *   NOT_AVAILABLE: unavailable
          */
         public Builder failoverAddrPoolGroupStatus(String failoverAddrPoolGroupStatus) {
             this.failoverAddrPoolGroupStatus = failoverAddrPoolGroupStatus;
@@ -442,7 +472,12 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverAddrPoolType.
+         * The type of the secondary address pool. Valid values:
+         * <p>
+         * 
+         * *   IPV4
+         * *   IPV6
+         * *   DOMAIN
          */
         public Builder failoverAddrPoolType(String failoverAddrPoolType) {
             this.failoverAddrPoolType = failoverAddrPoolType;
@@ -450,7 +485,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverAddrPools.
+         * The address pools in the secondary address pool group.
          */
         public Builder failoverAddrPools(FailoverAddrPools failoverAddrPools) {
             this.failoverAddrPools = failoverAddrPools;
@@ -458,7 +493,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverAvailableAddrNum.
+         * The number of available addresses in the secondary address pool.
          */
         public Builder failoverAvailableAddrNum(Integer failoverAvailableAddrNum) {
             this.failoverAvailableAddrNum = failoverAvailableAddrNum;
@@ -466,7 +501,11 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverLatencyOptimization.
+         * Indicates whether scheduling optimization for latency resolution was enabled for the secondary address pool group. Valid values:
+         * <p>
+         * 
+         * *   OPEN: enabled
+         * *   CLOSE: disabled
          */
         public Builder failoverLatencyOptimization(String failoverLatencyOptimization) {
             this.failoverLatencyOptimization = failoverLatencyOptimization;
@@ -474,7 +513,11 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverLbaStrategy.
+         * The load balancing policy of the secondary address pool group. Valid values:
+         * <p>
+         * 
+         * *   ALL_RR: returns all addresses.
+         * *   RATIO: returns addresses by weight.
          */
         public Builder failoverLbaStrategy(String failoverLbaStrategy) {
             this.failoverLbaStrategy = failoverLbaStrategy;
@@ -482,7 +525,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverMaxReturnAddrNum.
+         * The maximum number of addresses returned from the secondary address pool group.
          */
         public Builder failoverMaxReturnAddrNum(Integer failoverMaxReturnAddrNum) {
             this.failoverMaxReturnAddrNum = failoverMaxReturnAddrNum;
@@ -490,7 +533,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverMinAvailableAddrNum.
+         * The minimum number of available addresses in the secondary address pool group.
          */
         public Builder failoverMinAvailableAddrNum(Integer failoverMinAvailableAddrNum) {
             this.failoverMinAvailableAddrNum = failoverMinAvailableAddrNum;
@@ -498,7 +541,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the associated instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -506,7 +549,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Lines.
+         * The source regions.
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -514,7 +557,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -522,7 +565,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyId.
+         * The ID of the access policy.
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;
@@ -530,7 +573,11 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyMode.
+         * The type of the access policy. Valid values:
+         * <p>
+         * 
+         * *   GEO: geographical location-based
+         * *   LATENCY: latency-based
          */
         public Builder strategyMode(String strategyMode) {
             this.strategyMode = strategyMode;
@@ -538,7 +585,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyName.
+         * The name of the access policy.
          */
         public Builder strategyName(String strategyName) {
             this.strategyName = strategyName;
@@ -614,7 +661,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AddrCount.
+             * The number of addresses in the address pool.
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -622,7 +669,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the address pool.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -630,7 +677,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address pool.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -638,7 +685,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the address pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -756,7 +803,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AddrCount.
+             * The number of addresses in the address pool.
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -764,7 +811,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the address pool.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -772,7 +819,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address pool.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -780,7 +827,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the address pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -898,7 +945,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * GroupCode.
+             * The code of the source region group.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -906,7 +953,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the source region group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -914,7 +961,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * LineCode.
+             * The line code of the source region.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -922,7 +969,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * LineName.
+             * The line name of the source region.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;

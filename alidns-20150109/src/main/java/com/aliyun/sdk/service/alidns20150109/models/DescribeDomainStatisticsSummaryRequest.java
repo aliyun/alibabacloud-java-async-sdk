@@ -154,7 +154,10 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * <p>
+         * 
+         * The default value is the day when you perform the operation.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -163,7 +166,7 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword for searches in %KeyWord% mode. The value is not case-sensitive.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -172,7 +175,7 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -181,7 +184,7 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +193,7 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **100**. Minimum value: **1**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +202,11 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * SearchMode.
+         * The search mode of the keyword. Valid values:
+         * <p>
+         * 
+         * *   **LIKE**: fuzzy match (default).
+         * *   **EXACT**: exact match.
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -208,7 +215,10 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * <p>
+         * 
+         * You can only query DNS records of the last 90 days.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -217,7 +227,7 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * The threshold of query volume that can be obtained. You can also obtain data about a domain name with the query volume less than or equal to the threshold. For example, if you set this parameter to 100, you can query domain names with less than 100 queries.
          */
         public Builder threshold(Long threshold) {
             this.putQueryParameter("Threshold", threshold);

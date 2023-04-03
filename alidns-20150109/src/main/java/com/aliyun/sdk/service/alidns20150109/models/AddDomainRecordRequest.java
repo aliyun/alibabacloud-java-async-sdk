@@ -172,7 +172,7 @@ public class AddDomainRecordRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -181,7 +181,7 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -190,7 +190,7 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * Line.
+         * The resolution line. Default value: **default**.
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -199,7 +199,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of an MX-type DNS record. Valid values: `[1,50]`.
+         * <p>
+         * 
+         * This parameter must be specified if the type of the DNS record is MX. A smaller value indicates a higher priority.
          */
         public Builder priority(Long priority) {
             this.putQueryParameter("Priority", priority);
@@ -208,7 +211,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * RR.
+         * The host record.
+         * <p>
+         * 
+         * For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.
          */
         public Builder rr(String rr) {
             this.putQueryParameter("RR", rr);
@@ -217,7 +223,7 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * TTL.
+         * The TTL of the resolution. Default value: 600. Unit: seconds.
          */
         public Builder TTL(Long TTL) {
             this.putQueryParameter("TTL", TTL);
@@ -226,7 +232,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the DNS record. DNS record types
+         * <p>
+         * 
+         * [dns records types](https://www.alibabacloud.com/help/en/alibaba-cloud-dns/latest/dns-record-types)
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -235,7 +244,7 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -244,7 +253,7 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the DNS record.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

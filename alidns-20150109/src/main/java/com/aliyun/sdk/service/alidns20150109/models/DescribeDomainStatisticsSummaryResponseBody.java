@@ -98,7 +98,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Statistics.
+         * The list of query volume records.
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -130,7 +130,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of data records.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of returned pages.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -202,7 +202,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
             private String domainType; 
 
             /**
-             * Count.
+             * The number of queries.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -210,7 +210,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

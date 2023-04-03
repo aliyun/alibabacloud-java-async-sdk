@@ -112,7 +112,7 @@ public class DescribeDnsGtmInstancesRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The keyword that you use for query. Fuzzy search by instance ID or instance name is supported.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -121,7 +121,7 @@ public class DescribeDnsGtmInstancesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -130,7 +130,7 @@ public class DescribeDnsGtmInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +139,7 @@ public class DescribeDnsGtmInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +148,7 @@ public class DescribeDnsGtmInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group where you want to query instances.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

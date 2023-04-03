@@ -98,7 +98,7 @@ public class SetDomainRecordStatusRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,7 +107,7 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * The ID of the DNS record.
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -116,7 +116,11 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the DNS record. Valid values:
+         * <p>
+         * 
+         * *   **Enable**: enables resolution.
+         * *   **Disable**: suspends resolution.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -125,7 +129,7 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

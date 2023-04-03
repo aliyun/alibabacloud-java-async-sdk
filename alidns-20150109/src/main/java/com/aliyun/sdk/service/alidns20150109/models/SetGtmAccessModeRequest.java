@@ -84,7 +84,12 @@ public class SetGtmAccessModeRequest extends Request {
         } 
 
         /**
-         * AccessMode.
+         * The target access policy of the GTM instance. Valid values:
+         * <p>
+         * 
+         * *   **AUTO**: Automatic switch
+         * *   **DEFAULT**: Default address pool
+         * *   **FAILOVER**: Failover address pool
          */
         public Builder accessMode(String accessMode) {
             this.putQueryParameter("AccessMode", accessMode);
@@ -93,7 +98,7 @@ public class SetGtmAccessModeRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +107,7 @@ public class SetGtmAccessModeRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the access policy.
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

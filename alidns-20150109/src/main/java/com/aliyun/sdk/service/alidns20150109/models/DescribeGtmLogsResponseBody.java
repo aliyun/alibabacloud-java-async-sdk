@@ -98,7 +98,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * Logs.
+         * The list of logs returned.
          */
         public Builder logs(Logs logs) {
             this.logs = logs;
@@ -106,7 +106,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned on all pages.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -274,7 +274,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             private Long operTimestamp; 
 
             /**
-             * Content.
+             * The formatted message content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -282,7 +282,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * The ID of the object that was operated on.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -290,7 +290,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityName.
+             * The name of the object that was operated on.
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -298,7 +298,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The type of the object that was operated on.
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -306,7 +306,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the log record.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -314,7 +314,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperAction.
+             * The operation performed.
              */
             public Builder operAction(String operAction) {
                 this.operAction = operAction;
@@ -322,7 +322,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperIp.
+             * The IP address subject to the operation.
              */
             public Builder operIp(String operIp) {
                 this.operIp = operIp;
@@ -330,7 +330,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperTime.
+             * The time when the operation was performed.
              */
             public Builder operTime(String operTime) {
                 this.operTime = operTime;
@@ -338,7 +338,7 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperTimestamp.
+             * A timestamp that indicates the time when the operation was performed.
              */
             public Builder operTimestamp(Long operTimestamp) {
                 this.operTimestamp = operTimestamp;

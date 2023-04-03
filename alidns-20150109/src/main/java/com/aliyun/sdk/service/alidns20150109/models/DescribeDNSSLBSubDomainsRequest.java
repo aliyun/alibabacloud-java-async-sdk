@@ -126,7 +126,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name whose subdomains you want to query.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -135,7 +135,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the domain name.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -144,7 +144,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,7 +153,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +171,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client that you use to query subdomains.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

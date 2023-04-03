@@ -206,7 +206,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * CreateTime.
+         * The time when the disaster recovery plan was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -222,7 +222,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * FaultAddrPoolNum.
+         * The number of faulty address pools.
          */
         public Builder faultAddrPoolNum(Integer faultAddrPoolNum) {
             this.faultAddrPoolNum = faultAddrPoolNum;
@@ -230,7 +230,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * FaultAddrPools.
+         * The list of faulty address pools.
          */
         public Builder faultAddrPools(FaultAddrPools faultAddrPools) {
             this.faultAddrPools = faultAddrPools;
@@ -238,7 +238,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * LastExecuteTime.
+         * The last time when the recovery plan was executed.
          */
         public Builder lastExecuteTime(String lastExecuteTime) {
             this.lastExecuteTime = lastExecuteTime;
@@ -246,7 +246,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * LastExecuteTimestamp.
+         * A timestamp that indicates the last time when the recovery plan was executed.
          */
         public Builder lastExecuteTimestamp(Long lastExecuteTimestamp) {
             this.lastExecuteTimestamp = lastExecuteTimestamp;
@@ -254,7 +254,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * LastRollbackTime.
+         * The last time when the disaster recovery plan was rolled back.
          */
         public Builder lastRollbackTime(String lastRollbackTime) {
             this.lastRollbackTime = lastRollbackTime;
@@ -262,7 +262,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * LastRollbackTimestamp.
+         * A timestamp that indicates the last time when the disaster recovery plan was rolled back.
          */
         public Builder lastRollbackTimestamp(Long lastRollbackTimestamp) {
             this.lastRollbackTimestamp = lastRollbackTimestamp;
@@ -270,7 +270,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the disaster recovery plan queried.
          */
         public Builder name(String name) {
             this.name = name;
@@ -278,7 +278,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RecoveryPlanId.
+         * The ID of the disaster recovery plan queried.
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.recoveryPlanId = recoveryPlanId;
@@ -286,7 +286,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * The remarks on the disaster recovery plan.
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -294,7 +294,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -302,7 +302,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the disaster recovery plan queried.
          */
         public Builder status(String status) {
             this.status = status;
@@ -310,7 +310,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The last time when the disaster recovery plan was updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -318,7 +318,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * A timestamp that indicates the last time when the disaster recovery plan was updated.
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -382,7 +382,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Id.
+             * The ID of the address.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -390,7 +390,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The address work mode. It is the mode that was set for the IP address to work.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -398,7 +398,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The address value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -516,7 +516,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * AddrPoolId.
+             * The ID of the address pool.
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -524,7 +524,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * AddrPoolName.
+             * The name of the address pool.
              */
             public Builder addrPoolName(String addrPoolName) {
                 this.addrPoolName = addrPoolName;
@@ -532,7 +532,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * Addrs.
+             * The list of addresses in the address pool.
              */
             public Builder addrs(Addrs addrs) {
                 this.addrs = addrs;
@@ -540,7 +540,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the GTM instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

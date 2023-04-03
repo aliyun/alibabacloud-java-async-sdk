@@ -50,7 +50,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * Instances.
+         * The list of GTM instances involved in the disaster recovery plan.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -58,7 +58,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             private String name; 
 
             /**
-             * AddrPoolId.
+             * The ID of the address pool.
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -118,7 +118,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * Name.
+             * The name of the address pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -224,7 +224,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             private String instanceName; 
 
             /**
-             * AddrPools.
+             * The list of address pools for the GTM instance.
              */
             public Builder addrPools(AddrPools addrPools) {
                 this.addrPools = addrPools;
@@ -232,7 +232,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * InstanceId.
+             * The ID of the GTM instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -240,7 +240,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * InstanceName.
+             * The name of the GTM instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

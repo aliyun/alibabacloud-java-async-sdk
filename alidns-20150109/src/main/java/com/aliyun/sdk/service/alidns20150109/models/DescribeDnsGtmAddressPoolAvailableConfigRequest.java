@@ -69,7 +69,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

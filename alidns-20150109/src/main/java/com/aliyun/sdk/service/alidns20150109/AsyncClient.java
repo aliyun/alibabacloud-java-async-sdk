@@ -18,6 +18,11 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      *
+     */
     CompletableFuture<AddCustomLineResponse> addCustomLine(AddCustomLineRequest request);
 
     CompletableFuture<AddDnsCacheDomainResponse> addDnsCacheDomain(AddDnsCacheDomainRequest request);
@@ -26,8 +31,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddDnsGtmAddressPoolResponse> addDnsGtmAddressPool(AddDnsGtmAddressPoolRequest request);
 
+    /**
+      * ***
+      *
+     */
     CompletableFuture<AddDnsGtmMonitorResponse> addDnsGtmMonitor(AddDnsGtmMonitorRequest request);
 
+    /**
+      * You can check whether a domain name is valid based on the following topic:
+      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+      *
+     */
     CompletableFuture<AddDomainResponse> addDomain(AddDomainRequest request);
 
     CompletableFuture<AddDomainBackupResponse> addDomainBackup(AddDomainBackupRequest request);
@@ -48,6 +62,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeDomainGroupResponse> changeDomainGroup(ChangeDomainGroupRequest request);
 
+    /**
+      * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
+      *
+     */
     CompletableFuture<ChangeDomainOfDnsProductResponse> changeDomainOfDnsProduct(ChangeDomainOfDnsProductRequest request);
 
     CompletableFuture<CopyGtmConfigResponse> copyGtmConfig(CopyGtmConfigRequest request);
@@ -64,8 +82,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDnsGtmAddressPoolResponse> deleteDnsGtmAddressPool(DeleteDnsGtmAddressPoolRequest request);
 
+    /**
+      * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
+      * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
+      *
+     */
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
+    /**
+      * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+      *
+     */
     CompletableFuture<DeleteDomainGroupResponse> deleteDomainGroup(DeleteDomainGroupRequest request);
 
     CompletableFuture<DeleteDomainRecordResponse> deleteDomainRecord(DeleteDomainRecordRequest request);
@@ -76,10 +103,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteGtmRecoveryPlanResponse> deleteGtmRecoveryPlan(DeleteGtmRecoveryPlanRequest request);
 
+    /**
+      * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
+      *
+     */
     CompletableFuture<DeleteSubDomainRecordsResponse> deleteSubDomainRecords(DeleteSubDomainRecordsRequest request);
 
     CompletableFuture<DescribeBatchResultCountResponse> describeBatchResultCount(DescribeBatchResultCountRequest request);
 
+    /**
+      * Before you call this operation, make sure that the batch tasks have been executed.
+      *
+     */
     CompletableFuture<DescribeBatchResultDetailResponse> describeBatchResultDetail(DescribeBatchResultDetailRequest request);
 
     CompletableFuture<DescribeCustomLineResponse> describeCustomLine(DescribeCustomLineRequest request);
@@ -122,6 +157,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDnsProductInstanceResponse> describeDnsProductInstance(DescribeDnsProductInstanceRequest request);
 
+    /**
+      * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+      *
+     */
     CompletableFuture<DescribeDnsProductInstancesResponse> describeDnsProductInstances(DescribeDnsProductInstancesRequest request);
 
     CompletableFuture<DescribeDohAccountStatisticsResponse> describeDohAccountStatistics(DescribeDohAccountStatisticsRequest request);
@@ -140,20 +179,47 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDomainGroupsResponse> describeDomainGroups(DescribeDomainGroupsRequest request);
 
+    /**
+      * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+      *
+     */
     CompletableFuture<DescribeDomainInfoResponse> describeDomainInfo(DescribeDomainInfoRequest request);
 
     CompletableFuture<DescribeDomainLogsResponse> describeDomainLogs(DescribeDomainLogsRequest request);
 
+    /**
+      * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
+      *
+     */
     CompletableFuture<DescribeDomainNsResponse> describeDomainNs(DescribeDomainNsRequest request);
 
     CompletableFuture<DescribeDomainRecordInfoResponse> describeDomainRecordInfo(DescribeDomainRecordInfoRequest request);
 
+    /**
+      * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
+      * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+      * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+      *
+     */
     CompletableFuture<DescribeDomainRecordsResponse> describeDomainRecords(DescribeDomainRecordsRequest request);
 
+    CompletableFuture<DescribeDomainResolveStatisticsSummaryResponse> describeDomainResolveStatisticsSummary(DescribeDomainResolveStatisticsSummaryRequest request);
+
+    /**
+      * Real-time data is collected per hour.
+      *
+     */
     CompletableFuture<DescribeDomainStatisticsResponse> describeDomainStatistics(DescribeDomainStatisticsRequest request);
 
     CompletableFuture<DescribeDomainStatisticsSummaryResponse> describeDomainStatisticsSummary(DescribeDomainStatisticsSummaryRequest request);
 
+    /**
+      * *   You can specify the PageNumber and PageSize parameters to query domain names.
+      * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
+      * *   By default, the domain names in a list are sorted in descending order of the time they were added.
+      * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
+      *
+     */
     CompletableFuture<DescribeDomainsResponse> describeDomains(DescribeDomainsRequest request);
 
     CompletableFuture<DescribeGtmAccessStrategiesResponse> describeGtmAccessStrategies(DescribeGtmAccessStrategiesRequest request);
@@ -222,6 +288,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRecordLogsResponse> describeRecordLogs(DescribeRecordLogsRequest request);
 
+    CompletableFuture<DescribeRecordResolveStatisticsSummaryResponse> describeRecordResolveStatisticsSummary(DescribeRecordResolveStatisticsSummaryRequest request);
+
+    /**
+      * Real-time data is collected per hour.
+      *
+     */
     CompletableFuture<DescribeRecordStatisticsResponse> describeRecordStatistics(DescribeRecordStatisticsRequest request);
 
     CompletableFuture<DescribeRecordStatisticsSummaryResponse> describeRecordStatisticsSummary(DescribeRecordStatisticsSummaryRequest request);
@@ -240,8 +312,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTxtRecordForVerifyResponse> getTxtRecordForVerify(GetTxtRecordForVerifyRequest request);
 
+    /**
+      * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+      * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
+      * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+      *
+     */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
+    /**
+      * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
+      * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
+      *
+     */
     CompletableFuture<ModifyHichinaDomainDNSResponse> modifyHichinaDomainDNS(ModifyHichinaDomainDNSRequest request);
 
     CompletableFuture<MoveDomainResourceGroupResponse> moveDomainResourceGroup(MoveDomainResourceGroupRequest request);
@@ -266,6 +350,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetDNSSLBStatusResponse> setDNSSLBStatus(SetDNSSLBStatusRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<SetDnsGtmAccessModeResponse> setDnsGtmAccessMode(SetDnsGtmAccessModeRequest request);
 
     CompletableFuture<SetDnsGtmMonitorStatusResponse> setDnsGtmMonitorStatus(SetDnsGtmMonitorStatusRequest request);
@@ -292,6 +380,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateAppKeyStateResponse> updateAppKeyState(UpdateAppKeyStateRequest request);
 
+    /**
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      *
+     */
     CompletableFuture<UpdateCustomLineResponse> updateCustomLine(UpdateCustomLineRequest request);
 
     CompletableFuture<UpdateDNSSLBWeightResponse> updateDNSSLBWeight(UpdateDNSSLBWeightRequest request);

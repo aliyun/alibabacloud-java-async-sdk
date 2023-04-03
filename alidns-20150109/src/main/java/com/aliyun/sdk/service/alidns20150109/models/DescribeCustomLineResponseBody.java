@@ -98,7 +98,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The code of the custom line. The code is used when you configure a resolution record.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name for which the custom line is configured.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The unique ID of the custom line.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -122,7 +122,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * IpSegmentList.
+         * The list of CIDR blocks.
          */
         public Builder ipSegmentList(java.util.List < IpSegmentList> ipSegmentList) {
             this.ipSegmentList = ipSegmentList;
@@ -130,7 +130,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the custom line.
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +138,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
             private String startIp; 
 
             /**
-             * EndIp.
+             * The end IP address.
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -198,7 +198,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
             }
 
             /**
-             * StartIp.
+             * The start IP address.
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

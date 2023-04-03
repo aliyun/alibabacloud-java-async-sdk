@@ -98,7 +98,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Previews.
+         * The returned preview information of the disaster recovery plan.
          */
         public Builder previews(Previews previews) {
             this.previews = previews;
@@ -122,7 +122,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned on all pages.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -190,7 +190,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             private String strategyName; 
 
             /**
-             * Content.
+             * The formatted message content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -198,7 +198,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * The name of the switching policy for address pools.
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -316,7 +316,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             private String userDomainName; 
 
             /**
-             * InstanceId.
+             * The ID of the GTM instance to which the previewed disaster recovery plan belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -324,7 +324,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the GTM instance to which the previewed disaster recovery plan belongs.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -332,7 +332,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchInfos.
+             * The returned information of the switching policies for address pools.
              */
             public Builder switchInfos(SwitchInfos switchInfos) {
                 this.switchInfos = switchInfos;
@@ -340,7 +340,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * UserDomainName.
+             * The user\"s domain name or domain name list.
              */
             public Builder userDomainName(String userDomainName) {
                 this.userDomainName = userDomainName;

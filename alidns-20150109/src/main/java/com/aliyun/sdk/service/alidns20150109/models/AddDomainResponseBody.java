@@ -110,7 +110,7 @@ public class AddDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DnsServers.
+         * The Domain Name System (DNS) servers that resolve the domain name.
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -118,7 +118,7 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DomainId.
+         * The ID of the domain name.
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -126,7 +126,7 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -134,7 +134,7 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * The ID of the domain name group.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -142,7 +142,7 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * The name of the domain name group.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -150,7 +150,7 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * PunyCode.
+         * The Punycode for the domain name. This parameter is returned only for Chinese domain names.
          */
         public Builder punyCode(String punyCode) {
             this.punyCode = punyCode;
@@ -158,7 +158,7 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

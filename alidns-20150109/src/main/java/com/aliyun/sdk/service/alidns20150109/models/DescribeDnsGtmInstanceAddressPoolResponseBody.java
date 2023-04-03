@@ -182,7 +182,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * AddrCount.
+         * The number of addresses in the address pool.
          */
         public Builder addrCount(Integer addrCount) {
             this.addrCount = addrCount;
@@ -190,7 +190,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * AddrPoolId.
+         * The ID of the address pool.
          */
         public Builder addrPoolId(String addrPoolId) {
             this.addrPoolId = addrPoolId;
@@ -198,7 +198,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Addrs.
+         * The addresses in the address pool.
          */
         public Builder addrs(Addrs addrs) {
             this.addrs = addrs;
@@ -206,7 +206,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the address pool was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -214,7 +214,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * The timestamp that indicates the time when the address pool was created.
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -222,7 +222,11 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * LbaStrategy.
+         * The load balancing policy for the address pool. Valid values:
+         * <p>
+         * 
+         * *   ALL_RR: returns all addresses.
+         * *   RATIO: returns addresses by weight.
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.lbaStrategy = lbaStrategy;
@@ -230,7 +234,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check configuration.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -238,7 +242,12 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorStatus.
+         * Indicates the status of the health check. Valid values:
+         * <p>
+         * 
+         * *   OPEN: The health check is enabled.
+         * *   CLOSE: The health check is disabled.
+         * *   UNCONFIGURED: The health check is not configured.
          */
         public Builder monitorStatus(String monitorStatus) {
             this.monitorStatus = monitorStatus;
@@ -246,7 +255,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the address pool.
          */
         public Builder name(String name) {
             this.name = name;
@@ -254,7 +263,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -262,7 +271,12 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the address pool. Valid values:
+         * <p>
+         * 
+         * *   IPV4: IPv4 address
+         * *   IPV6: IPv6 address
+         * *   DOMAIN: domain name
          */
         public Builder type(String type) {
             this.type = type;
@@ -270,7 +284,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The time when the address pool was last updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -278,7 +292,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * The timestamp that indicates the time when the address pool was last updated.
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -426,7 +440,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * Addr.
+             * The address.
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -434,7 +448,11 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * AlertStatus.
+             * The status of the last health check on the address. Valid values:
+             * <p>
+             * 
+             * *   OK: No active alerts are triggered.
+             * *   ALERT: Alerts are triggered based on the alert rules.
              */
             public Builder alertStatus(String alertStatus) {
                 this.alertStatus = alertStatus;
@@ -442,7 +460,12 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeInfo.
+             * The source region of the address.
+             * <p>
+             * 
+             * *   lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.
+             * *   lineName: the line name of the source region of the address. This parameter is deprecated.
+             * *   lineCodes: the line codes of the source regions of the address.
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -450,7 +473,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the address was added into the address pool.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -458,7 +481,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The timestamp that indicates the time when the address was added into the address pool.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -466,7 +489,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -474,7 +497,12 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The mode of the address. Valid values:
+             * <p>
+             * 
+             * *   SMART: smart return
+             * *   ONLINE: always online
+             * *   OFFLINE: always offline
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -482,7 +510,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The description of the address.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -490,7 +518,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the address was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -498,7 +526,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * The timestamp that indicates the time when the address was last updated.
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -539,7 +567,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
             private java.util.List < Addr> addr; 
 
             /**
-             * Addr.
+             * The address.
              */
             public Builder addr(java.util.List < Addr> addr) {
                 this.addr = addr;

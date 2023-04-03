@@ -50,7 +50,7 @@ public class AddGtmAccessStrategyResponseBody extends TeaModel {
         private String strategyId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AddGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyId.
+         * The ID of the access policy created.
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;

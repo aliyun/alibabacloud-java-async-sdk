@@ -69,7 +69,7 @@ public class DescribeGtmInstanceSystemCnameRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Global Traffic Manager (GTM) instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeGtmInstanceSystemCnameRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

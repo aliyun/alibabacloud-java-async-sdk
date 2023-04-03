@@ -50,7 +50,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         private java.util.List < Statistics> statistics; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Statistics.
+         * The statistics list.
          */
         public Builder statistics(java.util.List < Statistics> statistics) {
             this.statistics = statistics;
@@ -158,7 +158,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             private Long v6HttpsCount; 
 
             /**
-             * Timestamp.
+             * The timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -166,7 +166,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of requests.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -174,7 +174,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V4HttpCount.
+             * The number of IPv4-based HTTP requests.
              */
             public Builder v4HttpCount(Long v4HttpCount) {
                 this.v4HttpCount = v4HttpCount;
@@ -182,7 +182,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V4HttpsCount.
+             * The number of IPv4-based HTTPS requests.
              */
             public Builder v4HttpsCount(Long v4HttpsCount) {
                 this.v4HttpsCount = v4HttpsCount;
@@ -190,7 +190,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V6HttpCount.
+             * The number of IPv6-based HTTP requests.
              */
             public Builder v6HttpCount(Long v6HttpCount) {
                 this.v6HttpCount = v6HttpCount;
@@ -198,7 +198,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V6HttpsCount.
+             * The number of IPv6-based HTTPS requests.
              */
             public Builder v6HttpsCount(Long v6HttpsCount) {
                 this.v6HttpsCount = v6HttpsCount;

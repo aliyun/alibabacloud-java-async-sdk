@@ -50,7 +50,7 @@ public class DescribeGtmInstanceSystemCnameResponseBody extends TeaModel {
         private String systemCname; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeGtmInstanceSystemCnameResponseBody extends TeaModel {
         }
 
         /**
-         * SystemCname.
+         * The CNAME record assigned by the system.
          */
         public Builder systemCname(String systemCname) {
             this.systemCname = systemCname;

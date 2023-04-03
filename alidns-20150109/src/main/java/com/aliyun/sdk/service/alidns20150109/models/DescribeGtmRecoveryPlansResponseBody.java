@@ -98,7 +98,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * RecoveryPlans.
+         * The details about the queried disaster recovery plans.
          */
         public Builder recoveryPlans(RecoveryPlans recoveryPlans) {
             this.recoveryPlans = recoveryPlans;
@@ -122,7 +122,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -322,7 +322,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * CreateTime.
+             * The time when the disaster recovery plan was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -330,7 +330,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The UNIX timestamp that indicates when the disaster recovery plan was created.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -338,7 +338,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * FaultAddrPoolNum.
+             * The number of faulty address pools.
              */
             public Builder faultAddrPoolNum(Integer faultAddrPoolNum) {
                 this.faultAddrPoolNum = faultAddrPoolNum;
@@ -346,7 +346,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * LastExecuteTime.
+             * The last time when the disaster recovery plan was executed.
              */
             public Builder lastExecuteTime(String lastExecuteTime) {
                 this.lastExecuteTime = lastExecuteTime;
@@ -354,7 +354,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * LastExecuteTimestamp.
+             * The UNIX timestamp that indicates the last time when the disaster recovery plan was executed.
              */
             public Builder lastExecuteTimestamp(Long lastExecuteTimestamp) {
                 this.lastExecuteTimestamp = lastExecuteTimestamp;
@@ -362,7 +362,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * LastRollbackTime.
+             * The last time when the disaster recovery plan was rolled back.
              */
             public Builder lastRollbackTime(String lastRollbackTime) {
                 this.lastRollbackTime = lastRollbackTime;
@@ -370,7 +370,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * LastRollbackTimestamp.
+             * The UNIX timestamp that indicates the last time when the disaster recovery plan was rolled back.
              */
             public Builder lastRollbackTimestamp(Long lastRollbackTimestamp) {
                 this.lastRollbackTimestamp = lastRollbackTimestamp;
@@ -378,7 +378,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the disaster recovery plan.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -386,7 +386,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * RecoveryPlanId.
+             * The ID of the disaster recovery plan.
              */
             public Builder recoveryPlanId(Long recoveryPlanId) {
                 this.recoveryPlanId = recoveryPlanId;
@@ -394,7 +394,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks about the disaster recovery plan.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -402,7 +402,12 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the disaster recovery plan. Valid values:
+             * <p>
+             * 
+             * *   **UNEXECUTED**: The plan is not executed.
+             * *   **EXECUTED**: The plan is executed.
+             * *   **ROLLED_BACK**: The plan is rolled back.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -410,7 +415,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The last time when the disaster recovery plan was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -418,7 +423,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * The UNIX timestamp that indicates the last time when the disaster recovery plan was updated.
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;

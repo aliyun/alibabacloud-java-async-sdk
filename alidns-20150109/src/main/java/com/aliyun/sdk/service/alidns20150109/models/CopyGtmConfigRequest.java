@@ -99,7 +99,7 @@ public class CopyGtmConfigRequest extends Request {
         } 
 
         /**
-         * CopyType.
+         * The type of the object that you want to copy. Only the INSTANCE type is supported.
          */
         public Builder copyType(String copyType) {
             this.putQueryParameter("CopyType", copyType);
@@ -108,7 +108,7 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language that specific response parameters will use.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +117,7 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * The ID of the source object. Only instance IDs are supported.
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -126,7 +126,7 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the target object. Only instance IDs are supported.
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

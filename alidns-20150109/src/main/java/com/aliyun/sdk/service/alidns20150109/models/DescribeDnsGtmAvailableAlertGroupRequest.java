@@ -54,7 +54,7 @@ public class DescribeDnsGtmAvailableAlertGroupRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

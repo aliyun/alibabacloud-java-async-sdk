@@ -98,7 +98,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * The number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * Strategies.
+         * The returned list of access policies of the GTM instance.
          */
         public Builder strategies(Strategies strategies) {
             this.strategies = strategies;
@@ -130,7 +130,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned on all pages.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -214,7 +214,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * GroupCode.
+             * The code of the access region group.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -222,7 +222,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the access region group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -230,7 +230,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * LineCode.
+             * The code for the line of the access region.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -238,7 +238,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * LineName.
+             * The name for the line of the access region.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -512,7 +512,12 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             private String strategyName; 
 
             /**
-             * AccessMode.
+             * The access policy. Valid values:
+             * <p>
+             * 
+             * *   **AUTO**: Automatic switch
+             * *   **DEFAULT**: Default address pool
+             * *   **FAILOVER**: Failover address pool
              */
             public Builder accessMode(String accessMode) {
                 this.accessMode = accessMode;
@@ -520,7 +525,11 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * AccessStatus.
+             * The access status. Valid values:
+             * <p>
+             * 
+             * *   **DEFAULT**: The default address pool is currently accessed.
+             * *   **FAILOVER**: The failover address pool is currently accessed.
              */
             public Builder accessStatus(String accessStatus) {
                 this.accessStatus = accessStatus;
@@ -528,7 +537,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the access policy was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -544,7 +553,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAddrPoolId.
+             * The ID of the default address pool.
              */
             public Builder defaultAddrPoolId(String defaultAddrPoolId) {
                 this.defaultAddrPoolId = defaultAddrPoolId;
@@ -552,7 +561,12 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAddrPoolMonitorStatus.
+             * Indicates whether health check was enabled for the default address pool. Valid values:
+             * <p>
+             * 
+             * *   **OPEN**: Enabled
+             * *   **CLOSE**: Disabled
+             * *   **UNCONFIGURED**: Not configured
              */
             public Builder defaultAddrPoolMonitorStatus(String defaultAddrPoolMonitorStatus) {
                 this.defaultAddrPoolMonitorStatus = defaultAddrPoolMonitorStatus;
@@ -560,7 +574,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAddrPoolName.
+             * The name of the default address pool.
              */
             public Builder defaultAddrPoolName(String defaultAddrPoolName) {
                 this.defaultAddrPoolName = defaultAddrPoolName;
@@ -568,7 +582,11 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAddrPoolStatus.
+             * The availability status of the default address pool. Valid values:
+             * <p>
+             * 
+             * *   **AVAILABLE**: Available
+             * *   **NOT_AVAILABLE**: Unavailable
              */
             public Builder defaultAddrPoolStatus(String defaultAddrPoolStatus) {
                 this.defaultAddrPoolStatus = defaultAddrPoolStatus;
@@ -576,7 +594,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * FailoverAddrPoolId.
+             * The ID of the failover address pool.
              */
             public Builder failoverAddrPoolId(String failoverAddrPoolId) {
                 this.failoverAddrPoolId = failoverAddrPoolId;
@@ -584,7 +602,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * FailoverAddrPoolMonitorStatus.
+             * Indicates whether health check was enabled for the failover address pool.
              */
             public Builder failoverAddrPoolMonitorStatus(String failoverAddrPoolMonitorStatus) {
                 this.failoverAddrPoolMonitorStatus = failoverAddrPoolMonitorStatus;
@@ -592,7 +610,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * FailoverAddrPoolName.
+             * The name of the failover address pool.
              */
             public Builder failoverAddrPoolName(String failoverAddrPoolName) {
                 this.failoverAddrPoolName = failoverAddrPoolName;
@@ -600,7 +618,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * FailoverAddrPoolStatus.
+             * The availability status of the failover address pool.
              */
             public Builder failoverAddrPoolStatus(String failoverAddrPoolStatus) {
                 this.failoverAddrPoolStatus = failoverAddrPoolStatus;
@@ -608,7 +626,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the GTM instance whose access policies you want to query.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -616,7 +634,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * Lines.
+             * The returned lines of access regions.
              */
             public Builder lines(Lines lines) {
                 this.lines = lines;
@@ -624,7 +642,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * The ID of the access policy.
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -632,7 +650,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyMode.
+             * The mode of the access policy. **SELF_DEFINED** indicates that the access policy is user-defined.
              */
             public Builder strategyMode(String strategyMode) {
                 this.strategyMode = strategyMode;
@@ -640,7 +658,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * The name of the access policy.
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;

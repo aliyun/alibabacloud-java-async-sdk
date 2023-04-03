@@ -111,7 +111,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -120,7 +120,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -129,7 +129,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -138,7 +138,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -147,7 +147,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The key-value pairs of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -201,7 +201,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -209,7 +209,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

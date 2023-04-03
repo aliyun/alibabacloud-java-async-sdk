@@ -82,7 +82,13 @@ public class DescribeBatchResultCountRequest extends Request {
         } 
 
         /**
-         * BatchType.
+         * The type of the batch operation. Valid values:
+         * <p>
+         * 
+         * *   **DOMAIN_ADD**: adds domain names in batches.
+         * *   **DOMAIN_DEL**: deletes domain names in batches.
+         * *   **RR_ADD**: adds DNS records in batches.
+         * *   **RR_DEL**: deletes DNS records in batches.
          */
         public Builder batchType(String batchType) {
             this.putQueryParameter("BatchType", batchType);
@@ -91,7 +97,7 @@ public class DescribeBatchResultCountRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +106,10 @@ public class DescribeBatchResultCountRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
+         * <p>
+         * 
+         * If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

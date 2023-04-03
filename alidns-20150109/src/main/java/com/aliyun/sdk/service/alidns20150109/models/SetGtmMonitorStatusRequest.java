@@ -84,7 +84,7 @@ public class SetGtmMonitorStatusRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -93,7 +93,7 @@ public class SetGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * MonitorConfigId.
+         * The health check ID.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -102,7 +102,11 @@ public class SetGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether health check is enabled for the address pool. Valid values:
+         * <p>
+         * 
+         * *   **OPEN**: Enabled
+         * *   **CLOSE**: Disabled
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -83,7 +83,7 @@ public class DescribeDnsProductInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can call the **DescribeDomainInfo** operation to obtain the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class DescribeDnsProductInstanceRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +101,7 @@ public class DescribeDnsProductInstanceRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

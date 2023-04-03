@@ -156,7 +156,7 @@ public class UpdateGtmMonitorRequest extends Request {
         } 
 
         /**
-         * EvaluationCount.
+         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -165,7 +165,7 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The health check interval. Unit: seconds. Set the value to 60.
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -174,7 +174,7 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * IspCityNode.
+         * The monitored nodes.
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -183,7 +183,7 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -192,7 +192,7 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check configuration.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -201,7 +201,27 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * MonitorExtendInfo.
+         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+         * <p>
+         * 
+         * HTTP or HTTPS:
+         * 
+         * *   port: the port to check.
+         * *   failureRate: the failure rate.
+         * *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.
+         * *   host: the host configuration.
+         * *   path: the health check URL.
+         * 
+         * PING:
+         * 
+         * *   packetNum: the number of ping packets.
+         * *   packetLossRate: the loss rate of ping packets.
+         * *   failureRate: the failure rate.
+         * 
+         * TCP:
+         * 
+         * *   port: the port to check.
+         * *   failureRate: the failure rate.
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -210,7 +230,7 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The protocol used for the health check.
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -219,7 +239,7 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -273,7 +293,7 @@ public class UpdateGtmMonitorRequest extends Request {
             private String ispCode; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -281,7 +301,10 @@ public class UpdateGtmMonitorRequest extends Request {
             }
 
             /**
-             * IspCode.
+             * *   The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
+             * <p>
+             * *   If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.
+             * *   If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

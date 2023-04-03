@@ -69,7 +69,7 @@ public class DeleteCustomLinesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +78,7 @@ public class DeleteCustomLinesRequest extends Request {
         }
 
         /**
-         * LineIds.
+         * The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).
          */
         public Builder lineIds(String lineIds) {
             this.putQueryParameter("LineIds", lineIds);

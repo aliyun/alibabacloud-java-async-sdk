@@ -62,7 +62,7 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AddrPoolId.
+         * The ID of the address pool created.
          */
         public Builder addrPoolId(String addrPoolId) {
             this.addrPoolId = addrPoolId;
@@ -70,7 +70,7 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check configuration.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -78,7 +78,7 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

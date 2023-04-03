@@ -124,7 +124,7 @@ public class DescribeGtmInstancesRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The keyword that you use for query. Exact match is supported by instance ID or instance name.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -133,7 +133,7 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +142,7 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * NeedDetailAttributes.
+         * Specifies whether additional information is required. Default value: **false**.
          */
         public Builder needDetailAttributes(Boolean needDetailAttributes) {
             this.putQueryParameter("NeedDetailAttributes", needDetailAttributes);
@@ -151,7 +151,7 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +160,7 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +169,7 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

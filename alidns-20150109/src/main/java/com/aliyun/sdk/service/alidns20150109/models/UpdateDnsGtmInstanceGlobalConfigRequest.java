@@ -219,7 +219,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * AlertGroup.
+         * The name of the alert group in the JSON format.
          */
         public Builder alertGroup(String alertGroup) {
             this.putQueryParameter("AlertGroup", alertGroup);
@@ -228,7 +228,10 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * CnameType.
+         * The type of the CNAME domain name that is used to access the instance. Valid value:
+         * <p>
+         * 
+         * *   PUBLIC: The CNAME domain name is used to access the instance over the Internet.
          */
         public Builder cnameType(String cnameType) {
             this.putQueryParameter("CnameType", cnameType);
@@ -237,7 +240,11 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * ForceUpdate.
+         * Specifies whether to enable force updates. Valid values:
+         * <p>
+         * 
+         * *   true: enables force update without a conflict alert.
+         * *   false: disables force update. If a conflict occurs, the system displays an alert. null: This valid value of ForceUpdate provides the same information as the false value.
          */
         public Builder forceUpdate(Boolean forceUpdate) {
             this.putQueryParameter("ForceUpdate", forceUpdate);
@@ -246,7 +253,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -255,7 +262,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance. This parameter is required only for the first update.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -264,7 +271,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -273,7 +280,11 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * PublicCnameMode.
+         * Specifies whether to use a custom CNAME domain name or a CNAME domain name assigned by the system to access the instance over the Internet. Valid values:
+         * <p>
+         * 
+         * *   SYSTEM_ASSIGN: a CNAME domain name assigned by the system
+         * *   CUSTOM: a custom CNAME domain name
          */
         public Builder publicCnameMode(String publicCnameMode) {
             this.putQueryParameter("PublicCnameMode", publicCnameMode);
@@ -282,7 +293,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * PublicRr.
+         * The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.
          */
         public Builder publicRr(String publicRr) {
             this.putQueryParameter("PublicRr", publicRr);
@@ -291,7 +302,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * PublicUserDomainName.
+         * The service domain name that is used over the Internet.
          */
         public Builder publicUserDomainName(String publicUserDomainName) {
             this.putQueryParameter("PublicUserDomainName", publicUserDomainName);
@@ -300,7 +311,10 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * PublicZoneName.
+         * The CNAME domain name that is used to access the instance over the Internet, which is the primary domain name. This parameter is required when the PublicCnameMode parameter is set to CUSTOM.
+         * <p>
+         * 
+         * >  You must use the primary domain name. Do not include the hostname specified by the PublicRr parameter.
          */
         public Builder publicZoneName(String publicZoneName) {
             this.putQueryParameter("PublicZoneName", publicZoneName);
@@ -309,7 +323,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * The global time to live (TTL).
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);

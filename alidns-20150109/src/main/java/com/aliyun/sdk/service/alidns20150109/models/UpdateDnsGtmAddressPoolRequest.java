@@ -113,7 +113,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * Addr.
+         * The addresses in the address pool.
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -122,7 +122,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * AddrPoolId.
+         * The ID of the address pool.
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -131,7 +131,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -140,7 +140,11 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * LbaStrategy.
+         * The load balancing policy for the address pool. Valid values:
+         * <p>
+         * 
+         * *   ALL_RR: returns all addresses.
+         * *   RATIO: returns addresses by weight.
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.putQueryParameter("LbaStrategy", lbaStrategy);
@@ -149,7 +153,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the address pool.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -241,7 +245,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             private String remark; 
 
             /**
-             * Addr.
+             * The address.
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -249,7 +253,18 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * AttributeInfo.
+             * The source region of the address. The value is a JSON string.
+             * <p>
+             * 
+             * *   lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.
+             * 
+             * *   lineCodes: the line codes of the source regions of the address.
+             * 
+             * *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
+             * 
+             *     *   NO_NEED: no need for rectification
+             *     *   RECTIFIED: rectified
+             *     *   AUTO: automatic rectification
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -257,7 +272,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -265,7 +280,12 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * Mode.
+             * The mode of the address. Valid values:
+             * <p>
+             * 
+             * *   SMART: smart return
+             * *   ONLINE: always online
+             * *   OFFLINE: always offline
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -273,7 +293,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * Remark.
+             * The description of the address.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

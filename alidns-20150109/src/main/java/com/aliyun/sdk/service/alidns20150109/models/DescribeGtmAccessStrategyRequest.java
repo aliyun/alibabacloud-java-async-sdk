@@ -69,7 +69,7 @@ public class DescribeGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +78,7 @@ public class DescribeGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the access policy that you want to query.
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

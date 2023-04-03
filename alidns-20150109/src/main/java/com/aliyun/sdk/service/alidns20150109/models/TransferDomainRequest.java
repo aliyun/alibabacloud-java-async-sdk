@@ -98,7 +98,7 @@ public class TransferDomainRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * The list of domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -107,7 +107,7 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +116,7 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The detailed information.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -125,7 +125,7 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * TargetUserId.
+         * The ID of the user to which domain names were transferred.
          */
         public Builder targetUserId(Long targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);

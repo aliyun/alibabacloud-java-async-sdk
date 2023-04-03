@@ -86,7 +86,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNumber.
+         * The returned page number. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Default value: 200.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The list of tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -118,7 +118,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tags returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;

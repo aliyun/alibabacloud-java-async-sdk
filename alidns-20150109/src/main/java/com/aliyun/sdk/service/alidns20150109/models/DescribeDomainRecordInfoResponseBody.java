@@ -42,6 +42,9 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     @NameInMap("RecordId")
     private String recordId;
 
+    @NameInMap("Remark")
+    private String remark;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -68,6 +71,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         this.punyCode = builder.punyCode;
         this.rr = builder.rr;
         this.recordId = builder.recordId;
+        this.remark = builder.remark;
         this.requestId = builder.requestId;
         this.status = builder.status;
         this.TTL = builder.TTL;
@@ -154,6 +158,13 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -199,6 +210,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         private String punyCode; 
         private String rr; 
         private String recordId; 
+        private String remark; 
         private String requestId; 
         private String status; 
         private Long TTL; 
@@ -206,7 +218,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         private String value; 
 
         /**
-         * DomainId.
+         * The ID of the domain name.
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -214,7 +226,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -222,7 +234,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * The ID of the domain name group.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -230,7 +242,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * The name of the domain name group.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -238,7 +250,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Line.
+         * The resolution line.
          */
         public Builder line(String line) {
             this.line = line;
@@ -246,7 +258,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Locked.
+         * The lock status of the DNS record. Valid values: true and false.
          */
         public Builder locked(Boolean locked) {
             this.locked = locked;
@@ -254,7 +266,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Priority.
+         * The priority of the MX-type DNS record.
          */
         public Builder priority(Long priority) {
             this.priority = priority;
@@ -262,7 +274,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PunyCode.
+         * The punycode is only returned for Chinese domain names.
          */
         public Builder punyCode(String punyCode) {
             this.punyCode = punyCode;
@@ -270,7 +282,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RR.
+         * The host record.
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -278,7 +290,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RecordId.
+         * The ID of the DNS record.
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -286,7 +298,15 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -294,7 +314,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the DNS record. Valid values: Enable and Disable.
          */
         public Builder status(String status) {
             this.status = status;
@@ -302,7 +322,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TTL.
+         * The TTL of the resolution.
          */
         public Builder TTL(Long TTL) {
             this.TTL = TTL;
@@ -310,7 +330,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the DNS record.
          */
         public Builder type(String type) {
             this.type = type;
@@ -318,7 +338,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * The value of the DNS record.
          */
         public Builder value(String value) {
             this.value = value;

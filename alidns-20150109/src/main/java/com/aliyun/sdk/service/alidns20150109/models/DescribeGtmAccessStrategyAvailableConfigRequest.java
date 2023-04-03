@@ -69,7 +69,7 @@ public class DescribeGtmAccessStrategyAvailableConfigRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance for which you want to query the available configurations of the current access policy.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeGtmAccessStrategyAvailableConfigRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

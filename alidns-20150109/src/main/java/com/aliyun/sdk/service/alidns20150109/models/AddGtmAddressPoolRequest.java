@@ -227,7 +227,7 @@ public class AddGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * Addr.
+         * The addresses in the address pool.
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -236,7 +236,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * EvaluationCount.
+         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -245,7 +245,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance for which you want to create an address pool.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -254,7 +254,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The health check interval. Unit: seconds. Set the value to 60.
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -263,7 +263,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * IspCityNode.
+         * The monitored nodes.
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -272,7 +272,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -281,7 +281,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * MinAvailableAddrNum.
+         * The minimum number of available addresses in the address pool.
          */
         public Builder minAvailableAddrNum(Integer minAvailableAddrNum) {
             this.putQueryParameter("MinAvailableAddrNum", minAvailableAddrNum);
@@ -290,7 +290,27 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * MonitorExtendInfo.
+         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+         * <p>
+         * 
+         * HTTP or HTTPS:
+         * 
+         * *   port: the port to check.
+         * *   failureRate: the failure rate.
+         * *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.
+         * *   host: the host configuration.
+         * *   path: the health check URL.
+         * 
+         * PING:
+         * 
+         * *   packetNum: the number of ping packets.
+         * *   packetLossRate: the loss rate of ping packets.
+         * *   failureRate: the failure rate.
+         * 
+         * TCP:
+         * 
+         * *   port: the port to check.
+         * *   failureRate: the failure rate.
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -299,7 +319,11 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * MonitorStatus.
+         * Specifies whether to enable the health check. Valid values:
+         * <p>
+         * 
+         * *   **OPEN**: enables the health check.
+         * *   **CLOSE**: disables the health check. This is the default value.
          */
         public Builder monitorStatus(String monitorStatus) {
             this.putQueryParameter("MonitorStatus", monitorStatus);
@@ -308,7 +332,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the address pool that you want to create.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -317,7 +341,13 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The protocol used for the health check. Valid values:
+         * <p>
+         * 
+         * *   HTTP
+         * *   HTTPS
+         * *   PING
+         * *   TCP
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -326,7 +356,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -335,7 +365,11 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the address pool. Valid values:
+         * <p>
+         * 
+         * *   **IP**: IPv4 address
+         * *   **DOMAIN**: domain name
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -401,7 +435,7 @@ public class AddGtmAddressPoolRequest extends Request {
             private String value; 
 
             /**
-             * LbaWeight.
+             * The weight of the address.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -409,7 +443,12 @@ public class AddGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * Mode.
+             * The mode of the address. Valid values:
+             * <p>
+             * 
+             * *   **SMART**: smart return
+             * *   **ONLINE**: always online
+             * *   **OFFLINE**: always offline
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -417,7 +456,7 @@ public class AddGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * Value.
+             * The address.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -470,7 +509,7 @@ public class AddGtmAddressPoolRequest extends Request {
             private String ispCode; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -478,7 +517,10 @@ public class AddGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * IspCode.
+             * *   The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
+             * <p>
+             * *   If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.
+             * *   If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

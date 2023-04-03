@@ -98,7 +98,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * Strategies.
+         * The access policies.
          */
         public Builder strategies(Strategies strategies) {
             this.strategies = strategies;
@@ -130,7 +130,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned on all pages.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -214,7 +214,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AddrCount.
+             * The number of addresses in the address pool.
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -222,7 +222,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the address pool.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -230,7 +230,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address pool.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -238,7 +238,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the address pool.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +356,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * GroupCode.
+             * The code of the source region group.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -364,7 +364,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the source region group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -372,7 +372,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * LineCode.
+             * The line code of the source region.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -380,7 +380,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * LineName.
+             * The line name of the source region.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -558,7 +558,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private String strategyName; 
 
             /**
-             * CreateTime.
+             * The time when the access policy was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -566,7 +566,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The timestamp that indicates when the access policy was created.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -574,7 +574,11 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveAddrPoolGroupType.
+             * The type of the active address pool group. Valid values:
+             * <p>
+             * 
+             * *   DEFAULT: the primary address pool group
+             * *   FAILOVER: the secondary address pool group
              */
             public Builder effectiveAddrPoolGroupType(String effectiveAddrPoolGroupType) {
                 this.effectiveAddrPoolGroupType = effectiveAddrPoolGroupType;
@@ -582,7 +586,12 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveAddrPoolType.
+             * The type of the active address pools. Valid values:
+             * <p>
+             * 
+             * *   IPV4
+             * *   IPV6
+             * *   DOMAIN
              */
             public Builder effectiveAddrPoolType(String effectiveAddrPoolType) {
                 this.effectiveAddrPoolType = effectiveAddrPoolType;
@@ -590,7 +599,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveAddrPools.
+             * The active address pool groups.
              */
             public Builder effectiveAddrPools(EffectiveAddrPools effectiveAddrPools) {
                 this.effectiveAddrPools = effectiveAddrPools;
@@ -598,7 +607,11 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveLbaStrategy.
+             * The load balancing policy of the active address pool group. Data is returned when StrategyMode is set to GEO. Valid values: 
+             * <p>
+             * 
+             * - ALL_RR: returns all addresses.
+             * - RATIO: returns addresses by weight.
              */
             public Builder effectiveLbaStrategy(String effectiveLbaStrategy) {
                 this.effectiveLbaStrategy = effectiveLbaStrategy;
@@ -606,7 +619,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * Lines.
+             * The source regions. Data is returned when StrategyMode is set to GEO. Valid values:
              */
             public Builder lines(Lines lines) {
                 this.lines = lines;
@@ -614,7 +627,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * The ID of the access policy.
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -622,7 +635,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * The name of the access policy.
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;

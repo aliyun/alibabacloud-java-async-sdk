@@ -83,7 +83,7 @@ public class DescribeGtmInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class DescribeGtmInstanceRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +101,7 @@ public class DescribeGtmInstanceRequest extends Request {
         }
 
         /**
-         * NeedDetailAttributes.
+         * Specifies whether additional information is required. Default value: **false**. If the value is **true**, the AccessStrategyNum and AddressPoolNum parameters are returned.
          */
         public Builder needDetailAttributes(Boolean needDetailAttributes) {
             this.putQueryParameter("NeedDetailAttributes", needDetailAttributes);

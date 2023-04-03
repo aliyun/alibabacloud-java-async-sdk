@@ -50,7 +50,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         private Statistics statistics; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Statistics.
+         * The list of query volume records.
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -110,7 +110,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * Count.
+             * The number of queries.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The UNIX timestamp representing the collection time.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

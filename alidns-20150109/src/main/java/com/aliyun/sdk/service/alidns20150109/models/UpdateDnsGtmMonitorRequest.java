@@ -159,7 +159,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         } 
 
         /**
-         * EvaluationCount.
+         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -168,7 +168,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The health check interval. Unit: seconds.
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -177,7 +177,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * IspCityNode.
+         * The monitored nodes.
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -186,7 +186,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -195,7 +195,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check configuration.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -204,7 +204,54 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * MonitorExtendInfo.
+         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+         * <p>
+         * 
+         * *   HTTP or HTTPS:
+         * 
+         *     *   port: the port to check.
+         * 
+         *     *   host: the host configuration.
+         * 
+         *     *   path: the health check URL.
+         * 
+         *     *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal.
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   sni: specifies whether to enable Server Name Indication (SNI). This parameter is only required for the HTTPS protocol. Valid values:
+         * 
+         *         *   true: enables SNI.
+         *         *   false: disables SNI.
+         * 
+         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
+         * 
+         * *   PING:
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   packetNum: the number of ping packets.
+         * 
+         *     *   packetLossRate: the loss rate of ping packets.
+         * 
+         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
+         * 
+         * *   TCP:
+         * 
+         *     *   port: the port to check.
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -213,7 +260,13 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The protocol used for the health check. Valid values:
+         * <p>
+         * 
+         * *   HTTP
+         * *   HTTPS
+         * *   PING
+         * *   TCP
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -222,7 +275,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The health check timeout period. Unit: milliseconds.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -276,7 +329,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
             private String ispCode; 
 
             /**
-             * CityCode.
+             * The code of the city where the monitored node is deployed.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -284,7 +337,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
             }
 
             /**
-             * IspCode.
+             * The code of the Internet service provider (ISP) to which the monitored node belongs.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

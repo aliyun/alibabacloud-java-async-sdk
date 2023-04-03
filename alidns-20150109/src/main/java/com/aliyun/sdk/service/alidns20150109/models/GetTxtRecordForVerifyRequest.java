@@ -83,7 +83,7 @@ public class GetTxtRecordForVerifyRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +92,7 @@ public class GetTxtRecordForVerifyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +101,11 @@ public class GetTxtRecordForVerifyRequest extends Request {
         }
 
         /**
-         * Type.
+         * The function verified by using the TXT record. Valid values:
+         * <p>
+         * 
+         * *   ADD_SUBDOMAIN
+         * *   RETRIEVAL
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

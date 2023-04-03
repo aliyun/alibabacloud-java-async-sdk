@@ -69,7 +69,7 @@ public class DeleteDnsGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * AddrPoolId.
+         * The ID of the address pool.
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -78,7 +78,7 @@ public class DeleteDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -83,7 +83,7 @@ public class DescribeDomainInfoRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +92,7 @@ public class DescribeDomainInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +101,10 @@ public class DescribeDomainInfoRequest extends Request {
         }
 
         /**
-         * NeedDetailAttributes.
+         * Specifies whether detailed attributes are required. Default value: **false**, which indicates that detailed attributes are not required.
+         * <p>
+         * 
+         * If you set this parameter to **true**, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.
          */
         public Builder needDetailAttributes(Boolean needDetailAttributes) {
             this.putQueryParameter("NeedDetailAttributes", needDetailAttributes);

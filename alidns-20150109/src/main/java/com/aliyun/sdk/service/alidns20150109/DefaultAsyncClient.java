@@ -39,6 +39,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      *
+     */
     @Override
     public CompletableFuture<AddCustomLineResponse> addCustomLine(AddCustomLineRequest request) {
         try {
@@ -95,6 +100,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ***
+      *
+     */
     @Override
     public CompletableFuture<AddDnsGtmMonitorResponse> addDnsGtmMonitor(AddDnsGtmMonitorRequest request) {
         try {
@@ -109,6 +118,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can check whether a domain name is valid based on the following topic:
+      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+      *
+     */
     @Override
     public CompletableFuture<AddDomainResponse> addDomain(AddDomainRequest request) {
         try {
@@ -249,6 +263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
+      *
+     */
     @Override
     public CompletableFuture<ChangeDomainOfDnsProductResponse> changeDomainOfDnsProduct(ChangeDomainOfDnsProductRequest request) {
         try {
@@ -361,6 +379,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
+      * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request) {
         try {
@@ -375,6 +398,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDomainGroupResponse> deleteDomainGroup(DeleteDomainGroupRequest request) {
         try {
@@ -445,6 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
+      *
+     */
     @Override
     public CompletableFuture<DeleteSubDomainRecordsResponse> deleteSubDomainRecords(DeleteSubDomainRecordsRequest request) {
         try {
@@ -473,6 +504,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that the batch tasks have been executed.
+      *
+     */
     @Override
     public CompletableFuture<DescribeBatchResultDetailResponse> describeBatchResultDetail(DescribeBatchResultDetailRequest request) {
         try {
@@ -767,6 +802,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDnsProductInstancesResponse> describeDnsProductInstances(DescribeDnsProductInstancesRequest request) {
         try {
@@ -893,6 +932,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDomainInfoResponse> describeDomainInfo(DescribeDomainInfoRequest request) {
         try {
@@ -921,6 +964,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDomainNsResponse> describeDomainNs(DescribeDomainNsRequest request) {
         try {
@@ -949,6 +996,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
+      * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+      * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDomainRecordsResponse> describeDomainRecords(DescribeDomainRecordsRequest request) {
         try {
@@ -963,6 +1016,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<DescribeDomainResolveStatisticsSummaryResponse> describeDomainResolveStatisticsSummary(DescribeDomainResolveStatisticsSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainResolveStatisticsSummary").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainResolveStatisticsSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainResolveStatisticsSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * Real-time data is collected per hour.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDomainStatisticsResponse> describeDomainStatistics(DescribeDomainStatisticsRequest request) {
         try {
@@ -991,6 +1062,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can specify the PageNumber and PageSize parameters to query domain names.
+      * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
+      * *   By default, the domain names in a list are sorted in descending order of the time they were added.
+      * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDomainsResponse> describeDomains(DescribeDomainsRequest request) {
         try {
@@ -1468,6 +1546,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeRecordResolveStatisticsSummaryResponse> describeRecordResolveStatisticsSummary(DescribeRecordResolveStatisticsSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRecordResolveStatisticsSummary").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRecordResolveStatisticsSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRecordResolveStatisticsSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * Real-time data is collected per hour.
+      *
+     */
+    @Override
     public CompletableFuture<DescribeRecordStatisticsResponse> describeRecordStatistics(DescribeRecordStatisticsRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1593,6 +1689,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+      * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
+      * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+      *
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1607,6 +1710,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
+      * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
+      *
+     */
     @Override
     public CompletableFuture<ModifyHichinaDomainDNSResponse> modifyHichinaDomainDNS(ModifyHichinaDomainDNSRequest request) {
         try {
@@ -1775,6 +1883,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ****
+      *
+     */
     @Override
     public CompletableFuture<SetDnsGtmAccessModeResponse> setDnsGtmAccessMode(SetDnsGtmAccessModeRequest request) {
         try {
@@ -1957,6 +2069,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      *
+     */
     @Override
     public CompletableFuture<UpdateCustomLineResponse> updateCustomLine(UpdateCustomLineRequest request) {
         try {

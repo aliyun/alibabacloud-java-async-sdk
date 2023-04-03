@@ -97,7 +97,10 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the YYYY-MM-DD format.
+         * <p>
+         * 
+         * The default value is the day when you perform the operation.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -106,7 +109,7 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +118,10 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.
+         * <p>
+         * 
+         * You can query only the DNS records of the latest 90 days. `The value of StartDate must be greater than or equal to the difference between the current date and 90`.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -124,7 +130,7 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
         }
 
         /**
-         * SubDomain.
+         * The subdomain whose statistics you want to query.
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);

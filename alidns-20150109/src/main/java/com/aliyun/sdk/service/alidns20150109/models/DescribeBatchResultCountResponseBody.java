@@ -122,7 +122,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BatchType.
+         * The type of the batch operation.
          */
         public Builder batchType(String batchType) {
             this.batchType = batchType;
@@ -130,7 +130,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * FailedCount.
+         * The total number of domain names or DNS records that failed to be processed.
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -138,7 +138,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * The cause of the execution failure.
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -146,7 +146,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,13 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **-1**: No task for importing domain names or DNS records is submitted.
+         * *   **0**: The task is being processed.
+         * *   **1**: The task is completed.
+         * *   **2**: The task failed.
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -162,7 +168,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * The total number of successfully processed domain names or DNS records.
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -170,7 +176,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the last task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -178,7 +184,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of DNS records that were processed in batches.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

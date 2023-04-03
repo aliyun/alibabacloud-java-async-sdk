@@ -218,7 +218,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         private String strategyName; 
 
         /**
-         * AccessMode.
+         * The access policy.
          */
         public Builder accessMode(String accessMode) {
             this.accessMode = accessMode;
@@ -226,7 +226,11 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * AccessStatus.
+         * The access status. Valid values:
+         * <p>
+         * 
+         * *   **DEFAULT**: Indicates normal when the default address pool is accessed.
+         * *   **FAILOVER**: Indicates an exception when a failover address pool is accessed.
          */
         public Builder accessStatus(String accessStatus) {
             this.accessStatus = accessStatus;
@@ -234,7 +238,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultAddrPoolMonitorStatus.
+         * Indicates whether health check is enabled for the default address pool.
          */
         public Builder defaultAddrPoolMonitorStatus(String defaultAddrPoolMonitorStatus) {
             this.defaultAddrPoolMonitorStatus = defaultAddrPoolMonitorStatus;
@@ -242,7 +246,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultAddrPoolName.
+         * The name of the default address pool.
          */
         public Builder defaultAddrPoolName(String defaultAddrPoolName) {
             this.defaultAddrPoolName = defaultAddrPoolName;
@@ -250,7 +254,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultAddrPoolStatus.
+         * The availability status of the default address pool.
          */
         public Builder defaultAddrPoolStatus(String defaultAddrPoolStatus) {
             this.defaultAddrPoolStatus = defaultAddrPoolStatus;
@@ -258,7 +262,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * DefultAddrPoolId.
+         * The ID of the default address pool.
          */
         public Builder defultAddrPoolId(String defultAddrPoolId) {
             this.defultAddrPoolId = defultAddrPoolId;
@@ -266,7 +270,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverAddrPoolId.
+         * The ID of the failover address pool.
          */
         public Builder failoverAddrPoolId(String failoverAddrPoolId) {
             this.failoverAddrPoolId = failoverAddrPoolId;
@@ -274,7 +278,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverAddrPoolMonitorStatus.
+         * Indicates whether health check is enabled for the failover address pool.
          */
         public Builder failoverAddrPoolMonitorStatus(String failoverAddrPoolMonitorStatus) {
             this.failoverAddrPoolMonitorStatus = failoverAddrPoolMonitorStatus;
@@ -282,7 +286,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverAddrPoolName.
+         * The name of the failover address pool.
          */
         public Builder failoverAddrPoolName(String failoverAddrPoolName) {
             this.failoverAddrPoolName = failoverAddrPoolName;
@@ -290,7 +294,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverAddrPoolStatus.
+         * The availability status of the failover address pool.
          */
         public Builder failoverAddrPoolStatus(String failoverAddrPoolStatus) {
             this.failoverAddrPoolStatus = failoverAddrPoolStatus;
@@ -298,7 +302,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance whose access policy details you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -306,7 +310,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Lines.
+         * The returned lines of access regions.
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -314,7 +318,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -322,7 +326,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyId.
+         * The ID of the access policy queried.
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;
@@ -330,7 +334,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyMode.
+         * The mode of traffic scheduling.
          */
         public Builder strategyMode(String strategyMode) {
             this.strategyMode = strategyMode;
@@ -338,7 +342,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyName.
+         * The name of the access policy queried.
          */
         public Builder strategyName(String strategyName) {
             this.strategyName = strategyName;
@@ -414,7 +418,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * GroupCode.
+             * The code of the access region group.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -422,7 +426,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the access region group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -430,7 +434,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * LineCode.
+             * The code for the line of the access region.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -438,7 +442,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * LineName.
+             * The name for the line of the access region.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;

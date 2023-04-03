@@ -170,7 +170,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * CreateTime.
+         * The time when the health check task was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -178,7 +178,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * The timestamp that indicates when the health check task was created.
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -186,7 +186,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EvaluationCount.
+         * The number of consecutive times of failed health check attempts.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.evaluationCount = evaluationCount;
@@ -194,7 +194,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * The interval at which the health check task is executed. Unit: seconds.
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -202,7 +202,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * IspCityNodes.
+         * The monitored node.
          */
         public Builder ispCityNodes(IspCityNodes ispCityNodes) {
             this.ispCityNodes = ispCityNodes;
@@ -210,7 +210,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorConfigId.
+         * The ID of the health check task.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -218,7 +218,54 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorExtendInfo.
+         * The extended information. The following parameters are required for different health check protocols:
+         * <p>
+         * 
+         * *   HTTP or HTTPS:
+         * 
+         *     *   port: the check port.
+         * 
+         *     *   host: the host settings.
+         * 
+         *     *   path: the URL path.
+         * 
+         *     *   code: the return code greater than the specified value.
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   sni: specifies whether to enable server name indication (SNI). This parameter is used only for the HTTPS protocol. Valid values:
+         * 
+         *         *   true: enable SNI.
+         *         *   false: disable SNI.
+         * 
+         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
+         * 
+         * *   PING:
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   packetNum: the number of ping packets.
+         * 
+         *     *   packetLossRate: the loss rate of ping packets.
+         * 
+         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
+         * 
+         * *   TCP:
+         * 
+         *     *   port: the check port.
+         * 
+         *     *   failureRate: the failure rate.
+         * 
+         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
+         * 
+         *         *   IPV4
+         *         *   IPV6
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.monitorExtendInfo = monitorExtendInfo;
@@ -226,7 +273,13 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ProtocolType.
+         * The health check protocol. Valid values:
+         * <p>
+         * 
+         * *   HTTP
+         * *   HTTPS
+         * *   PING
+         * *   TCP
          */
         public Builder protocolType(String protocolType) {
             this.protocolType = protocolType;
@@ -234,7 +287,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +295,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Timeout.
+         * The timeout period. Unit: milliseconds.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -250,7 +303,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The time when the information about the health check task was updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -258,7 +311,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * The timestamp that indicates when the information about the health check task was updated.
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -358,7 +411,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * CityCode.
+             * The code of the monitored city node.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -366,7 +419,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * The display name of the monitored city node.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -374,7 +427,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCode.
+             * The code of the country or region.
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -382,7 +435,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CountryName.
+             * The display name of the country or region.
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -390,7 +443,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * The code of the monitored Internet service provider (ISP) node.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -398,7 +451,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * The name of the ISP.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;

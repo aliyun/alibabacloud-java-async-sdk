@@ -69,7 +69,7 @@ public class ExecuteGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +78,7 @@ public class ExecuteGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * RecoveryPlanId.
+         * The ID of the disaster recovery plan that you want to executed.
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.putQueryParameter("RecoveryPlanId", recoveryPlanId);

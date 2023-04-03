@@ -69,7 +69,7 @@ public class DescribeDnsGtmInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance about which you want to query the information.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeDnsGtmInstanceRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

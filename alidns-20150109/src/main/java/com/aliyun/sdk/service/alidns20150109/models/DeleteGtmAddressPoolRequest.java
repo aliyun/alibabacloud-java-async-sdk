@@ -69,7 +69,7 @@ public class DeleteGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * AddrPoolId.
+         * The ID of the address pool that you want to delete.
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -78,7 +78,7 @@ public class DeleteGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

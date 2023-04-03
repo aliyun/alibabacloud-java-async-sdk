@@ -84,7 +84,10 @@ public class UnbindInstanceDomainsRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * The list of domain names.
+         * <p>
+         * 
+         * Separate multiple domain names with commas (,). A maximum of 100 domain names can be entered.
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -93,7 +96,7 @@ public class UnbindInstanceDomainsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +105,7 @@ public class UnbindInstanceDomainsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

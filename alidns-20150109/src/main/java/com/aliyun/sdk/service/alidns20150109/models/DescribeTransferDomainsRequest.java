@@ -158,7 +158,7 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -167,7 +167,7 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +176,7 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +194,11 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * TransferType.
+         * The transfer type. Valid values:
+         * <p>
+         * 
+         * *   IN: transferred to this account.
+         * *   OUT: transferred from this account.
          */
         public Builder transferType(String transferType) {
             this.putQueryParameter("TransferType", transferType);

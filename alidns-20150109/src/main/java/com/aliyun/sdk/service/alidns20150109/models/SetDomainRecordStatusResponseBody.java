@@ -62,7 +62,7 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RecordId.
+         * The ID of the DNS record.
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -70,7 +70,7 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the DNS record.
          */
         public Builder status(String status) {
             this.status = status;

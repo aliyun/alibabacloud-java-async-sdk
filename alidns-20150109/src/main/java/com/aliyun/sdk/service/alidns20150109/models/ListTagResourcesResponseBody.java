@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The unique ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * Details of the resource and tags, such as the resource ID, the resource type, tag keys, and tag values.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource. The returned parameter value is fixed to DOMAIN.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +170,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

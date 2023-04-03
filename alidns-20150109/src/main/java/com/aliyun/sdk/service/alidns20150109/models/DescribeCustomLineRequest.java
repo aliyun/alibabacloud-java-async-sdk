@@ -68,7 +68,7 @@ public class DescribeCustomLineRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +77,7 @@ public class DescribeCustomLineRequest extends Request {
         }
 
         /**
-         * LineId.
+         * The unique ID of the custom line.
          */
         public Builder lineId(Long lineId) {
             this.putQueryParameter("LineId", lineId);

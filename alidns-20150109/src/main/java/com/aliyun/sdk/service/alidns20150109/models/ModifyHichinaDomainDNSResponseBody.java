@@ -62,7 +62,7 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NewDnsServers.
+         * The list of DNS servers after the domain name is changed.
          */
         public Builder newDnsServers(NewDnsServers newDnsServers) {
             this.newDnsServers = newDnsServers;
@@ -70,7 +70,7 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         }
 
         /**
-         * OriginalDnsServers.
+         * The list of DNS servers before the domain name is changed.
          */
         public Builder originalDnsServers(OriginalDnsServers originalDnsServers) {
             this.originalDnsServers = originalDnsServers;
@@ -78,7 +78,7 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

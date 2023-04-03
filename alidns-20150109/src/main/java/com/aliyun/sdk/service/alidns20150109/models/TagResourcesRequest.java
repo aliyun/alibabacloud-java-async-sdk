@@ -99,7 +99,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +108,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The domain name.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -117,7 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -180,7 +180,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -188,7 +188,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

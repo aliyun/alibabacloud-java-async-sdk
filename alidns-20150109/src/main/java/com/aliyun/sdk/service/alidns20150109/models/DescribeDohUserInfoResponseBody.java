@@ -74,7 +74,7 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         private Integer subDomainCount; 
 
         /**
-         * DomainCount.
+         * The number of accessed domains.
          */
         public Builder domainCount(Integer domainCount) {
             this.domainCount = domainCount;
@@ -82,7 +82,7 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PdnsId.
+         * The ID of the Alibaba Cloud public DNS user.
          */
         public Builder pdnsId(Long pdnsId) {
             this.pdnsId = pdnsId;
@@ -90,7 +90,7 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SubDomainCount.
+         * The number of accessed subdomains.
          */
         public Builder subDomainCount(Integer subDomainCount) {
             this.subDomainCount = subDomainCount;

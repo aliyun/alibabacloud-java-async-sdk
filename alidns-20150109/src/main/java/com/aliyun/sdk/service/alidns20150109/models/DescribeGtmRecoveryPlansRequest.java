@@ -96,7 +96,7 @@ public class DescribeGtmRecoveryPlansRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The keyword for the query. Fuzzy match is supported by disaster recovery plan name.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -105,7 +105,7 @@ public class DescribeGtmRecoveryPlansRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +114,7 @@ public class DescribeGtmRecoveryPlansRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number to return. The page number starts from **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +123,7 @@ public class DescribeGtmRecoveryPlansRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

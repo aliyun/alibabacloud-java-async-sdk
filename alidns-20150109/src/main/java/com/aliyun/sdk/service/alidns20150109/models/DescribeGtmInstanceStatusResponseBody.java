@@ -110,7 +110,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         private Integer switchToFailoverStrategyNum; 
 
         /**
-         * AddrNotAvailableNum.
+         * The number of unavailable addresses.
          */
         public Builder addrNotAvailableNum(Integer addrNotAvailableNum) {
             this.addrNotAvailableNum = addrNotAvailableNum;
@@ -118,7 +118,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * AddrPoolNotAvailableNum.
+         * The number of unavailable address pools.
          */
         public Builder addrPoolNotAvailableNum(Integer addrPoolNotAvailableNum) {
             this.addrPoolNotAvailableNum = addrPoolNotAvailableNum;
@@ -126,7 +126,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the instance. Valid values:
+         * <p>
+         * 
+         * *   ALLOW: Operations on the instance are allowed.
+         * *   DENY: Operations on the instance are not allowed.
          */
         public Builder status(String status) {
             this.status = status;
@@ -142,7 +146,11 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StatusReason.
+         * List of reasons for an instance status. Valid values:
+         * <p>
+         * 
+         * *   INSTANCE_OPERATE_BLACK_LIST: The instance is in the blacklist.
+         * *   BETA_INSTANCE: The instance is in public preview.
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -150,7 +158,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyNotAvailableNum.
+         * The number of access policies that are unavailable in the active address pool.
          */
         public Builder strategyNotAvailableNum(Integer strategyNotAvailableNum) {
             this.strategyNotAvailableNum = strategyNotAvailableNum;
@@ -158,7 +166,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SwitchToFailoverStrategyNum.
+         * The number of access policies that fail over to the secondary address pool.
          */
         public Builder switchToFailoverStrategyNum(Integer switchToFailoverStrategyNum) {
             this.switchToFailoverStrategyNum = switchToFailoverStrategyNum;

@@ -50,7 +50,7 @@ public class AddGtmRecoveryPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RecoveryPlanId.
+         * The ID of the disaster recovery plan created.
          */
         public Builder recoveryPlanId(String recoveryPlanId) {
             this.recoveryPlanId = recoveryPlanId;
@@ -58,7 +58,7 @@ public class AddGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

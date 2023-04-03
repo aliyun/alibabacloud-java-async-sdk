@@ -111,7 +111,7 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * FaultAddrPool.
+         * The list of faulty address pools.
          */
         public Builder faultAddrPool(String faultAddrPool) {
             this.putQueryParameter("FaultAddrPool", faultAddrPool);
@@ -120,7 +120,7 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -129,7 +129,7 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the disaster recovery plan.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -138,7 +138,7 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * RecoveryPlanId.
+         * The ID of the disaster recovery plan.
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.putQueryParameter("RecoveryPlanId", recoveryPlanId);
@@ -147,7 +147,7 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks about the disaster recovery plan.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

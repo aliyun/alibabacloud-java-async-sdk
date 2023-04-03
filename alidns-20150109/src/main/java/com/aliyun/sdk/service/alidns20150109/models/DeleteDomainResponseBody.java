@@ -50,7 +50,7 @@ public class DeleteDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -58,7 +58,7 @@ public class DeleteDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

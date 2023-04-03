@@ -69,7 +69,7 @@ public class GetMainDomainNameRequest extends Request {
         } 
 
         /**
-         * InputString.
+         * The input string. The string can be up to 128 characters in length.
          */
         public Builder inputString(String inputString) {
             this.putQueryParameter("InputString", inputString);
@@ -78,7 +78,7 @@ public class GetMainDomainNameRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

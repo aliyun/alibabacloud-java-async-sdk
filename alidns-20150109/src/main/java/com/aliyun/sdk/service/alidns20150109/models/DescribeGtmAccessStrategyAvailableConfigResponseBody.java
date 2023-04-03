@@ -21,10 +21,14 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SuggestSetDefaultLine")
+    private Boolean suggestSetDefaultLine;
+
     private DescribeGtmAccessStrategyAvailableConfigResponseBody(Builder builder) {
         this.addrPools = builder.addrPools;
         this.lines = builder.lines;
         this.requestId = builder.requestId;
+        this.suggestSetDefaultLine = builder.suggestSetDefaultLine;
     }
 
     public static Builder builder() {
@@ -56,13 +60,21 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         return this.requestId;
     }
 
+    /**
+     * @return suggestSetDefaultLine
+     */
+    public Boolean getSuggestSetDefaultLine() {
+        return this.suggestSetDefaultLine;
+    }
+
     public static final class Builder {
         private AddrPools addrPools; 
         private Lines lines; 
         private String requestId; 
+        private Boolean suggestSetDefaultLine; 
 
         /**
-         * AddrPools.
+         * The returned list of address pools.
          */
         public Builder addrPools(AddrPools addrPools) {
             this.addrPools = addrPools;
@@ -70,7 +82,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * Lines.
+         * The returned lines of access regions.
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -78,10 +90,18 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SuggestSetDefaultLine.
+         */
+        public Builder suggestSetDefaultLine(Boolean suggestSetDefaultLine) {
+            this.suggestSetDefaultLine = suggestSetDefaultLine;
             return this;
         }
 
@@ -130,7 +150,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             private String addrPoolName; 
 
             /**
-             * AddrPoolId.
+             * The ID of the address pool.
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -138,7 +158,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * AddrPoolName.
+             * The name of the address pool.
              */
             public Builder addrPoolName(String addrPoolName) {
                 this.addrPoolName = addrPoolName;
@@ -280,7 +300,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             private String status; 
 
             /**
-             * FatherCode.
+             * The code of the parent line for the access region. If no parent line exists, leave this parameter blank.
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -288,7 +308,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * GroupCode.
+             * The code of the access region group.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -296,7 +316,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * GroupName.
+             * The name of the access region group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -304,7 +324,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * LineCode.
+             * The code for the line of the access region.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -312,7 +332,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * LineName.
+             * The name for the line of the access region.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -320,7 +340,11 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * Status.
+             * The current status of the line. Valid values:
+             * <p>
+             * 
+             * - **FORBIDDEN**: Unavailable
+             * - **OPTIONAL**: Availabe
              */
             public Builder status(String status) {
                 this.status = status;

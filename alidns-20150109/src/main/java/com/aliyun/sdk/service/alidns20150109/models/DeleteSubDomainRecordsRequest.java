@@ -112,7 +112,7 @@ public class DeleteSubDomainRecordsRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -121,7 +121,7 @@ public class DeleteSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -130,7 +130,10 @@ public class DeleteSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * RR.
+         * The host record.
+         * <p>
+         * 
+         * For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.
          */
         public Builder rr(String rr) {
             this.putQueryParameter("RR", rr);
@@ -139,7 +142,10 @@ public class DeleteSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the DNS record. If you do not specify this parameter, all DNS record types corresponding to the subdomain name are returned.
+         * <p>
+         * 
+         * DNS record types include **A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV**. The value is not case-sensitive.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -148,7 +154,7 @@ public class DeleteSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

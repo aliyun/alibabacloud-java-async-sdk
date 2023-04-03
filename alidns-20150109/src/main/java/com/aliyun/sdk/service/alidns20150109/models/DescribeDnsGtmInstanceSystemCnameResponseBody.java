@@ -58,7 +58,7 @@ public class DescribeDnsGtmInstanceSystemCnameResponseBody extends TeaModel {
         }
 
         /**
-         * SystemCname.
+         * The CNAME domain name assigned by the system.
          */
         public Builder systemCname(String systemCname) {
             this.systemCname = systemCname;

@@ -124,7 +124,13 @@ public class DescribeBatchResultDetailRequest extends Request {
         } 
 
         /**
-         * BatchType.
+         * The type of the batch operation. Valid values:
+         * <p>
+         * 
+         * *   **DOMAIN_ADD**: adds domain names in batches.
+         * *   **DOMAIN_DEL**: deletes domain names in batches.
+         * *   **RR_ADD**: adds DNS records in batches.
+         * *   **RR_DEL**: deletes DNS records in batches.
          */
         public Builder batchType(String batchType) {
             this.putQueryParameter("BatchType", batchType);
@@ -133,7 +139,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,7 +148,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +157,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +175,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

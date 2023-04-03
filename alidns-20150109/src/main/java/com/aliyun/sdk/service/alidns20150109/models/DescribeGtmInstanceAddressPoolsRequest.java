@@ -98,7 +98,7 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance that you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,7 +107,7 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +116,7 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +125,7 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

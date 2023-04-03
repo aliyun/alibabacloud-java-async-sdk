@@ -172,7 +172,7 @@ public class UpdateDomainRecordRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -181,7 +181,7 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * Line.
+         * The resolution line. Default value: **default**.
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -190,7 +190,10 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of an MX-type DNS record. Valid values: `[1,50]`.
+         * <p>
+         * 
+         * This parameter must be specified if the type of the DNS record is MX.
          */
         public Builder priority(Long priority) {
             this.putQueryParameter("Priority", priority);
@@ -199,7 +202,10 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * RR.
+         * The host record.
+         * <p>
+         * 
+         * For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.
          */
         public Builder rr(String rr) {
             this.putQueryParameter("RR", rr);
@@ -208,7 +214,7 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * The ID of the DNS record.
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -217,7 +223,7 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * TTL.
+         * The TTL of the resolution. Default value: 600. Unit: seconds.
          */
         public Builder TTL(Long TTL) {
             this.putQueryParameter("TTL", TTL);
@@ -226,7 +232,7 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the DNS record.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -235,7 +241,7 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -244,7 +250,7 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the DNS record.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

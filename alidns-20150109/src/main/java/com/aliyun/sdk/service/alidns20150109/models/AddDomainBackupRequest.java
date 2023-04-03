@@ -84,7 +84,7 @@ public class AddDomainBackupRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name for which you want to create a backup task.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,7 +93,7 @@ public class AddDomainBackupRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +102,11 @@ public class AddDomainBackupRequest extends Request {
         }
 
         /**
-         * PeriodType.
+         * The backup cycle. Valid values:
+         * <p>
+         * 
+         * *   **DAY**: Backs up data once every day.
+         * *   **HOUR**: Backs up data once every hour.
          */
         public Builder periodType(String periodType) {
             this.putQueryParameter("PeriodType", periodType);

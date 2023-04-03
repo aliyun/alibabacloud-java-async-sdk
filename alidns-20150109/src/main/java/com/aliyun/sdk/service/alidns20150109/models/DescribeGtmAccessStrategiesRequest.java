@@ -96,7 +96,7 @@ public class DescribeGtmAccessStrategiesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the GTM instance whose access policies you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +105,7 @@ public class DescribeGtmAccessStrategiesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language used by the user.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +114,7 @@ public class DescribeGtmAccessStrategiesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +123,7 @@ public class DescribeGtmAccessStrategiesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

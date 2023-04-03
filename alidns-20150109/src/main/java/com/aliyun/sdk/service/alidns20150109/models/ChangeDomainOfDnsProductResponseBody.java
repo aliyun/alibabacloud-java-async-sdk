@@ -50,7 +50,7 @@ public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OriginalDomain.
+         * The original domain name that was bound to the instance. If the value of this parameter is empty, the instance is bound with a domain name for the first time.
          */
         public Builder originalDomain(String originalDomain) {
             this.originalDomain = originalDomain;
@@ -58,7 +58,7 @@ public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

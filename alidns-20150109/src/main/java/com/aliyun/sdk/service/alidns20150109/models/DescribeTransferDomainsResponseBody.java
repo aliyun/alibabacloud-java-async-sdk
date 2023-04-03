@@ -86,7 +86,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DomainTransfers.
+         * The list of domain names that were transferred between accounts.
          */
         public Builder domainTransfers(DomainTransfers domainTransfers) {
             this.domainTransfers = domainTransfers;
@@ -94,7 +94,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of domain names.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             private Long targetUserId; 
 
             /**
-             * CreateTime.
+             * The time when the task for transferring domain names was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +226,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The UNIX timestamp representing when the task for transferring domain names was created.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -234,7 +234,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -242,7 +242,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * FromUserId.
+             * The ID of the user from which the domain name was transferred.
              */
             public Builder fromUserId(Long fromUserId) {
                 this.fromUserId = fromUserId;
@@ -250,7 +250,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the domain name that was transferred.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -258,7 +258,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetUserId.
+             * The ID of the user to which the domain name was transferred.
              */
             public Builder targetUserId(Long targetUserId) {
                 this.targetUserId = targetUserId;

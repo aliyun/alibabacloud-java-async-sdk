@@ -302,7 +302,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * AliDomain.
+         * Indicates whether the domain name is an Alibaba Cloud HiChina domain name.
          */
         public Builder aliDomain(Boolean aliDomain) {
             this.aliDomain = aliDomain;
@@ -310,7 +310,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * AvailableTtls.
+         * The available time to live (TTL) values.
          */
         public Builder availableTtls(AvailableTtls availableTtls) {
             this.availableTtls = availableTtls;
@@ -318,7 +318,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the domain name was added to Alibaba Cloud CDN.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -326,7 +326,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DnsServers.
+         * The information about DNS servers.
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -334,7 +334,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DomainId.
+         * The ID of the domain name.
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -342,7 +342,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -350,7 +350,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * The ID of the domain name group.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -358,7 +358,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * The name of the domain name group.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -366,7 +366,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InBlackHole.
+         * Indicates whether blackhole filtering was triggered.
          */
         public Builder inBlackHole(Boolean inBlackHole) {
             this.inBlackHole = inBlackHole;
@@ -374,7 +374,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InClean.
+         * Indicates whether traffic scrubbing was started.
          */
         public Builder inClean(Boolean inClean) {
             this.inClean = inClean;
@@ -382,7 +382,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Alibaba Cloud DNS instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -390,7 +390,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * LineType.
+         * The type of line.
          */
         public Builder lineType(String lineType) {
             this.lineType = lineType;
@@ -398,7 +398,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * MinTtl.
+         * The minimum TTL.
          */
         public Builder minTtl(Long minTtl) {
             this.minTtl = minTtl;
@@ -406,7 +406,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PunyCode.
+         * The Punycode for the domain name. This parameter is returned only for Chinese domain names.
          */
         public Builder punyCode(String punyCode) {
             this.punyCode = punyCode;
@@ -414,7 +414,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RecordLineTreeJson.
+         * The tree-based lines.
          */
         public Builder recordLineTreeJson(String recordLineTreeJson) {
             this.recordLineTreeJson = recordLineTreeJson;
@@ -422,7 +422,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RecordLines.
+         * The information about lines.
          */
         public Builder recordLines(RecordLines recordLines) {
             this.recordLines = recordLines;
@@ -430,7 +430,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RegionLines.
+         * Indicates whether the lines are regional lines.
          */
         public Builder regionLines(Boolean regionLines) {
             this.regionLines = regionLines;
@@ -438,7 +438,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * The description of the domain name.
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -446,7 +446,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -454,7 +454,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -462,7 +462,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SlaveDns.
+         * Indicates whether secondary DNS is allowed.
          */
         public Builder slaveDns(Boolean slaveDns) {
             this.slaveDns = slaveDns;
@@ -470,7 +470,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * VersionCode.
+         * The version of the Alibaba Cloud DNS instance.
          */
         public Builder versionCode(String versionCode) {
             this.versionCode = versionCode;
@@ -478,7 +478,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * The edition of the Alibaba Cloud DNS instance.
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;
@@ -636,7 +636,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * FatherCode.
+             * The code of the parent line. This parameter is left empty if the line has no parent line.
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -644,7 +644,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LineCode.
+             * The code of the line.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -652,7 +652,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LineDisplayName.
+             * The name of the parent line.
              */
             public Builder lineDisplayName(String lineDisplayName) {
                 this.lineDisplayName = lineDisplayName;
@@ -660,7 +660,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LineName.
+             * The name of the line.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;

@@ -84,7 +84,7 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
         } 
 
         /**
-         * Addrs.
+         * The addresses whose source regions you want to query.
          */
         public Builder addrs(String addrs) {
             this.putQueryParameter("Addrs", addrs);
@@ -93,7 +93,7 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +102,12 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the addresses. Valid values:
+         * <p>
+         * 
+         * *   IPV4: IPv4 address
+         * *   IPV6: IPv6 address
+         * *   DOMAIN: domain name
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

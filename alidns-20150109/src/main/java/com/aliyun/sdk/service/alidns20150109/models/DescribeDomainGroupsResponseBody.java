@@ -86,7 +86,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DomainGroups.
+         * The list of domain name groups.
          */
         public Builder domainGroups(DomainGroups domainGroups) {
             this.domainGroups = domainGroups;
@@ -94,7 +94,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of domain name groups.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * DomainCount.
+             * The number of domain name groups.
              */
             public Builder domainCount(Long domainCount) {
                 this.domainCount = domainCount;
@@ -190,7 +190,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the domain name group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -198,7 +198,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the domain name group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

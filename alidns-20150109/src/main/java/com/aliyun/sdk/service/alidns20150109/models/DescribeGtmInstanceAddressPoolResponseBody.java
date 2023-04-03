@@ -194,7 +194,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * AddrCount.
+         * The number of addresses in the address pool queried.
          */
         public Builder addrCount(Integer addrCount) {
             this.addrCount = addrCount;
@@ -202,7 +202,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * AddrPoolId.
+         * The ID of the address pool.
          */
         public Builder addrPoolId(String addrPoolId) {
             this.addrPoolId = addrPoolId;
@@ -210,7 +210,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Addrs.
+         * The addresses in the address pool.
          */
         public Builder addrs(Addrs addrs) {
             this.addrs = addrs;
@@ -218,7 +218,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the address pool was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -234,7 +234,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * MinAvailableAddrNum.
+         * The minimum number of available addresses in the address pool.
          */
         public Builder minAvailableAddrNum(Integer minAvailableAddrNum) {
             this.minAvailableAddrNum = minAvailableAddrNum;
@@ -242,7 +242,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorConfigId.
+         * The health check ID of the address pool.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -250,7 +250,12 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorStatus.
+         * Indicates whether health check was enabled for the address pool. Valid values:
+         * <p>
+         * 
+         * *   **OPEN**: Enabled
+         * *   **CLOSE**: Disabled
+         * *   **UNCONFIGURED**: Not configured
          */
         public Builder monitorStatus(String monitorStatus) {
             this.monitorStatus = monitorStatus;
@@ -258,7 +263,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the address pool.
          */
         public Builder name(String name) {
             this.name = name;
@@ -266,7 +271,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +279,11 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The availability status of the address pool. Valid values:
+         * <p>
+         * 
+         * *   **AVAILABLE**: Available
+         * *   **NOT_AVAILABLE**: Unavailable
          */
         public Builder status(String status) {
             this.status = status;
@@ -282,7 +291,11 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the address pool. Valid values:
+         * <p>
+         * 
+         * *   **IP**: IP address
+         * *   **DOMAIN**: Domain name
          */
         public Builder type(String type) {
             this.type = type;
@@ -290,7 +303,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The last time when the address pool was updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -298,7 +311,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * A timestamp that indicates the last time the address pool was updated.
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -434,7 +447,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * AddrId.
+             * The ID of the address.
              */
             public Builder addrId(Long addrId) {
                 this.addrId = addrId;
@@ -442,7 +455,11 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * AlertStatus.
+             * Indicates whether health check was enabled for the address. Valid values:
+             * <p>
+             * 
+             * *   **OK**: Normal
+             * *   **ALERT**: Alert
              */
             public Builder alertStatus(String alertStatus) {
                 this.alertStatus = alertStatus;
@@ -450,7 +467,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the address pool was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -466,7 +483,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * LbaWeight.
+             * The weight of the address.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -474,7 +491,12 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The mode of the address. Valid values:
+             * <p>
+             * 
+             * *   **SMART**: Intelligent return
+             * *   **ONLINE**: Always online
+             * *   **OFFLINE**: Always offline
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -482,7 +504,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The last time when the address was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -490,7 +512,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * A timestamp that indicates the last time when the address was updated.
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -498,7 +520,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The address.
              */
             public Builder value(String value) {
                 this.value = value;

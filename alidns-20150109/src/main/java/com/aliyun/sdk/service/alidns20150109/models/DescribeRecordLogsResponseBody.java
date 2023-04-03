@@ -86,7 +86,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RecordLogs.
+         * The list of the operation logs of the domain name.
          */
         public Builder recordLogs(RecordLogs recordLogs) {
             this.recordLogs = recordLogs;
@@ -110,7 +110,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of operation logs.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Action.
+             * The operation that you performed.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -214,7 +214,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ActionTime.
+             * The time when the operation was performed.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -222,7 +222,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ActionTimestamp.
+             * The UNIX timestamp representing the time of the operation.
              */
             public Builder actionTimestamp(Long actionTimestamp) {
                 this.actionTimestamp = actionTimestamp;
@@ -230,7 +230,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * The IP address of the operator.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -238,7 +238,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned operation message.
              */
             public Builder message(String message) {
                 this.message = message;

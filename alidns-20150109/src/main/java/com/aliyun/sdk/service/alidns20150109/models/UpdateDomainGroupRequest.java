@@ -84,7 +84,7 @@ public class UpdateDomainGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the domain name group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -93,7 +93,7 @@ public class UpdateDomainGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The new name of the domain name group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -102,7 +102,7 @@ public class UpdateDomainGroupRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

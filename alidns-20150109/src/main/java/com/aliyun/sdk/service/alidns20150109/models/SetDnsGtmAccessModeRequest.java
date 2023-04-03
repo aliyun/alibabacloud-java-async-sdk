@@ -84,7 +84,12 @@ public class SetDnsGtmAccessModeRequest extends Request {
         } 
 
         /**
-         * AccessMode.
+         * The primary/secondary switchover policy for address pool groups. Valid values:
+         * <p>
+         * 
+         * *   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.
+         * *   DEFAULT: uses the primary address pool group.
+         * *   FAILOVER: uses the secondary address pool group.
          */
         public Builder accessMode(String accessMode) {
             this.putQueryParameter("AccessMode", accessMode);
@@ -93,7 +98,7 @@ public class SetDnsGtmAccessModeRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +107,7 @@ public class SetDnsGtmAccessModeRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * The ID of the policy.
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
