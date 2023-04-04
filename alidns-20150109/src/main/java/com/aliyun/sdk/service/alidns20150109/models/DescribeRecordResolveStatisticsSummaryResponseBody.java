@@ -161,10 +161,14 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
         @NameInMap("DomainType")
         private String domainType;
 
+        @NameInMap("SubDomain")
+        private String subDomain;
+
         private Statistics(Builder builder) {
             this.count = builder.count;
             this.domainName = builder.domainName;
             this.domainType = builder.domainType;
+            this.subDomain = builder.subDomain;
         }
 
         public static Builder builder() {
@@ -196,10 +200,18 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
             return this.domainType;
         }
 
+        /**
+         * @return subDomain
+         */
+        public String getSubDomain() {
+            return this.subDomain;
+        }
+
         public static final class Builder {
             private String count; 
             private String domainName; 
             private String domainType; 
+            private String subDomain; 
 
             /**
              * Count.
@@ -210,7 +222,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
             }
 
             /**
-             * DomainName.
+             * 子域名
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -222,6 +234,14 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
+                return this;
+            }
+
+            /**
+             * 子域名
+             */
+            public Builder subDomain(String subDomain) {
+                this.subDomain = subDomain;
                 return this;
             }
 
