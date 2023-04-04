@@ -300,6 +300,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateFlowTagGroupResponse> updateFlowTagGroup(UpdateFlowTagGroupRequest request);
 
+    CompletableFuture<UpdateGroupResponse> updateGroup(UpdateGroupRequest request);
+
     CompletableFuture<UpdateGroupMemberResponse> updateGroupMember(UpdateGroupMemberRequest request);
 
     CompletableFuture<UpdateHostGroupResponse> updateHostGroup(UpdateHostGroupRequest request);
