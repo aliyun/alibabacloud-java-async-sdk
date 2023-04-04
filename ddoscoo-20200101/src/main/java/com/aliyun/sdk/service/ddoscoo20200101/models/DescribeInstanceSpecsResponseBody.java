@@ -111,6 +111,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("QpsLimit")
         private Integer qpsLimit;
 
+        @NameInMap("RealLimitBw")
+        private Long realLimitBw;
+
         @NameInMap("SiteLimit")
         private Integer siteLimit;
 
@@ -128,6 +131,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.portLimit = builder.portLimit;
             this.qpsLimit = builder.qpsLimit;
+            this.realLimitBw = builder.realLimitBw;
             this.siteLimit = builder.siteLimit;
         }
 
@@ -231,6 +235,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
+         * @return realLimitBw
+         */
+        public Long getRealLimitBw() {
+            return this.realLimitBw;
+        }
+
+        /**
          * @return siteLimit
          */
         public Integer getSiteLimit() {
@@ -251,6 +262,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private String instanceId; 
             private Integer portLimit; 
             private Integer qpsLimit; 
+            private Long realLimitBw; 
             private Integer siteLimit; 
 
             /**
@@ -368,6 +380,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
              */
             public Builder qpsLimit(Integer qpsLimit) {
                 this.qpsLimit = qpsLimit;
+                return this;
+            }
+
+            /**
+             * RealLimitBw.
+             */
+            public Builder realLimitBw(Long realLimitBw) {
+                this.realLimitBw = realLimitBw;
                 return this;
             }
 
