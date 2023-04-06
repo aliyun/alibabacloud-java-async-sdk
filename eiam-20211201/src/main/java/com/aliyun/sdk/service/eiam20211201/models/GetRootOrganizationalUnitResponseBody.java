@@ -174,7 +174,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 实例Id
+             * 实例ID
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -182,7 +182,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 机构ID
+             * 组织ID
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -190,7 +190,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * 机构名称
+             * 组织名称
              */
             public Builder organizationalUnitName(String organizationalUnitName) {
                 this.organizationalUnitName = organizationalUnitName;

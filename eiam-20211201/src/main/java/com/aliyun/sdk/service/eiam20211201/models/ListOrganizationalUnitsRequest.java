@@ -27,6 +27,11 @@ public class ListOrganizationalUnitsRequest extends Request {
     private String organizationalUnitName;
 
     @Query
+    @NameInMap("OrganizationalUnitNameStartsWith")
+    @Validation(maxLength = 64)
+    private String organizationalUnitNameStartsWith;
+
+    @Query
     @NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -44,6 +49,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.organizationalUnitName = builder.organizationalUnitName;
+        this.organizationalUnitNameStartsWith = builder.organizationalUnitNameStartsWith;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.parentId = builder.parentId;
@@ -84,6 +90,13 @@ public class ListOrganizationalUnitsRequest extends Request {
     }
 
     /**
+     * @return organizationalUnitNameStartsWith
+     */
+    public String getOrganizationalUnitNameStartsWith() {
+        return this.organizationalUnitNameStartsWith;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -108,6 +121,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private String organizationalUnitName; 
+        private String organizationalUnitNameStartsWith; 
         private Long pageNumber; 
         private Long pageSize; 
         private String parentId; 
@@ -121,6 +135,7 @@ public class ListOrganizationalUnitsRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.organizationalUnitName = request.organizationalUnitName;
+            this.organizationalUnitNameStartsWith = request.organizationalUnitNameStartsWith;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.parentId = request.parentId;
@@ -136,7 +151,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +160,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 机构名称
+         * The name of the organizational unit.
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putQueryParameter("OrganizationalUnitName", organizationalUnitName);
@@ -154,7 +169,16 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为1。
+         * 组织名称，左匹配
+         */
+        public Builder organizationalUnitNameStartsWith(String organizationalUnitNameStartsWith) {
+            this.putQueryParameter("OrganizationalUnitNameStartsWith", organizationalUnitNameStartsWith);
+            this.organizationalUnitNameStartsWith = organizationalUnitNameStartsWith;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -163,7 +187,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 当前查询的列表页码，默认为20。
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -172,7 +196,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 父机构ID
+         * The ID of the parent organizational unit.
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);

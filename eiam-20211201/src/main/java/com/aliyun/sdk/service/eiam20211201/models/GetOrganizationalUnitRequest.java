@@ -93,7 +93,7 @@ public class GetOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class GetOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * 机构Id
+         * The ID of the organizational unit.
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);

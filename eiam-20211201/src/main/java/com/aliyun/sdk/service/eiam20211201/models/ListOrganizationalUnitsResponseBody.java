@@ -62,7 +62,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * OrganizationalUnits.
+         * The list of data objects of organizational units.
          */
         public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -70,7 +70,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * 列表总条数目。
+         * The number of entries in the list.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -101,11 +101,17 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("Leaf")
+        private Boolean leaf;
+
         @NameInMap("OrganizationalUnitExternalId")
         private String organizationalUnitExternalId;
 
         @NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
+
+        @NameInMap("OrganizationalUnitName")
+        private String organizationalUnitName;
 
         @NameInMap("OrganizationalUnitSourceId")
         private String organizationalUnitSourceId;
@@ -123,8 +129,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
+            this.leaf = builder.leaf;
             this.organizationalUnitExternalId = builder.organizationalUnitExternalId;
             this.organizationalUnitId = builder.organizationalUnitId;
+            this.organizationalUnitName = builder.organizationalUnitName;
             this.organizationalUnitSourceId = builder.organizationalUnitSourceId;
             this.organizationalUnitSourceType = builder.organizationalUnitSourceType;
             this.parentId = builder.parentId;
@@ -161,6 +169,13 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         }
 
         /**
+         * @return leaf
+         */
+        public Boolean getLeaf() {
+            return this.leaf;
+        }
+
+        /**
          * @return organizationalUnitExternalId
          */
         public String getOrganizationalUnitExternalId() {
@@ -172,6 +187,13 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
          */
         public String getOrganizationalUnitId() {
             return this.organizationalUnitId;
+        }
+
+        /**
+         * @return organizationalUnitName
+         */
+        public String getOrganizationalUnitName() {
+            return this.organizationalUnitName;
         }
 
         /**
@@ -206,15 +228,17 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             private Long createTime; 
             private String description; 
             private String instanceId; 
+            private Boolean leaf; 
             private String organizationalUnitExternalId; 
             private String organizationalUnitId; 
+            private String organizationalUnitName; 
             private String organizationalUnitSourceId; 
             private String organizationalUnitSourceType; 
             private String parentId; 
             private Long updateTime; 
 
             /**
-             * 创建时间
+             * The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -222,7 +246,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * The description of the organizational unit.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +254,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例Id
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -238,7 +262,18 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 外部ID
+             * Indicates whether the node is a leaf node.
+             */
+            public Builder leaf(Boolean leaf) {
+                this.leaf = leaf;
+                return this;
+            }
+
+            /**
+             * The external ID of the organizational unit. The external ID can be used by external data to map the data of the organizational unit in IDaaS EIAM. By default, the external ID is the organizational unit ID.
+             * <p>
+             * 
+             * For organizational units with the same source type and source ID, each organizational unit has a unique external ID.
              */
             public Builder organizationalUnitExternalId(String organizationalUnitExternalId) {
                 this.organizationalUnitExternalId = organizationalUnitExternalId;
@@ -246,7 +281,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 机构ID
+             * The ID of the organizational unit.
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -254,7 +289,15 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 来源ID
+             * 机构名称
+             */
+            public Builder organizationalUnitName(String organizationalUnitName) {
+                this.organizationalUnitName = organizationalUnitName;
+                return this;
+            }
+
+            /**
+             * The source ID of the organizational unit.
              */
             public Builder organizationalUnitSourceId(String organizationalUnitSourceId) {
                 this.organizationalUnitSourceId = organizationalUnitSourceId;
@@ -262,7 +305,13 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 来源类型, build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导]
+             * The source type of the organizational unit. Valid values:
+             * <p>
+             * 
+             * *   build_in: The organizational unit was created in IDaaS.
+             * *   ding_talk: The organizational unit was imported from DingTalk.
+             * *   ad: The organizational unit was imported from Microsoft Active Directory (AD).
+             * *   ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.
              */
             public Builder organizationalUnitSourceType(String organizationalUnitSourceType) {
                 this.organizationalUnitSourceType = organizationalUnitSourceType;
@@ -270,7 +319,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 父机构ID
+             * The ID of the parent organizational unit.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -278,7 +327,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 最近一次更新时间
+             * The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

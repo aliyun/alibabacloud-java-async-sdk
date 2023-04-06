@@ -71,12 +71,238 @@ public class GetUserResponseBody extends TeaModel {
 
     } 
 
+    public static class CustomFields extends TeaModel {
+        @NameInMap("FieldName")
+        private String fieldName;
+
+        @NameInMap("FieldValue")
+        private String fieldValue;
+
+        private CustomFields(Builder builder) {
+            this.fieldName = builder.fieldName;
+            this.fieldValue = builder.fieldValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return fieldValue
+         */
+        public String getFieldValue() {
+            return this.fieldValue;
+        }
+
+        public static final class Builder {
+            private String fieldName; 
+            private String fieldValue; 
+
+            /**
+             * 字段标识
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * 字段数据值
+             */
+            public Builder fieldValue(String fieldValue) {
+                this.fieldValue = fieldValue;
+                return this;
+            }
+
+            public CustomFields build() {
+                return new CustomFields(this);
+            } 
+
+        } 
+
+    }
+    public static class Groups extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("GroupId")
+        private String groupId;
+
+        @NameInMap("GroupName")
+        private String groupName;
+
+        private Groups(Builder builder) {
+            this.description = builder.description;
+            this.groupId = builder.groupId;
+            this.groupName = builder.groupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Groups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String groupId; 
+            private String groupName; 
+
+            /**
+             * 组描述。
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * 组ID。
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * 组名称。
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            public Groups build() {
+                return new Groups(this);
+            } 
+
+        } 
+
+    }
+    public static class OrganizationalUnits extends TeaModel {
+        @NameInMap("OrganizationalUnitId")
+        private String organizationalUnitId;
+
+        @NameInMap("OrganizationalUnitName")
+        private String organizationalUnitName;
+
+        @NameInMap("Primary")
+        private Boolean primary;
+
+        private OrganizationalUnits(Builder builder) {
+            this.organizationalUnitId = builder.organizationalUnitId;
+            this.organizationalUnitName = builder.organizationalUnitName;
+            this.primary = builder.primary;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OrganizationalUnits create() {
+            return builder().build();
+        }
+
+        /**
+         * @return organizationalUnitId
+         */
+        public String getOrganizationalUnitId() {
+            return this.organizationalUnitId;
+        }
+
+        /**
+         * @return organizationalUnitName
+         */
+        public String getOrganizationalUnitName() {
+            return this.organizationalUnitName;
+        }
+
+        /**
+         * @return primary
+         */
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        public static final class Builder {
+            private String organizationalUnitId; 
+            private String organizationalUnitName; 
+            private Boolean primary; 
+
+            /**
+             * 机构ID
+             */
+            public Builder organizationalUnitId(String organizationalUnitId) {
+                this.organizationalUnitId = organizationalUnitId;
+                return this;
+            }
+
+            /**
+             * 机构名称
+             */
+            public Builder organizationalUnitName(String organizationalUnitName) {
+                this.organizationalUnitName = organizationalUnitName;
+                return this;
+            }
+
+            /**
+             * 是否主机构
+             */
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
+                return this;
+            }
+
+            public OrganizationalUnits build() {
+                return new OrganizationalUnits(this);
+            } 
+
+        } 
+
+    }
     public static class User extends TeaModel {
         @NameInMap("AccountExpireTime")
         private Long accountExpireTime;
 
         @NameInMap("CreateTime")
         private Long createTime;
+
+        @NameInMap("CustomFields")
+        private java.util.List < CustomFields> customFields;
 
         @NameInMap("Description")
         private String description;
@@ -90,14 +316,23 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("EmailVerified")
         private Boolean emailVerified;
 
+        @NameInMap("Groups")
+        private java.util.List < Groups> groups;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
         @NameInMap("LockExpireTime")
         private Long lockExpireTime;
 
+        @NameInMap("OrganizationalUnits")
+        private java.util.List < OrganizationalUnits> organizationalUnits;
+
         @NameInMap("PasswordExpireTime")
         private Long passwordExpireTime;
+
+        @NameInMap("PasswordSet")
+        private Boolean passwordSet;
 
         @NameInMap("PhoneNumber")
         private String phoneNumber;
@@ -138,13 +373,17 @@ public class GetUserResponseBody extends TeaModel {
         private User(Builder builder) {
             this.accountExpireTime = builder.accountExpireTime;
             this.createTime = builder.createTime;
+            this.customFields = builder.customFields;
             this.description = builder.description;
             this.displayName = builder.displayName;
             this.email = builder.email;
             this.emailVerified = builder.emailVerified;
+            this.groups = builder.groups;
             this.instanceId = builder.instanceId;
             this.lockExpireTime = builder.lockExpireTime;
+            this.organizationalUnits = builder.organizationalUnits;
             this.passwordExpireTime = builder.passwordExpireTime;
+            this.passwordSet = builder.passwordSet;
             this.phoneNumber = builder.phoneNumber;
             this.phoneNumberVerified = builder.phoneNumberVerified;
             this.phoneRegion = builder.phoneRegion;
@@ -182,6 +421,13 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return customFields
+         */
+        public java.util.List < CustomFields> getCustomFields() {
+            return this.customFields;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -210,6 +456,13 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return groups
+         */
+        public java.util.List < Groups> getGroups() {
+            return this.groups;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -224,10 +477,24 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return organizationalUnits
+         */
+        public java.util.List < OrganizationalUnits> getOrganizationalUnits() {
+            return this.organizationalUnits;
+        }
+
+        /**
          * @return passwordExpireTime
          */
         public Long getPasswordExpireTime() {
             return this.passwordExpireTime;
+        }
+
+        /**
+         * @return passwordSet
+         */
+        public Boolean getPasswordSet() {
+            return this.passwordSet;
         }
 
         /**
@@ -317,13 +584,17 @@ public class GetUserResponseBody extends TeaModel {
         public static final class Builder {
             private Long accountExpireTime; 
             private Long createTime; 
+            private java.util.List < CustomFields> customFields; 
             private String description; 
             private String displayName; 
             private String email; 
             private Boolean emailVerified; 
+            private java.util.List < Groups> groups; 
             private String instanceId; 
             private Long lockExpireTime; 
+            private java.util.List < OrganizationalUnits> organizationalUnits; 
             private Long passwordExpireTime; 
+            private Boolean passwordSet; 
             private String phoneNumber; 
             private Boolean phoneNumberVerified; 
             private String phoneRegion; 
@@ -350,6 +621,14 @@ public class GetUserResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * 账户扩展字段列表
+             */
+            public Builder customFields(java.util.List < CustomFields> customFields) {
+                this.customFields = customFields;
                 return this;
             }
 
@@ -386,7 +665,15 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 实例Id
+             * 账户所属组列表
+             */
+            public Builder groups(java.util.List < Groups> groups) {
+                this.groups = groups;
+                return this;
+            }
+
+            /**
+             * 实例ID
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -402,10 +689,26 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordExpireTime.
+             * 账户所属组织列表
+             */
+            public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
+                this.organizationalUnits = organizationalUnits;
+                return this;
+            }
+
+            /**
+             * 密码过期时间
              */
             public Builder passwordExpireTime(Long passwordExpireTime) {
                 this.passwordExpireTime = passwordExpireTime;
+                return this;
+            }
+
+            /**
+             * 密码是否已设置
+             */
+            public Builder passwordSet(Boolean passwordSet) {
+                this.passwordSet = passwordSet;
                 return this;
             }
 
@@ -434,7 +737,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 用户所属主机构ID
+             * 账户主机构ID
              */
             public Builder primaryOrganizationalUnitId(String primaryOrganizationalUnitId) {
                 this.primaryOrganizationalUnitId = primaryOrganizationalUnitId;

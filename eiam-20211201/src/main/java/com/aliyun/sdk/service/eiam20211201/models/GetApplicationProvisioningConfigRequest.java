@@ -93,7 +93,7 @@ public class GetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * IDaaS的应用主键id
+         * IDaaS的应用资源ID。
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -102,7 +102,7 @@ public class GetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM的实例id
+         * IDaaS EIAM实例的ID。
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -102,7 +102,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * 账号ID
+         * 账户ID
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

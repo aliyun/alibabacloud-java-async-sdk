@@ -116,6 +116,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("LockExpireTime")
         private Long lockExpireTime;
 
+        @NameInMap("PasswordExpireTime")
+        private Long passwordExpireTime;
+
         @NameInMap("PasswordSet")
         private Boolean passwordSet;
 
@@ -161,6 +164,7 @@ public class ListUsersResponseBody extends TeaModel {
             this.emailVerified = builder.emailVerified;
             this.instanceId = builder.instanceId;
             this.lockExpireTime = builder.lockExpireTime;
+            this.passwordExpireTime = builder.passwordExpireTime;
             this.passwordSet = builder.passwordSet;
             this.phoneNumber = builder.phoneNumber;
             this.phoneNumberVerified = builder.phoneNumberVerified;
@@ -237,6 +241,13 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public Long getLockExpireTime() {
             return this.lockExpireTime;
+        }
+
+        /**
+         * @return passwordExpireTime
+         */
+        public Long getPasswordExpireTime() {
+            return this.passwordExpireTime;
         }
 
         /**
@@ -332,6 +343,7 @@ public class ListUsersResponseBody extends TeaModel {
             private Boolean emailVerified; 
             private String instanceId; 
             private Long lockExpireTime; 
+            private Long passwordExpireTime; 
             private Boolean passwordSet; 
             private String phoneNumber; 
             private Boolean phoneNumberVerified; 
@@ -394,7 +406,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 实例Id
+             * 实例ID
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -406,6 +418,14 @@ public class ListUsersResponseBody extends TeaModel {
              */
             public Builder lockExpireTime(Long lockExpireTime) {
                 this.lockExpireTime = lockExpireTime;
+                return this;
+            }
+
+            /**
+             * 密码过期时间
+             */
+            public Builder passwordExpireTime(Long passwordExpireTime) {
+                this.passwordExpireTime = passwordExpireTime;
                 return this;
             }
 

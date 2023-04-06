@@ -244,7 +244,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 机构ID
+         * 组织ID
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);

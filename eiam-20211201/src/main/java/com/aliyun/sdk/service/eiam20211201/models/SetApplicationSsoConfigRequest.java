@@ -289,6 +289,12 @@ public class SetApplicationSsoConfigRequest extends Request {
         @NameInMap("IdTokenEffectiveTime")
         private Long idTokenEffectiveTime;
 
+        @NameInMap("PasswordAuthenticationSourceId")
+        private String passwordAuthenticationSourceId;
+
+        @NameInMap("PasswordTotpMfaRequired")
+        private Boolean passwordTotpMfaRequired;
+
         @NameInMap("PkceChallengeMethods")
         private java.util.List < String > pkceChallengeMethods;
 
@@ -318,6 +324,8 @@ public class SetApplicationSsoConfigRequest extends Request {
             this.grantScopes = builder.grantScopes;
             this.grantTypes = builder.grantTypes;
             this.idTokenEffectiveTime = builder.idTokenEffectiveTime;
+            this.passwordAuthenticationSourceId = builder.passwordAuthenticationSourceId;
+            this.passwordTotpMfaRequired = builder.passwordTotpMfaRequired;
             this.pkceChallengeMethods = builder.pkceChallengeMethods;
             this.pkceRequired = builder.pkceRequired;
             this.postLogoutRedirectUris = builder.postLogoutRedirectUris;
@@ -378,6 +386,20 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
+         * @return passwordAuthenticationSourceId
+         */
+        public String getPasswordAuthenticationSourceId() {
+            return this.passwordAuthenticationSourceId;
+        }
+
+        /**
+         * @return passwordTotpMfaRequired
+         */
+        public Boolean getPasswordTotpMfaRequired() {
+            return this.passwordTotpMfaRequired;
+        }
+
+        /**
          * @return pkceChallengeMethods
          */
         public java.util.List < String > getPkceChallengeMethods() {
@@ -433,6 +455,8 @@ public class SetApplicationSsoConfigRequest extends Request {
             private java.util.List < String > grantScopes; 
             private java.util.List < String > grantTypes; 
             private Long idTokenEffectiveTime; 
+            private String passwordAuthenticationSourceId; 
+            private Boolean passwordTotpMfaRequired; 
             private java.util.List < String > pkceChallengeMethods; 
             private Boolean pkceRequired; 
             private java.util.List < String > postLogoutRedirectUris; 
@@ -486,6 +510,22 @@ public class SetApplicationSsoConfigRequest extends Request {
              */
             public Builder idTokenEffectiveTime(Long idTokenEffectiveTime) {
                 this.idTokenEffectiveTime = idTokenEffectiveTime;
+                return this;
+            }
+
+            /**
+             * 密码模式使用的身份认证来源id，仅对password模式生效
+             */
+            public Builder passwordAuthenticationSourceId(String passwordAuthenticationSourceId) {
+                this.passwordAuthenticationSourceId = passwordAuthenticationSourceId;
+                return this;
+            }
+
+            /**
+             * 是否强制需要TOTP二次认证，仅对password模式生效
+             */
+            public Builder passwordTotpMfaRequired(Boolean passwordTotpMfaRequired) {
+                this.passwordTotpMfaRequired = passwordTotpMfaRequired;
                 return this;
             }
 
