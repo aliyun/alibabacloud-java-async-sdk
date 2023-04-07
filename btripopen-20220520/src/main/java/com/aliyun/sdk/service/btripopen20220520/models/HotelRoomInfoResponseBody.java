@@ -1,0 +1,737 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.btripopen20220520.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link HotelRoomInfoResponseBody} extends {@link TeaModel}
+ *
+ * <p>HotelRoomInfoResponseBody</p>
+ */
+public class HotelRoomInfoResponseBody extends TeaModel {
+    @NameInMap("code")
+    private String code;
+
+    @NameInMap("message")
+    private String message;
+
+    @NameInMap("module")
+    private java.util.List < Module> module;
+
+    @NameInMap("requestId")
+    private String requestId;
+
+    @NameInMap("success")
+    private Boolean success;
+
+    @NameInMap("traceId")
+    private String traceId;
+
+    private HotelRoomInfoResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
+        this.module = builder.module;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+        this.traceId = builder.traceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static HotelRoomInfoResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return module
+     */
+    public java.util.List < Module> getModule() {
+        return this.module;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return traceId
+     */
+    public String getTraceId() {
+        return this.traceId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private String message; 
+        private java.util.List < Module> module; 
+        private String requestId; 
+        private Boolean success; 
+        private String traceId; 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * module.
+         */
+        public Builder module(java.util.List < Module> module) {
+            this.module = module;
+            return this;
+        }
+
+        /**
+         * requestId
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * traceId.
+         */
+        public Builder traceId(String traceId) {
+            this.traceId = traceId;
+            return this;
+        }
+
+        public HotelRoomInfoResponseBody build() {
+            return new HotelRoomInfoResponseBody(this);
+        } 
+
+    } 
+
+    public static class BedInfos extends TeaModel {
+        @NameInMap("bed_desc")
+        private String bedDesc;
+
+        @NameInMap("bed_num")
+        private Integer bedNum;
+
+        @NameInMap("bed_size")
+        private String bedSize;
+
+        @NameInMap("bed_type")
+        private String bedType;
+
+        private BedInfos(Builder builder) {
+            this.bedDesc = builder.bedDesc;
+            this.bedNum = builder.bedNum;
+            this.bedSize = builder.bedSize;
+            this.bedType = builder.bedType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BedInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedDesc
+         */
+        public String getBedDesc() {
+            return this.bedDesc;
+        }
+
+        /**
+         * @return bedNum
+         */
+        public Integer getBedNum() {
+            return this.bedNum;
+        }
+
+        /**
+         * @return bedSize
+         */
+        public String getBedSize() {
+            return this.bedSize;
+        }
+
+        /**
+         * @return bedType
+         */
+        public String getBedType() {
+            return this.bedType;
+        }
+
+        public static final class Builder {
+            private String bedDesc; 
+            private Integer bedNum; 
+            private String bedSize; 
+            private String bedType; 
+
+            /**
+             * 床型描述
+             */
+            public Builder bedDesc(String bedDesc) {
+                this.bedDesc = bedDesc;
+                return this;
+            }
+
+            /**
+             * 床型数量
+             */
+            public Builder bedNum(Integer bedNum) {
+                this.bedNum = bedNum;
+                return this;
+            }
+
+            /**
+             * 床型尺寸说明
+             */
+            public Builder bedSize(String bedSize) {
+                this.bedSize = bedSize;
+                return this;
+            }
+
+            /**
+             * 床型
+             */
+            public Builder bedType(String bedType) {
+                this.bedType = bedType;
+                return this;
+            }
+
+            public BedInfos build() {
+                return new BedInfos(this);
+            } 
+
+        } 
+
+    }
+    public static class RoomImages extends TeaModel {
+        @NameInMap("bed_infos2")
+        private String bedInfos2;
+
+        @NameInMap("tag")
+        private Integer tag;
+
+        @NameInMap("url")
+        private String url;
+
+        private RoomImages(Builder builder) {
+            this.bedInfos2 = builder.bedInfos2;
+            this.tag = builder.tag;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RoomImages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedInfos2
+         */
+        public String getBedInfos2() {
+            return this.bedInfos2;
+        }
+
+        /**
+         * @return tag
+         */
+        public Integer getTag() {
+            return this.tag;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String bedInfos2; 
+            private Integer tag; 
+            private String url; 
+
+            /**
+             * 图片描述
+             */
+            public Builder bedInfos2(String bedInfos2) {
+                this.bedInfos2 = bedInfos2;
+                return this;
+            }
+
+            /**
+             * 图片类型
+             */
+            public Builder tag(Integer tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            /**
+             * 地址
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public RoomImages build() {
+                return new RoomImages(this);
+            } 
+
+        } 
+
+    }
+    public static class Module extends TeaModel {
+        @NameInMap("bed_infos")
+        private java.util.List < BedInfos> bedInfos;
+
+        @NameInMap("extra_bed")
+        private Integer extraBed;
+
+        @NameInMap("extra_bed_desc")
+        private String extraBedDesc;
+
+        @NameInMap("floor")
+        private String floor;
+
+        @NameInMap("internet_way")
+        private String internetWay;
+
+        @NameInMap("max_occupancy")
+        private Integer maxOccupancy;
+
+        @NameInMap("room_desc")
+        private String roomDesc;
+
+        @NameInMap("room_facilities")
+        private String roomFacilities;
+
+        @NameInMap("room_facility_list")
+        private java.util.List < String > roomFacilityList;
+
+        @NameInMap("room_id")
+        private String roomId;
+
+        @NameInMap("room_image")
+        private String roomImage;
+
+        @NameInMap("room_images")
+        private java.util.List < RoomImages> roomImages;
+
+        @NameInMap("room_name")
+        private String roomName;
+
+        @NameInMap("room_type")
+        private Integer roomType;
+
+        @NameInMap("roomarea")
+        private String roomarea;
+
+        @NameInMap("rooms")
+        private Integer rooms;
+
+        @NameInMap("window")
+        private String window;
+
+        @NameInMap("window_bad")
+        private String windowBad;
+
+        @NameInMap("window_view")
+        private String windowView;
+
+        private Module(Builder builder) {
+            this.bedInfos = builder.bedInfos;
+            this.extraBed = builder.extraBed;
+            this.extraBedDesc = builder.extraBedDesc;
+            this.floor = builder.floor;
+            this.internetWay = builder.internetWay;
+            this.maxOccupancy = builder.maxOccupancy;
+            this.roomDesc = builder.roomDesc;
+            this.roomFacilities = builder.roomFacilities;
+            this.roomFacilityList = builder.roomFacilityList;
+            this.roomId = builder.roomId;
+            this.roomImage = builder.roomImage;
+            this.roomImages = builder.roomImages;
+            this.roomName = builder.roomName;
+            this.roomType = builder.roomType;
+            this.roomarea = builder.roomarea;
+            this.rooms = builder.rooms;
+            this.window = builder.window;
+            this.windowBad = builder.windowBad;
+            this.windowView = builder.windowView;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Module create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedInfos
+         */
+        public java.util.List < BedInfos> getBedInfos() {
+            return this.bedInfos;
+        }
+
+        /**
+         * @return extraBed
+         */
+        public Integer getExtraBed() {
+            return this.extraBed;
+        }
+
+        /**
+         * @return extraBedDesc
+         */
+        public String getExtraBedDesc() {
+            return this.extraBedDesc;
+        }
+
+        /**
+         * @return floor
+         */
+        public String getFloor() {
+            return this.floor;
+        }
+
+        /**
+         * @return internetWay
+         */
+        public String getInternetWay() {
+            return this.internetWay;
+        }
+
+        /**
+         * @return maxOccupancy
+         */
+        public Integer getMaxOccupancy() {
+            return this.maxOccupancy;
+        }
+
+        /**
+         * @return roomDesc
+         */
+        public String getRoomDesc() {
+            return this.roomDesc;
+        }
+
+        /**
+         * @return roomFacilities
+         */
+        public String getRoomFacilities() {
+            return this.roomFacilities;
+        }
+
+        /**
+         * @return roomFacilityList
+         */
+        public java.util.List < String > getRoomFacilityList() {
+            return this.roomFacilityList;
+        }
+
+        /**
+         * @return roomId
+         */
+        public String getRoomId() {
+            return this.roomId;
+        }
+
+        /**
+         * @return roomImage
+         */
+        public String getRoomImage() {
+            return this.roomImage;
+        }
+
+        /**
+         * @return roomImages
+         */
+        public java.util.List < RoomImages> getRoomImages() {
+            return this.roomImages;
+        }
+
+        /**
+         * @return roomName
+         */
+        public String getRoomName() {
+            return this.roomName;
+        }
+
+        /**
+         * @return roomType
+         */
+        public Integer getRoomType() {
+            return this.roomType;
+        }
+
+        /**
+         * @return roomarea
+         */
+        public String getRoomarea() {
+            return this.roomarea;
+        }
+
+        /**
+         * @return rooms
+         */
+        public Integer getRooms() {
+            return this.rooms;
+        }
+
+        /**
+         * @return window
+         */
+        public String getWindow() {
+            return this.window;
+        }
+
+        /**
+         * @return windowBad
+         */
+        public String getWindowBad() {
+            return this.windowBad;
+        }
+
+        /**
+         * @return windowView
+         */
+        public String getWindowView() {
+            return this.windowView;
+        }
+
+        public static final class Builder {
+            private java.util.List < BedInfos> bedInfos; 
+            private Integer extraBed; 
+            private String extraBedDesc; 
+            private String floor; 
+            private String internetWay; 
+            private Integer maxOccupancy; 
+            private String roomDesc; 
+            private String roomFacilities; 
+            private java.util.List < String > roomFacilityList; 
+            private String roomId; 
+            private String roomImage; 
+            private java.util.List < RoomImages> roomImages; 
+            private String roomName; 
+            private Integer roomType; 
+            private String roomarea; 
+            private Integer rooms; 
+            private String window; 
+            private String windowBad; 
+            private String windowView; 
+
+            /**
+             * 该房型下的床型列表
+             */
+            public Builder bedInfos(java.util.List < BedInfos> bedInfos) {
+                this.bedInfos = bedInfos;
+                return this;
+            }
+
+            /**
+             * 是否可以加床
+             */
+            public Builder extraBed(Integer extraBed) {
+                this.extraBed = extraBed;
+                return this;
+            }
+
+            /**
+             * 加床说明
+             */
+            public Builder extraBedDesc(String extraBedDesc) {
+                this.extraBedDesc = extraBedDesc;
+                return this;
+            }
+
+            /**
+             * 房间所在楼层，如"2"、"2-3"
+             */
+            public Builder floor(String floor) {
+                this.floor = floor;
+                return this;
+            }
+
+            /**
+             * 宽带
+             */
+            public Builder internetWay(String internetWay) {
+                this.internetWay = internetWay;
+                return this;
+            }
+
+            /**
+             * 房间最大容纳人数
+             */
+            public Builder maxOccupancy(Integer maxOccupancy) {
+                this.maxOccupancy = maxOccupancy;
+                return this;
+            }
+
+            /**
+             * 房型描述（无）
+             */
+            public Builder roomDesc(String roomDesc) {
+                this.roomDesc = roomDesc;
+                return this;
+            }
+
+            /**
+             * 房间设施
+             */
+            public Builder roomFacilities(String roomFacilities) {
+                this.roomFacilities = roomFacilities;
+                return this;
+            }
+
+            /**
+             * 房间设施列表
+             */
+            public Builder roomFacilityList(java.util.List < String > roomFacilityList) {
+                this.roomFacilityList = roomFacilityList;
+                return this;
+            }
+
+            /**
+             * 房型Id
+             */
+            public Builder roomId(String roomId) {
+                this.roomId = roomId;
+                return this;
+            }
+
+            /**
+             * 房型主图链接
+             */
+            public Builder roomImage(String roomImage) {
+                this.roomImage = roomImage;
+                return this;
+            }
+
+            /**
+             * 房型图片链接列表
+             */
+            public Builder roomImages(java.util.List < RoomImages> roomImages) {
+                this.roomImages = roomImages;
+                return this;
+            }
+
+            /**
+             * 房型名称
+             */
+            public Builder roomName(String roomName) {
+                this.roomName = roomName;
+                return this;
+            }
+
+            /**
+             * 房型类型
+             */
+            public Builder roomType(Integer roomType) {
+                this.roomType = roomType;
+                return this;
+            }
+
+            /**
+             * 面积
+             */
+            public Builder roomarea(String roomarea) {
+                this.roomarea = roomarea;
+                return this;
+            }
+
+            /**
+             * 房间数
+             */
+            public Builder rooms(Integer rooms) {
+                this.rooms = rooms;
+                return this;
+            }
+
+            /**
+             * 窗型
+             */
+            public Builder window(String window) {
+                this.window = window;
+                return this;
+            }
+
+            /**
+             * 窗型缺陷
+             */
+            public Builder windowBad(String windowBad) {
+                this.windowBad = windowBad;
+                return this;
+            }
+
+            /**
+             * 窗景描述
+             */
+            public Builder windowView(String windowView) {
+                this.windowView = windowView;
+                return this;
+            }
+
+            public Module build() {
+                return new Module(this);
+            } 
+
+        } 
+
+    }
+}

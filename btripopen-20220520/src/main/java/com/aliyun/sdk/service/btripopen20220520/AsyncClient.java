@@ -120,9 +120,29 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<HotelExceedApplyQueryResponse> hotelExceedApplyQuery(HotelExceedApplyQueryRequest request);
 
+    CompletableFuture<HotelGoodsQueryResponse> hotelGoodsQuery(HotelGoodsQueryRequest request);
+
+    CompletableFuture<HotelIndexInfoResponse> hotelIndexInfo(HotelIndexInfoRequest request);
+
+    CompletableFuture<HotelOrderCancelResponse> hotelOrderCancel(HotelOrderCancelRequest request);
+
+    CompletableFuture<HotelOrderCreateResponse> hotelOrderCreate(HotelOrderCreateRequest request);
+
+    CompletableFuture<HotelOrderDetailInfoResponse> hotelOrderDetailInfo(HotelOrderDetailInfoRequest request);
+
     CompletableFuture<HotelOrderListQueryResponse> hotelOrderListQuery(HotelOrderListQueryRequest request);
 
+    CompletableFuture<HotelOrderPayResponse> hotelOrderPay(HotelOrderPayRequest request);
+
+    CompletableFuture<HotelOrderPreValidateResponse> hotelOrderPreValidate(HotelOrderPreValidateRequest request);
+
     CompletableFuture<HotelOrderQueryResponse> hotelOrderQuery(HotelOrderQueryRequest request);
+
+    CompletableFuture<HotelRoomInfoResponse> hotelRoomInfo(HotelRoomInfoRequest request);
+
+    CompletableFuture<HotelSearchResponse> hotelSearch(HotelSearchRequest request);
+
+    CompletableFuture<HotelStaticInfoResponse> hotelStaticInfo(HotelStaticInfoRequest request);
 
     CompletableFuture<IeFlightBillSettlementQueryResponse> ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request);
 
@@ -159,6 +179,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryReimbursementOrderResponse> queryReimbursementOrder(QueryReimbursementOrderRequest request);
 
     CompletableFuture<SyncSingleUserResponse> syncSingleUser(SyncSingleUserRequest request);
+
+    CompletableFuture<SyncThirdUserMappingResponse> syncThirdUserMapping(SyncThirdUserMappingRequest request);
 
     CompletableFuture<TicketChangingApplyResponse> ticketChangingApply(TicketChangingApplyRequest request);
 

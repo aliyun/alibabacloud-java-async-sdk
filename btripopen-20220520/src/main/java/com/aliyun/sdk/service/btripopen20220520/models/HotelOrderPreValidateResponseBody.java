@@ -1,0 +1,1001 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.btripopen20220520.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+ *
+ * <p>HotelOrderPreValidateResponseBody</p>
+ */
+public class HotelOrderPreValidateResponseBody extends TeaModel {
+    @NameInMap("code")
+    private String code;
+
+    @NameInMap("message")
+    private String message;
+
+    @NameInMap("module")
+    private Module module;
+
+    @NameInMap("requestId")
+    private String requestId;
+
+    @NameInMap("success")
+    private Boolean success;
+
+    @NameInMap("traceId")
+    private String traceId;
+
+    private HotelOrderPreValidateResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
+        this.module = builder.module;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+        this.traceId = builder.traceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static HotelOrderPreValidateResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return module
+     */
+    public Module getModule() {
+        return this.module;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return traceId
+     */
+    public String getTraceId() {
+        return this.traceId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private String message; 
+        private Module module; 
+        private String requestId; 
+        private Boolean success; 
+        private String traceId; 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * module.
+         */
+        public Builder module(Module module) {
+            this.module = module;
+            return this;
+        }
+
+        /**
+         * requestId
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * traceId.
+         */
+        public Builder traceId(String traceId) {
+            this.traceId = traceId;
+            return this;
+        }
+
+        public HotelOrderPreValidateResponseBody build() {
+            return new HotelOrderPreValidateResponseBody(this);
+        } 
+
+    } 
+
+    public static class PromotionDetailInfoList extends TeaModel {
+        @NameInMap("check_status")
+        private Boolean checkStatus;
+
+        @NameInMap("need_check")
+        private Boolean needCheck;
+
+        @NameInMap("promotion_id")
+        private String promotionId;
+
+        @NameInMap("promotion_name")
+        private String promotionName;
+
+        @NameInMap("promotion_price")
+        private Long promotionPrice;
+
+        @NameInMap("promotion_type")
+        private String promotionType;
+
+        private PromotionDetailInfoList(Builder builder) {
+            this.checkStatus = builder.checkStatus;
+            this.needCheck = builder.needCheck;
+            this.promotionId = builder.promotionId;
+            this.promotionName = builder.promotionName;
+            this.promotionPrice = builder.promotionPrice;
+            this.promotionType = builder.promotionType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PromotionDetailInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkStatus
+         */
+        public Boolean getCheckStatus() {
+            return this.checkStatus;
+        }
+
+        /**
+         * @return needCheck
+         */
+        public Boolean getNeedCheck() {
+            return this.needCheck;
+        }
+
+        /**
+         * @return promotionId
+         */
+        public String getPromotionId() {
+            return this.promotionId;
+        }
+
+        /**
+         * @return promotionName
+         */
+        public String getPromotionName() {
+            return this.promotionName;
+        }
+
+        /**
+         * @return promotionPrice
+         */
+        public Long getPromotionPrice() {
+            return this.promotionPrice;
+        }
+
+        /**
+         * @return promotionType
+         */
+        public String getPromotionType() {
+            return this.promotionType;
+        }
+
+        public static final class Builder {
+            private Boolean checkStatus; 
+            private Boolean needCheck; 
+            private String promotionId; 
+            private String promotionName; 
+            private Long promotionPrice; 
+            private String promotionType; 
+
+            /**
+             * 选中状态
+             */
+            public Builder checkStatus(Boolean checkStatus) {
+                this.checkStatus = checkStatus;
+                return this;
+            }
+
+            /**
+             * 是否需要选中
+             */
+            public Builder needCheck(Boolean needCheck) {
+                this.needCheck = needCheck;
+                return this;
+            }
+
+            /**
+             * 优惠Id
+             */
+            public Builder promotionId(String promotionId) {
+                this.promotionId = promotionId;
+                return this;
+            }
+
+            /**
+             * 优惠名称
+             */
+            public Builder promotionName(String promotionName) {
+                this.promotionName = promotionName;
+                return this;
+            }
+
+            /**
+             * 优惠金额
+             */
+            public Builder promotionPrice(Long promotionPrice) {
+                this.promotionPrice = promotionPrice;
+                return this;
+            }
+
+            /**
+             * 优惠类型
+             */
+            public Builder promotionType(String promotionType) {
+                this.promotionType = promotionType;
+                return this;
+            }
+
+            public PromotionDetailInfoList build() {
+                return new PromotionDetailInfoList(this);
+            } 
+
+        } 
+
+    }
+    public static class PromotionInfo extends TeaModel {
+        @NameInMap("ext_attr_map")
+        private java.util.Map < String, String > extAttrMap;
+
+        @NameInMap("promotion_detail_info_list")
+        private java.util.List < PromotionDetailInfoList> promotionDetailInfoList;
+
+        @NameInMap("promotion_total_price")
+        private Long promotionTotalPrice;
+
+        private PromotionInfo(Builder builder) {
+            this.extAttrMap = builder.extAttrMap;
+            this.promotionDetailInfoList = builder.promotionDetailInfoList;
+            this.promotionTotalPrice = builder.promotionTotalPrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PromotionInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extAttrMap
+         */
+        public java.util.Map < String, String > getExtAttrMap() {
+            return this.extAttrMap;
+        }
+
+        /**
+         * @return promotionDetailInfoList
+         */
+        public java.util.List < PromotionDetailInfoList> getPromotionDetailInfoList() {
+            return this.promotionDetailInfoList;
+        }
+
+        /**
+         * @return promotionTotalPrice
+         */
+        public Long getPromotionTotalPrice() {
+            return this.promotionTotalPrice;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > extAttrMap; 
+            private java.util.List < PromotionDetailInfoList> promotionDetailInfoList; 
+            private Long promotionTotalPrice; 
+
+            /**
+             * 扩展信息
+             */
+            public Builder extAttrMap(java.util.Map < String, String > extAttrMap) {
+                this.extAttrMap = extAttrMap;
+                return this;
+            }
+
+            /**
+             * 优惠信息
+             */
+            public Builder promotionDetailInfoList(java.util.List < PromotionDetailInfoList> promotionDetailInfoList) {
+                this.promotionDetailInfoList = promotionDetailInfoList;
+                return this;
+            }
+
+            /**
+             * 总优惠金额
+             */
+            public Builder promotionTotalPrice(Long promotionTotalPrice) {
+                this.promotionTotalPrice = promotionTotalPrice;
+                return this;
+            }
+
+            public PromotionInfo build() {
+                return new PromotionInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class RatePlanDaily extends TeaModel {
+        @NameInMap("board")
+        private String board;
+
+        @NameInMap("price")
+        private Long price;
+
+        @NameInMap("rate_start_time")
+        private String rateStartTime;
+
+        @NameInMap("room_count")
+        private Integer roomCount;
+
+        @NameInMap("service_fee")
+        private Long serviceFee;
+
+        private RatePlanDaily(Builder builder) {
+            this.board = builder.board;
+            this.price = builder.price;
+            this.rateStartTime = builder.rateStartTime;
+            this.roomCount = builder.roomCount;
+            this.serviceFee = builder.serviceFee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RatePlanDaily create() {
+            return builder().build();
+        }
+
+        /**
+         * @return board
+         */
+        public String getBoard() {
+            return this.board;
+        }
+
+        /**
+         * @return price
+         */
+        public Long getPrice() {
+            return this.price;
+        }
+
+        /**
+         * @return rateStartTime
+         */
+        public String getRateStartTime() {
+            return this.rateStartTime;
+        }
+
+        /**
+         * @return roomCount
+         */
+        public Integer getRoomCount() {
+            return this.roomCount;
+        }
+
+        /**
+         * @return serviceFee
+         */
+        public Long getServiceFee() {
+            return this.serviceFee;
+        }
+
+        public static final class Builder {
+            private String board; 
+            private Long price; 
+            private String rateStartTime; 
+            private Integer roomCount; 
+            private Long serviceFee; 
+
+            /**
+             * 每日早餐
+             */
+            public Builder board(String board) {
+                this.board = board;
+                return this;
+            }
+
+            /**
+             * 每日价格
+             */
+            public Builder price(Long price) {
+                this.price = price;
+                return this;
+            }
+
+            /**
+             * 适用日期
+             */
+            public Builder rateStartTime(String rateStartTime) {
+                this.rateStartTime = rateStartTime;
+                return this;
+            }
+
+            /**
+             * 每日房量
+             */
+            public Builder roomCount(Integer roomCount) {
+                this.roomCount = roomCount;
+                return this;
+            }
+
+            /**
+             * 服务费（收客户或收汇联易的服务费）
+             */
+            public Builder serviceFee(Long serviceFee) {
+                this.serviceFee = serviceFee;
+                return this;
+            }
+
+            public RatePlanDaily build() {
+                return new RatePlanDaily(this);
+            } 
+
+        } 
+
+    }
+    public static class BtripHotelCancelPolicyInfoDTOList extends TeaModel {
+        @NameInMap("hour")
+        private Long hour;
+
+        @NameInMap("value")
+        private Long value;
+
+        private BtripHotelCancelPolicyInfoDTOList(Builder builder) {
+            this.hour = builder.hour;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BtripHotelCancelPolicyInfoDTOList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hour
+         */
+        public Long getHour() {
+            return this.hour;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Long hour; 
+            private Long value; 
+
+            /**
+             * hour.
+             */
+            public Builder hour(Long hour) {
+                this.hour = hour;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Long value) {
+                this.value = value;
+                return this;
+            }
+
+            public BtripHotelCancelPolicyInfoDTOList build() {
+                return new BtripHotelCancelPolicyInfoDTOList(this);
+            } 
+
+        } 
+
+    }
+    public static class BtripHotelCancelPolicyDTO extends TeaModel {
+        @NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
+        private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
+
+        @NameInMap("cancel_policy_type")
+        private Integer cancelPolicyType;
+
+        private BtripHotelCancelPolicyDTO(Builder builder) {
+            this.btripHotelCancelPolicyInfoDTOList = builder.btripHotelCancelPolicyInfoDTOList;
+            this.cancelPolicyType = builder.cancelPolicyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BtripHotelCancelPolicyDTO create() {
+            return builder().build();
+        }
+
+        /**
+         * @return btripHotelCancelPolicyInfoDTOList
+         */
+        public java.util.List < BtripHotelCancelPolicyInfoDTOList> getBtripHotelCancelPolicyInfoDTOList() {
+            return this.btripHotelCancelPolicyInfoDTOList;
+        }
+
+        /**
+         * @return cancelPolicyType
+         */
+        public Integer getCancelPolicyType() {
+            return this.cancelPolicyType;
+        }
+
+        public static final class Builder {
+            private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
+            private Integer cancelPolicyType; 
+
+            /**
+             * btrip_hotel_cancel_policy_info_d_t_o_list.
+             */
+            public Builder btripHotelCancelPolicyInfoDTOList(java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList) {
+                this.btripHotelCancelPolicyInfoDTOList = btripHotelCancelPolicyInfoDTOList;
+                return this;
+            }
+
+            /**
+             * cancel_policy_type.
+             */
+            public Builder cancelPolicyType(Integer cancelPolicyType) {
+                this.cancelPolicyType = cancelPolicyType;
+                return this;
+            }
+
+            public BtripHotelCancelPolicyDTO build() {
+                return new BtripHotelCancelPolicyDTO(this);
+            } 
+
+        } 
+
+    }
+    public static class RatePlanInfo extends TeaModel {
+        @NameInMap("bed_desc")
+        private String bedDesc;
+
+        @NameInMap("btrip_hotel_cancel_policy_d_t_o")
+        private BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO;
+
+        @NameInMap("earliest_check_in_time")
+        private String earliestCheckInTime;
+
+        @NameInMap("latest_check_out_time")
+        private String latestCheckOutTime;
+
+        @NameInMap("max_occupancy_num")
+        private Integer maxOccupancyNum;
+
+        @NameInMap("need_certificate")
+        private Boolean needCertificate;
+
+        @NameInMap("need_email")
+        private Boolean needEmail;
+
+        @NameInMap("need_english_name")
+        private Boolean needEnglishName;
+
+        @NameInMap("total_order_price")
+        private Long totalOrderPrice;
+
+        @NameInMap("total_room_price")
+        private Long totalRoomPrice;
+
+        private RatePlanInfo(Builder builder) {
+            this.bedDesc = builder.bedDesc;
+            this.btripHotelCancelPolicyDTO = builder.btripHotelCancelPolicyDTO;
+            this.earliestCheckInTime = builder.earliestCheckInTime;
+            this.latestCheckOutTime = builder.latestCheckOutTime;
+            this.maxOccupancyNum = builder.maxOccupancyNum;
+            this.needCertificate = builder.needCertificate;
+            this.needEmail = builder.needEmail;
+            this.needEnglishName = builder.needEnglishName;
+            this.totalOrderPrice = builder.totalOrderPrice;
+            this.totalRoomPrice = builder.totalRoomPrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RatePlanInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedDesc
+         */
+        public String getBedDesc() {
+            return this.bedDesc;
+        }
+
+        /**
+         * @return btripHotelCancelPolicyDTO
+         */
+        public BtripHotelCancelPolicyDTO getBtripHotelCancelPolicyDTO() {
+            return this.btripHotelCancelPolicyDTO;
+        }
+
+        /**
+         * @return earliestCheckInTime
+         */
+        public String getEarliestCheckInTime() {
+            return this.earliestCheckInTime;
+        }
+
+        /**
+         * @return latestCheckOutTime
+         */
+        public String getLatestCheckOutTime() {
+            return this.latestCheckOutTime;
+        }
+
+        /**
+         * @return maxOccupancyNum
+         */
+        public Integer getMaxOccupancyNum() {
+            return this.maxOccupancyNum;
+        }
+
+        /**
+         * @return needCertificate
+         */
+        public Boolean getNeedCertificate() {
+            return this.needCertificate;
+        }
+
+        /**
+         * @return needEmail
+         */
+        public Boolean getNeedEmail() {
+            return this.needEmail;
+        }
+
+        /**
+         * @return needEnglishName
+         */
+        public Boolean getNeedEnglishName() {
+            return this.needEnglishName;
+        }
+
+        /**
+         * @return totalOrderPrice
+         */
+        public Long getTotalOrderPrice() {
+            return this.totalOrderPrice;
+        }
+
+        /**
+         * @return totalRoomPrice
+         */
+        public Long getTotalRoomPrice() {
+            return this.totalRoomPrice;
+        }
+
+        public static final class Builder {
+            private String bedDesc; 
+            private BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO; 
+            private String earliestCheckInTime; 
+            private String latestCheckOutTime; 
+            private Integer maxOccupancyNum; 
+            private Boolean needCertificate; 
+            private Boolean needEmail; 
+            private Boolean needEnglishName; 
+            private Long totalOrderPrice; 
+            private Long totalRoomPrice; 
+
+            /**
+             * 房型
+             */
+            public Builder bedDesc(String bedDesc) {
+                this.bedDesc = bedDesc;
+                return this;
+            }
+
+            /**
+             * 取消政策
+             */
+            public Builder btripHotelCancelPolicyDTO(BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO) {
+                this.btripHotelCancelPolicyDTO = btripHotelCancelPolicyDTO;
+                return this;
+            }
+
+            /**
+             * 最早可以办理入住时间
+             */
+            public Builder earliestCheckInTime(String earliestCheckInTime) {
+                this.earliestCheckInTime = earliestCheckInTime;
+                return this;
+            }
+
+            /**
+             * 最晚离店时间
+             */
+            public Builder latestCheckOutTime(String latestCheckOutTime) {
+                this.latestCheckOutTime = latestCheckOutTime;
+                return this;
+            }
+
+            /**
+             * 每间房最大可入住人数
+             */
+            public Builder maxOccupancyNum(Integer maxOccupancyNum) {
+                this.maxOccupancyNum = maxOccupancyNum;
+                return this;
+            }
+
+            /**
+             * 是否需要证件信息
+             */
+            public Builder needCertificate(Boolean needCertificate) {
+                this.needCertificate = needCertificate;
+                return this;
+            }
+
+            /**
+             * 是否需要填写电子邮箱
+             */
+            public Builder needEmail(Boolean needEmail) {
+                this.needEmail = needEmail;
+                return this;
+            }
+
+            /**
+             * 是否填写英文/拼音姓名 firstName/lastName
+             */
+            public Builder needEnglishName(Boolean needEnglishName) {
+                this.needEnglishName = needEnglishName;
+                return this;
+            }
+
+            /**
+             * 优惠后总金额
+             */
+            public Builder totalOrderPrice(Long totalOrderPrice) {
+                this.totalOrderPrice = totalOrderPrice;
+                return this;
+            }
+
+            /**
+             * 总房价
+             */
+            public Builder totalRoomPrice(Long totalRoomPrice) {
+                this.totalRoomPrice = totalRoomPrice;
+                return this;
+            }
+
+            public RatePlanInfo build() {
+                return new RatePlanInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class Module extends TeaModel {
+        @NameInMap("extend_info")
+        private String extendInfo;
+
+        @NameInMap("itinerary_no")
+        private String itineraryNo;
+
+        @NameInMap("promotion_info")
+        private PromotionInfo promotionInfo;
+
+        @NameInMap("rate_plan_daily")
+        private java.util.List < RatePlanDaily> ratePlanDaily;
+
+        @NameInMap("rate_plan_id")
+        private Long ratePlanId;
+
+        @NameInMap("rate_plan_info")
+        private RatePlanInfo ratePlanInfo;
+
+        @NameInMap("validate_res_key")
+        private String validateResKey;
+
+        private Module(Builder builder) {
+            this.extendInfo = builder.extendInfo;
+            this.itineraryNo = builder.itineraryNo;
+            this.promotionInfo = builder.promotionInfo;
+            this.ratePlanDaily = builder.ratePlanDaily;
+            this.ratePlanId = builder.ratePlanId;
+            this.ratePlanInfo = builder.ratePlanInfo;
+            this.validateResKey = builder.validateResKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Module create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extendInfo
+         */
+        public String getExtendInfo() {
+            return this.extendInfo;
+        }
+
+        /**
+         * @return itineraryNo
+         */
+        public String getItineraryNo() {
+            return this.itineraryNo;
+        }
+
+        /**
+         * @return promotionInfo
+         */
+        public PromotionInfo getPromotionInfo() {
+            return this.promotionInfo;
+        }
+
+        /**
+         * @return ratePlanDaily
+         */
+        public java.util.List < RatePlanDaily> getRatePlanDaily() {
+            return this.ratePlanDaily;
+        }
+
+        /**
+         * @return ratePlanId
+         */
+        public Long getRatePlanId() {
+            return this.ratePlanId;
+        }
+
+        /**
+         * @return ratePlanInfo
+         */
+        public RatePlanInfo getRatePlanInfo() {
+            return this.ratePlanInfo;
+        }
+
+        /**
+         * @return validateResKey
+         */
+        public String getValidateResKey() {
+            return this.validateResKey;
+        }
+
+        public static final class Builder {
+            private String extendInfo; 
+            private String itineraryNo; 
+            private PromotionInfo promotionInfo; 
+            private java.util.List < RatePlanDaily> ratePlanDaily; 
+            private Long ratePlanId; 
+            private RatePlanInfo ratePlanInfo; 
+            private String validateResKey; 
+
+            /**
+             * 扩展信息
+             */
+            public Builder extendInfo(String extendInfo) {
+                this.extendInfo = extendInfo;
+                return this;
+            }
+
+            /**
+             * 行程单Id，创单接口需要
+             */
+            public Builder itineraryNo(String itineraryNo) {
+                this.itineraryNo = itineraryNo;
+                return this;
+            }
+
+            /**
+             * 优惠信息
+             */
+            public Builder promotionInfo(PromotionInfo promotionInfo) {
+                this.promotionInfo = promotionInfo;
+                return this;
+            }
+
+            /**
+             * 每日价格
+             */
+            public Builder ratePlanDaily(java.util.List < RatePlanDaily> ratePlanDaily) {
+                this.ratePlanDaily = ratePlanDaily;
+                return this;
+            }
+
+            /**
+             * 产品编号
+             */
+            public Builder ratePlanId(Long ratePlanId) {
+                this.ratePlanId = ratePlanId;
+                return this;
+            }
+
+            /**
+             * 售卖政策信息
+             */
+            public Builder ratePlanInfo(RatePlanInfo ratePlanInfo) {
+                this.ratePlanInfo = ratePlanInfo;
+                return this;
+            }
+
+            /**
+             * 渲染返回key，创单接口需要
+             */
+            public Builder validateResKey(String validateResKey) {
+                this.validateResKey = validateResKey;
+                return this;
+            }
+
+            public Module build() {
+                return new Module(this);
+            } 
+
+        } 
+
+    }
+}
