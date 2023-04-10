@@ -407,7 +407,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -416,13 +416,13 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable RAM authorization for a configuration center. This parameter is valid for Nacos instances. Valid values:
+         * Specifies whether to enable Resource Access Management (RAM) authentication for a configuration center. This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
-         * *   `true`: enabled
-         * *   `false`: disabled
+         * *   `true`: enabled.
+         * *   `false`: disabled.
          * 
-         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports this feature.
+         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports the RAM authentication feature.
          */
         public Builder configAuthEnabled(Boolean configAuthEnabled) {
             this.putQueryParameter("ConfigAuthEnabled", configAuthEnabled);
@@ -434,10 +434,10 @@ public class UpdateConfigRequest extends Request {
          * Specifies whether to enable configuration encryption for a configuration center. This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
-         * *   `true`: enabled
-         * *   `false`: disabled
+         * *   `true`: enabled.
+         * *   `false`: disabled.
          * 
-         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports this feature.
+         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports configuration encryption.
          */
         public Builder configSecretEnabled(Boolean configSecretEnabled) {
             this.putQueryParameter("ConfigSecretEnabled", configSecretEnabled);
@@ -464,7 +464,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the time to live (TTL) configuration.
+         * Specifies whether to enable the time to live (TTL) configuration. This parameter is valid for ZooKeeper instances.
          */
         public Builder extendedTypesEnable(String extendedTypesEnable) {
             this.putQueryParameter("ExtendedTypesEnable", extendedTypesEnable);
@@ -503,10 +503,10 @@ public class UpdateConfigRequest extends Request {
          * Specifies whether to enable Mesh Configuration Protocol (MCP). This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
-         * *   `true`: enabled
-         * *   `false`: disabled
+         * *   `true`: enabled.
+         * *   `false`: disabled.
          * 
-         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports this feature.
+         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports MCP.
          */
         public Builder MCPEnabled(Boolean MCPEnabled) {
             this.putQueryParameter("MCPEnabled", MCPEnabled);
@@ -544,13 +544,13 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable RAM authorization for a registry. This parameter is valid for Nacos instances. Valid values:
+         * Specifies whether to enable RAM authentication for a registry. This parameter is valid for Nacos instances. Valid values:
          * <p>
          * 
-         * *   `true`: enabled
-         * *   `false`: disabled
+         * *   `true`: enabled.
+         * *   `false`: disabled.
          * 
-         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupporte parameter value to check whether the instance supports this feature.
+         * > Before you configure this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupporte parameter value to check whether the instance supports the RAM authentication feature.
          */
         public Builder namingAuthEnabled(Boolean namingAuthEnabled) {
             this.putQueryParameter("NamingAuthEnabled", namingAuthEnabled);

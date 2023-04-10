@@ -21,10 +21,6 @@ public class AddMigrationTaskRequest extends Request {
     private String clusterType;
 
     @Query
-    @NameInMap("Id")
-    private String id;
-
-    @Query
     @NameInMap("OriginInstanceAddress")
     private String originInstanceAddress;
 
@@ -60,7 +56,6 @@ public class AddMigrationTaskRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterType = builder.clusterType;
-        this.id = builder.id;
         this.originInstanceAddress = builder.originInstanceAddress;
         this.originInstanceName = builder.originInstanceName;
         this.originInstanceNamespace = builder.originInstanceNamespace;
@@ -96,13 +91,6 @@ public class AddMigrationTaskRequest extends Request {
      */
     public String getClusterType() {
         return this.clusterType;
-    }
-
-    /**
-     * @return id
-     */
-    public String getId() {
-        return this.id;
     }
 
     /**
@@ -164,7 +152,6 @@ public class AddMigrationTaskRequest extends Request {
     public static final class Builder extends Request.Builder<AddMigrationTaskRequest, Builder> {
         private String acceptLanguage; 
         private String clusterType; 
-        private String id; 
         private String originInstanceAddress; 
         private String originInstanceName; 
         private String originInstanceNamespace; 
@@ -182,7 +169,6 @@ public class AddMigrationTaskRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.clusterType = request.clusterType;
-            this.id = request.id;
             this.originInstanceAddress = request.originInstanceAddress;
             this.originInstanceName = request.originInstanceName;
             this.originInstanceNamespace = request.originInstanceNamespace;
@@ -217,15 +203,6 @@ public class AddMigrationTaskRequest extends Request {
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
-            return this;
-        }
-
-        /**
-         * The ID of the task. You do not need to configure this parameter.
-         */
-        public Builder id(String id) {
-            this.putQueryParameter("Id", id);
-            this.id = id;
             return this;
         }
 

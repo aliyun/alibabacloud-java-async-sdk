@@ -118,7 +118,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Long data) {
             this.data = data;

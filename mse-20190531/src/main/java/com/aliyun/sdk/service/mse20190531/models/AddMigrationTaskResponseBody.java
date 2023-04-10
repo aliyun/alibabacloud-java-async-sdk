@@ -18,9 +18,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
-    private String httpCode;
-
     @NameInMap("Message")
     private String message;
 
@@ -33,7 +30,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     private AddMigrationTaskResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
-        this.httpCode = builder.httpCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -62,13 +58,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     }
 
     /**
-     * @return httpCode
-     */
-    public String getHttpCode() {
-        return this.httpCode;
-    }
-
-    /**
      * @return message
      */
     public String getMessage() {
@@ -92,7 +81,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String errorCode; 
-        private String httpCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -110,14 +98,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         */
-        public Builder httpCode(String httpCode) {
-            this.httpCode = httpCode;
             return this;
         }
 
@@ -159,12 +139,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         @NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("GmtCreate")
-        private String gmtCreate;
-
-        @NameInMap("GmtModified")
-        private String gmtModified;
-
         @NameInMap("Id")
         private String id;
 
@@ -194,8 +168,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.clusterType = builder.clusterType;
-            this.gmtCreate = builder.gmtCreate;
-            this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.originInstanceAddress = builder.originInstanceAddress;
             this.originInstanceName = builder.originInstanceName;
@@ -220,20 +192,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
          */
         public String getClusterType() {
             return this.clusterType;
-        }
-
-        /**
-         * @return gmtCreate
-         */
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        /**
-         * @return gmtModified
-         */
-        public String getGmtModified() {
-            return this.gmtModified;
         }
 
         /**
@@ -301,8 +259,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clusterType; 
-            private String gmtCreate; 
-            private String gmtModified; 
             private String id; 
             private String originInstanceAddress; 
             private String originInstanceName; 
@@ -323,22 +279,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
-                return this;
-            }
-
-            /**
-             * The creation time.
-             */
-            public Builder gmtCreate(String gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * The update time.
-             */
-            public Builder gmtModified(String gmtModified) {
-                this.gmtModified = gmtModified;
                 return this;
             }
 
