@@ -16,6 +16,10 @@ public class PredictModelRequest extends Request {
     @NameInMap("BinaryToText")
     private Boolean binaryToText;
 
+    @Body
+    @NameInMap("Body")
+    private String body;
+
     @Query
     @NameInMap("Content")
     private String content;
@@ -29,17 +33,13 @@ public class PredictModelRequest extends Request {
     @NameInMap("ModelVersion")
     private String modelVersion;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     private PredictModelRequest(Builder builder) {
         super(builder);
         this.binaryToText = builder.binaryToText;
+        this.body = builder.body;
         this.content = builder.content;
         this.modelId = builder.modelId;
         this.modelVersion = builder.modelVersion;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -63,6 +63,13 @@ public class PredictModelRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
+    }
+
+    /**
      * @return content
      */
     public String getContent() {
@@ -83,19 +90,12 @@ public class PredictModelRequest extends Request {
         return this.modelVersion;
     }
 
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
     public static final class Builder extends Request.Builder<PredictModelRequest, Builder> {
         private Boolean binaryToText; 
+        private String body; 
         private String content; 
         private Long modelId; 
         private String modelVersion; 
-        private String body; 
 
         private Builder() {
             super();
@@ -104,10 +104,10 @@ public class PredictModelRequest extends Request {
         private Builder(PredictModelRequest request) {
             super(request);
             this.binaryToText = request.binaryToText;
+            this.body = request.body;
             this.content = request.content;
             this.modelId = request.modelId;
             this.modelVersion = request.modelVersion;
-            this.body = request.body;
         } 
 
         /**
@@ -116,6 +116,15 @@ public class PredictModelRequest extends Request {
         public Builder binaryToText(Boolean binaryToText) {
             this.putQueryParameter("BinaryToText", binaryToText);
             this.binaryToText = binaryToText;
+            return this;
+        }
+
+        /**
+         * Body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("Body", body);
+            this.body = body;
             return this;
         }
 
@@ -143,15 +152,6 @@ public class PredictModelRequest extends Request {
         public Builder modelVersion(String modelVersion) {
             this.putQueryParameter("ModelVersion", modelVersion);
             this.modelVersion = modelVersion;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 

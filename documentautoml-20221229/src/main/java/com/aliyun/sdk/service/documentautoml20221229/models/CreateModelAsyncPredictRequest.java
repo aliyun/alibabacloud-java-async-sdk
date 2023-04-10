@@ -16,6 +16,10 @@ public class CreateModelAsyncPredictRequest extends Request {
     @NameInMap("BinaryToText")
     private Boolean binaryToText;
 
+    @Body
+    @NameInMap("Body")
+    private String body;
+
     @Query
     @NameInMap("Content")
     private String content;
@@ -37,19 +41,15 @@ public class CreateModelAsyncPredictRequest extends Request {
     @NameInMap("ServiceVersion")
     private String serviceVersion;
 
-    @Body
-    @NameInMap("body")
-    private String body;
-
     private CreateModelAsyncPredictRequest(Builder builder) {
         super(builder);
         this.binaryToText = builder.binaryToText;
+        this.body = builder.body;
         this.content = builder.content;
         this.modelId = builder.modelId;
         this.modelVersion = builder.modelVersion;
         this.serviceName = builder.serviceName;
         this.serviceVersion = builder.serviceVersion;
-        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -70,6 +70,13 @@ public class CreateModelAsyncPredictRequest extends Request {
      */
     public Boolean getBinaryToText() {
         return this.binaryToText;
+    }
+
+    /**
+     * @return body
+     */
+    public String getBody() {
+        return this.body;
     }
 
     /**
@@ -107,21 +114,14 @@ public class CreateModelAsyncPredictRequest extends Request {
         return this.serviceVersion;
     }
 
-    /**
-     * @return body
-     */
-    public String getBody() {
-        return this.body;
-    }
-
     public static final class Builder extends Request.Builder<CreateModelAsyncPredictRequest, Builder> {
         private Boolean binaryToText; 
+        private String body; 
         private String content; 
         private Long modelId; 
         private String modelVersion; 
         private String serviceName; 
         private String serviceVersion; 
-        private String body; 
 
         private Builder() {
             super();
@@ -130,12 +130,12 @@ public class CreateModelAsyncPredictRequest extends Request {
         private Builder(CreateModelAsyncPredictRequest request) {
             super(request);
             this.binaryToText = request.binaryToText;
+            this.body = request.body;
             this.content = request.content;
             this.modelId = request.modelId;
             this.modelVersion = request.modelVersion;
             this.serviceName = request.serviceName;
             this.serviceVersion = request.serviceVersion;
-            this.body = request.body;
         } 
 
         /**
@@ -144,6 +144,15 @@ public class CreateModelAsyncPredictRequest extends Request {
         public Builder binaryToText(Boolean binaryToText) {
             this.putQueryParameter("BinaryToText", binaryToText);
             this.binaryToText = binaryToText;
+            return this;
+        }
+
+        /**
+         * Body.
+         */
+        public Builder body(String body) {
+            this.putBodyParameter("Body", body);
+            this.body = body;
             return this;
         }
 
@@ -189,15 +198,6 @@ public class CreateModelAsyncPredictRequest extends Request {
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
             this.serviceVersion = serviceVersion;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
             return this;
         }
 
