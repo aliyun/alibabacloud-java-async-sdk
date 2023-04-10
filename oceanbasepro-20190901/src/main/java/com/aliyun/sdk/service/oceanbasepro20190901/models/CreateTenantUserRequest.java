@@ -21,6 +21,10 @@ public class CreateTenantUserRequest extends Request {
     private String description;
 
     @Body
+    @NameInMap("EncryptionType")
+    private String encryptionType;
+
+    @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -53,6 +57,7 @@ public class CreateTenantUserRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.description = builder.description;
+        this.encryptionType = builder.encryptionType;
         this.instanceId = builder.instanceId;
         this.roles = builder.roles;
         this.tenantId = builder.tenantId;
@@ -86,6 +91,13 @@ public class CreateTenantUserRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return encryptionType
+     */
+    public String getEncryptionType() {
+        return this.encryptionType;
     }
 
     /**
@@ -133,6 +145,7 @@ public class CreateTenantUserRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTenantUserRequest, Builder> {
         private String regionId; 
         private String description; 
+        private String encryptionType; 
         private String instanceId; 
         private String roles; 
         private String tenantId; 
@@ -148,6 +161,7 @@ public class CreateTenantUserRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.description = request.description;
+            this.encryptionType = request.encryptionType;
             this.instanceId = request.instanceId;
             this.roles = request.roles;
             this.tenantId = request.tenantId;
@@ -171,6 +185,15 @@ public class CreateTenantUserRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * 加密方式。
+         */
+        public Builder encryptionType(String encryptionType) {
+            this.putBodyParameter("EncryptionType", encryptionType);
+            this.encryptionType = encryptionType;
             return this;
         }
 
