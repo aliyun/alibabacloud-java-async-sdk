@@ -41,6 +41,14 @@ public class ListAuthorizationRulesRequest extends Request {
     private java.util.List < String > destinationType;
 
     @Query
+    @NameInMap("FuzzyAuthorizationRuleName")
+    private String fuzzyAuthorizationRuleName;
+
+    @Query
+    @NameInMap("FuzzyDestination")
+    private String fuzzyDestination;
+
+    @Query
     @NameInMap("IoTCloudConnectorId")
     @Validation(required = true)
     private String ioTCloudConnectorId;
@@ -76,6 +84,8 @@ public class ListAuthorizationRulesRequest extends Request {
         this.destination = builder.destination;
         this.destinationPort = builder.destinationPort;
         this.destinationType = builder.destinationType;
+        this.fuzzyAuthorizationRuleName = builder.fuzzyAuthorizationRuleName;
+        this.fuzzyDestination = builder.fuzzyDestination;
         this.ioTCloudConnectorId = builder.ioTCloudConnectorId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -147,6 +157,20 @@ public class ListAuthorizationRulesRequest extends Request {
     }
 
     /**
+     * @return fuzzyAuthorizationRuleName
+     */
+    public String getFuzzyAuthorizationRuleName() {
+        return this.fuzzyAuthorizationRuleName;
+    }
+
+    /**
+     * @return fuzzyDestination
+     */
+    public String getFuzzyDestination() {
+        return this.fuzzyDestination;
+    }
+
+    /**
      * @return ioTCloudConnectorId
      */
     public String getIoTCloudConnectorId() {
@@ -196,6 +220,8 @@ public class ListAuthorizationRulesRequest extends Request {
         private java.util.List < String > destination; 
         private java.util.List < String > destinationPort; 
         private java.util.List < String > destinationType; 
+        private String fuzzyAuthorizationRuleName; 
+        private String fuzzyDestination; 
         private String ioTCloudConnectorId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -216,6 +242,8 @@ public class ListAuthorizationRulesRequest extends Request {
             this.destination = request.destination;
             this.destinationPort = request.destinationPort;
             this.destinationType = request.destinationType;
+            this.fuzzyAuthorizationRuleName = request.fuzzyAuthorizationRuleName;
+            this.fuzzyDestination = request.fuzzyDestination;
             this.ioTCloudConnectorId = request.ioTCloudConnectorId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -284,6 +312,24 @@ public class ListAuthorizationRulesRequest extends Request {
         public Builder destinationType(java.util.List < String > destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
             this.destinationType = destinationType;
+            return this;
+        }
+
+        /**
+         * FuzzyAuthorizationRuleName.
+         */
+        public Builder fuzzyAuthorizationRuleName(String fuzzyAuthorizationRuleName) {
+            this.putQueryParameter("FuzzyAuthorizationRuleName", fuzzyAuthorizationRuleName);
+            this.fuzzyAuthorizationRuleName = fuzzyAuthorizationRuleName;
+            return this;
+        }
+
+        /**
+         * FuzzyDestination.
+         */
+        public Builder fuzzyDestination(String fuzzyDestination) {
+            this.putQueryParameter("FuzzyDestination", fuzzyDestination);
+            this.fuzzyDestination = fuzzyDestination;
             return this;
         }
 

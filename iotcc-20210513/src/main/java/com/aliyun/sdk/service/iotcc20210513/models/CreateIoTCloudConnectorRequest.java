@@ -52,6 +52,7 @@ public class CreateIoTCloudConnectorRequest extends Request {
 
     @Query
     @NameInMap("WildcardDomainEnabled")
+    @Deprecated
     private Boolean wildcardDomainEnabled;
 
     private CreateIoTCloudConnectorRequest(Builder builder) {

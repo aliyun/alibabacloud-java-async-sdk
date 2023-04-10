@@ -56,6 +56,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAuthorizationRuleResponse> deleteAuthorizationRule(DeleteAuthorizationRuleRequest request);
 
+    CompletableFuture<DeleteAuthorizationRulesResponse> deleteAuthorizationRules(DeleteAuthorizationRulesRequest request);
+
     CompletableFuture<DeleteConnectionPoolResponse> deleteConnectionPool(DeleteConnectionPoolRequest request);
 
     CompletableFuture<DeleteDNSServiceRuleResponse> deleteDNSServiceRule(DeleteDNSServiceRuleRequest request);
@@ -115,8 +117,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGroupDNSServiceRulesResponse> listGroupDNSServiceRules(ListGroupDNSServiceRulesRequest request);
 
     CompletableFuture<ListGroupIpMappingRulesResponse> listGroupIpMappingRules(ListGroupIpMappingRulesRequest request);
-
-    CompletableFuture<ListIoTCloudConnectorAccessSessionLogsResponse> listIoTCloudConnectorAccessSessionLogs(ListIoTCloudConnectorAccessSessionLogsRequest request);
 
     CompletableFuture<ListIoTCloudConnectorAvailableZonesResponse> listIoTCloudConnectorAvailableZones(ListIoTCloudConnectorAvailableZonesRequest request);
 
