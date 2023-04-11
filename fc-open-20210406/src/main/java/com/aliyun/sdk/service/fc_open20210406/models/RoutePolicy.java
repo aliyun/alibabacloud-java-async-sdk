@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RoutePolicy extends TeaModel {
     @NameInMap("condition")
     @Validation(required = true)
-    private byte[] condition;
+    private String condition;
 
     @NameInMap("policyItems")
     @Validation(required = true)
@@ -36,7 +36,7 @@ public class RoutePolicy extends TeaModel {
     /**
      * @return condition
      */
-    public byte[] getCondition() {
+    public String getCondition() {
         return this.condition;
     }
 
@@ -48,13 +48,13 @@ public class RoutePolicy extends TeaModel {
     }
 
     public static final class Builder {
-        private byte[] condition; 
+        private String condition; 
         private java.util.List < PolicyItem > policyItems; 
 
         /**
          * 条件模式：灰度规则项的逻辑运算。 枚举值： AND:  全部灰度规则项满足则命中。 OR: 任意一个灰度规则项满足则命中。
          */
-        public Builder condition(byte[] condition) {
+        public Builder condition(String condition) {
             this.condition = condition;
             return this;
         }

@@ -239,7 +239,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
+         * The starting position of the result list. The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

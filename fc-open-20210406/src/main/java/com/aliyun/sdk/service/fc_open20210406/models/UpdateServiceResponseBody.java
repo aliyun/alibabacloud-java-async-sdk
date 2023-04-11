@@ -190,7 +190,7 @@ public class UpdateServiceResponseBody extends TeaModel {
          * <p>
          * 
          * *   **true**: allows functions in the specified service to access the Internet.
-         * *   **false**: does not allow functions in the specified service to access the Internet.
+         * *   **false**: does not allow functions to access the Internet.
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.internetAccess = internetAccess;
@@ -258,7 +258,7 @@ public class UpdateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).
+         * The configuration of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).
          */
         public Builder tracingConfig(TracingConfig tracingConfig) {
             this.tracingConfig = tracingConfig;

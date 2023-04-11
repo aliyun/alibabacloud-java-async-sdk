@@ -607,7 +607,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The handler of the Initializer hook. For more information, see [Initializer hook](~~157704~~).
+         * The handler of the Initializer hook. For more information, see [Initializer hooks](~~157704~~).
          */
         public Builder initializer(String initializer) {
             this.putBodyParameter("initializer", initializer);
@@ -665,7 +665,7 @@ public class CreateFunctionRequest extends Request {
          * The information about layers.
          * <p>
          * 
-         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name as a layer with a larger subscript.
+         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
          */
         public Builder layers(java.util.List < String > layers) {
             this.putBodyParameter("layers", layers);
@@ -674,7 +674,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The memory size for the function. Unit: MB. The memory size must be a multiple of 64 MB. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
+         * The memory size for the function. Unit: MB. The value must be a multiple of 64. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
          */
         public Builder memorySize(Integer memorySize) {
             this.putBodyParameter("memorySize", memorySize);

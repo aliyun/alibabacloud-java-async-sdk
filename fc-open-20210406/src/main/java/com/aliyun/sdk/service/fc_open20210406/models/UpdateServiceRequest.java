@@ -281,7 +281,7 @@ public class UpdateServiceRequest extends Request {
          * <p>
          * 
          * *   **true**: allows functions in the specified service to access the Internet.
-         * *   **false**: does not allow functions in the specified service to access the Internet.
+         * *   **false**: does not allow functions to access the Internet.
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.putBodyParameter("internetAccess", internetAccess);

@@ -129,7 +129,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * The time when the function is invoked. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
