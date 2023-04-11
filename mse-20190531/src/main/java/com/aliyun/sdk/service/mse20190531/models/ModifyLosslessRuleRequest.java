@@ -33,7 +33,7 @@ public class ModifyLosslessRuleRequest extends Request {
     @Query
     @NameInMap("DelayTime")
     @Validation(required = true)
-    private Long delayTime;
+    private Integer delayTime;
 
     @Query
     @NameInMap("Enable")
@@ -43,7 +43,7 @@ public class ModifyLosslessRuleRequest extends Request {
     @Query
     @NameInMap("FuncType")
     @Validation(required = true)
-    private Long funcType;
+    private Integer funcType;
 
     @Query
     @NameInMap("LossLessDetail")
@@ -68,17 +68,9 @@ public class ModifyLosslessRuleRequest extends Request {
     private Boolean related;
 
     @Query
-    @NameInMap("ShutdownWaitSeconds")
-    private Integer shutdownWaitSeconds;
-
-    @Query
-    @NameInMap("Source")
-    private String source;
-
-    @Query
     @NameInMap("WarmupTime")
     @Validation(required = true)
-    private Long warmupTime;
+    private Integer warmupTime;
 
     private ModifyLosslessRuleRequest(Builder builder) {
         super(builder);
@@ -94,8 +86,6 @@ public class ModifyLosslessRuleRequest extends Request {
         this.notice = builder.notice;
         this.regionId = builder.regionId;
         this.related = builder.related;
-        this.shutdownWaitSeconds = builder.shutdownWaitSeconds;
-        this.source = builder.source;
         this.warmupTime = builder.warmupTime;
     }
 
@@ -143,7 +133,7 @@ public class ModifyLosslessRuleRequest extends Request {
     /**
      * @return delayTime
      */
-    public Long getDelayTime() {
+    public Integer getDelayTime() {
         return this.delayTime;
     }
 
@@ -157,7 +147,7 @@ public class ModifyLosslessRuleRequest extends Request {
     /**
      * @return funcType
      */
-    public Long getFuncType() {
+    public Integer getFuncType() {
         return this.funcType;
     }
 
@@ -197,23 +187,9 @@ public class ModifyLosslessRuleRequest extends Request {
     }
 
     /**
-     * @return shutdownWaitSeconds
-     */
-    public Integer getShutdownWaitSeconds() {
-        return this.shutdownWaitSeconds;
-    }
-
-    /**
-     * @return source
-     */
-    public String getSource() {
-        return this.source;
-    }
-
-    /**
      * @return warmupTime
      */
-    public Long getWarmupTime() {
+    public Integer getWarmupTime() {
         return this.warmupTime;
     }
 
@@ -222,17 +198,15 @@ public class ModifyLosslessRuleRequest extends Request {
         private Boolean aligned; 
         private String appId; 
         private String appName; 
-        private Long delayTime; 
+        private Integer delayTime; 
         private Boolean enable; 
-        private Long funcType; 
+        private Integer funcType; 
         private Boolean lossLessDetail; 
         private String namespace; 
         private Boolean notice; 
         private String regionId; 
         private Boolean related; 
-        private Integer shutdownWaitSeconds; 
-        private String source; 
-        private Long warmupTime; 
+        private Integer warmupTime; 
 
         private Builder() {
             super();
@@ -252,8 +226,6 @@ public class ModifyLosslessRuleRequest extends Request {
             this.notice = request.notice;
             this.regionId = request.regionId;
             this.related = request.related;
-            this.shutdownWaitSeconds = request.shutdownWaitSeconds;
-            this.source = request.source;
             this.warmupTime = request.warmupTime;
         } 
 
@@ -300,7 +272,7 @@ public class ModifyLosslessRuleRequest extends Request {
         /**
          * The registration latency.
          */
-        public Builder delayTime(Long delayTime) {
+        public Builder delayTime(Integer delayTime) {
             this.putQueryParameter("DelayTime", delayTime);
             this.delayTime = delayTime;
             return this;
@@ -322,7 +294,7 @@ public class ModifyLosslessRuleRequest extends Request {
         /**
          * The slope of the prefetching curve.
          */
-        public Builder funcType(Long funcType) {
+        public Builder funcType(Integer funcType) {
             this.putQueryParameter("FuncType", funcType);
             this.funcType = funcType;
             return this;
@@ -374,27 +346,9 @@ public class ModifyLosslessRuleRequest extends Request {
         }
 
         /**
-         * The cooldown duration. Unit: seconds.
-         */
-        public Builder shutdownWaitSeconds(Integer shutdownWaitSeconds) {
-            this.putQueryParameter("ShutdownWaitSeconds", shutdownWaitSeconds);
-            this.shutdownWaitSeconds = shutdownWaitSeconds;
-            return this;
-        }
-
-        /**
-         * The service source.
-         */
-        public Builder source(String source) {
-            this.putQueryParameter("Source", source);
-            this.source = source;
-            return this;
-        }
-
-        /**
          * The prefetching duration.
          */
-        public Builder warmupTime(Long warmupTime) {
+        public Builder warmupTime(Integer warmupTime) {
             this.putQueryParameter("WarmupTime", warmupTime);
             this.warmupTime = warmupTime;
             return this;

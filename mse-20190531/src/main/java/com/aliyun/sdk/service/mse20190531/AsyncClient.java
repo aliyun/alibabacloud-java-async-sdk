@@ -169,6 +169,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * You can call this operation to query the rules for graceful start and shutdown.
       *
+     * @tags msc
      */
     CompletableFuture<FetchLosslessRuleListResponse> fetchLosslessRuleList(FetchLosslessRuleListRequest request);
 

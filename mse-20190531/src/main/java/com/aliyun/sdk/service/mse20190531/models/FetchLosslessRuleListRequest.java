@@ -31,22 +31,17 @@ public class FetchLosslessRuleListRequest extends Request {
     @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
-    private Long pageNumber;
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
     @Validation(required = true)
-    private Long pageSize;
+    private Integer pageSize;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
-
-    @Query
-    @NameInMap("Source")
-    @Validation(required = true)
-    private String source;
 
     private FetchLosslessRuleListRequest(Builder builder) {
         super(builder);
@@ -57,7 +52,6 @@ public class FetchLosslessRuleListRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
-        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -104,14 +98,14 @@ public class FetchLosslessRuleListRequest extends Request {
     /**
      * @return pageNumber
      */
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -122,22 +116,14 @@ public class FetchLosslessRuleListRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return source
-     */
-    public String getSource() {
-        return this.source;
-    }
-
     public static final class Builder extends Request.Builder<FetchLosslessRuleListRequest, Builder> {
         private String acceptLanguage; 
         private String appId; 
         private String appName; 
         private String namespace; 
-        private Long pageNumber; 
-        private Long pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
-        private String source; 
 
         private Builder() {
             super();
@@ -152,7 +138,6 @@ public class FetchLosslessRuleListRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
-            this.source = request.source;
         } 
 
         /**
@@ -199,7 +184,7 @@ public class FetchLosslessRuleListRequest extends Request {
         /**
          * The number of the page to return.
          */
-        public Builder pageNumber(Long pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -208,7 +193,7 @@ public class FetchLosslessRuleListRequest extends Request {
         /**
          * The number of entries to return on each page. Default value: 10
          */
-        public Builder pageSize(Long pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
@@ -220,15 +205,6 @@ public class FetchLosslessRuleListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The service source that the application accesses.
-         */
-        public Builder source(String source) {
-            this.putQueryParameter("Source", source);
-            this.source = source;
             return this;
         }
 

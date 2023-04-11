@@ -12,11 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyLosslessRuleResponseBody</p>
  */
 public class ModifyLosslessRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Integer code;
+
+    @NameInMap("Data")
+    private Object data;
+
     @NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
-    private String httpCode;
+    @NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -28,8 +34,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
     private Boolean success;
 
     private ModifyLosslessRuleResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.data = builder.data;
         this.errorCode = builder.errorCode;
-        this.httpCode = builder.httpCode;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -44,6 +52,20 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Integer getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Object getData() {
+        return this.data;
+    }
+
+    /**
      * @return errorCode
      */
     public String getErrorCode() {
@@ -51,10 +73,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
     }
 
     /**
-     * @return httpCode
+     * @return httpStatusCode
      */
-    public String getHttpCode() {
-        return this.httpCode;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -79,11 +101,29 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer code; 
+        private Object data; 
         private String errorCode; 
-        private String httpCode; 
+        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * code仅仅用来和success同步
+         */
+        public Builder code(Integer code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Object data) {
+            this.data = data;
+            return this;
+        }
 
         /**
          * The error code returned if the request failed.
@@ -94,10 +134,10 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
-        public Builder httpCode(String httpCode) {
-            this.httpCode = httpCode;
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
