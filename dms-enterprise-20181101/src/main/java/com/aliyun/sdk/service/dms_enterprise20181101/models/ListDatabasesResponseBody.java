@@ -98,7 +98,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DatabaseList.
+         * The details of the databases.
          */
         public Builder databaseList(DatabaseList databaseList) {
             this.databaseList = databaseList;
@@ -106,7 +106,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of databases that belong to an instance.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -440,7 +440,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * CatalogName.
+             * The name of the catalog to which the database belongs.
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -448,7 +448,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseId.
+             * The ID of the database.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -456,7 +456,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database engine.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -464,7 +464,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DbaId.
+             * The ID of the DBA.
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -472,7 +472,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DbaName.
+             * The nickname of the Database administrator (DBA) to which the database belongs.
              */
             public Builder dbaName(String dbaName) {
                 this.dbaName = dbaName;
@@ -480,7 +480,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Encoding.
+             * The encoding format of the database.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -488,7 +488,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database belongs.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -496,7 +496,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The endpoint of the instance to which the database belongs.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -504,7 +504,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the database belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -512,7 +512,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerIdList.
+             * The IDs of the owners of the database.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -520,7 +520,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNameList.
+             * The nicknames of the database owners.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -528,7 +528,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The connection port of the instance to which the database belongs.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -536,7 +536,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -544,7 +544,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used for searching the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -552,7 +552,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Sid.
+             * The system ID (SID) of the instance to which the database belongs.
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -560,7 +560,13 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the database. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The database is normal.
+             * *   DISABLE: The database is disabled.
+             * *   OFFLINE: The database is unpublished.
+             * *   NOT_EXIST: The database does not exist.
              */
             public Builder state(String state) {
                 this.state = state;

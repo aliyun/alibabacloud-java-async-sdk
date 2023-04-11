@@ -98,7 +98,7 @@ public class GetOpLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code returned if the request fails.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,11 +130,11 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * - **true**: The request is successful.
-         * - **false**: The request fails.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -269,8 +269,11 @@ public class GetOpLogResponseBody extends TeaModel {
              * The endpoint of the database instance.
              * <p>
              * 
-             * > * This parameter is valid only for database instances of the LocalInstance type.
-             * > * This parameter is valid only for operations on the functional modules related to tasks.
+             * > 
+             * 
+             * *   This parameter is valid only for database instances of the LocalInstance type.
+             * 
+             * *   This parameter is valid only for operations on the functional modules related to tasks.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -321,7 +324,7 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the Alibaba Cloud account.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -166,7 +166,7 @@ public class GetOpLogRequest extends Request {
          * *   **PERMISSION**: permissions
          * *   **OWNER**: data owner
          * *   **SQL_CONSOLE**: data query
-         * *   **SQL\_CONSOLE\_EXPORT**: query result export
+         * *   **SQL_CONSOLE_EXPORT**: query result export
          * *   **DATA_CHANGE**: data change
          * *   **DATA_EXPORT**: data export
          * *   **SQL_REVIEW**: SQL review
@@ -175,10 +175,18 @@ public class GetOpLogRequest extends Request {
          * *   **DB_TASK**: task management
          * *   **INSTANCE_MANAGE**: instance management
          * *   **USER_MANAGE**: user management
-         * *   **SECURITY_RULE**: security rule
+         * *   **SECURITY_RULE**: security rules
          * *   **CONFIG_MANAGE**: configuration management
          * *   **RESOURCE_AUTH**: resource authorization
-         * *   **ACCESS\_WHITE\_IP**: access IP address allowlist
+         * *   **ACCESS_WHITE_IP**: access IP address whitelist
+         * *   **NDDL**: schema design
+         * *   **DSQL_CONSOLE**: cross-database data query
+         * *   **DSQL_CONSOLE_EXPORT**: cross-database query result export
+         * *   **DATA_TRACT**: data tracking
+         * *   **DATA_QUALITY**: data quality
+         * *   **DATALINK_MANAGE** :DBLink management
+         * *   **DATASEC_MANAGE**: sensitive data management
+         * *   **SELL**: sales
          */
         public Builder module(String module) {
             this.putQueryParameter("Module", module);
@@ -219,7 +227,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

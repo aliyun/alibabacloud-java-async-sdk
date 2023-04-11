@@ -122,7 +122,10 @@ public class UpdateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the permission template.
+         * <p>
+         * 
+         * >  You must specify the Name or Description parameter. Otherwise, the API call fails.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,7 +134,10 @@ public class UpdateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the permission template.
+         * <p>
+         * 
+         * >  You must specify the Name or Description parameter. Otherwise, the API call fails.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,7 +146,7 @@ public class UpdateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the permission template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -149,7 +155,7 @@ public class UpdateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

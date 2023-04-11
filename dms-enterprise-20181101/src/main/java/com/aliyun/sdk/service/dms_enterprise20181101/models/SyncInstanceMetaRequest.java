@@ -106,7 +106,11 @@ public class SyncInstanceMetaRequest extends Request {
         }
 
         /**
-         * IgnoreTable.
+         * Specifies whether to skip synchronization for the metadata of table dictionaries. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder ignoreTable(Boolean ignoreTable) {
             this.putQueryParameter("IgnoreTable", ignoreTable);
@@ -115,7 +119,7 @@ public class SyncInstanceMetaRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +128,10 @@ public class SyncInstanceMetaRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

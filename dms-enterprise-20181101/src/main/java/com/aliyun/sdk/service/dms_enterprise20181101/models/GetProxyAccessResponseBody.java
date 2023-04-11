@@ -86,7 +86,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyAccess.
+         * The authorization information about the secure access proxy feature.
          */
         public Builder proxyAccess(ProxyAccess proxyAccess) {
             this.proxyAccess = proxyAccess;
@@ -110,7 +110,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetProxyAccessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +270,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
             private String userUid; 
 
             /**
-             * AccessId.
+             * The username of the database account that is authorized to enable the secure access proxy feature for an instance.
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -274,7 +278,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the user is authorized to enable the secure access proxy feature for an instance.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -282,7 +286,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * IndepAccount.
+             * The username of the independent database account.
              */
             public Builder indepAccount(String indepAccount) {
                 this.indepAccount = indepAccount;
@@ -290,7 +294,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance for which the secure access proxy feature is enabled.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -298,7 +302,11 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * OriginInfo.
+             * The method that is used to authorize the user to enable the secure access proxy feature for an instance. Valid values:
+             * <p>
+             * 
+             * *   **Authorization by the Alibaba Cloud Account ()**: The information in the parentheses () indicates the ID of the Alibaba Cloud account.
+             * *   **Authorization by submitting the ticket ()**:The information in the parentheses () indicates the number of the ticket that the user submits to apply for permissions.
              */
             public Builder originInfo(String originInfo) {
                 this.originInfo = originInfo;
@@ -306,7 +314,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyAccessId.
+             * The ID that DMS generates after the user is authorized to enable the secure access proxy feature for an instance. The ID is unique in DMS. You can call the [ListProxyAccesses](~~295386~~) operation to query the ID.
              */
             public Builder proxyAccessId(Long proxyAccessId) {
                 this.proxyAccessId = proxyAccessId;
@@ -314,7 +322,10 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyId.
+             * The ID of the secure access proxy.
+             * <p>
+             * 
+             * >  You can call the [ListProxies](~~295371~~) operation to query the ID of the secure access proxy.
              */
             public Builder proxyId(Long proxyId) {
                 this.proxyId = proxyId;
@@ -322,7 +333,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -330,7 +341,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The nickname of the user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -338,7 +349,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
             }
 
             /**
-             * UserUid.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder userUid(String userUid) {
                 this.userUid = userUid;

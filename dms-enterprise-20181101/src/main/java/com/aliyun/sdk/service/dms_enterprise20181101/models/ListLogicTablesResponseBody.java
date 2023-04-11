@@ -98,7 +98,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * LogicTableList.
+         * The details of the logical tables.
          */
         public Builder logicTableList(LogicTableList logicTableList) {
             this.logicTableList = logicTableList;
@@ -122,7 +122,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of logical tables that meet the query conditions.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -368,7 +368,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DatabaseId.
+             * The ID of the logical database.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -376,7 +376,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the table is a logical table. The value is fixed to true.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -384,7 +384,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerIdList.
+             * The IDs of the owners of the logical tables.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -392,7 +392,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNameList.
+             * The nicknames of the owners of the logical tables.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -400,7 +400,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The logical database to which the logical table belongs.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -408,7 +408,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableCount.
+             * The number of logical tables.
              */
             public Builder tableCount(String tableCount) {
                 this.tableCount = tableCount;
@@ -416,7 +416,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableExpr.
+             * The expression of the logical table.
              */
             public Builder tableExpr(String tableExpr) {
                 this.tableExpr = tableExpr;
@@ -424,7 +424,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The GUID of the logical table.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -432,7 +432,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * The ID of the logical table.
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -440,7 +440,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the logical table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

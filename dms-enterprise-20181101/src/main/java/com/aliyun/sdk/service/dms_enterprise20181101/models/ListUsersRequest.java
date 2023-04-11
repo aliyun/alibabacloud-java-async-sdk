@@ -159,7 +159,9 @@ public class ListUsersRequest extends Request {
          * The number of entries to return on each page.
          * <p>
          * 
-         * >  Valid values: 10, 20, 50, and 100. Default value: 10.
+         * **
+         * 
+         * Valid values: 10, 20, 50, and 100.**** Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,11 +173,11 @@ public class ListUsersRequest extends Request {
          * The role that is assigned to the user. Valid values:
          * <p>
          * 
-         * *   **USER**: a regular user role.
-         * *   **DBA**: a database administrator (DBA) role.
-         * *   **ADMIN**: a Data Management (DMS) administrator role.
-         * *   **SECURITY_ADMIN**: a security administrator role.
-         * *   **STRUCT\_READ\_ONLY**: a schema read-only user role.
+         * *   **USER**: a regular user.
+         * *   **DBA** : a database administrator (DBA).
+         * *   **ADMIN**: a Data Management (DMS) administrator.
+         * *   **SECURITY_ADMIN**: a security administrator.
+         * *   **STRUCT_READ_ONLY**: a schema read-only user.
          * 
          * >  To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.
          */
@@ -195,7 +197,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

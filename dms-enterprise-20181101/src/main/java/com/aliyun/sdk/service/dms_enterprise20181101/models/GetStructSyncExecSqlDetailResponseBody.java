@@ -86,7 +86,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         }
 
         /**
-         * StructSyncExecSqlDetail.
+         * The details of the SQL statements.
          */
         public Builder structSyncExecSqlDetail(StructSyncExecSqlDetail structSyncExecSqlDetail) {
             this.structSyncExecSqlDetail = structSyncExecSqlDetail;
@@ -118,7 +118,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
             private Long totalSqlCount; 
 
             /**
-             * ExecSql.
+             * The SQL statements that are executed.
              */
             public Builder execSql(String execSql) {
                 this.execSql = execSql;
@@ -178,7 +178,7 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSqlCount.
+             * The total number of SQL statements.
              */
             public Builder totalSqlCount(Long totalSqlCount) {
                 this.totalSqlCount = totalSqlCount;

@@ -92,7 +92,7 @@ public class GetDataExportOrderDetailRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket.
          */
         public Builder orderId(Long orderId) {
             this.putBodyParameter("OrderId", orderId);
@@ -101,7 +101,10 @@ public class GetDataExportOrderDetailRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

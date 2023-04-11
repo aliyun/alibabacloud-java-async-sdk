@@ -136,7 +136,7 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * AttachmentKey.
+         * The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -145,7 +145,7 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The remarks of the ticket.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -154,7 +154,7 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * Param.
+         * The parameters of the ticket.
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -164,7 +164,7 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * RelatedUserList.
+         * The IDs of the stakeholders.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -174,7 +174,10 @@ public class CreateStructSyncOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -254,7 +257,7 @@ public class CreateStructSyncOrderRequest extends Request {
             private String versionId; 
 
             /**
-             * DbId.
+             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -262,7 +265,7 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * DbSearchName.
+             * The name that is used to search for the database. You can call the [SearchDatabases](~~141876~~) operation to query the name of the database.
              */
             public Builder dbSearchName(String dbSearchName) {
                 this.dbSearchName = dbSearchName;
@@ -270,7 +273,11 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * Logic.
+             * Specifies whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is not a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -278,7 +285,7 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * VersionId.
+             * The version number of the schema. The default value is the latest schema version number. For more information, see [Manage schema versions](~~202275~~).
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -331,7 +338,7 @@ public class CreateStructSyncOrderRequest extends Request {
             private String targetTableName; 
 
             /**
-             * SourceTableName.
+             * The name of the source table.
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -339,7 +346,7 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * TargetTableName.
+             * The name of the destination table.
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;
@@ -418,7 +425,7 @@ public class CreateStructSyncOrderRequest extends Request {
             private String versionId; 
 
             /**
-             * DbId.
+             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -426,7 +433,7 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * DbSearchName.
+             * The name that is used to search for the database. You can call the [SearchDatabases](~~141876~~) operation to query the name of the database.
              */
             public Builder dbSearchName(String dbSearchName) {
                 this.dbSearchName = dbSearchName;
@@ -434,7 +441,11 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * Logic.
+             * Specifies whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is not a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -442,7 +453,10 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * VersionId.
+             * The version number. By default, this parameter is left empty.
+             * <p>
+             * 
+             * >  If you specify the schema version number of the destination database, Data Management (DMS) only compares the schemas of the two databases.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -521,7 +535,11 @@ public class CreateStructSyncOrderRequest extends Request {
             private Target target; 
 
             /**
-             * IgnoreError.
+             * Specifies whether to skip an error that occurs in executing an SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **true**: continues to execute subsequent SQL statements if an error occurs in executing an SQL statement.
+             * *   **false**: stops executing subsequent SQL statements if an error occurs in executing an SQL statement.
              */
             public Builder ignoreError(Boolean ignoreError) {
                 this.ignoreError = ignoreError;
@@ -529,7 +547,7 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * Source.
+             * The information about the base database.
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -537,7 +555,7 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * TableInfoList.
+             * The information about the table of which you want to synchronize the schema.
              */
             public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
@@ -545,7 +563,7 @@ public class CreateStructSyncOrderRequest extends Request {
             }
 
             /**
-             * Target.
+             * The information about the database to which you want to synchronize the schema of a table.
              */
             public Builder target(Target target) {
                 this.target = target;

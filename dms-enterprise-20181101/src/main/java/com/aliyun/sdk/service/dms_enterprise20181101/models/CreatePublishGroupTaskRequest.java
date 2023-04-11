@@ -151,7 +151,7 @@ public class CreatePublishGroupTaskRequest extends Request {
         }
 
         /**
-         * DbId.
+         * The ID of the database for which the schema design is executed.
          */
         public Builder dbId(Integer dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -160,7 +160,7 @@ public class CreatePublishGroupTaskRequest extends Request {
         }
 
         /**
-         * Logic.
+         * Indicates whether the database is a logical database.
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -169,7 +169,10 @@ public class CreatePublishGroupTaskRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket.
+         * <p>
+         * 
+         * > : You can create a schema design ticket in the DMS console. For more information, see [Design schemas](~~69711~~). You can also create a schema design ticket by calling the [CreateOrder](~~144649~~) operation and obtain the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -178,7 +181,7 @@ public class CreatePublishGroupTaskRequest extends Request {
         }
 
         /**
-         * PlanTime.
+         * The time to execute the schema design ticket.
          */
         public Builder planTime(String planTime) {
             this.putQueryParameter("PlanTime", planTime);
@@ -187,7 +190,11 @@ public class CreatePublishGroupTaskRequest extends Request {
         }
 
         /**
-         * PublishStrategy.
+         * The policy to execute the schema design ticket. Valid values:
+         * <p>
+         * 
+         * *   IMMEDIATELY: immediately executes the schema design ticket.
+         * *   REGULARLY: executes the schema design ticket at a scheduled time.
          */
         public Builder publishStrategy(String publishStrategy) {
             this.putQueryParameter("PublishStrategy", publishStrategy);
@@ -196,7 +203,10 @@ public class CreatePublishGroupTaskRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

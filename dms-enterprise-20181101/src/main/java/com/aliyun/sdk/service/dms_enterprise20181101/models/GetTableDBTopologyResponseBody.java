@@ -86,7 +86,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DBTopology.
+         * The topology of the data table.
          */
         public Builder DBTopology(DBTopology DBTopology) {
             this.DBTopology = DBTopology;
@@ -94,7 +94,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String tableType; 
 
             /**
-             * TableId.
+             * The ID of the table.
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -190,7 +190,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the physical table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -198,7 +198,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableType.
+             * The type of the table. This is a reserved parameter.
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -287,7 +287,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private java.util.List < TableList> tableList; 
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -295,7 +295,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -303,7 +303,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -311,7 +311,19 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database belongs. Valid values:
+             * <p>
+             * 
+             * *   **product**: production environment
+             * *   **dev**: development environment
+             * *   **pre**: pre-release environment
+             * *   **test**: test environment
+             * *   **sit**: system integration testing (SIT) environment
+             * *   **uat**: user acceptance testing (UAT) environment
+             * *   **pet**: stress testing environment
+             * *   **stag**: staging environment
+             * 
+             * > For more information, see [Change the environment type of an instance](~~163309~~).
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -319,7 +331,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableList.
+             * The physical tables.
              */
             public Builder tableList(java.util.List < TableList> tableList) {
                 this.tableList = tableList;
@@ -408,7 +420,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String sid; 
 
             /**
-             * DatabaseList.
+             * The physical databases.
              */
             public Builder databaseList(java.util.List < DatabaseList> databaseList) {
                 this.databaseList = databaseList;
@@ -416,7 +428,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -424,7 +436,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The endpoint of the data source.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -432,7 +444,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port that is used to connect to the data source.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -440,7 +452,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Sid.
+             * The system ID (SID) of the data source.
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -505,7 +517,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DataSourceList.
+             * The data sources.
              */
             public Builder dataSourceList(java.util.List < DataSourceList> dataSourceList) {
                 this.dataSourceList = dataSourceList;
@@ -513,7 +525,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The GUID of the table in DMS.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -521,7 +533,14 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
+             * <p>
+             * 
+             * > 
+             * 
+             * *   If a logical table is queried, the name of the logical table is returned.
+             * 
+             * *   If a physical table is queried, the name of the physical table is returned.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

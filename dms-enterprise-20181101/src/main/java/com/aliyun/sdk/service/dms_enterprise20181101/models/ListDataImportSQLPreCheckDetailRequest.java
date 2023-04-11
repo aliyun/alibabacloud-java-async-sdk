@@ -7,18 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetStructSyncJobAnalyzeResultRequest} extends {@link RequestModel}
+ * {@link ListDataImportSQLPreCheckDetailRequest} extends {@link RequestModel}
  *
- * <p>GetStructSyncJobAnalyzeResultRequest</p>
+ * <p>ListDataImportSQLPreCheckDetailRequest</p>
  */
-public class GetStructSyncJobAnalyzeResultRequest extends Request {
+public class ListDataImportSQLPreCheckDetailRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
-
-    @Query
-    @NameInMap("CompareType")
-    private String compareType;
 
     @Query
     @NameInMap("OrderId")
@@ -26,27 +22,34 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
     private Long orderId;
 
     @Query
-    @NameInMap("PageNumber")
-    @Validation(minimum = 1)
-    private Long pageNumber;
+    @NameInMap("PageNumer")
+    private Long pageNumer;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(maximum = 200, minimum = 1)
     private Long pageSize;
+
+    @Query
+    @NameInMap("SqlType")
+    private String sqlType;
+
+    @Query
+    @NameInMap("StatusCode")
+    private String statusCode;
 
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
     private Long tid;
 
-    private GetStructSyncJobAnalyzeResultRequest(Builder builder) {
+    private ListDataImportSQLPreCheckDetailRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.compareType = builder.compareType;
         this.orderId = builder.orderId;
-        this.pageNumber = builder.pageNumber;
+        this.pageNumer = builder.pageNumer;
         this.pageSize = builder.pageSize;
+        this.sqlType = builder.sqlType;
+        this.statusCode = builder.statusCode;
         this.tid = builder.tid;
     }
 
@@ -54,7 +57,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         return new Builder();
     }
 
-    public static GetStructSyncJobAnalyzeResultRequest create() {
+    public static ListDataImportSQLPreCheckDetailRequest create() {
         return builder().build();
     }
 
@@ -71,13 +74,6 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
     }
 
     /**
-     * @return compareType
-     */
-    public String getCompareType() {
-        return this.compareType;
-    }
-
-    /**
      * @return orderId
      */
     public Long getOrderId() {
@@ -85,10 +81,10 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
     }
 
     /**
-     * @return pageNumber
+     * @return pageNumer
      */
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getPageNumer() {
+        return this.pageNumer;
     }
 
     /**
@@ -99,31 +95,47 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
     }
 
     /**
+     * @return sqlType
+     */
+    public String getSqlType() {
+        return this.sqlType;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public String getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetStructSyncJobAnalyzeResultRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListDataImportSQLPreCheckDetailRequest, Builder> {
         private String regionId; 
-        private String compareType; 
         private Long orderId; 
-        private Long pageNumber; 
+        private Long pageNumer; 
         private Long pageSize; 
+        private String sqlType; 
+        private String statusCode; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetStructSyncJobAnalyzeResultRequest request) {
+        private Builder(ListDataImportSQLPreCheckDetailRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.compareType = request.compareType;
             this.orderId = request.orderId;
-            this.pageNumber = request.pageNumber;
+            this.pageNumer = request.pageNumer;
             this.pageSize = request.pageSize;
+            this.sqlType = request.sqlType;
+            this.statusCode = request.statusCode;
             this.tid = request.tid;
         } 
 
@@ -137,23 +149,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The type of the comparison. Valid values:
-         * <p>
-         * 
-         * *   **CREATE_TABLE**: compares the created tables.
-         * *   **ALTER_TABLE**: compares the modified tables.
-         * *   **EQUAL_TABLE**: compares the identical tables.
-         * *   **PASS_TABLE**: compares the tables that are skipped during schema synchronization.
-         * *   **NOT_COMPARE**: does not compare tables.
-         */
-        public Builder compareType(String compareType) {
-            this.putQueryParameter("CompareType", compareType);
-            this.compareType = compareType;
-            return this;
-        }
-
-        /**
-         * The ID of the ticket.
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -162,16 +158,16 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * PageNumer.
          */
-        public Builder pageNumber(Long pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder pageNumer(Long pageNumer) {
+            this.putQueryParameter("PageNumer", pageNumer);
+            this.pageNumer = pageNumer;
             return this;
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,10 +176,25 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * SqlType.
+         */
+        public Builder sqlType(String sqlType) {
+            this.putQueryParameter("SqlType", sqlType);
+            this.sqlType = sqlType;
+            return this;
+        }
+
+        /**
+         * StatusCode.
+         */
+        public Builder statusCode(String statusCode) {
+            this.putQueryParameter("StatusCode", statusCode);
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -192,8 +203,8 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         @Override
-        public GetStructSyncJobAnalyzeResultRequest build() {
-            return new GetStructSyncJobAnalyzeResultRequest(this);
+        public ListDataImportSQLPreCheckDetailRequest build() {
+            return new ListDataImportSQLPreCheckDetailRequest(this);
         } 
 
     } 

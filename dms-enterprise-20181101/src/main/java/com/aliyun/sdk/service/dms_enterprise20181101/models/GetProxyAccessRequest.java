@@ -93,7 +93,7 @@ public class GetProxyAccessRequest extends Request {
         }
 
         /**
-         * ProxyAccessId.
+         * The ID that Data Management (DMS) generates after the user is authorized to enable the secure access proxy feature for an instance. The ID is unique in DMS. You can call the [ListProxyAccesses](~~295386~~) operation to query the ID.
          */
         public Builder proxyAccessId(Long proxyAccessId) {
             this.putQueryParameter("ProxyAccessId", proxyAccessId);
@@ -102,7 +102,7 @@ public class GetProxyAccessRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

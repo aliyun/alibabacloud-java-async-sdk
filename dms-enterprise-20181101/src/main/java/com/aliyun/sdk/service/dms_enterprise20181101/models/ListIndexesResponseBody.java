@@ -86,7 +86,7 @@ public class ListIndexesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * IndexList.
+         * The details of indexes.
          */
         public Builder indexList(IndexList indexList) {
             this.indexList = indexList;
@@ -110,7 +110,7 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +206,7 @@ public class ListIndexesResponseBody extends TeaModel {
             private String tableId; 
 
             /**
-             * IndexComment.
+             * The description of the index.
              */
             public Builder indexComment(String indexComment) {
                 this.indexComment = indexComment;
@@ -214,7 +214,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexId.
+             * The ID of the index.
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -222,7 +222,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexName.
+             * The name of the index.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -230,7 +230,14 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexType.
+             * The type of the index. Valid values:
+             * <p>
+             * 
+             * *   Primary
+             * *   Unique
+             * *   Normal
+             * *   FullText
+             * *   Spatial
              */
             public Builder indexType(String indexType) {
                 this.indexType = indexType;
@@ -238,7 +245,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * The ID of the table.
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;

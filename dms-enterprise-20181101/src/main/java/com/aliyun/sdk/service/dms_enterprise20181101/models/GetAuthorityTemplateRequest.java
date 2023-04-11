@@ -92,7 +92,7 @@ public class GetAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the permission template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -101,7 +101,7 @@ public class GetAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

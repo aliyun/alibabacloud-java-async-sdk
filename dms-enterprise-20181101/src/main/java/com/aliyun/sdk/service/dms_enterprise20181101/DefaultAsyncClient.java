@@ -203,6 +203,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateAuthorityTemplateResponse> createAuthorityTemplate(CreateAuthorityTemplateRequest request) {
         try {
@@ -400,7 +404,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
      */
     @Override
@@ -808,8 +812,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
-      * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
       *
      */
     @Override
@@ -840,6 +844,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     @Override
     public CompletableFuture<GetAuthorityTemplateResponse> getAuthorityTemplate(GetAuthorityTemplateRequest request) {
         try {
@@ -854,6 +862,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     @Override
     public CompletableFuture<GetAuthorityTemplateItemResponse> getAuthorityTemplateItem(GetAuthorityTemplateItemRequest request) {
         try {
@@ -939,7 +951,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+      * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
       *
      */
     @Override
@@ -1027,6 +1039,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetDataImportSQLResponse> getDataImportSQL(GetDataImportSQLRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataImportSQL").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataImportSQLResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataImportSQLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1104,6 +1130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     @Override
     public CompletableFuture<GetMetaTableColumnResponse> getMetaTableColumn(GetMetaTableColumnRequest request) {
         try {
@@ -1118,6 +1148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     @Override
     public CompletableFuture<GetMetaTableDetailInfoResponse> getMetaTableDetailInfo(GetMetaTableDetailInfoRequest request) {
         try {
@@ -1207,7 +1241,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+      * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
       *
      */
     @Override
@@ -1498,6 +1532,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     @Override
     public CompletableFuture<GrantTemplateAuthorityResponse> grantTemplateAuthority(GrantTemplateAuthorityRequest request) {
         try {
@@ -1554,6 +1592,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     @Override
     public CompletableFuture<ListColumnsResponse> listColumns(ListColumnsRequest request) {
         try {
@@ -1655,6 +1697,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListDataCorrectPreCheckSQLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListDataImportSQLPreCheckDetailResponse> listDataImportSQLPreCheckDetail(ListDataImportSQLPreCheckDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDataImportSQLPreCheckDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataImportSQLPreCheckDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataImportSQLPreCheckDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListDataImportSQLTypeResponse> listDataImportSQLType(ListDataImportSQLTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDataImportSQLType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataImportSQLTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataImportSQLTypeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2019,6 +2089,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     @Override
     public CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request) {
         try {
@@ -2441,6 +2515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     @Override
     public CompletableFuture<RevokeTemplateAuthorityResponse> revokeTemplateAuthority(RevokeTemplateAuthorityRequest request) {
         try {
@@ -2483,6 +2561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
+      *
+     */
     @Override
     public CompletableFuture<SearchTableResponse> searchTable(SearchTableRequest request) {
         try {
@@ -2581,6 +2663,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     @Override
     public CompletableFuture<SyncInstanceMetaResponse> syncInstanceMeta(SyncInstanceMetaRequest request) {
         try {
@@ -2595,6 +2681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     @Override
     public CompletableFuture<UpdateAuthorityTemplateResponse> updateAuthorityTemplate(UpdateAuthorityTemplateRequest request) {
         try {

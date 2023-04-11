@@ -107,7 +107,7 @@ public class RevokeTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the permission template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -116,7 +116,7 @@ public class RevokeTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -125,7 +125,7 @@ public class RevokeTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * The IDs of users from whom you want to revoke permissions by using a permission template.
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

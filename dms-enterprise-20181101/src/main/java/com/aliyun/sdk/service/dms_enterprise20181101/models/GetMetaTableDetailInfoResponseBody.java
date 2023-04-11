@@ -86,7 +86,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DetailInfo.
+         * The details of the table.
          */
         public Builder detailInfo(DetailInfo detailInfo) {
             this.detailInfo = detailInfo;
@@ -94,7 +94,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +266,11 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             private String position; 
 
             /**
-             * AutoIncrement.
+             * Indicates whether the column is an auto-increment column. Valid values:
+             * <p>
+             * 
+             * *   true: The column is an auto-increment column.
+             * *   false: The column is not an auto-increment column.
              */
             public Builder autoIncrement(Boolean autoIncrement) {
                 this.autoIncrement = autoIncrement;
@@ -274,7 +278,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnId.
+             * The ID of the column.
              */
             public Builder columnId(String columnId) {
                 this.columnId = columnId;
@@ -282,7 +286,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The name of the column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -290,7 +294,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * The data type of the column. Examples: Bigint, Int, and Varchar.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -298,7 +302,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataLength.
+             * The length of the field.
              */
             public Builder dataLength(Long dataLength) {
                 this.dataLength = dataLength;
@@ -306,7 +310,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataPrecision.
+             * The precision of the field.
              */
             public Builder dataPrecision(Integer dataPrecision) {
                 this.dataPrecision = dataPrecision;
@@ -314,7 +318,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataScale.
+             * The scale of the column.
              */
             public Builder dataScale(Integer dataScale) {
                 this.dataScale = dataScale;
@@ -322,7 +326,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the column.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +334,11 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Nullable.
+             * Indicates whether the column is nullable. Valid values:
+             * <p>
+             * 
+             * *   true: The column is nullable.
+             * *   false: The column is not nullable.
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -338,7 +346,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * The position of the field in the table.
              */
             public Builder position(String position) {
                 this.position = position;
@@ -427,7 +435,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             private Boolean unique; 
 
             /**
-             * IndexColumns.
+             * The index column.
              */
             public Builder indexColumns(java.util.List < String > indexColumns) {
                 this.indexColumns = indexColumns;
@@ -435,7 +443,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IndexId.
+             * The ID of the index.
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -443,7 +451,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IndexName.
+             * The name of the index.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -451,7 +459,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IndexType.
+             * The type of the index. Examples: Primary, Unique, and Normal.
              */
             public Builder indexType(String indexType) {
                 this.indexType = indexType;
@@ -459,7 +467,11 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Unique.
+             * Indicates whether the index is unique. Valid values:
+             * <p>
+             * 
+             * *   true: The index is unique.
+             * *   false: The index is not unique.
              */
             public Builder unique(Boolean unique) {
                 this.unique = unique;
@@ -512,7 +524,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             private java.util.List < IndexList> indexList; 
 
             /**
-             * ColumnList.
+             * The columns in the table.
              */
             public Builder columnList(java.util.List < ColumnList> columnList) {
                 this.columnList = columnList;
@@ -520,7 +532,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IndexList.
+             * The list of indexes.
              */
             public Builder indexList(java.util.List < IndexList> indexList) {
                 this.indexList = indexList;

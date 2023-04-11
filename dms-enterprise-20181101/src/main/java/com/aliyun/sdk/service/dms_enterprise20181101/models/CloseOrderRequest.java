@@ -107,7 +107,7 @@ public class CloseOrderRequest extends Request {
         }
 
         /**
-         * CloseReason.
+         * The reason why the ticket is closed.
          */
         public Builder closeReason(String closeReason) {
             this.putQueryParameter("CloseReason", closeReason);
@@ -116,7 +116,7 @@ public class CloseOrderRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -125,7 +125,10 @@ public class CloseOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

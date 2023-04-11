@@ -98,7 +98,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DataCronClearTaskDetailList.
+         * The historical data cleansing tasks
          */
         public Builder dataCronClearTaskDetailList(java.util.List < DataCronClearTaskDetailList> dataCronClearTaskDetailList) {
             this.dataCronClearTaskDetailList = dataCronClearTaskDetailList;
@@ -106,7 +106,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of SQL tasks.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             private String jobStatus; 
 
             /**
-             * ActualAffectRows.
+             * The number of rows affected by the SQL task.
              */
             public Builder actualAffectRows(Long actualAffectRows) {
                 this.actualAffectRows = actualAffectRows;
@@ -222,7 +222,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the SQL task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -230,7 +230,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * DBTaskGroupId.
+             * The ID of the SQL task group.
              */
             public Builder DBTaskGroupId(Long DBTaskGroupId) {
                 this.DBTaskGroupId = DBTaskGroupId;
@@ -238,7 +238,17 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * jobStatus.
+             * The state of the SQL task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The SQL task was initialized.
+             * *   **PENDING**: The SQL task waited to be run.
+             * *   **BE_SCHEDULED**: The SQL task waited to be scheduled.
+             * *   **FAIL**: The SQL task failed.
+             * *   **SUCCESS**: The SQL task was successful.
+             * *   **PAUSE**: The SQL task was paused.
+             * *   **DELETE**: The SQL task was deleted.
+             * *   **RUNNING**: The SQL task was being run.
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;

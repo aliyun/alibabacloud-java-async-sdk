@@ -7,31 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateUploadOSSFileJobResponseBody} extends {@link TeaModel}
+ * {@link GetDataImportSQLResponseBody} extends {@link TeaModel}
  *
- * <p>CreateUploadOSSFileJobResponseBody</p>
+ * <p>GetDataImportSQLResponseBody</p>
  */
-public class CreateUploadOSSFileJobResponseBody extends TeaModel {
+public class GetDataImportSQLResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
     @NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("JobKey")
-    private String jobKey;
-
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("SQLDetail")
+    private SQLDetail SQLDetail;
 
     @NameInMap("Success")
     private Boolean success;
 
-    private CreateUploadOSSFileJobResponseBody(Builder builder) {
+    private GetDataImportSQLResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
-        this.jobKey = builder.jobKey;
         this.requestId = builder.requestId;
+        this.SQLDetail = builder.SQLDetail;
         this.success = builder.success;
     }
 
@@ -39,7 +39,7 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateUploadOSSFileJobResponseBody create() {
+    public static GetDataImportSQLResponseBody create() {
         return builder().build();
     }
 
@@ -58,17 +58,17 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
     }
 
     /**
-     * @return jobKey
-     */
-    public String getJobKey() {
-        return this.jobKey;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return SQLDetail
+     */
+    public SQLDetail getSQLDetail() {
+        return this.SQLDetail;
     }
 
     /**
@@ -81,12 +81,12 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private String jobKey; 
         private String requestId; 
+        private SQLDetail SQLDetail; 
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,15 +102,7 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the file upload task. You can query the upload progress and task details. For more information, see [GetUserUploadFileJob](~~206069~~).
-         */
-        public Builder jobKey(String jobKey) {
-            this.jobKey = jobKey;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,17 +110,66 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * SQLDetail.
+         */
+        public Builder SQLDetail(SQLDetail SQLDetail) {
+            this.SQLDetail = SQLDetail;
+            return this;
+        }
+
+        /**
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateUploadOSSFileJobResponseBody build() {
-            return new CreateUploadOSSFileJobResponseBody(this);
+        public GetDataImportSQLResponseBody build() {
+            return new GetDataImportSQLResponseBody(this);
         } 
 
     } 
 
+    public static class SQLDetail extends TeaModel {
+        @NameInMap("ExecSql")
+        private String execSql;
+
+        private SQLDetail(Builder builder) {
+            this.execSql = builder.execSql;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SQLDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return execSql
+         */
+        public String getExecSql() {
+            return this.execSql;
+        }
+
+        public static final class Builder {
+            private String execSql; 
+
+            /**
+             * ExecSql.
+             */
+            public Builder execSql(String execSql) {
+                this.execSql = execSql;
+                return this;
+            }
+
+            public SQLDetail build() {
+                return new SQLDetail(this);
+            } 
+
+        } 
+
+    }
 }

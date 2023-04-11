@@ -189,7 +189,17 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * DbType.
+         * The type of database. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **SQLServer**
+         * *   **PostgreSQL**
+         * *   **Oracle**
+         * *   **DRDS**
+         * *   **OceanBase**
+         * *   **Mongo**
+         * *   **Redis**
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -198,7 +208,7 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The type of the environment to which databases belong. For more information, see [Change the environment type of an instance](~~163309~~).
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -207,7 +217,7 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +226,7 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +235,7 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * ReturnGuid.
+         * Specifies whether to return the GUID of each table.
          */
         public Builder returnGuid(Boolean returnGuid) {
             this.putQueryParameter("ReturnGuid", returnGuid);
@@ -234,7 +244,7 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The keyword that is used to query tables.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -243,7 +253,13 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * SearchRange.
+         * The scope of tables that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **HAS_PERMSSION**: the tables on which the current account has permissions.
+         * *   **OWNER**: the tables owned by the current account.
+         * *   **MY_FOCUS**: the tables that the current account follows.
+         * *   **UNKNOWN**: all tables.
          */
         public Builder searchRange(String searchRange) {
             this.putQueryParameter("SearchRange", searchRange);
@@ -252,7 +268,12 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * SearchTarget.
+         * The type of table that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **TABLE**: physical and logical tables
+         * *   **SINGLE_TABLE**: physical tables
+         * *   **LOGIC_TABLE**: logical tables
          */
         public Builder searchTarget(String searchTarget) {
             this.putQueryParameter("SearchTarget", searchTarget);
@@ -261,7 +282,10 @@ public class SearchTableRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -122,7 +122,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The purpose or objective of the SQL review. This reduces unnecessary communication.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -131,7 +131,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         /**
-         * Param.
+         * The parameters of the ticket.
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -141,7 +141,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         /**
-         * RelatedUserList.
+         * The stakeholders involved in this operation. All the specified stakeholders can view the ticket details and take part in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -151,7 +151,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -220,7 +220,7 @@ public class CreateSQLReviewOrderRequest extends Request {
             private String projectName; 
 
             /**
-             * AttachmentKeyList.
+             * The files to be reviewed. Multiple files can be reviewed at a time.
              */
             public Builder attachmentKeyList(java.util.List < String > attachmentKeyList) {
                 this.attachmentKeyList = attachmentKeyList;
@@ -228,7 +228,10 @@ public class CreateSQLReviewOrderRequest extends Request {
             }
 
             /**
-             * DbId.
+             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
+             * <p>
+             * 
+             * >  You can call this operation to query only physical databases. This operation is unavailable to query logical databases.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -236,7 +239,7 @@ public class CreateSQLReviewOrderRequest extends Request {
             }
 
             /**
-             * ProjectName.
+             * The name of the project.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;

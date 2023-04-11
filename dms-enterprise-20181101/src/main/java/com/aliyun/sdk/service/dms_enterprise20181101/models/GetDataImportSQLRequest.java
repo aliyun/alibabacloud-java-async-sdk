@@ -7,29 +7,35 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDBTopologyRequest} extends {@link RequestModel}
+ * {@link GetDataImportSQLRequest} extends {@link RequestModel}
  *
- * <p>GetDBTopologyRequest</p>
+ * <p>GetDataImportSQLRequest</p>
  */
-public class GetDBTopologyRequest extends Request {
+public class GetDataImportSQLRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("LogicDbId")
+    @NameInMap("OrderId")
     @Validation(required = true, minimum = 1)
-    private Long logicDbId;
+    private Long orderId;
+
+    @Query
+    @NameInMap("SqlId")
+    @Validation(required = true)
+    private Long sqlId;
 
     @Query
     @NameInMap("Tid")
     @Validation(minimum = 1)
     private Long tid;
 
-    private GetDBTopologyRequest(Builder builder) {
+    private GetDataImportSQLRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.logicDbId = builder.logicDbId;
+        this.orderId = builder.orderId;
+        this.sqlId = builder.sqlId;
         this.tid = builder.tid;
     }
 
@@ -37,7 +43,7 @@ public class GetDBTopologyRequest extends Request {
         return new Builder();
     }
 
-    public static GetDBTopologyRequest create() {
+    public static GetDataImportSQLRequest create() {
         return builder().build();
     }
 
@@ -54,10 +60,17 @@ public class GetDBTopologyRequest extends Request {
     }
 
     /**
-     * @return logicDbId
+     * @return orderId
      */
-    public Long getLogicDbId() {
-        return this.logicDbId;
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    /**
+     * @return sqlId
+     */
+    public Long getSqlId() {
+        return this.sqlId;
     }
 
     /**
@@ -67,19 +80,21 @@ public class GetDBTopologyRequest extends Request {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetDBTopologyRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetDataImportSQLRequest, Builder> {
         private String regionId; 
-        private Long logicDbId; 
+        private Long orderId; 
+        private Long sqlId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDBTopologyRequest request) {
+        private Builder(GetDataImportSQLRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.logicDbId = request.logicDbId;
+            this.orderId = request.orderId;
+            this.sqlId = request.sqlId;
             this.tid = request.tid;
         } 
 
@@ -93,22 +108,25 @@ public class GetDBTopologyRequest extends Request {
         }
 
         /**
-         * The ID of the logical database.
-         * <p>
-         * 
-         * > You can call the [ListLogicDatabases](~~141874~~) operation to query the ID of the logical database.
+         * OrderId.
          */
-        public Builder logicDbId(Long logicDbId) {
-            this.putQueryParameter("LogicDbId", logicDbId);
-            this.logicDbId = logicDbId;
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("OrderId", orderId);
+            this.orderId = orderId;
             return this;
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * SqlId.
+         */
+        public Builder sqlId(Long sqlId) {
+            this.putQueryParameter("SqlId", sqlId);
+            this.sqlId = sqlId;
+            return this;
+        }
+
+        /**
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -117,8 +135,8 @@ public class GetDBTopologyRequest extends Request {
         }
 
         @Override
-        public GetDBTopologyRequest build() {
-            return new GetDBTopologyRequest(this);
+        public GetDataImportSQLRequest build() {
+            return new GetDataImportSQLRequest(this);
         } 
 
     } 

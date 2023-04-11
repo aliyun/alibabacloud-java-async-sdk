@@ -148,7 +148,7 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * DatabaseId.
+         * The ID of the logical database.
          */
         public Builder databaseId(String databaseId) {
             this.putQueryParameter("DatabaseId", databaseId);
@@ -157,7 +157,7 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +166,7 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +175,7 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * ReturnGuid.
+         * Specifies whether to return the GUID of the table.
          */
         public Builder returnGuid(Boolean returnGuid) {
             this.putQueryParameter("ReturnGuid", returnGuid);
@@ -184,7 +184,7 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * SearchName.
+         * The keyword that is used to search for the logical tables. Prefix match is supported.
          */
         public Builder searchName(String searchName) {
             this.putQueryParameter("SearchName", searchName);
@@ -193,7 +193,10 @@ public class ListLogicTablesRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

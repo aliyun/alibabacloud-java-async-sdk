@@ -123,7 +123,10 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The name of the file.
+         * <p>
+         * 
+         * > The file name must end with .txt or .sql. For example, the file name can be text.txt.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -132,7 +135,13 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * FileSource.
+         * The purpose of the file upload task. Valid values:
+         * <p>
+         * 
+         * *   **datacorrect**: The file is uploaded to change data.
+         * *   **order_info_attachment**: The file is uploaded as an attachment in a ticket.
+         * *   **big-file**: The file is uploaded to import multiple data records at a time.
+         * *   **sqlreview**: The file is uploaded for SQL review.
          */
         public Builder fileSource(String fileSource) {
             this.putQueryParameter("FileSource", fileSource);
@@ -141,7 +150,10 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -150,7 +162,7 @@ public class CreateUploadOSSFileJobRequest extends Request {
         }
 
         /**
-         * UploadTarget.
+         * The information about the OSS file to be uploaded.
          */
         public Builder uploadTarget(UploadTarget uploadTarget) {
             String uploadTargetShrink = shrink(uploadTarget, "UploadTarget", "json");
@@ -220,7 +232,7 @@ public class CreateUploadOSSFileJobRequest extends Request {
             private String objectName; 
 
             /**
-             * BucketName.
+             * The name of the OSS bucket.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -228,7 +240,7 @@ public class CreateUploadOSSFileJobRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * The endpoint of the OSS bucket.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -236,7 +248,7 @@ public class CreateUploadOSSFileJobRequest extends Request {
             }
 
             /**
-             * ObjectName.
+             * The name of the OSS object.
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;

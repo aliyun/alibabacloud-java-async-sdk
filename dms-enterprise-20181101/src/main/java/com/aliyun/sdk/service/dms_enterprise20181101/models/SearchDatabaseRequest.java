@@ -184,7 +184,7 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+         * The environment type of the database. For more information, see [Change the environment type of an instance](~~163309~~).
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -249,7 +249,7 @@ public class SearchDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -86,7 +86,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AuthorityTemplateView.
+         * The details of the permission template.
          */
         public Builder authorityTemplateView(AuthorityTemplateView authorityTemplateView) {
             this.authorityTemplateView = authorityTemplateView;
@@ -94,7 +94,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +246,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * Attribute.
+             * Other information. For example, you can add the logon permission on an instance to the permission template.
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -250,7 +254,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -258,7 +262,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -266,7 +270,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ItemId.
+             * The ID of the resource.
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -274,7 +278,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * The ID of the user who modified the resource.
              */
             public Builder modifierId(Long modifierId) {
                 this.modifierId = modifierId;
@@ -282,7 +286,14 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource. Valid values:
+             * <p>
+             * 
+             * *   **INSTANCE**: instance
+             * *   **LOGIC_DB**: logical database
+             * *   **META_DB**: physical database
+             * *   **LOGIC_TABLE**: logical table
+             * *   **SINGLE_TABLE**: physical table
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -290,7 +301,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -298,7 +309,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the permission template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -440,7 +451,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * AuthorityTemplateItemList.
+             * The resource information in the permission template.
              */
             public Builder authorityTemplateItemList(AuthorityTemplateItemList authorityTemplateItemList) {
                 this.authorityTemplateItemList = authorityTemplateItemList;
@@ -448,7 +459,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -456,7 +467,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * The ID of the user who created the permission template.
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -464,7 +475,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the permission template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -472,7 +483,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the permission template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -480,7 +491,7 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the permission template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

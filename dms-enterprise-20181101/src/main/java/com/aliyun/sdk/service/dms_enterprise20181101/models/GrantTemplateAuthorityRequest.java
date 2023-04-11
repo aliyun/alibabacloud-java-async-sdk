@@ -136,7 +136,7 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The reason why you want to grant permissions on resources to the users by using the permission template.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -145,7 +145,7 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * ExpireDate.
+         * The time when the permission expires. Specify the time in the yyyy-MM-DD HH:mm:ss format.
          */
         public Builder expireDate(String expireDate) {
             this.putQueryParameter("ExpireDate", expireDate);
@@ -154,7 +154,7 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the permission template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -163,7 +163,7 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -172,7 +172,7 @@ public class GrantTemplateAuthorityRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * The IDs of users to which you want to grant permissions on resources by using the permission template.
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

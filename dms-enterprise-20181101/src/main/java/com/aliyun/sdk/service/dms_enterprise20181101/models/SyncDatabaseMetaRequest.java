@@ -106,7 +106,7 @@ public class SyncDatabaseMetaRequest extends Request {
         }
 
         /**
-         * DbId.
+         * The ID of the database.
          */
         public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -115,7 +115,7 @@ public class SyncDatabaseMetaRequest extends Request {
         }
 
         /**
-         * Logic.
+         * Specifies whether the database is a logical database.
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -124,7 +124,10 @@ public class SyncDatabaseMetaRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

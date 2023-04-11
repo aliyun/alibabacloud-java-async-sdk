@@ -98,7 +98,7 @@ public class ListTablesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code that is returned if the request fails.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -125,8 +125,8 @@ public class ListTablesResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -448,7 +448,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the table.
+             * The ID list of the table owners.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -456,7 +456,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners of the table.
+             * The nickname list of the table owners.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -488,7 +488,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

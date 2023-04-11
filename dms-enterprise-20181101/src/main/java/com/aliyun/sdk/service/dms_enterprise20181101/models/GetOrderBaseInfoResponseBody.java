@@ -86,7 +86,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * OrderBaseInfo.
+         * The basic information about the ticket.
          */
         public Builder orderBaseInfo(OrderBaseInfo orderBaseInfo) {
             this.orderBaseInfo = orderBaseInfo;
@@ -110,7 +110,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -384,7 +384,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             private String workflowStatusDesc; 
 
             /**
-             * Comment.
+             * The remarks of the ticket.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -392,7 +392,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Committer.
+             * The applicant.
              */
             public Builder committer(String committer) {
                 this.committer = committer;
@@ -400,7 +400,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CommitterId.
+             * The ID of the applicant. Note: The ID is different from the Alibaba Cloud account ID of the applicant.
              */
             public Builder committerId(Long committerId) {
                 this.committerId = committerId;
@@ -408,7 +408,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the ticket was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -416,7 +416,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * The time when the ticket was last modified.
              */
             public Builder lastModifyTime(String lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -424,7 +424,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * The ID of the ticket.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -432,7 +432,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PluginType.
+             * The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](~~465865~~) operation.
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;
@@ -440,7 +440,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedUserList.
+             * The IDs of the operators that are related to the ticket.
              */
             public Builder relatedUserList(RelatedUserList relatedUserList) {
                 this.relatedUserList = relatedUserList;
@@ -448,7 +448,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedUserNickList.
+             * The nicknames of the operators that are related to the ticket.
              */
             public Builder relatedUserNickList(RelatedUserNickList relatedUserNickList) {
                 this.relatedUserNickList = relatedUserNickList;
@@ -456,7 +456,16 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * The status code of the ticket. Valid values:
+             * <p>
+             * 
+             * *   **new**: The ticket is created.
+             * *   **toaudit**: The ticket is being reviewed.
+             * *   **Approved**: The ticket is approved.
+             * *   **reject**: The ticket is rejected.
+             * *   **processing**: The ticket is being executed.
+             * *   **success**: The ticket is executed.
+             * *   **closed**: The ticket is closed.
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -464,7 +473,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The description of the status.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -472,7 +481,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInstanceId.
+             * The ID of the approval process.
              */
             public Builder workflowInstanceId(Long workflowInstanceId) {
                 this.workflowInstanceId = workflowInstanceId;
@@ -480,7 +489,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowStatusDesc.
+             * The description of the approval process.
              */
             public Builder workflowStatusDesc(String workflowStatusDesc) {
                 this.workflowStatusDesc = workflowStatusDesc;

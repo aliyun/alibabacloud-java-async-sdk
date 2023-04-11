@@ -62,6 +62,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CloseOrderResponse> closeOrder(CloseOrderRequest request);
 
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     CompletableFuture<CreateAuthorityTemplateResponse> createAuthorityTemplate(CreateAuthorityTemplateRequest request);
 
     /**
@@ -127,7 +131,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePublishGroupTaskResponse> createPublishGroupTask(CreatePublishGroupTaskRequest request);
 
     /**
-      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
      */
     CompletableFuture<CreateSQLReviewOrderResponse> createSQLReviewOrder(CreateSQLReviewOrderRequest request);
@@ -223,16 +227,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteScriptResponse> executeScript(ExecuteScriptRequest request);
 
     /**
-      * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
-      * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
       *
      */
     CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request);
 
     CompletableFuture<GetApprovalDetailResponse> getApprovalDetail(GetApprovalDetailRequest request);
 
+    /**
+      * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     CompletableFuture<GetAuthorityTemplateResponse> getAuthorityTemplate(GetAuthorityTemplateRequest request);
 
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     CompletableFuture<GetAuthorityTemplateItemResponse> getAuthorityTemplateItem(GetAuthorityTemplateItemRequest request);
 
     CompletableFuture<GetDBTaskSQLJobLogResponse> getDBTaskSQLJobLog(GetDBTaskSQLJobLogRequest request);
@@ -246,7 +258,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataCorrectRollbackFileResponse> getDataCorrectRollbackFile(GetDataCorrectRollbackFileRequest request);
 
     /**
-      * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+      * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
       *
      */
     CompletableFuture<GetDataCorrectSQLFileResponse> getDataCorrectSQLFile(GetDataCorrectSQLFileRequest request);
@@ -260,6 +272,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataExportDownloadURLResponse> getDataExportDownloadURL(GetDataExportDownloadURLRequest request);
 
     CompletableFuture<GetDataExportOrderDetailResponse> getDataExportOrderDetail(GetDataExportOrderDetailRequest request);
+
+    CompletableFuture<GetDataImportSQLResponse> getDataImportSQL(GetDataImportSQLRequest request);
 
     CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
 
@@ -279,8 +293,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLogicDatabaseResponse> getLogicDatabase(GetLogicDatabaseRequest request);
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     CompletableFuture<GetMetaTableColumnResponse> getMetaTableColumn(GetMetaTableColumnRequest request);
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     CompletableFuture<GetMetaTableDetailInfoResponse> getMetaTableDetailInfo(GetMetaTableDetailInfoRequest request);
 
     CompletableFuture<GetOnlineDDLProgressResponse> getOnlineDDLProgress(GetOnlineDDLProgressRequest request);
@@ -298,7 +320,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOwnerApplyOrderDetailResponse> getOwnerApplyOrderDetail(GetOwnerApplyOrderDetailRequest request);
 
     /**
-      * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+      * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
       *
      */
     CompletableFuture<GetPermApplyOrderDetailResponse> getPermApplyOrderDetail(GetPermApplyOrderDetailRequest request);
@@ -349,6 +371,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUserUploadFileJobResponse> getUserUploadFileJob(GetUserUploadFileJobRequest request);
 
+    /**
+      * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     CompletableFuture<GrantTemplateAuthorityResponse> grantTemplateAuthority(GrantTemplateAuthorityRequest request);
 
     CompletableFuture<GrantUserPermissionResponse> grantUserPermission(GrantUserPermissionRequest request);
@@ -357,6 +383,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListClassificationTemplatesResponse> listClassificationTemplates(ListClassificationTemplatesRequest request);
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     CompletableFuture<ListColumnsResponse> listColumns(ListColumnsRequest request);
 
     CompletableFuture<ListDAGVersionsResponse> listDAGVersions(ListDAGVersionsRequest request);
@@ -378,6 +408,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ListDataCorrectPreCheckSQLResponse> listDataCorrectPreCheckSQL(ListDataCorrectPreCheckSQLRequest request);
+
+    CompletableFuture<ListDataImportSQLPreCheckDetailResponse> listDataImportSQLPreCheckDetail(ListDataImportSQLPreCheckDetailRequest request);
+
+    CompletableFuture<ListDataImportSQLTypeResponse> listDataImportSQLType(ListDataImportSQLTypeRequest request);
 
     CompletableFuture<ListDatabaseUserPermssionsResponse> listDatabaseUserPermssions(ListDatabaseUserPermssionsRequest request);
 
@@ -438,6 +472,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListStandardGroupsResponse> listStandardGroups(ListStandardGroupsRequest request);
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
     CompletableFuture<ListTaskFlowResponse> listTaskFlow(ListTaskFlowRequest request);
@@ -512,12 +550,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RetryDataCorrectPreCheckResponse> retryDataCorrectPreCheck(RetryDataCorrectPreCheckRequest request);
 
+    /**
+      * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     CompletableFuture<RevokeTemplateAuthorityResponse> revokeTemplateAuthority(RevokeTemplateAuthorityRequest request);
 
     CompletableFuture<RevokeUserPermissionResponse> revokeUserPermission(RevokeUserPermissionRequest request);
 
     CompletableFuture<SearchDatabaseResponse> searchDatabase(SearchDatabaseRequest request);
 
+    /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
+      *
+     */
     CompletableFuture<SearchTableResponse> searchTable(SearchTableRequest request);
 
     CompletableFuture<SetOwnersResponse> setOwners(SetOwnersRequest request);
@@ -532,8 +578,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SyncDatabaseMetaResponse> syncDatabaseMeta(SyncDatabaseMetaRequest request);
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+     */
     CompletableFuture<SyncInstanceMetaResponse> syncInstanceMeta(SyncInstanceMetaRequest request);
 
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+     */
     CompletableFuture<UpdateAuthorityTemplateResponse> updateAuthorityTemplate(UpdateAuthorityTemplateRequest request);
 
     /**

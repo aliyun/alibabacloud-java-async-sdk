@@ -162,7 +162,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * MaxExecuteCount.
+         * The maximum number of queries that can be performed each day.
          */
         public Builder maxExecuteCount(Long maxExecuteCount) {
             this.putQueryParameter("MaxExecuteCount", maxExecuteCount);
@@ -171,7 +171,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * MaxResultCount.
+         * The maximum number of rows that can be queried each day.
          */
         public Builder maxResultCount(Long maxResultCount) {
             this.putQueryParameter("MaxResultCount", maxResultCount);
@@ -180,7 +180,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * The DingTalk ID or mobile number of the user.
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -189,7 +189,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * RoleNames.
+         * The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [RegisterUser](~~141565~~) topic.
          */
         public Builder roleNames(String roleNames) {
             this.putQueryParameter("RoleNames", roleNames);
@@ -201,7 +201,7 @@ public class UpdateUserRequest extends Request {
          * The ID of the tenant.
          * <p>
          * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -210,7 +210,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The UID of the user. You can view your UID by moving the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console.
+         * The Alibaba Cloud unique ID (UID) of the user to update.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -219,7 +219,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserNick.
+         * The nickname of the user.
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

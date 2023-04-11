@@ -188,7 +188,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The position of the node on the Directed Acyclic Graph (DAG).
+         * The position of the node on the directed acyclic graph (DAG).
          */
         public Builder graphParam(String graphParam) {
             this.putQueryParameter("GraphParam", graphParam);
@@ -197,7 +197,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The configuration for the node.
+         * The configuration of the node.
          */
         public Builder nodeContent(String nodeContent) {
             this.putQueryParameter("NodeContent", nodeContent);
@@ -206,7 +206,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The name of the node you want to create.
+         * The name of the node that you want to create.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -224,7 +224,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The type of the node you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+         * The type of the node that you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -236,7 +236,7 @@ public class CreateTaskRequest extends Request {
          * The ID of the tenant.
          * <p>
          * 
-         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.
+         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -245,7 +245,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The time variables configured for the node.
+         * The time variables for the node.
          */
         public Builder timeVariables(String timeVariables) {
             this.putQueryParameter("TimeVariables", timeVariables);

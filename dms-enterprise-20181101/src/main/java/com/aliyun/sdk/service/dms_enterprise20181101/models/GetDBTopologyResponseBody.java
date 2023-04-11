@@ -86,7 +86,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DBTopology.
+         * The topology of the logical database.
          */
         public Builder DBTopology(DBTopology DBTopology) {
             this.DBTopology = DBTopology;
@@ -94,7 +94,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +266,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * CatalogName.
+             * The name of the catalog to which the database belongs.
+             * <p>
+             * 
+             * > If the database is a PostgreSQL database, the value of this parameter is the name of the database.
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -274,7 +277,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The ID of the logical database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -282,7 +285,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -290,7 +293,19 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the logical database belongs. Valid values:
+             * <p>
+             * 
+             * *   **product**: production environment
+             * *   **dev**: development environment
+             * *   **pre**: pre-release environment
+             * *   **test**: test environment
+             * *   **sit**: SIT environment
+             * *   **uat**: UAT environment
+             * *   **pet**: stress testing environment
+             * *   **stag**: staging environment
+             * 
+             * > For more information, see [Change the environment type of an instance](~~163309~~).
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -298,7 +313,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance in which the logical database resides.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -306,7 +321,14 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceResourceId.
+             * The ID of the resource related to the instance. The resource corresponds with the database instance type returned in the InstanceSource parameter.
+             * <p>
+             * 
+             * *   If the value of the InstanceSource parameter is RDS, the ID of an ApsaraDB RDS instance is returned.
+             * *   If the value of the InstanceSource parameter is ECS_OWN, the ID of a self-managed database that is hosted on an Elastic Compute Service (ECS) instance is returned.
+             * *   If the value of the InstanceSource parameter is PUBLIC_OWN, an empty string is returned.
+             * *   If the value of the InstanceSource parameter is VPC_ID, the ID of a self-managed database instance in a virtual private cloud (VPC) that is connected over Express Connect circuits is returned.
+             * *   If the value of the InstanceSource parameter is GATEWAY, the ID of a database instance connected by using a database gateway is returned.
              */
             public Builder instanceResourceId(String instanceResourceId) {
                 this.instanceResourceId = instanceResourceId;
@@ -314,7 +336,14 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSource.
+             * The type of the database instance. Valid values:
+             * <p>
+             * 
+             * *   **RDS**: an ApsaraDB RDS instance.
+             * *   **ECS_OWN**: a self-managed database that is hosted on an ECS instance.
+             * *   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.
+             * *   **VPC_ID**: a self-managed database instance in a VPC that is connected over Express Connect circuits.
+             * *   **GATEWAY**: a database instance connected by using a database gateway.
              */
             public Builder instanceSource(String instanceSource) {
                 this.instanceSource = instanceSource;
@@ -322,7 +351,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -330,7 +359,10 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the logical database.
+             * <p>
+             * 
+             * > If the database is a PostgreSQL database, the value of this parameter is the name of the database schema.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -338,7 +370,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -451,7 +483,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * Alias.
+             * The alias of the logical database.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -459,7 +491,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DBTopologyInfoList.
+             * The topologies of the physical database shards.
              */
             public Builder DBTopologyInfoList(java.util.List < DBTopologyInfoList> DBTopologyInfoList) {
                 this.DBTopologyInfoList = DBTopologyInfoList;
@@ -467,7 +499,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -475,7 +507,19 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the logical database belongs. Valid values:
+             * <p>
+             * 
+             * *   **product**: production environment
+             * *   **dev**: development environment
+             * *   **pre**: pre-release environment
+             * *   **test**: test environment
+             * *   **sit**: system integration testing (SIT) environment
+             * *   **uat**: user acceptance testing (UAT) environment
+             * *   **pet**: stress testing environment
+             * *   **stag**: staging environment
+             * 
+             * > For more information, see [Change the environment type of an instance](~~163309~~).
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -483,7 +527,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * LogicDbId.
+             * The ID of the logical database.
              */
             public Builder logicDbId(Long logicDbId) {
                 this.logicDbId = logicDbId;
@@ -491,7 +535,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * LogicDbName.
+             * The name of the logical database.
              */
             public Builder logicDbName(String logicDbName) {
                 this.logicDbName = logicDbName;
@@ -499,7 +543,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the logical database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;

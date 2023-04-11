@@ -163,7 +163,7 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * DbId.
+         * The ID of the database.
          */
         public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -172,7 +172,7 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * Logic.
+         * Specifies whether the database is a logical database.
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -181,7 +181,7 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +190,7 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +199,12 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * PermType.
+         * The type of the permission. Valid values:
+         * <p>
+         * 
+         * *   DATABASE: permissions on databases
+         * *   TABLE: permissions on tables
+         * *   COLUMN: permissions on fields
          */
         public Builder permType(String permType) {
             this.putQueryParameter("PermType", permType);
@@ -208,7 +213,10 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -217,7 +225,7 @@ public class ListDatabaseUserPermssionsRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The nickname of the user.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

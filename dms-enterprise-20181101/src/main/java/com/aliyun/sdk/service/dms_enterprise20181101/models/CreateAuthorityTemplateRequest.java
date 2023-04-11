@@ -106,7 +106,7 @@ public class CreateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the permission template.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -115,7 +115,7 @@ public class CreateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the permission template.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -124,7 +124,7 @@ public class CreateAuthorityTemplateRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

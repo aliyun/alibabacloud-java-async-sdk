@@ -86,7 +86,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         private WorkflowNodes workflowNodes; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowNodes.
+         * The details of approval nodes.
          */
         public Builder workflowNodes(WorkflowNodes workflowNodes) {
             this.workflowNodes = workflowNodes;
@@ -182,7 +182,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * NickName.
+             * The nickname of the approver.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -190,7 +190,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RealName.
+             * The real name of the approver.
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -198,7 +198,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the approver. The ID is different from the ID of the Alibaba Cloud account of the approver.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -352,7 +352,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * AuditUsers.
+             * The details about approvers.
              */
             public Builder auditUsers(AuditUsers auditUsers) {
                 this.auditUsers = auditUsers;
@@ -360,7 +360,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The description of the approval template.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -368,7 +368,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserId.
+             * The ID of the creator. This ID is different from the ID of the Alibaba Cloud account of the creator.
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -376,7 +376,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserNickName.
+             * The name of the user who creates the approval node.
              */
             public Builder createUserNickName(String createUserNickName) {
                 this.createUserNickName = createUserNickName;
@@ -384,7 +384,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the approval node.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -392,7 +392,7 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the approval node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -400,7 +400,11 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The type of the approval node. Valid values:
+             * <p>
+             * 
+             * *   SYS: The approval node is predefined by the system.
+             * *   USER_LIST: The approval node is created by a user.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

@@ -86,7 +86,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AuthorityTemplateView.
+         * The details of the permission template.
          */
         public Builder authorityTemplateView(AuthorityTemplateView authorityTemplateView) {
             this.authorityTemplateView = authorityTemplateView;
@@ -94,7 +94,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * CreatorId.
+             * The ID of the user who created the permission template.
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -202,7 +206,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the permission template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,7 +214,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the permission template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +222,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the permission template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

@@ -234,7 +234,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -242,7 +242,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -250,7 +250,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The port that was used by HTTPS clients to connect to the database instance.
+         * The port number used by the HTTPS protocol.
          */
         public Builder httpsPort(Integer httpsPort) {
             this.httpsPort = httpsPort;
@@ -258,7 +258,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the database instance.
+         * The ID of the instance.
          */
         public Builder instanceId(Long instanceId) {
             this.instanceId = instanceId;
@@ -266,7 +266,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the internal endpoint is enabled. Default value: **true**.
+         * Indicates whether the internal endpoint was enabled. Default value: **true**.
          */
         public Builder privateEnable(Boolean privateEnable) {
             this.privateEnable = privateEnable;
@@ -282,7 +282,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * 数据库协议连接端口号
+         * The port number used by the protocol.
          */
         public Builder protocolPort(Integer protocolPort) {
             this.protocolPort = protocolPort;
@@ -290,7 +290,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * 数据库协议类型，例如：MYSQL
+         * The protocol type of the database. Example: MYSQL.
          */
         public Builder protocolType(String protocolType) {
             this.protocolType = protocolType;
@@ -306,11 +306,11 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the public endpoint is enabled. Valid values:
+         * Indicates whether the public endpoint was enabled. Valid values:
          * <p>
          * 
-         * - **true**: The public endpoint is enabled.
-         * - **false**: The public endpoint is disabled.
+         * *   **true**: The public endpoint was enabled.
+         * *   **false**: The public endpoint was disabled.
          */
         public Builder publicEnable(Boolean publicEnable) {
             this.publicEnable = publicEnable;
@@ -318,11 +318,14 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.  
+         * The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.
          * <p>
          * 
-         * > - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.
-         * > - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.
+         * > 
+         * 
+         * *   If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS is returned.
+         * 
+         * *   If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using Alibaba Cloud DNS is returned.
          */
         public Builder publicHost(String publicHost) {
             this.publicHost = publicHost;
@@ -330,7 +333,7 @@ public class GetProxyResponseBody extends TeaModel {
         }
 
         /**
-         * 区域
+         * The ID of the region in which the instance resides.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -349,8 +352,8 @@ public class GetProxyResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

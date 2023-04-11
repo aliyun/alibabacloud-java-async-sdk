@@ -86,7 +86,7 @@ public class CreatePublishGroupTaskResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreatePublishGroupTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class CreatePublishGroupTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreatePublishGroupTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class CreatePublishGroupTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the job.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

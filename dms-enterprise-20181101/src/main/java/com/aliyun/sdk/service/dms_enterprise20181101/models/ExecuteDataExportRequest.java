@@ -106,7 +106,15 @@ public class ExecuteDataExportRequest extends Request {
         }
 
         /**
-         * ActionDetail.
+         * The parameters that are required to perform the operation:
+         * <p>
+         * 
+         * ```json
+         * {
+         *    "fileType": "CSV", // The format of the exported file.
+         *    "encoding": "" // The encoding format.
+         *  }
+         * ```
          */
         public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
             String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
@@ -116,7 +124,7 @@ public class ExecuteDataExportRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -125,7 +133,10 @@ public class ExecuteDataExportRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

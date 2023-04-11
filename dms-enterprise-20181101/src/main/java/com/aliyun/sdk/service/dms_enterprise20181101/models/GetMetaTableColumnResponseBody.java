@@ -294,11 +294,11 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             private String securityLevel; 
 
             /**
-             * Indicates whether the field is an auto-increment field. Valid values:
+             * Indicates whether the column is an auto-increment column. Valid values:
              * <p>
              * 
-             * *   **true**: The field is an auto-increment field.
-             * *   **false**: The field is not an auto-increment field.
+             * *   **true**: The column is an auto-increment column.
+             * *   **false**: The column is not an auto-increment column.
              */
             public Builder autoIncrement(Boolean autoIncrement) {
                 this.autoIncrement = autoIncrement;
@@ -306,7 +306,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the field.
+             * The ID of the column.
              */
             public Builder columnId(String columnId) {
                 this.columnId = columnId;
@@ -314,7 +314,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the field.
+             * The name of the column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -322,10 +322,10 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the field.
+             * The data type of the column.
              * <p>
              * 
-             * >  The returned data type is not unique. For example, the returned data type can be **bigint** or **int**.
+             * > The return value of a column is not unique, such as **bigint** or **int**.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -349,7 +349,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The number of decimal places that the field shows.
+             * The number of decimal places for the field.
              */
             public Builder dataScale(Integer dataScale) {
                 this.dataScale = dataScale;
@@ -357,7 +357,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the field.
+             * The description of the column.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -397,14 +397,14 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitivity level of the field. Valid values:
+             * The sensitivity level of the column. Valid values:
              * <p>
              * 
-             * *   **INNER**: The field is not sensitive.
-             * *   **SENSITIVE**: The field is sensitive.
-             * *   **CONFIDENTIAL**: The field is confidential.
+             * *   **INNER**: The column is not sensitive.
+             * *   **SENSITIVE**: The column is sensitive.
+             * *   **CONFIDENTIAL**: The column is confidential.
              * 
-             * >  For more information, see [Sensitivity levels of fields](~~66091~~).
+             * > For more information, see [Sensitivity levels of columns](~~66091~~).
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;

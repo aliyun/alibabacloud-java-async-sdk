@@ -86,7 +86,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * StructSyncOrderDetail.
+         * The details of the schema synchronization ticket.
          */
         public Builder structSyncOrderDetail(StructSyncOrderDetail structSyncOrderDetail) {
             this.structSyncOrderDetail = structSyncOrderDetail;
@@ -118,7 +118,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +206,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * DbId.
+             * The ID of the source database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -214,7 +214,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database engine.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -222,7 +222,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -230,7 +230,11 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is not a logical database
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -238,7 +242,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -279,7 +283,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * VersionId.
+             * The version number.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -332,7 +336,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String targetTableName; 
 
             /**
-             * SourceTableName.
+             * The name of the table whose schema you want to synchronize.
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -340,7 +344,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetTableName.
+             * The name of the table to which you want to synchronize the schema of a table.
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;
@@ -429,7 +433,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * DbId.
+             * The ID of the destination database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -437,7 +441,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database engine.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -445,7 +449,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -453,7 +457,11 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: The database is not a logical database
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -461,7 +469,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -502,7 +510,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * VersionId.
+             * The version number.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -627,7 +635,11 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private TargetVersionInfo targetVersionInfo; 
 
             /**
-             * IgnoreError.
+             * Indicates whether to skip errors. Valid values:
+             * <p>
+             * 
+             * *   **true**: skips the error and continues to execute SQL statements.
+             * *   **false**: stops executing SQL statements.
              */
             public Builder ignoreError(Boolean ignoreError) {
                 this.ignoreError = ignoreError;
@@ -635,7 +647,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDatabaseInfo.
+             * The information about the source database.
              */
             public Builder sourceDatabaseInfo(SourceDatabaseInfo sourceDatabaseInfo) {
                 this.sourceDatabaseInfo = sourceDatabaseInfo;
@@ -643,7 +655,11 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The schema version of the source database. Valid values:
+             * <p>
+             * 
+             * *   **DATASOURCE**: the default latest version of the system
+             * *   **VERSION**: a previous schema version that you manually specify
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -651,7 +667,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceVersionInfo.
+             * The version information about the source instance.
+             * <p>
+             * 
+             * > This parameter is displayed only when the value of the **SourceType** parameter is **VERSION**.
              */
             public Builder sourceVersionInfo(SourceVersionInfo sourceVersionInfo) {
                 this.sourceVersionInfo = sourceVersionInfo;
@@ -659,7 +678,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableInfoList.
+             * The information about the table whose schema you want to synchronize.
              */
             public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
@@ -667,7 +686,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetDatabaseInfo.
+             * The information about the destination database.
              */
             public Builder targetDatabaseInfo(TargetDatabaseInfo targetDatabaseInfo) {
                 this.targetDatabaseInfo = targetDatabaseInfo;
@@ -675,7 +694,11 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The schema version of the destination database. Valid values:
+             * <p>
+             * 
+             * *   **DATASOURCE**: the default latest version of the system
+             * *   **VERSION**: a previous schema version that you manually specify
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -683,7 +706,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetVersionInfo.
+             * The version information about the destination instance.
+             * <p>
+             * 
+             * > This parameter is displayed only when the value of the **SourceType** parameter is **VERSION**.
              */
             public Builder targetVersionInfo(TargetVersionInfo targetVersionInfo) {
                 this.targetVersionInfo = targetVersionInfo;

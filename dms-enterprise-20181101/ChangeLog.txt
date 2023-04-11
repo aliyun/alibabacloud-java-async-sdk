@@ -1,3 +1,6 @@
+2023-04-11 Version: 1.45.0
+- Supported ListDataImportSQLPreCheckDetail,GetDataImportSQL,ListDataImportSQLType API.
+
 2023-03-23 Version: 1.44.1
 - Supported Java Async SDK to process 1, 0 as boolean true,false.
 

@@ -7,31 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateUploadOSSFileJobResponseBody} extends {@link TeaModel}
+ * {@link ListDataImportSQLTypeResponseBody} extends {@link TeaModel}
  *
- * <p>CreateUploadOSSFileJobResponseBody</p>
+ * <p>ListDataImportSQLTypeResponseBody</p>
  */
-public class CreateUploadOSSFileJobResponseBody extends TeaModel {
+public class ListDataImportSQLTypeResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
     @NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("JobKey")
-    private String jobKey;
-
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("SqlTypeResult")
+    private java.util.List < String > sqlTypeResult;
 
     @NameInMap("Success")
     private Boolean success;
 
-    private CreateUploadOSSFileJobResponseBody(Builder builder) {
+    private ListDataImportSQLTypeResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
-        this.jobKey = builder.jobKey;
         this.requestId = builder.requestId;
+        this.sqlTypeResult = builder.sqlTypeResult;
         this.success = builder.success;
     }
 
@@ -39,7 +39,7 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateUploadOSSFileJobResponseBody create() {
+    public static ListDataImportSQLTypeResponseBody create() {
         return builder().build();
     }
 
@@ -58,17 +58,17 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
     }
 
     /**
-     * @return jobKey
-     */
-    public String getJobKey() {
-        return this.jobKey;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return sqlTypeResult
+     */
+    public java.util.List < String > getSqlTypeResult() {
+        return this.sqlTypeResult;
     }
 
     /**
@@ -81,12 +81,12 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private String jobKey; 
         private String requestId; 
+        private java.util.List < String > sqlTypeResult; 
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,15 +102,7 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the file upload task. You can query the upload progress and task details. For more information, see [GetUserUploadFileJob](~~206069~~).
-         */
-        public Builder jobKey(String jobKey) {
-            this.jobKey = jobKey;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,15 +110,23 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * SqlTypeResult.
+         */
+        public Builder sqlTypeResult(java.util.List < String > sqlTypeResult) {
+            this.sqlTypeResult = sqlTypeResult;
+            return this;
+        }
+
+        /**
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateUploadOSSFileJobResponseBody build() {
-            return new CreateUploadOSSFileJobResponseBody(this);
+        public ListDataImportSQLTypeResponseBody build() {
+            return new ListDataImportSQLTypeResponseBody(this);
         } 
 
     } 

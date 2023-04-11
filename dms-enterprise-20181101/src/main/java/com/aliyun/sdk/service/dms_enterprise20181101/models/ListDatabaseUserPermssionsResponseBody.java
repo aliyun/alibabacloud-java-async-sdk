@@ -98,7 +98,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         private UserPermissions userPermissions; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +138,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         }
 
         /**
-         * UserPermissions.
+         * The details of user permissions.
          */
         public Builder userPermissions(UserPermissions userPermissions) {
             this.userPermissions = userPermissions;
@@ -238,7 +238,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             private String userAccessId; 
 
             /**
-             * CreateDate.
+             * The time when the permission was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -246,7 +246,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * The time when the permissions expire.
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -254,7 +254,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraData.
+             * The extra information. This parameter is reserved.
              */
             public Builder extraData(String extraData) {
                 this.extraData = extraData;
@@ -262,7 +262,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * OriginFrom.
+             * The description of the entity that authorizes the permission.
              */
             public Builder originFrom(String originFrom) {
                 this.originFrom = originFrom;
@@ -270,7 +270,12 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * PermType.
+             * The type of the permission. Valid values:
+             * <p>
+             * 
+             * *   QUERY: the query permissions
+             * *   EXPORT: the export permissions
+             * *   CORRECT: the change permissions
              */
             public Builder permType(String permType) {
                 this.permType = permType;
@@ -278,7 +283,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserAccessId.
+             * The ID of the authorization record.
              */
             public Builder userAccessId(String userAccessId) {
                 this.userAccessId = userAccessId;
@@ -528,7 +533,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             private String userNickName; 
 
             /**
-             * Alias.
+             * The alias of the database instance.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -536,7 +541,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The name of a column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -544,7 +549,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -552,7 +557,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database engine.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -560,7 +565,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * DsType.
+             * The type of resources on which the user has permissions.
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -568,7 +573,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database belongs.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -576,7 +581,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -584,7 +589,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -592,7 +597,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * PermDetails.
+             * The details of user permissions.
              */
             public Builder permDetails(PermDetails permDetails) {
                 this.permDetails = permDetails;
@@ -600,7 +605,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -608,7 +613,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -616,7 +621,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * The ID of the table.
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -624,7 +629,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -632,7 +637,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -640,7 +645,7 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserNickName.
+             * The nickname of the user.
              */
             public Builder userNickName(String userNickName) {
                 this.userNickName = userNickName;

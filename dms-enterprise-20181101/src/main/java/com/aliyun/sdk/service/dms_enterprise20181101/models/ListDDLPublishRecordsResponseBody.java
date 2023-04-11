@@ -86,7 +86,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DDLPublishRecordList.
+         * The details of the publishing records.
          */
         public Builder DDLPublishRecordList(java.util.List < DDLPublishRecordList> DDLPublishRecordList) {
             this.DDLPublishRecordList = DDLPublishRecordList;
@@ -94,7 +94,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             private String taskJobStatus; 
 
             /**
-             * DBTaskGroupId.
+             * The ID of the SQL task group.
              */
             public Builder DBTaskGroupId(Long DBTaskGroupId) {
                 this.DBTaskGroupId = DBTaskGroupId;
@@ -226,7 +226,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteCount.
+             * The number of SQL statements that are executed.
              */
             public Builder executeCount(Long executeCount) {
                 this.executeCount = executeCount;
@@ -234,7 +234,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Scripts.
+             * The script for data changes.
              */
             public Builder scripts(String scripts) {
                 this.scripts = scripts;
@@ -242,7 +242,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The description of the state.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -250,7 +250,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table after the change.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -258,7 +258,12 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskJobStatus.
+             * The state of the publishing task. Valid values:
+             * <p>
+             * 
+             * *   **NONE**: The state of the task is unknown.
+             * *   **SUCCESS**: The task is successful.
+             * *   **FAIL**: The task fails.
              */
             public Builder taskJobStatus(String taskJobStatus) {
                 this.taskJobStatus = taskJobStatus;
@@ -371,7 +376,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             private String taskJobStatus; 
 
             /**
-             * DbId.
+             * The ID of the database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -379,7 +384,11 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**: The database is a logical database.
+             * *   **false**: the database is not a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -387,7 +396,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PlanTime.
+             * The time to publish the ticket.
              */
             public Builder planTime(String planTime) {
                 this.planTime = planTime;
@@ -395,7 +404,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishJobList.
+             * The list of the publishing tasks.
              */
             public Builder publishJobList(java.util.List < PublishJobList> publishJobList) {
                 this.publishJobList = publishJobList;
@@ -403,7 +412,11 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStrategy.
+             * The publishing policy. Valid values:
+             * <p>
+             * 
+             * *   **IMMEDIATELY**: immediately publishes the ticket.
+             * *   **REGULARLY**: publishes the ticket at a scheduled time.
              */
             public Builder publishStrategy(String publishStrategy) {
                 this.publishStrategy = publishStrategy;
@@ -411,7 +424,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The description of the state.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -419,7 +432,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskJobStatus.
+             * The state of the task.
              */
             public Builder taskJobStatus(String taskJobStatus) {
                 this.taskJobStatus = taskJobStatus;
@@ -568,7 +581,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             private Long workflowInstanceId; 
 
             /**
-             * AuditExpireTime.
+             * The time when the approval expires.
              */
             public Builder auditExpireTime(String auditExpireTime) {
                 this.auditExpireTime = auditExpireTime;
@@ -576,7 +589,14 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * AuditStatus.
+             * The approval state of the ticket. Valid values:
+             * <p>
+             * 
+             * *   **EXEMPT_PASS**: The ticket passes without approval.
+             * *   **TO_AUDIT**: The ticket is pending for approval.
+             * *   **CANCEL**: The ticket is canceled.
+             * *   **SUCCESS**: The ticket is approved.
+             * *   **FAIL**: The ticket fails to pass the approval.
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -584,7 +604,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](~~147098~~) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -592,7 +612,13 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Finality.
+             * Indicates whether the approval is terminated. Valid values:
+             * <p>
+             * 
+             * *   **true**: The approval is terminated.
+             * *   **false**: The approval is not terminated.
+             * 
+             * > Multiple reasons can terminate the approval. For example, you withdraw the application or your ticket is not approved before the specified time.
              */
             public Builder finality(Boolean finality) {
                 this.finality = finality;
@@ -600,7 +626,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * FinalityReason.
+             * The reason for the termination.
              */
             public Builder finalityReason(String finalityReason) {
                 this.finalityReason = finalityReason;
@@ -608,7 +634,14 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * The publishing state of the ticket. Valid values:
+             * <p>
+             * 
+             * *   **START**: The ticket is created.
+             * *   **ANALYZE**: The ticket is under analysis.
+             * *   **AUDIT**: The ticket is under approval.
+             * *   **DISPATCH**: A task is generated for the ticket.
+             * *   **SUCCESS**: The task is successful.
              */
             public Builder publishStatus(String publishStatus) {
                 this.publishStatus = publishStatus;
@@ -616,7 +649,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTaskInfoList.
+             * The list of publishing tasks.
              */
             public Builder publishTaskInfoList(java.util.List < PublishTaskInfoList> publishTaskInfoList) {
                 this.publishTaskInfoList = publishTaskInfoList;
@@ -624,7 +657,13 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level of the operation. Valid values:
+             * <p>
+             * 
+             * *   **NONE_RISK**: The operation does not have risks.
+             * *   **LOW_RISK**: The operation is at low risk.
+             * *   **MIDDLE_RISK**: The operation is at medium risk.
+             * *   **HIGH_RISK**: The operation is at high risk.
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -632,7 +671,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The description of the publishing state.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -640,7 +679,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInstanceId.
+             * The ID of the approval process.
              */
             public Builder workflowInstanceId(Long workflowInstanceId) {
                 this.workflowInstanceId = workflowInstanceId;

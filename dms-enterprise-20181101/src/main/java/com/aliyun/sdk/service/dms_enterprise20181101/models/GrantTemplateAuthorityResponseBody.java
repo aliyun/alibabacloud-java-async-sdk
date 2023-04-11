@@ -86,7 +86,7 @@ public class GrantTemplateAuthorityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GrantTemplateAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GrantTemplateAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GrantTemplateAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the permissions on resources were granted to the users by using the permission template.
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -118,7 +118,11 @@ public class GrantTemplateAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
