@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOrderRequest extends Request {
     @Query
+    @NameInMap("CredentialNo")
+    private String credentialNo;
+
+    @Query
     @NameInMap("EndDate")
     private String endDate;
 
@@ -44,6 +48,7 @@ public class ListOrderRequest extends Request {
 
     private ListOrderRequest(Builder builder) {
         super(builder);
+        this.credentialNo = builder.credentialNo;
         this.endDate = builder.endDate;
         this.orderId = builder.orderId;
         this.orderStatus = builder.orderStatus;
@@ -64,6 +69,13 @@ public class ListOrderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return credentialNo
+     */
+    public String getCredentialNo() {
+        return this.credentialNo;
     }
 
     /**
@@ -116,6 +128,7 @@ public class ListOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListOrderRequest, Builder> {
+        private String credentialNo; 
         private String endDate; 
         private String orderId; 
         private String orderStatus; 
@@ -130,6 +143,7 @@ public class ListOrderRequest extends Request {
 
         private Builder(ListOrderRequest request) {
             super(request);
+            this.credentialNo = request.credentialNo;
             this.endDate = request.endDate;
             this.orderId = request.orderId;
             this.orderStatus = request.orderStatus;
@@ -138,6 +152,15 @@ public class ListOrderRequest extends Request {
             this.pageSize = request.pageSize;
             this.startDate = request.startDate;
         } 
+
+        /**
+         * CredentialNo.
+         */
+        public Builder credentialNo(String credentialNo) {
+            this.putQueryParameter("CredentialNo", credentialNo);
+            this.credentialNo = credentialNo;
+            return this;
+        }
 
         /**
          * EndDate.

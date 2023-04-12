@@ -152,6 +152,9 @@ public class GetOperateResultResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("ExecuteResult")
+        private String executeResult;
+
         @NameInMap("OperateType")
         private String operateType;
 
@@ -162,6 +165,7 @@ public class GetOperateResultResponseBody extends TeaModel {
         private String status;
 
         private Data(Builder builder) {
+            this.executeResult = builder.executeResult;
             this.operateType = builder.operateType;
             this.result = builder.result;
             this.status = builder.status;
@@ -173,6 +177,13 @@ public class GetOperateResultResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return executeResult
+         */
+        public String getExecuteResult() {
+            return this.executeResult;
         }
 
         /**
@@ -197,9 +208,18 @@ public class GetOperateResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String executeResult; 
             private String operateType; 
             private Boolean result; 
             private String status; 
+
+            /**
+             * ExecuteResult.
+             */
+            public Builder executeResult(String executeResult) {
+                this.executeResult = executeResult;
+                return this;
+            }
 
             /**
              * OperateType.
