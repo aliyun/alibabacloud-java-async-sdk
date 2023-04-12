@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRuleV4Request</p>
  */
 public class UpdateRuleV4Request extends Request {
+    @Query
+    @NameInMap("BaseMeAgentId")
+    private Long baseMeAgentId;
+
     @Body
     @NameInMap("JsonStrForRule")
     @Validation(required = true)
@@ -23,6 +27,7 @@ public class UpdateRuleV4Request extends Request {
 
     private UpdateRuleV4Request(Builder builder) {
         super(builder);
+        this.baseMeAgentId = builder.baseMeAgentId;
         this.jsonStrForRule = builder.jsonStrForRule;
         this.ruleId = builder.ruleId;
     }
@@ -41,6 +46,13 @@ public class UpdateRuleV4Request extends Request {
     }
 
     /**
+     * @return baseMeAgentId
+     */
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
+    }
+
+    /**
      * @return jsonStrForRule
      */
     public String getJsonStrForRule() {
@@ -55,6 +67,7 @@ public class UpdateRuleV4Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateRuleV4Request, Builder> {
+        private Long baseMeAgentId; 
         private String jsonStrForRule; 
         private Long ruleId; 
 
@@ -64,9 +77,19 @@ public class UpdateRuleV4Request extends Request {
 
         private Builder(UpdateRuleV4Request request) {
             super(request);
+            this.baseMeAgentId = request.baseMeAgentId;
             this.jsonStrForRule = request.jsonStrForRule;
             this.ruleId = request.ruleId;
         } 
+
+        /**
+         * baseMeAgentId
+         */
+        public Builder baseMeAgentId(Long baseMeAgentId) {
+            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.baseMeAgentId = baseMeAgentId;
+            return this;
+        }
 
         /**
          * JsonStrForRule.

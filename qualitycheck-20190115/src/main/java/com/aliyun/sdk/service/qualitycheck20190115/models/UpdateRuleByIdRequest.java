@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRuleByIdRequest</p>
  */
 public class UpdateRuleByIdRequest extends Request {
+    @Query
+    @NameInMap("BaseMeAgentId")
+    private Long baseMeAgentId;
+
     @Body
     @NameInMap("IsCopy")
     private Boolean isCopy;
@@ -31,6 +35,7 @@ public class UpdateRuleByIdRequest extends Request {
 
     private UpdateRuleByIdRequest(Builder builder) {
         super(builder);
+        this.baseMeAgentId = builder.baseMeAgentId;
         this.isCopy = builder.isCopy;
         this.jsonStrForRule = builder.jsonStrForRule;
         this.returnRelatedSchemes = builder.returnRelatedSchemes;
@@ -48,6 +53,13 @@ public class UpdateRuleByIdRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return baseMeAgentId
+     */
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
     }
 
     /**
@@ -79,6 +91,7 @@ public class UpdateRuleByIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateRuleByIdRequest, Builder> {
+        private Long baseMeAgentId; 
         private Boolean isCopy; 
         private String jsonStrForRule; 
         private Boolean returnRelatedSchemes; 
@@ -90,11 +103,21 @@ public class UpdateRuleByIdRequest extends Request {
 
         private Builder(UpdateRuleByIdRequest request) {
             super(request);
+            this.baseMeAgentId = request.baseMeAgentId;
             this.isCopy = request.isCopy;
             this.jsonStrForRule = request.jsonStrForRule;
             this.returnRelatedSchemes = request.returnRelatedSchemes;
             this.ruleId = request.ruleId;
         } 
+
+        /**
+         * baseMeAgentId
+         */
+        public Builder baseMeAgentId(Long baseMeAgentId) {
+            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.baseMeAgentId = baseMeAgentId;
+            return this;
+        }
 
         /**
          * IsCopy.

@@ -640,7 +640,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * "流程版本：0：树，1：图"
+             * \"流程版本：0：树，1：图\"
              */
             public Builder taskFlowType(Integer taskFlowType) {
                 this.taskFlowType = taskFlowType;

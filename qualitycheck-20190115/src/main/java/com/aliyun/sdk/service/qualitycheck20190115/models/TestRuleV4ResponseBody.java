@@ -1214,7 +1214,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Matched.
+             * true
              */
             public Builder matched(Boolean matched) {
                 this.matched = matched;
@@ -1428,7 +1428,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
             }
 
             /**
-             * Matched.
+             * true
              */
             public Builder matched(Boolean matched) {
                 this.matched = matched;

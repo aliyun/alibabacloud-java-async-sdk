@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRulesCountListRequest</p>
  */
 public class GetRulesCountListRequest extends Request {
+    @Query
+    @NameInMap("BaseMeAgentId")
+    private Long baseMeAgentId;
+
     @Body
     @NameInMap("BusinessName")
     private String businessName;
@@ -115,6 +119,7 @@ public class GetRulesCountListRequest extends Request {
 
     private GetRulesCountListRequest(Builder builder) {
         super(builder);
+        this.baseMeAgentId = builder.baseMeAgentId;
         this.businessName = builder.businessName;
         this.businessRange = builder.businessRange;
         this.categoryName = builder.categoryName;
@@ -153,6 +158,13 @@ public class GetRulesCountListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return baseMeAgentId
+     */
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
     }
 
     /**
@@ -331,6 +343,7 @@ public class GetRulesCountListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetRulesCountListRequest, Builder> {
+        private Long baseMeAgentId; 
         private String businessName; 
         private Integer businessRange; 
         private String categoryName; 
@@ -363,6 +376,7 @@ public class GetRulesCountListRequest extends Request {
 
         private Builder(GetRulesCountListRequest request) {
             super(request);
+            this.baseMeAgentId = request.baseMeAgentId;
             this.businessName = request.businessName;
             this.businessRange = request.businessRange;
             this.categoryName = request.categoryName;
@@ -389,6 +403,15 @@ public class GetRulesCountListRequest extends Request {
             this.updateStartTime = request.updateStartTime;
             this.updateUserId = request.updateUserId;
         } 
+
+        /**
+         * baseMeAgentId
+         */
+        public Builder baseMeAgentId(Long baseMeAgentId) {
+            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.baseMeAgentId = baseMeAgentId;
+            return this;
+        }
 
         /**
          * BusinessName.

@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateCheckTypeToSchemeRequest extends Request {
     @Query
+    @NameInMap("BaseMeAgentId")
+    private Long baseMeAgentId;
+
+    @Query
     @NameInMap("jsonStr")
     private String jsonStr;
 
     private UpdateCheckTypeToSchemeRequest(Builder builder) {
         super(builder);
+        this.baseMeAgentId = builder.baseMeAgentId;
         this.jsonStr = builder.jsonStr;
     }
 
@@ -35,6 +40,13 @@ public class UpdateCheckTypeToSchemeRequest extends Request {
     }
 
     /**
+     * @return baseMeAgentId
+     */
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
+    }
+
+    /**
      * @return jsonStr
      */
     public String getJsonStr() {
@@ -42,6 +54,7 @@ public class UpdateCheckTypeToSchemeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCheckTypeToSchemeRequest, Builder> {
+        private Long baseMeAgentId; 
         private String jsonStr; 
 
         private Builder() {
@@ -50,8 +63,18 @@ public class UpdateCheckTypeToSchemeRequest extends Request {
 
         private Builder(UpdateCheckTypeToSchemeRequest request) {
             super(request);
+            this.baseMeAgentId = request.baseMeAgentId;
             this.jsonStr = request.jsonStr;
         } 
+
+        /**
+         * baseMeAgentId
+         */
+        public Builder baseMeAgentId(Long baseMeAgentId) {
+            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.baseMeAgentId = baseMeAgentId;
+            return this;
+        }
 
         /**
          * jsonStr.

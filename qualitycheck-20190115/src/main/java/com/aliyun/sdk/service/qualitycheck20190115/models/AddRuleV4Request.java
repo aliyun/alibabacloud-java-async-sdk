@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddRuleV4Request</p>
  */
 public class AddRuleV4Request extends Request {
+    @Query
+    @NameInMap("BaseMeAgentId")
+    private Long baseMeAgentId;
+
     @Body
     @NameInMap("IsCopy")
     private Boolean isCopy;
@@ -23,6 +27,7 @@ public class AddRuleV4Request extends Request {
 
     private AddRuleV4Request(Builder builder) {
         super(builder);
+        this.baseMeAgentId = builder.baseMeAgentId;
         this.isCopy = builder.isCopy;
         this.jsonStrForRule = builder.jsonStrForRule;
     }
@@ -41,6 +46,13 @@ public class AddRuleV4Request extends Request {
     }
 
     /**
+     * @return baseMeAgentId
+     */
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
+    }
+
+    /**
      * @return isCopy
      */
     public Boolean getIsCopy() {
@@ -55,6 +67,7 @@ public class AddRuleV4Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddRuleV4Request, Builder> {
+        private Long baseMeAgentId; 
         private Boolean isCopy; 
         private String jsonStrForRule; 
 
@@ -64,9 +77,19 @@ public class AddRuleV4Request extends Request {
 
         private Builder(AddRuleV4Request request) {
             super(request);
+            this.baseMeAgentId = request.baseMeAgentId;
             this.isCopy = request.isCopy;
             this.jsonStrForRule = request.jsonStrForRule;
         } 
+
+        /**
+         * baseMeAgentId
+         */
+        public Builder baseMeAgentId(Long baseMeAgentId) {
+            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.baseMeAgentId = baseMeAgentId;
+            return this;
+        }
 
         /**
          * IsCopy.

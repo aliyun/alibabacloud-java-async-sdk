@@ -474,6 +474,1661 @@ public class GetResultResponseBody extends TeaModel {
         } 
 
     }
+    public static class Anchor extends TeaModel {
+        @NameInMap("Cid")
+        private String cid;
+
+        @NameInMap("Hit_time")
+        private Integer hitTime;
+
+        @NameInMap("Location")
+        private String location;
+
+        private Anchor(Builder builder) {
+            this.cid = builder.cid;
+            this.hitTime = builder.hitTime;
+            this.location = builder.location;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Anchor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cid
+         */
+        public String getCid() {
+            return this.cid;
+        }
+
+        /**
+         * @return hitTime
+         */
+        public Integer getHitTime() {
+            return this.hitTime;
+        }
+
+        /**
+         * @return location
+         */
+        public String getLocation() {
+            return this.location;
+        }
+
+        public static final class Builder {
+            private String cid; 
+            private Integer hitTime; 
+            private String location; 
+
+            /**
+             * 条件ID
+             */
+            public Builder cid(String cid) {
+                this.cid = cid;
+                return this;
+            }
+
+            /**
+             * 命中次数
+             */
+            public Builder hitTime(Integer hitTime) {
+                this.hitTime = hitTime;
+                return this;
+            }
+
+            /**
+             * 位置
+             */
+            public Builder location(String location) {
+                this.location = location;
+                return this;
+            }
+
+            public Anchor build() {
+                return new Anchor(this);
+            } 
+
+        } 
+
+    }
+    public static class Range extends TeaModel {
+        @NameInMap("From")
+        private Integer from;
+
+        @NameInMap("To")
+        private Integer to;
+
+        private Range(Builder builder) {
+            this.from = builder.from;
+            this.to = builder.to;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Range create() {
+            return builder().build();
+        }
+
+        /**
+         * @return from
+         */
+        public Integer getFrom() {
+            return this.from;
+        }
+
+        /**
+         * @return to
+         */
+        public Integer getTo() {
+            return this.to;
+        }
+
+        public static final class Builder {
+            private Integer from; 
+            private Integer to; 
+
+            /**
+             * 对话开始索引
+             */
+            public Builder from(Integer from) {
+                this.from = from;
+                return this;
+            }
+
+            /**
+             * 对话结束索引
+             */
+            public Builder to(Integer to) {
+                this.to = to;
+                return this;
+            }
+
+            public Range build() {
+                return new Range(this);
+            } 
+
+        } 
+
+    }
+    public static class TimeRange extends TeaModel {
+        @NameInMap("From")
+        private Long from;
+
+        @NameInMap("To")
+        private Long to;
+
+        private TimeRange(Builder builder) {
+            this.from = builder.from;
+            this.to = builder.to;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeRange create() {
+            return builder().build();
+        }
+
+        /**
+         * @return from
+         */
+        public Long getFrom() {
+            return this.from;
+        }
+
+        /**
+         * @return to
+         */
+        public Long getTo() {
+            return this.to;
+        }
+
+        public static final class Builder {
+            private Long from; 
+            private Long to; 
+
+            /**
+             * 对话开始索引
+             */
+            public Builder from(Long from) {
+                this.from = from;
+                return this;
+            }
+
+            /**
+             * 对话结束索引
+             */
+            public Builder to(Long to) {
+                this.to = to;
+                return this;
+            }
+
+            public TimeRange build() {
+                return new TimeRange(this);
+            } 
+
+        } 
+
+    }
+    public static class CheckRange extends TeaModel {
+        @NameInMap("Absolute")
+        private Boolean absolute;
+
+        @NameInMap("AllSentencesSatisfy")
+        private Boolean allSentencesSatisfy;
+
+        @NameInMap("Anchor")
+        private Anchor anchor;
+
+        @NameInMap("Range")
+        private Range range;
+
+        @NameInMap("Role")
+        private String role;
+
+        @NameInMap("RoleId")
+        private Integer roleId;
+
+        @NameInMap("TimeRange")
+        private TimeRange timeRange;
+
+        private CheckRange(Builder builder) {
+            this.absolute = builder.absolute;
+            this.allSentencesSatisfy = builder.allSentencesSatisfy;
+            this.anchor = builder.anchor;
+            this.range = builder.range;
+            this.role = builder.role;
+            this.roleId = builder.roleId;
+            this.timeRange = builder.timeRange;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CheckRange create() {
+            return builder().build();
+        }
+
+        /**
+         * @return absolute
+         */
+        public Boolean getAbsolute() {
+            return this.absolute;
+        }
+
+        /**
+         * @return allSentencesSatisfy
+         */
+        public Boolean getAllSentencesSatisfy() {
+            return this.allSentencesSatisfy;
+        }
+
+        /**
+         * @return anchor
+         */
+        public Anchor getAnchor() {
+            return this.anchor;
+        }
+
+        /**
+         * @return range
+         */
+        public Range getRange() {
+            return this.range;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        /**
+         * @return roleId
+         */
+        public Integer getRoleId() {
+            return this.roleId;
+        }
+
+        /**
+         * @return timeRange
+         */
+        public TimeRange getTimeRange() {
+            return this.timeRange;
+        }
+
+        public static final class Builder {
+            private Boolean absolute; 
+            private Boolean allSentencesSatisfy; 
+            private Anchor anchor; 
+            private Range range; 
+            private String role; 
+            private Integer roleId; 
+            private TimeRange timeRange; 
+
+            /**
+             * false: 相对位置; 会结合anchor以及角色来决定句子位置
+             */
+            public Builder absolute(Boolean absolute) {
+                this.absolute = absolute;
+                return this;
+            }
+
+            /**
+             * true: 每句话都必须满足条件；
+             */
+            public Builder allSentencesSatisfy(Boolean allSentencesSatisfy) {
+                this.allSentencesSatisfy = allSentencesSatisfy;
+                return this;
+            }
+
+            /**
+             * 前置后置条件
+             */
+            public Builder anchor(Anchor anchor) {
+                this.anchor = anchor;
+                return this;
+            }
+
+            /**
+             * 相对范围
+             */
+            public Builder range(Range range) {
+                this.range = range;
+                return this;
+            }
+
+            /**
+             * 对应 RoleType.type
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            /**
+             * 对应 RoleType.id
+             */
+            public Builder roleId(Integer roleId) {
+                this.roleId = roleId;
+                return this;
+            }
+
+            /**
+             * TimeRange.
+             */
+            public Builder timeRange(TimeRange timeRange) {
+                this.timeRange = timeRange;
+                return this;
+            }
+
+            public CheckRange build() {
+                return new CheckRange(this);
+            } 
+
+        } 
+
+    }
+    public static class Excludes extends TeaModel {
+        @NameInMap("Exclude")
+        private java.util.List < String > exclude;
+
+        private Excludes(Builder builder) {
+            this.exclude = builder.exclude;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Excludes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return exclude
+         */
+        public java.util.List < String > getExclude() {
+            return this.exclude;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > exclude; 
+
+            /**
+             * Exclude.
+             */
+            public Builder exclude(java.util.List < String > exclude) {
+                this.exclude = exclude;
+                return this;
+            }
+
+            public Excludes build() {
+                return new Excludes(this);
+            } 
+
+        } 
+
+    }
+    public static class FlowNodePrerequisiteParam extends TeaModel {
+        @NameInMap("NodeId")
+        private Long nodeId;
+
+        @NameInMap("NodeMatchStatus")
+        private Integer nodeMatchStatus;
+
+        @NameInMap("NodeName")
+        private String nodeName;
+
+        private FlowNodePrerequisiteParam(Builder builder) {
+            this.nodeId = builder.nodeId;
+            this.nodeMatchStatus = builder.nodeMatchStatus;
+            this.nodeName = builder.nodeName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlowNodePrerequisiteParam create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nodeId
+         */
+        public Long getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return nodeMatchStatus
+         */
+        public Integer getNodeMatchStatus() {
+            return this.nodeMatchStatus;
+        }
+
+        /**
+         * @return nodeName
+         */
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public static final class Builder {
+            private Long nodeId; 
+            private Integer nodeMatchStatus; 
+            private String nodeName; 
+
+            /**
+             * 节点id
+             */
+            public Builder nodeId(Long nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * 节点匹配状态。
+             */
+            public Builder nodeMatchStatus(Integer nodeMatchStatus) {
+                this.nodeMatchStatus = nodeMatchStatus;
+                return this;
+            }
+
+            /**
+             * 冗余的节点名称
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            public FlowNodePrerequisiteParam build() {
+                return new FlowNodePrerequisiteParam(this);
+            } 
+
+        } 
+
+    }
+    public static class Intent extends TeaModel {
+        @NameInMap("Id")
+        private Long id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private Intent(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Intent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * 意图模型ID
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * 意图模型名称
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Intent build() {
+                return new Intent(this);
+            } 
+
+        } 
+
+    }
+    public static class Intents extends TeaModel {
+        @NameInMap("Intent")
+        private java.util.List < Intent> intent;
+
+        private Intents(Builder builder) {
+            this.intent = builder.intent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Intents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return intent
+         */
+        public java.util.List < Intent> getIntent() {
+            return this.intent;
+        }
+
+        public static final class Builder {
+            private java.util.List < Intent> intent; 
+
+            /**
+             * Intent.
+             */
+            public Builder intent(java.util.List < Intent> intent) {
+                this.intent = intent;
+                return this;
+            }
+
+            public Intents build() {
+                return new Intents(this);
+            } 
+
+        } 
+
+    }
+    public static class IntentModelCheckParm extends TeaModel {
+        @NameInMap("Intents")
+        private Intents intents;
+
+        @NameInMap("ModelScene")
+        private String modelScene;
+
+        private IntentModelCheckParm(Builder builder) {
+            this.intents = builder.intents;
+            this.modelScene = builder.modelScene;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IntentModelCheckParm create() {
+            return builder().build();
+        }
+
+        /**
+         * @return intents
+         */
+        public Intents getIntents() {
+            return this.intents;
+        }
+
+        /**
+         * @return modelScene
+         */
+        public String getModelScene() {
+            return this.modelScene;
+        }
+
+        public static final class Builder {
+            private Intents intents; 
+            private String modelScene; 
+
+            /**
+             * 引用的意图模型
+             */
+            public Builder intents(Intents intents) {
+                this.intents = intents;
+                return this;
+            }
+
+            /**
+             * 模型应用的场景 AGENT:客户场景、CUSTOMER:客服场景 (CUSTOMER: 客户场景, AGENT: 坐席场景)
+             */
+            public Builder modelScene(String modelScene) {
+                this.modelScene = modelScene;
+                return this;
+            }
+
+            public IntentModelCheckParm build() {
+                return new IntentModelCheckParm(this);
+            } 
+
+        } 
+
+    }
+    public static class Keywords extends TeaModel {
+        @NameInMap("Keyword")
+        private java.util.List < String > keyword;
+
+        private Keywords(Builder builder) {
+            this.keyword = builder.keyword;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Keywords create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyword
+         */
+        public java.util.List < String > getKeyword() {
+            return this.keyword;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > keyword; 
+
+            /**
+             * Keyword.
+             */
+            public Builder keyword(java.util.List < String > keyword) {
+                this.keyword = keyword;
+                return this;
+            }
+
+            public Keywords build() {
+                return new Keywords(this);
+            } 
+
+        } 
+
+    }
+    public static class Param extends TeaModel {
+        @NameInMap("Average")
+        private Boolean average;
+
+        @NameInMap("BeginType")
+        private String beginType;
+
+        @NameInMap("Case_sensitive")
+        private Boolean caseSensitive;
+
+        @NameInMap("CheckFirstSentence")
+        private Boolean checkFirstSentence;
+
+        @NameInMap("CheckType")
+        private Integer checkType;
+
+        @NameInMap("CompareOperator")
+        private String compareOperator;
+
+        @NameInMap("ContextChatMatch")
+        private Boolean contextChatMatch;
+
+        @NameInMap("DelayTime")
+        private Integer delayTime;
+
+        @NameInMap("EndType")
+        private String endType;
+
+        @NameInMap("Excludes")
+        private Excludes excludes;
+
+        @NameInMap("FlowNodePrerequisiteParam")
+        private FlowNodePrerequisiteParam flowNodePrerequisiteParam;
+
+        @NameInMap("From")
+        private Integer from;
+
+        @NameInMap("From_end")
+        private Boolean fromEnd;
+
+        @NameInMap("Hit_time")
+        private Integer hitTime;
+
+        @NameInMap("In_sentence")
+        private Boolean inSentence;
+
+        @NameInMap("IntentModelCheckParm")
+        private IntentModelCheckParm intentModelCheckParm;
+
+        @NameInMap("Interval")
+        private Integer interval;
+
+        @NameInMap("IntervalEnd")
+        private Integer intervalEnd;
+
+        @NameInMap("KeywordExtension")
+        private Integer keywordExtension;
+
+        @NameInMap("KeywordMatchSize")
+        private Integer keywordMatchSize;
+
+        @NameInMap("Keywords")
+        private Keywords keywords;
+
+        @NameInMap("MaxEmotionChangeValue")
+        private Integer maxEmotionChangeValue;
+
+        @NameInMap("MinWordSize")
+        private Integer minWordSize;
+
+        @NameInMap("Near_dialogue")
+        private Boolean nearDialogue;
+
+        @NameInMap("NotRegex")
+        private String notRegex;
+
+        @NameInMap("Phrase")
+        private String phrase;
+
+        @NameInMap("Regex")
+        private String regex;
+
+        @NameInMap("Target")
+        private Integer target;
+
+        @NameInMap("Threshold")
+        private Float threshold;
+
+        private Param(Builder builder) {
+            this.average = builder.average;
+            this.beginType = builder.beginType;
+            this.caseSensitive = builder.caseSensitive;
+            this.checkFirstSentence = builder.checkFirstSentence;
+            this.checkType = builder.checkType;
+            this.compareOperator = builder.compareOperator;
+            this.contextChatMatch = builder.contextChatMatch;
+            this.delayTime = builder.delayTime;
+            this.endType = builder.endType;
+            this.excludes = builder.excludes;
+            this.flowNodePrerequisiteParam = builder.flowNodePrerequisiteParam;
+            this.from = builder.from;
+            this.fromEnd = builder.fromEnd;
+            this.hitTime = builder.hitTime;
+            this.inSentence = builder.inSentence;
+            this.intentModelCheckParm = builder.intentModelCheckParm;
+            this.interval = builder.interval;
+            this.intervalEnd = builder.intervalEnd;
+            this.keywordExtension = builder.keywordExtension;
+            this.keywordMatchSize = builder.keywordMatchSize;
+            this.keywords = builder.keywords;
+            this.maxEmotionChangeValue = builder.maxEmotionChangeValue;
+            this.minWordSize = builder.minWordSize;
+            this.nearDialogue = builder.nearDialogue;
+            this.notRegex = builder.notRegex;
+            this.phrase = builder.phrase;
+            this.regex = builder.regex;
+            this.target = builder.target;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Param create() {
+            return builder().build();
+        }
+
+        /**
+         * @return average
+         */
+        public Boolean getAverage() {
+            return this.average;
+        }
+
+        /**
+         * @return beginType
+         */
+        public String getBeginType() {
+            return this.beginType;
+        }
+
+        /**
+         * @return caseSensitive
+         */
+        public Boolean getCaseSensitive() {
+            return this.caseSensitive;
+        }
+
+        /**
+         * @return checkFirstSentence
+         */
+        public Boolean getCheckFirstSentence() {
+            return this.checkFirstSentence;
+        }
+
+        /**
+         * @return checkType
+         */
+        public Integer getCheckType() {
+            return this.checkType;
+        }
+
+        /**
+         * @return compareOperator
+         */
+        public String getCompareOperator() {
+            return this.compareOperator;
+        }
+
+        /**
+         * @return contextChatMatch
+         */
+        public Boolean getContextChatMatch() {
+            return this.contextChatMatch;
+        }
+
+        /**
+         * @return delayTime
+         */
+        public Integer getDelayTime() {
+            return this.delayTime;
+        }
+
+        /**
+         * @return endType
+         */
+        public String getEndType() {
+            return this.endType;
+        }
+
+        /**
+         * @return excludes
+         */
+        public Excludes getExcludes() {
+            return this.excludes;
+        }
+
+        /**
+         * @return flowNodePrerequisiteParam
+         */
+        public FlowNodePrerequisiteParam getFlowNodePrerequisiteParam() {
+            return this.flowNodePrerequisiteParam;
+        }
+
+        /**
+         * @return from
+         */
+        public Integer getFrom() {
+            return this.from;
+        }
+
+        /**
+         * @return fromEnd
+         */
+        public Boolean getFromEnd() {
+            return this.fromEnd;
+        }
+
+        /**
+         * @return hitTime
+         */
+        public Integer getHitTime() {
+            return this.hitTime;
+        }
+
+        /**
+         * @return inSentence
+         */
+        public Boolean getInSentence() {
+            return this.inSentence;
+        }
+
+        /**
+         * @return intentModelCheckParm
+         */
+        public IntentModelCheckParm getIntentModelCheckParm() {
+            return this.intentModelCheckParm;
+        }
+
+        /**
+         * @return interval
+         */
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        /**
+         * @return intervalEnd
+         */
+        public Integer getIntervalEnd() {
+            return this.intervalEnd;
+        }
+
+        /**
+         * @return keywordExtension
+         */
+        public Integer getKeywordExtension() {
+            return this.keywordExtension;
+        }
+
+        /**
+         * @return keywordMatchSize
+         */
+        public Integer getKeywordMatchSize() {
+            return this.keywordMatchSize;
+        }
+
+        /**
+         * @return keywords
+         */
+        public Keywords getKeywords() {
+            return this.keywords;
+        }
+
+        /**
+         * @return maxEmotionChangeValue
+         */
+        public Integer getMaxEmotionChangeValue() {
+            return this.maxEmotionChangeValue;
+        }
+
+        /**
+         * @return minWordSize
+         */
+        public Integer getMinWordSize() {
+            return this.minWordSize;
+        }
+
+        /**
+         * @return nearDialogue
+         */
+        public Boolean getNearDialogue() {
+            return this.nearDialogue;
+        }
+
+        /**
+         * @return notRegex
+         */
+        public String getNotRegex() {
+            return this.notRegex;
+        }
+
+        /**
+         * @return phrase
+         */
+        public String getPhrase() {
+            return this.phrase;
+        }
+
+        /**
+         * @return regex
+         */
+        public String getRegex() {
+            return this.regex;
+        }
+
+        /**
+         * @return target
+         */
+        public Integer getTarget() {
+            return this.target;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Float getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private Boolean average; 
+            private String beginType; 
+            private Boolean caseSensitive; 
+            private Boolean checkFirstSentence; 
+            private Integer checkType; 
+            private String compareOperator; 
+            private Boolean contextChatMatch; 
+            private Integer delayTime; 
+            private String endType; 
+            private Excludes excludes; 
+            private FlowNodePrerequisiteParam flowNodePrerequisiteParam; 
+            private Integer from; 
+            private Boolean fromEnd; 
+            private Integer hitTime; 
+            private Boolean inSentence; 
+            private IntentModelCheckParm intentModelCheckParm; 
+            private Integer interval; 
+            private Integer intervalEnd; 
+            private Integer keywordExtension; 
+            private Integer keywordMatchSize; 
+            private Keywords keywords; 
+            private Integer maxEmotionChangeValue; 
+            private Integer minWordSize; 
+            private Boolean nearDialogue; 
+            private String notRegex; 
+            private String phrase; 
+            private String regex; 
+            private Integer target; 
+            private Float threshold; 
+
+            /**
+             * 语速检测，是否计算整个对话平均语速，默认false
+             */
+            public Builder average(Boolean average) {
+                this.average = average;
+                return this;
+            }
+
+            /**
+             * 时长算子，时长计算开始类型，录音开始，还是某句对话开始
+             */
+            public Builder beginType(String beginType) {
+                this.beginType = beginType;
+                return this;
+            }
+
+            /**
+             * 区分大小写
+             */
+            public Builder caseSensitive(Boolean caseSensitive) {
+                this.caseSensitive = caseSensitive;
+                return this;
+            }
+
+            /**
+             * 静音检测：要不要检测第一句话
+             */
+            public Builder checkFirstSentence(Boolean checkFirstSentence) {
+                this.checkFirstSentence = checkFirstSentence;
+                return this;
+            }
+
+            /**
+             * 检测方式，1 相邻句能量波动 2 最大能量跨度 默认1
+             */
+            public Builder checkType(Integer checkType) {
+                this.checkType = checkType;
+                return this;
+            }
+
+            /**
+             * 大于，还是小于，gt/lt
+             */
+            public Builder compareOperator(String compareOperator) {
+                this.compareOperator = compareOperator;
+                return this;
+            }
+
+            /**
+             * 是否单句话匹配；
+             */
+            public Builder contextChatMatch(Boolean contextChatMatch) {
+                this.contextChatMatch = contextChatMatch;
+                return this;
+            }
+
+            /**
+             * 抢话算子 延时时长
+             */
+            public Builder delayTime(Integer delayTime) {
+                this.delayTime = delayTime;
+                return this;
+            }
+
+            /**
+             * 时长算子，时长计算结束类型，录音结束，还是某句对话结束
+             */
+            public Builder endType(String endType) {
+                this.endType = endType;
+                return this;
+            }
+
+            /**
+             * 上下文重复算子：排除掉某些对话
+             */
+            public Builder excludes(Excludes excludes) {
+                this.excludes = excludes;
+                return this;
+            }
+
+            /**
+             * 流程节点前置条件参数
+             */
+            public Builder flowNodePrerequisiteParam(FlowNodePrerequisiteParam flowNodePrerequisiteParam) {
+                this.flowNodePrerequisiteParam = flowNodePrerequisiteParam;
+                return this;
+            }
+
+            /**
+             * 上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句
+             */
+            public Builder from(Integer from) {
+                this.from = from;
+                return this;
+            }
+
+            /**
+             * from_end
+             */
+            public Builder fromEnd(Boolean fromEnd) {
+                this.fromEnd = fromEnd;
+                return this;
+            }
+
+            /**
+             * 上下文重复算子：重复几次
+             */
+            public Builder hitTime(Integer hitTime) {
+                this.hitTime = hitTime;
+                return this;
+            }
+
+            /**
+             * 生效句子， true单个句子，false多个句子
+             */
+            public Builder inSentence(Boolean inSentence) {
+                this.inSentence = inSentence;
+                return this;
+            }
+
+            /**
+             * 意图模型检查参数
+             */
+            public Builder intentModelCheckParm(IntentModelCheckParm intentModelCheckParm) {
+                this.intentModelCheckParm = intentModelCheckParm;
+                return this;
+            }
+
+            /**
+             * interval代表区间范围开始
+             */
+            public Builder interval(Integer interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            /**
+             * intervalEnd 代表区间范围结束
+             */
+            public Builder intervalEnd(Integer intervalEnd) {
+                this.intervalEnd = intervalEnd;
+                return this;
+            }
+
+            /**
+             * 关键字扩展
+             */
+            public Builder keywordExtension(Integer keywordExtension) {
+                this.keywordExtension = keywordExtension;
+                return this;
+            }
+
+            /**
+             * 匹配到的关键字数量
+             */
+            public Builder keywordMatchSize(Integer keywordMatchSize) {
+                this.keywordMatchSize = keywordMatchSize;
+                return this;
+            }
+
+            /**
+             * 关键词
+             */
+            public Builder keywords(Keywords keywords) {
+                this.keywords = keywords;
+                return this;
+            }
+
+            /**
+             * 能量值变化，默认3, 1~9
+             */
+            public Builder maxEmotionChangeValue(Integer maxEmotionChangeValue) {
+                this.maxEmotionChangeValue = maxEmotionChangeValue;
+                return this;
+            }
+
+            /**
+             * 句子中最少字数，小于此字数的句子不检查
+             */
+            public Builder minWordSize(Integer minWordSize) {
+                this.minWordSize = minWordSize;
+                return this;
+            }
+
+            /**
+             * true表示取不同角色相邻的两句话，false表示取不同角色的第一句话比较响应时间（默认）
+             */
+            public Builder nearDialogue(Boolean nearDialogue) {
+                this.nearDialogue = nearDialogue;
+                return this;
+            }
+
+            /**
+             * 排除的正则表达式
+             */
+            public Builder notRegex(String notRegex) {
+                this.notRegex = notRegex;
+                return this;
+            }
+
+            /**
+             * 语句
+             */
+            public Builder phrase(String phrase) {
+                this.phrase = phrase;
+                return this;
+            }
+
+            /**
+             * 正则表达式
+             */
+            public Builder regex(String regex) {
+                this.regex = regex;
+                return this;
+            }
+
+            /**
+             * target
+             */
+            public Builder target(Integer target) {
+                this.target = target;
+                return this;
+            }
+
+            /**
+             * 阈值
+             */
+            public Builder threshold(Float threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public Param build() {
+                return new Param(this);
+            } 
+
+        } 
+
+    }
+    public static class Operator extends TeaModel {
+        @NameInMap("Id")
+        private Long id;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Oid")
+        private String oid;
+
+        @NameInMap("Param")
+        private Param param;
+
+        @NameInMap("Type")
+        private String type;
+
+        private Operator(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+            this.oid = builder.oid;
+            this.param = builder.param;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Operator create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return oid
+         */
+        public String getOid() {
+            return this.oid;
+        }
+
+        /**
+         * @return param
+         */
+        public Param getParam() {
+            return this.param;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+            private String oid; 
+            private Param param; 
+            private String type; 
+
+            /**
+             * 主键id
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * 算子名
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * 可能是主键id，也可能是前端生成的id
+             */
+            public Builder oid(String oid) {
+                this.oid = oid;
+                return this;
+            }
+
+            /**
+             * 算子参数
+             */
+            public Builder param(Param param) {
+                this.param = param;
+                return this;
+            }
+
+            /**
+             * 算子类别
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Operator build() {
+                return new Operator(this);
+            } 
+
+        } 
+
+    }
+    public static class Operators extends TeaModel {
+        @NameInMap("Operator")
+        private java.util.List < Operator> operator;
+
+        private Operators(Builder builder) {
+            this.operator = builder.operator;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Operators create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operator
+         */
+        public java.util.List < Operator> getOperator() {
+            return this.operator;
+        }
+
+        public static final class Builder {
+            private java.util.List < Operator> operator; 
+
+            /**
+             * Operator.
+             */
+            public Builder operator(java.util.List < Operator> operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            public Operators build() {
+                return new Operators(this);
+            } 
+
+        } 
+
+    }
+    public static class Conditions extends TeaModel {
+        @NameInMap("Check_range")
+        private CheckRange checkRange;
+
+        @NameInMap("Cid")
+        private String cid;
+
+        @NameInMap("Exclusion")
+        private Integer exclusion;
+
+        @NameInMap("Id")
+        private Long id;
+
+        @NameInMap("Lambda")
+        private String lambda;
+
+        @NameInMap("Operators")
+        private Operators operators;
+
+        @NameInMap("Rid")
+        private String rid;
+
+        private Conditions(Builder builder) {
+            this.checkRange = builder.checkRange;
+            this.cid = builder.cid;
+            this.exclusion = builder.exclusion;
+            this.id = builder.id;
+            this.lambda = builder.lambda;
+            this.operators = builder.operators;
+            this.rid = builder.rid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkRange
+         */
+        public CheckRange getCheckRange() {
+            return this.checkRange;
+        }
+
+        /**
+         * @return cid
+         */
+        public String getCid() {
+            return this.cid;
+        }
+
+        /**
+         * @return exclusion
+         */
+        public Integer getExclusion() {
+            return this.exclusion;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return lambda
+         */
+        public String getLambda() {
+            return this.lambda;
+        }
+
+        /**
+         * @return operators
+         */
+        public Operators getOperators() {
+            return this.operators;
+        }
+
+        /**
+         * @return rid
+         */
+        public String getRid() {
+            return this.rid;
+        }
+
+        public static final class Builder {
+            private CheckRange checkRange; 
+            private String cid; 
+            private Integer exclusion; 
+            private Long id; 
+            private String lambda; 
+            private Operators operators; 
+            private String rid; 
+
+            /**
+             * 检测范围
+             */
+            public Builder checkRange(CheckRange checkRange) {
+                this.checkRange = checkRange;
+                return this;
+            }
+
+            /**
+             * 条件id，可能是db中的主键，也可能是转换成的a, b, c
+             */
+            public Builder cid(String cid) {
+                this.cid = cid;
+                return this;
+            }
+
+            /**
+             * 排除
+             */
+            public Builder exclusion(Integer exclusion) {
+                this.exclusion = exclusion;
+                return this;
+            }
+
+            /**
+             * 在db中的主键
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Lambda表达式：例如:a&&b
+             */
+            public Builder lambda(String lambda) {
+                this.lambda = lambda;
+                return this;
+            }
+
+            /**
+             * 算子列表
+             */
+            public Builder operators(Operators operators) {
+                this.operators = operators;
+                return this;
+            }
+
+            /**
+             * 条件所属的规则id
+             */
+            public Builder rid(String rid) {
+                this.rid = rid;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    public static class HitResultConditions extends TeaModel {
+        @NameInMap("Conditions")
+        private java.util.List < Conditions> conditions;
+
+        private HitResultConditions(Builder builder) {
+            this.conditions = builder.conditions;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HitResultConditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List < Conditions> getConditions() {
+            return this.conditions;
+        }
+
+        public static final class Builder {
+            private java.util.List < Conditions> conditions; 
+
+            /**
+             * Conditions.
+             */
+            public Builder conditions(java.util.List < Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            public HitResultConditions build() {
+                return new HitResultConditions(this);
+            } 
+
+        } 
+
+    }
     public static class Cid extends TeaModel {
         @NameInMap("Cid")
         private java.util.List < String > cid;
@@ -501,7 +2156,7 @@ public class GetResultResponseBody extends TeaModel {
             private java.util.List < String > cid; 
 
             /**
-             * Cid.
+             * 条件id，可能是db中的主键，也可能是转换成的a, b, c
              */
             public Builder cid(java.util.List < String > cid) {
                 this.cid = cid;
@@ -578,7 +2233,7 @@ public class GetResultResponseBody extends TeaModel {
             private String val; 
 
             /**
-             * Cid.
+             * 条件id，可能是db中的主键，也可能是转换成的a, b, c
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -586,7 +2241,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * 上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -594,7 +2249,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * 对话结束索引
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -756,7 +2411,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * 对应 RoleType.type
              */
             public Builder role(String role) {
                 this.role = role;
@@ -829,7 +2484,7 @@ public class GetResultResponseBody extends TeaModel {
             private Phrase phrase; 
 
             /**
-             * Cid.
+             * 条件id，可能是db中的主键，也可能是转换成的a, b, c
              */
             public Builder cid(Cid cid) {
                 this.cid = cid;
@@ -845,7 +2500,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Phrase.
+             * 语句
              */
             public Builder phrase(Phrase phrase) {
                 this.phrase = phrase;
@@ -901,6 +2556,9 @@ public class GetResultResponseBody extends TeaModel {
 
     }
     public static class HitResult extends TeaModel {
+        @NameInMap("Conditions")
+        private HitResultConditions conditions;
+
         @NameInMap("Hits")
         private Hits hits;
 
@@ -923,6 +2581,7 @@ public class GetResultResponseBody extends TeaModel {
         private String type;
 
         private HitResult(Builder builder) {
+            this.conditions = builder.conditions;
             this.hits = builder.hits;
             this.name = builder.name;
             this.reviewResult = builder.reviewResult;
@@ -938,6 +2597,13 @@ public class GetResultResponseBody extends TeaModel {
 
         public static HitResult create() {
             return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public HitResultConditions getConditions() {
+            return this.conditions;
         }
 
         /**
@@ -990,6 +2656,7 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private HitResultConditions conditions; 
             private Hits hits; 
             private String name; 
             private Integer reviewResult; 
@@ -997,6 +2664,14 @@ public class GetResultResponseBody extends TeaModel {
             private Long schemeId; 
             private Long schemeVersion; 
             private String type; 
+
+            /**
+             * Conditions.
+             */
+            public Builder conditions(HitResultConditions conditions) {
+                this.conditions = conditions;
+                return this;
+            }
 
             /**
              * Hits.
@@ -1007,7 +2682,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * 算子名
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1023,7 +2698,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Rid.
+             * 条件所属的规则id
              */
             public Builder rid(String rid) {
                 this.rid = rid;
@@ -1047,7 +2722,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * 算子类别
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1643,7 +3318,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * 在db中的主键
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1651,7 +3326,7 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * 算子名
              */
             public Builder name(String name) {
                 this.name = name;

@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DelThesaurusForApiRequest extends Request {
     @Query
+    @NameInMap("BaseMeAgentId")
+    private Long baseMeAgentId;
+
+    @Query
     @NameInMap("JsonStr")
     @Validation(required = true)
     private String jsonStr;
 
     private DelThesaurusForApiRequest(Builder builder) {
         super(builder);
+        this.baseMeAgentId = builder.baseMeAgentId;
         this.jsonStr = builder.jsonStr;
     }
 
@@ -36,6 +41,13 @@ public class DelThesaurusForApiRequest extends Request {
     }
 
     /**
+     * @return baseMeAgentId
+     */
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
+    }
+
+    /**
      * @return jsonStr
      */
     public String getJsonStr() {
@@ -43,6 +55,7 @@ public class DelThesaurusForApiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DelThesaurusForApiRequest, Builder> {
+        private Long baseMeAgentId; 
         private String jsonStr; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class DelThesaurusForApiRequest extends Request {
 
         private Builder(DelThesaurusForApiRequest request) {
             super(request);
+            this.baseMeAgentId = request.baseMeAgentId;
             this.jsonStr = request.jsonStr;
         } 
+
+        /**
+         * baseMeAgentId
+         */
+        public Builder baseMeAgentId(Long baseMeAgentId) {
+            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.baseMeAgentId = baseMeAgentId;
+            return this;
+        }
 
         /**
          * JsonStr.

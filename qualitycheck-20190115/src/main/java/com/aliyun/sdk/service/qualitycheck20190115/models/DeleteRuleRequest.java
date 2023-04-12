@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRuleRequest</p>
  */
 public class DeleteRuleRequest extends Request {
+    @Query
+    @NameInMap("BaseMeAgentId")
+    private Long baseMeAgentId;
+
     @Body
     @NameInMap("ForceDelete")
     private Boolean forceDelete;
@@ -27,6 +31,7 @@ public class DeleteRuleRequest extends Request {
 
     private DeleteRuleRequest(Builder builder) {
         super(builder);
+        this.baseMeAgentId = builder.baseMeAgentId;
         this.forceDelete = builder.forceDelete;
         this.isSchemeData = builder.isSchemeData;
         this.ruleId = builder.ruleId;
@@ -43,6 +48,13 @@ public class DeleteRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return baseMeAgentId
+     */
+    public Long getBaseMeAgentId() {
+        return this.baseMeAgentId;
     }
 
     /**
@@ -67,6 +79,7 @@ public class DeleteRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteRuleRequest, Builder> {
+        private Long baseMeAgentId; 
         private Boolean forceDelete; 
         private Integer isSchemeData; 
         private Long ruleId; 
@@ -77,10 +90,20 @@ public class DeleteRuleRequest extends Request {
 
         private Builder(DeleteRuleRequest request) {
             super(request);
+            this.baseMeAgentId = request.baseMeAgentId;
             this.forceDelete = request.forceDelete;
             this.isSchemeData = request.isSchemeData;
             this.ruleId = request.ruleId;
         } 
+
+        /**
+         * baseMeAgentId
+         */
+        public Builder baseMeAgentId(Long baseMeAgentId) {
+            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.baseMeAgentId = baseMeAgentId;
+            return this;
+        }
 
         /**
          * ForceDelete.
