@@ -98,7 +98,10 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         } 
 
         /**
-         * Note.
+         * The description of the invitation.
+         * <p>
+         * 
+         * The description can be up to 1,024 characters in length.
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -107,7 +110,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -116,7 +119,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * TargetEntity.
+         * The ID or logon email address of the account that you want to invite.
          */
         public Builder targetEntity(String targetEntity) {
             this.putQueryParameter("TargetEntity", targetEntity);
@@ -125,7 +128,11 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the account. Valid values:
+         * <p>
+         * 
+         * *   Account: indicates the ID of the account.
+         * *   Email: indicates the logon email address of the account.
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -179,7 +186,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +194,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -98,7 +98,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the specified members. Valid values:
+         * <p>
+         * 
+         * *   false (default value)
+         * *   true
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -107,7 +111,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The Alibaba Cloud account IDs of the members.
+         * <p>
+         * 
+         * You can specify a maximum of 50 IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -116,7 +123,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the objects from which you want to remove tags. Valid values:
+         * <p>
+         * 
+         * *   Account: member
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -125,7 +135,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag keys.
+         * <p>
+         * 
+         * You can specify a maximum of 20 tag keys.
+         * 
+         * > If you set the `All` parameter to `true`, you do not need to specify tag keys.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

@@ -54,7 +54,12 @@ public class SendVerificationCodeForEnableRDRequest extends Request {
         } 
 
         /**
-         * SecureMobilePhone.
+         * The mobile phone number that is bound to the newly created account. If you leave this parameter empty, the mobile phone number that is bound to the current account is used.
+         * <p>
+         * 
+         * Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
+         * 
+         * > Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
          */
         public Builder secureMobilePhone(String secureMobilePhone) {
             this.putQueryParameter("SecureMobilePhone", secureMobilePhone);

@@ -99,7 +99,10 @@ public class CreateControlPolicyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the access control policy.
+         * <p>
+         * 
+         * The description must be 1 to 1,024 characters in length. The description can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -108,7 +111,10 @@ public class CreateControlPolicyRequest extends Request {
         }
 
         /**
-         * EffectScope.
+         * The effective scope of the access control policy.
+         * <p>
+         * 
+         * The value RAM indicates that the access control policy takes effect only for RAM users and RAM roles.
          */
         public Builder effectScope(String effectScope) {
             this.putQueryParameter("EffectScope", effectScope);
@@ -117,7 +123,14 @@ public class CreateControlPolicyRequest extends Request {
         }
 
         /**
-         * PolicyDocument.
+         * The document of the access control policy.
+         * <p>
+         * 
+         * The document can be a maximum of 4,096 characters in length.
+         * 
+         * For more information about the languages of access control policies, see [Languages of access control policies](~~179096~~).
+         * 
+         * For more information about the examples of access control policies, see [Examples of custom access control policies](~~181474~~).
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -126,7 +139,10 @@ public class CreateControlPolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the access control policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length. The name can contain letters, digits, and hyphens (-) and must start with a letter.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

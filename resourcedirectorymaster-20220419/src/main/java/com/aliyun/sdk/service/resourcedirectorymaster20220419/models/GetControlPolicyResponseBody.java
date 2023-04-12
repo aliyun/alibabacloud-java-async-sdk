@@ -50,7 +50,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ControlPolicy.
+         * The details of the access control policy.
          */
         public Builder controlPolicy(ControlPolicy controlPolicy) {
             this.controlPolicy = controlPolicy;
@@ -58,7 +58,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AttachmentCount.
+             * The number of times that the access control policy is referenced.
              */
             public Builder attachmentCount(String attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -202,7 +202,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the access control policy was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -210,7 +210,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the access control policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +218,11 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EffectScope.
+             * The effective scope of the access control policy. Valid values:
+             * <p>
+             * 
+             * *   All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.
+             * *   RAM: The access control policy is in effect only for RAM users and RAM roles.
              */
             public Builder effectScope(String effectScope) {
                 this.effectScope = effectScope;
@@ -226,7 +230,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDocument.
+             * The document of the access control policy.
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -234,7 +238,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * The ID of the access control policy.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -242,7 +246,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the access control policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -250,7 +254,11 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the access control policy. Valid values:
+             * <p>
+             * 
+             * *   System: system access control policy
+             * *   Custom: custom access control policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -258,7 +266,7 @@ public class GetControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the access control policy was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

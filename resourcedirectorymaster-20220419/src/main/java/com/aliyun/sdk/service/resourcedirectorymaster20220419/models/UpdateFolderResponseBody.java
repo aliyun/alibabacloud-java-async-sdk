@@ -50,7 +50,7 @@ public class UpdateFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Folder.
+         * The information about the folder.
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -58,7 +58,7 @@ public class UpdateFolderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class UpdateFolderResponseBody extends TeaModel {
             private String parentFolderId; 
 
             /**
-             * CreateTime.
+             * The time when the folder was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -142,7 +142,7 @@ public class UpdateFolderResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -150,7 +150,7 @@ public class UpdateFolderResponseBody extends TeaModel {
             }
 
             /**
-             * FolderName.
+             * The name of the folder.
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -158,7 +158,7 @@ public class UpdateFolderResponseBody extends TeaModel {
             }
 
             /**
-             * ParentFolderId.
+             * The ID of the parent folder.
              */
             public Builder parentFolderId(String parentFolderId) {
                 this.parentFolderId = parentFolderId;

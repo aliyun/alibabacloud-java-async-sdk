@@ -55,7 +55,7 @@ public class GetAccountDeletionCheckResultRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The Alibaba Cloud account ID of the member that you want to delete.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

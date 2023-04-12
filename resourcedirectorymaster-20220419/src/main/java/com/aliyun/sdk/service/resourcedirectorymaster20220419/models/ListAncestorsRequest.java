@@ -55,7 +55,7 @@ public class ListAncestorsRequest extends Request {
         } 
 
         /**
-         * ChildId.
+         * The ID of the subfolder.
          */
         public Builder childId(String childId) {
             this.putQueryParameter("ChildId", childId);

@@ -86,7 +86,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Folders.
+         * The information of the folders.
          */
         public Builder folders(Folders folders) {
             this.folders = folders;
@@ -94,7 +94,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             private String folderName; 
 
             /**
-             * CreateTime.
+             * The time when the folder was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -190,7 +190,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -198,7 +198,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             }
 
             /**
-             * FolderName.
+             * The name of the folder.
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;

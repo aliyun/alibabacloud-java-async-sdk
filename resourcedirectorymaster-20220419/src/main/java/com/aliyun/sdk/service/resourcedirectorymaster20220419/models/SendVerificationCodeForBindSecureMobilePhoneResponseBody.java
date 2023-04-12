@@ -50,7 +50,7 @@ public class SendVerificationCodeForBindSecureMobilePhoneResponseBody extends Te
         private String requestId; 
 
         /**
-         * ExpirationDate.
+         * The time when the verification code expires.
          */
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = expirationDate;
@@ -58,7 +58,7 @@ public class SendVerificationCodeForBindSecureMobilePhoneResponseBody extends Te
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

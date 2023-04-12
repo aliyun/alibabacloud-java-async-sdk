@@ -70,7 +70,7 @@ public class MoveAccountRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The Alibaba Cloud account ID of the member that you want to move.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,7 +79,7 @@ public class MoveAccountRequest extends Request {
         }
 
         /**
-         * DestinationFolderId.
+         * The ID of the destination folder.
          */
         public Builder destinationFolderId(String destinationFolderId) {
             this.putQueryParameter("DestinationFolderId", destinationFolderId);

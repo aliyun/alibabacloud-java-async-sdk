@@ -50,7 +50,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * ControlPolicyAttachments.
+         * The information about the attached access control policies.
          */
         public Builder controlPolicyAttachments(ControlPolicyAttachments controlPolicyAttachments) {
             this.controlPolicyAttachments = controlPolicyAttachments;
@@ -58,7 +58,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             private String policyType; 
 
             /**
-             * AttachDate.
+             * The time when the access control policy was attached.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -166,7 +166,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * Description.
+             * The description of the access control policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,11 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * EffectScope.
+             * The effective scope of the access control policy. Valid values:
+             * <p>
+             * 
+             * *   All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.
+             * *   RAM: The access control policy is in effect only for RAM users and RAM roles.
              */
             public Builder effectScope(String effectScope) {
                 this.effectScope = effectScope;
@@ -182,7 +186,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * PolicyId.
+             * The ID of the access control policy.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -190,7 +194,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * PolicyName.
+             * The name of the access control policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -198,7 +202,11 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             }
 
             /**
-             * PolicyType.
+             * The type of the access control policy. Valid values:
+             * <p>
+             * 
+             * *   System: system access control policy
+             * *   Custom: custom access control policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

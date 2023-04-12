@@ -50,7 +50,7 @@ public class GetHandshakeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Handshake.
+         * The information of the invitation.
          */
         public Builder handshake(Handshake handshake) {
             this.handshake = handshake;
@@ -58,7 +58,7 @@ public class GetHandshakeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +242,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * CreateTime.
+             * The time when the invitation was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -250,7 +250,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the invitation expires. The time is displayed in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -258,7 +258,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * HandshakeId.
+             * The ID of the invitation.
              */
             public Builder handshakeId(String handshakeId) {
                 this.handshakeId = handshakeId;
@@ -266,7 +266,10 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * InvitedAccountRealName.
+             * The real-name verification information of the invitee.
+             * <p>
+             * 
+             * > This parameter is available only when an invitee calls this operation.
              */
             public Builder invitedAccountRealName(String invitedAccountRealName) {
                 this.invitedAccountRealName = invitedAccountRealName;
@@ -274,7 +277,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountId.
+             * The ID of the management account of the resource directory.
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -282,7 +285,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountName.
+             * The name of the management account of the resource directory.
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -290,7 +293,10 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountRealName.
+             * The real-name verification information of the management account of the resource directory.
+             * <p>
+             * 
+             * > This parameter is available only when an invitee calls this operation.
              */
             public Builder masterAccountRealName(String masterAccountRealName) {
                 this.masterAccountRealName = masterAccountRealName;
@@ -298,7 +304,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the invitation was modified. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -306,7 +312,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * Note.
+             * The description of the invitation.
              */
             public Builder note(String note) {
                 this.note = note;
@@ -314,7 +320,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDirectoryId.
+             * The ID of the resource directory.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -322,7 +328,14 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the invitation. Valid values:
+             * <p>
+             * 
+             * *   Pending: The invitation is waiting for confirmation.
+             * *   Accepted: The invitation is accepted.
+             * *   Cancelled: The invitation is canceled.
+             * *   Declined: The invitation is rejected.
+             * *   Expired: The invitation expires.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +343,7 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * TargetEntity.
+             * The ID or logon email address of the invited account.
              */
             public Builder targetEntity(String targetEntity) {
                 this.targetEntity = targetEntity;
@@ -338,7 +351,11 @@ public class GetHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the invited account. Valid values:
+             * <p>
+             * 
+             * *   Account: indicates the ID of the account.
+             * *   Email: indicates the logon email address of the account.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

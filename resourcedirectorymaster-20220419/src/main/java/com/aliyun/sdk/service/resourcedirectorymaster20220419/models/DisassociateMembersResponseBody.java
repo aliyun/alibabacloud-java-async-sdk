@@ -1,0 +1,155 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DisassociateMembersResponseBody} extends {@link TeaModel}
+ *
+ * <p>DisassociateMembersResponseBody</p>
+ */
+public class DisassociateMembersResponseBody extends TeaModel {
+    @NameInMap("Members")
+    private java.util.List < Members> members;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private DisassociateMembersResponseBody(Builder builder) {
+        this.members = builder.members;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DisassociateMembersResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return members
+     */
+    public java.util.List < Members> getMembers() {
+        return this.members;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private java.util.List < Members> members; 
+        private String requestId; 
+
+        /**
+         * Members.
+         */
+        public Builder members(java.util.List < Members> members) {
+            this.members = members;
+            return this;
+        }
+
+        /**
+         * Id of the request
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DisassociateMembersResponseBody build() {
+            return new DisassociateMembersResponseBody(this);
+        } 
+
+    } 
+
+    public static class Members extends TeaModel {
+        @NameInMap("ContactId")
+        private String contactId;
+
+        @NameInMap("MemberId")
+        private String memberId;
+
+        @NameInMap("ModifyDate")
+        private String modifyDate;
+
+        private Members(Builder builder) {
+            this.contactId = builder.contactId;
+            this.memberId = builder.memberId;
+            this.modifyDate = builder.modifyDate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Members create() {
+            return builder().build();
+        }
+
+        /**
+         * @return contactId
+         */
+        public String getContactId() {
+            return this.contactId;
+        }
+
+        /**
+         * @return memberId
+         */
+        public String getMemberId() {
+            return this.memberId;
+        }
+
+        /**
+         * @return modifyDate
+         */
+        public String getModifyDate() {
+            return this.modifyDate;
+        }
+
+        public static final class Builder {
+            private String contactId; 
+            private String memberId; 
+            private String modifyDate; 
+
+            /**
+             * ContactId.
+             */
+            public Builder contactId(String contactId) {
+                this.contactId = contactId;
+                return this;
+            }
+
+            /**
+             * MemberId.
+             */
+            public Builder memberId(String memberId) {
+                this.memberId = memberId;
+                return this;
+            }
+
+            /**
+             * ModifyDate.
+             */
+            public Builder modifyDate(String modifyDate) {
+                this.modifyDate = modifyDate;
+                return this;
+            }
+
+            public Members build() {
+                return new Members(this);
+            } 
+
+        } 
+
+    }
+}

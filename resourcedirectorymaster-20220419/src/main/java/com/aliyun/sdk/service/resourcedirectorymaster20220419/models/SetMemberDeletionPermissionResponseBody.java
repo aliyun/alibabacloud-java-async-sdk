@@ -74,7 +74,7 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         private String resourceDirectoryId; 
 
         /**
-         * ManagementAccountId.
+         * The ID of the management account of the resource directory.
          */
         public Builder managementAccountId(String managementAccountId) {
             this.managementAccountId = managementAccountId;
@@ -82,7 +82,11 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * MemberDeletionStatus.
+         * The status of the member deletion feature. Valid values:
+         * <p>
+         * 
+         * *   Enabled: The feature is enabled.
+         * *   Disabled: The feature is disabled.
          */
         public Builder memberDeletionStatus(String memberDeletionStatus) {
             this.memberDeletionStatus = memberDeletionStatus;
@@ -90,7 +94,7 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceDirectoryId.
+         * The ID of the resource directory.
          */
         public Builder resourceDirectoryId(String resourceDirectoryId) {
             this.resourceDirectoryId = resourceDirectoryId;

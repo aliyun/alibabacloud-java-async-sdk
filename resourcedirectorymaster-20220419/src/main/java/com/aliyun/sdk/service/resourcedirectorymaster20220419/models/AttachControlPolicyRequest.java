@@ -70,7 +70,7 @@ public class AttachControlPolicyRequest extends Request {
         } 
 
         /**
-         * PolicyId.
+         * The ID of the access control policy.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -79,7 +79,12 @@ public class AttachControlPolicyRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the object to which you want to attach the access control policy. Access control policies can be attached to the following objects:
+         * <p>
+         * 
+         * *   Root folder
+         * *   Subfolders of the Root folder
+         * *   Members
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

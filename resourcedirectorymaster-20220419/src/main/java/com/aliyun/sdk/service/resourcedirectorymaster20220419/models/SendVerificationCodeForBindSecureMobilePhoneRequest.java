@@ -70,7 +70,7 @@ public class SendVerificationCodeForBindSecureMobilePhoneRequest extends Request
         } 
 
         /**
-         * AccountId.
+         * The Alibaba Cloud account ID of the member.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,7 +79,12 @@ public class SendVerificationCodeForBindSecureMobilePhoneRequest extends Request
         }
 
         /**
-         * SecureMobilePhone.
+         * The mobile phone number that you want to bind to the member for security purposes.
+         * <p>
+         * 
+         * Specify the mobile phone number in the \<Country code>-\<Mobile phone number> format.
+         * 
+         * > Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
          */
         public Builder secureMobilePhone(String secureMobilePhone) {
             this.putQueryParameter("SecureMobilePhone", secureMobilePhone);

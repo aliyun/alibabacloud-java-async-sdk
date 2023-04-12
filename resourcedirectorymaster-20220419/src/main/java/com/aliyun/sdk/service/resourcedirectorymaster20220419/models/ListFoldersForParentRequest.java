@@ -96,7 +96,10 @@ public class ListFoldersForParentRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -105,7 +108,10 @@ public class ListFoldersForParentRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -114,7 +120,10 @@ public class ListFoldersForParentRequest extends Request {
         }
 
         /**
-         * ParentFolderId.
+         * The ID of the parent folder.
+         * <p>
+         * 
+         * If you leave this parameter empty, the information of the first-level subfolders of the Root folder is queried.
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -123,7 +132,10 @@ public class ListFoldersForParentRequest extends Request {
         }
 
         /**
-         * QueryKeyword.
+         * The keyword used for the query, such as a folder name.
+         * <p>
+         * 
+         * Fuzzy match is supported.
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);

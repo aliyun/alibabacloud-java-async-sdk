@@ -124,7 +124,10 @@ public class ListAccountsForParentRequest extends Request {
         } 
 
         /**
-         * IncludeTags.
+         * Specifies whether to return the information of tags. Valid values:
+         * <p>
+         * 
+         * false (default value) true
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -133,7 +136,10 @@ public class ListAccountsForParentRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -142,7 +148,10 @@ public class ListAccountsForParentRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +160,7 @@ public class ListAccountsForParentRequest extends Request {
         }
 
         /**
-         * ParentFolderId.
+         * The ID of the folder.
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -160,7 +169,10 @@ public class ListAccountsForParentRequest extends Request {
         }
 
         /**
-         * QueryKeyword.
+         * The keyword used for the query, such as the display name of a member.
+         * <p>
+         * 
+         * Fuzzy match is supported.
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);
@@ -169,7 +181,7 @@ public class ListAccountsForParentRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags. This parameter specifies a filter condition.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -223,7 +235,7 @@ public class ListAccountsForParentRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +243,7 @@ public class ListAccountsForParentRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

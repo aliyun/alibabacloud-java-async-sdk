@@ -82,7 +82,10 @@ public class ListDelegatedAdministratorsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -91,7 +94,10 @@ public class ListDelegatedAdministratorsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +106,10 @@ public class ListDelegatedAdministratorsRequest extends Request {
         }
 
         /**
-         * ServicePrincipal.
+         * The identifier of the trusted service.
+         * <p>
+         * 
+         * For more information, see the `Trusted service identifier` column in [Supported trusted services](~~208133~~).
          */
         public Builder servicePrincipal(String servicePrincipal) {
             this.putQueryParameter("ServicePrincipal", servicePrincipal);

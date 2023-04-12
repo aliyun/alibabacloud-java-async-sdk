@@ -86,7 +86,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
 
         /**
-         * TargetAttachments.
+         * The information about the objects to which the access control policy is attached.
          */
         public Builder targetAttachments(TargetAttachments targetAttachments) {
             this.targetAttachments = targetAttachments;
@@ -118,7 +118,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
 
         /**
-         * TotalCount.
+         * The total number of objects to which the access control policy is attached.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             private String targetType; 
 
             /**
-             * AttachDate.
+             * The time when the access control policy was attached to the object.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -202,7 +202,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             }
 
             /**
-             * TargetId.
+             * The ID of the object.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -210,7 +210,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             }
 
             /**
-             * TargetName.
+             * The name of the object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -218,7 +218,12 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             }
 
             /**
-             * TargetType.
+             * The type of the object. Valid values:
+             * <p>
+             * 
+             * *   Root: Root folder
+             * *   Folder: subfolder of the Root folder
+             * *   Account: member
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

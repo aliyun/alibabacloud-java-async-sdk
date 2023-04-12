@@ -55,7 +55,7 @@ public class CancelHandshakeRequest extends Request {
         } 
 
         /**
-         * HandshakeId.
+         * The ID of the invitation.
          */
         public Builder handshakeId(String handshakeId) {
             this.putQueryParameter("HandshakeId", handshakeId);

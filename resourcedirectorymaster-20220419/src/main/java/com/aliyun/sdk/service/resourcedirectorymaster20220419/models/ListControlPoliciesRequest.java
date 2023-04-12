@@ -98,7 +98,14 @@ public class ListControlPoliciesRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language in which you want to return the descriptions of the access control policies. Valid values:
+         * <p>
+         * 
+         * *   zh-CN (default value): Chinese
+         * *   en: English
+         * *   ja: Japanese
+         * 
+         * > This parameter is available only for system access control policies.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -107,7 +114,10 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +126,10 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +138,11 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the access control policies. Valid values:
+         * <p>
+         * 
+         * *   System: system access control policy
+         * *   Custom: custom access control policy
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
