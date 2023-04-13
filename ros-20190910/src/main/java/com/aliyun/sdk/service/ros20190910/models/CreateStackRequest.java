@@ -21,6 +21,10 @@ public class CreateStackRequest extends Request {
     private String createOption;
 
     @Query
+    @NameInMap("CreateOptions")
+    private java.util.List < String > createOptions;
+
+    @Query
     @NameInMap("DeletionProtection")
     private String deletionProtection;
 
@@ -102,6 +106,7 @@ public class CreateStackRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.createOption = builder.createOption;
+        this.createOptions = builder.createOptions;
         this.deletionProtection = builder.deletionProtection;
         this.disableRollback = builder.disableRollback;
         this.notificationURLs = builder.notificationURLs;
@@ -148,6 +153,13 @@ public class CreateStackRequest extends Request {
      */
     public String getCreateOption() {
         return this.createOption;
+    }
+
+    /**
+     * @return createOptions
+     */
+    public java.util.List < String > getCreateOptions() {
+        return this.createOptions;
     }
 
     /**
@@ -286,6 +298,7 @@ public class CreateStackRequest extends Request {
     public static final class Builder extends Request.Builder<CreateStackRequest, Builder> {
         private String clientToken; 
         private String createOption; 
+        private java.util.List < String > createOptions; 
         private String deletionProtection; 
         private Boolean disableRollback; 
         private java.util.List < String > notificationURLs; 
@@ -314,6 +327,7 @@ public class CreateStackRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.createOption = request.createOption;
+            this.createOptions = request.createOptions;
             this.deletionProtection = request.deletionProtection;
             this.disableRollback = request.disableRollback;
             this.notificationURLs = request.notificationURLs;
@@ -358,6 +372,15 @@ public class CreateStackRequest extends Request {
         public Builder createOption(String createOption) {
             this.putQueryParameter("CreateOption", createOption);
             this.createOption = createOption;
+            return this;
+        }
+
+        /**
+         * CreateOptions.
+         */
+        public Builder createOptions(java.util.List < String > createOptions) {
+            this.putQueryParameter("CreateOptions", createOptions);
+            this.createOptions = createOptions;
             return this;
         }
 

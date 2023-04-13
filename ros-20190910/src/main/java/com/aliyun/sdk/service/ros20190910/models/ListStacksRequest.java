@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListStacksRequest extends Request {
     @Query
+    @NameInMap("EndTime")
+    private String endTime;
+
+    @Query
     @NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -50,6 +54,10 @@ public class ListStacksRequest extends Request {
     private java.util.List < String > stackName;
 
     @Query
+    @NameInMap("StartTime")
+    private String startTime;
+
+    @Query
     @NameInMap("Status")
     private java.util.List < String > status;
 
@@ -59,6 +67,7 @@ public class ListStacksRequest extends Request {
 
     private ListStacksRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.parentStackId = builder.parentStackId;
@@ -68,6 +77,7 @@ public class ListStacksRequest extends Request {
         this.stackId = builder.stackId;
         this.stackIds = builder.stackIds;
         this.stackName = builder.stackName;
+        this.startTime = builder.startTime;
         this.status = builder.status;
         this.tag = builder.tag;
     }
@@ -83,6 +93,13 @@ public class ListStacksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -149,6 +166,13 @@ public class ListStacksRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return status
      */
     public java.util.List < String > getStatus() {
@@ -163,6 +187,7 @@ public class ListStacksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListStacksRequest, Builder> {
+        private String endTime; 
         private Long pageNumber; 
         private Long pageSize; 
         private String parentStackId; 
@@ -172,6 +197,7 @@ public class ListStacksRequest extends Request {
         private String stackId; 
         private java.util.List < String > stackIds; 
         private java.util.List < String > stackName; 
+        private String startTime; 
         private java.util.List < String > status; 
         private java.util.List < Tag> tag; 
 
@@ -181,6 +207,7 @@ public class ListStacksRequest extends Request {
 
         private Builder(ListStacksRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.parentStackId = request.parentStackId;
@@ -190,9 +217,19 @@ public class ListStacksRequest extends Request {
             this.stackId = request.stackId;
             this.stackIds = request.stackIds;
             this.stackName = request.stackName;
+            this.startTime = request.startTime;
             this.status = request.status;
             this.tag = request.tag;
         } 
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * The number of the page to return.
@@ -292,6 +329,15 @@ public class ListStacksRequest extends Request {
         public Builder stackName(java.util.List < String > stackName) {
             this.putQueryParameter("StackName", stackName);
             this.stackName = stackName;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
