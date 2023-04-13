@@ -495,7 +495,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
          * 
          * *   **ANONYMOUS**: The API can be anonymously called. Take note of the following information:
          * 
-         *     *   All users who have the permissions to obtain the API information can call this API. API Gateway neither authenticates callers nor configures user-specific throttling policies. You must configure throttling policies for public APIs.
+         *     *   All users who have obtained the API service information can call this API. API Gateway neither authenticates callers nor sets user-specific throttling policies. If this API is a public one, you must set throttling policies for it.
          */
         public Builder authType(String authType) {
             this.authType = authType;
@@ -503,7 +503,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The backend configurations.
+         * The configuration items of the backend service.
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.backendConfig = backendConfig;
@@ -580,7 +580,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * *   Indicates whether to forcefully check X-Ca-Nonce. X-Ca-Nonce is the unique identifier of a request and is generally identified by UUID. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcefully checked. After API Gateway receives this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
+         * *   Indicates whether to forcefully check X-Ca-Nonce. X-Ca-Nonce is the unique identifier of a request and is generally identified by UUID. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcefully checked. After API Gateway receives this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps defend against replay attacks.
          * <p>
          * *   If the **ForceNonceCheck** parameter is set to **false**, X-Ca-Nonce is not checked. When you create an API, the default value of this parameter is false.
          */
@@ -676,7 +676,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The sample response that is returned.
+         * The sample response.
          */
         public Builder resultSample(String resultSample) {
             this.resultSample = resultSample;
@@ -726,7 +726,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
          * <p>
          * 
          * *   **RELEASE**: production environment
-         * *   **PRE**: pre-release environment
+         * *   **PRE**: staging environment
          * *   **TEST**: test environment
          */
         public Builder stageName(String stageName) {
@@ -1491,7 +1491,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
             private String requestProtocol; 
 
             /**
-             * The format in which data was transmitted to the server for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data was transmitted as forms that consist of key-value pairs. STREAM indicates that data was transmitted as byte streams. This parameter takes effect when the RequestMode parameter is set to MAPPING.
+             * The format in which data was transmitted to the server for a POST or PUT request. Valid values: FORM and STREAM. FORM indicates that data was transmitted as forms that consist of key-value pairs. STREAM indicates that data was transmitted as byte streams. This parameter takes effect when the RequestMode parameter is set to MAPPING.
              */
             public Builder bodyFormat(String bodyFormat) {
                 this.bodyFormat = bodyFormat;
@@ -1544,7 +1544,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol that is supported by the API. Valid values: HTTP, HTTPS, and WebSocket. Separate values with commas (,). Example: "HTTP,HTTPS".
+             * The type of the protocol that is supported by the API. Valid values: HTTP, HTTPS, and WebSocket. Separate multiple values with commas (,). Example: "HTTP,HTTPS".
              */
             public Builder requestProtocol(String requestProtocol) {
                 this.requestProtocol = requestProtocol;
@@ -1793,7 +1793,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The default value.
+             * The default value of the parameter.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -1833,7 +1833,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The hash values that are specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
+             * The hash values can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -2079,7 +2079,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a child node exists.
+             * Indicates whether a subnode exists.
              */
             public Builder hasChild(Boolean hasChild) {
                 this.hasChild = hasChild;
@@ -3410,7 +3410,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * The name of the frontend parameter. The name must be included in RequestParametersObject and matches ApiParameterName in RequestParameters.
+             * The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.
              */
             public Builder requestParameterName(String requestParameterName) {
                 this.requestParameterName = requestParameterName;
