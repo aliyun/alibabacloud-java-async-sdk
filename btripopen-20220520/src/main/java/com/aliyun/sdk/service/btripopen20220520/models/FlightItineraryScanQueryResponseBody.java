@@ -151,7 +151,271 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
     } 
 
+    public static class Flights extends TeaModel {
+        @NameInMap("arrival_station")
+        private String arrivalStation;
+
+        @NameInMap("cabin_class")
+        private String cabinClass;
+
+        @NameInMap("carrier")
+        private String carrier;
+
+        @NameInMap("departure_station")
+        private String departureStation;
+
+        @NameInMap("flight_date")
+        private String flightDate;
+
+        @NameInMap("flight_number")
+        private String flightNumber;
+
+        @NameInMap("flight_time")
+        private String flightTime;
+
+        @NameInMap("free_baggage_allowance")
+        private String freeBaggageAllowance;
+
+        @NameInMap("index")
+        private String index;
+
+        @NameInMap("seat_class")
+        private String seatClass;
+
+        @NameInMap("valid_from_date")
+        private String validFromDate;
+
+        @NameInMap("valid_to_date")
+        private String validToDate;
+
+        private Flights(Builder builder) {
+            this.arrivalStation = builder.arrivalStation;
+            this.cabinClass = builder.cabinClass;
+            this.carrier = builder.carrier;
+            this.departureStation = builder.departureStation;
+            this.flightDate = builder.flightDate;
+            this.flightNumber = builder.flightNumber;
+            this.flightTime = builder.flightTime;
+            this.freeBaggageAllowance = builder.freeBaggageAllowance;
+            this.index = builder.index;
+            this.seatClass = builder.seatClass;
+            this.validFromDate = builder.validFromDate;
+            this.validToDate = builder.validToDate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Flights create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arrivalStation
+         */
+        public String getArrivalStation() {
+            return this.arrivalStation;
+        }
+
+        /**
+         * @return cabinClass
+         */
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        /**
+         * @return carrier
+         */
+        public String getCarrier() {
+            return this.carrier;
+        }
+
+        /**
+         * @return departureStation
+         */
+        public String getDepartureStation() {
+            return this.departureStation;
+        }
+
+        /**
+         * @return flightDate
+         */
+        public String getFlightDate() {
+            return this.flightDate;
+        }
+
+        /**
+         * @return flightNumber
+         */
+        public String getFlightNumber() {
+            return this.flightNumber;
+        }
+
+        /**
+         * @return flightTime
+         */
+        public String getFlightTime() {
+            return this.flightTime;
+        }
+
+        /**
+         * @return freeBaggageAllowance
+         */
+        public String getFreeBaggageAllowance() {
+            return this.freeBaggageAllowance;
+        }
+
+        /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return seatClass
+         */
+        public String getSeatClass() {
+            return this.seatClass;
+        }
+
+        /**
+         * @return validFromDate
+         */
+        public String getValidFromDate() {
+            return this.validFromDate;
+        }
+
+        /**
+         * @return validToDate
+         */
+        public String getValidToDate() {
+            return this.validToDate;
+        }
+
+        public static final class Builder {
+            private String arrivalStation; 
+            private String cabinClass; 
+            private String carrier; 
+            private String departureStation; 
+            private String flightDate; 
+            private String flightNumber; 
+            private String flightTime; 
+            private String freeBaggageAllowance; 
+            private String index; 
+            private String seatClass; 
+            private String validFromDate; 
+            private String validToDate; 
+
+            /**
+             * 航班至
+             */
+            public Builder arrivalStation(String arrivalStation) {
+                this.arrivalStation = arrivalStation;
+                return this;
+            }
+
+            /**
+             * 座位等级
+             */
+            public Builder cabinClass(String cabinClass) {
+                this.cabinClass = cabinClass;
+                return this;
+            }
+
+            /**
+             * 承运人
+             */
+            public Builder carrier(String carrier) {
+                this.carrier = carrier;
+                return this;
+            }
+
+            /**
+             * 航班从
+             */
+            public Builder departureStation(String departureStation) {
+                this.departureStation = departureStation;
+                return this;
+            }
+
+            /**
+             * 日期
+             */
+            public Builder flightDate(String flightDate) {
+                this.flightDate = flightDate;
+                return this;
+            }
+
+            /**
+             * 航班号
+             */
+            public Builder flightNumber(String flightNumber) {
+                this.flightNumber = flightNumber;
+                return this;
+            }
+
+            /**
+             * 时间
+             */
+            public Builder flightTime(String flightTime) {
+                this.flightTime = flightTime;
+                return this;
+            }
+
+            /**
+             * 免费行李
+             */
+            public Builder freeBaggageAllowance(String freeBaggageAllowance) {
+                this.freeBaggageAllowance = freeBaggageAllowance;
+                return this;
+            }
+
+            /**
+             * 行号
+             */
+            public Builder index(String index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * 客票级别
+             */
+            public Builder seatClass(String seatClass) {
+                this.seatClass = seatClass;
+                return this;
+            }
+
+            /**
+             * 客票生效日期
+             */
+            public Builder validFromDate(String validFromDate) {
+                this.validFromDate = validFromDate;
+                return this;
+            }
+
+            /**
+             * 有效截止日期
+             */
+            public Builder validToDate(String validToDate) {
+                this.validToDate = validToDate;
+                return this;
+            }
+
+            public Flights build() {
+                return new Flights(this);
+            } 
+
+        } 
+
+    }
     public static class Items extends TeaModel {
+        @NameInMap("agent_code")
+        private String agentCode;
+
         @NameInMap("bill_date")
         private String billDate;
 
@@ -164,14 +428,26 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         private String department;
 
+        @NameInMap("flights")
+        private java.util.List < Flights> flights;
+
         @NameInMap("fuel_surcharge")
         private String fuelSurcharge;
+
+        @NameInMap("id")
+        private String id;
 
         @NameInMap("insurance")
         private String insurance;
 
         @NameInMap("invoice_title")
         private String invoiceTitle;
+
+        @NameInMap("issue_company")
+        private String issueCompany;
+
+        @NameInMap("issue_date")
+        private String issueDate;
 
         @NameInMap("itinerary_num")
         private String itineraryNum;
@@ -188,6 +464,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("project")
         private String project;
 
+        @NameInMap("prompt_message")
+        private String promptMessage;
+
         @NameInMap("tax_amount")
         private String taxAmount;
 
@@ -203,24 +482,34 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("total_price")
         private String totalPrice;
 
+        @NameInMap("validation_code")
+        private String validationCode;
+
         private Items(Builder builder) {
+            this.agentCode = builder.agentCode;
             this.billDate = builder.billDate;
             this.build = builder.build;
             this.costCenter = builder.costCenter;
             this.department = builder.department;
+            this.flights = builder.flights;
             this.fuelSurcharge = builder.fuelSurcharge;
+            this.id = builder.id;
             this.insurance = builder.insurance;
             this.invoiceTitle = builder.invoiceTitle;
+            this.issueCompany = builder.issueCompany;
+            this.issueDate = builder.issueDate;
             this.itineraryNum = builder.itineraryNum;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
             this.passengerName = builder.passengerName;
             this.project = builder.project;
+            this.promptMessage = builder.promptMessage;
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
             this.ticketNo = builder.ticketNo;
             this.ticketPrice = builder.ticketPrice;
             this.totalPrice = builder.totalPrice;
+            this.validationCode = builder.validationCode;
         }
 
         public static Builder builder() {
@@ -229,6 +518,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentCode
+         */
+        public String getAgentCode() {
+            return this.agentCode;
         }
 
         /**
@@ -260,10 +556,24 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return flights
+         */
+        public java.util.List < Flights> getFlights() {
+            return this.flights;
+        }
+
+        /**
          * @return fuelSurcharge
          */
         public String getFuelSurcharge() {
             return this.fuelSurcharge;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
         }
 
         /**
@@ -278,6 +588,20 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
          */
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        /**
+         * @return issueCompany
+         */
+        public String getIssueCompany() {
+            return this.issueCompany;
+        }
+
+        /**
+         * @return issueDate
+         */
+        public String getIssueDate() {
+            return this.issueDate;
         }
 
         /**
@@ -316,6 +640,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return promptMessage
+         */
+        public String getPromptMessage() {
+            return this.promptMessage;
+        }
+
+        /**
          * @return taxAmount
          */
         public String getTaxAmount() {
@@ -350,24 +681,46 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             return this.totalPrice;
         }
 
+        /**
+         * @return validationCode
+         */
+        public String getValidationCode() {
+            return this.validationCode;
+        }
+
         public static final class Builder {
+            private String agentCode; 
             private String billDate; 
             private String build; 
             private String costCenter; 
             private String department; 
+            private java.util.List < Flights> flights; 
             private String fuelSurcharge; 
+            private String id; 
             private String insurance; 
             private String invoiceTitle; 
+            private String issueCompany; 
+            private String issueDate; 
             private String itineraryNum; 
             private Long orderId; 
             private String ossUrl; 
             private String passengerName; 
             private String project; 
+            private String promptMessage; 
             private String taxAmount; 
             private String taxRate; 
             private String ticketNo; 
             private String ticketPrice; 
             private String totalPrice; 
+            private String validationCode; 
+
+            /**
+             * 销售单位代号
+             */
+            public Builder agentCode(String agentCode) {
+                this.agentCode = agentCode;
+                return this;
+            }
 
             /**
              * 出账日
@@ -402,10 +755,26 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * 机票行程明细
+             */
+            public Builder flights(java.util.List < Flights> flights) {
+                this.flights = flights;
+                return this;
+            }
+
+            /**
              * 燃油
              */
             public Builder fuelSurcharge(String fuelSurcharge) {
                 this.fuelSurcharge = fuelSurcharge;
+                return this;
+            }
+
+            /**
+             * UK
+             */
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 
@@ -422,6 +791,22 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
+                return this;
+            }
+
+            /**
+             * 填开单位
+             */
+            public Builder issueCompany(String issueCompany) {
+                this.issueCompany = issueCompany;
+                return this;
+            }
+
+            /**
+             * 填开日期
+             */
+            public Builder issueDate(String issueDate) {
+                this.issueDate = issueDate;
                 return this;
             }
 
@@ -466,6 +851,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * 提示信息
+             */
+            public Builder promptMessage(String promptMessage) {
+                this.promptMessage = promptMessage;
+                return this;
+            }
+
+            /**
              * 税额
              */
             public Builder taxAmount(String taxAmount) {
@@ -502,6 +895,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
              */
             public Builder totalPrice(String totalPrice) {
                 this.totalPrice = totalPrice;
+                return this;
+            }
+
+            /**
+             * 验证码
+             */
+            public Builder validationCode(String validationCode) {
+                this.validationCode = validationCode;
                 return this;
             }
 

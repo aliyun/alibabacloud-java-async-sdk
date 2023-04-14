@@ -72,6 +72,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CostCenterSaveResponse> costCenterSave(CostCenterSaveRequest request);
 
+    CompletableFuture<CreateSubCorpResponse> createSubCorp(CreateSubCorpRequest request);
+
     CompletableFuture<DeleteInvoiceEntityResponse> deleteInvoiceEntity(DeleteInvoiceEntityRequest request);
 
     CompletableFuture<DepartmentSaveResponse> departmentSave(DepartmentSaveRequest request);
@@ -115,6 +117,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FlightRefundPreCalResponse> flightRefundPreCal(FlightRefundPreCalRequest request);
 
     CompletableFuture<FlightSearchListResponse> flightSearchList(FlightSearchListRequest request);
+
+    CompletableFuture<GroupDepartSaveResponse> groupDepartSave(GroupDepartSaveRequest request);
+
+    CompletableFuture<GroupUserSaveResponse> groupUserSave(GroupUserSaveRequest request);
 
     CompletableFuture<HotelBillSettlementQueryResponse> hotelBillSettlementQuery(HotelBillSettlementQueryRequest request);
 

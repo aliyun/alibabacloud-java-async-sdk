@@ -1624,9 +1624,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("check_out")
         private String checkOut;
 
-        @NameInMap("code")
-        private String code;
-
         @NameInMap("confirm_order_time")
         private String confirmOrderTime;
 
@@ -1638,9 +1635,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
 
         @NameInMap("create_order_time")
         private String createOrderTime;
-
-        @NameInMap("desc")
-        private String desc;
 
         @NameInMap("early_arrival_time")
         private String earlyArrivalTime;
@@ -1726,12 +1720,10 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             this.cancelInfo = builder.cancelInfo;
             this.checkIn = builder.checkIn;
             this.checkOut = builder.checkOut;
-            this.code = builder.code;
             this.confirmOrderTime = builder.confirmOrderTime;
             this.contractName = builder.contractName;
             this.contractTel = builder.contractTel;
             this.createOrderTime = builder.createOrderTime;
-            this.desc = builder.desc;
             this.earlyArrivalTime = builder.earlyArrivalTime;
             this.earlyDeparture = builder.earlyDeparture;
             this.guestCount = builder.guestCount;
@@ -1824,13 +1816,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return code
-         */
-        public String getCode() {
-            return this.code;
-        }
-
-        /**
          * @return confirmOrderTime
          */
         public String getConfirmOrderTime() {
@@ -1856,13 +1841,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
          */
         public String getCreateOrderTime() {
             return this.createOrderTime;
-        }
-
-        /**
-         * @return desc
-         */
-        public String getDesc() {
-            return this.desc;
         }
 
         /**
@@ -2049,12 +2027,10 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private CancelInfo cancelInfo; 
             private String checkIn; 
             private String checkOut; 
-            private String code; 
             private String confirmOrderTime; 
             private String contractName; 
             private String contractTel; 
             private String createOrderTime; 
-            private String desc; 
             private String earlyArrivalTime; 
             private Boolean earlyDeparture; 
             private Integer guestCount; 
@@ -2146,14 +2122,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 状态码
-             */
-            public Builder code(String code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
              * 确认订单时间
              */
             public Builder confirmOrderTime(String confirmOrderTime) {
@@ -2182,14 +2150,6 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
              */
             public Builder createOrderTime(String createOrderTime) {
                 this.createOrderTime = createOrderTime;
-                return this;
-            }
-
-            /**
-             * 状态描述
-             */
-            public Builder desc(String desc) {
-                this.desc = desc;
                 return this;
             }
 

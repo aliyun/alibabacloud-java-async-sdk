@@ -151,6 +151,207 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
 
     } 
 
+    public static class InvoiceDetails extends TeaModel {
+        @NameInMap("amount")
+        private String amount;
+
+        @NameInMap("index")
+        private String index;
+
+        @NameInMap("item_name")
+        private String itemName;
+
+        @NameInMap("quantity")
+        private String quantity;
+
+        @NameInMap("specification")
+        private String specification;
+
+        @NameInMap("tax")
+        private String tax;
+
+        @NameInMap("tax_rate")
+        private String taxRate;
+
+        @NameInMap("unit")
+        private String unit;
+
+        @NameInMap("unit_price")
+        private String unitPrice;
+
+        private InvoiceDetails(Builder builder) {
+            this.amount = builder.amount;
+            this.index = builder.index;
+            this.itemName = builder.itemName;
+            this.quantity = builder.quantity;
+            this.specification = builder.specification;
+            this.tax = builder.tax;
+            this.taxRate = builder.taxRate;
+            this.unit = builder.unit;
+            this.unitPrice = builder.unitPrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InvoiceDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public String getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return itemName
+         */
+        public String getItemName() {
+            return this.itemName;
+        }
+
+        /**
+         * @return quantity
+         */
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+        /**
+         * @return specification
+         */
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        /**
+         * @return tax
+         */
+        public String getTax() {
+            return this.tax;
+        }
+
+        /**
+         * @return taxRate
+         */
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        /**
+         * @return unit
+         */
+        public String getUnit() {
+            return this.unit;
+        }
+
+        /**
+         * @return unitPrice
+         */
+        public String getUnitPrice() {
+            return this.unitPrice;
+        }
+
+        public static final class Builder {
+            private String amount; 
+            private String index; 
+            private String itemName; 
+            private String quantity; 
+            private String specification; 
+            private String tax; 
+            private String taxRate; 
+            private String unit; 
+            private String unitPrice; 
+
+            /**
+             * amount.
+             */
+            public Builder amount(String amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * 行号
+             */
+            public Builder index(String index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * item_name.
+             */
+            public Builder itemName(String itemName) {
+                this.itemName = itemName;
+                return this;
+            }
+
+            /**
+             * quantity.
+             */
+            public Builder quantity(String quantity) {
+                this.quantity = quantity;
+                return this;
+            }
+
+            /**
+             * specification.
+             */
+            public Builder specification(String specification) {
+                this.specification = specification;
+                return this;
+            }
+
+            /**
+             * tax.
+             */
+            public Builder tax(String tax) {
+                this.tax = tax;
+                return this;
+            }
+
+            /**
+             * tax_rate.
+             */
+            public Builder taxRate(String taxRate) {
+                this.taxRate = taxRate;
+                return this;
+            }
+
+            /**
+             * unit.
+             */
+            public Builder unit(String unit) {
+                this.unit = unit;
+                return this;
+            }
+
+            /**
+             * unit_price.
+             */
+            public Builder unitPrice(String unitPrice) {
+                this.unitPrice = unitPrice;
+                return this;
+            }
+
+            public InvoiceDetails build() {
+                return new InvoiceDetails(this);
+            } 
+
+        } 
+
+    }
     public static class Items extends TeaModel {
         @NameInMap("amount_with_tax")
         private String amountWithTax;
@@ -161,6 +362,15 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("bill_date")
         private String billDate;
 
+        @NameInMap("check_code")
+        private String checkCode;
+
+        @NameInMap("drawer")
+        private String drawer;
+
+        @NameInMap("id")
+        private String id;
+
         @NameInMap("invoice_code")
         private String invoiceCode;
 
@@ -169,6 +379,12 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
 
         @NameInMap("invoice_detail")
         private String invoiceDetail;
+
+        @NameInMap("invoice_details")
+        private java.util.List < InvoiceDetails> invoiceDetails;
+
+        @NameInMap("invoice_location")
+        private String invoiceLocation;
 
         @NameInMap("invoice_no")
         private String invoiceNo;
@@ -185,11 +401,35 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("oss_url")
         private String ossUrl;
 
+        @NameInMap("password_area")
+        private String passwordArea;
+
+        @NameInMap("purchaser_bank_account_info")
+        private String purchaserBankAccountInfo;
+
+        @NameInMap("purchaser_contact_info")
+        private String purchaserContactInfo;
+
         @NameInMap("purchaser_name")
         private String purchaserName;
 
         @NameInMap("purchaser_tax_no")
         private String purchaserTaxNo;
+
+        @NameInMap("recipient")
+        private String recipient;
+
+        @NameInMap("remarks")
+        private String remarks;
+
+        @NameInMap("reviewer")
+        private String reviewer;
+
+        @NameInMap("seller_bank_account_info")
+        private String sellerBankAccountInfo;
+
+        @NameInMap("seller_contact_info")
+        private String sellerContactInfo;
 
         @NameInMap("seller_name")
         private String sellerName;
@@ -197,30 +437,51 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("seller_tax_no")
         private String sellerTaxNo;
 
+        @NameInMap("smart_check_code")
+        private String smartCheckCode;
+
         @NameInMap("tax_amount")
         private String taxAmount;
 
         @NameInMap("tax_rate")
         private String taxRate;
 
+        @NameInMap("total_amount_in_words")
+        private String totalAmountInWords;
+
         private Items(Builder builder) {
             this.amountWithTax = builder.amountWithTax;
             this.amountWithoutTax = builder.amountWithoutTax;
             this.billDate = builder.billDate;
+            this.checkCode = builder.checkCode;
+            this.drawer = builder.drawer;
+            this.id = builder.id;
             this.invoiceCode = builder.invoiceCode;
             this.invoiceDay = builder.invoiceDay;
             this.invoiceDetail = builder.invoiceDetail;
+            this.invoiceDetails = builder.invoiceDetails;
+            this.invoiceLocation = builder.invoiceLocation;
             this.invoiceNo = builder.invoiceNo;
             this.invoiceSubTaskId = builder.invoiceSubTaskId;
             this.invoiceType = builder.invoiceType;
             this.invoiceTypeDesc = builder.invoiceTypeDesc;
             this.ossUrl = builder.ossUrl;
+            this.passwordArea = builder.passwordArea;
+            this.purchaserBankAccountInfo = builder.purchaserBankAccountInfo;
+            this.purchaserContactInfo = builder.purchaserContactInfo;
             this.purchaserName = builder.purchaserName;
             this.purchaserTaxNo = builder.purchaserTaxNo;
+            this.recipient = builder.recipient;
+            this.remarks = builder.remarks;
+            this.reviewer = builder.reviewer;
+            this.sellerBankAccountInfo = builder.sellerBankAccountInfo;
+            this.sellerContactInfo = builder.sellerContactInfo;
             this.sellerName = builder.sellerName;
             this.sellerTaxNo = builder.sellerTaxNo;
+            this.smartCheckCode = builder.smartCheckCode;
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
+            this.totalAmountInWords = builder.totalAmountInWords;
         }
 
         public static Builder builder() {
@@ -253,6 +514,27 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return checkCode
+         */
+        public String getCheckCode() {
+            return this.checkCode;
+        }
+
+        /**
+         * @return drawer
+         */
+        public String getDrawer() {
+            return this.drawer;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
          * @return invoiceCode
          */
         public String getInvoiceCode() {
@@ -271,6 +553,20 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getInvoiceDetail() {
             return this.invoiceDetail;
+        }
+
+        /**
+         * @return invoiceDetails
+         */
+        public java.util.List < InvoiceDetails> getInvoiceDetails() {
+            return this.invoiceDetails;
+        }
+
+        /**
+         * @return invoiceLocation
+         */
+        public String getInvoiceLocation() {
+            return this.invoiceLocation;
         }
 
         /**
@@ -309,6 +605,27 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return passwordArea
+         */
+        public String getPasswordArea() {
+            return this.passwordArea;
+        }
+
+        /**
+         * @return purchaserBankAccountInfo
+         */
+        public String getPurchaserBankAccountInfo() {
+            return this.purchaserBankAccountInfo;
+        }
+
+        /**
+         * @return purchaserContactInfo
+         */
+        public String getPurchaserContactInfo() {
+            return this.purchaserContactInfo;
+        }
+
+        /**
          * @return purchaserName
          */
         public String getPurchaserName() {
@@ -320,6 +637,41 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getPurchaserTaxNo() {
             return this.purchaserTaxNo;
+        }
+
+        /**
+         * @return recipient
+         */
+        public String getRecipient() {
+            return this.recipient;
+        }
+
+        /**
+         * @return remarks
+         */
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        /**
+         * @return reviewer
+         */
+        public String getReviewer() {
+            return this.reviewer;
+        }
+
+        /**
+         * @return sellerBankAccountInfo
+         */
+        public String getSellerBankAccountInfo() {
+            return this.sellerBankAccountInfo;
+        }
+
+        /**
+         * @return sellerContactInfo
+         */
+        public String getSellerContactInfo() {
+            return this.sellerContactInfo;
         }
 
         /**
@@ -337,6 +689,13 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return smartCheckCode
+         */
+        public String getSmartCheckCode() {
+            return this.smartCheckCode;
+        }
+
+        /**
          * @return taxAmount
          */
         public String getTaxAmount() {
@@ -350,24 +709,46 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             return this.taxRate;
         }
 
+        /**
+         * @return totalAmountInWords
+         */
+        public String getTotalAmountInWords() {
+            return this.totalAmountInWords;
+        }
+
         public static final class Builder {
             private String amountWithTax; 
             private String amountWithoutTax; 
             private String billDate; 
+            private String checkCode; 
+            private String drawer; 
+            private String id; 
             private String invoiceCode; 
             private String invoiceDay; 
             private String invoiceDetail; 
+            private java.util.List < InvoiceDetails> invoiceDetails; 
+            private String invoiceLocation; 
             private String invoiceNo; 
             private Long invoiceSubTaskId; 
             private Integer invoiceType; 
             private String invoiceTypeDesc; 
             private String ossUrl; 
+            private String passwordArea; 
+            private String purchaserBankAccountInfo; 
+            private String purchaserContactInfo; 
             private String purchaserName; 
             private String purchaserTaxNo; 
+            private String recipient; 
+            private String remarks; 
+            private String reviewer; 
+            private String sellerBankAccountInfo; 
+            private String sellerContactInfo; 
             private String sellerName; 
             private String sellerTaxNo; 
+            private String smartCheckCode; 
             private String taxAmount; 
             private String taxRate; 
+            private String totalAmountInWords; 
 
             /**
              * 价税合计金额
@@ -394,6 +775,30 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * check_code.
+             */
+            public Builder checkCode(String checkCode) {
+                this.checkCode = checkCode;
+                return this;
+            }
+
+            /**
+             * drawer.
+             */
+            public Builder drawer(String drawer) {
+                this.drawer = drawer;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
              * 发票代码
              */
             public Builder invoiceCode(String invoiceCode) {
@@ -414,6 +819,22 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder invoiceDetail(String invoiceDetail) {
                 this.invoiceDetail = invoiceDetail;
+                return this;
+            }
+
+            /**
+             * invoice_details.
+             */
+            public Builder invoiceDetails(java.util.List < InvoiceDetails> invoiceDetails) {
+                this.invoiceDetails = invoiceDetails;
+                return this;
+            }
+
+            /**
+             * invoice_location.
+             */
+            public Builder invoiceLocation(String invoiceLocation) {
+                this.invoiceLocation = invoiceLocation;
                 return this;
             }
 
@@ -458,6 +879,30 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * password_area.
+             */
+            public Builder passwordArea(String passwordArea) {
+                this.passwordArea = passwordArea;
+                return this;
+            }
+
+            /**
+             * purchaser_bank_account_info.
+             */
+            public Builder purchaserBankAccountInfo(String purchaserBankAccountInfo) {
+                this.purchaserBankAccountInfo = purchaserBankAccountInfo;
+                return this;
+            }
+
+            /**
+             * purchaser_contact_info.
+             */
+            public Builder purchaserContactInfo(String purchaserContactInfo) {
+                this.purchaserContactInfo = purchaserContactInfo;
+                return this;
+            }
+
+            /**
              * 购方名称
              */
             public Builder purchaserName(String purchaserName) {
@@ -470,6 +915,46 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder purchaserTaxNo(String purchaserTaxNo) {
                 this.purchaserTaxNo = purchaserTaxNo;
+                return this;
+            }
+
+            /**
+             * recipient.
+             */
+            public Builder recipient(String recipient) {
+                this.recipient = recipient;
+                return this;
+            }
+
+            /**
+             * remarks.
+             */
+            public Builder remarks(String remarks) {
+                this.remarks = remarks;
+                return this;
+            }
+
+            /**
+             * reviewer.
+             */
+            public Builder reviewer(String reviewer) {
+                this.reviewer = reviewer;
+                return this;
+            }
+
+            /**
+             * seller_bank_account_info.
+             */
+            public Builder sellerBankAccountInfo(String sellerBankAccountInfo) {
+                this.sellerBankAccountInfo = sellerBankAccountInfo;
+                return this;
+            }
+
+            /**
+             * seller_contact_info.
+             */
+            public Builder sellerContactInfo(String sellerContactInfo) {
+                this.sellerContactInfo = sellerContactInfo;
                 return this;
             }
 
@@ -490,6 +975,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * smart_check_code.
+             */
+            public Builder smartCheckCode(String smartCheckCode) {
+                this.smartCheckCode = smartCheckCode;
+                return this;
+            }
+
+            /**
              * 税额
              */
             public Builder taxAmount(String taxAmount) {
@@ -502,6 +995,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
+                return this;
+            }
+
+            /**
+             * total_amount_in_words.
+             */
+            public Builder totalAmountInWords(String totalAmountInWords) {
+                this.totalAmountInWords = totalAmountInWords;
                 return this;
             }
 

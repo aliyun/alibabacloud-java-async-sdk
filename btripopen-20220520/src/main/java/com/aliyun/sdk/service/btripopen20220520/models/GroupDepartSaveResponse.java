@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.btripopen20220520.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GroupDepartSaveResponse} extends {@link TeaModel}
+ *
+ * <p>GroupDepartSaveResponse</p>
+ */
+public class GroupDepartSaveResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GroupDepartSaveResponseBody body;
+
+    private GroupDepartSaveResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GroupDepartSaveResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GroupDepartSaveResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GroupDepartSaveResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GroupDepartSaveResponseBody body);
+
+        @Override
+        GroupDepartSaveResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GroupDepartSaveResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GroupDepartSaveResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GroupDepartSaveResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GroupDepartSaveResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GroupDepartSaveResponse build() {
+            return new GroupDepartSaveResponse(this);
+        } 
+
+    } 
+
+}

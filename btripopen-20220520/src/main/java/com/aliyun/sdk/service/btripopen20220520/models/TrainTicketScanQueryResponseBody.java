@@ -173,6 +173,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         private String department;
 
+        @NameInMap("id")
+        private String id;
+
         @NameInMap("invoice_title")
         private String invoiceTitle;
 
@@ -214,6 +217,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             this.depStation = builder.depStation;
             this.depTime = builder.depTime;
             this.department = builder.department;
+            this.id = builder.id;
             this.invoiceTitle = builder.invoiceTitle;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
@@ -282,6 +286,13 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
          */
         public String getDepartment() {
             return this.department;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
         }
 
         /**
@@ -369,6 +380,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String depStation; 
             private String depTime; 
             private String department; 
+            private String id; 
             private String invoiceTitle; 
             private Long orderId; 
             private String ossUrl; 
@@ -434,6 +446,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
              */
             public Builder department(String department) {
                 this.department = department;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 
