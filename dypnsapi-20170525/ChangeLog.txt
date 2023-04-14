@@ -1,3 +1,6 @@
+2023-04-14 Version: 1.0.2
+- Supported Fusion Auth.
+
 2022-12-16 Version: 1.0.1
 - Update Apis .
 

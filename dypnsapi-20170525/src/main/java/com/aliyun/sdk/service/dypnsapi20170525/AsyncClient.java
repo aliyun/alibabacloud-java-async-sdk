@@ -28,7 +28,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAuthorizationUrlResponse> getAuthorizationUrl(GetAuthorizationUrlRequest request);
 
-    CompletableFuture<GetCertifyResultResponse> getCertifyResult(GetCertifyResultRequest request);
+    CompletableFuture<GetFusionAuthTokenResponse> getFusionAuthToken(GetFusionAuthTokenRequest request);
 
     CompletableFuture<GetMobileResponse> getMobile(GetMobileRequest request);
 
@@ -45,5 +45,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<VerifyPhoneWithTokenResponse> verifyPhoneWithToken(VerifyPhoneWithTokenRequest request);
 
     CompletableFuture<VerifySmsCodeResponse> verifySmsCode(VerifySmsCodeRequest request);
+
+    CompletableFuture<VerifyWithFusionAuthTokenResponse> verifyWithFusionAuthToken(VerifyWithFusionAuthTokenRequest request);
 
 }
