@@ -77,7 +77,7 @@ public class QueryChatappBindWabaRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by ISV.
+         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

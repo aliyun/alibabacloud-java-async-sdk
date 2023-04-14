@@ -82,7 +82,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -335,7 +335,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the hit problem in the knowledge base.
+             * The ID of the hit question in the knowledge base.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -440,7 +440,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The recommended content, which may be the entity in graph-based question answering, the standard knowledge in knowledge-based question answering, or the column value in table-based question answering.
+             * The title of the recommended knowledge. Valid values: the entity in graph-based question answering, the knowledge title in knowledge-based question answering, or the column value in table-based question answering.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -525,7 +525,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the slot.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -750,7 +750,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * The name of the dialog. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder dialogName(String dialogName) {
                 this.dialogName = dialogName;
@@ -782,7 +782,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * The name of the intent. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -798,7 +798,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * The ID of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -806,7 +806,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * The name of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -911,7 +911,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             private Text text; 
 
             /**
-             * If the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.
+             * When the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -919,7 +919,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the message.
+             * The type of the answer.
              */
             public Builder answerType(String answerType) {
                 this.answerType = answerType;
@@ -935,7 +935,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * When the AnswerType parameter is set to Recommend, this parameter contains a list of recommends returned by the bot.
+             * The list of recommended knowledge. When the AnswerType parameter is set to Recommend, this parameter is returned.
              */
             public Builder recommends(java.util.List < Recommends> recommends) {
                 this.recommends = recommends;
@@ -1016,7 +1016,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the message.
+             * The list of messages.
              */
             public Builder messages(java.util.List < Messages> messages) {
                 this.messages = messages;

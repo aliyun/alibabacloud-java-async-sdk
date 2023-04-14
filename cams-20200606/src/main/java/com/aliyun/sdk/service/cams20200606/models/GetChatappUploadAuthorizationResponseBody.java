@@ -74,7 +74,11 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +214,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * oss 授权上传文件的accessKeyId
+             * The AccessKey ID that is used to authorize a user to upload a file to Object Storage Service (OSS).
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -218,7 +222,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * Oss授权上传文件的secret
+             * The AccessKey secret that is used to authorize a user to upload a file to OSS.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -226,7 +230,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * Oss上传的bucket名称
+             * The name of the bucket to which a file is uploaded in OSS.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -234,7 +238,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * Oss授权上传的目录
+             * The directory to which a file is uploaded in OSS.
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -242,7 +246,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * Oss授权上传的服务器地址
+             * The address of the server to which a file is uploaded in OSS.
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -250,7 +254,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * 超时时间
+             * The timeout period.
              */
             public Builder expire(Integer expire) {
                 this.expire = expire;
@@ -258,7 +262,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * 授权密钥
+             * The security token.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

@@ -24,11 +24,15 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Total")
+    private Integer total;
+
     private ListChatappTemplateResponseBody(Builder builder) {
         this.code = builder.code;
         this.listTemplate = builder.listTemplate;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -67,18 +71,26 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return total
+     */
+    public Integer getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private String code; 
         private java.util.List < ListTemplate> listTemplate; 
         private String message; 
         private String requestId; 
+        private Integer total; 
 
         /**
          * The HTTP status code returned.
          * <p>
          * 
-         * *   A code of OK indicates that the call is successful.
-         * *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,6 +118,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * 总记录条数。
+         */
+        public Builder total(Integer total) {
+            this.total = total;
             return this;
         }
 
@@ -219,17 +239,9 @@ public class ListChatappTemplateResponseBody extends TeaModel {
              * The category of the message template. Valid values:
              * <p>
              * 
-             * *   **ACCOUNT_UPDATE**: account update
-             * *   **PAYMENT_UPDATE**: payment update
-             * *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-             * *   **SHIPPING_UPDATE**: traffic update
-             * *   **RESERVATION_UPDATE**: reservation update
-             * *   **ISSUE_RESOLUTION**: issue resolution
-             * *   **APPOINTMENT_UPDATE**: appointment update
-             * *   **TRANSPORTATION_UPDATE**: logistics information update
-             * *   **TICKET_UPDATE**: ticket update
-             * *   **ALERT_UPDATE**: alert update
-             * *   **AUTO_REPLY**: auto reply
+             * *   **TRANSACTIONAL**: a transactional template
+             * *   **MARKETING**: a marketing template
+             * *   **OTP**: a one-time password template
              */
             public Builder category(String category) {
                 this.category = category;
@@ -237,7 +249,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The language that is used in the message template.
+             * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
              */
             public Builder language(String language) {
                 this.language = language;
@@ -261,7 +273,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板类型，取值为WHATSAPP/VIBER
+             * The type of the template. Valid values: WHATSAPP and VIBER.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

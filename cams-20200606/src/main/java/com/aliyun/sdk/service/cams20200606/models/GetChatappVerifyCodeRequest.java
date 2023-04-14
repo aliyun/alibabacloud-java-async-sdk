@@ -100,7 +100,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * The space ID of the user under the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);

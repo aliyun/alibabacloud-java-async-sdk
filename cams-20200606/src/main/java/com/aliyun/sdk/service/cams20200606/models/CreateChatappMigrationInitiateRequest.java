@@ -85,7 +85,7 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         } 
 
         /**
-         * The country code of the phone number.
+         * The country code of a phone number.
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);

@@ -98,7 +98,7 @@ public class DeleteChatappTemplateRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -116,7 +116,7 @@ public class DeleteChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

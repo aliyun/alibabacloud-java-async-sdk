@@ -140,7 +140,7 @@ public class BeeBotAssociateRequest extends Request {
         } 
 
         /**
-         * The ID of chatbot instance.
+         * The ID of a bot instance.
          */
         public Builder chatBotInstanceId(String chatBotInstanceId) {
             this.putBodyParameter("ChatBotInstanceId", chatBotInstanceId);
@@ -158,7 +158,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
+         * The ISV verification code, which is used to verify whether the user is authorized by ISV.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -177,7 +177,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * The number of recommended questions, which ranges from 1 to 10.
+         * The number of recommended questions. The value ranges from 1 to 10.
          */
         public Builder recommendNum(Integer recommendNum) {
             this.putBodyParameter("RecommendNum", recommendNum);
@@ -186,7 +186,7 @@ public class BeeBotAssociateRequest extends Request {
         }
 
         /**
-         * The ID of the session, which identifies the session and context information of the visitor.
+         * The ID of the session, which is used to identify the session and store context information in the session.
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);

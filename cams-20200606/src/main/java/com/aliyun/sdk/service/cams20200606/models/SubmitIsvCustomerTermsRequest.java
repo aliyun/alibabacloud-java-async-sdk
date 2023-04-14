@@ -145,7 +145,7 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         } 
 
         /**
-         * 企业使用场景
+         * The usage scenario.
          */
         public Builder businessDesc(String businessDesc) {
             this.putQueryParameter("BusinessDesc", businessDesc);
@@ -154,7 +154,7 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * 企业邮箱
+         * The email address of your business.
          */
         public Builder contactMail(String contactMail) {
             this.putQueryParameter("ContactMail", contactMail);
@@ -163,7 +163,7 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * 国家编码ID
+         * The country code.
          */
         public Builder countryId(String countryId) {
             this.putQueryParameter("CountryId", countryId);
@@ -172,7 +172,7 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * 企业名称
+         * The display name of your business.
          */
         public Builder custName(String custName) {
             this.putQueryParameter("CustName", custName);
@@ -181,7 +181,7 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -190,7 +190,12 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * Isv/Client协议
+         * The ISV or Client agreement.
+         * <p>
+         * 
+         * > After you call the GetChatappUploadAuthorization operation to obtain the authentication information, you must use this authentication information to upload files to OSS servers. You can use the SDK provided by OSS to upload files. When you upload a file, you must set the key parameter value. To set the value for the key parameter, concatenate the value of the Dir parameter and the file name by using a forward slash (/). You can obtain the value of the Dir parameter by calling the GetChatappUploadAuthorization operation.
+         * 
+         * > The value of this parameter is the name of the uploaded file.
          */
         public Builder isvTerms(String isvTerms) {
             this.putQueryParameter("IsvTerms", isvTerms);
@@ -199,7 +204,7 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * 企业地址
+         * The address of your business.
          */
         public Builder officeAddress(String officeAddress) {
             this.putQueryParameter("OfficeAddress", officeAddress);

@@ -86,7 +86,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The business information about the WhatsApp Business account.
+         * The business information about the WABA.
          */
         public Builder data(Data data) {
             this.data = data;

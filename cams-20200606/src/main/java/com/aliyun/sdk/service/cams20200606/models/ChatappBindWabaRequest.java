@@ -55,7 +55,7 @@ public class ChatappBindWabaRequest extends Request {
         } 
 
         /**
-         * WabaId
+         * The ID of the WhatsApp Business account.
          */
         public Builder wabaId(String wabaId) {
             this.putBodyParameter("WabaId", wabaId);

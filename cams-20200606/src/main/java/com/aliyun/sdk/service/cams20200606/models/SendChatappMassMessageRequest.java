@@ -31,6 +31,11 @@ public class SendChatappMassMessageRequest extends Request {
     private String fallBackContent;
 
     @Body
+    @NameInMap("FallBackDuration")
+    @Validation(maximum = 43200, minimum = 60)
+    private Integer fallBackDuration;
+
+    @Body
     @NameInMap("FallBackId")
     private String fallBackId;
 
@@ -80,6 +85,7 @@ public class SendChatappMassMessageRequest extends Request {
         this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.fallBackContent = builder.fallBackContent;
+        this.fallBackDuration = builder.fallBackDuration;
         this.fallBackId = builder.fallBackId;
         this.from = builder.from;
         this.isvCode = builder.isvCode;
@@ -131,6 +137,13 @@ public class SendChatappMassMessageRequest extends Request {
      */
     public String getFallBackContent() {
         return this.fallBackContent;
+    }
+
+    /**
+     * @return fallBackDuration
+     */
+    public Integer getFallBackDuration() {
+        return this.fallBackDuration;
     }
 
     /**
@@ -208,6 +221,7 @@ public class SendChatappMassMessageRequest extends Request {
         private String custSpaceId; 
         private String custWabaId; 
         private String fallBackContent; 
+        private Integer fallBackDuration; 
         private String fallBackId; 
         private String from; 
         private String isvCode; 
@@ -229,6 +243,7 @@ public class SendChatappMassMessageRequest extends Request {
             this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.fallBackContent = request.fallBackContent;
+            this.fallBackDuration = request.fallBackDuration;
             this.fallBackId = request.fallBackId;
             this.from = request.from;
             this.isvCode = request.isvCode;
@@ -260,7 +275,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The ID of the WhatApp Business account of the ISV account.
+         * The ID of the WhatsApp Business account under the ISV account.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -278,6 +293,15 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
+         * 消息在指定时间范围内未收到回执时回落
+         */
+        public Builder fallBackDuration(Integer fallBackDuration) {
+            this.putBodyParameter("FallBackDuration", fallBackDuration);
+            this.fallBackDuration = fallBackDuration;
+            return this;
+        }
+
+        /**
          * The ID of the fallback strategy.
          */
         public Builder fallBackId(String fallBackId) {
@@ -287,7 +311,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The message sender.
+         * The phone number of the message sender.
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -305,7 +329,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * Viber消息类型，取值：pormotion或transation。
+         * The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -333,7 +357,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * Viber消息发送时tag信息。
+         * The tag information when the ChannelType parameter is set to viber.
          */
         public Builder tag(String tag) {
             this.putBodyParameter("Tag", tag);
@@ -351,7 +375,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The code of the message template.
+         * The encoding of the message template.
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -360,7 +384,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * Viber消息发送超时时间，单位：秒，取值范围 30~1209600。
+         * The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.
          */
         public Builder ttl(Long ttl) {
             this.putBodyParameter("Ttl", ttl);
@@ -427,7 +451,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String to; 
 
             /**
-             * The payload.
+             * payload
              */
             public Builder payload(java.util.List < String > payload) {
                 this.payload = payload;

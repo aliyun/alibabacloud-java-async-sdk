@@ -39,6 +39,11 @@ public class SendChatappMessageRequest extends Request {
     private String fallBackContent;
 
     @Body
+    @NameInMap("FallBackDuration")
+    @Validation(maximum = 43200, minimum = 60)
+    private Integer fallBackDuration;
+
+    @Body
     @NameInMap("FallBackId")
     private String fallBackId;
 
@@ -109,6 +114,7 @@ public class SendChatappMessageRequest extends Request {
         this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.fallBackContent = builder.fallBackContent;
+        this.fallBackDuration = builder.fallBackDuration;
         this.fallBackId = builder.fallBackId;
         this.from = builder.from;
         this.isvCode = builder.isvCode;
@@ -179,6 +185,13 @@ public class SendChatappMessageRequest extends Request {
      */
     public String getFallBackContent() {
         return this.fallBackContent;
+    }
+
+    /**
+     * @return fallBackDuration
+     */
+    public Integer getFallBackDuration() {
+        return this.fallBackDuration;
     }
 
     /**
@@ -293,6 +306,7 @@ public class SendChatappMessageRequest extends Request {
         private String custSpaceId; 
         private String custWabaId; 
         private String fallBackContent; 
+        private Integer fallBackDuration; 
         private String fallBackId; 
         private String from; 
         private String isvCode; 
@@ -321,6 +335,7 @@ public class SendChatappMessageRequest extends Request {
             this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.fallBackContent = request.fallBackContent;
+            this.fallBackDuration = request.fallBackDuration;
             this.fallBackId = request.fallBackId;
             this.from = request.from;
             this.isvCode = request.isvCode;
@@ -343,8 +358,8 @@ public class SendChatappMessageRequest extends Request {
          * <p>
          * 
          * *   **whatsapp**
-         * *   **viber**. This message channel is supported only when you set the Type parameter to message.
-         * *   line. The feature ChatApp sends messages by using Line is under development.
+         * *   **viber**
+         * *   line. The feature that ChatAPP sends messages by using Line is under development.
          */
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -374,11 +389,11 @@ public class SendChatappMessageRequest extends Request {
          * *   When you set the **MessageType** parameter to **text**, the **text** parameter is required.
          * *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
          * *   When you set the **MessageType** parameter to **video**, the **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
-         * *   When you set the **MessageType** parameter to **document**, the **link**, **fileName**, and **fileType** parameters are required.
+         * *   When you set the **MessageType** parameter to  **document**, the **link**, **fileName**, and **fileType** parameters are required.
          * *   When you set the **MessageType** parameter to **text_button**, the **text**, **caption**, and **action** parameters are required.
          * *   When you set the **MessageType** parameter to **text_image_button**, the **text**, **link**, **caption**, and **action** parameters are required.
          * *   When you set the **MessageType** parameter to **text_video**, the **text**, **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
-         * *   When you set the **MessageType** parameter to **text_video_button**, the **text**, **link**, **thumbnail**, **fileSize**, **duration**, and **caption** parameters are required, and the **action** parameter is invalid.
+         * *   When you set the **MessageType** parameter to **text_video_button**, the **text**, **link**, **thumbnail**, **fileSize**, **duration**, and **caption** parameters are required. The **action** parameter is invalid.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -405,7 +420,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The unique identifier of the WhatsApp account that you register.
+         * The ID of the WhatsApp account that you register.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -423,6 +438,15 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
+         * 消息在指定时间内未返回回执回落
+         */
+        public Builder fallBackDuration(Integer fallBackDuration) {
+            this.putBodyParameter("FallBackDuration", fallBackDuration);
+            this.fallBackDuration = fallBackDuration;
+            return this;
+        }
+
+        /**
          * The ID of the fallback strategy. You can create a fallback strategy and view the information in the console.
          */
         public Builder fallBackId(String fallBackId) {
@@ -435,7 +459,7 @@ public class SendChatappMessageRequest extends Request {
          * The phone number of the message sender.
          * <p>
          * 
-         * >  You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.
+         * > You can specify a phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -471,7 +495,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:
+         * The specific type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:
          * <p>
          * 
          * **When you set the ChannelType parameter to whatsapp**
@@ -494,11 +518,12 @@ public class SendChatappMessageRequest extends Request {
          * *   **video**: the video message.
          * *   **document**: the document message.
          * *   **text_button**: messages that contain the text and button media objects.
-         * *   **text_image_button**: messages that contain multiple media objects, including the text, image, and button.
+         * *   **text_image_button**: messages that contain multiple media objects, including the text, image, and button media objects.
          * *   **text_video**: messages that contain the text and video media objects.
-         * *   **text_video_button**: messages that contain multiple media objects, including text, video, and button.
+         * *   **text_video_button**: messages that contain multiple media objects, including text, video, and button media objects.
+         * *   **text_image**: messages that contain the text and image media objects..
          * 
-         * >  For more information, see [Parameters of a message template](~~454530~~).
+         * > For more information, see [Parameters of a message template](~~454530~~).
          */
         public Builder messageType(String messageType) {
             this.putBodyParameter("MessageType", messageType);
@@ -526,7 +551,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * 任务ID，由客户传入，在状态报告时会返回
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -584,7 +609,7 @@ public class SendChatappMessageRequest extends Request {
          * The type of the message. Valid values:
          * <p>
          * 
-         * *   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages at any time based on your business requirements.
+         * *   **template**: a template message. A template message is sent based on a template that is created in the ChatAPP console and is approved. You can send template messages at any time based on your business requirements.
          * *   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.
          */
         public Builder type(String type) {

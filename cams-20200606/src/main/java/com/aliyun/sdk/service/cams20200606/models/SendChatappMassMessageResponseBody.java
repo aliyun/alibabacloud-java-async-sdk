@@ -94,7 +94,7 @@ public class SendChatappMassMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;

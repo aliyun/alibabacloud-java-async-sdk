@@ -198,7 +198,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp Business account under the ISV account.
+         * The ID of the WhatsApp Business account under the independent software vendor (ISV) account.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -217,7 +217,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by ISV.
+         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -343,7 +343,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The text of the message that is sent.
+             * The text of the message to be sent.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -354,9 +354,9 @@ public class ModifyChatappTemplateRequest extends Request {
              * The type of the button.
              * <p>
              * 
-             * *   **PHONE_NUMBER**: the phone call button
-             * *   **URL**: the URL button
-             * *   **QUICK_REPLY**: the quick reply button
+             * *   **PHONE_NUMBER**: a phone number button
+             * *   **URL**: a URL button
+             * *   **QUICK_REPLY**: a quick reply button
              */
             public Builder type(String type) {
                 this.type = type;
@@ -375,8 +375,8 @@ public class ModifyChatappTemplateRequest extends Request {
              * The type of the URL. Valid values:
              * <p>
              * 
-             * *   **static**: the static URL
-             * *   **dynamic**: the dynamic URL
+             * *   **static**: a static URL
+             * *   **dynamic**: a dynamic URL
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -526,7 +526,7 @@ public class ModifyChatappTemplateRequest extends Request {
             private String url; 
 
             /**
-             * The list of buttons, which applies only to the **BUTTONS** component.
+             * The buttons. This parameter is applicable only to components of the **BUTTONS** type.
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -537,7 +537,7 @@ public class ModifyChatappTemplateRequest extends Request {
              * The description.
              * <p>
              * 
-             * >  When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE/DOCUMENT/VIDEO**, you can specify the description.
+             * > When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE, DOCUMENT, or VIDEO**, you can specify a description.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -553,10 +553,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The name of the file
+             * The name of the file.
              * <p>
              * 
-             * > : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.
+             * > When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name for the file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -586,7 +586,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The text of the message that is sent.
+             * The text of the message to be sent.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -602,7 +602,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the component.
+             * The type of the component. Valid values:
              * <p>
              * 
              * *   **BODY**

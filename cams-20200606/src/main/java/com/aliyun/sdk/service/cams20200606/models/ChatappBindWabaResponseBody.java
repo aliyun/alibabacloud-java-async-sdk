@@ -162,7 +162,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * wabaId
+             * The ID of the WhatsApp Business account.
              */
             public Builder wabaId(String wabaId) {
                 this.wabaId = wabaId;

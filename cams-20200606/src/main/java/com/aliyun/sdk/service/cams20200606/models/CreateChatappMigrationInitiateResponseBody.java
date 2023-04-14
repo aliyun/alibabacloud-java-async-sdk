@@ -166,7 +166,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the phone number.
+             * The ID of the number.
              */
             public Builder id(String id) {
                 this.id = id;

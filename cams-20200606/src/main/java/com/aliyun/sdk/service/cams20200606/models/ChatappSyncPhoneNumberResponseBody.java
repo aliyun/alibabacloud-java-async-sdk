@@ -94,7 +94,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The list of phone numbers.
+         * Details of the phone numbers.
          */
         public Builder phoneNumbers(java.util.List < PhoneNumbers> phoneNumbers) {
             this.phoneNumbers = phoneNumbers;
@@ -282,7 +282,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of messages that can be sent to users by using the phone number.
+             * The number of phone numbers to which messages can be sent in a day.
              */
             public Builder messagingLimitTier(String messagingLimitTier) {
                 this.messagingLimitTier = messagingLimitTier;
@@ -290,7 +290,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the business name.
+             * The review status of the business display name.
              */
             public Builder nameStatus(String nameStatus) {
                 this.nameStatus = nameStatus;
@@ -298,7 +298,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the new business name.
+             * The review status of the new business display name.
              */
             public Builder newNameStatus(String newNameStatus) {
                 this.newNameStatus = newNameStatus;
@@ -362,7 +362,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the business to which the phone number belongs.
+             * The display name of the business to which the phone number belongs.
              */
             public Builder verifiedName(String verifiedName) {
                 this.verifiedName = verifiedName;

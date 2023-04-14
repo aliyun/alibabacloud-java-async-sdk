@@ -196,7 +196,7 @@ public class BeeBotChatRequest extends Request {
         } 
 
         /**
-         * The ID of chatbot instance.
+         * The ID of the bot instance.
          */
         public Builder chatBotInstanceId(String chatBotInstanceId) {
             this.putBodyParameter("ChatBotInstanceId", chatBotInstanceId);
@@ -214,7 +214,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The name of the intent in the dialog flow. When this parameter is specified, the bot will conduct a Q\&A according to the intent.
+         * The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\&A based on the intent.
          */
         public Builder intentName(String intentName) {
             this.putBodyParameter("IntentName", intentName);
@@ -223,7 +223,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * ISV verification code, which is used to verify whether the sub-account is authorized by ISV.
+         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -269,7 +269,7 @@ public class BeeBotChatRequest extends Request {
         }
 
         /**
-         * The ID of the session, which identifies the session and context information of the visitor.
+         * The ID of the session, which is used to identify the session and store context information of the session.
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);

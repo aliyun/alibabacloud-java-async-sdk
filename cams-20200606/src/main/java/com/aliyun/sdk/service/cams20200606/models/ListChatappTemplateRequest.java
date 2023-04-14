@@ -168,7 +168,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV子客户的SpaceId
+         * The space ID of the user under the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -177,7 +177,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The unique identifier of the WhatsApp account that you register.
+         * The ID of the WhatsApp account that you register.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -186,7 +186,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * Assigned by ISV for RAM user authentication and authorization.
+         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -195,7 +195,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template.
+         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -204,7 +204,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The name of the message template.
+         * The name of the image template.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -223,7 +223,12 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * 模板的模板类型，取值为WHATSAPP/VIBER， 当未传递此值时，默认值为WHATSAPP
+         * The type of the message template.
+         * <p>
+         * 
+         * *   **WHATSAPP**
+         * *   **VIBER**
+         * *   LINE: the LINE message template. This type of message template will be released later.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -279,7 +284,7 @@ public class ListChatappTemplateRequest extends Request {
             private Integer size; 
 
             /**
-             * The number of the page to return. Default value: 1.
+             * The number of the page to return. Pages start from page 1. Default value: 1.
              */
             public Builder index(Integer index) {
                 this.index = index;

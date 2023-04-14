@@ -102,7 +102,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         }
 
         /**
-         * The list of WhatsApp Business accounts.
+         * The list of the WhatsApp Business accounts.
          */
         public Builder wabas(java.util.List < Wabas> wabas) {
             this.wabas = wabas;
@@ -206,7 +206,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * WabaId
+             * The ID of the WhatsApp Business account.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -222,7 +222,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * Waba Name
+             * The name of the WhatsApp Business account.
              */
             public Builder name(String name) {
                 this.name = name;

@@ -77,8 +77,8 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          * The HTTP status code returned.
          * <p>
          * 
-         * *   A code of OK indicates that the call is successful.
-         * *   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -190,7 +190,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String urlType; 
 
             /**
-             * The mobile phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
+             * The phone number. This parameter is valid only if the return value of the Type parameter is **PHONE_NUMBER**.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -209,17 +209,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
              * The type of the button. Valid values:
              * <p>
              * 
-             * *   **PHONE_NUMBER**: a phone call button
+             * *   **PHONE_NUMBER**: a phone number button
              * *   **URL**: a URL button
              * *   **QUICK_REPLY**: a quick reply button
              * 
-             * **
+             * > 
              * 
-             * **Note**
+             * *   If you have created a URL button or a phone number button, you cannot create a quick reply button.
              * 
-             * *   A quick reply button cannot coexist with a phone call button or a URL button in a message template.
+             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone number button to a message template.
              * 
-             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.
+             * *   You can add only one button to a Viber message template, and the button must be a URL button.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -227,7 +227,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The URL to be accessed when you click the URL button.
+             * The URL to be accessed when users click the URL button.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -272,6 +272,18 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Format")
         private String format;
 
+        @NameInMap("Latitude")
+        private String latitude;
+
+        @NameInMap("LocationAddress")
+        private String locationAddress;
+
+        @NameInMap("LocationName")
+        private String locationName;
+
+        @NameInMap("Longitude")
+        private String longitude;
+
         @NameInMap("Text")
         private String text;
 
@@ -291,6 +303,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
             this.format = builder.format;
+            this.latitude = builder.latitude;
+            this.locationAddress = builder.locationAddress;
+            this.locationName = builder.locationName;
+            this.longitude = builder.longitude;
             this.text = builder.text;
             this.thumbUrl = builder.thumbUrl;
             this.type = builder.type;
@@ -348,6 +364,34 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return latitude
+         */
+        public String getLatitude() {
+            return this.latitude;
+        }
+
+        /**
+         * @return locationAddress
+         */
+        public String getLocationAddress() {
+            return this.locationAddress;
+        }
+
+        /**
+         * @return locationName
+         */
+        public String getLocationName() {
+            return this.locationName;
+        }
+
+        /**
+         * @return longitude
+         */
+        public String getLongitude() {
+            return this.longitude;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -382,13 +426,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String fileName; 
             private String fileType; 
             private String format; 
+            private String latitude; 
+            private String locationAddress; 
+            private String locationName; 
+            private String longitude; 
             private String text; 
             private String thumbUrl; 
             private String type; 
             private String url; 
 
             /**
-             * This parameter applies only to components of the **BUTTONS** type. This parameter is passed in by converting its original JSON structure into a string.
+             * This parameter is applicable only to components of the **BUTTONS** type.
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -404,7 +452,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Viber视频消息的视频时长，取值范围 0 - 600
+             * The duration of the video used in the Viber message template. Valid values: 0 to 600. Unit: seconds.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -420,7 +468,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Viber文件消息的文件类型
+             * The type of the file attached in the Viber message template.
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -436,6 +484,38 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
+             * 位置纬度属性
+             */
+            public Builder latitude(String latitude) {
+                this.latitude = latitude;
+                return this;
+            }
+
+            /**
+             * 位置地址
+             */
+            public Builder locationAddress(String locationAddress) {
+                this.locationAddress = locationAddress;
+                return this;
+            }
+
+            /**
+             * 位置名称
+             */
+            public Builder locationName(String locationName) {
+                this.locationName = locationName;
+                return this;
+            }
+
+            /**
+             * 位置经度属性
+             */
+            public Builder longitude(String longitude) {
+                this.longitude = longitude;
+                return this;
+            }
+
+            /**
              * The text of the message to be sent.
              */
             public Builder text(String text) {
@@ -444,7 +524,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Viber带视频消息的缩略图
+             * The thumbnail URL of the video used in the Viber message template.
              */
             public Builder thumbUrl(String thumbUrl) {
                 this.thumbUrl = thumbUrl;
@@ -460,9 +540,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
              * *   **FOOTER**
              * *   **BUTTONS**
              * 
-             * **
+             * > 
              * 
-             * **Note** A component of the **BODY** type cannot exceed 1,024 characters in length. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
+             * *   The following limits apply to components in WhatsApp message templates: A component of the **BODY** type cannot exceed 1,024 characters. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
+             * 
+             * > 
+             * 
+             * *   **FOOTER** components are not supported in Viber message templates.
+             * 
+             * > 
+             * 
+             * *   In a Viber message template, a media object, such as an image, a video, or a document, is placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a device.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -609,20 +697,26 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the message template. Valid values:
+             * The category of the template when the return value of the TemplateType parameter is WHATSAPP. Valid values:
              * <p>
              * 
-             * *   **ACCOUNT_UPDATE**: account update
-             * *   **PAYMENT_UPDATE**: payment update
-             * *   **PERSONAL_FINANCE\_UPDATE**: personal finance update
-             * *   **SHIPPING_UPDATE**: traffic update
-             * *   **RESERVATION_UPDATE**: reservation update
-             * *   **ISSUE_RESOLUTION**: issue resolution
-             * *   **APPOINTMENT_UPDATE**: appointment update
-             * *   **TRANSPORTATION_UPDATE**: logistics information update
-             * *   **TICKET_UPDATE**: ticket update
-             * *   **ALERT_UPDATE**: alert update
-             * *   **AUTO_REPLY**: auto reply
+             * *   **TRANSACTIONAL**: a transactional template
+             * *   **MARKETING**: a marketing template
+             * *   **OTP**: a one-time password template
+             * 
+             * The category of the template when the return value of the TemplateType parameter is VIBER. Valid values:
+             * 
+             * *   **text**: a text message template
+             * *   **image**: an image message template
+             * *   **text_image_button**: a template that contains multiple media objects, including text, image, and button
+             * *   **text_button**: a template that contains the text and button media objects
+             * *   **document**: a template that contains a document attachment
+             * *   **video**: a video message template
+             * *   **text_video**: a template that contains the text and video media objects
+             * *   **text_video_button**: a template that contains multiple media objects, including text, video, and button
+             * *   **text_image**: a template that contains the text and image media objects
+             * 
+             * > When the category of a Viber message template is text_video_button, users cannot open a web page by clicking the button. Users can open only the video in the message. In this case, you do not need to specify the Url parameter for the URL button in the template.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -646,7 +740,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The language that is used in the message template.
+             * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
              */
             public Builder language(String language) {
                 this.language = language;
@@ -670,7 +764,12 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模板类型，取值为WHATSAPP/VIBER
+             * The type of the message template.
+             * <p>
+             * 
+             * *   **WHATSAPP**
+             * *   **VIBER**
+             * *   LINE: the LINE message template. This type of message template will be released later.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

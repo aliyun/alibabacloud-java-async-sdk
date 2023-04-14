@@ -166,7 +166,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
             private String phoneNumber; 
 
             /**
-             * The verification status of the phone number.
+             * The verification status.
              */
             public Builder codeVerificationStatus(String codeVerificationStatus) {
                 this.codeVerificationStatus = codeVerificationStatus;
@@ -174,7 +174,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the phone number.
+             * The ID of the number.
              */
             public Builder id(String id) {
                 this.id = id;

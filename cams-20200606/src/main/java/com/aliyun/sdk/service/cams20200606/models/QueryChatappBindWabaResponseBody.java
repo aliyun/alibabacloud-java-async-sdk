@@ -86,7 +86,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -190,7 +190,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The audit status of the WhatApp Business account.
+             * The review status of the WhatsApp Business account.
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;
@@ -198,7 +198,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * Currency
+             * The currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -206,7 +206,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * WabaID
+             * The ID of the WhatsApp Business account.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -222,7 +222,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the WhatApp Business account.
+             * The name of the WhatsApp Business account.
              */
             public Builder name(String name) {
                 this.name = name;
