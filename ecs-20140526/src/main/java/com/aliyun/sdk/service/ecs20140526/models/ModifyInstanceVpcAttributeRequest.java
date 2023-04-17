@@ -191,7 +191,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -218,7 +218,12 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The new private IP address of the instance.
+         * <p>
+         * 
+         * >  The `PrivateIpAddress` value depends on the `VSwitchId` value. The specified IP address must be within the CIDR block of the specified vSwitch.
+         * 
+         * By default, if this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -245,7 +250,12 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of security group N to which the instance belongs after the VPC is changed. This parameter is required only when the `VpcId` parameter is specified.
+         * <p>
+         * 
+         * *   The specified security groups must be of the same type.
+         * *   You can specify one or more security groups. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see [Limits](~~25412~~).
+         * *   The specified security groups must belong to the VPC specified by the `VpcId` parameter.
          */
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -254,7 +264,12 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID of the instance.
+         * <p>
+         * 
+         * *   If this parameter is set to the ID of the current vSwitch, the vSwitch of the instance remains unchanged.
+         * *   If this parameter is set to the ID of a different vSwitch and the `VpcId` parameter is not specified, the new vSwitch must belong to the same zone and VPC as the current vSwitch.
+         * *   If the `VpcId` parameter is specified, the vSwitch specified by this parameter must belong to the specified VPC and to the same zone as the current vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -263,7 +278,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the new VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

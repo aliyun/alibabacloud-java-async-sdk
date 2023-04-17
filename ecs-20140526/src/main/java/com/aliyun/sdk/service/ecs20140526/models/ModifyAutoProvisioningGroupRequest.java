@@ -251,7 +251,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         } 
 
         /**
-         * AutoProvisioningGroupId.
+         * The ID of the auto provisioning group.
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -260,7 +260,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * AutoProvisioningGroupName.
+         * The name of the auto provisioning group. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with [http:// or https://.](http://https://。、（:）、（\_）（-）。)
          */
         public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
             this.putQueryParameter("AutoProvisioningGroupName", autoProvisioningGroupName);
@@ -269,7 +269,11 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * DefaultTargetCapacityType.
+         * The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:
+         * <p>
+         * 
+         * *   PayAsYouGo: pay-as-you-go instances
+         * *   Spot: preemptible instances
          */
         public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
             this.putQueryParameter("DefaultTargetCapacityType", defaultTargetCapacityType);
@@ -278,7 +282,11 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * ExcessCapacityTerminationPolicy.
+         * Specifies whether to release the removed instances when the real-time capacity of the auto provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:
+         * <p>
+         * 
+         * *   termination: releases the removed instances.
+         * *   no-termination: only removes the instances from the auto provisioning group but does not release them.
          */
         public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
             this.putQueryParameter("ExcessCapacityTerminationPolicy", excessCapacityTerminationPolicy);
@@ -287,7 +295,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * LaunchTemplateConfig.
+         * The extended configurations of the launch template.
          */
         public Builder launchTemplateConfig(java.util.List < LaunchTemplateConfig> launchTemplateConfig) {
             this.putQueryParameter("LaunchTemplateConfig", launchTemplateConfig);
@@ -296,7 +304,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * MaxSpotPrice.
+         * The maximum price of preemptible instances in the auto provisioning group.
+         * <p>
+         * 
+         * > When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto provisioning group is created, and cannot be modified.
          */
         public Builder maxSpotPrice(Float maxSpotPrice) {
             this.putQueryParameter("MaxSpotPrice", maxSpotPrice);
@@ -323,7 +334,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * PayAsYouGoTargetCapacity.
+         * The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
          */
         public Builder payAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
             this.putQueryParameter("PayAsYouGoTargetCapacity", payAsYouGoTargetCapacity);
@@ -332,7 +343,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -359,7 +370,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * SpotTargetCapacity.
+         * The target capacity of preemptible instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
          */
         public Builder spotTargetCapacity(String spotTargetCapacity) {
             this.putQueryParameter("SpotTargetCapacity", spotTargetCapacity);
@@ -368,7 +379,11 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * TerminateInstancesWithExpiration.
+         * Specifies whether to release instances in the auto provisioning group when the auto provisioning group expires. Valid values:
+         * <p>
+         * 
+         * *   true: releases instances in the auto provisioning group.
+         * *   false: only removes instances from the auto provisioning group but does not release them.
          */
         public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
             this.putQueryParameter("TerminateInstancesWithExpiration", terminateInstancesWithExpiration);
@@ -377,7 +392,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * TotalTargetCapacity.
+         * The total target capacity of the auto provisioning group. The value must be a positive integer.
+         * <p>
+         * 
+         * The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter and the target capacity of preemptible instances specified by the SpotTargetCapacity parameter.
          */
         public Builder totalTargetCapacity(String totalTargetCapacity) {
             this.putQueryParameter("TotalTargetCapacity", totalTargetCapacity);
@@ -467,7 +485,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             private Double weightedCapacity; 
 
             /**
-             * InstanceType.
+             * The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -475,7 +493,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * MaxPrice.
+             * The maximum price of preemptible instances in extended configuration N.
              */
             public Builder maxPrice(Double maxPrice) {
                 this.maxPrice = maxPrice;
@@ -483,7 +501,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Priority.
+             * The priority of extended configuration N. A value of 0 indicates the highest priority. The value must be greater than 0.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -491,7 +509,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -499,7 +517,13 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * WeightedCapacity.
+             * The weight of the instance type specified in extended configuration N. A greater weight indicates that a single instance has more computing power and that fewer instances are required. The value must be greater than 0.
+             * <p>
+             * 
+             * The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster to be created by the auto provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.
+             * 
+             * *   For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.
+             * *   For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.
              */
             public Builder weightedCapacity(Double weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;

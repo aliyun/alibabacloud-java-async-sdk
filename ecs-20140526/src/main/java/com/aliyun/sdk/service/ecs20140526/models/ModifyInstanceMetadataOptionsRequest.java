@@ -191,7 +191,15 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * HttpEndpoint.
+         * Specifies whether to enable the access channel for instance metadata. Valid values:
+         * <p>
+         * 
+         * *   enabled: enables the access channel for instance metadata.
+         * *   disabled: disables the access channel for instance metadata.
+         * 
+         * Default value: enabled.
+         * 
+         * > For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -200,7 +208,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * HttpPutResponseHopLimit.
+         * > This parameter is in invitational preview and is unavailable to general users.
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -209,7 +217,15 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * HttpTokens.
+         * Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
+         * <p>
+         * 
+         * *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
+         * *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
+         * 
+         * Default value: optional.
+         * 
+         * > For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);
@@ -218,7 +234,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -245,7 +261,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

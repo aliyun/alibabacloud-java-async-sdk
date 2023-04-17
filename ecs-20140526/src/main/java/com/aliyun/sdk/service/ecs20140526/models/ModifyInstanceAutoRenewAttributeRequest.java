@@ -205,7 +205,10 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for the instance.
+         * <p>
+         * 
+         * Default value: false.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -214,7 +217,11 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The auto-renewal period for the instance.
+         * <p>
+         * 
+         * *   Valid values of `Duration` when `PeriodUnit` is set to `Year`: 1, 2, 3, 4, and 5.
+         * *   Valid values of `Duration` when `PeriodUnit` is set to `Month` : 1, 2, 3, 6, 12, 24, 36, 48, and 60.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -223,7 +230,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance You can specify IDs of up to 100 subscription instances. Separate the instance IDs with commas (,).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -250,7 +257,11 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the renewal period (`Duration`). Default value: Month. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -259,7 +270,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +279,14 @@ public class ModifyInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * The auto-renewal state of the instance. Valid values:
+         * <p>
+         * 
+         * *   AutoRenewal: Auto-renewal is enabled for the instance.
+         * *   Normal: Auto-renewal is disabled for the instance.
+         * *   NotRenewal: The instance is not renewed. The system no longer sends an expiration notification. Notifications for renewal are sent three days before the expiration time of the instance. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.
+         * 
+         * > `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, the `AutoRenew` parameter is used by default.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

@@ -126,7 +126,7 @@ public class RedeployDedicatedHostRequest extends Request {
         } 
 
         /**
-         * DedicatedHostId.
+         * The ID of the dedicated host.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -153,7 +153,7 @@ public class RedeployDedicatedHostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated host. You can call the [escribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

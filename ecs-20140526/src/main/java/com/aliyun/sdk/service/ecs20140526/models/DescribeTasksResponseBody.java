@@ -98,7 +98,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the task.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -122,7 +122,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TaskSet.
+         * Details about the tasks.
          */
         public Builder taskSet(TaskSet taskSet) {
             this.taskSet = taskSet;
@@ -138,7 +138,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -250,7 +250,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * CreationTime.
+             * The time when the task was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -258,7 +258,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * The time when the task was completed.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -274,7 +274,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SupportCancel.
+             * Indicates whether the task can be canceled.
              */
             public Builder supportCancel(String supportCancel) {
                 this.supportCancel = supportCancel;
@@ -282,7 +282,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskAction.
+             * The name of the task.
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -290,7 +290,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -298,7 +298,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the task.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

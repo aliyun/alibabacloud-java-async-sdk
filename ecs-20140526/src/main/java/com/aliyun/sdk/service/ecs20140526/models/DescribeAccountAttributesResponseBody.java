@@ -178,7 +178,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the data disk. Valid values:
+             * The data disk category. Valid values:
              * <p>
              * 
              * *   cloud_efficiency: ultra disk
@@ -207,7 +207,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -220,31 +220,31 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
              * 
              * The values returned for the resource quotas to which the following AttributeName values correspond are 0 or positive integers:
              * 
-             * * max-security-groups
-             * * max-elastic-network-interfaces
-             * * max-postpaid-instance-vcpu-count
-             * * max-spot-instance-vcpu-count
-             * * used-postpaid-instance-vcpu-count
-             * * used-spot-instance-vcpu-count
-             * * max-postpaid-yundisk-capacity
-             * * used-postpaid-yundisk-capacity
-             * * max-dedicated-hosts
-             * * max-axt-command-count
-             * * max-axt-invocation-daily
-             * * max-cloud-assistant-activation-count
+             * *   max-security-groups
+             * *   max-elastic-network-interfaces
+             * *   max-postpaid-instance-vcpu-count
+             * *   max-spot-instance-vcpu-count
+             * *   used-postpaid-instance-vcpu-count
+             * *   used-spot-instance-vcpu-count
+             * *   max-postpaid-yundisk-capacity
+             * *   used-postpaid-yundisk-capacity
+             * *   max-dedicated-hosts
+             * *   max-axt-command-count
+             * *   max-axt-invocation-daily
+             * *   max-cloud-assistant-activation-count
              * 
              * When the AttributeName parameter is set to supported-postpay-instance-types, an instance type is returned. For more information, see [Instance families](~~25378~~).
              * 
              * When the AttributeName parameter is set to real-name-authentications, one of the following values is returned:
              * 
-             * * yes
-             * * none
-             * * unnecessary
+             * *   yes
+             * *   none
+             * *   unnecessary
              * 
              * When the AttributeName parameter is set to instance-network-type, one of the following values is returned:
              * 
-             * * vpc
-             * * classic
+             * *   vpc
+             * *   classic
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,7 +252,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The ID of the zone in which the resource resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -349,21 +349,21 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
              * The type of the resource quota in the specified region. Valid values:
              * <p>
              * 
-             * * instance-network-type: available network types
-             * * max-security-groups: the maximum number of security groups
-             * * max-elastic-network-interfaces: the maximum number of ENIs
-             * * max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances
-             * * max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances
-             * * used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances
-             * * used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances
-             * * max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks
-             * * used-postpaid-yundisk-capacity: the capacity of pay-as-you-go disks that have been created
-             * * max-dedicated-hosts: the maximum number of dedicated hosts
-             * * supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances
-             * * max-axt-command-count: the maximum number of Cloud Assistant commands
-             * * max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day
-             * * real-name-authentication: whether an account has completed real-name verification
-             * * max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances
+             * *   instance-network-type: available network types
+             * *   max-security-groups: the maximum number of security groups
+             * *   max-elastic-network-interfaces: the maximum number of ENIs
+             * *   max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances
+             * *   max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances
+             * *   used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances
+             * *   used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances
+             * *   max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks
+             * *   used-postpaid-yundisk-capacity: the capacity of pay-as-you-go disks that have been created
+             * *   max-dedicated-hosts: the maximum number of dedicated hosts
+             * *   supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances
+             * *   max-axt-command-count: the maximum number of Cloud Assistant commands
+             * *   max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day
+             * *   real-name-authentication: whether the account has passed the real-name verification
+             * *   max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;

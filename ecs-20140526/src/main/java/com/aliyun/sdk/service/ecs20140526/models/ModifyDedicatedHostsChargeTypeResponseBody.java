@@ -62,7 +62,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FeeOfInstances.
+         * Details about the charges for the order.
          */
         public Builder feeOfInstances(FeeOfInstances feeOfInstances) {
             this.feeOfInstances = feeOfInstances;
@@ -70,7 +70,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,12 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * Currency.
+             * The unit of currency for the bill.
+             * <p>
+             * 
+             * Alibaba Cloud China site (aliyun.com): CNY.
+             * 
+             * Alibaba Cloud International site (alibabacloud.com): USD.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -150,7 +155,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Fee.
+             * The cost value.
              */
             public Builder fee(String fee) {
                 this.fee = fee;
@@ -158,7 +163,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the dedicated host.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

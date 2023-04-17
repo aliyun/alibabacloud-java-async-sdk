@@ -353,7 +353,11 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Architecture.
+         * The system architecture. Valid values:
+         * <p>
+         * 
+         * *   i386
+         * *   x86\_64
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -362,7 +366,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Arn.
+         * This parameter is unavailable for public use.
          */
         public Builder arn(java.util.List < Arn> arn) {
             this.putQueryParameter("Arn", arn);
@@ -371,7 +375,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among the requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -380,7 +384,14 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk.
+         * <p>
+         * 
+         * If the `ImageId` parameter is not specified, this parameter is required.
+         * 
+         * If the DiskId parameter is specified, the `Platform` and `Architecture` parameters are required. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` of the instance.
+         * 
+         * > This feature is in invitational preview. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -389,7 +400,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * EncryptAlgorithm.
+         * > This parameter is unavailable for public use.
          */
         public Builder encryptAlgorithm(String encryptAlgorithm) {
             this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
@@ -398,7 +409,13 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Encrypted.
+         * Specifies whether to encrypt the disk. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -407,7 +424,10 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
+         * <p>
+         * 
+         * If the `DiskId` parameter is not specified, this parameter is required.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -416,7 +436,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -425,7 +445,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * KMSKeyId.
+         * The ID of the Key Management Service (KMS) key to use for the system disk.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -434,7 +454,10 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair.
+         * <p>
+         * 
+         * > This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -461,7 +484,16 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Password.
+         * Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
+         * <p>
+         * 
+         *     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
+         * 
+         * The password of a Windows instance cannot start with a forward slash (/).
+         * 
+         * This parameter is empty by default, which indicates that the current password remains unchanged.
+         * 
+         * > If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -470,7 +502,12 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * PasswordInherit.
+         * Specifies whether to use the preset password of the image.
+         * <p>
+         * 
+         * Default value: false.
+         * 
+         * > If the PasswordInherit parameter is specified, you must leave the Password parameter empty and make sure that the selected image has a preset password.
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -479,7 +516,11 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The operating system distribution. Valid values:
+         * <p>
+         * 
+         * *   CentOS
+         * *   Ubuntu
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -506,7 +547,13 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * SecurityEnhancementStrategy.
+         * Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:
+         * <p>
+         * 
+         * *   Active: uses Security Center Basic after the system disk is replaced. This value is applicable to only public images.
+         * *   Deactive: does not use Security Center Basic after the system disk is replaced. This value is applicable to all images.
+         * 
+         * Default value: Deactive.
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -515,7 +562,10 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * UseAdditionalService.
+         * Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).
+         * <p>
+         * 
+         * > This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.
          */
         public Builder useAdditionalService(Boolean useAdditionalService) {
             this.putQueryParameter("UseAdditionalService", useAdditionalService);
@@ -557,7 +607,12 @@ public class ReplaceSystemDiskRequest extends Request {
             private Integer size; 
 
             /**
-             * Size.
+             * The capacity of the new system disk. Unit: GiB. Valid values: Max{20, Size of the image specified by ImageId} to 500.
+             * <p>
+             * 
+             * Default value: Max{40, Size of the image specified by ImageId}.
+             * 
+             * > If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for the excess capacity.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -622,7 +677,7 @@ public class ReplaceSystemDiskRequest extends Request {
             private String rolearn; 
 
             /**
-             * AssumeRoleFor.
+             * > This parameter is unavailable for public use.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -630,7 +685,7 @@ public class ReplaceSystemDiskRequest extends Request {
             }
 
             /**
-             * RoleType.
+             * > This parameter is unavailable for public use.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -638,7 +693,7 @@ public class ReplaceSystemDiskRequest extends Request {
             }
 
             /**
-             * Rolearn.
+             * > This parameter is unavailable for public use.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;

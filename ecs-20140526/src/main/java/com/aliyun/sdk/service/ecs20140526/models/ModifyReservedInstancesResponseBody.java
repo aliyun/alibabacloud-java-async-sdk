@@ -50,7 +50,7 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         private ReservedInstanceIdSets reservedInstanceIdSets; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ReservedInstanceIdSets.
+         * The IDs of the reserved instances.
          */
         public Builder reservedInstanceIdSets(ReservedInstanceIdSets reservedInstanceIdSets) {
             this.reservedInstanceIdSets = reservedInstanceIdSets;

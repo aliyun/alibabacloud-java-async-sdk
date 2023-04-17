@@ -86,7 +86,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotLinks.
+         * Details about the snapshot chains.
          */
         public Builder snapshotLinks(SnapshotLinks snapshotLinks) {
             this.snapshotLinks = snapshotLinks;
@@ -118,7 +118,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of snapshot chains.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +290,10 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * Category.
+             * The category of the snapshot.
+             * <p>
+             * 
+             * > This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -298,7 +301,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -306,7 +309,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -314,7 +317,11 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * InstantAccess.
+             * Indicates whether the instant access feature was enabled. Valid values:
+             * <p>
+             * 
+             * *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
+             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -322,7 +329,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the source disk of the snapshot chain is located.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -330,7 +337,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotLinkId.
+             * The ID of the snapshot chain.
              */
             public Builder snapshotLinkId(String snapshotLinkId) {
                 this.snapshotLinkId = snapshotLinkId;
@@ -338,7 +345,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskId.
+             * The ID of the source disk. This parameter is retained even if the source disk is deleted.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -346,7 +353,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskName.
+             * The name of the source disk.
              */
             public Builder sourceDiskName(String sourceDiskName) {
                 this.sourceDiskName = sourceDiskName;
@@ -354,7 +361,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskSize.
+             * The size of the source disk. Unit: GiB.
              */
             public Builder sourceDiskSize(Integer sourceDiskSize) {
                 this.sourceDiskSize = sourceDiskSize;
@@ -362,7 +369,11 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskType.
+             * The type of the source disk. Valid values:
+             * <p>
+             * 
+             * *   system: system disk
+             * *   data: data disk
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -370,7 +381,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of snapshots.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -378,7 +389,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total size of all snapshots in the snapshot chain. Unit: bytes.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

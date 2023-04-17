@@ -177,7 +177,7 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Ipv6Address.
+         * The IPv6 addresses to unassign. You can specify up to 10 IPv6 addresses in a single request.
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -186,7 +186,7 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Ipv6Prefix.
+         * > This parameter is in invitational preview and is unavailable for general users.
          */
         public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
@@ -195,7 +195,7 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -222,7 +222,7 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

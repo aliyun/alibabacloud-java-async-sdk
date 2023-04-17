@@ -323,7 +323,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for the reserved instance. Valid values:
+         * <p>
+         * 
+         * true: enables auto-renewal for the reserved instance. false: disables auto-renewal for the reserved instance. This is the default value.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -332,7 +335,14 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * AutoRenewPeriod.
+         * The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only if you set the AutoRenew parameter to true.
+         * <p>
+         * 
+         * Valid values: 1, 12, 36, and 60.
+         * 
+         * Default value if you set the PeriodUnit parameter to Month: 1.
+         * 
+         * Default value if you set the PeriodUnit parameter to Year: 12.
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -341,7 +351,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -350,7 +360,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the reserved instance. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
+         * <p>
+         * 
+         * By default, this parameter is left empty.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -359,7 +372,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * InstanceAmount.
+         * The number of pay-as-you-go instances of the same instance type to which the reserved instance can be matched at the same time. Valid values: 1 to 50.
+         * <p>
+         * 
+         * For example, if you set the InstanceAmount parameter to 3 and the InstanceType parameter to ecs.g5.large, the reserved instance can be matched to three ecs.g5.large pay-as-you-go instances at the same time.
          */
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
@@ -368,7 +384,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the reserved instance. For more information, see [Instance families](~~25378~~).
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -377,7 +393,14 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * OfferingType.
+         * The payment option of the reserved instance. Valid values:
+         * <p>
+         * 
+         * *   No Upfront
+         * *   Partial Upfront
+         * *   All Upfront
+         * 
+         * Default value: All Upfront.
          */
         public Builder offeringType(String offeringType) {
             this.putQueryParameter("OfferingType", offeringType);
@@ -404,7 +427,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * Period.
+         * The term of the reserved instance.
+         * <p>
+         * 
+         * Valid values: 1 and 3.
+         * 
+         * Default value: 1.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -413,7 +441,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the term of the reserved instance.
+         * <p>
+         * 
+         * Valid value: Year.
+         * 
+         * Default value: Year.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -422,7 +455,13 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The operating system of the image that is used by the instance. Valid values:
+         * <p>
+         * 
+         * *   Windows: Windows Server operating system
+         * *   Linux: Linux and UNIX-like operating system
+         * 
+         * Default value: Linux.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -431,7 +470,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -440,7 +479,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * ReservedInstanceName.
+         * The name of the reserved instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
@@ -449,7 +488,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the reserved instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -476,7 +515,13 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The scope of the reserved instance. Valid values:
+         * <p>
+         * 
+         * *   Region: regional
+         * *   Zone: zonal
+         * 
+         * Default value: Region.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -485,7 +530,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the reserved instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -494,7 +539,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. If you set the `Scope` parameter to `Zone`, you must specify this parameter. You can call the [DescribeZones](~~25610~~) operation to query the most recent list of zones.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -548,7 +593,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -556,7 +601,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
              */
             public Builder value(String value) {
                 this.value = value;

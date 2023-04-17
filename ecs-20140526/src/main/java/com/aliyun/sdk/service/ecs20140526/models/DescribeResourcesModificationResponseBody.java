@@ -71,6 +71,290 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     } 
 
+    public static class Condition extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        private Condition(Builder builder) {
+            this.key = builder.key;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Condition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        public static final class Builder {
+            private String key; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            public Condition build() {
+                return new Condition(this);
+            } 
+
+        } 
+
+    }
+    public static class Conditions extends TeaModel {
+        @NameInMap("Condition")
+        private java.util.List < Condition> condition;
+
+        private Conditions(Builder builder) {
+            this.condition = builder.condition;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return condition
+         */
+        public java.util.List < Condition> getCondition() {
+            return this.condition;
+        }
+
+        public static final class Builder {
+            private java.util.List < Condition> condition; 
+
+            /**
+             * Condition.
+             */
+            public Builder condition(java.util.List < Condition> condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    public static class ConditionSupportedResource extends TeaModel {
+        @NameInMap("Conditions")
+        private Conditions conditions;
+
+        @NameInMap("Max")
+        private Integer max;
+
+        @NameInMap("Min")
+        private Integer min;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("StatusCategory")
+        private String statusCategory;
+
+        @NameInMap("Unit")
+        private String unit;
+
+        @NameInMap("Value")
+        private String value;
+
+        private ConditionSupportedResource(Builder builder) {
+            this.conditions = builder.conditions;
+            this.max = builder.max;
+            this.min = builder.min;
+            this.status = builder.status;
+            this.statusCategory = builder.statusCategory;
+            this.unit = builder.unit;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConditionSupportedResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public Conditions getConditions() {
+            return this.conditions;
+        }
+
+        /**
+         * @return max
+         */
+        public Integer getMax() {
+            return this.max;
+        }
+
+        /**
+         * @return min
+         */
+        public Integer getMin() {
+            return this.min;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return statusCategory
+         */
+        public String getStatusCategory() {
+            return this.statusCategory;
+        }
+
+        /**
+         * @return unit
+         */
+        public String getUnit() {
+            return this.unit;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Conditions conditions; 
+            private Integer max; 
+            private Integer min; 
+            private String status; 
+            private String statusCategory; 
+            private String unit; 
+            private String value; 
+
+            /**
+             * Conditions.
+             */
+            public Builder conditions(Conditions conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            /**
+             * Max.
+             */
+            public Builder max(Integer max) {
+                this.max = max;
+                return this;
+            }
+
+            /**
+             * Min.
+             */
+            public Builder min(Integer min) {
+                this.min = min;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusCategory.
+             */
+            public Builder statusCategory(String statusCategory) {
+                this.statusCategory = statusCategory;
+                return this;
+            }
+
+            /**
+             * Unit.
+             */
+            public Builder unit(String unit) {
+                this.unit = unit;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ConditionSupportedResource build() {
+                return new ConditionSupportedResource(this);
+            } 
+
+        } 
+
+    }
+    public static class ConditionSupportedResources extends TeaModel {
+        @NameInMap("ConditionSupportedResource")
+        private java.util.List < ConditionSupportedResource> conditionSupportedResource;
+
+        private ConditionSupportedResources(Builder builder) {
+            this.conditionSupportedResource = builder.conditionSupportedResource;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConditionSupportedResources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionSupportedResource
+         */
+        public java.util.List < ConditionSupportedResource> getConditionSupportedResource() {
+            return this.conditionSupportedResource;
+        }
+
+        public static final class Builder {
+            private java.util.List < ConditionSupportedResource> conditionSupportedResource; 
+
+            /**
+             * ConditionSupportedResource.
+             */
+            public Builder conditionSupportedResource(java.util.List < ConditionSupportedResource> conditionSupportedResource) {
+                this.conditionSupportedResource = conditionSupportedResource;
+                return this;
+            }
+
+            public ConditionSupportedResources build() {
+                return new ConditionSupportedResources(this);
+            } 
+
+        } 
+
+    }
     public static class SupportedResource extends TeaModel {
         @NameInMap("Max")
         private Integer max;
@@ -263,6 +547,9 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class AvailableResource extends TeaModel {
+        @NameInMap("ConditionSupportedResources")
+        private ConditionSupportedResources conditionSupportedResources;
+
         @NameInMap("SupportedResources")
         private SupportedResources supportedResources;
 
@@ -270,6 +557,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         private String type;
 
         private AvailableResource(Builder builder) {
+            this.conditionSupportedResources = builder.conditionSupportedResources;
             this.supportedResources = builder.supportedResources;
             this.type = builder.type;
         }
@@ -280,6 +568,13 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
         public static AvailableResource create() {
             return builder().build();
+        }
+
+        /**
+         * @return conditionSupportedResources
+         */
+        public ConditionSupportedResources getConditionSupportedResources() {
+            return this.conditionSupportedResources;
         }
 
         /**
@@ -297,8 +592,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ConditionSupportedResources conditionSupportedResources; 
             private SupportedResources supportedResources; 
             private String type; 
+
+            /**
+             * ConditionSupportedResources.
+             */
+            public Builder conditionSupportedResources(ConditionSupportedResources conditionSupportedResources) {
+                this.conditionSupportedResources = conditionSupportedResources;
+                return this;
+            }
 
             /**
              * Details about the resources.

@@ -74,7 +74,7 @@ public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +90,7 @@ public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message for this instance operation. The return value Success indicates that this operation is successful. For more information, see the "Error codes" section of this topic.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

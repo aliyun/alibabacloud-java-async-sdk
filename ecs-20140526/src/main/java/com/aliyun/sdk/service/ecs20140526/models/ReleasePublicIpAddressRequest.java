@@ -120,7 +120,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * > This parameter is unavailable.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -129,7 +129,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -138,7 +138,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * PublicIpAddress.
+         * The public IP address of the instance.
          */
         public Builder publicIpAddress(String publicIpAddress) {
             this.putQueryParameter("PublicIpAddress", publicIpAddress);
@@ -147,7 +147,7 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

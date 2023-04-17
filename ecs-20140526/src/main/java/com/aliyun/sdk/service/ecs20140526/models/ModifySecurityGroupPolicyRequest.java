@@ -178,7 +178,7 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,7 +187,13 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         }
 
         /**
-         * InnerAccessPolicy.
+         * The internal access policy of the security group. Valid values:
+         * <p>
+         * 
+         * *   Accept: All instances in the security group can communicate with each other.
+         * *   Drop: All instances in the security group are isolated from each other.
+         * 
+         * These values are case-insensitive.
          */
         public Builder innerAccessPolicy(String innerAccessPolicy) {
             this.putQueryParameter("InnerAccessPolicy", innerAccessPolicy);
@@ -214,7 +220,7 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +247,7 @@ public class ModifySecurityGroupPolicyRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

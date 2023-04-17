@@ -262,7 +262,10 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * This parameter is empty by default. If this parameter is empty, the current time is used.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -271,7 +274,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type of the preemptible instance.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -280,7 +283,15 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * IoOptimized.
+         * Specifies whether the instance is I/O optimized. Valid values:
+         * <p>
+         * 
+         * *   optimized: The instance is I/O optimized.
+         * *   none: The instance is not I/O optimized.
+         * 
+         * For instances of generation I instance families, the default value is none.
+         * 
+         * For instances of other instance families, the default value is optimized.
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -289,7 +300,11 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the preemptible instance. Valid values:
+         * <p>
+         * 
+         * *   classic: classic network
+         * *   vpc: Virtual Private Cloud (VPC)
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -298,7 +313,11 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * OSType.
+         * The type of the operating system platform. Valid values:
+         * <p>
+         * 
+         * *   linux
+         * *   windows
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -307,7 +326,10 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * Offset.
+         * The line from which the next query starts.
+         * <p>
+         * 
+         * Default value: 0.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("Offset", offset);
@@ -334,7 +356,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the preemptible instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -361,7 +383,13 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * SpotDuration.
+         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+         * <p>
+         * 
+         * *   The following protection periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.
+         * *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
+         * 
+         * Default value: 1.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -370,7 +398,10 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.
+         * <p>
+         * 
+         * This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -379,7 +410,7 @@ public class DescribeSpotPriceHistoryRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the preemptible instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

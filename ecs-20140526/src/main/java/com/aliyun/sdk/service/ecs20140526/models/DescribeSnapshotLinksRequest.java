@@ -205,7 +205,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * DiskIds.
+         * The IDs of disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -214,7 +214,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -241,7 +241,10 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +253,10 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +265,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -286,7 +292,7 @@ public class DescribeSnapshotLinksRequest extends Request {
         }
 
         /**
-         * SnapshotLinkIds.
+         * The IDs of snapshot chains. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).
          */
         public Builder snapshotLinkIds(String snapshotLinkIds) {
             this.putQueryParameter("SnapshotLinkIds", snapshotLinkIds);

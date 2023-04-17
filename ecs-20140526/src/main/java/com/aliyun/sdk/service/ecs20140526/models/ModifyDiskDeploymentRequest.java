@@ -7,19 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ReleaseDedicatedHostRequest} extends {@link RequestModel}
+ * {@link ModifyDiskDeploymentRequest} extends {@link RequestModel}
  *
- * <p>ReleaseDedicatedHostRequest</p>
+ * <p>ModifyDiskDeploymentRequest</p>
  */
-public class ReleaseDedicatedHostRequest extends Request {
+public class ModifyDiskDeploymentRequest extends Request {
     @Host
     @NameInMap("SourceRegionId")
     private String sourceRegionId;
 
     @Query
-    @NameInMap("DedicatedHostId")
+    @NameInMap("DiskCategory")
+    private String diskCategory;
+
+    @Query
+    @NameInMap("DiskId")
     @Validation(required = true)
-    private String dedicatedHostId;
+    private String diskId;
+
+    @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -30,9 +38,8 @@ public class ReleaseDedicatedHostRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("PerformanceLevel")
+    private String performanceLevel;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -42,22 +49,29 @@ public class ReleaseDedicatedHostRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ReleaseDedicatedHostRequest(Builder builder) {
+    @Query
+    @NameInMap("StorageClusterId")
+    private String storageClusterId;
+
+    private ModifyDiskDeploymentRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
-        this.dedicatedHostId = builder.dedicatedHostId;
+        this.diskCategory = builder.diskCategory;
+        this.diskId = builder.diskId;
+        this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
+        this.performanceLevel = builder.performanceLevel;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.storageClusterId = builder.storageClusterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ReleaseDedicatedHostRequest create() {
+    public static ModifyDiskDeploymentRequest create() {
         return builder().build();
     }
 
@@ -74,10 +88,24 @@ public class ReleaseDedicatedHostRequest extends Request {
     }
 
     /**
-     * @return dedicatedHostId
+     * @return diskCategory
      */
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
+    public String getDiskCategory() {
+        return this.diskCategory;
+    }
+
+    /**
+     * @return diskId
+     */
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -95,10 +123,10 @@ public class ReleaseDedicatedHostRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return performanceLevel
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getPerformanceLevel() {
+        return this.performanceLevel;
     }
 
     /**
@@ -115,28 +143,41 @@ public class ReleaseDedicatedHostRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ReleaseDedicatedHostRequest, Builder> {
+    /**
+     * @return storageClusterId
+     */
+    public String getStorageClusterId() {
+        return this.storageClusterId;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyDiskDeploymentRequest, Builder> {
         private String sourceRegionId; 
-        private String dedicatedHostId; 
+        private String diskCategory; 
+        private String diskId; 
+        private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
+        private String performanceLevel; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String storageClusterId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ReleaseDedicatedHostRequest request) {
+        private Builder(ModifyDiskDeploymentRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
-            this.dedicatedHostId = request.dedicatedHostId;
+            this.diskCategory = request.diskCategory;
+            this.diskId = request.diskId;
+            this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
+            this.performanceLevel = request.performanceLevel;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.storageClusterId = request.storageClusterId;
         } 
 
         /**
@@ -149,11 +190,29 @@ public class ReleaseDedicatedHostRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host.
+         * DiskCategory.
          */
-        public Builder dedicatedHostId(String dedicatedHostId) {
-            this.putQueryParameter("DedicatedHostId", dedicatedHostId);
-            this.dedicatedHostId = dedicatedHostId;
+        public Builder diskCategory(String diskCategory) {
+            this.putQueryParameter("DiskCategory", diskCategory);
+            this.diskCategory = diskCategory;
+            return this;
+        }
+
+        /**
+         * DiskId.
+         */
+        public Builder diskId(String diskId) {
+            this.putQueryParameter("DiskId", diskId);
+            this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -176,11 +235,11 @@ public class ReleaseDedicatedHostRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * PerformanceLevel.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder performanceLevel(String performanceLevel) {
+            this.putQueryParameter("PerformanceLevel", performanceLevel);
+            this.performanceLevel = performanceLevel;
             return this;
         }
 
@@ -202,9 +261,18 @@ public class ReleaseDedicatedHostRequest extends Request {
             return this;
         }
 
+        /**
+         * StorageClusterId.
+         */
+        public Builder storageClusterId(String storageClusterId) {
+            this.putQueryParameter("StorageClusterId", storageClusterId);
+            this.storageClusterId = storageClusterId;
+            return this;
+        }
+
         @Override
-        public ReleaseDedicatedHostRequest build() {
-            return new ReleaseDedicatedHostRequest(this);
+        public ModifyDiskDeploymentRequest build() {
+            return new ModifyDiskDeploymentRequest(this);
         } 
 
     } 

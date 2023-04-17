@@ -205,7 +205,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * AddAccount.
+         * The ID of Alibaba Cloud account N with which you want to share the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.
          */
         public Builder addAccount(java.util.List < String > addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
@@ -214,7 +214,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the custom image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -223,7 +223,13 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * 发布为社区镜像
+         * Specifies whether to publish or unpublish a community image. Valid values:
+         * <p>
+         * 
+         * *   true: publishes the custom image as a community image.
+         * *   false: unpublishes a community image. The unpublish operation takes effect only on community images.
+         * 
+         * Default value: false
          */
         public Builder isPublic(Boolean isPublic) {
             this.putQueryParameter("IsPublic", isPublic);
@@ -232,7 +238,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * LaunchPermission.
+         * > This parameter is in invitational preview and is unavailable to general users.
          */
         public Builder launchPermission(String launchPermission) {
             this.putQueryParameter("LaunchPermission", launchPermission);
@@ -259,7 +265,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +274,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * RemoveAccount.
+         * The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.
          */
         public Builder removeAccount(java.util.List < String > removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);

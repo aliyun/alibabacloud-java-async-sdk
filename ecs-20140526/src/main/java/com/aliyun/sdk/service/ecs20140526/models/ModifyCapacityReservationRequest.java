@@ -218,7 +218,7 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -227,7 +227,7 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The expiration time of the capacity reservation. This parameter takes effect only when `EndTimeType` is set to Limited. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -236,7 +236,11 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * EndTimeType.
+         * The release mode of the capacity reservation. Valid values:
+         * <p>
+         * 
+         * *   Limited: The capacity reservation is released at the specified time. You must also specify the `EndTime` parameter.
+         * *   Unlimited: You must manually release the capacity reservation. You can release capacity reservations at any time.
          */
         public Builder endTimeType(String endTimeType) {
             this.putQueryParameter("EndTimeType", endTimeType);
@@ -245,7 +249,10 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * InstanceAmount.
+         * The total number of instances reserved by the capacity reservation. Valid values: the number of created instances to 1000.
+         * <p>
+         * 
+         * >  When you increase the number of instances reserved, the increase may fail due to insufficient resources.
          */
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
@@ -272,7 +279,13 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The operating system type of the instance reserved. Valid values:
+         * <p>
+         * 
+         * *   Windows: Windows Server operating systems
+         * *   Linux: Linux and Unix-like operating systems
+         * 
+         * >  This parameter is unavailable.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -281,7 +294,7 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -308,7 +321,10 @@ public class ModifyCapacityReservationRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The effective mode of the capacity reservation. The capacity reservation can be set only to take effect immediately. You do not need to pass in a value for the parameter.
+         * <p>
+         * 
+         * >  The capacity reservation takes effect immediately when this parameter is left empty.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -363,7 +379,7 @@ public class ModifyCapacityReservationRequest extends Request {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the capacity reservation.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -371,7 +387,7 @@ public class ModifyCapacityReservationRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
              */
             public Builder name(String name) {
                 this.name = name;

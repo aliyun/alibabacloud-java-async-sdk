@@ -302,7 +302,13 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * CreditSpecification.
+         * The performance mode of the burstable instance. Valid values:
+         * <p>
+         * 
+         * *   Standard: standard mode
+         * *   Unlimited: unlimited mode
+         * 
+         * For more information about the performance modes of burstable instances, see [Burstable instances](~~59977~~).
          */
         public Builder creditSpecification(String creditSpecification) {
             this.putQueryParameter("CreditSpecification", creditSpecification);
@@ -311,7 +317,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.
+         * <p>
+         * 
+         * > This parameter is applicable to only pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -320,7 +329,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -338,7 +350,16 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * HostName.
+         * The hostname of the instance. Take note of the following items:
+         * <p>
+         * 
+         * *   When you modify the hostname of an instance, the instance must not be in the Creating (Pending) or Starting (Starting) state. Otherwise, the new hostname and the configurations in `/etc/hosts` cannot take effect. You can call the [DescribeInstances](~~25506~~) operation to query the state of the instance.
+         * *   After the hostname is modified, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the new hostname to take effect.
+         * 
+         * The following limits apply to the hostnames of instances that run different operating systems:
+         * 
+         * *   For Windows Server, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
+         * *   For other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot contain consecutive periods (.) or hyphens (-). It cannot start or end with a period (.) or a hyphen (-).
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -347,7 +368,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -356,7 +377,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -365,7 +386,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceQueueNumber.
+         * The number of queues supported by the primary ENI.
          */
         public Builder networkInterfaceQueueNumber(Integer networkInterfaceQueueNumber) {
             this.putQueryParameter("NetworkInterfaceQueueNumber", networkInterfaceQueueNumber);
@@ -392,7 +413,14 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
+         * <p>
+         * 
+         *     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
+         * 
+         * The password of a Windows instance cannot start with a forward slash (/).
+         * 
+         * > If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -401,7 +429,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Recyclable.
+         * > This parameter is in invitational preview and unavailable for general users.
          */
         public Builder recyclable(Boolean recyclable) {
             this.putQueryParameter("Recyclable", recyclable);
@@ -410,7 +438,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * RemoteConnectionOptions.
+         * > This parameter is in invitational preview and unavailable for general users.
          */
         public Builder remoteConnectionOptions(RemoteConnectionOptions remoteConnectionOptions) {
             this.putQueryParameter("RemoteConnectionOptions", remoteConnectionOptions);
@@ -437,7 +465,15 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * SecurityGroupIds.
+         * The IDs of replacement security groups.
+         * <p>
+         * 
+         * *   All security group IDs must be unique.
+         * *   The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, you must add the IDs of the current security groups to the list.
+         * *   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.
+         * *   The specified security group and instance must belong to the same virtual private cloud (VPC).
+         * *   The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see [Limits](~~25412#SecurityGroupQuota1~~).
+         * *   New security groups become valid for corresponding instances after a short latency.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -446,7 +482,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The user data of the instance. User data must be encoded in Base64.
+         * <p>
+         * 
+         * The size of the user data cannot exceed 16 KB before it is encoded in Base64. We recommend that you do not pass in confidential information such as passwords and private keys in the plaintext format. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then you can decode and decrypt the information in the same way within the instance.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -500,7 +539,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             private String type; 
 
             /**
-             * Password.
+             * > This parameter is in invitational preview and unavailable for general users.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -508,7 +547,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * Type.
+             * > This parameter is in invitational preview and unavailable for general users.
              */
             public Builder type(String type) {
                 this.type = type;

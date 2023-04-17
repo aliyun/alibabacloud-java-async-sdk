@@ -163,7 +163,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk that you want to roll back.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -172,7 +172,13 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   true: performs a dry run. The system checks the required parameters, request format, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -217,7 +223,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot that you want to use to roll back the disk.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

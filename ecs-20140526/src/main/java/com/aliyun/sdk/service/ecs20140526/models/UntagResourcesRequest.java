@@ -169,7 +169,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -196,7 +202,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -205,7 +211,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -232,7 +238,24 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance: ECS instance
+         * *   disk: disk
+         * *   snapshot: snapshot
+         * *   image: image
+         * *   securitygroup: security group
+         * *   volume: storage volume
+         * *   eni: elastic network interface (ENI)
+         * *   ddh: dedicated host
+         * *   ddhcluster: dedicated host cluster
+         * *   keypair: SSH key pair
+         * *   launchtemplate: launch template
+         * *   reservedinstance: reserved instance
+         * *   snapshotpolicy: automatic snapshot policy
+         * *   elasticityassurance: elasticity assurance
+         * *   capacityreservation: capacity reservation
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -241,7 +264,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag keys of the resource.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

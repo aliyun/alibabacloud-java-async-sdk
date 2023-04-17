@@ -208,7 +208,10 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The auto-renewal term of the reserved instance. Valid values:
+         * <p>
+         * 
+         * Valid values: 1 and 3.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -217,7 +220,10 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the auto-renewal term.
+         * <p>
+         * 
+         * Valid value: Year.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -226,7 +232,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +241,11 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * Specifies whether to automatically renew the reserved instance. Valid values:
+         * <p>
+         * 
+         * *   AutoRenewal: automatically renew the reserved instance.
+         * *   Normal: manually renew the reserved instance.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -244,7 +254,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * ReservedInstanceId.
+         * The ID of reserved instance N.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

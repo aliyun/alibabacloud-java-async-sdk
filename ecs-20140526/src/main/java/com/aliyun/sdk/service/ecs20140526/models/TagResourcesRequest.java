@@ -160,7 +160,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +169,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of resource N. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -187,7 +187,26 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance: ECS instance
+         * *   disk: disk
+         * *   snapshot: snapshot
+         * *   image: image
+         * *   securitygroup: security group
+         * *   volume: storage volume
+         * *   eni: elastic network interface (ENI)
+         * *   ddh: dedicated host
+         * *   ddhcluster: dedicated host cluster
+         * *   keypair: SSH key pair
+         * *   launchtemplate: launch template
+         * *   reservedinstance: reserved instance
+         * *   snapshotpolicy: automatic snapshot policy
+         * *   elasticityassurance: elasticity assurance
+         * *   capacityreservation: capacity reservation
+         * *   command: Cloud Assistant command
+         * *   invocation: Cloud Assistant command execution result
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -196,7 +215,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -250,7 +269,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,7 +277,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

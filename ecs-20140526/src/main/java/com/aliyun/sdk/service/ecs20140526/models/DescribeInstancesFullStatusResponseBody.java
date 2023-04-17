@@ -682,7 +682,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The state of the event. Valid values:
+             * The state of the event.
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;

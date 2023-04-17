@@ -320,7 +320,11 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the file. The content must not exceed 32 KB in size after it is encoded in Base64.
+         * <p>
+         * 
+         * *   If `ContentType` is set to `PlainText`, the Content value is in plaintext.
+         * *   If `ContentType` is set to `Base64`, the Content value is Base64-encoded.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -329,7 +333,13 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * ContentType.
+         * The content type of the file. Valid values:
+         * <p>
+         * 
+         * *   PlainText: The command content is not encoded.
+         * *   Base64: The command content is Base64-encoded.
+         * 
+         * Default value: PlainText.
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -338,7 +348,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the file. The description supports all character sets and can be up to 512 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -347,7 +357,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * FileGroup.
+         * The user group of the file. This parameter takes effect only on Linux instances. Default value: root.
          */
         public Builder fileGroup(String fileGroup) {
             this.putQueryParameter("FileGroup", fileGroup);
@@ -356,7 +366,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * FileMode.
+         * The permissions on the file. This parameter takes effect only on Linux instances. You can configure this parameter in the same way as you configure the chmod command.
+         * <p>
+         * 
+         * Default value: 0644, which indicates that the owner of the file has the read and write permissions on the file and that the user group of the file and other users have only the read permissions on the file.
          */
         public Builder fileMode(String fileMode) {
             this.putQueryParameter("FileMode", fileMode);
@@ -365,7 +378,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * FileOwner.
+         * The owner of the file. This parameter takes effect only on Linux instances. Default value: root.
          */
         public Builder fileOwner(String fileOwner) {
             this.putQueryParameter("FileOwner", fileOwner);
@@ -374,7 +387,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of instances to which to send the file. A maximum of 50 instance IDs can be specified.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -383,7 +396,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the file. The name supports all character sets and can be up to 255 characters in length.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -392,7 +405,13 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Overwrite.
+         * Specifies whether to overwrite a file in the destination directory if the file has the same name as the sent file.
+         * <p>
+         * 
+         * *   true: overwrites the file.
+         * *   false: does not overwrite the file.
+         * 
+         * Default value: false.
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -419,7 +438,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance to which to send the file. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -428,7 +447,11 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group for send files. When specify this parameter:
+         * <p>
+         * 
+         * - The InstanceId of the ECS instance must belongs to the resource group.
+         * - Support via the parameter to filter out results of send file(via Call [DescribeSendFileResults](~~184117~~)).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -464,7 +487,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * TargetDir.
+         * The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance.
          */
         public Builder targetDir(String targetDir) {
             this.putQueryParameter("TargetDir", targetDir);
@@ -473,7 +496,13 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period for sending the file. Unit: seconds.
+         * <p>
+         * 
+         * *   A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or the Cloud Assistant client does not exist.
+         * *   If the specified timeout period is less than 10 seconds, the system automatically sets the timeout period to 10 seconds to ensure that the file is sent to the instances.
+         * 
+         * Default value: 60.
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);

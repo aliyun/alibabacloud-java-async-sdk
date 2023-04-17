@@ -50,7 +50,7 @@ public class ResetDisksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OperationProgressSet.
+         * The information about the rollback operations on one or more disks.
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -58,7 +58,7 @@ public class ResetDisksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ResetDisksResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the resource.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +118,7 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The ID of the resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -236,7 +236,10 @@ public class ResetDisksResponseBody extends TeaModel {
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * ErrorCode.
+             * The error code that is returned if the request failed. This parameter is empty if the operation is successful.
+             * <p>
+             * 
+             * For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -244,7 +247,10 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The error message that is returned if the request failed. This parameter is empty if the operation is successful.
+             * <p>
+             * 
+             * For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -252,7 +258,7 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * OperationStatus.
+             * Indicates whether the operation is successful. If the operation is successful, Success is returned. If the operation failed, an error code and an error message are returned.
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -260,7 +266,7 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedItemSet.
+             * The information about the resources.
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;

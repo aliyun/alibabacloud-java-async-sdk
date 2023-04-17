@@ -74,7 +74,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConsoleOutput.
+         * The Base64-encoded command output of the instance.
          */
         public Builder consoleOutput(String consoleOutput) {
             this.consoleOutput = consoleOutput;
@@ -82,7 +82,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -90,7 +90,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         }
 
         /**
-         * LastUpdateTime.
+         * The time when the instance was last started, restarted, or shut down. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
@@ -98,7 +98,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

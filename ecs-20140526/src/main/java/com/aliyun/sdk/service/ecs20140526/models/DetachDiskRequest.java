@@ -192,7 +192,7 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance from which the disk is to be detached.
+         * The ID of the ECS instance from which to detach the disk.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

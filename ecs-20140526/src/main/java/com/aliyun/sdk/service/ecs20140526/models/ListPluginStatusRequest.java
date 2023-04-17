@@ -190,7 +190,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of ECS instances. You can specify up to 50 instance IDs in each request.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +199,14 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.
+         * <p>
+         * 
+         * * If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.
+         * 
+         *     > If this parameter is not specified, only a single instance ID can be specified.
+         * 
+         * * If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -226,7 +233,11 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * *   Pages start from page 1.
+         * *   Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,7 +246,11 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 50.
+         * *   Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +259,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

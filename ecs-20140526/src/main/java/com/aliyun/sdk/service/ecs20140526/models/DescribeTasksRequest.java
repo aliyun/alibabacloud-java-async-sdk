@@ -247,7 +247,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -274,7 +274,12 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -283,7 +288,12 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -292,7 +302,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -328,7 +338,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -337,7 +347,13 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * TaskAction.
+         * The name of the operation that generates the task. Valid values:
+         * <p>
+         * 
+         * *   ImportImage
+         * *   ExportImage
+         * *   RedeployInstance
+         * *   ModifyDiskSpec
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
@@ -346,7 +362,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * The IDs of the tasks. You can specify up to 100 tasks at a time. Separate multiple task IDs with commas (,).
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -355,7 +371,16 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   Finished
+         * *   Processing
+         * *   Failed
+         * 
+         * This parameter has no default value.
+         * 
+         * >  The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);

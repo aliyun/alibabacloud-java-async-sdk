@@ -135,7 +135,7 @@ public class ConvertNatPublicIpToEipRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose public IP address you want to convert into an EIP.
+         * The ID of the instance whose public IP address you want to convert to an EIP.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +153,7 @@ public class ConvertNatPublicIpToEipRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

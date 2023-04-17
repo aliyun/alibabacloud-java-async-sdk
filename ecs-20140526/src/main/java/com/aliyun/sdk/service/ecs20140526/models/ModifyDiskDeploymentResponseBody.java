@@ -7,23 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InstallCloudAssistantResponseBody} extends {@link TeaModel}
+ * {@link ModifyDiskDeploymentResponseBody} extends {@link TeaModel}
  *
- * <p>InstallCloudAssistantResponseBody</p>
+ * <p>ModifyDiskDeploymentResponseBody</p>
  */
-public class InstallCloudAssistantResponseBody extends TeaModel {
+public class ModifyDiskDeploymentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private InstallCloudAssistantResponseBody(Builder builder) {
+    @NameInMap("TaskId")
+    private String taskId;
+
+    private ModifyDiskDeploymentResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static InstallCloudAssistantResponseBody create() {
+    public static ModifyDiskDeploymentResponseBody create() {
         return builder().build();
     }
 
@@ -34,19 +38,35 @@ public class InstallCloudAssistantResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private String taskId; 
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public InstallCloudAssistantResponseBody build() {
-            return new InstallCloudAssistantResponseBody(this);
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
+        public ModifyDiskDeploymentResponseBody build() {
+            return new ModifyDiskDeploymentResponseBody(this);
         } 
 
     } 

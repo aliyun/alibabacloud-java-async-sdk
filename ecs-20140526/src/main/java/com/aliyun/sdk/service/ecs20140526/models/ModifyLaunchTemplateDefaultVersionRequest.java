@@ -177,7 +177,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * DefaultVersionNumber.
+         * The default version number of the launch template.
          */
         public Builder defaultVersionNumber(Long defaultVersionNumber) {
             this.putQueryParameter("DefaultVersionNumber", defaultVersionNumber);
@@ -186,7 +186,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * LaunchTemplateId.
+         * The ID of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -195,7 +195,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * LaunchTemplateName.
+         * The name of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -222,7 +222,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

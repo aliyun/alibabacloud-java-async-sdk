@@ -140,7 +140,7 @@ public class ModifyReservedInstancesRequest extends Request {
         } 
 
         /**
-         * Configuration.
+         * The configurations of reserved instances.
          */
         public Builder configuration(java.util.List < Configuration> configuration) {
             this.putQueryParameter("Configuration", configuration);
@@ -167,7 +167,10 @@ public class ModifyReservedInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the reserved instance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +179,7 @@ public class ModifyReservedInstancesRequest extends Request {
         }
 
         /**
-         * ReservedInstanceId.
+         * The IDs of reserved instances. Valid values of N: 1 to 20.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
@@ -284,7 +287,7 @@ public class ModifyReservedInstancesRequest extends Request {
             private String zoneId; 
 
             /**
-             * InstanceAmount.
+             * The number of pay-as-you-go instances of the same instance type that the reserved instance can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.
              */
             public Builder instanceAmount(Integer instanceAmount) {
                 this.instanceAmount = instanceAmount;
@@ -292,7 +295,10 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The instance type that reserved instance N can match. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * > The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](~~100370~~).
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -300,7 +306,10 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * ReservedInstanceName.
+             * The name of reserved instance N. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
              */
             public Builder reservedInstanceName(String reservedInstanceName) {
                 this.reservedInstanceName = reservedInstanceName;
@@ -308,7 +317,15 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * Scope.
+             * The scope of reserved instance N. Valid values:
+             * <p>
+             * 
+             * *   Region: regional.
+             * *   Zone: zonal.
+             * 
+             * Valid values of N: 1 to 100.
+             * 
+             * Default value: Region.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -316,7 +333,12 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of reserved instance N. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * This parameter is required when `Scope` is set to `Zone`.
+             * 
+             * You can call the [DescribeZones](~~25609~~) operation to query the most recent list of zones.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

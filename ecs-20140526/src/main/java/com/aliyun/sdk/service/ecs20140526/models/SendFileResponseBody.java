@@ -50,7 +50,7 @@ public class SendFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InvokeId.
+         * The ID of the execution.
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -58,7 +58,7 @@ public class SendFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

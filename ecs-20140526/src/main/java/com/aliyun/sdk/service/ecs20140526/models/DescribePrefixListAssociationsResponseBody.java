@@ -130,7 +130,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * Indicates the ID of a resource.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

@@ -177,7 +177,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * Ipv4Prefix.
+         * > This parameter is in invitational preview and is unavailable for general users.
          */
         public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);

@@ -86,7 +86,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotPackages.
+         * Details about the OSS storage plans.
          */
         public Builder snapshotPackages(SnapshotPackages snapshotPackages) {
             this.snapshotPackages = snapshotPackages;
@@ -118,7 +118,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned OSS storage plans.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * DisplayName.
+             * The name of the OSS storage plan.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -202,7 +202,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the OSS storage plan expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -210,7 +210,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacity.
+             * The maximum storage capacity offered by the OSS storage plan.
              */
             public Builder initCapacity(Long initCapacity) {
                 this.initCapacity = initCapacity;
@@ -218,7 +218,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the OSS storage plan was purchased. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

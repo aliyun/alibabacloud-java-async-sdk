@@ -50,7 +50,7 @@ public class StopInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceResponses.
+         * Details about instance-specific responses, which contain the states of each instance before and after the operation is called and the results of the operation.
          */
         public Builder instanceResponses(InstanceResponses instanceResponses) {
             this.instanceResponses = instanceResponses;
@@ -58,7 +58,7 @@ public class StopInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class StopInstancesResponseBody extends TeaModel {
             private String previousStatus; 
 
             /**
-             * Code.
+             * The error code of the instance operation result. The return value 200 indicates success. For more information, see the "Error codes" section in this topic.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -154,7 +154,7 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStatus.
+             * The current state of the instance.
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -162,7 +162,7 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of instance N.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +170,7 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message for instance operation. The return value Success indicates operation success. For more information, see the "Error codes" section in this topic.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -178,7 +178,7 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousStatus.
+             * The state of the instance before the operation is called.
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;

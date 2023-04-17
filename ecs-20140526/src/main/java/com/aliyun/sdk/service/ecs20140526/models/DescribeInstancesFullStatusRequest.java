@@ -398,7 +398,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -428,9 +428,9 @@ public class DescribeInstancesFullStatusRequest extends Request {
          * The lifecycle state of the instance. Valid values:
          * <p>
          * 
-         * *   Starting: The instance is being started.
-         * *   Running: The instance is running.
-         * *   Stopped: The instance is stopped.
+         * *   Starting
+         * *   Running
+         * *   Stopped
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

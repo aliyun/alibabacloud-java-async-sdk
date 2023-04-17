@@ -172,7 +172,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * RAM用户的虚拟账号ID。
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -181,7 +181,10 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +193,10 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +205,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +214,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * 资源主账号的账号名称。
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -217,7 +223,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * 资源主账号的ID，亦即UID。
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

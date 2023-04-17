@@ -186,7 +186,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * The number of entries to return on each page.
          * <p>
          * 
          * Maximum value: 100.

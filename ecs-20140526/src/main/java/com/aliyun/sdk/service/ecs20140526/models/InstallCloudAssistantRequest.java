@@ -149,7 +149,7 @@ public class InstallCloudAssistantRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IDs of instances. You can specify up to 50 instance IDs in a single request.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,7 +176,7 @@ public class InstallCloudAssistantRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

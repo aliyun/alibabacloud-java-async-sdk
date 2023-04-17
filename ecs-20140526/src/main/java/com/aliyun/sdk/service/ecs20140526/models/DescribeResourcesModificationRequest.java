@@ -17,6 +17,10 @@ public class DescribeResourcesModificationRequest extends Request {
     private String sourceRegionId;
 
     @Query
+    @NameInMap("Conditions")
+    private java.util.List < String > conditions;
+
+    @Query
     @NameInMap("Cores")
     private Integer cores;
 
@@ -74,6 +78,7 @@ public class DescribeResourcesModificationRequest extends Request {
     private DescribeResourcesModificationRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.conditions = builder.conditions;
         this.cores = builder.cores;
         this.destinationResource = builder.destinationResource;
         this.instanceType = builder.instanceType;
@@ -107,6 +112,13 @@ public class DescribeResourcesModificationRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return conditions
+     */
+    public java.util.List < String > getConditions() {
+        return this.conditions;
     }
 
     /**
@@ -202,6 +214,7 @@ public class DescribeResourcesModificationRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeResourcesModificationRequest, Builder> {
         private String sourceRegionId; 
+        private java.util.List < String > conditions; 
         private Integer cores; 
         private String destinationResource; 
         private String instanceType; 
@@ -223,6 +236,7 @@ public class DescribeResourcesModificationRequest extends Request {
         private Builder(DescribeResourcesModificationRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.conditions = request.conditions;
             this.cores = request.cores;
             this.destinationResource = request.destinationResource;
             this.instanceType = request.instanceType;
@@ -244,6 +258,15 @@ public class DescribeResourcesModificationRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Conditions.
+         */
+        public Builder conditions(java.util.List < String > conditions) {
+            this.putQueryParameter("Conditions", conditions);
+            this.conditions = conditions;
             return this;
         }
 

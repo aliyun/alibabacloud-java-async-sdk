@@ -29,6 +29,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("Disk")
+    private java.util.List < Disk> disk;
+
+    @Query
     @NameInMap("EndTime")
     private String endTime;
 
@@ -45,6 +49,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     @Query
     @NameInMap("MigrateAcrossZone")
     private Boolean migrateAcrossZone;
+
+    @Query
+    @NameInMap("ModifyMode")
+    private String modifyMode;
 
     @Query
     @NameInMap("OperatorType")
@@ -85,10 +93,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.autoPay = builder.autoPay;
         this.clientToken = builder.clientToken;
+        this.disk = builder.disk;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
         this.migrateAcrossZone = builder.migrateAcrossZone;
+        this.modifyMode = builder.modifyMode;
         this.operatorType = builder.operatorType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -141,6 +151,13 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return disk
+     */
+    public java.util.List < Disk> getDisk() {
+        return this.disk;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
@@ -166,6 +183,13 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
      */
     public Boolean getMigrateAcrossZone() {
         return this.migrateAcrossZone;
+    }
+
+    /**
+     * @return modifyMode
+     */
+    public String getModifyMode() {
+        return this.modifyMode;
     }
 
     /**
@@ -229,10 +253,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         private String sourceRegionId; 
         private Boolean autoPay; 
         private String clientToken; 
+        private java.util.List < Disk> disk; 
         private String endTime; 
         private String instanceId; 
         private String instanceType; 
         private Boolean migrateAcrossZone; 
+        private String modifyMode; 
         private String operatorType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -252,10 +278,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.autoPay = request.autoPay;
             this.clientToken = request.clientToken;
+            this.disk = request.disk;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
             this.migrateAcrossZone = request.migrateAcrossZone;
+            this.modifyMode = request.modifyMode;
             this.operatorType = request.operatorType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -285,7 +313,20 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:
+         * <p>
+         * 
+         * *   true: enables automatic payment.
+         * 
+         *     **
+         * 
+         *     **Note** Make sure that your Alibaba Cloud account has sufficient balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
+         * 
+         * *   false: An order is generated but no payment is made.
+         * 
+         * Default value: true.
+         * 
+         * When `OperatorType` is set to `downgrade`, `AutoPay` is ignored.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -294,7 +335,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -303,7 +344,16 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * Disk.
+         */
+        public Builder disk(java.util.List < Disk> disk) {
+            this.putQueryParameter("Disk", disk);
+            this.disk = disk;
+            return this;
+        }
+
+        /**
+         * The end time of the temporary change. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -312,7 +362,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -321,7 +371,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The new instance type. For information about available instance types, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -330,7 +380,19 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * MigrateAcrossZone.
+         * Specifies whether to support cross-cluster instance type upgrades.
+         * <p>
+         * 
+         * Default value: false.
+         * 
+         * When the `MigrateAcrossZone` parameter is set to `true` and you upgrade the instance based on the returned information, take note of the following items:
+         * 
+         * Instances of the classic network type:
+         * 
+         * *   For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software license codes of the instance are changed. For more information, see [Retired instance types](~~55263~~). For Linux instances, basic disks (cloud) are identified by the prefix xvd. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified by the prefix vd.
+         * *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.
+         * 
+         * Instances of the Virtual Private Cloud (VPC) type: For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software license codes of the instance are changed. For Linux instances, basic disks (cloud) are identified by the prefix xvd. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified by the prefix vd.
          */
         public Builder migrateAcrossZone(Boolean migrateAcrossZone) {
             this.putQueryParameter("MigrateAcrossZone", migrateAcrossZone);
@@ -339,7 +401,24 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * OperatorType.
+         * ModifyMode.
+         */
+        public Builder modifyMode(String modifyMode) {
+            this.putQueryParameter("ModifyMode", modifyMode);
+            this.modifyMode = modifyMode;
+            return this;
+        }
+
+        /**
+         * The operation type. Valid values:
+         * <p>
+         * 
+         * >  This parameter is optional. The system can automatically determine whether the operation is an upgrade or a downgrade. If you want to specify this parameter, you can refer to the following valid values of the parameter.
+         * 
+         * *   upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.
+         * *   downgrade: downgrades the instance type. When the new instance type specified by the `InstanceType` parameter has lower specifications than the current instance type, set `OperatorType` to downgrade.
+         * 
+         * >  You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.
          */
         public Builder operatorType(String operatorType) {
             this.putQueryParameter("OperatorType", operatorType);
@@ -366,7 +445,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * RebootTime.
+         * The restart time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder rebootTime(String rebootTime) {
             this.putQueryParameter("RebootTime", rebootTime);
@@ -375,7 +454,15 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * RebootWhenFinished.
+         * Specifies whether to restart the instance immediately after the instance type is changed. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
+         * 
+         * >  If the instance is in the **Stopping** state, the instance status remains unchanged and no operations are performed regardless of whether you set the `RebootWhenFinished` parameter to true.
          */
         public Builder rebootWhenFinished(Boolean rebootWhenFinished) {
             this.putQueryParameter("RebootWhenFinished", rebootWhenFinished);
@@ -384,7 +471,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -444,7 +531,11 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private String category; 
 
             /**
-             * Category.
+             * The new category of the system disk. This parameter is valid only if you upgrade an instance from a retired instance type to an available instance type or if you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Overview of instance families](~~25378~~). Valid values:
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
              */
             public Builder category(String category) {
                 this.category = category;
@@ -453,6 +544,91 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
 
             public SystemDisk build() {
                 return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    public static class Disk extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
+        @NameInMap("DiskId")
+        private String diskId;
+
+        @NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        private Disk(Builder builder) {
+            this.category = builder.category;
+            this.diskId = builder.diskId;
+            this.performanceLevel = builder.performanceLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Disk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return diskId
+         */
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String diskId; 
+            private String performanceLevel; 
+
+            /**
+             * The new category of the system disk. This parameter is valid only if you upgrade an instance from a retired instance type to an available instance type or if you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Overview of instance families](~~25378~~). Valid values:
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * DiskId.
+             */
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            public Disk build() {
+                return new Disk(this);
             } 
 
         } 

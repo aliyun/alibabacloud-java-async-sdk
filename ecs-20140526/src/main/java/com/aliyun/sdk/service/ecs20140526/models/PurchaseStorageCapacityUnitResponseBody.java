@@ -62,7 +62,7 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
         private StorageCapacityUnitIds storageCapacityUnitIds; 
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -70,7 +70,7 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
         }
 
         /**
-         * StorageCapacityUnitIds.
+         * The IDs of the SCUs.
          */
         public Builder storageCapacityUnitIds(StorageCapacityUnitIds storageCapacityUnitIds) {
             this.storageCapacityUnitIds = storageCapacityUnitIds;

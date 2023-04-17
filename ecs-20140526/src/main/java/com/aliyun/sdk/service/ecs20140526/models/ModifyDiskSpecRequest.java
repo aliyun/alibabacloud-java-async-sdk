@@ -38,6 +38,10 @@ public class ModifyDiskSpecRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PerformanceControlOptions")
+    private PerformanceControlOptions performanceControlOptions;
+
+    @Query
     @NameInMap("PerformanceLevel")
     private String performanceLevel;
 
@@ -61,6 +65,7 @@ public class ModifyDiskSpecRequest extends Request {
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.performanceControlOptions = builder.performanceControlOptions;
         this.performanceLevel = builder.performanceLevel;
         this.provisionedIops = builder.provisionedIops;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -123,6 +128,13 @@ public class ModifyDiskSpecRequest extends Request {
     }
 
     /**
+     * @return performanceControlOptions
+     */
+    public PerformanceControlOptions getPerformanceControlOptions() {
+        return this.performanceControlOptions;
+    }
+
+    /**
      * @return performanceLevel
      */
     public String getPerformanceLevel() {
@@ -157,6 +169,7 @@ public class ModifyDiskSpecRequest extends Request {
         private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
+        private PerformanceControlOptions performanceControlOptions; 
         private String performanceLevel; 
         private Long provisionedIops; 
         private String resourceOwnerAccount; 
@@ -174,6 +187,7 @@ public class ModifyDiskSpecRequest extends Request {
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.performanceControlOptions = request.performanceControlOptions;
             this.performanceLevel = request.performanceLevel;
             this.provisionedIops = request.provisionedIops;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -190,7 +204,16 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * DiskCategory.
+         * The new category of the disk. Valid values:
+         * <p>
+         * 
+         * *   cloud_essd: ESSD
+         * *   cloud_ssd: standard SSD
+         * *   cloud_efficiency: ultra disk
+         * 
+         * This parameter is empty by default, which indicates that the disk category is not changed.
+         * 
+         * >  The preceding values are listed in descending order of disk performance. The disk cannot be downgraded if it is a subscription disk.
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -199,7 +222,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -208,7 +231,13 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the validity of the request without actually making the request. Valid values:
+         * <p>
+         * 
+         * *   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, service limits, and available ECS resources. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.
+         * *   false: The validity of the request is checked. If the check succeeds, a 2xx HTTP status code is returned and the request is made.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -235,7 +264,24 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * PerformanceLevel.
+         * PerformanceControlOptions.
+         */
+        public Builder performanceControlOptions(PerformanceControlOptions performanceControlOptions) {
+            this.putQueryParameter("PerformanceControlOptions", performanceControlOptions);
+            this.performanceControlOptions = performanceControlOptions;
+            return this;
+        }
+
+        /**
+         * The new performance level of the ESSD. Valid values:
+         * <p>
+         * 
+         * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+         * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+         * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+         * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+         * 
+         * Default value: PL1.
          */
         public Builder performanceLevel(String performanceLevel) {
             this.putQueryParameter("PerformanceLevel", performanceLevel);
@@ -244,7 +290,12 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * ProvisionedIops.
+         * 是否修改ESSD AutoPL云盘预配置读写IOPS。取值范围：0~min{50000, 1000*容量-基准性能}。
+         * <p>
+         * 
+         * 基准性能=min{1,800+50*容量, 50,000}
+         * 
+         * > 当DiskCategory取值为cloud_auto时才支持设置该参数。更多信息，请参见[ESSD AutoPL云盘](~~368372~~)和[修改ESSD AutoPL云盘预配置信息](~~413275~~)。
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -277,4 +328,85 @@ public class ModifyDiskSpecRequest extends Request {
 
     } 
 
+    public static class PerformanceControlOptions extends TeaModel {
+        @NameInMap("IOPS")
+        private Integer IOPS;
+
+        @NameInMap("Recover")
+        private String recover;
+
+        @NameInMap("Throughput")
+        private Integer throughput;
+
+        private PerformanceControlOptions(Builder builder) {
+            this.IOPS = builder.IOPS;
+            this.recover = builder.recover;
+            this.throughput = builder.throughput;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PerformanceControlOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return IOPS
+         */
+        public Integer getIOPS() {
+            return this.IOPS;
+        }
+
+        /**
+         * @return recover
+         */
+        public String getRecover() {
+            return this.recover;
+        }
+
+        /**
+         * @return throughput
+         */
+        public Integer getThroughput() {
+            return this.throughput;
+        }
+
+        public static final class Builder {
+            private Integer IOPS; 
+            private String recover; 
+            private Integer throughput; 
+
+            /**
+             * IOPS.
+             */
+            public Builder IOPS(Integer IOPS) {
+                this.IOPS = IOPS;
+                return this;
+            }
+
+            /**
+             * Recover.
+             */
+            public Builder recover(String recover) {
+                this.recover = recover;
+                return this;
+            }
+
+            /**
+             * Throughput.
+             */
+            public Builder throughput(Integer throughput) {
+                this.throughput = throughput;
+                return this;
+            }
+
+            public PerformanceControlOptions build() {
+                return new PerformanceControlOptions(this);
+            } 
+
+        } 
+
+    }
 }

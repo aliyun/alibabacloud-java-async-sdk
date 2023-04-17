@@ -253,7 +253,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * The number of SCUs that you want to purchase. Valid values: 1 to 20.
+         * <p>
+         * 
+         * Default value: 1
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -262,7 +265,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * Capacity.
+         * The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5210, 10240, 20480, and 52100.
          */
         public Builder capacity(Integer capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -271,7 +274,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -280,7 +283,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the SCU. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -289,7 +292,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * FromApp.
+         * The source of the request. The value is automatically set to OpenAPI and does not need to be changed. Default value: OpenAPI.
          */
         public Builder fromApp(String fromApp) {
             this.putQueryParameter("FromApp", fromApp);
@@ -298,7 +301,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -325,7 +328,13 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * Period.
+         * The validity period of the SCU. Valid values:
+         * <p>
+         * 
+         * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.
+         * *   Valid values when PeriodUnit is set to Year: 1, 3, and 5.
+         * 
+         * Default value: 1.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -334,7 +343,13 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the validity period of the SCU. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
+         * 
+         * Default value: Month.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -343,7 +358,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which to purchase the SCU. After this parameter is specified, the purchased SCU can offset bills of only pay-as-you-go disks that reside in the specified region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -370,7 +385,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the SCU takes effect. It can be up to six months later than the time when the SCU is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * This parameter is empty by default. If this parameter is left empty, the SCU takes effect immediately after it is created.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -379,7 +397,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the SCU.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -433,7 +451,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N. N indicates the number of tag keys that can be specified. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -441,7 +459,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N. N indicates the number of tag values that can be specified and corresponds to the N in `Tag.N.Key`. Valid values: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -50,7 +50,7 @@ public class DisableActivationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Activation.
+         * Details about the activation code and its usage information.
          */
         public Builder activation(Activation activation) {
             this.activation = activation;
@@ -58,7 +58,7 @@ public class DisableActivationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class DisableActivationResponseBody extends TeaModel {
             private Long timeToLiveInHours; 
 
             /**
-             * ActivationId.
+             * The ID of the activation code.
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -214,7 +214,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the activation code was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -222,7 +222,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * DeregisteredCount.
+             * The number of instances that were deregistered.
              */
             public Builder deregisteredCount(Integer deregisteredCount) {
                 this.deregisteredCount = deregisteredCount;
@@ -230,7 +230,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the activation code.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +238,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * Disabled.
+             * Indicates whether the activation code is disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -246,7 +246,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The maximum number of times that the activation code can be used to register managed instances.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -254,7 +254,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The default instance name prefix.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -262,7 +262,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddressRange.
+             * The IP addresses of hosts that are allowed to use the activation code.
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -270,7 +270,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * RegisteredCount.
+             * The number of instances that were registered.
              */
             public Builder registeredCount(Integer registeredCount) {
                 this.registeredCount = registeredCount;
@@ -278,7 +278,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * TimeToLiveInHours.
+             * The validity period of the activation code. Unit: hours.
              */
             public Builder timeToLiveInHours(Long timeToLiveInHours) {
                 this.timeToLiveInHours = timeToLiveInHours;

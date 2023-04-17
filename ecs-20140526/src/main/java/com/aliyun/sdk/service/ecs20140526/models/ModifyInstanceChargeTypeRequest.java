@@ -261,15 +261,15 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
+         * Specifies whether to automatically complete the payment. Valid values:
          * <p>
          * 
-         * *   true: enables automatic payment. Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is canceled.
+         * *   true: The payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.
          * *   false: An order is generated but no payment is made.
          * 
          * Default value: true.
          * 
-         * >  If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
+         * > If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -278,7 +278,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -287,11 +287,11 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Valid values:
+         * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
-         * *   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-         * *   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned and the request is made.
+         * *   true: performs a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          * 
          * Default value: false.
          */
@@ -329,7 +329,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The IDs of instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
+         * The ID of the instance. The value can be a JSON array that consists of up to 20 instance IDs. Separate the instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -338,7 +338,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to return cost details of the order when the billing method is changed from subscription to pay-as-you-go.
+         * Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go.
          * <p>
          * 
          * Default value: false.
@@ -368,7 +368,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The renewal period of the subscription instance. If the instance is hosted on a dedicated host, the renewal period of the instance cannot exceed the subscription duration of the dedicated host. Valid values:
+         * The renewal duration of the subscription instance. If the instance is hosted on a dedicated host, the renewal duration of the instance cannot exceed the subscription duration of the dedicated host. Valid values:
          * <p>
          * 
          * Valid values when the `PeriodUnit` parameter is set to Month: `1, 2, 3, 4, 5, 6, 7, 8, 9, and 12`.
@@ -380,7 +380,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The unit of the renewal period (`Period`). Valid values:
+         * The unit of the renewal duration specified by the `Period` parameter. Valid values:
          * <p>
          * 
          * Month
@@ -394,7 +394,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance is located. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

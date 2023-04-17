@@ -172,7 +172,7 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance for which you want to modify the attributes of the private pool.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +199,7 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +272,11 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
             private String matchCriteria; 
 
             /**
-             * Id.
+             * The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.
+             * <p>
+             * 
+             * *   This parameter is required when `PrivatePoolOptions.MatchCriteria` is set to `Target`.
+             * *   This parameter must be empty when `PrivatePoolOptions.MatchCriteria` is set to `Open` or `None`.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -280,7 +284,12 @@ public class ModifyInstanceAttachmentAttributesRequest extends Request {
             }
 
             /**
-             * MatchCriteria.
+             * The match mode of the private pool. Valid values:
+             * <p>
+             * 
+             * *   Open: open private pool. The system matches the instance with open private pools.
+             * *   Target: specified private pool. You must use `PrivatePoolOptions.Id` to specify the ID of a private pool.
+             * *   None: no private pool. The instance starts normally without using private pools.
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;

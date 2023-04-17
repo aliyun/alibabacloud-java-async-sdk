@@ -151,7 +151,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the diagnostic metric set.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -160,7 +160,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * MetricIds.
+         * The IDs of diagnostic metrics.
          */
         public Builder metricIds(java.util.List < String > metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
@@ -169,7 +169,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * MetricSetId.
+         * The ID of the diagnostic metric set.
          */
         public Builder metricSetId(String metricSetId) {
             this.putQueryParameter("MetricSetId", metricSetId);
@@ -178,7 +178,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * MetricSetName.
+         * The new name of the diagnostic metric set.
          */
         public Builder metricSetName(String metricSetName) {
             this.putQueryParameter("MetricSetName", metricSetName);
@@ -187,7 +187,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the diagnostic metric set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +196,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

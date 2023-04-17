@@ -142,7 +142,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The unit of currency for the bill.
+             * The unit of currency used on the bill.
              * <p>
              * 
              * Alibaba Cloud China site (aliyun.com): CNY.

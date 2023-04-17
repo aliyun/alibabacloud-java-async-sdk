@@ -178,7 +178,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * The number of entries to return on each page.
          * <p>
          * 
          * Maximum value: 100.
@@ -192,7 +192,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to this operation. Leave this parameter empty the first time you call this operation.
+         * The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

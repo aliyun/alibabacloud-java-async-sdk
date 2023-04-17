@@ -171,6 +171,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
+      * > This operation has been upgraded. We recommend that you do not use it. For information about the new version of this operation, see [AllocateEipAddress](~~120192~~).
       *
      */
     @Override
@@ -213,7 +214,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   Each disk can have only one automatic snapshot policy applied.
-      * *   A single automatic snapshot policy can be applied to multiple disks.
+      * *   Each automatic snapshot policy can be applied to multiple disks.
       *
      */
     @Override
@@ -428,18 +429,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
       * When you call this operation, take note of the following items:
       * *   The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
       * *   The valid value of Priority ranges from 1 to 100. A smaller value indicates a higher priority.
       * *   When multiple security group rules have the same priority, drop rules take precedence.
       * *   The source can be a CIDR block specified by SourceCidrIp, Ipv6SourceCidrIp, or SourcePrefixListId or can be Elastic Compute Service (ECS) instances in a security group specified by SourceGroupId.
-      * *   For advanced security groups, security groups cannot be used as authorization objects.
-      * *   For each basic security group, a maximum of 20 security groups can be used as authorization objects.
+      * *   Security groups cannot be referenced as authorization objects in rules of advanced security groups.
+      * *   Up to 20 security groups can be referenced as authorization objects in the rules of each basic security group.
       * *   If the specified security group rule exists in the security group, the call is successful but no security group rule is created.
-      * *   The `Permissions.N` prefix is added to some parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be specified together. We recommend that you use parameters prefixed with `Permissions.N`.
+      * *   The `Permissions.N` prefix is added to some parameters to generate new parameters. Original parameters andparameters prefixed with Permissions.N cannot be specified together. We recommend that you use parameters prefixed with `Permissions.N`.
       * *   You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
-      *     *   Parameters used to specify a security group rule that controls access from a specified CIDR block: IpProtocol, PortRange, SourcePortRange, NicType, Policy, and SourceCidrIp. For a security group of the Virtual Private Cloud (VPC) type, you must set the NicType parameter to intranet. For a security group of the classic network type, you can set the NicType parameter to either internet or intranet. Sample request:
+      *     *   Parameters used to specify an inbound security group rule that controls access from a specific CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourceCidrIp. For a security group of the Virtual Private Cloud (VPC) type, you must set the NicType parameter to intranet. For a security group of the classic network type, you can set the NicType parameter to either internet or intranet. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourceCidrIp=10.0.0.0/8
@@ -448,7 +448,7 @@ public final class DefaultAsyncClient implements AsyncClient {
       *             &Permissions.1.NicType=intranet
       *             &Permissions.1.Policy=Accept
       *             &<Common request parameters>
-      *     *   Parameters used to specify a security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceGroupOwnerAccount, and SourceGroupId. In this case, you must set the NicType parameter to intranet. To allow mutual access between security groups in the classic network, you can allow or deny another security group within the same region access to your security group. The security group that is allowed access to your security group can belong to your own Alibaba Cloud account or another Alibaba Cloud account specified by the SourceGroupOwnerAccount parameter. To allow mutual access between security groups in VPCs, you can allow or deny another security group within the same VPC access to your security group. Sample request:
+      *     *   Parameters used to specify an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceGroupOwnerAccount, and SourceGroupId. In this case, you must set the NicType parameter to intranet. For access control between security groups in the classic network, you can allow or deny other security groups within the same region to access your security group. The security groups that are allowed to access your security group can belong to your own Alibaba Cloud account or another Alibaba Cloud account specified by the SourceGroupOwnerAccount parameter. For access control between security groups in VPCs, you can allow or deny another security group within the same VPC to access your security group. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourceGroupId=sg-1651FBB**
@@ -458,7 +458,7 @@ public final class DefaultAsyncClient implements AsyncClient {
       *             &Permissions.1.NicType=intranet
       *             &Permissions.1.Policy=Drop
       *             &<Common request parameters>
-      *     *   Parameters used to specify a security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestPrefixListId. In this case, prefix lists support only security groups in VPCs. NicType must be set to intranet. Sample request:
+      *     *   Parameters used to specify an outbound security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestPrefixListId. In this case, prefix lists support only security groups in VPCs. NicType must be set to intranet. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
@@ -486,17 +486,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
       * When you call this operation, take note of the following items:
       * *   The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the "Security group limits" section in [](~~25412#SecurityGroupQuota1~~).
       * *   You can set Policy to accept or drop for each security group rule to allow or deny access.
       * *   The valid value of Priority ranges from 1 to 100. A smaller value indicates a higher priority.
       * *   When several security group rules have the same priority, drop rules take precedence.
       * *   The destination can be a CIDR block specified by DestCidrIp, Ipv6DestCidrIp, or DestPrefixListId or can be Elastic Compute Service (ECS) instances in a security group specified by DestGroupId.
-      * *   For advanced security groups, security groups cannot be used as authorization objects.
-      * *   For each basic security group, a maximum of 20 security groups can be used as authorization objects.
+      * *   Security groups cannot be referenced as authorization objects in the rules of advanced security groups.
+      * *   Up to 20 security groups can be referenced as authorization objects in the rules of each basic security group.
       * *   If the specified security group rule exists in the security group, the call is successful but no security group rule is created.
-      * *   The `Permissions.N` prefix is added to some parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be specified together. We recommend that you use parameters prefixed with `Permissions.N`.
+      * *   The `Permissions.N` prefix is added to certain parameters to generate new parameters. Original parameters and parameters prefixed with Permissions.N cannot be specified together. We recommend that you use parameters prefixed with `Permissions.N`.
       * *   You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
       *     *   Parameters used to specify a security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestCidrIp. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
@@ -660,9 +659,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a public IP address is converted into an EIP, the EIP is billed separately. Make sure that you understand the billing methods of EIPs. For more information, see [Billing overview](~~122035~~).
+      * After a public IP address is converted to an EIP, the EIP is billed separately. Make sure that you understand the billing methods of EIPs. For more information, see [Billing overview](~~122035~~).
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is in the `Stopped` or `Running` state.
+      * *   The instance is in the **Stopped** (`Stopped`) or **Running** (`Running`) state.
       * *   No EIPs are associated with the instance.
       * *   The instance has no configuration change tasks that have not taken effect.
       * *   The public bandwidth of the instance is not 0 Mbit/s.
@@ -1434,16 +1433,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can specify `InstanceId` to create a snapshot-consistent group for the specified disks of the instance. You can also specify `DiskId.N` to create a snapshot-consistent group for multiple disks that are attached to multiple instances within the same zone.
-      * > You cannot specify both `DiskId.N` and `ExcludeDiskId.N`. If `InstanceId` is specified, `DiskId.N` is only used to specify the disks that are attached to the instance specified by InstanceId.
+      * You can specify `InstanceId` to create a snapshot-consistent group for the specified disks in an instance. You can also specify `DiskId.N` to create a snapshot-consistent group for multiple disks that are attached to multiple instances within the same zone.
+      * > You cannot specify both `DiskId.N` and `ExcludeDiskId.N`. If `InstanceId` is set, you can use `DiskId.N` to specify only disks attached to the instance specified by InstanceId. You cannot use DiskId.N to specify disks attached to multiple instances.
       * When you call this operation, take note of the following items:
       * *   The disk for which you want to create a snapshot must be in the **In Use** (`In_use`) or **Unattached** (`Available`) state.
-      *     *   If the disk is in the **In Use** (`In_use`) state, the instance to which the disk is attached must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
+      *     *   If the disk is in the **In Use** (`In_use`) state, the instance to which the disk is attached must be in the **Running** or **Stopped** state.````
       *     *   If the disk is in the **Unattached** (`Available`) state, make sure that the disk has been attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to ECS instances.
       * *   The snapshot-consistent group feature can be used to create snapshots only for enhanced SSDs (ESSDs).
-      * *   A single snapshot-consistent group can contain snapshots of up to 16 disks including the system disk and data disks and cannot exceed 32 TiB in size.
+      * *   A single snapshot-consistent group can contain snapshots of up to 16 disks including the system disk and data disks. A single snapshot-consistent group cannot exceed 32 TiB in size.
       * *   Snapshots that you created by using the snapshot-consistent group feature are retained until they are deleted. We recommend that you delete unnecessary snapshots on a regular basis to prevent them from incurring excessive fees.
-      * *   Snapshot-consistent groups cannot be created for disks that have the multi-attach feature enabled. If disks that have the multi-attach feature enabled are attached to the instance for which you want to create a snapshot-consistent group, you must set the `ExcludeDiskId.N` parameter to exclude these disks.
+      * *   Snapshot-consistent groups cannot be created for disks that have the multi-attach feature enabled. If disks that have the multi-attach feature enabled are attached to an instance, you must set the `ExcludeDiskId.N` parameter to exclude these disks.
       * For information about the snapshot-consistent group feature and its billing, see [Create a snapshot-consistent group](~~199625~~).
       *
      */
@@ -2094,7 +2093,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * When you call this operation, take note of the following items:
       * *   If the specified snapshot does not exist, the request is ignored.
-      * *   If the specified snapshot has been used to create custom images, the snapshot cannot be deleted. You must call the [DeleteImage](~~25537~~) operation to delete the custom images before you can delete the snapshot.
+      * *   If a snapshot has been used to create custom images, the snapshot cannot be deleted. You must call the [DeleteImage](~~25537~~) operation to delete the custom images before you can delete the snapshot.
       * *   If the specified snapshot has been used to create disks and the `Force` parameter is not specified or is set to `false`, the snapshot cannot be deleted directly. If you want to delete the snapshot, set the `Force` parameter to true to forcefully delete the snapshot. The disks created from the snapshot cannot be re-initialized after the snapshot is forcefully deleted.
       *
      */
@@ -2233,7 +2232,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * After you [create](https://account.alibabacloud.com/register/intl_register.htm) an Alibaba Cloud account, you can create a specific number of ECS instances in different regions within the account. For more information, see [Limits](~~25412~~).
-      * You can also [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
+      * You can apply for a quota increase in the [Quota Center console](https://ecs.console.aliyun.com/?#/privilegeQuotaV2/region/cn-hangzhou?subTab=userQuota).
       *
      */
     @Override
@@ -2543,6 +2542,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to query the details of resources you filed with Alibaba Cloud, including the types, delivery status, and consumption details of the resources.
+      * By default, the filing tickets of I/O optimized VPC-type instances are queried.
+      * For information about how to create (CreateDemand), modify (ModifyDemand), and delete (DeleteDemand) filing tickets on ECS resources, contact your account manager.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDemandsResponse> describeDemands(DescribeDemandsRequest request) {
         try {
@@ -2749,7 +2754,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When an elasticity assurance expires, data about the association between instances and the private pool generated by the elasticity assurance becomes invalid. When you call this operation to query the expired elasticity assurance, no value is returned.
+      * When an elasticity assurance expires, data about the association between the instances and the private pool generated by the elasticity assurance becomes invalid. When you call this operation to query the expired elasticity assurance, no value is returned.
       *
      */
     @Override
@@ -3147,6 +3152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The DescribeInstanceTopology operation is in invitational preview and is not commercially available.
+      *
+     */
     @Override
     public CompletableFuture<DescribeInstanceTopologyResponse> describeInstanceTopology(DescribeInstanceTopologyRequest request) {
         try {
@@ -3220,13 +3229,13 @@ public final class DefaultAsyncClient implements AsyncClient {
       * When you call this operation, take note of the following items:
       * *   The URL returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful query, the URL expires and you must query it again.
       * *   The **KeepAlive** time of a connection to a VNC management terminal is 60 seconds. If you do not interact with the VNC management terminal within 60 seconds, the VNC management terminal is automatically disconnected.
-      * *   When the VNC management terminal is disconnected, you can only reconnect to the VNC management terminal up to 30 times a minute.
-      * *   You need to add `vncUrl`, `instanceId`, `isWindows`, and `password` parameters at the end of the URL `https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?`. Separate each parameter with an ampersand (`&`).`` Where,
-      *     *   `vncUrl:` the `VncUrl` value returned after a successful query.
+      * *   After the VNC management terminal is disconnected, you can only reconnect to the VNC management terminal a maximum of 30 times a minute.
+      * *   You need to add `vncUrl`, `instanceId`, `isWindows`, and `password` parameters at the end of the URL `https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?`. Separate each parameter with an ampersand (`&`).``
+      *     *   `vncUrl:` the value of the `VncUrl` parameter that is returned after a successful query.
       *     *   `instanceId:` the ID of your instance.
       *     *   `isWindows:` specifies whether the operating system of the instance is Windows. Set the parameter to `true` if the operating system is Windows. Set the parameter to `false` if the operating system is not Windows.
-      *     *   `password:` Optional. A six-character password used to connect to the VNC management terminal. It can contain digits and letters. You do not need to enter your password again when the connection is being established if you set this parameter.
-      *         Example:
+      *     *   `password:` Optional. A six-character password that is used to connect to the VNC management terminal. It can contain digits and letters. If you specify this parameter, you do not need to enter your password again when the connection is being established.
+      *         Examples:
       *         ```
       *         ```
       * <https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%\\\\*\\\\*\\\\*\\\\*&instanceId=i-wz9hhwq5a6tm\\\\*\\\\*\\\\*\\\\*&isWindows=true> \\`\\`\\`
@@ -3274,7 +3283,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The response includes instance states and instance system events in the Scheduled state.
+      * The response includes instance states and instance system events that are in the Scheduled state.
       * If a period is specified, events are queried based on the specified period.
       *
      */
@@ -3739,6 +3748,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   A security group can be referenced by the inbound or outbound rules of other security groups.
+      * *   Up to 100 entries can be returned each time.
+      * *   If a security group cannot be deleted by calling the [DeleteSecurityGroup](~~25558~~) operation, you can call the DescribeSecurityGroupReferences operation to check whether the security group is referenced by the rules of other security groups. If the security group is referenced by the rules of other security groups, you must remove the reference before you can delete the security group.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSecurityGroupReferencesResponse> describeSecurityGroupReferences(DescribeSecurityGroupReferencesRequest request) {
         try {
@@ -3774,6 +3790,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Usage notes
+      * *   When you send a file, the file may fail to be sent to specified Elastic Compute Service (ECS) instances. You can call this operation to check whether the file is successfully sent.
+      * *   You can call this operation to query the records of files sent in the last six weeks.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSendFileResultsResponse> describeSendFileResults(DescribeSendFileResultsRequest request) {
         try {
@@ -3806,6 +3828,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   You can specify multiple request parameters such as `RegionId`, `DiskIds`, and `InstanceId` to be queried. Specified parameters have logical AND relations.
+      * *   Only the specified parameters are used as filter conditions. If the `DiskIds` and `SnapshotLinkIds` parameters are set to empty JSON arrays, they are regarded as valid filter conditions and an empty result is returned.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSnapshotLinksResponse> describeSnapshotLinks(DescribeSnapshotLinksRequest request) {
         try {
@@ -4038,6 +4066,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * *   The returned user data is encoded in Base64.
+      * *   If the instance does not have user data configured, an empty result is returned.
+      *
+     */
     @Override
     public CompletableFuture<DescribeUserDataResponse> describeUserData(DescribeUserDataRequest request) {
         try {
@@ -4142,6 +4176,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, only a list of zones and some resource information of each zone are returned. If you want to query instance types and disk categories that are available for purchase in a specific zone, we recommend that you call the [DescribeAvailableResource](~~66186~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request) {
         try {
@@ -4172,11 +4210,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   The disk you want to detach must be in the `In_Use` state.
-      * *   The instance from which you want to detach a data disk must be in the `Running` or `Stopped`state.********
-      * *   The instance from which you want to detach the system disk must be in the `Stopped` state.****
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance.``
-      * *   DetachDisk is an asynchronous operation. It takes about one minute for a disk to be detached from an instance after the operation is called.
+      * *   The disk that you want to detach must be in the In Use (`In_Use`) state.
+      * *   The instance from which you want to detach a data disk must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
+      * *   The instance from which you want to detach the system disk must be in the **Stopped** (`Stopped`) state.
+      * *   If the `OperationLocks` parameter in the response contains `"LockReason" : "security"` when you query the instance information, the instance is locked for security reasons and all operations do not take effect on the instance.
+      * *   DetachDisk is an asynchronous operation. It takes about 1 minute for a disk to be detached from an instance after the operation is called.
       *
      */
     @Override
@@ -4255,6 +4293,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.
+      *
+     */
     @Override
     public CompletableFuture<DisableActivationResponse> disableActivation(DisableActivationRequest request) {
         try {
@@ -4341,6 +4384,49 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you export a custom image, complete the following operations:
+      * *   Understand the prerequisites and precautions. For more information, see [Export images](~~58181~~).
+      * *   Use Resource Access Management (RAM) to create a RAM role for ECS and grant ECS the permissions to write data to OSS. Perform the following steps:
+      *     1.  Create a role named `AliyunECSImageExportDefaultRole` and configure the following trust policy for the role:
+      *              {
+      *                "Statement": [
+      *                  {
+      *                    "Action": "sts:AssumeRole",
+      *                    "Effect": "Allow",
+      *                    "Principal": {
+      *                      "Service": [
+      *                        "ecs.aliyuncs.com"
+      *                      ]
+      *                    }
+      *                  }
+      *                ],
+      *                "Version": "1"
+      *              }
+      *     2.  Attach the `AliyunECSImageExportRolePolicy` system policy to the `AliyunECSImageExportDefaultRole` role. This policy is the default policy that grants ECS the permissions to export images. For more information, go to the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101.0.0.64c64df5dfpmdY#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunECSImageImportDefaultRole%22,%20%22TemplateId%22:%20%22ECSImportRole%22%7D,%20%22request2%22:%20%7B%22RoleName%22:%20%22AliyunECSImageExportDefaultRole%22,%20%22TemplateId%22:%20%22ECSExportRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fecs.console.aliyun.com%2F%22,%20%22Service%22:%20%22ECS%22%7D) page. You can also create a custom policy that contains the following content and attach the policy to the role:
+      *              {
+      *                "Version": "1",
+      *                "Statement": [
+      *                  {
+      *                    "Action": [
+      *                      "oss:GetObject",
+      *                      "oss:PutObject",
+      *                      "oss:DeleteObject",
+      *                      "oss:GetBucketLocation",
+      *                      "oss:GetBucketInfo",
+      *                      "oss:AbortMultipartUpload",
+      *                      "oss:ListMultipartUploads",
+      *                      "oss:ListParts"
+      *                    ],
+      *                    "Resource": "*",
+      *                    "Effect": "Allow"
+      *                  }
+      *                ]
+      *              }
+      * After you export a custom image, the following situation occurs:
+      * The custom image is stored in the specified OSS bucket. You can download the custom image. For more information, see [Download objects](~~31912~~).
+      *
+     */
     @Override
     public CompletableFuture<ExportImageResponse> exportImage(ExportImageRequest request) {
         try {
@@ -4373,6 +4459,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   ECS is a virtualized cloud-based service and cannot be connected to display devices. However, Alibaba Cloud caches system command outputs for the last start, restart, or shutdown of ECS instances. You can call the GetInstanceConsoleOutput operation to obtain the command outputs.
+      * *   The command outputs of instances that use the retired instance types cannot be obtained. For more information, see [Retired instance types](~~55263~~).
+      * *   The command outputs of Windows instances cannot be obtained.
+      *
+     */
     @Override
     public CompletableFuture<GetInstanceConsoleOutputResponse> getInstanceConsoleOutput(GetInstanceConsoleOutputRequest request) {
         try {
@@ -4408,6 +4500,59 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   Before you can import an image, you must upload the image to an Object Storage Service (OSS) bucket. For more information, see [Upload objects](~~31886~~).
+      * *   In some scenarios, you may want to create a custom image from an existing server and create an ECS instance from the image. The source server can be a physical server, a virtual machine, or a cloud host. However, you must make sure that the virtio driver is installed on the source server, otherwise the ECS instance created from the resulting image may be unable to start. For more information, see [Install the virtio driver](~~62423~~).
+      * *   If this is the first time you import images to ECS, you must use Resource Access Management (RAM) to grant ECS the permissions to access your OSS buckets. Otherwise, the `NoSetRoletoECSServiceAcount` error code is returned when you call the ImportImage operation. The [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101image.0.0.2ffa4df57kSoHX#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageImportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSImportRole%22%7D%2C%20%22request2%22%3A%20%7B%22RoleName%22%3A%20%22AliyunECSImageExportDefaultRole%22%2C%20%22TemplateId%22%3A%20%22ECSExportRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//ecs.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22ECS%22%7D) page of the RAM console provides a convenient push-button authorization function for this operation. You can also perform the authorization by using a RAM role and RAM policies. The following examples show the policies and permissions required for some steps in the authorization procedure. For more information, see [Control access to resources by using RAM users](~~25481~~).
+      *     1.  Create a role named `AliyunECSImageImportDefaultRole`. You must use this exact name. Otherwise, the image cannot be imported. Configure the following trust policy for the role:
+      *             {
+      *             	"Statement": [
+      *             	{
+      *             		"Action": "sts:AssumeRole",
+      *             		"Effect": "Allow",
+      *             		"Principal": {
+      *             		"Service": [
+      *             			"ecs.aliyuncs.com"
+      *             		]
+      *             		}
+      *             	}
+      *             ],
+      *             	"Version": "1"
+      *             }
+      *     2.  Attach the `AliyunECSImageImportRolePolicy` system policy to the role. You can also create a custom policy that contains the following content and attach the policy to the role:
+      *         ```
+      *         {
+      *         	"Version": "1",
+      *         	"Statement": [
+      *         	{
+      *         		"Action": [
+      *         				"oss:GetObject",
+      *         				"oss:GetBucketLocation",
+      *         				"oss:GetBucketInfo"
+      *         	],
+      *         			"Resource": "*",
+      *         			"Effect": "Allow"
+      *         			}
+      *         	]
+      *         }
+      *         ```
+      * *   You cannot delete an image that is being imported. However, you can call the [CancelTask](~~25624~~) operation to cancel the image import task.
+      * *   Make sure that the image is imported to the same region where the OSS bucket resides.
+      * *   The valid values of N in the `DiskDeviceMapping.N` parameter range from 1 to 17. When N is set to 1, the disk is a system disk. When N is set to a value from 2 to 17, the disk is a data disk.
+      * *   When you set the `Architecture` parameter to `arm64` or when you set the `Platform` parameter to `CentOS Stream`, `Anolis`, `AlmaLinux`, `UOS`, `Kylin`, or `Rocky Linux`, take note of the following items:
+      *     *   If you need to set the password or modify the key pair for the imported image, make sure that the image meets the following requirements:
+      *         *   The kernel of the operating system supports the `CONFIG_FW_CFG_SYSFS` feature. By default, this feature is supported by Linux community kernel 4.6 and later and CentOS kernel 3.10.0-826.el7 and later. You can run the `grep -nr CONFIG_FW_CFG_SYSFS /boot/config-$(uname -r)` command on the source server of the image. If the command output contains `CONFIG_FW_CFG_SYSFS=y`, the operating system kernel in this image supports the `CONFIG_FW_CFG_SYSFS` feature.
+      *         *   The operating system is installed with the latest version of Alibaba Cloud cloud-init. The version of cloud-init 19.1 must be 19.1.3 or later. The version of cloud-init 0.7.6a in some early versions of operating systems must be 0.7.6a15 or later. For more information, see [Install cloud-init](~~57803~~).
+      *         *   The operating system supports the SHA-512 encryption algorithm.
+      *     *   If you want use the imported image to resize disks and file systems, make sure that the image meets the following requirements:
+      *         *   The kernel version of the operating system is later than 3.6.
+      *         *   The image supports the growpart command. The `cloud-utils-growpart` package is required to use this command. The methods for installing this package vary based on the operating systems. For more information, see [Resize partitions and file systems of Linux system disks](~~111738~~).
+      *         *   The image must support the resize2fs command. The`e2fsprogs` package is required to use this command. By default, the package is installed on the operating system. If the package is not installed, install it.
+      *         *   The operating system is installed with the latest version of Alibaba Cloud cloud-init. The version of cloud-init 19.1 must be 19.1.3 or later. The version of cloud-init 0.7.6a in some early versions of operating systems must be 0.7.6a15 or later. For more information, see [Install cloud-init](~~57803~~).
+      * *   If the image that you want to import uses the ARM64 architecture, you must set the real-time clock (RTC) to use the Coordinated Universal Time (UTC) time standard. For more information, see [Linux time and time zones](https://icms.alibaba-inc.com/content/ecs/image?l=1\\&m=4656\\&n=3385033).
+      *
+     */
     @Override
     public CompletableFuture<ImportImageResponse> importImage(ImportImageRequest request) {
         try {
@@ -4472,6 +4617,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * After you call the InstallCloudAssistant operation and then the [RebootInstance](~~25502~~) operation, the Cloud Assistant client is installed and takes effect.
+      *
+     */
     @Override
     public CompletableFuture<InstallCloudAssistantResponse> installCloudAssistant(InstallCloudAssistantRequest request) {
         try {
@@ -4486,6 +4635,23 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The ECS instances on which you want to run the Cloud Assistant command must meet the following requirements. If you specify multiple ECS instances and one of the instances does not meet the requirements to run the command, the call fails. Specify instances that meet the requirements and call the InvokeCommand operation again.
+      *     *   The network type is virtual private cloud (VPC). For more information, see [What is a VPC?](~~34217~~)
+      *     *   The instances are in the Running (`Running`) state.
+      *     *   The Cloud Assistant client is installed on the instances. For more information, see [Install the Cloud Assistant client](~~64921~~).
+      *     *   Before you run PowerShell commands, make sure that the PowerShell module is configured for the instances.
+      * *   If you set the `Timed` parameter to false, the command is run only once.
+      * *   If you set the `Timed` parameter to true, the command is run on a schedule.
+      *     *   The schedule is specified by the `Frequency` parameter. The execution results of a command do not affect the next command execution.
+      *     *   If you want to specify a schedule by using a cron expression, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For more information, see [Configure the NTP service and time zone for Linux instances](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
+      *     To ensure that scheduled tasks can run as expected, make sure that the version of the Cloud Assistant client is not earlier than the following versions. A scheduled task can run a command at a specified interval, only once at a specified time, or at specific times based on a cron expression that includes a specific year or time zone. If the `ClientNeedUpgrade` error code is returned, you must update the Cloud Assistant client to the latest version. For more information, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).
+      *           - Linux: 2.2.3.282 
+      *           - Windows: 2.1.3.282 
+      * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on the Cloud Assistant client. If an execution fails, no execution information is generated.
+      * *   If you enable the custom parameter feature by setting the EnableParameter parameter to true when you create a command, you must specify custom parameters (`Parameters`) when you run the command.
+      *
+     */
     @Override
     public CompletableFuture<InvokeCommandResponse> invokeCommand(InvokeCommandRequest request) {
         try {
@@ -4518,6 +4684,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add instances to or remove instances from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add ENIs to or remove ENIs from a security group.
+      * When you call this operation, take note of the following items:
+      * *   Before you add an instance to a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
+      * *   An instance can be added to up to five security groups.
+      * *   To add an instance to more security groups, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex.htm). An instance can be added to up to 16 security groups.
+      * *
+      * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
+      * *   The security group and the instance must belong to the same region.
+      * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must be in the same VPC.
+      * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
+      *
+     */
     @Override
     public CompletableFuture<JoinSecurityGroupResponse> joinSecurityGroup(JoinSecurityGroupRequest request) {
         try {
@@ -4554,6 +4733,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation to query the states of Cloud Assistant plug-ins on ECS instances, make sure that the versions of the Cloud Assistant client installed on the instances are not earlier than the following ones:
+      * - 2.2.3.344 for Linux instances
+      * - 2.1.3.344 for Windows instances
+      *
+     */
     @Override
     public CompletableFuture<ListPluginStatusResponse> listPluginStatus(ListPluginStatusRequest request) {
         try {
@@ -4568,6 +4753,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * *   `ResourceId.N`
+      * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
+      * *   `TagFilter.N`
+      * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all of the specified filter conditions are returned:
+      * *   Set 1: `Tag.N.Key, Tag.N.Value`, and `ResourceId.N`
+      * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N`, and `ResourceId.N`
+      *
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -4582,6 +4777,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you modify the capacity or capacity-related settings of an auto provisioning group, the group executes a scheduling task once after the group is modified.
+      * *   You cannot modify an auto provisioning group when the group is being deleted.
+      *
+     */
     @Override
     public CompletableFuture<ModifyAutoProvisioningGroupResponse> modifyAutoProvisioningGroup(ModifyAutoProvisioningGroupRequest request) {
         try {
@@ -4660,6 +4861,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can modify a command when it is being executed. After the command is modified, the new command content applies to subsequent executions.
+      * You cannot modify the command type. For example, you cannot change a shell command (RunShellScript) to a batch command (RunBatScript).
+      *
+     */
     @Override
     public CompletableFuture<ModifyCommandResponse> modifyCommand(ModifyCommandRequest request) {
         try {
@@ -4712,6 +4918,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * *   If you enable auto-renewal for your subscription dedicated host, the dedicated host is automatically renewed nine days before expiration. The renewal fees are automatically paid at 08:00:00 (UTC+8). If the fees are not paid, they are paid at the same point in time the next day. Automatic payment stops after the fees are paid or after the dedicated host expires and is locked. Make sure that you have sufficient balance within your account.
+      * *   Subscription dedicated hosts can be automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on the dedicated hosts. For more information, see the description of the AutoRenewWithEcs parameter.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDedicatedHostAutoRenewAttributeResponse> modifyDedicatedHostAutoRenewAttribute(ModifyDedicatedHostAutoRenewAttributeRequest request) {
         try {
@@ -4754,6 +4966,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to modify the demand information about instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
+      * > This operation is in internal preview and has not been officially released. We recommend that you do not use this operation.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDemandResponse> modifyDemand(ModifyDemandRequest request) {
         try {
@@ -4815,6 +5032,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * After you change the billing method, the payment (if any) is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
+      * When you call this operation, take note of the following items:
+      * *   You can change the billing method from subscription to pay-as-you-go for disks that are attached to a subscription instance.
+      * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
+      * *   The instance cannot be in the Stopped state due to overdue payments.
+      * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
+      * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
+      * *   You cannot change the billing method again within 5 minutes of a successful change.
+      * *   The billing method of disks with the multi-attach feature enabled must be pay-as-you-go and cannot be changed to subscription.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDiskChargeTypeResponse> modifyDiskChargeType(ModifyDiskChargeTypeRequest request) {
         try {
@@ -4829,6 +5058,33 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<ModifyDiskDeploymentResponse> modifyDiskDeployment(ModifyDiskDeploymentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDiskDeployment").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDiskDeploymentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDiskDeploymentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * ## Description
+      * When you call this operation, take note of the following items:
+      * *   To modify the performance level of an ESSD, take note of the following items:
+      *     *   For a subscription ESSD, you can only upgrade its performance level.
+      *     *   For a pay-as-you-go ESSD, You can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
+      *     *   The ESSD must be in the **In Use** (In_Use) or **Unattached** (Available) state.
+      *     *   If the ESSD is attached to an ECS instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.
+      *     *   If you cannot upgrade the performance level of the ESSD due to its capacity, resize the ESSD by calling the [ResizeDisk](~~25522~~) operation and then try again. For more information, see [Enhanced SSDs](~~122389~~).
+      * *   For more information about the limits on changing the category of a disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
+      * The new disk category or performance level takes effect immediately after this operation is executed. Alibaba Cloud calculates the bill based on the new disk category and performance level.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDiskSpecResponse> modifyDiskSpec(ModifyDiskSpecRequest request) {
         try {
@@ -4957,6 +5213,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   You can share only your custom images with other Alibaba Cloud accounts.
+      * *   You can share a custom image with up to 10 Alibaba Cloud accounts in a request. You can specify up to 10 Alibaba Cloud account IDs by using the AddAccount.N parameter or the RemoveAccount.N parameter. If you specify more than 10 account IDs, the parameter value does not take effect.
+      * *   You can share a custom image with up to 50 Alibaba Cloud accounts in total.
+      * *   After you create an instance from a shared custom image by calling the [RunInstances](~~63440~~) operation, you cannot call the [ReInitDisk](~~25519~~) operation to reinitialize the system disk of the instance if the image owner unshares the image or calls the [DeleteImage](~~25537~~) operation to delete the image.
+      * To publish or unpublish a community image, take note of the following items:
+      * *   Alibaba Cloud provides only the platform where the community images can be published and managed. The owner of a community image is responsible for the quality and updates of the image. Make sure that you read and agree to the Community Image Agreement. Otherwise, you cannot publish community images. For more information, see [Publish a community image](~~208370~~)
+      * *   You cannot publish encrypted images as community images.
+      * *   All community images are publicly available. All Alibaba Cloud accounts that reside in the same region as a community image can access the image.
+      * *   You cannot share, export, or copy community images.
+      * *   After a community image is unpublished, the image is no longer available to Alibaba Cloud accounts. If you share a custom image with specific Alibaba cloud accounts and then publish the image as a community image, the image is still shared with the accounts.
+      *
+     */
     @Override
     public CompletableFuture<ModifyImageSharePermissionResponse> modifyImageSharePermission(ModifyImageSharePermissionRequest request) {
         try {
@@ -4971,6 +5241,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * A private pool is generated after an elasticity assurance or a capacity reservation is created. The private pool is associated with information about instances that are created by using the private pool. You can also use a private pool when you create an ECS instance, so that the instance can be matched to the elasticity assurance or capacity reservation associated with the private pool.
+      * *   After you call this operation to modify the attributes of the private pool for an instance, you do not need to restart the instance.
+      * *   When you call the following operations, the system rematches the instance with private pools. If the instance already matches a specified private pool, the call to an operation may fail when the private pool capacity is used up or because the private pool expires. If the call fails, call the ModifyInstanceAttachmentAttributes operation to change the match mode of the private pool to `Open`.
+      *     *   StartInstance
+      *     *   ReActivateInstances
+      *     *   ModifyInstanceChargeType
+      *     *   ModifyPrepayInstanceSpec
+      *     *   ReplaceSystemDisk
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceAttachmentAttributesResponse> modifyInstanceAttachmentAttributes(ModifyInstanceAttachmentAttributesRequest request) {
         try {
@@ -4985,6 +5266,26 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons and all operations are prohibited on it.
+      * When you call this operation, take note of the following items:
+      * *   Modify the hostname (`HostName`): After the hostname is modified, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. The new hostname does not take effect if you restart the instance from within the operating system.
+      * *   Reset the password (`Password`):
+      *     *   The instance must not be in the **Starting** (`Starting`) state.
+      *     *   After the password is reset, you must restart the instance by performing the operations described in [Restart an instance](~~25440~~) in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. The new password does not take effect if you restart the instance from within the operating system.
+      * *   Modify user data (`UserData`):
+      *     *   The instance must be in the **Stopped** (`Stopped`) state.
+      *     *   The instance must meet the conditions on user data. For more information, see [Overview of ECS instance user data](~~49121~~).
+      * *   Change the security group (`SecurityGroupIds.N`):
+      *     *   You can move an instance to a security group of a different type. Before you move an instance to a security group of a different type, we recommend that you evaluate the differences in rule configurations of the two security group types. This helps prevent business continuity issues when you switch security groups.
+      *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of the `SecurityGroupIds.N` parameter.
+      * *   Modify the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`):
+      *     *   The instance must be in the Stopped (`Stopped`) state.
+      *     *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.
+      *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To obtain the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` parameters.
+      *     *   If you set the NetworkInterfaceQueueNumber parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `PrimaryEniQueueNumber` parameter.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceAttributeResponse> modifyInstanceAttribute(ModifyInstanceAttributeRequest request) {
         try {
@@ -5013,6 +5314,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you are familiar with the billing methods and pricing schedule of Elastic Compute Service (ECS). For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
+      * *   The payment for auto-renewal is deducted automatically at 08:00:00 (UTC+8) nine days before the instance expires.
+      * *   If the first deduction attempt fails, Alibaba Cloud attempts to deduct the payment each day until the payment is deducted or until the instance is locked after the nine-day period ends. Make sure that your account balance or credit balance is sufficient.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceAutoRenewAttributeResponse> modifyInstanceAutoRenewAttribute(ModifyInstanceAutoRenewAttributeRequest request) {
         try {
@@ -5028,17 +5335,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
+      * Before you call this operation, make sure that you are familiar with the billing methods and pricing of ECS. For more information, see the [Elastic Compute Service](https://www.alibabacloud.com/product/ecs#pricing) product page.
       * When you call this operation, take note of the following items:
-      * * The instances must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state, and you have no overdue payments for them.
-      * * After you change the billing method, automatic payment is enabled by default. Make sure that you have sufficient balance in your account. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
-      * * **Change the billing method from subscription to pay-as-you-go**:
-      *     * Your ECS usage determines whether the billing method of an instance can be changed from subscription to pay-as-you-go.
-      *     * After you change the billing method of an instance from subscription to pay-as-you-go, the new billing method remains in effect for the remaining lifecycle of the instance. The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
-      *     * **Refund rule**: You have a quota for the total refund amount each month, and unused balance of this quota is not carried forward into the next month. After you use up the refund quota of the current month, you can change the billing method only when the next month arrives. The refund amount incurred when you change the billing method is calculated based on the following formula: **Number of vCPUs × (Number of remaining days × 24 ± Number of remaining or elapsed hours)**.
-      * * **Change the billing method from pay-as-you-go to subscription**:
-      *     * You can change the billing method of all data disks attached to an instance from pay-as-you-go to subscription.
-      *     * This operation cannot be called for a pay-as-you-go instance that has an automatic release time set.
+      * *   The instances must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state, and you cannot have overdue payments associated with them.
+      * *   After you change the billing method, the payment (if any) is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com/) to pay for the order.
+      * *   **Change the billing method from subscription to pay-as-you-go**:
+      *     *   Your ECS usage determines whether the billing method of an instance can be changed from subscription to pay-as-you-go.
+      *     *   After you change the billing method of an instance from subscription to pay-as-you-go, the new billing method remains in effect for the remaining lifecycle of the instance. The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
+      *     *   **Refund rule**: You have a quota for the total refund amount each month, and the unused balance of this quota is not carried over to the next month. If you use up the refund quota of the current month, you can change the billing method only in the next month. The refund amount incurred after you change the billing method is calculated based on the following formula: **Number of vCPUs × (Number of remaining days × 24 ± Number of remaining or elapsed hours)**.
+      * *   **Change the billing method from pay-as-you-go to subscription**:
+      *     *   You can change the billing method of all data disks that are attached to an instance from pay-as-you-go to subscription.
+      *     *   This operation cannot be called for a pay-as-you-go instance that has an automatic release time set.
       *
      */
     @Override
@@ -5113,6 +5420,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   As of November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to throttling policies for your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:
+      *     *   Within a single region, the sum of actual peak bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.
+      *     *   Within a single region, the sum of actual peak bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
+      * *   If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, a public IP address is automatically assigned to the instance.
+      * *   If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, no public IP address is automatically assigned to the instance. You must call the [AllocatePublicIpAddress](~~25544~~) operation to assign a public IP address to the instance.
+      * *   An instance in the classic network must be in the Stopped state before you can upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of the instance from 0 Mbit/s.
+      * *   After the bandwidth is upgraded, AutoPay is set to true by default and the payment is automatically made. Maintain a sufficient account balance. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false. When you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.
+      * *   The price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed cannot be returned.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceNetworkSpecResponse> modifyInstanceNetworkSpec(ModifyInstanceNetworkSpecRequest request) {
         try {
@@ -5127,6 +5446,21 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * Before you call this operation, make sure that you understand the billing methods and pricing schedule of ECS. For more information, visit the [Elastic Compute Service](https://www.aliyun.com/price/product#/ecs/detail) product page.
+      * For information about ECS SDK for Python used to change resource configurations, see [Query available resources for configuration changes](~~109517~~).
+      * When you call this operation, take note of the following items:
+      * *   You must have no overdue payments in your account.
+      * *   You can adjust the public bandwidth of an instance only when the instance is in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
+      * *   Before you change the instance type of a pay-as-you-go instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the instance types to which you can change.
+      * *   You can change the instance type of an instance only when the instance is in the **Stopped** (`Stopped`) state.
+      * *   The instance type and the public bandwidth of an instance cannot be changed together.
+      * *   As of November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to throttling policies for your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:
+      *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.
+      *     *   Within a single region, the sum of actual maximum bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceSpecResponse> modifyInstanceSpec(ModifyInstanceSpecRequest request) {
         try {
@@ -5162,6 +5496,36 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The instance must be in the **Stopped** state.``
+      * *   When you call this operation to modify the private IP address or vSwitch of an instance, take note of the following items:
+      *     *   If the instance is newly created, you must restart the instance before you can call this operation.
+      *     *   After you modify the private IP address or vSwitch of an instance, you must restart the instance before you can call this operation again.
+      * *   When you call this operation to modify the VPC of an instance, take note of the following items:
+      *     *   **Instance:**
+      *         *   The instance cannot be associated with Server Load Balancer (SLB) instances.
+      *         *   The instance cannot be in the Locked, To Be Released, Expired, Expired and Being Recycled, or Overdue and Being Recycled state. For more information, see [ECS instance lifecycle](~~25380~~).
+      *         *   The instance cannot be in-use or used in conjunction with other cloud services. For example, the instance cannot be in the process of being migrated or having its VPC changed, or the databases deployed on the instance cannot be managed by Data Transmission Service (DTS).
+      *     *   **Network:**
+      *         *   The cut-through mode or multi-elastic IP address (EIP) to elastic network interface (ENI) mode must be disabled.
+      *         *   The instance cannot be associated with a high-availability virtual IP address (HAVIP).
+      *         *   The vSwitch of the instance cannot be associated with a custom route table.
+      *         *   The instance cannot have Global Accelerator (GA) activated.
+      *         *   The instance cannot have secondary ENIs bound.
+      *         *   The instance cannot have IPv6 addresses assigned.
+      *         *   The primary ENI of the instance cannot be associated with multiple IP addresses.
+      *         *   The vSwitch specified by the VSwitchId parameter must belong to the new VPC.
+      *         *   The new and original vSwitches must reside within the same zone.
+      *         *   If the private IP address of the primary ENI is specified, the private IP address must be available and within the CIDR block of the vSwitch. If the private IP address is not specified, the system randomly assigns one. The available IP addresses in the CIDR block of the new vSwitch must be sufficient.
+      *         *   If advanced features are enabled in the new VPC, take note of the instance families that do not support advanced VPC features. For more information, see [Instance families that do not support advanced VPC features](~~163466~~).
+      *         *   The Alibaba Cloud account that owns the new VPC cannot share the VPC with other accounts.
+      *     *   **Security group (SecurityGroupId.N):**
+      *         *   All security groups must be of the same type.
+      *         *   The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see [Limits](~~25412~~).
+      *         *   The specified security groups must belong to the new VPC.
+      *         *   You can switch the instance to a security group of a different type. If you want to switch an instance to a security group of a different type, you must understand the differences between the rule configurations of the two security group types to avoid impacts on the instance network. For more information, see [Overview](~~25387~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceVpcAttributeResponse> modifyInstanceVpcAttribute(ModifyInstanceVpcAttributeRequest request) {
         try {
@@ -5190,6 +5554,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * The ModifyManagedInstance operation can be called to modify only the name of a single managed instance.
+      *
+     */
     @Override
     public CompletableFuture<ModifyManagedInstanceResponse> modifyManagedInstance(ModifyManagedInstanceRequest request) {
         try {
@@ -5260,6 +5629,21 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods, pricing schedule, and refund policies of [ECS](https://www.alibabacloud.com/product/ecs#pricing). For more information, see [Request a refund for the downgrade of resource specifications](~~201955~~).
+      * Before you change the instance type of a subscription instance, you can call the [DescribeResourcesModification](~~66187~~) operation to query the instance types to which you can change. You can use ECS SDK for Python to query the instance types to which you can change. For more information, see [Query available resources for configuration changes](~~109517~~).
+      * When you call this operation, take note of the following items:
+      * *   The instance type of an expired instance cannot be changed. You can renew the instance and try again.
+      * *   When you downgrade the instance type of an instance, take note of the following items:
+      *     *   The instance must be in the **Stopped** state.``
+      *     *   You must specify the operation type by setting `OperatorType` to downgrade.
+      *     *   You can downgrade the configurations of an instance up to three times. Therefore, a maximum of three refunds for price difference can be made for an instance. Downgrade operations include instance type downgrades, bandwidth configuration downgrades, and the change of the disk billing method from subscription to pay-as-you-go.
+      *     *   The price difference is refunded to the payment account you used. Vouchers that have been redeemed are not refundable.
+      * *   This operation is asynchronous. It takes 5 to 10 seconds for the instance type to change. You must restart the instance by calling the RebootInstance operation or by using the ECS console for the instance type change to take effect. If you restart only the operating system of the instance, the instance type change does not take effect.
+      *     *   If the instance is in the **Stopped** state, you only need to start the instance. You do not need to restart the instance after it enters the Running state.
+      *     *   If `RebootWhenFinished` is set to true for the instance, you do not need to manually restart the instance.
+      *
+     */
     @Override
     public CompletableFuture<ModifyPrepayInstanceSpecResponse> modifyPrepayInstanceSpec(ModifyPrepayInstanceSpecRequest request) {
         try {
@@ -5302,6 +5686,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * When you call this operation, take note of the following items:
+      * *   For information about limits on reserved instances, see the "Limits" section in [Reserved instance overview](~~100370~~).
+      * *   Before you call this operation to split a reserved instance, make sure that you fully understand the limits on splitting a reserved instance. For more information, see [Split a reserved instance](~~100375~~).
+      * *   Before you call this operation to merge reserved instances, make sure that you fully understand the limits on merging reserved instances. For more information, see [Merge reserved instances](~~132229~~).
+      * *   Before you call this operation to modify a reserved instance, make sure that you fully understand the limits and methods of modifying a reserved instance. For more information, see [Modify a reserved instance](~~132230~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifyReservedInstancesResponse> modifyReservedInstances(ModifyReservedInstancesRequest request) {
         try {
@@ -5366,6 +5759,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * When you modify the rules of a security group by specifying the rule IDs, take note of the following limits:
+      * *   If the type of the authorization object (source or destination) is IP address or CIDR block, security group, or prefix list, the type cannot be changed. If the original authorization object is an IP address, you can change it to another IP address or a CIDR block, but not to a security group or prefix list.
+      * *   The IP address family of the authorization object cannot be changed. For example, if the original authorization object is an IPv4 CIDR block, you cannot change it to an IPv6 CIDR block. If the original authorization object is an IPv4 prefix list, you cannot change it to an IPv6 prefix list.
+      * *   The modified security group rule cannot be the same as other existing rules.
+      * *   If you want to delete the values of non-empty parameters for the rule, we recommend that you create a new rule and delete the original rule.
+      *
+     */
     @Override
     public CompletableFuture<ModifySecurityGroupEgressRuleResponse> modifySecurityGroupEgressRule(ModifySecurityGroupEgressRuleRequest request) {
         try {
@@ -5380,6 +5782,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   When InnerAccessPolicy is set to Accept for a security group, the instances in the security group can communicate with each other. In this case, the Accept internal access control policy takes precedence over user-created security group rules to keep instances in the security group accessible to each other.
+      * *   When InnerAccessPolicy is set to Drop for a security group, the instances in the security group are isolated from each other. In this case, user-created security group rules take precedence over the Drop internal access control policy and can be used to allow access between the instances. For example, you can call the [AuthorizeSecurityGroup](~~25554~~) operation to create an inbound security group rule that allows the instances in the security group to communicate with each other.
+      * *   You can call the [DescribeSecurityGroupAttribute](~~25555~~) operation to query the internal access policy of a security group.
+      *
+     */
     @Override
     public CompletableFuture<ModifySecurityGroupPolicyResponse> modifySecurityGroupPolicy(ModifySecurityGroupPolicyRequest request) {
         try {
@@ -5562,6 +5971,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
+      * *   Before you purchase a reserved instance, you can call the [DescribeAvailableResource](~~66186~~) operation to query available instance resources.
+      *
+     */
     @Override
     public CompletableFuture<PurchaseReservedInstancesOfferingResponse> purchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest request) {
         try {
@@ -5576,6 +5990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of SCUs. For more information, see [Storage capacity units](~~137897~~).
+      *
+     */
     @Override
     public CompletableFuture<PurchaseStorageCapacityUnitResponse> purchaseStorageCapacityUnit(PurchaseStorageCapacityUnitRequest request) {
         try {
@@ -5613,6 +6031,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   The disk that you want to re-initialize must be in the **In Use** (In_use) state and the instance to which the disk is attached must be in the **Stopped** (Stopped) state.
+      * *   If the instance has never been started since it was created, the disks attached to it cannot be re-initialized.
+      * *   If a local snapshot has been created for a disk, the disk cannot be re-initialized.
+      * *   Disks that have the multi-attach feature enabled cannot be re-initialized.
+      * *   When a system disk is re-initialized, it is restored to the state of the image from which it was created. If the source image is deleted, the system disk cannot be re-initialized.
+      * *   When a separately created data disk is re-initialized, it is restored to an empty data disk.
+      * *   When a data disk that was created from a snapshot is re-initialized, the disk is restored to the state of the snapshot.
+      * > If the source snapshot is deleted, the disk cannot be re-initialized and an error is returned.
+      *
+     */
     @Override
     public CompletableFuture<ReInitDiskResponse> reInitDisk(ReInitDiskRequest request) {
         try {
@@ -5627,6 +6057,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The ECS instance to which you want to restart must be in the **Running** (`Running`) state.
+      * *   After this operation is called, the status of the instance changes to `Starting`.****
+      * *   An instance can be forcefully restarted. A forced restart (`ForceReboot`) is equivalent to powering off a traditional server and then starting the server. If data in the instance operating system is not written to block storage devices when the operation is called, the data is lost.
+      * *   If `OperationLocks` in the DescribeInstances response contains "LockReason" : "security" for an instance, the instance is locked for security reasons and cannot be restarted. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
+      *
+     */
     @Override
     public CompletableFuture<RebootInstanceResponse> rebootInstance(RebootInstanceRequest request) {
         try {
@@ -5680,6 +6117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If a dedicated host is in the UnderAssessment state, we recommend that you call this operation to migrate ECS instances away from the dedicated host to prevent permanent failures. You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the status of a dedicated host.
+      *
+     */
     @Override
     public CompletableFuture<RedeployDedicatedHostResponse> redeployDedicatedHost(RedeployDedicatedHostRequest request) {
         try {
@@ -5694,6 +6135,30 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the Running (`Running`) state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before redeployment.
+      * When you call this operation, take note of the following items:
+      * * The instance must be in the Running (Running) or Stopped (Stopped) state. After the instance is redeployed, the following changes occur to the status of the instance:
+      *   * If the instance is in the Running (`Running`) state, the instance enters the Stopping (`Stopping`) state.
+      *   * If the instance is in the Stopped (`Stopped`) state, the instance enters the Starting (`Starting`) state.
+      * * If an instance is deployed on a dedicated host, you cannot redeploy the instance.
+      * * If the `OperationLocks` parameter in the DescribeInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
+      * * If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.
+      * * If the damaged local disk is isolated but the **SystemMaintenance.RebootAndReInitErrorDisk** event is not sent when you handle a local disk-related system event for an instance, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see [System events for ECS instances equipped with local disks](~~107693~~).
+      * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides possible event status.
+      * |System event|Event status|
+      * |---|---|
+      * |Instance restart due to system maintenance (SystemMaintenance.Reboot)|Inquiring and Scheduled|
+      * |Instance redeployment due to system maintenance (SystemMaintenance.Redeploy)|Inquiring and Scheduled|
+      * |Instance restart and replacement of damaged disks due to system maintenance (SystemMaintenance.RebootAndIsolateErrorDisk)|Inquiring|
+      * |Instance restart and re-initialization of damaged disks due to system maintenance (SystemMaintenance.RebootAndReInitErrorDisk)|Inquiring|
+      * |Instance redeployment due to system errors (SystemFailure.Redeploy)|Inquiring and Scheduled|
+      * |For ECS instances that use only local disks: instance restart due to a system error (SystemFailure.Reboot)|Executing|
+      * |Isolation of damaged disks due to system maintenance (SystemMaintenance.IsolateErrorDisk)|Inquiring|
+      * |Re-initialization of damaged disks due to system maintenance (SystemMaintenance.ReInitErrorDisk)|Inquiring|
+      * **Note**When instances that use local disks are redeployed, the local disks are re-initialized and data on the local disks is cleared.
+      *
+     */
     @Override
     public CompletableFuture<RedeployInstanceResponse> redeployInstance(RedeployInstanceRequest request) {
         try {
@@ -5722,6 +6187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you release a pay-as-you-go dedicated host, make sure that no Elastic Compute Service (ECS) instances are deployed on the dedicated host.
+      *
+     */
     @Override
     public CompletableFuture<ReleaseDedicatedHostResponse> releaseDedicatedHost(ReleaseDedicatedHostRequest request) {
         try {
@@ -5840,6 +6309,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Before you call this operation, make sure that you fully understand the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
+      * *   You can call the [DescribeReservedInstances](~~100065~~) operation to query the reserved instances that you purchased.
+      *
+     */
     @Override
     public CompletableFuture<RenewReservedInstancesResponse> renewReservedInstances(RenewReservedInstancesRequest request) {
         try {
@@ -5854,6 +6328,23 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   You must specify the `ImageId` parameter or the `DiskId` parameter. You cannot specify both parameters in the same request. Otherwise, the request fails and an error message is returned.````
+      * > You can use the `DiskId` parameter to replace the operating system of an instance. This feature is in invitational preview. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+      * *   The category of the system disk cannot be changed.
+      * *   The billing method of the system disk cannot be changed.
+      * *   The instance must be in the `Stopped` state.
+      *     **
+      *     **Note**This item is applicable only to instances in virtual private clouds (VPCs). If the instance is a pay-as-you-go instance and the economical mode is enabled by default for the instance, you must set the stop mode to the standard mode when you stop the instance. This prevents instance restart failures caused by insufficient resources after the system disk is replaced. For more information, see [StopInstance](~~25501~~).
+      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance.`` For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
+      * *   You cannot have unpaid orders that are associated with the instance.
+      * *   You can configure the `SystemDisk.Size` parameter to specify the capacity of the new system disk.
+      * After you call this operation, you can use one of the following methods to check whether the system disk is replaced:
+      * *   Call the [DescribeDisks](~~25514~~) operation to query the state of the new system disk. If the new system disk is in the In_use state, the system disk is replaced.
+      * *   Call the [DescribeInstances](~~25506~~) operation to query the state of the instance whose system disk is replaced. If `OperationLocks` in the response is empty, the system disk is replaced.
+      *
+     */
     @Override
     public CompletableFuture<ReplaceSystemDiskResponse> replaceSystemDisk(ReplaceSystemDiskRequest request) {
         try {
@@ -5882,6 +6373,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   The disk must be in the In Use (In_Use) or Unattached (Available) state.
+      * *   The Elastic Compute Service (ECS) instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the [StopInstances](~~155372~~) operation to stop an instance.
+      * *   The snapshot specified by the SnapshotId parameter must be created from the disk specified by the DiskId parameter.
+      * *   When you call the [DescribeInstances](~~25506~~) operation to query instance information, if the response contains `{"OperationLocks": {"LockReason" : "security"}}` for an instance, the instance is locked for security reasons and no operations can be performed on the instance.
+      *
+     */
     @Override
     public CompletableFuture<ResetDiskResponse> resetDisk(ResetDiskRequest request) {
         try {
@@ -5896,6 +6395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation will be removed in the future. We recommend that you call the [ResetDisk](~~25520~~) operation to roll back a disk.
+      *
+     */
     @Override
     public CompletableFuture<ResetDisksResponse> resetDisks(ResetDisksRequest request) {
         try {
@@ -5934,6 +6437,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, you can use one of the following groups of parameters to specify the security group rules that you want to delete:
+      * * Parameters used to specify the IDs of security group rules. We recommend that you specify the IDs of security group rules to delete the rules. - If the specified security group rule ID does not exist, an error is reported. - Parameters that are no longer used and their Permissions.N-prefixed counterparts cannot be specified at the same time. - Sample request:
+      *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup
+      *         &SecurityGroupId=sg-bp67acfmxazb4p****
+      *         &SecurityGroupRuleId.1=sgr-bpdfmk****
+      *         &SecurityGroupRuleId.2=sgr-bpdfmg****
+      *         &<Common request parameters>
+      * *   Parameters prefixed with Permissions.N.
+      *     *   If no security group rule matches the specified parameters, the call to RevokeSecurityGroup is successful but no security group rule is deleted.
+      *     *   Security group rule IDs and parameters without the Permissions.N prefix cannot be specified.
+      *     *   You can determine an inbound rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
+      *     *   Parameters used to determine an inbound security group rule that controls access from a specified CIDR block: SecurityGroupId, Permissions.N.IpProtocol, Permissions.N.PortRange, Permissions.N.SourcePortRange, Permissions.N.NicType, Permissions.N.Policy, Permissions.N.DestCidrIp, and Permissions.N.SourceCidrIp. The Permissions.N.SourcePortRange and Permissions.N.DestCidrIp parameters are optional. Sample request:
+      *         ```
+      *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup&SecurityGroupId=sg-bp67acfmxazb4p****&Permissions.1.SourceCidrIp=10.0.0.0/8&Permissions.1.IpProtocol=TCP&Permissions.1.PortRange=80/80&Permissions.1.NicType=intranet&Permissions.1.Policy=accept&<Common request parameters>
+      *         ```
+      *     *   Parameters used to determine an inbound security group rule that controls access from a security group: SecurityGroupId, Permissions.N.IpProtocol, Permissions.N.PortRange, Permissions.N.SourcePortRange, Permissions.N.NicType, Permissions.N.Policy, Permissions.N.DestCidrIp, and Permissions.N.SourceGroupId. The Permissions.N.SourcePortRange and Permissions.N.DestCidrIp parameters are optional. Sample request:
+      *         ```
+      *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup \\&SecurityGroupId=sg-bp67acfmxazb4p****&Permissions.1.SourceGroupId=sg-bp67acfmxa123b****&Permissions.1.IpProtocol=TCP&Permissions.1.PortRange=80/80&Permissions.1.NicType=intranet&Permissions.1.Policy=accept&<Common request parameters>
+      *         ```
+      *     *   Parameters used to delete an inbound security group rule that controls access from a prefix list. SecurityGroupId, Permissions.N.IpProtocol, Permissions.N.PortRange, Permissions.N.SourcePortRange, Permissions.N.NicType, Permissions.N.Policy, Permissions.N.DestCidrIp, and Permissions.N.SourcePrefixListId. The Permissions.N.SourcePortRange and Permissions.N.DestCidrIp parameters are optional. Sample request:
+      *         ```
+      *         http(s)://ecs.aliyuncs.com/?Action=RevokeSecurityGroup&SecurityGroupId=sg-bp67acfmxazb4p****&Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****&Permissions.1.IpProtocol=TCP&Permissions.1.PortRange=80/80&Permissions.1.NicType=intranet&Permissions.1.Policy=accept&<Common request parameters>
+      *         ```
+      *
+     */
     @Override
     public CompletableFuture<RevokeSecurityGroupResponse> revokeSecurityGroup(RevokeSecurityGroupRequest request) {
         try {
@@ -6040,6 +6569,30 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * **Preparations**:
+      *     * The real-name verification is complete. For more information, see [Real-name verification](~~48263~~).
+      *     * Cost estimation: Learn about the billing methods of ECS resources. For more information, see [Billing overview](~~25398~~).
+      *     * Instance type selection: Call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of instance types, or see [Best practices for instance type selection](~~58291~~) to learn about how to select instance types.
+      *     * Query for available resources: Call the [DescribeAvailableResource](~~66186~~) operation to query available resources in a specific region or zone.
+      *     * Network planning: Make sure that you have security groups available for use. For more information, see [CreateSecurityGroup](~~25553~~). Before you create an instance of the Virtual Private Cloud (VPC) type, create a VPC in the region where you want to create the instance. For more information, see [Create a VPC](~~65430~~).
+      * * **Precautions**:
+      *     * You can create a maximum of 100 instances at a time.
+      *     * You can use the `AutoReleaseTime` parameter to set the time when you want the instances to be automatically released.
+      *     * After instances are created, you can call the [DescribeInstances](~~25506~~) operation to check their states.
+      *     * By default, instances automatically start after they are created. Instances are ready for use when they are in the Running (`Running`) state.
+      *     * As of November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to the throttling policy for your account. To increase the maximum bandwidth value, submit a ticket. The throttling policy imposes the following constraints: Within a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and that of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
+      *     * Different from the [CreateInstance](~~25499~~) operation, the `RunInstances` operation allows the system to assign public IP addresses to the new instances if you set the `InternetMaxBandwidthOut` parameter to a value greater than 0.
+      *     * When you call the RunInstances operation to create an instance, you can use one of the following methods to bind a primary elastic network interface (ENI) to the instance. Note that you can use only one of the methods to configure the primary ENI in each call. Otherwise, the call fails and an error message is returned. Specify parameters such as `SecurityGroupId`, `VSwitchId`, `PrivateIpAddress`, `NetworkInterfaceQueueNumber`, and `Ipv6AddressCount` to configure the primary ENI. Specify parameters that start with `NetworkInterface.N.` to configure the primary and secondary ENIs. If `NetworkInterface.N.InstanceType` is set to `Primary`, the primary ENI is bound to the instance. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, a secondary ENI is bound to the instance.
+      *     * After you call this operation, an error is returned if a parameter is invalid or if available resources are insufficient. For more information, see the "Error codes" section of this topic.
+      * > If the `QuotaExceed.ElasticQuota` error is returned when you call this operation, you have reached the maximum number of instances of the specified instance type that can be created within the specified region or the maximum number of vCPUs for all instance types in a zone. You can go to the [ECS console](https://ecs.console.aliyun.com/?spm=a2c8b.12215451.favorites.decs.5e3a336aMGTtzy#/privileges/quota) or [Quota Center](https://quotas.console.aliyun.com/products/ecs/quotas) to request a quota increase.
+      * * **Best practices**:
+      *     * We recommend that you use auto provisioning groups in the following scenarios: Resources are insufficient to create more than 100 instances at a time, you want to quickly create instances regardless of resource configurations such as instance types or zones, or you want to create instances to consume a specific total number of vCPUs regardless of the number of the instances. You can call the [CreateAutoProvisioningGroup](~~122738~~) operation to create an auto provisioning group to deploy an instance cluster across different billing methods, instance families, and zones. For more information, see [Use auto provisioning group-related API operations to create multiple ECS instances at the same time](~~200772~~).
+      *     * You can call the `RunInstances` operation to batch create instances. To better manage and search for these instances, we recommend that you specify tags for the instances by using the `Tag.N.Key` and `Tag.N.Value` parameters. You can also append incremental suffixes (`UniqueSuffix`) to the hostname (`HostName`) and to the instance name (`InstanceName`).
+      *     * A launch template contains parameters required to create an instance so that you do not have to specify these parameters every time you create instances. You can call the [CreateLaunchTemplate](~~74686~~) operation to create a launch template. Then, in your request to call the `RunInstances` operation, you can specify the `LaunchTemplateId` and `LaunchTemplateVersion` parameters to use the launch template.
+      *     * When you create an instance in the [ECS console](https://ecs.console.aliyun.com/), you can view the best practices for calling the `RunInstances` operation. In the Preview step, click View Open API in the Configurations Selected section. In the dialog box that appears, the left-side **API Workflow** section shows the operations and request parameters that are related to the `RunInstances` operation. The right-side section shows SDK examples for the **Java** and **Python** programming languages.
+      *
+     */
     @Override
     public CompletableFuture<RunInstancesResponse> runInstances(RunInstancesRequest request) {
         try {
@@ -6054,6 +6607,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * The instances to which to send a file must be in the Running (`Running`) state.
+      * * The Cloud Assistant client must be installed on the instances. For information about how to install the Cloud Assistant client, see [InstallCloudAssistant](~~85916~~).
+      * * Only the Cloud Assistant client versions that are later than the following ones support file sending. If the `ClientNeedUpgrade` error code is returned, you must upgrade the Cloud Assistant client to the latest version. For more information, see [Update or disable updates for the Cloud Assistant client](~~134383~~).
+      *     * For Linux instances, the version of the Cloud Assistant client must be later than 1.0.2.569.
+      *     * For Windows instances, the version of the Cloud Assistant client must be later than 1.0.0.149.
+      * * The file to be sent must not exceed 32 KB in size after it is encoded in Base64.
+      * * The file may fail to be sent due to exceptions on the instances, network, or the Cloud Assistance client. Call the [DescribeSendFileResults](~~~~) operation to troubleshoot the issues.
+      *
+     */
     @Override
     public CompletableFuture<SendFileResponse> sendFile(SendFileRequest request) {
         try {
@@ -6106,9 +6669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ## Usage notes
       * When you call this operation, take note of the following items:
-      * *   The instances to be started must be in the **Stopped** state.``
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance.[](~~25695~~)``
+      * *   The instances that you want to start must be in the **Stopped** (`Stopped`) state.
+      * *   If the response contains `{"OperationLocks"`: `{"LockReason" : "security"}}` for an instance when you query the information of the instance, the instance is locked for [security reasons](~~25695~~) and cannot be started.
       *
      */
     @Override
@@ -6191,6 +6755,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you call the DescribeInstances operation and the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instances are locked for security reasons and cannot be stopped.
+      * *   If the economical mode is enabled for pay-as-you-go instances, you can set `StoppedMode` to KeepCharging to enable the standard mode for the instances. Then, after the instances are stopped in standard mode, you continue to be charged for them, and their instance type resources and public IP addresses are retained.
+      * *   Batch operations are supported. You can use the `BatchOptimization` parameter to specify the batch operation mode.
+      *
+     */
     @Override
     public CompletableFuture<StopInstancesResponse> stopInstances(StopInstancesRequest request) {
         try {
@@ -6205,6 +6775,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
+      * *   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.
+      *
+     */
     @Override
     public CompletableFuture<StopInvocationResponse> stopInvocation(StopInvocationRequest request) {
         try {
@@ -6219,6 +6794,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number of tags is reached, an error message is returned. For more information, see the "Tag limits" section in [Limits](~~25412~~).
+      *
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -6269,6 +6848,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   The ENI must be in the **Available** (Available) or **InUse** (InUse) state.
+      * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+      *
+     */
     @Override
     public CompletableFuture<UnassignIpv6AddressesResponse> unassignIpv6Addresses(UnassignIpv6AddressesRequest request) {
         try {

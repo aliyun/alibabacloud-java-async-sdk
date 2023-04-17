@@ -140,7 +140,7 @@ public class ResetDisksRequest extends Request {
         } 
 
         /**
-         * Disk.
+         * The disks that you want to roll back.
          */
         public Builder disk(java.util.List < Disk> disk) {
             this.putQueryParameter("Disk", disk);
@@ -149,7 +149,13 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   true: performs a dry run. The system checks the required parameters, request format, and resource status limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -176,7 +182,7 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the disks that you want to roll back. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +254,7 @@ public class ResetDisksRequest extends Request {
             private String snapshotId; 
 
             /**
-             * DiskId.
+             * The IDs of the disks that you want to roll back. You can specify up to 10 disk IDs.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -256,7 +262,7 @@ public class ResetDisksRequest extends Request {
             }
 
             /**
-             * SnapshotId.
+             * The IDs of the disk snapshots that are contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;

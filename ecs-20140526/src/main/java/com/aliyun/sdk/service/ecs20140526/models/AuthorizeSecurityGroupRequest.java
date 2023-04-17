@@ -387,7 +387,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among the requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -531,7 +531,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * The ID of the security group to which the instance belongs.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -585,7 +585,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourcePrefixListId`to specify the ID of the source prefix list.
+         * This parameter is deprecated. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.
          */
         public Builder sourcePrefixListId(String sourcePrefixListId) {
             this.putQueryParameter("SourcePrefixListId", sourcePrefixListId);
@@ -819,7 +819,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The transport layer protocol. The value of this parameter is case-insensitive. Valid values:
+             * The transport layer protocol of the security group rule. These values are case-insensitive. Valid values:
              * <p>
              * 
              * *   TCP
@@ -844,7 +844,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * 
              * Valid values of N: 1 to 100.
              * 
-             * > The Permissions.N.Ipv6DestCidrIp parameter is valid only when the destination is ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and the `DestCidrIp` parameter at the same time.
+             * > This parameter takes effect only when the destination is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.
              */
             public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
                 this.ipv6DestCidrIp = ipv6DestCidrIp;
@@ -857,7 +857,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * 
              * Valid values of N: 1 to 100.
              * 
-             * > The Permissions.N.Ipv6SourceCidrIp parameter is valid only when the source is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and the `SourceCidrIp` parameter at the same time.
+             * > This parameter takes effect only when the source is ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and the `SourceCidrIp` parameter.
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -904,10 +904,10 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * The range of destination ports that correspond to the transport layer protocol for the security group rule. Valid values:
              * <p>
              * 
-             * *   When the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-             * *   When the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.
-             * *   When the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.
-             * *   When the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.
+             * *   If the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
+             * *   If the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.
+             * *   If the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.
+             * *   If the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.
              * 
              * For more information, see [Typical applications of commonly used ports](~~40724~~).
              * 
@@ -922,7 +922,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 100.
              * <p>
              * 
-             * Default value: 1
+             * Default value: 1.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -947,15 +947,15 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * <p>
              * 
              * *   At least one of `SourceGroupId`, `SourceCidrIp`, `Ipv6SourceCidrIp`, and `SourcePrefixListId` must be specified.
-             * *   If `SourceGroupId` is specified but `SourceCidrIp` or `Ipv6SourceCidrIp` is not specified, `NicType` must be set to `intranet`.
+             * *   If `SourceGroupId` is specified and `SourceCidrIp` or `Ipv6SourceCidrIp` is not specified, `NicType` must be set to `intranet`.
              * *   If both `SourceGroupId` and `SourceCidrIp` are specified, `SourceCidrIp` takes precedence.
              * 
              * Valid values of N: 1 to 100.
              * 
-             * When you call this operation, take note of the following items:
+             * Take note of the following items:
              * 
-             * *   For advanced security groups, security groups cannot be used as authorization objects.
-             * *   For each basic security group, a maximum of 20 security groups can be used as authorization objects.
+             * *   Security groups cannot be referenced as authorization objects in rules of advanced security groups.
+             * *   Up to 20 security groups can be referenced as authorization objects in the rules of each basic security group.
              */
             public Builder sourceGroupId(String sourceGroupId) {
                 this.sourceGroupId = sourceGroupId;
@@ -994,10 +994,10 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * The range of source ports that correspond to the transport layer protocol for the security group rule. Valid values:
              * <p>
              * 
-             * *   When the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-             * *   When the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.
-             * *   When the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.
-             * *   When the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.
+             * *   If the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+             * *   If the Permissions.N.IpProtocol parameter is set to ICMP, the port number range is -1/-1, which indicates all ports.
+             * *   If the Permissions.N.IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.
+             * *   If the Permissions.N.IpProtocol parameter is set to ALL, the port number range is -1/-1, which indicates all ports.
              * 
              * This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
              * 
@@ -1014,9 +1014,9 @@ public class AuthorizeSecurityGroupRequest extends Request {
              * 
              * Valid values of N: 1 to 100.
              * 
-             * Note:
+             * Take note of the following items:
              * 
-             * *   If a security group is in the classic network, you cannot configure prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
+             * *   If a security group is in the classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
              * *   If you specify the `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId` parameter, this parameter is ignored.
              */
             public Builder sourcePrefixListId(String sourcePrefixListId) {
