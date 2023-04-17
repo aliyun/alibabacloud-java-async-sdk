@@ -385,7 +385,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DbGrayEnable.
+             * 是否开启数据库灰度
              */
             public Builder dbGrayEnable(String dbGrayEnable) {
                 this.dbGrayEnable = dbGrayEnable;
@@ -417,7 +417,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MessageQueueFilterSide.
+             * 消息灰度过滤侧
              */
             public Builder messageQueueFilterSide(String messageQueueFilterSide) {
                 this.messageQueueFilterSide = messageQueueFilterSide;
@@ -433,7 +433,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * 应用名
              */
             public Builder name(String name) {
                 this.name = name;
@@ -441,7 +441,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * MSE命名空间名字
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

@@ -51,6 +51,10 @@ public class AddGatewayRequest extends Request {
     private Integer replica;
 
     @Query
+    @NameInMap("RequestPars")
+    private String requestPars;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -96,6 +100,7 @@ public class AddGatewayRequest extends Request {
         this.name = builder.name;
         this.region = builder.region;
         this.replica = builder.replica;
+        this.requestPars = builder.requestPars;
         this.resourceGroupId = builder.resourceGroupId;
         this.slbSpec = builder.slbSpec;
         this.spec = builder.spec;
@@ -183,6 +188,13 @@ public class AddGatewayRequest extends Request {
     }
 
     /**
+     * @return requestPars
+     */
+    public String getRequestPars() {
+        return this.requestPars;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -248,6 +260,7 @@ public class AddGatewayRequest extends Request {
         private String name; 
         private String region; 
         private Integer replica; 
+        private String requestPars; 
         private String resourceGroupId; 
         private String slbSpec; 
         private String spec; 
@@ -272,6 +285,7 @@ public class AddGatewayRequest extends Request {
             this.name = request.name;
             this.region = request.region;
             this.replica = request.replica;
+            this.requestPars = request.requestPars;
             this.resourceGroupId = request.resourceGroupId;
             this.slbSpec = request.slbSpec;
             this.spec = request.spec;
@@ -372,6 +386,15 @@ public class AddGatewayRequest extends Request {
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
             this.replica = replica;
+            return this;
+        }
+
+        /**
+         * RequestPars.
+         */
+        public Builder requestPars(String requestPars) {
+            this.putQueryParameter("RequestPars", requestPars);
+            this.requestPars = requestPars;
             return this;
         }
 

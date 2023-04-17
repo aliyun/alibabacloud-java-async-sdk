@@ -415,7 +415,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * RecordCanaryDetail.
+         * 是否开启记录请求详情
          */
         public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
             this.putQueryParameter("RecordCanaryDetail", recordCanaryDetail);
