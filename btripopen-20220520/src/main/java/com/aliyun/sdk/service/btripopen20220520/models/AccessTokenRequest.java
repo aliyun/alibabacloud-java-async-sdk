@@ -13,18 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AccessTokenRequest extends Request {
     @Query
-    @NameInMap("app_key")
-    @Validation(required = true)
-    private String appKey;
-
-    @Query
     @NameInMap("app_secret")
     @Validation(required = true)
     private String appSecret;
 
     private AccessTokenRequest(Builder builder) {
         super(builder);
-        this.appKey = builder.appKey;
         this.appSecret = builder.appSecret;
     }
 
@@ -42,13 +36,6 @@ public class AccessTokenRequest extends Request {
     }
 
     /**
-     * @return appKey
-     */
-    public String getAppKey() {
-        return this.appKey;
-    }
-
-    /**
      * @return appSecret
      */
     public String getAppSecret() {
@@ -56,7 +43,6 @@ public class AccessTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AccessTokenRequest, Builder> {
-        private String appKey; 
         private String appSecret; 
 
         private Builder() {
@@ -65,18 +51,8 @@ public class AccessTokenRequest extends Request {
 
         private Builder(AccessTokenRequest request) {
             super(request);
-            this.appKey = request.appKey;
             this.appSecret = request.appSecret;
         } 
-
-        /**
-         * 应用的appKey
-         */
-        public Builder appKey(String appKey) {
-            this.putQueryParameter("app_key", appKey);
-            this.appKey = appKey;
-            return this;
-        }
 
         /**
          * 应用的appSecret
