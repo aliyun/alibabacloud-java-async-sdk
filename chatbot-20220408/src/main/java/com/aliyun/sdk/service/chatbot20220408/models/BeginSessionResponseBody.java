@@ -15,11 +15,15 @@ public class BeginSessionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SilenceReplyTimeout")
+    private Integer silenceReplyTimeout;
+
     @NameInMap("WelcomeMessage")
     private String welcomeMessage;
 
     private BeginSessionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.silenceReplyTimeout = builder.silenceReplyTimeout;
         this.welcomeMessage = builder.welcomeMessage;
     }
 
@@ -39,6 +43,13 @@ public class BeginSessionResponseBody extends TeaModel {
     }
 
     /**
+     * @return silenceReplyTimeout
+     */
+    public Integer getSilenceReplyTimeout() {
+        return this.silenceReplyTimeout;
+    }
+
+    /**
      * @return welcomeMessage
      */
     public String getWelcomeMessage() {
@@ -47,6 +58,7 @@ public class BeginSessionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private Integer silenceReplyTimeout; 
         private String welcomeMessage; 
 
         /**
@@ -54,6 +66,14 @@ public class BeginSessionResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SilenceReplyTimeout.
+         */
+        public Builder silenceReplyTimeout(Integer silenceReplyTimeout) {
+            this.silenceReplyTimeout = silenceReplyTimeout;
             return this;
         }
 
