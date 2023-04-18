@@ -28,12 +28,17 @@ public class DeleteGatewaySlbRequest extends Request {
     @NameInMap("Id")
     private String id;
 
+    @Query
+    @NameInMap("SlbId")
+    private String slbId;
+
     private DeleteGatewaySlbRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.deleteSlb = builder.deleteSlb;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
+        this.slbId = builder.slbId;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class DeleteGatewaySlbRequest extends Request {
         return this.id;
     }
 
+    /**
+     * @return slbId
+     */
+    public String getSlbId() {
+        return this.slbId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteGatewaySlbRequest, Builder> {
         private String acceptLanguage; 
         private Boolean deleteSlb; 
         private String gatewayUniqueId; 
         private String id; 
+        private String slbId; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class DeleteGatewaySlbRequest extends Request {
             this.deleteSlb = request.deleteSlb;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.id = request.id;
+            this.slbId = request.slbId;
         } 
 
         /**
@@ -132,6 +146,15 @@ public class DeleteGatewaySlbRequest extends Request {
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * SlbId.
+         */
+        public Builder slbId(String slbId) {
+            this.putQueryParameter("SlbId", slbId);
+            this.slbId = slbId;
             return this;
         }
 
