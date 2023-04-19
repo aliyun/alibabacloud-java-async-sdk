@@ -151,6 +151,207 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
 
     } 
 
+    public static class InvoiceDetails extends TeaModel {
+        @NameInMap("amount")
+        private String amount;
+
+        @NameInMap("index")
+        private String index;
+
+        @NameInMap("item_name")
+        private String itemName;
+
+        @NameInMap("quantity")
+        private String quantity;
+
+        @NameInMap("specification")
+        private String specification;
+
+        @NameInMap("tax")
+        private String tax;
+
+        @NameInMap("tax_rate")
+        private String taxRate;
+
+        @NameInMap("unit")
+        private String unit;
+
+        @NameInMap("unit_price")
+        private String unitPrice;
+
+        private InvoiceDetails(Builder builder) {
+            this.amount = builder.amount;
+            this.index = builder.index;
+            this.itemName = builder.itemName;
+            this.quantity = builder.quantity;
+            this.specification = builder.specification;
+            this.tax = builder.tax;
+            this.taxRate = builder.taxRate;
+            this.unit = builder.unit;
+            this.unitPrice = builder.unitPrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InvoiceDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public String getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return itemName
+         */
+        public String getItemName() {
+            return this.itemName;
+        }
+
+        /**
+         * @return quantity
+         */
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+        /**
+         * @return specification
+         */
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        /**
+         * @return tax
+         */
+        public String getTax() {
+            return this.tax;
+        }
+
+        /**
+         * @return taxRate
+         */
+        public String getTaxRate() {
+            return this.taxRate;
+        }
+
+        /**
+         * @return unit
+         */
+        public String getUnit() {
+            return this.unit;
+        }
+
+        /**
+         * @return unitPrice
+         */
+        public String getUnitPrice() {
+            return this.unitPrice;
+        }
+
+        public static final class Builder {
+            private String amount; 
+            private String index; 
+            private String itemName; 
+            private String quantity; 
+            private String specification; 
+            private String tax; 
+            private String taxRate; 
+            private String unit; 
+            private String unitPrice; 
+
+            /**
+             * 金额
+             */
+            public Builder amount(String amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * 行号
+             */
+            public Builder index(String index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * 货物或应税劳务、服务名称
+             */
+            public Builder itemName(String itemName) {
+                this.itemName = itemName;
+                return this;
+            }
+
+            /**
+             * 数量
+             */
+            public Builder quantity(String quantity) {
+                this.quantity = quantity;
+                return this;
+            }
+
+            /**
+             * 规格型号
+             */
+            public Builder specification(String specification) {
+                this.specification = specification;
+                return this;
+            }
+
+            /**
+             * 税额
+             */
+            public Builder tax(String tax) {
+                this.tax = tax;
+                return this;
+            }
+
+            /**
+             * 税率
+             */
+            public Builder taxRate(String taxRate) {
+                this.taxRate = taxRate;
+                return this;
+            }
+
+            /**
+             * 单位
+             */
+            public Builder unit(String unit) {
+                this.unit = unit;
+                return this;
+            }
+
+            /**
+             * 单价
+             */
+            public Builder unitPrice(String unitPrice) {
+                this.unitPrice = unitPrice;
+                return this;
+            }
+
+            public InvoiceDetails build() {
+                return new InvoiceDetails(this);
+            } 
+
+        } 
+
+    }
     public static class Items extends TeaModel {
         @NameInMap("amount_with_tax")
         private String amountWithTax;
@@ -161,11 +362,20 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("bill_date")
         private String billDate;
 
+        @NameInMap("check_code")
+        private String checkCode;
+
         @NameInMap("cost_center")
         private String costCenter;
 
         @NameInMap("department")
         private String department;
+
+        @NameInMap("drawer")
+        private String drawer;
+
+        @NameInMap("id")
+        private String id;
 
         @NameInMap("insurance_company")
         private String insuranceCompany;
@@ -182,8 +392,17 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_day")
         private String invoiceDay;
 
+        @NameInMap("invoice_details")
+        private java.util.List < InvoiceDetails> invoiceDetails;
+
+        @NameInMap("invoice_location")
+        private String invoiceLocation;
+
         @NameInMap("invoice_no")
         private String invoiceNo;
+
+        @NameInMap("invoice_title")
+        private String invoiceTitle;
 
         @NameInMap("order_id")
         private Long orderId;
@@ -194,8 +413,17 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("passenger")
         private String passenger;
 
+        @NameInMap("password_area")
+        private String passwordArea;
+
         @NameInMap("project")
         private String project;
+
+        @NameInMap("purchaser_bank_account_info")
+        private String purchaserBankAccountInfo;
+
+        @NameInMap("purchaser_contact_info")
+        private String purchaserContactInfo;
 
         @NameInMap("purchaser_name")
         private String purchaserName;
@@ -203,8 +431,20 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("purchaser_tax_no")
         private String purchaserTaxNo;
 
-        @NameInMap("real_invoice_title")
-        private String realInvoiceTitle;
+        @NameInMap("recipient")
+        private String recipient;
+
+        @NameInMap("remarks")
+        private String remarks;
+
+        @NameInMap("reviewer")
+        private String reviewer;
+
+        @NameInMap("seller_bank_account_info")
+        private String sellerBankAccountInfo;
+
+        @NameInMap("seller_contact_info")
+        private String sellerContactInfo;
 
         @NameInMap("seller_name")
         private String sellerName;
@@ -212,35 +452,56 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("seller_tax_no")
         private String sellerTaxNo;
 
+        @NameInMap("smart_check_code")
+        private String smartCheckCode;
+
         @NameInMap("tax_amount")
         private String taxAmount;
 
         @NameInMap("tax_rate")
         private String taxRate;
 
+        @NameInMap("total_amount_in_words")
+        private String totalAmountInWords;
+
         private Items(Builder builder) {
             this.amountWithTax = builder.amountWithTax;
             this.amountWithoutTax = builder.amountWithoutTax;
             this.billDate = builder.billDate;
+            this.checkCode = builder.checkCode;
             this.costCenter = builder.costCenter;
             this.department = builder.department;
+            this.drawer = builder.drawer;
+            this.id = builder.id;
             this.insuranceCompany = builder.insuranceCompany;
             this.insuranceOrderId = builder.insuranceOrderId;
             this.insuranceType = builder.insuranceType;
             this.invoiceCode = builder.invoiceCode;
             this.invoiceDay = builder.invoiceDay;
+            this.invoiceDetails = builder.invoiceDetails;
+            this.invoiceLocation = builder.invoiceLocation;
             this.invoiceNo = builder.invoiceNo;
+            this.invoiceTitle = builder.invoiceTitle;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
             this.passenger = builder.passenger;
+            this.passwordArea = builder.passwordArea;
             this.project = builder.project;
+            this.purchaserBankAccountInfo = builder.purchaserBankAccountInfo;
+            this.purchaserContactInfo = builder.purchaserContactInfo;
             this.purchaserName = builder.purchaserName;
             this.purchaserTaxNo = builder.purchaserTaxNo;
-            this.realInvoiceTitle = builder.realInvoiceTitle;
+            this.recipient = builder.recipient;
+            this.remarks = builder.remarks;
+            this.reviewer = builder.reviewer;
+            this.sellerBankAccountInfo = builder.sellerBankAccountInfo;
+            this.sellerContactInfo = builder.sellerContactInfo;
             this.sellerName = builder.sellerName;
             this.sellerTaxNo = builder.sellerTaxNo;
+            this.smartCheckCode = builder.smartCheckCode;
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
+            this.totalAmountInWords = builder.totalAmountInWords;
         }
 
         public static Builder builder() {
@@ -273,6 +534,13 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return checkCode
+         */
+        public String getCheckCode() {
+            return this.checkCode;
+        }
+
+        /**
          * @return costCenter
          */
         public String getCostCenter() {
@@ -284,6 +552,20 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getDepartment() {
             return this.department;
+        }
+
+        /**
+         * @return drawer
+         */
+        public String getDrawer() {
+            return this.drawer;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
         }
 
         /**
@@ -322,10 +604,31 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return invoiceDetails
+         */
+        public java.util.List < InvoiceDetails> getInvoiceDetails() {
+            return this.invoiceDetails;
+        }
+
+        /**
+         * @return invoiceLocation
+         */
+        public String getInvoiceLocation() {
+            return this.invoiceLocation;
+        }
+
+        /**
          * @return invoiceNo
          */
         public String getInvoiceNo() {
             return this.invoiceNo;
+        }
+
+        /**
+         * @return invoiceTitle
+         */
+        public String getInvoiceTitle() {
+            return this.invoiceTitle;
         }
 
         /**
@@ -350,10 +653,31 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return passwordArea
+         */
+        public String getPasswordArea() {
+            return this.passwordArea;
+        }
+
+        /**
          * @return project
          */
         public String getProject() {
             return this.project;
+        }
+
+        /**
+         * @return purchaserBankAccountInfo
+         */
+        public String getPurchaserBankAccountInfo() {
+            return this.purchaserBankAccountInfo;
+        }
+
+        /**
+         * @return purchaserContactInfo
+         */
+        public String getPurchaserContactInfo() {
+            return this.purchaserContactInfo;
         }
 
         /**
@@ -371,10 +695,38 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return realInvoiceTitle
+         * @return recipient
          */
-        public String getRealInvoiceTitle() {
-            return this.realInvoiceTitle;
+        public String getRecipient() {
+            return this.recipient;
+        }
+
+        /**
+         * @return remarks
+         */
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        /**
+         * @return reviewer
+         */
+        public String getReviewer() {
+            return this.reviewer;
+        }
+
+        /**
+         * @return sellerBankAccountInfo
+         */
+        public String getSellerBankAccountInfo() {
+            return this.sellerBankAccountInfo;
+        }
+
+        /**
+         * @return sellerContactInfo
+         */
+        public String getSellerContactInfo() {
+            return this.sellerContactInfo;
         }
 
         /**
@@ -392,6 +744,13 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return smartCheckCode
+         */
+        public String getSmartCheckCode() {
+            return this.smartCheckCode;
+        }
+
+        /**
          * @return taxAmount
          */
         public String getTaxAmount() {
@@ -405,29 +764,51 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.taxRate;
         }
 
+        /**
+         * @return totalAmountInWords
+         */
+        public String getTotalAmountInWords() {
+            return this.totalAmountInWords;
+        }
+
         public static final class Builder {
             private String amountWithTax; 
             private String amountWithoutTax; 
             private String billDate; 
+            private String checkCode; 
             private String costCenter; 
             private String department; 
+            private String drawer; 
+            private String id; 
             private String insuranceCompany; 
             private String insuranceOrderId; 
             private String insuranceType; 
             private String invoiceCode; 
             private String invoiceDay; 
+            private java.util.List < InvoiceDetails> invoiceDetails; 
+            private String invoiceLocation; 
             private String invoiceNo; 
+            private String invoiceTitle; 
             private Long orderId; 
             private String ossUrl; 
             private String passenger; 
+            private String passwordArea; 
             private String project; 
+            private String purchaserBankAccountInfo; 
+            private String purchaserContactInfo; 
             private String purchaserName; 
             private String purchaserTaxNo; 
-            private String realInvoiceTitle; 
+            private String recipient; 
+            private String remarks; 
+            private String reviewer; 
+            private String sellerBankAccountInfo; 
+            private String sellerContactInfo; 
             private String sellerName; 
             private String sellerTaxNo; 
+            private String smartCheckCode; 
             private String taxAmount; 
             private String taxRate; 
+            private String totalAmountInWords; 
 
             /**
              * 价税合计金额
@@ -454,6 +835,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * 校验码
+             */
+            public Builder checkCode(String checkCode) {
+                this.checkCode = checkCode;
+                return this;
+            }
+
+            /**
              * 成本中心
              */
             public Builder costCenter(String costCenter) {
@@ -466,6 +855,22 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder department(String department) {
                 this.department = department;
+                return this;
+            }
+
+            /**
+             * 开票人
+             */
+            public Builder drawer(String drawer) {
+                this.drawer = drawer;
+                return this;
+            }
+
+            /**
+             * 应用ID
+             */
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 
@@ -510,10 +915,34 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * 发票明细
+             */
+            public Builder invoiceDetails(java.util.List < InvoiceDetails> invoiceDetails) {
+                this.invoiceDetails = invoiceDetails;
+                return this;
+            }
+
+            /**
+             * 发票地区
+             */
+            public Builder invoiceLocation(String invoiceLocation) {
+                this.invoiceLocation = invoiceLocation;
+                return this;
+            }
+
+            /**
              * 发票号码
              */
             public Builder invoiceNo(String invoiceNo) {
                 this.invoiceNo = invoiceNo;
+                return this;
+            }
+
+            /**
+             * 发票抬头
+             */
+            public Builder invoiceTitle(String invoiceTitle) {
+                this.invoiceTitle = invoiceTitle;
                 return this;
             }
 
@@ -542,10 +971,34 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * 密码区
+             */
+            public Builder passwordArea(String passwordArea) {
+                this.passwordArea = passwordArea;
+                return this;
+            }
+
+            /**
              * 项目
              */
             public Builder project(String project) {
                 this.project = project;
+                return this;
+            }
+
+            /**
+             * 购方银行信息
+             */
+            public Builder purchaserBankAccountInfo(String purchaserBankAccountInfo) {
+                this.purchaserBankAccountInfo = purchaserBankAccountInfo;
+                return this;
+            }
+
+            /**
+             * 购方联系方式
+             */
+            public Builder purchaserContactInfo(String purchaserContactInfo) {
+                this.purchaserContactInfo = purchaserContactInfo;
                 return this;
             }
 
@@ -566,10 +1019,42 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * 收款人
              */
-            public Builder realInvoiceTitle(String realInvoiceTitle) {
-                this.realInvoiceTitle = realInvoiceTitle;
+            public Builder recipient(String recipient) {
+                this.recipient = recipient;
+                return this;
+            }
+
+            /**
+             * 备注
+             */
+            public Builder remarks(String remarks) {
+                this.remarks = remarks;
+                return this;
+            }
+
+            /**
+             * 复核人
+             */
+            public Builder reviewer(String reviewer) {
+                this.reviewer = reviewer;
+                return this;
+            }
+
+            /**
+             * 销售方银行信息
+             */
+            public Builder sellerBankAccountInfo(String sellerBankAccountInfo) {
+                this.sellerBankAccountInfo = sellerBankAccountInfo;
+                return this;
+            }
+
+            /**
+             * 销售方联系方式
+             */
+            public Builder sellerContactInfo(String sellerContactInfo) {
+                this.sellerContactInfo = sellerContactInfo;
                 return this;
             }
 
@@ -590,6 +1075,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * 校验码
+             */
+            public Builder smartCheckCode(String smartCheckCode) {
+                this.smartCheckCode = smartCheckCode;
+                return this;
+            }
+
+            /**
              * 税额
              */
             public Builder taxAmount(String taxAmount) {
@@ -602,6 +1095,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
+                return this;
+            }
+
+            /**
+             * 大写金额
+             */
+            public Builder totalAmountInWords(String totalAmountInWords) {
+                this.totalAmountInWords = totalAmountInWords;
                 return this;
             }
 

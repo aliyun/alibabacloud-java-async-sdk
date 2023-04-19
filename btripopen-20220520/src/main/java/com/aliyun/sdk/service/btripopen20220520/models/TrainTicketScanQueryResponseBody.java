@@ -209,6 +209,12 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("tax_rate")
         private String taxRate;
 
+        @NameInMap("ticket_no")
+        private String ticketNo;
+
+        @NameInMap("train_no")
+        private String trainNo;
+
         private Items(Builder builder) {
             this.arrStation = builder.arrStation;
             this.billDate = builder.billDate;
@@ -229,6 +235,8 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             this.serialNumber = builder.serialNumber;
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
+            this.ticketNo = builder.ticketNo;
+            this.trainNo = builder.trainNo;
         }
 
         public static Builder builder() {
@@ -372,6 +380,20 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             return this.taxRate;
         }
 
+        /**
+         * @return ticketNo
+         */
+        public String getTicketNo() {
+            return this.ticketNo;
+        }
+
+        /**
+         * @return trainNo
+         */
+        public String getTrainNo() {
+            return this.trainNo;
+        }
+
         public static final class Builder {
             private String arrStation; 
             private String billDate; 
@@ -392,6 +414,8 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String serialNumber; 
             private String taxAmount; 
             private String taxRate; 
+            private String ticketNo; 
+            private String trainNo; 
 
             /**
              * 到达站
@@ -450,7 +474,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * 应用ID
              */
             public Builder id(String id) {
                 this.id = id;
@@ -542,6 +566,22 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
+                return this;
+            }
+
+            /**
+             * 取票号
+             */
+            public Builder ticketNo(String ticketNo) {
+                this.ticketNo = ticketNo;
+                return this;
+            }
+
+            /**
+             * 车次
+             */
+            public Builder trainNo(String trainNo) {
+                this.trainNo = trainNo;
                 return this;
             }
 

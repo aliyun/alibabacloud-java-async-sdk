@@ -18,6 +18,10 @@ public class AddressGetRequest extends Request {
     private Integer actionType;
 
     @Query
+    @NameInMap("car_scenes_code")
+    private String carScenesCode;
+
+    @Query
     @NameInMap("itinerary_id")
     private String itineraryId;
 
@@ -45,6 +49,7 @@ public class AddressGetRequest extends Request {
     private AddressGetRequest(Builder builder) {
         super(builder);
         this.actionType = builder.actionType;
+        this.carScenesCode = builder.carScenesCode;
         this.itineraryId = builder.itineraryId;
         this.phone = builder.phone;
         this.subCorpId = builder.subCorpId;
@@ -71,6 +76,13 @@ public class AddressGetRequest extends Request {
      */
     public Integer getActionType() {
         return this.actionType;
+    }
+
+    /**
+     * @return carScenesCode
+     */
+    public String getCarScenesCode() {
+        return this.carScenesCode;
     }
 
     /**
@@ -117,6 +129,7 @@ public class AddressGetRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddressGetRequest, Builder> {
         private Integer actionType; 
+        private String carScenesCode; 
         private String itineraryId; 
         private String phone; 
         private String subCorpId; 
@@ -131,6 +144,7 @@ public class AddressGetRequest extends Request {
         private Builder(AddressGetRequest request) {
             super(request);
             this.actionType = request.actionType;
+            this.carScenesCode = request.carScenesCode;
             this.itineraryId = request.itineraryId;
             this.phone = request.phone;
             this.subCorpId = request.subCorpId;
@@ -145,6 +159,15 @@ public class AddressGetRequest extends Request {
         public Builder actionType(Integer actionType) {
             this.putQueryParameter("action_type", actionType);
             this.actionType = actionType;
+            return this;
+        }
+
+        /**
+         * car_scenes_code.
+         */
+        public Builder carScenesCode(String carScenesCode) {
+            this.putQueryParameter("car_scenes_code", carScenesCode);
+            this.carScenesCode = carScenesCode;
             return this;
         }
 
