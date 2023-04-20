@@ -18,6 +18,10 @@ public class DescribeFileUploadSignedUrlRequest extends Request {
     private String contentType;
 
     @Body
+    @NameInMap("FileId")
+    private String fileId;
+
+    @Body
     @NameInMap("Filename")
     @Validation(required = true)
     private String filename;
@@ -35,6 +39,7 @@ public class DescribeFileUploadSignedUrlRequest extends Request {
     private DescribeFileUploadSignedUrlRequest(Builder builder) {
         super(builder);
         this.contentType = builder.contentType;
+        this.fileId = builder.fileId;
         this.filename = builder.filename;
         this.size = builder.size;
         this.spaceId = builder.spaceId;
@@ -61,6 +66,13 @@ public class DescribeFileUploadSignedUrlRequest extends Request {
     }
 
     /**
+     * @return fileId
+     */
+    public String getFileId() {
+        return this.fileId;
+    }
+
+    /**
      * @return filename
      */
     public String getFilename() {
@@ -83,6 +95,7 @@ public class DescribeFileUploadSignedUrlRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeFileUploadSignedUrlRequest, Builder> {
         private String contentType; 
+        private String fileId; 
         private String filename; 
         private Long size; 
         private String spaceId; 
@@ -94,6 +107,7 @@ public class DescribeFileUploadSignedUrlRequest extends Request {
         private Builder(DescribeFileUploadSignedUrlRequest request) {
             super(request);
             this.contentType = request.contentType;
+            this.fileId = request.fileId;
             this.filename = request.filename;
             this.size = request.size;
             this.spaceId = request.spaceId;
@@ -105,6 +119,15 @@ public class DescribeFileUploadSignedUrlRequest extends Request {
         public Builder contentType(String contentType) {
             this.putBodyParameter("ContentType", contentType);
             this.contentType = contentType;
+            return this;
+        }
+
+        /**
+         * FileId.
+         */
+        public Builder fileId(String fileId) {
+            this.putBodyParameter("FileId", fileId);
+            this.fileId = fileId;
             return this;
         }
 

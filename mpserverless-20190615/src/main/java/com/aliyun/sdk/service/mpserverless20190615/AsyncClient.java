@@ -42,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSpaceResponse> createSpace(CreateSpaceRequest request);
 
+    CompletableFuture<CreateSpaceWithOrderResponse> createSpaceWithOrder(CreateSpaceWithOrderRequest request);
+
     CompletableFuture<DeleteAntOpenPlatformConfigResponse> deleteAntOpenPlatformConfig(DeleteAntOpenPlatformConfigRequest request);
 
     CompletableFuture<DeleteCorsDomainResponse> deleteCorsDomain(DeleteCorsDomainRequest request);

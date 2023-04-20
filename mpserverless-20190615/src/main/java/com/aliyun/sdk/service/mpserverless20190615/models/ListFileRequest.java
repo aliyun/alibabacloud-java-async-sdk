@@ -20,6 +20,10 @@ public class ListFileRequest extends Request {
     @NameInMap("Keyword")
     private String keyword;
 
+    @Body
+    @NameInMap("Mode")
+    private String mode;
+
     @Query
     @NameInMap("NextToken")
     private String nextToken;
@@ -30,6 +34,10 @@ public class ListFileRequest extends Request {
     private Integer pageSize;
 
     @Body
+    @NameInMap("Prefix")
+    private String prefix;
+
+    @Body
     @NameInMap("SpaceId")
     @Validation(required = true)
     private String spaceId;
@@ -38,8 +46,10 @@ public class ListFileRequest extends Request {
         super(builder);
         this.fileId = builder.fileId;
         this.keyword = builder.keyword;
+        this.mode = builder.mode;
         this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
+        this.prefix = builder.prefix;
         this.spaceId = builder.spaceId;
     }
 
@@ -71,6 +81,13 @@ public class ListFileRequest extends Request {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -85,6 +102,13 @@ public class ListFileRequest extends Request {
     }
 
     /**
+     * @return prefix
+     */
+    public String getPrefix() {
+        return this.prefix;
+    }
+
+    /**
      * @return spaceId
      */
     public String getSpaceId() {
@@ -94,8 +118,10 @@ public class ListFileRequest extends Request {
     public static final class Builder extends Request.Builder<ListFileRequest, Builder> {
         private String fileId; 
         private String keyword; 
+        private String mode; 
         private String nextToken; 
         private Integer pageSize; 
+        private String prefix; 
         private String spaceId; 
 
         private Builder() {
@@ -106,8 +132,10 @@ public class ListFileRequest extends Request {
             super(request);
             this.fileId = request.fileId;
             this.keyword = request.keyword;
+            this.mode = request.mode;
             this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
+            this.prefix = request.prefix;
             this.spaceId = request.spaceId;
         } 
 
@@ -130,6 +158,15 @@ public class ListFileRequest extends Request {
         }
 
         /**
+         * Mode.
+         */
+        public Builder mode(String mode) {
+            this.putBodyParameter("Mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
          * NextToken.
          */
         public Builder nextToken(String nextToken) {
@@ -144,6 +181,15 @@ public class ListFileRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Prefix.
+         */
+        public Builder prefix(String prefix) {
+            this.putBodyParameter("Prefix", prefix);
+            this.prefix = prefix;
             return this;
         }
 

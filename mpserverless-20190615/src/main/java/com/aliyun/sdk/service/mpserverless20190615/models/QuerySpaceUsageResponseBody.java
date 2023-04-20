@@ -462,6 +462,9 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
         @NameInMap("DbUsage")
         private DbUsage dbUsage;
 
+        @NameInMap("EffectiveBillFlag")
+        private Boolean effectiveBillFlag;
+
         @NameInMap("FcUsage")
         private FcUsage fcUsage;
 
@@ -474,6 +477,7 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
         private SpaceUsageDataList(Builder builder) {
             this.csUsage = builder.csUsage;
             this.dbUsage = builder.dbUsage;
+            this.effectiveBillFlag = builder.effectiveBillFlag;
             this.fcUsage = builder.fcUsage;
             this.timestamp = builder.timestamp;
             this.whUsage = builder.whUsage;
@@ -502,6 +506,13 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectiveBillFlag
+         */
+        public Boolean getEffectiveBillFlag() {
+            return this.effectiveBillFlag;
+        }
+
+        /**
          * @return fcUsage
          */
         public FcUsage getFcUsage() {
@@ -525,6 +536,7 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
         public static final class Builder {
             private CsUsage csUsage; 
             private DbUsage dbUsage; 
+            private Boolean effectiveBillFlag; 
             private FcUsage fcUsage; 
             private String timestamp; 
             private WhUsage whUsage; 
@@ -542,6 +554,14 @@ public class QuerySpaceUsageResponseBody extends TeaModel {
              */
             public Builder dbUsage(DbUsage dbUsage) {
                 this.dbUsage = dbUsage;
+                return this;
+            }
+
+            /**
+             * EffectiveBillFlag.
+             */
+            public Builder effectiveBillFlag(Boolean effectiveBillFlag) {
+                this.effectiveBillFlag = effectiveBillFlag;
                 return this;
             }
 
