@@ -311,7 +311,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例所在地域，目前仅支持cn-qingdao、cn-beijing、cn-hangzhou。
+             * RDS MySQL实例所在地域。
              */
             public Builder region(String region) {
                 this.region = region;

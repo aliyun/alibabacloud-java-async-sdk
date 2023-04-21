@@ -15,22 +15,19 @@ public class Project extends TeaModel {
     @NameInMap("createTime")
     private String createTime;
 
+    @NameInMap("description")
+    @Validation(required = true)
+    private String description;
+
     @NameInMap("lastModifyTime")
     private String lastModifyTime;
 
-    @NameInMap("projectDesc")
-    @Validation(required = true)
-    private String projectDesc;
+    @NameInMap("owner")
+    private String owner;
 
     @NameInMap("projectName")
     @Validation(required = true)
     private String projectName;
-
-    @NameInMap("projectOwner")
-    private String projectOwner;
-
-    @NameInMap("projectStatus")
-    private String projectStatus;
 
     @NameInMap("region")
     private String region;
@@ -38,15 +35,18 @@ public class Project extends TeaModel {
     @NameInMap("resourceGroupId")
     private String resourceGroupId;
 
+    @NameInMap("status")
+    private String status;
+
     private Project(Builder builder) {
         this.createTime = builder.createTime;
+        this.description = builder.description;
         this.lastModifyTime = builder.lastModifyTime;
-        this.projectDesc = builder.projectDesc;
+        this.owner = builder.owner;
         this.projectName = builder.projectName;
-        this.projectOwner = builder.projectOwner;
-        this.projectStatus = builder.projectStatus;
         this.region = builder.region;
         this.resourceGroupId = builder.resourceGroupId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -65,6 +65,13 @@ public class Project extends TeaModel {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return lastModifyTime
      */
     public String getLastModifyTime() {
@@ -72,10 +79,10 @@ public class Project extends TeaModel {
     }
 
     /**
-     * @return projectDesc
+     * @return owner
      */
-    public String getProjectDesc() {
-        return this.projectDesc;
+    public String getOwner() {
+        return this.owner;
     }
 
     /**
@@ -83,20 +90,6 @@ public class Project extends TeaModel {
      */
     public String getProjectName() {
         return this.projectName;
-    }
-
-    /**
-     * @return projectOwner
-     */
-    public String getProjectOwner() {
-        return this.projectOwner;
-    }
-
-    /**
-     * @return projectStatus
-     */
-    public String getProjectStatus() {
-        return this.projectStatus;
     }
 
     /**
@@ -113,21 +106,36 @@ public class Project extends TeaModel {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private String createTime; 
+        private String description; 
         private String lastModifyTime; 
-        private String projectDesc; 
+        private String owner; 
         private String projectName; 
-        private String projectOwner; 
-        private String projectStatus; 
         private String region; 
         private String resourceGroupId; 
+        private String status; 
 
         /**
          * 创建时间
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * 描述
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 
@@ -140,10 +148,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * 描述
+         * project owner
          */
-        public Builder projectDesc(String projectDesc) {
-            this.projectDesc = projectDesc;
+        public Builder owner(String owner) {
+            this.owner = owner;
             return this;
         }
 
@@ -152,22 +160,6 @@ public class Project extends TeaModel {
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
-            return this;
-        }
-
-        /**
-         * owner
-         */
-        public Builder projectOwner(String projectOwner) {
-            this.projectOwner = projectOwner;
-            return this;
-        }
-
-        /**
-         * 状态
-         */
-        public Builder projectStatus(String projectStatus) {
-            this.projectStatus = projectStatus;
             return this;
         }
 
@@ -184,6 +176,14 @@ public class Project extends TeaModel {
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * 状态
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

@@ -151,7 +151,7 @@ public class CreateOssShipperRequest extends Request {
         }
 
         /**
-         * 投递目标的类型，这里固定为 odps。
+         * 投递目标的类型，这里固定为 oss。
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("targetType", targetType);
@@ -467,7 +467,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * 时区，默认取值为空字符串。可取值的格式为 +8 、-6 等。
+             * 时区，默认取值为空字符串。可取值的格式为 +8000 等。
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

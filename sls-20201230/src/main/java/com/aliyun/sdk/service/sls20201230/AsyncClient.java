@@ -22,6 +22,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
+    CompletableFuture<ConsumerGroupHeartBeatResponse> consumerGroupHeartBeat(ConsumerGroupHeartBeatRequest request);
+
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);

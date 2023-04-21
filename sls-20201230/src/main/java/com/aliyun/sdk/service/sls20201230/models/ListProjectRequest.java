@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListProjectRequest</p>
  */
 public class ListProjectRequest extends Request {
+    @Path
+    @NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     @Query
     @NameInMap("offset")
     private Integer offset;
@@ -26,6 +30,7 @@ public class ListProjectRequest extends Request {
 
     private ListProjectRequest(Builder builder) {
         super(builder);
+        this.resourceGroupId = builder.resourceGroupId;
         this.offset = builder.offset;
         this.projectName = builder.projectName;
         this.size = builder.size;
@@ -42,6 +47,13 @@ public class ListProjectRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -66,6 +78,7 @@ public class ListProjectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListProjectRequest, Builder> {
+        private String resourceGroupId; 
         private Integer offset; 
         private String projectName; 
         private Integer size; 
@@ -76,10 +89,20 @@ public class ListProjectRequest extends Request {
 
         private Builder(ListProjectRequest request) {
             super(request);
+            this.resourceGroupId = request.resourceGroupId;
             this.offset = request.offset;
             this.projectName = request.projectName;
             this.size = request.size;
         } 
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putPathParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
 
         /**
          * offset.
