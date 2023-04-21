@@ -70,7 +70,7 @@ public class GetDesktopGroupDetailRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The ID of the desktop group.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -79,7 +79,7 @@ public class GetDesktopGroupDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the desktop group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

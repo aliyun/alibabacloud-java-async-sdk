@@ -112,7 +112,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         } 
 
         /**
-         * EndUserId.
+         * The list of the AD users.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -121,7 +121,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of results to return. Valid values: 1 to 500. Default value: 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -130,7 +130,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Set the value to the NextToken value returned in the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -139,7 +139,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -148,7 +148,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

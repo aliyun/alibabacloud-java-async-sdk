@@ -99,7 +99,7 @@ public class HandleSecurityEventsRequest extends Request {
         } 
 
         /**
-         * OperationCode.
+         * The operation to handle multiple alerts of the same type at a time.
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -108,7 +108,9 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * OperationParams.
+         * The return value from the operation to handle multiple alerts of the same type at a time.\
+         * <p>
+         * This parameter is required only if you set the OperationCode parameter to `kill_and_quara` or `block_ip`. This parameter is not required if you set the OperationCode parameter to other values.
          */
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
@@ -117,7 +119,7 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +128,7 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * SecurityEvent.
+         * The alerts.
          */
         public Builder securityEvent(java.util.List < SecurityEvent> securityEvent) {
             this.putQueryParameter("SecurityEvent", securityEvent);
@@ -180,7 +182,7 @@ public class HandleSecurityEventsRequest extends Request {
             private String securityEventId; 
 
             /**
-             * DesktopId.
+             * The ID of the cloud desktop.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -188,7 +190,7 @@ public class HandleSecurityEventsRequest extends Request {
             }
 
             /**
-             * SecurityEventId.
+             * The ID of the alert.
              */
             public Builder securityEventId(String securityEventId) {
                 this.securityEventId = securityEventId;

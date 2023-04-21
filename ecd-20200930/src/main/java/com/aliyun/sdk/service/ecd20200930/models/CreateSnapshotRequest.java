@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateSnapshotRequest extends Request {
     @Query
     @NameInMap("Description")
+    @Validation(maxLength = 128)
     private String description;
 
     @Query
@@ -28,7 +29,7 @@ public class CreateSnapshotRequest extends Request {
 
     @Query
     @NameInMap("SnapshotName")
-    @Validation(required = true)
+    @Validation(required = true, maxLength = 128, minLength = 2)
     private String snapshotName;
 
     @Query
@@ -114,7 +115,7 @@ public class CreateSnapshotRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the snapshot. The description can be up to 128 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -123,7 +124,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -132,7 +133,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +142,9 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * The name of the snapshot. The name must be 2 to 128 characters in length.\
+         * <p>
+         * The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -150,7 +153,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * SourceDiskType.
+         * The type of the disk for which to create a snapshot. Valid values:
+         * <p>
+         * 
+         * *   system: system disk
+         * *   data: data disk
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);

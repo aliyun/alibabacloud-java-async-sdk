@@ -62,7 +62,7 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NetworkPackageId.
+         * The ID of the Internet access package.
          */
         public Builder networkPackageId(String networkPackageId) {
             this.networkPackageId = networkPackageId;
@@ -70,7 +70,7 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the bill.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

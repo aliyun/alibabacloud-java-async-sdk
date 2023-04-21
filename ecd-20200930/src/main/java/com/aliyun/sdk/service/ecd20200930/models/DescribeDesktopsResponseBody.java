@@ -74,7 +74,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Desktops.
+         * Details of the cloud desktops.
          */
         public Builder desktops(java.util.List < Desktops> desktops) {
             this.desktops = desktops;
@@ -82,7 +82,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of cloud desktops.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -174,7 +174,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String performanceLevel; 
 
             /**
-             * DiskId.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -182,7 +182,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * The size of the disk. Unit: GiB.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -190,7 +190,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * The type of the disk.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -198,7 +198,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceLevel.
+             * The performance level (PL) of the disk that is an enhanced SSD (ESSD). Valid values:
+             * <p>
+             * 
+             * *   PL0
+             * *   PL1
+             * *   PL2
+             * *   PL3
+             * 
+             * For more information about the differences between disks of different PLs, see [Enhanced SSDs](~~122389~~).
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -275,7 +283,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * CurrentAppVersion.
+             * The current version of the cloud desktop.
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -283,7 +291,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * NewAppVersion.
+             * The version to which the cloud desktop can be updated.
              */
             public Builder newAppVersion(String newAppVersion) {
                 this.newAppVersion = newAppVersion;
@@ -291,7 +299,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * The description of the version to which the cloud desktop can be updated.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -299,7 +307,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the installation package for the version to which the cloud desktop can be updated. Unit: KB.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -364,7 +372,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String externalUserName; 
 
             /**
-             * EndUserId.
+             * The ID of the user that logged on to the cloud desktop.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -372,7 +380,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * EstablishmentTime.
+             * The time when the desktop session was established.
              */
             public Builder establishmentTime(String establishmentTime) {
                 this.establishmentTime = establishmentTime;
@@ -380,7 +388,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalUserName.
+             * The name of the external user.
              */
             public Builder externalUserName(String externalUserName) {
                 this.externalUserName = externalUserName;
@@ -433,7 +441,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -441,7 +449,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -456,6 +464,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     }
     public static class Desktops extends TeaModel {
+        @NameInMap("BindAmount")
+        private Integer bindAmount;
+
         @NameInMap("BundleId")
         private String bundleId;
 
@@ -531,6 +542,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("GpuSpec")
         private String gpuSpec;
 
+        @NameInMap("HibernationOptionsConfigured")
+        private Boolean hibernationOptionsConfigured;
+
         @NameInMap("HostName")
         private String hostName;
 
@@ -570,8 +584,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("PolicyGroupId")
         private String policyGroupId;
 
+        @NameInMap("PolicyGroupIdList")
+        private java.util.List < String > policyGroupIdList;
+
         @NameInMap("PolicyGroupName")
         private String policyGroupName;
+
+        @NameInMap("PolicyGroupNameList")
+        private java.util.List < String > policyGroupNameList;
 
         @NameInMap("Progress")
         private String progress;
@@ -585,8 +605,17 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("Sessions")
         private java.util.List < Sessions> sessions;
 
+        @NameInMap("SnapshotPolicyId")
+        private String snapshotPolicyId;
+
+        @NameInMap("SnapshotPolicyName")
+        private String snapshotPolicyName;
+
         @NameInMap("StartTime")
         private String startTime;
+
+        @NameInMap("SupportHibernation")
+        private Boolean supportHibernation;
 
         @NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
@@ -607,6 +636,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private String zoneType;
 
         private Desktops(Builder builder) {
+            this.bindAmount = builder.bindAmount;
             this.bundleId = builder.bundleId;
             this.bundleName = builder.bundleName;
             this.chargeType = builder.chargeType;
@@ -632,6 +662,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.gpuCount = builder.gpuCount;
             this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuSpec = builder.gpuSpec;
+            this.hibernationOptionsConfigured = builder.hibernationOptionsConfigured;
             this.hostName = builder.hostName;
             this.imageId = builder.imageId;
             this.managementFlag = builder.managementFlag;
@@ -645,12 +676,17 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.osType = builder.osType;
             this.platform = builder.platform;
             this.policyGroupId = builder.policyGroupId;
+            this.policyGroupIdList = builder.policyGroupIdList;
             this.policyGroupName = builder.policyGroupName;
+            this.policyGroupNameList = builder.policyGroupNameList;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
             this.sessionType = builder.sessionType;
             this.sessions = builder.sessions;
+            this.snapshotPolicyId = builder.snapshotPolicyId;
+            this.snapshotPolicyName = builder.snapshotPolicyName;
             this.startTime = builder.startTime;
+            this.supportHibernation = builder.supportHibernation;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
             this.tags = builder.tags;
@@ -665,6 +701,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         public static Desktops create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindAmount
+         */
+        public Integer getBindAmount() {
+            return this.bindAmount;
         }
 
         /**
@@ -843,6 +886,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return hibernationOptionsConfigured
+         */
+        public Boolean getHibernationOptionsConfigured() {
+            return this.hibernationOptionsConfigured;
+        }
+
+        /**
          * @return hostName
          */
         public String getHostName() {
@@ -934,10 +984,24 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return policyGroupIdList
+         */
+        public java.util.List < String > getPolicyGroupIdList() {
+            return this.policyGroupIdList;
+        }
+
+        /**
          * @return policyGroupName
          */
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        /**
+         * @return policyGroupNameList
+         */
+        public java.util.List < String > getPolicyGroupNameList() {
+            return this.policyGroupNameList;
         }
 
         /**
@@ -969,10 +1033,31 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotPolicyId
+         */
+        public String getSnapshotPolicyId() {
+            return this.snapshotPolicyId;
+        }
+
+        /**
+         * @return snapshotPolicyName
+         */
+        public String getSnapshotPolicyName() {
+            return this.snapshotPolicyName;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
             return this.startTime;
+        }
+
+        /**
+         * @return supportHibernation
+         */
+        public Boolean getSupportHibernation() {
+            return this.supportHibernation;
         }
 
         /**
@@ -1018,6 +1103,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer bindAmount; 
             private String bundleId; 
             private String bundleName; 
             private String chargeType; 
@@ -1043,6 +1129,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Float gpuCount; 
             private String gpuDriverVersion; 
             private String gpuSpec; 
+            private Boolean hibernationOptionsConfigured; 
             private String hostName; 
             private String imageId; 
             private String managementFlag; 
@@ -1056,12 +1143,17 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String osType; 
             private String platform; 
             private String policyGroupId; 
+            private java.util.List < String > policyGroupIdList; 
             private String policyGroupName; 
+            private java.util.List < String > policyGroupNameList; 
             private String progress; 
             private String protocolType; 
             private String sessionType; 
             private java.util.List < Sessions> sessions; 
+            private String snapshotPolicyId; 
+            private String snapshotPolicyName; 
             private String startTime; 
+            private Boolean supportHibernation; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
             private java.util.List < Tags> tags; 
@@ -1070,7 +1162,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * BundleId.
+             * The number of sessions allowed for each cloud desktop in the multi-session desktop group.
+             */
+            public Builder bindAmount(Integer bindAmount) {
+                this.bindAmount = bindAmount;
+                return this;
+            }
+
+            /**
+             * The ID of the desktop template that is used to create the cloud desktop.
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -1078,7 +1178,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * BundleName.
+             * The name of the desktop template that is used to create the cloud desktop.
              */
             public Builder bundleName(String bundleName) {
                 this.bundleName = bundleName;
@@ -1086,7 +1186,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the cloud desktop.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1094,7 +1194,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionStatus.
+             * The connection status of the user.
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -1102,7 +1202,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1110,7 +1210,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the cloud desktop was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1118,7 +1218,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskCategory.
+             * > This parameter is in invitational preview and is unavailable to the public.
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -1126,7 +1226,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskSize.
+             * > This parameter is in invitational preview and is unavailable to the public.
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -1134,7 +1234,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupId.
+             * The ID of the group to which the cloud desktop belongs. Default value: null.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -1142,7 +1242,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * The ID of the cloud desktop.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -1150,7 +1250,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * The name of the cloud desktop.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -1158,7 +1258,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopStatus.
+             * The state of the cloud desktop.
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -1166,7 +1266,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopType.
+             * The desktop type.
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -1174,7 +1274,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID is the same as the workspace ID that is indicated by the value of the OfficeSiteId parameter.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -1182,7 +1282,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryType.
+             * This parameter is in invitational preview and unavailable for general users.
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -1190,7 +1290,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * Details of the disks.
              */
             public Builder disks(java.util.List < Disks> disks) {
                 this.disks = disks;
@@ -1198,7 +1298,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DowngradeQuota.
+             * The number of times for which the cloud desktop can be downgraded.
              */
             public Builder downgradeQuota(Long downgradeQuota) {
                 this.downgradeQuota = downgradeQuota;
@@ -1206,7 +1306,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DowngradedTimes.
+             * The number of times for which the cloud desktop is downgraded.
              */
             public Builder downgradedTimes(Long downgradedTimes) {
                 this.downgradedTimes = downgradedTimes;
@@ -1214,7 +1314,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserIds.
+             * The IDs of the users that have the permissions to connect to the cloud desktops.
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -1222,7 +1322,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the subscription cloud desktop expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1230,7 +1330,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * FotaUpdate.
+             * The information about the image version that the cloud desktop uses.
              */
             public Builder fotaUpdate(FotaUpdate fotaUpdate) {
                 this.fotaUpdate = fotaUpdate;
@@ -1238,7 +1338,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuCategory.
+             * Indicates whether the cloud desktop is of the GPU-accelerated type.
              */
             public Builder gpuCategory(Long gpuCategory) {
                 this.gpuCategory = gpuCategory;
@@ -1246,7 +1346,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuCount.
+             * The number of GPUs.
              */
             public Builder gpuCount(Float gpuCount) {
                 this.gpuCount = gpuCount;
@@ -1254,7 +1354,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuDriverVersion.
+             * The version of the GPU driver with which the cloud desktop is equipped.
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -1262,7 +1362,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpec.
+             * The GPU model.
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -1270,7 +1370,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * > This parameter is in invitational preview and is unavailable to the public.
+             */
+            public Builder hibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
+                this.hibernationOptionsConfigured = hibernationOptionsConfigured;
+                return this;
+            }
+
+            /**
+             * The hostname of the cloud desktop.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1278,7 +1386,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1286,7 +1394,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlag.
+             * The flag that is used for management.
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -1294,7 +1402,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size. Unit: MiB.
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -1302,7 +1410,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * The ID of the secondary network interface controller (NIC) created by the RAM user or Active Directory (AD) user in EDS. You do not have the permissions to modify this ID.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -1310,7 +1418,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceIp.
+             * The IP address of the secondary NIC that is created by the RAM user or AD user in EDS.
              */
             public Builder networkInterfaceIp(String networkInterfaceIp) {
                 this.networkInterfaceIp = networkInterfaceIp;
@@ -1318,7 +1426,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * The ID of the workspace.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -1326,7 +1434,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * The name of the workspace.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -1334,7 +1442,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteType.
+             * The account type of the workspace.
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -1342,7 +1450,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteVpcType.
+             * The virtual private cloud (VPC) type of the workspace.
              */
             public Builder officeSiteVpcType(String officeSiteVpcType) {
                 this.officeSiteVpcType = officeSiteVpcType;
@@ -1350,7 +1458,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * The type of the OS.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1358,7 +1466,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The information about the OS platform. Valid values:
+             * <p>
+             * 
+             * *   CentOS
+             * *   Ubuntu
+             * *   Windows Server 2016
+             * *   Windows Server 2019
+             * *   UOS
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1366,7 +1481,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupId.
+             * The ID of the policy.
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -1374,7 +1489,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupName.
+             * The IDs of the policies.
+             */
+            public Builder policyGroupIdList(java.util.List < String > policyGroupIdList) {
+                this.policyGroupIdList = policyGroupIdList;
+                return this;
+            }
+
+            /**
+             * The name of the policy.
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
@@ -1382,7 +1505,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The names of the policies.
+             */
+            public Builder policyGroupNameList(java.util.List < String > policyGroupNameList) {
+                this.policyGroupNameList = policyGroupNameList;
+                return this;
+            }
+
+            /**
+             * The progress when the cloud desktop was created.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1390,7 +1521,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The type of the protocol.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1398,7 +1529,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionType.
+             * The type of the session.
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -1406,7 +1537,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * Details of the desktop sessions that users hold.
              */
             public Builder sessions(java.util.List < Sessions> sessions) {
                 this.sessions = sessions;
@@ -1414,7 +1545,23 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The ID of the snapshot policy.
+             */
+            public Builder snapshotPolicyId(String snapshotPolicyId) {
+                this.snapshotPolicyId = snapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * The name of the snapshot policy.
+             */
+            public Builder snapshotPolicyName(String snapshotPolicyName) {
+                this.snapshotPolicyName = snapshotPolicyName;
+                return this;
+            }
+
+            /**
+             * The first time when the cloud desktop was started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1422,7 +1569,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskCategory.
+             * Indicates whether hibernation is supported for the cloud desktop.
+             */
+            public Builder supportHibernation(Boolean supportHibernation) {
+                this.supportHibernation = supportHibernation;
+                return this;
+            }
+
+            /**
+             * > This parameter is in invitational preview and is unavailable to the public.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1430,7 +1585,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * > This parameter is in invitational preview and is unavailable to the public.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1438,7 +1593,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * Details of the tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1446,7 +1601,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeEncryptionEnabled.
+             * Indicates whether disk encryption is enabled.
              */
             public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
                 this.volumeEncryptionEnabled = volumeEncryptionEnabled;
@@ -1454,7 +1609,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeEncryptionKey.
+             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;
@@ -1462,7 +1617,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneType.
+             * The type of the zone. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;

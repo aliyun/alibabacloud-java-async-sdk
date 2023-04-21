@@ -100,7 +100,7 @@ public class ModifyUserToDesktopGroupRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The ID of the desktop group that you want to assign to users.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -109,7 +109,7 @@ public class ModifyUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * NewEndUserIds.
+         * The IDs of the regular users to whom you want to grant the permissions on the cloud desktop.
          */
         public Builder newEndUserIds(java.util.List < String > newEndUserIds) {
             this.putQueryParameter("NewEndUserIds", newEndUserIds);
@@ -118,7 +118,7 @@ public class ModifyUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * OldEndUserIds.
+         * The IDs of the original regular users who have the permissions on the cloud desktop.
          */
         public Builder oldEndUserIds(java.util.List < String > oldEndUserIds) {
             this.putQueryParameter("OldEndUserIds", oldEndUserIds);
@@ -127,7 +127,7 @@ public class ModifyUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

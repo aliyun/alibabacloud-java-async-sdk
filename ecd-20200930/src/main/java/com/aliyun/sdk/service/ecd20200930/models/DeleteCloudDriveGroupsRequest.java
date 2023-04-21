@@ -1,0 +1,120 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ecd20200930.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteCloudDriveGroupsRequest} extends {@link RequestModel}
+ *
+ * <p>DeleteCloudDriveGroupsRequest</p>
+ */
+public class DeleteCloudDriveGroupsRequest extends Request {
+    @Query
+    @NameInMap("CdsId")
+    @Validation(required = true)
+    private String cdsId;
+
+    @Query
+    @NameInMap("GroupId")
+    private java.util.List < String > groupId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    private DeleteCloudDriveGroupsRequest(Builder builder) {
+        super(builder);
+        this.cdsId = builder.cdsId;
+        this.groupId = builder.groupId;
+        this.regionId = builder.regionId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteCloudDriveGroupsRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return cdsId
+     */
+    public String getCdsId() {
+        return this.cdsId;
+    }
+
+    /**
+     * @return groupId
+     */
+    public java.util.List < String > getGroupId() {
+        return this.groupId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteCloudDriveGroupsRequest, Builder> {
+        private String cdsId; 
+        private java.util.List < String > groupId; 
+        private String regionId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DeleteCloudDriveGroupsRequest request) {
+            super(request);
+            this.cdsId = request.cdsId;
+            this.groupId = request.groupId;
+            this.regionId = request.regionId;
+        } 
+
+        /**
+         * The ID of the cloud disk in Cloud Drive Service.
+         */
+        public Builder cdsId(String cdsId) {
+            this.putQueryParameter("CdsId", cdsId);
+            this.cdsId = cdsId;
+            return this;
+        }
+
+        /**
+         * The IDs of the teams that you want to delete. You can delete multiple teams at a time.
+         */
+        public Builder groupId(java.util.List < String > groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The region ID.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        @Override
+        public DeleteCloudDriveGroupsRequest build() {
+            return new DeleteCloudDriveGroupsRequest(this);
+        } 
+
+    } 
+
+}

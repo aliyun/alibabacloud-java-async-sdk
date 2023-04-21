@@ -84,7 +84,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -93,7 +93,10 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         }
 
         /**
-         * QuaraFieldId.
+         * The ID of the quarantined file.
+         * <p>
+         * 
+         * You can call the [DescribeSuspEventQuaraFiles](~~217947~~) operation to obtain the ID of the quarantined file.
          */
         public Builder quaraFieldId(Integer quaraFieldId) {
             this.putQueryParameter("QuaraFieldId", quaraFieldId);
@@ -102,7 +105,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

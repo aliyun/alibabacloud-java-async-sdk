@@ -50,7 +50,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FotaTasks.
+         * Details about the image update tasks.
          */
         public Builder fotaTasks(java.util.List < FotaTasks> fotaTasks) {
             this.fotaTasks = fotaTasks;
@@ -58,7 +58,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,6 +77,9 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
 
         @NameInMap("FotaProject")
         private String fotaProject;
+
+        @NameInMap("PendingCustomImageCount")
+        private Integer pendingCustomImageCount;
 
         @NameInMap("PendingDesktopCount")
         private Integer pendingDesktopCount;
@@ -99,6 +102,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         private FotaTasks(Builder builder) {
             this.appVersion = builder.appVersion;
             this.fotaProject = builder.fotaProject;
+            this.pendingCustomImageCount = builder.pendingCustomImageCount;
             this.pendingDesktopCount = builder.pendingDesktopCount;
             this.publishTime = builder.publishTime;
             this.releaseNote = builder.releaseNote;
@@ -127,6 +131,13 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
          */
         public String getFotaProject() {
             return this.fotaProject;
+        }
+
+        /**
+         * @return pendingCustomImageCount
+         */
+        public Integer getPendingCustomImageCount() {
+            return this.pendingCustomImageCount;
         }
 
         /**
@@ -174,6 +185,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String appVersion; 
             private String fotaProject; 
+            private Integer pendingCustomImageCount; 
             private Integer pendingDesktopCount; 
             private String publishTime; 
             private String releaseNote; 
@@ -182,7 +194,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             private String taskUid; 
 
             /**
-             * AppVersion.
+             * The version of the custom image. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -190,7 +202,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FotaProject.
+             * This parameter is not available to the public.
              */
             public Builder fotaProject(String fotaProject) {
                 this.fotaProject = fotaProject;
@@ -198,7 +210,15 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PendingDesktopCount.
+             * PendingCustomImageCount.
+             */
+            public Builder pendingCustomImageCount(Integer pendingCustomImageCount) {
+                this.pendingCustomImageCount = pendingCustomImageCount;
+                return this;
+            }
+
+            /**
+             * The number of cloud desktops for which the images can be updated to this version.
              */
             public Builder pendingDesktopCount(Integer pendingDesktopCount) {
                 this.pendingDesktopCount = pendingDesktopCount;
@@ -206,7 +226,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * The time when the updated image was published.
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -214,7 +234,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * The description of the image version to which the original image is updated.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -222,7 +242,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the image update package. Unit: KB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -230,7 +250,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the user can update the image of the cloud desktop.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +258,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskUid.
+             * The ID of the image update task.
              */
             public Builder taskUid(String taskUid) {
                 this.taskUid = taskUid;

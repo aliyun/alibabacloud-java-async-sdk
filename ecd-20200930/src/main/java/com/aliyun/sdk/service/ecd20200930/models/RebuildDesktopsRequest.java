@@ -84,7 +84,7 @@ public class RebuildDesktopsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -93,7 +93,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the new image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -102,7 +102,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -70,7 +70,7 @@ public class ResetNASDefaultMountTargetRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the NAS file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +79,7 @@ public class ResetNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

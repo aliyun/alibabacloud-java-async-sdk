@@ -98,7 +98,11 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 100
+         * *   Default value: 20
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -107,7 +111,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -116,7 +120,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +129,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * TaskUid.
+         * The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the value of this parameter.
          */
         public Builder taskUid(String taskUid) {
             this.putQueryParameter("TaskUid", taskUid);

@@ -126,7 +126,7 @@ public class CreateNASFileSystemRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the NAS file system.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,7 +135,13 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * EncryptType.
+         * Specifies whether to encrypt the data in the NAS file system. You can use keys that are managed by Key Management Service (KMS) to encrypt the data that is stored in a NAS file system. When you read and write the encrypted data, the data is automatically decrypted. Valid values:
+         * <p>
+         * 
+         * *   0: does not encrypt the data in the NAS file system.
+         * *   1: encrypts the data in the NAS file system by using NAS-managed keys.
+         * 
+         * Default value: 0.
          */
         public Builder encryptType(String encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -153,7 +159,7 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -162,7 +168,7 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +177,13 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type of the NAS file system. Valid values:
+         * <p>
+         * 
+         * *   Capacity
+         * *   Performance
+         * 
+         * Default value: Capacity.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

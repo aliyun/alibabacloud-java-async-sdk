@@ -114,7 +114,7 @@ public class ConfigADConnectorUserRequest extends Request {
         } 
 
         /**
-         * DomainPassword.
+         * The password of the AD user that has the permissions to join computers to domains.
          */
         public Builder domainPassword(String domainPassword) {
             this.putQueryParameter("DomainPassword", domainPassword);
@@ -123,7 +123,10 @@ public class ConfigADConnectorUserRequest extends Request {
         }
 
         /**
-         * DomainUserName.
+         * The username of the AD user that has the permissions to join computers to domains.
+         * <p>
+         * 
+         * After the username is configured, the cloud desktops in the same AD workspace are joined to the specified OU.
          */
         public Builder domainUserName(String domainUserName) {
             this.putQueryParameter("DomainUserName", domainUserName);
@@ -132,7 +135,7 @@ public class ConfigADConnectorUserRequest extends Request {
         }
 
         /**
-         * OUName.
+         * The name of the OU in the AD domain. You can call the [ListUserAdOrganizationUnits](~~311259~~) to obtain the OU name.
          */
         public Builder OUName(String OUName) {
             this.putQueryParameter("OUName", OUName);
@@ -141,7 +144,7 @@ public class ConfigADConnectorUserRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the AD workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -150,7 +153,7 @@ public class ConfigADConnectorUserRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

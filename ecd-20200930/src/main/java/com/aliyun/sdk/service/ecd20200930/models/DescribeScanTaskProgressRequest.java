@@ -69,7 +69,7 @@ public class DescribeScanTaskProgressRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +78,10 @@ public class DescribeScanTaskProgressRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the virus scan task. If this parameter is not specified, the status of the latest scan task is queried by default.
+         * <p>
+         * 
+         * You can call the [StartVirusScanTask](~~217908~~) operation to query the ID of a virus scan task.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

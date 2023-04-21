@@ -62,7 +62,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Images.
+         * The details of the images.
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -70,7 +70,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,6 +122,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("OsType")
         private String osType;
 
+        @NameInMap("Platform")
+        private String platform;
+
         @NameInMap("Progress")
         private String progress;
 
@@ -143,6 +146,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("SupportedLanguages")
         private java.util.List < String > supportedLanguages;
 
+        @NameInMap("UpdateTime")
+        private String updateTime;
+
         @NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
@@ -160,6 +166,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             this.imageType = builder.imageType;
             this.name = builder.name;
             this.osType = builder.osType;
+            this.platform = builder.platform;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
             this.sessionType = builder.sessionType;
@@ -167,6 +174,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             this.size = builder.size;
             this.status = builder.status;
             this.supportedLanguages = builder.supportedLanguages;
+            this.updateTime = builder.updateTime;
             this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
@@ -250,6 +258,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return progress
          */
         public String getProgress() {
@@ -299,6 +314,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        /**
          * @return volumeEncryptionEnabled
          */
         public Boolean getVolumeEncryptionEnabled() {
@@ -323,6 +345,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String imageType; 
             private String name; 
             private String osType; 
+            private String platform; 
             private String progress; 
             private String protocolType; 
             private String sessionType; 
@@ -330,11 +353,12 @@ public class DescribeImagesResponseBody extends TeaModel {
             private Integer size; 
             private String status; 
             private java.util.List < String > supportedLanguages; 
+            private String updateTime; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
 
             /**
-             * AppVersion.
+             * The version of the image.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -342,7 +366,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the image was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -350,7 +374,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskSize.
+             * The size of the data disk. Unit: GiB.
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -358,7 +382,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the image.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +390,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuCategory.
+             * Indicates whether the image is a GPU-accelerated image.
              */
             public Builder gpuCategory(Boolean gpuCategory) {
                 this.gpuCategory = gpuCategory;
@@ -374,7 +398,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuDriverVersion.
+             * The version of the GPU driver.
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -382,7 +406,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -390,7 +414,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * The type of the image.
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -398,7 +422,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the image.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -406,7 +430,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * The OS type of the image.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -414,7 +438,15 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The OS type of the image.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * The progress of image creation. Unit: percentage (%).
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -422,7 +454,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The type of the protocol.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -430,7 +462,11 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SessionType.
+             * The session type of the image. Valid values:
+             * <p>
+             * 
+             * *   SINGLE_SESSION: single-session images
+             * *   MULTIPLE_SESSION: multi-session images
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -438,7 +474,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SharedCount.
+             * The number of shared images.
              */
             public Builder sharedCount(Integer sharedCount) {
                 this.sharedCount = sharedCount;
@@ -446,7 +482,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the image. Unit: GiB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -454,7 +490,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the image.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -462,7 +498,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedLanguages.
+             * The languages of the OS.
              */
             public Builder supportedLanguages(java.util.List < String > supportedLanguages) {
                 this.supportedLanguages = supportedLanguages;
@@ -470,7 +506,15 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeEncryptionEnabled.
+             * The time when the image was last modified.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * Indicates whether disk encryption is enabled.
              */
             public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
                 this.volumeEncryptionEnabled = volumeEncryptionEnabled;
@@ -478,7 +522,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeEncryptionKey.
+             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain the list of KMS keys.
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;

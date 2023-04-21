@@ -83,7 +83,10 @@ public class DescribeCensRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -92,7 +95,10 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -101,7 +107,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

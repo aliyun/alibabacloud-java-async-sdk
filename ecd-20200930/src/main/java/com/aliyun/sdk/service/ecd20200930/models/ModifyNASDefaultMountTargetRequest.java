@@ -85,7 +85,7 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the NAS file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -94,7 +94,7 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * MountTargetDomain.
+         * The domain name of the mount target.
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -103,7 +103,7 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

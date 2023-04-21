@@ -86,7 +86,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The maximum number of entries returned per page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * GroupedVulItems.
+         * Details about vulnerabilities.
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -102,7 +102,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The page number of the returned page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AliasName.
+             * The alias of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -262,7 +262,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * AsapCount.
+             * The number of high-risk vulnerabilities.
              */
             public Builder asapCount(Integer asapCount) {
                 this.asapCount = asapCount;
@@ -270,7 +270,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * GmtLast.
+             * The time when the vulnerability was last detected. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
              */
             public Builder gmtLast(String gmtLast) {
                 this.gmtLast = gmtLast;
@@ -278,7 +278,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * HandledCount.
+             * The number of vulnerabilities processed.
              */
             public Builder handledCount(Integer handledCount) {
                 this.handledCount = handledCount;
@@ -286,7 +286,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * LaterCount.
+             * The number of medium-risk vulnerabilities.
              */
             public Builder laterCount(Integer laterCount) {
                 this.laterCount = laterCount;
@@ -294,7 +294,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +302,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * NntfCount.
+             * The number of low-risk vulnerabilities.
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
@@ -310,7 +310,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the vulnerability.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -318,7 +318,11 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   cve: Linux software vulnerability
+             * *   sys: Windows system vulnerability
              */
             public Builder type(String type) {
                 this.type = type;

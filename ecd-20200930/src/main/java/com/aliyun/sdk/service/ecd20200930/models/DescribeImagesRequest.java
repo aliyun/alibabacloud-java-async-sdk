@@ -17,10 +17,6 @@ public class DescribeImagesRequest extends Request {
     private String desktopInstanceType;
 
     @Query
-    @NameInMap("FotaChannel")
-    private String fotaChannel;
-
-    @Query
     @NameInMap("GpuCategory")
     private Boolean gpuCategory;
 
@@ -66,10 +62,13 @@ public class DescribeImagesRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("SessionType")
+    private String sessionType;
+
     private DescribeImagesRequest(Builder builder) {
         super(builder);
         this.desktopInstanceType = builder.desktopInstanceType;
-        this.fotaChannel = builder.fotaChannel;
         this.gpuCategory = builder.gpuCategory;
         this.gpuDriverVersion = builder.gpuDriverVersion;
         this.imageId = builder.imageId;
@@ -81,6 +80,7 @@ public class DescribeImagesRequest extends Request {
         this.osType = builder.osType;
         this.protocolType = builder.protocolType;
         this.regionId = builder.regionId;
+        this.sessionType = builder.sessionType;
     }
 
     public static Builder builder() {
@@ -101,13 +101,6 @@ public class DescribeImagesRequest extends Request {
      */
     public String getDesktopInstanceType() {
         return this.desktopInstanceType;
-    }
-
-    /**
-     * @return fotaChannel
-     */
-    public String getFotaChannel() {
-        return this.fotaChannel;
     }
 
     /**
@@ -187,9 +180,15 @@ public class DescribeImagesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return sessionType
+     */
+    public String getSessionType() {
+        return this.sessionType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImagesRequest, Builder> {
         private String desktopInstanceType; 
-        private String fotaChannel; 
         private Boolean gpuCategory; 
         private String gpuDriverVersion; 
         private java.util.List < String > imageId; 
@@ -201,6 +200,7 @@ public class DescribeImagesRequest extends Request {
         private String osType; 
         private String protocolType; 
         private String regionId; 
+        private String sessionType; 
 
         private Builder() {
             super();
@@ -209,7 +209,6 @@ public class DescribeImagesRequest extends Request {
         private Builder(DescribeImagesRequest request) {
             super(request);
             this.desktopInstanceType = request.desktopInstanceType;
-            this.fotaChannel = request.fotaChannel;
             this.gpuCategory = request.gpuCategory;
             this.gpuDriverVersion = request.gpuDriverVersion;
             this.imageId = request.imageId;
@@ -221,10 +220,11 @@ public class DescribeImagesRequest extends Request {
             this.osType = request.osType;
             this.protocolType = request.protocolType;
             this.regionId = request.regionId;
+            this.sessionType = request.sessionType;
         } 
 
         /**
-         * DesktopInstanceType.
+         * The cloud desktop type. You can call the [DescribeBundles](~~188884~~) operation to query the available cloud desktop types.
          */
         public Builder desktopInstanceType(String desktopInstanceType) {
             this.putQueryParameter("DesktopInstanceType", desktopInstanceType);
@@ -233,16 +233,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * FotaChannel.
-         */
-        public Builder fotaChannel(String fotaChannel) {
-            this.putQueryParameter("FotaChannel", fotaChannel);
-            this.fotaChannel = fotaChannel;
-            return this;
-        }
-
-        /**
-         * GpuCategory.
+         * Specifies whether the image is a GPU-accelerated image.
          */
         public Builder gpuCategory(Boolean gpuCategory) {
             this.putQueryParameter("GpuCategory", gpuCategory);
@@ -251,7 +242,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * GpuDriverVersion.
+         * The version of the GPU driver.
          */
         public Builder gpuDriverVersion(String gpuDriverVersion) {
             this.putQueryParameter("GpuDriverVersion", gpuDriverVersion);
@@ -260,7 +251,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The IDs of the images. You can specify one or more image IDs.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -269,7 +260,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * ImageStatus.
+         * The state of the image.
          */
         public Builder imageStatus(String imageStatus) {
             this.putQueryParameter("ImageStatus", imageStatus);
@@ -278,7 +269,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * The type of the image.
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -287,7 +278,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * LanguageType.
+         * The language of the OS.
          */
         public Builder languageType(String languageType) {
             this.putQueryParameter("LanguageType", languageType);
@@ -296,7 +287,11 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 100.
+         * *   Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -305,7 +300,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If you do not specify this parameter, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -314,7 +309,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * OsType.
+         * The type of the OS. Default value: `null`.
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -323,7 +318,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The type of the protocol.
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -332,11 +327,20 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The session type.
+         */
+        public Builder sessionType(String sessionType) {
+            this.putQueryParameter("SessionType", sessionType);
+            this.sessionType = sessionType;
             return this;
         }
 

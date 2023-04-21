@@ -50,7 +50,7 @@ public class StartVirusScanTaskResponseBody extends TeaModel {
         private Long scanTaskId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class StartVirusScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ScanTaskId.
+         * The ID of the virus scan task.
          */
         public Builder scanTaskId(Long scanTaskId) {
             this.scanTaskId = scanTaskId;

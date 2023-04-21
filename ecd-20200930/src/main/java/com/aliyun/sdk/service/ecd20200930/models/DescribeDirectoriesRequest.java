@@ -140,7 +140,7 @@ public class DescribeDirectoriesRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * Details of directory IDs. You can specify one or more directory IDs.
          */
         public Builder directoryId(java.util.List < String > directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -149,7 +149,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * DirectoryStatus.
+         * The status of the directory. The value of this parameter is the same as the value of the `Status` parameter.
          */
         public Builder directoryStatus(String directoryStatus) {
             this.putQueryParameter("DirectoryStatus", directoryStatus);
@@ -158,7 +158,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * DirectoryType.
+         * The type of the directory.
          */
         public Builder directoryType(String directoryType) {
             this.putQueryParameter("DirectoryType", directoryType);
@@ -167,7 +167,12 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -176,7 +181,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -185,7 +190,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +199,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the workspace.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

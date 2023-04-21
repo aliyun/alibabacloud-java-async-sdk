@@ -155,7 +155,12 @@ public class DescribeGroupedVulRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -164,7 +169,11 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * The processing status of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   y: handled
+         * *   n: unhandled
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -173,7 +182,11 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The natural language of the request and response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -182,7 +195,12 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Necessity.
+         * The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   asap: high
+         * *   later: medium
+         * *   nntf: low
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -191,7 +209,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -200,7 +218,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -209,7 +230,7 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +239,11 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   cve: Linux software vulnerability
+         * *   sys: Windows system vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -41,6 +41,14 @@ public class ModifyPolicyGroupRequest extends Request {
     private String domainList;
 
     @Query
+    @NameInMap("EndUserApplyAdminCoordinate")
+    private String endUserApplyAdminCoordinate;
+
+    @Query
+    @NameInMap("EndUserGroupCoordinate")
+    private String endUserGroupCoordinate;
+
+    @Query
     @NameInMap("GpuAcceleration")
     private String gpuAcceleration;
 
@@ -51,6 +59,10 @@ public class ModifyPolicyGroupRequest extends Request {
     @Query
     @NameInMap("Html5FileTransfer")
     private String html5FileTransfer;
+
+    @Query
+    @NameInMap("InternetCommunicationProtocol")
+    private String internetCommunicationProtocol;
 
     @Query
     @NameInMap("LocalDrive")
@@ -94,6 +106,14 @@ public class ModifyPolicyGroupRequest extends Request {
     private String recording;
 
     @Query
+    @NameInMap("RecordingAudio")
+    private String recordingAudio;
+
+    @Query
+    @NameInMap("RecordingDuration")
+    private Integer recordingDuration;
+
+    @Query
     @NameInMap("RecordingEndTime")
     private String recordingEndTime;
 
@@ -127,12 +147,24 @@ public class ModifyPolicyGroupRequest extends Request {
     private java.util.List < RevokeSecurityPolicyRule> revokeSecurityPolicyRule;
 
     @Query
+    @NameInMap("Scope")
+    private String scope;
+
+    @Query
+    @NameInMap("ScopeValue")
+    private java.util.List < String > scopeValue;
+
+    @Query
     @NameInMap("UsbRedirect")
     private String usbRedirect;
 
     @Query
     @NameInMap("UsbSupplyRedirectRule")
     private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule;
+
+    @Query
+    @NameInMap("VideoRedirect")
+    private String videoRedirect;
 
     @Query
     @NameInMap("VisualQuality")
@@ -143,8 +175,32 @@ public class ModifyPolicyGroupRequest extends Request {
     private String watermark;
 
     @Query
+    @NameInMap("WatermarkColor")
+    private Integer watermarkColor;
+
+    @Query
+    @NameInMap("WatermarkDegree")
+    private Double watermarkDegree;
+
+    @Query
+    @NameInMap("WatermarkFontSize")
+    private Integer watermarkFontSize;
+
+    @Query
+    @NameInMap("WatermarkFontStyle")
+    private String watermarkFontStyle;
+
+    @Query
+    @NameInMap("WatermarkRowAmount")
+    private Integer watermarkRowAmount;
+
+    @Query
     @NameInMap("WatermarkTransparency")
     private String watermarkTransparency;
+
+    @Query
+    @NameInMap("WatermarkTransparencyValue")
+    private Integer watermarkTransparencyValue;
 
     @Query
     @NameInMap("WatermarkType")
@@ -159,9 +215,12 @@ public class ModifyPolicyGroupRequest extends Request {
         this.clientType = builder.clientType;
         this.clipboard = builder.clipboard;
         this.domainList = builder.domainList;
+        this.endUserApplyAdminCoordinate = builder.endUserApplyAdminCoordinate;
+        this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
         this.gpuAcceleration = builder.gpuAcceleration;
         this.html5Access = builder.html5Access;
         this.html5FileTransfer = builder.html5FileTransfer;
+        this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
         this.localDrive = builder.localDrive;
         this.name = builder.name;
         this.netRedirect = builder.netRedirect;
@@ -172,6 +231,8 @@ public class ModifyPolicyGroupRequest extends Request {
         this.recordContent = builder.recordContent;
         this.recordContentExpires = builder.recordContentExpires;
         this.recording = builder.recording;
+        this.recordingAudio = builder.recordingAudio;
+        this.recordingDuration = builder.recordingDuration;
         this.recordingEndTime = builder.recordingEndTime;
         this.recordingExpires = builder.recordingExpires;
         this.recordingFps = builder.recordingFps;
@@ -180,11 +241,20 @@ public class ModifyPolicyGroupRequest extends Request {
         this.remoteCoordinate = builder.remoteCoordinate;
         this.revokeAccessPolicyRule = builder.revokeAccessPolicyRule;
         this.revokeSecurityPolicyRule = builder.revokeSecurityPolicyRule;
+        this.scope = builder.scope;
+        this.scopeValue = builder.scopeValue;
         this.usbRedirect = builder.usbRedirect;
         this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
+        this.videoRedirect = builder.videoRedirect;
         this.visualQuality = builder.visualQuality;
         this.watermark = builder.watermark;
+        this.watermarkColor = builder.watermarkColor;
+        this.watermarkDegree = builder.watermarkDegree;
+        this.watermarkFontSize = builder.watermarkFontSize;
+        this.watermarkFontStyle = builder.watermarkFontStyle;
+        this.watermarkRowAmount = builder.watermarkRowAmount;
         this.watermarkTransparency = builder.watermarkTransparency;
+        this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
         this.watermarkType = builder.watermarkType;
     }
 
@@ -251,6 +321,20 @@ public class ModifyPolicyGroupRequest extends Request {
     }
 
     /**
+     * @return endUserApplyAdminCoordinate
+     */
+    public String getEndUserApplyAdminCoordinate() {
+        return this.endUserApplyAdminCoordinate;
+    }
+
+    /**
+     * @return endUserGroupCoordinate
+     */
+    public String getEndUserGroupCoordinate() {
+        return this.endUserGroupCoordinate;
+    }
+
+    /**
      * @return gpuAcceleration
      */
     public String getGpuAcceleration() {
@@ -269,6 +353,13 @@ public class ModifyPolicyGroupRequest extends Request {
      */
     public String getHtml5FileTransfer() {
         return this.html5FileTransfer;
+    }
+
+    /**
+     * @return internetCommunicationProtocol
+     */
+    public String getInternetCommunicationProtocol() {
+        return this.internetCommunicationProtocol;
     }
 
     /**
@@ -342,6 +433,20 @@ public class ModifyPolicyGroupRequest extends Request {
     }
 
     /**
+     * @return recordingAudio
+     */
+    public String getRecordingAudio() {
+        return this.recordingAudio;
+    }
+
+    /**
+     * @return recordingDuration
+     */
+    public Integer getRecordingDuration() {
+        return this.recordingDuration;
+    }
+
+    /**
      * @return recordingEndTime
      */
     public String getRecordingEndTime() {
@@ -398,6 +503,20 @@ public class ModifyPolicyGroupRequest extends Request {
     }
 
     /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
+    /**
+     * @return scopeValue
+     */
+    public java.util.List < String > getScopeValue() {
+        return this.scopeValue;
+    }
+
+    /**
      * @return usbRedirect
      */
     public String getUsbRedirect() {
@@ -409,6 +528,13 @@ public class ModifyPolicyGroupRequest extends Request {
      */
     public java.util.List < UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
         return this.usbSupplyRedirectRule;
+    }
+
+    /**
+     * @return videoRedirect
+     */
+    public String getVideoRedirect() {
+        return this.videoRedirect;
     }
 
     /**
@@ -426,10 +552,52 @@ public class ModifyPolicyGroupRequest extends Request {
     }
 
     /**
+     * @return watermarkColor
+     */
+    public Integer getWatermarkColor() {
+        return this.watermarkColor;
+    }
+
+    /**
+     * @return watermarkDegree
+     */
+    public Double getWatermarkDegree() {
+        return this.watermarkDegree;
+    }
+
+    /**
+     * @return watermarkFontSize
+     */
+    public Integer getWatermarkFontSize() {
+        return this.watermarkFontSize;
+    }
+
+    /**
+     * @return watermarkFontStyle
+     */
+    public String getWatermarkFontStyle() {
+        return this.watermarkFontStyle;
+    }
+
+    /**
+     * @return watermarkRowAmount
+     */
+    public Integer getWatermarkRowAmount() {
+        return this.watermarkRowAmount;
+    }
+
+    /**
      * @return watermarkTransparency
      */
     public String getWatermarkTransparency() {
         return this.watermarkTransparency;
+    }
+
+    /**
+     * @return watermarkTransparencyValue
+     */
+    public Integer getWatermarkTransparencyValue() {
+        return this.watermarkTransparencyValue;
     }
 
     /**
@@ -447,9 +615,12 @@ public class ModifyPolicyGroupRequest extends Request {
         private java.util.List < ClientType> clientType; 
         private String clipboard; 
         private String domainList; 
+        private String endUserApplyAdminCoordinate; 
+        private String endUserGroupCoordinate; 
         private String gpuAcceleration; 
         private String html5Access; 
         private String html5FileTransfer; 
+        private String internetCommunicationProtocol; 
         private String localDrive; 
         private String name; 
         private String netRedirect; 
@@ -460,6 +631,8 @@ public class ModifyPolicyGroupRequest extends Request {
         private String recordContent; 
         private Long recordContentExpires; 
         private String recording; 
+        private String recordingAudio; 
+        private Integer recordingDuration; 
         private String recordingEndTime; 
         private Long recordingExpires; 
         private Long recordingFps; 
@@ -468,11 +641,20 @@ public class ModifyPolicyGroupRequest extends Request {
         private String remoteCoordinate; 
         private java.util.List < RevokeAccessPolicyRule> revokeAccessPolicyRule; 
         private java.util.List < RevokeSecurityPolicyRule> revokeSecurityPolicyRule; 
+        private String scope; 
+        private java.util.List < String > scopeValue; 
         private String usbRedirect; 
         private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
+        private String videoRedirect; 
         private String visualQuality; 
         private String watermark; 
+        private Integer watermarkColor; 
+        private Double watermarkDegree; 
+        private Integer watermarkFontSize; 
+        private String watermarkFontStyle; 
+        private Integer watermarkRowAmount; 
         private String watermarkTransparency; 
+        private Integer watermarkTransparencyValue; 
         private String watermarkType; 
 
         private Builder() {
@@ -488,9 +670,12 @@ public class ModifyPolicyGroupRequest extends Request {
             this.clientType = request.clientType;
             this.clipboard = request.clipboard;
             this.domainList = request.domainList;
+            this.endUserApplyAdminCoordinate = request.endUserApplyAdminCoordinate;
+            this.endUserGroupCoordinate = request.endUserGroupCoordinate;
             this.gpuAcceleration = request.gpuAcceleration;
             this.html5Access = request.html5Access;
             this.html5FileTransfer = request.html5FileTransfer;
+            this.internetCommunicationProtocol = request.internetCommunicationProtocol;
             this.localDrive = request.localDrive;
             this.name = request.name;
             this.netRedirect = request.netRedirect;
@@ -501,6 +686,8 @@ public class ModifyPolicyGroupRequest extends Request {
             this.recordContent = request.recordContent;
             this.recordContentExpires = request.recordContentExpires;
             this.recording = request.recording;
+            this.recordingAudio = request.recordingAudio;
+            this.recordingDuration = request.recordingDuration;
             this.recordingEndTime = request.recordingEndTime;
             this.recordingExpires = request.recordingExpires;
             this.recordingFps = request.recordingFps;
@@ -509,11 +696,20 @@ public class ModifyPolicyGroupRequest extends Request {
             this.remoteCoordinate = request.remoteCoordinate;
             this.revokeAccessPolicyRule = request.revokeAccessPolicyRule;
             this.revokeSecurityPolicyRule = request.revokeSecurityPolicyRule;
+            this.scope = request.scope;
+            this.scopeValue = request.scopeValue;
             this.usbRedirect = request.usbRedirect;
             this.usbSupplyRedirectRule = request.usbSupplyRedirectRule;
+            this.videoRedirect = request.videoRedirect;
             this.visualQuality = request.visualQuality;
             this.watermark = request.watermark;
+            this.watermarkColor = request.watermarkColor;
+            this.watermarkDegree = request.watermarkDegree;
+            this.watermarkFontSize = request.watermarkFontSize;
+            this.watermarkFontStyle = request.watermarkFontStyle;
+            this.watermarkRowAmount = request.watermarkRowAmount;
             this.watermarkTransparency = request.watermarkTransparency;
+            this.watermarkTransparencyValue = request.watermarkTransparencyValue;
             this.watermarkType = request.watermarkType;
         } 
 
@@ -581,6 +777,24 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
+         * EndUserApplyAdminCoordinate.
+         */
+        public Builder endUserApplyAdminCoordinate(String endUserApplyAdminCoordinate) {
+            this.putQueryParameter("EndUserApplyAdminCoordinate", endUserApplyAdminCoordinate);
+            this.endUserApplyAdminCoordinate = endUserApplyAdminCoordinate;
+            return this;
+        }
+
+        /**
+         * EndUserGroupCoordinate.
+         */
+        public Builder endUserGroupCoordinate(String endUserGroupCoordinate) {
+            this.putQueryParameter("EndUserGroupCoordinate", endUserGroupCoordinate);
+            this.endUserGroupCoordinate = endUserGroupCoordinate;
+            return this;
+        }
+
+        /**
          * GpuAcceleration.
          */
         public Builder gpuAcceleration(String gpuAcceleration) {
@@ -604,6 +818,15 @@ public class ModifyPolicyGroupRequest extends Request {
         public Builder html5FileTransfer(String html5FileTransfer) {
             this.putQueryParameter("Html5FileTransfer", html5FileTransfer);
             this.html5FileTransfer = html5FileTransfer;
+            return this;
+        }
+
+        /**
+         * InternetCommunicationProtocol.
+         */
+        public Builder internetCommunicationProtocol(String internetCommunicationProtocol) {
+            this.putQueryParameter("InternetCommunicationProtocol", internetCommunicationProtocol);
+            this.internetCommunicationProtocol = internetCommunicationProtocol;
             return this;
         }
 
@@ -698,6 +921,24 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
+         * RecordingAudio.
+         */
+        public Builder recordingAudio(String recordingAudio) {
+            this.putQueryParameter("RecordingAudio", recordingAudio);
+            this.recordingAudio = recordingAudio;
+            return this;
+        }
+
+        /**
+         * RecordingDuration.
+         */
+        public Builder recordingDuration(Integer recordingDuration) {
+            this.putQueryParameter("RecordingDuration", recordingDuration);
+            this.recordingDuration = recordingDuration;
+            return this;
+        }
+
+        /**
          * RecordingEndTime.
          */
         public Builder recordingEndTime(String recordingEndTime) {
@@ -770,6 +1011,24 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
+         * Scope.
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
+            return this;
+        }
+
+        /**
+         * ScopeValue.
+         */
+        public Builder scopeValue(java.util.List < String > scopeValue) {
+            this.putQueryParameter("ScopeValue", scopeValue);
+            this.scopeValue = scopeValue;
+            return this;
+        }
+
+        /**
          * UsbRedirect.
          */
         public Builder usbRedirect(String usbRedirect) {
@@ -784,6 +1043,15 @@ public class ModifyPolicyGroupRequest extends Request {
         public Builder usbSupplyRedirectRule(java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule) {
             this.putQueryParameter("UsbSupplyRedirectRule", usbSupplyRedirectRule);
             this.usbSupplyRedirectRule = usbSupplyRedirectRule;
+            return this;
+        }
+
+        /**
+         * VideoRedirect.
+         */
+        public Builder videoRedirect(String videoRedirect) {
+            this.putQueryParameter("VideoRedirect", videoRedirect);
+            this.videoRedirect = videoRedirect;
             return this;
         }
 
@@ -806,11 +1074,65 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
+         * WatermarkColor.
+         */
+        public Builder watermarkColor(Integer watermarkColor) {
+            this.putQueryParameter("WatermarkColor", watermarkColor);
+            this.watermarkColor = watermarkColor;
+            return this;
+        }
+
+        /**
+         * WatermarkDegree.
+         */
+        public Builder watermarkDegree(Double watermarkDegree) {
+            this.putQueryParameter("WatermarkDegree", watermarkDegree);
+            this.watermarkDegree = watermarkDegree;
+            return this;
+        }
+
+        /**
+         * WatermarkFontSize.
+         */
+        public Builder watermarkFontSize(Integer watermarkFontSize) {
+            this.putQueryParameter("WatermarkFontSize", watermarkFontSize);
+            this.watermarkFontSize = watermarkFontSize;
+            return this;
+        }
+
+        /**
+         * WatermarkFontStyle.
+         */
+        public Builder watermarkFontStyle(String watermarkFontStyle) {
+            this.putQueryParameter("WatermarkFontStyle", watermarkFontStyle);
+            this.watermarkFontStyle = watermarkFontStyle;
+            return this;
+        }
+
+        /**
+         * WatermarkRowAmount.
+         */
+        public Builder watermarkRowAmount(Integer watermarkRowAmount) {
+            this.putQueryParameter("WatermarkRowAmount", watermarkRowAmount);
+            this.watermarkRowAmount = watermarkRowAmount;
+            return this;
+        }
+
+        /**
          * WatermarkTransparency.
          */
         public Builder watermarkTransparency(String watermarkTransparency) {
             this.putQueryParameter("WatermarkTransparency", watermarkTransparency);
             this.watermarkTransparency = watermarkTransparency;
+            return this;
+        }
+
+        /**
+         * WatermarkTransparencyValue.
+         */
+        public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
+            this.putQueryParameter("WatermarkTransparencyValue", watermarkTransparencyValue);
+            this.watermarkTransparencyValue = watermarkTransparencyValue;
             return this;
         }
 

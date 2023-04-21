@@ -74,7 +74,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AdHostname.
+         * The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.
          */
         public Builder adHostname(String adHostname) {
             this.adHostname = adHostname;
@@ -82,7 +82,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Directories.
+         * Details of the directories.
          */
         public Builder directories(java.util.List < Directories> directories) {
             this.directories = directories;
@@ -90,7 +90,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +198,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * ADConnectorAddress.
+             * The address of the AD connector.
              */
             public Builder ADConnectorAddress(String ADConnectorAddress) {
                 this.ADConnectorAddress = ADConnectorAddress;
@@ -206,7 +206,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorStatus.
+             * The status of the AD connector.
              */
             public Builder connectorStatus(String connectorStatus) {
                 this.connectorStatus = connectorStatus;
@@ -214,7 +214,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * The ID of the network interface controller (NIC) with which the AD connector is associated.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -222,7 +222,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Specification.
+             * The type of the AD connector.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -230,7 +230,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustKey.
+             * The trust password of the AD domain controller.
              */
             public Builder trustKey(String trustKey) {
                 this.trustKey = trustKey;
@@ -238,7 +238,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch with which the AD connector is associated.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -315,7 +315,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Level.
+             * The level of the log entry.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -323,7 +323,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * Details of the log entry.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -331,7 +331,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step that corresponds to the log entry.
              */
             public Builder step(String step) {
                 this.step = step;
@@ -339,7 +339,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The time when the log entry was printed.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -704,7 +704,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ADConnectors.
+             * Details of the AD connectors.
              */
             public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
@@ -712,7 +712,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the directory was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -720,7 +720,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomSecurityGroupId.
+             * The ID of the security group.
              */
             public Builder customSecurityGroupId(String customSecurityGroupId) {
                 this.customSecurityGroupId = customSecurityGroupId;
@@ -728,7 +728,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopAccessType.
+             * The method that is used to connect the client to cloud desktops.
              */
             public Builder desktopAccessType(String desktopAccessType) {
                 this.desktopAccessType = desktopAccessType;
@@ -736,7 +736,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopVpcEndpoint.
+             * The endpoint that is used to connect to cloud desktops over a VPC.
              */
             public Builder desktopVpcEndpoint(String desktopVpcEndpoint) {
                 this.desktopVpcEndpoint = desktopVpcEndpoint;
@@ -744,7 +744,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -752,7 +752,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryType.
+             * The type of the directory.
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -760,7 +760,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsAddress.
+             * Details of the DNS addresses of the directory.
              */
             public Builder dnsAddress(java.util.List < String > dnsAddress) {
                 this.dnsAddress = dnsAddress;
@@ -768,7 +768,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsUserName.
+             * The username of the Domain Name System (DNS) user.
              */
             public Builder dnsUserName(String dnsUserName) {
                 this.dnsUserName = dnsUserName;
@@ -776,7 +776,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The name of the domain.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -784,7 +784,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainPassword.
+             * The password of the domain administrator.
              */
             public Builder domainPassword(String domainPassword) {
                 this.domainPassword = domainPassword;
@@ -792,7 +792,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainUserName.
+             * The username of the domain administrator.
              */
             public Builder domainUserName(String domainUserName) {
                 this.domainUserName = domainUserName;
@@ -800,7 +800,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAdminAccess.
+             * Indicates whether the permissions of the local administrator are granted to the regular user of the cloud desktop.
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -808,7 +808,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableCrossDesktopAccess.
+             * Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace.
+             * <p>
+             * 
+             * If the feature is enabled, the cloud desktops in the same workspace can access each other.
              */
             public Builder enableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
                 this.enableCrossDesktopAccess = enableCrossDesktopAccess;
@@ -816,7 +819,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableInternetAccess.
+             * Indicates whether access over the Internet is allowed.
+             * <p>
+             * 
+             * >  This parameter is unavailable.
              */
             public Builder enableInternetAccess(Boolean enableInternetAccess) {
                 this.enableInternetAccess = enableInternetAccess;
@@ -824,7 +830,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemIds.
+             * Details of the IDs of the Apsara File Storage NAS (NAS) file systems.
              */
             public Builder fileSystemIds(java.util.List < String > fileSystemIds) {
                 this.fileSystemIds = fileSystemIds;
@@ -832,7 +838,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Logs.
+             * Details of the registration logs.
              */
             public Builder logs(java.util.List < Logs> logs) {
                 this.logs = logs;
@@ -840,7 +846,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * MfaEnabled.
+             * Indicates whether multi-factor authentication (MFA) is enabled.
              */
             public Builder mfaEnabled(Boolean mfaEnabled) {
                 this.mfaEnabled = mfaEnabled;
@@ -848,7 +854,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the directory.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -856,7 +862,9 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * NeedVerifyLoginRisk.
+             * Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
+             * <p>
+             * If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the Elastic Desktop Service (EDS) client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
              */
             public Builder needVerifyLoginRisk(Boolean needVerifyLoginRisk) {
                 this.needVerifyLoginRisk = needVerifyLoginRisk;
@@ -864,7 +872,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * OuName.
+             * The name of the organizational unit (OU) that you specified when you add cloud desktops to domains.
              */
             public Builder ouName(String ouName) {
                 this.ouName = ouName;
@@ -872,7 +880,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * SsoEnabled.
+             * Indicates whether single sign-on (SSO) is enabled.
              */
             public Builder ssoEnabled(Boolean ssoEnabled) {
                 this.ssoEnabled = ssoEnabled;
@@ -880,7 +888,11 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the AD directory. Valid values:
+             * <p>
+             * 
+             * *   REGISTERING
+             * *   REGISTERED
              */
             public Builder status(String status) {
                 this.status = status;
@@ -888,7 +900,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * SubDnsAddress.
+             * Details of the DNS addresses of the AD subdomain.
              */
             public Builder subDnsAddress(java.util.List < String > subDnsAddress) {
                 this.subDnsAddress = subDnsAddress;
@@ -896,7 +908,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * SubDomainName.
+             * The fully qualified domain name (FQDN) of the enterprise AD subdomain. The value must contain the hostname and the subdomain name. Example: child.example.com.
              */
             public Builder subDomainName(String subDomainName) {
                 this.subDomainName = subDomainName;
@@ -904,7 +916,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustPassword.
+             * The AD trust password.
              */
             public Builder trustPassword(String trustPassword) {
                 this.trustPassword = trustPassword;
@@ -912,7 +924,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * Details of vSwitch IDs that are specified when the directory is being created.
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -920,7 +932,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the vSwitch belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

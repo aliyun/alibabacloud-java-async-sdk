@@ -23,6 +23,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
+    @Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
     @Query
@@ -31,7 +32,6 @@ public class DescribeDesktopsInGroupRequest extends Request {
 
     @Query
     @NameInMap("PayType")
-    @Validation(required = true)
     private String payType;
 
     @Query
@@ -127,7 +127,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The desktop group ID.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -136,7 +136,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * IgnoreDeleted.
+         * Specifies whether to ignore the deleted cloud desktops.
          */
         public Builder ignoreDeleted(Boolean ignoreDeleted) {
             this.putQueryParameter("IgnoreDeleted", ignoreDeleted);
@@ -145,7 +145,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -154,7 +154,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -163,7 +163,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the desktop group.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -172,7 +172,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

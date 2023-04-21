@@ -126,7 +126,13 @@ public class ModifyDiskSpecRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically complete the payment. Valid values:
+         * <p>
+         * 
+         * *   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.
+         * *   `false`: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the **Orders** page.
+         * 
+         * Default value: `true`.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -135,7 +141,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -144,7 +150,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * The ID of the sales promotion activity. You can call the DescribePrice operation to obtain the IDs of matching sales promotion activities.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -153,7 +159,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +168,13 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * RootDiskPerformanceLevel.
+         * The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:
+         * <p>
+         * 
+         * *   PL0
+         * *   PL1
+         * *   PL2
+         * *   PL3
          */
         public Builder rootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
             this.putQueryParameter("RootDiskPerformanceLevel", rootDiskPerformanceLevel);
@@ -171,7 +183,13 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * UserDiskPerformanceLevel.
+         * The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:
+         * <p>
+         * 
+         * *   PL0
+         * *   PL1
+         * *   PL2
+         * *   PL3
          */
         public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
             this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);

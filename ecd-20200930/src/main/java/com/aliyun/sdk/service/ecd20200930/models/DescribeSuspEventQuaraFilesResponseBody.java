@@ -86,7 +86,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * QuaraFiles.
+         * The quarantined files.
          */
         public Builder quaraFiles(java.util.List < QuaraFiles> quaraFiles) {
             this.quaraFiles = quaraFiles;
@@ -110,7 +110,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of quarantined files.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * DesktopId.
+             * The ID of the cloud desktop.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -274,7 +274,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * The name of the cloud desktop.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -282,7 +282,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the alert.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -290,7 +290,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the alert.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -298,7 +298,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the quarantined file.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -306,7 +306,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The message-digest algorithm 5 (MD5) value of the quarantined file.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -314,7 +314,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the quarantined file was updated.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -322,7 +322,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The path where the quarantined file is stored on the cloud desktop.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -330,7 +330,15 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the quarantined file. Valid values:
+             * <p>
+             * 
+             * *   quaraFailed: The file failed to be quarantined.
+             * *   quaraDone: The file is quarantined.
+             * *   quaraing: The file is being quarantined.
+             * *   rollbackFailed: Quarantine for the file failed to be canceled.
+             * *   rollbackDone: Quarantine for the file is canceled.
+             * *   rollbacking: Quarantine for the file is being canceled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +346,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag of the alert.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

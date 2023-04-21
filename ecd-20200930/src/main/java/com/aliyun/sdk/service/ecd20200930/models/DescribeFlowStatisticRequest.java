@@ -129,7 +129,7 @@ public class DescribeFlowStatisticRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -138,7 +138,7 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -147,7 +147,9 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.\
+         * <p>
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +158,7 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +167,12 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * Period.
+         * The interval to query the traffic data. Unit: seconds. Valid values:
+         * <p>
+         * 
+         * *   3600
+         * *   10800
+         * *   86400
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -174,7 +181,7 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -62,7 +62,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DesktopCount.
+         * The number of available cloud desktops in the workspace.
          */
         public Builder desktopCount(Integer desktopCount) {
             this.desktopCount = desktopCount;
@@ -70,7 +70,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * DesktopFlowStatistic.
+         * Details of the traffic that is consumed by cloud desktops.
          */
         public Builder desktopFlowStatistic(java.util.List < DesktopFlowStatistic> desktopFlowStatistic) {
             this.desktopFlowStatistic = desktopFlowStatistic;
@@ -78,7 +78,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             private Integer flowRank; 
 
             /**
-             * DesktopId.
+             * The ID of the cloud desktop.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -162,7 +162,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * The name of the cloud desktop.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -170,7 +170,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * FlowIn.
+             * The amount of the traffic. Unit: KB.
              */
             public Builder flowIn(String flowIn) {
                 this.flowIn = flowIn;
@@ -178,7 +178,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * FlowRank.
+             * The traffic ranking.
              */
             public Builder flowRank(Integer flowRank) {
                 this.flowRank = flowRank;

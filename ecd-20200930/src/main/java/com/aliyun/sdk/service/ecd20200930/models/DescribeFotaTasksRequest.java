@@ -126,7 +126,7 @@ public class DescribeFotaTasksRequest extends Request {
         } 
 
         /**
-         * FotaStatus.
+         * This parameter is not available to the public.
          */
         public Builder fotaStatus(String fotaStatus) {
             this.putQueryParameter("FotaStatus", fotaStatus);
@@ -135,7 +135,11 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 100
+         * *   Default value: 20
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -144,7 +148,7 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -153,7 +157,7 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +166,7 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * TaskUid.
+         * The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the value of this parameter.
          */
         public Builder taskUid(java.util.List < String > taskUid) {
             this.putQueryParameter("TaskUid", taskUid);
@@ -171,7 +175,7 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * UserStatus.
+         * Specifies whether to automatically push the image update task.
          */
         public Builder userStatus(String userStatus) {
             this.putQueryParameter("UserStatus", userStatus);

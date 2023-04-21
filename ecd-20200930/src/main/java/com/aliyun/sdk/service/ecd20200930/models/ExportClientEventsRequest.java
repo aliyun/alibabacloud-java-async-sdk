@@ -37,6 +37,10 @@ public class ExportClientEventsRequest extends Request {
     private java.util.List < String > eventTypes;
 
     @Query
+    @NameInMap("LangType")
+    private String langType;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -65,6 +69,7 @@ public class ExportClientEventsRequest extends Request {
         this.endUserId = builder.endUserId;
         this.eventType = builder.eventType;
         this.eventTypes = builder.eventTypes;
+        this.langType = builder.langType;
         this.maxResults = builder.maxResults;
         this.officeSiteId = builder.officeSiteId;
         this.officeSiteName = builder.officeSiteName;
@@ -128,6 +133,13 @@ public class ExportClientEventsRequest extends Request {
     }
 
     /**
+     * @return langType
+     */
+    public String getLangType() {
+        return this.langType;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -169,6 +181,7 @@ public class ExportClientEventsRequest extends Request {
         private String endUserId; 
         private String eventType; 
         private java.util.List < String > eventTypes; 
+        private String langType; 
         private Integer maxResults; 
         private String officeSiteId; 
         private String officeSiteName; 
@@ -187,6 +200,7 @@ public class ExportClientEventsRequest extends Request {
             this.endUserId = request.endUserId;
             this.eventType = request.eventType;
             this.eventTypes = request.eventTypes;
+            this.langType = request.langType;
             this.maxResults = request.maxResults;
             this.officeSiteId = request.officeSiteId;
             this.officeSiteName = request.officeSiteName;
@@ -195,7 +209,7 @@ public class ExportClientEventsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -204,7 +218,7 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * DesktopName.
+         * The name of the cloud desktop.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -213,7 +227,9 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\
+         * <p>
+         * If you leave this parameter empty, the current time is used.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -222,7 +238,7 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of the end user.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -231,7 +247,7 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The type of the event that you want to query. If you specify a value for the EventTypes parameter, the combination of event types that you want to query is considered the filter condition for the query. If you do not specify a value for the EventTypes parameter and the EventType parameter is left empty, all events are queried.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -240,7 +256,7 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * EventTypes.
+         * The combination of event types that you want to query. You can combine multiple event types. The query result contains all the combined events.
          */
         public Builder eventTypes(java.util.List < String > eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
@@ -249,7 +265,16 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * LangType.
+         */
+        public Builder langType(String langType) {
+            this.putQueryParameter("LangType", langType);
+            this.langType = langType;
+            return this;
+        }
+
+        /**
+         * The number of records that you want to export. Maximum Value: 5000 Default value: 5000
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -258,7 +283,7 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -267,7 +292,7 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * OfficeSiteName.
+         * The name of the workspace.
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -276,7 +301,7 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -285,7 +310,9 @@ public class ExportClientEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\
+         * <p>
+         * If you leave this parameter empty, all events that occurred before the point in time that you specify for `EndTime` are queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

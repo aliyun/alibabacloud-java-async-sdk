@@ -146,7 +146,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private Integer stopedPrePaidDesktopsCount; 
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -154,7 +154,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * OnlinePrePaidDesktopsCount.
+         * The number of subscription cloud desktops that are connected.
          */
         public Builder onlinePrePaidDesktopsCount(Integer onlinePrePaidDesktopsCount) {
             this.onlinePrePaidDesktopsCount = onlinePrePaidDesktopsCount;
@@ -162,7 +162,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PaidDesktops.
+         * The subscription cloud desktops.
          */
         public Builder paidDesktops(java.util.List < PaidDesktops> paidDesktops) {
             this.paidDesktops = paidDesktops;
@@ -170,7 +170,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PaidDesktopsCount.
+         * The total number of subscription cloud desktops.
          */
         public Builder paidDesktopsCount(Integer paidDesktopsCount) {
             this.paidDesktopsCount = paidDesktopsCount;
@@ -178,7 +178,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PostPaidDesktops.
+         * The pay-as-you-go cloud desktops.
          */
         public Builder postPaidDesktops(java.util.List < PostPaidDesktops> postPaidDesktops) {
             this.postPaidDesktops = postPaidDesktops;
@@ -186,7 +186,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PostPaidDesktopsCount.
+         * The total number of pay-as-you-go cloud desktops.
          */
         public Builder postPaidDesktopsCount(Integer postPaidDesktopsCount) {
             this.postPaidDesktopsCount = postPaidDesktopsCount;
@@ -194,7 +194,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PostPaidDesktopsTotalAmount.
+         * The total bill amount for the pay-as-you-go cloud desktops.
          */
         public Builder postPaidDesktopsTotalAmount(Integer postPaidDesktopsTotalAmount) {
             this.postPaidDesktopsTotalAmount = postPaidDesktopsTotalAmount;
@@ -202,7 +202,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +210,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RunningPrePaidDesktopsCount.
+         * The number of subscription cloud desktops that are running.
          */
         public Builder runningPrePaidDesktopsCount(Integer runningPrePaidDesktopsCount) {
             this.runningPrePaidDesktopsCount = runningPrePaidDesktopsCount;
@@ -218,7 +218,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * StopedPrePaidDesktopsCount.
+         * The number of subscription cloud desktops that are stopped.
          */
         public Builder stopedPrePaidDesktopsCount(Integer stopedPrePaidDesktopsCount) {
             this.stopedPrePaidDesktopsCount = stopedPrePaidDesktopsCount;
@@ -259,6 +259,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("EndUserNames")
         private java.util.List < String > endUserNames;
 
+        @NameInMap("FotaVersion")
+        private String fotaVersion;
+
         @NameInMap("GpuDriverVersion")
         private String gpuDriverVersion;
 
@@ -283,6 +286,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("PrimaryEniIp")
         private String primaryEniIp;
 
+        @NameInMap("ProtocolType")
+        private String protocolType;
+
         @NameInMap("ResetTime")
         private String resetTime;
 
@@ -299,6 +305,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             this.endUserIds = builder.endUserIds;
             this.endUserName = builder.endUserName;
             this.endUserNames = builder.endUserNames;
+            this.fotaVersion = builder.fotaVersion;
             this.gpuDriverVersion = builder.gpuDriverVersion;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
@@ -307,6 +314,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             this.memberEniIp = builder.memberEniIp;
             this.osType = builder.osType;
             this.primaryEniIp = builder.primaryEniIp;
+            this.protocolType = builder.protocolType;
             this.resetTime = builder.resetTime;
             this.systemDiskSize = builder.systemDiskSize;
         }
@@ -383,6 +391,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return fotaVersion
+         */
+        public String getFotaVersion() {
+            return this.fotaVersion;
+        }
+
+        /**
          * @return gpuDriverVersion
          */
         public String getGpuDriverVersion() {
@@ -439,6 +454,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocolType
+         */
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
+        /**
          * @return resetTime
          */
         public String getResetTime() {
@@ -462,6 +484,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private java.util.List < String > endUserIds; 
             private String endUserName; 
             private java.util.List < String > endUserNames; 
+            private String fotaVersion; 
             private String gpuDriverVersion; 
             private String imageId; 
             private String imageName; 
@@ -470,11 +493,12 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String memberEniIp; 
             private String osType; 
             private String primaryEniIp; 
+            private String protocolType; 
             private String resetTime; 
             private Integer systemDiskSize; 
 
             /**
-             * ConnectionStatus.
+             * The connection status of the cloud desktop.
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -482,7 +506,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * The cloud desktop ID.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -490,7 +514,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * The cloud desktop name.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -498,7 +522,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopStatus.
+             * The state of the cloud desktop.
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -506,7 +530,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * The disk type.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -514,7 +538,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * The authorized user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -522,7 +546,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserIds.
+             * The IDs of users that are connected to cloud desktops. If no users are connected, null is returned.
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -530,7 +554,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserName.
+             * The username of the authorized user.
              */
             public Builder endUserName(String endUserName) {
                 this.endUserName = endUserName;
@@ -538,7 +562,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserNames.
+             * The usernames of users that are connected to cloud desktops. If no users are connected, null is returned.
              */
             public Builder endUserNames(java.util.List < String > endUserNames) {
                 this.endUserNames = endUserNames;
@@ -546,7 +570,15 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GpuDriverVersion.
+             * The image version.
+             */
+            public Builder fotaVersion(String fotaVersion) {
+                this.fotaVersion = fotaVersion;
+                return this;
+            }
+
+            /**
+             * The GPU driver version.
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -554,7 +586,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -562,7 +594,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -570,7 +602,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlag.
+             * The flag that is used for management.
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -578,7 +610,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlags.
+             * The flags that are used for management.
              */
             public Builder managementFlags(java.util.List < String > managementFlags) {
                 this.managementFlags = managementFlags;
@@ -586,7 +618,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MemberEniIp.
+             * The IP address of the member Elastic Network Interface (ENI).
              */
             public Builder memberEniIp(String memberEniIp) {
                 this.memberEniIp = memberEniIp;
@@ -594,7 +626,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * The OS type.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -602,7 +634,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryEniIp.
+             * The IP address of the primary ENI.
              */
             public Builder primaryEniIp(String primaryEniIp) {
                 this.primaryEniIp = primaryEniIp;
@@ -610,7 +642,19 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ResetTime.
+             * The protocol. Valid values:
+             * <p>
+             * 
+             * *   ASP
+             * *   HDX
+             */
+            public Builder protocolType(String protocolType) {
+                this.protocolType = protocolType;
+                return this;
+            }
+
+            /**
+             * The point in time when the cloud desktop was reset.
              */
             public Builder resetTime(String resetTime) {
                 this.resetTime = resetTime;
@@ -618,7 +662,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * The system disk size. Unit: GiB.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -666,6 +710,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("EndUserNames")
         private java.util.List < String > endUserNames;
 
+        @NameInMap("FotaVersion")
+        private String fotaVersion;
+
         @NameInMap("GpuDriverVersion")
         private String gpuDriverVersion;
 
@@ -690,6 +737,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("PrimaryEniIp")
         private String primaryEniIp;
 
+        @NameInMap("ProtocolType")
+        private String protocolType;
+
         @NameInMap("ReleaseTime")
         private String releaseTime;
 
@@ -711,6 +761,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             this.endUserIds = builder.endUserIds;
             this.endUserName = builder.endUserName;
             this.endUserNames = builder.endUserNames;
+            this.fotaVersion = builder.fotaVersion;
             this.gpuDriverVersion = builder.gpuDriverVersion;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
@@ -719,6 +770,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             this.memberEniIp = builder.memberEniIp;
             this.osType = builder.osType;
             this.primaryEniIp = builder.primaryEniIp;
+            this.protocolType = builder.protocolType;
             this.releaseTime = builder.releaseTime;
             this.resetTime = builder.resetTime;
             this.systemDiskSize = builder.systemDiskSize;
@@ -810,6 +862,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return fotaVersion
+         */
+        public String getFotaVersion() {
+            return this.fotaVersion;
+        }
+
+        /**
          * @return gpuDriverVersion
          */
         public String getGpuDriverVersion() {
@@ -866,6 +925,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocolType
+         */
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
+        /**
          * @return releaseTime
          */
         public String getReleaseTime() {
@@ -898,6 +964,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private java.util.List < String > endUserIds; 
             private String endUserName; 
             private java.util.List < String > endUserNames; 
+            private String fotaVersion; 
             private String gpuDriverVersion; 
             private String imageId; 
             private String imageName; 
@@ -906,12 +973,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String memberEniIp; 
             private String osType; 
             private String primaryEniIp; 
+            private String protocolType; 
             private String releaseTime; 
             private String resetTime; 
             private Integer systemDiskSize; 
 
             /**
-             * ConnectionStatus.
+             * The connection status of the cloud desktop.
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -919,7 +987,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDuration.
+             * The retention period.
              */
             public Builder createDuration(String createDuration) {
                 this.createDuration = createDuration;
@@ -927,7 +995,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the cloud desktop was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -935,7 +1003,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * The cloud desktop ID.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -943,7 +1011,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * The cloud desktop name.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -951,7 +1019,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopStatus.
+             * The state of the cloud desktop.
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -959,7 +1027,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * The disk type.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -967,7 +1035,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * The authorized user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -975,7 +1043,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserIds.
+             * The IDs of users that are connected to cloud desktops. If no users are connected, null is returned.
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -983,7 +1051,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserName.
+             * The username of the authorized user.
              */
             public Builder endUserName(String endUserName) {
                 this.endUserName = endUserName;
@@ -991,7 +1059,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserNames.
+             * The usernames of users that are connected to cloud desktops. If no users are connected, null is returned.
              */
             public Builder endUserNames(java.util.List < String > endUserNames) {
                 this.endUserNames = endUserNames;
@@ -999,7 +1067,15 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GpuDriverVersion.
+             * The image version.
+             */
+            public Builder fotaVersion(String fotaVersion) {
+                this.fotaVersion = fotaVersion;
+                return this;
+            }
+
+            /**
+             * The GPU driver version.
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -1007,7 +1083,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1015,7 +1091,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1023,7 +1099,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlag.
+             * The flag that is used for management.
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -1031,7 +1107,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlags.
+             * The flags that are used for management.
              */
             public Builder managementFlags(java.util.List < String > managementFlags) {
                 this.managementFlags = managementFlags;
@@ -1039,7 +1115,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MemberEniIp.
+             * The IP address of the member Elastic Network Interface (ENI).
              */
             public Builder memberEniIp(String memberEniIp) {
                 this.memberEniIp = memberEniIp;
@@ -1047,7 +1123,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * The OS type.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1055,7 +1131,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryEniIp.
+             * The IP address of the primary ENI.
              */
             public Builder primaryEniIp(String primaryEniIp) {
                 this.primaryEniIp = primaryEniIp;
@@ -1063,7 +1139,19 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * The protocol. Valid values:
+             * <p>
+             * 
+             * *   ASP
+             * *   HDX
+             */
+            public Builder protocolType(String protocolType) {
+                this.protocolType = protocolType;
+                return this;
+            }
+
+            /**
+             * The time when the cloud desktop was released.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -1071,7 +1159,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ResetTime.
+             * The point in time when the cloud desktop was reset.
              */
             public Builder resetTime(String resetTime) {
                 this.resetTime = resetTime;
@@ -1079,7 +1167,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * The system disk size. Unit: GiB.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

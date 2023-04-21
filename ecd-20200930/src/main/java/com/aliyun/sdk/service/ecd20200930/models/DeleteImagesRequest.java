@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteImagesRequest extends Request {
     @Query
+    @NameInMap("DeleteCascadedBundle")
+    private Boolean deleteCascadedBundle;
+
+    @Query
     @NameInMap("ImageId")
     @Validation(required = true)
     private java.util.List < String > imageId;
@@ -24,6 +28,7 @@ public class DeleteImagesRequest extends Request {
 
     private DeleteImagesRequest(Builder builder) {
         super(builder);
+        this.deleteCascadedBundle = builder.deleteCascadedBundle;
         this.imageId = builder.imageId;
         this.regionId = builder.regionId;
     }
@@ -42,6 +47,13 @@ public class DeleteImagesRequest extends Request {
     }
 
     /**
+     * @return deleteCascadedBundle
+     */
+    public Boolean getDeleteCascadedBundle() {
+        return this.deleteCascadedBundle;
+    }
+
+    /**
      * @return imageId
      */
     public java.util.List < String > getImageId() {
@@ -56,6 +68,7 @@ public class DeleteImagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteImagesRequest, Builder> {
+        private Boolean deleteCascadedBundle; 
         private java.util.List < String > imageId; 
         private String regionId; 
 
@@ -65,12 +78,22 @@ public class DeleteImagesRequest extends Request {
 
         private Builder(DeleteImagesRequest request) {
             super(request);
+            this.deleteCascadedBundle = request.deleteCascadedBundle;
             this.imageId = request.imageId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ImageId.
+         * DeleteCascadedBundle.
+         */
+        public Builder deleteCascadedBundle(Boolean deleteCascadedBundle) {
+            this.putQueryParameter("DeleteCascadedBundle", deleteCascadedBundle);
+            this.deleteCascadedBundle = deleteCascadedBundle;
+            return this;
+        }
+
+        /**
+         * The IDs of the images that you want to delete.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -79,7 +102,7 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the images to delete are located.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

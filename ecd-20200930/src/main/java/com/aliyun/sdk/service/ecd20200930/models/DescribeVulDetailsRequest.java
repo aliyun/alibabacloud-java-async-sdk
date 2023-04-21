@@ -113,7 +113,7 @@ public class DescribeVulDetailsRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -122,7 +122,11 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The natural language of the request and response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -131,7 +135,10 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the Redhat Package Manager (RPM) package.
+         * <p>
+         * 
+         * You can call the [DescribeVulList](~~223907~~) operation to obtain the names of RPM packages.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,7 +147,7 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +156,11 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   cve: Linux software vulnerability
+         * *   sys: Windows system vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

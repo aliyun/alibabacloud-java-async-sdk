@@ -126,7 +126,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -135,7 +135,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -144,7 +144,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +153,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -162,7 +162,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -171,7 +171,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -225,7 +225,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +233,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

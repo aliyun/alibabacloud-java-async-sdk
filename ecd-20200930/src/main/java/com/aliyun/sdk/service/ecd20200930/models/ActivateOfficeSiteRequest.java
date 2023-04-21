@@ -70,7 +70,7 @@ public class ActivateOfficeSiteRequest extends Request {
         } 
 
         /**
-         * OfficeSiteId.
+         * The ID of the convenience workspace that is locked.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -79,7 +79,7 @@ public class ActivateOfficeSiteRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

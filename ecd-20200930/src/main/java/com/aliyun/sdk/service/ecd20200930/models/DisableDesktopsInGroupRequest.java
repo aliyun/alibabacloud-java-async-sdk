@@ -85,7 +85,7 @@ public class DisableDesktopsInGroupRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The ID of the desktop group.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -94,7 +94,7 @@ public class DisableDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * DesktopIds.
+         * The IDs of the cloud desktops.
          */
         public Builder desktopIds(java.util.List < String > desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -103,7 +103,7 @@ public class DisableDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

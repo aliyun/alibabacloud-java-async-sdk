@@ -83,7 +83,7 @@ public class DescribeCustomizedListHeadersRequest extends Request {
         } 
 
         /**
-         * LangType.
+         * The language in which the exported cloud desktop list is displayed.
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -92,7 +92,7 @@ public class DescribeCustomizedListHeadersRequest extends Request {
         }
 
         /**
-         * ListType.
+         * The type of the list.
          */
         public Builder listType(String listType) {
             this.putQueryParameter("ListType", listType);
@@ -101,7 +101,7 @@ public class DescribeCustomizedListHeadersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -50,7 +50,7 @@ public class ExportClientEventsResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ExportClientEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * The URL from which you export events.
          */
         public Builder url(String url) {
             this.url = url;

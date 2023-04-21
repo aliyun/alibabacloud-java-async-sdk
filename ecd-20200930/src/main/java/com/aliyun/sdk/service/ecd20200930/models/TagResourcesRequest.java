@@ -100,7 +100,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the resource.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -127,7 +127,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -181,7 +181,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag.
+             * <p>
+             * Valid values of N: 1 to 20.
+             * The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -189,7 +192,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag.
+             * <p>
+             * Valid values of N: 1 to 20.
+             * The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

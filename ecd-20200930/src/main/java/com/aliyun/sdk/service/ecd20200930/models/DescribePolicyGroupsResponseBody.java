@@ -374,6 +374,148 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class DomainResolveRule extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("Domain")
+        private String domain;
+
+        @NameInMap("Policy")
+        private String policy;
+
+        private DomainResolveRule(Builder builder) {
+            this.description = builder.description;
+            this.domain = builder.domain;
+            this.policy = builder.policy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DomainResolveRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String domain; 
+            private String policy; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            public DomainResolveRule build() {
+                return new DomainResolveRule(this);
+            } 
+
+        } 
+
+    }
+    public static class NetRedirectRule extends TeaModel {
+        @NameInMap("Domain")
+        private String domain;
+
+        @NameInMap("RuleType")
+        private String ruleType;
+
+        private NetRedirectRule(Builder builder) {
+            this.domain = builder.domain;
+            this.ruleType = builder.ruleType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetRedirectRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        public static final class Builder {
+            private String domain; 
+            private String ruleType; 
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * RuleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            public NetRedirectRule build() {
+                return new NetRedirectRule(this);
+            } 
+
+        } 
+
+    }
     public static class UsbSupplyRedirectRule extends TeaModel {
         @NameInMap("Description")
         private String description;
@@ -557,8 +699,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("DomainList")
         private String domainList;
 
+        @NameInMap("DomainResolveRule")
+        private java.util.List < DomainResolveRule> domainResolveRule;
+
+        @NameInMap("DomainResolveRuleType")
+        private String domainResolveRuleType;
+
         @NameInMap("EdsCount")
         private Integer edsCount;
+
+        @NameInMap("EndUserApplyAdminCoordinate")
+        private String endUserApplyAdminCoordinate;
+
+        @NameInMap("EndUserGroupCoordinate")
+        private String endUserGroupCoordinate;
 
         @NameInMap("GpuAcceleration")
         private String gpuAcceleration;
@@ -569,6 +723,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Html5FileTransfer")
         private String html5FileTransfer;
 
+        @NameInMap("InternetCommunicationProtocol")
+        private String internetCommunicationProtocol;
+
         @NameInMap("LocalDrive")
         private String localDrive;
 
@@ -577,6 +734,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("NetRedirect")
         private String netRedirect;
+
+        @NameInMap("NetRedirectRule")
+        private java.util.List < NetRedirectRule> netRedirectRule;
 
         @NameInMap("PolicyGroupId")
         private String policyGroupId;
@@ -605,6 +765,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Recording")
         private String recording;
 
+        @NameInMap("RecordingAudio")
+        private String recordingAudio;
+
+        @NameInMap("RecordingDuration")
+        private Integer recordingDuration;
+
         @NameInMap("RecordingEndTime")
         private String recordingEndTime;
 
@@ -620,11 +786,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RemoteCoordinate")
         private String remoteCoordinate;
 
+        @NameInMap("Scope")
+        private String scope;
+
+        @NameInMap("ScopeValue")
+        private java.util.List < String > scopeValue;
+
         @NameInMap("UsbRedirect")
         private String usbRedirect;
 
         @NameInMap("UsbSupplyRedirectRule")
         private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule;
+
+        @NameInMap("VideoRedirect")
+        private String videoRedirect;
 
         @NameInMap("VisualQuality")
         private String visualQuality;
@@ -632,11 +807,29 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Watermark")
         private String watermark;
 
+        @NameInMap("WatermarkColor")
+        private Integer watermarkColor;
+
         @NameInMap("WatermarkCustomText")
         private String watermarkCustomText;
 
+        @NameInMap("WatermarkDegree")
+        private Double watermarkDegree;
+
+        @NameInMap("WatermarkFontSize")
+        private Integer watermarkFontSize;
+
+        @NameInMap("WatermarkFontStyle")
+        private String watermarkFontStyle;
+
+        @NameInMap("WatermarkRowAmount")
+        private Integer watermarkRowAmount;
+
         @NameInMap("WatermarkTransparency")
         private String watermarkTransparency;
+
+        @NameInMap("WatermarkTransparencyValue")
+        private Integer watermarkTransparencyValue;
 
         @NameInMap("WatermarkType")
         private String watermarkType;
@@ -649,13 +842,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.clientTypes = builder.clientTypes;
             this.clipboard = builder.clipboard;
             this.domainList = builder.domainList;
+            this.domainResolveRule = builder.domainResolveRule;
+            this.domainResolveRuleType = builder.domainResolveRuleType;
             this.edsCount = builder.edsCount;
+            this.endUserApplyAdminCoordinate = builder.endUserApplyAdminCoordinate;
+            this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
             this.gpuAcceleration = builder.gpuAcceleration;
             this.html5Access = builder.html5Access;
             this.html5FileTransfer = builder.html5FileTransfer;
+            this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
             this.localDrive = builder.localDrive;
             this.name = builder.name;
             this.netRedirect = builder.netRedirect;
+            this.netRedirectRule = builder.netRedirectRule;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupType = builder.policyGroupType;
             this.policyStatus = builder.policyStatus;
@@ -665,17 +864,28 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.recordContent = builder.recordContent;
             this.recordContentExpires = builder.recordContentExpires;
             this.recording = builder.recording;
+            this.recordingAudio = builder.recordingAudio;
+            this.recordingDuration = builder.recordingDuration;
             this.recordingEndTime = builder.recordingEndTime;
             this.recordingExpires = builder.recordingExpires;
             this.recordingFps = builder.recordingFps;
             this.recordingStartTime = builder.recordingStartTime;
             this.remoteCoordinate = builder.remoteCoordinate;
+            this.scope = builder.scope;
+            this.scopeValue = builder.scopeValue;
             this.usbRedirect = builder.usbRedirect;
             this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
+            this.videoRedirect = builder.videoRedirect;
             this.visualQuality = builder.visualQuality;
             this.watermark = builder.watermark;
+            this.watermarkColor = builder.watermarkColor;
             this.watermarkCustomText = builder.watermarkCustomText;
+            this.watermarkDegree = builder.watermarkDegree;
+            this.watermarkFontSize = builder.watermarkFontSize;
+            this.watermarkFontStyle = builder.watermarkFontStyle;
+            this.watermarkRowAmount = builder.watermarkRowAmount;
             this.watermarkTransparency = builder.watermarkTransparency;
+            this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
             this.watermarkType = builder.watermarkType;
         }
 
@@ -737,10 +947,38 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return domainResolveRule
+         */
+        public java.util.List < DomainResolveRule> getDomainResolveRule() {
+            return this.domainResolveRule;
+        }
+
+        /**
+         * @return domainResolveRuleType
+         */
+        public String getDomainResolveRuleType() {
+            return this.domainResolveRuleType;
+        }
+
+        /**
          * @return edsCount
          */
         public Integer getEdsCount() {
             return this.edsCount;
+        }
+
+        /**
+         * @return endUserApplyAdminCoordinate
+         */
+        public String getEndUserApplyAdminCoordinate() {
+            return this.endUserApplyAdminCoordinate;
+        }
+
+        /**
+         * @return endUserGroupCoordinate
+         */
+        public String getEndUserGroupCoordinate() {
+            return this.endUserGroupCoordinate;
         }
 
         /**
@@ -765,6 +1003,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return internetCommunicationProtocol
+         */
+        public String getInternetCommunicationProtocol() {
+            return this.internetCommunicationProtocol;
+        }
+
+        /**
          * @return localDrive
          */
         public String getLocalDrive() {
@@ -783,6 +1028,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getNetRedirect() {
             return this.netRedirect;
+        }
+
+        /**
+         * @return netRedirectRule
+         */
+        public java.util.List < NetRedirectRule> getNetRedirectRule() {
+            return this.netRedirectRule;
         }
 
         /**
@@ -849,6 +1101,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordingAudio
+         */
+        public String getRecordingAudio() {
+            return this.recordingAudio;
+        }
+
+        /**
+         * @return recordingDuration
+         */
+        public Integer getRecordingDuration() {
+            return this.recordingDuration;
+        }
+
+        /**
          * @return recordingEndTime
          */
         public String getRecordingEndTime() {
@@ -884,6 +1150,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return scope
+         */
+        public String getScope() {
+            return this.scope;
+        }
+
+        /**
+         * @return scopeValue
+         */
+        public java.util.List < String > getScopeValue() {
+            return this.scopeValue;
+        }
+
+        /**
          * @return usbRedirect
          */
         public String getUsbRedirect() {
@@ -895,6 +1175,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public java.util.List < UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
             return this.usbSupplyRedirectRule;
+        }
+
+        /**
+         * @return videoRedirect
+         */
+        public String getVideoRedirect() {
+            return this.videoRedirect;
         }
 
         /**
@@ -912,6 +1199,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return watermarkColor
+         */
+        public Integer getWatermarkColor() {
+            return this.watermarkColor;
+        }
+
+        /**
          * @return watermarkCustomText
          */
         public String getWatermarkCustomText() {
@@ -919,10 +1213,45 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return watermarkDegree
+         */
+        public Double getWatermarkDegree() {
+            return this.watermarkDegree;
+        }
+
+        /**
+         * @return watermarkFontSize
+         */
+        public Integer getWatermarkFontSize() {
+            return this.watermarkFontSize;
+        }
+
+        /**
+         * @return watermarkFontStyle
+         */
+        public String getWatermarkFontStyle() {
+            return this.watermarkFontStyle;
+        }
+
+        /**
+         * @return watermarkRowAmount
+         */
+        public Integer getWatermarkRowAmount() {
+            return this.watermarkRowAmount;
+        }
+
+        /**
          * @return watermarkTransparency
          */
         public String getWatermarkTransparency() {
             return this.watermarkTransparency;
+        }
+
+        /**
+         * @return watermarkTransparencyValue
+         */
+        public Integer getWatermarkTransparencyValue() {
+            return this.watermarkTransparencyValue;
         }
 
         /**
@@ -940,13 +1269,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private java.util.List < ClientTypes> clientTypes; 
             private String clipboard; 
             private String domainList; 
+            private java.util.List < DomainResolveRule> domainResolveRule; 
+            private String domainResolveRuleType; 
             private Integer edsCount; 
+            private String endUserApplyAdminCoordinate; 
+            private String endUserGroupCoordinate; 
             private String gpuAcceleration; 
             private String html5Access; 
             private String html5FileTransfer; 
+            private String internetCommunicationProtocol; 
             private String localDrive; 
             private String name; 
             private String netRedirect; 
+            private java.util.List < NetRedirectRule> netRedirectRule; 
             private String policyGroupId; 
             private String policyGroupType; 
             private String policyStatus; 
@@ -956,17 +1291,28 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String recordContent; 
             private Long recordContentExpires; 
             private String recording; 
+            private String recordingAudio; 
+            private Integer recordingDuration; 
             private String recordingEndTime; 
             private Long recordingExpires; 
             private Long recordingFps; 
             private String recordingStartTime; 
             private String remoteCoordinate; 
+            private String scope; 
+            private java.util.List < String > scopeValue; 
             private String usbRedirect; 
             private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
+            private String videoRedirect; 
             private String visualQuality; 
             private String watermark; 
+            private Integer watermarkColor; 
             private String watermarkCustomText; 
+            private Double watermarkDegree; 
+            private Integer watermarkFontSize; 
+            private String watermarkFontStyle; 
+            private Integer watermarkRowAmount; 
             private String watermarkTransparency; 
+            private Integer watermarkTransparencyValue; 
             private String watermarkType; 
 
             /**
@@ -1026,10 +1372,42 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * DomainResolveRule.
+             */
+            public Builder domainResolveRule(java.util.List < DomainResolveRule> domainResolveRule) {
+                this.domainResolveRule = domainResolveRule;
+                return this;
+            }
+
+            /**
+             * DomainResolveRuleType.
+             */
+            public Builder domainResolveRuleType(String domainResolveRuleType) {
+                this.domainResolveRuleType = domainResolveRuleType;
+                return this;
+            }
+
+            /**
              * EdsCount.
              */
             public Builder edsCount(Integer edsCount) {
                 this.edsCount = edsCount;
+                return this;
+            }
+
+            /**
+             * EndUserApplyAdminCoordinate.
+             */
+            public Builder endUserApplyAdminCoordinate(String endUserApplyAdminCoordinate) {
+                this.endUserApplyAdminCoordinate = endUserApplyAdminCoordinate;
+                return this;
+            }
+
+            /**
+             * EndUserGroupCoordinate.
+             */
+            public Builder endUserGroupCoordinate(String endUserGroupCoordinate) {
+                this.endUserGroupCoordinate = endUserGroupCoordinate;
                 return this;
             }
 
@@ -1058,6 +1436,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * InternetCommunicationProtocol.
+             */
+            public Builder internetCommunicationProtocol(String internetCommunicationProtocol) {
+                this.internetCommunicationProtocol = internetCommunicationProtocol;
+                return this;
+            }
+
+            /**
              * LocalDrive.
              */
             public Builder localDrive(String localDrive) {
@@ -1078,6 +1464,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder netRedirect(String netRedirect) {
                 this.netRedirect = netRedirect;
+                return this;
+            }
+
+            /**
+             * NetRedirectRule.
+             */
+            public Builder netRedirectRule(java.util.List < NetRedirectRule> netRedirectRule) {
+                this.netRedirectRule = netRedirectRule;
                 return this;
             }
 
@@ -1154,6 +1548,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * RecordingAudio.
+             */
+            public Builder recordingAudio(String recordingAudio) {
+                this.recordingAudio = recordingAudio;
+                return this;
+            }
+
+            /**
+             * RecordingDuration.
+             */
+            public Builder recordingDuration(Integer recordingDuration) {
+                this.recordingDuration = recordingDuration;
+                return this;
+            }
+
+            /**
              * RecordingEndTime.
              */
             public Builder recordingEndTime(String recordingEndTime) {
@@ -1194,6 +1604,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * Scope.
+             */
+            public Builder scope(String scope) {
+                this.scope = scope;
+                return this;
+            }
+
+            /**
+             * ScopeValue.
+             */
+            public Builder scopeValue(java.util.List < String > scopeValue) {
+                this.scopeValue = scopeValue;
+                return this;
+            }
+
+            /**
              * UsbRedirect.
              */
             public Builder usbRedirect(String usbRedirect) {
@@ -1206,6 +1632,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder usbSupplyRedirectRule(java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule) {
                 this.usbSupplyRedirectRule = usbSupplyRedirectRule;
+                return this;
+            }
+
+            /**
+             * VideoRedirect.
+             */
+            public Builder videoRedirect(String videoRedirect) {
+                this.videoRedirect = videoRedirect;
                 return this;
             }
 
@@ -1226,6 +1660,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * WatermarkColor.
+             */
+            public Builder watermarkColor(Integer watermarkColor) {
+                this.watermarkColor = watermarkColor;
+                return this;
+            }
+
+            /**
              * WatermarkCustomText.
              */
             public Builder watermarkCustomText(String watermarkCustomText) {
@@ -1234,10 +1676,50 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * WatermarkDegree.
+             */
+            public Builder watermarkDegree(Double watermarkDegree) {
+                this.watermarkDegree = watermarkDegree;
+                return this;
+            }
+
+            /**
+             * WatermarkFontSize.
+             */
+            public Builder watermarkFontSize(Integer watermarkFontSize) {
+                this.watermarkFontSize = watermarkFontSize;
+                return this;
+            }
+
+            /**
+             * WatermarkFontStyle.
+             */
+            public Builder watermarkFontStyle(String watermarkFontStyle) {
+                this.watermarkFontStyle = watermarkFontStyle;
+                return this;
+            }
+
+            /**
+             * WatermarkRowAmount.
+             */
+            public Builder watermarkRowAmount(Integer watermarkRowAmount) {
+                this.watermarkRowAmount = watermarkRowAmount;
+                return this;
+            }
+
+            /**
              * WatermarkTransparency.
              */
             public Builder watermarkTransparency(String watermarkTransparency) {
                 this.watermarkTransparency = watermarkTransparency;
+                return this;
+            }
+
+            /**
+             * WatermarkTransparencyValue.
+             */
+            public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
+                this.watermarkTransparencyValue = watermarkTransparencyValue;
                 return this;
             }
 

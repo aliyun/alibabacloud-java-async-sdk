@@ -74,7 +74,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ImageModifiedRecords.
+         * The image change records.
          */
         public Builder imageModifiedRecords(java.util.List < ImageModifiedRecords> imageModifiedRecords) {
             this.imageModifiedRecords = imageModifiedRecords;
@@ -82,7 +82,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. If this parameter is left empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of image change records.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -198,7 +198,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * ImageId.
+             * The ID of the original image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -206,7 +206,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the original image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -214,7 +214,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NewImageId.
+             * The ID of the new image.
              */
             public Builder newImageId(String newImageId) {
                 this.newImageId = newImageId;
@@ -222,7 +222,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NewImageName.
+             * The name of the new image.
              */
             public Builder newImageName(String newImageName) {
                 this.newImageName = newImageName;
@@ -230,7 +230,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -238,7 +238,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the image was last changed.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

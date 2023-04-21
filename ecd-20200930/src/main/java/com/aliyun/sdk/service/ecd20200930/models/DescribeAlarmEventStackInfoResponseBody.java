@@ -50,7 +50,7 @@ public class DescribeAlarmEventStackInfoResponseBody extends TeaModel {
         private String stackInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeAlarmEventStackInfoResponseBody extends TeaModel {
         }
 
         /**
-         * StackInfo.
+         * The stack information of the alert details.
          */
         public Builder stackInfo(String stackInfo) {
             this.stackInfo = stackInfo;

@@ -126,7 +126,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The character string for fuzzy search.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -135,7 +135,12 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100
+         * 
+         * Default value: 10
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -144,7 +149,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that specifies the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -153,7 +158,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * OUPath.
+         * The organizational unit (OU) in the specified AD domain.
          */
         public Builder OUPath(String OUPath) {
             this.putQueryParameter("OUPath", OUPath);
@@ -162,7 +167,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace. Only workspaces of the enterprise AD account type are supported.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -171,7 +176,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

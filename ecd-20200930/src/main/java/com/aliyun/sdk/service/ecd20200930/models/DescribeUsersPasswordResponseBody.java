@@ -50,7 +50,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DesktopUsers.
+         * The users that are associated with cloud desktop.
          */
         public Builder desktopUsers(java.util.List < DesktopUsers> desktopUsers) {
             this.desktopUsers = desktopUsers;
@@ -58,7 +58,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             private String password; 
 
             /**
-             * DisplayName.
+             * The display name of the user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -130,7 +130,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * The ID of the end user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -138,7 +138,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * The password of the user.
              */
             public Builder password(String password) {
                 this.password = password;

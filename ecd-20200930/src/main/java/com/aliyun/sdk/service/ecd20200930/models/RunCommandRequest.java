@@ -27,6 +27,10 @@ public class RunCommandRequest extends Request {
     private java.util.List < String > desktopId;
 
     @Query
+    @NameInMap("EndUserId")
+    private String endUserId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -45,6 +49,7 @@ public class RunCommandRequest extends Request {
         this.commandContent = builder.commandContent;
         this.contentEncoding = builder.contentEncoding;
         this.desktopId = builder.desktopId;
+        this.endUserId = builder.endUserId;
         this.regionId = builder.regionId;
         this.timeout = builder.timeout;
         this.type = builder.type;
@@ -85,6 +90,13 @@ public class RunCommandRequest extends Request {
     }
 
     /**
+     * @return endUserId
+     */
+    public String getEndUserId() {
+        return this.endUserId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -109,6 +121,7 @@ public class RunCommandRequest extends Request {
         private String commandContent; 
         private String contentEncoding; 
         private java.util.List < String > desktopId; 
+        private String endUserId; 
         private String regionId; 
         private Long timeout; 
         private String type; 
@@ -122,13 +135,18 @@ public class RunCommandRequest extends Request {
             this.commandContent = request.commandContent;
             this.contentEncoding = request.contentEncoding;
             this.desktopId = request.desktopId;
+            this.endUserId = request.endUserId;
             this.regionId = request.regionId;
             this.timeout = request.timeout;
             this.type = request.type;
         } 
 
         /**
-         * CommandContent.
+         * The content of the command. The command content can be plaintext or Base64-encoded.\
+         * <p>
+         * The Base64-encoded command content cannot exceed 16 KB in size.
+         * 
+         * > If the command content is Base64-encoded, you must set the ContentEncoding parameter to Base64.
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -137,7 +155,13 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * ContentEncoding.
+         * The encoding mode of the command content. Valid values:
+         * <p>
+         * 
+         * *   PlainText: The command content is not encoded.
+         * *   Base64: The command content is Base64-encoded.
+         * 
+         * Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -146,7 +170,9 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The ID of cloud desktop N. Valid values of N: 1 to 50.\
+         * <p>
+         * If multiple cloud desktops are specified and the command execution succeeds on at least one of the cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command execution fails on all the cloud desktops, verify the value of the parameter and try again.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -155,7 +181,16 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the end user.
+         */
+        public Builder endUserId(String endUserId) {
+            this.putQueryParameter("EndUserId", endUserId);
+            this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +199,9 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period for the command to run. Unit: seconds. Default value: 60.\
+         * <p>
+         * A timeout error occurs if the command cannot be run because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -173,7 +210,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Type.
+         * The language of the O\&M command. Valid values:
+         * <p>
+         * 
+         * *   RunBatScript
+         * *   RunPowerShellScript
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

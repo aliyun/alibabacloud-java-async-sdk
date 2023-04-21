@@ -30,6 +30,10 @@ public class CreateDesktopsRequest extends Request {
     private String bundleId;
 
     @Query
+    @NameInMap("BundleModels")
+    private java.util.List < BundleModels> bundleModels;
+
+    @Query
     @NameInMap("ChargeType")
     private String chargeType;
 
@@ -117,6 +121,7 @@ public class CreateDesktopsRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.bundleId = builder.bundleId;
+        this.bundleModels = builder.bundleModels;
         this.chargeType = builder.chargeType;
         this.desktopName = builder.desktopName;
         this.desktopNameSuffix = builder.desktopNameSuffix;
@@ -178,6 +183,13 @@ public class CreateDesktopsRequest extends Request {
      */
     public String getBundleId() {
         return this.bundleId;
+    }
+
+    /**
+     * @return bundleModels
+     */
+    public java.util.List < BundleModels> getBundleModels() {
+        return this.bundleModels;
     }
 
     /**
@@ -325,6 +337,7 @@ public class CreateDesktopsRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String bundleId; 
+        private java.util.List < BundleModels> bundleModels; 
         private String chargeType; 
         private String desktopName; 
         private Boolean desktopNameSuffix; 
@@ -356,6 +369,7 @@ public class CreateDesktopsRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.bundleId = request.bundleId;
+            this.bundleModels = request.bundleModels;
             this.chargeType = request.chargeType;
             this.desktopName = request.desktopName;
             this.desktopNameSuffix = request.desktopNameSuffix;
@@ -379,7 +393,7 @@ public class CreateDesktopsRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 1.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -388,7 +402,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -397,7 +411,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal. This parameter takes effect only when the ChargeType parameter is set to PrePaid.````
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -406,7 +420,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * BundleId.
+         * The ID of the desktop template.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -415,7 +429,16 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The desktop templates that you want to use.
+         */
+        public Builder bundleModels(java.util.List < BundleModels> bundleModels) {
+            this.putQueryParameter("BundleModels", bundleModels);
+            this.bundleModels = bundleModels;
+            return this;
+        }
+
+        /**
+         * The billing method of the cloud desktop.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -424,7 +447,11 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * DesktopName.
+         * The name of the cloud desktop. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   The name must be 1 to 64 characters in length.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter but cannot start with http:// or https://.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -433,7 +460,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * DesktopNameSuffix.
+         * Specifies whether to automatically add a suffix to the cloud desktop name when you create multiple cloud desktops at a time.
          */
         public Builder desktopNameSuffix(Boolean desktopNameSuffix) {
             this.putQueryParameter("DesktopNameSuffix", desktopNameSuffix);
@@ -442,7 +469,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * This parameter is not available.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -451,7 +478,11 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The IDs of the users that you want to authorize to use the cloud desktop. The cloud desktop is assigned to the users. You can specify IDs of 1 to 100 users.
+         * <p>
+         * 
+         * *   Only one user can use the cloud desktop at a time.
+         * *   If you do not specify the `EndUserId` parameter, the cloud desktop that you create is not assigned to users.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -460,7 +491,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the desktop group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -469,7 +500,19 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Hostname.
+         * The hostname that you specify for the cloud desktop. You can specify only the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.
+         * <p>
+         * 
+         * The hostname must meet the following requirements:
+         * 
+         * *   It must be 2 to 15 characters in length.
+         * *   It can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
+         * 
+         * If you create multiple cloud desktops, you can use the`  name_prefix[begin_number,bits]name_suffix ` format to determine the hostnames of the cloud desktops. For example, if you set Hostname to ecd-\[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. Other hostnames follow the same rule.
+         * 
+         * *   `name_prefix`: the prefix of the hostname.
+         * *   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.
+         * *   `name_suffix`: the suffix of the hostname.
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("Hostname", hostname);
@@ -478,7 +521,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -487,7 +530,23 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration of the cloud desktop that you want to create. The unit is specified by the `PeriodUnit` parameter. This parameter takes effect and is required only when the `ChargeType` parameter is set to `PrePaid`.
+         * <p>
+         * 
+         * *   Valid values if the `PeriodUnit` parameter is set to `Month`:
+         * 
+         *     *   1
+         *     *   2
+         *     *   3
+         *     *   6
+         * 
+         * *   Valid values if the `PeriodUnit` parameter is set to `Year`:
+         * 
+         *     *   1
+         *     *   2
+         *     *   3
+         *     *   4
+         *     *   5
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -496,7 +555,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the subscription duration.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -505,7 +564,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -514,7 +573,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * The ID of the sales promotion.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -523,7 +582,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -532,7 +591,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that you want to add to the cloud desktop.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -541,7 +600,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * UserAssignMode.
+         * The assignment mode of the cloud desktop.
+         * <p>
+         * 
+         * > If you do not specify the `EndUserId` parameter, the cloud desktop that you create is not assigned to users.
          */
         public Builder userAssignMode(String userAssignMode) {
             this.putQueryParameter("UserAssignMode", userAssignMode);
@@ -550,7 +612,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * UserCommands.
+         * The custom command scripts of the user.
          */
         public Builder userCommands(java.util.List < UserCommands> userCommands) {
             this.putQueryParameter("UserCommands", userCommands);
@@ -559,7 +621,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * UserName.
+         * This parameter is not available.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -568,7 +630,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * VolumeEncryptionEnabled.
+         * Specifies whether to enable disk encryption.
          */
         public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
             this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);
@@ -577,7 +639,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * VolumeEncryptionKey.
+         * The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
          */
         public Builder volumeEncryptionKey(String volumeEncryptionKey) {
             this.putQueryParameter("VolumeEncryptionKey", volumeEncryptionKey);
@@ -586,7 +648,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * This parameter is not available.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -601,6 +663,180 @@ public class CreateDesktopsRequest extends Request {
 
     } 
 
+    public static class BundleModels extends TeaModel {
+        @NameInMap("Amount")
+        @Validation(maximum = 300)
+        private Integer amount;
+
+        @NameInMap("BundleId")
+        private String bundleId;
+
+        @NameInMap("DesktopName")
+        private String desktopName;
+
+        @NameInMap("EndUserIds")
+        private java.util.List < String > endUserIds;
+
+        @NameInMap("Hostname")
+        private String hostname;
+
+        @NameInMap("VolumeEncryptionEnabled")
+        private Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        private String volumeEncryptionKey;
+
+        private BundleModels(Builder builder) {
+            this.amount = builder.amount;
+            this.bundleId = builder.bundleId;
+            this.desktopName = builder.desktopName;
+            this.endUserIds = builder.endUserIds;
+            this.hostname = builder.hostname;
+            this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
+            this.volumeEncryptionKey = builder.volumeEncryptionKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BundleModels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return bundleId
+         */
+        public String getBundleId() {
+            return this.bundleId;
+        }
+
+        /**
+         * @return desktopName
+         */
+        public String getDesktopName() {
+            return this.desktopName;
+        }
+
+        /**
+         * @return endUserIds
+         */
+        public java.util.List < String > getEndUserIds() {
+            return this.endUserIds;
+        }
+
+        /**
+         * @return hostname
+         */
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        /**
+         * @return volumeEncryptionEnabled
+         */
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        /**
+         * @return volumeEncryptionKey
+         */
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
+        }
+
+        public static final class Builder {
+            private Integer amount; 
+            private String bundleId; 
+            private String desktopName; 
+            private java.util.List < String > endUserIds; 
+            private String hostname; 
+            private Boolean volumeEncryptionEnabled; 
+            private String volumeEncryptionKey; 
+
+            /**
+             * The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 0.
+             */
+            public Builder amount(Integer amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * The ID of the desktop template.
+             */
+            public Builder bundleId(String bundleId) {
+                this.bundleId = bundleId;
+                return this;
+            }
+
+            /**
+             * The name of the cloud desktop.
+             */
+            public Builder desktopName(String desktopName) {
+                this.desktopName = desktopName;
+                return this;
+            }
+
+            /**
+             * The users to whom you want to assign the cloud desktops.
+             */
+            public Builder endUserIds(java.util.List < String > endUserIds) {
+                this.endUserIds = endUserIds;
+                return this;
+            }
+
+            /**
+             * The hostname that you specify for the cloud desktop. You can only specify the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.
+             * <p>
+             * 
+             * The hostname must meet the following requirements:
+             * 
+             * *   It must be 2 to 15 characters in length.
+             * *   It can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
+             * 
+             * If you create multiple cloud desktops, you can use the`  name_prefix[begin_number,bits]name_suffix ` format to determine the hostnames of the cloud desktops. For example, if you set Hostname to ecd-\[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. Other hostnames follow the same rule.
+             * 
+             * *   `name_prefix`: the prefix of the hostname.
+             * *   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.
+             * *   `name_suffix`: the suffix of the hostname.
+             */
+            public Builder hostname(String hostname) {
+                this.hostname = hostname;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable disk encryption.
+             */
+            public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+                this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+                return this;
+            }
+
+            /**
+             * The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+             */
+            public Builder volumeEncryptionKey(String volumeEncryptionKey) {
+                this.volumeEncryptionKey = volumeEncryptionKey;
+                return this;
+            }
+
+            public BundleModels build() {
+                return new BundleModels(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -640,7 +876,7 @@ public class CreateDesktopsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can specify 1 to 20 keys for a tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -648,7 +884,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. You can specify 1 to 20 values for a tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -714,7 +950,7 @@ public class CreateDesktopsRequest extends Request {
             private String contentType; 
 
             /**
-             * Content.
+             * The content of the command.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -722,7 +958,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * 自定义脚本命令编码，默认Base64编码
+             * The encoding mode of the command content (CommandContent).
              */
             public Builder contentEncoding(String contentEncoding) {
                 this.contentEncoding = contentEncoding;
@@ -730,7 +966,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * The language type of the command.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;

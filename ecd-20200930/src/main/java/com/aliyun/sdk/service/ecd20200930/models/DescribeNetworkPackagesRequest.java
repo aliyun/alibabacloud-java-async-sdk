@@ -112,7 +112,11 @@ public class DescribeNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * InternetChargeType.
+         * The billing method of the Internet access package. Valid values:
+         * <p>
+         * 
+         * *   PayByTraffic: pay-by-data-transfer
+         * *   PayByBandwidth: pay-by-bandwidth
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -121,7 +125,11 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 100
+         * *   Default value: 10
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -130,7 +138,7 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * NetworkPackageId.
+         * The IDs of the Internet access packages. You can specify 1 to 100 IDs of Internet access packages.
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -139,7 +147,7 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -148,7 +156,7 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

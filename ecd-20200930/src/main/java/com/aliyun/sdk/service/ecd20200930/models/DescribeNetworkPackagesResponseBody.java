@@ -62,7 +62,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NetworkPackages.
+         * Details of the Internet access packages.
          */
         public Builder networkPackages(java.util.List < NetworkPackages> networkPackages) {
             this.networkPackages = networkPackages;
@@ -70,7 +70,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to start the next query. If the value of this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,6 +122,18 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         @NameInMap("OfficeSiteVpcType")
         private String officeSiteVpcType;
 
+        @NameInMap("PayType")
+        private String payType;
+
+        @NameInMap("ReservationActiveTime")
+        private String reservationActiveTime;
+
+        @NameInMap("ReservationBandwidth")
+        private Integer reservationBandwidth;
+
+        @NameInMap("ReservationInternetChargeType")
+        private String reservationInternetChargeType;
+
         private NetworkPackages(Builder builder) {
             this.bandwidth = builder.bandwidth;
             this.createTime = builder.createTime;
@@ -133,6 +145,10 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
             this.officeSiteVpcType = builder.officeSiteVpcType;
+            this.payType = builder.payType;
+            this.reservationActiveTime = builder.reservationActiveTime;
+            this.reservationBandwidth = builder.reservationBandwidth;
+            this.reservationInternetChargeType = builder.reservationInternetChargeType;
         }
 
         public static Builder builder() {
@@ -213,6 +229,34 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             return this.officeSiteVpcType;
         }
 
+        /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
+        }
+
+        /**
+         * @return reservationActiveTime
+         */
+        public String getReservationActiveTime() {
+            return this.reservationActiveTime;
+        }
+
+        /**
+         * @return reservationBandwidth
+         */
+        public Integer getReservationBandwidth() {
+            return this.reservationBandwidth;
+        }
+
+        /**
+         * @return reservationInternetChargeType
+         */
+        public String getReservationInternetChargeType() {
+            return this.reservationInternetChargeType;
+        }
+
         public static final class Builder {
             private Integer bandwidth; 
             private String createTime; 
@@ -224,9 +268,13 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             private String officeSiteId; 
             private String officeSiteName; 
             private String officeSiteVpcType; 
+            private String payType; 
+            private String reservationActiveTime; 
+            private Integer reservationBandwidth; 
+            private String reservationInternetChargeType; 
 
             /**
-             * Bandwidth.
+             * The maximum public bandwidth of the Internet access package. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -234,7 +282,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the Internet access package was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -242,7 +290,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * EipAddresses.
+             * The elastic IP addresses (EIPs) of the Internet access package for outbound traffic.
              */
             public Builder eipAddresses(java.util.List < String > eipAddresses) {
                 this.eipAddresses = eipAddresses;
@@ -250,7 +298,11 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the Internet access package expires.
+             * <p>
+             * 
+             * *   If the Internet access package is metered on a pay-by-bandwidth basis, the actual expiration time is returned.
+             * *   If the Internet access package is metered on a pay-by-data-transfer basis, 2099-12-31T15:59:59Z is returned.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -258,7 +310,11 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * The billing method of the network bandwidth.
+             * <p>
+             * 
+             * *   PayByTraffic: pay-by-data-transfer
+             * *   PayByBandwidth: pay-by-bandwidth
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -266,7 +322,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkPackageId.
+             * The ID of the Internet access package.
              */
             public Builder networkPackageId(String networkPackageId) {
                 this.networkPackageId = networkPackageId;
@@ -274,7 +330,13 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkPackageStatus.
+             * The state of the Internet access package. Valid values:
+             * <p>
+             * 
+             * *   Creating
+             * *   InUse
+             * *   Releasing
+             * *   Released
              */
             public Builder networkPackageStatus(String networkPackageStatus) {
                 this.networkPackageStatus = networkPackageStatus;
@@ -282,7 +344,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * The ID of the workspace.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -290,7 +352,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * The name of the workspace.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -298,10 +360,55 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteVpcType.
+             * The type of the workspace. Valid values:
+             * <p>
+             * 
+             * *   basic
+             * *   standard
+             * *   customized
              */
             public Builder officeSiteVpcType(String officeSiteVpcType) {
                 this.officeSiteVpcType = officeSiteVpcType;
+                return this;
+            }
+
+            /**
+             * The billing method for the network.
+             * <p>
+             * 
+             * *   PrePaid: subscription
+             * *   PostPaid: pay-as-you-go
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
+                return this;
+            }
+
+            /**
+             * The time when the reserved network bandwidth takes effect.
+             */
+            public Builder reservationActiveTime(String reservationActiveTime) {
+                this.reservationActiveTime = reservationActiveTime;
+                return this;
+            }
+
+            /**
+             * The peak bandwidth of the reserved network bandwidth. Unit: Mbit/s.
+             */
+            public Builder reservationBandwidth(Integer reservationBandwidth) {
+                this.reservationBandwidth = reservationBandwidth;
+                return this;
+            }
+
+            /**
+             * The billing method of the reserved network bandwidth.
+             * <p>
+             * 
+             * *   PayByTraffic: pay-by-data-transfer
+             * *   PayByBandwidth: pay-by-bandwidth
+             */
+            public Builder reservationInternetChargeType(String reservationInternetChargeType) {
+                this.reservationInternetChargeType = reservationInternetChargeType;
                 return this;
             }
 

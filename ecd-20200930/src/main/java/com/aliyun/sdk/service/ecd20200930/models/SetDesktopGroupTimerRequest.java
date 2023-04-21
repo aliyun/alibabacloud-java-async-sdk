@@ -127,7 +127,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         } 
 
         /**
-         * CronExpression.
+         * The CRON expression for the scheduled task.
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -136,7 +136,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         }
 
         /**
-         * DesktopGroupId.
+         * The ID of the desktop group.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -145,7 +145,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcefully execute the scheduled task.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -154,7 +154,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +163,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         }
 
         /**
-         * ResetType.
+         * The type of the disk that you want to reset.
          */
         public Builder resetType(Integer resetType) {
             this.putQueryParameter("ResetType", resetType);
@@ -172,7 +172,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         }
 
         /**
-         * TimerType.
+         * The type of the scheduled task. Valid values:
          */
         public Builder timerType(Integer timerType) {
             this.putQueryParameter("TimerType", timerType);

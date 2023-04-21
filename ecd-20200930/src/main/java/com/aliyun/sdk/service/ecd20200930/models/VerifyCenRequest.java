@@ -113,7 +113,7 @@ public class VerifyCenRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -122,7 +122,11 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * CenOwnerId.
+         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+         * <p>
+         * 
+         * *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.
+         * *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -131,7 +135,7 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * CidrBlock.
+         * The IPv4 CIDR block of the workspace.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -140,7 +144,7 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +153,7 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * VerifyCode.
+         * The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

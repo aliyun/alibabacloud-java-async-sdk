@@ -45,6 +45,10 @@ public class DescribeBundlesRequest extends Request {
     private Float gpuCount;
 
     @Query
+    @NameInMap("ImageId")
+    private java.util.List < String > imageId;
+
+    @Query
     @NameInMap("MaxResults")
     @Validation(maximum = 500)
     private Integer maxResults;
@@ -67,6 +71,14 @@ public class DescribeBundlesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("SelectedBundle")
+    private Boolean selectedBundle;
+
+    @Query
+    @NameInMap("SessionType")
+    private String sessionType;
+
+    @Query
     @NameInMap("SupportMultiSession")
     private Boolean supportMultiSession;
 
@@ -84,11 +96,14 @@ public class DescribeBundlesRequest extends Request {
         this.fotaChannel = builder.fotaChannel;
         this.fromDesktopGroup = builder.fromDesktopGroup;
         this.gpuCount = builder.gpuCount;
+        this.imageId = builder.imageId;
         this.maxResults = builder.maxResults;
         this.memorySize = builder.memorySize;
         this.nextToken = builder.nextToken;
         this.protocolType = builder.protocolType;
         this.regionId = builder.regionId;
+        this.selectedBundle = builder.selectedBundle;
+        this.sessionType = builder.sessionType;
         this.supportMultiSession = builder.supportMultiSession;
         this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
     }
@@ -163,6 +178,13 @@ public class DescribeBundlesRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public java.util.List < String > getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -198,6 +220,20 @@ public class DescribeBundlesRequest extends Request {
     }
 
     /**
+     * @return selectedBundle
+     */
+    public Boolean getSelectedBundle() {
+        return this.selectedBundle;
+    }
+
+    /**
+     * @return sessionType
+     */
+    public String getSessionType() {
+        return this.sessionType;
+    }
+
+    /**
      * @return supportMultiSession
      */
     public Boolean getSupportMultiSession() {
@@ -220,11 +256,14 @@ public class DescribeBundlesRequest extends Request {
         private String fotaChannel; 
         private Boolean fromDesktopGroup; 
         private Float gpuCount; 
+        private java.util.List < String > imageId; 
         private Integer maxResults; 
         private Integer memorySize; 
         private String nextToken; 
         private String protocolType; 
         private String regionId; 
+        private Boolean selectedBundle; 
+        private String sessionType; 
         private Boolean supportMultiSession; 
         private Boolean volumeEncryptionEnabled; 
 
@@ -242,17 +281,20 @@ public class DescribeBundlesRequest extends Request {
             this.fotaChannel = request.fotaChannel;
             this.fromDesktopGroup = request.fromDesktopGroup;
             this.gpuCount = request.gpuCount;
+            this.imageId = request.imageId;
             this.maxResults = request.maxResults;
             this.memorySize = request.memorySize;
             this.nextToken = request.nextToken;
             this.protocolType = request.protocolType;
             this.regionId = request.regionId;
+            this.selectedBundle = request.selectedBundle;
+            this.sessionType = request.sessionType;
             this.supportMultiSession = request.supportMultiSession;
             this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
         } 
 
         /**
-         * BundleId.
+         * The IDs of the desktop templates. You can specify 1 to 100 desktop templates.
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -261,7 +303,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * BundleType.
+         * The type of the desktop template.
          */
         public Builder bundleType(String bundleType) {
             this.putQueryParameter("BundleType", bundleType);
@@ -270,7 +312,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * CheckStock.
+         * Specifies whether to query the inventory status of the desktop type.
          */
         public Builder checkStock(Boolean checkStock) {
             this.putQueryParameter("CheckStock", checkStock);
@@ -279,7 +321,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * CpuCount.
+         * The number of vCPUs of the desktop type.
          */
         public Builder cpuCount(Integer cpuCount) {
             this.putQueryParameter("CpuCount", cpuCount);
@@ -288,7 +330,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * DesktopTypeFamily.
+         * The family of the desktop type.
          */
         public Builder desktopTypeFamily(String desktopTypeFamily) {
             this.putQueryParameter("DesktopTypeFamily", desktopTypeFamily);
@@ -297,7 +339,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * FotaChannel.
+         * This parameter is now in invitational preview and unavailable.
          */
         public Builder fotaChannel(String fotaChannel) {
             this.putQueryParameter("FotaChannel", fotaChannel);
@@ -306,7 +348,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * FromDesktopGroup.
+         * Specifies whether the cloud desktop that uses the desktop template belongs to the desktop group. Default value: `false`.
          */
         public Builder fromDesktopGroup(Boolean fromDesktopGroup) {
             this.putQueryParameter("FromDesktopGroup", fromDesktopGroup);
@@ -315,7 +357,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * GpuCount.
+         * The number of GPUs of the desktop type.
          */
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
@@ -324,7 +366,20 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * ImageId.
+         */
+        public Builder imageId(java.util.List < String > imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 100.
+         * *   Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -333,7 +388,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * MemorySize.
+         * The memory size of the desktop type. Unit: GiB.
          */
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
@@ -342,7 +397,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -351,7 +406,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The type of the protocol.
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -360,7 +415,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -369,7 +424,25 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * SupportMultiSession.
+         * The desktop template that is selected based on specific criteria.
+         */
+        public Builder selectedBundle(Boolean selectedBundle) {
+            this.putQueryParameter("SelectedBundle", selectedBundle);
+            this.selectedBundle = selectedBundle;
+            return this;
+        }
+
+        /**
+         * The type of the session.
+         */
+        public Builder sessionType(String sessionType) {
+            this.putQueryParameter("SessionType", sessionType);
+            this.sessionType = sessionType;
+            return this;
+        }
+
+        /**
+         * Specifies whether to return multi-session desktop templates in this call. Default value: false.
          */
         public Builder supportMultiSession(Boolean supportMultiSession) {
             this.putQueryParameter("SupportMultiSession", supportMultiSession);
@@ -378,7 +451,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * VolumeEncryptionEnabled.
+         * Specifies whether to enable disk encryption.
          */
         public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
             this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);

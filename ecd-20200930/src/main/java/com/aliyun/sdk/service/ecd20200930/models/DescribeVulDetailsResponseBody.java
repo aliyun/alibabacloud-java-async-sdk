@@ -50,7 +50,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cves.
+         * Details about the vulnerability.
          */
         public Builder cves(java.util.List < Cves> cves) {
             this.cves = cves;
@@ -58,7 +58,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * CveId.
+             * The ID of the vulnerability.
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -142,7 +142,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CvssScore.
+             * The Common Vulnerability Scoring System (CVSS) score of the vulnerability, which indicates the severity of the vulnerability. A larger value indicates a higher severity. Valid values: 0 to 10.
              */
             public Builder cvssScore(String cvssScore) {
                 this.cvssScore = cvssScore;
@@ -150,7 +150,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * The description of the vulnerability.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -158,7 +158,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The name of the vulnerability.
              */
             public Builder title(String title) {
                 this.title = title;

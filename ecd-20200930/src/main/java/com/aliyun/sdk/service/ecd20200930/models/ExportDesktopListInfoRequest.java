@@ -46,6 +46,7 @@ public class ExportDesktopListInfoRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
+    @Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
     @Query
@@ -251,7 +252,13 @@ public class ExportDesktopListInfoRequest extends Request {
         } 
 
         /**
-         * ChargeType.
+         * The billing method of the cloud desktop. Valid values:
+         * <p>
+         * 
+         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription
+         * 
+         * Default value: PostPaid.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -260,7 +267,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The ID of cloud desktop N. Valid values of N: 1 to 100.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -269,7 +276,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * DesktopName.
+         * The name of the cloud desktop.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -278,7 +285,17 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * DesktopStatus.
+         * The status of the cloud desktop. Valid values:
+         * <p>
+         * 
+         * *   Pending: The cloud desktop is pending.
+         * *   Starting: The cloud desktop is being started.
+         * *   Running: The cloud desktop is running.
+         * *   Stopping: The cloud desktop is being stopped.
+         * *   Rebuilding: The cloud desktop is being rebuilt.
+         * *   Stopped: The cloud desktop is stopped.
+         * *   Expired: The cloud desktop expired.
+         * *   Deleted: The cloud desktop is deleted.
          */
         public Builder desktopStatus(String desktopStatus) {
             this.putQueryParameter("DesktopStatus", desktopStatus);
@@ -287,7 +304,10 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of end user N that is assigned the cloud desktop. Valid values of N: 1 to 100.
+         * <p>
+         * 
+         * > Only one end user can use the cloud desktop at a time.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -296,7 +316,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * ExpiredTime.
+         * The time when the subscription cloud desktop expires.
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -305,7 +325,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the desktop group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -314,7 +334,13 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * LangType.
+         * The language in which the cloud desktop is displayed in the console UI. You can export the list of cloud desktops in the specified language. Valid values:
+         * <p>
+         * 
+         * *   `zh-CN`: Simplified Chinese
+         * *   `en-GB`: English (United Kingdom)
+         * 
+         * Default value: `zh-CN`.
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -323,7 +349,12 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -332,7 +363,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -341,7 +372,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -350,7 +381,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy that is associated with the cloud desktop.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -359,7 +390,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -368,7 +399,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -377,7 +408,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username of the end user that is using the cloud desktop.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -431,7 +462,7 @@ public class ExportDesktopListInfoRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -439,7 +470,7 @@ public class ExportDesktopListInfoRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

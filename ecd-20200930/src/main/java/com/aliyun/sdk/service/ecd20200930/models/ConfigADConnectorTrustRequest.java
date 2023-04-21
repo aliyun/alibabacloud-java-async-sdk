@@ -18,6 +18,10 @@ public class ConfigADConnectorTrustRequest extends Request {
     private String officeSiteId;
 
     @Query
+    @NameInMap("RdsLicenseDomain")
+    private Boolean rdsLicenseDomain;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -30,6 +34,7 @@ public class ConfigADConnectorTrustRequest extends Request {
     private ConfigADConnectorTrustRequest(Builder builder) {
         super(builder);
         this.officeSiteId = builder.officeSiteId;
+        this.rdsLicenseDomain = builder.rdsLicenseDomain;
         this.regionId = builder.regionId;
         this.trustKey = builder.trustKey;
     }
@@ -55,6 +60,13 @@ public class ConfigADConnectorTrustRequest extends Request {
     }
 
     /**
+     * @return rdsLicenseDomain
+     */
+    public Boolean getRdsLicenseDomain() {
+        return this.rdsLicenseDomain;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -70,6 +82,7 @@ public class ConfigADConnectorTrustRequest extends Request {
 
     public static final class Builder extends Request.Builder<ConfigADConnectorTrustRequest, Builder> {
         private String officeSiteId; 
+        private Boolean rdsLicenseDomain; 
         private String regionId; 
         private String trustKey; 
 
@@ -80,12 +93,13 @@ public class ConfigADConnectorTrustRequest extends Request {
         private Builder(ConfigADConnectorTrustRequest request) {
             super(request);
             this.officeSiteId = request.officeSiteId;
+            this.rdsLicenseDomain = request.rdsLicenseDomain;
             this.regionId = request.regionId;
             this.trustKey = request.trustKey;
         } 
 
         /**
-         * OfficeSiteId.
+         * The ID of the AD workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -94,7 +108,16 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * RdsLicenseDomain.
+         */
+        public Builder rdsLicenseDomain(Boolean rdsLicenseDomain) {
+            this.putQueryParameter("RdsLicenseDomain", rdsLicenseDomain);
+            this.rdsLicenseDomain = rdsLicenseDomain;
+            return this;
+        }
+
+        /**
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +126,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * TrustKey.
+         * The trust password. You can specify the password when you configure a trust relationship between the AD domain and the ecd.acs domain.
          */
         public Builder trustKey(String trustKey) {
             this.putQueryParameter("TrustKey", trustKey);

@@ -85,7 +85,7 @@ public class ModifyDesktopHostNameRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -94,7 +94,11 @@ public class ModifyDesktopHostNameRequest extends Request {
         }
 
         /**
-         * NewHostName.
+         * The new hostname of the cloud desktop. The hostname must meet the following requirements:
+         * <p>
+         * 
+         * *   Must be 2 to 15 characters in length.
+         * *   Contain letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
          */
         public Builder newHostName(String newHostName) {
             this.putQueryParameter("NewHostName", newHostName);
@@ -103,7 +107,7 @@ public class ModifyDesktopHostNameRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

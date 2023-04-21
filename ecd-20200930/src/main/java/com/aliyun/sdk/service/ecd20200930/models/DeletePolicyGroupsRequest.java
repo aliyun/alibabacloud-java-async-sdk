@@ -70,7 +70,7 @@ public class DeletePolicyGroupsRequest extends Request {
         } 
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy. You can specify 1 to 100 policy IDs.
          */
         public Builder policyGroupId(java.util.List < String > policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -79,7 +79,7 @@ public class DeletePolicyGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

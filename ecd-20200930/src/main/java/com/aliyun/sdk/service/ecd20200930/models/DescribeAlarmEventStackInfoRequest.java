@@ -114,7 +114,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -123,7 +123,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * EventName.
+         * The name of the alert event.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -132,7 +132,11 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The natural language of the request and response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -141,7 +145,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,7 +154,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * UniqueInfo.
+         * The ID of the alert event.
          */
         public Builder uniqueInfo(String uniqueInfo) {
             this.putQueryParameter("UniqueInfo", uniqueInfo);

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConnectionTicketRequest extends Request {
     @Query
+    @NameInMap("CommandContent")
+    private String commandContent;
+
+    @Query
     @NameInMap("DesktopId")
     private String desktopId;
 
@@ -51,6 +55,7 @@ public class GetConnectionTicketRequest extends Request {
 
     private GetConnectionTicketRequest(Builder builder) {
         super(builder);
+        this.commandContent = builder.commandContent;
         this.desktopId = builder.desktopId;
         this.endUserId = builder.endUserId;
         this.ownerId = builder.ownerId;
@@ -73,6 +78,13 @@ public class GetConnectionTicketRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return commandContent
+     */
+    public String getCommandContent() {
+        return this.commandContent;
     }
 
     /**
@@ -139,6 +151,7 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetConnectionTicketRequest, Builder> {
+        private String commandContent; 
         private String desktopId; 
         private String endUserId; 
         private Long ownerId; 
@@ -155,6 +168,7 @@ public class GetConnectionTicketRequest extends Request {
 
         private Builder(GetConnectionTicketRequest request) {
             super(request);
+            this.commandContent = request.commandContent;
             this.desktopId = request.desktopId;
             this.endUserId = request.endUserId;
             this.ownerId = request.ownerId;
@@ -167,7 +181,20 @@ public class GetConnectionTicketRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The command that you want to run to configure a custom application in user mode. After you obtain the credentials, the application automatically starts.
+         * <p>
+         * 
+         * *   appPath: the path of the application startup file. Example: C:\\\Program Files (x86)\\\000\\\000.exe. Use double slashes as delimiters.
+         * *   appParameter: the startup parameters of the application. The value must be of the String type. Separate multiple parameters with spaces. Example: meetingid 000 meetingname aaa.
+         */
+        public Builder commandContent(String commandContent) {
+            this.putQueryParameter("CommandContent", commandContent);
+            this.commandContent = commandContent;
+            return this;
+        }
+
+        /**
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -176,7 +203,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of the end user.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -194,7 +221,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password for the username.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -203,7 +230,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cloud desktop.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +257,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the desktop connection task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -239,7 +266,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click **About** on the client logon page to view the identifier of the client.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

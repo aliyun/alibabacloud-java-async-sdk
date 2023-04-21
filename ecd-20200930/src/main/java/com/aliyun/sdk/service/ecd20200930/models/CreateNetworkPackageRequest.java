@@ -35,6 +35,10 @@ public class CreateNetworkPackageRequest extends Request {
     private String officeSiteId;
 
     @Query
+    @NameInMap("PayType")
+    private String payType;
+
+    @Query
     @NameInMap("Period")
     private Integer period;
 
@@ -58,6 +62,7 @@ public class CreateNetworkPackageRequest extends Request {
         this.bandwidth = builder.bandwidth;
         this.internetChargeType = builder.internetChargeType;
         this.officeSiteId = builder.officeSiteId;
+        this.payType = builder.payType;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
@@ -113,6 +118,13 @@ public class CreateNetworkPackageRequest extends Request {
     }
 
     /**
+     * @return payType
+     */
+    public String getPayType() {
+        return this.payType;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -146,6 +158,7 @@ public class CreateNetworkPackageRequest extends Request {
         private Integer bandwidth; 
         private String internetChargeType; 
         private String officeSiteId; 
+        private String payType; 
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
@@ -162,6 +175,7 @@ public class CreateNetworkPackageRequest extends Request {
             this.bandwidth = request.bandwidth;
             this.internetChargeType = request.internetChargeType;
             this.officeSiteId = request.officeSiteId;
+            this.payType = request.payType;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
@@ -169,7 +183,7 @@ public class CreateNetworkPackageRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -178,7 +192,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -187,7 +201,9 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum public bandwidth. Unit: Mbit/s.\
+         * <p>
+         * Valid values for the pay-by-data-transfer type (PayByTraffic): 10 to 200. Valid values for the pay-by-bandwith type (PayByBandwidth): 10 to 1000.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -196,7 +212,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the pay-as-you-go Internet access package. Valid values: PayByTraffic: pay-by-data-transfer. PayByBandwidth: pay-by-bandwidth. Default value: PayByTraffic.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -205,7 +221,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -214,7 +230,16 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * Period.
+         * The billing method of the Internet access package.
+         */
+        public Builder payType(String payType) {
+            this.putQueryParameter("PayType", payType);
+            this.payType = payType;
+            return this;
+        }
+
+        /**
+         * The duration of the Internet access package.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -223,7 +248,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of duration that you want to use for the Internet access package.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -232,7 +257,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * The ID of the sales promotion.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -241,7 +266,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

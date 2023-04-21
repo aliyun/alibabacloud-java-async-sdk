@@ -62,7 +62,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConnectionRecords.
+         * Details about connection records.
          */
         public Builder connectionRecords(java.util.List < ConnectionRecords> connectionRecords) {
             this.connectionRecords = connectionRecords;
@@ -70,7 +70,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             private String desktopName; 
 
             /**
-             * ConnectDuration.
+             * The duration of the desktop connection. Unit: seconds.
              */
             public Builder connectDuration(String connectDuration) {
                 this.connectDuration = connectDuration;
@@ -186,7 +186,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectEndTime.
+             * The time when the cloud desktop was disconnected.
              */
             public Builder connectEndTime(String connectEndTime) {
                 this.connectEndTime = connectEndTime;
@@ -194,7 +194,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectStartTime.
+             * The time when the cloud desktop was connected.
              */
             public Builder connectStartTime(String connectStartTime) {
                 this.connectStartTime = connectStartTime;
@@ -202,7 +202,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionRecordId.
+             * The ID of the connection record.
              */
             public Builder connectionRecordId(String connectionRecordId) {
                 this.connectionRecordId = connectionRecordId;
@@ -210,7 +210,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * The ID of the cloud desktop that is connected.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -218,7 +218,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * The name of the cloud desktop that is connected.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;

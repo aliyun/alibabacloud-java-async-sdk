@@ -85,7 +85,7 @@ public class ApproveFotaUpdateRequest extends Request {
         } 
 
         /**
-         * AppVersion.
+         * The version of the custom image. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.
          */
         public Builder appVersion(String appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -94,7 +94,7 @@ public class ApproveFotaUpdateRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -103,7 +103,7 @@ public class ApproveFotaUpdateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

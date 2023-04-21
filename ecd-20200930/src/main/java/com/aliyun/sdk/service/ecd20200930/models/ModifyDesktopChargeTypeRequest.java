@@ -140,7 +140,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment if you specify subscription as the new billing method for the cloud desktop.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -149,7 +149,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The new billing method that you want to use for the desktop group.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -158,7 +158,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The IDs of the cloud desktops. You can specify 1 to 20 IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -167,7 +167,12 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the `PeriodUnit` parameter. This parameter takes effect only when the `ChargeType` parameter is set to `PrePaid`.
+         * <p>
+         * 
+         * *   If the `PeriodUnit` parameter is set to `Week`, the valid value of the Period parameter is 1.
+         * *   If the `PeriodUnit` parameter is set to `Month`, the valid values of the Period parameter are 1, 2, 3, and 6.
+         * *   If the `PeriodUnit` parameter is set to `Year`, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -176,7 +181,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the subscription duration if you specify subscription as the new billing method for the cloud desktop.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -185,7 +190,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * The ID of the sales promotion.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -194,7 +199,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -70,7 +70,7 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The IDs of the snapshots. You can specify 1 to 100 IDs of snapshots.
          */
         public Builder snapshotId(java.util.List < String > snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

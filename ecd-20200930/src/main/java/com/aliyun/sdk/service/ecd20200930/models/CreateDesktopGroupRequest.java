@@ -31,6 +31,10 @@ public class CreateDesktopGroupRequest extends Request {
     private Boolean autoPay;
 
     @Query
+    @NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @Query
     @NameInMap("BindAmount")
     private Long bindAmount;
 
@@ -38,6 +42,10 @@ public class CreateDesktopGroupRequest extends Request {
     @NameInMap("BundleId")
     @Validation(required = true)
     private String bundleId;
+
+    @Query
+    @NameInMap("BuyDesktopsCount")
+    private Integer buyDesktopsCount;
 
     @Query
     @NameInMap("ChargeType")
@@ -62,7 +70,7 @@ public class CreateDesktopGroupRequest extends Request {
 
     @Query
     @NameInMap("DefaultInitDesktopCount")
-    @Validation(maximum = 1000, minimum = 1)
+    @Validation(maximum = 1000)
     private Integer defaultInitDesktopCount;
 
     @Query
@@ -80,6 +88,10 @@ public class CreateDesktopGroupRequest extends Request {
     @Query
     @NameInMap("FileSystemId")
     private String fileSystemId;
+
+    @Query
+    @NameInMap("GroupVersion")
+    private Integer groupVersion;
 
     @Query
     @NameInMap("IdleDisconnectDuration")
@@ -122,6 +134,7 @@ public class CreateDesktopGroupRequest extends Request {
 
     @Query
     @NameInMap("PolicyGroupId")
+    @Validation(required = true)
     private String policyGroupId;
 
     @Query
@@ -167,8 +180,10 @@ public class CreateDesktopGroupRequest extends Request {
         this.allowAutoSetup = builder.allowAutoSetup;
         this.allowBufferCount = builder.allowBufferCount;
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
         this.bindAmount = builder.bindAmount;
         this.bundleId = builder.bundleId;
+        this.buyDesktopsCount = builder.buyDesktopsCount;
         this.chargeType = builder.chargeType;
         this.classify = builder.classify;
         this.clientToken = builder.clientToken;
@@ -179,6 +194,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.directoryId = builder.directoryId;
         this.endUserIds = builder.endUserIds;
         this.fileSystemId = builder.fileSystemId;
+        this.groupVersion = builder.groupVersion;
         this.idleDisconnectDuration = builder.idleDisconnectDuration;
         this.keepDuration = builder.keepDuration;
         this.loadPolicy = builder.loadPolicy;
@@ -242,6 +258,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
      * @return bindAmount
      */
     public Long getBindAmount() {
@@ -253,6 +276,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public String getBundleId() {
         return this.bundleId;
+    }
+
+    /**
+     * @return buyDesktopsCount
+     */
+    public Integer getBuyDesktopsCount() {
+        return this.buyDesktopsCount;
     }
 
     /**
@@ -323,6 +353,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public String getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    /**
+     * @return groupVersion
+     */
+    public Integer getGroupVersion() {
+        return this.groupVersion;
     }
 
     /**
@@ -463,8 +500,10 @@ public class CreateDesktopGroupRequest extends Request {
         private Integer allowAutoSetup; 
         private Integer allowBufferCount; 
         private Boolean autoPay; 
+        private Boolean autoRenew; 
         private Long bindAmount; 
         private String bundleId; 
+        private Integer buyDesktopsCount; 
         private String chargeType; 
         private String classify; 
         private String clientToken; 
@@ -475,6 +514,7 @@ public class CreateDesktopGroupRequest extends Request {
         private String directoryId; 
         private java.util.List < String > endUserIds; 
         private String fileSystemId; 
+        private Integer groupVersion; 
         private Long idleDisconnectDuration; 
         private Long keepDuration; 
         private Long loadPolicy; 
@@ -505,8 +545,10 @@ public class CreateDesktopGroupRequest extends Request {
             this.allowAutoSetup = request.allowAutoSetup;
             this.allowBufferCount = request.allowBufferCount;
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
             this.bindAmount = request.bindAmount;
             this.bundleId = request.bundleId;
+            this.buyDesktopsCount = request.buyDesktopsCount;
             this.chargeType = request.chargeType;
             this.classify = request.classify;
             this.clientToken = request.clientToken;
@@ -517,6 +559,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.directoryId = request.directoryId;
             this.endUserIds = request.endUserIds;
             this.fileSystemId = request.fileSystemId;
+            this.groupVersion = request.groupVersion;
             this.idleDisconnectDuration = request.idleDisconnectDuration;
             this.keepDuration = request.keepDuration;
             this.loadPolicy = request.loadPolicy;
@@ -539,7 +582,7 @@ public class CreateDesktopGroupRequest extends Request {
         } 
 
         /**
-         * AllClassifyUsers.
+         * The end users whom you want to add to all types of desktop groups.
          */
         public Builder allClassifyUsers(Boolean allClassifyUsers) {
             this.putQueryParameter("AllClassifyUsers", allClassifyUsers);
@@ -548,7 +591,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * AllowAutoSetup.
+         * Specifies whether to automatically create cloud desktops in the desktop group if you set the billing method to subscription. If you set the ChargeType parameter to PrePaid, this parameter is required.
          */
         public Builder allowAutoSetup(Integer allowAutoSetup) {
             this.putQueryParameter("AllowAutoSetup", allowAutoSetup);
@@ -557,7 +600,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * AllowBufferCount.
+         * Specifies whether to reserve cloud desktops if you set the billing method to pay-as-you-go. If you set the ChargeType parameter to PostPaid, this parameter is required. Valid values: 0: does not allow the system to reserve cloud desktops. N: allows the system to reserve N cloud desktops. The variable N must be an integer that ranges from 1 to 100.
          */
         public Builder allowBufferCount(Integer allowBufferCount) {
             this.putQueryParameter("AllowBufferCount", allowBufferCount);
@@ -566,7 +609,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -575,7 +618,16 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * BindAmount.
+         * 是否自动续费。
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * The number of sessions that are allowed per cloud desktop in a multi-session desktop group.
          */
         public Builder bindAmount(Long bindAmount) {
             this.putQueryParameter("BindAmount", bindAmount);
@@ -584,7 +636,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * BundleId.
+         * The ID of the desktop template.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -593,7 +645,16 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The number of cloud desktops that you want to purchase. Valid values: 0 to 200.
+         */
+        public Builder buyDesktopsCount(Integer buyDesktopsCount) {
+            this.putQueryParameter("BuyDesktopsCount", buyDesktopsCount);
+            this.buyDesktopsCount = buyDesktopsCount;
+            return this;
+        }
+
+        /**
+         * The billing method of the cloud desktops in the desktop group.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -602,7 +663,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * Classify.
+         * The type of the desktop group.
          */
         public Builder classify(String classify) {
             this.putQueryParameter("Classify", classify);
@@ -611,7 +672,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -620,7 +681,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * Comments.
+         * The remarks on the desktop group.
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -629,7 +690,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * ConnectDuration.
+         * The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.
          */
         public Builder connectDuration(Long connectDuration) {
             this.putQueryParameter("ConnectDuration", connectDuration);
@@ -638,7 +699,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * DefaultInitDesktopCount.
+         * The default number of cloud desktops to create when you create the desktop group. Default value: 1.
          */
         public Builder defaultInitDesktopCount(Integer defaultInitDesktopCount) {
             this.putQueryParameter("DefaultInitDesktopCount", defaultInitDesktopCount);
@@ -647,7 +708,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * DesktopGroupName.
+         * The name of the desktop group.
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -656,7 +717,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -665,7 +726,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * The end users that can use the desktop group.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -674,7 +735,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The Apsara File Storage NAS (NAS) file system that is used after data roaming is enabled.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -683,7 +744,16 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * IdleDisconnectDuration.
+         * 桌面组版本。
+         */
+        public Builder groupVersion(Integer groupVersion) {
+            this.putQueryParameter("GroupVersion", groupVersion);
+            this.groupVersion = groupVersion;
+            return this;
+        }
+
+        /**
+         * The maximum period of time for which a session remains idle. If an end user performs no operations on a cloud desktop by using keyboards or mouses during a session, the session becomes idle. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.
          */
         public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
             this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
@@ -692,7 +762,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * KeepDuration.
+         * The retention period of the cloud desktop after the end user disconnects from the cloud desktop. Unit: milliseconds.
          */
         public Builder keepDuration(Long keepDuration) {
             this.putQueryParameter("KeepDuration", keepDuration);
@@ -701,7 +771,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * LoadPolicy.
+         * The load balancing policy of the multi-session desktop group.
          */
         public Builder loadPolicy(Long loadPolicy) {
             this.putQueryParameter("LoadPolicy", loadPolicy);
@@ -710,7 +780,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * MaxDesktopsCount.
+         * The maximum number of cloud desktops that the desktop group can contain. Valid values: 0 to 200.
          */
         public Builder maxDesktopsCount(Integer maxDesktopsCount) {
             this.putQueryParameter("MaxDesktopsCount", maxDesktopsCount);
@@ -719,7 +789,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * MinDesktopsCount.
+         * The minimum number of cloud desktops that must be contained in the desktop group if you set the billing method to subscription. If you set the ChargeType parameter to PrePaid, this parameter is required. Valid values: 0 to the value of MaxDesktopsCount. Default value: 1.
          */
         public Builder minDesktopsCount(Integer minDesktopsCount) {
             this.putQueryParameter("MinDesktopsCount", minDesktopsCount);
@@ -728,7 +798,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -737,7 +807,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * OwnType.
+         * The type of the desktop group.
          */
         public Builder ownType(Integer ownType) {
             this.putQueryParameter("OwnType", ownType);
@@ -746,7 +816,23 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription period of the cloud desktops in the desktop group. The unit is specified by the PeriodUnit parameter. The Period parameter takes effect only if you set the ChargeType parameter to PrePaid.
+         * <p>
+         * 
+         * *   Valid values if you set the PeriodUnit parameter to Month:
+         * 
+         *     *   1
+         *     *   2
+         *     *   3
+         *     *   6
+         * 
+         * *   Valid values if you set the PeriodUnit parameter to Year:
+         * 
+         *     *   1
+         *     *   2
+         *     *   3
+         *     *   4
+         *     *   5
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -755,7 +841,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the subscription duration.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -764,7 +850,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -773,7 +859,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * ProfileFollowSwitch.
+         * Specifies whether to enable data roaming.
          */
         public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
             this.putQueryParameter("ProfileFollowSwitch", profileFollowSwitch);
@@ -782,7 +868,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * RatioThreshold.
+         * The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%`. When the specified threshold is reached, new cloud desktops are automatically created. When the specified threshold is not reached, idle cloud desktops are released.
          */
         public Builder ratioThreshold(Float ratioThreshold) {
             this.putQueryParameter("RatioThreshold", ratioThreshold);
@@ -791,7 +877,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -800,7 +886,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * ResetType.
+         * Specifies which type of the disk to reset for cloud desktops in the desktop group.
          */
         public Builder resetType(Long resetType) {
             this.putQueryParameter("ResetType", resetType);
@@ -809,7 +895,10 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * ScaleStrategyId.
+         * The ID of the scaling policy.
+         * <p>
+         * 
+         * > This parameter is unavailable.
          */
         public Builder scaleStrategyId(String scaleStrategyId) {
             this.putQueryParameter("ScaleStrategyId", scaleStrategyId);
@@ -818,7 +907,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * StopDuration.
+         * The period of time before the idle cloud desktop is stopped. When the specified period of time is reached, the idle cloud desktop automatically stops. If an end user connects to a stopped cloud desktop, the cloud desktop automatically starts. Unit: milliseconds.
          */
         public Builder stopDuration(Long stopDuration) {
             this.putQueryParameter("StopDuration", stopDuration);
@@ -827,7 +916,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * VolumeEncryptionEnabled.
+         * Specifies whether to enable disk encryption.
          */
         public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
             this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);
@@ -836,7 +925,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * VolumeEncryptionKey.
+         * The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
          */
         public Builder volumeEncryptionKey(String volumeEncryptionKey) {
             this.putQueryParameter("VolumeEncryptionKey", volumeEncryptionKey);
@@ -845,7 +934,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) in which you want to create the desktop group.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

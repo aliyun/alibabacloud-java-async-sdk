@@ -99,7 +99,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         } 
 
         /**
-         * OperateType.
+         * The type of the action that you want to perform on the vulnerability. Valid value: vul_fix.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -108,7 +108,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,7 +117,11 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   cve: the Linux software vulnerability
+         * *   sys: the Windows system vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -126,7 +130,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * VulInfo.
+         * Details of the vulnerabilities. You can enter a maximum of 50 vulnerabilities.
          */
         public Builder vulInfo(java.util.List < VulInfo> vulInfo) {
             this.putQueryParameter("VulInfo", vulInfo);
@@ -192,7 +196,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
             private String tag; 
 
             /**
-             * DesktopId.
+             * The ID of the cloud desktop that is affected by the vulnerability.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -200,7 +204,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -208,7 +212,7 @@ public class DescribeFrontVulPatchListRequest extends Request {
             }
 
             /**
-             * Tag.
+             * The tag that you want to add to the vulnerability.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

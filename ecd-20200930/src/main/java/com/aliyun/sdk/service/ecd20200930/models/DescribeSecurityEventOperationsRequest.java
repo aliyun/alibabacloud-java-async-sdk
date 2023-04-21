@@ -70,7 +70,7 @@ public class DescribeSecurityEventOperationsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class DescribeSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * SecurityEventId.
+         * The ID of the alert.
          */
         public Builder securityEventId(Long securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);

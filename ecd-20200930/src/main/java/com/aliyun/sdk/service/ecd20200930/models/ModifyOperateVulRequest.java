@@ -114,7 +114,13 @@ public class ModifyOperateVulRequest extends Request {
         } 
 
         /**
-         * OperateType.
+         * The action that you want to perform on the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   vul_fix: fixes the vulnerability. The system fixes the vulnerability.
+         * *   vul_verify: verifies whether the vulnerability is fixed. You must perform this action after the vulnerability is fixed, and the cloud desktop is restarted.
+         * *   vul_ignore: ignores the vulnerability. After the vulnerability is ignored, the system provides no more prompts about the vulnerability.
+         * *   vul_undo_ignore: cancels the ignore action on the vulnerability. After you cancel the ignore action on the vulnerability, the system provides prompts about the vulnerability again.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -123,7 +129,9 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The reason why the vulnerability is ignored.\
+         * <p>
+         * This parameter is required only when `OperateType` is set to `vul_ignore`.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -132,7 +140,7 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +149,11 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   cve: the Linux software vulnerability
+         * *   sys: the Windows system vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -150,7 +162,7 @@ public class ModifyOperateVulRequest extends Request {
         }
 
         /**
-         * VulInfo.
+         * Details of the vulnerabilities.
          */
         public Builder vulInfo(java.util.List < VulInfo> vulInfo) {
             this.putQueryParameter("VulInfo", vulInfo);
@@ -216,7 +228,7 @@ public class ModifyOperateVulRequest extends Request {
             private String tag; 
 
             /**
-             * DesktopId.
+             * The ID of cloud desktop in which the vulnerability is detected.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -224,7 +236,7 @@ public class ModifyOperateVulRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -232,7 +244,7 @@ public class ModifyOperateVulRequest extends Request {
             }
 
             /**
-             * Tag.
+             * The tag that you want to add to the vulnerability.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -99,7 +99,7 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The ID of the desktop group.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -108,7 +108,7 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,7 +117,7 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the scheduled task.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -126,7 +126,7 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         }
 
         /**
-         * TimerType.
+         * The type of the scheduled task.
          */
         public Builder timerType(Integer timerType) {
             this.putQueryParameter("TimerType", timerType);

@@ -62,7 +62,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DesktopGroupId.
+         * The ID of the desktop group.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.desktopGroupId = desktopGroupId;
@@ -70,7 +70,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * OrderIds.
+         * The IDs of the orders.
          */
         public Builder orderIds(java.util.List < String > orderIds) {
             this.orderIds = orderIds;
@@ -78,7 +78,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

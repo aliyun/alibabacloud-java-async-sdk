@@ -19,8 +19,11 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
 
     @Query
     @NameInMap("PolicyGroupId")
-    @Validation(required = true)
     private String policyGroupId;
+
+    @Query
+    @NameInMap("PolicyGroupIds")
+    private java.util.List < String > policyGroupIds;
 
     @Query
     @NameInMap("RegionId")
@@ -31,6 +34,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         super(builder);
         this.desktopId = builder.desktopId;
         this.policyGroupId = builder.policyGroupId;
+        this.policyGroupIds = builder.policyGroupIds;
         this.regionId = builder.regionId;
     }
 
@@ -62,6 +66,13 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     }
 
     /**
+     * @return policyGroupIds
+     */
+    public java.util.List < String > getPolicyGroupIds() {
+        return this.policyGroupIds;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -71,6 +82,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDesktopsPolicyGroupRequest, Builder> {
         private java.util.List < String > desktopId; 
         private String policyGroupId; 
+        private java.util.List < String > policyGroupIds; 
         private String regionId; 
 
         private Builder() {
@@ -81,11 +93,12 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
             super(request);
             this.desktopId = request.desktopId;
             this.policyGroupId = request.policyGroupId;
+            this.policyGroupIds = request.policyGroupIds;
             this.regionId = request.regionId;
         } 
 
         /**
-         * DesktopId.
+         * The IDs of the cloud desktops. You can specify one or more cloud desktops. The value is a JSON array.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -94,7 +107,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -103,7 +116,16 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The IDs of the policies.
+         */
+        public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
+            this.putQueryParameter("PolicyGroupIds", policyGroupIds);
+            this.policyGroupIds = policyGroupIds;
+            return this;
+        }
+
+        /**
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

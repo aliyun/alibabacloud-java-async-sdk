@@ -114,7 +114,12 @@ public class DescribeDesktopIdsByVulNamesRequest extends Request {
         } 
 
         /**
-         * Necessity.
+         * The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   asap: high
+         * *   later: medium
+         * *   nntf: low
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -123,7 +128,7 @@ public class DescribeDesktopIdsByVulNamesRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -132,7 +137,7 @@ public class DescribeDesktopIdsByVulNamesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +146,11 @@ public class DescribeDesktopIdsByVulNamesRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   cve: Linux software vulnerability
+         * *   sys: Windows system vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

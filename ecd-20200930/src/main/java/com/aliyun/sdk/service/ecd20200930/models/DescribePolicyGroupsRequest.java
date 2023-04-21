@@ -30,12 +30,17 @@ public class DescribePolicyGroupsRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Scope")
+    private String scope;
+
     private DescribePolicyGroupsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.policyGroupId = builder.policyGroupId;
         this.regionId = builder.regionId;
+        this.scope = builder.scope;
     }
 
     public static Builder builder() {
@@ -79,11 +84,19 @@ public class DescribePolicyGroupsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return scope
+     */
+    public String getScope() {
+        return this.scope;
+    }
+
     public static final class Builder extends Request.Builder<DescribePolicyGroupsRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List < String > policyGroupId; 
         private String regionId; 
+        private String scope; 
 
         private Builder() {
             super();
@@ -95,6 +108,7 @@ public class DescribePolicyGroupsRequest extends Request {
             this.nextToken = request.nextToken;
             this.policyGroupId = request.policyGroupId;
             this.regionId = request.regionId;
+            this.scope = request.scope;
         } 
 
         /**
@@ -130,6 +144,15 @@ public class DescribePolicyGroupsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Scope.
+         */
+        public Builder scope(String scope) {
+            this.putQueryParameter("Scope", scope);
+            this.scope = scope;
             return this;
         }
 

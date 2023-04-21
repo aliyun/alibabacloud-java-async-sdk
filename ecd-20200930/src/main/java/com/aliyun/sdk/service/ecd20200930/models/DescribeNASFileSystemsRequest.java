@@ -17,6 +17,10 @@ public class DescribeNASFileSystemsRequest extends Request {
     private java.util.List < String > fileSystemId;
 
     @Query
+    @NameInMap("MatchCompatibleProfile")
+    private Boolean matchCompatibleProfile;
+
+    @Query
     @NameInMap("MaxResults")
     @Validation(maximum = 500)
     private Integer maxResults;
@@ -37,6 +41,7 @@ public class DescribeNASFileSystemsRequest extends Request {
     private DescribeNASFileSystemsRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
+        this.matchCompatibleProfile = builder.matchCompatibleProfile;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
@@ -61,6 +66,13 @@ public class DescribeNASFileSystemsRequest extends Request {
      */
     public java.util.List < String > getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    /**
+     * @return matchCompatibleProfile
+     */
+    public Boolean getMatchCompatibleProfile() {
+        return this.matchCompatibleProfile;
     }
 
     /**
@@ -93,6 +105,7 @@ public class DescribeNASFileSystemsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeNASFileSystemsRequest, Builder> {
         private java.util.List < String > fileSystemId; 
+        private Boolean matchCompatibleProfile; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
@@ -105,6 +118,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         private Builder(DescribeNASFileSystemsRequest request) {
             super(request);
             this.fileSystemId = request.fileSystemId;
+            this.matchCompatibleProfile = request.matchCompatibleProfile;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
@@ -112,7 +126,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * The IDs of the NAS file systems.
          */
         public Builder fileSystemId(java.util.List < String > fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -121,7 +135,20 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.
+         */
+        public Builder matchCompatibleProfile(Boolean matchCompatibleProfile) {
+            this.putQueryParameter("MatchCompatibleProfile", matchCompatibleProfile);
+            this.matchCompatibleProfile = matchCompatibleProfile;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 100.
+         * *   Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -130,7 +157,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Set the value to the NextToken value that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -139,7 +166,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -148,7 +175,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

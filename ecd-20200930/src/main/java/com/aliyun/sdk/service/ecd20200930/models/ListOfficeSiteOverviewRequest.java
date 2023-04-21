@@ -18,6 +18,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
+    @Validation(maximum = 1000)
     private Integer maxResults;
 
     @Query
@@ -125,7 +126,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         } 
 
         /**
-         * ForceRefresh.
+         * Specifies whether to refresh the cache.
          */
         public Builder forceRefresh(Boolean forceRefresh) {
             this.putQueryParameter("ForceRefresh", forceRefresh);
@@ -134,7 +135,11 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 100.
+         * *   Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -143,7 +148,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this is your first query or no next query is to be sent, skip this parameter. If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -152,7 +157,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -161,7 +166,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * QueryRange.
+         * The beginning of the time range that you want to query.
          */
         public Builder queryRange(Integer queryRange) {
             this.putQueryParameter("QueryRange", queryRange);
@@ -170,7 +175,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

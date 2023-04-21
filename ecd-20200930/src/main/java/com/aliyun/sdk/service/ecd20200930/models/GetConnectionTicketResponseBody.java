@@ -74,7 +74,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String ticket; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the desktop connection task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -90,7 +90,52 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * The status of the task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   FAILED
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     Failed to obtain the token
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   RUNNING
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     The token is being obtained
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   FINISHED
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     The token-based logon is successful
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -98,7 +143,18 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Ticket.
+         * The credentials that are used to connect to the cloud desktop. To use the credentials, you must decode the credentials in Base64, save the credentials as a xxx.ica file, and then open the file. Sample Python code:
+         * <p>
+         * 
+         *     import base64
+         *     response = {
+         *         "Ticket": "XXXX",
+         *         "RequestId": "XXX-XXX",
+         *     }
+         *     f = open (\"xxx.ica\", \"w\")
+         *     out = base64.b64decode(response[\"Ticket\"])
+         *     f.write(out)
+         *     f.close()
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;

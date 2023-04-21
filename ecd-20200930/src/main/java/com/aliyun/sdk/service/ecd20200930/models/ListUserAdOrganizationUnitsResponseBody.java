@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserAdOrganizationUnitsResponseBody</p>
  */
 public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("OUNames")
     private java.util.List < OUNames> OUNames;
 
@@ -19,6 +22,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     private String requestId;
 
     private ListUserAdOrganizationUnitsResponseBody(Builder builder) {
+        this.nextToken = builder.nextToken;
         this.OUNames = builder.OUNames;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
 
     public static ListUserAdOrganizationUnitsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -46,11 +57,20 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextToken; 
         private java.util.List < OUNames> OUNames; 
         private String requestId; 
 
         /**
-         * OUNames.
+         * The token that is used to start the next query.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * The names of the OUs in the AD domain.
          */
         public Builder OUNames(java.util.List < OUNames> OUNames) {
             this.OUNames = OUNames;
@@ -58,7 +78,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,6 +92,9 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     } 
 
     public static class OUNames extends TeaModel {
+        @NameInMap("DisplayOUName")
+        private String displayOUName;
+
         @NameInMap("OUName")
         private String OUName;
 
@@ -79,6 +102,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         private String officeSiteId;
 
         private OUNames(Builder builder) {
+            this.displayOUName = builder.displayOUName;
             this.OUName = builder.OUName;
             this.officeSiteId = builder.officeSiteId;
         }
@@ -89,6 +113,13 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
 
         public static OUNames create() {
             return builder().build();
+        }
+
+        /**
+         * @return displayOUName
+         */
+        public String getDisplayOUName() {
+            return this.displayOUName;
         }
 
         /**
@@ -106,11 +137,20 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String displayOUName; 
             private String OUName; 
             private String officeSiteId; 
 
             /**
-             * OUName.
+             * The display name of the OU.
+             */
+            public Builder displayOUName(String displayOUName) {
+                this.displayOUName = displayOUName;
+                return this;
+            }
+
+            /**
+             * The name of the OU of the AD domain controller.
              */
             public Builder OUName(String OUName) {
                 this.OUName = OUName;
@@ -118,7 +158,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * The ID of the AD workspace.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;

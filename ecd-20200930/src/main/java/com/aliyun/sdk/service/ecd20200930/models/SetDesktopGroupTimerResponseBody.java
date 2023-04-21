@@ -12,18 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDesktopGroupTimerResponseBody</p>
  */
 public class SetDesktopGroupTimerResponseBody extends TeaModel {
-    @NameInMap("DesktopGroupId")
-    private String desktopGroupId;
-
-    @NameInMap("OrderIds")
-    private java.util.List < String > orderIds;
-
     @NameInMap("RequestId")
     private String requestId;
 
     private SetDesktopGroupTimerResponseBody(Builder builder) {
-        this.desktopGroupId = builder.desktopGroupId;
-        this.orderIds = builder.orderIds;
         this.requestId = builder.requestId;
     }
 
@@ -36,20 +28,6 @@ public class SetDesktopGroupTimerResponseBody extends TeaModel {
     }
 
     /**
-     * @return desktopGroupId
-     */
-    public String getDesktopGroupId() {
-        return this.desktopGroupId;
-    }
-
-    /**
-     * @return orderIds
-     */
-    public java.util.List < String > getOrderIds() {
-        return this.orderIds;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -57,28 +35,10 @@ public class SetDesktopGroupTimerResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String desktopGroupId; 
-        private java.util.List < String > orderIds; 
         private String requestId; 
 
         /**
-         * DesktopGroupId.
-         */
-        public Builder desktopGroupId(String desktopGroupId) {
-            this.desktopGroupId = desktopGroupId;
-            return this;
-        }
-
-        /**
-         * OrderIds.
-         */
-        public Builder orderIds(java.util.List < String > orderIds) {
-            this.orderIds = orderIds;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

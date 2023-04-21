@@ -112,7 +112,12 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -121,7 +126,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -130,7 +135,10 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -139,7 +147,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +156,15 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the quarantined file. Valid values:
+         * <p>
+         * 
+         * *   quaraFailed: The file failed to be quarantined.
+         * *   quaraDone: The file is quarantined.
+         * *   quaraing: The file is being quarantined.
+         * *   rollbackFailed: Quarantine for the file failed to be canceled.
+         * *   rollbackDone: Quarantine for the file is canceled.
+         * *   rollbacking: Quarantine for the file is being canceled.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

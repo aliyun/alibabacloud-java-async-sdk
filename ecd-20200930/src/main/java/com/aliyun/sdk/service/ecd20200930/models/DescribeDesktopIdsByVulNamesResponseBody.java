@@ -50,7 +50,7 @@ public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DesktopItems.
+         * Details about cloud desktops.
          */
         public Builder desktopItems(java.util.List < DesktopItems> desktopItems) {
             this.desktopItems = desktopItems;
@@ -58,7 +58,7 @@ public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
             private String desktopName; 
 
             /**
-             * DesktopId.
+             * The ID of the cloud desktop.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -118,7 +118,7 @@ public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * The name of the cloud desktop.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;

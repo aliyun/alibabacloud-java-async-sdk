@@ -98,7 +98,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The ID of the desktop group on which the permissions you want to revoke from the authorized user.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -107,7 +107,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * DesktopGroupIds.
+         * Details about the IDs of the desktop groups.
          */
         public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -116,7 +116,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * Details about the authorized users from which you want to revoke permissions on the desktop group.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -125,7 +125,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

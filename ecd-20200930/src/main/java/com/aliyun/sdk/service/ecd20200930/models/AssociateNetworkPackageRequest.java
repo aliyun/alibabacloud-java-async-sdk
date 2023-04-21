@@ -85,7 +85,7 @@ public class AssociateNetworkPackageRequest extends Request {
         } 
 
         /**
-         * NetworkPackageId.
+         * The ID of the Internet access package. You can call the [DescribeNetworkPackages](~~216079~~) operation to query the ID of the Internet access package.
          */
         public Builder networkPackageId(String networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -94,7 +94,7 @@ public class AssociateNetworkPackageRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace. You can call the [DescribeOfficeSites](~~216071~~) operation to query the ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -103,7 +103,7 @@ public class AssociateNetworkPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -50,7 +50,7 @@ public class ExportDesktopListInfoResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ExportDesktopListInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * The URL from which you can download the file that contains information about exported cloud desktops.
          */
         public Builder url(String url) {
             this.url = url;

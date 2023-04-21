@@ -145,7 +145,11 @@ public class DescribeFlowMetricRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query data. The following formats are supported:
+         * <p>
+         * 
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -154,7 +158,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. The value can be the ID of the cloud desktop or the ID of the Internet access package.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -163,7 +167,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the instance. You can select a cloud desktop or a network package as an instance. If you select a cloud desktop as an instance, you need to configure the `InstanceId` and `MetricType` parameters. If you select a network package as an instance, you also need to must configure the parameters.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -172,7 +176,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * The type of the monitoring data. The monitoring data includes the inbound bandwidth and the outbound bandwidth of the cloud desktop, or the workspace bandwidth that is originated from or destined for the Internet.
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -181,7 +185,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
-         * Period.
+         * The interval at which monitoring data is collected. Unit: seconds.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -190,7 +194,7 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +203,11 @@ public class DescribeFlowMetricRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The following formats are supported:
+         * <p>
+         * 
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

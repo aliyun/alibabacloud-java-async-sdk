@@ -62,7 +62,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * NextToken.
+         * The ID of the request.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,10 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The usernames of AD users.
+         * <p>
+         * 
+         * This parameter is empty if the AD users include only Administrator and Guest.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The usernames of AD users.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -130,7 +133,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             private String endUser; 
 
             /**
-             * DisplayName.
+             * The display name of the AD user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -138,7 +141,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EndUser.
+             * The username of the AD user.
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;
