@@ -412,6 +412,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         private String departName;
 
+        @NameInMap("extend_field")
+        private String extendField;
+
         @NameInMap("gmt_create")
         private Long gmtCreate;
 
@@ -452,6 +455,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             this.corpName = builder.corpName;
             this.departId = builder.departId;
             this.departName = builder.departName;
+            this.extendField = builder.extendField;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
@@ -513,6 +517,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getDepartName() {
             return this.departName;
+        }
+
+        /**
+         * @return extendField
+         */
+        public String getExtendField() {
+            return this.extendField;
         }
 
         /**
@@ -599,6 +610,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private String corpName; 
             private String departId; 
             private String departName; 
+            private String extendField; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private Long id; 
@@ -656,6 +668,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder departName(String departName) {
                 this.departName = departName;
+                return this;
+            }
+
+            /**
+             * extend_field.
+             */
+            public Builder extendField(String extendField) {
+                this.extendField = extendField;
                 return this;
             }
 

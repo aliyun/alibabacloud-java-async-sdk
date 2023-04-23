@@ -54,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CarOrderQueryResponse> carOrderQuery(CarOrderQueryRequest request);
 
+    CompletableFuture<CarSceneQueryResponse> carSceneQuery(CarSceneQueryRequest request);
+
     CompletableFuture<CitySearchResponse> citySearch(CitySearchRequest request);
 
     CompletableFuture<CommonApplyQueryResponse> commonApplyQuery(CommonApplyQueryRequest request);
