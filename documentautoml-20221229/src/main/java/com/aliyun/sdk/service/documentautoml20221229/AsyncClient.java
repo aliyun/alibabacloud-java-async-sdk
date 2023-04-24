@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PredictModelResponse> predictModel(PredictModelRequest request);
 
+    CompletableFuture<PredictPreTrainModelResponse> predictPreTrainModel(PredictPreTrainModelRequest request);
+
     CompletableFuture<PredictTemplateModelResponse> predictTemplateModel(PredictTemplateModelRequest request);
 
 }
