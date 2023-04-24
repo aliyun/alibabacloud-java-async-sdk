@@ -81,11 +81,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateDataCronClearOrderResponse> createDataCronClearOrder(CreateDataCronClearOrderRequest request);
 
+    CompletableFuture<CreateDataExportOrderResponse> createDataExportOrder(CreateDataExportOrderRequest request);
+
     /**
       * For more information about the Large Data Import feature, see [Import data](~~161439~~).
       *
      */
     CompletableFuture<CreateDataImportOrderResponse> createDataImportOrder(CreateDataImportOrderRequest request);
+
+    CompletableFuture<CreateDataTrackOrderResponse> createDataTrackOrder(CreateDataTrackOrderRequest request);
+
+    CompletableFuture<CreateDatabaseExportOrderResponse> createDatabaseExportOrder(CreateDatabaseExportOrderRequest request);
 
     /**
       * For more information about the lock-free change feature, see [Overview](~~207847~~).
@@ -207,6 +213,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DisableUserResponse> disableUser(DisableUserRequest request);
 
+    CompletableFuture<DownloadDataTrackResultResponse> downloadDataTrackResult(DownloadDataTrackResultRequest request);
+
     CompletableFuture<EditLogicDatabaseResponse> editLogicDatabase(EditLogicDatabaseRequest request);
 
     /**
@@ -275,7 +283,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDataImportSQLResponse> getDataImportSQL(GetDataImportSQLRequest request);
 
+    CompletableFuture<GetDataTrackJobDegreeResponse> getDataTrackJobDegree(GetDataTrackJobDegreeRequest request);
+
+    CompletableFuture<GetDataTrackJobTableMetaResponse> getDataTrackJobTableMeta(GetDataTrackJobTableMetaRequest request);
+
+    CompletableFuture<GetDataTrackOrderDetailResponse> getDataTrackOrderDetail(GetDataTrackOrderDetailRequest request);
+
     CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
+
+    CompletableFuture<GetDatabaseExportOrderDetailResponse> getDatabaseExportOrderDetail(GetDatabaseExportOrderDetailRequest request);
 
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
@@ -522,6 +538,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PublishAndDeployTaskFlowResponse> publishAndDeployTaskFlow(PublishAndDeployTaskFlowRequest request);
 
+    CompletableFuture<QueryDataTrackResultDownloadStatusResponse> queryDataTrackResultDownloadStatus(QueryDataTrackResultDownloadStatusRequest request);
+
     CompletableFuture<ReDeployLhDagVersionResponse> reDeployLhDagVersion(ReDeployLhDagVersionRequest request);
 
     CompletableFuture<ReRunTaskFlowInstanceResponse> reRunTaskFlowInstance(ReRunTaskFlowInstanceRequest request);
@@ -557,6 +575,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeTemplateAuthorityResponse> revokeTemplateAuthority(RevokeTemplateAuthorityRequest request);
 
     CompletableFuture<RevokeUserPermissionResponse> revokeUserPermission(RevokeUserPermissionRequest request);
+
+    CompletableFuture<SearchDataTrackResultResponse> searchDataTrackResult(SearchDataTrackResultRequest request);
 
     CompletableFuture<SearchDatabaseResponse> searchDatabase(SearchDatabaseRequest request);
 

@@ -369,7 +369,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
              * 
              * **
              * 
-             * **Description**This parameter is not returned for physical tables.
+             * **Description** This parameter is not returned for physical tables.
              */
             public Builder tableNameExpr(String tableNameExpr) {
                 this.tableNameExpr = tableNameExpr;

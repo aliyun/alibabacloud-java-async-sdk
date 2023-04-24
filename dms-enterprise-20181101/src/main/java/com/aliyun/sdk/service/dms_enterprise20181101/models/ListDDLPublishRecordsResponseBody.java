@@ -453,6 +453,9 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         @NameInMap("AuditStatus")
         private String auditStatus;
 
+        @NameInMap("Comment")
+        private String comment;
+
         @NameInMap("CreatorId")
         private Long creatorId;
 
@@ -480,6 +483,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         private DDLPublishRecordList(Builder builder) {
             this.auditExpireTime = builder.auditExpireTime;
             this.auditStatus = builder.auditStatus;
+            this.comment = builder.comment;
             this.creatorId = builder.creatorId;
             this.finality = builder.finality;
             this.finalityReason = builder.finalityReason;
@@ -510,6 +514,13 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
          */
         public String getAuditStatus() {
             return this.auditStatus;
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
         }
 
         /**
@@ -571,6 +582,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String auditExpireTime; 
             private String auditStatus; 
+            private String comment; 
             private Long creatorId; 
             private Boolean finality; 
             private String finalityReason; 
@@ -600,6 +612,14 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
+                return this;
+            }
+
+            /**
+             * 发布备注
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
                 return this;
             }
 
