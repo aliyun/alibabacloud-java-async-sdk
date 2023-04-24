@@ -46,6 +46,10 @@ public class CreateDesktopsRequest extends Request {
     private Boolean desktopNameSuffix;
 
     @Query
+    @NameInMap("DesktopTimers")
+    private java.util.List < DesktopTimers> desktopTimers;
+
+    @Query
     @NameInMap("DirectoryId")
     private String directoryId;
 
@@ -125,6 +129,7 @@ public class CreateDesktopsRequest extends Request {
         this.chargeType = builder.chargeType;
         this.desktopName = builder.desktopName;
         this.desktopNameSuffix = builder.desktopNameSuffix;
+        this.desktopTimers = builder.desktopTimers;
         this.directoryId = builder.directoryId;
         this.endUserId = builder.endUserId;
         this.groupId = builder.groupId;
@@ -211,6 +216,13 @@ public class CreateDesktopsRequest extends Request {
      */
     public Boolean getDesktopNameSuffix() {
         return this.desktopNameSuffix;
+    }
+
+    /**
+     * @return desktopTimers
+     */
+    public java.util.List < DesktopTimers> getDesktopTimers() {
+        return this.desktopTimers;
     }
 
     /**
@@ -341,6 +353,7 @@ public class CreateDesktopsRequest extends Request {
         private String chargeType; 
         private String desktopName; 
         private Boolean desktopNameSuffix; 
+        private java.util.List < DesktopTimers> desktopTimers; 
         private String directoryId; 
         private java.util.List < String > endUserId; 
         private String groupId; 
@@ -373,6 +386,7 @@ public class CreateDesktopsRequest extends Request {
             this.chargeType = request.chargeType;
             this.desktopName = request.desktopName;
             this.desktopNameSuffix = request.desktopNameSuffix;
+            this.desktopTimers = request.desktopTimers;
             this.directoryId = request.directoryId;
             this.endUserId = request.endUserId;
             this.groupId = request.groupId;
@@ -465,6 +479,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder desktopNameSuffix(Boolean desktopNameSuffix) {
             this.putQueryParameter("DesktopNameSuffix", desktopNameSuffix);
             this.desktopNameSuffix = desktopNameSuffix;
+            return this;
+        }
+
+        /**
+         * DesktopTimers.
+         */
+        public Builder desktopTimers(java.util.List < DesktopTimers> desktopTimers) {
+            this.putQueryParameter("DesktopTimers", desktopTimers);
+            this.desktopTimers = desktopTimers;
             return this;
         }
 
@@ -832,6 +855,167 @@ public class CreateDesktopsRequest extends Request {
 
             public BundleModels build() {
                 return new BundleModels(this);
+            } 
+
+        } 
+
+    }
+    public static class DesktopTimers extends TeaModel {
+        @NameInMap("AllowClientSetting")
+        private Boolean allowClientSetting;
+
+        @NameInMap("CronExpression")
+        private String cronExpression;
+
+        @NameInMap("Enforce")
+        private Boolean enforce;
+
+        @NameInMap("Interval")
+        private Integer interval;
+
+        @NameInMap("OperationType")
+        private String operationType;
+
+        @NameInMap("ResetType")
+        private String resetType;
+
+        @NameInMap("TimerType")
+        private String timerType;
+
+        private DesktopTimers(Builder builder) {
+            this.allowClientSetting = builder.allowClientSetting;
+            this.cronExpression = builder.cronExpression;
+            this.enforce = builder.enforce;
+            this.interval = builder.interval;
+            this.operationType = builder.operationType;
+            this.resetType = builder.resetType;
+            this.timerType = builder.timerType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DesktopTimers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowClientSetting
+         */
+        public Boolean getAllowClientSetting() {
+            return this.allowClientSetting;
+        }
+
+        /**
+         * @return cronExpression
+         */
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        /**
+         * @return enforce
+         */
+        public Boolean getEnforce() {
+            return this.enforce;
+        }
+
+        /**
+         * @return interval
+         */
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        /**
+         * @return operationType
+         */
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        /**
+         * @return resetType
+         */
+        public String getResetType() {
+            return this.resetType;
+        }
+
+        /**
+         * @return timerType
+         */
+        public String getTimerType() {
+            return this.timerType;
+        }
+
+        public static final class Builder {
+            private Boolean allowClientSetting; 
+            private String cronExpression; 
+            private Boolean enforce; 
+            private Integer interval; 
+            private String operationType; 
+            private String resetType; 
+            private String timerType; 
+
+            /**
+             * AllowClientSetting.
+             */
+            public Builder allowClientSetting(Boolean allowClientSetting) {
+                this.allowClientSetting = allowClientSetting;
+                return this;
+            }
+
+            /**
+             * CronExpression.
+             */
+            public Builder cronExpression(String cronExpression) {
+                this.cronExpression = cronExpression;
+                return this;
+            }
+
+            /**
+             * Enforce.
+             */
+            public Builder enforce(Boolean enforce) {
+                this.enforce = enforce;
+                return this;
+            }
+
+            /**
+             * Interval.
+             */
+            public Builder interval(Integer interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            /**
+             * OperationType.
+             */
+            public Builder operationType(String operationType) {
+                this.operationType = operationType;
+                return this;
+            }
+
+            /**
+             * ResetType.
+             */
+            public Builder resetType(String resetType) {
+                this.resetType = resetType;
+                return this;
+            }
+
+            /**
+             * TimerType.
+             */
+            public Builder timerType(String timerType) {
+                this.timerType = timerType;
+                return this;
+            }
+
+            public DesktopTimers build() {
+                return new DesktopTimers(this);
             } 
 
         } 
