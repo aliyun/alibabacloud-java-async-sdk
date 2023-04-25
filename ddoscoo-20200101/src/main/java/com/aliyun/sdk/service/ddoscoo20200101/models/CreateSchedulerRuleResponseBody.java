@@ -62,10 +62,7 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         private String ruleName; 
 
         /**
-         * The CNAME that is assigned by Sec-Traffic Manager for the scheduling rule.
-         * <p>
-         * 
-         * > To enable the scheduling rule, you must map the domain name of the service to the CNAME.
+         * Cname.
          */
         public Builder cname(String cname) {
             this.cname = cname;
@@ -73,7 +70,7 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +78,7 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the rule.
+         * RuleName.
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;

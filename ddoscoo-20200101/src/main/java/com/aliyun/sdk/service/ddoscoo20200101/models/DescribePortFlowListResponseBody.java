@@ -96,6 +96,12 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         @NameInMap("Region")
         private String region;
 
+        @NameInMap("SlaBps")
+        private Long slaBps;
+
+        @NameInMap("SlaPps")
+        private Long slaPps;
+
         @NameInMap("Time")
         private Long time;
 
@@ -108,6 +114,8 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             this.outBps = builder.outBps;
             this.outPps = builder.outPps;
             this.region = builder.region;
+            this.slaBps = builder.slaBps;
+            this.slaPps = builder.slaPps;
             this.time = builder.time;
         }
 
@@ -176,6 +184,20 @@ public class DescribePortFlowListResponseBody extends TeaModel {
         }
 
         /**
+         * @return slaBps
+         */
+        public Long getSlaBps() {
+            return this.slaBps;
+        }
+
+        /**
+         * @return slaPps
+         */
+        public Long getSlaPps() {
+            return this.slaPps;
+        }
+
+        /**
          * @return time
          */
         public Long getTime() {
@@ -191,6 +213,8 @@ public class DescribePortFlowListResponseBody extends TeaModel {
             private Long outBps; 
             private Long outPps; 
             private String region; 
+            private Long slaBps; 
+            private Long slaPps; 
             private Long time; 
 
             /**
@@ -264,6 +288,22 @@ public class DescribePortFlowListResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * SlaBps.
+             */
+            public Builder slaBps(Long slaBps) {
+                this.slaBps = slaBps;
+                return this;
+            }
+
+            /**
+             * SlaPps.
+             */
+            public Builder slaPps(Long slaPps) {
+                this.slaPps = slaPps;
                 return this;
             }
 

@@ -148,10 +148,10 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * The public key of the certificate that you want to associate. This parameter must be used together with the **CertName** and **Key** parameters.
+         * The public key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Key**.
          * <p>
          * 
-         * > If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.
+         * > If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.
          */
         public Builder cert(String cert) {
             this.putQueryParameter("Cert", cert);
@@ -196,10 +196,10 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * The private key of the certificate that you want to associate. This parameter must be used together with the **CertName** and **Cert** parameters.
+         * The private key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Cert**.
          * <p>
          * 
-         * > If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.
+         * > If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
