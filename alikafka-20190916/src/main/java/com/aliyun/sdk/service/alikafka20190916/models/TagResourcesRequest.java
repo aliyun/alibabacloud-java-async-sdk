@@ -114,7 +114,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +123,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the resource is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +132,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The type of the resources to which you want to attach tags. Valid values:
+         * <p>
+         * 
+         * *   **INSTANCE**
+         * *   **TOPIC**
+         * *   **CONSUMERGROUP**
+         * 
+         * >  The value of this parameter is not case-sensitive.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -141,7 +148,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The ID of the resource to which you want to attach tags. Take note of the following rules when you specify a resource ID:
+         * <p>
+         * 
+         * *   The resource ID of an instance is the value of the instanceId parameter.
+         * *   The resource ID of a topic is the value of the Kafka_alikafka_instanceId_topic parameter.
+         * *   The resource ID of a group is the value of the Kafka_alikafka_instanceId_consumerGroup parameter.
+         * 
+         * For example, the resources to which you want to attach tags include the alikafka_post-cn-v0h1fgs2xxxx instance, the test-topic topic, and the test-consumer-group group. In this case, their resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -150,7 +164,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

@@ -85,7 +85,7 @@ public class GetConsumerProgressRequest extends Request {
         } 
 
         /**
-         * ConsumerId.
+         * The region ID of the instance.
          */
         public Builder consumerId(String consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -94,7 +94,7 @@ public class GetConsumerProgressRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The name of the consumer group.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +103,7 @@ public class GetConsumerProgressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

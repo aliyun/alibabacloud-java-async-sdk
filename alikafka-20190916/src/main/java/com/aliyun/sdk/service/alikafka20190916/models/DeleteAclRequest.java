@@ -145,7 +145,11 @@ public class DeleteAclRequest extends Request {
         } 
 
         /**
-         * AclOperationType.
+         * The type of operation allowed by the ACL. Valid values:
+         * <p>
+         * 
+         * *   **Write**
+         * *   **Read**
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -154,7 +158,11 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * AclResourceName.
+         * The name of the resource.
+         * <p>
+         * 
+         * *   The value can be the name of a topic or consumer group.
+         * *   You can use an asterisk (\*) to indicate the names of all topics or consumer groups.
          */
         public Builder aclResourceName(String aclResourceName) {
             this.putQueryParameter("AclResourceName", aclResourceName);
@@ -163,7 +171,11 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * AclResourcePatternType.
+         * The mode that is used to match resources. Valid values:
+         * <p>
+         * 
+         * *   **LITERAL:** full match
+         * *   **PREFIXED**: prefix match
          */
         public Builder aclResourcePatternType(String aclResourcePatternType) {
             this.putQueryParameter("AclResourcePatternType", aclResourcePatternType);
@@ -172,7 +184,11 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * AclResourceType.
+         * The type of the resource.
+         * <p>
+         * 
+         * *   **Topic**
+         * *   **Group**
          */
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
@@ -181,7 +197,7 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,7 +206,7 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +215,7 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * Username.
+         * The name of the user.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

@@ -18,7 +18,7 @@ public class CreateTopicRequest extends Request {
 
     @Query
     @NameInMap("Config")
-    private java.util.Map < String, ? > config;
+    private String config;
 
     @Query
     @NameInMap("InstanceId")
@@ -100,7 +100,7 @@ public class CreateTopicRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, ? > getConfig() {
+    public String getConfig() {
         return this.config;
     }
 
@@ -169,7 +169,7 @@ public class CreateTopicRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateTopicRequest, Builder> {
         private Boolean compactTopic; 
-        private java.util.Map < String, ? > config; 
+        private String config; 
         private String instanceId; 
         private Boolean localTopic; 
         private Long minInsyncReplicas; 
@@ -200,7 +200,13 @@ public class CreateTopicRequest extends Request {
         } 
 
         /**
-         * CompactTopic.
+         * The number of replicas for the topic.
+         * <p>
+         * 
+         * *   This parameter is available only when the **LocalTopic** parameter is set to **true**\<props="local_disk">, or the **edition of the instance** is **Open Source Edition (Local Disk)**.
+         * *   Valid values: 1 to 3.
+         * 
+         * > If you set this parameter to **1**, the risk of data loss increases. Exercise caution when you configure this parameter.
          */
         public Builder compactTopic(Boolean compactTopic) {
             this.putQueryParameter("CompactTopic", compactTopic);
@@ -209,17 +215,16 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * Config.
+         * The status code returned. The status code 200 indicates that the request is successful.
          */
-        public Builder config(java.util.Map < String, ? > config) {
-            String configShrink = shrink(config, "Config", "json");
-            this.putQueryParameter("Config", configShrink);
+        public Builder config(String config) {
+            this.putQueryParameter("Config", config);
             this.config = config;
             return this;
         }
 
         /**
-         * InstanceId.
+         * The region ID of the instance in which you want to create a topic.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -228,7 +233,14 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * LocalTopic.
+         * Additional configurations.
+         * <p>
+         * 
+         * *   The value of this parameter must be in JSON format.
+         * *   The key must be **replications**. The value specifies the number of replicas for the topic. The value must be an integer that ranges from 1 to 3.
+         * *   This parameter is available only when the **LocalTopic** parameter is set to **true**\<props="local_disk">, or the **edition of the instance** is **Open Source Edition (Local Disk)**.
+         * 
+         * > If you configure this parameter, the **ReplicationFactor** parameter does not take effect.
          */
         public Builder localTopic(Boolean localTopic) {
             this.putQueryParameter("LocalTopic", localTopic);
@@ -237,7 +249,12 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * MinInsyncReplicas.
+         * The value of tag N to add to the resource.
+         * <p>
+         * 
+         * *   Valid values of N: 1 to 20.
+         * *   This parameter can be left empty.
+         * *   A tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
          */
         public Builder minInsyncReplicas(Long minInsyncReplicas) {
             this.putQueryParameter("MinInsyncReplicas", minInsyncReplicas);
@@ -246,7 +263,12 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * PartitionNum.
+         * The minimum number of in-sync replicas (ISRs).
+         * <p>
+         * 
+         * *   This parameter is available only when the **LocalTopic** parameter is set to **true**\<props="local_disk">, or the **edition of the instance** is **Open Source Edition (Local Disk)**.
+         * *   The value of this parameter must be smaller than the value of the ReplicationFactor parameter.
+         * *   Valid values: 1 to 3.
          */
         public Builder partitionNum(String partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -255,7 +277,11 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether the topic uses local storage. Valid values:
+         * <p>
+         * 
+         * *   false: The topic uses cloud storage.
+         * *   true: The topic uses local storage.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +290,11 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The number of partitions in the topic.
+         * <p>
+         * 
+         * *   Valid values: 1 to 360.
+         * *   In the Message Queue for Apache Kafka console, you can view the number of partitions that the system recommends based on the specification of the instance. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -273,7 +303,12 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * ReplicationFactor.
+         * The key of tag N to add to the resource.
+         * <p>
+         * 
+         * *   Valid values of N: 1 to 20.
+         * *   If this parameter is left empty, the keys of all tags are matched.
+         * *   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
          */
         public Builder replicationFactor(Long replicationFactor) {
             this.putQueryParameter("ReplicationFactor", replicationFactor);
@@ -291,7 +326,11 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The log cleanup policy that is used for the topic. This parameter is available only when the LocalTopic parameter is set to true. Valid values:
+         * <p>
+         * 
+         * *   false: The topic uses the delete policy.
+         * *   true: The topic uses the compact policy.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

@@ -70,7 +70,7 @@ public class GetQuotaTipRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class GetQuotaTipRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -86,7 +86,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the call is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceList.
+         * The details of the instances.
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -102,7 +102,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the region.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -260,7 +260,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String current2OpenSourceVersion; 
 
             /**
-             * Current2OpenSourceVersion.
+             * The open source Apache Kafka version that corresponds to the instance.
              */
             public Builder current2OpenSourceVersion(String current2OpenSourceVersion) {
                 this.current2OpenSourceVersion = current2OpenSourceVersion;
@@ -307,6 +307,9 @@ public class GetInstanceListResponseBody extends TeaModel {
 
         @NameInMap("IoMax")
         private Integer ioMax;
+
+        @NameInMap("IoMaxSpec")
+        private String ioMaxSpec;
 
         @NameInMap("KmsKeyId")
         private String kmsKeyId;
@@ -386,6 +389,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.expiredTime = builder.expiredTime;
             this.instanceId = builder.instanceId;
             this.ioMax = builder.ioMax;
+            this.ioMaxSpec = builder.ioMaxSpec;
             this.kmsKeyId = builder.kmsKeyId;
             this.msgRetain = builder.msgRetain;
             this.name = builder.name;
@@ -493,6 +497,13 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         public Integer getIoMax() {
             return this.ioMax;
+        }
+
+        /**
+         * @return ioMaxSpec
+         */
+        public String getIoMaxSpec() {
+            return this.ioMaxSpec;
         }
 
         /**
@@ -661,6 +672,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Long expiredTime; 
             private String instanceId; 
             private Integer ioMax; 
+            private String ioMaxSpec; 
             private String kmsKeyId; 
             private Integer msgRetain; 
             private String name; 
@@ -685,7 +697,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AllConfig.
+             * The configurations of the instance.
              */
             public Builder allConfig(String allConfig) {
                 this.allConfig = allConfig;
@@ -693,7 +705,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -701,7 +713,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DeployType.
+             * The type of the network in which the instance is deployed. Valid values:
+             * <p>
+             * 
+             * *   **4**: the Internet and virtual private clouds (VPCs).
+             * *   **5**: VPCs.
              */
             public Builder deployType(Integer deployType) {
                 this.deployType = deployType;
@@ -709,7 +725,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * The size of the disk.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -717,7 +733,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * The type of the disk. Unit: GB. Valid values:
+             * <p>
+             * 
+             * *   **0**: ultra disk
+             * *   **1**: standard SSD
              */
             public Builder diskType(Integer diskType) {
                 this.diskType = diskType;
@@ -725,7 +745,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DomainEndpoint.
+             * The default endpoint of the instance in domain name mode. The default endpoint of an instance can be in domain name mode or IP address mode.
+             * <p>
+             * 
+             * *   Domain name mode: A default endpoint in this mode consists of a domain name of the instance and a port number. The format of a default endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   IP address mode: A default endpoint in this mode consists of the IP address of a broker and a port number. The format of a default endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder domainEndpoint(String domainEndpoint) {
                 this.domainEndpoint = domainEndpoint;
@@ -733,7 +757,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EipMax.
+             * The peak public traffic allowed for the instance.
              */
             public Builder eipMax(Integer eipMax) {
                 this.eipMax = eipMax;
@@ -741,7 +765,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * EndPoint.
+             * The default endpoint of the instance in IP address mode. The default endpoint of an instance can be in domain name mode or IP address mode.
+             * <p>
+             * 
+             * *   Domain name mode: A default endpoint in this mode consists of a domain name of the instance and a port number. The format of a default endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   IP address mode: A default endpoint in this mode consists of the IP address of a broker and a port number. The format of a default endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -749,7 +777,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The expiration time. Unit: milliseconds.
              */
             public Builder expiredTime(Long expiredTime) {
                 this.expiredTime = expiredTime;
@@ -757,7 +785,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -765,7 +793,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * IoMax.
+             * The peak traffic allowed for the instance.
              */
             public Builder ioMax(Integer ioMax) {
                 this.ioMax = ioMax;
@@ -773,7 +801,15 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyId.
+             * IoMaxSpec.
+             */
+            public Builder ioMaxSpec(String ioMaxSpec) {
+                this.ioMaxSpec = ioMaxSpec;
+                return this;
+            }
+
+            /**
+             * The ID of the key that is used for disk encryption in the region where the instance resides.
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -781,7 +817,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * MsgRetain.
+             * The retention period of messages on the instance. Unit: hours.
              */
             public Builder msgRetain(Integer msgRetain) {
                 this.msgRetain = msgRetain;
@@ -789,7 +825,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -797,7 +833,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * PaidType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **0**: the subscription billing method
+             * *   **1**: the pay-as-you-go billing method
              */
             public Builder paidType(Integer paidType) {
                 this.paidType = paidType;
@@ -805,7 +845,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -813,7 +853,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -821,7 +861,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * SaslDomainEndpoint.
+             * The Simple Authentication and Security Layer (SASL) endpoint of the instance in domain name mode. The SASL endpoint of an instance can be in domain name mode or IP address mode.
+             * <p>
+             * 
+             * *   Domain name mode: An SASL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SASL endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   IP address mode: An SASL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SASL endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder saslDomainEndpoint(String saslDomainEndpoint) {
                 this.saslDomainEndpoint = saslDomainEndpoint;
@@ -829,7 +873,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroup.
+             * The security group of the instance.
+             * <p>
+             * 
+             * *   If the instance is deployed in the Message Queue for Apache Kafka console or by calling the [StartInstance](~~157786~~) operation without configuring a security group, no value is returned for this parameter.
+             * *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation and a security group is configured, the return value is the configured security group.
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -837,7 +885,13 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceStatus.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   **0**: pending
+             * *   **1**: deploying
+             * *   **5**: running
+             * *   **15**: expired
              */
             public Builder serviceStatus(Integer serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -845,7 +899,12 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * The edition of the instance. Valid values:
+             * <p>
+             * 
+             * *   **professional**: Professional Edition (High Write)
+             * *   **professionalForHighRead**: Professional Edition (High Read)
+             * *   **normal**: Standard Edition
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -853,7 +912,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * SslDomainEndpoint.
+             * The SSL endpoint of the instance in domain name mode. The SSL endpoint of an instance can be in domain name mode or IP address mode.
+             * <p>
+             * 
+             * *   Domain name mode: An SSL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SSL endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   IP address mode: An SSL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SSL endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder sslDomainEndpoint(String sslDomainEndpoint) {
                 this.sslDomainEndpoint = sslDomainEndpoint;
@@ -861,7 +924,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * SslEndPoint.
+             * The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. The SSL endpoint of an instance can be in domain name mode or IP address mode.
+             * <p>
+             * 
+             * *   Domain name mode: An SSL endpoint in this mode consists of a domain name of the instance and a port number. The format of an SSL endpoint in this mode is `{Instance domain name}:{Port number}`.
+             * *   IP address mode: An SSL endpoint in this mode consists of the IP address of the broker and a port number. The format of an SSL endpoint in this mode is `{Broker IP address}:{Port number}`.
              */
             public Builder sslEndPoint(String sslEndPoint) {
                 this.sslEndPoint = sslEndPoint;
@@ -869,7 +936,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * StandardZoneId.
+             * The ID of the zone.
              */
             public Builder standardZoneId(String standardZoneId) {
                 this.standardZoneId = standardZoneId;
@@ -877,7 +944,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are attached to the instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -885,7 +952,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * TopicNumLimit.
+             * The maximum number of topics that can be created on the instance.
              */
             public Builder topicNumLimit(Integer topicNumLimit) {
                 this.topicNumLimit = topicNumLimit;
@@ -893,7 +960,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeServiceDetailInfo.
+             * The upgrade information about the instance.
              */
             public Builder upgradeServiceDetailInfo(UpgradeServiceDetailInfo upgradeServiceDetailInfo) {
                 this.upgradeServiceDetailInfo = upgradeServiceDetailInfo;
@@ -901,7 +968,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * UsedGroupCount.
+             * The number of used groups.
              */
             public Builder usedGroupCount(Integer usedGroupCount) {
                 this.usedGroupCount = usedGroupCount;
@@ -909,7 +976,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * UsedPartitionCount.
+             * The number of used partitions.
              */
             public Builder usedPartitionCount(Integer usedPartitionCount) {
                 this.usedPartitionCount = usedPartitionCount;
@@ -917,7 +984,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTopicCount.
+             * The number of used topics.
              */
             public Builder usedTopicCount(Integer usedTopicCount) {
                 this.usedTopicCount = usedTopicCount;
@@ -925,7 +992,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -933,7 +1000,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -941,7 +1008,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

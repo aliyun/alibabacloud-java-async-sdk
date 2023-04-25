@@ -99,7 +99,7 @@ public class ModifyTopicRemarkRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,7 +108,7 @@ public class ModifyTopicRemarkRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,7 +117,7 @@ public class ModifyTopicRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The description of the topic.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -126,7 +126,7 @@ public class ModifyTopicRemarkRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The name of the topic.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

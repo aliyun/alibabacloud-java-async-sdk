@@ -85,7 +85,7 @@ public class UpgradeInstanceVersionRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +94,7 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +103,13 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * TargetVersion.
+         * The major version to be upgraded to. Valid values:
+         * <p>
+         * 
+         * *   **0.10.2**
+         * *   **2.2.0**
+         * 
+         * If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.
          */
         public Builder targetVersion(String targetVersion) {
             this.putQueryParameter("TargetVersion", targetVersion);

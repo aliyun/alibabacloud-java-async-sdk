@@ -86,7 +86,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional message. This message is typically used to describe API call failures for troubleshooting.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaData.
+         * The quota.
          */
         public Builder quotaData(QuotaData quotaData) {
             this.quotaData = quotaData;
@@ -110,7 +110,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -147,8 +147,8 @@ public class GetQuotaTipResponseBody extends TeaModel {
         @NameInMap("PartitionNumOfBuy")
         private Integer partitionNumOfBuy;
 
-        @NameInMap("PartitionQuata")
-        private Integer partitionQuata;
+        @NameInMap("PartitionQuota")
+        private Integer partitionQuota;
 
         @NameInMap("PartitionUsed")
         private Integer partitionUsed;
@@ -171,7 +171,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             this.isPartitionBuy = builder.isPartitionBuy;
             this.partitionLeft = builder.partitionLeft;
             this.partitionNumOfBuy = builder.partitionNumOfBuy;
-            this.partitionQuata = builder.partitionQuata;
+            this.partitionQuota = builder.partitionQuota;
             this.partitionUsed = builder.partitionUsed;
             this.topicLeft = builder.topicLeft;
             this.topicNumOfBuy = builder.topicNumOfBuy;
@@ -223,10 +223,10 @@ public class GetQuotaTipResponseBody extends TeaModel {
         }
 
         /**
-         * @return partitionQuata
+         * @return partitionQuota
          */
-        public Integer getPartitionQuata() {
-            return this.partitionQuata;
+        public Integer getPartitionQuota() {
+            return this.partitionQuota;
         }
 
         /**
@@ -270,7 +270,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             private Integer isPartitionBuy; 
             private Integer partitionLeft; 
             private Integer partitionNumOfBuy; 
-            private Integer partitionQuata; 
+            private Integer partitionQuota; 
             private Integer partitionUsed; 
             private Integer topicLeft; 
             private Integer topicNumOfBuy; 
@@ -278,7 +278,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             private Integer topicUsed; 
 
             /**
-             * GroupLeft.
+             * The number of available groups.
              */
             public Builder groupLeft(Integer groupLeft) {
                 this.groupLeft = groupLeft;
@@ -286,7 +286,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * GroupUsed.
+             * The number of used groups.
              */
             public Builder groupUsed(Integer groupUsed) {
                 this.groupUsed = groupUsed;
@@ -294,7 +294,11 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * IsPartitionBuy.
+             * The method that you use to purchase partitions. Valid values:
+             * <p>
+             * 
+             * *   0: indicates that the instance is purchased based on topics.
+             * *   1: indicates that the instance is purchased based on partitions.
              */
             public Builder isPartitionBuy(Integer isPartitionBuy) {
                 this.isPartitionBuy = isPartitionBuy;
@@ -302,7 +306,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionLeft.
+             * The number of available partitions.
              */
             public Builder partitionLeft(Integer partitionLeft) {
                 this.partitionLeft = partitionLeft;
@@ -310,7 +314,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionNumOfBuy.
+             * The number of purchased partitions.
              */
             public Builder partitionNumOfBuy(Integer partitionNumOfBuy) {
                 this.partitionNumOfBuy = partitionNumOfBuy;
@@ -318,15 +322,15 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionQuata.
+             * The quota of partitions.
              */
-            public Builder partitionQuata(Integer partitionQuata) {
-                this.partitionQuata = partitionQuata;
+            public Builder partitionQuota(Integer partitionQuota) {
+                this.partitionQuota = partitionQuota;
                 return this;
             }
 
             /**
-             * PartitionUsed.
+             * The number of used partitions.
              */
             public Builder partitionUsed(Integer partitionUsed) {
                 this.partitionUsed = partitionUsed;
@@ -334,7 +338,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * TopicLeft.
+             * The number of available topics.
              */
             public Builder topicLeft(Integer topicLeft) {
                 this.topicLeft = topicLeft;
@@ -342,7 +346,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * TopicNumOfBuy.
+             * The number of purchased topics.
              */
             public Builder topicNumOfBuy(Integer topicNumOfBuy) {
                 this.topicNumOfBuy = topicNumOfBuy;
@@ -350,7 +354,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * TopicQuota.
+             * The quota of topics.
              */
             public Builder topicQuota(Integer topicQuota) {
                 this.topicQuota = topicQuota;
@@ -358,7 +362,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
             }
 
             /**
-             * TopicUsed.
+             * The number of used topics.
              */
             public Builder topicUsed(Integer topicUsed) {
                 this.topicUsed = topicUsed;

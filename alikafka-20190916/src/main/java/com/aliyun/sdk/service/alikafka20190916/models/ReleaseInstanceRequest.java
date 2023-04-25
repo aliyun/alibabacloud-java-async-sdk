@@ -84,7 +84,7 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * ForceDeleteInstance.
+         * The returned message.
          */
         public Builder forceDeleteInstance(Boolean forceDeleteInstance) {
             this.putQueryParameter("ForceDeleteInstance", forceDeleteInstance);
@@ -93,7 +93,11 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * Specifies whether to immediately release the physical resources of the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**: The physical resources of the instance are immediately released.
+         * *   **false**: The physical resources of the instance are retained for a period of time before they are released.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +106,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

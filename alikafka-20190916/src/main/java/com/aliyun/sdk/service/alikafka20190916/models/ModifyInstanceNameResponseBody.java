@@ -74,7 +74,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The returned message.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates whether the request is successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Changes the name of a Message Queue for Apache Kafka instance.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -183,7 +183,13 @@ public class UpgradePrePayOrderRequest extends Request {
         } 
 
         /**
-         * DiskSize.
+         * The number of topics. We recommend that you do not configure this parameter.
+         * <p>
+         * 
+         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
+         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
+         * *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
+         * *   For more information about the valid values, see [Billing overview](~~84737~~).
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -192,7 +198,12 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * EipMax.
+         * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+         * <p>
+         * 
+         * *   The maximum traffic volume that you specify must be greater than or equal to the current maximum traffic volume of the instance.
+         * *   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.
+         * *   For more information about the valid values, see [Billing overview](~~84737~~).
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -201,7 +212,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * EipModel.
+         * The ID of the instance.
          */
         public Builder eipModel(Boolean eipModel) {
             this.putQueryParameter("EipModel", eipModel);
@@ -210,7 +221,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The region ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -219,7 +230,14 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * IoMax.
+         * The edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **normal**: Standard Edition (High Write)
+         * *   **professional**: Professional Edition (High Write)
+         * *   **professionalForHighRead**: Professional Edition (High Read)
+         * 
+         * You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing overview](~~84737~~).
          */
         public Builder ioMax(Integer ioMax) {
             this.putQueryParameter("IoMax", ioMax);
@@ -228,7 +246,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * IoMaxSpec.
+         * The ID of the request.
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -237,7 +255,12 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * PartitionNum.
+         * The number of partitions. We recommend that you configure this parameter.
+         * <p>
+         * 
+         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
+         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
+         * *   For more information about the valid values, see [Billing overview](~~84737~~).
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -246,7 +269,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -255,7 +278,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * SpecType.
+         * The error message returned.
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -264,7 +287,17 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * TopicQuota.
+         * The Internet traffic for the instance.
+         * <p>
+         * 
+         * *   The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.
+         * *   For more information about the valid values, see [Billing overview](~~84737~~).
+         * 
+         * > 
+         * 
+         * *   If the **EipModel** parameter is set to **true**, set the **EipMax** parameter to a value that is greater than 0.
+         * 
+         * *   If the **EipModel** parameter is set to **false**, set the **EipMax** parameter to **0**.
          */
         public Builder topicQuota(Integer topicQuota) {
             this.putQueryParameter("TopicQuota", topicQuota);

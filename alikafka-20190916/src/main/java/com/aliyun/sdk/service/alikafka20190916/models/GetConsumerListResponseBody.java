@@ -86,7 +86,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The name of the consumer group.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * ConsumerList.
+         * The returned message.
          */
         public Builder consumerList(ConsumerList consumerList) {
             this.consumerList = consumerList;
@@ -102,7 +102,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The key of the tag.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The information about the consumer groups.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -234,6 +234,9 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     }
     public static class ConsumerVO extends TeaModel {
+        @NameInMap("AutomaticallyCreatedGroup")
+        private Boolean automaticallyCreatedGroup;
+
         @NameInMap("ConsumerId")
         private String consumerId;
 
@@ -250,6 +253,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         private Tags tags;
 
         private ConsumerVO(Builder builder) {
+            this.automaticallyCreatedGroup = builder.automaticallyCreatedGroup;
             this.consumerId = builder.consumerId;
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
@@ -263,6 +267,13 @@ public class GetConsumerListResponseBody extends TeaModel {
 
         public static ConsumerVO create() {
             return builder().build();
+        }
+
+        /**
+         * @return automaticallyCreatedGroup
+         */
+        public Boolean getAutomaticallyCreatedGroup() {
+            return this.automaticallyCreatedGroup;
         }
 
         /**
@@ -301,6 +312,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean automaticallyCreatedGroup; 
             private String consumerId; 
             private String instanceId; 
             private String regionId; 
@@ -308,7 +320,15 @@ public class GetConsumerListResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * ConsumerId.
+             * 自动创建的Group
+             */
+            public Builder automaticallyCreatedGroup(Boolean automaticallyCreatedGroup) {
+                this.automaticallyCreatedGroup = automaticallyCreatedGroup;
+                return this;
+            }
+
+            /**
+             * The ID of the instance to which the consumer group belongs.
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -316,7 +336,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The value of the tag.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -324,7 +344,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The description of the consumer group.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -332,7 +352,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The ID of the request.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -340,7 +360,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

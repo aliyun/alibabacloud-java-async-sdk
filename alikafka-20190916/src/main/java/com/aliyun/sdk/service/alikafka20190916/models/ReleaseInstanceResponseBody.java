@@ -74,7 +74,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The ID of the request.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Indicates whether the request is successful.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Releases a pay-as-you-go Message Queue for Apache Kafka instance.
          */
         public Builder success(Boolean success) {
             this.success = success;

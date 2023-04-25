@@ -99,7 +99,7 @@ public class DeleteSaslUserRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The name of the user.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,7 +108,7 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,7 +117,7 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * Type.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -126,7 +126,13 @@ public class DeleteSaslUserRequest extends Request {
         }
 
         /**
-         * Username.
+         * The SASL mechanism. Valid values:
+         * <p>
+         * 
+         * *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.
+         * *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
+         * 
+         * Default value: **plain**.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

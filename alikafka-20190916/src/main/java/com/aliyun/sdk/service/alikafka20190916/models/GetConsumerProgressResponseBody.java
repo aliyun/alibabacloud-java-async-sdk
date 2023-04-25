@@ -86,7 +86,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The returned message.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * ConsumerProgress.
+         * The time when the last message consumed by the consumer group was generated.
          */
         public Builder consumerProgress(ConsumerProgress consumerProgress) {
             this.consumerProgress = consumerProgress;
@@ -102,7 +102,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates whether the request is successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The consumption status of the consumer group.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * BrokerOffset.
+             * The consumer offset in the partition of the topic.
              */
             public Builder brokerOffset(Long brokerOffset) {
                 this.brokerOffset = brokerOffset;
@@ -202,7 +202,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerOffset.
+             * The time when the last consumed message in the partition was generated.
              */
             public Builder consumerOffset(Long consumerOffset) {
                 this.consumerOffset = consumerOffset;
@@ -210,7 +210,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimestamp.
+             * Queries the consumption status of a specified consumer group.
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -218,7 +218,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Partition.
+             * The latest offset in the partition of the topic.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -336,7 +336,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * LastTimestamp.
+             * The name of the topic.
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -344,7 +344,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * OffsetList.
+             * The ID of the partition.
              */
             public Builder offsetList(TopicListOffsetList offsetList) {
                 this.offsetList = offsetList;
@@ -352,7 +352,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The information about offsets in the topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -360,7 +360,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDiff.
+             * The time when the last consumed message in the topic was generated.
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;
@@ -466,7 +466,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             private Long totalDiff; 
 
             /**
-             * LastTimestamp.
+             * The number of messages that were not consumed in all topics. This is also known as the number of accumulated messages in all topics.
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -474,7 +474,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TopicList.
+             * The number of messages that were not consumed in the topic. This is also known as the number of accumulated messages in the topic.
              */
             public Builder topicList(ConsumerProgressTopicList topicList) {
                 this.topicList = topicList;
@@ -482,7 +482,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDiff.
+             * The consumption progress of each topic to which the consumer group is subscribed.
              */
             public Builder totalDiff(Long totalDiff) {
                 this.totalDiff = totalDiff;

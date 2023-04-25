@@ -74,7 +74,7 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * 261860
          */
         public Builder message(String message) {
             this.message = message;

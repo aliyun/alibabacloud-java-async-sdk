@@ -74,7 +74,7 @@ public class CreateTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The message returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class CreateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates whether the request is successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,9 @@ public class CreateTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * *   Each Alibaba Cloud account can call this operation up to once per second.
+         * <p>
+         * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
          */
         public Builder success(Boolean success) {
             this.success = success;

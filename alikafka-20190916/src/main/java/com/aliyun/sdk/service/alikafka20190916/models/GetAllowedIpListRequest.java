@@ -70,7 +70,7 @@ public class GetAllowedIpListRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class GetAllowedIpListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

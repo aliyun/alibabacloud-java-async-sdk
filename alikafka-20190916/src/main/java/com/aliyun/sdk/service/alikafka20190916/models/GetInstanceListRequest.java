@@ -111,7 +111,7 @@ public class GetInstanceListRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The IDs of instances.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,7 +120,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the order. You can obtain the order ID on the [Orders](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\&pageSize=20\&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa) page in Alibaba Cloud User Center.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -129,7 +129,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +138,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. You can obtain this ID on the Resource Group page in the Resource Management console.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -147,7 +147,7 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -201,7 +201,11 @@ public class GetInstanceListRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag that is attached to the resource.
+             * <p>
+             * 
+             * *   If this parameter is left empty, all tag keys are matched.
+             * *   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder key(String key) {
                 this.key = key;
@@ -209,7 +213,11 @@ public class GetInstanceListRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag that is attached to the resource.
+             * <p>
+             * 
+             * *   If the Key parameter is left empty, this parameter must be left empty. If this parameter is left empty, all tag values are matched.
+             * *   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder value(String value) {
                 this.value = value;

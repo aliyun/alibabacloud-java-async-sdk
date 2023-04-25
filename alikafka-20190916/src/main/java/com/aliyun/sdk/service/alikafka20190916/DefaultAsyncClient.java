@@ -109,6 +109,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+      * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
+      * *   For more information about the valid values, see [Billing](~~84737~~).
+      *
+     */
     @Override
     public CompletableFuture<CreatePrePayOrderResponse> createPrePayOrder(CreatePrePayOrderRequest request) {
         try {
@@ -137,6 +143,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The description of the topic.
+      * *   The description can contain only letters, digits, hyphens (-), and underscores (\\_).
+      * *   The description must be 3 to 64 characters in length.
+      *
+     */
     @Override
     public CompletableFuture<CreateTopicResponse> createTopic(CreateTopicRequest request) {
         try {
@@ -417,6 +429,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The region ID of the instance.
+      *
+     */
     @Override
     public CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request) {
         try {
@@ -488,6 +504,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<UpdateConsumerOffsetResponse> updateConsumerOffset(UpdateConsumerOffsetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateConsumerOffset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateConsumerOffsetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateConsumerOffsetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * The region ID of the instance.
+      *
+     */
+    @Override
     public CompletableFuture<UpdateInstanceConfigResponse> updateInstanceConfig(UpdateInstanceConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -501,6 +535,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## **Permissions**
+      * A RAM user must be granted the required permissions before the RAM user call the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
+      * |API|Action|Resource|
+      * |---|---|---|
+      * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+      * ## **QPS limits**
+      * You can send a maximum of two queries per second (QPS).
+      *
+     */
     @Override
     public CompletableFuture<UpgradeInstanceVersionResponse> upgradeInstanceVersion(UpgradeInstanceVersionRequest request) {
         try {
@@ -515,6 +559,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
+      *
+     */
     @Override
     public CompletableFuture<UpgradePostPayOrderResponse> upgradePostPayOrder(UpgradePostPayOrderRequest request) {
         try {
@@ -529,6 +577,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The size of the disk.
+      * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
+      * *   For more information about the valid values, see [Billing overview](~~84737~~).
+      *
+     */
     @Override
     public CompletableFuture<UpgradePrePayOrderResponse> upgradePrePayOrder(UpgradePrePayOrderRequest request) {
         try {

@@ -85,7 +85,7 @@ public class UpdateInstanceConfigRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -94,7 +94,7 @@ public class UpdateInstanceConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +103,7 @@ public class UpdateInstanceConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The message returned.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

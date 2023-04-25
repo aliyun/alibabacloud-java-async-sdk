@@ -145,7 +145,13 @@ public class CreateAclRequest extends Request {
         } 
 
         /**
-         * AclOperationType.
+         * The type of operation allowed by the ACL. Valid values:
+         * <p>
+         * 
+         * *   **Write**: data writes.
+         * *   **Read**: data reads.
+         * *   **Describe**: reads of transaction IDs.****
+         * *   **IdempotentWrite**: idempotent data writes to clusters.
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -154,7 +160,11 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * AclResourceName.
+         * The name or ID of the resource.
+         * <p>
+         * 
+         * *   The value can be the name of a topic, consumer group, or cluster, or the ID of a transaction.
+         * *   You can use an asterisk (\*) to represent the names or IDs of all relevant resources.
          */
         public Builder aclResourceName(String aclResourceName) {
             this.putQueryParameter("AclResourceName", aclResourceName);
@@ -163,7 +173,11 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * AclResourcePatternType.
+         * The mode that is used to match resources. Valid values:
+         * <p>
+         * 
+         * *   **LITERAL**: exact match
+         * *   **PREFIXED**: prefix match
          */
         public Builder aclResourcePatternType(String aclResourcePatternType) {
             this.putQueryParameter("AclResourcePatternType", aclResourcePatternType);
@@ -172,7 +186,13 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * AclResourceType.
+         * The resource type. Valid values:
+         * <p>
+         * 
+         * *   **Topic**: specifies topics.
+         * *   **Group**: specifies consumer groups.
+         * *   **Cluster**: specifies instances.
+         * *   **TransactionalId**: specifies transactions.
          */
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
@@ -181,7 +201,7 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,7 +210,7 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +219,10 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * Username.
+         * The username.
+         * <p>
+         * 
+         * You can use an asterisk (\*) to represent all usernames.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

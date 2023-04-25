@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpgradeInstanceVersionResponseBody} extends {@link TeaModel}
+ * {@link UpdateConsumerOffsetResponseBody} extends {@link TeaModel}
  *
- * <p>UpgradeInstanceVersionResponseBody</p>
+ * <p>UpdateConsumerOffsetResponseBody</p>
  */
-public class UpgradeInstanceVersionResponseBody extends TeaModel {
+public class UpdateConsumerOffsetResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
@@ -24,7 +24,7 @@ public class UpgradeInstanceVersionResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private UpgradeInstanceVersionResponseBody(Builder builder) {
+    private UpdateConsumerOffsetResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -35,7 +35,7 @@ public class UpgradeInstanceVersionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpgradeInstanceVersionResponseBody create() {
+    public static UpdateConsumerOffsetResponseBody create() {
         return builder().build();
     }
 
@@ -74,7 +74,7 @@ public class UpgradeInstanceVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned. The HTTP status code 200 indicates that the request is successful.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class UpgradeInstanceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class UpgradeInstanceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,15 +98,15 @@ public class UpgradeInstanceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public UpgradeInstanceVersionResponseBody build() {
-            return new UpgradeInstanceVersionResponseBody(this);
+        public UpdateConsumerOffsetResponseBody build() {
+            return new UpdateConsumerOffsetResponseBody(this);
         } 
 
     } 
