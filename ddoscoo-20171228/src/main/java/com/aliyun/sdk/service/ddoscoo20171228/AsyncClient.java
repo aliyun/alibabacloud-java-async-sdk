@@ -64,15 +64,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDomainAccessModeResponse> describeDomainAccessMode(DescribeDomainAccessModeRequest request);
 
+    CompletableFuture<DescribeDomainAttackEventListResponse> describeDomainAttackEventList(DescribeDomainAttackEventListRequest request);
+
     CompletableFuture<DescribeDomainAttackEventsResponse> describeDomainAttackEvents(DescribeDomainAttackEventsRequest request);
 
     CompletableFuture<DescribeDomainAttackMaxQpsResponse> describeDomainAttackMaxQps(DescribeDomainAttackMaxQpsRequest request);
 
+    CompletableFuture<DescribeDomainOverviewResponse> describeDomainOverview(DescribeDomainOverviewRequest request);
+
     CompletableFuture<DescribeDomainQpsResponse> describeDomainQps(DescribeDomainQpsRequest request);
+
+    CompletableFuture<DescribeDomainQpsListResponse> describeDomainQpsList(DescribeDomainQpsListRequest request);
 
     CompletableFuture<DescribeDomainQpsWithCacheResponse> describeDomainQpsWithCache(DescribeDomainQpsWithCacheRequest request);
 
     CompletableFuture<DescribeDomainSlsStatusResponse> describeDomainSlsStatus(DescribeDomainSlsStatusRequest request);
+
+    CompletableFuture<DescribeDomainStatusCodeListResponse> describeDomainStatusCodeList(DescribeDomainStatusCodeListRequest request);
 
     CompletableFuture<DescribeDomainsResponse> describeDomains(DescribeDomainsRequest request);
 
