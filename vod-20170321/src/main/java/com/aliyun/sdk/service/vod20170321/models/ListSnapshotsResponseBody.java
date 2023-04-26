@@ -50,7 +50,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The snapshot data of the media.
+         * The URL of the snapshot.
          */
         public Builder mediaSnapshot(MediaSnapshot mediaSnapshot) {
             this.mediaSnapshot = mediaSnapshot;
@@ -58,7 +58,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The snapshot data of the media.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The index of the snapshot.
+             * Index.
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -118,7 +118,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the snapshot.
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -248,7 +248,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The time when the snapshot job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The ID of the snapshot job.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -256,7 +256,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot job.
+             * Queries the snapshots that are captured from the specified media.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -264,7 +264,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The rule for generating snapshot URLs.
+             * The ID of the request.
              */
             public Builder regular(String regular) {
                 this.regular = regular;
@@ -272,7 +272,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot data.
+             * Snapshots.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;

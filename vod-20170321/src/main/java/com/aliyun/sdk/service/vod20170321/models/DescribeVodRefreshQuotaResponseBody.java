@@ -134,7 +134,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         private String blockRemain; 
 
         /**
-         * The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.
+         * The remaining number of directories of files that can be refreshed on the current day.
          */
         public Builder blockQuota(String blockQuota) {
             this.blockQuota = blockQuota;
@@ -142,7 +142,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of directories of files that can be refreshed each day.
+         * Queries the maximum number and remaining number of requests to refresh or prefetch files on the current day. You can prefetch files based on URLs and refresh files based on URLs or directories.
          */
         public Builder dirQuota(String dirQuota) {
             this.dirQuota = dirQuota;
@@ -150,7 +150,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of directories of files that can be refreshed on the current day.
+         * The ID of the request.
          */
         public Builder dirRemain(String dirRemain) {
             this.dirRemain = dirRemain;
@@ -158,7 +158,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of URLs of files that can be prefetched each day.
+         * PreloadQuota.
          */
         public Builder preloadQuota(String preloadQuota) {
             this.preloadQuota = preloadQuota;
@@ -166,7 +166,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of URLs of files that can be prefetched on the current day.
+         * The remaining number of OSS buckets that can be refreshed on the current day.
          */
         public Builder preloadRemain(String preloadRemain) {
             this.preloadRemain = preloadRemain;
@@ -174,7 +174,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The maximum number of directories of files that can be refreshed each day.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of URLs of files that can be refreshed each day.
+         * UrlQuota.
          */
         public Builder urlQuota(String urlQuota) {
             this.urlQuota = urlQuota;
@@ -190,7 +190,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of URLs of files that can be refreshed on the current day.
+         * The operation that you want to perform. Set the value to **DescribeVodRefreshQuota**.
          */
         public Builder urlRemain(String urlRemain) {
             this.urlRemain = urlRemain;
@@ -198,7 +198,7 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The remaining number of OSS buckets that can be refreshed on the current day.
+         * The maximum number of URLs of files that can be prefetched each day.
          */
         public Builder blockRemain(String blockRemain) {
             this.blockRemain = blockRemain;

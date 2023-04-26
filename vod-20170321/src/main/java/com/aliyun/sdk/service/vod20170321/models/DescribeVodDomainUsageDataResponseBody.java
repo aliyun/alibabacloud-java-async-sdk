@@ -162,7 +162,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The start of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -174,7 +174,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
          * <p>
          * 
          * *   **static**: static content
-         * *   **dynamic**: dynamic content
+         * *   **dynamic**: dynamic requests
          * *   **all**: all content
          */
         public Builder type(String type) {
@@ -235,7 +235,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

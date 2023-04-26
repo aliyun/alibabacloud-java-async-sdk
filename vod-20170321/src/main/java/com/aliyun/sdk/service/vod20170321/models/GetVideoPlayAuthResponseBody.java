@@ -62,7 +62,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         private VideoMeta videoMeta; 
 
         /**
-         * The credential for video or audio playback.
+         * The ID of the request.
          */
         public Builder playAuth(String playAuth) {
             this.playAuth = playAuth;
@@ -70,7 +70,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **GetVideoPlayAuth**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of the audio or video file.
+         * Queries the credential required for media playback.
          */
         public Builder videoMeta(VideoMeta videoMeta) {
             this.videoMeta = videoMeta;
@@ -166,7 +166,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The thumbnail URL of the audio or video file.
+             * CoverURL.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -174,7 +174,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the audio or video file. Unit: seconds.
+             * Duration.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -182,7 +182,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -190,7 +190,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the audio or video file.
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -198,7 +198,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the audio or video file.
+             * VideoId.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

@@ -50,7 +50,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         private UserPlayStatisTotals userPlayStatisTotals; 
 
         /**
-         * The ID of the request.
+         * The total playback duration. Unit: milliseconds.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private String iOS; 
 
             /**
-             * The total number of unique visitors who use ApsaraVideo Player SDK for Android.
+             * Android.
              */
             public Builder android(String android) {
                 this.android = android;
@@ -142,7 +142,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unique visitors who use ApsaraVideo Player SDK for Flash.
+             * The distribution of the playback duration.
              */
             public Builder flash(String flash) {
                 this.flash = flash;
@@ -150,7 +150,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unique visitors who use ApsaraVideo Player SDK for HTML5.
+             * HTML5.
              */
             public Builder HTML5(String HTML5) {
                 this.HTML5 = HTML5;
@@ -158,7 +158,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unique visitors who use ApsaraVideo Player SDK for iOS.
+             * Queries the statistics on total playback each day in a specified time range.
              */
             public Builder iOS(String iOS) {
                 this.iOS = iOS;
@@ -235,7 +235,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private String iOS; 
 
             /**
-             * The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Android.
+             * The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for iOS.
              */
             public Builder android(String android) {
                 this.android = android;
@@ -259,7 +259,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for iOS.
+             * The total number of unique visitors who use ApsaraVideo Player SDK for Android.
              */
             public Builder iOS(String iOS) {
                 this.iOS = iOS;
@@ -348,7 +348,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private Vv vv; 
 
             /**
-             * The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
+             * The total number of unique visitors who use ApsaraVideo Player SDK for HTML5.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -356,7 +356,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total playback duration. Unit: milliseconds.
+             * The operation that you want to perform. Set the value to **DescribePlayUserTotal**.
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -364,7 +364,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The distribution of the playback duration.
+             * The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
              */
             public Builder playRange(String playRange) {
                 this.playRange = playRange;
@@ -372,7 +372,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unique visitors.
+             * The ID of the request.
              */
             public Builder uv(Uv uv) {
                 this.uv = uv;
@@ -380,7 +380,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of video views.
+             * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
              */
             public Builder vv(Vv vv) {
                 this.vv = vv;

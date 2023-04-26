@@ -84,10 +84,7 @@ public class UpdateWatermarkRequest extends Request {
         } 
 
         /**
-         * The name of the watermark. Only letters and digits are supported.
-         * <p>
-         * *   The name can be up to 128 bytes in length.
-         * *   The value must be encoded in UTF-8.
+         * The ID of the watermark.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -96,9 +93,7 @@ public class UpdateWatermarkRequest extends Request {
         }
 
         /**
-         * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
-         * <p>
-         * > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+         * The name of the watermark.
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);
@@ -107,7 +102,10 @@ public class UpdateWatermarkRequest extends Request {
         }
 
         /**
-         * The ID of the watermark.
+         * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
+         * <p>
+         * 
+         * > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
          */
         public Builder watermarkId(String watermarkId) {
             this.putQueryParameter("WatermarkId", watermarkId);

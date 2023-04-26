@@ -55,10 +55,19 @@ public class UpdateVideoInfosRequest extends Request {
         } 
 
         /**
-         * The new information about audios or videos. You can modify the information about up to 20 audios or videos at a time. Separate multiple audios or videos with commas (,). When you modify the information exceed 20 audios or videos at a time, the update will fail with an error code **CountExceededMax**.
+         * ## UpdateContent
          * <p>
          * 
-         * The value is a JSON string. For more information, see the **UpdateContent** section of this topic.
+         * >  You must convert the UpdateContent[] parameter to a string before you pass it in.
+         * 
+         * | Parameter | Type | Required | Description |
+         * | --------- | ---- | -------- | ----------- |
+         * | VideoId | String | Yes | The ID of the video. |
+         * | Title | String | No | The title of the video. |
+         * | Description | String | No | The description of the video. |
+         * | Tags | String | No | The tag of the video. |
+         * | CoverURL | String | No | The URL of the video thumbnail. |
+         * | CateId | Long | No | The ID of the category. |
          */
         public Builder updateContent(String updateContent) {
             this.putQueryParameter("UpdateContent", updateContent);

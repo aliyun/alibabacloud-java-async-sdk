@@ -62,7 +62,7 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of canceled jobs.
+         * CanceledJobs.
          */
         public Builder canceledJobs(java.util.List < String > canceledJobs) {
             this.canceledJobs = canceledJobs;
@@ -70,10 +70,7 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The job IDs or upload URLs that do not exist.
-         * <p>
-         * 
-         * If you set the request parameter JobIds, the job IDs that do not exist are returned. If you set the request parameter UploadUrls, the upload URLs that do not exist are returned.
+         * NonExists.
          */
         public Builder nonExists(java.util.List < String > nonExists) {
             this.nonExists = nonExists;
@@ -81,7 +78,7 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

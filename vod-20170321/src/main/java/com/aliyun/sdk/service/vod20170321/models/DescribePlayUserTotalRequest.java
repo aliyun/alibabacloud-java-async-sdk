@@ -102,7 +102,7 @@ public class DescribePlayUserTotalRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The total number of unique visitors who use ApsaraVideo Player SDK for iOS.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

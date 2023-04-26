@@ -67,7 +67,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachAppPolicyToIdentityResponse> attachAppPolicyToIdentity(AttachAppPolicyToIdentityRequest request);
 
     /**
-      * > This operation is available only in the **China (Shanghai)** region.
+      * The ID of the request.
       *
      */
     CompletableFuture<BatchSetVodDomainConfigsResponse> batchSetVodDomainConfigs(BatchSetVodDomainConfigsRequest request);
@@ -79,15 +79,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchStartVodDomainResponse> batchStartVodDomain(BatchStartVodDomainRequest request);
 
     /**
-      * > *   This operation is available only in the **China (Shanghai)** region.
-      * > *   After you disable a domain name for CDN, the information about the domain name is retained. The system automatically reroutes all the requests that are destined for the domain name for CDN to the origin server.
+      * The operation that you want to perform. Set the value to **BatchStopVodDomain**.
       *
      */
     CompletableFuture<BatchStopVodDomainResponse> batchStopVodDomain(BatchStopVodDomainRequest request);
 
     /**
-      * *   You can cancel only a URL-based upload job in the **Pending** state. You can query the status of a URL-based upload job by calling the [GetURLUploadInfos](~~106830~~) operation.
-      * *   You cannot cancel an upload job that already starts.
+      * The upload URLs of source files. Separate multiple URLs with commas (,). You can specify a maximum of 10 URLs.
+      * > *   You must encode the URLs before you use the URLs.
+      * > *   You must set one of the JobIds and the UploadUrls parameters. If you set both the JobIds and UploadUrls parameters, only the value of the JobIds parameter takes effect.
       *
      */
     CompletableFuture<CancelUrlUploadJobsResponse> cancelUrlUploadJobs(CancelUrlUploadJobsRequest request);
@@ -158,7 +158,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAttachedMediaResponse> deleteAttachedMedia(DeleteAttachedMediaRequest request);
 
     /**
-      * > If a video category is deleted, its subcategories, including level 2 and level 3 categories, are also deleted. Exercise caution when you call this operation.
+      * The ID of the request.
       *
      */
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
@@ -177,7 +177,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
 
     /**
-      * > For more information, see [Overview](~~55627~~).
+      * The operation that you want to perform. Set the value to **DeleteMessageCallback**.
       *
      */
     CompletableFuture<DeleteMessageCallbackResponse> deleteMessageCallback(DeleteMessageCallbackRequest request);
@@ -189,9 +189,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMezzaninesResponse> deleteMezzanines(DeleteMezzaninesRequest request);
 
     /**
-      * * In a multipart upload, fragments may be generated if the upload fails. In most cases, the fragments are automatically deleted after seven days. You can call this operation to delete the generated fragments after the upload is successful or fails.
-      * * This operation does not delete the source file or transcoded file, but deletes only the fragments generated during the upload.
-      * * If you call the [DeleteVideo](~~52837~~) operation, the entire video file is deleted, including the generated fragments.
+      * The ID of the request.
       *
      */
     CompletableFuture<DeleteMultipartUploadResponse> deleteMultipartUpload(DeleteMultipartUploadRequest request);
@@ -199,17 +197,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteStreamResponse> deleteStream(DeleteStreamRequest request);
 
     /**
-      * *   You cannot remove the default transcoding template. You can remove it only after it is no longer specified as the default.
-      * *   For security purposes, you cannot add, modify, or remove transcoding templates in a transcoding template group that is locked in the ApsaraVideo VOD console. To manage such transcoding template groups, contact the ApsaraVideo VOD technical support.
-      * *   You can call the GetTranscodeTemplateGroup operation to query the configurations of a transcoding template group and check whether the transcoding template group is locked by using the response parameter Locked.
+      * Specifies whether to forcibly delete the entire transcoding template group. Valid values:
+      * *   **true**: deletes the entire transcoding template group and its transcoding templates.
+      * *   **false**: removes the specified transcoding templates from the transcoding template group. This is the default value.
       *
      */
     CompletableFuture<DeleteTranscodeTemplateGroupResponse> deleteTranscodeTemplateGroup(DeleteTranscodeTemplateGroupRequest request);
 
     /**
-      * *   This operation physically deletes videos. Deleted videos cannot be recovered. Exercise caution when you call this operation.
-      * *   You can call this operation to delete multiple videos at a time.
-      * *   When you delete a video, its source file, transcoded stream file, and thumbnail screenshot are also deleted. However, the Alibaba Cloud Content Delivery Network (CDN) cache is not refreshed simultaneously. You can use the refresh feature in the ApsaraVideo VOD console to clear garbage data on CDN nodes. For more information, see [Refresh and prefetch](~~86098~~).
+      * The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified. You can obtain a video ID in one of the following ways:
+      * *   If the video is uploaded by using the [ApsaraVideo VOD console](https://vod.console.aliyun.com), log on to the console and choose **Media Files** > **Audio/Video** to view the ID of the video.
+      * *   If the video is uploaded by calling the [CreateUploadVideo](~~55407~~) operation, the video ID is the VideoId value in the response.
+      * *   You can also call the [SearchMedia](~~86044~~) operation to obtain the video ID, which is the VideoId value in the response.
       *
      */
     CompletableFuture<DeleteVideoResponse> deleteVideo(DeleteVideoRequest request);
@@ -247,10 +246,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePlayUserAvgResponse> describePlayUserAvg(DescribePlayUserAvgRequest request);
 
     /**
-      * > *   This operation is available only in the **China (Shanghai)** region.
-      * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-      * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-      * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+      * The total number of unique visitors who use ApsaraVideo Player SDK for Flash.
       *
      */
     CompletableFuture<DescribePlayUserTotalResponse> describePlayUserTotal(DescribePlayUserTotalRequest request);
@@ -275,7 +271,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodCertificateListResponse> describeVodCertificateList(DescribeVodCertificateListRequest request);
 
     /**
-      * If you specify neither the StartTime parameter nor the EndTime parameter, the data in the last 24 hours is queried. Alternatively, you can specify both the StartTime and EndTime parameters to query data that is generated in the specified duration. You can query data for the last 90 days at most.
+      * The domain name for CDN.
       *
      */
     CompletableFuture<DescribeVodDomainBpsDataResponse> describeVodDomainBpsData(DescribeVodDomainBpsDataRequest request);
@@ -302,20 +298,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVodDomainSrcBpsDataResponse> describeVodDomainSrcBpsData(DescribeVodDomainSrcBpsDataRequest request);
 
-    /**
-      * * This operation is available only in the **China (Shanghai)** region.
-      * * ApsaraVideo VOD stores the origin traffic data for 90 days before the data is deleted.
-      * * If you do not set the `StartTime` or `EndTime` parameter, the request returns the data collected in the last 24 hours. If you set both the `StartTime` and `EndTime` parameters, the request returns the data collected within the specified time range.
-      * * You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
-      * ### Time granularity
-      * The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. The following table describes the time period within which historical data is available and the data delay.
-      * |Time granularity|Time range per query (days)|Historical data available (days)|Data delay|
-      * |---|---|---|---|
-      * |5 minutes|(0, 3\\]|93|15 minutes|
-      * |1 hour|(3, 31\\]|186|4 hours|
-      * |1 day|(31, 366\\]|366|04:00 on the next day|
-      *
-     */
     CompletableFuture<DescribeVodDomainSrcTrafficDataResponse> describeVodDomainSrcTrafficData(DescribeVodDomainSrcTrafficDataRequest request);
 
     /**
@@ -329,16 +311,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodDomainTrafficDataResponse> describeVodDomainTrafficData(DescribeVodDomainTrafficDataRequest request);
 
     /**
-      * > -   This operation is available only in the **China (Shanghai)** region.
-      * >-  You can specify a maximum of 100 accelerated domain names in a request. Separate multiple domain names with commas (,). If you do not specify an accelerated domain name, the data of all accelerated domain names within your Alibaba Cloud account is returned.
-      * >-  You can query data in the last year. The maximum time range that can be queried is three months. If you specify a time range of one to three days, the system returns data on an hourly basis. If you specify a time range of four days or more, the system returns data on a daily basis.
+      * > 
+      * *   This operation is available only in the **China (Shanghai)** region.
+      * *   You can specify up to 100 accelerated domain names in a request. Separate multiple domain names with commas (,). If you do not specify an accelerated domain name, the data of all accelerated domain names within your Alibaba Cloud account is returned.
+      * *   You can query data in the last year. The maximum time range that can be queried is three months. If you specify a time range of one to three days, the system returns data on an hourly basis. If you specify a time range of four days or more, the system returns data on a daily basis.
       *
      */
     CompletableFuture<DescribeVodDomainUsageDataResponse> describeVodDomainUsageData(DescribeVodDomainUsageDataRequest request);
 
     /**
-      * > *   This operation is available only in the **China (Shanghai)** region.
-      * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
+      * The maximum number of URLs of files that can be refreshed each day.
       *
      */
     CompletableFuture<DescribeVodRefreshQuotaResponse> describeVodRefreshQuota(DescribeVodRefreshQuotaRequest request);
@@ -470,7 +452,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMediaRefreshJobsResponse> getMediaRefreshJobs(GetMediaRefreshJobsRequest request);
 
     /**
-      * > For more information, see [Overview](~~55627~~).
+      * The type of the callback event.
       *
      */
     CompletableFuture<GetMessageCallbackResponse> getMessageCallback(GetMessageCallbackRequest request);
@@ -563,14 +545,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVideoInfosResponse> getVideoInfos(GetVideoInfosRequest request);
 
     /**
-      * In a single request, you can obtain the information about a maximum of first **5,000** video records that meet the specified filter criteria, such as the video status and category. We recommend that you set the StartTime and EndTime parameters to narrow down the time range for queries and perform multiple queries. For more information about how to query the information about more videos or even all videos, see [SearchMedia](~~86044~~).
+      * You can call this operation to query information about media files based on the filter conditions that you specify, such as video status and category ID. Information about a maximum of **5,000** media files can be returned for each request. We recommend that you set the StartTime and EndTime parameters to specify a time range for each request. For more information about how to query information about more media files or even all media files, see [SearchMedia](~~86044~~).
       *
      */
     CompletableFuture<GetVideoListResponse> getVideoList(GetVideoListRequest request);
 
     /**
-      * *   You can call this operation to obtain a playback credential when you use ApsaraVideo Player SDK to play a media file based on PlayAuth. The credential is used to obtain the playback URL.
-      * *   You cannot obtain the playback URL of a video by using a credential that has expired. A new credential is required.
+      * The thumbnail URL of the audio or video file.
       *
      */
     CompletableFuture<GetVideoPlayAuthResponse> getVideoPlayAuth(GetVideoPlayAuthRequest request);
@@ -620,13 +601,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDynamicImageResponse> listDynamicImage(ListDynamicImageRequest request);
 
     /**
-      * You can query a maximum of 5,000 videos based on the specified filter condition.
+      * The ID of the video category.
       *
      */
     CompletableFuture<ListLiveRecordVideoResponse> listLiveRecordVideo(ListLiveRecordVideoRequest request);
 
     /**
-      * If multiple snapshots of a video exist, the data of the latest snapshot is returned.
+      * The type of snapshots that are returned. Valid values:
+      * *   **CoverSnapshot**: thumbnail snapshot
+      * *   **NormalSnapshot**: normal snapshot
+      * *   **SpriteSnapshot**: sprite snapshot
+      * *   **SpriteOriginSnapshot**: sprite source snapshot
+      * *   **WebVttSnapshot**: WebVTT snapshot
       *
      */
     CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request);
@@ -687,22 +673,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshVodObjectCachesResponse> refreshVodObjectCaches(RefreshVodObjectCachesRequest request);
 
     /**
-      * After you store an audio or video file in an Object Storage Service (OSS) bucket that is used for ApsaraVideo VOD, you can call the RegisterMedia operation to register the media file. After the media file is registered, you can use the media ID associated with the media file to submit transcoding jobs and snapshot jobs in ApsaraVideo VOD. For more information, see [SubmitTranscodeJobs](~~68570~~) and [SubmitSnapshotJob](~~72213~~).
-      * > *   You can register up to 10 OSS media files that have the same storage location at a time.
-      * > *   If you use the ApsaraVideo VOD console to upload a media file and do not specify a transcoding template group ID, ApsaraVideo VOD uses the default transcoding template group to transcode the media file. However, if you do not specify a transcoding template group ID when you call the RegisterMedia operation, ApsaraVideo VOD does not automatically transcode the media file after the media file is registered. If you specify a transcoding template group ID, ApsaraVideo VOD uses the specified transcoding template group to transcode the media file.
-      * > *   If the media file that you want to register is registered before, this operation returns only the unique media ID that is associated with the media file. No further processing is performed.
+      * The media files that are registered, including newly registered and repeatedly registered media files.
       *
      */
     CompletableFuture<RegisterMediaResponse> registerMedia(RegisterMediaRequest request);
 
+    CompletableFuture<RestoreMediaResponse> restoreMedia(RestoreMediaRequest request);
+
     CompletableFuture<SearchEditingProjectResponse> searchEditingProject(SearchEditingProjectRequest request);
 
     /**
-      * The preprocessing status. Valid values:
-      * *   **UnPreprocess**
-      * *   **Preprocessing**
-      * *   **PreprocessSucceed**
-      * *   **PreprocessFailed**
+      * The ID of the parent category.
       *
      */
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
@@ -732,8 +713,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetEditingProjectMaterialsResponse> setEditingProjectMaterials(SetEditingProjectMaterialsRequest request);
 
     /**
-      * ## Usage note
-      * ApsaraVideo VOD supports the HTTP and MNS callback methods. For more information, see [Event notification](~~55627~~).
+      * The ID of the application. If you do not set this parameter, the default value **app-1000000** is used.
       *
      */
     CompletableFuture<SetMessageCallbackResponse> setMessageCallback(SetMessageCallbackRequest request);
@@ -819,6 +799,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateImageInfosResponse> updateImageInfos(UpdateImageInfosRequest request);
 
+    CompletableFuture<UpdateMediaStorageClassResponse> updateMediaStorageClass(UpdateMediaStorageClassRequest request);
+
     /**
       * The ID of the transcoding template group.
       *
@@ -832,7 +814,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateVideoInfoResponse> updateVideoInfo(UpdateVideoInfoRequest request);
 
     /**
-      * The specific parameter of a video is updated only when a new value is passed in the parameter.
+      * The IDs of the videos that do not exist.
       *
      */
     CompletableFuture<UpdateVideoInfosResponse> updateVideoInfos(UpdateVideoInfosRequest request);
@@ -846,7 +828,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateVodTemplateResponse> updateVodTemplate(UpdateVodTemplateRequest request);
 
     /**
-      * You can modify only the name and configurations of a watermark.
+      * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
+      * > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
       *
      */
     CompletableFuture<UpdateWatermarkResponse> updateWatermark(UpdateWatermarkRequest request);

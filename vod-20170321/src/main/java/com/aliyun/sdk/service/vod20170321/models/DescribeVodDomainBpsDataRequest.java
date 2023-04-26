@@ -138,7 +138,7 @@ public class DescribeVodDomainBpsDataRequest extends Request {
         } 
 
         /**
-         * The domain name to be queried. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas (,).
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -147,7 +147,7 @@ public class DescribeVodDomainBpsDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The name of the Internet service provider (ISP). If you do not specify this parameter, the data of all ISPs is returned.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,12 +156,7 @@ public class DescribeVodDomainBpsDataRequest extends Request {
         }
 
         /**
-         * The query interval. Unit: seconds. Valid values: **300**, **3600**, and **86400**.
-         * <p>
-         * 
-         * *   If the time range to query is less than 3 days, valid values are **300**, **3600**, and **86400**. The default value is 300.
-         * *   If the time range to query is from 3 to less than 31 days, valid values are **3600** and **86400**. The default value is 3600.
-         * *   If the time range to query is from 31 to 90 days, the valid value is **86400**.
+         * The bandwidth in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -170,7 +165,7 @@ public class DescribeVodDomainBpsDataRequest extends Request {
         }
 
         /**
-         * The name of the Internet service provider (ISP). If you do not specify this parameter, the data of all ISPs is returned.
+         * The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -197,10 +192,7 @@ public class DescribeVodDomainBpsDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
-         * 
-         * > The minimum query interval is 5 minutes. If you do not specify this parameter, the data in the last 24 hours is queried.
+         * The operation that you want to perform. Set the value to **DescribeVodDomainBpsData**.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

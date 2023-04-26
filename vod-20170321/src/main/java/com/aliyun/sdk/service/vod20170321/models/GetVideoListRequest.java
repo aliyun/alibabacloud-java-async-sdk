@@ -152,7 +152,12 @@ public class GetVideoListRequest extends Request {
         } 
 
         /**
-         * The ID of the video category.
+         * The category ID. You can use one of the following methods to obtain the category ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID.
+         * *   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.
+         * *   Obtain the value of CateId from the response to the [GetCategories](~~56406~~) operation.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -161,7 +166,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The end of the time range for querying videos based on their creation time. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +184,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * Optional. The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +193,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The method for sorting the results. Valid values:
+         * The sorting method of the results. Valid values:
          * <p>
          * 
          * *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
@@ -201,7 +206,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range for querying videos based on their creation time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -210,16 +215,20 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The status of the video. By default, you can obtain videos in all states. Separate multiple states with commas (,). Valid values:
+         * The video status. You can specify multiple video statuses and separate them with commas (,). Valid values:
          * <p>
          * 
          * *   **Uploading**: The video is being uploaded.
-         * *   **UploadFail**: The video fails to be uploaded.
-         * *   **UploadSucc**: The video is uploaded.
+         * *   **UploadFail**: The video failed to be uploaded.
+         * *   **UploadSucc**: The video has been uploaded.
          * *   **Transcoding**: The video is being transcoded.
-         * *   **TranscodeFail**: The video fails to be transcoded.
+         * *   **TranscodeFail**: The video failed to be transcoded.
+         * *   **checking**: The video is being reviewed.
          * *   **Blocked**: The video is blocked.
-         * *   **Normal**: The video can be played.
+         * *   **Normal**: The video is normal.
+         * *   **ProduceFail**: The video failed to be produced.
+         * 
+         * For more information about each video status, see the "Status: the status of a video" section of the [Basic data types](~~52839#section-p7c-jgy-070~~) topic.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -228,7 +237,7 @@ public class GetVideoListRequest extends Request {
         }
 
         /**
-         * The Object Storage Service (OSS) bucket where the video file is stored.
+         * The storage address of the media file.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);

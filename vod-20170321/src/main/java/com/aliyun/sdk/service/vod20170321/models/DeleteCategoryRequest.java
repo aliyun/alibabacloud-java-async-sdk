@@ -55,7 +55,7 @@ public class DeleteCategoryRequest extends Request {
         } 
 
         /**
-         * The ID of the category.
+         * CateId.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);

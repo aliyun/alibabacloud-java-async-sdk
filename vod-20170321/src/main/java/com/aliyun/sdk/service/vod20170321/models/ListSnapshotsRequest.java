@@ -111,12 +111,7 @@ public class ListSnapshotsRequest extends Request {
         } 
 
         /**
-         * The validity period of the snapshot URL. Unit: seconds. Default value: **3600**. Minimum value: **3600**.
-         * <p>
-         * 
-         * *   This parameter only takes effect when [URL authentication](~~57007~~) is enabled.
-         * *   If the specified validity period is less than **3600** seconds, the default value is **3600**.
-         * *   If an Object Storage Service (OSS) URL is returned, the maximum validity period is limited to **2592000** seconds (30 days) to reduce security risks of the origin.
+         * The index of the snapshot.
          */
         public Builder authTimeout(String authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -125,7 +120,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of the page to turn. Default value: **1**.
+         * The number of entries to return on each page. Default value: **20**. Maximum value: **100**.
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -134,7 +129,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **100**.
+         * The ID of the video.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,14 +138,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of snapshots that are returned. Valid values:
-         * <p>
-         * 
-         * *   **CoverSnapshot**: thumbnail snapshot
-         * *   **NormalSnapshot**: normal snapshot
-         * *   **SpriteSnapshot**: sprite snapshot
-         * *   **SpriteOriginSnapshot**: sprite source snapshot
-         * *   **WebVttSnapshot**: WebVTT snapshot
+         * The number of the page to turn. Default value: **1**.
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -159,7 +147,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * The operation that you want to perform. Set the value to **ListSnapshots**.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

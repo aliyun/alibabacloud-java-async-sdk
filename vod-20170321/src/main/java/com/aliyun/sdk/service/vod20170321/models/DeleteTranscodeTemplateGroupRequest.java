@@ -83,11 +83,7 @@ public class DeleteTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * Specifies whether to forcibly delete the entire transcoding template group. Valid values:
-         * <p>
-         * 
-         * *   **true**: deletes the entire transcoding template group and its transcoding templates.
-         * *   **false**: removes the specified transcoding templates from the transcoding template group. This is the default value.
+         * ForceDelGroup.
          */
         public Builder forceDelGroup(String forceDelGroup) {
             this.putQueryParameter("ForceDelGroup", forceDelGroup);
@@ -96,7 +92,7 @@ public class DeleteTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The ID of the transcoding template group.
+         * Removes one or more transcoding templates from a transcoding template group or forcibly deletes the entire transcoding template group.
          */
         public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
             this.putQueryParameter("TranscodeTemplateGroupId", transcodeTemplateGroupId);
@@ -105,11 +101,7 @@ public class DeleteTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the transcoding templates that you want to remove.
-         * <p>
-         * 
-         * *   Separate multiple IDs with commas (,).
-         * *   You can specify a maximum of 10 IDs.
+         * TranscodeTemplateIds.
          */
         public Builder transcodeTemplateIds(String transcodeTemplateIds) {
             this.putQueryParameter("TranscodeTemplateIds", transcodeTemplateIds);

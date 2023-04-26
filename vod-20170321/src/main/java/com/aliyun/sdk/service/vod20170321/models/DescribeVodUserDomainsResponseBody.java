@@ -86,7 +86,15 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.
+         * The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:
+         * <p>
+         * 
+         * *   **online**: indicates that the domain name is enabled.
+         * *   **offline**: indicates that the domain name is disabled.
+         * *   **configuring**: indicates that the domain name is being configured.
+         * *   **configure_failed**: indicates that the domain name failed to be configured.
+         * *   **checking**: indicates that the domain name is under review.
+         * *   **check_failed**: indicates that the domain name failed the review.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -94,7 +102,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The domain name. The value of this parameter is used as a filter condition for a fuzzy match.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +118,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of the page to return.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +126,11 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * Indicates whether HTTPS is enabled.
+         * <p>
+         * 
+         * - **on**: indicates that HTTPS is enabled.
+         * - **off**: indicates that HTTPS is disabled.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +206,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The address of the origin server.
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -202,7 +214,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number. Valid values: **443** and **80**.
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -210,7 +222,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the origin server.
+             * Priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -218,12 +230,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the origin server. Valid values:
-             * <p>
-             * 
-             * *   **ipaddr**: a server that you can access by using an IP address.
-             * *   **domain**: a server that you can access by using a domain name.
-             * *   **oss**: an Object Storage Service (OSS) bucket.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -401,7 +408,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             private String sslProtocol; 
 
             /**
-             * The canonical domain name that is assigned to the domain name for CDN.
+             * Queries the domain names for CDN within your Alibaba Cloud account. You can filter domain names by name or by state. When you filter domain names by name, a fuzzy match is supported.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -409,7 +416,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * The number of entries returned per page.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -417,7 +424,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name for CDN.
+             * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -425,15 +432,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name for CDN. Valid values:
-             * <p>
-             * 
-             * *   **online**: indicates that the domain name is enabled.
-             * *   **offline**: indicates that the domain name is disabled.
-             * *   **configuring**: indicates that the domain name is being configured.
-             * *   **configure_failed**: indicates that the domain name failed to be configured.
-             * *   **checking**: indicates that the domain name is under review.
-             * *   **check_failed**: indicates that the domain name failed the review.
+             * DomainStatus.
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -441,7 +440,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The page number of the returned page.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -449,7 +448,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -457,7 +456,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the domain name for CDN is in a sandbox environment.
+             * The ID of the request.
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -465,7 +464,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the origin server.
+             * Sources.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -473,11 +472,10 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTPS is enabled.
+             * The key of tag N. Valid values of N: **1** to **20**.
              * <p>
              * 
-             * - **on**: indicates that HTTPS is enabled.
-             * - **off**: indicates that HTTPS is disabled.
+             * If you do not specify this parameter, all tag keys are queried.
              */
             public Builder sslProtocol(String sslProtocol) {
                 this.sslProtocol = sslProtocol;

@@ -138,29 +138,11 @@ public class SearchMediaRequest extends Request {
         } 
 
         /**
-         * The level of the category.
+         * Details about media assets.
          */
         public Builder fields(String fields) {
             this.putQueryParameter("Fields", fields);
             this.fields = fields;
-            return this;
-        }
-
-        /**
-         * The operation that you want to perform. Set the value to **SearchMedia**.
-         */
-        public Builder match(String match) {
-            this.putQueryParameter("Match", match);
-            this.match = match;
-            return this;
-        }
-
-        /**
-         * Details about media assets.
-         */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
             return this;
         }
 
@@ -173,6 +155,32 @@ public class SearchMediaRequest extends Request {
          * *   **PreprocessSucceed**
          * *   **PreprocessFailed**
          */
+        public Builder match(String match) {
+            this.putQueryParameter("Match", match);
+            this.match = match;
+            return this;
+        }
+
+        /**
+         * The ID of the media asset.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The type of the media asset that you want to query. Default value: video. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
+         * *   **image**
+         * *   **attached**
+         * 
+         * > If this parameter is set to **video** or **audio** and you want to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.
+         */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
@@ -180,7 +188,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The size of the video file.
+         * The tags of the image file.
          */
         public Builder scrollToken(String scrollToken) {
             this.putQueryParameter("ScrollToken", scrollToken);
@@ -189,7 +197,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The ID of the parent category.
+         * The list of sprite snapshots.
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("SearchType", searchType);
@@ -198,7 +206,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * The list of sprite snapshots.
+         * The size of the video file.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

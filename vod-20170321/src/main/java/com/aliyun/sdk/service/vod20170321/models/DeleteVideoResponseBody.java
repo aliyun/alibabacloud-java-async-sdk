@@ -62,9 +62,7 @@ public class DeleteVideoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the videos that cannot be deleted.
-         * <p>
-         * > Generally, videos cannot be deleted if you do not have the required [permissions](~~113600~~).
+         * ForbiddenVideoIds.
          */
         public Builder forbiddenVideoIds(java.util.List < String > forbiddenVideoIds) {
             this.forbiddenVideoIds = forbiddenVideoIds;
@@ -72,9 +70,7 @@ public class DeleteVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the videos that do not exist.
-         * <p>
-         * > If the list of videos to be deleted contains one or more videos that do not exist, the IDs of these non-existing videos are returned. If none of the videos in the list exists, a 404 error is returned.
+         * NonExistVideoIds.
          */
         public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -82,7 +78,7 @@ public class DeleteVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
