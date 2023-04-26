@@ -69,7 +69,7 @@ public class ListVodTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Set the value to **app-1000000**. For more information, see [Overview](~~113600~~).
+         * The snapshot templates.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +78,11 @@ public class ListVodTemplateRequest extends Request {
         }
 
         /**
-         * The type of the template. Set the value to **Snapshot**.
+         * Indicates whether the template is the default one. Valid values:
+         * <p>
+         * 
+         * *   **Default**: The template is the default one.
+         * *   **NotDefault**: The template is not the default one.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

@@ -99,7 +99,7 @@ public class DescribePlayVideoStatisRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The number of video views.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -117,7 +117,7 @@ public class DescribePlayVideoStatisRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -126,7 +126,7 @@ public class DescribePlayVideoStatisRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

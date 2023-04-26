@@ -62,7 +62,7 @@ public class MoveAppResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the resource that failed to be migrated.
+         * FailedResourceIds.
          */
         public Builder failedResourceIds(java.util.List < String > failedResourceIds) {
             this.failedResourceIds = failedResourceIds;
@@ -70,7 +70,7 @@ public class MoveAppResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource that was not found.
+         * NonExistResourceIds.
          */
         public Builder nonExistResourceIds(java.util.List < String > nonExistResourceIds) {
             this.nonExistResourceIds = nonExistResourceIds;
@@ -78,7 +78,7 @@ public class MoveAppResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Migrates one or more resources from an application to another application.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

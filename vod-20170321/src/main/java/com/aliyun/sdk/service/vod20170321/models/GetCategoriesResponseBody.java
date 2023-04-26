@@ -74,7 +74,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         private Long subTotal; 
 
         /**
-         * The information about the specified category.
+         * The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.
          */
         public Builder category(Category category) {
             this.category = category;
@@ -82,7 +82,11 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The type of the category. Valid values:
+         * <p>
+         * 
+         * *   **default** (default): default category
+         * *   **material**: material category
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +94,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of subcategories.
+         * The ID of the request.
          */
         public Builder subCategories(SubCategories subCategories) {
             this.subCategories = subCategories;
@@ -98,7 +102,7 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of subcategories.
+         * The information about the specified category.
          */
         public Builder subTotal(Long subTotal) {
             this.subTotal = subTotal;
@@ -194,10 +198,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
-             * <p>
-             * *   The value can be up to 64 bytes in length.
-             * *   The string must be encoded in the UTF-8 format.
+             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -205,7 +206,11 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category. A value of **0** indicates a level 1 category.
+             * The name of the category.
+             * <p>
+             * 
+             * *   The value can be up to 64 bytes in length.
+             * *   The string must be encoded in the UTF-8 format.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -213,7 +218,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
+             * The level of the category. A value of **0** indicates a level 1 category.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -221,10 +226,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the category. Valid values:
-             * <p>
-             * *   **default** (default): default category
-             * *   **material**: material category
+             * The total number of subcategories.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -333,10 +335,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
-             * <p>
-             * *   The value can be up to 64 bytes in length.
-             * *   The string must be encoded in the UTF-8 format.
+             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -344,7 +343,11 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category. A value of **0** indicates a level 1 category.
+             * The name of the category.
+             * <p>
+             * 
+             * *   The value can be up to 64 bytes in length.
+             * *   The string must be encoded in the UTF-8 format.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -352,7 +355,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
+             * The level of the category. A value of **0** indicates a level 1 category.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -360,7 +363,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of subcategories.
+             * The information about the specified category.
              */
             public Builder subTotal(Long subTotal) {
                 this.subTotal = subTotal;
@@ -368,11 +371,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the category. Valid values:
-             * <p>
-             * 
-             * *   **default** (default): default category
-             * *   **material**: material category
+             * Queries the information about the specified category and its subcategories.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -413,7 +412,7 @@ public class GetCategoriesResponseBody extends TeaModel {
             private java.util.List < SubCategoriesCategory> category; 
 
             /**
-             * The information about the specified category.
+             * The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.
              */
             public Builder category(java.util.List < SubCategoriesCategory> category) {
                 this.category = category;

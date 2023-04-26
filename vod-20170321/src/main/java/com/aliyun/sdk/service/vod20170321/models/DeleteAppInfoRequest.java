@@ -55,7 +55,7 @@ public class DeleteAppInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

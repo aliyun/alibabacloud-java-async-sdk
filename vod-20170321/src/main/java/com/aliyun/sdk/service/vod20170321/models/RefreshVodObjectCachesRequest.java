@@ -97,7 +97,11 @@ public class RefreshVodObjectCachesRequest extends Request {
         } 
 
         /**
-         * The path of the resource to be refreshed. Separate multiple paths with line breaks (\n or \r\n).
+         * The granularity of the resources to be refreshed. Valid values:
+         * <p>
+         * 
+         * *   **File**: refreshes one or more files. This is the default value.
+         * *   **Directory**: refreshes the files under one or more directories.
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -106,11 +110,7 @@ public class RefreshVodObjectCachesRequest extends Request {
         }
 
         /**
-         * The granularity of the resources to be refreshed. Valid values:
-         * <p>
-         * 
-         * *   **File**: refreshes one or more files. This is the default value.
-         * *   **Directory**: refreshes the files under one or more directories.
+         * Refreshes files on Alibaba Cloud CDN nodes. You can refresh multiple files at a time based on URLs.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);

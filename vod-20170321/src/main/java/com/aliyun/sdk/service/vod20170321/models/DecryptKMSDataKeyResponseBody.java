@@ -62,7 +62,7 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the customer master key (CMK) that was used to decrypt the ciphertext.
+         * KeyId.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -70,7 +70,7 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The plaintext that is generated after decryption.
+         * Plaintext.
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -78,7 +78,7 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

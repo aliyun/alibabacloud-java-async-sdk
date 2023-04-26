@@ -50,7 +50,7 @@ public class DescribeVodVerifyContentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The verification content.
+         * Content.
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeVodVerifyContentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

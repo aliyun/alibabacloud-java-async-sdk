@@ -98,7 +98,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
         private String uploadAuth; 
 
         /**
-         * The OSS URL of the file. The URL does not contain the information used for URL signing. You can set FileUrl to this URL when you call the [AddWatermark](~~98617~~) operation.
+         * FileURL.
          */
         public Builder fileURL(String fileURL) {
             this.fileURL = fileURL;
@@ -106,7 +106,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image file.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -114,10 +114,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the image.
-         * <p>
-         * 
-         * > If you enable the URL signing feature in ApsaraVideo VOD, the returned URL may not be accessible from a browser and an HTTP 403 status code may be returned. To resolve this issue, you can disable the [URL signing](~~86090~~) feature or [generate a signed URL](~~57007~~).
+         * ImageURL.
          */
         public Builder imageURL(String imageURL) {
             this.imageURL = imageURL;
@@ -125,7 +122,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,10 +130,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The upload URL.
-         * <p>
-         * 
-         * > The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload media files.
+         * UploadAddress.
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -144,10 +138,7 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The upload credential.
-         * <p>
-         * 
-         * > The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.
+         * UploadAuth.
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;

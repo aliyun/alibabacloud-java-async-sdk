@@ -83,7 +83,7 @@ public class BatchStartVodDomainRequest extends Request {
         } 
 
         /**
-         * The domain name for CDN. Separate multiple domain names with commas (,).
+         * DomainNames.
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);

@@ -167,7 +167,7 @@ public class UpdateEditingProjectRequest extends Request {
         } 
 
         /**
-         * The thumbnail URL of the online editing project.
+         * CoverURL.
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -176,7 +176,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * The description of the online editing project.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +203,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project.
+         * Modifies an online editing project.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -230,7 +230,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * The timeline of the online editing project. For more information about the structure, see [Timeline](~~52839~~).
+         * Timeline.
          */
         public Builder timeline(String timeline) {
             this.putQueryParameter("Timeline", timeline);
@@ -239,7 +239,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * The title of the online editing project.
+         * Title.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

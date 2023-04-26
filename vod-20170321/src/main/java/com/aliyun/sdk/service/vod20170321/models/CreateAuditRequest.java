@@ -55,12 +55,7 @@ public class CreateAuditRequest extends Request {
         } 
 
         /**
-         * The array of the review content.
-         * <p>
-         * 
-         * You can specify a maximum of **20** videos to be reviewed. The array must be converted into a string as the value of this parameter.
-         * 
-         * For more information about the parameters in AuditContent, see the **AuditContent** section of this topic.
+         * AuditContent.
          */
         public Builder auditContent(String auditContent) {
             this.putQueryParameter("AuditContent", auditContent);

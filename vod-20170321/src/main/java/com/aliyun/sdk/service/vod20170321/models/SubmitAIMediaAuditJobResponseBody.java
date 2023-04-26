@@ -62,7 +62,7 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the task.
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -70,7 +70,7 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the video.
+         * MediaId.
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -78,7 +78,7 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

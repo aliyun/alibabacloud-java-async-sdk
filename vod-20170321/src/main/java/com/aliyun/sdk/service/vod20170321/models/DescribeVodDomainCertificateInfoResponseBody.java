@@ -50,7 +50,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The certificate information.
+         * CertInfos.
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -58,7 +58,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The domain name that matches the certificate.
+             * CertDomainName.
              */
             public Builder certDomainName(String certDomainName) {
                 this.certDomainName = certDomainName;
@@ -202,7 +202,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * CertExpireTime.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -210,7 +210,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the certificate. Unit: month or year.
+             * CertLife.
              */
             public Builder certLife(String certLife) {
                 this.certLife = certLife;
@@ -218,7 +218,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * CertName.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -226,7 +226,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate authority (CA) that issued the certificate.
+             * CertOrg.
              */
             public Builder certOrg(String certOrg) {
                 this.certOrg = certOrg;
@@ -234,12 +234,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate. Valid values:
-             * <p>
-             * 
-             * *   **free**: a free certificate.
-             * *   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service.
-             * *   **upload**: a user-uploaded certificate.
+             * CertType.
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -247,7 +242,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name for CDN.
+             * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -255,16 +250,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the server certificate.
-             * <p>
-             * 
-             * *   **success**: indicates that the certificate has taken effect.
-             * *   **checking**: indicates that the system is checking whether the domain name has been added to ApsaraVideo VOD.
-             * *   **cname_error**: indicates that the domain name has not been added to ApsaraVideo VOD.
-             * *   **domain_invalid**: indicates that the domain name contains invalid characters.
-             * *   **unsupport_wildcard**: indicates that wildcard domain names are not supported.
-             * *   **applying**: indicates that the certificate is in the application process.
-             * *   **failed**: indicates that the request of applying for the certificate has failed.
+             * ServerCertificateStatus.
              */
             public Builder serverCertificateStatus(String serverCertificateStatus) {
                 this.serverCertificateStatus = serverCertificateStatus;
@@ -272,16 +258,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate.
-             * <p>
-             * 
-             * *   **success**: indicates that the certificate has taken effect.
-             * *   **checking**: indicates that the system is checking whether the domain name has been added to ApsaraVideo VOD.
-             * *   **cname_error**: indicates that the domain name has not been added to ApsaraVideo VOD.
-             * *   **domain_invalid**: indicates that the domain name contains invalid characters.
-             * *   **unsupport_wildcard**: indicates that wildcard domain names are not supported.
-             * *   **applying**: indicates that the certificate is in the application process.
-             * *   **failed**: indicates that the request of applying for the certificate has failed.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

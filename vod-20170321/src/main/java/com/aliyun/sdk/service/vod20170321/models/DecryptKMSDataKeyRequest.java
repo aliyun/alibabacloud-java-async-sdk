@@ -111,7 +111,7 @@ public class DecryptKMSDataKeyRequest extends Request {
         } 
 
         /**
-         * The ciphertext that you want to decrypt.
+         * 待解密的密文。
          */
         public Builder cipherText(String cipherText) {
             this.putQueryParameter("CipherText", cipherText);

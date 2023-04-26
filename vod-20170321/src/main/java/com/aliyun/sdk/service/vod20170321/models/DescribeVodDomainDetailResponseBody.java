@@ -50,7 +50,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The basic information about the domain name for CDN.
+         * The priority of the origin server.
          */
         public Builder domainDetail(DomainDetail domainDetail) {
             this.domainDetail = domainDetail;
@@ -58,7 +58,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **DescribeVodDomainDetail**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The address of the origin server.
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -154,10 +154,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the origin server. Valid values:
-             * <p>
-             * *   **online**: indicates that the origin server is enabled.
-             * *   **offline**: indicates that the origin server is disabled.
+             * Enabled.
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -165,7 +162,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port number. Valid values: 443 and 80.
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -173,7 +170,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the origin server.
+             * Priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -181,11 +178,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the origin server. Valid values:
-             * <p>
-             * *   **ipaddr**: a server that you can access by using an IP address.
-             * *   **domain**: a server that you can access by using a domain name.
-             * *   **oss**: the URL of an Object Storage Service (OSS) bucket.
+             * Queries the basic information about a specified domain name for CDN.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -399,7 +392,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The name of the certificate. The value of this parameter is returned if HTTPS is enabled.
+             * The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -407,32 +400,9 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.
-             */
-            public Builder cname(String cname) {
-                this.cname = cname;
-                return this;
-            }
-
-            /**
-             * The description of the domain name for CDN.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The domain name for CDN.
-             */
-            public Builder domainName(String domainName) {
-                this.domainName = domainName;
-                return this;
-            }
-
-            /**
              * The status of the domain name for CDN. Value values:
              * <p>
+             * 
              * *   **online**: indicates that the domain name is enabled.
              * *   **offline**: indicates that the domain name is disabled.
              * *   **configuring**: indicates that the domain name is being configured.
@@ -440,13 +410,37 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
              * *   **checking**: indicates that the domain name is under review.
              * *   **check_failed**: indicates that the domain name failed the review.
              */
+            public Builder cname(String cname) {
+                this.cname = cname;
+                return this;
+            }
+
+            /**
+             * The name of the certificate. The value of this parameter is returned if HTTPS is enabled.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The port number. Valid values: 443 and 80.
+             */
+            public Builder domainName(String domainName) {
+                this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * The address of the origin server.
+             */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
                 return this;
             }
 
             /**
-             * The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -454,7 +448,11 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**: indicates that the SSL certificate is enabled.
+             * *   **off**: indicates that the SSL certificate is disabled.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -462,10 +460,12 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:
+             * This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:
              * <p>
-             * *   **on**: indicates that the SSL certificate is enabled.
-             * *   **off**: indicates that the SSL certificate is disabled.
+             * 
+             * *   **domestic**: mainland China. This is the default value.
+             * *   **overseas**: outside mainland China.
+             * *   **global**: regions in and outside mainland China.
              */
             public Builder SSLProtocol(String SSLProtocol) {
                 this.SSLProtocol = SSLProtocol;
@@ -473,7 +473,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public key of the certificate. The value of this parameter is returned if HTTPS is enabled.
+             * The domain name for CDN.
              */
             public Builder SSLPub(String SSLPub) {
                 this.SSLPub = SSLPub;
@@ -481,11 +481,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:
-             * <p>
-             * *   **domestic**: mainland China. This is the default value.
-             * *   **overseas**: outside mainland China.
-             * *   **global**: regions in and outside mainland China.
+             * The weight of the origin server.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -493,7 +489,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the origin server.
+             * The ID of the request.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -501,7 +497,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the origin server.
+             * The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.
              */
             public Builder weight(String weight) {
                 this.weight = weight;

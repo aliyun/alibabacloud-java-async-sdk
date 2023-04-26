@@ -1,3 +1,6 @@
+2023-04-26 Version: 1.0.5
+- Api add media storage class.
+
 2023-03-02 Version: 1.0.4
 - Api DescribeVodDomainUsageData add parameter Interval.
 

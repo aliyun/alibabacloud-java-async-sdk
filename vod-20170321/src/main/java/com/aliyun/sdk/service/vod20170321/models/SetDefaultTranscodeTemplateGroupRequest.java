@@ -55,7 +55,7 @@ public class SetDefaultTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the transcoding template group.
+         * TranscodeTemplateGroupId.
          */
         public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
             this.putQueryParameter("TranscodeTemplateGroupId", transcodeTemplateGroupId);

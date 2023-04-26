@@ -50,7 +50,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the animated image job.
+         * The ID of the request.
          */
         public Builder dynamicImageJob(DynamicImageJob dynamicImageJob) {
             this.dynamicImageJob = dynamicImageJob;
@@ -58,7 +58,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The parameters used for overriding. The value is a JSON-formatted string. For more information, see the "OverrideParams" section of the [Media processing parameters](~~98618~~) topic. The parameters are used to replace the parameters in the animated image template. For more information, see the [Basic data types](~~52839~~) topic.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * The ID of the animated image job.
+             * The operation that you want to perform. Set the value to **SubmitDynamicImageJob**.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

@@ -93,7 +93,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * The parameters used for overriding. The value is a JSON-formatted string. For more information, see the "OverrideParams" section of the [Media processing parameters](~~98618~~) topic. The parameters are used to replace the parameters in the animated image template. For more information, see the [Basic data types](~~52839~~) topic.
+         * The ID of the animated image job.
          */
         public Builder overrideParams(String overrideParams) {
             this.putQueryParameter("OverrideParams", overrideParams);
@@ -102,7 +102,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * The returned data.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

@@ -111,7 +111,7 @@ public class SubmitMediaDNADeleteJobRequest extends Request {
         } 
 
         /**
-         * The ID of the video.
+         * Deletes a video fingerprinting job.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

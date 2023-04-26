@@ -55,7 +55,11 @@ public class GetMediaAuditResultTimelineRequest extends Request {
         } 
 
         /**
-         * The ID of the video.
+         * The category of the review result. Valid values:
+         * <p>
+         * 
+         * *   **normal**
+         * *   **logo**
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

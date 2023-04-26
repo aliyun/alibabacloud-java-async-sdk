@@ -62,7 +62,7 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the policy that failed to be detached from the identity.
+         * FailedPolicyNames.
          */
         public Builder failedPolicyNames(java.util.List < String > failedPolicyNames) {
             this.failedPolicyNames = failedPolicyNames;
@@ -70,7 +70,7 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the policy that was not found.
+         * NonExistPolicyNames.
          */
         public Builder nonExistPolicyNames(java.util.List < String > nonExistPolicyNames) {
             this.nonExistPolicyNames = nonExistPolicyNames;
@@ -78,7 +78,7 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Revokes application permissions from the specified identity. The identity may a RAM user or RAM role.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

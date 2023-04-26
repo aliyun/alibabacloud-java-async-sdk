@@ -149,11 +149,11 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * The time granularity at which the data is queried. Valid values:
+         * The interval at which you want to query data. Valid values:
          * <p>
          * 
-         * *   **day**
-         * *   **hour**
+         * *   **day**: days
+         * *   **hour**: hours
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -171,7 +171,7 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * The region where the transcoded file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:
+         * The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:
          * <p>
          * 
          * *   **cn-shanghai**: China (Shanghai)
@@ -186,12 +186,12 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * The transcoding specification. If you do not set this parameter, the data of all transcoding specifications is returned. You can specify multiple transcoding specifications. Separate them with commas (,). Valid values:
+         * The transcoding specification. If you leave this parameter empty, data of all transcoding specifications is returned. Separate multiple transcoding specifications with commas (,). Valid values:
          * <p>
          * 
          * *   **Audio**: audio transcoding
          * *   **Segmentation**: container format conversion
-         * *   H.264 and H.265-related video transcoding specifications, such as **H264.LD**, **H264.SD**, **H264.HD**, **H264.2K**, and **H264.4K**
+         * *   **H264.LD**, **H264.SD**, **H264.HD**, **H264.2K**, **H264.4K**, and more
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);
@@ -209,7 +209,7 @@ public class DescribeVodTranscodeDataRequest extends Request {
         }
 
         /**
-         * The name of the Object Storage Service (OSS) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas (,).
+         * The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);

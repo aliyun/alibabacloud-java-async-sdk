@@ -62,7 +62,10 @@ public class ListAIJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the jobs.
+         * The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the [GetPlayInfo](~~56124~~) operation.
+         * <p>
+         * 
+         * >  You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).
          */
         public Builder AIJobList(AIJobList AIJobList) {
             this.AIJobList = AIJobList;
@@ -70,7 +73,7 @@ public class ListAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the jobs that do not exist.
+         * The error code. This parameter is returned if the value of Status is fail.
          */
         public Builder nonExistAIJobIds(NonExistAIJobIds nonExistAIJobIds) {
             this.nonExistAIJobIds = nonExistAIJobIds;
@@ -78,7 +81,7 @@ public class ListAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the job.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +217,7 @@ public class ListAIJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The error code. This parameter is returned if the value of Status is fail.
+             * Queries AI jobs. After a job is submitted, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -222,50 +225,10 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The ID of the request.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
-                return this;
-            }
-
-            /**
-             * The time when the job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The returned data. The value is a JSON string.
-             */
-            public Builder data(String data) {
-                this.data = data;
-                return this;
-            }
-
-            /**
-             * The ID of the job.
-             */
-            public Builder jobId(String jobId) {
-                this.jobId = jobId;
-                return this;
-            }
-
-            /**
-             * The ID of the video.
-             */
-            public Builder mediaId(String mediaId) {
-                this.mediaId = mediaId;
-                return this;
-            }
-
-            /**
-             * The error message. This parameter is returned if the value of Status is fail.
-             */
-            public Builder message(String message) {
-                this.message = message;
                 return this;
             }
 
@@ -278,17 +241,56 @@ public class ListAIJobResponseBody extends TeaModel {
              * *   **init**: The job is being initialized.
              * *   **Processing**: The job is in progress.
              */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * {"OrigASRData":{"AsrTextList":\[{"EndTime":700,"StartTime":0,"Text":"Yes.","ChannelId":0,"SpeechRate":85},{"EndTime":3750,"StartTime":1630,"Text":"No.","ChannelId":0,"SpeechRate":28},{"EndTime":5910,"StartTime":4020,"Text":"Of course.","ChannelId":0,"SpeechRate":95},{"EndTime":12750,"StartTime":10090,"Text":"Message.","ChannelId":0,"SpeechRate":45},{"EndTime":25230,"StartTime":13590,"Text":"Hello, good afternoon.","ChannelId":0,"SpeechRate":20},{"EndTime":30000,"StartTime":28220,"Text":"Yes.","ChannelId":0,"SpeechRate":33}],"Duration":"30016"}}
+             */
+            public Builder data(String data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * The ID of the video.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * MediaId.
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * The error message. This parameter is returned if the value of Status is fail.
+             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * The type of the job. Valid values:
+             * The returned data. The value is a JSON string.
              * <p>
              * 
-             * *   **AIMediaDNA**: The media fingerprinting job.
-             * *   **AIVideoTag**: The smart tagging job.
+             * For more information, see [AITemplateConfig](~~89863~~).
              */
             public Builder type(String type) {
                 this.type = type;

@@ -83,7 +83,7 @@ public class PreloadVodObjectCachesRequest extends Request {
         } 
 
         /**
-         * The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).
+         * ObjectPath.
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);

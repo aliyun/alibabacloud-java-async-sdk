@@ -204,11 +204,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The type of the media asset. Valid values:
-         * <p>
-         * *   **watermark**
-         * *   **subtitle**
-         * *   **material**
+         * The name of the source file.
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -242,7 +238,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The name of the source file.
+         * FileName.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -251,7 +247,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The size of the auxiliary media asset. Unit: byte.
+         * FileSize.
          */
         public Builder fileSize(String fileSize) {
             this.putQueryParameter("FileSize", fileSize);
@@ -260,11 +256,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The file name extension. Valid values:
-         * <p>
-         * *   Valid values for watermarks: **png, gif, apng, and mov**
-         * *   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**
-         * *   Valid values for materials: **jpg, gif, png, mp4, mat, and zip**
+         * The size of the auxiliary media asset. Unit: byte.
          */
         public Builder mediaExt(String mediaExt) {
             this.putQueryParameter("MediaExt", mediaExt);
@@ -300,10 +292,11 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The title of the media asset. Take note of the following items:
+         * The file name extension. Valid values:
          * <p>
-         * *   The title can be up to 128 bytes in length.
-         * *   The value must be encoded in UTF-8.
+         * *   Valid values for watermarks: **png, gif, apng, and mov**
+         * *   Valid values for subtitles: **srt, ass, stl, ttml, and vtt**
+         * *   Valid values for materials: **jpg, gif, png, mp4, mat, and zip**
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

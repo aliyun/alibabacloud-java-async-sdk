@@ -69,7 +69,7 @@ public class DescribeVodDomainCertificateInfoRequest extends Request {
         } 
 
         /**
-         * The domain name for CDN.
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

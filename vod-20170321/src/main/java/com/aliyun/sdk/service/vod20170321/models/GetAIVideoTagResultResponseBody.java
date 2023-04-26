@@ -50,7 +50,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         private VideoTagResult videoTagResult; 
 
         /**
-         * The ID of the request.
+         * The location tag of the video.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * The tag string.
          */
         public Builder videoTagResult(VideoTagResult videoTagResult) {
             this.videoTagResult = videoTagResult;
@@ -98,7 +98,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The tag string.
+             * John
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -151,7 +151,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * The tag string.
+             * The URL of the profile photo.
+             * <p>
+             * 
+             * > This parameter is returned only when a figure tag was used.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -159,7 +162,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when the tags are displayed. Unit: milliseconds.
+             * Times.
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -212,7 +215,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * The tag string.
+             * The figure tag of the video.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -220,7 +223,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when the tags are displayed. Unit: milliseconds.
+             * The returned result.
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -285,10 +288,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * The URL of the profile photo.
-             * <p>
-             * 
-             * > This parameter is returned only when a figure tag was used.
+             * Retouching
              */
             public Builder faceUrl(String faceUrl) {
                 this.faceUrl = faceUrl;
@@ -296,7 +296,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The tag string.
+             * The keyword tags.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -357,7 +357,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * The tag string.
+             * Cushion
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -365,7 +365,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when the tags are displayed. Unit: milliseconds.
+             * The tag string.
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -454,7 +454,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             private java.util.List < Time> time; 
 
             /**
-             * The video categories.
+             * The location tags.
              */
             public Builder category(java.util.List < Category> category) {
                 this.category = category;
@@ -462,7 +462,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword tags.
+             * The video categories.
              */
             public Builder keyword(java.util.List < Keyword> keyword) {
                 this.keyword = keyword;
@@ -470,7 +470,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The location tags.
+             * The point in time when the location tag is displayed. Unit: milliseconds.
              */
             public Builder location(java.util.List < Location> location) {
                 this.location = location;
@@ -478,7 +478,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The figure tags.
+             * The tag string.
              */
             public Builder person(java.util.List < Person> person) {
                 this.person = person;
@@ -486,7 +486,12 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time tags.
+             * The ID of the media file. You can use one of the following methods to obtain the ID:
+             * <p>
+             * 
+             * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
+             * *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.
+             * *   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation after you upload media files.
              */
             public Builder time(java.util.List < Time> time) {
                 this.time = time;

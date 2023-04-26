@@ -62,7 +62,11 @@ public class ListAppInfoResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The details of each application.
+         * The status of the application. After an application is created, it enters the **Normal** state. Valid values:
+         * <p>
+         * 
+         * *   **Normal**
+         * *   **Disable**
          */
         public Builder appInfoList(java.util.List < AppInfoList> appInfoList) {
             this.appInfoList = appInfoList;
@@ -70,7 +74,7 @@ public class ListAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +82,11 @@ public class ListAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The status of the application. Valid values:
+         * <p>
+         * 
+         * *   **Normal**
+         * *   **Disable**
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -190,7 +198,7 @@ public class ListAppInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the application.
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -198,7 +206,7 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * Queries the applications that you are authorized to manage based on query conditions.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -206,7 +214,7 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The ID of the request.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -214,7 +222,7 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * WB01210940
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +230,7 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the application was modified. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * ModificationTime.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -230,11 +238,7 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application. Valid values:
-             * <p>
-             * 
-             * *   **Normal**
-             * *   **Disable**
+             * The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -242,11 +246,7 @@ public class ListAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. Valid values:
-             * <p>
-             * 
-             * *   **System**
-             * *   **Custom**
+             * The ID of the application.
              */
             public Builder type(String type) {
                 this.type = type;

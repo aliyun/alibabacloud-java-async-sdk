@@ -50,7 +50,7 @@ public class SubmitAIImageAuditJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the image review task.
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +58,7 @@ public class SubmitAIImageAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

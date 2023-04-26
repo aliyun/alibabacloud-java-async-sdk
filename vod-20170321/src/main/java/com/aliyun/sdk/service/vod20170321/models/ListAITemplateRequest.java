@@ -55,11 +55,11 @@ public class ListAITemplateRequest extends Request {
         } 
 
         /**
-         * The type of the AI template. Valid values:
+         * Indicates whether the template is the default AI template. Valid values:
          * <p>
          * 
-         * *   **AIMediaAudit**: automated review
-         * *   **AIImage**: smart thumbnail
+         * *   **Default**
+         * *   **NotDefault**
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

@@ -74,7 +74,7 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ciphertext of the encrypted data key. This is used as CipherText when you create a transcoding job.
+         * CiphertextBlob.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
@@ -82,7 +82,7 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the customer master key (CMK). The ID must be globally unique.
+         * KeyId.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -90,7 +90,7 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The Base64-encoded plaintext of the data key.
+         * Plaintext.
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -98,7 +98,7 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

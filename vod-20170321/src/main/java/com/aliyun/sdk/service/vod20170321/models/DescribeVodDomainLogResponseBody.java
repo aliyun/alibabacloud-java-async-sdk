@@ -58,7 +58,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The total number of entries returned.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -154,7 +154,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log file.
+             * Queries the information about the raw access logs for a specific domain name, including the log path.
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -162,7 +162,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the log file.
+             * LogPath.
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -170,7 +170,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the log file.
+             * The ID of the request.
              */
             public Builder logSize(Long logSize) {
                 this.logSize = logSize;
@@ -178,7 +178,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The pagination settings of Alibaba Cloud CDN logs.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -284,7 +284,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The page number of the returned page.
+             * PageNumber.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -292,7 +292,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * PageSize.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -300,7 +300,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * Total.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -385,7 +385,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned on the current page.
+             * The detailed information about Alibaba Cloud CDN logs.
              */
             public Builder logCount(Long logCount) {
                 this.logCount = logCount;
@@ -393,7 +393,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information about Alibaba Cloud CDN logs.
+             * The path of the log file.
              */
             public Builder logInfos(LogInfos logInfos) {
                 this.logInfos = logInfos;
@@ -401,7 +401,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination settings of Alibaba Cloud CDN logs.
+             * PageInfos.
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;

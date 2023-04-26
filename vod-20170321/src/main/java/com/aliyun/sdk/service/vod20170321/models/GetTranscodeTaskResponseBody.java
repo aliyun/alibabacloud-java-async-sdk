@@ -50,7 +50,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
         private TranscodeTask transcodeTask; 
 
         /**
-         * The ID of the request.
+         * The size of the output file. Unit: byte.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Details about transcoding tasks.
+         * The length of the output file. Unit: seconds.
          */
         public Builder transcodeTask(TranscodeTask transcodeTask) {
             this.transcodeTask = transcodeTask;
@@ -242,7 +242,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * The audio streams.
+             * The ID of the transcoding job.
              */
             public Builder audioStreamList(String audioStreamList) {
                 this.audioStreamList = audioStreamList;
@@ -250,7 +250,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The average bitrate of the output file. Unit: Kbit/s.
+             * The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -258,7 +258,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The length of the output file. Unit: seconds.
+             * The frame rate of the output file. Unit: frames per second.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -266,11 +266,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption method of the output file. Valid values:
-             * <p>
-             * 
-             * *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
-             * *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
+             * The audio streams.
              */
             public Builder encryption(String encryption) {
                 this.encryption = encryption;
@@ -278,7 +274,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the output file. Unit: byte.
+             * Queries details about transcoding jobs based on the transcoding task ID.
              */
             public Builder filesize(Long filesize) {
                 this.filesize = filesize;
@@ -286,7 +282,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The container format of the output file.
+             * The IDs of the watermarks used by the output file.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -294,7 +290,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The frame rate of the output file. Unit: frames per second.
+             * The ID of the request.
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -302,7 +298,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the output video. Unit: pixels.
+             * The error message returned when the transcoding job failed.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -310,7 +306,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS URL of the output file.
+             * The ID of the transcoding task.
              */
             public Builder outputFileUrl(String outputFileUrl) {
                 this.outputFileUrl = outputFileUrl;
@@ -318,7 +314,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The subtitle streams.
+             * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder subtitleStreamList(String subtitleStreamList) {
                 this.subtitleStreamList = subtitleStreamList;
@@ -326,7 +322,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The video streams.
+             * The time when the transcoding job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder videoStreamList(String videoStreamList) {
                 this.videoStreamList = videoStreamList;
@@ -334,7 +330,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the watermarks used by the output file.
+             * WatermarkIdList.
              */
             public Builder watermarkIdList(java.util.List < String > watermarkIdList) {
                 this.watermarkIdList = watermarkIdList;
@@ -342,7 +338,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the output video. Unit: pixels.
+             * Details about transcoding tasks.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -515,88 +511,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private String transcodeTemplateId; 
 
             /**
-             * The time when the transcoding job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The progress of the transcoding job. Valid values: `[0,100]`.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
-                return this;
-            }
-
-            /**
-             * The time when the transcoding job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The video resolution. Valid values:
-             * <p>
-             * 
-             * *   **LD**: low definition
-             * *   **SD**: standard definition
-             * *   **HD**: high definition
-             * *   **FHD**: ultra high definition
-             * *   **OD**: original definition
-             * *   **2K**: 2K
-             * *   **4K**: 4K
-             * *   **SQ**: standard sound quality
-             * *   **HQ**: high sound quality
-             * *   **AUTO**: adaptive bitrate Adaptive bitrate streams are returned only if PackageSetting is set in the transcoding template. For more information, see [Basic structures](~~52839~~).
-             * 
-             * > This parameter indicates the definition that is configured in the transcoding template and does not indicate the actual resolution of the output video.
-             */
-            public Builder definition(String definition) {
-                this.definition = definition;
-                return this;
-            }
-
-            /**
-             * The error code returned when the transcoding job failed.
-             */
-            public Builder errorCode(String errorCode) {
-                this.errorCode = errorCode;
-                return this;
-            }
-
-            /**
-             * The error message returned when the transcoding job failed.
-             */
-            public Builder errorMessage(String errorMessage) {
-                this.errorMessage = errorMessage;
-                return this;
-            }
-
-            /**
-             * The Object Storage Service (OSS) URL of the input file.
-             */
-            public Builder inputFileUrl(String inputFileUrl) {
-                this.inputFileUrl = inputFileUrl;
-                return this;
-            }
-
-            /**
-             * The information about the output file.
-             */
-            public Builder outputFile(OutputFile outputFile) {
-                this.outputFile = outputFile;
-                return this;
-            }
-
-            /**
-             * The priority of the transcoding job.
-             */
-            public Builder priority(String priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * The ID of the transcoding job.
-             */
-            public Builder transcodeJobId(String transcodeJobId) {
-                this.transcodeJobId = transcodeJobId;
                 return this;
             }
 
@@ -608,13 +526,81 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
              * *   **TranscodeSuccess**
              * *   **TranscodeFail**
              */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * The encryption method of the output file. Valid values:
+             * <p>
+             * 
+             * *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
+             * *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
+             */
+            public Builder definition(String definition) {
+                this.definition = definition;
+                return this;
+            }
+
+            /**
+             * Details about transcoding jobs.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * The height of the output video. Unit: pixels.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * The IDs of the watermarks used by the output file.
+             */
+            public Builder inputFileUrl(String inputFileUrl) {
+                this.inputFileUrl = inputFileUrl;
+                return this;
+            }
+
+            /**
+             * The ID of the transcoding template group.
+             */
+            public Builder outputFile(OutputFile outputFile) {
+                this.outputFile = outputFile;
+                return this;
+            }
+
+            /**
+             * The subtitle streams.
+             */
+            public Builder priority(String priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * The ID of the audio or video file.
+             */
+            public Builder transcodeJobId(String transcodeJobId) {
+                this.transcodeJobId = transcodeJobId;
+                return this;
+            }
+
+            /**
+             * The priority of the transcoding job.
+             */
             public Builder transcodeJobStatus(String transcodeJobStatus) {
                 this.transcodeJobStatus = transcodeJobStatus;
                 return this;
             }
 
             /**
-             * The progress of the transcoding job. Valid values: `[0,100]`.
+             * The average bitrate of the output file. Unit: Kbit/s.
              */
             public Builder transcodeProgress(Long transcodeProgress) {
                 this.transcodeProgress = transcodeProgress;
@@ -622,7 +608,14 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template.
+             * The status of the transcoding task. Valid values:
+             * <p>
+             * 
+             * *   **Processing**: In progress.
+             * *   **Partial**: Some transcoding jobs were complete.
+             * *   **CompleteAllSucc**: All transcoding jobs were successful.
+             * *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.
+             * *   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.
              */
             public Builder transcodeTemplateId(String transcodeTemplateId) {
                 this.transcodeTemplateId = transcodeTemplateId;
@@ -747,7 +740,7 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The Object Storage Service (OSS) URL of the input file.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -755,49 +748,10 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The operation that you want to perform. Set the value to **GetTranscodeTask**.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The status of the transcoding task. Valid values:
-             * <p>
-             * 
-             * *   **Processing**: In progress.
-             * *   **Partial**: Some transcoding jobs were complete.
-             * *   **CompleteAllSucc**: All transcoding jobs were successful.
-             * *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.
-             * *   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.
-             */
-            public Builder taskStatus(String taskStatus) {
-                this.taskStatus = taskStatus;
-                return this;
-            }
-
-            /**
-             * Details about transcoding jobs.
-             */
-            public Builder transcodeJobInfoList(java.util.List < TranscodeJobInfoList> transcodeJobInfoList) {
-                this.transcodeJobInfoList = transcodeJobInfoList;
-                return this;
-            }
-
-            /**
-             * The ID of the transcoding task.
-             */
-            public Builder transcodeTaskId(String transcodeTaskId) {
-                this.transcodeTaskId = transcodeTaskId;
-                return this;
-            }
-
-            /**
-             * The ID of the transcoding template group.
-             */
-            public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
-                this.transcodeTemplateGroupId = transcodeTemplateGroupId;
                 return this;
             }
 
@@ -808,13 +762,49 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
              * *   **Auto**: The transcoding task is automatically triggered when the video is uploaded.
              * *   **Manual**: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.
              */
+            public Builder taskStatus(String taskStatus) {
+                this.taskStatus = taskStatus;
+                return this;
+            }
+
+            /**
+             * The information about the output file.
+             */
+            public Builder transcodeJobInfoList(java.util.List < TranscodeJobInfoList> transcodeJobInfoList) {
+                this.transcodeJobInfoList = transcodeJobInfoList;
+                return this;
+            }
+
+            /**
+             * The container format of the output file.
+             */
+            public Builder transcodeTaskId(String transcodeTaskId) {
+                this.transcodeTaskId = transcodeTaskId;
+                return this;
+            }
+
+            /**
+             * The ID of the transcoding task. You can use one of the following methods to obtain the ID:
+             * <p>
+             * 
+             * *   Obtain the value of TranscodeTaskId from the response to the [SubmitTranscodeJobs](~~68570~~) operation.
+             * *   Obtain the value of TranscodeTaskId from the response to the [ListTranscodeTask](~~109120~~) operation.
+             */
+            public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
+                this.transcodeTemplateGroupId = transcodeTemplateGroupId;
+                return this;
+            }
+
+            /**
+             * The video streams.
+             */
             public Builder trigger(String trigger) {
                 this.trigger = trigger;
                 return this;
             }
 
             /**
-             * The ID of the audio or video file.
+             * The ID of the transcoding template.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

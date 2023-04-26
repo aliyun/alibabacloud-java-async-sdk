@@ -55,7 +55,11 @@ public class GetVodTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the snapshot template.
+         * Indicates whether the template is the default one. Valid values:
+         * <p>
+         * 
+         * *   **Default**: The template is the default one.
+         * *   **NotDefault**: The template is not the default one.
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.putQueryParameter("VodTemplateId", vodTemplateId);

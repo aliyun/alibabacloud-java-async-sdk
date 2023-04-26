@@ -144,7 +144,7 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * The region where media assets are stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:
+         * The region in which you want to query storage data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:
          * <p>
          * 
          * *   **cn-shanghai**: China (Shanghai)
@@ -168,7 +168,7 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * The name of the Object Storage Service (OSS) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas (,).
+         * The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);

@@ -82,7 +82,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed usage of storage-related resources.
+         * The storage usage data returned.
          */
         public Builder storageData(StorageData storageData) {
             this.storageData = storageData;
@@ -146,7 +146,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.
+             * The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.
              */
             public Builder networkOut(String networkOut) {
                 this.networkOut = networkOut;
@@ -154,7 +154,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The storage volume. Unit: byte.
+             * The detailed usage data of storage-related resources. Unit: bytes.
              */
             public Builder storageUtilization(String storageUtilization) {
                 this.storageUtilization = storageUtilization;

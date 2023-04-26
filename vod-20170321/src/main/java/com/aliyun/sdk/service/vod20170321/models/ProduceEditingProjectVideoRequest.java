@@ -194,7 +194,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         } 
 
         /**
-         * The thumbnail URL of the online editing project.
+         * >ApsaraVideo VOD sends a FileUploadComplete event notification after video production is complete, which is similar to the action that is performed after video upload. After the produced video is transcoded, ApsaraVideo VOD sends the StreamTranscodeComplete and TranscodeComplete event notifications.
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -212,7 +212,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).
+         * Produces a video from one or more mezzanine files. You can directly submit mezzanine files by specifying the Timeline parameter. Alternatively, you can submit mezzanine files after you create an online editing project.
          */
         public Builder mediaMetadata(String mediaMetadata) {
             this.putQueryParameter("MediaMetadata", mediaMetadata);
@@ -230,7 +230,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The configuration of video production, in JSON format. For more information about the structure, see [ProduceConfig](~~52839~~).
+         * 朴灵
          */
         public Builder produceConfig(String produceConfig) {
             this.putQueryParameter("ProduceConfig", produceConfig);
@@ -239,7 +239,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project.
+         * The thumbnail URL of the online editing project.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -266,7 +266,11 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).
+         * The ID of the produced video.
+         * <p>
+         * 
+         * > *   This operation returns the ID of the produced video in synchronous mode.
+         * > *   If this operation returns the MediaId parameter, the video production task is being asynchronously processed.
          */
         public Builder timeline(String timeline) {
             this.putQueryParameter("Timeline", timeline);
@@ -275,7 +279,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The title of the online editing project.
+         * The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -284,10 +288,7 @@ public class ProduceEditingProjectVideoRequest extends Request {
         }
 
         /**
-         * The custom configuration, such as the callback configuration. The value is a JSON-formatted string. For more information about the structure, see [UserData](~~86952~~).
-         * <p>
-         * 
-         * > To use the MessageCallback parameter, you must set an HTTP callback URL and select a callback event type in the ApsaraVideo VOD console. Otherwise, the callback configuration does not take effect.
+         * UserData.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

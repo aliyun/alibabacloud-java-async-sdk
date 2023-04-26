@@ -125,7 +125,7 @@ public class UpdateVideoInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the video category.
+         * CateId.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -134,11 +134,38 @@ public class UpdateVideoInfoRequest extends Request {
         }
 
         /**
-         * The URL of the video thumbnail.
+         * CoverURL.
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
             this.coverURL = coverURL;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The URL of the video thumbnail.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder title(String title) {
+            this.putQueryParameter("Title", title);
+            this.title = title;
             return this;
         }
 
@@ -148,42 +175,6 @@ public class UpdateVideoInfoRequest extends Request {
          * 
          * *   The value can be up to 1,024 bytes in length.
          * *   The string must be encoded in the UTF-8 format.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The tags of the video.
-         * <p>
-         * 
-         * *   Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.
-         * *   Separate multiple tags with commas (,).
-         * *   The string must be encoded in the UTF-8 format.
-         */
-        public Builder tags(String tags) {
-            this.putQueryParameter("Tags", tags);
-            this.tags = tags;
-            return this;
-        }
-
-        /**
-         * The title of the video.
-         * <p>
-         * 
-         * *   The value can be up to 128 bytes in length.
-         * *   The string must be encoded in the UTF-8 format.
-         */
-        public Builder title(String title) {
-            this.putQueryParameter("Title", title);
-            this.title = title;
-            return this;
-        }
-
-        /**
-         * The ID of the video.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

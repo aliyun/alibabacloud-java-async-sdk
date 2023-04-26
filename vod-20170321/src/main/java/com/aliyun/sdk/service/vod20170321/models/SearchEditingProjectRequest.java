@@ -194,7 +194,7 @@ public class SearchEditingProjectRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The beginning of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -221,7 +221,15 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects are queried.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **Normal**: indicates that the online editing project is in draft.
+         * *   **Producing**: indicates that the video is being produced.
+         * *   **Produced**: indicates that the video was produced.
+         * *   **ProduceFailed**: indicates that the video failed to be produced.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -230,7 +238,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+         * The title of the online editing project.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,10 +265,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The sorting rule of results. Valid values:
-         * <p>
-         * *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
-         * *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
+         * The title of the online editing project.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -269,7 +274,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The region where the online editing project was created.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -278,12 +283,7 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects are queried. Valid values:
-         * <p>
-         * *   **Normal**: indicates that the online editing project is in draft.
-         * *   **Producing**: indicates that the video is being produced.
-         * *   **Produced**: indicates that the video was produced.
-         * *   **ProduceFailed**: indicates that the video failed to be produced.
+         * The list of online editing projects.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -292,7 +292,10 @@ public class SearchEditingProjectRequest extends Request {
         }
 
         /**
-         * The title of the online editing project.
+         * The duration of the online editing project, which must be consistent with the duration of the timeline.
+         * <p>
+         * 
+         * > The Timeline parameter is not included in response parameters.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

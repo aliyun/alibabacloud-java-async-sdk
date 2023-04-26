@@ -62,7 +62,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The list of online editing projects.
+         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
          */
         public Builder projectList(ProjectList projectList) {
             this.projectList = projectList;
@@ -70,7 +70,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **SearchEditingProject**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of online editing projects returned.
+         * The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -226,7 +226,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The thumbnail URL of the online editing project.
+             * The ID of the online editing project.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -234,7 +234,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The end of the time range to query. The query is performed based on the time range during which the required online editing projects were created. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -242,7 +242,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the online editing project.
+             * The thumbnail URL of the online editing project.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,9 +250,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the online editing project, which must be consistent with the duration of the timeline.
-             * <p>
-             * > The Timeline parameter is not included in response parameters.
+             * Duration.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -260,7 +258,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The number of the page to return. Default value: **1**.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -268,7 +266,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the online editing project.
+             * Queries online editing projects.
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -276,7 +274,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the online editing project was created.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -284,12 +282,11 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:
+             * The sorting rule of results. Valid values:
              * <p>
-             * *   **Normal**: indicates that the online editing project is in draft.
-             * *   **Producing**: indicates that the video is being produced.
-             * *   **Produced**: indicates that the video was produced.
-             * *   **ProduceFailed**: indicates that the video failed to be produced.
+             * 
+             * *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
+             * *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,6 +296,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             /**
              * The path of the Object Storage Service (OSS) bucket where the produced video is stored.
              * <p>
+             * 
              * > To view the path of the OSS bucket, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored), and choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the path of the OSS bucket.
              */
             public Builder storageLocation(String storageLocation) {
@@ -307,7 +305,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the online editing project.
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;

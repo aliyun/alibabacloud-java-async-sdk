@@ -54,7 +54,7 @@ public class ListTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * The name of the template group.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

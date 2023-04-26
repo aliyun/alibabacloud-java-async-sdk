@@ -50,7 +50,7 @@ public class AddTranscodeTemplateGroupResponseBody extends TeaModel {
         private String transcodeTemplateGroupId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AddTranscodeTemplateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the transcoding template group.
+         * TranscodeTemplateGroupId.
          */
         public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
             this.transcodeTemplateGroupId = transcodeTemplateGroupId;

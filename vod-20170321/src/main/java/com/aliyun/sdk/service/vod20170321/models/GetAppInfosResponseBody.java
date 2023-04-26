@@ -74,7 +74,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of each application.
+         * The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder appInfoList(java.util.List < AppInfoList> appInfoList) {
             this.appInfoList = appInfoList;
@@ -90,7 +90,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application that was not found.
+         * The ID of the application. You can specify a maximum of 10 application IDs. Separate them with commas (,).
          */
         public Builder nonExistAppIds(java.util.List < String > nonExistAppIds) {
             this.nonExistAppIds = nonExistAppIds;
@@ -98,7 +98,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +210,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the application.
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -218,7 +218,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * AppName.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -226,7 +226,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -234,7 +234,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,7 +242,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * ModificationTime.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -250,10 +250,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application. Valid values:
-             * <p>
-             * - **Normal**
-             * - **Disable**
+             * Queries the information about one or more applications based on application IDs.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -261,10 +258,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. Valid values:
-             * <p>
-             * - **System**
-             * - **Custom**
+             * The ID of the request.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -73,8 +73,8 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
          * The time granularity at which the data was queried. Valid values:
          * <p>
          * 
-         * - **hour**
-         * - **day**
+         * *   **hour**
+         * *   **day**
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -137,9 +137,9 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
              * The type of video AI. Valid values:
              * <p>
              * 
-             * - **AIVideoCensor**: automated review
-             * - **AIVideoFPShot**: media fingerprinting
-             * - **AIVideoTag**: smart tag
+             * *   **AIVideoCensor**: automated review
+             * *   **AIVideoFPShot**: media fingerprinting
+             * *   **AIVideoTag**: smart tagging
              */
             public Builder name(String name) {
                 this.name = name;
@@ -249,7 +249,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The timestamp of the returned data. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

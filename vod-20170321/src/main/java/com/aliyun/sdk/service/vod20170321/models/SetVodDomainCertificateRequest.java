@@ -176,7 +176,7 @@ public class SetVodDomainCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SSL certificate. Valid values:
+         * Specifies whether to enable the SSL certificate. Default value: off. Valid values:
          * <p>
          * 
          * *   **on**

@@ -113,7 +113,7 @@ public class AddWatermarkRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * The ID of the request.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -122,7 +122,7 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The Object Storage Service (OSS) URL of the watermark file. You must set this parameter if you add image watermarks.
+         * The OSS URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -131,10 +131,7 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The name of the watermark. Only letters and digits are supported.
-         * <p>
-         * *   The name can be up to 128 bytes in length.
-         * *   The value must be encoded in UTF-8.
+         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -143,10 +140,7 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The type of the watermark. Valid values:
-         * <p>
-         * *   **Image**: This is the default value.
-         * *   **Text**
+         * The ID of the watermark.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -155,9 +149,7 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
-         * <p>
-         * > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+         * The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);

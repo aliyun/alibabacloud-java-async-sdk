@@ -58,7 +58,7 @@ public class AddCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **AddCategory**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class AddCategoryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the video category.
+             * CateId.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -154,11 +154,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
-             * <p>
-             * 
-             * - The value can be up to 64 bytes in length.
-             * - The string must be encoded in the UTF-8 format.
+             * AddCategory
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -166,7 +162,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category. A value of **0** indicates a level 1 category.
+             * Level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -174,7 +170,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
+             * Creates a video category.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -182,11 +178,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the category. Valid values:
-             * <p>
-             * 
-             * - **default** (default): default category
-             * - **material**: material category
+             * The ID of the video category.
              */
             public Builder type(String type) {
                 this.type = type;

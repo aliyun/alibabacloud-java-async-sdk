@@ -50,7 +50,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the intelligent review job.
+         * The average score of the images of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
          */
         public Builder mediaAuditJob(MediaAuditJob mediaAuditJob) {
             this.mediaAuditJob = mediaAuditJob;
@@ -58,7 +58,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The highest review score.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,38 +134,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * The category of the review result. Valid values:
+             * The recommendation for review results. Valid values:
              * <p>
              * 
-             * *   **normal**
-             * *   **spam**
-             * *   **ad**
-             * *   **politics**
-             * *   **terrorism**
-             * *   **abuse**
-             * *   **porn**
-             * *   **flood**: spam posts
-             * *   **contraband**
-             * *   **meaningless**
+             * *   **block**: The content violates the regulations.
+             * *   **review**: The content may violate the regulations.
+             * *   **pass**: The content passes the review.
              */
             public Builder label(String label) {
                 this.label = label;
-                return this;
-            }
-
-            /**
-             * The review scenario. Valid value: **antispam**.
-             */
-            public Builder scene(String scene) {
-                this.scene = scene;
-                return this;
-            }
-
-            /**
-             * The score.
-             */
-            public Builder score(String score) {
-                this.score = score;
                 return this;
             }
 
@@ -176,6 +153,38 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * *   **block**: The content violates the regulations.
              * *   **review**: The content may violate the regulations.
              * *   **pass**: The content passes the review.
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
+                return this;
+            }
+
+            /**
+             * The categories of the review results and the number of images.
+             */
+            public Builder score(String score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **normal**
+             * *   **bloody**
+             * *   **explosion**
+             * *   **outfit**
+             * *   **logo**
+             * *   **weapon**
+             * *   **politics**
+             * *   **violence**
+             * *   **crowd**
+             * *   **parade**
+             * *   **carcrash**
+             * *   **flag**
+             * *   **location**
+             * *   **others**
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -252,59 +261,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * The category of the review result.
+             * The recommendation for review results. Valid values:
              * <p>
              * 
-             * Valid values if scene is **porn**:
-             * 
-             * *   **porn**
-             * *   **sexy**
-             * *   **normal**
-             * 
-             * Valid values if scene is **terrorism**:
-             * 
-             * *   **normal**
-             * *   **bloody**
-             * *   **explosion**
-             * *   **outfit**
-             * *   **logo**
-             * *   **weapon**
-             * *   **politics**
-             * *   **violence**
-             * *   **crowd**
-             * *   **parade**
-             * *   **carcrash**
-             * *   **flag**
-             * *   **location**
-             * *   **others**
-             * 
-             * Valid values if scene is **ad**:
-             * 
-             * *   **normal**
-             * *   **ad**
-             * *   **politics**
-             * *   **porn**
-             * *   **abuse**
-             * *   **terrorism**
-             * *   **contraband**
-             * *   **spam**
-             * *   **npx**: illegal ad
-             * *   **qrcode**: QR code
-             * *   **programCode**
-             * 
-             * Valid values if scene is **live**:
-             * 
-             * *   **normal**
-             * *   **meaningless**
-             * *   **PIP**
-             * *   **smoking**
-             * *   **drivelive**
-             * 
-             * Valid values if scene is **logo**:
-             * 
-             * *   **normal**
-             * *   **TV**
-             * *   **trademark**
+             * *   **block**: The content violates the regulations.
+             * *   **review**: The content may violate the regulations.
+             * *   **pass**: The content passes the review.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -312,14 +274,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The review scenario. Valid values:
+             * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **porn**
-             * *   **terrorism**
              * *   **ad**
-             * *   **live**: undesirable scenes
-             * *   **logo**
+             * *   **normal**
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -327,7 +286,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The score is representative of the confidence.
+             * The number of images.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -335,12 +294,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
-             * 
-             * *   **block**: The content violates the regulations.
-             * *   **review**: The content may violate the regulations.
-             * *   **pass**: The content passes the review.
+             * The results of logo review.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -429,16 +383,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Separate multiple values with commas (,). Valid values:
-             * <p>
-             * 
-             * *   **porn**
-             * *   **terrorism**
-             * *   **ad**
-             * *   **live**: undesirable scenes
-             * *   **logo**
-             * *   **audio**: audio anti-spam
-             * *   **normal**
+             * The error code. This parameter is returned if the value of Status is fail.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -446,7 +391,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * Details of image review results.
+             * The results of terrorism content review.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -454,12 +399,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
-             * 
-             * *   **block**: The content violates the regulations.
-             * *   **review**: The content may violate the regulations.
-             * *   **pass**: The content passes the review.
+             * The categories of the review results and the number of images.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -467,7 +407,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image. Valid value: **cover**.
+             * The information about the image with the highest score of the category that is indicated by Label.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -475,7 +415,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * The score of the image of the category that is indicated by Label.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -576,43 +516,10 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The text.
+             * The number of images.
              */
             public Builder content(String content) {
                 this.content = content;
-                return this;
-            }
-
-            /**
-             * The category of the review result. Valid values:
-             * <p>
-             * 
-             * *   **spam**
-             * *   **ad**
-             * *   **abuse**
-             * *   **flood**: spam posts
-             * *   **contraband**
-             * *   **meaningless**
-             * *   **normal**
-             */
-            public Builder label(String label) {
-                this.label = label;
-                return this;
-            }
-
-            /**
-             * The review scenario. Valid value: **antispam**.
-             */
-            public Builder scene(String scene) {
-                this.scene = scene;
-                return this;
-            }
-
-            /**
-             * The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The score is representative of the confidence.
-             */
-            public Builder score(String score) {
-                this.score = score;
                 return this;
             }
 
@@ -624,13 +531,89 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * *   **review**: The content may violate the regulations.
              * *   **pass**: The content passes the review.
              */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * The categories of the review results and the number of images.
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
+                return this;
+            }
+
+            /**
+             * The URL of the image.
+             */
+            public Builder score(String score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * The information about the intelligent review job.
+             */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
                 return this;
             }
 
             /**
-             * The type of the text. The value is **title**.
+             * The category of the review result.
+             * <p>
+             * 
+             * Valid values if scene is **porn**:
+             * 
+             * *   **porn**
+             * *   **sexy**
+             * *   **normal**
+             * 
+             * Valid values if scene is **terrorism**:
+             * 
+             * *   **normal**
+             * *   **bloody**
+             * *   **explosion**
+             * *   **outfit**
+             * *   **logo**
+             * *   **weapon**
+             * *   **politics**
+             * *   **violence**
+             * *   **crowd**
+             * *   **parade**
+             * *   **carcrash**
+             * *   **flag**
+             * *   **location**
+             * *   **others**
+             * 
+             * Valid values if scene is **ad**:
+             * 
+             * *   **normal**
+             * *   **ad**
+             * *   **politics**
+             * *   **porn**
+             * *   **abuse**
+             * *   **terrorism**
+             * *   **contraband**
+             * *   **spam**
+             * *   **npx**: illegal ad
+             * *   **qrcode**: QR code
+             * *   **programCode**
+             * 
+             * Valid values if scene is **live**:
+             * 
+             * *   **normal**
+             * *   **meaningless**
+             * *   **PIP**
+             * *   **smoking**
+             * *   **drivelive**
+             * 
+             * Valid values if scene is **logo**:
+             * 
+             * *   **normal**
+             * *   **TV**
+             * *   **trademark**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -683,7 +666,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The number of images.
+             * The information about the image with the highest score of the category that is indicated by Label.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -691,11 +674,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
-             * 
-             * *   **ad**
-             * *   **normal**
+             * The results of undesired content review.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -772,11 +751,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
-             * 
-             * *   **ad**
-             * *   **normal**
+             * The URL of the image.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -784,7 +759,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * The average score of the review results.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -792,7 +767,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * The categories of the review results and the number of images.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -901,7 +876,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private java.util.List < TopList> topList; 
 
             /**
-             * The average score of the review results.
+             * The number of images.
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -909,7 +884,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics about tag frames.
+             * The results of video review.
              */
             public Builder counterList(java.util.List < CounterList> counterList) {
                 this.counterList = counterList;
@@ -917,11 +892,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
-             * 
-             * *   **ad**
-             * *   **normal**
+             * The type of the image. Valid value: **cover**.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -929,7 +900,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The highest review score.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **porn**
+             * *   **sexy**
+             * *   **normal**
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -937,12 +913,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
-             * 
-             * *   **block**: The content violates the regulations.
-             * *   **review**: The content may violate the regulations.
-             * *   **pass**: The content passes the review.
+             * The statistics about tag frames.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1011,11 +982,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
+             * The recommendation for review results. Valid values:
              * <p>
              * 
-             * *   **live**: The content contains undesirable scenes.
-             * *   **normal**
+             * *   **block**: The content violates the regulations.
+             * *   **review**: The content may violate the regulations.
+             * *   **pass**: The content passes the review.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1092,11 +1064,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
-             * 
-             * *   **live**: The content contains undesirable scenes.
-             * *   **normal**
+             * Queries the information about an intelligent review job. After the job is submitted, it is processed asynchronously. You can call this operation to query the job information in real time.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1104,7 +1072,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * The ID of the request.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -1112,7 +1080,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * The results of text review.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1120,7 +1088,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **live**: The content contains undesirable scenes.
+             * *   **normal**
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1221,7 +1193,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private java.util.List < LiveResultTopList> topList; 
 
             /**
-             * The average score of the review results.
+             * The recommendation for review results. Valid values:
+             * <p>
+             * 
+             * *   **block**: The content violates the regulations.
+             * *   **review**: The content may violate the regulations.
+             * *   **pass**: The content passes the review.
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -1229,7 +1206,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The categories of the review results and the number of images.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder counterList(java.util.List < LiveResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -1237,10 +1214,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
+             * The category of the review result. Separate multiple values with commas (,). Valid values:
              * <p>
              * 
-             * *   **live**: The content contains undesirable scenes.
+             * *   **porn**
+             * *   **terrorism**
+             * *   **ad**
+             * *   **live**: undesirable scenes
+             * *   **logo**
+             * *   **audio**: audio anti-spam
              * *   **normal**
              */
             public Builder label(String label) {
@@ -1249,7 +1231,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The highest review score.
+             * The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -1257,12 +1239,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
-             * 
-             * *   **block**: The content violates the regulations.
-             * *   **review**: The content may violate the regulations.
-             * *   **pass**: The content passes the review.
+             * The error message. This parameter is returned if the value of Status is fail.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1270,7 +1247,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image with the highest score of the category that is indicated by Label.
+             * The results of image review.
              */
             public Builder topList(java.util.List < LiveResultTopList> topList) {
                 this.topList = topList;
@@ -1331,10 +1308,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
+             * The category of the review result. Separate multiple values with commas (,). Valid values:
              * <p>
              * 
+             * *   **porn**
+             * *   **terrorism**
+             * *   **ad**
+             * *   **live**: undesirable scenes
              * *   **logo**
+             * *   **audio**: audio anti-spam
              * *   **normal**
              */
             public Builder label(String label) {
@@ -1412,10 +1394,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Valid values:
+             * The category of the review result. Separate multiple values with commas (,). Valid values:
              * <p>
              * 
+             * *   **porn**
+             * *   **terrorism**
+             * *   **ad**
+             * *   **live**: undesirable scenes
              * *   **logo**
+             * *   **audio**: audio anti-spam
              * *   **normal**
              */
             public Builder label(String label) {
@@ -1424,7 +1411,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label.
+             * The ID of the request.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -1432,7 +1419,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * The results of text review.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1440,7 +1427,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **live**: The content contains undesirable scenes.
+             * *   **normal**
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1541,7 +1532,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private java.util.List < LogoResultTopList> topList; 
 
             /**
-             * The average score of the images of the category that is indicated by Label.
+             * The recommendation for review results. Valid values:
+             * <p>
+             * 
+             * *   **block**: The content violates the regulations.
+             * *   **review**: The content may violate the regulations.
+             * *   **pass**: The content passes the review.
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -1549,7 +1545,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The categories of the review results and the number of images.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder counterList(java.util.List < LogoResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -1557,10 +1553,15 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the review result. Valid values:
+             * The category of the review result. Separate multiple values with commas (,). Valid values:
              * <p>
              * 
+             * *   **porn**
+             * *   **terrorism**
+             * *   **ad**
+             * *   **live**: undesirable scenes
              * *   **logo**
+             * *   **audio**: audio anti-spam
              * *   **normal**
              */
             public Builder label(String label) {
@@ -1569,7 +1570,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The highest score of the image of the category that is indicated by Label.
+             * The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -1577,12 +1578,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
-             * 
-             * *   **block**: The content violates the regulations.
-             * *   **review**: The content may violate the regulations.
-             * *   **pass**: The content passes the review.
+             * The error message. This parameter is returned if the value of Status is fail.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -1590,7 +1586,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image with the highest score of the category that is indicated by Label.
+             * The results of image review.
              */
             public Builder topList(java.util.List < LogoResultTopList> topList) {
                 this.topList = topList;
@@ -1643,7 +1639,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The number of images.
+             * The results of audio review.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1654,8 +1650,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **porn**
-             * *   **sexy**
+             * *   **live**: The content contains undesirable scenes.
              * *   **normal**
              */
             public Builder label(String label) {
@@ -1733,12 +1728,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the review result. Valid values:
-             * <p>
-             * 
-             * *   **porn**
-             * *   **sexy**
-             * *   **normal**
+             * The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1746,7 +1736,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -1754,7 +1744,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * The score.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1762,7 +1752,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1863,7 +1853,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private java.util.List < PornResultTopList> topList; 
 
             /**
-             * The average score of the images of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
+             * Test
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -1871,10 +1861,34 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The categories of the review results and the number of images.
+             * The URL of the image.
              */
             public Builder counterList(java.util.List < PornResultCounterList> counterList) {
                 this.counterList = counterList;
+                return this;
+            }
+
+            /**
+             * The average score of the review results.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * The number of images.
+             */
+            public Builder maxScore(String maxScore) {
+                this.maxScore = maxScore;
+                return this;
+            }
+
+            /**
+             * The score of the image of the category that is indicated by Label.
+             */
+            public Builder suggestion(String suggestion) {
+                this.suggestion = suggestion;
                 return this;
             }
 
@@ -1885,35 +1899,6 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * *   **porn**
              * *   **sexy**
              * *   **normal**
-             */
-            public Builder label(String label) {
-                this.label = label;
-                return this;
-            }
-
-            /**
-             * The highest score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
-             */
-            public Builder maxScore(String maxScore) {
-                this.maxScore = maxScore;
-                return this;
-            }
-
-            /**
-             * The recommendation for review results. Valid values:
-             * <p>
-             * 
-             * *   **block**: The content violates the regulations.
-             * *   **review**: The content may violate the regulations.
-             * *   **pass**: The content passes the review.
-             */
-            public Builder suggestion(String suggestion) {
-                this.suggestion = suggestion;
-                return this;
-            }
-
-            /**
-             * The information about the image with the highest score of the category that is indicated by Label.
              */
             public Builder topList(java.util.List < PornResultTopList> topList) {
                 this.topList = topList;
@@ -1966,7 +1951,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The number of images.
+             * The highest score of the image of the category that is indicated by Label.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1977,13 +1962,20 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **terrorism**
+             * *   **normal**
+             * *   **bloody**
+             * *   **explosion**
              * *   **outfit**
              * *   **logo**
              * *   **weapon**
              * *   **politics**
+             * *   **violence**
+             * *   **crowd**
+             * *   **parade**
+             * *   **carcrash**
+             * *   **flag**
+             * *   **location**
              * *   **others**
-             * *   **normal**
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2063,20 +2055,8 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **normal**
-             * *   **bloody**
-             * *   **explosion**
-             * *   **outfit**
              * *   **logo**
-             * *   **weapon**
-             * *   **politics**
-             * *   **violence**
-             * *   **crowd**
-             * *   **parade**
-             * *   **carcrash**
-             * *   **flag**
-             * *   **location**
-             * *   **others**
+             * *   **normal**
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2084,7 +2064,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
+             * The ID of the job.
              */
             public Builder score(String score) {
                 this.score = score;
@@ -2092,7 +2072,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * The highest review score.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -2100,7 +2080,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * The position in the video. Unit: milliseconds.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2201,7 +2181,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private java.util.List < TerrorismResultTopList> topList; 
 
             /**
-             * The average score of the images of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **porn**
+             * *   **sexy**
+             * *   **normal**
              */
             public Builder averageScore(String averageScore) {
                 this.averageScore = averageScore;
@@ -2209,7 +2194,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The categories of the review results and the number of images.
+             * The review scenario. Valid values:
+             * <p>
+             * 
+             * *   **porn**
+             * *   **terrorism**
+             * *   **ad**
+             * *   **live**: undesirable scenes
+             * *   **logo**
              */
             public Builder counterList(java.util.List < TerrorismResultCounterList> counterList) {
                 this.counterList = counterList;
@@ -2220,20 +2212,8 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **normal**
-             * *   **bloody**
-             * *   **explosion**
-             * *   **outfit**
              * *   **logo**
-             * *   **weapon**
-             * *   **politics**
-             * *   **violence**
-             * *   **crowd**
-             * *   **parade**
-             * *   **carcrash**
-             * *   **flag**
-             * *   **location**
-             * *   **others**
+             * *   **normal**
              */
             public Builder label(String label) {
                 this.label = label;
@@ -2241,7 +2221,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The highest score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
+             * The score of the image of the category that is indicated by Label.
              */
             public Builder maxScore(String maxScore) {
                 this.maxScore = maxScore;
@@ -2249,12 +2229,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The recommendation for review results. Valid values:
-             * <p>
-             * 
-             * *   **block**: The content violates the regulations.
-             * *   **review**: The content may violate the regulations.
-             * *   **pass**: The content passes the review.
+             * The URL of the image.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -2262,7 +2237,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image with the highest score of the category that is indicated by Label.
+             * The score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The score is representative of the confidence.
              */
             public Builder topList(java.util.List < TerrorismResultTopList> topList) {
                 this.topList = topList;
@@ -2375,7 +2350,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private TerrorismResult terrorismResult; 
 
             /**
-             * The results of ad review.
+             * The information about the image with the highest score of the category that is indicated by Label.
              */
             public Builder adResult(AdResult adResult) {
                 this.adResult = adResult;
@@ -2386,35 +2361,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **ad**
+             * *   **live**: The content contains undesirable scenes.
              * *   **normal**
              */
             public Builder label(String label) {
                 this.label = label;
-                return this;
-            }
-
-            /**
-             * The results of undesired content review.
-             */
-            public Builder liveResult(LiveResult liveResult) {
-                this.liveResult = liveResult;
-                return this;
-            }
-
-            /**
-             * The results of logo review.
-             */
-            public Builder logoResult(LogoResult logoResult) {
-                this.logoResult = logoResult;
-                return this;
-            }
-
-            /**
-             * The results of pornography content review.
-             */
-            public Builder pornResult(PornResult pornResult) {
-                this.pornResult = pornResult;
                 return this;
             }
 
@@ -2426,13 +2377,41 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * *   **review**: The content may violate the regulations.
              * *   **pass**: The content passes the review.
              */
+            public Builder liveResult(LiveResult liveResult) {
+                this.liveResult = liveResult;
+                return this;
+            }
+
+            /**
+             * LogoResult.
+             */
+            public Builder logoResult(LogoResult logoResult) {
+                this.logoResult = logoResult;
+                return this;
+            }
+
+            /**
+             * The time when the job started to run. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             */
+            public Builder pornResult(PornResult pornResult) {
+                this.pornResult = pornResult;
+                return this;
+            }
+
+            /**
+             * The position in the video. Unit: milliseconds.
+             */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
                 return this;
             }
 
             /**
-             * The results of terrorism content review.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **ad**
+             * *   **normal**
              */
             public Builder terrorismResult(TerrorismResult terrorismResult) {
                 this.terrorismResult = terrorismResult;
@@ -2545,12 +2524,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private VideoResult videoResult; 
 
             /**
-             * The content that violates the regulations. Separate multiple values with commas (,). Valid values:
-             * <p>
-             * 
-             * *   **video**: the video.
-             * *   **image-cover**: the cover.
-             * *   **text-title**: the title.
+             * The ID of the video.
              */
             public Builder abnormalModules(String abnormalModules) {
                 this.abnormalModules = abnormalModules;
@@ -2558,35 +2532,10 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The results of audio review.
+             * The job result data.
              */
             public Builder audioResult(java.util.List < AudioResult> audioResult) {
                 this.audioResult = audioResult;
-                return this;
-            }
-
-            /**
-             * The results of image review.
-             */
-            public Builder imageResult(java.util.List < ImageResult> imageResult) {
-                this.imageResult = imageResult;
-                return this;
-            }
-
-            /**
-             * The category of the review result. Separate multiple values with commas (,). Valid values:
-             * <p>
-             * 
-             * *   **porn**
-             * *   **terrorism**
-             * *   **ad**
-             * *   **live**: undesirable scenes
-             * *   **logo**
-             * *   **audio**: audio anti-spam
-             * *   **normal**
-             */
-            public Builder label(String label) {
-                this.label = label;
                 return this;
             }
 
@@ -2598,13 +2547,34 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * *   **review**: The content may violate the regulations.
              * *   **pass**: The content passes the review.
              */
+            public Builder imageResult(java.util.List < ImageResult> imageResult) {
+                this.imageResult = imageResult;
+                return this;
+            }
+
+            /**
+             * The content that violates the regulations. Separate multiple values with commas (,). Valid values:
+             * <p>
+             * 
+             * *   **video**: the video.
+             * *   **image-cover**: the cover.
+             * *   **text-title**: the title.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * The results of pornography content review.
+             */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
                 return this;
             }
 
             /**
-             * The results of text review.
+             * The results of ad review.
              */
             public Builder textResult(java.util.List < TextResult> textResult) {
                 this.textResult = textResult;
@@ -2612,7 +2582,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The results of video review.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **logo**
+             * *   **normal**
              */
             public Builder videoResult(VideoResult videoResult) {
                 this.videoResult = videoResult;
@@ -2749,7 +2723,7 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The error code. This parameter is returned if the value of Status is fail.
+             * The ID of the intelligent review job.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -2757,7 +2731,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job is complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The recommendation for review results. Valid values:
+             * <p>
+             * 
+             * *   **block**: The content violates the regulations.
+             * *   **review**: The content may violate the regulations.
+             * *   **pass**: The content passes the review.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -2765,42 +2744,10 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job started to run. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The review scenario. Valid value: **antispam**.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The job result data.
-             */
-            public Builder data(Data data) {
-                this.data = data;
-                return this;
-            }
-
-            /**
-             * The ID of the job.
-             */
-            public Builder jobId(String jobId) {
-                this.jobId = jobId;
-                return this;
-            }
-
-            /**
-             * The ID of the video.
-             */
-            public Builder mediaId(String mediaId) {
-                this.mediaId = mediaId;
-                return this;
-            }
-
-            /**
-             * The error message. This parameter is returned if the value of Status is fail.
-             */
-            public Builder message(String message) {
-                this.message = message;
                 return this;
             }
 
@@ -2813,13 +2760,58 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
              * *   **init**: The job is being initialized.
              * *   **Processing**: The job is in progress.
              */
+            public Builder data(Data data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * Only the job type is supported.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * The highest score of the image of the category that is indicated by Label. Valid values: `[0, 100]`. The value is accurate to 10 decimal places. The score is representative of the confidence.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **ad**
+             * *   **normal**
+             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * Only the job type is supported.
+             * The category of the review result. Valid values:
+             * <p>
+             * 
+             * *   **terrorism**
+             * *   **outfit**
+             * *   **logo**
+             * *   **weapon**
+             * *   **politics**
+             * *   **others**
+             * *   **normal**
              */
             public Builder type(String type) {
                 this.type = type;

@@ -84,7 +84,7 @@ public class VerifyVodDomainOwnerRequest extends Request {
         } 
 
         /**
-         * The domain name of which you want to verify the ownership. You can specify only one domain name in each call.
+         * The DNS verification method that is used to verify the ownership of the specified domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -102,7 +102,7 @@ public class VerifyVodDomainOwnerRequest extends Request {
         }
 
         /**
-         * The DNS verification method that is used to verify the ownership of the specified domain name.
+         * Verifies the ownership of a specified domain name.
          */
         public Builder verifyType(String verifyType) {
             this.putQueryParameter("VerifyType", verifyType);

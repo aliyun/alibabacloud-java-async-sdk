@@ -54,11 +54,7 @@ public class DeleteAttachedMediaRequest extends Request {
         } 
 
         /**
-         * The list of auxiliary media asset IDs.
-         * <p>
-         * 
-         * *   Separate multiple IDs with commas (,).
-         * *   A maximum of 20 IDs can be specified.
+         * Deletes one or more auxiliary media assets at a time.
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

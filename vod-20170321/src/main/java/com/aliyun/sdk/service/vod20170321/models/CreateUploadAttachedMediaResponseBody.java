@@ -98,7 +98,7 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         private String uploadAuth; 
 
         /**
-         * The OSS URL of the file. The URL does not contain the information used for URL signing. You can set the FileUrl parameter to this URL when you call the [AddWatermark](~~98617~~) operation.
+         * The returned data.
          */
         public Builder fileURL(String fileURL) {
             this.fileURL = fileURL;
@@ -106,7 +106,7 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the auxiliary media asset.
+         * MediaId.
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -114,9 +114,7 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the auxiliary media asset. If a domain name for Alibaba Cloud CDN (CDN) is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
-         * <p>
-         * > If you enable the URL signing feature of ApsaraVideo VOD, you may be unable to access the returned URL of the auxiliary media asset by using a browser and the HTTP status code 403 may be returned. You can disable the [URL signing](~~86090~~) feature or [generate an authentication signature](~~57007~~).
+         * The ID of the request.
          */
         public Builder mediaURL(String mediaURL) {
             this.mediaURL = mediaURL;
@@ -124,7 +122,7 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,9 +130,7 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The upload URL.
-         * <p>
-         * > The upload URL returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload URL, you must decode the upload URL by using the Base64 algorithm. You must parse the upload URL only if you use native OSS SDKs or OSS API for uploads.
+         * The OSS URL of the file. The URL does not contain the information used for URL signing. You can set the FileUrl parameter to this URL when you call the [AddWatermark](~~98617~~) operation.
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -142,9 +138,9 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The upload credential.
+         * The upload URL.
          * <p>
-         * > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
+         * > The upload URL returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload URL, you must decode the upload URL by using the Base64 algorithm. You must parse the upload URL only if you use native OSS SDKs or OSS API for uploads.
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;

@@ -62,7 +62,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         private TranscodeData transcodeData; 
 
         /**
-         * The time granularity at which the data was queried. Valid values:
+         * The interval at which the data was queried. Valid values:
          * <p>
          * 
          * *   **hour**
@@ -82,7 +82,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics on transcoding.
+         * The transcoding statistics returned.
          */
         public Builder transcodeData(TranscodeData transcodeData) {
             this.transcodeData = transcodeData;
@@ -139,7 +139,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
              * 
              * *   **Audio**: audio transcoding
              * *   **Segmentation**: container format conversion
-             * *   H.264 and H.265-related video transcoding specifications, such as **H264.LD, H264.SD, H264.HD, H264.2K, and H264.4K**
+             * *   **H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more**
              */
             public Builder name(String name) {
                 this.name = name;
@@ -147,7 +147,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding length. Unit: seconds.
+             * The transcoding duration. Unit: seconds.
              */
             public Builder value(String value) {
                 this.value = value;

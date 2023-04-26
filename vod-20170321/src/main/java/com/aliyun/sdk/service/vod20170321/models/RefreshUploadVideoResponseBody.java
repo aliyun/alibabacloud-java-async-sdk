@@ -74,7 +74,7 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         private String videoId; 
 
         /**
-         * The ID of the request.
+         * Obtains a new upload credential after the video upload times out.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,10 +82,7 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The upload URL.
-         * <p>
-         * 
-         * > The upload URL returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload URL, you must decode the upload URL by using the Base64 algorithm. You must parse the upload URL only if you use native Object Storage Service (OSS) SDKs or OSS API for uploads.
+         * UploadAddress.
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -93,10 +90,7 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The upload credential.
-         * <p>
-         * 
-         * > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
+         * UploadAuth.
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;
@@ -104,7 +98,7 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the audio or video file.
+         * VideoId.
          */
         public Builder videoId(String videoId) {
             this.videoId = videoId;

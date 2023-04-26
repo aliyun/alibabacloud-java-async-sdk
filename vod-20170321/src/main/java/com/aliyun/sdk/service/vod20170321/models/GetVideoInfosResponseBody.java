@@ -62,7 +62,16 @@ public class GetVideoInfosResponseBody extends TeaModel {
         private java.util.List < VideoList> videoList; 
 
         /**
-         * The IDs of the videos that do not exist.
+         * The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Uploading**: The video is being uploaded.
+         * *   **UploadFail**: The video fails to be uploaded.
+         * *   **UploadSucc**: The video is uploaded.
+         * *   **Transcoding**: The video is being transcoded.
+         * *   **TranscodeFail**: The video fails to be transcoded.
+         * *   **Blocked**: The video is blocked.
+         * *   **Normal**: The video can be played.
          */
         public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
@@ -70,7 +79,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The title of the video.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +87,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the video.
+         * The description of the video.
          */
         public Builder videoList(java.util.List < VideoList> videoList) {
             this.videoList = videoList;
@@ -116,6 +125,12 @@ public class GetVideoInfosResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         private String modificationTime;
 
+        @NameInMap("RestoreExpiration")
+        private String restoreExpiration;
+
+        @NameInMap("RestoreStatus")
+        private String restoreStatus;
+
         @NameInMap("Size")
         private Long size;
 
@@ -124,6 +139,9 @@ public class GetVideoInfosResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("StorageClass")
+        private String storageClass;
 
         @NameInMap("StorageLocation")
         private String storageLocation;
@@ -149,9 +167,12 @@ public class GetVideoInfosResponseBody extends TeaModel {
             this.description = builder.description;
             this.duration = builder.duration;
             this.modificationTime = builder.modificationTime;
+            this.restoreExpiration = builder.restoreExpiration;
+            this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
             this.snapshots = builder.snapshots;
             this.status = builder.status;
+            this.storageClass = builder.storageClass;
             this.storageLocation = builder.storageLocation;
             this.tags = builder.tags;
             this.templateGroupId = builder.templateGroupId;
@@ -224,6 +245,20 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return restoreExpiration
+         */
+        public String getRestoreExpiration() {
+            return this.restoreExpiration;
+        }
+
+        /**
+         * @return restoreStatus
+         */
+        public String getRestoreStatus() {
+            return this.restoreStatus;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -242,6 +277,13 @@ public class GetVideoInfosResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         /**
@@ -288,9 +330,12 @@ public class GetVideoInfosResponseBody extends TeaModel {
             private String description; 
             private Float duration; 
             private String modificationTime; 
+            private String restoreExpiration; 
+            private String restoreStatus; 
             private Long size; 
             private java.util.List < String > snapshots; 
             private String status; 
+            private String storageClass; 
             private String storageLocation; 
             private String tags; 
             private String templateGroupId; 
@@ -298,7 +343,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The ID of the application.
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -306,7 +351,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video category.
+             * The Object Storage Service (OSS) bucket where the video file is stored.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -322,7 +367,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the video thumbnail.
+             * CoverURL.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -338,7 +383,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the video.
+             * Queries the information about multiple videos at a time.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -346,7 +391,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video. Unit: seconds.
+             * Duration.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -354,7 +399,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The URL array of video snapshots.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -362,7 +407,23 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the video mezzanine file. Unit: byte.
+             * RestoreExpiration.
+             */
+            public Builder restoreExpiration(String restoreExpiration) {
+                this.restoreExpiration = restoreExpiration;
+                return this;
+            }
+
+            /**
+             * RestoreStatus.
+             */
+            public Builder restoreStatus(String restoreStatus) {
+                this.restoreStatus = restoreStatus;
+                return this;
+            }
+
+            /**
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -370,7 +431,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The URL array of video snapshots.
+             * Snapshots.
              */
             public Builder snapshots(java.util.List < String > snapshots) {
                 this.snapshots = snapshots;
@@ -378,16 +439,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:
-             * <p>
-             * 
-             * *   **Uploading**: The video is being uploaded.
-             * *   **UploadFail**: The video fails to be uploaded.
-             * *   **UploadSucc**: The video is uploaded.
-             * *   **Transcoding**: The video is being transcoded.
-             * *   **TranscodeFail**: The video fails to be transcoded.
-             * *   **Blocked**: The video is blocked.
-             * *   **Normal**: The video can be played.
+             * The URL of the video thumbnail.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -395,7 +447,15 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) bucket where the video file is stored.
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
+                return this;
+            }
+
+            /**
+             * The information about the video.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -403,7 +463,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the video. Multiple tags are separated by commas (,).
+             * The ID of the video category.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -411,7 +471,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template group that was used to transcode the video.
+             * TemplateGroupId.
              */
             public Builder templateGroupId(String templateGroupId) {
                 this.templateGroupId = templateGroupId;
@@ -419,7 +479,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the video.
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -427,7 +487,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

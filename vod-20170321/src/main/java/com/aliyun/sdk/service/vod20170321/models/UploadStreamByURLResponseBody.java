@@ -74,7 +74,7 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         private String streamJobId; 
 
         /**
-         * The URL of the OSS object.
+         * FileURL.
          */
         public Builder fileURL(String fileURL) {
             this.fileURL = fileURL;
@@ -82,7 +82,7 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Uploads transcoded streams to ApsaraVideo VOD from external storage.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the input stream. This parameter is used when you call the [GetURLUploadInfos](~~106830~~) operation.
+         * SourceURL.
          */
         public Builder sourceURL(String sourceURL) {
             this.sourceURL = sourceURL;
@@ -98,10 +98,7 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stream upload job. This parameter is used when you call the [GetURLUploadInfos](~~106830~~) operation.
-         * <p>
-         * 
-         * In ApsaraVideo VOD, you can upload only one transcoded stream in an upload job. For more information, see the PlayInfo: the playback information about a video stream section in [Basic structures](~~52839~~).
+         * UploadStreamByURL
          */
         public Builder streamJobId(String streamJobId) {
             this.streamJobId = streamJobId;

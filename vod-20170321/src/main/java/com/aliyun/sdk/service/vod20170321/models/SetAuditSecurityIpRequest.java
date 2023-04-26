@@ -83,11 +83,7 @@ public class SetAuditSecurityIpRequest extends Request {
         } 
 
         /**
-         * The IP addresses to be added to a review security group. You can add a maximum of 100 IP addresses to each review security group. Separate multiple IP addresses with commas (,). You can enter individual IP addresses or a CIDR block.
-         * <p>
-         * 
-         * *   Individual IP address: for example, 10.23.12.24
-         * *   CIDR block: for example, 10.23.12.24/24, where /24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from `1 to 32`.
+         * Manages the IP addresses in review security groups.
          */
         public Builder ips(String ips) {
             this.putQueryParameter("Ips", ips);
@@ -96,12 +92,7 @@ public class SetAuditSecurityIpRequest extends Request {
         }
 
         /**
-         * The operation type. Valid values:
-         * <p>
-         * 
-         * *   **Append**: adds the IP addresses to the original whitelist. This is the default value.
-         * *   **Cover**: overwrites the original whitelist.
-         * *   **Delete**: removes the IP addresses from the original whitelist.
+         * OperateMode.
          */
         public Builder operateMode(String operateMode) {
             this.putQueryParameter("OperateMode", operateMode);
@@ -110,7 +101,11 @@ public class SetAuditSecurityIpRequest extends Request {
         }
 
         /**
-         * The name of the review security group. Default value: **Default**. You can specify a maximum of 10 review security groups.
+         * The IP addresses to be added to a review security group. You can add a maximum of 100 IP addresses to each review security group. Separate multiple IP addresses with commas (,). You can enter individual IP addresses or a CIDR block.
+         * <p>
+         * 
+         * *   Individual IP address: for example, 10.23.12.24
+         * *   CIDR block: for example, 10.23.12.24/24, where /24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from `1 to 32`.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

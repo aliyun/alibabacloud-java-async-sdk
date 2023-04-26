@@ -50,7 +50,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         private java.util.List < UploadJobs> uploadJobs; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         }
 
         /**
-         * The information about one or more upload jobs.
+         * UploadJobs.
          */
         public Builder uploadJobs(java.util.List < UploadJobs> uploadJobs) {
             this.uploadJobs = uploadJobs;
@@ -110,7 +110,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             private String sourceURL; 
 
             /**
-             * The ID of the upload job.
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -118,7 +118,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the source file that is uploaded in the upload job.
+             * SourceURL.
              */
             public Builder sourceURL(String sourceURL) {
                 this.sourceURL = sourceURL;

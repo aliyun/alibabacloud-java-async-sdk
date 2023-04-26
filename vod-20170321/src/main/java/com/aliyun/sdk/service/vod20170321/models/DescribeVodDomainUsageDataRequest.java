@@ -155,11 +155,11 @@ public class DescribeVodDomainUsageDataRequest extends Request {
         } 
 
         /**
-         * The region where the data is queried. The default value is CN, which indicates mainland China. Valid values:
+         * The region where you want to query data. Default value: CN. Valid values:
          * <p>
          * 
-         * *   **CN**: mainland China.
-         * *   **OverSeas**: outside mainland China.
+         * *   **CN**: Chinese mainland
+         * *   **OverSeas**: outside the Chinese mainland
          */
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
@@ -168,7 +168,7 @@ public class DescribeVodDomainUsageDataRequest extends Request {
         }
 
         /**
-         * The domain name for CDN. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas (,).
+         * The accelerated domain name. If you leave this parameter empty, the merged data of all your accelerated domain names is returned. Separate multiple accelerated domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -186,11 +186,11 @@ public class DescribeVodDomainUsageDataRequest extends Request {
         }
 
         /**
-         * The type of the data to be queried. Valid values:
+         * The type of the data to return. Valid values:
          * <p>
          * 
-         * *   **bps**: bandwidth.
-         * *   **traf**: traffic.
+         * *   **bps**: bandwidth
+         * *   **traf**: traffic
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -226,12 +226,12 @@ public class DescribeVodDomainUsageDataRequest extends Request {
         }
 
         /**
-         * The type of the content based on which the data is generated. Valid values:
+         * The type of content that you want to query. Valid values:
          * <p>
          * 
-         * *   **static**
-         * *   **dynamic**
-         * *   **all**
+         * *   **static**: static content
+         * *   **dynamic**: dynamic content
+         * *   **all**: all content
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

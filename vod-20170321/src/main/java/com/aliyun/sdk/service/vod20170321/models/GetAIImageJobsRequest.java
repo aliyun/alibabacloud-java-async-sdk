@@ -111,10 +111,7 @@ public class GetAIImageJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the image AI processing job. You can obtain the value of JobId from the response to the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation.
-         * <p>
-         * *   You can specify a maximum of 10 IDs.
-         * *   Separate multiple IDs with commas (,).
+         * The returned data.
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);

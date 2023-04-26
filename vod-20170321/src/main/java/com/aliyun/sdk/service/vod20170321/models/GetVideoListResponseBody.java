@@ -157,6 +157,12 @@ public class GetVideoListResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         private String modificationTime;
 
+        @NameInMap("RestoreExpiration")
+        private String restoreExpiration;
+
+        @NameInMap("RestoreStatus")
+        private String restoreStatus;
+
         @NameInMap("Size")
         private Long size;
 
@@ -165,6 +171,9 @@ public class GetVideoListResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("StorageClass")
+        private String storageClass;
 
         @NameInMap("StorageLocation")
         private String storageLocation;
@@ -187,9 +196,12 @@ public class GetVideoListResponseBody extends TeaModel {
             this.description = builder.description;
             this.duration = builder.duration;
             this.modificationTime = builder.modificationTime;
+            this.restoreExpiration = builder.restoreExpiration;
+            this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
             this.snapshots = builder.snapshots;
             this.status = builder.status;
+            this.storageClass = builder.storageClass;
             this.storageLocation = builder.storageLocation;
             this.tags = builder.tags;
             this.title = builder.title;
@@ -261,6 +273,20 @@ public class GetVideoListResponseBody extends TeaModel {
         }
 
         /**
+         * @return restoreExpiration
+         */
+        public String getRestoreExpiration() {
+            return this.restoreExpiration;
+        }
+
+        /**
+         * @return restoreStatus
+         */
+        public String getRestoreStatus() {
+            return this.restoreStatus;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -279,6 +305,13 @@ public class GetVideoListResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         /**
@@ -318,9 +351,12 @@ public class GetVideoListResponseBody extends TeaModel {
             private String description; 
             private Float duration; 
             private String modificationTime; 
+            private String restoreExpiration; 
+            private String restoreStatus; 
             private Long size; 
             private Snapshots snapshots; 
             private String status; 
+            private String storageClass; 
             private String storageLocation; 
             private String tags; 
             private String title; 
@@ -391,6 +427,22 @@ public class GetVideoListResponseBody extends TeaModel {
             }
 
             /**
+             * RestoreExpiration.
+             */
+            public Builder restoreExpiration(String restoreExpiration) {
+                this.restoreExpiration = restoreExpiration;
+                return this;
+            }
+
+            /**
+             * RestoreStatus.
+             */
+            public Builder restoreStatus(String restoreStatus) {
+                this.restoreStatus = restoreStatus;
+                return this;
+            }
+
+            /**
              * The size of the video mezzanine file. Unit: byte.
              */
             public Builder size(Long size) {
@@ -420,6 +472,14 @@ public class GetVideoListResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
                 return this;
             }
 

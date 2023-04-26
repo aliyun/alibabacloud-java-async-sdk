@@ -50,7 +50,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of review results.
+         * The page number of the returned page.
          */
         public Builder mediaAuditAudioResultDetail(MediaAuditAudioResultDetail mediaAuditAudioResultDetail) {
             this.mediaAuditAudioResultDetail = mediaAuditAudioResultDetail;
@@ -58,7 +58,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * The end time of the audio that failed the review. Unit: seconds.
+             * The list of results.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -142,15 +142,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The review results. Valid values:
-             * <p>
-             * *   **spam**
-             * *   **ad**
-             * *   **abuse**
-             * *   **flood**
-             * *   **contraband**
-             * *   **meaningless**
-             * *   **normal**
+             * Label.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -158,7 +150,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the audio that failed the review. Unit: seconds.
+             * Queries the details of audio review results.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -166,7 +158,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The text that corresponds to the audio.
+             * Text.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -231,7 +223,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The list of results.
+             * The text that corresponds to the audio.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -239,7 +231,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The operation that you want to perform. Set the value to **GetMediaAuditAudioResultDetail**.
              */
             public Builder pageTotal(Integer pageTotal) {
                 this.pageTotal = pageTotal;
@@ -247,7 +239,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of pages returned.
+             * The ID of the request.
              */
             public Builder total(Integer total) {
                 this.total = total;

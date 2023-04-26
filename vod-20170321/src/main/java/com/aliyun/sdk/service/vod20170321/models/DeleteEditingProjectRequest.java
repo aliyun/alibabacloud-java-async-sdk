@@ -129,7 +129,7 @@ public class DeleteEditingProjectRequest extends Request {
         }
 
         /**
-         * The ID of the online editing project. Separate multiple IDs with commas (,).
+         * ProjectIds.
          */
         public Builder projectIds(String projectIds) {
             this.putQueryParameter("ProjectIds", projectIds);

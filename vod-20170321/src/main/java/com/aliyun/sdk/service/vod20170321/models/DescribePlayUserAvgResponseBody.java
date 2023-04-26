@@ -58,7 +58,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics on average playback each day.
+         * The operation that you want to perform. Set the value to **DescribePlayUserAvg**.
          */
         public Builder userPlayStatisAvgs(UserPlayStatisAvgs userPlayStatisAvgs) {
             this.userPlayStatisAvgs = userPlayStatisAvgs;
@@ -122,7 +122,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             private String date; 
 
             /**
-             * The average number of video views.
+             * AvgPlayCount.
              */
             public Builder avgPlayCount(String avgPlayCount) {
                 this.avgPlayCount = avgPlayCount;
@@ -130,7 +130,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             }
 
             /**
-             * The average playback duration. Unit: milliseconds.
+             * AvgPlayDuration.
              */
             public Builder avgPlayDuration(String avgPlayDuration) {
                 this.avgPlayDuration = avgPlayDuration;
@@ -138,7 +138,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             }
 
             /**
-             * The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
+             * Queries the statistics on average playback each day in a specified time range.
              */
             public Builder date(String date) {
                 this.date = date;

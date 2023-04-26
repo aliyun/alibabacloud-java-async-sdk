@@ -55,7 +55,7 @@ public class GetTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the transcoding template group.
+         * The transcoding configurations of the video stream. The value is a JSON-formatted string.
          */
         public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
             this.putQueryParameter("TranscodeTemplateGroupId", transcodeTemplateGroupId);

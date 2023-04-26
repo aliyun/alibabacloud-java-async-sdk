@@ -125,7 +125,7 @@ public class GetMediaAuditAudioResultDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](~~86044~~) operation.
+         * The end time of the audio that failed the review. Unit: seconds.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -152,7 +152,7 @@ public class GetMediaAuditAudioResultDetailRequest extends Request {
         }
 
         /**
-         * The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.
+         * Details of review results.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);

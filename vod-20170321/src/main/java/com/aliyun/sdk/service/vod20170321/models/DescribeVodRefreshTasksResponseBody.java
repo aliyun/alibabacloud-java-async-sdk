@@ -238,12 +238,12 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the error that was returned when the refresh or prefetch task failed. Valid values:
+             * The type of error returned when the refresh or prefetch task failed. Valid values: Valid values:
              * <p>
              * 
-             * *   **Internal Error**: indicates that an internal error occurred.
-             * *   **Origin Timeout**: indicates that the response from the origin server timed out.
-             * *   **Origin Return StatusCode 5XX**: indicates that the origin server returned a 5XX error.
+             * *   **Internal Error**: An internal error occurred.
+             * *   **Origin Timeout**: The response from the origin server timed out.
+             * *   **Origin Return StatusCode 5XX**: The origin server returned an HTTP status code 5xx.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +251,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the object to which the refresh or prefetch task is applied.
+             * The URL of the object refreshed.
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -259,11 +259,11 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
+             * The type of the task. Default value: file. Valid values:
              * <p>
              * 
-             * *   **file**: refreshes one or more files. This is the default value.
-             * *   **directory**: refreshes the files under one or more directories.
+             * *   **file**: refreshes one or more files.
+             * *   **directory**: refreshes files in the specified directory.
              * *   **preload**: prefetches one or more files.
              */
             public Builder objectType(String objectType) {
@@ -272,7 +272,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task, in percentage.
+             * The progress of the task in percentage.
              */
             public Builder process(String process) {
                 this.process = process;
@@ -283,10 +283,10 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
              * The status of the task. Valid values:
              * <p>
              * 
-             * *   **Complete**: indicates that the task is complete.
-             * *   **Refreshing**: indicates that the task is in progress.
-             * *   **Failed**: indicates that the task failed.
-             * *   **Pending**: indicates that the task is pending.
+             * *   **Complete**: The task is complete.
+             * *   **Refreshing**: The task is in progress.
+             * *   **Failed**: The task failed.
+             * *   **Pending**: The task is pending.
              */
             public Builder status(String status) {
                 this.status = status;

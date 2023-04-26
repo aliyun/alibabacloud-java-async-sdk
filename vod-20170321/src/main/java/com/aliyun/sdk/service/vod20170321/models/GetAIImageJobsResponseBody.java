@@ -50,7 +50,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The image AI processing jobs.
+         * The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder AIImageJobList(java.util.List < AIImageJobList> AIImageJobList) {
             this.AIImageJobList = AIImageJobList;
@@ -58,7 +58,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The information about the image AI processing job.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +217,14 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * The user data.
+             * <p>
+             * 
+             * *   The value must be a JSON string.
+             * *   The MessageCallback or Extend parameter is returned.
+             * *   The value contains a maximum of 512 bytes.
+             * 
+             * For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -225,7 +232,11 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The ID of the image AI processing job. You can obtain the value of JobId from the response to the [SubmitAIImageJob](~~186922~~) operation.
+             * <p>
+             * 
+             * *   You can specify a maximum of 10 IDs.
+             * *   Separate multiple IDs with commas (,).
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -241,7 +252,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * Queries jobs of image AI processing.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -249,11 +260,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
-             * <p>
-             * 
-             * *   **success**
-             * *   **fail**
+             * The error code.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -261,7 +268,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the AI template that was used to submit the job.
+             * TemplateConfig.
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -269,7 +276,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AI template.
+             * TemplateId.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -277,14 +284,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The user data.
-             * <p>
-             * 
-             * *   The value must be a JSON string.
-             * *   The MessageCallback or Extend parameter is returned.
-             * *   The value contains a maximum of 512 bytes.
-             * 
-             * For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+             * The ID of the request.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -292,7 +292,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * The configurations of the AI template that was used to submit the job.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

@@ -97,11 +97,7 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * The lock status of the template group. Valid values:
-         * <p>
-         * 
-         * *   **Enabled**: The template group is locked.
-         * *   **Disabled**: The template group is not locked.
+         * Locked.
          */
         public Builder locked(String locked) {
             this.putQueryParameter("Locked", locked);
@@ -110,11 +106,7 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The name of the transcoding template group.
-         * <p>
-         * 
-         * *   The name can be up to 128 bytes in length.
-         * *   The value must be encoded in UTF-8.
+         * The operation that you want to perform. Set the value to **UpdateTranscodeTemplateGroup**.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -123,7 +115,7 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The ID of the transcoding template group.
+         * TranscodeTemplateGroupId.
          */
         public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
             this.putQueryParameter("TranscodeTemplateGroupId", transcodeTemplateGroupId);
@@ -132,7 +124,7 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The configurations of the transcoding template. The value is a JSON-formatted string. For more information about the data structure, see the "TranscodeTemplate" section of the [Basic data types](~~52839~~) topic.
+         * Modifies a transcoding template group. You can modify the configurations of the specified transcoding templates in a transcoding template group.
          */
         public Builder transcodeTemplateList(String transcodeTemplateList) {
             this.putQueryParameter("TranscodeTemplateList", transcodeTemplateList);

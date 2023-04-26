@@ -50,7 +50,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         private SnapshotJob snapshotJob; 
 
         /**
-         * The ID of the request.
+         * Submits a snapshot job for a video and starts asynchronous snapshot processing.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the snapshot job.
+         * SnapshotJob.
          */
         public Builder snapshotJob(SnapshotJob snapshotJob) {
             this.snapshotJob = snapshotJob;
@@ -98,7 +98,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * The ID of the snapshot job.
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

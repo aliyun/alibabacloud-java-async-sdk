@@ -74,7 +74,7 @@ public class SearchMediaResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * Details about media assets.
+         * The tags of the audio file.
          */
         public Builder mediaList(java.util.List < MediaList> mediaList) {
             this.mediaList = mediaList;
@@ -82,7 +82,15 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The type of the media asset that you want to query. Default value: video. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
+         * *   **image**
+         * *   **attached**
+         * 
+         * > If this parameter is set to **video** or **audio** and you want to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +98,12 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination identifier.
+         * The transcoding mode. Default value: FastTranscode. Valid values:
+         * <p>
+         * 
+         * *   **FastTranscode**: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.
+         * *   **NoTranscode**: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.
+         * *   **AsyncTranscode**: The video file can be immediately played and asynchronously transcoded after it is uploaded.
          */
         public Builder scrollToken(String scrollToken) {
             this.scrollToken = scrollToken;
@@ -98,7 +111,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of data records that meet the specified filter criteria.
+         * The tags of the image file.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -111,6 +124,431 @@ public class SearchMediaResponseBody extends TeaModel {
 
     } 
 
+    public static class Occurrences extends TeaModel {
+        @NameInMap("From")
+        private Double from;
+
+        @NameInMap("Score")
+        private Double score;
+
+        @NameInMap("To")
+        private Double to;
+
+        private Occurrences(Builder builder) {
+            this.from = builder.from;
+            this.score = builder.score;
+            this.to = builder.to;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Occurrences create() {
+            return builder().build();
+        }
+
+        /**
+         * @return from
+         */
+        public Double getFrom() {
+            return this.from;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return to
+         */
+        public Double getTo() {
+            return this.to;
+        }
+
+        public static final class Builder {
+            private Double from; 
+            private Double score; 
+            private Double to; 
+
+            /**
+             * 片段起始时间
+             */
+            public Builder from(Double from) {
+                this.from = from;
+                return this;
+            }
+
+            /**
+             * 打分
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * 片段结束时间
+             */
+            public Builder to(Double to) {
+                this.to = to;
+                return this;
+            }
+
+            public Occurrences build() {
+                return new Occurrences(this);
+            } 
+
+        } 
+
+    }
+    public static class AiLabelInfo extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
+        @NameInMap("LabelId")
+        private String labelId;
+
+        @NameInMap("LabelName")
+        private String labelName;
+
+        @NameInMap("Occurrences")
+        private java.util.List < Occurrences> occurrences;
+
+        private AiLabelInfo(Builder builder) {
+            this.category = builder.category;
+            this.labelId = builder.labelId;
+            this.labelName = builder.labelName;
+            this.occurrences = builder.occurrences;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AiLabelInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return labelId
+         */
+        public String getLabelId() {
+            return this.labelId;
+        }
+
+        /**
+         * @return labelName
+         */
+        public String getLabelName() {
+            return this.labelName;
+        }
+
+        /**
+         * @return occurrences
+         */
+        public java.util.List < Occurrences> getOccurrences() {
+            return this.occurrences;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String labelId; 
+            private String labelName; 
+            private java.util.List < Occurrences> occurrences; 
+
+            /**
+             * 分类
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * 实体ID
+             */
+            public Builder labelId(String labelId) {
+                this.labelId = labelId;
+                return this;
+            }
+
+            /**
+             * 实体名称
+             */
+            public Builder labelName(String labelName) {
+                this.labelName = labelName;
+                return this;
+            }
+
+            /**
+             * 片段列表
+             */
+            public Builder occurrences(java.util.List < Occurrences> occurrences) {
+                this.occurrences = occurrences;
+                return this;
+            }
+
+            public AiLabelInfo build() {
+                return new AiLabelInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class OcrInfo extends TeaModel {
+        @NameInMap("Content")
+        private String content;
+
+        @NameInMap("From")
+        private Double from;
+
+        @NameInMap("To")
+        private Double to;
+
+        private OcrInfo(Builder builder) {
+            this.content = builder.content;
+            this.from = builder.from;
+            this.to = builder.to;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OcrInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return from
+         */
+        public Double getFrom() {
+            return this.from;
+        }
+
+        /**
+         * @return to
+         */
+        public Double getTo() {
+            return this.to;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private Double from; 
+            private Double to; 
+
+            /**
+             * 文本内容
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * 片段起始时间
+             */
+            public Builder from(Double from) {
+                this.from = from;
+                return this;
+            }
+
+            /**
+             * 片段结束时间
+             */
+            public Builder to(Double to) {
+                this.to = to;
+                return this;
+            }
+
+            public OcrInfo build() {
+                return new OcrInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class AiData extends TeaModel {
+        @NameInMap("AiLabelInfo")
+        private java.util.List < AiLabelInfo> aiLabelInfo;
+
+        @NameInMap("OcrInfo")
+        private java.util.List < OcrInfo> ocrInfo;
+
+        private AiData(Builder builder) {
+            this.aiLabelInfo = builder.aiLabelInfo;
+            this.ocrInfo = builder.ocrInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AiData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aiLabelInfo
+         */
+        public java.util.List < AiLabelInfo> getAiLabelInfo() {
+            return this.aiLabelInfo;
+        }
+
+        /**
+         * @return ocrInfo
+         */
+        public java.util.List < OcrInfo> getOcrInfo() {
+            return this.ocrInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < AiLabelInfo> aiLabelInfo; 
+            private java.util.List < OcrInfo> ocrInfo; 
+
+            /**
+             * AI标签信息列表
+             */
+            public Builder aiLabelInfo(java.util.List < AiLabelInfo> aiLabelInfo) {
+                this.aiLabelInfo = aiLabelInfo;
+                return this;
+            }
+
+            /**
+             * 字幕信息列表
+             */
+            public Builder ocrInfo(java.util.List < OcrInfo> ocrInfo) {
+                this.ocrInfo = ocrInfo;
+                return this;
+            }
+
+            public AiData build() {
+                return new AiData(this);
+            } 
+
+        } 
+
+    }
+    public static class AiRoughData extends TeaModel {
+        @NameInMap("AiCategory")
+        private String aiCategory;
+
+        @NameInMap("AiJobId")
+        private String aiJobId;
+
+        @NameInMap("SaveType")
+        private String saveType;
+
+        @NameInMap("Status")
+        private String status;
+
+        private AiRoughData(Builder builder) {
+            this.aiCategory = builder.aiCategory;
+            this.aiJobId = builder.aiJobId;
+            this.saveType = builder.saveType;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AiRoughData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aiCategory
+         */
+        public String getAiCategory() {
+            return this.aiCategory;
+        }
+
+        /**
+         * @return aiJobId
+         */
+        public String getAiJobId() {
+            return this.aiJobId;
+        }
+
+        /**
+         * @return saveType
+         */
+        public String getSaveType() {
+            return this.saveType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String aiCategory; 
+            private String aiJobId; 
+            private String saveType; 
+            private String status; 
+
+            /**
+             * 视频AI分类
+             */
+            public Builder aiCategory(String aiCategory) {
+                this.aiCategory = aiCategory;
+                return this;
+            }
+
+            /**
+             * AI任务ID
+             */
+            public Builder aiJobId(String aiJobId) {
+                this.aiJobId = aiJobId;
+                return this;
+            }
+
+            /**
+             * 保存类型
+             */
+            public Builder saveType(String saveType) {
+                this.saveType = saveType;
+                return this;
+            }
+
+            /**
+             * 数据状态
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public AiRoughData build() {
+                return new AiRoughData(this);
+            } 
+
+        } 
+
+    }
     public static class Categories extends TeaModel {
         @NameInMap("CateId")
         private Long cateId;
@@ -174,7 +612,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private Long parentId; 
 
             /**
-             * The category ID of the auxiliary media asset.
+             * CateId.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -182,7 +620,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * CateName.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -190,7 +628,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category.
+             * Level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -198,7 +636,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category.
+             * ParentId.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -371,7 +809,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * The ID of the application.
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -379,12 +817,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the auxiliary media asset. Valid values:
-             * <p>
-             * 
-             * *   **watermark**
-             * *   **subtitle**
-             * *   **material**
+             * BusinessType.
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -392,7 +825,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of category IDs.
+             * Categories.
              */
             public Builder categories(java.util.List < Categories> categories) {
                 this.categories = categories;
@@ -400,7 +833,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The ID of the request.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -408,7 +841,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the auxiliary media asset.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -416,7 +849,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the auxiliary media asset.
+             * MediaId.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -424,7 +857,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * ModificationTime.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -432,12 +865,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the auxiliary media asset. Valid values:
-             * <p>
-             * 
-             * *   **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.
-             * *   **Normal**: The auxiliary media asset is uploaded.
-             * *   **UploadFail**: The auxiliary media asset fails to be uploaded.
+             * The endpoint of the OSS bucket in which the audio file is stored.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -445,7 +873,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket in which the auxiliary media asset is stored.
+             * Queries the information about media assets such as video, audio, and image files, and auxiliary media assets.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -453,7 +881,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the auxiliary media asset.
+             * Tags.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -461,7 +889,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the auxiliary media asset.
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -469,7 +897,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the auxiliary media asset.
+             * URL.
              */
             public Builder URL(String URL) {
                 this.URL = URL;
@@ -520,6 +948,12 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("PreprocessStatus")
         private String preprocessStatus;
 
+        @NameInMap("RestoreExpiration")
+        private String restoreExpiration;
+
+        @NameInMap("RestoreStatus")
+        private String restoreStatus;
+
         @NameInMap("Size")
         private Long size;
 
@@ -531,6 +965,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("StorageClass")
+        private String storageClass;
 
         @NameInMap("StorageLocation")
         private String storageLocation;
@@ -557,10 +994,13 @@ public class SearchMediaResponseBody extends TeaModel {
             this.mediaSource = builder.mediaSource;
             this.modificationTime = builder.modificationTime;
             this.preprocessStatus = builder.preprocessStatus;
+            this.restoreExpiration = builder.restoreExpiration;
+            this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
             this.snapshots = builder.snapshots;
             this.spriteSnapshots = builder.spriteSnapshots;
             this.status = builder.status;
+            this.storageClass = builder.storageClass;
             this.storageLocation = builder.storageLocation;
             this.tags = builder.tags;
             this.title = builder.title;
@@ -660,6 +1100,20 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
+         * @return restoreExpiration
+         */
+        public String getRestoreExpiration() {
+            return this.restoreExpiration;
+        }
+
+        /**
+         * @return restoreStatus
+         */
+        public String getRestoreStatus() {
+            return this.restoreStatus;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -685,6 +1139,13 @@ public class SearchMediaResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         /**
@@ -728,17 +1189,23 @@ public class SearchMediaResponseBody extends TeaModel {
             private String mediaSource; 
             private String modificationTime; 
             private String preprocessStatus; 
+            private String restoreExpiration; 
+            private String restoreStatus; 
             private Long size; 
             private java.util.List < String > snapshots; 
             private java.util.List < String > spriteSnapshots; 
             private String status; 
+            private String storageClass; 
             private String storageLocation; 
             private String tags; 
             private String title; 
             private String transcodeMode; 
 
             /**
-             * The ID of the application.
+             * The number of the page to return. Default value: **1**.
+             * <p>
+             * 
+             * > If the value of this parameter exceeds **200**, we recommend that you set the ScrollToken parameter as well.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -746,7 +1213,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the audio file.
+             * The name of the category.
              */
             public Builder audioId(String audioId) {
                 this.audioId = audioId;
@@ -754,7 +1221,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The category ID of the audio file.
+             * The size of the audio file.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -762,7 +1229,12 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * The status of the auxiliary media asset. Valid values:
+             * <p>
+             * 
+             * *   **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.
+             * *   **Normal**: The auxiliary media asset is uploaded.
+             * *   **UploadFail**: The auxiliary media asset fails to be uploaded.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -770,7 +1242,12 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the thumbnail.
+             * The type of the auxiliary media asset. Valid values:
+             * <p>
+             * 
+             * *   **watermark**
+             * *   **subtitle**
+             * *   **material**
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -778,7 +1255,15 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The sort field and order. Separate multiple values with commas (,). Default value: CreationTime:Desc. Valid values:
+             * <p>
+             * 
+             * *   **CreationTime:Desc**: The results are sorted in reverse chronological order based on the creation time.
+             * *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
+             * 
+             * > * For more information about the sort field, see "Sort field" in the [Search for media asset information](~~99179~~) topic.
+             * > * To obtain the first 5,000 data records that meet the specified filter criteria, you can specify a maximum of three sort fields.
+             * > * To obtain all the data records that meet the specified filter criteria, you can specify only one sort field.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -786,7 +1271,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the audio file.
+             * The tags of the video file.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -794,11 +1279,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The download switch. The audio file can be downloaded offline only when the download switch is turned on. Valid values:
-             * <p>
-             * 
-             * *   **on**
-             * *   **off**
+             * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
              */
             public Builder downloadSwitch(String downloadSwitch) {
                 this.downloadSwitch = downloadSwitch;
@@ -806,7 +1287,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the audio file.
+             * The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -814,13 +1295,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The source. Valid values:
-             * <p>
-             * 
-             * *   **general**: The audio file is uploaded by using ApsaraVideo VOD.
-             * *   **short_video**: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see [Introduction](~~53407~~).
-             * *   **editing**: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see [ProduceEditingProjectVideo](~~68536~~).
-             * *   **live**: The audio stream is recorded and uploaded as a file to ApsaraVideo VOD.
+             * The URL of the auxiliary media asset.
              */
             public Builder mediaSource(String mediaSource) {
                 this.mediaSource = mediaSource;
@@ -828,7 +1303,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The duration of the audio file.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -836,13 +1311,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The preprocessing status. Only preprocessed videos can be used for live streaming in the production studio. Valid values:
-             * <p>
-             * 
-             * *   **UnPreprocess**
-             * *   **Preprocessing**
-             * *   **PreprocessSucceed**
-             * *   **PreprocessFailed**
+             * The ID of the auxiliary media asset.
              */
             public Builder preprocessStatus(String preprocessStatus) {
                 this.preprocessStatus = preprocessStatus;
@@ -850,7 +1319,23 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the audio file.
+             * RestoreExpiration.
+             */
+            public Builder restoreExpiration(String restoreExpiration) {
+                this.restoreExpiration = restoreExpiration;
+                return this;
+            }
+
+            /**
+             * RestoreStatus.
+             */
+            public Builder restoreStatus(String restoreStatus) {
+                this.restoreStatus = restoreStatus;
+                return this;
+            }
+
+            /**
+             * The name of the category.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -858,7 +1343,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of automatic snapshots.
+             * [Details about audio files](~~86991~~).
              */
             public Builder snapshots(java.util.List < String > snapshots) {
                 this.snapshots = snapshots;
@@ -866,7 +1351,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of sprite snapshots.
+             * The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder spriteSnapshots(java.util.List < String > spriteSnapshots) {
                 this.spriteSnapshots = spriteSnapshots;
@@ -874,13 +1359,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the audio file. Valid values:
-             * <p>
-             * 
-             * *   **Uploading**
-             * *   **Normal**
-             * *   **UploadFail**
-             * *   **Deleted**
+             * The endpoint of the OSS bucket in which the auxiliary media asset is stored.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -888,7 +1367,15 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket in which the audio file is stored.
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
+                return this;
+            }
+
+            /**
+             * The name of the category.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -896,7 +1383,13 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the audio file.
+             * The source. Valid values:
+             * <p>
+             * 
+             * *   **general**: The video file is uploaded by using ApsaraVideo VOD.
+             * *   **short_video**: The video file is uploaded by using the short video SDK.
+             * *   **editing**: The video file is produced after online editing.
+             * *   **live**: The video stream is recorded and uploaded as a file.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -904,7 +1397,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the audio file.
+             * The total number of data records that meet the specified filter criteria.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -912,12 +1405,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding mode. Default value: FastTranscode. Valid values:
-             * <p>
-             * 
-             * *   **FastTranscode**: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.
-             * *   **NoTranscode**: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.
-             * *   **AsyncTranscode**: The audio file can be immediately played and asynchronously transcoded after it is uploaded.
+             * The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder transcodeMode(String transcodeMode) {
                 this.transcodeMode = transcodeMode;
@@ -1090,7 +1578,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * The ID of the application.
+             * The ID of the image file.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1098,7 +1586,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The category ID of the image file.
+             * The ID of the application.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -1106,7 +1594,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * The duration of the video file. Unit: seconds.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -1114,7 +1602,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The category ID of the image file.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1122,7 +1610,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image file.
+             * The URL of the thumbnail.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1130,7 +1618,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image file.
+             * The ID of the audio file.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1138,7 +1626,13 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The type of the media asset. Valid values:
+             * <p>
+             * 
+             * *   **video**
+             * *   **audio**
+             * *   **image**
+             * *   **attached**
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -1146,12 +1640,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image file.
-             * <p>
-             * 
-             * *   **Uploading**: The image file is being uploaded. This is the initial status.
-             * *   **Normal**: The image file is uploaded.
-             * *   **UploadFail**: The image file fails to be uploaded.
+             * The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1159,7 +1648,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket in which the image file is stored.
+             * The ID of the video file.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -1167,7 +1656,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the image file.
+             * [Details about auxiliary media assets](~~86991~~).
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -1175,7 +1664,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the image file.
+             * The category ID of the video file.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1183,7 +1672,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image file.
+             * The ID of the application.
              */
             public Builder URL(String URL) {
                 this.URL = URL;
@@ -1231,6 +1720,12 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("PreprocessStatus")
         private String preprocessStatus;
 
+        @NameInMap("RestoreExpiration")
+        private String restoreExpiration;
+
+        @NameInMap("RestoreStatus")
+        private String restoreStatus;
+
         @NameInMap("Size")
         private Long size;
 
@@ -1242,6 +1737,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("StorageClass")
+        private String storageClass;
 
         @NameInMap("StorageLocation")
         private String storageLocation;
@@ -1270,10 +1768,13 @@ public class SearchMediaResponseBody extends TeaModel {
             this.mediaSource = builder.mediaSource;
             this.modificationTime = builder.modificationTime;
             this.preprocessStatus = builder.preprocessStatus;
+            this.restoreExpiration = builder.restoreExpiration;
+            this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
             this.snapshots = builder.snapshots;
             this.spriteSnapshots = builder.spriteSnapshots;
             this.status = builder.status;
+            this.storageClass = builder.storageClass;
             this.storageLocation = builder.storageLocation;
             this.tags = builder.tags;
             this.title = builder.title;
@@ -1367,6 +1868,20 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
+         * @return restoreExpiration
+         */
+        public String getRestoreExpiration() {
+            return this.restoreExpiration;
+        }
+
+        /**
+         * @return restoreStatus
+         */
+        public String getRestoreStatus() {
+            return this.restoreStatus;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -1392,6 +1907,13 @@ public class SearchMediaResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         /**
@@ -1441,10 +1963,13 @@ public class SearchMediaResponseBody extends TeaModel {
             private String mediaSource; 
             private String modificationTime; 
             private String preprocessStatus; 
+            private String restoreExpiration; 
+            private String restoreStatus; 
             private Long size; 
             private java.util.List < String > snapshots; 
             private java.util.List < String > spriteSnapshots; 
             private String status; 
+            private String storageClass; 
             private String storageLocation; 
             private String tags; 
             private String title; 
@@ -1452,7 +1977,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The ID of the application.
+             * [Details about video files](~~86991~~).
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1460,7 +1985,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The category ID of the video file.
+             * The ID of the application.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -1468,7 +1993,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * The filter condition. For more information about the syntax, see [Protocol for media asset search](~~86991~~).
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -1476,7 +2001,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the thumbnail.
+             * The endpoint of the OSS bucket in which the image file is stored.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -1484,7 +2009,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1492,7 +2017,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the video file.
+             * The title of the image file.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1500,7 +2025,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:
+             * The download switch. The audio file can be downloaded offline only when the download switch is turned on. Valid values:
              * <p>
              * 
              * *   **on**
@@ -1512,70 +2037,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video file. Unit: seconds.
+             * The category ID of the audio file.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
-                return this;
-            }
-
-            /**
-             * The source. Valid values:
-             * <p>
-             * 
-             * *   **general**: The video file is uploaded by using ApsaraVideo VOD.
-             * *   **short_video**: The video file is uploaded by using the short video SDK.
-             * *   **editing**: The video file is produced after online editing.
-             * *   **live**: The video stream is recorded and uploaded as a file.
-             */
-            public Builder mediaSource(String mediaSource) {
-                this.mediaSource = mediaSource;
-                return this;
-            }
-
-            /**
-             * The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             */
-            public Builder modificationTime(String modificationTime) {
-                this.modificationTime = modificationTime;
-                return this;
-            }
-
-            /**
-             * The preprocessing status. Valid values:
-             * <p>
-             * 
-             * *   **UnPreprocess**
-             * *   **Preprocessing**
-             * *   **PreprocessSucceed**
-             * *   **PreprocessFailed**
-             */
-            public Builder preprocessStatus(String preprocessStatus) {
-                this.preprocessStatus = preprocessStatus;
-                return this;
-            }
-
-            /**
-             * The size of the video file.
-             */
-            public Builder size(Long size) {
-                this.size = size;
-                return this;
-            }
-
-            /**
-             * The list of automatic snapshots.
-             */
-            public Builder snapshots(java.util.List < String > snapshots) {
-                this.snapshots = snapshots;
-                return this;
-            }
-
-            /**
-             * The list of sprite snapshots.
-             */
-            public Builder spriteSnapshots(java.util.List < String > spriteSnapshots) {
-                this.spriteSnapshots = spriteSnapshots;
                 return this;
             }
 
@@ -1591,13 +2056,89 @@ public class SearchMediaResponseBody extends TeaModel {
              * *   **Blocked**
              * *   **Normal**
              */
+            public Builder mediaSource(String mediaSource) {
+                this.mediaSource = mediaSource;
+                return this;
+            }
+
+            /**
+             * The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             */
+            public Builder modificationTime(String modificationTime) {
+                this.modificationTime = modificationTime;
+                return this;
+            }
+
+            /**
+             * The ID of the application.
+             */
+            public Builder preprocessStatus(String preprocessStatus) {
+                this.preprocessStatus = preprocessStatus;
+                return this;
+            }
+
+            /**
+             * RestoreExpiration.
+             */
+            public Builder restoreExpiration(String restoreExpiration) {
+                this.restoreExpiration = restoreExpiration;
+                return this;
+            }
+
+            /**
+             * RestoreStatus.
+             */
+            public Builder restoreStatus(String restoreStatus) {
+                this.restoreStatus = restoreStatus;
+                return this;
+            }
+
+            /**
+             * The name of the category.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * The title of the audio file.
+             */
+            public Builder snapshots(java.util.List < String > snapshots) {
+                this.snapshots = snapshots;
+                return this;
+            }
+
+            /**
+             * The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             */
+            public Builder spriteSnapshots(java.util.List < String > spriteSnapshots) {
+                this.spriteSnapshots = spriteSnapshots;
+                return this;
+            }
+
+            /**
+             * The description of the image file.
+             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * The endpoint of the OSS bucket in which the video file is stored.
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
+                return this;
+            }
+
+            /**
+             * The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -1605,7 +2146,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the video file.
+             * The category ID of the auxiliary media asset.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -1613,7 +2154,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the video file.
+             * The URL of the image file.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1621,12 +2162,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding mode. Default value: FastTranscode. Valid values:
-             * <p>
-             * 
-             * *   **FastTranscode**: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.
-             * *   **NoTranscode**: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.
-             * *   **AsyncTranscode**: The video file can be immediately played and asynchronously transcoded after it is uploaded.
+             * The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder transcodeMode(String transcodeMode) {
                 this.transcodeMode = transcodeMode;
@@ -1634,7 +2170,10 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video file.
+             * The media asset fields to return in the query results.
+             * <p>
+             * 
+             * By default, only the basic media asset fields are returned. You can specify additional media asset fields that need to be returned in the request. For more information, see the "API examples" section of the [Search for media asset information](~~99179~~) topic.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;
@@ -1649,6 +2188,12 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class MediaList extends TeaModel {
+        @NameInMap("AiData")
+        private AiData aiData;
+
+        @NameInMap("AiRoughData")
+        private AiRoughData aiRoughData;
+
         @NameInMap("AttachedMedia")
         private AttachedMedia attachedMedia;
 
@@ -1671,6 +2216,8 @@ public class SearchMediaResponseBody extends TeaModel {
         private Video video;
 
         private MediaList(Builder builder) {
+            this.aiData = builder.aiData;
+            this.aiRoughData = builder.aiRoughData;
             this.attachedMedia = builder.attachedMedia;
             this.audio = builder.audio;
             this.creationTime = builder.creationTime;
@@ -1686,6 +2233,20 @@ public class SearchMediaResponseBody extends TeaModel {
 
         public static MediaList create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiData
+         */
+        public AiData getAiData() {
+            return this.aiData;
+        }
+
+        /**
+         * @return aiRoughData
+         */
+        public AiRoughData getAiRoughData() {
+            return this.aiRoughData;
         }
 
         /**
@@ -1738,6 +2299,8 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AiData aiData; 
+            private AiRoughData aiRoughData; 
             private AttachedMedia attachedMedia; 
             private Audio audio; 
             private String creationTime; 
@@ -1747,7 +2310,23 @@ public class SearchMediaResponseBody extends TeaModel {
             private Video video; 
 
             /**
-             * [Details about auxiliary media assets](~~86991~~).
+             * AI详细信息
+             */
+            public Builder aiData(AiData aiData) {
+                this.aiData = aiData;
+                return this;
+            }
+
+            /**
+             * AI简介数据
+             */
+            public Builder aiRoughData(AiRoughData aiRoughData) {
+                this.aiRoughData = aiRoughData;
+                return this;
+            }
+
+            /**
+             * The URL of the thumbnail.
              */
             public Builder attachedMedia(AttachedMedia attachedMedia) {
                 this.attachedMedia = attachedMedia;
@@ -1755,7 +2334,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * [Details about audio files](~~86991~~).
+             * The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -1763,7 +2342,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The title of the auxiliary media asset.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1771,7 +2350,13 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * [Details about image files](~~86991~~).
+             * The pagination identifier. The identifier can be up to 32 characters in length.
+             * <p>
+             * 
+             * The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter criteria are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search:
+             * 
+             * *   If SearchType is set to **video** or **audio** and you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.
+             * *   If the value of the PageNo parameter exceeds **200**, we recommend that you set this parameter to optimize search performance.
              */
             public Builder image(Image image) {
                 this.image = image;
@@ -1779,7 +2364,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media asset.
+             * The description of the video file.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -1787,13 +2372,13 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the media asset. Valid values:
+             * The status of the audio file. Valid values:
              * <p>
              * 
-             * *   **video**
-             * *   **audio**
-             * *   **image**
-             * *   **attached**
+             * *   **Uploading**
+             * *   **Normal**
+             * *   **UploadFail**
+             * *   **Deleted**
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -1801,7 +2386,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * [Details about video files](~~86991~~).
+             * The list of category IDs.
              */
             public Builder video(Video video) {
                 this.video = video;

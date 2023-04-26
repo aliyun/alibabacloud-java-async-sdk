@@ -214,7 +214,7 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The object URL based on which the query is performed. The URL is used as a condition for an exact match.
+         * The path of the object. The path is used as a condition for exact matching.
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -227,10 +227,10 @@ public class DescribeVodRefreshTasksRequest extends Request {
          * <p>
          * 
          * *   **file**: refreshes one or more files.
-         * *   **directory**: refreshes the files under one or more directories.
+         * *   **directory**: refreshes files in the specified directories.
          * *   **preload**: prefetches one or more files.
          * 
-         * > If you specify the DomainName or TaskStatus parameter, you must also specify the ObjectType parameter.
+         * > If you specify the DomainName or Status parameter, you must also specify the ObjectType parameter.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -290,9 +290,9 @@ public class DescribeVodRefreshTasksRequest extends Request {
          * The status of the task. Valid values:
          * <p>
          * 
-         * *   **Complete**: indicates that the task is complete.
-         * *   **Refreshing**: indicates that the task is in progress.
-         * *   **Failed**: indicates that the task failed.
+         * *   **Complete**: The task is complete.
+         * *   **Refreshing**: The task is in progress.
+         * *   **Failed**: The task failed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -301,7 +301,7 @@ public class DescribeVodRefreshTasksRequest extends Request {
         }
 
         /**
-         * The task ID based on which the query is performed.
+         * The ID of the task that you want to query.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

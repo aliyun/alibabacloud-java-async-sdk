@@ -50,7 +50,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
         private java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList; 
 
         /**
-         * The ID of the request.
+         * The ID of the transcoding template group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The transcoding template groups.
+         * The lock status of the transcoding template group. Valid values:
+         * <p>
+         * 
+         * *   **Disabled**: The template group is not locked.
+         * *   **Enabled**: The template group is locked.
          */
         public Builder transcodeTemplateGroupList(java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList) {
             this.transcodeTemplateGroupList = transcodeTemplateGroupList;
@@ -170,7 +174,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             private String transcodeTemplateGroupId; 
 
             /**
-             * The ID of the application.
+             * The operation that you want to perform. Set the value to **ListTranscodeTemplateGroup**.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -178,7 +182,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the template group was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -186,11 +190,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template group is the default one. Valid values:
-             * <p>
-             * 
-             * *   **Default**: The template group is the default one.
-             * *   **NotDefault**: The template group is not the default one.
+             * The ID of the request.
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -198,11 +198,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The lock status of the transcoding template group. Valid values:
-             * <p>
-             * 
-             * *   **Disabled**: The template group is not locked.
-             * *   **Enabled**: The template group is locked.
+             * Locked.
              */
             public Builder locked(String locked) {
                 this.locked = locked;
@@ -210,7 +206,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template group was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -218,7 +214,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template group.
+             * Queries transcoding template groups.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -226,7 +222,7 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template group.
+             * The ID of the application.
              */
             public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
                 this.transcodeTemplateGroupId = transcodeTemplateGroupId;

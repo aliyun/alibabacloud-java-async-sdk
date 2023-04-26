@@ -50,7 +50,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
         private java.util.List < TranscodeTaskList> transcodeTaskList; 
 
         /**
-         * The ID of the request.
+         * The ID of the transcoding template group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Details about transcoding tasks.
+         * The ID of the transcoding task.
          */
         public Builder transcodeTaskList(java.util.List < TranscodeTaskList> transcodeTaskList) {
             this.transcodeTaskList = transcodeTaskList;
@@ -170,7 +170,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * Queries transcoding tasks based on the media ID. This operation does not return specific job information.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -178,7 +178,12 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The ID of the audio or video file. You can use one of the following methods to obtain the ID of the file:
+             * <p>
+             * 
+             * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
+             * *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to obtain the upload URL and credential.
+             * *   Obtain the value of VideoId by calling the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -186,13 +191,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the transcoding task. Valid values:
-             * <p>
-             * *   **Processing**: In progress.
-             * *   **Partial**: Some transcoding jobs were complete.
-             * *   **CompleteAllSucc**: All transcoding jobs were successful.
-             * *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.
-             * *   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.
+             * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -200,7 +199,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding task.
+             * TranscodeTaskId.
              */
             public Builder transcodeTaskId(String transcodeTaskId) {
                 this.transcodeTaskId = transcodeTaskId;
@@ -208,7 +207,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template group.
+             * TranscodeTemplateGroupId.
              */
             public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
                 this.transcodeTemplateGroupId = transcodeTemplateGroupId;
@@ -216,10 +215,14 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the transcoding task is triggered. Valid values:
+             * The status of the transcoding task. Valid values:
              * <p>
-             * *   **Auto**: The transcoding task is automatically triggered when the video is uploaded.
-             * *   **Manual**: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.
+             * 
+             * *   **Processing**: In progress.
+             * *   **Partial**: Some transcoding jobs were complete.
+             * *   **CompleteAllSucc**: All transcoding jobs were successful.
+             * *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.
+             * *   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.
              */
             public Builder trigger(String trigger) {
                 this.trigger = trigger;
@@ -227,7 +230,7 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the audio or video file.
+             * The ID of the request.
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

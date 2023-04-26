@@ -110,7 +110,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * The time interval between the returned entries. Unit: seconds.
+         * The time interval between the entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -118,7 +118,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name for CDN.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -126,7 +126,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -142,7 +142,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,7 +150,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total traffic.
+         * The total amount of network traffic.
          */
         public Builder totalTraffic(String totalTraffic) {
             this.totalTraffic = totalTraffic;
@@ -158,7 +158,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The network traffic data that is collected for each interval.
+         * The network traffic that was collected at each interval.
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -270,7 +270,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The volume of the network traffic in mainland China. Unit: byte.
+             * The amount of network traffic in the Chinese mainland. Unit: bytes.
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -278,7 +278,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The volume of the HTTPS network traffic on L1 nodes in mainland China. Unit: byte.
+             * The amount of HTTPS network traffic on points of presence (POPs) in the Chinese mainland. Unit: bytes.
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -286,7 +286,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The volume of the HTTPS network traffic on L1 nodes outside mainland China. Unit: byte.
+             * The amount of HTTPS network traffic on POPs outside the Chinese mainland. Unit: bytes.
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -294,7 +294,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total volume of the HTTPS network traffic on L1 nodes. Unit: byte.
+             * The total amount of HTTPS network traffic on POPs. Unit: bytes.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -302,7 +302,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The volume of the network traffic outside mainland China. Unit: byte.
+             * The amount of network traffic outside the Chinese mainland. Unit: bytes.
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -318,7 +318,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total volume of the network traffic. Unit: byte.
+             * The total amount of network traffic. Unit: bytes.
              */
             public Builder value(String value) {
                 this.value = value;

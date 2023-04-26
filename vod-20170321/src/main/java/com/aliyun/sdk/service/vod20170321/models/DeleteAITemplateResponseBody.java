@@ -50,7 +50,7 @@ public class DeleteAITemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteAITemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the AI template.
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

@@ -62,11 +62,7 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the produced video.
-         * <p>
-         * 
-         * > *   This operation returns the ID of the produced video in synchronous mode.
-         * > *   If this operation returns the MediaId parameter, the video production task is being asynchronously processed.
+         * MediaId.
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -74,7 +70,7 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the online editing project.
+         * ProjectId.
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -82,7 +78,7 @@ public class ProduceEditingProjectVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

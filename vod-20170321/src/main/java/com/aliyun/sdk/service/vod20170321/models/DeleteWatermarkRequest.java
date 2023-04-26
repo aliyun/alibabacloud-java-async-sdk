@@ -55,7 +55,7 @@ public class DeleteWatermarkRequest extends Request {
         } 
 
         /**
-         * The ID of the watermark.
+         * WatermarkId.
          */
         public Builder watermarkId(String watermarkId) {
             this.putQueryParameter("WatermarkId", watermarkId);
