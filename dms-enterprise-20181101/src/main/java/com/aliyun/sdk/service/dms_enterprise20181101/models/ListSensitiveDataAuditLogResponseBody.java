@@ -98,7 +98,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The audit logs for sensitive data.
+         * SensitiveDataAuditLogList.
          */
         public Builder sensitiveDataAuditLogList(java.util.List < SensitiveDataAuditLogList> sensitiveDataAuditLogList) {
             this.sensitiveDataAuditLogList = sensitiveDataAuditLogList;
@@ -130,11 +130,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +138,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +226,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the column that contains sensitive data.
+             * ColumnName.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -238,15 +234,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The permission that the user has on the column. Valid values:
-             * <p>
-             * 
-             * *   **No permission**
-             * *   **Partial redaction**
-             * *   **Plaintext**
-             * *   **Change**
-             * *   **Enable data masking**
-             * *   **Disable data masking**
+             * ColumnPermissionType.
              */
             public Builder columnPermissionType(String columnPermissionType) {
                 this.columnPermissionType = columnPermissionType;
@@ -254,7 +242,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm used for data masking.
+             * DesensitizationRule.
              */
             public Builder desensitizationRule(String desensitizationRule) {
                 this.desensitizationRule = desensitizationRule;
@@ -262,12 +250,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitivity level of the data. Valid values:
-             * <p>
-             * 
-             * *   **Low**
-             * *   **Medium**
-             * *   **High**
+             * SecurityLevel.
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -275,7 +258,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that stores the sensitive data.
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -400,7 +383,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database that stores the sensitive data.
+             * DbDisplayName.
              */
             public Builder dbDisplayName(String dbDisplayName) {
                 this.dbDisplayName = dbDisplayName;
@@ -408,7 +391,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -416,7 +399,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the function module whose audit logs were queried.
+             * ModuleName.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -424,7 +407,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed. The time is in the yyyy-MM-DD HH:mm:ss format.
+             * OpTime.
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -432,7 +415,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The logs for sensitive data.
+             * SensitiveDataLog.
              */
             public Builder sensitiveDataLog(java.util.List < SensitiveDataLog> sensitiveDataLog) {
                 this.sensitiveDataLog = sensitiveDataLog;
@@ -440,11 +423,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the object on which the operation was performed. The value of this parameter is in one of the following formats:
-             * <p>
-             * 
-             * *   Object name - object ID
-             * *   Object name (object ID)
+             * TargetName.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -452,7 +431,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the requester.
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -460,7 +439,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the requester.
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

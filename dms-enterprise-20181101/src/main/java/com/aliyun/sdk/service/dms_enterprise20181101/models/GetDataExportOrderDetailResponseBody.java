@@ -86,7 +86,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data export ticket.
+         * DataExportOrderDetail.
          */
         public Builder dataExportOrderDetail(DataExportOrderDetail dataExportOrderDetail) {
             this.dataExportOrderDetail = dataExportOrderDetail;
@@ -94,7 +94,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,19 +170,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private Long preCheckId; 
 
             /**
-             * The status of the data export ticket. Valid values:
-             * <p>
-             * 
-             * *   PRE_CHECKING: The ticket is being prechecked.
-             * *   PRE_CHECK_SUCCESS: The ticket passes the precheck.
-             * *   PRE_CHECK_FAIL: The ticket fails to pass the precheck.
-             * *   WAITING_APPLY_AUDIT: The ticket is to be submitted for approval.
-             * *   APPLY_AUDIT_SUCESS: The ticket is submitted for approval.
-             * *   ENABLE_EXPORT: The ticket is approved. Data can be exported.
-             * *   WAITING_EXPORT: Data is to be scheduled for export.
-             * *   DOING_EXPORT: Data is being exported.
-             * *   EXPORT_FAIL: Data fails to be exported.
-             * *   EXPORT_SUCCESS: Data is exported.
+             * JobStatus.
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -190,7 +178,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the precheck.
+             * PreCheckId.
              */
             public Builder preCheckId(Long preCheckId) {
                 this.preCheckId = preCheckId;
@@ -327,7 +315,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private Boolean logic; 
 
             /**
-             * The number of rows that are affected by the system check.
+             * ActualAffectRows.
              */
             public Builder actualAffectRows(Long actualAffectRows) {
                 this.actualAffectRows = actualAffectRows;
@@ -335,7 +323,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the reason for the data export.
+             * Classify.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -343,7 +331,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The database from which data is exported.
+             * Database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -351,7 +339,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database from which you want to export data.
+             * DbId.
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -359,7 +347,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs.
+             * EnvType.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -367,7 +355,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that is executed to export data.
+             * ExeSQL.
              */
             public Builder exeSQL(String exeSQL) {
                 this.exeSQL = exeSQL;
@@ -375,7 +363,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the affected rows are skipped.
+             * IgnoreAffectRows.
              */
             public Builder ignoreAffectRows(Boolean ignoreAffectRows) {
                 this.ignoreAffectRows = ignoreAffectRows;
@@ -383,7 +371,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the affected rows are skipped.
+             * IgnoreAffectRowsReason.
              */
             public Builder ignoreAffectRowsReason(String ignoreAffectRowsReason) {
                 this.ignoreAffectRowsReason = ignoreAffectRowsReason;
@@ -391,7 +379,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database.
+             * Logic.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -444,7 +432,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private OrderDetail orderDetail; 
 
             /**
-             * The status information of the data export ticket.
+             * KeyInfo.
              */
             public Builder keyInfo(KeyInfo keyInfo) {
                 this.keyInfo = keyInfo;
@@ -452,7 +440,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the ticket.
+             * OrderDetail.
              */
             public Builder orderDetail(OrderDetail orderDetail) {
                 this.orderDetail = orderDetail;

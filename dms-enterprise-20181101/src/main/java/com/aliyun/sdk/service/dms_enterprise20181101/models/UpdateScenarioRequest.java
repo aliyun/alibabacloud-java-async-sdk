@@ -122,7 +122,7 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The description of the business scenario.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,7 +131,7 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the business scenario.
+         * ScenarioId.
          */
         public Builder scenarioId(String scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -140,7 +140,7 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The name of the business scenario.
+         * ScenarioName.
          */
         public Builder scenarioName(String scenarioName) {
             this.putQueryParameter("ScenarioName", scenarioName);
@@ -149,10 +149,7 @@ public class UpdateScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

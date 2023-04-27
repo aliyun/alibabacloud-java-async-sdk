@@ -86,7 +86,7 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         private Long workflowInstanceId; 
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the approval process.
+         * WorkflowInstanceId.
          */
         public Builder workflowInstanceId(Long workflowInstanceId) {
             this.workflowInstanceId = workflowInstanceId;

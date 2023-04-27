@@ -86,7 +86,7 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
         private Tenant tenant; 
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,11 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The status of the tenant. Valid values:
+         * <p>
+         * 
+         * *   **ACTIVE**: The tenant is used to access DMS.
+         * *   **IN_ACTIVE**: The tenant is not used.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +114,7 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -186,11 +186,7 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
             private Long tid; 
 
             /**
-             * The status of the tenant. Valid values:
-             * <p>
-             * 
-             * *   **ACTIVE**: The tenant is used to access DMS.
-             * *   **IN_ACTIVE**: The tenant is not used.
+             * The error code.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +194,7 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * The operation that you want to perform. Set the value to **GetUserActiveTenant**.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -206,7 +202,7 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * The ID of the request.
              */
             public Builder tid(Long tid) {
                 this.tid = tid;

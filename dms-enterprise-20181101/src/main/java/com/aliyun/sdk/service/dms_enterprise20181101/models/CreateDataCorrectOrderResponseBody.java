@@ -86,7 +86,7 @@ public class CreateDataCorrectOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The IDs of the tickets.
+         * CreateOrderResult.
          */
         public Builder createOrderResult(java.util.List < Long > createOrderResult) {
             this.createOrderResult = createOrderResult;
@@ -94,7 +94,7 @@ public class CreateDataCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class CreateDataCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * Creates a ticket for changing data in Data Management (DMS).
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class CreateDataCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The reason for the data change.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class CreateDataCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * The ID of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;

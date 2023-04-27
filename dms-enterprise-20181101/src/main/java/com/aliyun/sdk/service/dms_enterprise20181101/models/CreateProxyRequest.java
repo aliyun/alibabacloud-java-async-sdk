@@ -123,7 +123,7 @@ public class CreateProxyRequest extends Request {
         }
 
         /**
-         * The ID of the database instance. You can call the [ListInstances](https://www.alibabacloud.com/help/en/data-management-service/latest/listinstances) or [GetInstance](https://www.alibabacloud.com/help/en/data-management-service/latest/getinstance) operation to query the database instance ID.
+         * InstanceId.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,7 +132,7 @@ public class CreateProxyRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * Password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -141,7 +141,7 @@ public class CreateProxyRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -150,7 +150,7 @@ public class CreateProxyRequest extends Request {
         }
 
         /**
-         * The username of the database account.
+         * Username.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

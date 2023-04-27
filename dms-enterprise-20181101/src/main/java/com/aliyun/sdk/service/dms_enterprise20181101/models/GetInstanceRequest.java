@@ -121,7 +121,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The endpoint of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the endpoint.
+         * The name of the security rule set corresponding to the control mode.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -130,7 +130,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the port number.
+         * The name of the database link for the database instance.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -139,7 +139,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the SID.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -148,7 +148,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * The ID of the virtual private cloud (VPC) to which the database instance belongs.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

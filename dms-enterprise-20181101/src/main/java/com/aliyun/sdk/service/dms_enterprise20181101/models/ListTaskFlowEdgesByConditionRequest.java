@@ -135,7 +135,7 @@ public class ListTaskFlowEdgesByConditionRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * The operation that you want to perform. Set the value to **ListTaskFlowEdgesByCondition**.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -144,7 +144,7 @@ public class ListTaskFlowEdgesByConditionRequest extends Request {
         }
 
         /**
-         * The ID of the task flow edge.
+         * The ID of the end node on the edge.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -153,7 +153,10 @@ public class ListTaskFlowEdgesByConditionRequest extends Request {
         }
 
         /**
-         * The ID of the end node on the edge.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder nodeEnd(Long nodeEnd) {
             this.putQueryParameter("NodeEnd", nodeEnd);
@@ -162,7 +165,7 @@ public class ListTaskFlowEdgesByConditionRequest extends Request {
         }
 
         /**
-         * The ID of the start node on the edge.
+         * The error message returned if the request failed.
          */
         public Builder nodeFrom(Long nodeFrom) {
             this.putQueryParameter("NodeFrom", nodeFrom);
@@ -171,10 +174,7 @@ public class ListTaskFlowEdgesByConditionRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * The error code returned if the request failed.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

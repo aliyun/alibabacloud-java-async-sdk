@@ -93,7 +93,7 @@ public class ListLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.
+         * TableId.
          */
         public Builder tableId(Long tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -102,7 +102,7 @@ public class ListLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

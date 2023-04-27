@@ -86,7 +86,7 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * The ID of the request.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The type of the masking algorithm.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID generated for the masking rule.
+         * RuleId.
          */
         public Builder ruleId(Integer ruleId) {
             this.ruleId = ruleId;
@@ -118,11 +118,7 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

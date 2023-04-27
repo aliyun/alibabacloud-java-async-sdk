@@ -17,6 +17,10 @@ public class GetOpLogRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("DatabaseName")
+    private String databaseName;
+
+    @Query
     @NameInMap("EndTime")
     @Validation(required = true)
     private String endTime;
@@ -44,15 +48,21 @@ public class GetOpLogRequest extends Request {
     @NameInMap("Tid")
     private Long tid;
 
+    @Query
+    @NameInMap("UserNick")
+    private String userNick;
+
     private GetOpLogRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.databaseName = builder.databaseName;
         this.endTime = builder.endTime;
         this.module = builder.module;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
         this.tid = builder.tid;
+        this.userNick = builder.userNick;
     }
 
     public static Builder builder() {
@@ -73,6 +83,13 @@ public class GetOpLogRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return databaseName
+     */
+    public String getDatabaseName() {
+        return this.databaseName;
     }
 
     /**
@@ -117,14 +134,23 @@ public class GetOpLogRequest extends Request {
         return this.tid;
     }
 
+    /**
+     * @return userNick
+     */
+    public String getUserNick() {
+        return this.userNick;
+    }
+
     public static final class Builder extends Request.Builder<GetOpLogRequest, Builder> {
         private String regionId; 
+        private String databaseName; 
         private String endTime; 
         private String module; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String startTime; 
         private Long tid; 
+        private String userNick; 
 
         private Builder() {
             super();
@@ -133,12 +159,14 @@ public class GetOpLogRequest extends Request {
         private Builder(GetOpLogRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.databaseName = request.databaseName;
             this.endTime = request.endTime;
             this.module = request.module;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
             this.tid = request.tid;
+            this.userNick = request.userNick;
         } 
 
         /**
@@ -151,7 +179,16 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+         * DatabaseName.
+         */
+        public Builder databaseName(String databaseName) {
+            this.putQueryParameter("DatabaseName", databaseName);
+            this.databaseName = databaseName;
+            return this;
+        }
+
+        /**
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,33 +197,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The functional module for which you want to query operation logs. If you do not specify this parameter, operation logs for all functional modules are returned. Valid values:
-         * <p>
-         * 
-         * *   **PERMISSION**: permissions
-         * *   **OWNER**: data owner
-         * *   **SQL_CONSOLE**: data query
-         * *   **SQL_CONSOLE_EXPORT**: query result export
-         * *   **DATA_CHANGE**: data change
-         * *   **DATA_EXPORT**: data export
-         * *   **SQL_REVIEW**: SQL review
-         * *   **DT_SYNC**: database and table synchronization
-         * *   **DT_DETAIL**: database and table details
-         * *   **DB_TASK**: task management
-         * *   **INSTANCE_MANAGE**: instance management
-         * *   **USER_MANAGE**: user management
-         * *   **SECURITY_RULE**: security rules
-         * *   **CONFIG_MANAGE**: configuration management
-         * *   **RESOURCE_AUTH**: resource authorization
-         * *   **ACCESS_WHITE_IP**: access IP address whitelist
-         * *   **NDDL**: schema design
-         * *   **DSQL_CONSOLE**: cross-database data query
-         * *   **DSQL_CONSOLE_EXPORT**: cross-database query result export
-         * *   **DATA_TRACT**: data tracking
-         * *   **DATA_QUALITY**: data quality
-         * *   **DATALINK_MANAGE** :DBLink management
-         * *   **DATASEC_MANAGE**: sensitive data management
-         * *   **SELL**: sales
+         * Module.
          */
         public Builder module(String module) {
             this.putQueryParameter("Module", module);
@@ -195,7 +206,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,12 +215,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
-         * 
-         * *   30
-         * *   50
-         * *   100
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -218,7 +224,7 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -227,11 +233,20 @@ public class GetOpLogRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
             this.tid = tid;
+            return this;
+        }
+
+        /**
+         * UserNick.
+         */
+        public Builder userNick(String userNick) {
+            this.putQueryParameter("UserNick", userNick);
+            this.userNick = userNick;
             return this;
         }
 

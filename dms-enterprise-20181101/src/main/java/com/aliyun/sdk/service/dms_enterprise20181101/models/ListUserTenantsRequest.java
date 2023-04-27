@@ -78,7 +78,7 @@ public class ListUserTenantsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * The name of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

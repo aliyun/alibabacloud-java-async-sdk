@@ -98,7 +98,7 @@ public class ListOrdersResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the tickets.
+         * The time when the ticket was last modified.
          */
         public Builder orders(Orders orders) {
             this.orders = orders;
@@ -122,7 +122,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +130,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +138,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that are returned.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -278,7 +274,7 @@ public class ListOrdersResponseBody extends TeaModel {
             private String statusDesc; 
 
             /**
-             * The remarks of the ticket.
+             * The status description of the ticket.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -286,7 +282,7 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The user who submitted the ticket.
+             * The type of the ticket.
              */
             public Builder committer(String committer) {
                 this.committer = committer;
@@ -294,7 +290,7 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who submitted the ticket.
+             * The ID of the ticket.
              */
             public Builder committerId(Long committerId) {
                 this.committerId = committerId;
@@ -310,7 +306,7 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was last modified.
+             * The number of entries to return on each page.
              */
             public Builder lastModifyTime(String lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -318,7 +314,7 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ticket.
+             * OrderId.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -326,7 +322,7 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ticket.
+             * PluginType.
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;
@@ -334,17 +330,11 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The status code of the ticket. Valid values:
+             * The time condition based on which you want to query tickets. Valid values:
              * <p>
              * 
-             * *   **fail**: The ticket fails to be executed.
-             * *   **toaudit**: The ticket is waiting for approval.
-             * *   **cancel**: The ticket is cancelled.
-             * *   **processing**: The ticket is being executed.
-             * *   **approved**: The ticket is approved.
-             * *   **reject**: The ticket is rejected.
-             * *   **success**: The ticket is executed.
-             * *   **closed**: The ticket is closed.
+             * *   **CREATE_TIME**: the time when a ticket was created.
+             * *   **MODIFY_TIME**: the time when a ticket was last modified.
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -352,7 +342,7 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The status description of the ticket.
+             * Queries tickets in Data Management (DMS).
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;

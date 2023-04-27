@@ -98,7 +98,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the published versions.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder dagVersionList(DagVersionList dagVersionList) {
             this.dagVersionList = dagVersionList;
@@ -106,7 +106,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The information about the published versions.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +122,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **ListDAGVersions**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +130,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * The ID of the version.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +138,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +238,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             private Long versionId; 
 
             /**
-             * The name of the task flow.
+             * The name of the task flow owner.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -250,7 +246,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow owner.
+             * The name of the task flow.
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -258,7 +254,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow owner.
+             * The ID of the request.
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -266,7 +262,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the previously published version.
+             * LastVersionId.
              */
             public Builder lastVersionId(Long lastVersionId) {
                 this.lastVersionId = lastVersionId;
@@ -274,7 +270,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the version.
+             * VersionComments.
              */
             public Builder versionComments(String versionComments) {
                 this.versionComments = versionComments;
@@ -282,7 +278,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the version.
+             * VersionId.
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;

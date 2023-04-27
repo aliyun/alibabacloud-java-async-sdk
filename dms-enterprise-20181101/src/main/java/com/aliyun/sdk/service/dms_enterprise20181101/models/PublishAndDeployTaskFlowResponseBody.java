@@ -86,7 +86,7 @@ public class PublishAndDeployTaskFlowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the deployment record.
+         * DeployId.
          */
         public Builder deployId(Long deployId) {
             this.deployId = deployId;
@@ -94,7 +94,13 @@ public class PublishAndDeployTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <PublishAndDeployTaskFlowResponse>
+         * <p>
+         *     <RequestId>64E26249-B61F-51C6-B6DF-47EFF50128CC</RequestId>
+         *     <ErrorCode>UnknownError</ErrorCode>
+         *     <ErrorMessage>Unknown server error</ErrorMessage>
+         *     <Success>true</Success>
+         * </PublishAndDeployTaskFlowResponse>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +108,7 @@ public class PublishAndDeployTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * Publishes and deploys a task flow.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +116,7 @@ public class PublishAndDeployTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * 12**
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +124,7 @@ public class PublishAndDeployTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * WB01220210
          */
         public Builder success(Boolean success) {
             this.success = success;

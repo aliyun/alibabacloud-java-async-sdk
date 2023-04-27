@@ -98,7 +98,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The error code returned.
+         * The MD5 hash value of the SQL statement.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The description of the review status.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the parsed SQL statements.
+         * The parameters that are used to filter SQL statements involved in the ticket.
          */
         public Builder originSQLList(java.util.List < OriginSQLList> originSQLList) {
             this.originSQLList = originSQLList;
@@ -122,7 +122,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The name of the file.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The ID of the SQL statement.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the SQL statements.
+         * The number of entries to return on each page.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -298,15 +298,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             private String statusDesc; 
 
             /**
-             * The review status of the SQL statement. Valid values:
-             * <p>
-             * 
-             * *   **new**: The SQL statement is pending for analysis.
-             * *   **unknown**: The SQL statement failed to be parsed.
-             * *   **check_not_pass**: The SQL statement failed the review.
-             * *   **check_pass**: The SQL statement passed the review.
-             * *   **force_pass**: The SQL statement passed the review by manual effort.
-             * *   **force_not_pass**: The SQL statement failed the review by manual effort.
+             * The ID of the file.
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -314,7 +306,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement is reviewed.
+             * Queries the details of the SQL statements that are involved in an SQL review ticket.
              */
             public Builder checkedTime(String checkedTime) {
                 this.checkedTime = checkedTime;
@@ -322,7 +314,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file.
+             * The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://icms.alibaba-inc.com/content/dms/doc?l=1\&m=61777\&n=2712723\&spm) operation to query the details of optimization suggestions based on the key.
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -330,7 +322,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * The SQL statement.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -338,15 +330,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics of optimization suggestions for SQL statements. The value is a JSON string. The following optimization suggestions are involved:
-             * <p>
-             * 
-             * *   **MUST_IMPROVE**: The SQL statement must be improved.
-             * *   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.
-             * *   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.
-             * *   **USEDMSTOOLKIT**: We recommend that you change schemas without locking tables.
-             * *   **USEDMSDML_UNLOCK**: We recommend that you change data without locking tables.
-             * *   **TABLEINDEXSUGGEST**: We recommend that you use SQL statements that use indexes.
+             * ReviewSummary.
              */
             public Builder reviewSummary(String reviewSummary) {
                 this.reviewSummary = reviewSummary;
@@ -354,7 +338,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * The error message returned.
              */
             public Builder SQLContent(String SQLContent) {
                 this.SQLContent = SQLContent;
@@ -362,7 +346,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SQL statement.
+             * The time when the SQL statement is reviewed.
              */
             public Builder SQLId(Long SQLId) {
                 this.SQLId = SQLId;
@@ -378,7 +362,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://icms.alibaba-inc.com/content/dms/doc?l=1\&m=61777\&n=2712723\&spm) operation to query the details of optimization suggestions based on the key.
+             * SQLReviewQueryKey.
              */
             public Builder SQLReviewQueryKey(String SQLReviewQueryKey) {
                 this.SQLReviewQueryKey = SQLReviewQueryKey;
@@ -386,7 +370,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the SQL statement.
+             * SqlHash.
              */
             public Builder sqlHash(String sqlHash) {
                 this.sqlHash = sqlHash;
@@ -394,7 +378,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the review status.
+             * The ID of the request.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;

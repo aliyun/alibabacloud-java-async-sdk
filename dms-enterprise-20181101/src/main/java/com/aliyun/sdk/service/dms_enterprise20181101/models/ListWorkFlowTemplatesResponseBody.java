@@ -86,7 +86,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         private WorkFlowTemplates workFlowTemplates; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The approval templates.
+         * WorkFlowTemplates.
          */
         public Builder workFlowTemplates(WorkFlowTemplates workFlowTemplates) {
             this.workFlowTemplates = workFlowTemplates;
@@ -230,7 +230,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The description of the approval node.
+             * Comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -238,7 +238,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the creator.
+             * CreateUserId.
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -246,7 +246,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the approval node.
+             * NodeId.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -254,7 +254,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the approval node.
+             * NodeName.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -262,11 +262,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the approval node. Valid values:
-             * <p>
-             * 
-             * *   SYS: The approval node is predefined by the system.
-             * *   USER_LIST: The approval node is created by a user.
+             * NodeType.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -274,7 +270,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the approval node.
+             * Position.
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -282,7 +278,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * TemplateId.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -436,7 +432,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             private WorkflowNodes workflowNodes; 
 
             /**
-             * The description of the approval template.
+             * Comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -444,7 +440,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the creator.
+             * CreateUserId.
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -452,11 +448,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the approval template is enabled. Valid values:
-             * <p>
-             * 
-             * *   Y: The approval template is enabled.
-             * *   N: The approval template is disabled.
+             * Enabled.
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -464,11 +456,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the approval template is predefined by the system. Valid values:
-             * <p>
-             * 
-             * *   1: The approval template is predefined by the system.
-             * *   0: The approval template is not predefined by the system.
+             * IsSystem.
              */
             public Builder isSystem(Integer isSystem) {
                 this.isSystem = isSystem;
@@ -476,7 +464,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the approval template.
+             * TemplateId.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -484,7 +472,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the approval template.
+             * TemplateName.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -492,7 +480,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of approval nodes.
+             * WorkflowNodes.
              */
             public Builder workflowNodes(WorkflowNodes workflowNodes) {
                 this.workflowNodes = workflowNodes;

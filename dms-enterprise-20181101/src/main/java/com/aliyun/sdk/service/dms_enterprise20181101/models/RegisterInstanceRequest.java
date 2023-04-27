@@ -426,15 +426,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The name of the database link for cross-database query.
-         * <p>
-         * 
-         * > 
-         * 
-         * *   This parameter is required if the UseDsql parameter is set to 1.
-         * 
-         * *   The name can contain only lowercase letters and underscores (\_).
-         * *   The name must be unique within a tenant.
+         * DataLinkName.
          */
         public Builder dataLinkName(String dataLinkName) {
             this.putQueryParameter("DataLinkName", dataLinkName);
@@ -443,7 +435,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The password that is used to log on to the database.
+         * DatabasePassword.
          */
         public Builder databasePassword(String databasePassword) {
             this.putQueryParameter("DatabasePassword", databasePassword);
@@ -452,7 +444,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The account that is used to log on to the database.
+         * DatabaseUser.
          */
         public Builder databaseUser(String databaseUser) {
             this.putQueryParameter("DatabaseUser", databaseUser);
@@ -461,7 +453,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the user who assumes the DBA role of the database instance. You can call the [ListUsers](~~141938~~) or [GetInstance](~~141567~~) operation to query the user ID.
+         * DbaUid.
          */
         public Builder dbaUid(Long dbaUid) {
             this.putQueryParameter("DbaUid", dbaUid);
@@ -470,14 +462,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:
-         * <p>
-         * 
-         * *   **0:** disables the lock-free schema change feature
-         * *   **1:** uses the online DDL of MySQL first
-         * *   **2:** uses the lock-free schema change feature of DMS first
-         * 
-         * > Supported database types: ApsaraDB RDS for MySQL, PolarDB for MySQL, ApsaraDB MyBase for MySQL, and third-party MySQL databases.
+         * DdlOnline.
          */
         public Builder ddlOnline(Integer ddlOnline) {
             this.putQueryParameter("DdlOnline", ddlOnline);
@@ -486,10 +471,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance on which the database instance is deployed.
-         * <p>
-         * 
-         * > This parameter is required if the InstanceSource parameter is set to ECS_OWN.
+         * EcsInstanceId.
          */
         public Builder ecsInstanceId(String ecsInstanceId) {
             this.putQueryParameter("EcsInstanceId", ecsInstanceId);
@@ -498,10 +480,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the database instance resides.
-         * <p>
-         * 
-         * > This parameter is required if the InstanceSource parameter is set to RDS, ECS_OWN, or VPC_IDC.
+         * EcsRegion.
          */
         public Builder ecsRegion(String ecsRegion) {
             this.putQueryParameter("EcsRegion", ecsRegion);
@@ -510,9 +489,9 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * *   **Y:** enables the sensitive data protection feature
+         * - Y：开启敏感数据保护
          * <p>
-         * *   **NULL or other:** disables the sensitive data protection feature
+         * - NULL或其它：不开启敏感数据保护
          */
         public Builder enableSellSitd(String enableSellSitd) {
             this.putQueryParameter("EnableSellSitd", enableSellSitd);
@@ -521,17 +500,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The type of the environment in which the database instance is deployed. Valid values:
-         * <p>
-         * 
-         * *   product: production environment
-         * *   dev: development environment
-         * *   pre: pre-release environment
-         * *   test: test environment
-         * *   sit: system integration testing (SIT) environment
-         * *   uat: user acceptance testing (UAT) environment
-         * *   pet: stress testing environment
-         * *   stag: staging environment
+         * EnvType.
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -540,7 +509,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The timeout period for exporting data from the database instance. Unit: seconds.
+         * ExportTimeout.
          */
         public Builder exportTimeout(Integer exportTimeout) {
             this.putQueryParameter("ExportTimeout", exportTimeout);
@@ -549,7 +518,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The host address that is used to connect to the database instance.
+         * Host.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -558,7 +527,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The alias of the database instance. Specify an alias that can help you identify the database instance in DMS.
+         * InstanceAlias.
          */
         public Builder instanceAlias(String instanceAlias) {
             this.putQueryParameter("InstanceAlias", instanceAlias);
@@ -567,13 +536,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The source of the database instance. Valid values:
-         * <p>
-         * 
-         * *   **PUBLIC_OWN:** a self-managed database instance that is deployed on the Internet
-         * *   **RDS:** an ApsaraDB RDS instance
-         * *   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
-         * *   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
+         * InstanceSource.
          */
         public Builder instanceSource(String instanceSource) {
             this.putQueryParameter("InstanceSource", instanceSource);
@@ -582,7 +545,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -591,11 +554,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the database instance. Valid values:
-         * <p>
-         * 
-         * *   **CLASSIC:** classic network
-         * *   **VPC:** VPC
+         * NetworkType.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -604,7 +563,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The port that is used to connect to the database instance.
+         * Port.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -613,7 +572,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The timeout period for querying data in the database instance. Unit: seconds.
+         * QueryTimeout.
          */
         public Builder queryTimeout(Integer queryTimeout) {
             this.putQueryParameter("QueryTimeout", queryTimeout);
@@ -622,7 +581,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The name of the security rule set (GroupName) for the database instance. You can call the [ListStandardGroups](~~417891~~) or [GetInstance](~~141567~~) operation to query the name of the security rule set.
+         * SafeRule.
          */
         public Builder safeRule(String safeRule) {
             this.putQueryParameter("SafeRule", safeRule);
@@ -631,10 +590,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The system ID (SID) of the database.
-         * <p>
-         * 
-         * > This parameter is required if the InstanceType parameter is set to ORACLE.
+         * Sid.
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -643,11 +599,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to skip the connectivity test. Valid values:
-         * <p>
-         * 
-         * *   **true:** skips the connectivity test
-         * *   **false:** does not skip the connectivity test
+         * SkipTest.
          */
         public Builder skipTest(Boolean skipTest) {
             this.putQueryParameter("SkipTest", skipTest);
@@ -656,7 +608,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template ID.
+         * 分类分级模板ID，可从ListClassificationTemplates获取
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -665,7 +617,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The type of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template type.
+         * 分类分级模板类型，可从ListClassificationTemplates获取
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -674,7 +626,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -683,13 +635,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the cross-database query feature for the database instance. Valid values:
-         * <p>
-         * 
-         * *   **0:** disables the cross-database query feature
-         * *   **1:** enables the cross-database query feature
-         * 
-         * > Supported database types: MySQL, SQL Server, PostgreSQL, PolarDB for Oracle, and ApsaraDB for Redis.
+         * UseDsql.
          */
         public Builder useDsql(Integer useDsql) {
             this.putQueryParameter("UseDsql", useDsql);
@@ -698,10 +644,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the database instance belongs.
-         * <p>
-         * 
-         * > This parameter is required if the InstanceSource parameter is set to VPC_IDC.
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

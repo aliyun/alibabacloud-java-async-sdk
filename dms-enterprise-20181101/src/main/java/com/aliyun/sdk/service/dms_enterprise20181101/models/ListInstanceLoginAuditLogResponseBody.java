@@ -98,7 +98,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code returned.
+         * The ID of the user.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The number of the page to return.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The logon records of the instance.
+         * The database account that is used to log on to the instance.
          */
         public Builder instanceLoginAuditLogList(InstanceLoginAuditLogList instanceLoginAuditLogList) {
             this.instanceLoginAuditLogList = instanceLoginAuditLogList;
@@ -122,7 +122,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +130,10 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * The beginning of the time range to query.
          * <p>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * >  The start time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +141,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The number of entries to return on each page. Maximum value: 100.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +253,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The database account that is used to log on to the instance.
+             * DbUser.
              */
             public Builder dbUser(String dbUser) {
                 this.dbUser = dbUser;
@@ -262,7 +261,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -270,7 +269,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The ID of the request.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -278,7 +277,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user performed an operation on the instance.
+             * The name of the instance.
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -286,7 +285,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the request.
+             * RequestIp.
              */
             public Builder requestIp(String requestIp) {
                 this.requestIp = requestIp;
@@ -294,7 +293,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * The source IP address of the request.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

@@ -123,7 +123,7 @@ public class ResumeTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * DagId.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -132,7 +132,7 @@ public class ResumeTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to query the execution record ID.
+         * DagInstanceId.
          */
         public Builder dagInstanceId(Long dagInstanceId) {
             this.putQueryParameter("DagInstanceId", dagInstanceId);
@@ -141,7 +141,7 @@ public class ResumeTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The version number of the task flow. You can call the [ListDAGVersions](~~424682~~) operation to query the version number.
+         * DagVersion.
          */
         public Builder dagVersion(String dagVersion) {
             this.putQueryParameter("DagVersion", dagVersion);
@@ -150,7 +150,7 @@ public class ResumeTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

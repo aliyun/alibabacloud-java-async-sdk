@@ -106,7 +106,7 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The parameters that are required to perform the operation. You do not need to specify this parameter.
+         * The error code.
          */
         public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
             String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
@@ -116,7 +116,7 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
+         * The download URL of the backup file for the ticket.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -125,7 +125,7 @@ public class GetDataCorrectBackupFilesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * The parameters that are required to perform the operation. You do not need to specify this parameter.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

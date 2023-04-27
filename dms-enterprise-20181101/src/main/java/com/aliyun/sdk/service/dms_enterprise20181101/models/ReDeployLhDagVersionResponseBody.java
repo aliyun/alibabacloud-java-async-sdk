@@ -86,7 +86,7 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the deployment record.
+         * DeployId.
          */
         public Builder deployId(Long deployId) {
             this.deployId = deployId;
@@ -94,7 +94,7 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The ID of the request.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The operation that you want to perform. Set the value to **ReDeployLhDagVersion**.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error code returned if the request fails.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class ReDeployLhDagVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDataExportOrderDetailRequest} extends {@link RequestModel}
+ * {@link GetDataExportPreCheckDetailRequest} extends {@link RequestModel}
  *
- * <p>GetDataExportOrderDetailRequest</p>
+ * <p>GetDataExportPreCheckDetailRequest</p>
  */
-public class GetDataExportOrderDetailRequest extends Request {
+public class GetDataExportPreCheckDetailRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
-    @Body
+    @Query
     @NameInMap("OrderId")
     @Validation(required = true)
     private Long orderId;
@@ -25,7 +25,7 @@ public class GetDataExportOrderDetailRequest extends Request {
     @NameInMap("Tid")
     private Long tid;
 
-    private GetDataExportOrderDetailRequest(Builder builder) {
+    private GetDataExportPreCheckDetailRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.orderId = builder.orderId;
@@ -36,7 +36,7 @@ public class GetDataExportOrderDetailRequest extends Request {
         return new Builder();
     }
 
-    public static GetDataExportOrderDetailRequest create() {
+    public static GetDataExportPreCheckDetailRequest create() {
         return builder().build();
     }
 
@@ -66,7 +66,7 @@ public class GetDataExportOrderDetailRequest extends Request {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetDataExportOrderDetailRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetDataExportPreCheckDetailRequest, Builder> {
         private String regionId; 
         private Long orderId; 
         private Long tid; 
@@ -75,7 +75,7 @@ public class GetDataExportOrderDetailRequest extends Request {
             super();
         } 
 
-        private Builder(GetDataExportOrderDetailRequest request) {
+        private Builder(GetDataExportPreCheckDetailRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.orderId = request.orderId;
@@ -95,7 +95,7 @@ public class GetDataExportOrderDetailRequest extends Request {
          * OrderId.
          */
         public Builder orderId(Long orderId) {
-            this.putBodyParameter("OrderId", orderId);
+            this.putQueryParameter("OrderId", orderId);
             this.orderId = orderId;
             return this;
         }
@@ -110,8 +110,8 @@ public class GetDataExportOrderDetailRequest extends Request {
         }
 
         @Override
-        public GetDataExportOrderDetailRequest build() {
-            return new GetDataExportOrderDetailRequest(this);
+        public GetDataExportPreCheckDetailRequest build() {
+            return new GetDataExportPreCheckDetailRequest(this);
         } 
 
     } 

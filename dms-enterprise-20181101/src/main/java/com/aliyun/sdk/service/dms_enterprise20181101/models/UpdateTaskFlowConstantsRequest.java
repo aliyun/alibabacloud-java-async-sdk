@@ -107,7 +107,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         }
 
         /**
-         * The constants for the task flow.
+         * The key value of a constant for the task flow.
          */
         public Builder dagConstants(java.util.List < DagConstants> dagConstants) {
             String dagConstantsShrink = shrink(dagConstants, "DagConstants", "json");
@@ -117,7 +117,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * The error code returned if the request failed.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -126,7 +126,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * The constants for the task flow.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -188,7 +188,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
             }
 
             /**
-             * The key value of a constant for the task flow.
+             * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
              */
             public Builder value(String value) {
                 this.value = value;

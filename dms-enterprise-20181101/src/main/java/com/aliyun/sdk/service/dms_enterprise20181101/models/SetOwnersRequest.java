@@ -122,10 +122,7 @@ public class SetOwnersRequest extends Request {
         }
 
         /**
-         * The ID of the user whom you want to specify as an owner. Separate multiple IDs with commas (,). You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
-         * <p>
-         * 
-         * >  The value of the OwnerIds parameter is that of the UserId parameter.
+         * The operation that you want to perform. Set the value to **SetOwners**.
          */
         public Builder ownerIds(String ownerIds) {
             this.putQueryParameter("OwnerIds", ownerIds);
@@ -134,14 +131,7 @@ public class SetOwnersRequest extends Request {
         }
 
         /**
-         * The type of the owner. Valid values:
-         * <p>
-         * 
-         * *   INSTANCE: an owner of an instance.
-         * *   DATABASE: an owner of a physical database.
-         * *   LOGIC_DATABASE: an owner of a logical database.
-         * *   TABLE: an owner of a physical table.
-         * *   LOGIC_TABLE: an owner of a logical table.
+         * The ID of the request.
          */
         public Builder ownerType(String ownerType) {
             this.putQueryParameter("OwnerType", ownerType);
@@ -150,14 +140,7 @@ public class SetOwnersRequest extends Request {
         }
 
         /**
-         * The ID of the resource. The ID of the resource varies with the owner type. The owner types and resource IDs have the following mappings:
-         * <p>
-         * 
-         * *   INSTANCE: the ID of an instance. You can call the [ListInstances](~~141936~~) operation to query the ID of the instance.
-         * *   DATABASE: the ID of a physical database. You can call the [ListDatabases](~~141873~~) operation to query the ID of the physical database.
-         * *   LOGIC_DATABASE: the ID of a logical database. You can call the [ListLogicDatabases](~~141874~~) operation to query the ID of the logical database.
-         * *   TABLE: the ID of a physical table. You can call the [ListTables](~~141878~~) operation to query the ID of the physical table.
-         * *   LOGIC_DATABASE: the ID of a logical table. You can call the [ListLogicTables](~~141875~~) operation to query the ID of the logical table.
+         * The error code.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -166,10 +149,10 @@ public class SetOwnersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The ID of the user whom you want to specify as an owner. Separate multiple IDs with commas (,). You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
          * <p>
          * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * >  The value of the OwnerIds parameter is that of the UserId parameter.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

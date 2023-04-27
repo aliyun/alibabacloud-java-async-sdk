@@ -116,10 +116,7 @@ public class PublishAndDeployTaskFlowRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * The response parameters.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -128,7 +125,7 @@ public class PublishAndDeployTaskFlowRequest extends Request {
         }
 
         /**
-         * The description of the version.
+         * The error code returned if the request failed.
          */
         public Builder versionComments(String versionComments) {
             this.putQueryParameter("VersionComments", versionComments);

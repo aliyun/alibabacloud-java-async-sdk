@@ -86,7 +86,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
         private java.util.List < TenantList> tenantList; 
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,11 +110,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -122,7 +118,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the tenants that were returned.
+         * The operation that you want to perform. Set the value to **ListUserTenants**.
          */
         public Builder tenantList(java.util.List < TenantList> tenantList) {
             this.tenantList = tenantList;
@@ -186,11 +182,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
             private Long tid; 
 
             /**
-             * The status of the tenant. Valid values:
-             * <p>
-             * 
-             * *   **ACTIVE**: The tenant is used to access DMS.
-             * *   **IN_ACTIVE**: The tenant is not used.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +190,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * TenantName.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -206,7 +198,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * Tid.
              */
             public Builder tid(Long tid) {
                 this.tid = tid;

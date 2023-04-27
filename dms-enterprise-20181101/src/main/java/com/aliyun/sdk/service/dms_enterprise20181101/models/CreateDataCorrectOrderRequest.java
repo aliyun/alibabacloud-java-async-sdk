@@ -136,7 +136,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
+         * The ID of the ticket.
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -145,7 +145,11 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.
+         * Specifies whether the database is a logical database. Valid values:
+         * <p>
+         * 
+         * *   **true**: The database is a logical database.
+         * *   **false**: The database is a physical database.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -154,7 +158,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * The databases in which you want to change data.
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -164,7 +168,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -174,7 +178,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * The estimated number of data rows to be affected by the data change.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -230,11 +234,10 @@ public class CreateDataCorrectOrderRequest extends Request {
             private Boolean logic; 
 
             /**
-             * The ID of the database. The database can be a physical database or a logical database.
+             * The key of the attachment that contains the SQL statements used to change data. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
              * <p>
              * 
-             * *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
-             * *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
+             * >  This parameter is required if you set the **SqlType** parameter to **ATTACHMENT**.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -242,11 +245,11 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether the database is a logical database. Valid values:
+             * The SQL statements used to roll back the data change.
              * <p>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is a physical database.
+             * > 
+             * *   This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -398,10 +401,11 @@ public class CreateDataCorrectOrderRequest extends Request {
             private String sqlType; 
 
             /**
-             * The key of the attachment that contains the SQL statements used to change data. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
+             * The format of the SQL statements used to change data. Valid values:
              * <p>
              * 
-             * >  This parameter is required if you set the **SqlType** parameter to **ATTACHMENT**.
+             * *   **TEXT**: text
+             * *   **ATTACHMENT**: attachment
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -409,7 +413,7 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The reason for the data change.
+             * The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -417,7 +421,7 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The databases in which you want to change data.
+             * The error message returned if the request fails.
              */
             public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
@@ -425,10 +429,22 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The estimated number of data rows to be affected by the data change.
+             * The ID of the database. The database can be a physical database or a logical database.
+             * <p>
+             * 
+             * *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
+             * *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
              */
             public Builder estimateAffectRows(Long estimateAffectRows) {
                 this.estimateAffectRows = estimateAffectRows;
+                return this;
+            }
+
+            /**
+             * The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
+             */
+            public Builder execMode(String execMode) {
+                this.execMode = execMode;
                 return this;
             }
 
@@ -440,27 +456,13 @@ public class CreateDataCorrectOrderRequest extends Request {
              * *   **AUTO**: The data change is automatically performed after the ticket is approved.
              * *   **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.
              */
-            public Builder execMode(String execMode) {
-                this.execMode = execMode;
-                return this;
-            }
-
-            /**
-             * The SQL statements that you want to execute to change data.
-             * <p>
-             * 
-             * >  This parameter is required if you set the **SqlType** parameter to **TEXT**.
-             */
             public Builder execSQL(String execSQL) {
                 this.execSQL = execSQL;
                 return this;
             }
 
             /**
-             * The key of the attachment that contains the SQL statements used to roll back the data change. You can call the [GetUserUploadFileJob](~~206069~~) operation to the attachment key from the value of the AttachmentKey parameter.
-             * <p>
-             * 
-             * >  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.
+             * The parameters of the ticket.
              */
             public Builder rollbackAttachmentName(String rollbackAttachmentName) {
                 this.rollbackAttachmentName = rollbackAttachmentName;
@@ -468,10 +470,7 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The SQL statements used to roll back the data change.
-             * <p>
-             * 
-             * > This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
+             * The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
              */
             public Builder rollbackSQL(String rollbackSQL) {
                 this.rollbackSQL = rollbackSQL;
@@ -491,11 +490,10 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The format of the SQL statements used to change data. Valid values:
+             * The SQL statements that you want to execute to change data.
              * <p>
              * 
-             * *   **TEXT**: text
-             * *   **ATTACHMENT**: attachment
+             * >  This parameter is required if you set the **SqlType** parameter to **TEXT**.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;

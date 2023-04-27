@@ -86,7 +86,7 @@ public class CreateProxyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class CreateProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the secure access proxy.
+         * ProxyId.
          */
         public Builder proxyId(Long proxyId) {
             this.proxyId = proxyId;
@@ -110,7 +110,7 @@ public class CreateProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class CreateProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

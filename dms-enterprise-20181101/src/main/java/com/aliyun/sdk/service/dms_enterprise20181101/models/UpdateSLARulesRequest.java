@@ -107,7 +107,10 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * > :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -116,7 +119,7 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * The list of SLA rules.
+         * The timeout period. Unit: minutes.
          */
         public Builder slaRuleList(java.util.List < SlaRuleList> slaRuleList) {
             String slaRuleListShrink = shrink(slaRuleList, "SlaRuleList", "json");
@@ -126,10 +129,7 @@ public class UpdateSLARulesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * The list of SLA rules.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -210,7 +210,7 @@ public class UpdateSLARulesRequest extends Request {
             private Integer type; 
 
             /**
-             * The ID of the task flow.
+             * The error code returned if the request failed.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -218,7 +218,7 @@ public class UpdateSLARulesRequest extends Request {
             }
 
             /**
-             * The timeout period. Unit: minutes.
+             * Updates the service level agreement (SLA) timeout reminder for a task flow.
              */
             public Builder intervalMinutes(Integer intervalMinutes) {
                 this.intervalMinutes = intervalMinutes;
@@ -226,7 +226,7 @@ public class UpdateSLARulesRequest extends Request {
             }
 
             /**
-             * The ID of the task node.
+             * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;

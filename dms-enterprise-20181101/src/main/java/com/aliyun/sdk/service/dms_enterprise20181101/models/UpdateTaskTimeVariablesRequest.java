@@ -108,7 +108,7 @@ public class UpdateTaskTimeVariablesRequest extends Request {
         }
 
         /**
-         * The ID of the task node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.
+         * NodeId.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -117,10 +117,7 @@ public class UpdateTaskTimeVariablesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -129,7 +126,7 @@ public class UpdateTaskTimeVariablesRequest extends Request {
         }
 
         /**
-         * The time variables configured for the node. The value of this parameter must be a JSON string.
+         * TimeVariables.
          */
         public Builder timeVariables(String timeVariables) {
             this.putQueryParameter("TimeVariables", timeVariables);

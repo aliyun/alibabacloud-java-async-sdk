@@ -123,7 +123,7 @@ public class AddLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The routing algorithm expression. For more information about how to configure a routing algorithm expression, see [Configure a routing algorithm](https://www.alibabacloud.com/help/en/data-management-service/latest/configure-a-routing-algorithm).
+         * The ID of the request.
          */
         public Builder routeExpr(String routeExpr) {
             this.putQueryParameter("RouteExpr", routeExpr);
@@ -132,11 +132,7 @@ public class AddLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The unique key of the routing algorithm. 
-         * <p>
-         * 
-         * > - You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.
-         * > - The unique key of the routing algorithm in the same logical table must be unique.
+         * The error code returned.
          */
         public Builder routeKey(String routeKey) {
             this.putQueryParameter("RouteKey", routeKey);
@@ -145,7 +141,7 @@ public class AddLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
          */
         public Builder tableId(Long tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -154,7 +150,7 @@ public class AddLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
+         * Adds a routing algorithm to a logical table.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

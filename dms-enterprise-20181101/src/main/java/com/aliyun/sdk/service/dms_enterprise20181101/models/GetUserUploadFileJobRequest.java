@@ -93,7 +93,11 @@ public class GetUserUploadFileJobRequest extends Request {
         }
 
         /**
-         * The key of the file upload task. You can call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation to query the key.
+         * The method used to upload the file. Valid values:
+         * <p>
+         * 
+         * *   **URL**
+         * *   **OSS**
          */
         public Builder jobKey(String jobKey) {
             this.putQueryParameter("JobKey", jobKey);

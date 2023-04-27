@@ -107,7 +107,7 @@ public class UpdateTaskFlowCooperatorsRequest extends Request {
         }
 
         /**
-         * The IDs of the users who are involved in the task flow to be updated.
+         * CooperatorIds.
          */
         public Builder cooperatorIds(java.util.List < String > cooperatorIds) {
             String cooperatorIdsShrink = shrink(cooperatorIds, "CooperatorIds", "json");
@@ -117,7 +117,7 @@ public class UpdateTaskFlowCooperatorsRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * DagId.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -126,10 +126,7 @@ public class UpdateTaskFlowCooperatorsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

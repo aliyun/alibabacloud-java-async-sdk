@@ -86,7 +86,7 @@ public class ListScenariosResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the returned business scenarios.
+         * ScenarioList.
          */
         public Builder scenarioList(java.util.List < ScenarioList> scenarioList) {
             this.scenarioList = scenarioList;
@@ -118,11 +118,7 @@ public class ListScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +194,7 @@ public class ListScenariosResponseBody extends TeaModel {
             private String scenarioName; 
 
             /**
-             * The ID of the user who created the business scenario.
+             * CreatorId.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -206,7 +202,7 @@ public class ListScenariosResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the business scenario.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +210,7 @@ public class ListScenariosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business scenario.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -222,7 +218,7 @@ public class ListScenariosResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the business scenario.
+             * ScenarioName.
              */
             public Builder scenarioName(String scenarioName) {
                 this.scenarioName = scenarioName;

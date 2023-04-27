@@ -86,7 +86,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * The name of the security rule set.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **CreateStandardGroup**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The created security rule set.
+         * The name of the security rule set.
          */
         public Builder standardGroup(StandardGroup standardGroup) {
             this.standardGroup = standardGroup;
@@ -118,11 +118,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * The error message returned if the request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +206,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             private Long lastMenderId; 
 
             /**
-             * The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * DbType.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -218,7 +214,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security rule set.
+             * The ID of the request.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,12 +222,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The control mode. Valid values:
-             * <p>
-             * 
-             * *   **NONE_CONTROL**: Flexible Management
-             * *   **STABLE**: Stable Change
-             * *   **COMMON**: Security Collaboration
+             * GroupMode.
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -239,7 +230,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security rule set.
+             * The ID of the tenant.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -247,7 +238,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the security rule set.
+             * LastMenderId.
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;

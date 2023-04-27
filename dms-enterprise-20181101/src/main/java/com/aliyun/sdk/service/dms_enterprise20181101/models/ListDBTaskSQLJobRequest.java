@@ -121,7 +121,7 @@ public class ListDBTaskSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the SQL task group. You can call the [GetStructSyncJobDetail](~~206160~~) operation to obtain this parameter.
+         * DBTaskGroupId.
          */
         public Builder DBTaskGroupId(Long DBTaskGroupId) {
             this.putQueryParameter("DBTaskGroupId", DBTaskGroupId);
@@ -130,7 +130,7 @@ public class ListDBTaskSQLJobRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +139,7 @@ public class ListDBTaskSQLJobRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,10 +148,7 @@ public class ListDBTaskSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

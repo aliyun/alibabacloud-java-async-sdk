@@ -165,7 +165,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
+         * The operation that you want to perform. Set the value to **ListTaskFlowInstance**.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -174,7 +174,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The number of entries to return on each page.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -183,7 +183,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the ID of the task flow.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +192,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
+         * The number of the page to return.
          */
         public Builder startTimeBegin(String startTimeBegin) {
             this.putQueryParameter("StartTimeBegin", startTimeBegin);
@@ -201,7 +201,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query the execution records of the task flow. Specify the time in the yyyy-MM-DD format.
+         * The ID of the task flow.
          */
         public Builder startTimeEnd(String startTimeEnd) {
             this.putQueryParameter("StartTimeEnd", startTimeEnd);
@@ -210,7 +210,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * The ID of the execution record.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -219,11 +219,7 @@ public class ListTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The mode in which the task flow is triggered. Valid values:
-         * <p>
-         * 
-         * *   **0**: The task flow is automatically triggered based on periodic scheduling.
-         * *   **1**: The task flow is manually triggered.
+         * The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
          */
         public Builder triggerType(Integer triggerType) {
             this.putQueryParameter("TriggerType", triggerType);

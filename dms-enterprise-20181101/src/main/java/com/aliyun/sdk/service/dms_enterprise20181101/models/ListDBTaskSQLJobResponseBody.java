@@ -98,7 +98,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The list of the SQL tasks.
+         * DBTaskSQLJobList.
          */
         public Builder DBTaskSQLJobList(java.util.List < DBTaskSQLJobList> DBTaskSQLJobList) {
             this.DBTaskSQLJobList = DBTaskSQLJobList;
@@ -106,7 +106,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the SQL tasks.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +298,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             private Boolean transactional; 
 
             /**
-             * The description of the SQL task.
+             * Comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -306,7 +306,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL task was created.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -314,7 +314,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * DbId.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -322,7 +322,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * DbSearchName.
              */
             public Builder dbSearchName(String dbSearchName) {
                 this.dbSearchName = dbSearchName;
@@ -330,7 +330,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SQL task group.
+             * DbTaskGroupId.
              */
             public Builder dbTaskGroupId(Long dbTaskGroupId) {
                 this.dbTaskGroupId = dbTaskGroupId;
@@ -338,7 +338,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SQL task.
+             * JobId.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -346,7 +346,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL task.
+             * JobType.
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -354,7 +354,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL task was last executed.
+             * LastExecTime.
              */
             public Builder lastExecTime(String lastExecTime) {
                 this.lastExecTime = lastExecTime;
@@ -362,11 +362,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
-             * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is a logical database.
+             * Logic.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -374,17 +370,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the SQL task. Valid values:
-             * <p>
-             * 
-             * *   **INIT**: The SQL task was initialized.
-             * *   **PENDING**: The SQL task waited to be run.
-             * *   **BE_SCHEDULED**: The SQL task waited to be scheduled.
-             * *   **FAIL**: The SQL task failed.
-             * *   **SUCCESS**: The SQL task was successful.
-             * *   **PAUSE**: The SQL task was paused.
-             * *   **DELETE**: The SQL task was deleted.
-             * *   **RUNNING**: The SQL task was being run.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -392,11 +378,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SQL task is executed as a transaction. Valid values:
-             * <p>
-             * 
-             * *   **true**: The SQL task is executed as a transaction.
-             * *   **false**: The SQL task is not executed as a transaction.
+             * Transactional.
              */
             public Builder transactional(Boolean transactional) {
                 this.transactional = transactional;

@@ -74,7 +74,7 @@ public class RetryDataCorrectPreCheckResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class RetryDataCorrectPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class RetryDataCorrectPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **RetryDataCorrectPreCheck**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,7 @@ public class RetryDataCorrectPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

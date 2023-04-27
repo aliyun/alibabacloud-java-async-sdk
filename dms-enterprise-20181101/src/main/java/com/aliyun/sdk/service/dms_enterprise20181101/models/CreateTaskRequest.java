@@ -188,7 +188,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The position of the node on the directed acyclic graph (DAG).
+         * The position of the node on the Directed Acyclic Graph (DAG).
          */
         public Builder graphParam(String graphParam) {
             this.putQueryParameter("GraphParam", graphParam);
@@ -215,7 +215,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The output variables for the task.
+         * The output variables configured for the task.
          */
         public Builder nodeOutput(String nodeOutput) {
             this.putQueryParameter("NodeOutput", nodeOutput);
@@ -233,10 +233,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID.
          * <p>
          * 
-         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
+         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -245,7 +245,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * The time variables for the node.
+         * The time variables configured for the node.
          */
         public Builder timeVariables(String timeVariables) {
             this.putQueryParameter("TimeVariables", timeVariables);

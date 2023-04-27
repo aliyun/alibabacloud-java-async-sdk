@@ -123,7 +123,7 @@ public class AddLhMembersRequest extends Request {
         }
 
         /**
-         * The information about the users to be added.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder members(java.util.List < Members> members) {
             String membersShrink = shrink(members, "Members", "json");
@@ -133,11 +133,7 @@ public class AddLhMembersRequest extends Request {
         }
 
         /**
-         * The ID of the object.
-         * <p>
-         * 
-         * *   If the object is a workspace, you can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.
-         * *   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.
+         * The ID of the user to be added. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
          */
         public Builder objectId(Long objectId) {
             this.putQueryParameter("ObjectId", objectId);
@@ -159,7 +155,7 @@ public class AddLhMembersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -215,12 +211,7 @@ public class AddLhMembersRequest extends Request {
             private Long userId; 
 
             /**
-             * The role. Valid values:
-             * <p>
-             * 
-             * *   **ADMIN**: workspace administrator. You can add a workspace administrator only as a DMS administrator or a DBA.
-             * *   **MEMBER**: workspace member.
-             * *   **DEVELOPER**: task flow developer. Only a workspace member can be added as a task flow developer.
+             * Roles.
              */
             public Builder roles(java.util.List < String > roles) {
                 this.roles = roles;
@@ -228,7 +219,7 @@ public class AddLhMembersRequest extends Request {
             }
 
             /**
-             * The ID of the user to be added. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.
+             * The ID of the request.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

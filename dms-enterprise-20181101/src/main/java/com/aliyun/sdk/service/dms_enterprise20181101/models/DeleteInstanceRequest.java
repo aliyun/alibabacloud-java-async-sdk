@@ -121,7 +121,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The endpoint of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the endpoint.
+         * The error code that is returned.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -130,7 +130,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the port number.
+         * The ID of the request.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -139,7 +139,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the SID.
+         * The operation that you want to perform. Set the value to **DeleteInstance**.
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -148,7 +148,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to obtain the SID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

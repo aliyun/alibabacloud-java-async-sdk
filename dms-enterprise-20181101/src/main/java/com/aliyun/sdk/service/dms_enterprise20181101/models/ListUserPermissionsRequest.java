@@ -205,7 +205,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -214,7 +214,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         * The ID of the database.
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -223,21 +223,50 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The type of the environment to which the database belongs. Valid values:
-         * <p>
-         * 
-         * *   product: production environment
-         * *   dev: development environment
-         * *   pre: staging environment
-         * *   test: test environment
-         * *   sit: SIT environment
-         * *   uat: user acceptance testing (UAT) environment
-         * *   pet: stress testing environment
-         * *   stag: STAG environment
+         * The time when the permissions were granted.
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
             this.envType = envType;
+            return this;
+        }
+
+        /**
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         */
+        public Builder logic(Boolean logic) {
+            this.putQueryParameter("Logic", logic);
+            this.logic = logic;
+            return this;
+        }
+
+        /**
+         * This parameter is reserved.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The operation that you want to perform. Set the value to **ListUserPermissions**.
+         */
+        public Builder permType(String permType) {
+            this.putQueryParameter("PermType", permType);
+            this.permType = permType;
             return this;
         }
 
@@ -248,48 +277,6 @@ public class ListUserPermissionsRequest extends Request {
          * *   true: The database is a logical database.
          * *   false: The database is a physical database.
          */
-        public Builder logic(Boolean logic) {
-            this.putQueryParameter("Logic", logic);
-            this.logic = logic;
-            return this;
-        }
-
-        /**
-         * The number of the page to return.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The permissions on a specific type of resources that you want to query. Valid values:
-         * <p>
-         * 
-         * *   DATABASE: permissions on databases
-         * *   TABLE: permissions on tables
-         * *   COLUMN: permissions on fields
-         * *   INSTANCE: permissions on instances
-         */
-        public Builder permType(String permType) {
-            this.putQueryParameter("PermType", permType);
-            this.permType = permType;
-            return this;
-        }
-
-        /**
-         * The keyword used in the query. For example, if you want to query permissions on an instance, you can specify the endpoint of the instance, such as rm-bp144d5ky4l4r****.
-         */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
             this.searchKey = searchKey;
@@ -297,10 +284,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * The nickname of the user.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -309,10 +293,7 @@ public class ListUserPermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
-         * <p>
-         * 
-         * >  The user ID is different from the ID of your Alibaba Cloud account.
+         * The ID of the authorization record.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

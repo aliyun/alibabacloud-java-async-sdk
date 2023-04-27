@@ -94,7 +94,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * The ID of the classification template.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The list of templates.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +110,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * The name of the classification template.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -122,7 +118,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of templates.
+         * The remarks.
          */
         public Builder templateList(java.util.List < TemplateList> templateList) {
             this.templateList = templateList;
@@ -198,7 +194,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * The name of the classification template.
+             * Queries the classification templates.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -206,7 +202,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * 备注信息
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -214,7 +210,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the classification template.
+             * The ID of the request.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -222,11 +218,10 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the classification template. Valid values:
+             * 分类分级模板类型
              * <p>
-             * 
-             * *   **INNER**: built-in template
-             * *   **USER_DEFINE**: custom template
+             * - INNER：内置
+             * - USER_DEFINE：自定义
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

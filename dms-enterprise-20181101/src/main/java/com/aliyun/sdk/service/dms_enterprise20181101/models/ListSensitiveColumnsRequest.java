@@ -189,7 +189,7 @@ public class ListSensitiveColumnsRequest extends Request {
         }
 
         /**
-         * The name of the field. You can call the [ListColumns](~~141870~~) operation to query the name of the field.
+         * The operation that you want to perform. Set the value to **ListSensitiveColumns**.
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -198,10 +198,7 @@ public class ListSensitiveColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to query the ID of the database.
-         * <p>
-         * 
-         * >  You can also call the [ListDatabases](~~141873~~) operation to query the ID of the physical database and the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
+         * 1860
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -223,7 +220,7 @@ public class ListSensitiveColumnsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The error message.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -232,7 +229,7 @@ public class ListSensitiveColumnsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of the page to return.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -241,10 +238,7 @@ public class ListSensitiveColumnsRequest extends Request {
         }
 
         /**
-         * The name of the database. You can call the [SearchDatabase](~~141876~~) operation to query the name of the database.
-         * <p>
-         * 
-         * >  You can also call the [ListDatabases](~~141873~~) operation to query the name of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the name of a logical database.
+         * The number of entries to return on each page.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -266,7 +260,7 @@ public class ListSensitiveColumnsRequest extends Request {
         }
 
         /**
-         * The name of the table. You can call the [ListTables](~~141878~~) operation to query the ID of the table.
+         * The error code.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -275,10 +269,7 @@ public class ListSensitiveColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * The name of the table. You can call the [ListTables](~~141878~~) operation to query the ID of the table.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

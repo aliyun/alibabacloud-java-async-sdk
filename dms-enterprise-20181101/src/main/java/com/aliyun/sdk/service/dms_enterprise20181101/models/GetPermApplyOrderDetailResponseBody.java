@@ -86,7 +86,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the permission application ticket.
+         * PermApplyOrderDetail.
          */
         public Builder permApplyOrderDetail(PermApplyOrderDetail permApplyOrderDetail) {
             this.permApplyOrderDetail = permApplyOrderDetail;
@@ -110,7 +110,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the column.
+             * ColumnName.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -178,7 +178,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -291,7 +291,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The ID of the database.
+             * DbId.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -299,7 +299,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * DbType.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -307,7 +307,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * EnvType.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -315,11 +315,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
-             * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database.
+             * Logic.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -327,7 +323,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the database.
+             * OwnerIds.
              */
             public Builder ownerIds(java.util.List < Long > ownerIds) {
                 this.ownerIds = ownerIds;
@@ -335,7 +331,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners of the database.
+             * OwnerNickNames.
              */
             public Builder ownerNickNames(java.util.List < String > ownerNickNames) {
                 this.ownerNickNames = ownerNickNames;
@@ -343,7 +339,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
+             * SearchName.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -492,7 +488,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The type of the database engine.
+             * DbType.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -500,7 +496,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database administrator (DBA) of the instance.
+             * DbaId.
              */
             public Builder dbaId(Long dbaId) {
                 this.dbaId = dbaId;
@@ -508,7 +504,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the DBA of the instance.
+             * DbaNickName.
              */
             public Builder dbaNickName(String dbaNickName) {
                 this.dbaNickName = dbaNickName;
@@ -516,7 +512,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * EnvType.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -524,7 +520,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance.
+             * Host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -532,7 +528,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -540,7 +536,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the instance.
+             * OwnerIds.
              */
             public Builder ownerIds(java.util.List < Long > ownerIds) {
                 this.ownerIds = ownerIds;
@@ -548,7 +544,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners of the instance.
+             * OwnerNickName.
              */
             public Builder ownerNickName(java.util.List < String > ownerNickName) {
                 this.ownerNickName = ownerNickName;
@@ -556,7 +552,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the instance.
+             * Port.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -564,7 +560,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the instance.
+             * SearchName.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -605,7 +601,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the table.
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -682,7 +678,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private TableInfo tableInfo; 
 
             /**
-             * The information about the column.
+             * ColumnInfo.
              */
             public Builder columnInfo(ColumnInfo columnInfo) {
                 this.columnInfo = columnInfo;
@@ -690,7 +686,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the database.
+             * DatabaseInfo.
              */
             public Builder databaseInfo(DatabaseInfo databaseInfo) {
                 this.databaseInfo = databaseInfo;
@@ -698,7 +694,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the instance.
+             * InstanceInfo.
              */
             public Builder instanceInfo(InstanceInfo instanceInfo) {
                 this.instanceInfo = instanceInfo;
@@ -706,7 +702,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the table.
+             * TableInfo.
              */
             public Builder tableInfo(TableInfo tableInfo) {
                 this.tableInfo = tableInfo;
@@ -783,13 +779,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private Long seconds; 
 
             /**
-             * The type of objects on which you apply for permissions. Valid values:
-             * <p>
-             * 
-             * *   **DB**: database
-             * *   **TAB**: table
-             * *   **COL**: column
-             * *   **INSTANT**: instance
+             * ApplyType.
              */
             public Builder applyType(String applyType) {
                 this.applyType = applyType;
@@ -797,16 +787,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of permissions that you apply for. Valid values:
-             * <p>
-             * 
-             * *   **1**: the permissions to query information
-             * *   **2**: the permissions to export information
-             * *   **3**: the permissions to query and export information
-             * *   **4**: the permissions to modify information
-             * *   **5**: the permissions to query and modify information
-             * *   **6**: the permissions to export and modify information
-             * *   **7**: the permissions to query, export, and modify information
+             * PermType.
              */
             public Builder permType(Long permType) {
                 this.permType = permType;
@@ -814,7 +795,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of resources.
+             * Resources.
              */
             public Builder resources(java.util.List < Resources> resources) {
                 this.resources = resources;
@@ -822,7 +803,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The validity duration of the permissions. Unit: seconds.
+             * Seconds.
              */
             public Builder seconds(Long seconds) {
                 this.seconds = seconds;

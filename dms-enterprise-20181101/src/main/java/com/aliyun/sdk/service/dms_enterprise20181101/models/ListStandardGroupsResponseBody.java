@@ -86,7 +86,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * The ID of the tenant.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The security rule sets returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to **ListStandardGroups**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,12 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The security rule sets returned.
+         * The control mode. Valid values:
+         * <p>
+         * 
+         * *   **NONE_CONTROL**: Flexible Management
+         * *   **STABLE**: Stable Change
+         * *   **COMMON**: Security Collaboration
          */
         public Builder standardGroupList(java.util.List < StandardGroupList> standardGroupList) {
             this.standardGroupList = standardGroupList;
@@ -118,11 +123,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * The error message returned if the request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +223,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
             private Long lastMenderId; 
 
             /**
-             * The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * DbType.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -230,7 +231,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security rule set.
+             * The ID of the request.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,12 +247,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The control mode. Valid values:
-             * <p>
-             * 
-             * *   **NONE_CONTROL**: Flexible Management
-             * *   **STABLE**: Stable Change
-             * *   **COMMON**: Security Collaboration
+             * GroupMode.
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -267,7 +263,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who queries the security sets.
+             * LastMenderId.
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;

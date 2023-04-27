@@ -136,10 +136,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The key of the attachment for the ticket. The attachment provides more instructions for this operation.
-         * <p>
-         * 
-         * You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
+         * The ID of the ticket.
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -148,7 +145,11 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the data change. This reduces unnecessary communication.
+         * Indicates whether the database is a logical database. Valid values:
+         * <p>
+         * 
+         * *   **true**: The database is a logical database.
+         * *   **false**: The database is not a logical database.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -157,7 +158,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * The databases for which you want to clear historical data.
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -167,7 +168,10 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.
          */
         public Builder relatedUserList(java.util.List < Long > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -177,10 +181,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the Manage DMS tenants topic.
+         * The reason for the data change.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -273,7 +274,10 @@ public class CreateDataCronClearOrderRequest extends Request {
             private String timeUnit; 
 
             /**
-             * The name of the field.
+             * The amount of time taken to run the task. Unit: hours.
+             * <p>
+             * 
+             * >  If the **specifyDuration** parameter is set to **true**, this parameter is required.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -281,7 +285,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The filter conditions.
+             * The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.
              */
             public Builder filterSQL(String filterSQL) {
                 this.filterSQL = filterSQL;
@@ -289,7 +293,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.
+             * The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).
              */
             public Builder remainDays(Long remainDays) {
                 this.remainDays = remainDays;
@@ -297,7 +301,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The name of the table. You can call the [ListTables](~~141878~~) operation to query the name of the table.
+             * The parameters of the ticket.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -305,11 +309,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:
-             * <p>
-             * 
-             * *   **MILLISECONDS**: milliseconds
-             * *   **SECONDS**: seconds
+             * The error message.
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -364,7 +364,11 @@ public class CreateDataCronClearOrderRequest extends Request {
             private Boolean logic; 
 
             /**
-             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
+             * The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:
+             * <p>
+             * 
+             * *   **MILLISECONDS**: milliseconds
+             * *   **SECONDS**: seconds
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -372,11 +376,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
-             * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is not a logical database.
+             * The tables for which you want to clear historical data.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -481,7 +481,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             private Boolean specifyDuration; 
 
             /**
-             * The reason for the data change.
+             * The purpose or objective of the data change. This reduces unnecessary communication.
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -489,7 +489,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The tables for which you want to clear historical data.
+             * The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.
              */
             public Builder cronClearItemList(java.util.List < CronClearItemList> cronClearItemList) {
                 this.cronClearItemList = cronClearItemList;
@@ -497,7 +497,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](~~206581~~).
+             * The name of the field.
              */
             public Builder cronFormat(String cronFormat) {
                 this.cronFormat = cronFormat;
@@ -505,7 +505,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The databases for which you want to clear historical data.
+             * The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.
              */
             public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
@@ -513,10 +513,10 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * The amount of time taken to run the task. Unit: hours.
+             * The key of the attachment for the ticket. The attachment provides more instructions for this operation.
              * <p>
              * 
-             * >  If the **specifyDuration** parameter is set to **true**, this parameter is required.
+             * You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
              */
             public Builder durationHour(Long durationHour) {
                 this.durationHour = durationHour;
@@ -524,11 +524,7 @@ public class CreateDataCronClearOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether to specify an end time for the task. Valid values:
-             * <p>
-             * 
-             * *   **true**: specifies an end time for the task. The task is automatically suspended after this end time.
-             * *   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.
+             * The name of the table. You can call the [ListTables](~~141878~~) operation to query the name of the table.
              */
             public Builder specifyDuration(Boolean specifyDuration) {
                 this.specifyDuration = specifyDuration;

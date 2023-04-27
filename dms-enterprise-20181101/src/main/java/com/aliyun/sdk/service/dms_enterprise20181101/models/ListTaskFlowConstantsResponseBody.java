@@ -86,7 +86,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * A list of constant key-value pairs for the task flow.
+         * DagConstants.
          */
         public Builder dagConstants(DagConstants dagConstants) {
             this.dagConstants = dagConstants;
@@ -94,7 +94,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,7 +170,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The constant key.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +178,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
             }
 
             /**
-             * The constant value.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -137,14 +137,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The type of the comparison. Valid values:
-         * <p>
-         * 
-         * *   **CREATE_TABLE**: compares the created tables.
-         * *   **ALTER_TABLE**: compares the modified tables.
-         * *   **EQUAL_TABLE**: compares the identical tables.
-         * *   **PASS_TABLE**: compares the tables that are skipped during schema synchronization.
-         * *   **NOT_COMPARE**: does not compare tables.
+         * CompareType.
          */
         public Builder compareType(String compareType) {
             this.putQueryParameter("CompareType", compareType);
@@ -153,7 +146,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -162,7 +155,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -171,7 +164,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,10 +173,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

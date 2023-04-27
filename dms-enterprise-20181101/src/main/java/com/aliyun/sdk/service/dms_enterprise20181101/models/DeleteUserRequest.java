@@ -92,10 +92,7 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -104,7 +101,7 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * The UID of the user. You can view your UID by moving the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console.
+         * Uid.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

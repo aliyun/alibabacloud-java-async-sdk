@@ -122,10 +122,7 @@ public class PauseDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](~~208481~~) and [ListDBTaskSQLJob](~~207049~~) operations to obtain the value of this parameter.
-         * <p>
-         * 
-         * >  If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.
+         * JobId.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -134,7 +131,7 @@ public class PauseDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.
+         * The ID of the request.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -143,7 +140,7 @@ public class PauseDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -152,11 +149,7 @@ public class PauseDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The type of the pause operation. Valid values:
-         * <p>
-         * 
-         * *   ALL: pauses all SQL tasks.
-         * *   SINGLE: pauses a single SQL task.
+         * The operation that you want to perform. Set the value to **PauseDataCorrectSQLJob**.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

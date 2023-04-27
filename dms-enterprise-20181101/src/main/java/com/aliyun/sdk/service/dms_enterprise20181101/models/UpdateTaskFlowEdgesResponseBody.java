@@ -74,7 +74,7 @@ public class UpdateTaskFlowEdgesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * UpdateTaskFlowEdges
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class UpdateTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * WB01220505
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class UpdateTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * You can use the ID to locate logs and troubleshoot issues.
+         * Updates the start and end nodes of specified edges of a specified task flow at a time.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,7 @@ public class UpdateTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -123,7 +123,7 @@ public class ReRunTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * DagId.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -132,7 +132,7 @@ public class ReRunTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to query the execution record ID.
+         * DagInstanceId.
          */
         public Builder dagInstanceId(Long dagInstanceId) {
             this.putQueryParameter("DagInstanceId", dagInstanceId);
@@ -141,7 +141,7 @@ public class ReRunTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The version number of the task flow. You can call the ListTaskFlowVersions operation to query the version number of the task flow.
+         * DagVersion.
          */
         public Builder dagVersion(String dagVersion) {
             this.putQueryParameter("DagVersion", dagVersion);
@@ -150,10 +150,7 @@ public class ReRunTaskFlowInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

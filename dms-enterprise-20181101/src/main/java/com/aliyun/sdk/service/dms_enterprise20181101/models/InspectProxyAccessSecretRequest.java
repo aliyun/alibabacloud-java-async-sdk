@@ -93,7 +93,7 @@ public class InspectProxyAccessSecretRequest extends Request {
         }
 
         /**
-         * The ID of the security protection authorization. After the security protection agent authorizes the target user, the system automatically generates a security protection authorization ID. The ID is globally unique. You can call the [ListProxyAccesses](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxyaccesses) operation to obtain this parameter.
+         * ProxyAccessId.
          */
         public Builder proxyAccessId(Long proxyAccessId) {
             this.putQueryParameter("ProxyAccessId", proxyAccessId);
@@ -102,7 +102,7 @@ public class InspectProxyAccessSecretRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to obtain this parameter.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

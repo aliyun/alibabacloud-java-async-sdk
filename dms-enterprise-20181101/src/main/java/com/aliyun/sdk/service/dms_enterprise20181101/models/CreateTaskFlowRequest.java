@@ -121,7 +121,7 @@ public class CreateTaskFlowRequest extends Request {
         }
 
         /**
-         * The name of the task flow.
+         * DagName.
          */
         public Builder dagName(String dagName) {
             this.putQueryParameter("DagName", dagName);
@@ -130,7 +130,7 @@ public class CreateTaskFlowRequest extends Request {
         }
 
         /**
-         * The description of the task flow.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -139,7 +139,7 @@ public class CreateTaskFlowRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
+         * ScenarioId.
          */
         public Builder scenarioId(Long scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);
@@ -148,7 +148,7 @@ public class CreateTaskFlowRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

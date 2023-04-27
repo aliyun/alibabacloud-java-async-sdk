@@ -86,7 +86,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of SLA rules.
+         * SLARuleList.
          */
         public Builder SLARuleList(SLARuleList SLARuleList) {
             this.SLARuleList = SLARuleList;
@@ -118,11 +118,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +206,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             private Integer ruleType; 
 
             /**
-             * The ID of the task flow.
+             * DagId.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -218,7 +214,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SLA rule.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -226,7 +222,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period. Unit: minutes.
+             * IntervalMinutes.
              */
             public Builder intervalMinutes(Integer intervalMinutes) {
                 this.intervalMinutes = intervalMinutes;
@@ -234,7 +230,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task node.
+             * NodeId.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -242,11 +238,7 @@ public class ListDefaultSLARulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
-             * 
-             * *   **0**: an SLA rule for a task flow
-             * *   **1**: an SLA rule for a task node
+             * RuleType.
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;

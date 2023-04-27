@@ -98,7 +98,7 @@ public class GetOpLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the operation log.
+         * OpLogDetails.
          */
         public Builder opLogDetails(OpLogDetails opLogDetails) {
             this.opLogDetails = opLogDetails;
@@ -122,7 +122,7 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +130,7 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +138,7 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of operation logs that are returned.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -266,14 +262,7 @@ public class GetOpLogResponseBody extends TeaModel {
             private String userNick; 
 
             /**
-             * The endpoint of the database instance.
-             * <p>
-             * 
-             * > 
-             * 
-             * *   This parameter is valid only for database instances of the LocalInstance type.
-             * 
-             * *   This parameter is valid only for operations on the functional modules related to tasks.
+             * Database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -281,7 +270,7 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The functional module for which the operation log is queried.
+             * Module.
              */
             public Builder module(String module) {
                 this.module = module;
@@ -289,7 +278,7 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the operation.
+             * OpContent.
              */
             public Builder opContent(String opContent) {
                 this.opContent = opContent;
@@ -297,7 +286,7 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * OpTime.
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -305,7 +294,7 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who performed the operation.
+             * OpUserId.
              */
             public Builder opUserId(Long opUserId) {
                 this.opUserId = opUserId;
@@ -313,10 +302,7 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ticket or task.
-             * <p>
-             * 
-             * >  This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.
+             * OrderId.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -324,7 +310,7 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -332,7 +318,7 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the user.
+             * UserNick.
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;

@@ -150,7 +150,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
+         * test_AttachmentKey
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -159,7 +159,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The description of the ticket to be created.
+         * The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -168,7 +168,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The ticket creation parameter. The value is a JSON string. The value of this parameter differs based on the type of the ticket. For more information, see the **PluginParam parameter** section in this topic.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder pluginParam(java.util.Map < String, ? > pluginParam) {
             String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
@@ -178,7 +178,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The type of the ticket. For more information, see [PluginType parameter](~~429109~~).
+         * The ID of the ticket.
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -196,7 +196,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * The error message.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

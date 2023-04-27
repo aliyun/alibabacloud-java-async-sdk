@@ -93,7 +93,7 @@ public class GetSQLReviewCheckResultStatusRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the ticket. You can obtain the ticket ID from the response parameters of the [CreateSQLReviewOrder](~~257777~~) operation.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,7 +102,7 @@ public class GetSQLReviewCheckResultStatusRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

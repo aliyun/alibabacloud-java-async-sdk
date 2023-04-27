@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dms_enterprise20181101.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetDataExportPreCheckDetailResponse} extends {@link TeaModel}
+ *
+ * <p>GetDataExportPreCheckDetailResponse</p>
+ */
+public class GetDataExportPreCheckDetailResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetDataExportPreCheckDetailResponseBody body;
+
+    private GetDataExportPreCheckDetailResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetDataExportPreCheckDetailResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetDataExportPreCheckDetailResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetDataExportPreCheckDetailResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetDataExportPreCheckDetailResponseBody body);
+
+        @Override
+        GetDataExportPreCheckDetailResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetDataExportPreCheckDetailResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetDataExportPreCheckDetailResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetDataExportPreCheckDetailResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetDataExportPreCheckDetailResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetDataExportPreCheckDetailResponse build() {
+            return new GetDataExportPreCheckDetailResponse(this);
+        } 
+
+    } 
+
+}

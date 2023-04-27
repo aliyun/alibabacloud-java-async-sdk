@@ -86,7 +86,7 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the ticket.
+         * CreateOrderResult.
          */
         public Builder createOrderResult(java.util.List < Long > createOrderResult) {
             this.createOrderResult = createOrderResult;
@@ -94,7 +94,7 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The ID of the request.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,12 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The execution mode of the ticket after the ticket is approved. Valid values:
+         * <p>
+         * 
+         * *   **COMMITOR**: The data change is performed by the user who submits the ticket.
+         * *   **AUTO**: The data change is automatically performed after the ticket is approved.
+         * *   **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +123,7 @@ public class CreateFreeLockCorrectOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * The reason for the data change.
          */
         public Builder success(Boolean success) {
             this.success = success;

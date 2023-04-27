@@ -108,7 +108,7 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The new SQL script.
+         * The error code returned.
          */
         public Builder execSQL(String execSQL) {
             this.putQueryParameter("ExecSQL", execSQL);
@@ -117,7 +117,7 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The ID of the data change ticket.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -126,7 +126,7 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * The ID of the request.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

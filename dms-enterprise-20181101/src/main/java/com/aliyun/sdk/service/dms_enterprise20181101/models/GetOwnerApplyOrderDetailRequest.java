@@ -93,7 +93,7 @@ public class GetOwnerApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * OrderId.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,10 +102,7 @@ public class GetOwnerApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

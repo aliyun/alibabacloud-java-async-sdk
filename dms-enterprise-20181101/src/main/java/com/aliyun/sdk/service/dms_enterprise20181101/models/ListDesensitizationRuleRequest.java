@@ -162,7 +162,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The type of the masking algorithm.
+         * The description of the rule.
          */
         public Builder funcType(String funcType) {
             this.putQueryParameter("FuncType", funcType);
@@ -171,7 +171,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The name of the masking rule.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +180,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. The maximum value is 100.
+         * The ID of the masking rule.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +198,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The name of the masking rule.
+         * The example.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -207,7 +207,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The algorithm used for masking.
+         * The number of the page to return.
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -216,10 +216,7 @@ public class ListDesensitizationRuleRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](~~181330~~).
+         * The name of the masking rule.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

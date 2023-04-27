@@ -86,7 +86,7 @@ public class CreateUploadFileJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The operation that you want to perform. Set the value to **CreateUploadFileJob**.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,10 +102,7 @@ public class CreateUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the task.
-         * <p>
-         * 
-         * >  You can call the [GetUserUploadFileJob](~~206069~~) operation to query the progress and details of the task.
+         * JobKey.
          */
         public Builder jobKey(String jobKey) {
             this.jobKey = jobKey;
@@ -113,7 +110,7 @@ public class CreateUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error code returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +118,7 @@ public class CreateUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * The ID of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;

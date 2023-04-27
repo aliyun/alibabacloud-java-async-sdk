@@ -94,7 +94,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The key of the file that is returned after the file is uploaded. You can use this key when you upload the file as an attachment in a ticket.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The endpoint of the OSS bucket.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The size of the file. Unit: byte.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the file upload task.
+         * The name of the OSS bucket.
          */
         public Builder uploadFileJobDetail(UploadFileJobDetail uploadFileJobDetail) {
             this.uploadFileJobDetail = uploadFileJobDetail;
@@ -182,7 +182,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             private String objectName; 
 
             /**
-             * The name of the OSS bucket.
+             * The information about the Object Storage Service (OSS) bucket from which the file is uploaded.
+             * <p>
+             * 
+             * >  This parameter is returned if the **UploadType** parameter is set to **OSS**.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -190,7 +193,10 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket.
+             * The URL of the file.
+             * <p>
+             * 
+             * >  This parameter is returned if the **UploadType** parameter is set to **URL**.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -198,7 +204,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS object.
+             * The ID of the request.
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -359,7 +365,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             private Long uploadedSize; 
 
             /**
-             * The key of the file that is returned after the file is uploaded. You can use this key when you upload the file as an attachment in a ticket.
+             * AttachmentKey.
              */
             public Builder attachmentKey(String attachmentKey) {
                 this.attachmentKey = attachmentKey;
@@ -367,7 +373,7 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * The key of the file upload task. You can call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation to query the key.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -375,10 +381,58 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the file. Unit: byte.
+             * -1
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
+                return this;
+            }
+
+            /**
+             * The information about the status of the file upload task.
+             */
+            public Builder fileSource(String fileSource) {
+                this.fileSource = fileSource;
+                return this;
+            }
+
+            /**
+             * The error message returned.
+             */
+            public Builder jobKey(String jobKey) {
+                this.jobKey = jobKey;
+                return this;
+            }
+
+            /**
+             * JobStatus.
+             */
+            public Builder jobStatus(String jobStatus) {
+                this.jobStatus = jobStatus;
+                return this;
+            }
+
+            /**
+             * JobStatusDesc.
+             */
+            public Builder jobStatusDesc(String jobStatusDesc) {
+                this.jobStatusDesc = jobStatusDesc;
+                return this;
+            }
+
+            /**
+             * The size of the uploaded file. Unit: byte.
+             */
+            public Builder uploadOSSParam(UploadOSSParam uploadOSSParam) {
+                this.uploadOSSParam = uploadOSSParam;
+                return this;
+            }
+
+            /**
+             * The name of the file.
+             */
+            public Builder uploadType(String uploadType) {
+                this.uploadType = uploadType;
                 return this;
             }
 
@@ -391,79 +445,13 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
              * *   **big-file**: The file is uploaded to import multiple data records at a time.
              * *   **sqlreview**: The file is uploaded for SQL review.
              */
-            public Builder fileSource(String fileSource) {
-                this.fileSource = fileSource;
-                return this;
-            }
-
-            /**
-             * The key of the file upload task.
-             */
-            public Builder jobKey(String jobKey) {
-                this.jobKey = jobKey;
-                return this;
-            }
-
-            /**
-             * The status of the file upload task. Valid values:
-             * <p>
-             * 
-             * *   **INIT**: The task was initialized.
-             * *   **PENDING**: The task waited to be run.
-             * *   **BE_SCHEDULED**: The task waited to be scheduled.
-             * *   **FAIL**: The task failed.
-             * *   **SUCCESS**: The task was run as expected.
-             * *   **RUNNING**: The task was being run.
-             */
-            public Builder jobStatus(String jobStatus) {
-                this.jobStatus = jobStatus;
-                return this;
-            }
-
-            /**
-             * The information about the status of the file upload task.
-             */
-            public Builder jobStatusDesc(String jobStatusDesc) {
-                this.jobStatusDesc = jobStatusDesc;
-                return this;
-            }
-
-            /**
-             * The information about the Object Storage Service (OSS) bucket from which the file is uploaded.
-             * <p>
-             * 
-             * >  This parameter is returned if the **UploadType** parameter is set to **OSS**.
-             */
-            public Builder uploadOSSParam(UploadOSSParam uploadOSSParam) {
-                this.uploadOSSParam = uploadOSSParam;
-                return this;
-            }
-
-            /**
-             * The method used to upload the file. Valid values:
-             * <p>
-             * 
-             * *   **URL**
-             * *   **OSS**
-             */
-            public Builder uploadType(String uploadType) {
-                this.uploadType = uploadType;
-                return this;
-            }
-
-            /**
-             * The URL of the file.
-             * <p>
-             * 
-             * >  This parameter is returned if the **UploadType** parameter is set to **URL**.
-             */
             public Builder uploadURL(String uploadURL) {
                 this.uploadURL = uploadURL;
                 return this;
             }
 
             /**
-             * The size of the uploaded file. Unit: byte.
+             * The key of the file upload task.
              */
             public Builder uploadedSize(Long uploadedSize) {
                 this.uploadedSize = uploadedSize;

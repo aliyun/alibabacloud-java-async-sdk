@@ -122,39 +122,14 @@ public class BuyPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * The type of the resource that you want to purchase.
+         * The number of database instances that you want to use DMS to manage.
          * <p>
          * 
-         * *   **VersionType**: DMS that supports control modes
-         * *   **SensitiveDataProtection**: DMS that supports sensitive data protection
+         * > : A quota can be used for only one database instance.
          */
         public Builder commodityType(String commodityType) {
             this.putQueryParameter("CommodityType", commodityType);
             this.commodityType = commodityType;
-            return this;
-        }
-
-        /**
-         * The number of database instances that you want to use DMS to manage.
-         * <p>
-         * 
-         * > A quota can be used for only one database instance.
-         */
-        public Builder insNum(Integer insNum) {
-            this.putQueryParameter("InsNum", insNum);
-            this.insNum = insNum;
-            return this;
-        }
-
-        /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
-         */
-        public Builder tid(Long tid) {
-            this.putQueryParameter("Tid", tid);
-            this.tid = tid;
             return this;
         }
 
@@ -164,6 +139,28 @@ public class BuyPayAsYouGoOrderRequest extends Request {
          * 
          * *   **stand**: Stable Change
          * *   **safety**: Security Collaboration
+         */
+        public Builder insNum(Integer insNum) {
+            this.putQueryParameter("InsNum", insNum);
+            this.insNum = insNum;
+            return this;
+        }
+
+        /**
+         * The type of the resource that you want to purchase.
+         * <p>
+         * 
+         * *   **VersionType**: DMS that supports control modes
+         * *   **SensitiveDataProtection**: DMS that supports sensitive data protection
+         */
+        public Builder tid(Long tid) {
+            this.putQueryParameter("Tid", tid);
+            this.tid = tid;
+            return this;
+        }
+
+        /**
+         * The error code returned if the request failed.
          */
         public Builder versionType(String versionType) {
             this.putQueryParameter("VersionType", versionType);

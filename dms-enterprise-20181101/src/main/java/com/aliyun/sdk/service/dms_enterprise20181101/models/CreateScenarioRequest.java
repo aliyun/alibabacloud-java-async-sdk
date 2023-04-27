@@ -107,7 +107,7 @@ public class CreateScenarioRequest extends Request {
         }
 
         /**
-         * The description of the business scenario.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -116,7 +116,7 @@ public class CreateScenarioRequest extends Request {
         }
 
         /**
-         * The name of the business scenario.
+         * ScenarioName.
          */
         public Builder scenarioName(String scenarioName) {
             this.putQueryParameter("ScenarioName", scenarioName);
@@ -125,10 +125,7 @@ public class CreateScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

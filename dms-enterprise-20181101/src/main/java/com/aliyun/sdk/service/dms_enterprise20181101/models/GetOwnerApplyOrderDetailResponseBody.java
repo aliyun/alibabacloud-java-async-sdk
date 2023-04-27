@@ -86,7 +86,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the ticket.
+         * OwnerApplyOrderDetail.
          */
         public Builder ownerApplyOrderDetail(OwnerApplyOrderDetail ownerApplyOrderDetail) {
             this.ownerApplyOrderDetail = ownerApplyOrderDetail;
@@ -110,7 +110,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The type of the database engine.
+             * DbType.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -226,7 +226,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).
+             * EnvType.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -234,7 +234,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the original owners.
+             * OwnerIds.
              */
             public Builder ownerIds(java.util.List < Long > ownerIds) {
                 this.ownerIds = ownerIds;
@@ -242,7 +242,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the owners.
+             * OwnerNickNames.
              */
             public Builder ownerNickNames(java.util.List < String > ownerNickNames) {
                 this.ownerNickNames = ownerNickNames;
@@ -250,7 +250,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The search name of the resource.
+             * SearchName.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -258,10 +258,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
-             * <p>
-             * 
-             * > : This parameter is returned when you submit a Database-OWNER ticket.
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -326,11 +323,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             private String targetId; 
 
             /**
-             * Indicates whether the database is a logical database. Valid values:
-             * <p>
-             * 
-             * *   **true**: The instance is a logical database.
-             * *   **false**: The instance is not a logical database.
+             * Logic.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -338,7 +331,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the resource.
+             * ResourceDetail.
              */
             public Builder resourceDetail(ResourceDetail resourceDetail) {
                 this.resourceDetail = resourceDetail;
@@ -346,7 +339,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * TargetId.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -399,12 +392,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             private java.util.List < Resources> resources; 
 
             /**
-             * The type of the submitted ticket. Valid values:
-             * <p>
-             * 
-             * *   **INSTANCE**: the ticket that applies for the permissions to be an instance owner
-             * *   **DB**: the ticket that applies for the permissions to be a database owner
-             * *   **TABLE**: the ticket that applies for the permissions to be a table owner
+             * ApplyType.
              */
             public Builder applyType(String applyType) {
                 this.applyType = applyType;
@@ -412,7 +400,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the requested resource.
+             * Resources.
              */
             public Builder resources(java.util.List < Resources> resources) {
                 this.resources = resources;

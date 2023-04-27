@@ -93,7 +93,7 @@ public class GetStructSyncJobDetailRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
+         * The total number of tables.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -102,10 +102,7 @@ public class GetStructSyncJobDetailRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * >  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).
+         * The error message that is returned.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -86,7 +86,7 @@ public class CreateStructSyncOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result of creating the ticket.
+         * CreateOrderResult.
          */
         public Builder createOrderResult(java.util.List < Long > createOrderResult) {
             this.createOrderResult = createOrderResult;
@@ -94,7 +94,7 @@ public class CreateStructSyncOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class CreateStructSyncOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +110,7 @@ public class CreateStructSyncOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateStructSyncOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

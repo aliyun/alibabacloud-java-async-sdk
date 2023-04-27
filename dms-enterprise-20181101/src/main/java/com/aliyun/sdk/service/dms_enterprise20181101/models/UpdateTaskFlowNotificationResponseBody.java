@@ -74,7 +74,7 @@ public class UpdateTaskFlowNotificationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class UpdateTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class UpdateTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * Specifies whether to enable SLA global notifications for task flows. Notifications are disabled by default. You can enable notifications based on your business requirements.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,7 @@ public class UpdateTaskFlowNotificationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

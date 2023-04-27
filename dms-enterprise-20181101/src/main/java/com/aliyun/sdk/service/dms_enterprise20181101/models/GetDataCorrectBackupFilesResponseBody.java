@@ -86,7 +86,7 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The download URL of the backup file for the ticket.
+         * DataCorrectBackupFiles.
          */
         public Builder dataCorrectBackupFiles(DataCorrectBackupFiles dataCorrectBackupFiles) {
             this.dataCorrectBackupFiles = dataCorrectBackupFiles;
@@ -94,7 +94,7 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The operation that you want to perform. Set the value to **GetDataCorrectBackupFiles**.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -118,7 +118,7 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

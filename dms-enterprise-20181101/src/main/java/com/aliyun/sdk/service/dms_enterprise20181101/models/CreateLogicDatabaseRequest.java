@@ -108,7 +108,7 @@ public class CreateLogicDatabaseRequest extends Request {
         }
 
         /**
-         * The alias of the logical database.
+         * Alias.
          */
         public Builder alias(String alias) {
             this.putQueryParameter("Alias", alias);
@@ -117,7 +117,7 @@ public class CreateLogicDatabaseRequest extends Request {
         }
 
         /**
-         * The IDs of the physical databases that compose the logical database. You can specify one or more database IDs. You can call the [ListDatabases](https://www.alibabacloud.com/help/en/data-management-service/latest/listdatabases) or [SearchDatabase](https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase) operation to query the IDs of the physical databases.
+         * DatabaseIds.
          */
         public Builder databaseIds(java.util.List < Long > databaseIds) {
             String databaseIdsShrink = shrink(databaseIds, "DatabaseIds", "json");
@@ -127,10 +127,7 @@ public class CreateLogicDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. 
-         * <p>
-         * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://www.alibabacloud.com/help/en/data-management-service/latest/manage-dms-tenants) topic.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -86,7 +86,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * The analysis result of the schema synchronization task.
+         * StructSyncJobAnalyzeResult.
          */
         public Builder structSyncJobAnalyzeResult(StructSyncJobAnalyzeResult structSyncJobAnalyzeResult) {
             this.structSyncJobAnalyzeResult = structSyncJobAnalyzeResult;
@@ -118,7 +118,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             private String targetTableName; 
 
             /**
-             * The SQL script.
+             * Script.
              */
             public Builder script(String script) {
                 this.script = script;
@@ -190,7 +190,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source table.
+             * SourceTableName.
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -198,7 +198,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination table.
+             * TargetTableName.
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;
@@ -251,14 +251,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * The type of the comparison. Valid values:
-             * <p>
-             * 
-             * *   **CREATE_TABLE**: compares the created tables.
-             * *   **ALTER_TABLE**: compares the modified tables.
-             * *   **EQUAL_TABLE**: compares the identical tables.
-             * *   **PASS_TABLE**: compares the tables that are skipped during schema synchronization.
-             * *   **NOT_COMPARE**: does not compare tables.
+             * CompareType.
              */
             public Builder compareType(String compareType) {
                 this.compareType = compareType;
@@ -266,7 +259,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables.
+             * Count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -319,7 +312,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             private java.util.List < SummaryList> summaryList; 
 
             /**
-             * The details of the analysis results.
+             * ResultList.
              */
             public Builder resultList(java.util.List < ResultList> resultList) {
                 this.resultList = resultList;
@@ -327,7 +320,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on the analysis results.
+             * SummaryList.
              */
             public Builder summaryList(java.util.List < SummaryList> summaryList) {
                 this.summaryList = summaryList;

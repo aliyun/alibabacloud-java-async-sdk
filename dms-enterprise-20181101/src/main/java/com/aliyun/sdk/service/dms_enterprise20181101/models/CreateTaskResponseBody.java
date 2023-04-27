@@ -94,7 +94,7 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task node returned if the node is created.
+         * The ID of the task node returned when the task was created.
          */
         public Builder nodeId(Long nodeId) {
             this.nodeId = nodeId;
@@ -121,8 +121,8 @@ public class CreateTaskResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

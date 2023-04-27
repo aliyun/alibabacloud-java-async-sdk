@@ -74,7 +74,7 @@ public class DeleteLogicDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class DeleteLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class DeleteLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,7 @@ public class DeleteLogicDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * - true: The request is successful.
-         * - false: The request fails.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

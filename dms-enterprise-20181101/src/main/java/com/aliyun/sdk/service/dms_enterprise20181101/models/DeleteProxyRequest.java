@@ -93,7 +93,7 @@ public class DeleteProxyRequest extends Request {
         }
 
         /**
-         * The ID of the security protection agent. You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) or [GetProxy](https://www.alibabacloud.com/help/en/data-management-service/latest/getproxy) operation to obtain this parameter.
+         * ProxyId.
          */
         public Builder proxyId(Long proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -102,7 +102,7 @@ public class DeleteProxyRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) or [ListUserTenants](https://www.alibabacloud.com/help/en/data-management-service/latest/listusertenants) operation to obtain this parameter.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

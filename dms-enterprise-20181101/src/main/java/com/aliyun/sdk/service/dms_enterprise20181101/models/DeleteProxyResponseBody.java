@@ -74,7 +74,7 @@ public class DeleteProxyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned to the query task.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class DeleteProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +90,7 @@ public class DeleteProxyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DeleteProxyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

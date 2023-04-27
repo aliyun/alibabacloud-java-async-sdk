@@ -208,7 +208,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The start of the time range for scheduling.
+         * CronBeginDate.
          */
         public Builder cronBeginDate(String cronBeginDate) {
             this.putQueryParameter("CronBeginDate", cronBeginDate);
@@ -217,7 +217,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The end of the time range for scheduling.
+         * CronEndDate.
          */
         public Builder cronEndDate(String cronEndDate) {
             this.putQueryParameter("CronEndDate", cronEndDate);
@@ -226,7 +226,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The cron expression for timed scheduling.
+         * CronStr.
          */
         public Builder cronStr(String cronStr) {
             this.putQueryParameter("CronStr", cronStr);
@@ -235,14 +235,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The type of the scheduling cycle. Valid values:
-         * <p>
-         * 
-         * *   **MINUTE**: scheduling by minute
-         * *   **HOUR**: scheduling by hour
-         * *   **DAY**: scheduling by day
-         * *   **WEEK**: scheduling by week
-         * *   **MONTH**: scheduling by month
+         * CronType.
          */
         public Builder cronType(String cronType) {
             this.putQueryParameter("CronType", cronType);
@@ -251,7 +244,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The ID of the task flow.
+         * DagId.
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -260,7 +253,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The event scheduling configuration. The value of this parameter is a JSON string.
+         * ScheduleParam.
          */
         public Builder scheduleParam(String scheduleParam) {
             this.putQueryParameter("ScheduleParam", scheduleParam);
@@ -269,11 +262,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable scheduling. Valid values:
-         * <p>
-         * 
-         * *   **Enable**
-         * *   **Disable**
+         * ScheduleSwitch.
          */
         public Builder scheduleSwitch(Boolean scheduleSwitch) {
             this.putQueryParameter("ScheduleSwitch", scheduleSwitch);
@@ -282,10 +271,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
-         * 
-         * > : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -294,7 +280,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The time zone. The default time zone is UTC+8 (Asia/Shanghai).
+         * TimeZoneId.
          */
         public Builder timeZoneId(String timeZoneId) {
             this.putQueryParameter("TimeZoneId", timeZoneId);
@@ -303,11 +289,7 @@ public class UpdateTaskFlowScheduleRequest extends Request {
         }
 
         /**
-         * The mode in which the task flow is triggered. Valid values:
-         * <p>
-         * 
-         * *   **Cron**: The task flow is triggered based on timed scheduling.
-         * *   **Event**: The task flow is triggered by events.
+         * TriggerType.
          */
         public Builder triggerType(String triggerType) {
             this.putQueryParameter("TriggerType", triggerType);

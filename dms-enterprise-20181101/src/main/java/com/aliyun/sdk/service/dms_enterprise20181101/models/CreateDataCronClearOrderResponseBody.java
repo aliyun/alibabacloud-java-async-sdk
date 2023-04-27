@@ -86,7 +86,7 @@ public class CreateDataCronClearOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the ticket.
+         * CreateOrderResult.
          */
         public Builder createOrderResult(java.util.List < Long > createOrderResult) {
             this.createOrderResult = createOrderResult;
@@ -94,7 +94,7 @@ public class CreateDataCronClearOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class CreateDataCronClearOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -118,7 +118,11 @@ public class CreateDataCronClearOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Specifies whether to specify an end time for the task. Valid values:
+         * <p>
+         * 
+         * *   **true**: specifies an end time for the task. The task is automatically suspended after this end time.
+         * *   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.
          */
         public Builder success(Boolean success) {
             this.success = success;

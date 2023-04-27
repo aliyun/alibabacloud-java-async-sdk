@@ -86,7 +86,7 @@ public class GetIntervalLimitOfSLAResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * GetIntervalLimitOfSLA
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetIntervalLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetIntervalLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum scheduling cycle. Unit: minutes.
+         * IntervalLimit.
          */
         public Builder intervalLimit(Integer intervalLimit) {
             this.intervalLimit = intervalLimit;
@@ -110,7 +110,7 @@ public class GetIntervalLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * Queries the minimum scheduling cycle of a task flow when a service level agreement (SLA) timeout rule is configured for the task flow.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class GetIntervalLimitOfSLAResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
