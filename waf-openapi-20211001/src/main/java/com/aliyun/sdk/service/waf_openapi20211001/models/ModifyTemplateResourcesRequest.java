@@ -26,6 +26,14 @@ public class ModifyTemplateResourcesRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("TemplateId")
     @Validation(required = true)
     private Long templateId;
@@ -43,6 +51,8 @@ public class ModifyTemplateResourcesRequest extends Request {
         this.bindResourceGroups = builder.bindResourceGroups;
         this.bindResources = builder.bindResources;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.templateId = builder.templateId;
         this.unbindResourceGroups = builder.unbindResourceGroups;
         this.unbindResources = builder.unbindResources;
@@ -83,6 +93,20 @@ public class ModifyTemplateResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return templateId
      */
     public Long getTemplateId() {
@@ -107,6 +131,8 @@ public class ModifyTemplateResourcesRequest extends Request {
         private java.util.List < String > bindResourceGroups; 
         private java.util.List < String > bindResources; 
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private Long templateId; 
         private java.util.List < String > unbindResourceGroups; 
         private java.util.List < String > unbindResources; 
@@ -120,13 +146,15 @@ public class ModifyTemplateResourcesRequest extends Request {
             this.bindResourceGroups = request.bindResourceGroups;
             this.bindResources = request.bindResources;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.templateId = request.templateId;
             this.unbindResourceGroups = request.unbindResourceGroups;
             this.unbindResources = request.unbindResources;
         } 
 
         /**
-         * BindResourceGroups.
+         * The protected object groups that you want to associate with the protection rule template. Specify the value of this parameter in the \["group1","group2",...] format.
          */
         public Builder bindResourceGroups(java.util.List < String > bindResourceGroups) {
             this.putQueryParameter("BindResourceGroups", bindResourceGroups);
@@ -135,7 +163,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * BindResources.
+         * The protected objects that you want to associate with the protection rule template. Specify the value of this parameter in the \["XX1","XX2",...] format.
          */
         public Builder bindResources(java.util.List < String > bindResources) {
             this.putQueryParameter("BindResources", bindResources);
@@ -144,7 +172,10 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +184,29 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the Alibaba Cloud resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the protection rule template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -162,7 +215,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * UnbindResourceGroups.
+         * The protected object groups that you want to disassociate from the protection rule template. Specify the value of this parameter in the \["group1","group2",...] format.
          */
         public Builder unbindResourceGroups(java.util.List < String > unbindResourceGroups) {
             this.putQueryParameter("UnbindResourceGroups", unbindResourceGroups);
@@ -171,7 +224,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * UnbindResources.
+         * The protected objects that you want to disassociate from the protection rule template. Specify the value of this parameter in the \["XX1","XX2",...] format.
          */
         public Builder unbindResources(java.util.List < String > unbindResources) {
             this.putQueryParameter("UnbindResources", unbindResources);

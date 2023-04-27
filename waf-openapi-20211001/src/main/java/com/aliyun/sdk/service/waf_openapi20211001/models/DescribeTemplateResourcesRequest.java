@@ -18,6 +18,14 @@ public class DescribeTemplateResourcesRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("ResourceType")
     @Validation(required = true)
     private String resourceType;
@@ -30,6 +38,8 @@ public class DescribeTemplateResourcesRequest extends Request {
     private DescribeTemplateResourcesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.resourceType = builder.resourceType;
         this.templateId = builder.templateId;
     }
@@ -55,6 +65,20 @@ public class DescribeTemplateResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -70,6 +94,8 @@ public class DescribeTemplateResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeTemplateResourcesRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private String resourceType; 
         private Long templateId; 
 
@@ -80,12 +106,17 @@ public class DescribeTemplateResourcesRequest extends Request {
         private Builder(DescribeTemplateResourcesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resourceType = request.resourceType;
             this.templateId = request.templateId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +125,33 @@ public class DescribeTemplateResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the Alibaba Cloud resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The type of the protected resource. Valid values:
+         * <p>
+         * 
+         * *   **single:** protected object.
+         * *   **group:** protected object group.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -103,7 +160,7 @@ public class DescribeTemplateResourcesRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the protection rule template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -34,6 +34,14 @@ public class ModifyDefenseResourceGroupRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
     private ModifyDefenseResourceGroupRequest(Builder builder) {
         super(builder);
         this.addList = builder.addList;
@@ -41,6 +49,8 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         this.description = builder.description;
         this.groupName = builder.groupName;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
 
     public static Builder builder() {
@@ -91,12 +101,28 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDefenseResourceGroupRequest, Builder> {
         private String addList; 
         private String deleteList; 
         private String description; 
         private String groupName; 
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
 
         private Builder() {
             super();
@@ -109,10 +135,12 @@ public class ModifyDefenseResourceGroupRequest extends Request {
             this.description = request.description;
             this.groupName = request.groupName;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * AddList.
+         * The protected objects that you want to add to the protected object group. Separate the protected objects with commas (,). If you leave this parameter empty, no protected objects are added to the protected object group.
          */
         public Builder addList(String addList) {
             this.putQueryParameter("AddList", addList);
@@ -121,7 +149,7 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * DeleteList.
+         * The protected objects that you want to remove from the protected object group. Separate the protected objects with commas (,). If you leave this parameter empty, no protected objects are removed from the protected object group.
          */
         public Builder deleteList(String deleteList) {
             this.putQueryParameter("DeleteList", deleteList);
@@ -130,7 +158,7 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the protected object group.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -139,7 +167,7 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the protected object group whose configurations you want to modify.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -148,11 +176,36 @@ public class ModifyDefenseResourceGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
             return this;
         }
 

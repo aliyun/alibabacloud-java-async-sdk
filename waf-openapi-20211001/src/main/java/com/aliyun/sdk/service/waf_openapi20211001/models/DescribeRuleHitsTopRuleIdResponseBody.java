@@ -50,7 +50,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopRuleId> ruleHitsTopRuleId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
         }
 
         /**
-         * RuleHitsTopRuleId.
+         * The array of the IDs of the top 10 rules that are matched by requests.
          */
         public Builder ruleHitsTopRuleId(java.util.List < RuleHitsTopRuleId> ruleHitsTopRuleId) {
             this.ruleHitsTopRuleId = ruleHitsTopRuleId;
@@ -122,7 +122,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * Count.
+             * The number of requests that match the rule.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -130,7 +130,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The protected object.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -138,7 +138,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

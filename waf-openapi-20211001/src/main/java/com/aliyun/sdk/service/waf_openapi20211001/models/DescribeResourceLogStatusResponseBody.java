@@ -50,7 +50,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * Resource.
+             * The protected object.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -118,7 +118,11 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the log collection feature is enabled for the protected object. Valid values:
+             * <p>
+             * 
+             * *   **true:** The log collection feature is enabled.
+             * *   **false:** The log collection feature is disabled.
              */
             public Builder status(Boolean status) {
                 this.status = status;

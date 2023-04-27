@@ -50,7 +50,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
         private java.util.List < TopIp> topIp; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
         }
 
         /**
-         * TopIp.
+         * The array of the top 10 IP addresses from which requests are sent.
          */
         public Builder topIp(java.util.List < TopIp> topIp) {
             this.topIp = topIp;
@@ -134,7 +134,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             private String isp; 
 
             /**
-             * Area.
+             * The ordinal number of the area to which the IP address belongs.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -142,7 +142,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The total number of requests that are sent from the IP address.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -150,7 +150,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -158,7 +158,7 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The ISP.
              */
             public Builder isp(String isp) {
                 this.isp = isp;

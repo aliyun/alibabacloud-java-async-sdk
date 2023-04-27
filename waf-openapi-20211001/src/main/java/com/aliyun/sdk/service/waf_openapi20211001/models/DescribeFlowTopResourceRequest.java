@@ -22,6 +22,14 @@ public class DescribeFlowTopResourceRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("StartTimestamp")
     @Validation(required = true)
     private String startTimestamp;
@@ -30,6 +38,8 @@ public class DescribeFlowTopResourceRequest extends Request {
         super(builder);
         this.endTimestamp = builder.endTimestamp;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.startTimestamp = builder.startTimestamp;
     }
 
@@ -61,6 +71,20 @@ public class DescribeFlowTopResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return startTimestamp
      */
     public String getStartTimestamp() {
@@ -70,6 +94,8 @@ public class DescribeFlowTopResourceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeFlowTopResourceRequest, Builder> {
         private String endTimestamp; 
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private String startTimestamp; 
 
         private Builder() {
@@ -80,11 +106,13 @@ public class DescribeFlowTopResourceRequest extends Request {
             super(request);
             this.endTimestamp = request.endTimestamp;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.startTimestamp = request.startTimestamp;
         } 
 
         /**
-         * EndTimestamp.
+         * The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.
          */
         public Builder endTimestamp(String endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -93,7 +121,10 @@ public class DescribeFlowTopResourceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +133,29 @@ public class DescribeFlowTopResourceRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the Alibaba Cloud resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The beginning of the time range to query. Unit: seconds.
          */
         public Builder startTimestamp(String startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

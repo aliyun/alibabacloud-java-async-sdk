@@ -62,7 +62,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * IpList.
+         * An array of IP addresses in the IP address blacklist.
          */
         public Builder ipList(java.util.List < IpList> ipList) {
             this.ipList = ipList;
@@ -70,7 +70,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of IP addresses in the blacklist.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -178,7 +178,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * Description.
+             * The description of the IP address in the blacklist.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +186,10 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time after which the IP address blacklist becomes invalid. Unit: seconds.
+             * <p>
+             * 
+             * >  If the value of this parameter is **0**, the blacklist is permanently valid.
              */
             public Builder expiredTime(Long expiredTime) {
                 this.expiredTime = expiredTime;
@@ -194,7 +197,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The most recent time when the IP address blacklist was modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -202,7 +205,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address in the IP address blacklist.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -210,7 +213,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the IP address blacklist rule for major event protection.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -218,7 +221,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the rule template for major event protection.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

@@ -22,8 +22,16 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Resource")
     private String resource;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
 
     @Query
     @NameInMap("RuleType")
@@ -38,7 +46,9 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
         super(builder);
         this.endTimestamp = builder.endTimestamp;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
         this.resource = builder.resource;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.ruleType = builder.ruleType;
         this.startTimestamp = builder.startTimestamp;
     }
@@ -71,10 +81,24 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resource
      */
     public String getResource() {
         return this.resource;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
     /**
@@ -94,7 +118,9 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeRuleHitsTopRuleIdRequest, Builder> {
         private String endTimestamp; 
         private String instanceId; 
+        private String regionId; 
         private String resource; 
+        private String resourceManagerResourceGroupId; 
         private String ruleType; 
         private String startTimestamp; 
 
@@ -106,13 +132,15 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
             super(request);
             this.endTimestamp = request.endTimestamp;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
             this.resource = request.resource;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.ruleType = request.ruleType;
             this.startTimestamp = request.startTimestamp;
         } 
 
         /**
-         * EndTimestamp.
+         * The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.
          */
         public Builder endTimestamp(String endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -121,7 +149,10 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +161,20 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The protected object.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -139,7 +183,23 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The ID of the Alibaba Cloud resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.
+         * <p>
+         * 
+         * *   **blacklist:** IP address blacklist rules.
+         * *   **custom:** custom rules.
+         * *   **antiscan:** scan protection rules.
+         * *   **cc_system:** HTTP flood protection rules.
+         * *   **region_block:** region blacklist rules.
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -148,7 +208,7 @@ public class DescribeRuleHitsTopRuleIdRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The beginning of the time range to query. Unit: seconds.
          */
         public Builder startTimestamp(String startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

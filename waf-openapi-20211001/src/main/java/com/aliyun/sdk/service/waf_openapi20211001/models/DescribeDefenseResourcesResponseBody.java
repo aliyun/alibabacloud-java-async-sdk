@@ -62,7 +62,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * An array of protected objects.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -78,7 +78,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries that are returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -119,6 +119,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceGroup")
         private String resourceGroup;
 
+        @NameInMap("ResourceManagerResourceGroupId")
+        private String resourceManagerResourceGroupId;
+
         @NameInMap("ResourceOrigin")
         private String resourceOrigin;
 
@@ -135,6 +138,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             this.product = builder.product;
             this.resource = builder.resource;
             this.resourceGroup = builder.resourceGroup;
+            this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
             this.resourceOrigin = builder.resourceOrigin;
             this.xffStatus = builder.xffStatus;
         }
@@ -211,6 +215,13 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceManagerResourceGroupId
+         */
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
+        /**
          * @return resourceOrigin
          */
         public String getResourceOrigin() {
@@ -234,11 +245,12 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private String product; 
             private String resource; 
             private String resourceGroup; 
+            private String resourceManagerResourceGroupId; 
             private String resourceOrigin; 
             private Integer xffStatus; 
 
             /**
-             * CustomHeaders.
+             * An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.
              */
             public Builder customHeaders(java.util.List < String > customHeaders) {
                 this.customHeaders = customHeaders;
@@ -246,7 +258,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the protected object.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -254,7 +266,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * The description of the protected object. Different key-value pairs in a map indicate different properties of the protected object.
              */
             public Builder detail(java.util.Map < String, ? > detail) {
                 this.detail = detail;
@@ -262,7 +274,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time of the protected object. Unit: seconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -270,7 +282,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The most recent modification time of the protected object. Unit: seconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -278,7 +290,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Pattern.
+             * The protection pattern.
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -286,7 +298,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The name of the cloud service.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -294,7 +306,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The name of the protected object.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -302,7 +314,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * The name of the protected object group to which the protected object belongs.
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -310,7 +322,15 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOrigin.
+             * The ID of the resource group.
+             */
+            public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+                this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+                return this;
+            }
+
+            /**
+             * The origin of the protected object.
              */
             public Builder resourceOrigin(String resourceOrigin) {
                 this.resourceOrigin = resourceOrigin;
@@ -318,7 +338,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * XffStatus.
+             * Indicates whether the X-Forwarded-For (XFF) header is used.
              */
             public Builder xffStatus(Integer xffStatus) {
                 this.xffStatus = xffStatus;

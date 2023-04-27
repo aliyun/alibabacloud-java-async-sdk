@@ -50,7 +50,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType; 
 
         /**
-         * RequestId.
+         * The number of requests that match the rules of the protection module.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RuleHitsTopTuleType.
+         * The type of rules. For details, see the description of **RuleType** in [DescribeRuleHitsTopRuleId](~~DescribeRuleHitsTopRuleId~~).
          */
         public Builder ruleHitsTopTuleType(java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType) {
             this.ruleHitsTopTuleType = ruleHitsTopTuleType;

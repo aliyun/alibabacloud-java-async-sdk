@@ -50,7 +50,7 @@ public class CreateDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainInfo.
+         * $.parameters[3].schema.example
          */
         public Builder domainInfo(DomainInfo domainInfo) {
             this.domainInfo = domainInfo;
@@ -58,7 +58,7 @@ public class CreateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * $.parameters[3].schema.description
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateDomainResponseBody extends TeaModel {
             private String domain; 
 
             /**
-             * Cname.
+             * $.parameters[3].schema.enumValueTitles
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -118,7 +118,7 @@ public class CreateDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * $.parameters[4].schema.properties.Backends.items.description
              */
             public Builder domain(String domain) {
                 this.domain = domain;

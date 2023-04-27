@@ -7,16 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDomainDetailRequest} extends {@link RequestModel}
+ * {@link DescribeHybridCloudUserRequest} extends {@link RequestModel}
  *
- * <p>DescribeDomainDetailRequest</p>
+ * <p>DescribeHybridCloudUserRequest</p>
  */
-public class DescribeDomainDetailRequest extends Request {
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
-    private String domain;
-
+public class DescribeHybridCloudUserRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -27,35 +22,27 @@ public class DescribeDomainDetailRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
 
-    private DescribeDomainDetailRequest(Builder builder) {
+    private DescribeHybridCloudUserRequest(Builder builder) {
         super(builder);
-        this.domain = builder.domain;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeDomainDetailRequest create() {
+    public static DescribeHybridCloudUserRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
     }
 
     /**
@@ -73,38 +60,27 @@ public class DescribeDomainDetailRequest extends Request {
     }
 
     /**
-     * @return sourceIp
+     * @return resourceManagerResourceGroupId
      */
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDomainDetailRequest, Builder> {
-        private String domain; 
+    public static final class Builder extends Request.Builder<DescribeHybridCloudUserRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private String sourceIp; 
+        private String resourceManagerResourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainDetailRequest request) {
+        private Builder(DescribeHybridCloudUserRequest request) {
             super(request);
-            this.domain = request.domain;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
-
-        /**
-         * 域名
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
 
         /**
          * InstanceId.
@@ -125,17 +101,17 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * ResourceManagerResourceGroupId.
          */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
             return this;
         }
 
         @Override
-        public DescribeDomainDetailRequest build() {
-            return new DescribeDomainDetailRequest(this);
+        public DescribeHybridCloudUserRequest build() {
+            return new DescribeHybridCloudUserRequest(this);
         } 
 
     } 

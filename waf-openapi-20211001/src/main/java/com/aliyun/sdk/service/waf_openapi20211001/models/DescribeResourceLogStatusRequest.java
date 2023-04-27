@@ -18,6 +18,14 @@ public class DescribeResourceLogStatusRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("Resources")
     @Validation(required = true)
     private String resources;
@@ -25,6 +33,8 @@ public class DescribeResourceLogStatusRequest extends Request {
     private DescribeResourceLogStatusRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.resources = builder.resources;
     }
 
@@ -49,6 +59,20 @@ public class DescribeResourceLogStatusRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return resources
      */
     public String getResources() {
@@ -57,6 +81,8 @@ public class DescribeResourceLogStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeResourceLogStatusRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private String resources; 
 
         private Builder() {
@@ -66,11 +92,16 @@ public class DescribeResourceLogStatusRequest extends Request {
         private Builder(DescribeResourceLogStatusRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resources = request.resources;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +110,29 @@ public class DescribeResourceLogStatusRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The protected object that you want to query. You can specify multiple protected objects. Separate the protected objects with commas (,).
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);

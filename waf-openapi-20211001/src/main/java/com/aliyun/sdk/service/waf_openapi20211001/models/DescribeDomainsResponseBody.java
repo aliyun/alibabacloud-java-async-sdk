@@ -308,6 +308,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("ListenPorts")
         private ListenPorts listenPorts;
 
+        @NameInMap("ResourceManagerResourceGroupId")
+        private String resourceManagerResourceGroupId;
+
         @NameInMap("Status")
         private Integer status;
 
@@ -316,6 +319,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             this.cname = builder.cname;
             this.domain = builder.domain;
             this.listenPorts = builder.listenPorts;
+            this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
             this.status = builder.status;
         }
 
@@ -356,6 +360,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceManagerResourceGroupId
+         */
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -367,6 +378,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String cname; 
             private String domain; 
             private ListenPorts listenPorts; 
+            private String resourceManagerResourceGroupId; 
             private Integer status; 
 
             /**
@@ -398,6 +410,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
              */
             public Builder listenPorts(ListenPorts listenPorts) {
                 this.listenPorts = listenPorts;
+                return this;
+            }
+
+            /**
+             * 阿里云资源组ID。
+             */
+            public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+                this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
                 return this;
             }
 

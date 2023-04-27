@@ -22,6 +22,10 @@ public class DeleteDomainRequest extends Request {
     private String domain;
 
     @Query
+    @NameInMap("DomainId")
+    private String domainId;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -31,12 +35,18 @@ public class DeleteDomainRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("SourceIp")
+    private String sourceIp;
+
     private DeleteDomainRequest(Builder builder) {
         super(builder);
         this.accessType = builder.accessType;
         this.domain = builder.domain;
+        this.domainId = builder.domainId;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -67,6 +77,13 @@ public class DeleteDomainRequest extends Request {
     }
 
     /**
+     * @return domainId
+     */
+    public String getDomainId() {
+        return this.domainId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -80,11 +97,20 @@ public class DeleteDomainRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return sourceIp
+     */
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
     public static final class Builder extends Request.Builder<DeleteDomainRequest, Builder> {
         private String accessType; 
         private String domain; 
+        private String domainId; 
         private String instanceId; 
         private String regionId; 
+        private String sourceIp; 
 
         private Builder() {
             super();
@@ -94,12 +120,18 @@ public class DeleteDomainRequest extends Request {
             super(request);
             this.accessType = request.accessType;
             this.domain = request.domain;
+            this.domainId = request.domainId;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * AccessType.
+         * The mode in which the domain name is added to WAF. Valid values:
+         * <p>
+         * 
+         * *   **share:** CNAME record mode. This is the default value.
+         * *   **hybrid_cloud_cname:** hybrid cloud reverse proxy mode.
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -108,7 +140,7 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name that you want to delete.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -117,7 +149,19 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the domain name.
+         */
+        public Builder domainId(String domainId) {
+            this.putQueryParameter("DomainId", domainId);
+            this.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,11 +170,24 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The source IP address of the request. The value of this parameter is specified by the system.
+         */
+        public Builder sourceIp(String sourceIp) {
+            this.putQueryParameter("SourceIp", sourceIp);
+            this.sourceIp = sourceIp;
             return this;
         }
 

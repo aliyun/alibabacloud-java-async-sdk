@@ -50,7 +50,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Group.
+         * The information about the protected object group.
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +58,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             private String resourceList; 
 
             /**
-             * Description.
+             * The description of the protected object group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +154,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the protected object group was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -162,7 +162,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The most recent time when the protected object group was modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -170,7 +170,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the protected object group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -178,7 +178,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceList.
+             * The protected objects in the protected object group. The protected objects are separated with commas (,).
              */
             public Builder resourceList(String resourceList) {
                 this.resourceList = resourceList;

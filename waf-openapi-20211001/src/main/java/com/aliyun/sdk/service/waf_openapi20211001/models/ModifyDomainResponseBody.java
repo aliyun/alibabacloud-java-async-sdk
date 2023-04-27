@@ -50,7 +50,7 @@ public class ModifyDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainInfo.
+         * The information about the domain name.
          */
         public Builder domainInfo(DomainInfo domainInfo) {
             this.domainInfo = domainInfo;
@@ -58,7 +58,7 @@ public class ModifyDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +78,13 @@ public class ModifyDomainResponseBody extends TeaModel {
         @NameInMap("Domain")
         private String domain;
 
+        @NameInMap("DomainId")
+        private String domainId;
+
         private DomainInfo(Builder builder) {
             this.cname = builder.cname;
             this.domain = builder.domain;
+            this.domainId = builder.domainId;
         }
 
         public static Builder builder() {
@@ -105,12 +109,20 @@ public class ModifyDomainResponseBody extends TeaModel {
             return this.domain;
         }
 
+        /**
+         * @return domainId
+         */
+        public String getDomainId() {
+            return this.domainId;
+        }
+
         public static final class Builder {
             private String cname; 
             private String domain; 
+            private String domainId; 
 
             /**
-             * Cname.
+             * The CNAME that is assigned by WAF to the domain name.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -118,10 +130,18 @@ public class ModifyDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name whose access configurations you modified.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
+                return this;
+            }
+
+            /**
+             * The ID of the domain name.
+             */
+            public Builder domainId(String domainId) {
+                this.domainId = domainId;
                 return this;
             }
 

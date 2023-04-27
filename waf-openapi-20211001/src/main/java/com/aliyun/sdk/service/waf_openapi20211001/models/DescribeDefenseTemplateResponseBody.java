@@ -50,7 +50,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         private Template template; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Template.
+         * The information about the protection rule template.
          */
         public Builder template(Template template) {
             this.template = template;
@@ -182,7 +182,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * DefenseScene.
+             * The scenario in which the protection rule template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~ID~~) topic.
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -190,7 +190,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the protection rule template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -198,7 +198,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The most recent time when the protection rule template was modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -206,7 +206,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the protection rule template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -214,7 +214,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the protection rule template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -222,7 +222,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateOrigin.
+             * The origin of the protection rule template. If the value of this parameter is custom, the protection rule template is created by the user.
              */
             public Builder templateOrigin(String templateOrigin) {
                 this.templateOrigin = templateOrigin;
@@ -230,7 +230,11 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateStatus.
+             * The status of the protection rule template. Valid values:
+             * <p>
+             * 
+             * *   **0:** disabled.
+             * *   **1:** enabled.
              */
             public Builder templateStatus(Integer templateStatus) {
                 this.templateStatus = templateStatus;
@@ -238,7 +242,11 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * The type of the protection rule template. Valid values:
+             * <p>
+             * 
+             * *   **user_default:** default template.
+             * *   **user_custom:** custom template.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

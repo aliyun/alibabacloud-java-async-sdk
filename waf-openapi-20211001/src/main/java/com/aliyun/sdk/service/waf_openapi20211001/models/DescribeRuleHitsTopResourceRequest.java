@@ -22,6 +22,14 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("RuleType")
     private String ruleType;
 
@@ -34,6 +42,8 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         super(builder);
         this.endTimestamp = builder.endTimestamp;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.ruleType = builder.ruleType;
         this.startTimestamp = builder.startTimestamp;
     }
@@ -66,6 +76,20 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return ruleType
      */
     public String getRuleType() {
@@ -82,6 +106,8 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeRuleHitsTopResourceRequest, Builder> {
         private String endTimestamp; 
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private String ruleType; 
         private String startTimestamp; 
 
@@ -93,12 +119,14 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
             super(request);
             this.endTimestamp = request.endTimestamp;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.ruleType = request.ruleType;
             this.startTimestamp = request.startTimestamp;
         } 
 
         /**
-         * EndTimestamp.
+         * The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.
          */
         public Builder endTimestamp(String endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -107,7 +135,10 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +147,36 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.
+         * <p>
+         * 
+         * *   **blacklist:** IP address blacklist rules.
+         * *   **custom:** custom rules.
+         * *   **antiscan:** scan protection rules.
+         * *   **cc_system:** HTTP flood protection rules.
+         * *   **region_block:** region blacklist rules.
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -125,7 +185,7 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The beginning of the time range to query. Unit: seconds.
          */
         public Builder startTimestamp(String startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

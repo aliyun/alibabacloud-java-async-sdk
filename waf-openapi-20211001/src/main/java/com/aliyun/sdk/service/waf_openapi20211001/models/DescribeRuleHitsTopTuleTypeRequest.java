@@ -22,6 +22,10 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Resource")
     private String resource;
 
@@ -34,6 +38,7 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
         super(builder);
         this.endTimestamp = builder.endTimestamp;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
         this.resource = builder.resource;
         this.startTimestamp = builder.startTimestamp;
     }
@@ -66,6 +71,13 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resource
      */
     public String getResource() {
@@ -82,6 +94,7 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeRuleHitsTopTuleTypeRequest, Builder> {
         private String endTimestamp; 
         private String instanceId; 
+        private String regionId; 
         private String resource; 
         private String startTimestamp; 
 
@@ -93,12 +106,13 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
             super(request);
             this.endTimestamp = request.endTimestamp;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
             this.resource = request.resource;
             this.startTimestamp = request.startTimestamp;
         } 
 
         /**
-         * EndTimestamp.
+         * cn-hangzhou
          */
         public Builder endTimestamp(String endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -107,7 +121,7 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +130,16 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The array of the top 10 protection modules that are matched.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The result of the request.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -125,7 +148,11 @@ public class DescribeRuleHitsTopTuleTypeRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The ID of the region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: the Chinese mainland.
+         * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder startTimestamp(String startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

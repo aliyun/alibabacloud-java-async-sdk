@@ -18,6 +18,14 @@ public class DeleteDefenseRuleRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("RuleIds")
     @Validation(required = true)
     private String ruleIds;
@@ -30,6 +38,8 @@ public class DeleteDefenseRuleRequest extends Request {
     private DeleteDefenseRuleRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.ruleIds = builder.ruleIds;
         this.templateId = builder.templateId;
     }
@@ -55,6 +65,20 @@ public class DeleteDefenseRuleRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return ruleIds
      */
     public String getRuleIds() {
@@ -70,6 +94,8 @@ public class DeleteDefenseRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteDefenseRuleRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private String ruleIds; 
         private Long templateId; 
 
@@ -80,12 +106,17 @@ public class DeleteDefenseRuleRequest extends Request {
         private Builder(DeleteDefenseRuleRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.ruleIds = request.ruleIds;
             this.templateId = request.templateId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +125,29 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleIds.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The IDs of the protection rules that you want to delete. Separate the IDs with commas (,).
          */
         public Builder ruleIds(String ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -103,7 +156,7 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the protection rule template to which the protection rule that you want to delete belongs.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

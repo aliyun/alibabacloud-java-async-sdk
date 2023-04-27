@@ -50,7 +50,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopUa> ruleHitsTopUa; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
         }
 
         /**
-         * RuleHitsTopUa.
+         * The array of the top 10 user agents that are used to initiate attacks.
          */
         public Builder ruleHitsTopUa(java.util.List < RuleHitsTopUa> ruleHitsTopUa) {
             this.ruleHitsTopUa = ruleHitsTopUa;
@@ -110,7 +110,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
             private String ua; 
 
             /**
-             * Count.
+             * The number of attacks that are initiated from the IP address.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
             }
 
             /**
-             * Ua.
+             * The user agent.
              */
             public Builder ua(String ua) {
                 this.ua = ua;

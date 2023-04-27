@@ -22,6 +22,14 @@ public class ModifyDefenseTemplateRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("TemplateId")
     @Validation(required = true)
     private Long templateId;
@@ -35,6 +43,8 @@ public class ModifyDefenseTemplateRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.templateId = builder.templateId;
         this.templateName = builder.templateName;
     }
@@ -67,6 +77,20 @@ public class ModifyDefenseTemplateRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return templateId
      */
     public Long getTemplateId() {
@@ -83,6 +107,8 @@ public class ModifyDefenseTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDefenseTemplateRequest, Builder> {
         private String description; 
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private Long templateId; 
         private String templateName; 
 
@@ -94,12 +120,14 @@ public class ModifyDefenseTemplateRequest extends Request {
             super(request);
             this.description = request.description;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.templateId = request.templateId;
             this.templateName = request.templateName;
         } 
 
         /**
-         * Description.
+         * The description of the protection rule template whose configurations you want to modify.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -108,7 +136,10 @@ public class ModifyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +148,29 @@ public class ModifyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the protection rule template whose configurations you want to modify.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -126,7 +179,7 @@ public class ModifyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the protection rule template whose configurations you want to modify.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

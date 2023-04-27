@@ -22,6 +22,10 @@ public class DescribeVisitUasRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Resource")
     private String resource;
 
@@ -34,6 +38,7 @@ public class DescribeVisitUasRequest extends Request {
         super(builder);
         this.endTimestamp = builder.endTimestamp;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
         this.resource = builder.resource;
         this.startTimestamp = builder.startTimestamp;
     }
@@ -66,6 +71,13 @@ public class DescribeVisitUasRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resource
      */
     public String getResource() {
@@ -82,6 +94,7 @@ public class DescribeVisitUasRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeVisitUasRequest, Builder> {
         private String endTimestamp; 
         private String instanceId; 
+        private String regionId; 
         private String resource; 
         private String startTimestamp; 
 
@@ -93,6 +106,7 @@ public class DescribeVisitUasRequest extends Request {
             super(request);
             this.endTimestamp = request.endTimestamp;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
             this.resource = request.resource;
             this.startTimestamp = request.startTimestamp;
         } 
@@ -112,6 +126,15 @@ public class DescribeVisitUasRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

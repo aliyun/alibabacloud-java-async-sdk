@@ -50,7 +50,7 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopUrl> ruleHitsTopUrl; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RuleHitsTopUrl.
+         * The array of the top 10 URLs that are used to initiate requests.
          */
         public Builder ruleHitsTopUrl(java.util.List < RuleHitsTopUrl> ruleHitsTopUrl) {
             this.ruleHitsTopUrl = ruleHitsTopUrl;
@@ -110,7 +110,7 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Count.
+             * The total number of requests that are initiated by using the URL.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL that is used to initiate requests.
              */
             public Builder url(String url) {
                 this.url = url;

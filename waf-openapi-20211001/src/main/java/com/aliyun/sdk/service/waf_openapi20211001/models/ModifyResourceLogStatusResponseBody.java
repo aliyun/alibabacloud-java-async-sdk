@@ -50,7 +50,7 @@ public class ModifyResourceLogStatusResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ModifyResourceLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the log collection feature is enabled for the protected object. Valid values:
+         * <p>
+         * 
+         * *   **true:** The log collection feature is enabled.
+         * *   **false:** The log collection feature is disabled.
          */
         public Builder status(Boolean status) {
             this.status = status;

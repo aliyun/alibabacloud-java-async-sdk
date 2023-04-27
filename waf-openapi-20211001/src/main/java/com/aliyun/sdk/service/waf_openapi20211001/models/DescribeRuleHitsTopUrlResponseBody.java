@@ -50,7 +50,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopUrl> ruleHitsTopUrl; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RuleHitsTopUrl.
+         * The array of the top 10 URLs that trigger protection rules.
          */
         public Builder ruleHitsTopUrl(java.util.List < RuleHitsTopUrl> ruleHitsTopUrl) {
             this.ruleHitsTopUrl = ruleHitsTopUrl;
@@ -110,7 +110,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Count.
+             * The number of requests from the URL that match protection rules.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The request URL.
              */
             public Builder url(String url) {
                 this.url = url;

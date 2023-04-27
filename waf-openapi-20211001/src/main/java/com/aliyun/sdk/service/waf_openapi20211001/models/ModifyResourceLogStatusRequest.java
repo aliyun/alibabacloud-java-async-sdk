@@ -18,9 +18,17 @@ public class ModifyResourceLogStatusRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Resource")
     @Validation(required = true)
     private String resource;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
 
     @Query
     @NameInMap("Status")
@@ -30,7 +38,9 @@ public class ModifyResourceLogStatusRequest extends Request {
     private ModifyResourceLogStatusRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
         this.resource = builder.resource;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.status = builder.status;
     }
 
@@ -55,10 +65,24 @@ public class ModifyResourceLogStatusRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resource
      */
     public String getResource() {
         return this.resource;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
     /**
@@ -70,7 +94,9 @@ public class ModifyResourceLogStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyResourceLogStatusRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
         private String resource; 
+        private String resourceManagerResourceGroupId; 
         private Boolean status; 
 
         private Builder() {
@@ -80,12 +106,17 @@ public class ModifyResourceLogStatusRequest extends Request {
         private Builder(ModifyResourceLogStatusRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
             this.resource = request.resource;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.status = request.status;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +125,20 @@ public class ModifyResourceLogStatusRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The protected object on which you want to manage the log collection feature.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -103,7 +147,20 @@ public class ModifyResourceLogStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable the log collection feature for the protected object. Valid values:
+         * <p>
+         * 
+         * *   **true:** enables the log collection feature.
+         * *   **false:** disables the log collection feature.
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);

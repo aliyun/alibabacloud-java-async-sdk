@@ -7,11 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeRuleGroupsRequest} extends {@link RequestModel}
+ * {@link DescribeHybridCloudGroupsRequest} extends {@link RequestModel}
  *
- * <p>DescribeRuleGroupsRequest</p>
+ * <p>DescribeHybridCloudGroupsRequest</p>
  */
-public class DescribeRuleGroupsRequest extends Request {
+public class DescribeHybridCloudGroupsRequest extends Request {
+    @Query
+    @NameInMap("ClusterId")
+    private Long clusterId;
+
+    @Query
+    @NameInMap("ClusterProxyType")
+    private String clusterProxyType;
+
+    @Query
+    @NameInMap("GroupName")
+    private Integer groupName;
+
+    @Query
+    @NameInMap("GroupType")
+    private String groupType;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -33,36 +49,58 @@ public class DescribeRuleGroupsRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("SearchType")
-    private String searchType;
-
-    @Query
-    @NameInMap("SearchValue")
-    private String searchValue;
-
-    private DescribeRuleGroupsRequest(Builder builder) {
+    private DescribeHybridCloudGroupsRequest(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
+        this.clusterProxyType = builder.clusterProxyType;
+        this.groupName = builder.groupName;
+        this.groupType = builder.groupType;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.searchType = builder.searchType;
-        this.searchValue = builder.searchValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeRuleGroupsRequest create() {
+    public static DescribeHybridCloudGroupsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public Long getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return clusterProxyType
+     */
+    public String getClusterProxyType() {
+        return this.clusterProxyType;
+    }
+
+    /**
+     * @return groupName
+     */
+    public Integer getGroupName() {
+        return this.groupName;
+    }
+
+    /**
+     * @return groupType
+     */
+    public String getGroupType() {
+        return this.groupType;
     }
 
     /**
@@ -100,49 +138,72 @@ public class DescribeRuleGroupsRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    /**
-     * @return searchType
-     */
-    public String getSearchType() {
-        return this.searchType;
-    }
-
-    /**
-     * @return searchValue
-     */
-    public String getSearchValue() {
-        return this.searchValue;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeRuleGroupsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeHybridCloudGroupsRequest, Builder> {
+        private Long clusterId; 
+        private String clusterProxyType; 
+        private Integer groupName; 
+        private String groupType; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String searchType; 
-        private String searchValue; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRuleGroupsRequest request) {
+        private Builder(DescribeHybridCloudGroupsRequest request) {
             super(request);
+            this.clusterId = request.clusterId;
+            this.clusterProxyType = request.clusterProxyType;
+            this.groupName = request.groupName;
+            this.groupType = request.groupType;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.searchType = request.searchType;
-            this.searchValue = request.searchValue;
         } 
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * ClusterId.
+         */
+        public Builder clusterId(Long clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ClusterProxyType.
+         */
+        public Builder clusterProxyType(String clusterProxyType) {
+            this.putQueryParameter("ClusterProxyType", clusterProxyType);
+            this.clusterProxyType = clusterProxyType;
+            return this;
+        }
+
+        /**
+         * GroupName.
+         */
+        public Builder groupName(Integer groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * GroupType.
+         */
+        public Builder groupType(String groupType) {
+            this.putQueryParameter("GroupType", groupType);
+            this.groupType = groupType;
+            return this;
+        }
+
+        /**
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,7 +212,7 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +221,7 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,11 +230,7 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou:** the Chinese mainland
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +239,7 @@ public class DescribeRuleGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ResourceManagerResourceGroupId.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -190,31 +247,9 @@ public class DescribeRuleGroupsRequest extends Request {
             return this;
         }
 
-        /**
-         * The type of the query condition. Valid values:
-         * <p>
-         * 
-         * *   **id:** queries regular expression rule groups by ID.
-         * *   **name:** queries regular expression rule groups by name.
-         */
-        public Builder searchType(String searchType) {
-            this.putQueryParameter("SearchType", searchType);
-            this.searchType = searchType;
-            return this;
-        }
-
-        /**
-         * The query condition.
-         */
-        public Builder searchValue(String searchValue) {
-            this.putQueryParameter("SearchValue", searchValue);
-            this.searchValue = searchValue;
-            return this;
-        }
-
         @Override
-        public DescribeRuleGroupsRequest build() {
-            return new DescribeRuleGroupsRequest(this);
+        public DescribeHybridCloudGroupsRequest build() {
+            return new DescribeHybridCloudGroupsRequest(this);
         } 
 
     } 

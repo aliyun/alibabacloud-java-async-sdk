@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainDetailResponseBody</p>
  */
 public class DescribeDomainDetailResponseBody extends TeaModel {
+    @NameInMap("CertDetail")
+    private CertDetail certDetail;
+
     @NameInMap("Cname")
     private String cname;
 
@@ -27,15 +30,24 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @NameInMap("SM2CertDetail")
+    private SM2CertDetail sM2CertDetail;
+
     @NameInMap("Status")
     private Long status;
 
     private DescribeDomainDetailResponseBody(Builder builder) {
+        this.certDetail = builder.certDetail;
         this.cname = builder.cname;
         this.domain = builder.domain;
         this.listen = builder.listen;
         this.redirect = builder.redirect;
         this.requestId = builder.requestId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.sM2CertDetail = builder.sM2CertDetail;
         this.status = builder.status;
     }
 
@@ -45,6 +57,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     public static DescribeDomainDetailResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return certDetail
+     */
+    public CertDetail getCertDetail() {
+        return this.certDetail;
     }
 
     /**
@@ -83,6 +102,20 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
+     * @return sM2CertDetail
+     */
+    public SM2CertDetail getSM2CertDetail() {
+        return this.sM2CertDetail;
+    }
+
+    /**
      * @return status
      */
     public Long getStatus() {
@@ -90,12 +123,23 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private CertDetail certDetail; 
         private String cname; 
         private String domain; 
         private Listen listen; 
         private Redirect redirect; 
         private String requestId; 
+        private String resourceManagerResourceGroupId; 
+        private SM2CertDetail sM2CertDetail; 
         private Long status; 
+
+        /**
+         * CertDetail.
+         */
+        public Builder certDetail(CertDetail certDetail) {
+            this.certDetail = certDetail;
+            return this;
+        }
 
         /**
          * Cname.
@@ -138,6 +182,22 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * ResourceManagerResourceGroupId.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * SM2CertDetail.
+         */
+        public Builder sM2CertDetail(SM2CertDetail sM2CertDetail) {
+            this.sM2CertDetail = sM2CertDetail;
+            return this;
+        }
+
+        /**
          * 状态
          */
         public Builder status(Long status) {
@@ -151,6 +211,147 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class CertDetail extends TeaModel {
+        @NameInMap("CommonName")
+        private String commonName;
+
+        @NameInMap("EndTime")
+        private Long endTime;
+
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Sans")
+        private java.util.List < String > sans;
+
+        @NameInMap("StartTime")
+        private Long startTime;
+
+        private CertDetail(Builder builder) {
+            this.commonName = builder.commonName;
+            this.endTime = builder.endTime;
+            this.id = builder.id;
+            this.name = builder.name;
+            this.sans = builder.sans;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return commonName
+         */
+        public String getCommonName() {
+            return this.commonName;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return sans
+         */
+        public java.util.List < String > getSans() {
+            return this.sans;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String commonName; 
+            private Long endTime; 
+            private String id; 
+            private String name; 
+            private java.util.List < String > sans; 
+            private Long startTime; 
+
+            /**
+             * CommonName.
+             */
+            public Builder commonName(String commonName) {
+                this.commonName = commonName;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Sans.
+             */
+            public Builder sans(java.util.List < String > sans) {
+                this.sans = sans;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public CertDetail build() {
+                return new CertDetail(this);
+            } 
+
+        } 
+
+    }
     public static class Listen extends TeaModel {
         @NameInMap("CertId")
         private Long certId;
@@ -185,6 +386,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("ProtectionResource")
         private String protectionResource;
 
+        @NameInMap("SM2AccessOnly")
+        private Boolean sM2AccessOnly;
+
+        @NameInMap("SM2CertId")
+        private Boolean sM2CertId;
+
+        @NameInMap("SM2Enabled")
+        private Boolean sM2Enabled;
+
         @NameInMap("TLSVersion")
         private String TLSVersion;
 
@@ -206,6 +416,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             this.httpsPorts = builder.httpsPorts;
             this.iPv6Enabled = builder.iPv6Enabled;
             this.protectionResource = builder.protectionResource;
+            this.sM2AccessOnly = builder.sM2AccessOnly;
+            this.sM2CertId = builder.sM2CertId;
+            this.sM2Enabled = builder.sM2Enabled;
             this.TLSVersion = builder.TLSVersion;
             this.xffHeaderMode = builder.xffHeaderMode;
             this.xffHeaders = builder.xffHeaders;
@@ -297,6 +510,27 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return sM2AccessOnly
+         */
+        public Boolean getSM2AccessOnly() {
+            return this.sM2AccessOnly;
+        }
+
+        /**
+         * @return sM2CertId
+         */
+        public Boolean getSM2CertId() {
+            return this.sM2CertId;
+        }
+
+        /**
+         * @return sM2Enabled
+         */
+        public Boolean getSM2Enabled() {
+            return this.sM2Enabled;
+        }
+
+        /**
          * @return TLSVersion
          */
         public String getTLSVersion() {
@@ -329,6 +563,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private java.util.List < Long > httpsPorts; 
             private Boolean iPv6Enabled; 
             private String protectionResource; 
+            private Boolean sM2AccessOnly; 
+            private Boolean sM2CertId; 
+            private Boolean sM2Enabled; 
             private String TLSVersion; 
             private Long xffHeaderMode; 
             private java.util.List < String > xffHeaders; 
@@ -418,6 +655,30 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
              */
             public Builder protectionResource(String protectionResource) {
                 this.protectionResource = protectionResource;
+                return this;
+            }
+
+            /**
+             * SM2AccessOnly.
+             */
+            public Builder sM2AccessOnly(Boolean sM2AccessOnly) {
+                this.sM2AccessOnly = sM2AccessOnly;
+                return this;
+            }
+
+            /**
+             * SM2CertId.
+             */
+            public Builder sM2CertId(Boolean sM2CertId) {
+                this.sM2CertId = sM2CertId;
+                return this;
+            }
+
+            /**
+             * SM2Enabled.
+             */
+            public Builder sM2Enabled(Boolean sM2Enabled) {
+                this.sM2Enabled = sM2Enabled;
                 return this;
             }
 
@@ -830,6 +1091,147 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
             public Redirect build() {
                 return new Redirect(this);
+            } 
+
+        } 
+
+    }
+    public static class SM2CertDetail extends TeaModel {
+        @NameInMap("CommonName")
+        private String commonName;
+
+        @NameInMap("EndTime")
+        private Long endTime;
+
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Sans")
+        private java.util.List < String > sans;
+
+        @NameInMap("StartTime")
+        private Long startTime;
+
+        private SM2CertDetail(Builder builder) {
+            this.commonName = builder.commonName;
+            this.endTime = builder.endTime;
+            this.id = builder.id;
+            this.name = builder.name;
+            this.sans = builder.sans;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SM2CertDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return commonName
+         */
+        public String getCommonName() {
+            return this.commonName;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return sans
+         */
+        public java.util.List < String > getSans() {
+            return this.sans;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String commonName; 
+            private Long endTime; 
+            private String id; 
+            private String name; 
+            private java.util.List < String > sans; 
+            private Long startTime; 
+
+            /**
+             * CommonName.
+             */
+            public Builder commonName(String commonName) {
+                this.commonName = commonName;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Sans.
+             */
+            public Builder sans(java.util.List < String > sans) {
+                this.sans = sans;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public SM2CertDetail build() {
+                return new SM2CertDetail(this);
             } 
 
         } 

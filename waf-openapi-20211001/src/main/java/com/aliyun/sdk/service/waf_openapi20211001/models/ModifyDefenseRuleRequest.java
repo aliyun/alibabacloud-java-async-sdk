@@ -23,6 +23,14 @@ public class ModifyDefenseRuleRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("Rules")
     @Validation(required = true)
     private String rules;
@@ -36,6 +44,8 @@ public class ModifyDefenseRuleRequest extends Request {
         super(builder);
         this.defenseScene = builder.defenseScene;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.rules = builder.rules;
         this.templateId = builder.templateId;
     }
@@ -68,6 +78,20 @@ public class ModifyDefenseRuleRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return rules
      */
     public String getRules() {
@@ -84,6 +108,8 @@ public class ModifyDefenseRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDefenseRuleRequest, Builder> {
         private String defenseScene; 
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private String rules; 
         private Long templateId; 
 
@@ -95,12 +121,14 @@ public class ModifyDefenseRuleRequest extends Request {
             super(request);
             this.defenseScene = request.defenseScene;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.rules = request.rules;
             this.templateId = request.templateId;
         } 
 
         /**
-         * DefenseScene.
+         * The scenario in which you want to use the protection rule. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
          */
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
@@ -109,7 +137,10 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +149,33 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * Rules.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the Alibaba Cloud resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The details of the protection rule. Specify a string that contains multiple parameters in the JSON format. You must specify the ID and the new configurations of the protection rule.
+         * <p>
+         * 
+         * *   **id:** The ID of the protection rule. Data type: long. You must specify this parameter.
+         * *   The protection rule configurations: The role of this parameter is the same as that of the **Rules** parameter in the **CreateDefenseRule** topic. For more information, see the "**Protection rule parameters**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);
@@ -127,7 +184,7 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

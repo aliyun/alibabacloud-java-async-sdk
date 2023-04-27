@@ -50,7 +50,7 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopResource> ruleHitsTopResource; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RuleHitsTopResource.
+         * The array of the top 10 protected objects that receive requests.
          */
         public Builder ruleHitsTopResource(java.util.List < RuleHitsTopResource> ruleHitsTopResource) {
             this.ruleHitsTopResource = ruleHitsTopResource;
@@ -110,7 +110,7 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
             private String resource; 
 
             /**
-             * Count.
+             * The total number of requests received by the protected object in a specified time range.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The protected object.
              */
             public Builder resource(String resource) {
                 this.resource = resource;

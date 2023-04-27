@@ -146,7 +146,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Integer status; 
 
         /**
-         * 实例详情
+         * The details of the WAF instance.
          */
         public Builder details(Details details) {
             this.details = details;
@@ -154,7 +154,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 套餐
+         * The edition of the WAF instance.
          */
         public Builder edition(String edition) {
             this.edition = edition;
@@ -162,7 +162,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The expiration time of the WAF instance.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -170,7 +170,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InDebt.
+         * Indicates whether the WAF instance has overdue payments. Valid values:
+         * <p>
+         * 
+         * *   **0:** The WAF instance has overdue payments.
+         * *   **1:** The WAF instance does not have overdue payments.
+         * 
+         * >  This parameter is returned only when the value of the **PayType** parameter is **POSTPAY**.
          */
         public Builder inDebt(String inDebt) {
             this.inDebt = inDebt;
@@ -178,7 +184,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例ID
+         * The ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -186,7 +192,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * The billing method of the WAF instance. Valid values:
+         * <p>
+         * 
+         * *   **POSTPAY:** The WAF instance uses the pay-as-you-go billing method.
+         * *   **PREPAY:** The WAF instance uses the subscription billing method.
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -194,7 +204,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland
+         * *   **ap-southeast-1:** outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -202,7 +216,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +224,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The purchase time of the WAF instance. The time is in the UNIX timestamp format. The time is displayed in UTC. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -218,7 +232,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the WAF instance. Valid values:
+         * <p>
+         * 
+         * *   **1:** The WAF instance is in a normal state.
+         * *   **2:** The WAF instance has expired.
+         * *   **3:** The WAF instance has been released.
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -858,7 +877,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long whitelistTemplateMaxCount; 
 
             /**
-             * AclRuleMaxIpCount.
+             * The maximum number of IP addresses that can be added to the match content of a match condition. For more information, see [Match conditions](~~374354~~).
              */
             public Builder aclRuleMaxIpCount(Long aclRuleMaxIpCount) {
                 this.aclRuleMaxIpCount = aclRuleMaxIpCount;
@@ -866,7 +885,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 支持扫描防护
+             * Indicates whether the scan protection module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The scan protection module is supported.
+             * *   **false:** The scan protection module is not supported.
              */
             public Builder antiScan(Boolean antiScan) {
                 this.antiScan = antiScan;
@@ -874,7 +897,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 扫描防护模板数
+             * The maximum number of scan protection rule templates that can be configured.
              */
             public Builder antiScanTemplateMaxCount(Long antiScanTemplateMaxCount) {
                 this.antiScanTemplateMaxCount = antiScanTemplateMaxCount;
@@ -882,7 +905,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 最大回源数
+             * The maximum number of back-to-origin IP addresses that can be configured.
              */
             public Builder backendMaxCount(Long backendMaxCount) {
                 this.backendMaxCount = backendMaxCount;
@@ -890,7 +913,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 基础防护
+             * Indicates whether the basic protection rule module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The basic protection rule module is supported.
+             * *   **false:** The basic protection rule module is not supported.
              */
             public Builder baseWafGroup(Boolean baseWafGroup) {
                 this.baseWafGroup = baseWafGroup;
@@ -898,7 +925,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 基础防护规则
+             * The maximum number of protection rules that can be included in a basic protection rule template.
              */
             public Builder baseWafGroupRuleInTemplateMaxCount(Long baseWafGroupRuleInTemplateMaxCount) {
                 this.baseWafGroupRuleInTemplateMaxCount = baseWafGroupRuleInTemplateMaxCount;
@@ -906,7 +933,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 基础防护规则最大数量
+             * The maximum number of basic protection rule templates that can be configured.
              */
             public Builder baseWafGroupRuleTemplateMaxCount(Long baseWafGroupRuleTemplateMaxCount) {
                 this.baseWafGroupRuleTemplateMaxCount = baseWafGroupRuleTemplateMaxCount;
@@ -914,7 +941,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Bot.
+             * Indicates whether the bot management module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The bot management module is supported.
+             * *   **false:** The bot management module is not supported.
              */
             public Builder bot(Boolean bot) {
                 this.bot = bot;
@@ -922,7 +953,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BotApp.
+             * Indicates whether bot management for app protection is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** Bot management for app protection is supported.
+             * *   **false:** Bot management for app protection is not supported.
              */
             public Builder botApp(String botApp) {
                 this.botApp = botApp;
@@ -930,7 +965,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BotTemplateMaxCount.
+             * The maximum number of bot management rule templates that can be configured.
              */
             public Builder botTemplateMaxCount(Long botTemplateMaxCount) {
                 this.botTemplateMaxCount = botTemplateMaxCount;
@@ -938,7 +973,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BotWeb.
+             * Indicates whether bot management for website protection is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** Bot management for website protection is supported.
+             * *   **false:** Bot management for website protection is not supported.
              */
             public Builder botWeb(String botWeb) {
                 this.botWeb = botWeb;
@@ -946,7 +985,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 最大可添加CNAME数
+             * The maximum number of CNAMEs that can be added.
              */
             public Builder cnameResourceMaxCount(Long cnameResourceMaxCount) {
                 this.cnameResourceMaxCount = cnameResourceMaxCount;
@@ -954,7 +993,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 支持自定义响应
+             * Indicates whether the custom response module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The custom response module is supported.
+             * *   **false:** The custom response module is not supported.
              */
             public Builder customResponse(Boolean customResponse) {
                 this.customResponse = customResponse;
@@ -962,7 +1005,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义响应模板包含规则数
+             * The maximum number of rules that can be included in a custom response rule template.
              */
             public Builder customResponseRuleInTemplateMaxCount(Long customResponseRuleInTemplateMaxCount) {
                 this.customResponseRuleInTemplateMaxCount = customResponseRuleInTemplateMaxCount;
@@ -970,7 +1013,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义响应模板数
+             * The maximum number of custom response rule templates that can be configured.
              */
             public Builder customResponseTemplateMaxCount(Long customResponseTemplateMaxCount) {
                 this.customResponseTemplateMaxCount = customResponseTemplateMaxCount;
@@ -978,7 +1021,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 支持自定义规则
+             * Indicates whether the custom rule module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The custom rule module is supported.
+             * *   **false:** The custom rule module is not supported.
              */
             public Builder customRule(Boolean customRule) {
                 this.customRule = customRule;
@@ -986,7 +1033,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 包含字符串
+             * The action that can be included in a custom rule.
              */
             public Builder customRuleAction(String customRuleAction) {
                 this.customRuleAction = customRuleAction;
@@ -994,7 +1041,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义规则匹配条件
+             * The match conditions that can be used in a custom rule. For more information, see **Match condition parameters** in the "**Parameters of custom rules (custom_acl)**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
              */
             public Builder customRuleCondition(String customRuleCondition) {
                 this.customRuleCondition = customRuleCondition;
@@ -1002,7 +1049,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义规则模板包含规则数
+             * The maximum number of rules that can be included in a custom rule template.
              */
             public Builder customRuleInTemplateMaxCount(Long customRuleInTemplateMaxCount) {
                 this.customRuleInTemplateMaxCount = customRuleInTemplateMaxCount;
@@ -1010,7 +1057,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义规则限速对象
+             * The statistical object for rate limiting in a custom rule.
              */
             public Builder customRuleRatelimitor(String customRuleRatelimitor) {
                 this.customRuleRatelimitor = customRuleRatelimitor;
@@ -1018,7 +1065,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义规则模板数
+             * The maximum number of custom rule templates that can be configured.
              */
             public Builder customRuleTemplateMaxCount(Long customRuleTemplateMaxCount) {
                 this.customRuleTemplateMaxCount = customRuleTemplateMaxCount;
@@ -1026,7 +1073,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 最大防护组数量
+             * The maximum number of protected object groups that can be configured.
              */
             public Builder defenseGroupMaxCount(Long defenseGroupMaxCount) {
                 this.defenseGroupMaxCount = defenseGroupMaxCount;
@@ -1034,7 +1081,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 一个防护组内最大包含对象数量
+             * The maximum number of protected objects that can be included in a protected object group.
              */
             public Builder defenseObjectInGroupMaxCount(Long defenseObjectInGroupMaxCount) {
                 this.defenseObjectInGroupMaxCount = defenseObjectInGroupMaxCount;
@@ -1042,7 +1089,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 一个模板内关联对象的最大数量
+             * The maximum number of protected objects to which a protection rule template can be applied.
              */
             public Builder defenseObjectInTemplateMaxCount(Long defenseObjectInTemplateMaxCount) {
                 this.defenseObjectInTemplateMaxCount = defenseObjectInTemplateMaxCount;
@@ -1050,7 +1097,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 最大防护对象数量
+             * The maximum number of protected objects that can be configured.
              */
             public Builder defenseObjectMaxCount(Long defenseObjectMaxCount) {
                 this.defenseObjectMaxCount = defenseObjectMaxCount;
@@ -1058,7 +1105,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Dlp.
+             * Indicates whether the data leakage prevention module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The data leakage prevention module is supported.
+             * *   **false:** The data leakage prevention module is not supported.
              */
             public Builder dlp(Boolean dlp) {
                 this.dlp = dlp;
@@ -1066,7 +1117,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DlpRuleInTemplateMaxCount.
+             * The maximum number of rules that can be included in a data leakage prevention rule template.
              */
             public Builder dlpRuleInTemplateMaxCount(Long dlpRuleInTemplateMaxCount) {
                 this.dlpRuleInTemplateMaxCount = dlpRuleInTemplateMaxCount;
@@ -1074,7 +1125,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DlpTemplateMaxCount.
+             * The maximum number of data leakage prevention rule templates that can be configured.
              */
             public Builder dlpTemplateMaxCount(Long dlpTemplateMaxCount) {
                 this.dlpTemplateMaxCount = dlpTemplateMaxCount;
@@ -1082,7 +1133,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 独享IP
+             * Indicates whether exclusive IP addresses are supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** Exclusive IP addresses are supported.
+             * *   **false:** Exclusive IP addresses are not supported.
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
@@ -1090,7 +1145,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Gslb
+             * Indicates whether global server load balancing (GSLB) is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** GSLB is supported.
+             * *   **false:** GSLB is not supported.
              */
             public Builder gslb(Boolean gslb) {
                 this.gslb = gslb;
@@ -1098,7 +1157,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HTTP端口可用范围
+             * The HTTP port range that is supported. For more information, see [View supported ports](~~385578~~).
              */
             public Builder httpPorts(String httpPorts) {
                 this.httpPorts = httpPorts;
@@ -1106,7 +1165,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HTTPS端口可用范围
+             * The HTTPS port range that is supported. For more information, see [View supported ports](~~385578~~).
              */
             public Builder httpsPorts(String httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -1114,7 +1173,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 支持IP黑名单
+             * Indicates whether the IP address blacklist module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The IP address blacklist module is supported.
+             * *   **false:** The IP address blacklist module is not supported.
              */
             public Builder ipBlacklist(Boolean ipBlacklist) {
                 this.ipBlacklist = ipBlacklist;
@@ -1122,7 +1185,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IP黑名单规则包含IP数
+             * The maximum number of IP addresses that can be added to an IP address blacklist rule.
              */
             public Builder ipBlacklistIpInRuleMaxCount(Long ipBlacklistIpInRuleMaxCount) {
                 this.ipBlacklistIpInRuleMaxCount = ipBlacklistIpInRuleMaxCount;
@@ -1130,7 +1193,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IP黑名单模板包含规则数
+             * The maximum number of rules that can be included in an IP address blacklist rule template.
              */
             public Builder ipBlacklistRuleInTemplateMaxCount(Long ipBlacklistRuleInTemplateMaxCount) {
                 this.ipBlacklistRuleInTemplateMaxCount = ipBlacklistRuleInTemplateMaxCount;
@@ -1138,7 +1201,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * /黑名单模板数
+             * The maximum number of IP address blacklist rule templates that can be configured.
              */
             public Builder ipBlacklistTemplateMaxCount(Long ipBlacklistTemplateMaxCount) {
                 this.ipBlacklistTemplateMaxCount = ipBlacklistTemplateMaxCount;
@@ -1146,7 +1209,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6
+             * Indicates whether IPv6 is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** IPv6 is supported.
+             * *   **false:** IPv6 is not supported.
              */
             public Builder ipv6(Boolean ipv6) {
                 this.ipv6 = ipv6;
@@ -1154,7 +1221,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 日志服务是否开启
+             * Indicates whether the log collection feature is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The log collection feature is supported.
+             * *   **false:** The log collection feature is not supported.
              */
             public Builder logService(Boolean logService) {
                 this.logService = logService;
@@ -1162,7 +1233,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否支持重保
+             * Indicates whether major event protection is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** Major event protection is supported.
+             * *   **false:** Major event protection is not supported.
              */
             public Builder majorProtection(Boolean majorProtection) {
                 this.majorProtection = majorProtection;
@@ -1170,7 +1245,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 重保模板的最大数量
+             * The maximum number of major event protection rule templates that can be configured.
              */
             public Builder majorProtectionTemplateMaxCount(Long majorProtectionTemplateMaxCount) {
                 this.majorProtectionTemplateMaxCount = majorProtectionTemplateMaxCount;
@@ -1178,7 +1253,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Tamperproof.
+             * Indicates whether the website tamper-proofing module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The website tamper-proofing module is supported.
+             * *   **false:** The website tamper-proofing module is not supported.
              */
             public Builder tamperproof(Boolean tamperproof) {
                 this.tamperproof = tamperproof;
@@ -1186,7 +1265,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TamperproofRuleInTemplateMaxCount.
+             * The maximum number of rules that can be included in a website tamper-proofing rule template.
              */
             public Builder tamperproofRuleInTemplateMaxCount(Long tamperproofRuleInTemplateMaxCount) {
                 this.tamperproofRuleInTemplateMaxCount = tamperproofRuleInTemplateMaxCount;
@@ -1194,7 +1273,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TamperproofTemplateMaxCount.
+             * The maximum number of website tamper-proofing rule templates that can be configured.
              */
             public Builder tamperproofTemplateMaxCount(Long tamperproofTemplateMaxCount) {
                 this.tamperproofTemplateMaxCount = tamperproofTemplateMaxCount;
@@ -1202,7 +1281,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 海量IP单次上传文件IP的最大数量
+             * The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist in a batch.
              */
             public Builder vastIpBlacklistInFileMaxCount(Long vastIpBlacklistInFileMaxCount) {
                 this.vastIpBlacklistInFileMaxCount = vastIpBlacklistInFileMaxCount;
@@ -1210,7 +1289,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 海量IP单次页面操作的最大数量
+             * The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist on a page.
              */
             public Builder vastIpBlacklistInOperationMaxCount(Long vastIpBlacklistInOperationMaxCount) {
                 this.vastIpBlacklistInOperationMaxCount = vastIpBlacklistInOperationMaxCount;
@@ -1218,7 +1297,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 海量IP的最大数量（单用户）
+             * The maximum number of IP addresses or CIDR blocks that can be added to an IP address blacklist per Alibaba Cloud account.
              */
             public Builder vastIpBlacklistMaxCount(Long vastIpBlacklistMaxCount) {
                 this.vastIpBlacklistMaxCount = vastIpBlacklistMaxCount;
@@ -1226,7 +1305,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否支持白名单
+             * Indicates whether the whitelist module is supported. Valid values:
+             * <p>
+             * 
+             * *   **true:** The whitelist module is supported.
+             * *   **false:** The whitelist module is not supported.
              */
             public Builder whitelist(Boolean whitelist) {
                 this.whitelist = whitelist;
@@ -1234,7 +1317,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 白名单规则匹配条件
+             * The logical operators that can be used in a whitelist rule. For more information, see **Match condition parameters** in the "**Parameters of whitelist rules (whitelist)**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
              */
             public Builder whitelistLogical(String whitelistLogical) {
                 this.whitelistLogical = whitelistLogical;
@@ -1242,7 +1325,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 白名单规则匹配条件
+             * The match fields that can be used in a whitelist rule. For more information, see **Match condition parameters** in the "**Parameters of whitelist rules (whitelist)**" section in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
              */
             public Builder whitelistRuleCondition(String whitelistRuleCondition) {
                 this.whitelistRuleCondition = whitelistRuleCondition;
@@ -1250,7 +1333,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 白名单模板包含规则数
+             * The maximum number of rules that can be included in a whitelist rule template.
              */
             public Builder whitelistRuleInTemplateMaxCount(Long whitelistRuleInTemplateMaxCount) {
                 this.whitelistRuleInTemplateMaxCount = whitelistRuleInTemplateMaxCount;
@@ -1258,7 +1341,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 白名单模板数
+             * The maximum number of whitelist rule templates that can be configured.
              */
             public Builder whitelistTemplateMaxCount(Long whitelistTemplateMaxCount) {
                 this.whitelistTemplateMaxCount = whitelistTemplateMaxCount;

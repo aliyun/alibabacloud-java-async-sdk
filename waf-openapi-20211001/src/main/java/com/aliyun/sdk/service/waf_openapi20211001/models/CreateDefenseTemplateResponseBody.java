@@ -50,7 +50,7 @@ public class CreateDefenseTemplateResponseBody extends TeaModel {
         private Long templateId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateDefenseTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * The ID of the protection rule template.
          */
         public Builder templateId(Long templateId) {
             this.templateId = templateId;

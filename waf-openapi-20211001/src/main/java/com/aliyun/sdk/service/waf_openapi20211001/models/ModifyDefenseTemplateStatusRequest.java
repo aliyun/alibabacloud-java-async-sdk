@@ -18,6 +18,14 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("TemplateId")
     @Validation(required = true)
     private Long templateId;
@@ -30,6 +38,8 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
     private ModifyDefenseTemplateStatusRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.templateId = builder.templateId;
         this.templateStatus = builder.templateStatus;
     }
@@ -55,6 +65,20 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return templateId
      */
     public Long getTemplateId() {
@@ -70,6 +94,8 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDefenseTemplateStatusRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private Long templateId; 
         private Integer templateStatus; 
 
@@ -80,12 +106,17 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
         private Builder(ModifyDefenseTemplateStatusRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.templateId = request.templateId;
             this.templateStatus = request.templateStatus;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +125,29 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the protection rule template whose status you want to change.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -103,7 +156,11 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
         }
 
         /**
-         * TemplateStatus.
+         * The new status of the protection rule template. Valid values:
+         * <p>
+         * 
+         * *   **0:** disabled.
+         * *   **1:** enabled.
          */
         public Builder templateStatus(Integer templateStatus) {
             this.putQueryParameter("TemplateStatus", templateStatus);

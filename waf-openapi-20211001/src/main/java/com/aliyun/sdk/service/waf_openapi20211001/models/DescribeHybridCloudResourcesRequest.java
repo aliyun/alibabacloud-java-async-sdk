@@ -7,14 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDomainsRequest} extends {@link RequestModel}
+ * {@link DescribeHybridCloudResourcesRequest} extends {@link RequestModel}
  *
- * <p>DescribeDomainsRequest</p>
+ * <p>DescribeHybridCloudResourcesRequest</p>
  */
-public class DescribeDomainsRequest extends Request {
+public class DescribeHybridCloudResourcesRequest extends Request {
     @Query
     @NameInMap("Backend")
     private String backend;
+
+    @Query
+    @NameInMap("CnameEnabled")
+    private Boolean cnameEnabled;
 
     @Query
     @NameInMap("Domain")
@@ -46,13 +50,10 @@ public class DescribeDomainsRequest extends Request {
     @NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
-
-    private DescribeDomainsRequest(Builder builder) {
+    private DescribeHybridCloudResourcesRequest(Builder builder) {
         super(builder);
         this.backend = builder.backend;
+        this.cnameEnabled = builder.cnameEnabled;
         this.domain = builder.domain;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
@@ -60,14 +61,13 @@ public class DescribeDomainsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.sourceIp = builder.sourceIp;
-        this.tag = builder.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeDomainsRequest create() {
+    public static DescribeHybridCloudResourcesRequest create() {
         return builder().build();
     }
 
@@ -81,6 +81,13 @@ public class DescribeDomainsRequest extends Request {
      */
     public String getBackend() {
         return this.backend;
+    }
+
+    /**
+     * @return cnameEnabled
+     */
+    public Boolean getCnameEnabled() {
+        return this.cnameEnabled;
     }
 
     /**
@@ -132,15 +139,9 @@ public class DescribeDomainsRequest extends Request {
         return this.sourceIp;
     }
 
-    /**
-     * @return tag
-     */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeDomainsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeHybridCloudResourcesRequest, Builder> {
         private String backend; 
+        private Boolean cnameEnabled; 
         private String domain; 
         private String instanceId; 
         private Long pageNumber; 
@@ -148,15 +149,15 @@ public class DescribeDomainsRequest extends Request {
         private String regionId; 
         private String resourceManagerResourceGroupId; 
         private String sourceIp; 
-        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainsRequest request) {
+        private Builder(DescribeHybridCloudResourcesRequest request) {
             super(request);
             this.backend = request.backend;
+            this.cnameEnabled = request.cnameEnabled;
             this.domain = request.domain;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
@@ -164,11 +165,10 @@ public class DescribeDomainsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.sourceIp = request.sourceIp;
-            this.tag = request.tag;
         } 
 
         /**
-         * An array of HTTPS listener ports.
+         * 回源地址
          */
         public Builder backend(String backend) {
             this.putQueryParameter("Backend", backend);
@@ -177,7 +177,16 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * CnameEnabled.
+         */
+        public Builder cnameEnabled(Boolean cnameEnabled) {
+            this.putQueryParameter("CnameEnabled", cnameEnabled);
+            this.cnameEnabled = cnameEnabled;
+            return this;
+        }
+
+        /**
+         * 域名
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -186,7 +195,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Default value: 1.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -195,7 +204,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The HTTPS address of the origin server.
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +213,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * Queries the list of a domain name that is added to Web Application Firewall (WAF).
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +240,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * 请求源IP。无需填写，系统自动获取。
+         * SourceIp.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -239,81 +248,11 @@ public class DescribeDomainsRequest extends Request {
             return this;
         }
 
-        /**
-         * 资源的标签，最多支持20个子项。
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
         @Override
-        public DescribeDomainsRequest build() {
-            return new DescribeDomainsRequest(this);
+        public DescribeHybridCloudResourcesRequest build() {
+            return new DescribeHybridCloudResourcesRequest(this);
         } 
 
     } 
 
-    public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        private String key;
-
-        @NameInMap("Value")
-        private String value;
-
-        private Tag(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Tag create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String value; 
-
-            /**
-             * 标签键。
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * 标签值
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Tag build() {
-                return new Tag(this);
-            } 
-
-        } 
-
-    }
 }

@@ -17,13 +17,13 @@ public class DescribeInstanceRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
 
     private DescribeInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
 
     public static Builder builder() {
@@ -47,15 +47,15 @@ public class DescribeInstanceRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
+     * @return resourceManagerResourceGroupId
      */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceRequest, Builder> {
         private String regionId; 
-        private String resourceGroupId; 
+        private String resourceManagerResourceGroupId; 
 
         private Builder() {
             super();
@@ -64,11 +64,15 @@ public class DescribeInstanceRequest extends Request {
         private Builder(DescribeInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * RegionId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland
+         * *   **ap-southeast-1:** outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,11 +81,11 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
             return this;
         }
 

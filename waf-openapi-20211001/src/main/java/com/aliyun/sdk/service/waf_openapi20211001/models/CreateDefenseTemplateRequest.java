@@ -27,6 +27,14 @@ public class CreateDefenseTemplateRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("TemplateName")
     @Validation(required = true)
     private String templateName;
@@ -51,6 +59,8 @@ public class CreateDefenseTemplateRequest extends Request {
         this.defenseScene = builder.defenseScene;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.templateName = builder.templateName;
         this.templateOrigin = builder.templateOrigin;
         this.templateStatus = builder.templateStatus;
@@ -92,6 +102,20 @@ public class CreateDefenseTemplateRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return templateName
      */
     public String getTemplateName() {
@@ -123,6 +147,8 @@ public class CreateDefenseTemplateRequest extends Request {
         private String defenseScene; 
         private String description; 
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private String templateName; 
         private String templateOrigin; 
         private Integer templateStatus; 
@@ -137,6 +163,8 @@ public class CreateDefenseTemplateRequest extends Request {
             this.defenseScene = request.defenseScene;
             this.description = request.description;
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.templateName = request.templateName;
             this.templateOrigin = request.templateOrigin;
             this.templateStatus = request.templateStatus;
@@ -144,7 +172,7 @@ public class CreateDefenseTemplateRequest extends Request {
         } 
 
         /**
-         * DefenseScene.
+         * The scenario in which you want to use the protection rule template. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.
          */
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
@@ -153,7 +181,7 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the protection rule template.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -162,7 +190,10 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -171,7 +202,29 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the Alibaba Cloud resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The name of the protection rule template.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -180,7 +233,7 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * TemplateOrigin.
+         * The origin of the protection rule template that you want to create. Set the value to **custom**. The value specifies that the protection rule template is a custom template.
          */
         public Builder templateOrigin(String templateOrigin) {
             this.putQueryParameter("TemplateOrigin", templateOrigin);
@@ -189,7 +242,11 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * TemplateStatus.
+         * The status of the protection rule template. Valid values:
+         * <p>
+         * 
+         * *   **0:** disabled.
+         * *   **1:** enabled.
          */
         public Builder templateStatus(Integer templateStatus) {
             this.putQueryParameter("TemplateStatus", templateStatus);
@@ -198,7 +255,11 @@ public class CreateDefenseTemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the protection rule template. Valid values:
+         * <p>
+         * 
+         * *   **user_default:** default template.
+         * *   **user_custom:** custom template.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

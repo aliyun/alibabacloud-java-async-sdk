@@ -50,7 +50,7 @@ public class DescribeResourcePortResponseBody extends TeaModel {
         private java.util.List < String > resourcePorts; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeResourcePortResponseBody extends TeaModel {
         }
 
         /**
-         * ResourcePorts.
+         * An array of HTTP and HTTPS listener ports that are added to the WAF instance.
          */
         public Builder resourcePorts(java.util.List < String > resourcePorts) {
             this.resourcePorts = resourcePorts;

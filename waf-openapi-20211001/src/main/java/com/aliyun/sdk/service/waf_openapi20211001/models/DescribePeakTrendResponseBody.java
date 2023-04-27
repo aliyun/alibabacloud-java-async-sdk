@@ -50,7 +50,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FlowChart.
+         * An array of the QPS statistics of the WAF instance.
          */
         public Builder flowChart(java.util.List < FlowChart> flowChart) {
             this.flowChart = flowChart;
@@ -58,7 +58,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             private Long wafSum; 
 
             /**
-             * AclSum.
+             * The number of requests that are monitored or blocked by the custom rule (access control) module.
              */
             public Builder aclSum(Long aclSum) {
                 this.aclSum = aclSum;
@@ -166,7 +166,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * AntiScanSum.
+             * The number of requests that are monitored or blocked by the scan protection module.
              */
             public Builder antiScanSum(Long antiScanSum) {
                 this.antiScanSum = antiScanSum;
@@ -174,7 +174,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * CcSum.
+             * The number of requests that are monitored or blocked by the HTTP flood protection module.
              */
             public Builder ccSum(Long ccSum) {
                 this.ccSum = ccSum;
@@ -182,7 +182,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The total number of requests.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -190,7 +190,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The serial number of the time interval. The serial numbers are arranged in chronological order.
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -198,7 +198,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
             }
 
             /**
-             * WafSum.
+             * The number of requests that are monitored or blocked by the regular expression protection engine.
              */
             public Builder wafSum(Long wafSum) {
                 this.wafSum = wafSum;

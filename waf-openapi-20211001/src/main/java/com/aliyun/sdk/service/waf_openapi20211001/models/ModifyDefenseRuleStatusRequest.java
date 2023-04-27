@@ -18,6 +18,14 @@ public class ModifyDefenseRuleStatusRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("RuleId")
     @Validation(required = true)
     private Long ruleId;
@@ -35,6 +43,8 @@ public class ModifyDefenseRuleStatusRequest extends Request {
     private ModifyDefenseRuleStatusRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.ruleId = builder.ruleId;
         this.ruleStatus = builder.ruleStatus;
         this.templateId = builder.templateId;
@@ -61,6 +71,20 @@ public class ModifyDefenseRuleStatusRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return ruleId
      */
     public Long getRuleId() {
@@ -83,6 +107,8 @@ public class ModifyDefenseRuleStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDefenseRuleStatusRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private Long ruleId; 
         private Integer ruleStatus; 
         private Long templateId; 
@@ -94,13 +120,18 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         private Builder(ModifyDefenseRuleStatusRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.ruleId = request.ruleId;
             this.ruleStatus = request.ruleStatus;
             this.templateId = request.templateId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -109,7 +140,29 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the protection rule whose status you want to change.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -118,7 +171,11 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         }
 
         /**
-         * RuleStatus.
+         * The new status of the protection rule. Valid values:
+         * <p>
+         * 
+         * *   **0:** disabled.
+         * *   **1:** enabled.
          */
         public Builder ruleStatus(Integer ruleStatus) {
             this.putQueryParameter("RuleStatus", ruleStatus);
@@ -127,7 +184,7 @@ public class ModifyDefenseRuleStatusRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the protection rule template to which the protection rule whose status you want to change belongs.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

@@ -34,6 +34,14 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("RuleId")
     private Long ruleId;
 
@@ -48,6 +56,8 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         this.orderBy = builder.orderBy;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.ruleId = builder.ruleId;
         this.templateId = builder.templateId;
     }
@@ -101,6 +111,20 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return ruleId
      */
     public Long getRuleId() {
@@ -120,6 +144,8 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         private String orderBy; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private Long ruleId; 
         private Long templateId; 
 
@@ -134,12 +160,17 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
             this.orderBy = request.orderBy;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.ruleId = request.ruleId;
             this.templateId = request.templateId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,7 +179,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * IpLike.
+         * The IP address that you want to query. You can specify this parameter to query an IP address in the IP address blacklist for major event protection by using fuzzy matching.
          */
         public Builder ipLike(String ipLike) {
             this.putQueryParameter("IpLike", ipLike);
@@ -157,7 +188,13 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The method that you want to use to sort the IP addresses **in descending order**. Valid values:
+         * <p>
+         * 
+         * *   **gmtModified:** sorts the IP addresses by most recent modification time.
+         * *   **ip:** sorts the IP addresses by IP address.
+         * *   **templateId:** sorts the IP addresses by template ID.
+         * *   **id:** sorts the IP addresses by primary key.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -166,7 +203,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +212,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +221,29 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the IP address blacklist rule for major event protection.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -193,7 +252,7 @@ public class DescribeMajorProtectionBlackIpsRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the rule template for major event protection.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

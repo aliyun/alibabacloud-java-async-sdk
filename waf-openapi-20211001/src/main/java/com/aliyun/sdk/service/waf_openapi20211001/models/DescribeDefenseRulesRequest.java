@@ -30,6 +30,14 @@ public class DescribeDefenseRulesRequest extends Request {
     private String query;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("RuleType")
     private String ruleType;
 
@@ -39,6 +47,8 @@ public class DescribeDefenseRulesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.query = builder.query;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.ruleType = builder.ruleType;
     }
 
@@ -84,6 +94,20 @@ public class DescribeDefenseRulesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return ruleType
      */
     public String getRuleType() {
@@ -95,6 +119,8 @@ public class DescribeDefenseRulesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String query; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private String ruleType; 
 
         private Builder() {
@@ -107,11 +133,16 @@ public class DescribeDefenseRulesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.query = request.query;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.ruleType = request.ruleType;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,7 +151,7 @@ public class DescribeDefenseRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -129,7 +160,7 @@ public class DescribeDefenseRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +169,10 @@ public class DescribeDefenseRulesRequest extends Request {
         }
 
         /**
-         * Query.
+         * The query conditions. Specify a string that contains multiple parameters in the JSON format.
+         * <p>
+         * 
+         * >  The results vary based on the query conditions. For more information, see the "**Query parameters**" section in this topic.
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -147,7 +181,33 @@ public class DescribeDefenseRulesRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The type of protection rule that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **whitelist:** whitelist rule.
+         * *   **defense:** defense rule. This is the default value.
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

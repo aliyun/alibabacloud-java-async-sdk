@@ -7,232 +7,86 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateDomainRequest} extends {@link RequestModel}
+ * {@link DescribeHybridCloudResourcesResponseBody} extends {@link TeaModel}
  *
- * <p>CreateDomainRequest</p>
+ * <p>DescribeHybridCloudResourcesResponseBody</p>
  */
-public class CreateDomainRequest extends Request {
-    @Query
-    @NameInMap("AccessType")
-    private String accessType;
+public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
+    @NameInMap("Domains")
+    private java.util.List < Domains> domains;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
-    private String domain;
+    @NameInMap("RequestId")
+    private String requestId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
+    @NameInMap("TotalCount")
+    private Long totalCount;
 
-    @Query
-    @NameInMap("Listen")
-    @Validation(required = true)
-    private Listen listen;
-
-    @Query
-    @NameInMap("Redirect")
-    @Validation(required = true)
-    private Redirect redirect;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
-    @Query
-    @NameInMap("ResourceManagerResourceGroupId")
-    private String resourceManagerResourceGroupId;
-
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    private CreateDomainRequest(Builder builder) {
-        super(builder);
-        this.accessType = builder.accessType;
-        this.domain = builder.domain;
-        this.instanceId = builder.instanceId;
-        this.listen = builder.listen;
-        this.redirect = builder.redirect;
-        this.regionId = builder.regionId;
-        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
+    private DescribeHybridCloudResourcesResponseBody(Builder builder) {
+        this.domains = builder.domains;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateDomainRequest create() {
+    public static DescribeHybridCloudResourcesResponseBody create() {
         return builder().build();
     }
 
-    @Override
-    public Builder toBuilder() {
-        return new Builder(this);
+    /**
+     * @return domains
+     */
+    public java.util.List < Domains> getDomains() {
+        return this.domains;
     }
 
     /**
-     * @return accessType
+     * @return requestId
      */
-    public String getAccessType() {
-        return this.accessType;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
-     * @return domain
+     * @return totalCount
      */
-    public String getDomain() {
-        return this.domain;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return listen
-     */
-    public Listen getListen() {
-        return this.listen;
-    }
-
-    /**
-     * @return redirect
-     */
-    public Redirect getRedirect() {
-        return this.redirect;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return resourceManagerResourceGroupId
-     */
-    public String getResourceManagerResourceGroupId() {
-        return this.resourceManagerResourceGroupId;
-    }
-
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public static final class Builder extends Request.Builder<CreateDomainRequest, Builder> {
-        private String accessType; 
-        private String domain; 
-        private String instanceId; 
-        private Listen listen; 
-        private Redirect redirect; 
-        private String regionId; 
-        private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
-
-        private Builder() {
-            super();
-        } 
-
-        private Builder(CreateDomainRequest request) {
-            super(request);
-            this.accessType = request.accessType;
-            this.domain = request.domain;
-            this.instanceId = request.instanceId;
-            this.listen = request.listen;
-            this.redirect = request.redirect;
-            this.regionId = request.regionId;
-            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
-        } 
+    public static final class Builder {
+        private java.util.List < Domains> domains; 
+        private String requestId; 
+        private Long totalCount; 
 
         /**
-         * $.parameters[3].schema.properties.ExclusiveIp.description
+         * Domains.
          */
-        public Builder accessType(String accessType) {
-            this.putQueryParameter("AccessType", accessType);
-            this.accessType = accessType;
+        public Builder domains(java.util.List < Domains> domains) {
+            this.domains = domains;
             return this;
         }
 
         /**
-         * $.parameters[3].schema.properties.Http2Enabled.description
+         * RequestId.
          */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
         /**
-         * $.parameters[3].schema.properties.HttpPorts.enumValueTitles
+         * TotalCount.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
-        /**
-         * $.parameters[3].schema.properties.Http2Enabled.example
-         */
-        public Builder listen(Listen listen) {
-            String listenShrink = shrink(listen, "Listen", "json");
-            this.putQueryParameter("Listen", listenShrink);
-            this.listen = listen;
-            return this;
-        }
-
-        /**
-         * $.parameters[3].schema.properties.CustomCiphers.enumValueTitles
-         */
-        public Builder redirect(Redirect redirect) {
-            String redirectShrink = shrink(redirect, "Redirect", "json");
-            this.putQueryParameter("Redirect", redirectShrink);
-            this.redirect = redirect;
-            return this;
-        }
-
-        /**
-         * $.parameters[3].schema.properties.ProtectionResource.enumValueTitles
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceManagerResourceGroupId.
-         */
-        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
-            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
-            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
-            return this;
-        }
-
-        /**
-         * $.parameters[3].schema.properties.ExclusiveIp.example
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
-            return this;
-        }
-
-        @Override
-        public CreateDomainRequest build() {
-            return new CreateDomainRequest(this);
+        public DescribeHybridCloudResourcesResponseBody build() {
+            return new DescribeHybridCloudResourcesResponseBody(this);
         } 
 
     } 
@@ -260,25 +114,16 @@ public class CreateDomainRequest extends Request {
         private Boolean http2Enabled;
 
         @NameInMap("HttpPorts")
-        private java.util.List < Integer > httpPorts;
+        private java.util.List < Long > httpPorts;
 
         @NameInMap("HttpsPorts")
-        private java.util.List < Integer > httpsPorts;
+        private java.util.List < Long > httpsPorts;
 
-        @NameInMap("IPv6Enabled")
-        private Boolean iPv6Enabled;
+        @NameInMap("Ipv6Enabled")
+        private Boolean ipv6Enabled;
 
         @NameInMap("ProtectionResource")
         private String protectionResource;
-
-        @NameInMap("SM2AccessOnly")
-        private Boolean sM2AccessOnly;
-
-        @NameInMap("SM2CertId")
-        private String sM2CertId;
-
-        @NameInMap("SM2Enabled")
-        private Boolean sM2Enabled;
 
         @NameInMap("TLSVersion")
         private String TLSVersion;
@@ -299,11 +144,8 @@ public class CreateDomainRequest extends Request {
             this.http2Enabled = builder.http2Enabled;
             this.httpPorts = builder.httpPorts;
             this.httpsPorts = builder.httpsPorts;
-            this.iPv6Enabled = builder.iPv6Enabled;
+            this.ipv6Enabled = builder.ipv6Enabled;
             this.protectionResource = builder.protectionResource;
-            this.sM2AccessOnly = builder.sM2AccessOnly;
-            this.sM2CertId = builder.sM2CertId;
-            this.sM2Enabled = builder.sM2Enabled;
             this.TLSVersion = builder.TLSVersion;
             this.xffHeaderMode = builder.xffHeaderMode;
             this.xffHeaders = builder.xffHeaders;
@@ -369,22 +211,22 @@ public class CreateDomainRequest extends Request {
         /**
          * @return httpPorts
          */
-        public java.util.List < Integer > getHttpPorts() {
+        public java.util.List < Long > getHttpPorts() {
             return this.httpPorts;
         }
 
         /**
          * @return httpsPorts
          */
-        public java.util.List < Integer > getHttpsPorts() {
+        public java.util.List < Long > getHttpsPorts() {
             return this.httpsPorts;
         }
 
         /**
-         * @return iPv6Enabled
+         * @return ipv6Enabled
          */
-        public Boolean getIPv6Enabled() {
-            return this.iPv6Enabled;
+        public Boolean getIpv6Enabled() {
+            return this.ipv6Enabled;
         }
 
         /**
@@ -392,27 +234,6 @@ public class CreateDomainRequest extends Request {
          */
         public String getProtectionResource() {
             return this.protectionResource;
-        }
-
-        /**
-         * @return sM2AccessOnly
-         */
-        public Boolean getSM2AccessOnly() {
-            return this.sM2AccessOnly;
-        }
-
-        /**
-         * @return sM2CertId
-         */
-        public String getSM2CertId() {
-            return this.sM2CertId;
-        }
-
-        /**
-         * @return sM2Enabled
-         */
-        public Boolean getSM2Enabled() {
-            return this.sM2Enabled;
         }
 
         /**
@@ -444,19 +265,16 @@ public class CreateDomainRequest extends Request {
             private Boolean exclusiveIp; 
             private Boolean focusHttps; 
             private Boolean http2Enabled; 
-            private java.util.List < Integer > httpPorts; 
-            private java.util.List < Integer > httpsPorts; 
-            private Boolean iPv6Enabled; 
+            private java.util.List < Long > httpPorts; 
+            private java.util.List < Long > httpsPorts; 
+            private Boolean ipv6Enabled; 
             private String protectionResource; 
-            private Boolean sM2AccessOnly; 
-            private String sM2CertId; 
-            private Boolean sM2Enabled; 
             private String TLSVersion; 
             private Integer xffHeaderMode; 
             private java.util.List < String > xffHeaders; 
 
             /**
-             * $.parameters[3].schema.properties.TLSVersion.example
+             * CertId.
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -464,7 +282,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.EnableTLSv3.example
+             * CipherSuite.
              */
             public Builder cipherSuite(Integer cipherSuite) {
                 this.cipherSuite = cipherSuite;
@@ -472,7 +290,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.EnableTLSv3.enumValueTitles
+             * CustomCiphers.
              */
             public Builder customCiphers(java.util.List < String > customCiphers) {
                 this.customCiphers = customCiphers;
@@ -480,7 +298,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.EnableTLSv3.description
+             * EnableTLSv3.
              */
             public Builder enableTLSv3(Boolean enableTLSv3) {
                 this.enableTLSv3 = enableTLSv3;
@@ -488,7 +306,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CustomCiphers.example
+             * ExclusiveIp.
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
@@ -496,7 +314,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CipherSuite.example
+             * FocusHttps.
              */
             public Builder focusHttps(Boolean focusHttps) {
                 this.focusHttps = focusHttps;
@@ -504,7 +322,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.TLSVersion.description
+             * Http2Enabled.
              */
             public Builder http2Enabled(Boolean http2Enabled) {
                 this.http2Enabled = http2Enabled;
@@ -512,31 +330,31 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CertId.example
+             * HttpPorts.
              */
-            public Builder httpPorts(java.util.List < Integer > httpPorts) {
+            public Builder httpPorts(java.util.List < Long > httpPorts) {
                 this.httpPorts = httpPorts;
                 return this;
             }
 
             /**
-             * $.parameters[3].schema.properties.Http2Enabled.enumValueTitles
+             * HttpsPorts.
              */
-            public Builder httpsPorts(java.util.List < Integer > httpsPorts) {
+            public Builder httpsPorts(java.util.List < Long > httpsPorts) {
                 this.httpsPorts = httpsPorts;
                 return this;
             }
 
             /**
-             * $.parameters[3].schema.properties.CustomCiphers.items.enumValueTitles
+             * Ipv6Enabled.
              */
-            public Builder iPv6Enabled(Boolean iPv6Enabled) {
-                this.iPv6Enabled = iPv6Enabled;
+            public Builder ipv6Enabled(Boolean ipv6Enabled) {
+                this.ipv6Enabled = ipv6Enabled;
                 return this;
             }
 
             /**
-             * $.parameters[3].schema.properties.CustomCiphers.description
+             * ProtectionResource.
              */
             public Builder protectionResource(String protectionResource) {
                 this.protectionResource = protectionResource;
@@ -544,31 +362,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * SM2AccessOnly.
-             */
-            public Builder sM2AccessOnly(Boolean sM2AccessOnly) {
-                this.sM2AccessOnly = sM2AccessOnly;
-                return this;
-            }
-
-            /**
-             * SM2CertId.
-             */
-            public Builder sM2CertId(String sM2CertId) {
-                this.sM2CertId = sM2CertId;
-                return this;
-            }
-
-            /**
-             * SM2Enabled.
-             */
-            public Builder sM2Enabled(Boolean sM2Enabled) {
-                this.sM2Enabled = sM2Enabled;
-                return this;
-            }
-
-            /**
-             * $.parameters[3].schema.properties.TLSVersion.enumValueTitles
+             * TLSVersion.
              */
             public Builder TLSVersion(String TLSVersion) {
                 this.TLSVersion = TLSVersion;
@@ -576,7 +370,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CipherSuite.enumValueTitles
+             * XffHeaderMode.
              */
             public Builder xffHeaderMode(Integer xffHeaderMode) {
                 this.xffHeaderMode = xffHeaderMode;
@@ -584,7 +378,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.CustomCiphers.items.description
+             * XffHeaders.
              */
             public Builder xffHeaders(java.util.List < String > xffHeaders) {
                 this.xffHeaders = xffHeaders;
@@ -637,7 +431,7 @@ public class CreateDomainRequest extends Request {
             private String value; 
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.items.enumValueTitles
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -645,7 +439,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.description
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -667,8 +461,7 @@ public class CreateDomainRequest extends Request {
         private Boolean cnameEnabled;
 
         @NameInMap("ConnectTimeout")
-        @Validation(maximum = 3600, minimum = 1)
-        private Integer connectTimeout;
+        private Long connectTimeout;
 
         @NameInMap("FocusHttpBackend")
         private Boolean focusHttpBackend;
@@ -677,20 +470,16 @@ public class CreateDomainRequest extends Request {
         private Boolean keepalive;
 
         @NameInMap("KeepaliveRequests")
-        @Validation(maximum = 1000, minimum = 60)
-        private Integer keepaliveRequests;
+        private Long keepaliveRequests;
 
         @NameInMap("KeepaliveTimeout")
-        @Validation(maximum = 3600, minimum = 10)
-        private Integer keepaliveTimeout;
+        private Long keepaliveTimeout;
 
         @NameInMap("Loadbalance")
-        @Validation(required = true)
         private String loadbalance;
 
         @NameInMap("ReadTimeout")
-        @Validation(maximum = 3600, minimum = 1)
-        private Integer readTimeout;
+        private Long readTimeout;
 
         @NameInMap("RequestHeaders")
         private java.util.List < RequestHeaders> requestHeaders;
@@ -708,8 +497,7 @@ public class CreateDomainRequest extends Request {
         private String sniHost;
 
         @NameInMap("WriteTimeout")
-        @Validation(maximum = 3600, minimum = 1)
-        private Integer writeTimeout;
+        private Long writeTimeout;
 
         private Redirect(Builder builder) {
             this.backends = builder.backends;
@@ -754,7 +542,7 @@ public class CreateDomainRequest extends Request {
         /**
          * @return connectTimeout
          */
-        public Integer getConnectTimeout() {
+        public Long getConnectTimeout() {
             return this.connectTimeout;
         }
 
@@ -775,14 +563,14 @@ public class CreateDomainRequest extends Request {
         /**
          * @return keepaliveRequests
          */
-        public Integer getKeepaliveRequests() {
+        public Long getKeepaliveRequests() {
             return this.keepaliveRequests;
         }
 
         /**
          * @return keepaliveTimeout
          */
-        public Integer getKeepaliveTimeout() {
+        public Long getKeepaliveTimeout() {
             return this.keepaliveTimeout;
         }
 
@@ -796,7 +584,7 @@ public class CreateDomainRequest extends Request {
         /**
          * @return readTimeout
          */
-        public Integer getReadTimeout() {
+        public Long getReadTimeout() {
             return this.readTimeout;
         }
 
@@ -838,29 +626,29 @@ public class CreateDomainRequest extends Request {
         /**
          * @return writeTimeout
          */
-        public Integer getWriteTimeout() {
+        public Long getWriteTimeout() {
             return this.writeTimeout;
         }
 
         public static final class Builder {
             private java.util.List < String > backends; 
             private Boolean cnameEnabled; 
-            private Integer connectTimeout; 
+            private Long connectTimeout; 
             private Boolean focusHttpBackend; 
             private Boolean keepalive; 
-            private Integer keepaliveRequests; 
-            private Integer keepaliveTimeout; 
+            private Long keepaliveRequests; 
+            private Long keepaliveTimeout; 
             private String loadbalance; 
-            private Integer readTimeout; 
+            private Long readTimeout; 
             private java.util.List < RequestHeaders> requestHeaders; 
             private Boolean retry; 
             private String routingRules; 
             private Boolean sniEnabled; 
             private String sniHost; 
-            private Integer writeTimeout; 
+            private Long writeTimeout; 
 
             /**
-             * $.parameters[3].schema.properties.FocusHttps.description
+             * Backends.
              */
             public Builder backends(java.util.List < String > backends) {
                 this.backends = backends;
@@ -868,12 +656,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * 是否开启公共云容灾。取值：
-             * <p>
-             * 
-             * - **true**：表示开启公共云容灾。
-             * 
-             * - **false**（默认）：表示不开启公共云容灾。
+             * CnameEnabled.
              */
             public Builder cnameEnabled(Boolean cnameEnabled) {
                 this.cnameEnabled = cnameEnabled;
@@ -881,15 +664,15 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.example
+             * ConnectTimeout.
              */
-            public Builder connectTimeout(Integer connectTimeout) {
+            public Builder connectTimeout(Long connectTimeout) {
                 this.connectTimeout = connectTimeout;
                 return this;
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaderMode.description
+             * FocusHttpBackend.
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
@@ -897,7 +680,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.IPv6Enabled.example
+             * Keepalive.
              */
             public Builder keepalive(Boolean keepalive) {
                 this.keepalive = keepalive;
@@ -905,23 +688,23 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.ProtectionResource.description
+             * KeepaliveRequests.
              */
-            public Builder keepaliveRequests(Integer keepaliveRequests) {
+            public Builder keepaliveRequests(Long keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
                 return this;
             }
 
             /**
-             * $.parameters[3].schema.properties.ProtectionResource.example
+             * KeepaliveTimeout.
              */
-            public Builder keepaliveTimeout(Integer keepaliveTimeout) {
+            public Builder keepaliveTimeout(Long keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
                 return this;
             }
 
             /**
-             * $.parameters[3].schema.properties.FocusHttps.enumValueTitles
+             * Loadbalance.
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
@@ -929,15 +712,15 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.enumValueTitles
+             * ReadTimeout.
              */
-            public Builder readTimeout(Integer readTimeout) {
+            public Builder readTimeout(Long readTimeout) {
                 this.readTimeout = readTimeout;
                 return this;
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaders.items.description
+             * RequestHeaders.
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -945,7 +728,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.IPv6Enabled.enumValueTitles
+             * Retry.
              */
             public Builder retry(Boolean retry) {
                 this.retry = retry;
@@ -953,13 +736,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * 混合云转发规则。使用JSON数组转化的字符串格式表示。JSON数组中的每个元素是一个结构体，包含以下字段：
-             * <p>
-             * - **rs**：Array类型 | 表示回源IP地址或者回源CNAME列表
-             * 
-             * - **location**：String类型 | 表示防护节点名称
-             * 
-             * - **locationId**：Long类型 | 表示防护节点ID
+             * RoutingRules.
              */
             public Builder routingRules(String routingRules) {
                 this.routingRules = routingRules;
@@ -967,7 +744,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaderMode.example
+             * SniEnabled.
              */
             public Builder sniEnabled(Boolean sniEnabled) {
                 this.sniEnabled = sniEnabled;
@@ -975,7 +752,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.XffHeaderMode.enumValueTitles
+             * SniHost.
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -983,15 +760,196 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * $.parameters[3].schema.properties.IPv6Enabled.description
+             * WriteTimeout.
              */
-            public Builder writeTimeout(Integer writeTimeout) {
+            public Builder writeTimeout(Long writeTimeout) {
                 this.writeTimeout = writeTimeout;
                 return this;
             }
 
             public Redirect build() {
                 return new Redirect(this);
+            } 
+
+        } 
+
+    }
+    public static class Domains extends TeaModel {
+        @NameInMap("Cname")
+        private String cname;
+
+        @NameInMap("Domain")
+        private String domain;
+
+        @NameInMap("Id")
+        private Long id;
+
+        @NameInMap("Listen")
+        private Listen listen;
+
+        @NameInMap("Redirect")
+        private Redirect redirect;
+
+        @NameInMap("ResourceManagerResourceGroupId")
+        private String resourceManagerResourceGroupId;
+
+        @NameInMap("Status")
+        private Integer status;
+
+        @NameInMap("Uid")
+        private String uid;
+
+        private Domains(Builder builder) {
+            this.cname = builder.cname;
+            this.domain = builder.domain;
+            this.id = builder.id;
+            this.listen = builder.listen;
+            this.redirect = builder.redirect;
+            this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+            this.status = builder.status;
+            this.uid = builder.uid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Domains create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cname
+         */
+        public String getCname() {
+            return this.cname;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return listen
+         */
+        public Listen getListen() {
+            return this.listen;
+        }
+
+        /**
+         * @return redirect
+         */
+        public Redirect getRedirect() {
+            return this.redirect;
+        }
+
+        /**
+         * @return resourceManagerResourceGroupId
+         */
+        public String getResourceManagerResourceGroupId() {
+            return this.resourceManagerResourceGroupId;
+        }
+
+        /**
+         * @return status
+         */
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return uid
+         */
+        public String getUid() {
+            return this.uid;
+        }
+
+        public static final class Builder {
+            private String cname; 
+            private String domain; 
+            private Long id; 
+            private Listen listen; 
+            private Redirect redirect; 
+            private String resourceManagerResourceGroupId; 
+            private Integer status; 
+            private String uid; 
+
+            /**
+             * CNAME
+             */
+            public Builder cname(String cname) {
+                this.cname = cname;
+                return this;
+            }
+
+            /**
+             * 域名
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Listen.
+             */
+            public Builder listen(Listen listen) {
+                this.listen = listen;
+                return this;
+            }
+
+            /**
+             * Redirect.
+             */
+            public Builder redirect(Redirect redirect) {
+                this.redirect = redirect;
+                return this;
+            }
+
+            /**
+             * ResourceManagerResourceGroupId.
+             */
+            public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+                this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+                return this;
+            }
+
+            /**
+             * 域名状态
+             */
+            public Builder status(Integer status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Uid.
+             */
+            public Builder uid(String uid) {
+                this.uid = uid;
+                return this;
+            }
+
+            public Domains build() {
+                return new Domains(this);
             } 
 
         } 

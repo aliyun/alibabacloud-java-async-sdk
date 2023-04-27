@@ -50,7 +50,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         private java.util.List < ResponseCodes> responseCodes; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         }
 
         /**
-         * ResponseCodes.
+         * The array of the statistics of the error codes.
          */
         public Builder responseCodes(java.util.List < ResponseCodes> responseCodes) {
             this.responseCodes = responseCodes;
@@ -146,7 +146,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             private Long index; 
 
             /**
-             * 302Pv.
+             * The number of 302 error codes that are returned.
              */
             public Builder code302Pv(Long code302Pv) {
                 this.code302Pv = code302Pv;
@@ -154,7 +154,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * 405Pv.
+             * The number of 405 error codes that are returned.
              */
             public Builder code405Pv(Long code405Pv) {
                 this.code405Pv = code405Pv;
@@ -162,7 +162,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * 499Pv.
+             * The number of 499 error codes that are returned.
              */
             public Builder code499Pv(Long code499Pv) {
                 this.code499Pv = code499Pv;
@@ -170,7 +170,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * 5xxPv.
+             * The number of 5xx error codes that are returned.
              */
             public Builder code5xxPv(Long code5xxPv) {
                 this.code5xxPv = code5xxPv;
@@ -178,7 +178,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The serial number of the time interval. The serial numbers are arranged in chronological order.
              */
             public Builder index(Long index) {
                 this.index = index;

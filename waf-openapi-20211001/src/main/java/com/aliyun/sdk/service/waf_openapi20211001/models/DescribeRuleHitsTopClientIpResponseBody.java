@@ -50,7 +50,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         private java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         }
 
         /**
-         * RuleHitsTopClientIp.
+         * The array of the top 10 IP addresses from which attacks are initiated.
          */
         public Builder ruleHitsTopClientIp(java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp) {
             this.ruleHitsTopClientIp = ruleHitsTopClientIp;
@@ -110,7 +110,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * ClientIp.
+             * The IP address of the service client.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -118,7 +118,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of attacks that are initiated from the IP address.
              */
             public Builder count(Long count) {
                 this.count = count;

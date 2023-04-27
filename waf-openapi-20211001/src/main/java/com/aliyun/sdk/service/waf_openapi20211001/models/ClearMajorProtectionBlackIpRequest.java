@@ -18,6 +18,14 @@ public class ClearMajorProtectionBlackIpRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @Query
     @NameInMap("RuleId")
     @Validation(required = true)
     private Long ruleId;
@@ -30,6 +38,8 @@ public class ClearMajorProtectionBlackIpRequest extends Request {
     private ClearMajorProtectionBlackIpRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.ruleId = builder.ruleId;
         this.templateId = builder.templateId;
     }
@@ -55,6 +65,20 @@ public class ClearMajorProtectionBlackIpRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return ruleId
      */
     public Long getRuleId() {
@@ -70,6 +94,8 @@ public class ClearMajorProtectionBlackIpRequest extends Request {
 
     public static final class Builder extends Request.Builder<ClearMajorProtectionBlackIpRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
+        private String resourceManagerResourceGroupId; 
         private Long ruleId; 
         private Long templateId; 
 
@@ -80,12 +106,17 @@ public class ClearMajorProtectionBlackIpRequest extends Request {
         private Builder(ClearMajorProtectionBlackIpRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.ruleId = request.ruleId;
             this.templateId = request.templateId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +125,29 @@ public class ClearMajorProtectionBlackIpRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland.
+         * *   **ap-southeast-1:** outside the Chinese mainland.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the Alibaba Cloud resource group.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * The ID of the IP address blacklist rule for major event protection.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -103,7 +156,7 @@ public class ClearMajorProtectionBlackIpRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the IP address blacklist rule template for major event protection.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

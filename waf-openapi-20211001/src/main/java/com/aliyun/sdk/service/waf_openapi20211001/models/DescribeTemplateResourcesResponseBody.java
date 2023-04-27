@@ -50,7 +50,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         private java.util.List < String > resources; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * An array of protected objects or protected object groups that are associated to the protection rule template.
          */
         public Builder resources(java.util.List < String > resources) {
             this.resources = resources;
