@@ -62,7 +62,7 @@ public class DeleteHubClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the master instance.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -78,7 +78,7 @@ public class DeleteHubClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the master instance.
+         * The ID of the job.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

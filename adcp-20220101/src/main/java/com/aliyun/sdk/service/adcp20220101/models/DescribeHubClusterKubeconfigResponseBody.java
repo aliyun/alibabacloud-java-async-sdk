@@ -50,7 +50,7 @@ public class DescribeHubClusterKubeconfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the kubeconfig file of the master instance.
+         * The content of the kubeconfig file.
          */
         public Builder kubeconfig(String kubeconfig) {
             this.kubeconfig = kubeconfig;

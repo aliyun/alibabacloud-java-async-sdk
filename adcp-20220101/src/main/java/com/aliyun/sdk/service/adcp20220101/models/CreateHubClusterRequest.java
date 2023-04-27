@@ -197,7 +197,11 @@ public class CreateHubClusterRequest extends Request {
         } 
 
         /**
-         * Specifies whether to use a public IP address to expose the API server. Valid values: - true: uses a public IP address to expose the API server. - true: uses an internal IP address to expose the API server.
+         * Specifies whether to expose the API server to the Internet. Valid values:
+         * <p>
+         * 
+         * *   true: exposes the API server to the Internet.
+         * *   false: exposes the API server to the internal network.
          */
         public Builder apiServerPublicEip(Boolean apiServerPublicEip) {
             this.putBodyParameter("ApiServerPublicEip", apiServerPublicEip);
@@ -215,7 +219,11 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable audit logs. Valid values: - true: enables audit logs. - false: disables audit logs.
+         * Specifies whether to enable the audit log feature. Valid values:
+         * <p>
+         * 
+         * *   true: enables the audit log feature.
+         * *   false: disables the audit log feature.
          */
         public Builder auditLogEnabled(Boolean auditLogEnabled) {
             this.putBodyParameter("AuditLogEnabled", auditLogEnabled);
@@ -224,7 +232,7 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether the security group is an advanced security group.
+         * Specifies whether to use an advanced security group.
          */
         public Builder isEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
             this.putBodyParameter("IsEnterpriseSecurityGroup", isEnterpriseSecurityGroup);
@@ -251,13 +259,13 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * Scenario-oriented master control type. The value can be:
+         * The type of scenario for which the master instance is suitable. Valid values:
          * <p>
          * 
-         * - `Default`: Standard scenario Master instance.
-         * - `XFlow`: Workflow scenario master instance.
+         * *   `Default`: The master instance is suitable for standard scenarios.
+         * *   `XFlow`: The master instance is suitable for workflow scenarios.
          * 
-         * Default Value: `Default`.
+         * Default value: `Default`.
          */
         public Builder profile(String profile) {
             this.putBodyParameter("Profile", profile);

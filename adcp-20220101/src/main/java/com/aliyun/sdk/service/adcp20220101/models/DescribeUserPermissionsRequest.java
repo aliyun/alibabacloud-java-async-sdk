@@ -55,7 +55,7 @@ public class DescribeUserPermissionsRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * The ID of the RAM user that you want to query.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -50,7 +50,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Permissions.
+         * The details about the permissions of the RAM user.
          */
         public Builder permissions(java.util.List < Permissions> permissions) {
             this.permissions = permissions;
@@ -58,7 +58,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,12 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             private String roleType; 
 
             /**
-             * ResourceId.
+             * The authorization setting. Valid values:
+             * <p>
+             * 
+             * *   {cluster_id} is returned if the permissions are scoped to a cluster.
+             * *   {cluster_id}/{namespace} is returned if the permissions are scoped to a namespace of a cluster.
+             * *   all-clusters is returned if the permissions are scoped to all clusters.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -142,7 +147,11 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The authorization type. Valid values:
+             * <p>
+             * 
+             * *   cluster: indicates that the permissions are scoped to a cluster.
+             * *   namespace: indicates that the permissions are scoped to a namespace of a cluster.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -150,7 +159,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -158,7 +167,11 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * RoleType.
+             * The type of predefined role. Valid values:
+             * <p>
+             * 
+             * *   admin: administrator
+             * *   dev: developer
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

@@ -78,7 +78,13 @@ public class DescribeHubClusterKubeconfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the credential that is used to connect to the master instance over the internal network. Valid values: - `true`: obtains only the credential that is used to access the master instance over the internal network. - `false`: obtains only the credential that is used to access the master instance over the Internet. Default value: `false`.
+         * Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:
+         * <p>
+         * 
+         * *   `true`: obtains the kubeconfig file that is used to connect to the master instance over the internal network.
+         * *   `false`: obtains the kubeconfig file that is used to connect to the master instance over the Internet.
+         * 
+         * Default value: `false`
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

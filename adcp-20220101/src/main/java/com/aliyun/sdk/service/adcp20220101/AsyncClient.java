@@ -24,6 +24,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteHubClusterResponse> deleteHubCluster(DeleteHubClusterRequest request);
 
+    CompletableFuture<DeletePolicyInstanceResponse> deletePolicyInstance(DeletePolicyInstanceRequest request);
+
+    CompletableFuture<DeleteUserPermissionResponse> deleteUserPermission(DeleteUserPermissionRequest request);
+
+    CompletableFuture<DeployPolicyInstanceResponse> deployPolicyInstance(DeployPolicyInstanceRequest request);
+
     CompletableFuture<DescribeHubClusterDetailsResponse> describeHubClusterDetails(DescribeHubClusterDetailsRequest request);
 
     CompletableFuture<DescribeHubClusterKubeconfigResponse> describeHubClusterKubeconfig(DescribeHubClusterKubeconfigRequest request);
@@ -34,14 +40,28 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeManagedClustersResponse> describeManagedClusters(DescribeManagedClustersRequest request);
 
+    CompletableFuture<DescribePoliciesResponse> describePolicies(DescribePoliciesRequest request);
+
+    CompletableFuture<DescribePolicyDetailsResponse> describePolicyDetails(DescribePolicyDetailsRequest request);
+
+    CompletableFuture<DescribePolicyGovernanceInClusterResponse> describePolicyGovernanceInCluster(DescribePolicyGovernanceInClusterRequest request);
+
+    CompletableFuture<DescribePolicyInstancesResponse> describePolicyInstances(DescribePolicyInstancesRequest request);
+
+    CompletableFuture<DescribePolicyInstancesStatusResponse> describePolicyInstancesStatus(DescribePolicyInstancesStatusRequest request);
+
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<DescribeUserPermissionsResponse> describeUserPermissions(DescribeUserPermissionsRequest request);
 
     CompletableFuture<DetachClusterFromHubResponse> detachClusterFromHub(DetachClusterFromHubRequest request);
 
+    CompletableFuture<GrantUserPermissionResponse> grantUserPermission(GrantUserPermissionRequest request);
+
     CompletableFuture<GrantUserPermissionsResponse> grantUserPermissions(GrantUserPermissionsRequest request);
 
     CompletableFuture<UpdateHubClusterFeatureResponse> updateHubClusterFeature(UpdateHubClusterFeatureRequest request);
+
+    CompletableFuture<UpdateUserPermissionResponse> updateUserPermission(UpdateUserPermissionRequest request);
 
 }

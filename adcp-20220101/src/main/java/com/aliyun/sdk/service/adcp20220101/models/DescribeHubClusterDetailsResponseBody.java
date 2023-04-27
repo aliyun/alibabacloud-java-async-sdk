@@ -50,7 +50,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the master instance.
+         * The details of the master instance.
          */
         public Builder cluster(Cluster cluster) {
             this.cluster = cluster;
@@ -130,7 +130,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a public endpoint is used to expose the API server. Valid values: - true: a public endpoint is used to expose the API server. - false: no public endpoint is used to expose the API server.
+             * Indicates whether the API server is accessible over the Internet. Valid values:
+             * <p>
+             * 
+             * *   true: The API server is accessible over the Internet.
+             * *   false: The API server is inaccessible over the Internet.
              */
             public Builder enabledPublic(Boolean enabledPublic) {
                 this.enabledPublic = enabledPublic;
@@ -295,7 +299,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the master instance. Valid values: - ack.pro.small: ACK Pro
+             * The specification of the master instance. Valid value:
+             * <p>
+             * 
+             * *   ack.pro.small: ACK Pro cluster
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -311,7 +318,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when the system fails to create the master instance.
+             * The error message returned when the master instance failed to be created.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -343,7 +350,16 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the master instance. Valid values: - initial: The master instance is being initialized. - failed: The master instance failed to be created. - running: The master instance is running. - inactive: The master instance is inactive. - deleting: The master instance is being deleted. - delete_failed: The master instance failed to be deleted. - deleted: The master instance is deleted.
+             * The status of the master instance. Valid values:
+             * <p>
+             * 
+             * *   initial: The master instance is being initialized.
+             * *   failed: The master instance failed to be created.
+             * *   running: The master instance is running
+             * *   inactive: The master instance is pending.
+             * *   deleting: The master instance is being deleted.
+             * *   delete_failed: The master instance failed to be deleted.
+             * *   deleted: The master instance is deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -359,7 +375,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Kubernetes version of the master instance.
+             * The version of the master instance.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -436,7 +452,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The error message of the deletion condition.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -452,11 +468,12 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the deletion condition. Valid values:
+             * The status of the master instance that the deletion condition indicates. Valid values:
              * <p>
-             * - True: The master instance cannot be deleted.
-             * - False: The master instance can be deleted.
-             * - Unknow: Whether the master instance can be deleted is unknown.
+             * 
+             * *   True: The master instance cannot be deleted.
+             * *   False: The master instance can be deleted.
+             * *   Unknow: Whether the master instance can be deleted is unknown.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -517,7 +534,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String publicApiServerEndpoint; 
 
             /**
-             * The internal endpoint of the API server of the master instance.
+             * The endpoint that is used to access the API server over the internal network.
              */
             public Builder intranetApiServerEndpoint(String intranetApiServerEndpoint) {
                 this.intranetApiServerEndpoint = intranetApiServerEndpoint;
@@ -525,7 +542,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the API server of the master instance.
+             * The endpoint that is used to access the API server over the Internet.
              */
             public Builder publicApiServerEndpoint(String publicApiServerEndpoint) {
                 this.publicApiServerEndpoint = publicApiServerEndpoint;
@@ -590,7 +607,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String logStoreTTL; 
 
             /**
-             * Indicates whether audit logs are enabled. Valid values: - true: audit logs are enabled. - false: audit logs are disabled.
+             * Indicates whether the audit logging feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: Audit logging is enabled.
+             * *   false: Audit logging is disabled.
              */
             public Builder enableLog(Boolean enableLog) {
                 this.enableLog = enableLog;
@@ -598,7 +619,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project.
+             * The name of the project of Log Service.
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -606,7 +627,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the logs.
+             * The number of days that logs are retained by Log Service.
              */
             public Builder logStoreTTL(String logStoreTTL) {
                 this.logStoreTTL = logStoreTTL;
@@ -659,7 +680,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String meshId; 
 
             /**
-             * Indicates whether ASM is enabled. Valid values: - true: ASM is enabled. - false: ASM is disabled.
+             * Indicates whether ASM is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: ASM is enabled.
+             * *   false: ASM is disabled.
              */
             public Builder enableMesh(Boolean enableMesh) {
                 this.enableMesh = enableMesh;
@@ -667,7 +692,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ASM instance.
+             * service mesh (ASM) instance ID
              */
             public Builder meshId(String meshId) {
                 this.meshId = meshId;
@@ -764,7 +789,12 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version that is supported by the master instance. Valid values: - ipv4: IPv4. - ipv6: IPv6. - dual: IPv4 and IPv6.
+             * The IP version that is supported by the master instance. Valid values:
+             * <p>
+             * 
+             * *   ipv4: IPv4.
+             * *   ipv6: IPv6.
+             * *   dual: IPv4 and IPv6.
              */
             public Builder IPStack(String IPStack) {
                 this.IPStack = IPStack;
@@ -772,7 +802,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated security group.
+             * The IDs of the associated security groups.
              */
             public Builder securityGroupIDs(java.util.List < String > securityGroupIDs) {
                 this.securityGroupIDs = securityGroupIDs;
@@ -780,7 +810,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * A list of the vSwitches that are used by the master instance.
+             * The details of the vSwitches.
              */
             public Builder vSwitches(java.util.List < String > vSwitches) {
                 this.vSwitches = vSwitches;
@@ -922,7 +952,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * A list of the vSwitches that are used by the master instance.
+             * The details of the vSwitches.
              */
             public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
@@ -1156,7 +1186,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private WorkflowConfig workflowConfig; 
 
             /**
-             * Information about the API server of the master instance.
+             * The details of the API server of the master instance.
              */
             public Builder apiServer(ApiServer apiServer) {
                 this.apiServer = apiServer;
@@ -1164,7 +1194,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the master instance.
+             * The details of the master instance.
              */
             public Builder clusterInfo(ClusterInfo clusterInfo) {
                 this.clusterInfo = clusterInfo;
@@ -1172,7 +1202,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the deletion conditions of the master instance.
+             * The deletion conditions of the master instance.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -1196,7 +1226,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Service Mesh (ASM) configurations.
+             * The configurations of Alibaba Cloud Service Mesh (ASM).
              */
             public Builder meshConfig(MeshConfig meshConfig) {
                 this.meshConfig = meshConfig;
