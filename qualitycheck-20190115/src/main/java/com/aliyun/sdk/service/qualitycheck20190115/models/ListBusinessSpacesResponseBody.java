@@ -426,7 +426,7 @@ public class ListBusinessSpacesResponseBody extends TeaModel {
             }
 
             /**
-             * id。
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;

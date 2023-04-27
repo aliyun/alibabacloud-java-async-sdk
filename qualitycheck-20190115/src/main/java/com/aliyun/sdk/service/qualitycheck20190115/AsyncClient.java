@@ -214,10 +214,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateSubScoreForApiResponse> updateSubScoreForApi(UpdateSubScoreForApiRequest request);
 
-    /**
-      * ****。
-      *
-     */
     CompletableFuture<UpdateSyncQualityCheckDataResponse> updateSyncQualityCheckData(UpdateSyncQualityCheckDataRequest request);
 
     CompletableFuture<UpdateTaskAssignRuleResponse> updateTaskAssignRule(UpdateTaskAssignRuleRequest request);
@@ -232,9 +228,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UploadAudioDataResponse> uploadAudioData(UploadAudioDataRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<UploadDataResponse> uploadData(UploadDataRequest request);
 
     CompletableFuture<UploadDataSyncResponse> uploadDataSync(UploadDataSyncRequest request);
+
+    CompletableFuture<UploadDataV4Response> uploadDataV4(UploadDataV4Request request);
 
     CompletableFuture<UploadRuleResponse> uploadRule(UploadRuleRequest request);
 
