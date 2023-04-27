@@ -33,6 +33,10 @@ public class ChatRequest extends Request {
     private java.util.List < String > perspective;
 
     @Query
+    @NameInMap("SandBox")
+    private Boolean sandBox;
+
+    @Query
     @NameInMap("SenderId")
     private String senderId;
 
@@ -59,6 +63,7 @@ public class ChatRequest extends Request {
         this.intentName = builder.intentName;
         this.knowledgeId = builder.knowledgeId;
         this.perspective = builder.perspective;
+        this.sandBox = builder.sandBox;
         this.senderId = builder.senderId;
         this.senderNick = builder.senderNick;
         this.sessionId = builder.sessionId;
@@ -115,6 +120,13 @@ public class ChatRequest extends Request {
     }
 
     /**
+     * @return sandBox
+     */
+    public Boolean getSandBox() {
+        return this.sandBox;
+    }
+
+    /**
      * @return senderId
      */
     public String getSenderId() {
@@ -155,6 +167,7 @@ public class ChatRequest extends Request {
         private String intentName; 
         private String knowledgeId; 
         private java.util.List < String > perspective; 
+        private Boolean sandBox; 
         private String senderId; 
         private String senderNick; 
         private String sessionId; 
@@ -172,6 +185,7 @@ public class ChatRequest extends Request {
             this.intentName = request.intentName;
             this.knowledgeId = request.knowledgeId;
             this.perspective = request.perspective;
+            this.sandBox = request.sandBox;
             this.senderId = request.senderId;
             this.senderNick = request.senderNick;
             this.sessionId = request.sessionId;
@@ -222,6 +236,15 @@ public class ChatRequest extends Request {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
             this.putQueryParameter("Perspective", perspectiveShrink);
             this.perspective = perspective;
+            return this;
+        }
+
+        /**
+         * SandBox.
+         */
+        public Builder sandBox(Boolean sandBox) {
+            this.putQueryParameter("SandBox", sandBox);
+            this.sandBox = sandBox;
             return this;
         }
 
