@@ -70,7 +70,7 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * SilenceReplyTimeout.
+         * 静默超时时间
          */
         public Builder silenceReplyTimeout(Integer silenceReplyTimeout) {
             this.silenceReplyTimeout = silenceReplyTimeout;
