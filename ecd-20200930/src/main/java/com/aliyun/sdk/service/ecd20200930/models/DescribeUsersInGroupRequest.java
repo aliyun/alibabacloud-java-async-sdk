@@ -182,7 +182,7 @@ public class DescribeUsersInGroupRequest extends Request {
         } 
 
         /**
-         * The status of the desktop connection for the end user.
+         * ConnectState.
          */
         public Builder connectState(Integer connectState) {
             this.putQueryParameter("ConnectState", connectState);
@@ -191,7 +191,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group.
+         * DesktopGroupId.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -200,7 +200,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the authorized user.
+         * EndUserId.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -209,7 +209,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the end users.
+         * EndUserIds.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -218,7 +218,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.
+         * Filter.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -227,11 +227,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,7 +236,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -249,7 +245,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the organization to which the end user belongs.
+         * OrgId.
          */
         public Builder orgId(String orgId) {
             this.putQueryParameter("OrgId", orgId);
@@ -258,7 +254,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the details about the end user.
+         * QueryUserDetail.
          */
         public Builder queryUserDetail(Boolean queryUserDetail) {
             this.putQueryParameter("QueryUserDetail", queryUserDetail);
@@ -267,7 +263,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -114,7 +114,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop.
+         * The ID of the request.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -123,7 +123,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * The name of the alert event.
+         * The operation that you want to perform. Set the value to DescribeAlarmEventStackInfo.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -145,7 +145,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the alert event.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +154,7 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * The ID of the alert event.
+         * The stack information of the alert details.
          */
         public Builder uniqueInfo(String uniqueInfo) {
             this.putQueryParameter("UniqueInfo", uniqueInfo);

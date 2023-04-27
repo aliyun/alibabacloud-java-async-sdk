@@ -62,7 +62,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The ID of the request.
+         * The token that specifies the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -81,7 +81,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The usernames of AD users.
+         * Queries the details about Active Directory (AD) users in an AD workspace after the workspace is connected to an AD domain.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -133,7 +133,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             private String endUser; 
 
             /**
-             * The display name of the AD user.
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -141,7 +141,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the AD user.
+             * EndUser.
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;

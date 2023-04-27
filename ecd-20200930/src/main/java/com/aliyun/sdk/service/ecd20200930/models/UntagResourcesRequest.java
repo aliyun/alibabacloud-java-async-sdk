@@ -113,7 +113,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to unbind all tags from the resource. This parameter takes effect only when the TagKey.N parameter is not specified. Default value: false.
+         * The operation that you want to perform. Set the value to UntagResources.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -122,7 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.
+         * The key of tag N. Valid values of N: 1 to 20.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +131,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.
+         * UntagResources
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,7 +140,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.
+         * The ID of the request.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +149,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The key of tag N. Valid values of N: 1 to 20.
+         * TagKey.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

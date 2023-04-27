@@ -167,7 +167,7 @@ public class DescribeDesktopTypesRequest extends Request {
         } 
 
         /**
-         * The applicable scope of the desktop type. Default value: `Public`.
+         * AppliedScope.
          */
         public Builder appliedScope(String appliedScope) {
             this.putQueryParameter("AppliedScope", appliedScope);
@@ -176,7 +176,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs.
+         * CpuCount.
          */
         public Builder cpuCount(Integer cpuCount) {
             this.putQueryParameter("CpuCount", cpuCount);
@@ -185,7 +185,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop whose desktop type that you want to modify. If you specify this parameter, the information that is returned includes whether the desktop type is compatible with the cloud desktop.
+         * DesktopIdForModify.
          */
         public Builder desktopIdForModify(String desktopIdForModify) {
             this.putQueryParameter("DesktopIdForModify", desktopIdForModify);
@@ -194,31 +194,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The ID of the desktop type. Valid values:
-         * <p>
-         * 
-         * *   eds.graphics.16c1t4
-         * *   eds.graphics.24c1t4
-         * *   eds.hf.12c24g
-         * *   eds.hf.8c16g
-         * *   eds.hf.4c8g
-         * *   eds.general.8c32g
-         * *   eds.general.16c32g
-         * *   eds.general.8c16g
-         * *   eds.general.4c16g
-         * *   eds.general.4c8g
-         * *   eds.general.2c8g
-         * *   eds.general.2c4g
-         * *   eds.general.2c2g
-         * *   ecd.graphics.xlarge
-         * *   ecd.graphics.2xlarge
-         * *   ecd.performance.2xlarge
-         * *   ecd.advanced.xlarge
-         * *   ecd.advanced.large
-         * *   ecd.basic.large
-         * *   ecd.basic.small
-         * 
-         * > When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all desktop types are queried.
+         * DesktopTypeId.
          */
         public Builder desktopTypeId(String desktopTypeId) {
             this.putQueryParameter("DesktopTypeId", desktopTypeId);
@@ -227,7 +203,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The number of GPUs.
+         * GpuCount.
          */
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
@@ -236,18 +212,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The family of the cloud desktop type. Valid values:
-         * <p>
-         * 
-         * *   eds.graphics
-         * *   eds.hf
-         * *   eds.general
-         * *   ecd.graphics
-         * *   ecd.performance
-         * *   ecd.advanced
-         * *   ecd.basic
-         * 
-         * > When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all desktop types are queried.
+         * InstanceTypeFamily.
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -256,7 +221,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The size of the memory. Unit: GiB.
+         * MemorySize.
          */
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
@@ -265,7 +230,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The type of the order that you want to place.
+         * OrderType.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -274,7 +239,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

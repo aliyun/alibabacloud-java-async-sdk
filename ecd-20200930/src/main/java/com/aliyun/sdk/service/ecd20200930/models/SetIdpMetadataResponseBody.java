@@ -50,7 +50,7 @@ public class SetIdpMetadataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The entityID value obtained after the IdP metadata file is parsed.
+         * IdpEntityId.
          */
         public Builder idpEntityId(String idpEntityId) {
             this.idpEntityId = idpEntityId;
@@ -58,7 +58,7 @@ public class SetIdpMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

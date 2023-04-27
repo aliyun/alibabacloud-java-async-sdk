@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The token used to start the next query.
+         * The ID of the request.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The type of the resource. Valid value: ALIYUN::GWS::INSTANCE.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The resources and their tags.
+         * TagResources.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the resource, which is the ID of the cloud desktop.
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid value: ALIYUN::GWS::INSTANCE.
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +170,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the resource.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the resource.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

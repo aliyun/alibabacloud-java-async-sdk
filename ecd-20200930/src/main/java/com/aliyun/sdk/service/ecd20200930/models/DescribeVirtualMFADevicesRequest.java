@@ -112,7 +112,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         } 
 
         /**
-         * The list of the AD users.
+         * >  This parameter is in invitational preview and unavailable for public use.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -121,7 +121,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 500. Default value: 100.
+         * The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -130,7 +130,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Set the value to the NextToken value returned in the last call.
+         * The name of the AD user.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -139,7 +139,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The operation that you want to perform. Set the value to DescribeVirtualMFADevices.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -148,7 +148,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The token that determines the start point of the query. Set the value to the NextToken value returned in the last call.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

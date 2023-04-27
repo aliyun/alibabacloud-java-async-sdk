@@ -86,7 +86,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         private java.util.List < VulRecords> vulRecords; 
 
         /**
-         * The page number of the returned page.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The vulnerabilities.
+         * VulRecords.
          */
         public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -206,7 +206,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String updateCmd; 
 
             /**
-             * The complete version number.
+             * FullVersion.
              */
             public Builder fullVersion(String fullVersion) {
                 this.fullVersion = fullVersion;
@@ -214,7 +214,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the vulnerability is detected.
+             * MatchDetail.
              */
             public Builder matchDetail(String matchDetail) {
                 this.matchDetail = matchDetail;
@@ -222,7 +222,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RPM package.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +230,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the software that has the vulnerability.
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -238,7 +238,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The command that is used to fix the vulnerability.
+             * UpdateCmd.
              */
             public Builder updateCmd(String updateCmd) {
                 this.updateCmd = updateCmd;
@@ -279,7 +279,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private java.util.List < RpmEntityList> rpmEntityList; 
 
             /**
-             * The RPM Package Manager (RPM) packages.
+             * RpmEntityList.
              */
             public Builder rpmEntityList(java.util.List < RpmEntityList> rpmEntityList) {
                 this.rpmEntityList = rpmEntityList;
@@ -524,7 +524,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The alias of the vulnerability.
+             * AliasName.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -532,7 +532,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the affected cloud desktop.
+             * DesktopId.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -540,7 +540,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the affected cloud desktop.
+             * DesktopName.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -548,7 +548,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about the vulnerability.
+             * ExtendContentJson.
              */
             public Builder extendContentJson(ExtendContentJson extendContentJson) {
                 this.extendContentJson = extendContentJson;
@@ -556,7 +556,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp when the vulnerability was first detected. Unit: milliseconds.
+             * FirstTs.
              */
             public Builder firstTs(Long firstTs) {
                 this.firstTs = firstTs;
@@ -564,7 +564,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp when the vulnerability was last detected. Unit: milliseconds.
+             * LastTs.
              */
             public Builder lastTs(Long lastTs) {
                 this.lastTs = lastTs;
@@ -572,7 +572,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability status was changed. Unit: milliseconds.
+             * ModifyTs.
              */
             public Builder modifyTs(Long modifyTs) {
                 this.modifyTs = modifyTs;
@@ -580,7 +580,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -588,7 +588,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The priority to fix the vulnerability or the risk level of the vulnerability.
+             * Necessity.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -596,7 +596,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Security Center agent on the cloud desktop is online.
+             * Online.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -604,7 +604,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the OS of the cloud desktop.
+             * OsVersion.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -612,7 +612,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.
+             * Related.
              */
             public Builder related(String related) {
                 this.related = related;
@@ -620,7 +620,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp when the vulnerability was fixed. Unit: milliseconds.
+             * RepairTs.
              */
             public Builder repairTs(Long repairTs) {
                 this.repairTs = repairTs;
@@ -628,7 +628,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The code returned after the vulnerability is fixed.
+             * ResultCode.
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -636,7 +636,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned after the vulnerability is fixed.
+             * ResultMessage.
              */
             public Builder resultMessage(String resultMessage) {
                 this.resultMessage = resultMessage;
@@ -644,7 +644,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the vulnerability.
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -652,7 +652,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the vulnerability.
+             * Tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -660,7 +660,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

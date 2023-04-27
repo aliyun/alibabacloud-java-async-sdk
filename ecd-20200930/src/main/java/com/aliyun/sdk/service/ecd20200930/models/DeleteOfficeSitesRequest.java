@@ -70,7 +70,7 @@ public class DeleteOfficeSitesRequest extends Request {
         } 
 
         /**
-         * The IDs of the workspaces. You can specify up to 100 workspace IDs.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -79,7 +79,7 @@ public class DeleteOfficeSitesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -50,7 +50,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about patches of one or more vulnerabilities before you fix the current vulnerability.
+         * FrontPatchList.
          */
         public Builder frontPatchList(java.util.List < FrontPatchList> frontPatchList) {
             this.frontPatchList = frontPatchList;
@@ -58,7 +58,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The alias of the vulnerability.
+             * AliasName.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -118,7 +118,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -171,7 +171,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             private java.util.List < PatchList> patchList; 
 
             /**
-             * The ID of the cloud desktop.
+             * DesktopId.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -179,7 +179,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             }
 
             /**
-             * Details about patches.
+             * PatchList.
              */
             public Builder patchList(java.util.List < PatchList> patchList) {
                 this.patchList = patchList;

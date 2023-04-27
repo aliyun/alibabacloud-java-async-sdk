@@ -126,11 +126,20 @@ public class ListOfficeSiteUsersRequest extends Request {
         } 
 
         /**
-         * The character string for fuzzy search.
+         * The ID of the workspace. Only workspaces of the enterprise AD account type are supported.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * The organizational unit (OU) in the specified AD domain.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
             return this;
         }
 
@@ -142,15 +151,6 @@ public class ListOfficeSiteUsersRequest extends Request {
          * 
          * Default value: 10
          */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * The token that specifies the start point of the next query.
-         */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
@@ -158,7 +158,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The organizational unit (OU) in the specified AD domain.
+         * The ID of the region.
          */
         public Builder OUPath(String OUPath) {
             this.putQueryParameter("OUPath", OUPath);
@@ -167,7 +167,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The ID of the workspace. Only workspaces of the enterprise AD account type are supported.
+         * The operation that you want to perform. Set the value to ListOfficeSiteUsers.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -176,7 +176,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The character string for fuzzy search.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

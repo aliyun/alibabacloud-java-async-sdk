@@ -86,7 +86,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about CEN instances.
+         * The level of CIDR block overlapping. Valid value: REDUCED. This value indicates that the CIDR blocks can overlap with each other but must not be the same.
          */
         public Builder cens(java.util.List < Cens> cens) {
             this.cens = cens;
@@ -94,7 +94,12 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
+         * The status of the CEN instance. Valid values:
+         * <p>
+         * 
+         * *   Creating: The CEN instance is being created.
+         * *   Active: The CEN instance is running.
+         * *   Deleting: The CEN instance is being deleted.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +107,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The description of the CEN instance.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +115,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to DescribeCens.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of CEN instances returned.
+         * The IDs of the bandwidth plans that are associated with the CEN instance.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +163,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private String packageId; 
 
             /**
-             * The ID of the bandwidth plan that is associated with the CEN instance.
+             * PackageId.
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -211,7 +216,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the CEN instance.
+             * DescribeCens
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,7 +224,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the CEN instance.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -356,7 +361,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the CEN instance.
+             * The number of entries returned per page.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -364,7 +369,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CEN instance was created.
+             * The tag value of the CEN instance.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -372,7 +377,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the CEN instance.
+             * The tag key of the CEN instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -391,7 +396,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CEN instance.
+             * The ID of the request.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -399,7 +404,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the bandwidth plans that are associated with the CEN instance.
+             * PackageIds.
              */
             public Builder packageIds(java.util.List < PackageIds> packageIds) {
                 this.packageIds = packageIds;
@@ -407,7 +412,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The level of CIDR block overlapping. Valid value: REDUCED. This value indicates that the CIDR blocks can overlap with each other but must not be the same.
+             * The name of the CEN instance.
              */
             public Builder protectionLevel(String protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -415,12 +420,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CEN instance. Valid values:
-             * <p>
-             * 
-             * *   Creating: The CEN instance is being created.
-             * *   Active: The CEN instance is running.
-             * *   Deleting: The CEN instance is being deleted.
+             * The ID of the region.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -428,7 +428,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the CEN instance.
+             * The ID of the CEN instance.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

@@ -50,7 +50,7 @@ public class GetSpMetadataResponseBody extends TeaModel {
         private String spMetadata; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetSpMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of the SP.
+         * SpMetadata.
          */
         public Builder spMetadata(String spMetadata) {
             this.spMetadata = spMetadata;

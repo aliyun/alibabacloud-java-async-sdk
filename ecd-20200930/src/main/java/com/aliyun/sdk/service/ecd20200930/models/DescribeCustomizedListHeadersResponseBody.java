@@ -50,7 +50,7 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The headers.
+         * Headers.
          */
         public Builder headers(java.util.List < Headers> headers) {
             this.headers = headers;
@@ -58,7 +58,7 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
             private String headerName; 
 
             /**
-             * The display type of the header. You can call the `ModifyCustomizedListHeaders` operation to modify the display type of the header.
+             * DisplayType.
              */
             public Builder displayType(String displayType) {
                 this.displayType = displayType;
@@ -130,7 +130,7 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the header.
+             * HeaderKey.
              */
             public Builder headerKey(String headerKey) {
                 this.headerKey = headerKey;
@@ -138,7 +138,7 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the header.
+             * HeaderName.
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;

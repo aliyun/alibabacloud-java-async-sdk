@@ -126,7 +126,7 @@ public class ResetDesktopsRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.``
+         * DesktopGroupId.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -135,7 +135,7 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.
+         * DesktopId.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -144,7 +144,7 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -153,10 +153,7 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The billing method.
-         * <p>
-         * 
-         * > This parameter is available only when you reset desktop groups. If you leave this parameter empty, all cloud desktops in the specified desktop group are reset, regardless of how the cloud desktops are billed.
+         * PayType.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -165,7 +162,7 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +171,7 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The type of the disk that you want to reset.
+         * ResetType.
          */
         public Builder resetType(String resetType) {
             this.putQueryParameter("ResetType", resetType);

@@ -50,7 +50,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the vulnerability.
+         * The name of the vulnerability.
          */
         public Builder cves(java.util.List < Cves> cves) {
             this.cves = cves;
@@ -58,7 +58,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the region.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The ID of the vulnerability.
+             * The name of the Redhat Package Manager (RPM) package.
+             * <p>
+             * 
+             * You can call the [DescribeVulList](~~223907~~) operation to obtain the names of RPM packages.
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -142,7 +145,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Common Vulnerability Scoring System (CVSS) score of the vulnerability, which indicates the severity of the vulnerability. A larger value indicates a higher severity. Valid values: 0 to 10.
+             * CvssScore.
              */
             public Builder cvssScore(String cvssScore) {
                 this.cvssScore = cvssScore;
@@ -150,7 +153,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the vulnerability.
+             * The ID of the request.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -158,7 +161,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;

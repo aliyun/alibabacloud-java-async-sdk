@@ -459,11 +459,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Domain")
         private String domain;
 
+        @NameInMap("Policy")
+        private String policy;
+
         @NameInMap("RuleType")
         private String ruleType;
 
         private NetRedirectRule(Builder builder) {
             this.domain = builder.domain;
+            this.policy = builder.policy;
             this.ruleType = builder.ruleType;
         }
 
@@ -483,6 +487,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
          * @return ruleType
          */
         public String getRuleType() {
@@ -491,6 +502,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String domain; 
+            private String policy; 
             private String ruleType; 
 
             /**
@@ -498,6 +510,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder domain(String domain) {
                 this.domain = domain;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
                 return this;
             }
 
@@ -696,6 +716,24 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Clipboard")
         private String clipboard;
 
+        @NameInMap("CpuDownGradeDuration")
+        private Integer cpuDownGradeDuration;
+
+        @NameInMap("CpuProcessors")
+        private java.util.List < String > cpuProcessors;
+
+        @NameInMap("CpuProtectedMode")
+        private String cpuProtectedMode;
+
+        @NameInMap("CpuRateLimit")
+        private Integer cpuRateLimit;
+
+        @NameInMap("CpuSampleDuration")
+        private Integer cpuSampleDuration;
+
+        @NameInMap("CpuSingleRateLimit")
+        private Integer cpuSingleRateLimit;
+
         @NameInMap("DomainList")
         private String domainList;
 
@@ -728,6 +766,24 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("LocalDrive")
         private String localDrive;
+
+        @NameInMap("MemoryDownGradeDuration")
+        private Integer memoryDownGradeDuration;
+
+        @NameInMap("MemoryProcessors")
+        private java.util.List < String > memoryProcessors;
+
+        @NameInMap("MemoryProtectedMode")
+        private String memoryProtectedMode;
+
+        @NameInMap("MemoryRateLimit")
+        private Integer memoryRateLimit;
+
+        @NameInMap("MemorySampleDuration")
+        private Integer memorySampleDuration;
+
+        @NameInMap("MemorySingleRateLimit")
+        private Integer memorySingleRateLimit;
 
         @NameInMap("Name")
         private String name;
@@ -841,6 +897,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.cameraRedirect = builder.cameraRedirect;
             this.clientTypes = builder.clientTypes;
             this.clipboard = builder.clipboard;
+            this.cpuDownGradeDuration = builder.cpuDownGradeDuration;
+            this.cpuProcessors = builder.cpuProcessors;
+            this.cpuProtectedMode = builder.cpuProtectedMode;
+            this.cpuRateLimit = builder.cpuRateLimit;
+            this.cpuSampleDuration = builder.cpuSampleDuration;
+            this.cpuSingleRateLimit = builder.cpuSingleRateLimit;
             this.domainList = builder.domainList;
             this.domainResolveRule = builder.domainResolveRule;
             this.domainResolveRuleType = builder.domainResolveRuleType;
@@ -852,6 +914,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.html5FileTransfer = builder.html5FileTransfer;
             this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
             this.localDrive = builder.localDrive;
+            this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
+            this.memoryProcessors = builder.memoryProcessors;
+            this.memoryProtectedMode = builder.memoryProtectedMode;
+            this.memoryRateLimit = builder.memoryRateLimit;
+            this.memorySampleDuration = builder.memorySampleDuration;
+            this.memorySingleRateLimit = builder.memorySingleRateLimit;
             this.name = builder.name;
             this.netRedirect = builder.netRedirect;
             this.netRedirectRule = builder.netRedirectRule;
@@ -940,6 +1008,48 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpuDownGradeDuration
+         */
+        public Integer getCpuDownGradeDuration() {
+            return this.cpuDownGradeDuration;
+        }
+
+        /**
+         * @return cpuProcessors
+         */
+        public java.util.List < String > getCpuProcessors() {
+            return this.cpuProcessors;
+        }
+
+        /**
+         * @return cpuProtectedMode
+         */
+        public String getCpuProtectedMode() {
+            return this.cpuProtectedMode;
+        }
+
+        /**
+         * @return cpuRateLimit
+         */
+        public Integer getCpuRateLimit() {
+            return this.cpuRateLimit;
+        }
+
+        /**
+         * @return cpuSampleDuration
+         */
+        public Integer getCpuSampleDuration() {
+            return this.cpuSampleDuration;
+        }
+
+        /**
+         * @return cpuSingleRateLimit
+         */
+        public Integer getCpuSingleRateLimit() {
+            return this.cpuSingleRateLimit;
+        }
+
+        /**
          * @return domainList
          */
         public String getDomainList() {
@@ -1014,6 +1124,48 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getLocalDrive() {
             return this.localDrive;
+        }
+
+        /**
+         * @return memoryDownGradeDuration
+         */
+        public Integer getMemoryDownGradeDuration() {
+            return this.memoryDownGradeDuration;
+        }
+
+        /**
+         * @return memoryProcessors
+         */
+        public java.util.List < String > getMemoryProcessors() {
+            return this.memoryProcessors;
+        }
+
+        /**
+         * @return memoryProtectedMode
+         */
+        public String getMemoryProtectedMode() {
+            return this.memoryProtectedMode;
+        }
+
+        /**
+         * @return memoryRateLimit
+         */
+        public Integer getMemoryRateLimit() {
+            return this.memoryRateLimit;
+        }
+
+        /**
+         * @return memorySampleDuration
+         */
+        public Integer getMemorySampleDuration() {
+            return this.memorySampleDuration;
+        }
+
+        /**
+         * @return memorySingleRateLimit
+         */
+        public Integer getMemorySingleRateLimit() {
+            return this.memorySingleRateLimit;
         }
 
         /**
@@ -1268,6 +1420,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String cameraRedirect; 
             private java.util.List < ClientTypes> clientTypes; 
             private String clipboard; 
+            private Integer cpuDownGradeDuration; 
+            private java.util.List < String > cpuProcessors; 
+            private String cpuProtectedMode; 
+            private Integer cpuRateLimit; 
+            private Integer cpuSampleDuration; 
+            private Integer cpuSingleRateLimit; 
             private String domainList; 
             private java.util.List < DomainResolveRule> domainResolveRule; 
             private String domainResolveRuleType; 
@@ -1279,6 +1437,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String html5FileTransfer; 
             private String internetCommunicationProtocol; 
             private String localDrive; 
+            private Integer memoryDownGradeDuration; 
+            private java.util.List < String > memoryProcessors; 
+            private String memoryProtectedMode; 
+            private Integer memoryRateLimit; 
+            private Integer memorySampleDuration; 
+            private Integer memorySingleRateLimit; 
             private String name; 
             private String netRedirect; 
             private java.util.List < NetRedirectRule> netRedirectRule; 
@@ -1360,6 +1524,54 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder clipboard(String clipboard) {
                 this.clipboard = clipboard;
+                return this;
+            }
+
+            /**
+             * CpuDownGradeDuration.
+             */
+            public Builder cpuDownGradeDuration(Integer cpuDownGradeDuration) {
+                this.cpuDownGradeDuration = cpuDownGradeDuration;
+                return this;
+            }
+
+            /**
+             * CpuProcessors.
+             */
+            public Builder cpuProcessors(java.util.List < String > cpuProcessors) {
+                this.cpuProcessors = cpuProcessors;
+                return this;
+            }
+
+            /**
+             * CpuProtectedMode.
+             */
+            public Builder cpuProtectedMode(String cpuProtectedMode) {
+                this.cpuProtectedMode = cpuProtectedMode;
+                return this;
+            }
+
+            /**
+             * CpuRateLimit.
+             */
+            public Builder cpuRateLimit(Integer cpuRateLimit) {
+                this.cpuRateLimit = cpuRateLimit;
+                return this;
+            }
+
+            /**
+             * CpuSampleDuration.
+             */
+            public Builder cpuSampleDuration(Integer cpuSampleDuration) {
+                this.cpuSampleDuration = cpuSampleDuration;
+                return this;
+            }
+
+            /**
+             * CpuSingleRateLimit.
+             */
+            public Builder cpuSingleRateLimit(Integer cpuSingleRateLimit) {
+                this.cpuSingleRateLimit = cpuSingleRateLimit;
                 return this;
             }
 
@@ -1448,6 +1660,54 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder localDrive(String localDrive) {
                 this.localDrive = localDrive;
+                return this;
+            }
+
+            /**
+             * MemoryDownGradeDuration.
+             */
+            public Builder memoryDownGradeDuration(Integer memoryDownGradeDuration) {
+                this.memoryDownGradeDuration = memoryDownGradeDuration;
+                return this;
+            }
+
+            /**
+             * MemoryProcessors.
+             */
+            public Builder memoryProcessors(java.util.List < String > memoryProcessors) {
+                this.memoryProcessors = memoryProcessors;
+                return this;
+            }
+
+            /**
+             * MemoryProtectedMode.
+             */
+            public Builder memoryProtectedMode(String memoryProtectedMode) {
+                this.memoryProtectedMode = memoryProtectedMode;
+                return this;
+            }
+
+            /**
+             * MemoryRateLimit.
+             */
+            public Builder memoryRateLimit(Integer memoryRateLimit) {
+                this.memoryRateLimit = memoryRateLimit;
+                return this;
+            }
+
+            /**
+             * MemorySampleDuration.
+             */
+            public Builder memorySampleDuration(Integer memorySampleDuration) {
+                this.memorySampleDuration = memorySampleDuration;
+                return this;
+            }
+
+            /**
+             * MemorySingleRateLimit.
+             */
+            public Builder memorySingleRateLimit(Integer memorySingleRateLimit) {
+                this.memorySingleRateLimit = memorySingleRateLimit;
                 return this;
             }
 

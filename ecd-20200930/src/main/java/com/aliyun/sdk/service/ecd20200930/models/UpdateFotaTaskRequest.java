@@ -84,7 +84,7 @@ public class UpdateFotaTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -93,7 +93,7 @@ public class UpdateFotaTaskRequest extends Request {
         }
 
         /**
-         * The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the value of this parameter.
+         * TaskUid.
          */
         public Builder taskUid(String taskUid) {
             this.putQueryParameter("TaskUid", taskUid);
@@ -102,7 +102,7 @@ public class UpdateFotaTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically push the image update task.
+         * UserStatus.
          */
         public Builder userStatus(String userStatus) {
             this.putQueryParameter("UserStatus", userStatus);

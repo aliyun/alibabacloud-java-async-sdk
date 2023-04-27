@@ -50,7 +50,7 @@ public class DescribeFlowMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring data.
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeFlowMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

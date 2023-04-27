@@ -50,7 +50,7 @@ public class GetOfficeSiteSsoStatusResponseBody extends TeaModel {
         private Boolean ssoStatus; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetOfficeSiteSsoStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether SSO is enabled.
+         * SsoStatus.
          */
         public Builder ssoStatus(Boolean ssoStatus) {
             this.ssoStatus = ssoStatus;

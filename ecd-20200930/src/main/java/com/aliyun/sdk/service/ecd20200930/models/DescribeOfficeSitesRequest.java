@@ -126,11 +126,7 @@ public class DescribeOfficeSitesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -139,7 +135,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -148,7 +144,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The IDs of the workspaces. You can specify 1 to 100 IDs of workspaces.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -157,7 +153,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The account type of the workspace.
+         * OfficeSiteType.
          */
         public Builder officeSiteType(String officeSiteType) {
             this.putQueryParameter("OfficeSiteType", officeSiteType);
@@ -166,7 +162,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +171,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The state of the workspace.
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

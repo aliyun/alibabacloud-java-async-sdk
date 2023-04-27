@@ -50,7 +50,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         private java.util.List < SecurityEventOperations> securityEventOperations; 
 
         /**
-         * The ID of the request.
+         * The ID of the alert.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The operations performed on the alert.
+         * The ID of the request.
          */
         public Builder securityEventOperations(java.util.List < SecurityEventOperations> securityEventOperations) {
             this.securityEventOperations = securityEventOperations;
@@ -122,19 +122,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private Boolean userCanOperate; 
 
             /**
-             * The code of the operation performed on the alert. Valid values:
-             * <p>
-             * 
-             * *   mark_mis_info: adds the alert to the whitelist without configuring rules. This operation is triggered by adding multiple alerts to the whitelist at a time.
-             * *   advance_mark_mis_inf: adds the alert to the whitelist by configuring advanced rules.
-             * *   defense_mark_mis_info: adds the alert to the whitelist by configuring precise defense rules.
-             * *   rm_mark_mis_info: removes the alert from the whitelist.
-             * *   rm_defense_mark_mis_info: removes the alert from the whitelist configured with precise defense rules.
-             * *   manual_handled: manually handles the alert.
-             * *   ignore: ignores the alert.
-             * *   quara: quarantines the source file of the malicious process.
-             * *   block_ip: blocks access from the source IP address.
-             * *   kill_and_quara: terminates the malicious process and quarantines the source file.
+             * OperationCode.
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -142,7 +130,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the operation.
+             * The operation that you want to perform. Set the value to DescribeSecurityEventOperations.
              */
             public Builder operationParams(String operationParams) {
                 this.operationParams = operationParams;
@@ -150,11 +138,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert can be handled. Valid values:
-             * <p>
-             * 
-             * *   true: The alert can be handled.
-             * *   false: The alert cannot be handled.
+             * UserCanOperate.
              */
             public Builder userCanOperate(Boolean userCanOperate) {
                 this.userCanOperate = userCanOperate;

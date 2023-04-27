@@ -86,7 +86,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the NAS file system.
+         * FileSystemId.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -94,7 +94,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the NAS file system.
+         * FileSystemName.
          */
         public Builder fileSystemName(String fileSystemName) {
             this.fileSystemName = fileSystemName;
@@ -102,7 +102,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name of the mount target.
+         * MountTargetDomain.
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.mountTargetDomain = mountTargetDomain;
@@ -110,7 +110,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the workspace.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
@@ -118,7 +118,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

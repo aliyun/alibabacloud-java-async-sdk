@@ -113,7 +113,7 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         } 
 
         /**
-         * The ID of the application for the coordinate permissions.
+         * CoId.
          */
         public Builder coId(String coId) {
             this.putQueryParameter("CoId", coId);
@@ -122,7 +122,7 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * The ID of the end user.
+         * EndUserId.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -131,7 +131,7 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,10 +140,7 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * The type of user who requires the coordinate permissions.
-         * <p>
-         * 
-         * Valid value: TENANT_ADMIN.
+         * UserType.
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);
@@ -152,7 +149,7 @@ public class ApplyCoordinatePrivilegeRequest extends Request {
         }
 
         /**
-         * The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click **About** on the client logon page to view the identifier of the client.
+         * Uuid.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

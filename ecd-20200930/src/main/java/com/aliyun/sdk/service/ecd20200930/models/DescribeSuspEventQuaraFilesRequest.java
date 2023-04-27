@@ -112,12 +112,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * The operation that you want to perform. Set the value to DescribeSuspEventQuaraFiles.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -126,7 +121,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The type of the alert.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -135,10 +130,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
-         * 
-         * Default value: 20.
+         * The name of the cloud desktop.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +139,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,15 +148,7 @@ public class DescribeSuspEventQuaraFilesRequest extends Request {
         }
 
         /**
-         * The status of the quarantined file. Valid values:
-         * <p>
-         * 
-         * *   quaraFailed: The file failed to be quarantined.
-         * *   quaraDone: The file is quarantined.
-         * *   quaraing: The file is being quarantined.
-         * *   rollbackFailed: Quarantine for the file failed to be canceled.
-         * *   rollbackDone: Quarantine for the file is canceled.
-         * *   rollbacking: Quarantine for the file is being canceled.
+         * The time when the quarantined file was updated.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

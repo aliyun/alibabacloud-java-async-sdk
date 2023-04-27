@@ -113,7 +113,7 @@ public class AttachCenRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * The ID of the request.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -122,11 +122,7 @@ public class AttachCenRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
-         * <p>
-         * 
-         * *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to the Alibaba Cloud account, skip this parameter.
-         * *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.
+         * The operation that you want to perform. Set the value to **AttachCen**.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -135,7 +131,7 @@ public class AttachCenRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -144,7 +140,7 @@ public class AttachCenRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +149,7 @@ public class AttachCenRequest extends Request {
         }
 
         /**
-         * The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.
+         * The ID of the workspace.
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

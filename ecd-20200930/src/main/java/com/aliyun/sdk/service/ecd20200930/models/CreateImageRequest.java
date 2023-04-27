@@ -168,7 +168,7 @@ public class CreateImageRequest extends Request {
         } 
 
         /**
-         * Specifies whether to clear private data of users. If you set AutoCleanUserdata to `true`, the custom image clears the data directories, excluding the `Administrator` and `Public` directories, in the `C:\Users` directory.
+         * AutoCleanUserdata.
          */
         public Builder autoCleanUserdata(Boolean autoCleanUserdata) {
             this.putQueryParameter("AutoCleanUserdata", autoCleanUserdata);
@@ -177,7 +177,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -186,7 +186,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop.
+         * DesktopId.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -195,7 +195,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The disk data that is contained in the custom image.
+         * DiskType.
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -204,7 +204,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The name of the custom image. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * ImageName.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -213,7 +213,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * This parameter is not available to the public.
+         * ImageResourceType.
          */
         public Builder imageResourceType(String imageResourceType) {
             this.putQueryParameter("ImageResourceType", imageResourceType);
@@ -222,7 +222,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +231,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -240,7 +240,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * SnapshotIds.
          */
         public Builder snapshotIds(java.util.List < String > snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);

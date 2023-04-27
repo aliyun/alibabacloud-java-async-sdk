@@ -70,7 +70,7 @@ public class DeleteNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * The IDs of Internet access packages.
+         * NetworkPackageId.
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -79,7 +79,7 @@ public class DeleteNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * DeleteNetworkPackages
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

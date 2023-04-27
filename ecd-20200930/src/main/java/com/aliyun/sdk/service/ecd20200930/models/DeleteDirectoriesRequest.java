@@ -70,7 +70,7 @@ public class DeleteDirectoriesRequest extends Request {
         } 
 
         /**
-         * The IDs of directories.
+         * DirectoryId.
          */
         public Builder directoryId(java.util.List < String > directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -79,7 +79,7 @@ public class DeleteDirectoriesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The operation that you want to perform. Set the value to DeleteDirectories.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

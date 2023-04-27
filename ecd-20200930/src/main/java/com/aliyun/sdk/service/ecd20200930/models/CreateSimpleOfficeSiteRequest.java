@@ -223,7 +223,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         } 
 
         /**
-         * The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set `EnableInternetAccess` to `true`.
+         * Specifies whether to enable trusted device verification.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -244,11 +244,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.
-         * <p>
-         * 
-         * - If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.
-         * - If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.
+         * The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -257,7 +253,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.
+         * Specifies whether the workspace is a CloudBox-based workspace.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -266,7 +262,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether the workspace is a CloudBox-based workspace.
+         * Creates a workspace of the convenience account type.
          */
         public Builder cloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
             this.putQueryParameter("CloudBoxOfficeSite", cloudBoxOfficeSite);
@@ -275,10 +271,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The method that is used to connect the client to cloud desktops.
-         * <p>
-         * 
-         * > VPC connections are established by using Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.
+         * The ID of the workspace.
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -287,7 +280,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -296,7 +289,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access. By default, Internet access is not enabled.
+         * Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.
          */
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.putQueryParameter("EnableInternetAccess", enableInternetAccess);
@@ -305,7 +298,11 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable trusted device verification.
+         * The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.
+         * <p>
+         * 
+         * *   If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.
+         * *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.
          */
         public Builder needVerifyZeroDevice(Boolean needVerifyZeroDevice) {
             this.putQueryParameter("NeedVerifyZeroDevice", needVerifyZeroDevice);
@@ -314,7 +311,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set `EnableInternetAccess` to `true`.
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -323,7 +320,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -332,7 +329,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The IDs of the vSwitches in the VPC. This parameter is required when you create a CloudBox-based workspace.
+         * The ID of the request.
          */
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

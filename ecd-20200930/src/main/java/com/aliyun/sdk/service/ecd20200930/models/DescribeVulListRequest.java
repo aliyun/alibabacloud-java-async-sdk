@@ -183,7 +183,7 @@ public class DescribeVulListRequest extends Request {
         } 
 
         /**
-         * The alias of the vulnerability.
+         * AliasName.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -192,11 +192,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * *   Pages start from page 1.
-         * *   Default value: 1.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -205,7 +201,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The processing status of the vulnerability.
+         * Dealed.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -214,7 +210,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response.
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -223,7 +219,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The name of the vulnerability.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -232,7 +228,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The priority to fix the detected vulnerability or the risk level of the vulnerability.
+         * Necessity.
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -241,7 +237,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -250,9 +246,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.\
-         * <p>
-         * Default value: 20.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -261,7 +255,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +264,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * The type of the detected vulnerability.
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

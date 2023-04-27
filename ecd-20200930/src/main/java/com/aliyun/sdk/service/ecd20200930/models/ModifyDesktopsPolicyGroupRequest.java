@@ -98,7 +98,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud desktops. You can specify one or more cloud desktops. The value is a JSON array.
+         * DesktopId.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -107,7 +107,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * PolicyGroupId.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -116,7 +116,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the policies.
+         * PolicyGroupIds.
          */
         public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
@@ -125,7 +125,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

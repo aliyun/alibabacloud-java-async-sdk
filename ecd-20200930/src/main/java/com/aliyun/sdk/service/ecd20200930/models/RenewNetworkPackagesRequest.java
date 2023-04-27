@@ -126,13 +126,7 @@ public class RenewNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically complete the payment. Valid values:
-         * <p>
-         * 
-         * *   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.
-         * *   `false`: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the **Orders** page.
-         * 
-         * Default value: `true`.
+         * AutoPay.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -141,7 +135,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the Internet access package. You can specify 1 to 100 IDs of Internet access packages.
+         * NetworkPackageId.
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -150,14 +144,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The renewal period. Valid values of this parameter are determined by the value of the `PeriodUnit` parameter.
-         * <p>
-         * 
-         * *   Valid value when the `PeriodUnit` parameter is set to `Week`: 1
-         * *   Valid values when the `PeriodUnit` parameter is set to `Month`: 1, 2, 3, and 6
-         * *   Valid values when the `PeriodUnit` parameter is set to `Year`: 1, 2, and 3
-         * 
-         * Default value: 1.
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -166,7 +153,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The unit of the renewal period. Default value: Month.
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -175,7 +162,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the promotion. You can call the `GetResourcePrice` operation to query the promotion ID.
+         * PromotionId.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -184,7 +171,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

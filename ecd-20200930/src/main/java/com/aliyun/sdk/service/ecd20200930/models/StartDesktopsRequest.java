@@ -70,7 +70,7 @@ public class StartDesktopsRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud desktops. You can specify up to 100 IDs.
+         * StartDesktops
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -79,7 +79,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The IDs of the cloud desktops. You can specify up to 100 IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

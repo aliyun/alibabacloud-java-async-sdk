@@ -55,7 +55,7 @@ public class DescribeSuspEventOverviewRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

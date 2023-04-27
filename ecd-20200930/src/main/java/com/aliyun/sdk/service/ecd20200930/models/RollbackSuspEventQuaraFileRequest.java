@@ -84,7 +84,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop.
+         * DesktopId.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -105,7 +105,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The operation that you want to perform. Set the value to RollbackSuspEventQuaraFile.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

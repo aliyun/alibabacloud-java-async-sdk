@@ -98,7 +98,7 @@ public class SetIdpMetadataRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * The ID of the request.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -107,7 +107,7 @@ public class SetIdpMetadataRequest extends Request {
         }
 
         /**
-         * The metadata of the IdP.
+         * IdpMetadata.
          */
         public Builder idpMetadata(String idpMetadata) {
             this.putQueryParameter("IdpMetadata", idpMetadata);
@@ -116,7 +116,7 @@ public class SetIdpMetadataRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The operation that you want to perform. Set the value to SetIdpMetadata.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -125,7 +125,7 @@ public class SetIdpMetadataRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The metadata of the IdP.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

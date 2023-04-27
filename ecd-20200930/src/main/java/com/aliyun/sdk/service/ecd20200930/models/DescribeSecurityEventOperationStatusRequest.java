@@ -85,7 +85,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * The ID of the task to handle the alerts.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +103,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * The ID of the task to handle the alerts.
+         * The ID of the alert.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -113,7 +113,7 @@ public class DescribeVulDetailsRequest extends Request {
         } 
 
         /**
-         * The alias of the vulnerability.
+         * Details about the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -122,11 +122,7 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The Common Vulnerability Scoring System (CVSS) score of the vulnerability, which indicates the severity of the vulnerability. A larger value indicates a higher severity. Valid values: 0 to 10.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -135,10 +131,7 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * The name of the Redhat Package Manager (RPM) package.
-         * <p>
-         * 
-         * You can call the [DescribeVulList](~~223907~~) operation to obtain the names of RPM packages.
+         * The alias of the vulnerability.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,7 +140,7 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the vulnerability.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,11 +149,7 @@ public class DescribeVulDetailsRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
-         * 
-         * *   cve: Linux software vulnerability
-         * *   sys: Windows system vulnerability
+         * The operation that you want to perform. Set the value to DescribeVulDetails.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -98,7 +98,7 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop.
+         * DesktopId.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -107,11 +107,7 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -120,7 +116,7 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Set the value to the NextToken value that is returned from the last call.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -129,7 +125,7 @@ public class DescribeImageModifiedRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

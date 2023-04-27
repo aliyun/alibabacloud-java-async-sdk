@@ -70,7 +70,7 @@ public class ResetSnapshotRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class ResetSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot.
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

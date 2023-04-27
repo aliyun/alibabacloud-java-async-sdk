@@ -50,7 +50,7 @@ public class ClonePolicyGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the new policy.
+         * PolicyGroupId.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.policyGroupId = policyGroupId;
@@ -58,7 +58,7 @@ public class ClonePolicyGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -168,7 +168,7 @@ public class DescribeSuspEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert event to which the exception belongs.
+         * AlarmUniqueInfo.
          */
         public Builder alarmUniqueInfo(String alarmUniqueInfo) {
             this.putQueryParameter("AlarmUniqueInfo", alarmUniqueInfo);
@@ -177,7 +177,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -186,11 +186,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The processing status of the exception. Valid values:
-         * <p>
-         * 
-         * *   N: not processed
-         * *   Y: processed
+         * Dealed.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -199,11 +195,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -212,12 +204,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The severity of the exception. Valid values:
-         * <p>
-         * 
-         * *   serious: The exception is urgent.
-         * *   suspicious: The exception is a warning
-         * *   remind: The exception is a suggestion.
+         * Levels.
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -226,7 +213,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -235,7 +222,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +231,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The type of the alert event to which the exception belongs.
+         * ParentEventType.
          */
         public Builder parentEventType(String parentEventType) {
             this.putQueryParameter("ParentEventType", parentEventType);
@@ -253,7 +240,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

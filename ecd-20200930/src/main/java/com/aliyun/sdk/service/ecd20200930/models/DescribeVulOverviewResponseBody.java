@@ -74,7 +74,7 @@ public class DescribeVulOverviewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of high-risk vulnerabilities.
+         * AsapCount.
          */
         public Builder asapCount(Integer asapCount) {
             this.asapCount = asapCount;
@@ -82,7 +82,7 @@ public class DescribeVulOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The number of medium-risk vulnerabilities.
+         * The operation that you want to perform. Set the value to DescribeVulOverview.
          */
         public Builder laterCount(Integer laterCount) {
             this.laterCount = laterCount;
@@ -90,7 +90,7 @@ public class DescribeVulOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The number of low-risk vulnerabilities.
+         * The ID of the request.
          */
         public Builder nntfCount(Integer nntfCount) {
             this.nntfCount = nntfCount;
@@ -98,7 +98,7 @@ public class DescribeVulOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

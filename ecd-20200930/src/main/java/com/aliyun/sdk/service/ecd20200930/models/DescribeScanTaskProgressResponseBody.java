@@ -62,7 +62,7 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
         private String taskStatus; 
 
         /**
-         * The time when the task was created.
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -70,7 +70,7 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The operation that you want to perform. Set the value to DescribeScanTaskProgress.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,13 +78,7 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
-         * 
-         * *   init: The task is being initialized.
-         * *   Processing: The task is in progress.
-         * *   Success: The task is completed.
-         * *   Failed: The task failed.
+         * TaskStatus.
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;

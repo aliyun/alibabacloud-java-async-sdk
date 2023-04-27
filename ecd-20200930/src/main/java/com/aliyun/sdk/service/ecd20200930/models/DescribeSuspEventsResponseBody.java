@@ -86,7 +86,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the exceptions.
+         * SuspEvents.
          */
         public Builder suspEvents(java.util.List < SuspEvents> suspEvents) {
             this.suspEvents = suspEvents;
@@ -118,7 +118,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of exceptions returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * The original property name.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -214,7 +214,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The property name that is displayed after the Name parameter was translated.
+             * NameDisplay.
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -222,7 +222,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The format in which the property value is displayed. The property value can be a string or displayed in the HTML or Markdown format.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -230,7 +230,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The property value.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -238,7 +238,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The property value that is displayed after the Value parameter was translated.
+             * ValueDisplay.
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -531,7 +531,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String uniqueInfo; 
 
             /**
-             * The name of the alert event to which the exception belongs.
+             * AlarmEventName.
              */
             public Builder alarmEventName(String alarmEventName) {
                 this.alarmEventName = alarmEventName;
@@ -539,7 +539,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert event with which the exception is associated.
+             * AlarmEventNameDisplay.
              */
             public Builder alarmEventNameDisplay(String alarmEventNameDisplay) {
                 this.alarmEventNameDisplay = alarmEventNameDisplay;
@@ -547,7 +547,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert event to which the exception belongs.
+             * AlarmEventType.
              */
             public Builder alarmEventType(String alarmEventType) {
                 this.alarmEventType = alarmEventType;
@@ -555,7 +555,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert event to which the exception belongs.
+             * AlarmEventTypeDisplay.
              */
             public Builder alarmEventTypeDisplay(String alarmEventTypeDisplay) {
                 this.alarmEventTypeDisplay = alarmEventTypeDisplay;
@@ -563,7 +563,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert event to which the exception belongs.
+             * AlarmUniqueInfo.
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -571,11 +571,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exception can be processed online. Valid values:
-             * <p>
-             * 
-             * *   true: The exception can be processed online.
-             * *   false: The exception cannot be processed online.
+             * CanBeDealOnLine.
              */
             public Builder canBeDealOnLine(String canBeDealOnLine) {
                 this.canBeDealOnLine = canBeDealOnLine;
@@ -583,11 +579,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exception can be ignored. Valid values:
-             * <p>
-             * 
-             * *   true: The exception can be ignored.
-             * *   false: The exception cannot be ignored.
+             * CanCancelFault.
              */
             public Builder canCancelFault(Boolean canCancelFault) {
                 this.canCancelFault = canCancelFault;
@@ -595,7 +587,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of data. This parameter can be ignored.
+             * DataSource.
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -603,7 +595,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The impact of the exception.
+             * Desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -611,7 +603,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the affected cloud desktop.
+             * DesktopId.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -619,7 +611,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the affected cloud desktop.
+             * DesktopName.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -627,7 +619,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the exceptions.
+             * Details.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -635,16 +627,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the exception. Valid values:
-             * <p>
-             * 
-             * *   1: PENDING
-             * *   2: IGNORE
-             * *   4: HANDLED
-             * *   8: FAULT
-             * *   16: DEALING
-             * *   32: DONE
-             * *   64: EXPIRE
+             * EventStatus.
              */
             public Builder eventStatus(Integer eventStatus) {
                 this.eventStatus = eventStatus;
@@ -652,7 +635,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the exception.
+             * EventSubType.
              */
             public Builder eventSubType(String eventSubType) {
                 this.eventSubType = eventSubType;
@@ -660,7 +643,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the exception.
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -668,7 +651,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last exception occurred.
+             * LastTime.
              */
             public Builder lastTime(String lastTime) {
                 this.lastTime = lastTime;
@@ -676,12 +659,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the exception. Valid values:
-             * <p>
-             * 
-             * *   serious: The exception is urgent.
-             * *   suspicious: The exception is a warning
-             * *   remind: The exception is a suggestion.
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -689,7 +667,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the exception.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -697,7 +675,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the exception first occurred.
+             * OccurrenceTime.
              */
             public Builder occurrenceTime(String occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
@@ -705,7 +683,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The handling result code of the exception.
+             * OperateErrorCode.
              */
             public Builder operateErrorCode(String operateErrorCode) {
                 this.operateErrorCode = operateErrorCode;
@@ -713,7 +691,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The handling remarks on the exception.
+             * OperateMsg.
              */
             public Builder operateMsg(String operateMsg) {
                 this.operateMsg = operateMsg;
@@ -721,7 +699,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the exception.
+             * UniqueInfo.
              */
             public Builder uniqueInfo(String uniqueInfo) {
                 this.uniqueInfo = uniqueInfo;

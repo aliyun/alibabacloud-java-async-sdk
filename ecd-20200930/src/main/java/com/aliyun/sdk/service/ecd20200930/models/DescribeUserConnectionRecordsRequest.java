@@ -225,7 +225,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         } 
 
         /**
-         * The duration when the cloud desktop is connected, which is the minimum value for condition filtering.
+         * ConnectDurationFrom.
          */
         public Builder connectDurationFrom(Long connectDurationFrom) {
             this.putQueryParameter("ConnectDurationFrom", connectDurationFrom);
@@ -234,7 +234,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The duration when the cloud desktop is connected, which is the maximum value for condition filtering.
+         * ConnectDurationTo.
          */
         public Builder connectDurationTo(Long connectDurationTo) {
             this.putQueryParameter("ConnectDurationTo", connectDurationTo);
@@ -243,7 +243,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The time when the cloud desktop stops to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.
+         * ConnectEndTimeFrom.
          */
         public Builder connectEndTimeFrom(Long connectEndTimeFrom) {
             this.putQueryParameter("ConnectEndTimeFrom", connectEndTimeFrom);
@@ -252,7 +252,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The time when the cloud desktop stops to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.
+         * ConnectEndTimeTo.
          */
         public Builder connectEndTimeTo(Long connectEndTimeTo) {
             this.putQueryParameter("ConnectEndTimeTo", connectEndTimeTo);
@@ -261,7 +261,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The time when the cloud desktop starts to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.
+         * ConnectStartTimeFrom.
          */
         public Builder connectStartTimeFrom(Long connectStartTimeFrom) {
             this.putQueryParameter("ConnectStartTimeFrom", connectStartTimeFrom);
@@ -270,7 +270,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The time when the cloud desktop starts to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.
+         * ConnectStartTimeTo.
          */
         public Builder connectStartTimeTo(Long connectStartTimeTo) {
             this.putQueryParameter("ConnectStartTimeTo", connectStartTimeTo);
@@ -279,7 +279,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group.
+         * DesktopGroupId.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -288,7 +288,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop.
+         * DesktopId.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -297,7 +297,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The user that you want to authorize to use the desktop group.
+         * EndUserId.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -306,11 +306,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The account type of the user. Valid values:
-         * <p>
-         * 
-         * *   SIMPLE: the convenience account type
-         * *   AD_CONNECTOR: the enterprise Active Directory (AD) account type
+         * EndUserType.
          */
         public Builder endUserType(String endUserType) {
             this.putQueryParameter("EndUserType", endUserType);
@@ -319,7 +315,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -328,7 +324,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -337,7 +333,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

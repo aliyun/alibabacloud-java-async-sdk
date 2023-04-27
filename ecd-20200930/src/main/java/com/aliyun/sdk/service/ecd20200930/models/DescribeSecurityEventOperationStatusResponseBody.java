@@ -62,7 +62,12 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         private String taskStatus; 
 
         /**
-         * The ID of the request.
+         * The processing status of the alert. Valid values:
+         * <p>
+         * 
+         * *   Processing: The alert is being processed.
+         * *   Success: The alert is processed.
+         * *   Failed: The alert failed to be processed.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +75,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the processing status of alerts.
+         * The ID of the request.
          */
         public Builder securityEventOperationStatuses(java.util.List < SecurityEventOperationStatuses> securityEventOperationStatuses) {
             this.securityEventOperationStatuses = securityEventOperationStatuses;
@@ -78,13 +83,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task that handles the alerts. Valid values:
-         * <p>
-         * 
-         * *   Processing: The task is being executed.
-         * *   Success: The task is executed.
-         * *   Failure: The task failed.
-         * *   Pending: The task is waiting to be executed.
+         * The code that indicates the processing result of the alert.
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -148,7 +147,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The code that indicates the processing result of the alert.
+             * ErrorCode.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -156,7 +155,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert.
+             * SecurityEventId.
              */
             public Builder securityEventId(Long securityEventId) {
                 this.securityEventId = securityEventId;
@@ -164,12 +163,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The processing status of the alert. Valid values:
-             * <p>
-             * 
-             * *   Processing: The alert is being processed.
-             * *   Success: The alert is processed.
-             * *   Failed: The alert failed to be processed.
+             * The operation that you want to perform. Set the value to DescribeSecurityEventOperationStatus.
              */
             public Builder status(String status) {
                 this.status = status;

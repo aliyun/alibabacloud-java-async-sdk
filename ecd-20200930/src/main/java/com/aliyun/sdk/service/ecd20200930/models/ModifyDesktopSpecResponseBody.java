@@ -50,7 +50,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +58,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

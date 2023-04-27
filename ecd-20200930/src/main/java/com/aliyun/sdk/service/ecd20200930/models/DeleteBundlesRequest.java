@@ -70,7 +70,7 @@ public class DeleteBundlesRequest extends Request {
         } 
 
         /**
-         * The desktop bundles that you want to delete.
+         * BundleId.
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -79,7 +79,7 @@ public class DeleteBundlesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the desktop bundles to delete are located.
+         * DeleteBundles
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

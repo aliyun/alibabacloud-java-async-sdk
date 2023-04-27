@@ -55,7 +55,7 @@ public class DescribeVulOverviewRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * The number of medium-risk vulnerabilities.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

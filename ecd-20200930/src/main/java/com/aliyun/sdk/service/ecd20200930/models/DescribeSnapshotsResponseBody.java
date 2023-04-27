@@ -62,7 +62,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private java.util.List < Snapshots> snapshots; 
 
         /**
-         * The token that is used to start the next query. If the value of this parameter is empty, all results are returned.
+         * If the NextToken parameter is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the snapshots.
+         * The queried snapshots.
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -330,7 +330,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The user that creates the snapshot.
+             * The user that creates the cloud desktop.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -346,7 +346,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the snapshot.
+             * The snapshot description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -362,7 +362,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * The cloud desktop name.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -370,7 +370,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cloud desktop. Valid values:
+             * The cloud desktop state. Valid values:
              * <p>
              * 
              * *   Pending: The cloud desktop is pending.
@@ -388,7 +388,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the snapshot creation. Unit: percentage (%).
+             * The progress of creating the snapshot. Unit: percentage (%).
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -396,7 +396,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol. Valid values:
+             * The protocol. Valid values:
              * <p>
              * 
              * *   ASP
@@ -419,7 +419,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * The snapshot ID.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -427,7 +427,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the snapshot.
+             * The snapshot name.
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -435,10 +435,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of snapshot. Valid values:
+             * The snapshot type. Valid values:
              * <p>
              * 
-             * *   AUTO: auto snapshot
+             * *   AUTO: automatic snapshot
              * *   USER: manual snapshot
              */
             public Builder snapshotType(String snapshotType) {

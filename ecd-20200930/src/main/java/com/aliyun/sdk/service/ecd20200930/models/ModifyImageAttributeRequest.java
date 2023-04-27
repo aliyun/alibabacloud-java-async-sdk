@@ -98,7 +98,7 @@ public class ModifyImageAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the image.
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -107,7 +107,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * The ID of the request.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -116,7 +116,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The name of the image.
+         * The operation that you want to perform. Set the value to ModifyImageAttribute.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -125,7 +125,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the image.
+         * The description of the image.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

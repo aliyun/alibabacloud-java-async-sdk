@@ -70,7 +70,7 @@ public class DeleteNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * The IDs of the NAS file systems.
+         * FileSystemId.
          */
         public Builder fileSystemId(java.util.List < String > fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +79,7 @@ public class DeleteNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -126,7 +126,7 @@ public class ListDirectoryUsersRequest extends Request {
         } 
 
         /**
-         * The ID of the AD directory.
+         * DirectoryId.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -135,7 +135,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The query string for fuzzy query. If you specify this parameter, the system returns all results that contain the string.
+         * Filter.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -144,11 +144,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * *   Maximum value: 100
-         * *   Default value: 10
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -157,7 +153,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -166,7 +162,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The organizational unit (OU) of the AD domain to which users belong. You can call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain the OU.
+         * OUPath.
          */
         public Builder OUPath(String OUPath) {
             this.putQueryParameter("OUPath", OUPath);
@@ -175,7 +171,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

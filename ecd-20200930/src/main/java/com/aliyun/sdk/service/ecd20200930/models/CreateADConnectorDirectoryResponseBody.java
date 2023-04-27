@@ -74,7 +74,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         private String trustPassword; 
 
         /**
-         * Details of the AD connectors.
+         * AdConnectors.
          */
         public Builder adConnectors(java.util.List < AdConnectors> adConnectors) {
             this.adConnectors = adConnectors;
@@ -82,7 +82,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the AD directory.
+         * CreateADConnectorDirectory
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -90,7 +90,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Creates an Active Directory (AD) directory.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The AD trust password.
+         * The DNS address of the enterprise AD subdomain.
          */
         public Builder trustPassword(String trustPassword) {
             this.trustPassword = trustPassword;
@@ -138,7 +138,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
             private String address; 
 
             /**
-             * The IP address of the AD connector.
+             * Address.
              */
             public Builder address(String address) {
                 this.address = address;

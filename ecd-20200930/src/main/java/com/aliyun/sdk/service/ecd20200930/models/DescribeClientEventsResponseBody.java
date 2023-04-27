@@ -62,7 +62,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the events.
+         * The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or AD username.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -70,7 +70,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The query token that is returned in this call.
+         * The ID of the region.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The type of the directory.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -370,7 +370,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the Alibaba Cloud account with which the event is associated.
+             * The name of the cloud desktop.
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -378,7 +378,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of bytes that are received.
+             * The name of the cloud desktop.
              */
             public Builder bytesReceived(String bytesReceived) {
                 this.bytesReceived = bytesReceived;
@@ -386,7 +386,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of bytes that are sent.
+             * The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or Active Directory (AD) username. If you do not specify a value for this parameter, events of all regular users in the specified region are queried.
              */
             public Builder bytesSend(String bytesSend) {
                 this.bytesSend = bytesSend;
@@ -394,7 +394,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * The IP address of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -402,7 +402,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The OS that the client runs.
+             * The ID of the cloud desktop.
              */
             public Builder clientOS(String clientOS) {
                 this.clientOS = clientOS;
@@ -410,7 +410,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the client.
+             * DescribeClientEvents
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -418,7 +418,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desktop group.
+             * DesktopGroupId.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -426,7 +426,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the desktop group.
+             * DesktopGroupName.
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -434,7 +434,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * The name of the desktop group.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -442,7 +442,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the cloud desktop.
+             * The name of the workspace.
              */
             public Builder desktopIp(String desktopIp) {
                 this.desktopIp = desktopIp;
@@ -450,7 +450,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * DesktopName.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -458,7 +458,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory to which the cloud desktop belongs.
+             * The type of the event.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -466,7 +466,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the directory.
+             * The type of event.
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -474,7 +474,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or AD username.
+             * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+             * <p>
+             * 
+             * If you do not specify a value for this parameter, the current time is used.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -482,7 +485,18 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * The type of event that you want to query. Valid values:
+             * <p>
+             * 
+             * *   DESKTOP_CONNECT: The desktop session is established.
+             * *   DESKTOP_DISCONNECT: The desktop session is disconnected.
+             * *   DESKTOP_REBOOT: The cloud desktop is restarted.
+             * *   CLIENT_AD_LOGIN: The AD user logs on to the client.
+             * *   GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.
+             * *   DESKTOP_START: The cloud desktop is started.
+             * *   DESKTOP_STOP: The cloud desktop is stopped.
+             * 
+             * If you do not specify a value for this parameter, events of all types are queried.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -490,7 +504,10 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event occurred.
+             * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+             * <p>
+             * 
+             * If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for `EndTime` are queried.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -498,7 +515,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event.
+             * The query token. Set the value to the NextToken value that is returned from the last call to the DescribeClientEvents operation.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -506,7 +523,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the cloud desktop belongs.
+             * The ID of the event.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -514,7 +531,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * OfficeSiteName.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -522,11 +539,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The account type of the workspace. Valid values:
-             * <p>
-             * 
-             * *   SIMPLE: convenience account
-             * *   AD_CONNECTOR: enterprise AD account
+             * The ID of the request.
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -534,7 +547,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The ID of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -542,11 +555,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. This parameter is returned if you set the EventType parameter to DESKTOP_DISCONNECT or GET_CONNECTION_TICKET. Valid values:
-             * <p>
-             * 
-             * *   200\. The value indicates that the request is successful.
-             * *   An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.
+             * The number of bytes that are sent.
              */
             public Builder status(String status) {
                 this.status = status;

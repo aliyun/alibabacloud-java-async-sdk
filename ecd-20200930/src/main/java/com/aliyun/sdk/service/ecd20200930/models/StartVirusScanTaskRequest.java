@@ -83,7 +83,7 @@ public class StartVirusScanTaskRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud desktops.
+         * DesktopId.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -92,7 +92,7 @@ public class StartVirusScanTaskRequest extends Request {
         }
 
         /**
-         * The IDs of the workspaces.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -101,7 +101,7 @@ public class StartVirusScanTaskRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

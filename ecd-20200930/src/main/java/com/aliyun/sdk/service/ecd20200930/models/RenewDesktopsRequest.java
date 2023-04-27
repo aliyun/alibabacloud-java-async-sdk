@@ -126,13 +126,7 @@ public class RenewDesktopsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
-         * 
-         * *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
-         * *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
-         * 
-         * Default value: true.
+         * The ID of the request.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -141,10 +135,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of cloud desktops.
-         * <p>
-         * 
-         * Only subscription cloud desktops can be renewed by calling this operation.
+         * The operation that you want to perform. Set the value to RenewDesktops.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -153,17 +144,38 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The renewal duration. The valid values of this parameter are determined by the PeriodUnit value.
+         * Specifies whether to enable automatic payment. Valid values:
          * <p>
          * 
-         * *   If PeriodUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, and 6.
-         * *   If PeriodUnit is set to Year, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
+         * *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
+         * *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
          * 
-         * Default value: 1.
+         * Default value: true.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * The ID of cloud desktop N.
+         * <p>
+         * 
+         * Only subscription cloud desktops can be renewed by calling this operation.
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 
@@ -175,24 +187,6 @@ public class RenewDesktopsRequest extends Request {
          * *   Year
          * 
          * Default value: Month.
-         */
-        public Builder periodUnit(String periodUnit) {
-            this.putQueryParameter("PeriodUnit", periodUnit);
-            this.periodUnit = periodUnit;
-            return this;
-        }
-
-        /**
-         * The ID of the sales promotion.
-         */
-        public Builder promotionId(String promotionId) {
-            this.putQueryParameter("PromotionId", promotionId);
-            this.promotionId = promotionId;
-            return this;
-        }
-
-        /**
-         * The region ID of the cloud desktop.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

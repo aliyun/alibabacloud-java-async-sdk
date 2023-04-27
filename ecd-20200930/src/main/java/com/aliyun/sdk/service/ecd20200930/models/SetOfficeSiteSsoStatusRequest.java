@@ -85,11 +85,7 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable SSO. Valid values:
-         * <p>
-         * 
-         * *   true: enables SSO
-         * *   false: disables SSO
+         * EnableSso.
          */
         public Builder enableSso(Boolean enableSso) {
             this.putQueryParameter("EnableSso", enableSso);
@@ -98,7 +94,7 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The operation that you want to perform. Set the value to SetOfficeSiteSsoStatus.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -107,7 +103,7 @@ public class SetOfficeSiteSsoStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

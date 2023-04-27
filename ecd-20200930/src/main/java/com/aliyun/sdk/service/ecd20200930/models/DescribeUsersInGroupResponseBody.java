@@ -86,7 +86,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         private Integer usersCount; 
 
         /**
-         * Details about the end users.
+         * EndUsers.
          */
         public Builder endUsers(java.util.List < EndUsers> endUsers) {
             this.endUsers = endUsers;
@@ -94,7 +94,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to start the next query.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of authorized users that are connecting to cloud desktops.
+         * OnlineUsersCount.
          */
         public Builder onlineUsersCount(Integer onlineUsersCount) {
             this.onlineUsersCount = onlineUsersCount;
@@ -110,7 +110,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of authorized users of the desktop group.
+         * UsersCount.
          */
         public Builder usersCount(Integer usersCount) {
             this.usersCount = usersCount;
@@ -170,7 +170,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String jobNumber; 
 
             /**
-             * The external name.
+             * ExternalName.
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -178,7 +178,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The employee ID.
+             * JobNumber.
              */
             public Builder jobNumber(String jobNumber) {
                 this.jobNumber = jobNumber;
@@ -231,7 +231,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * The property value.
+             * PropertyValue.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -239,7 +239,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the property value.
+             * PropertyValueId.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -340,7 +340,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The ID of the property.
+             * PropertyId.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -348,7 +348,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the property.
+             * PropertyKey.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -356,7 +356,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the property.
+             * PropertyType.
              */
             public Builder propertyType(Integer propertyType) {
                 this.propertyType = propertyType;
@@ -364,7 +364,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Details about property values.
+             * PropertyValues.
              */
             public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
@@ -372,7 +372,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the end user.
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -380,7 +380,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -565,7 +565,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
-             * The status of the desktop connection for the end user.
+             * ConnectionStatus.
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -573,7 +573,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * DesktopId.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -581,7 +581,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * DesktopName.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -589,7 +589,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the enterprise AD account.
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -597,7 +597,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the end user.
+             * EndUserEmail.
              */
             public Builder endUserEmail(String endUserEmail) {
                 this.endUserEmail = endUserEmail;
@@ -605,7 +605,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * EndUserId.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -613,7 +613,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * EndUserName.
              */
             public Builder endUserName(String endUserName) {
                 this.endUserName = endUserName;
@@ -621,7 +621,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the end user.
+             * EndUserPhone.
              */
             public Builder endUserPhone(String endUserPhone) {
                 this.endUserPhone = endUserPhone;
@@ -629,7 +629,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the end user.
+             * EndUserRemark.
              */
             public Builder endUserRemark(String endUserRemark) {
                 this.endUserRemark = endUserRemark;
@@ -637,7 +637,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The account type of the end user.
+             * EndUserType.
              */
             public Builder endUserType(String endUserType) {
                 this.endUserType = endUserType;
@@ -645,7 +645,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The appended information.
+             * ExternalInfo.
              */
             public Builder externalInfo(ExternalInfo externalInfo) {
                 this.externalInfo = externalInfo;
@@ -653,7 +653,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desktop of the end user.
+             * UserDesktopId.
              */
             public Builder userDesktopId(String userDesktopId) {
                 this.userDesktopId = userDesktopId;
@@ -661,7 +661,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the seats of end users.
+             * UserSetPropertiesModels.
              */
             public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;

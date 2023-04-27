@@ -112,7 +112,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -121,7 +121,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group that you want to assign to more regular users.
+         * DesktopGroupId.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -130,7 +130,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the desktop groups.
+         * DesktopGroupIds.
          */
         public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -139,7 +139,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * The regular users to whom you want to assign the desktop group.
+         * EndUserIds.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -148,7 +148,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

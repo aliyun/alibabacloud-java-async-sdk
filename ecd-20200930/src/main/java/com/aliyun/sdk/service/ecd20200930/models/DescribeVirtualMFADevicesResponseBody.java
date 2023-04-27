@@ -62,7 +62,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         private java.util.List < VirtualMFADevices> virtualMFADevices; 
 
         /**
-         * The token that determines the start point of the next query. This parameter is empty if no additional results exist.
+         * The name of the AD user who uses the virtual MFA device.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the workspace.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the virtual MFA devices.
+         * The ID of the region.
          */
         public Builder virtualMFADevices(java.util.List < VirtualMFADevices> virtualMFADevices) {
             this.virtualMFADevices = virtualMFADevices;
@@ -202,7 +202,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
+             * The time when the virtual MFA device is automatically unlocked after being locked. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder consecutiveFails(Integer consecutiveFails) {
                 this.consecutiveFails = consecutiveFails;
@@ -210,7 +210,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * >  This parameter is in invitational preview and unavailable for public use.
+             * DirectoryId.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -218,7 +218,12 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the AD user who uses the virtual MFA device.
+             * The status of the virtual MFA device. The valid values include:
+             * <p>
+             * 
+             * *   UNBOUND: The virtual MFA device is not bound.
+             * *   NORMAL: The virtual MFA device is normal.
+             * *   LOCKED: The virtual MFA device is locked.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -226,7 +231,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the virtual MFA device is enabled. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * GmtEnabled.
              */
             public Builder gmtEnabled(String gmtEnabled) {
                 this.gmtEnabled = gmtEnabled;
@@ -234,7 +239,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the virtual MFA device is automatically unlocked after being locked. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The ID of the workspace.
              */
             public Builder gmtUnlock(String gmtUnlock) {
                 this.gmtUnlock = gmtUnlock;
@@ -242,7 +247,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The ID of the request.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -258,12 +263,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the virtual MFA device. The valid values include:
-             * <p>
-             * 
-             * *   UNBOUND: The virtual MFA device is not bound.
-             * *   NORMAL: The virtual MFA device is normal.
-             * *   LOCKED: The virtual MFA device is locked.
+             * DescribeVirtualMFADevices
              */
             public Builder status(String status) {
                 this.status = status;

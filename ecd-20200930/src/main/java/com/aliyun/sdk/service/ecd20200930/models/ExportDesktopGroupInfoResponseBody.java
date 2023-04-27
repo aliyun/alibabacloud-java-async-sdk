@@ -50,7 +50,7 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The download address from which you can export desktop groups.
+         * Url.
          */
         public Builder url(String url) {
             this.url = url;

@@ -62,7 +62,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the cloud desktops whose images have not been updated. The cloud desktops can be updated to the image of a specific version that is described in an image update task (TaskUid).
+         * FotaPendingDesktops.
          */
         public Builder fotaPendingDesktops(java.util.List < FotaPendingDesktops> fotaPendingDesktops) {
             this.fotaPendingDesktops = fotaPendingDesktops;
@@ -70,7 +70,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to start the next query. If the value of this parameter is empty, all results are returned.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             private String officeSiteId; 
 
             /**
-             * The image version of the cloud desktop.
+             * CurrentAppVersion.
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -174,7 +174,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * DesktopId.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -182,7 +182,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * DesktopName.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -198,7 +198,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * OfficeSiteId.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;

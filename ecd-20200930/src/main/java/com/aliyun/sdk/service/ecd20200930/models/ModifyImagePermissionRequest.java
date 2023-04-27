@@ -98,7 +98,7 @@ public class ModifyImagePermissionRequest extends Request {
         } 
 
         /**
-         * The IDs of the recipient Alibaba Cloud accounts. You can share an image with up to 50 Alibaba Cloud accounts.
+         * AddAccount.
          */
         public Builder addAccount(java.util.List < Long > addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
@@ -107,7 +107,7 @@ public class ModifyImagePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the image that you want to share.
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -116,7 +116,7 @@ public class ModifyImagePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,7 @@ public class ModifyImagePermissionRequest extends Request {
         }
 
         /**
-         * The IDs of the recipient Alibaba Cloud accounts from which you want to unshare the image. You can unshare an image from up to 50 Alibaba Cloud accounts.
+         * RemoveAccount.
          */
         public Builder removeAccount(java.util.List < Long > removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);

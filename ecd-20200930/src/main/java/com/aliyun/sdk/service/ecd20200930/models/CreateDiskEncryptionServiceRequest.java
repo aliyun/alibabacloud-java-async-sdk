@@ -55,7 +55,7 @@ public class CreateDiskEncryptionServiceRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

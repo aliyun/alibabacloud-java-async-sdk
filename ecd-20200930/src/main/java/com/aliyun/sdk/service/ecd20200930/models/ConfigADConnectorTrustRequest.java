@@ -99,7 +99,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         } 
 
         /**
-         * The ID of the AD workspace.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -117,7 +117,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +126,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * The trust password. You can specify the password when you configure a trust relationship between the AD domain and the ecd.acs domain.
+         * TrustKey.
          */
         public Builder trustKey(String trustKey) {
             this.putQueryParameter("TrustKey", trustKey);

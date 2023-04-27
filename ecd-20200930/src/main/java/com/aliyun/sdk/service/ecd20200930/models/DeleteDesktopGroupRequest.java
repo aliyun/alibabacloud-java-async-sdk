@@ -70,7 +70,7 @@ public class DeleteDesktopGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group.
+         * DesktopGroupId.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -79,7 +79,7 @@ public class DeleteDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -74,7 +74,7 @@ public class DescribeSuspEventOverviewResponseBody extends TeaModel {
         private Integer suspiciousCount; 
 
         /**
-         * The total number of alerts at the remind level.
+         * RemindCount.
          */
         public Builder remindCount(Integer remindCount) {
             this.remindCount = remindCount;
@@ -82,7 +82,7 @@ public class DescribeSuspEventOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeSuspEventOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of alerts at the serious level.
+         * SeriousCount.
          */
         public Builder seriousCount(Integer seriousCount) {
             this.seriousCount = seriousCount;
@@ -98,7 +98,7 @@ public class DescribeSuspEventOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of alerts at the suspicious level.
+         * DescribeSuspEventOverview
          */
         public Builder suspiciousCount(Integer suspiciousCount) {
             this.suspiciousCount = suspiciousCount;

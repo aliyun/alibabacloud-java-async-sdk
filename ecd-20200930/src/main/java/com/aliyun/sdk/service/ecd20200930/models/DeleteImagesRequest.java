@@ -93,7 +93,7 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * The IDs of the images that you want to delete.
+         * ImageId.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -102,7 +102,7 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the images to delete are located.
+         * The operation that you want to perform. Set the value to DeleteImages.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

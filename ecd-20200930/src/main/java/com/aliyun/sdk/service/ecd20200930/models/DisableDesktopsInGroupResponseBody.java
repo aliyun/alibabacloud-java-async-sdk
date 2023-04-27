@@ -38,7 +38,7 @@ public class DisableDesktopsInGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

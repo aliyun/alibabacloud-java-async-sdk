@@ -85,11 +85,7 @@ public class ModifyOfficeSiteMfaEnabledRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable MFA. Valid values:
-         * <p>
-         * 
-         * *   true: enables MFA
-         * *   false: disables MFA
+         * Enables or disables multi-factor authentication (MFA) for a workspace.
          */
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
@@ -107,7 +103,7 @@ public class ModifyOfficeSiteMfaEnabledRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The operation that you want to perform. Set the value to ModifyOfficeSiteMfaEnabled.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

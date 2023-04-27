@@ -294,7 +294,7 @@ public class DescribeBundlesRequest extends Request {
         } 
 
         /**
-         * The IDs of the desktop templates. You can specify 1 to 100 desktop templates.
+         * BundleId.
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -303,7 +303,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The type of the desktop template.
+         * BundleType.
          */
         public Builder bundleType(String bundleType) {
             this.putQueryParameter("BundleType", bundleType);
@@ -312,7 +312,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the inventory status of the desktop type.
+         * CheckStock.
          */
         public Builder checkStock(Boolean checkStock) {
             this.putQueryParameter("CheckStock", checkStock);
@@ -321,7 +321,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the desktop type.
+         * CpuCount.
          */
         public Builder cpuCount(Integer cpuCount) {
             this.putQueryParameter("CpuCount", cpuCount);
@@ -330,7 +330,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The family of the desktop type.
+         * DesktopTypeFamily.
          */
         public Builder desktopTypeFamily(String desktopTypeFamily) {
             this.putQueryParameter("DesktopTypeFamily", desktopTypeFamily);
@@ -339,7 +339,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * This parameter is now in invitational preview and unavailable.
+         * FotaChannel.
          */
         public Builder fotaChannel(String fotaChannel) {
             this.putQueryParameter("FotaChannel", fotaChannel);
@@ -348,7 +348,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether the cloud desktop that uses the desktop template belongs to the desktop group. Default value: `false`.
+         * FromDesktopGroup.
          */
         public Builder fromDesktopGroup(Boolean fromDesktopGroup) {
             this.putQueryParameter("FromDesktopGroup", fromDesktopGroup);
@@ -357,7 +357,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The number of GPUs of the desktop type.
+         * GpuCount.
          */
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
@@ -375,11 +375,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -388,7 +384,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The memory size of the desktop type. Unit: GiB.
+         * MemorySize.
          */
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
@@ -397,7 +393,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -406,7 +402,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The type of the protocol.
+         * ProtocolType.
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -415,7 +411,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -424,7 +420,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The desktop template that is selected based on specific criteria.
+         * SelectedBundle.
          */
         public Builder selectedBundle(Boolean selectedBundle) {
             this.putQueryParameter("SelectedBundle", selectedBundle);
@@ -433,7 +429,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The type of the session.
+         * SessionType.
          */
         public Builder sessionType(String sessionType) {
             this.putQueryParameter("SessionType", sessionType);
@@ -442,7 +438,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return multi-session desktop templates in this call. Default value: false.
+         * SupportMultiSession.
          */
         public Builder supportMultiSession(Boolean supportMultiSession) {
             this.putQueryParameter("SupportMultiSession", supportMultiSession);
@@ -451,7 +447,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable disk encryption.
+         * VolumeEncryptionEnabled.
          */
         public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
             this.putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled);

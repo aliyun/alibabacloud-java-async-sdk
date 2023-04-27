@@ -62,7 +62,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the desktop groups.
+         * DesktopGroups.
          */
         public Builder desktopGroups(java.util.List < DesktopGroups> desktopGroups) {
             this.desktopGroups = desktopGroups;
@@ -70,7 +70,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -610,7 +610,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String volumeEncryptionKey; 
 
             /**
-             * The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.
+             * BindAmount.
              */
             public Builder bindAmount(Long bindAmount) {
                 this.bindAmount = bindAmount;
@@ -618,7 +618,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of purchased cloud desktops. Valid values: 0 to 200.
+             * BuyDesktopsCount.
              */
             public Builder buyDesktopsCount(Integer buyDesktopsCount) {
                 this.buyDesktopsCount = buyDesktopsCount;
@@ -626,7 +626,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the desktop group.
+             * Comments.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -634,7 +634,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum period of time during which a session is connected. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.
+             * ConnectDuration.
              */
             public Builder connectDuration(Long connectDuration) {
                 this.connectDuration = connectDuration;
@@ -642,7 +642,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -650,7 +650,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud desktop was created.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -658,7 +658,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account in which the desktop group is created.
+             * Creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -666,52 +666,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the data disk.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   cloud_efficiency
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     ultra disk
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   cloud_ssd
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     standard SSD
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   cloud_essd
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Enhanced SSD (ESSD)
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * DataDiskCategory.
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -719,7 +674,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the data disk. Unit: GiB.
+             * DataDiskSize.
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -727,7 +682,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desktop group.
+             * DesktopGroupId.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -735,7 +690,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the desktop group.
+             * DesktopGroupName.
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -743,7 +698,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of end users who are granted the permissions on the desktop group.
+             * EndUserCount.
              */
             public Builder endUserCount(Integer endUserCount) {
                 this.endUserCount = endUserCount;
@@ -751,7 +706,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the subscription cloud desktop.
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -759,7 +714,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPUs.
+             * GpuCount.
              */
             public Builder gpuCount(Float gpuCount) {
                 this.gpuCount = gpuCount;
@@ -767,7 +722,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU memory.
+             * GpuSpec.
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -775,7 +730,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum period of time during which a session is idle. When a session is idle, you cannot perform operations by using a keyboard or a mouse. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.
+             * IdleDisconnectDuration.
              */
             public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
                 this.idleDisconnectDuration = idleDisconnectDuration;
@@ -783,7 +738,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -791,7 +746,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The keep-alive duration of a cloud desktop after the end user disconnects from the cloud desktop. Unit: milliseconds.
+             * KeepDuration.
              */
             public Builder keepDuration(Long keepDuration) {
                 this.keepDuration = keepDuration;
@@ -799,38 +754,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The load balancing policy for the multi-session desktop group.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   0
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     depth first
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   1
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     breadth first
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * LoadPolicy.
              */
             public Builder loadPolicy(Long loadPolicy) {
                 this.loadPolicy = loadPolicy;
@@ -838,7 +762,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of cloud desktops that the desktop group can contain.
+             * MaxDesktopsCount.
              */
             public Builder maxDesktopsCount(Integer maxDesktopsCount) {
                 this.maxDesktopsCount = maxDesktopsCount;
@@ -846,7 +770,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MiB.
+             * Memory.
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -854,7 +778,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of cloud desktops that the desktop group must contain.
+             * MinDesktopsCount.
              */
             public Builder minDesktopsCount(Integer minDesktopsCount) {
                 this.minDesktopsCount = minDesktopsCount;
@@ -862,7 +786,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * OfficeSiteId.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -870,7 +794,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * OfficeSiteName.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -878,66 +802,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The account type of the workspace.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   PERSONAL
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     personal account type
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   SIMPLE
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     convenience account type
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   AD_CONNECTOR
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     enterprise AD account type
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   RAM
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Resource Access Management (RAM) account type
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * OfficeSiteType.
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -945,11 +810,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The OS. Valid values:
-             * <p>
-             * 
-             * *   Windows
-             * *   Linux
+             * OsType.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -957,7 +818,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desktop template.
+             * OwnBundleId.
              */
             public Builder ownBundleId(String ownBundleId) {
                 this.ownBundleId = ownBundleId;
@@ -965,7 +826,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the desktop template.
+             * OwnBundleName.
              */
             public Builder ownBundleName(String ownBundleName) {
                 this.ownBundleName = ownBundleName;
@@ -973,38 +834,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the desktop group.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   0
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     personal desktop group
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   1
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     shared desktop group (multi-session)
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * OwnType.
              */
             public Builder ownType(Long ownType) {
                 this.ownType = ownType;
@@ -1012,38 +842,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the desktop group.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   PostPaid
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     pay-as-you-go
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   PrePaid
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     subscription
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1051,7 +850,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * PolicyGroupId.
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -1059,7 +858,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * PolicyGroupName.
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
@@ -1067,11 +866,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
-             * 
-             * *   ASP
-             * *   HDX
+             * ProtocolType.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1079,7 +874,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%`. If the specified threshold is reached, new cloud desktops are automatically created. If the specified threshold is not reached, idle cloud desktops are released.
+             * RatioThreshold.
              */
             public Builder ratioThreshold(Float ratioThreshold) {
                 this.ratioThreshold = ratioThreshold;
@@ -1087,66 +882,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates which type of disk is reset for the cloud desktops in the desktop group.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   0
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     No disks are reset
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   1
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Only the system disk is reset
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   2
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Only the data disk is reset
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   3
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The system disk and data disk are reset
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * ResetType.
              */
             public Builder resetType(Long resetType) {
                 this.resetType = resetType;
@@ -1154,52 +890,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The payment status of the desktop group.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   0
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The desktop group is unpaid
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   1
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The desktop group is paid
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   2
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The desktop group has an overdue payment or expired
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1207,7 +898,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time before an idle cloud desktop stops. When the specified period of time is reached, the idle cloud desktop automatically stops. If an end user connects to a stopped cloud desktop, the cloud desktop automatically starts. Unit: milliseconds.
+             * StopDuration.
              */
             public Builder stopDuration(Long stopDuration) {
                 this.stopDuration = stopDuration;
@@ -1215,52 +906,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the system disk.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   cloud_efficiency
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     ultra disk
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   cloud_ssd
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     standard SSD
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   cloud_essd
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     ESSD
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * SystemDiskCategory.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1268,7 +914,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the system disk. Unit: GiB.
+             * SystemDiskSize.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1276,7 +922,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the desktop group.
+             * Version.
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -1284,7 +930,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether disk encryption is enabled.
+             * VolumeEncryptionEnabled.
              */
             public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
                 this.volumeEncryptionEnabled = volumeEncryptionEnabled;
@@ -1292,7 +938,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.
+             * VolumeEncryptionKey.
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;

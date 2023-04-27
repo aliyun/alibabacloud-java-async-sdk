@@ -126,7 +126,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * The IDs of the NAS file systems.
+         * FileSystemId.
          */
         public Builder fileSystemId(java.util.List < String > fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -135,7 +135,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.
+         * MatchCompatibleProfile.
          */
         public Builder matchCompatibleProfile(Boolean matchCompatibleProfile) {
             this.putQueryParameter("MatchCompatibleProfile", matchCompatibleProfile);
@@ -144,11 +144,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -157,7 +153,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Set the value to the NextToken value that is returned from the last call.
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -166,7 +162,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -175,7 +171,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

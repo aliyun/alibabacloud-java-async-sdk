@@ -126,7 +126,7 @@ public class ModifyBundleRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop template.
+         * The ID of the request.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -135,7 +135,7 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The name of the new desktop template.
+         * The description of the new desktop template.
          */
         public Builder bundleName(String bundleName) {
             this.putQueryParameter("BundleName", bundleName);
@@ -144,7 +144,7 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The description of the new desktop template.
+         * ModifyBundle
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -153,13 +153,7 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The ID of the new image. The new image must meet the following requirements:
-         * <p>
-         * 
-         * *   The new image must be in the Available state.
-         * *   The operating system of the new image must be the same as that of the original image.
-         * *   The required disk size for the new image cannot be greater than that for the original image.
-         * *   The GPU type of the new image must be the same as that of the original image.
+         * The operation that you want to perform. Set the value to ModifyBundle.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -168,12 +162,7 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The language of the operating system. This parameter is available only for system images. Valid values:
-         * <p>
-         * 
-         * *   zh-CN: Simplified Chinese
-         * *   zh-HK: Traditional Chinese (Hong Kong)
-         * *   en-US: English
+         * Language.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -182,7 +171,7 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The name of the new desktop template.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -62,7 +62,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The token that is used to start the next query. If this parameter is empty, all results are returned.
+         * The status of the workspace.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the workspaces.
+         * Specifies whether to refresh the cache.
          */
         public Builder officeSiteOverviewResults(java.util.List < OfficeSiteOverviewResults> officeSiteOverviewResults) {
             this.officeSiteOverviewResults = officeSiteOverviewResults;
@@ -78,7 +78,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The information that is returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -262,7 +262,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             private Integer willExpiredEdsCountForGroup; 
 
             /**
-             * The number of expired cloud desktops in the workspace.
+             * 153021
              */
             public Builder hasExpiredEdsCount(Integer hasExpiredEdsCount) {
                 this.hasExpiredEdsCount = hasExpiredEdsCount;
@@ -270,7 +270,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of expired cloud desktops in the desktop group.
+             * HasExpiredEdsCountForGroup.
              */
             public Builder hasExpiredEdsCountForGroup(Integer hasExpiredEdsCountForGroup) {
                 this.hasExpiredEdsCountForGroup = hasExpiredEdsCountForGroup;
@@ -278,7 +278,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The name of the workspace.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -286,7 +286,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * Queries the overview information about workspaces in Elastic Desktop Service (EDS).
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -294,7 +294,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the workspace.
+             * The number of running cloud desktops in the workspace.
              */
             public Builder officeSiteStatus(String officeSiteStatus) {
                 this.officeSiteStatus = officeSiteStatus;
@@ -302,7 +302,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the workspace.
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -310,7 +310,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running cloud desktops in the workspace.
+             * The number of running cloud desktops in the desktop group.
              */
             public Builder runningEdsCount(Integer runningEdsCount) {
                 this.runningEdsCount = runningEdsCount;
@@ -318,7 +318,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running cloud desktops in the desktop group.
+             * The ID of the request.
              */
             public Builder runningEdsCountForGroup(Integer runningEdsCountForGroup) {
                 this.runningEdsCountForGroup = runningEdsCountForGroup;
@@ -326,7 +326,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud desktops in the workspace.
+             * The ID of the workspace.
              */
             public Builder totalEdsCount(Integer totalEdsCount) {
                 this.totalEdsCount = totalEdsCount;
@@ -334,7 +334,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud desktops in the desktop group.
+             * The number of cloud desktops that are about to expire in the workspace.
              */
             public Builder totalEdsCountForGroup(Integer totalEdsCountForGroup) {
                 this.totalEdsCountForGroup = totalEdsCountForGroup;
@@ -342,7 +342,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) type of the workspace.
+             * ListOfficeSiteOverview
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
@@ -350,7 +350,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are about to expire in the workspace.
+             * The virtual private cloud (VPC) type of the workspace.
              */
             public Builder willExpiredEdsCount(Integer willExpiredEdsCount) {
                 this.willExpiredEdsCount = willExpiredEdsCount;
@@ -358,7 +358,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are about to expire in the desktop group.
+             * The token that determines the start point of the next query. If this is your first query or no next query is to be sent, skip this parameter. If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
              */
             public Builder willExpiredEdsCountForGroup(Integer willExpiredEdsCountForGroup) {
                 this.willExpiredEdsCountForGroup = willExpiredEdsCountForGroup;

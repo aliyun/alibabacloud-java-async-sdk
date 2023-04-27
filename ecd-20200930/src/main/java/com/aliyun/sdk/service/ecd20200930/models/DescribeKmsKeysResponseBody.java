@@ -74,7 +74,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The authorization status.
+         * AuthorizeStatus.
          */
         public Builder authorizeStatus(String authorizeStatus) {
             this.authorizeStatus = authorizeStatus;
@@ -82,7 +82,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the customer master keys (CMKs).
+         * Keys.
          */
         public Builder keys(java.util.List < Keys> keys) {
             this.keys = keys;
@@ -90,7 +90,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether KMS is activated.
+         * KmsServiceStatus.
          */
         public Builder kmsServiceStatus(String kmsServiceStatus) {
             this.kmsServiceStatus = kmsServiceStatus;
@@ -98,7 +98,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The alias of the key.
+             * Alias.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -182,7 +182,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the key in KMS.
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -190,7 +190,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the key.
+             * KeyId.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -198,7 +198,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the key.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
