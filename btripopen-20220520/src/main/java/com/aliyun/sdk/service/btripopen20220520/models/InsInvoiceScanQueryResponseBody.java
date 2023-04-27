@@ -404,6 +404,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_title")
         private String invoiceTitle;
 
+        @NameInMap("machine_code")
+        private String machineCode;
+
         @NameInMap("order_id")
         private Long orderId;
 
@@ -482,6 +485,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             this.invoiceLocation = builder.invoiceLocation;
             this.invoiceNo = builder.invoiceNo;
             this.invoiceTitle = builder.invoiceTitle;
+            this.machineCode = builder.machineCode;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
             this.passenger = builder.passenger;
@@ -629,6 +633,13 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        /**
+         * @return machineCode
+         */
+        public String getMachineCode() {
+            return this.machineCode;
         }
 
         /**
@@ -789,6 +800,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String invoiceLocation; 
             private String invoiceNo; 
             private String invoiceTitle; 
+            private String machineCode; 
             private Long orderId; 
             private String ossUrl; 
             private String passenger; 
@@ -943,6 +955,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
+                return this;
+            }
+
+            /**
+             * 机器码
+             */
+            public Builder machineCode(String machineCode) {
+                this.machineCode = machineCode;
                 return this;
             }
 

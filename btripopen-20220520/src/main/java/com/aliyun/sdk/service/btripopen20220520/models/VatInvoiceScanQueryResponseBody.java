@@ -398,6 +398,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_type_desc")
         private String invoiceTypeDesc;
 
+        @NameInMap("machine_code")
+        private String machineCode;
+
         @NameInMap("oss_url")
         private String ossUrl;
 
@@ -465,6 +468,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             this.invoiceSubTaskId = builder.invoiceSubTaskId;
             this.invoiceType = builder.invoiceType;
             this.invoiceTypeDesc = builder.invoiceTypeDesc;
+            this.machineCode = builder.machineCode;
             this.ossUrl = builder.ossUrl;
             this.passwordArea = builder.passwordArea;
             this.purchaserBankAccountInfo = builder.purchaserBankAccountInfo;
@@ -595,6 +599,13 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getInvoiceTypeDesc() {
             return this.invoiceTypeDesc;
+        }
+
+        /**
+         * @return machineCode
+         */
+        public String getMachineCode() {
+            return this.machineCode;
         }
 
         /**
@@ -732,6 +743,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             private Long invoiceSubTaskId; 
             private Integer invoiceType; 
             private String invoiceTypeDesc; 
+            private String machineCode; 
             private String ossUrl; 
             private String passwordArea; 
             private String purchaserBankAccountInfo; 
@@ -871,6 +883,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * 机器码
+             */
+            public Builder machineCode(String machineCode) {
+                this.machineCode = machineCode;
+                return this;
+            }
+
+            /**
              * 图片地址，专票已邮寄前为空，普票已开票前为空
              */
             public Builder ossUrl(String ossUrl) {
@@ -879,7 +899,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * password_area.
+             * 密码区
              */
             public Builder passwordArea(String passwordArea) {
                 this.passwordArea = passwordArea;

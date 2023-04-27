@@ -13,6 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class HotelOrderPayRequest extends Request {
     @Body
+    @NameInMap("btrip_order_id")
+    @Validation(required = true)
+    private Long btripOrderId;
+
+    @Body
     @NameInMap("btrip_user_id")
     @Validation(required = true)
     private String btripUserId;
@@ -21,11 +26,6 @@ public class HotelOrderPayRequest extends Request {
     @NameInMap("company_pay_fee")
     @Validation(required = true)
     private Long companyPayFee;
-
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
-    private String disOrderId;
 
     @Body
     @NameInMap("person_pay_fee")
@@ -50,9 +50,9 @@ public class HotelOrderPayRequest extends Request {
 
     private HotelOrderPayRequest(Builder builder) {
         super(builder);
+        this.btripOrderId = builder.btripOrderId;
         this.btripUserId = builder.btripUserId;
         this.companyPayFee = builder.companyPayFee;
-        this.disOrderId = builder.disOrderId;
         this.personPayFee = builder.personPayFee;
         this.thirdPayAccount = builder.thirdPayAccount;
         this.thirdTradeNo = builder.thirdTradeNo;
@@ -74,6 +74,13 @@ public class HotelOrderPayRequest extends Request {
     }
 
     /**
+     * @return btripOrderId
+     */
+    public Long getBtripOrderId() {
+        return this.btripOrderId;
+    }
+
+    /**
      * @return btripUserId
      */
     public String getBtripUserId() {
@@ -85,13 +92,6 @@ public class HotelOrderPayRequest extends Request {
      */
     public Long getCompanyPayFee() {
         return this.companyPayFee;
-    }
-
-    /**
-     * @return disOrderId
-     */
-    public String getDisOrderId() {
-        return this.disOrderId;
     }
 
     /**
@@ -130,9 +130,9 @@ public class HotelOrderPayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<HotelOrderPayRequest, Builder> {
+        private Long btripOrderId; 
         private String btripUserId; 
         private Long companyPayFee; 
-        private String disOrderId; 
         private Long personPayFee; 
         private String thirdPayAccount; 
         private String thirdTradeNo; 
@@ -145,15 +145,24 @@ public class HotelOrderPayRequest extends Request {
 
         private Builder(HotelOrderPayRequest request) {
             super(request);
+            this.btripOrderId = request.btripOrderId;
             this.btripUserId = request.btripUserId;
             this.companyPayFee = request.companyPayFee;
-            this.disOrderId = request.disOrderId;
             this.personPayFee = request.personPayFee;
             this.thirdPayAccount = request.thirdPayAccount;
             this.thirdTradeNo = request.thirdTradeNo;
             this.totalPrice = request.totalPrice;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * 供应商订单号（取自创单返回的订单号）
+         */
+        public Builder btripOrderId(Long btripOrderId) {
+            this.putBodyParameter("btrip_order_id", btripOrderId);
+            this.btripOrderId = btripOrderId;
+            return this;
+        }
 
         /**
          * btrip_user_id.
@@ -170,15 +179,6 @@ public class HotelOrderPayRequest extends Request {
         public Builder companyPayFee(Long companyPayFee) {
             this.putBodyParameter("company_pay_fee", companyPayFee);
             this.companyPayFee = companyPayFee;
-            return this;
-        }
-
-        /**
-         * 分销商订单id
-         */
-        public Builder disOrderId(String disOrderId) {
-            this.putBodyParameter("dis_order_id", disOrderId);
-            this.disOrderId = disOrderId;
             return this;
         }
 

@@ -150,7 +150,7 @@ public class CorpTokenResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * 是否成功
          */
         public Builder success(Boolean success) {
             this.success = success;

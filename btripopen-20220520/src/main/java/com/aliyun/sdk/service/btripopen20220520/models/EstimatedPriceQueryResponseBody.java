@@ -653,7 +653,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             }
 
             /**
-             * cheapest
+             * cheapest.
              */
             public Builder cheapest(Cheapest cheapest) {
                 this.cheapest = cheapest;

@@ -912,7 +912,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * exceed_apply_id.
+             * 火车票超标审批id
              */
             public Builder exceedApplyId(String exceedApplyId) {
                 this.exceedApplyId = exceedApplyId;
@@ -920,7 +920,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * exceed_third_part_apply_id.
+             * 火车票超标审批三方id
              */
             public Builder exceedThirdPartApplyId(String exceedThirdPartApplyId) {
                 this.exceedThirdPartApplyId = exceedThirdPartApplyId;
