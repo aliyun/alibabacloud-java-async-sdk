@@ -32,6 +32,10 @@ public class ApplyApproveRequest extends Request {
     private Integer status;
 
     @Body
+    @NameInMap("sub_corp_id")
+    private String subCorpId;
+
+    @Body
     @NameInMap("user_id")
     @Validation(required = true)
     private String userId;
@@ -50,6 +54,7 @@ public class ApplyApproveRequest extends Request {
         this.note = builder.note;
         this.operateTime = builder.operateTime;
         this.status = builder.status;
+        this.subCorpId = builder.subCorpId;
         this.userId = builder.userId;
         this.userName = builder.userName;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
@@ -97,6 +102,13 @@ public class ApplyApproveRequest extends Request {
     }
 
     /**
+     * @return subCorpId
+     */
+    public String getSubCorpId() {
+        return this.subCorpId;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -122,6 +134,7 @@ public class ApplyApproveRequest extends Request {
         private String note; 
         private String operateTime; 
         private Integer status; 
+        private String subCorpId; 
         private String userId; 
         private String userName; 
         private String xAcsBtripSoCorpToken; 
@@ -136,6 +149,7 @@ public class ApplyApproveRequest extends Request {
             this.note = request.note;
             this.operateTime = request.operateTime;
             this.status = request.status;
+            this.subCorpId = request.subCorpId;
             this.userId = request.userId;
             this.userName = request.userName;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
@@ -174,6 +188,15 @@ public class ApplyApproveRequest extends Request {
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * 子企业Id
+         */
+        public Builder subCorpId(String subCorpId) {
+            this.putBodyParameter("sub_corp_id", subCorpId);
+            this.subCorpId = subCorpId;
             return this;
         }
 

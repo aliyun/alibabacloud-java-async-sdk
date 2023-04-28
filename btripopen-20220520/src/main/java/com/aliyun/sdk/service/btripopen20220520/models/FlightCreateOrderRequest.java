@@ -816,7 +816,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * nationality.
+             * 国籍
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -824,7 +824,7 @@ public class FlightCreateOrderRequest extends Request {
             }
 
             /**
-             * nationality_code.
+             * 国籍二字码
              */
             public Builder nationalityCode(String nationalityCode) {
                 this.nationalityCode = nationalityCode;

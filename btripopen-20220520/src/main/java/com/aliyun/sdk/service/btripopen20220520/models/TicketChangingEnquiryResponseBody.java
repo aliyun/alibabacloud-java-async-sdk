@@ -896,7 +896,7 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * attributes.
+             * attributes
              */
             public Builder attributes(java.util.Map < String, ? > attributes) {
                 this.attributes = attributes;

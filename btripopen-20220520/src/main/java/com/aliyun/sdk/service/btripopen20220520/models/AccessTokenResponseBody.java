@@ -150,7 +150,7 @@ public class AccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * 成功标识
          */
         public Builder success(Boolean success) {
             this.success = success;

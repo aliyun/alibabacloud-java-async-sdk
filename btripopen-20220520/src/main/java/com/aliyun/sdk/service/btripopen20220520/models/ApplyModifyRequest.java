@@ -77,6 +77,10 @@ public class ApplyModifyRequest extends Request {
     private Integer status;
 
     @Body
+    @NameInMap("sub_corp_id")
+    private String subCorpId;
+
+    @Body
     @NameInMap("thirdpart_apply_id")
     @Validation(required = true)
     private String thirdpartApplyId;
@@ -158,6 +162,7 @@ public class ApplyModifyRequest extends Request {
         this.itinerarySetList = builder.itinerarySetList;
         this.limitTraveler = builder.limitTraveler;
         this.status = builder.status;
+        this.subCorpId = builder.subCorpId;
         this.thirdpartApplyId = builder.thirdpartApplyId;
         this.thirdpartBusinessId = builder.thirdpartBusinessId;
         this.thirdpartDepartId = builder.thirdpartDepartId;
@@ -301,6 +306,13 @@ public class ApplyModifyRequest extends Request {
     }
 
     /**
+     * @return subCorpId
+     */
+    public String getSubCorpId() {
+        return this.subCorpId;
+    }
+
+    /**
      * @return thirdpartApplyId
      */
     public String getThirdpartApplyId() {
@@ -422,6 +434,7 @@ public class ApplyModifyRequest extends Request {
         private java.util.List < ItinerarySetList> itinerarySetList; 
         private Integer limitTraveler; 
         private Integer status; 
+        private String subCorpId; 
         private String thirdpartApplyId; 
         private String thirdpartBusinessId; 
         private String thirdpartDepartId; 
@@ -460,6 +473,7 @@ public class ApplyModifyRequest extends Request {
             this.itinerarySetList = request.itinerarySetList;
             this.limitTraveler = request.limitTraveler;
             this.status = request.status;
+            this.subCorpId = request.subCorpId;
             this.thirdpartApplyId = request.thirdpartApplyId;
             this.thirdpartBusinessId = request.thirdpartBusinessId;
             this.thirdpartDepartId = request.thirdpartDepartId;
@@ -633,6 +647,15 @@ public class ApplyModifyRequest extends Request {
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * 子企业Id
+         */
+        public Builder subCorpId(String subCorpId) {
+            this.putBodyParameter("sub_corp_id", subCorpId);
+            this.subCorpId = subCorpId;
             return this;
         }
 
@@ -1056,7 +1079,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * premium_economy_discount.
+             * 超级经济舱折扣。1到10的整数
              */
             public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
                 this.premiumEconomyDiscount = premiumEconomyDiscount;
@@ -2084,7 +2107,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * premium_economy_discount.
+             * 超级经济舱折扣。1到10的整数
              */
             public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
                 this.premiumEconomyDiscount = premiumEconomyDiscount;

@@ -21,6 +21,10 @@ public class ApplyQueryRequest extends Request {
     private String applyShowId;
 
     @Query
+    @NameInMap("sub_corp_id")
+    private String subCorpId;
+
+    @Query
     @NameInMap("thirdpart_apply_id")
     private String thirdpartApplyId;
 
@@ -36,6 +40,7 @@ public class ApplyQueryRequest extends Request {
         super(builder);
         this.applyId = builder.applyId;
         this.applyShowId = builder.applyShowId;
+        this.subCorpId = builder.subCorpId;
         this.thirdpartApplyId = builder.thirdpartApplyId;
         this.type = builder.type;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
@@ -69,6 +74,13 @@ public class ApplyQueryRequest extends Request {
     }
 
     /**
+     * @return subCorpId
+     */
+    public String getSubCorpId() {
+        return this.subCorpId;
+    }
+
+    /**
      * @return thirdpartApplyId
      */
     public String getThirdpartApplyId() {
@@ -92,6 +104,7 @@ public class ApplyQueryRequest extends Request {
     public static final class Builder extends Request.Builder<ApplyQueryRequest, Builder> {
         private Integer applyId; 
         private String applyShowId; 
+        private String subCorpId; 
         private String thirdpartApplyId; 
         private Integer type; 
         private String xAcsBtripSoCorpToken; 
@@ -104,6 +117,7 @@ public class ApplyQueryRequest extends Request {
             super(request);
             this.applyId = request.applyId;
             this.applyShowId = request.applyShowId;
+            this.subCorpId = request.subCorpId;
             this.thirdpartApplyId = request.thirdpartApplyId;
             this.type = request.type;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
@@ -124,6 +138,15 @@ public class ApplyQueryRequest extends Request {
         public Builder applyShowId(String applyShowId) {
             this.putQueryParameter("apply_show_id", applyShowId);
             this.applyShowId = applyShowId;
+            return this;
+        }
+
+        /**
+         * 子企业Id
+         */
+        public Builder subCorpId(String subCorpId) {
+            this.putQueryParameter("sub_corp_id", subCorpId);
+            this.subCorpId = subCorpId;
             return this;
         }
 

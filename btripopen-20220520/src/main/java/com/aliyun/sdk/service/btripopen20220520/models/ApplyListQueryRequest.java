@@ -45,6 +45,10 @@ public class ApplyListQueryRequest extends Request {
     private String startTime;
 
     @Query
+    @NameInMap("sub_corp_id")
+    private String subCorpId;
+
+    @Query
     @NameInMap("type")
     private Integer type;
 
@@ -70,6 +74,7 @@ public class ApplyListQueryRequest extends Request {
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
+        this.subCorpId = builder.subCorpId;
         this.type = builder.type;
         this.unionNo = builder.unionNo;
         this.userId = builder.userId;
@@ -146,6 +151,13 @@ public class ApplyListQueryRequest extends Request {
     }
 
     /**
+     * @return subCorpId
+     */
+    public String getSubCorpId() {
+        return this.subCorpId;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -182,6 +194,7 @@ public class ApplyListQueryRequest extends Request {
         private Integer page; 
         private Integer pageSize; 
         private String startTime; 
+        private String subCorpId; 
         private Integer type; 
         private String unionNo; 
         private String userId; 
@@ -201,6 +214,7 @@ public class ApplyListQueryRequest extends Request {
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
+            this.subCorpId = request.subCorpId;
             this.type = request.type;
             this.unionNo = request.unionNo;
             this.userId = request.userId;
@@ -276,6 +290,15 @@ public class ApplyListQueryRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("start_time", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * 子企业Id
+         */
+        public Builder subCorpId(String subCorpId) {
+            this.putQueryParameter("sub_corp_id", subCorpId);
+            this.subCorpId = subCorpId;
             return this;
         }
 
