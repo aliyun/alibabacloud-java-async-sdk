@@ -239,6 +239,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("DeployType")
         private String deployType;
 
+        @NameInMap("EnablePrivateVpcConnection")
+        private Boolean enablePrivateVpcConnection;
+
         @NameInMap("PublishTime")
         private String publishTime;
 
@@ -269,6 +272,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private Service(Builder builder) {
             this.deployMetadata = builder.deployMetadata;
             this.deployType = builder.deployType;
+            this.enablePrivateVpcConnection = builder.enablePrivateVpcConnection;
             this.publishTime = builder.publishTime;
             this.serviceId = builder.serviceId;
             this.serviceInfos = builder.serviceInfos;
@@ -300,6 +304,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
          */
         public String getDeployType() {
             return this.deployType;
+        }
+
+        /**
+         * @return enablePrivateVpcConnection
+         */
+        public Boolean getEnablePrivateVpcConnection() {
+            return this.enablePrivateVpcConnection;
         }
 
         /**
@@ -368,6 +379,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String deployMetadata; 
             private String deployType; 
+            private Boolean enablePrivateVpcConnection; 
             private String publishTime; 
             private String serviceId; 
             private java.util.List < ServiceInfos> serviceInfos; 
@@ -391,6 +403,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
+                return this;
+            }
+
+            /**
+             * EnablePrivateVpcConnection.
+             */
+            public Builder enablePrivateVpcConnection(Boolean enablePrivateVpcConnection) {
+                this.enablePrivateVpcConnection = enablePrivateVpcConnection;
                 return this;
             }
 

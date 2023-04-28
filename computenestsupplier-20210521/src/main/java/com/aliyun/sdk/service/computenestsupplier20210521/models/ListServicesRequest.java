@@ -7,11 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListServiceInstancesRequest} extends {@link RequestModel}
+ * {@link ListServicesRequest} extends {@link RequestModel}
  *
- * <p>ListServiceInstancesRequest</p>
+ * <p>ListServicesRequest</p>
  */
-public class ListServiceInstancesRequest extends Request {
+public class ListServicesRequest extends Request {
+    @Query
+    @NameInMap("AllVersions")
+    private Boolean allVersions;
+
     @Query
     @NameInMap("Filter")
     private java.util.List < Filter> filter;
@@ -26,23 +30,20 @@ public class ListServiceInstancesRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
-
-    @Query
-    @NameInMap("ShowDeleted")
-    private Boolean showDeleted;
 
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    private ListServiceInstancesRequest(Builder builder) {
+    private ListServicesRequest(Builder builder) {
         super(builder);
+        this.allVersions = builder.allVersions;
         this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
-        this.showDeleted = builder.showDeleted;
         this.tag = builder.tag;
     }
 
@@ -50,13 +51,20 @@ public class ListServiceInstancesRequest extends Request {
         return new Builder();
     }
 
-    public static ListServiceInstancesRequest create() {
+    public static ListServicesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allVersions
+     */
+    public Boolean getAllVersions() {
+        return this.allVersions;
     }
 
     /**
@@ -88,40 +96,42 @@ public class ListServiceInstancesRequest extends Request {
     }
 
     /**
-     * @return showDeleted
-     */
-    public Boolean getShowDeleted() {
-        return this.showDeleted;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
         return this.tag;
     }
 
-    public static final class Builder extends Request.Builder<ListServiceInstancesRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
+        private Boolean allVersions; 
         private java.util.List < Filter> filter; 
         private String maxResults; 
         private String nextToken; 
         private String regionId; 
-        private Boolean showDeleted; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListServiceInstancesRequest request) {
+        private Builder(ListServicesRequest request) {
             super(request);
+            this.allVersions = request.allVersions;
             this.filter = request.filter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
-            this.showDeleted = request.showDeleted;
             this.tag = request.tag;
         } 
+
+        /**
+         * AllVersions.
+         */
+        public Builder allVersions(Boolean allVersions) {
+            this.putQueryParameter("AllVersions", allVersions);
+            this.allVersions = allVersions;
+            return this;
+        }
 
         /**
          * Filter.
@@ -160,15 +170,6 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * ShowDeleted.
-         */
-        public Builder showDeleted(Boolean showDeleted) {
-            this.putQueryParameter("ShowDeleted", showDeleted);
-            this.showDeleted = showDeleted;
-            return this;
-        }
-
-        /**
          * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
@@ -178,8 +179,8 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         @Override
-        public ListServiceInstancesRequest build() {
-            return new ListServiceInstancesRequest(this);
+        public ListServicesRequest build() {
+            return new ListServicesRequest(this);
         } 
 
     } 

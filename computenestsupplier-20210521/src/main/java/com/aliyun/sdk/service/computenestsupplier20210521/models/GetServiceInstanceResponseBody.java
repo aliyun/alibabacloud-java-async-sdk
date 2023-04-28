@@ -18,6 +18,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("EnableInstanceOps")
     private Boolean enableInstanceOps;
 
+    @NameInMap("EnableUserPrometheus")
+    private String enableUserPrometheus;
+
     @NameInMap("EndTime")
     private String endTime;
 
@@ -53,6 +56,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     @NameInMap("Progress")
     private Long progress;
+
+    @NameInMap("RdAccountLoginUrl")
+    private String rdAccountLoginUrl;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -96,6 +102,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     private GetServiceInstanceResponseBody(Builder builder) {
         this.createTime = builder.createTime;
         this.enableInstanceOps = builder.enableInstanceOps;
+        this.enableUserPrometheus = builder.enableUserPrometheus;
         this.endTime = builder.endTime;
         this.isOperated = builder.isOperated;
         this.licenseMetadata = builder.licenseMetadata;
@@ -108,6 +115,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         this.parameters = builder.parameters;
         this.payType = builder.payType;
         this.progress = builder.progress;
+        this.rdAccountLoginUrl = builder.rdAccountLoginUrl;
         this.requestId = builder.requestId;
         this.resources = builder.resources;
         this.service = builder.service;
@@ -143,6 +151,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public Boolean getEnableInstanceOps() {
         return this.enableInstanceOps;
+    }
+
+    /**
+     * @return enableUserPrometheus
+     */
+    public String getEnableUserPrometheus() {
+        return this.enableUserPrometheus;
     }
 
     /**
@@ -227,6 +242,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public Long getProgress() {
         return this.progress;
+    }
+
+    /**
+     * @return rdAccountLoginUrl
+     */
+    public String getRdAccountLoginUrl() {
+        return this.rdAccountLoginUrl;
     }
 
     /**
@@ -323,6 +345,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String createTime; 
         private Boolean enableInstanceOps; 
+        private String enableUserPrometheus; 
         private String endTime; 
         private Boolean isOperated; 
         private String licenseMetadata; 
@@ -335,6 +358,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String parameters; 
         private String payType; 
         private Long progress; 
+        private String rdAccountLoginUrl; 
         private String requestId; 
         private String resources; 
         private Service service; 
@@ -362,6 +386,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public Builder enableInstanceOps(Boolean enableInstanceOps) {
             this.enableInstanceOps = enableInstanceOps;
+            return this;
+        }
+
+        /**
+         * EnableUserPrometheus.
+         */
+        public Builder enableUserPrometheus(String enableUserPrometheus) {
+            this.enableUserPrometheus = enableUserPrometheus;
             return this;
         }
 
@@ -458,6 +490,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public Builder progress(Long progress) {
             this.progress = progress;
+            return this;
+        }
+
+        /**
+         * RdAccountLoginUrl.
+         */
+        public Builder rdAccountLoginUrl(String rdAccountLoginUrl) {
+            this.rdAccountLoginUrl = rdAccountLoginUrl;
             return this;
         }
 
@@ -572,6 +612,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     } 
 
     public static class ConnectionConfigs extends TeaModel {
+        @NameInMap("DomainName")
+        private String domainName;
+
         @NameInMap("EndpointIps")
         private java.util.List < String > endpointIps;
 
@@ -591,6 +634,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String vpcId;
 
         private ConnectionConfigs(Builder builder) {
+            this.domainName = builder.domainName;
             this.endpointIps = builder.endpointIps;
             this.ingressEndpointStatus = builder.ingressEndpointStatus;
             this.networkServiceStatus = builder.networkServiceStatus;
@@ -605,6 +649,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
         public static ConnectionConfigs create() {
             return builder().build();
+        }
+
+        /**
+         * @return domainName
+         */
+        public String getDomainName() {
+            return this.domainName;
         }
 
         /**
@@ -650,12 +701,21 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String domainName; 
             private java.util.List < String > endpointIps; 
             private String ingressEndpointStatus; 
             private String networkServiceStatus; 
             private java.util.List < String > securityGroups; 
             private java.util.List < String > vSwitches; 
             private String vpcId; 
+
+            /**
+             * DomainName.
+             */
+            public Builder domainName(String domainName) {
+                this.domainName = domainName;
+                return this;
+            }
 
             /**
              * EndpointIps.
@@ -1110,6 +1170,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("SupplierUrl")
         private String supplierUrl;
 
+        @NameInMap("UpgradableServiceVersions")
+        private java.util.List < String > upgradableServiceVersions;
+
         @NameInMap("Version")
         private String version;
 
@@ -1128,6 +1191,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             this.status = builder.status;
             this.supplierName = builder.supplierName;
             this.supplierUrl = builder.supplierUrl;
+            this.upgradableServiceVersions = builder.upgradableServiceVersions;
             this.version = builder.version;
             this.versionName = builder.versionName;
         }
@@ -1218,6 +1282,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return upgradableServiceVersions
+         */
+        public java.util.List < String > getUpgradableServiceVersions() {
+            return this.upgradableServiceVersions;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -1243,6 +1314,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String status; 
             private String supplierName; 
             private String supplierUrl; 
+            private java.util.List < String > upgradableServiceVersions; 
             private String version; 
             private String versionName; 
 
@@ -1331,6 +1403,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
              */
             public Builder supplierUrl(String supplierUrl) {
                 this.supplierUrl = supplierUrl;
+                return this;
+            }
+
+            /**
+             * UpgradableServiceVersions.
+             */
+            public Builder upgradableServiceVersions(java.util.List < String > upgradableServiceVersions) {
+                this.upgradableServiceVersions = upgradableServiceVersions;
                 return this;
             }
 

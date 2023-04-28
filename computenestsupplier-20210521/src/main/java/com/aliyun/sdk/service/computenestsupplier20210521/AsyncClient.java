@@ -20,11 +20,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateArtifactResponse> createArtifact(CreateArtifactRequest request);
 
+    CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
+
     CompletableFuture<DeleteArtifactResponse> deleteArtifact(DeleteArtifactRequest request);
 
     CompletableFuture<GetArtifactResponse> getArtifact(GetArtifactRequest request);
 
     CompletableFuture<GetArtifactRepositoryCredentialsResponse> getArtifactRepositoryCredentials(GetArtifactRepositoryCredentialsRequest request);
+
+    CompletableFuture<GetServiceEstimateCostResponse> getServiceEstimateCost(GetServiceEstimateCostRequest request);
 
     CompletableFuture<GetServiceInstanceResponse> getServiceInstance(GetServiceInstanceRequest request);
 
@@ -35,6 +39,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceInstancesResponse> listServiceInstances(ListServiceInstancesRequest request);
 
     CompletableFuture<ListServiceUsagesResponse> listServiceUsages(ListServiceUsagesRequest request);
+
+    CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
     CompletableFuture<ReleaseArtifactResponse> releaseArtifact(ReleaseArtifactRequest request);
 
