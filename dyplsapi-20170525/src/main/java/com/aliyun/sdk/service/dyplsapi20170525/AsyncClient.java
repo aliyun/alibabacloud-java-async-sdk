@@ -30,6 +30,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindAxnExtensionResponse> bindAxnExtension(BindAxnExtensionRequest request);
 
+    CompletableFuture<BindBatchAxgResponse> bindBatchAxg(BindBatchAxgRequest request);
+
     CompletableFuture<BuySecretNoResponse> buySecretNo(BuySecretNoRequest request);
 
     CompletableFuture<CancelPickUpWaybillResponse> cancelPickUpWaybill(CancelPickUpWaybillRequest request);
@@ -39,6 +41,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePickUpWaybillResponse> createPickUpWaybill(CreatePickUpWaybillRequest request);
 
     CompletableFuture<CreatePickUpWaybillPreQueryResponse> createPickUpWaybillPreQuery(CreatePickUpWaybillPreQueryRequest request);
+
+    CompletableFuture<DeleteAxgGroupResponse> deleteAxgGroup(DeleteAxgGroupRequest request);
 
     CompletableFuture<DeleteSecretBlacklistResponse> deleteSecretBlacklist(DeleteSecretBlacklistRequest request);
 

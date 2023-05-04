@@ -7,28 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CancelPickUpWaybillRequest} extends {@link RequestModel}
+ * {@link DeleteAxgGroupRequest} extends {@link RequestModel}
  *
- * <p>CancelPickUpWaybillRequest</p>
+ * <p>DeleteAxgGroupRequest</p>
  */
-public class CancelPickUpWaybillRequest extends Request {
+public class DeleteAxgGroupRequest extends Request {
     @Query
-    @NameInMap("CancelDesc")
+    @NameInMap("GroupId")
     @Validation(required = true)
-    private String cancelDesc;
-
-    @Header
-    @NameInMap("Content-Type")
-    private String contentType;
-
-    @Query
-    @NameInMap("OuterOrderCode")
-    @Validation(required = true)
-    private String outerOrderCode;
+    private Long groupId;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("PoolKey")
+    @Validation(required = true)
+    private String poolKey;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -38,12 +34,11 @@ public class CancelPickUpWaybillRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private CancelPickUpWaybillRequest(Builder builder) {
+    private DeleteAxgGroupRequest(Builder builder) {
         super(builder);
-        this.cancelDesc = builder.cancelDesc;
-        this.contentType = builder.contentType;
-        this.outerOrderCode = builder.outerOrderCode;
+        this.groupId = builder.groupId;
         this.ownerId = builder.ownerId;
+        this.poolKey = builder.poolKey;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -52,7 +47,7 @@ public class CancelPickUpWaybillRequest extends Request {
         return new Builder();
     }
 
-    public static CancelPickUpWaybillRequest create() {
+    public static DeleteAxgGroupRequest create() {
         return builder().build();
     }
 
@@ -62,24 +57,10 @@ public class CancelPickUpWaybillRequest extends Request {
     }
 
     /**
-     * @return cancelDesc
+     * @return groupId
      */
-    public String getCancelDesc() {
-        return this.cancelDesc;
-    }
-
-    /**
-     * @return contentType
-     */
-    public String getContentType() {
-        return this.contentType;
-    }
-
-    /**
-     * @return outerOrderCode
-     */
-    public String getOuterOrderCode() {
-        return this.outerOrderCode;
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     /**
@@ -87,6 +68,13 @@ public class CancelPickUpWaybillRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return poolKey
+     */
+    public String getPoolKey() {
+        return this.poolKey;
     }
 
     /**
@@ -103,11 +91,10 @@ public class CancelPickUpWaybillRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<CancelPickUpWaybillRequest, Builder> {
-        private String cancelDesc; 
-        private String contentType; 
-        private String outerOrderCode; 
+    public static final class Builder extends Request.Builder<DeleteAxgGroupRequest, Builder> {
+        private Long groupId; 
         private Long ownerId; 
+        private String poolKey; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -115,40 +102,21 @@ public class CancelPickUpWaybillRequest extends Request {
             super();
         } 
 
-        private Builder(CancelPickUpWaybillRequest request) {
+        private Builder(DeleteAxgGroupRequest request) {
             super(request);
-            this.cancelDesc = request.cancelDesc;
-            this.contentType = request.contentType;
-            this.outerOrderCode = request.outerOrderCode;
+            this.groupId = request.groupId;
             this.ownerId = request.ownerId;
+            this.poolKey = request.poolKey;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CancelDesc.
+         * GroupId.
          */
-        public Builder cancelDesc(String cancelDesc) {
-            this.putQueryParameter("CancelDesc", cancelDesc);
-            this.cancelDesc = cancelDesc;
-            return this;
-        }
-
-        /**
-         * Content-Type.
-         */
-        public Builder contentType(String contentType) {
-            this.putHeaderParameter("Content-Type", contentType);
-            this.contentType = contentType;
-            return this;
-        }
-
-        /**
-         * OuterOrderCode.
-         */
-        public Builder outerOrderCode(String outerOrderCode) {
-            this.putQueryParameter("OuterOrderCode", outerOrderCode);
-            this.outerOrderCode = outerOrderCode;
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 
@@ -158,6 +126,15 @@ public class CancelPickUpWaybillRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PoolKey.
+         */
+        public Builder poolKey(String poolKey) {
+            this.putQueryParameter("PoolKey", poolKey);
+            this.poolKey = poolKey;
             return this;
         }
 
@@ -180,8 +157,8 @@ public class CancelPickUpWaybillRequest extends Request {
         }
 
         @Override
-        public CancelPickUpWaybillRequest build() {
-            return new CancelPickUpWaybillRequest(this);
+        public DeleteAxgGroupRequest build() {
+            return new DeleteAxgGroupRequest(this);
         } 
 
     } 
