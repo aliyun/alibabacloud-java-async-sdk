@@ -50,7 +50,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The deletion status of the member.
+         * RdAccountDeletionStatus.
          */
         public Builder rdAccountDeletionStatus(RdAccountDeletionStatus rdAccountDeletionStatus) {
             this.rdAccountDeletionStatus = rdAccountDeletionStatus;
@@ -58,7 +58,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the check item.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service to which the check item belongs.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -220,7 +220,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -228,7 +228,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the deletion.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -236,7 +236,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the deletion.
+             * DeletionTime.
              */
             public Builder deletionTime(String deletionTime) {
                 this.deletionTime = deletionTime;
@@ -244,11 +244,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the deletion. Valid values:
-             * <p>
-             * 
-             * *   0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.
-             * *   1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period of 45 days. The system starts to delete the member until the silence period ends. For more information about the silence period, see [What is the silence period for member deletion?](~~446079~~)
+             * DeletionType.
              */
             public Builder deletionType(String deletionType) {
                 this.deletionType = deletionType;
@@ -256,7 +252,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reasons why the member fails to be deleted.
+             * FailReasonList.
              */
             public Builder failReasonList(java.util.List < FailReasonList> failReasonList) {
                 this.failReasonList = failReasonList;
@@ -264,14 +260,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status. Valid values:
-             * <p>
-             * 
-             * *   Success: The member is deleted.
-             * *   Checking: A deletion check is being performed for the member.
-             * *   Deleting: The member is being deleted.
-             * *   CheckFailed: The deletion check for the member fails.
-             * *   DeleteFailed: The member fails to be deleted.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

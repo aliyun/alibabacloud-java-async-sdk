@@ -17,6 +17,10 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
     private String note;
 
     @Query
+    @NameInMap("ParentFolderId")
+    private String parentFolderId;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -33,6 +37,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
     private InviteAccountToResourceDirectoryRequest(Builder builder) {
         super(builder);
         this.note = builder.note;
+        this.parentFolderId = builder.parentFolderId;
         this.tag = builder.tag;
         this.targetEntity = builder.targetEntity;
         this.targetType = builder.targetType;
@@ -59,6 +64,13 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
     }
 
     /**
+     * @return parentFolderId
+     */
+    public String getParentFolderId() {
+        return this.parentFolderId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -81,6 +93,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
 
     public static final class Builder extends Request.Builder<InviteAccountToResourceDirectoryRequest, Builder> {
         private String note; 
+        private String parentFolderId; 
         private java.util.List < Tag> tag; 
         private String targetEntity; 
         private String targetType; 
@@ -92,16 +105,14 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         private Builder(InviteAccountToResourceDirectoryRequest request) {
             super(request);
             this.note = request.note;
+            this.parentFolderId = request.parentFolderId;
             this.tag = request.tag;
             this.targetEntity = request.targetEntity;
             this.targetType = request.targetType;
         } 
 
         /**
-         * The description of the invitation.
-         * <p>
-         * 
-         * The description can be up to 1,024 characters in length.
+         * Note.
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -110,7 +121,16 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The tags.
+         * ParentFolderId.
+         */
+        public Builder parentFolderId(String parentFolderId) {
+            this.putQueryParameter("ParentFolderId", parentFolderId);
+            this.parentFolderId = parentFolderId;
+            return this;
+        }
+
+        /**
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -119,7 +139,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The ID or logon email address of the account that you want to invite.
+         * TargetEntity.
          */
         public Builder targetEntity(String targetEntity) {
             this.putQueryParameter("TargetEntity", targetEntity);
@@ -128,11 +148,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The type of the account. Valid values:
-         * <p>
-         * 
-         * *   Account: indicates the ID of the account.
-         * *   Email: indicates the logon email address of the account.
+         * TargetType.
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -186,7 +202,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -194,7 +210,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

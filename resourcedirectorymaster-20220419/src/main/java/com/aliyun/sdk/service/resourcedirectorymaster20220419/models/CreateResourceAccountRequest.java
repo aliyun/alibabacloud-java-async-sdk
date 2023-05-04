@@ -125,16 +125,7 @@ public class CreateResourceAccountRequest extends Request {
         } 
 
         /**
-         * The prefix for the Alibaba Cloud account name of the member. If you leave this parameter empty, the system randomly generates a prefix.
-         * <p>
-         * 
-         * The prefix must be 2 to 37 characters in length.
-         * 
-         * The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start with a letter or digit and end with a letter or digit. Valid special characters include underscores (`_`), periods (.), and hyphens (`-`).
-         * 
-         * The complete Alibaba Cloud account name of a member in a resource directory is in the @.aliyunid.com format, such as `alice@rd-3G****.aliyunid.com`.
-         * 
-         * Each name must be unique in the resource directory.
+         * AccountNamePrefix.
          */
         public Builder accountNamePrefix(String accountNamePrefix) {
             this.putQueryParameter("AccountNamePrefix", accountNamePrefix);
@@ -143,14 +134,7 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The display name of the member.
-         * <p>
-         * 
-         * The name must be 2 to 50 characters in length.
-         * 
-         * The name can contain letters, digits, underscores (\_), periods (.), hyphens (-), and spaces.
-         * 
-         * The name must be unique in the resource directory.
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -159,7 +143,7 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder.
+         * ParentFolderId.
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -168,7 +152,7 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The ID of the billing account. If you leave this parameter empty, the member is used as its own billing account.
+         * PayerAccountId.
          */
         public Builder payerAccountId(String payerAccountId) {
             this.putQueryParameter("PayerAccountId", payerAccountId);
@@ -177,13 +161,7 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The identity type of the member. Valid values:
-         * <p>
-         * 
-         * *   resell: The member is an account for a reseller. This is the default value. A relationship is automatically established between the member and the reseller. The management account of the resource directory must be used as the billing account of the member.
-         * *   non_resell: The member is not an account for a reseller. The member is an account that is not associated with a reseller. You can directly use the account to purchase Alibaba Cloud resources. The member is used as its own billing account.
-         * 
-         * > This parameter is available only for resellers at the international site (alibabacloud.com).
+         * ResellAccountType.
          */
         public Builder resellAccountType(String resellAccountType) {
             this.putQueryParameter("ResellAccountType", resellAccountType);
@@ -192,7 +170,7 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The tag of the member.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -246,7 +224,7 @@ public class CreateResourceAccountRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +232,7 @@ public class CreateResourceAccountRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

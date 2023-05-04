@@ -70,7 +70,7 @@ public class DetachControlPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * PolicyId.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -79,12 +79,7 @@ public class DetachControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the object from which you want to detach the access control policy. Access control policies can be attached to the following objects:
-         * <p>
-         * 
-         * *   Root folder
-         * *   Subfolders of the Root folder
-         * *   Members
+         * TargetId.
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

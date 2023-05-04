@@ -50,7 +50,7 @@ public class GetAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the member.
+         * Account.
          */
         public Builder account(Account account) {
             this.account = account;
@@ -58,7 +58,7 @@ public class GetAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetAccountResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * A tag key.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * A tag value.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -327,7 +327,7 @@ public class GetAccountResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -335,7 +335,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account name of the member.
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -343,7 +343,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member.
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -351,13 +351,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the modification for the email address bound to the member. Valid values:
-             * <p>
-             * 
-             * *   If the value of this parameter is empty, no modification is performed for the email address.
-             * *   WAIT_MODIFY: The modification is being performed.
-             * *   CANCELLED: The modification is canceled.
-             * *   EXPIRED: The modification expires.
+             * EmailStatus.
              */
             public Builder emailStatus(String emailStatus) {
                 this.emailStatus = emailStatus;
@@ -365,7 +359,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * FolderId.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -373,7 +367,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The real-name verification information.
+             * IdentityInformation.
              */
             public Builder identityInformation(String identityInformation) {
                 this.identityInformation = identityInformation;
@@ -381,11 +375,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the member joins the resource directory. Valid values:
-             * <p>
-             * 
-             * *   invited: The member is invited to join the resource directory.
-             * *   created: The member is directly created in the resource directory.
+             * JoinMethod.
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -393,7 +383,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member joined the resource directory.
+             * JoinTime.
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -401,7 +391,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The location of the member in the resource directory.
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -409,7 +399,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was modified.
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -417,7 +407,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * ResourceDirectoryId.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -425,7 +415,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the member in the resource directory.
+             * ResourceDirectoryPath.
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;
@@ -433,16 +423,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member. Valid values:
-             * <p>
-             * 
-             * *   CreateSuccess: The member is created.
-             * *   PromoteVerifying: The upgrade of the member is being confirmed.
-             * *   PromoteFailed: The upgrade of the member fails.
-             * *   PromoteExpired: The upgrade of the member expires.
-             * *   PromoteCancelled: The upgrade of the member is canceled.
-             * *   PromoteSuccess: The member is upgraded.
-             * *   InviteSuccess: The member accepts the invitation.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -450,7 +431,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the member.
+             * Tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -458,11 +439,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the member. Valid values:
-             * <p>
-             * 
-             * *   CloudAccount: cloud account
-             * *   ResourceAccount: resource account
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

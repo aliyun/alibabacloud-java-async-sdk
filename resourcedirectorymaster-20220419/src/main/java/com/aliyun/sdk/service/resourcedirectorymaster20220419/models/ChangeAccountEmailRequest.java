@@ -70,7 +70,7 @@ public class ChangeAccountEmailRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member.
+         * AccountId.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,10 +79,7 @@ public class ChangeAccountEmailRequest extends Request {
         }
 
         /**
-         * The email address to be bound to the member.
-         * <p>
-         * 
-         * > The system automatically sends a verification email to the email address. After the verification is passed, the email address takes effect, and the system changes both the logon email address and secure email address of the member.
+         * Email.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);

@@ -82,13 +82,7 @@ public class ListTrustedServiceStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the management account or delegated administrator account.
-         * <p>
-         * 
-         * *   If you set this parameter to the ID of a management account, the trusted services that are enabled within the management account are queried. The default value of this parameter is the ID of an management account.
-         * *   If you set this parameter to the ID of a delegated administrator account, the trusted services that are enabled within the delegated administrator account are queried.
-         * 
-         * For more information about trusted services and delegated administrator accounts, see [Overview of trusted services](~~208133~~) and [Delegated administrator accounts](~~208117~~).
+         * AdminAccountId.
          */
         public Builder adminAccountId(String adminAccountId) {
             this.putQueryParameter("AdminAccountId", adminAccountId);
@@ -97,10 +91,7 @@ public class ListTrustedServiceStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1. Default value: 1.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -109,10 +100,7 @@ public class ListTrustedServiceStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Valid values: 1 to 100. Default value: 10.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

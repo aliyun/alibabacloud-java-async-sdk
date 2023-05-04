@@ -69,7 +69,7 @@ public class GetAccountRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member.
+         * AccountId.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -78,11 +78,7 @@ public class GetAccountRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the information of tags. Valid values:
-         * <p>
-         * 
-         * *   false (default value)
-         * *   true
+         * IncludeTags.
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);

@@ -50,7 +50,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the member.
+         * Account.
          */
         public Builder account(Account account) {
             this.account = account;
@@ -58,7 +58,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -214,7 +214,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account name of the member.
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -222,7 +222,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member.
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -230,7 +230,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * FolderId.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -238,11 +238,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the member joins the resource directory. Valid values:
-             * <p>
-             * 
-             * *   invited: The member is invited to join the resource directory.
-             * *   created: The member is directly created in the resource directory.
+             * JoinMethod.
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -250,7 +246,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member joined the resource directory. The time is displayed in UTC.
+             * JoinTime.
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -258,7 +254,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was modified. The time is displayed in UTC.
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -266,7 +262,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * ResourceDirectoryId.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -274,7 +270,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member. The value CreateSuccess indicates that the member is created.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -282,7 +278,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the member. The value ResourceAccount indicates that the member is a resource account.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

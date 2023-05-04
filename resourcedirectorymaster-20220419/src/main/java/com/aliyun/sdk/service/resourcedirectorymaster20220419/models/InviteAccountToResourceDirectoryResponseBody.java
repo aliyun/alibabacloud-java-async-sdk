@@ -50,7 +50,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the invitation.
+         * Handshake.
          */
         public Builder handshake(Handshake handshake) {
             this.handshake = handshake;
@@ -58,7 +58,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The time when the invitation was created. The time is displayed in UTC.
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +226,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation expires. The time is displayed in UTC.
+             * ExpireTime.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -234,7 +234,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invitation.
+             * HandshakeId.
              */
             public Builder handshakeId(String handshakeId) {
                 this.handshakeId = handshakeId;
@@ -242,7 +242,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account of the resource directory.
+             * MasterAccountId.
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -250,7 +250,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management account of the resource directory.
+             * MasterAccountName.
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -258,7 +258,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation was modified. The time is displayed in UTC.
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -266,7 +266,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the invitation.
+             * Note.
              */
             public Builder note(String note) {
                 this.note = note;
@@ -274,7 +274,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * ResourceDirectoryId.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -282,14 +282,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the invitation. Valid values:
-             * <p>
-             * 
-             * *   Pending: The invitation is waiting for confirmation.
-             * *   Accepted: The invitation is accepted.
-             * *   Cancelled: The invitation is canceled.
-             * *   Declined: The invitation is rejected.
-             * *   Expired: The invitation expires.
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -297,7 +290,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID or logon email address of the invited account.
+             * TargetEntity.
              */
             public Builder targetEntity(String targetEntity) {
                 this.targetEntity = targetEntity;
@@ -305,11 +298,7 @@ public class InviteAccountToResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the invited account. Valid values:
-             * <p>
-             * 
-             * *   Account: indicates the ID of the account.
-             * *   Email: indicates the logon email address of the account.
+             * TargetType.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

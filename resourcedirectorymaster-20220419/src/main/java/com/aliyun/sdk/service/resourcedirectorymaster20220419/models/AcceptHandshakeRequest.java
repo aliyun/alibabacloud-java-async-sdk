@@ -55,10 +55,7 @@ public class AcceptHandshakeRequest extends Request {
         } 
 
         /**
-         * The ID of the invitation.
-         * <p>
-         * 
-         * You can call the [ListHandshakesForAccount](~~ListHandshakesForAccount~~) operation to obtain the ID.
+         * HandshakeId.
          */
         public Builder handshakeId(String handshakeId) {
             this.putQueryParameter("HandshakeId", handshakeId);

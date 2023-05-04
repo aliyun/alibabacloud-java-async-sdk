@@ -86,7 +86,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the trusted services that are enabled.
+         * EnabledServicePrincipals.
          */
         public Builder enabledServicePrincipals(EnabledServicePrincipals enabledServicePrincipals) {
             this.enabledServicePrincipals = enabledServicePrincipals;
@@ -94,7 +94,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             private String servicePrincipal; 
 
             /**
-             * The time when the trusted service was enabled.
+             * EnableTime.
              */
             public Builder enableTime(String enableTime) {
                 this.enableTime = enableTime;
@@ -178,7 +178,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the trusted service.
+             * ServicePrincipal.
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;

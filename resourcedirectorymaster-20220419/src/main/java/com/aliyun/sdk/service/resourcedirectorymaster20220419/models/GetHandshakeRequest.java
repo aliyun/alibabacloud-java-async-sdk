@@ -55,7 +55,7 @@ public class GetHandshakeRequest extends Request {
         } 
 
         /**
-         * The ID of the invitation.
+         * HandshakeId.
          */
         public Builder handshakeId(String handshakeId) {
             this.putQueryParameter("HandshakeId", handshakeId);

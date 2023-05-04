@@ -55,7 +55,7 @@ public class GetAccountDeletionStatusRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member.
+         * AccountId.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

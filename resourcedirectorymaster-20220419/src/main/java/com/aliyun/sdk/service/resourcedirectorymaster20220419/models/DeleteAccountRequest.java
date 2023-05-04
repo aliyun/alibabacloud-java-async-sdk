@@ -69,10 +69,7 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
-         * The IDs of the check items that you can choose to ignore for the member deletion.
-         * <p>
-         * 
-         * You can obtain the IDs from the response of the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation.
+         * AbandonableCheckId.
          */
         public Builder abandonableCheckId(java.util.List < String > abandonableCheckId) {
             String abandonableCheckIdShrink = shrink(abandonableCheckId, "AbandonableCheckId", "json");
@@ -82,7 +79,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member that you want to delete.
+         * AccountId.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

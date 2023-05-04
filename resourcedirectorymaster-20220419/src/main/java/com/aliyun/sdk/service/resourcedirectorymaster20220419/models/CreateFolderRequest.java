@@ -69,10 +69,7 @@ public class CreateFolderRequest extends Request {
         } 
 
         /**
-         * The name of the folder.
-         * <p>
-         * 
-         * The name must be 1 to 24 characters in length and can contain letters, digits, underscores (\_), periods (.),and hyphens (-).
+         * FolderName.
          */
         public Builder folderName(String folderName) {
             this.putQueryParameter("FolderName", folderName);
@@ -81,7 +78,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder.
+         * ParentFolderId.
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);

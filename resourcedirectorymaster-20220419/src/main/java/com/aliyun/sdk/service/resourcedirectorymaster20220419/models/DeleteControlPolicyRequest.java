@@ -55,7 +55,7 @@ public class DeleteControlPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * PolicyId.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);

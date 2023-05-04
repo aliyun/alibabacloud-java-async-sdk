@@ -55,7 +55,7 @@ public class DeleteFolderRequest extends Request {
         } 
 
         /**
-         * The ID of the folder.
+         * FolderId.
          */
         public Builder folderId(String folderId) {
             this.putQueryParameter("FolderId", folderId);
