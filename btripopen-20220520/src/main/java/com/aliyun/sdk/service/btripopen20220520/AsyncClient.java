@@ -190,6 +190,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SyncThirdUserMappingResponse> syncThirdUserMapping(SyncThirdUserMappingRequest request);
 
+    CompletableFuture<TBAccountInfoQueryResponse> tBAccountInfoQuery(TBAccountInfoQueryRequest request);
+
+    CompletableFuture<TBAccountUnbindResponse> tBAccountUnbind(TBAccountUnbindRequest request);
+
     CompletableFuture<TicketChangingApplyResponse> ticketChangingApply(TicketChangingApplyRequest request);
 
     CompletableFuture<TicketChangingCancelResponse> ticketChangingCancel(TicketChangingCancelRequest request);
