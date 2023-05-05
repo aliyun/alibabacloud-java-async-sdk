@@ -34,6 +34,10 @@ public class AddressGetRequest extends Request {
     private String subCorpId;
 
     @Query
+    @NameInMap("taobao_callback_url")
+    private String taobaoCallbackUrl;
+
+    @Query
     @NameInMap("type")
     private Integer type;
 
@@ -53,6 +57,7 @@ public class AddressGetRequest extends Request {
         this.itineraryId = builder.itineraryId;
         this.phone = builder.phone;
         this.subCorpId = builder.subCorpId;
+        this.taobaoCallbackUrl = builder.taobaoCallbackUrl;
         this.type = builder.type;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
@@ -107,6 +112,13 @@ public class AddressGetRequest extends Request {
     }
 
     /**
+     * @return taobaoCallbackUrl
+     */
+    public String getTaobaoCallbackUrl() {
+        return this.taobaoCallbackUrl;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -133,6 +145,7 @@ public class AddressGetRequest extends Request {
         private String itineraryId; 
         private String phone; 
         private String subCorpId; 
+        private String taobaoCallbackUrl; 
         private Integer type; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
@@ -148,6 +161,7 @@ public class AddressGetRequest extends Request {
             this.itineraryId = request.itineraryId;
             this.phone = request.phone;
             this.subCorpId = request.subCorpId;
+            this.taobaoCallbackUrl = request.taobaoCallbackUrl;
             this.type = request.type;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
@@ -195,6 +209,15 @@ public class AddressGetRequest extends Request {
         public Builder subCorpId(String subCorpId) {
             this.putQueryParameter("sub_corp_id", subCorpId);
             this.subCorpId = subCorpId;
+            return this;
+        }
+
+        /**
+         * taobao_callback_url.
+         */
+        public Builder taobaoCallbackUrl(String taobaoCallbackUrl) {
+            this.putQueryParameter("taobao_callback_url", taobaoCallbackUrl);
+            this.taobaoCallbackUrl = taobaoCallbackUrl;
             return this;
         }
 

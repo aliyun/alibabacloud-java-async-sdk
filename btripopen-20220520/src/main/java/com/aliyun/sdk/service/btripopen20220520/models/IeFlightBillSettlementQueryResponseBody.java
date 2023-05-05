@@ -184,6 +184,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
+        @NameInMap("apply_extend_field")
+        private String applyExtendField;
+
         @NameInMap("apply_id")
         private String applyId;
 
@@ -393,6 +396,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.airlineCorpCode = builder.airlineCorpCode;
             this.airlineCorpName = builder.airlineCorpName;
             this.alipayTradeNo = builder.alipayTradeNo;
+            this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
             this.arrAirportCode = builder.arrAirportCode;
             this.arrCity = builder.arrCity;
@@ -497,6 +501,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getAlipayTradeNo() {
             return this.alipayTradeNo;
+        }
+
+        /**
+         * @return applyExtendField
+         */
+        public String getApplyExtendField() {
+            return this.applyExtendField;
         }
 
         /**
@@ -980,6 +991,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String airlineCorpCode; 
             private String airlineCorpName; 
             private String alipayTradeNo; 
+            private String applyExtendField; 
             private String applyId; 
             private String arrAirportCode; 
             private String arrCity; 
@@ -1078,6 +1090,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
+                return this;
+            }
+
+            /**
+             * 审批扩展自定义字段
+             */
+            public Builder applyExtendField(String applyExtendField) {
+                this.applyExtendField = applyExtendField;
                 return this;
             }
 

@@ -155,6 +155,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
+        @NameInMap("apply_extend_field")
+        private String applyExtendField;
+
         @NameInMap("apply_id")
         private String applyId;
 
@@ -325,6 +328,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         private DataList(Builder builder) {
             this.alipayTradeNo = builder.alipayTradeNo;
+            this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
             this.arrCity = builder.arrCity;
             this.arrDate = builder.arrDate;
@@ -396,6 +400,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getAlipayTradeNo() {
             return this.alipayTradeNo;
+        }
+
+        /**
+         * @return applyExtendField
+         */
+        public String getApplyExtendField() {
+            return this.applyExtendField;
         }
 
         /**
@@ -792,6 +803,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alipayTradeNo; 
+            private String applyExtendField; 
             private String applyId; 
             private String arrCity; 
             private String arrDate; 
@@ -854,6 +866,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
+                return this;
+            }
+
+            /**
+             * 审批扩展自定义字段
+             */
+            public Builder applyExtendField(String applyExtendField) {
+                this.applyExtendField = applyExtendField;
                 return this;
             }
 

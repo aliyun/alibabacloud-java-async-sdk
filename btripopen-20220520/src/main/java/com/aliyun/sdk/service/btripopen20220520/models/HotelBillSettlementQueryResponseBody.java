@@ -155,6 +155,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
+        @NameInMap("apply_extend_field")
+        private String applyExtendField;
+
         @NameInMap("apply_id")
         private String applyId;
 
@@ -313,6 +316,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         private DataList(Builder builder) {
             this.alipayTradeNo = builder.alipayTradeNo;
+            this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
             this.billRecordTime = builder.billRecordTime;
             this.bookTime = builder.bookTime;
@@ -380,6 +384,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getAlipayTradeNo() {
             return this.alipayTradeNo;
+        }
+
+        /**
+         * @return applyExtendField
+         */
+        public String getApplyExtendField() {
+            return this.applyExtendField;
         }
 
         /**
@@ -748,6 +759,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alipayTradeNo; 
+            private String applyExtendField; 
             private String applyId; 
             private String billRecordTime; 
             private String bookTime; 
@@ -806,6 +818,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
+                return this;
+            }
+
+            /**
+             * 审批扩展自定义字段
+             */
+            public Builder applyExtendField(String applyExtendField) {
+                this.applyExtendField = applyExtendField;
                 return this;
             }
 
