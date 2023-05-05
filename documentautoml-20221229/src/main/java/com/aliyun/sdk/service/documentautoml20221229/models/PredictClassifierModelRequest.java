@@ -16,6 +16,10 @@ public class PredictClassifierModelRequest extends Request {
     @NameInMap("AutoPrediction")
     private Boolean autoPrediction;
 
+    @Query
+    @NameInMap("BinaryToText")
+    private Boolean binaryToText;
+
     @Body
     @NameInMap("Body")
     private String body;
@@ -32,6 +36,7 @@ public class PredictClassifierModelRequest extends Request {
     private PredictClassifierModelRequest(Builder builder) {
         super(builder);
         this.autoPrediction = builder.autoPrediction;
+        this.binaryToText = builder.binaryToText;
         this.body = builder.body;
         this.classifierId = builder.classifierId;
         this.content = builder.content;
@@ -58,6 +63,13 @@ public class PredictClassifierModelRequest extends Request {
     }
 
     /**
+     * @return binaryToText
+     */
+    public Boolean getBinaryToText() {
+        return this.binaryToText;
+    }
+
+    /**
      * @return body
      */
     public String getBody() {
@@ -80,6 +92,7 @@ public class PredictClassifierModelRequest extends Request {
 
     public static final class Builder extends Request.Builder<PredictClassifierModelRequest, Builder> {
         private Boolean autoPrediction; 
+        private Boolean binaryToText; 
         private String body; 
         private Long classifierId; 
         private String content; 
@@ -91,6 +104,7 @@ public class PredictClassifierModelRequest extends Request {
         private Builder(PredictClassifierModelRequest request) {
             super(request);
             this.autoPrediction = request.autoPrediction;
+            this.binaryToText = request.binaryToText;
             this.body = request.body;
             this.classifierId = request.classifierId;
             this.content = request.content;
@@ -102,6 +116,15 @@ public class PredictClassifierModelRequest extends Request {
         public Builder autoPrediction(Boolean autoPrediction) {
             this.putQueryParameter("AutoPrediction", autoPrediction);
             this.autoPrediction = autoPrediction;
+            return this;
+        }
+
+        /**
+         * BinaryToText.
+         */
+        public Builder binaryToText(Boolean binaryToText) {
+            this.putQueryParameter("BinaryToText", binaryToText);
+            this.binaryToText = binaryToText;
             return this;
         }
 
