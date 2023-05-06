@@ -7,39 +7,39 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SubscriptionBillResponseBody} extends {@link TeaModel}
+ * {@link EditEndUserStatusResponseBody} extends {@link TeaModel}
  *
- * <p>SubscriptionBillResponseBody</p>
+ * <p>EditEndUserStatusResponseBody</p>
  */
-public class SubscriptionBillResponseBody extends TeaModel {
+public class EditEndUserStatusResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
     @NameInMap("Data")
-    private Boolean data;
+    private String data;
 
     @NameInMap("Message")
     private String message;
 
+    @NameInMap("Msg")
+    private String msg;
+
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
-    private Boolean success;
-
-    private SubscriptionBillResponseBody(Builder builder) {
+    private EditEndUserStatusResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
+        this.msg = builder.msg;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SubscriptionBillResponseBody create() {
+    public static EditEndUserStatusResponseBody create() {
         return builder().build();
     }
 
@@ -53,7 +53,7 @@ public class SubscriptionBillResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Boolean getData() {
+    public String getData() {
         return this.data;
     }
 
@@ -65,28 +65,28 @@ public class SubscriptionBillResponseBody extends TeaModel {
     }
 
     /**
+     * @return msg
+     */
+    public String getMsg() {
+        return this.msg;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
         private String code; 
-        private Boolean data; 
+        private String data; 
         private String message; 
+        private String msg; 
         private String requestId; 
-        private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * code
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +94,15 @@ public class SubscriptionBillResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * data
          */
-        public Builder data(Boolean data) {
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The message that is returned.
+         * message
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,23 +110,23 @@ public class SubscriptionBillResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * msg
+         */
+        public Builder msg(String msg) {
+            this.msg = msg;
+            return this;
+        }
+
+        /**
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * Indicates whether the request was successful.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
-            return this;
-        }
-
-        public SubscriptionBillResponseBody build() {
-            return new SubscriptionBillResponseBody(this);
+        public EditEndUserStatusResponseBody build() {
+            return new EditEndUserStatusResponseBody(this);
         } 
 
     } 

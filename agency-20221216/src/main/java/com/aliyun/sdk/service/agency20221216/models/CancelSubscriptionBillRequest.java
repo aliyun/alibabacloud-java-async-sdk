@@ -55,7 +55,7 @@ public class CancelSubscriptionBillRequest extends Request {
         } 
 
         /**
-         * subscribeType
+         * The type of the bill to which you want to cancel the subscription. Valid values: PartnerBillingItemDetailForBillingPeriod, PartnerBillingItemDetailMonthly, PartnerInstanceDetailForBillingPeriod, and PartnerInstanceDetailMonthly.
          */
         public Builder subscribeType(String subscribeType) {
             this.putQueryParameter("SubscribeType", subscribeType);
