@@ -17,11 +17,6 @@ public class GroupUserSaveRequest extends Request {
     private String jobNo;
 
     @Body
-    @NameInMap("leave_status")
-    @Validation(required = true)
-    private Integer leaveStatus;
-
-    @Body
     @NameInMap("phone")
     private String phone;
 
@@ -51,7 +46,6 @@ public class GroupUserSaveRequest extends Request {
     private GroupUserSaveRequest(Builder builder) {
         super(builder);
         this.jobNo = builder.jobNo;
-        this.leaveStatus = builder.leaveStatus;
         this.phone = builder.phone;
         this.realNameEn = builder.realNameEn;
         this.subCorpIdList = builder.subCorpIdList;
@@ -78,13 +72,6 @@ public class GroupUserSaveRequest extends Request {
      */
     public String getJobNo() {
         return this.jobNo;
-    }
-
-    /**
-     * @return leaveStatus
-     */
-    public Integer getLeaveStatus() {
-        return this.leaveStatus;
     }
 
     /**
@@ -131,7 +118,6 @@ public class GroupUserSaveRequest extends Request {
 
     public static final class Builder extends Request.Builder<GroupUserSaveRequest, Builder> {
         private String jobNo; 
-        private Integer leaveStatus; 
         private String phone; 
         private String realNameEn; 
         private java.util.List < SubCorpIdList> subCorpIdList; 
@@ -146,7 +132,6 @@ public class GroupUserSaveRequest extends Request {
         private Builder(GroupUserSaveRequest request) {
             super(request);
             this.jobNo = request.jobNo;
-            this.leaveStatus = request.leaveStatus;
             this.phone = request.phone;
             this.realNameEn = request.realNameEn;
             this.subCorpIdList = request.subCorpIdList;
@@ -161,15 +146,6 @@ public class GroupUserSaveRequest extends Request {
         public Builder jobNo(String jobNo) {
             this.putBodyParameter("job_no", jobNo);
             this.jobNo = jobNo;
-            return this;
-        }
-
-        /**
-         * 离职状态（0 在职 1 离职）
-         */
-        public Builder leaveStatus(Integer leaveStatus) {
-            this.putBodyParameter("leave_status", leaveStatus);
-            this.leaveStatus = leaveStatus;
             return this;
         }
 
@@ -240,8 +216,15 @@ public class GroupUserSaveRequest extends Request {
         @Validation(required = true)
         private java.util.List < String > departIds;
 
+        @NameInMap("leave_status")
+        @Validation(required = true)
+        private Integer leaveStatus;
+
         @NameInMap("manager_user_id")
         private String managerUserId;
+
+        @NameInMap("position_level")
+        private String positionLevel;
 
         @NameInMap("sub_corp_id")
         @Validation(required = true)
@@ -249,7 +232,9 @@ public class GroupUserSaveRequest extends Request {
 
         private SubCorpIdList(Builder builder) {
             this.departIds = builder.departIds;
+            this.leaveStatus = builder.leaveStatus;
             this.managerUserId = builder.managerUserId;
+            this.positionLevel = builder.positionLevel;
             this.subCorpId = builder.subCorpId;
         }
 
@@ -269,10 +254,24 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
+         * @return leaveStatus
+         */
+        public Integer getLeaveStatus() {
+            return this.leaveStatus;
+        }
+
+        /**
          * @return managerUserId
          */
         public String getManagerUserId() {
             return this.managerUserId;
+        }
+
+        /**
+         * @return positionLevel
+         */
+        public String getPositionLevel() {
+            return this.positionLevel;
         }
 
         /**
@@ -284,7 +283,9 @@ public class GroupUserSaveRequest extends Request {
 
         public static final class Builder {
             private java.util.List < String > departIds; 
+            private Integer leaveStatus; 
             private String managerUserId; 
+            private String positionLevel; 
             private String subCorpId; 
 
             /**
@@ -296,10 +297,26 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
+             * 离职状态（0 在职 1 离职）
+             */
+            public Builder leaveStatus(Integer leaveStatus) {
+                this.leaveStatus = leaveStatus;
+                return this;
+            }
+
+            /**
              * 直属主管id
              */
             public Builder managerUserId(String managerUserId) {
                 this.managerUserId = managerUserId;
+                return this;
+            }
+
+            /**
+             * 职级
+             */
+            public Builder positionLevel(String positionLevel) {
+                this.positionLevel = positionLevel;
                 return this;
             }
 
