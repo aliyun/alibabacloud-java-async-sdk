@@ -246,7 +246,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the server to which a file is uploaded in OSS.
+             * The address of the OSS server to which a file is uploaded.
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;

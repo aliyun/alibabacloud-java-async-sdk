@@ -74,11 +74,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +82,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +90,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +98,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +150,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
             private String phoneNumber; 
 
             /**
-             * The ID of the phone number.
+             * 号码ID
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +158,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number.
+             * 号码
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;

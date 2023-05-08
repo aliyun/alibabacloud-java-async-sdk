@@ -195,24 +195,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The category of the template when the TemplateType parameter is set to WHATSAPP. Valid values:
-         * <p>
-         * 
-         * *   **TRANSACTIONAL**: a transactional template
-         * *   **MARKETING**: a marketing template
-         * *   **OTP**: a one-time password template
-         * 
-         * The category of the template when the TemplateType parameter is set to VIBER. Valid values:
-         * 
-         * *   **text**: a text message template
-         * *   **image**: an image message template
-         * *   **text_image_button**: a template that contains multiple media objects, including text, image, and button
-         * *   **text_button**: a template that contains the text and button media objects
-         * *   **document**: a document message template
-         * *   **video**: a video message template
-         * *   **text_video**: a template that contains the text and video media objects
-         * *   **text_video_button**: a template that contains multiple media objects, including text, video, and button
-         * *   **text_image**: a template that contains the text and image media objects
+         * The returned data.
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
@@ -221,7 +204,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The list of components of the message template.
+         * The name of the message template.
          */
         public Builder components(java.util.List < Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -240,7 +223,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp account that you register.
+         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -249,7 +232,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The examples of variables that are used when you create the message template.
+         * 变量，KEY-VALUE结构
          */
         public Builder example(java.util.Map < String, String > example) {
             String exampleShrink = shrink(example, "Example", "json");
@@ -259,7 +242,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * Isv校验码，用于校验子帐号是否由ISV授权
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -268,7 +251,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+         * 语言
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -277,7 +260,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The name of the message template.
+         * 模板名称
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -286,12 +269,7 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
-         * The type of the message template.
-         * <p>
-         * 
-         * *   **WHATSAPP**
-         * *   **VIBER**
-         * *   LINE: the LINE message template. The LINE message template is under development.
+         * 模板类型
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("TemplateType", templateType);
@@ -307,8 +285,20 @@ public class CreateChatappTemplateRequest extends Request {
     } 
 
     public static class Buttons extends TeaModel {
+        @NameInMap("AutofillText")
+        private String autofillText;
+
+        @NameInMap("IsOptOut")
+        private Boolean isOptOut;
+
+        @NameInMap("PackageName")
+        private String packageName;
+
         @NameInMap("PhoneNumber")
         private String phoneNumber;
+
+        @NameInMap("SignatureHash")
+        private String signatureHash;
 
         @NameInMap("Text")
         private String text;
@@ -324,7 +314,11 @@ public class CreateChatappTemplateRequest extends Request {
         private String urlType;
 
         private Buttons(Builder builder) {
+            this.autofillText = builder.autofillText;
+            this.isOptOut = builder.isOptOut;
+            this.packageName = builder.packageName;
             this.phoneNumber = builder.phoneNumber;
+            this.signatureHash = builder.signatureHash;
             this.text = builder.text;
             this.type = builder.type;
             this.url = builder.url;
@@ -340,10 +334,38 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return autofillText
+         */
+        public String getAutofillText() {
+            return this.autofillText;
+        }
+
+        /**
+         * @return isOptOut
+         */
+        public Boolean getIsOptOut() {
+            return this.isOptOut;
+        }
+
+        /**
+         * @return packageName
+         */
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        /**
          * @return phoneNumber
          */
         public String getPhoneNumber() {
             return this.phoneNumber;
+        }
+
+        /**
+         * @return signatureHash
+         */
+        public String getSignatureHash() {
+            return this.signatureHash;
         }
 
         /**
@@ -375,14 +397,42 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         public static final class Builder {
+            private String autofillText; 
+            private Boolean isOptOut; 
+            private String packageName; 
             private String phoneNumber; 
+            private String signatureHash; 
             private String text; 
             private String type; 
             private String url; 
             private String urlType; 
 
             /**
-             * The phone number. This parameter is valid only if the Type parameter is set to **PHONE_NUMBER**.
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，Whatsap Autofill操作的按钮文本
+             */
+            public Builder autofillText(String autofillText) {
+                this.autofillText = autofillText;
+                return this;
+            }
+
+            /**
+             * Whatsapp模板，在Category为Marketing,并且Button type为QUICK_REPLY时有效，表示按钮为营销退订按钮，客户如果点击了此按钮，并且在chatapp平台上配置了发送控制操作，则后续Marketing消息则不会发送到客户
+             */
+            public Builder isOptOut(Boolean isOptOut) {
+                this.isOptOut = isOptOut;
+                return this;
+            }
+
+            /**
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的包名
+             */
+            public Builder packageName(String packageName) {
+                this.packageName = packageName;
+                return this;
+            }
+
+            /**
+             * 号码
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -390,7 +440,15 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The display name of the button.
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的签名Hash值
+             */
+            public Builder signatureHash(String signatureHash) {
+                this.signatureHash = signatureHash;
+                return this;
+            }
+
+            /**
+             * 所发送消息的文本
              */
             public Builder text(String text) {
                 this.text = text;
@@ -398,20 +456,9 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the button. Valid values:
+             * 按钮类型
              * <p>
-             * 
-             * *   **PHONE_NUMBER**: a phone number button
-             * *   **URL**: a URL button
-             * *   **QUICK_REPLY**: a quick reply button
-             * 
-             * > 
-             * 
-             * *   When the TemplateType parameter is set to WHATSAPP, if you have created a website link or a phone number link, you cannot create an quick reply button.
-             * 
-             * *   When the TemplateType parameter is set to WHATSAPP, you can add a combination of two URL buttons or a combination of a URL button and a phone number button to a message template.
-             * 
-             * *   When the TemplateType parameter is set to VIBER, you can add only one button and the button must be of the URL type.
+             * PHONE_NUMBER（电话）,URL（网页按钮）和QUICK_REPLY（快速回复）
              */
             public Builder type(String type) {
                 this.type = type;
@@ -419,7 +466,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The URL to be accessed when users click the URL button.
+             * 点击按钮后将访问的网址
              */
             public Builder url(String url) {
                 this.url = url;
@@ -427,11 +474,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the URL. Valid values:
-             * <p>
-             * 
-             * *   **static**: a static URL
-             * *   **dynamic**: a dynamic URL
+             * 网址类型 static-静态dynamic-动态
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -446,11 +489,18 @@ public class CreateChatappTemplateRequest extends Request {
 
     }
     public static class Components extends TeaModel {
+        @NameInMap("AddSecretRecommendation")
+        private Boolean addSecretRecommendation;
+
         @NameInMap("Buttons")
         private java.util.List < Buttons> buttons;
 
         @NameInMap("Caption")
         private String caption;
+
+        @NameInMap("CodeExpirationMinutes")
+        @Validation(maximum = 90, minimum = 1)
+        private Integer codeExpirationMinutes;
 
         @NameInMap("Duration")
         private Integer duration;
@@ -478,8 +528,10 @@ public class CreateChatappTemplateRequest extends Request {
         private String url;
 
         private Components(Builder builder) {
+            this.addSecretRecommendation = builder.addSecretRecommendation;
             this.buttons = builder.buttons;
             this.caption = builder.caption;
+            this.codeExpirationMinutes = builder.codeExpirationMinutes;
             this.duration = builder.duration;
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
@@ -499,6 +551,13 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return addSecretRecommendation
+         */
+        public Boolean getAddSecretRecommendation() {
+            return this.addSecretRecommendation;
+        }
+
+        /**
          * @return buttons
          */
         public java.util.List < Buttons> getButtons() {
@@ -510,6 +569,13 @@ public class CreateChatappTemplateRequest extends Request {
          */
         public String getCaption() {
             return this.caption;
+        }
+
+        /**
+         * @return codeExpirationMinutes
+         */
+        public Integer getCodeExpirationMinutes() {
+            return this.codeExpirationMinutes;
         }
 
         /**
@@ -569,8 +635,10 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean addSecretRecommendation; 
             private java.util.List < Buttons> buttons; 
             private String caption; 
+            private Integer codeExpirationMinutes; 
             private Integer duration; 
             private String fileName; 
             private String fileType; 
@@ -581,7 +649,15 @@ public class CreateChatappTemplateRequest extends Request {
             private String url; 
 
             /**
-             * The list of buttons, which applies only to the **BUTTONS** component.
+             * Whatsapp类型模板，Category为Authentication，并且Component Type为Body时有效，表示在Body上面显示不要将验证码信息提供给其它人的提示信息
+             */
+            public Builder addSecretRecommendation(Boolean addSecretRecommendation) {
+                this.addSecretRecommendation = addSecretRecommendation;
+                return this;
+            }
+
+            /**
+             * 按钮
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -589,7 +665,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The description of the file.
+             * 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -597,7 +673,15 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The duration of the video message when the TemplateType parameter is set to VIBER. Valid values: 0 to 600. Unit: seconds.
+             * Whatsapp Authentication模板验证码有效期（分钟），只在Whatsapp类型消息，Category为Authentication并且Component Type为Footer时有效（此信息显示在Footer位置）
+             */
+            public Builder codeExpirationMinutes(Integer codeExpirationMinutes) {
+                this.codeExpirationMinutes = codeExpirationMinutes;
+                return this;
+            }
+
+            /**
+             * Viber视频消息的视频时长，取值范围 0 - 600
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -605,7 +689,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The name of the file.
+             * 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -613,7 +697,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the file when the TemplateType parameter is set to VIBER.
+             * Viber文件消息的文件类型
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -621,13 +705,9 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the media resources that are included in the message.
+             * 格式
              * <p>
-             * 
-             * *   **TEXT**: text
-             * *   **IMAGE**: image
-             * *   **DOCUMENT**: document
-             * *   **VIDEO**: video
+             * TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
              */
             public Builder format(String format) {
                 this.format = format;
@@ -635,7 +715,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The text of the message that is sent.
+             * 所发送消息的文本
              */
             public Builder text(String text) {
                 this.text = text;
@@ -643,7 +723,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The thumbnail URL of the video message when the TemplateType parameter is set to VIBER.
+             * Viber带视频消息的缩略图
              */
             public Builder thumbUrl(String thumbUrl) {
                 this.thumbUrl = thumbUrl;
@@ -651,19 +731,9 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the component. Valid values:
+             * 组件类型
              * <p>
-             * 
-             * *   **BODY**
-             * *   **HEADER**
-             * *   **FOOTER**
-             * *   **BUTTONS**
-             * 
-             * > When the TemplateType parameter is set to WHATSAPP, the component of the **BODY** type cannot exceed 1,024 characters in length. The component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
-             * 
-             * > When the TemplateType parameter is set to VIBER, the **FOOTER** parameter is invalid.
-             * 
-             * > When the TemplateType parameter is set to VIBER, media objects including image, video, and text are placed in the **HEADER** component. A device displays that the image is placed below the text.
+             * 值：BODY、HEADER、FOOTER 和 BUTTONS
              */
             public Builder type(String type) {
                 this.type = type;
@@ -671,7 +741,7 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
-             * The URL of the material.
+             * 素材路径
              */
             public Builder url(String url) {
                 this.url = url;

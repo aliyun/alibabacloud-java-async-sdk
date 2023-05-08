@@ -179,7 +179,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The components of the message template.
+         * Components.
          */
         public Builder components(java.util.List < Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -189,7 +189,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The space ID of the user under the ISV account.
+         * ISV子客户的SpaceId
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -198,7 +198,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp Business account under the independent software vendor (ISV) account.
+         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -207,7 +207,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The examples of variables that are used when you create the message template.
+         * 变量，KEY-VALUE结构
          */
         public Builder example(java.util.Map < String, String > example) {
             String exampleShrink = shrink(example, "Example", "json");
@@ -217,7 +217,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * Isv校验码，用于校验子帐号是否由ISV授权
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -226,7 +226,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+         * 语言
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -235,7 +235,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * The code of the message template.
+         * 消息模板编码
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -260,8 +260,20 @@ public class ModifyChatappTemplateRequest extends Request {
     } 
 
     public static class Buttons extends TeaModel {
+        @NameInMap("AutofillText")
+        private String autofillText;
+
+        @NameInMap("IsOptOut")
+        private Boolean isOptOut;
+
+        @NameInMap("PackageName")
+        private String packageName;
+
         @NameInMap("PhoneNumber")
         private String phoneNumber;
+
+        @NameInMap("SignatureHash")
+        private String signatureHash;
 
         @NameInMap("Text")
         private String text;
@@ -277,7 +289,11 @@ public class ModifyChatappTemplateRequest extends Request {
         private String urlType;
 
         private Buttons(Builder builder) {
+            this.autofillText = builder.autofillText;
+            this.isOptOut = builder.isOptOut;
+            this.packageName = builder.packageName;
             this.phoneNumber = builder.phoneNumber;
+            this.signatureHash = builder.signatureHash;
             this.text = builder.text;
             this.type = builder.type;
             this.url = builder.url;
@@ -293,10 +309,38 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return autofillText
+         */
+        public String getAutofillText() {
+            return this.autofillText;
+        }
+
+        /**
+         * @return isOptOut
+         */
+        public Boolean getIsOptOut() {
+            return this.isOptOut;
+        }
+
+        /**
+         * @return packageName
+         */
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        /**
          * @return phoneNumber
          */
         public String getPhoneNumber() {
             return this.phoneNumber;
+        }
+
+        /**
+         * @return signatureHash
+         */
+        public String getSignatureHash() {
+            return this.signatureHash;
         }
 
         /**
@@ -328,14 +372,42 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         public static final class Builder {
+            private String autofillText; 
+            private Boolean isOptOut; 
+            private String packageName; 
             private String phoneNumber; 
+            private String signatureHash; 
             private String text; 
             private String type; 
             private String url; 
             private String urlType; 
 
             /**
-             * The phone number.
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，Whatsap Autofill操作的按钮文本
+             */
+            public Builder autofillText(String autofillText) {
+                this.autofillText = autofillText;
+                return this;
+            }
+
+            /**
+             * Whatsapp模板，在Category为Marketing,并且Button type为QUICK_REPLY时有效，表示按钮为营销退订按钮，客户如果点击了此按钮，并且在chatapp平台上配置了发送控制操作，则后续Marketing消息则不会发送到客户
+             */
+            public Builder isOptOut(Boolean isOptOut) {
+                this.isOptOut = isOptOut;
+                return this;
+            }
+
+            /**
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的包名
+             */
+            public Builder packageName(String packageName) {
+                this.packageName = packageName;
+                return this;
+            }
+
+            /**
+             * 号码
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -343,7 +415,15 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The text of the message to be sent.
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的签名Hash值
+             */
+            public Builder signatureHash(String signatureHash) {
+                this.signatureHash = signatureHash;
+                return this;
+            }
+
+            /**
+             * 所发送消息的文本
              */
             public Builder text(String text) {
                 this.text = text;
@@ -351,12 +431,9 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the button.
+             * 按钮类型
              * <p>
-             * 
-             * *   **PHONE_NUMBER**: a phone number button
-             * *   **URL**: a URL button
-             * *   **QUICK_REPLY**: a quick reply button
+             * PHONE_NUMBER（电话）,URL（网页按钮）和QUICK_REPLY（快速回复）
              */
             public Builder type(String type) {
                 this.type = type;
@@ -364,7 +441,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The URL to be visited after users click the button.
+             * 点击按钮后将访问的网址
              */
             public Builder url(String url) {
                 this.url = url;
@@ -372,11 +449,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the URL. Valid values:
-             * <p>
-             * 
-             * *   **static**: a static URL
-             * *   **dynamic**: a dynamic URL
+             * 网址类型 static-静态dynamic-动态
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -391,11 +464,18 @@ public class ModifyChatappTemplateRequest extends Request {
 
     }
     public static class Components extends TeaModel {
+        @NameInMap("AddSecretRecommendation")
+        private Boolean addSecretRecommendation;
+
         @NameInMap("Buttons")
         private java.util.List < Buttons> buttons;
 
         @NameInMap("Caption")
         private String caption;
+
+        @NameInMap("CodeExpirationMinutes")
+        @Validation(maximum = 90, minimum = 1)
+        private Integer codeExpirationMinutes;
 
         @NameInMap("Duration")
         private Integer duration;
@@ -423,8 +503,10 @@ public class ModifyChatappTemplateRequest extends Request {
         private String url;
 
         private Components(Builder builder) {
+            this.addSecretRecommendation = builder.addSecretRecommendation;
             this.buttons = builder.buttons;
             this.caption = builder.caption;
+            this.codeExpirationMinutes = builder.codeExpirationMinutes;
             this.duration = builder.duration;
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
@@ -444,6 +526,13 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return addSecretRecommendation
+         */
+        public Boolean getAddSecretRecommendation() {
+            return this.addSecretRecommendation;
+        }
+
+        /**
          * @return buttons
          */
         public java.util.List < Buttons> getButtons() {
@@ -455,6 +544,13 @@ public class ModifyChatappTemplateRequest extends Request {
          */
         public String getCaption() {
             return this.caption;
+        }
+
+        /**
+         * @return codeExpirationMinutes
+         */
+        public Integer getCodeExpirationMinutes() {
+            return this.codeExpirationMinutes;
         }
 
         /**
@@ -514,8 +610,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean addSecretRecommendation; 
             private java.util.List < Buttons> buttons; 
             private String caption; 
+            private Integer codeExpirationMinutes; 
             private Integer duration; 
             private String fileName; 
             private String fileType; 
@@ -526,7 +624,15 @@ public class ModifyChatappTemplateRequest extends Request {
             private String url; 
 
             /**
-             * The buttons. This parameter is applicable only to components of the **BUTTONS** type.
+             * Whatsapp类型模板，Category为Authentication，并且Component Type为Body时有效，表示在Body上面显示不要将验证码信息提供给其它人的提示信息
+             */
+            public Builder addSecretRecommendation(Boolean addSecretRecommendation) {
+                this.addSecretRecommendation = addSecretRecommendation;
+                return this;
+            }
+
+            /**
+             * 按钮
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -534,13 +640,18 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The description.
-             * <p>
-             * 
-             * > When the Type parameter is set to **HEADER** and the Format parameter is set to **IMAGE, DOCUMENT, or VIDEO**, you can specify a description.
+             * 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
              */
             public Builder caption(String caption) {
                 this.caption = caption;
+                return this;
+            }
+
+            /**
+             * Whatsapp Authentication模板验证码有效期（分钟），只在Whatsapp类型消息，Category为Authentication并且Component Type为Footer时有效（此信息显示在Footer位置）
+             */
+            public Builder codeExpirationMinutes(Integer codeExpirationMinutes) {
+                this.codeExpirationMinutes = codeExpirationMinutes;
                 return this;
             }
 
@@ -553,10 +664,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The name of the file.
-             * <p>
-             * 
-             * > When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name for the file.
+             * 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -572,13 +680,9 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the media resources that are included in the message.
+             * 格式
              * <p>
-             * 
-             * *   **TEXT**: text
-             * *   **IMAGE**: image
-             * *   **DOCUMENT**: document
-             * *   **VIDEO**: video
+             * TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
              */
             public Builder format(String format) {
                 this.format = format;
@@ -586,7 +690,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The text of the message to be sent.
+             * 所发送消息的文本
              */
             public Builder text(String text) {
                 this.text = text;
@@ -602,13 +706,9 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The type of the component. Valid values:
+             * 组件类型
              * <p>
-             * 
-             * *   **BODY**
-             * *   **HEADER**
-             * *   **FOOTER**
-             * *   **BUTTONS**
+             * 值：BODY、HEADER、FOOTER 和 BUTTONS
              */
             public Builder type(String type) {
                 this.type = type;
@@ -616,7 +716,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * The URL of the material.
+             * 素材路径
              */
             public Builder url(String url) {
                 this.url = url;

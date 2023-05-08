@@ -74,11 +74,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * 返回结果 OK 为正常
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +82,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +90,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * 提示信息，当返回异常时有值
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +98,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * 请求ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +150,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * The code of the message template.
+             * 模板Code
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -162,7 +158,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the message template.
+             * 模板名称
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

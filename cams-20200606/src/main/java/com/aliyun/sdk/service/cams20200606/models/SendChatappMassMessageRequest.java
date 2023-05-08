@@ -293,7 +293,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 消息在指定时间范围内未收到回执时回落
+         * 消息在指定时间内没有返回已到达回执时回落, 不填代表不根据此时间判断回落，只有发送失败和有失败的状态报告时才会回落。时间单位为秒 最小值为60，最大值43200
          */
         public Builder fallBackDuration(Integer fallBackDuration) {
             this.putBodyParameter("FallBackDuration", fallBackDuration);

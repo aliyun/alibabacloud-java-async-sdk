@@ -204,7 +204,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The name of the image template.
+         * The name of the message template.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -228,7 +228,7 @@ public class ListChatappTemplateRequest extends Request {
          * 
          * *   **WHATSAPP**
          * *   **VIBER**
-         * *   LINE: the LINE message template. This type of message template will be released later.
+         * *   LINE: the Line message template. This type of message template will be released later.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

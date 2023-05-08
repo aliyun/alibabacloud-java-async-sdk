@@ -74,11 +74,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * 返回结果 OK 为正常
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +82,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * TemplateDetail
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +90,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +98,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * 请求ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,9 +111,145 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class ExtendAttrs extends TeaModel {
+        @NameInMap("Action")
+        private String action;
+
+        @NameInMap("IntentCode")
+        private String intentCode;
+
+        @NameInMap("NextLanguageCode")
+        private String nextLanguageCode;
+
+        @NameInMap("NextTemplateCode")
+        private String nextTemplateCode;
+
+        @NameInMap("NextTemplateName")
+        private String nextTemplateName;
+
+        private ExtendAttrs(Builder builder) {
+            this.action = builder.action;
+            this.intentCode = builder.intentCode;
+            this.nextLanguageCode = builder.nextLanguageCode;
+            this.nextTemplateCode = builder.nextTemplateCode;
+            this.nextTemplateName = builder.nextTemplateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtendAttrs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return intentCode
+         */
+        public String getIntentCode() {
+            return this.intentCode;
+        }
+
+        /**
+         * @return nextLanguageCode
+         */
+        public String getNextLanguageCode() {
+            return this.nextLanguageCode;
+        }
+
+        /**
+         * @return nextTemplateCode
+         */
+        public String getNextTemplateCode() {
+            return this.nextTemplateCode;
+        }
+
+        /**
+         * @return nextTemplateName
+         */
+        public String getNextTemplateName() {
+            return this.nextTemplateName;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String intentCode; 
+            private String nextLanguageCode; 
+            private String nextTemplateCode; 
+            private String nextTemplateName; 
+
+            /**
+             * 事件类型
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * 意图编码
+             */
+            public Builder intentCode(String intentCode) {
+                this.intentCode = intentCode;
+                return this;
+            }
+
+            /**
+             * 下一个模板语言
+             */
+            public Builder nextLanguageCode(String nextLanguageCode) {
+                this.nextLanguageCode = nextLanguageCode;
+                return this;
+            }
+
+            /**
+             * 下一个模板编码
+             */
+            public Builder nextTemplateCode(String nextTemplateCode) {
+                this.nextTemplateCode = nextTemplateCode;
+                return this;
+            }
+
+            /**
+             * 下一个模板名称
+             */
+            public Builder nextTemplateName(String nextTemplateName) {
+                this.nextTemplateName = nextTemplateName;
+                return this;
+            }
+
+            public ExtendAttrs build() {
+                return new ExtendAttrs(this);
+            } 
+
+        } 
+
+    }
     public static class Buttons extends TeaModel {
+        @NameInMap("AutofillText")
+        private String autofillText;
+
+        @NameInMap("ExtendAttrs")
+        private ExtendAttrs extendAttrs;
+
+        @NameInMap("IsOptOut")
+        private Boolean isOptOut;
+
+        @NameInMap("PackageName")
+        private String packageName;
+
         @NameInMap("PhoneNumber")
         private String phoneNumber;
+
+        @NameInMap("SignatureHash")
+        private String signatureHash;
 
         @NameInMap("Text")
         private String text;
@@ -132,7 +264,12 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private String urlType;
 
         private Buttons(Builder builder) {
+            this.autofillText = builder.autofillText;
+            this.extendAttrs = builder.extendAttrs;
+            this.isOptOut = builder.isOptOut;
+            this.packageName = builder.packageName;
             this.phoneNumber = builder.phoneNumber;
+            this.signatureHash = builder.signatureHash;
             this.text = builder.text;
             this.type = builder.type;
             this.url = builder.url;
@@ -148,10 +285,45 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return autofillText
+         */
+        public String getAutofillText() {
+            return this.autofillText;
+        }
+
+        /**
+         * @return extendAttrs
+         */
+        public ExtendAttrs getExtendAttrs() {
+            return this.extendAttrs;
+        }
+
+        /**
+         * @return isOptOut
+         */
+        public Boolean getIsOptOut() {
+            return this.isOptOut;
+        }
+
+        /**
+         * @return packageName
+         */
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        /**
          * @return phoneNumber
          */
         public String getPhoneNumber() {
             return this.phoneNumber;
+        }
+
+        /**
+         * @return signatureHash
+         */
+        public String getSignatureHash() {
+            return this.signatureHash;
         }
 
         /**
@@ -183,14 +355,51 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autofillText; 
+            private ExtendAttrs extendAttrs; 
+            private Boolean isOptOut; 
+            private String packageName; 
             private String phoneNumber; 
+            private String signatureHash; 
             private String text; 
             private String type; 
             private String url; 
             private String urlType; 
 
             /**
-             * The phone number. This parameter is valid only if the return value of the Type parameter is **PHONE_NUMBER**.
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，Whatsap Autofill操作的按钮文本
+             */
+            public Builder autofillText(String autofillText) {
+                this.autofillText = autofillText;
+                return this;
+            }
+
+            /**
+             * 扩展字段
+             */
+            public Builder extendAttrs(ExtendAttrs extendAttrs) {
+                this.extendAttrs = extendAttrs;
+                return this;
+            }
+
+            /**
+             * Whatsapp模板，在Category为Marketing,并且Button type为QUICK_REPLY时有效，表示按钮为营销退订按钮，客户如果点击了此按钮，并且在chatapp平台上配置了发送控制操作，则后续Marketing消息则不会发送到客户
+             */
+            public Builder isOptOut(Boolean isOptOut) {
+                this.isOptOut = isOptOut;
+                return this;
+            }
+
+            /**
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的包名
+             */
+            public Builder packageName(String packageName) {
+                this.packageName = packageName;
+                return this;
+            }
+
+            /**
+             * 电话号码
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -198,7 +407,15 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the button.
+             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的签名Hash值
+             */
+            public Builder signatureHash(String signatureHash) {
+                this.signatureHash = signatureHash;
+                return this;
+            }
+
+            /**
+             * 所发送消息的文本
              */
             public Builder text(String text) {
                 this.text = text;
@@ -206,20 +423,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the button. Valid values:
-             * <p>
-             * 
-             * *   **PHONE_NUMBER**: a phone number button
-             * *   **URL**: a URL button
-             * *   **QUICK_REPLY**: a quick reply button
-             * 
-             * > 
-             * 
-             * *   If you have created a URL button or a phone number button, you cannot create a quick reply button.
-             * 
-             * *   You can add a combination of two URL buttons or a combination of a URL button and a phone number button to a message template.
-             * 
-             * *   You can add only one button to a Viber message template, and the button must be a URL button.
+             * 按钮类型
              */
             public Builder type(String type) {
                 this.type = type;
@@ -227,7 +431,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The URL to be accessed when users click the URL button.
+             * 当按钮类型是
+             * <p>
+             * URL 时有效
              */
             public Builder url(String url) {
                 this.url = url;
@@ -235,11 +441,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the URL. Valid values:
+             * WEB地址类型
              * <p>
-             * 
-             * *   **static**: a static URL
-             * *   **dynamic**: a dynamic URL
+             * static-静态
+             * dynamic-动态
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -254,11 +459,18 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
     }
     public static class Components extends TeaModel {
+        @NameInMap("AddSecretRecommendation")
+        private Boolean addSecretRecommendation;
+
         @NameInMap("Buttons")
         private java.util.List < Buttons> buttons;
 
         @NameInMap("Caption")
         private String caption;
+
+        @NameInMap("CodeExpirationMinutes")
+        @Validation(maximum = 90, minimum = 1)
+        private Integer codeExpirationMinutes;
 
         @NameInMap("Duration")
         private Integer duration;
@@ -297,8 +509,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private String url;
 
         private Components(Builder builder) {
+            this.addSecretRecommendation = builder.addSecretRecommendation;
             this.buttons = builder.buttons;
             this.caption = builder.caption;
+            this.codeExpirationMinutes = builder.codeExpirationMinutes;
             this.duration = builder.duration;
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
@@ -322,6 +536,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return addSecretRecommendation
+         */
+        public Boolean getAddSecretRecommendation() {
+            return this.addSecretRecommendation;
+        }
+
+        /**
          * @return buttons
          */
         public java.util.List < Buttons> getButtons() {
@@ -333,6 +554,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          */
         public String getCaption() {
             return this.caption;
+        }
+
+        /**
+         * @return codeExpirationMinutes
+         */
+        public Integer getCodeExpirationMinutes() {
+            return this.codeExpirationMinutes;
         }
 
         /**
@@ -420,8 +648,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean addSecretRecommendation; 
             private java.util.List < Buttons> buttons; 
             private String caption; 
+            private Integer codeExpirationMinutes; 
             private Integer duration; 
             private String fileName; 
             private String fileType; 
@@ -436,7 +666,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * This parameter is applicable only to components of the **BUTTONS** type.
+             * Whatsapp类型模板，Category为Authentication，并且Component Type为Body时有效，表示在Body上面显示不要将验证码信息提供给其它人的提示信息
+             */
+            public Builder addSecretRecommendation(Boolean addSecretRecommendation) {
+                this.addSecretRecommendation = addSecretRecommendation;
+                return this;
+            }
+
+            /**
+             * 仅适用于 BUTTONS 类型。
+             * <p>
+             * 与按钮相关的参数。
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -444,7 +684,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the file.
+             * 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -452,7 +692,15 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video used in the Viber message template. Valid values: 0 to 600. Unit: seconds.
+             * Whatsapp Authentication模板验证码有效期（分钟），只在Whatsapp类型消息，Category为Authentication并且Component Type为Footer时有效（此信息显示在Footer位置）
+             */
+            public Builder codeExpirationMinutes(Integer codeExpirationMinutes) {
+                this.codeExpirationMinutes = codeExpirationMinutes;
+                return this;
+            }
+
+            /**
+             * Viber视频消息的视频时长，取值范围 0 - 600
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -460,7 +708,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -468,7 +716,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file attached in the Viber message template.
+             * Viber文件消息的文件类型
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -476,7 +724,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The format.
+             * 格式
              */
             public Builder format(String format) {
                 this.format = format;
@@ -516,7 +764,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The text of the message to be sent.
+             * 所发送消息的文本
              */
             public Builder text(String text) {
                 this.text = text;
@@ -524,7 +772,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The thumbnail URL of the video used in the Viber message template.
+             * Viber带视频消息的缩略图
              */
             public Builder thumbUrl(String thumbUrl) {
                 this.thumbUrl = thumbUrl;
@@ -532,25 +780,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the component. Valid values:
-             * <p>
-             * 
-             * *   **BODY**
-             * *   **HEADER**
-             * *   **FOOTER**
-             * *   **BUTTONS**
-             * 
-             * > 
-             * 
-             * *   The following limits apply to components in WhatsApp message templates: A component of the **BODY** type cannot exceed 1,024 characters. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.
-             * 
-             * > 
-             * 
-             * *   **FOOTER** components are not supported in Viber message templates.
-             * 
-             * > 
-             * 
-             * *   In a Viber message template, a media object, such as an image, a video, or a document, is placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a device.
+             * 组件类型
              */
             public Builder type(String type) {
                 this.type = type;
@@ -558,7 +788,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the material.
+             * 素材路径
              */
             public Builder url(String url) {
                 this.url = url;
@@ -683,13 +913,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * The review status of the message template. Valid values:
-             * <p>
-             * 
-             * *   **pass**: The message template is approved.
-             * *   **fail**: The message template is rejected.
-             * *   **auditing**: The message template is being reviewed.
-             * *   **unaudit**: The review is suspended.
+             * 审核状态
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -697,26 +921,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the template when the return value of the TemplateType parameter is WHATSAPP. Valid values:
-             * <p>
-             * 
-             * *   **TRANSACTIONAL**: a transactional template
-             * *   **MARKETING**: a marketing template
-             * *   **OTP**: a one-time password template
-             * 
-             * The category of the template when the return value of the TemplateType parameter is VIBER. Valid values:
-             * 
-             * *   **text**: a text message template
-             * *   **image**: an image message template
-             * *   **text_image_button**: a template that contains multiple media objects, including text, image, and button
-             * *   **text_button**: a template that contains the text and button media objects
-             * *   **document**: a template that contains a document attachment
-             * *   **video**: a video message template
-             * *   **text_video**: a template that contains the text and video media objects
-             * *   **text_video_button**: a template that contains multiple media objects, including text, video, and button
-             * *   **text_image**: a template that contains the text and image media objects
-             * 
-             * > When the category of a Viber message template is text_video_button, users cannot open a web page by clicking the button. Users can open only the video in the message. In this case, you do not need to specify the Url parameter for the URL button in the template.
+             * 模板分类
              */
             public Builder category(String category) {
                 this.category = category;
@@ -724,7 +929,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The components of the message template.
+             * 消息模板组件
              */
             public Builder components(java.util.List < Components> components) {
                 this.components = components;
@@ -732,7 +937,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The examples of variables.
+             * 变量例子
              */
             public Builder example(java.util.Map < String, String > example) {
                 this.example = example;
@@ -740,7 +945,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+             * 语言
              */
             public Builder language(String language) {
                 this.language = language;
@@ -748,7 +953,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the message template.
+             * 模板名称
              */
             public Builder name(String name) {
                 this.name = name;
@@ -756,7 +961,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the message template.
+             * 模板编码
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -764,12 +969,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the message template.
-             * <p>
-             * 
-             * *   **WHATSAPP**
-             * *   **VIBER**
-             * *   LINE: the LINE message template. This type of message template will be released later.
+             * 模板类型，取值为WHATSAPP/VIBER
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

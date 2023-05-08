@@ -85,7 +85,7 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         } 
 
         /**
-         * The country code of a phone number.
+         * 号码国家编码
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -94,7 +94,7 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         }
 
         /**
-         * The space ID of the user under the ISV account.
+         * ISV子客户的SpaceId
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -103,7 +103,7 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         }
 
         /**
-         * The phone number without the country code.
+         * 号码信息，不要带国家编码
          */
         public Builder mobileNumber(String mobileNumber) {
             this.putQueryParameter("MobileNumber", mobileNumber);

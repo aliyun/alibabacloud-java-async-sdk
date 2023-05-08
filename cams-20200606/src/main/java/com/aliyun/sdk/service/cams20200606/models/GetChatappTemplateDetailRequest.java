@@ -127,7 +127,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * ISV子客户的SpaceId
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -136,7 +136,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp account that you register.
+         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -145,7 +145,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
+         * Isv校验码，用于校验子帐号是否由ISV授权
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -154,7 +154,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+         * 语言
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -163,7 +163,12 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The code of the message template.
+         * The type of the message template. Valid values:
+         * <p>
+         * 
+         * *   **WHATSAPP**
+         * *   **VIBER**
+         * *   LINE (developing)
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -172,12 +177,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The type of the message template.
-         * <p>
-         * 
-         * *   **WHATSAPP**
-         * *   **VIBER**
-         * *   LINE: the LINE message template. This type of message template will be released later.
+         * 模板的模板类型，取值为WHATSAPP/VIBER， 当未传递此值时，默认值为WHATSAPP
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

@@ -55,7 +55,7 @@ public class IsvGetAppIdRequest extends Request {
         } 
 
         /**
-         * The type of the application. Set the value to WHATSAPP.
+         * app类型，取值：WHATSAPP
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

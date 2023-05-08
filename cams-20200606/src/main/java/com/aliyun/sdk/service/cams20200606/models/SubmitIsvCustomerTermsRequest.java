@@ -145,7 +145,7 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         } 
 
         /**
-         * The usage scenario.
+         * The use scenario.
          */
         public Builder businessDesc(String businessDesc) {
             this.putQueryParameter("BusinessDesc", businessDesc);
@@ -190,10 +190,10 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         }
 
         /**
-         * The ISV or Client agreement.
+         * The ISV or Client Agreement.
          * <p>
          * 
-         * > After you call the GetChatappUploadAuthorization operation to obtain the authentication information, you must use this authentication information to upload files to OSS servers. You can use the SDK provided by OSS to upload files. When you upload a file, you must set the key parameter value. To set the value for the key parameter, concatenate the value of the Dir parameter and the file name by using a forward slash (/). You can obtain the value of the Dir parameter by calling the GetChatappUploadAuthorization operation.
+         * > Before you upload files to Object Storage Service (OSS) servers, you must call the GetChatappUploadAuthorization operation to obtain the authentication information required to upload files. You can use the SDK provided by OSS to upload files. When you upload a file, you must set the key parameter value. To set the value for the key parameter, concatenate the value of the Dir parameter and the file name by using a forward slash (/). You can obtain the value of the Dir parameter by calling the GetChatappUploadAuthorization operation.
          * 
          * > The value of this parameter is the name of the uploaded file.
          */

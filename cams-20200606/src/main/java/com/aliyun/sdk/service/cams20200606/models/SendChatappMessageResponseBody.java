@@ -94,7 +94,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the message.
+         * The ID of the message that was sent.
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;

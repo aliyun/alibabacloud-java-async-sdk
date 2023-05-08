@@ -126,7 +126,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * ISV子客户的SpaceId
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -135,11 +135,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * Specifies whether to use HTTP callbacks to receive message receipts. Valid values:
-         * <p>
-         * 
-         * *   Y: indicates that HTTP callbacks are used to receive message receipts.
-         * *   N: indicates that HTTP callbacks are not used to receive message receipts.
+         * 是否使用Http方式接收回执（Y: 是， N: 否）
          */
         public Builder httpFlag(String httpFlag) {
             this.putQueryParameter("HttpFlag", httpFlag);
@@ -148,7 +144,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * 号码
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -157,11 +153,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values:
-         * <p>
-         * 
-         * *   Y: indicates that MNS queues are used to receive receipts.
-         * *   N: indicates that MNS queues are not used to receive receipts.
+         * 是否使用队列方式接收回执（Y: 是， N: 否）
          */
         public Builder queueFlag(String queueFlag) {
             this.putQueryParameter("QueueFlag", queueFlag);
@@ -170,7 +162,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * The callback URL to which status reports are sent by using HTTP callbacks.
+         * http方式状态报告接口回调地址
          */
         public Builder statusCallbackUrl(String statusCallbackUrl) {
             this.putQueryParameter("StatusCallbackUrl", statusCallbackUrl);
@@ -179,7 +171,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * The callback URL to which mobile originated (MO) messages are sent by using HTTP callbacks.
+         * http方式上行消息接口回调地址
          */
         public Builder upCallbackUrl(String upCallbackUrl) {
             this.putQueryParameter("UpCallbackUrl", upCallbackUrl);

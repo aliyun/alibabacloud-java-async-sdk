@@ -74,11 +74,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes).
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +82,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +90,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +98,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +162,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the number.
+             * 号码ID
              */
             public Builder id(String id) {
                 this.id = id;
@@ -174,7 +170,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number.
+             * 号码
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -182,7 +178,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the phone number.
+             * 号码状态
              */
             public Builder status(String status) {
                 this.status = status;

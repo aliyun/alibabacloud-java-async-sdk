@@ -62,11 +62,7 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -74,7 +70,7 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -82,7 +78,7 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

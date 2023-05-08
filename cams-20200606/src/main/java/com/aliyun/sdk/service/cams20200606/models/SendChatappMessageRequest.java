@@ -371,25 +371,25 @@ public class SendChatappMessageRequest extends Request {
          * The content of the message.
          * <p>
          * 
-         * **Usage notes when you set the ChannelType parameter to whatsapp**
+         * **Usage notes when you set the ChannelType parameter to whatsapp:**
          * 
          * *   When you set the **MessageType** parameter to **text**, the **text** parameter is required and the **caption** parameter cannot be specified.
          * *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
          * *   When you set the **MessageType** parameter to **video**, the **link** parameter is required.
-         * *   When you set the **MessageType** parameter to **audio**, the **link** parameter is required and **caption** parameter is invalid.
-         * *   When you set the **MessageType** parameter to **document**, the **link** and **fileName** parameters are required and **caption** parameter is invalid.
+         * *   When you set the **MessageType** parameter to **audio**, the **link** parameter is required and the **caption** parameter is invalid.
+         * *   When you set the **MessageType** parameter to **document**, the **link** and **fileName** parameters are required and the **caption** parameter is invalid.
          * *   When you set the **MessageType** parameter to **interactive**, the **type** and **action** parameters are required.
          * *   When you set the **MessageType** parameter to **contacts**, the **name** parameter is required.
          * *   When you set the **MessageType** parameter to **location**, the **longitude** and **latitude** parameters are required.
          * *   When you set the **MessageType** parameter to **sticker**, the **link** parameter is required, and the **caption** and **fileName** parameters are invalid.
          * *   When you set the **MessageType** parameter to **reaction**, the **messageId** and **emoji** parameters are required.
          * 
-         * **Usage notes when you set the ChannelType parameter to viber**
+         * **Usage notes when you set the ChannelType parameter to viber:**
          * 
          * *   When you set the **MessageType** parameter to **text**, the **text** parameter is required.
          * *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
          * *   When you set the **MessageType** parameter to **video**, the **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
-         * *   When you set the **MessageType** parameter to  **document**, the **link**, **fileName**, and **fileType** parameters are required.
+         * *   When you set the **MessageType** parameter to **document**, the **link**, **fileName**, and **fileType** parameters are required.
          * *   When you set the **MessageType** parameter to **text_button**, the **text**, **caption**, and **action** parameters are required.
          * *   When you set the **MessageType** parameter to **text_image_button**, the **text**, **link**, **caption**, and **action** parameters are required.
          * *   When you set the **MessageType** parameter to **text_video**, the **text**, **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
@@ -402,7 +402,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The ID of the reply message.
+         * The ID of the message to reply to.
          */
         public Builder contextMessageId(String contextMessageId) {
             this.putBodyParameter("ContextMessageId", contextMessageId);
@@ -459,7 +459,7 @@ public class SendChatappMessageRequest extends Request {
          * The phone number of the message sender.
          * <p>
          * 
-         * > You can specify a phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.
+         * > You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -468,7 +468,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -477,7 +477,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.
+         * The type of the Viber message. This parameter is required if you set the ChannelType parameter to viber. Valid values: promotion and transaction.
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -495,33 +495,33 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The specific type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:
+         * The specific type of the message. This parameter is required only if you set the Type parameter to **message**.
          * <p>
          * 
-         * **When you set the ChannelType parameter to whatsapp**
+         * **Valid values of MessageType when you set the ChannelType parameter to whatsapp:**
          * 
-         * *   **text**: the text message.
-         * *   **image**: the image message.
-         * *   **video**: the video message.
-         * *   **audio**: the audio message.
-         * *   **document**: the document message.
-         * *   **interactive**: the interactive message.
-         * *   **contacts**: the contact message.
-         * *   **location**: the location message.
-         * *   **sticker**: the sticker message.
-         * *   **reaction**: the reaction message.
+         * *   **text**: a text message.
+         * *   **image**: an image message.
+         * *   **video**: a video message.
+         * *   **audio**: an audio message.
+         * *   **document**: a document message.
+         * *   **interactive**: an interactive message.
+         * *   **contacts**: a contact message.
+         * *   **location**: a location message.
+         * *   **sticker**: a sticker message.
+         * *   **reaction**: a reaction message.
          * 
-         * **When you set the ChannelType parameter to viber**
+         * **Valid values of MessageType when you set the ChannelType parameter to viber:**
          * 
-         * *   **text**: the text message.
-         * *   **image**: the image message.
-         * *   **video**: the video message.
-         * *   **document**: the document message.
-         * *   **text_button**: messages that contain the text and button media objects.
-         * *   **text_image_button**: messages that contain multiple media objects, including the text, image, and button media objects.
-         * *   **text_video**: messages that contain the text and video media objects.
-         * *   **text_video_button**: messages that contain multiple media objects, including text, video, and button media objects.
-         * *   **text_image**: messages that contain the text and image media objects..
+         * *   **text**: a text message.
+         * *   **image**: an image message.
+         * *   **video**: a video message.
+         * *   **document**: a document message.
+         * *   **text_button**: a message that contains the text and button media objects.
+         * *   **text_image_button**: a message that contains multiple media objects, including the text, image, and button.
+         * *   **text_video**: a message that contains the text and video media objects.
+         * *   **text_video_button**: a message that contains multiple media objects, including text, video, and button.
+         * *   **text_image**: a message that contains the text and image media objects.
          * 
          * > For more information, see [Parameters of a message template](~~454530~~).
          */
@@ -542,7 +542,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The tag information when the ChannelType parameter is set to viber.
+         * The tag information of the Viber message.
          */
         public Builder tag(String tag) {
             this.putBodyParameter("Tag", tag);
@@ -579,7 +579,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The phone number of the message receiver.
+         * The phone number that receives the message.
          */
         public Builder to(String to) {
             this.putBodyParameter("To", to);
@@ -588,7 +588,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The tracking ID when the ChannelType parameter is set to viber.
+         * The tracking ID of the Viber message.
          */
         public Builder trackingData(String trackingData) {
             this.putBodyParameter("TrackingData", trackingData);
@@ -597,7 +597,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.
+         * The timeout period for sending the Viber message. Valid values: 30 to 1209600. Unit: seconds.
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("Ttl", ttl);
